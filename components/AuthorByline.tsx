@@ -15,7 +15,7 @@ export function AuthorByline({ updated }: AuthorBylineProps) {
         IW
       </div>
       <div className="text-[13px] leading-tight">
-        <p className="text-[#1C1C1C] font-semibold">Ilka Wysocki</p>
+        <a href="/ueber-uns/#team" className="text-[#1C1C1C] font-semibold hover:text-[#8B7355] transition-colors">Ilka Wysocki</a>
         <p className="text-[#6B6B6B]">Pflegeberaterin bei Primundus · Aktualisiert am {updated}</p>
       </div>
     </div>

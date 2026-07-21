@@ -15,9 +15,49 @@ export const metadata: Metadata = {
   },
 }
 
+const schemaMarkup = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://primundus.de/#organization',
+      name: 'Primundus',
+      url: 'https://primundus.de/',
+      logo: 'https://primundus.de/images/primundus_logo_header.webp',
+      telephone: '+498920000830',
+      email: 'info@primundus.de',
+      description: 'Primundus vermittelt rechtssichere 24-Stunden-Pflege zu Hause. Über 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, Testsieger DIE WELT.',
+      founder: { '@id': 'https://primundus.de/#mateusz-wysocki' },
+      employee: { '@id': 'https://primundus.de/#ilka-wysocki' },
+      award: 'Testsieger DIE WELT — Größter deutscher 24h-Pflege Vergleichstest',
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://primundus.de/#mateusz-wysocki',
+      name: 'Mateusz Wysocki',
+      jobTitle: 'Gründer & Geschäftsführer',
+      worksFor: { '@id': 'https://primundus.de/#organization' },
+      description: 'Gründer von Primundus, seit 2004 in der häuslichen 24-Stunden-Pflege tätig und ehemaliger Mitgründer von Pflegehelden, einem der größten 24h-Pflege-Anbieter Deutschlands.',
+      knowsAbout: ['24-Stunden-Pflege', 'häusliche Betreuung', 'Pflegevermittlung', 'Pflegemarkt Deutschland'],
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://primundus.de/#ilka-wysocki',
+      name: 'Ilka Wysocki',
+      jobTitle: 'Persönliche Ansprechpartnerin & Pflegeberaterin',
+      worksFor: { '@id': 'https://primundus.de/#organization' },
+      description: 'Persönliche Ansprechpartnerin bei Primundus. Berät Familien zu 24-Stunden-Pflege, Kosten und der Auswahl passender Betreuungskräfte — Mo–So von 8 bis 20 Uhr.',
+      telephone: '+498920000830',
+      knowsAbout: ['24-Stunden-Pflege', 'Pflegeberatung', 'Pflegegrade', 'Pflegefinanzierung'],
+      image: 'https://primundus.de/images/ilka-wysocki_pm-mallorca.webp',
+    },
+  ],
+})
+
 export default function Page() {
   return (
     <div className="min-h-screen bg-[#F8F7F5]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       {/* Header */}
       <div className="bg-white border-b border-[#E5E3DF]">
@@ -79,6 +119,36 @@ export default function Page() {
             <p className="text-[16px] text-[#5A5A5A] leading-[1.7]">
               Wir arbeiten rechtssicher, transparent und ohne versteckte Kosten. Täglich kündbar — weil wir überzeugen wollen, nicht binden.
             </p>
+          </div>
+        </div>
+
+        {/* Team */}
+        <div className="mb-14" id="team">
+          <p className="text-xs font-bold uppercase tracking-wider text-[#A89279] mb-3">Die Menschen hinter Primundus</p>
+          <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] leading-tight mb-8">
+            Wer für Sie da ist
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 flex gap-5">
+              <div className="w-16 h-16 rounded-full bg-[#8B7355] text-white flex items-center justify-center font-bold text-[18px] flex-shrink-0">MW</div>
+              <div>
+                <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Mateusz Wysocki</h3>
+                <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Gründer &amp; Geschäftsführer</p>
+                <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">
+                  Seit 2004 in der häuslichen 24-Stunden-Pflege. Mateusz war Mitgründer von Pflegehelden — einem der größten 24h-Pflege-Anbieter Deutschlands — und gründete Primundus mit dem Anspruch, Vermittlung ehrlich, rechtssicher und persönlich zu machen.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 flex gap-5">
+              <img src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0" />
+              <div>
+                <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Ilka Wysocki</h3>
+                <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Persönliche Ansprechpartnerin &amp; Pflegeberaterin</p>
+                <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">
+                  Ilka ist für viele Familien die erste Stimme bei Primundus. Sie begleitet von der ersten Frage bis zur passenden Betreuungskraft — persönlich, ohne Callcenter, Mo–So von 8 bis 20 Uhr.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
