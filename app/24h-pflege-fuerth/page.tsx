@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Fürth',
     description: '24h-Betreuungskräfte in Fürth. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-fuerth/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Fürth' },
     priceRange: '2.200–3.500 €/Monat',
@@ -33,7 +33,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Fürth', item: 'https://primundus.de/24h-pflege/fuerth/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Fürth', item: 'https://primundus.de/24h-pflege-fuerth/' },
     ],
   },
   {

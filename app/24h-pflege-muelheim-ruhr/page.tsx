@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Mülheim an der Ruhr',
     description: '24h-Betreuungskräfte in Mülheim an der Ruhr. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-muelheim-ruhr/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Mülheim an der Ruhr' },
     priceRange: '2.200–3.500 €/Monat',

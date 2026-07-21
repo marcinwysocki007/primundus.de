@@ -24,7 +24,7 @@ const BUNDESLAENDER = [
   { name: 'Mecklenburg-Vorpommern', faktor: 0.80, heimEA: 2297 },
 ]
 
-const PFLEGE_24H_BRUTTO = { min: 2400, max: 3500 }
+const PFLEGE_24H_BRUTTO = { min: 2200, max: 3500 }
 const STEUER_MAX_MO = 333
 
 export function PflegeheimVergleichClient() {

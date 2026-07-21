@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Speyer',
     description: '24h-Betreuungskräfte in Speyer. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-speyer/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Speyer' },
     priceRange: '2.200–3.500 €/Monat',
@@ -33,7 +33,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Speyer', item: 'https://primundus.de/24h-pflege/speyer/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Speyer', item: 'https://primundus.de/24h-pflege-speyer/' },
     ],
   },
   {

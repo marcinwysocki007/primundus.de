@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const GrafikKostenvergleich = dynamic(
   () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),
@@ -39,6 +40,7 @@ const schemaMarkup = [
     headline: 'Was kostet 24h-Pflege? Kosten, Zuschüsse & Vergleich 2026',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-01-15',
     dateModified: '2026-04-25',
     mainEntityOfPage: 'https://primundus.de/kosten/',
   },
@@ -89,6 +91,8 @@ export default function Kosten() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Was kostet 24-Stunden-Pflege? Kosten & Zuschüsse 2026
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-6 font-medium">
             24h-Pflege kostet bei Primundus 2.200–3.500 Euro pro Monat. Pflegegeld, Entlastungsbetrag und das neue Entlastungsbudget (3.539 €/Jahr) senken den Eigenanteil deutlich — bei Pflegegrad 3 auf unter 2.000 € monatlich. Im Vergleich zum Pflegeheim ist 24h-Pflege damit oft günstiger und bietet gleichzeitig mehr Individualität.

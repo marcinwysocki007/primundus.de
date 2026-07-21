@@ -50,7 +50,7 @@ const schemaMarkup = JSON.stringify([
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Primundus 24h-Pflege",
-    "priceRange": "ab 2.500 €/Monat",
+    "priceRange": "ab 2.200 €/Monat",
     "areaServed": "DE"
   },
   {
@@ -60,17 +60,32 @@ const schemaMarkup = JSON.stringify([
       {
         "@type": "Question",
         "name": "Was kostet eine 24-Stunden-Pflege ungefähr?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten variieren je nach Pflegebedarf. Im Durchschnitt liegt der Eigenanteil bei ca. 1.500 €/Monat – deutlich günstiger als ein Pflegeheim." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten variieren je nach Pflegebedarf und Qualifikation der Betreuungskraft. Mit unserem Online-Rechner erhalten Sie in 2 Minuten Ihren individuellen Preis – inklusive möglicher Zuschüsse durch die Pflegekasse, die den Eigenanteil erheblich senken können." }
       },
       {
         "@type": "Question",
         "name": "Wie schnell kann eine Betreuungskraft starten?",
-        "acceptedAnswer": { "@type": "Answer", "text": "In der Regel können wir innerhalb von 4–7 Tagen eine passende Betreuungskraft vermitteln." }
+        "acceptedAnswer": { "@type": "Answer", "text": "In der Regel können wir innerhalb von 4–7 Tagen eine passende Betreuungskraft vermitteln. Bei dringendem Bedarf auch schneller – sprechen Sie uns einfach an." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert, wenn die Betreuungskraft krank wird?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Wir organisieren schnellstmöglich eine Ersatzkraft. Unser Netzwerk umfasst tausende geprüfte Betreuungskräfte, sodass wir in der Regel innerhalb kurzer Zeit Ersatz stellen können." }
       },
       {
         "@type": "Question",
         "name": "Kann ich die Betreuung jederzeit kündigen?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ja, die Betreuung ist täglich kündbar. Es gibt keine Mindestlaufzeit und keine versteckten Gebühren." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja, die Betreuung ist täglich kündbar. Es gibt keine Mindestlaufzeit und keine versteckten Gebühren. Sie gehen kein Risiko ein." }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Zuschüsse kann ich von der Pflegekasse erhalten?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Je nach Pflegegrad können Sie Verhinderungspflege, Pflegegeld und weitere Leistungen nutzen. In unserer Kalkulation zeigen wir Ihnen genau, welche Zuschüsse Ihnen zustehen und wie sich der Eigenanteil reduziert." }
+      },
+      {
+        "@type": "Question",
+        "name": "Sind die Betreuungskräfte qualifiziert?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Alle Betreuungskräfte werden von uns persönlich geprüft. Sie verfügen über Erfahrung in der häuslichen Pflege und werden anhand Ihres individuellen Bedarfs ausgewählt." }
       }
     ]
   }
@@ -395,7 +410,7 @@ export default function Page() {
               Was kostet 24-Stunden-Pflege?
             </h2>
             <p className="text-[16px] md:text-[17px] leading-[1.7] text-[#5A5A5A] mb-6">
-              Die Kosten für eine 24-Stunden-Betreuung liegen je nach Pflegebedarf und Qualifikation der Betreuungskraft zwischen <strong className="text-[#3D3D3D]">2.500 € und 4.000 € pro Monat</strong>. Was viele nicht wissen: Die Pflegekasse übernimmt je nach Pflegegrad einen erheblichen Teil. Nach Abzug von Pflegegeld, Verhinderungspflege und Entlastungsbetrag liegt der tatsächliche <strong className="text-[#3D3D3D]">Eigenanteil oft bei nur 1.200–1.800 € monatlich</strong> — und damit häufig deutlich unter den Kosten eines Pflegeheims.
+              Die Kosten für eine 24-Stunden-Betreuung liegen je nach Pflegebedarf und Qualifikation der Betreuungskraft zwischen <strong className="text-[#3D3D3D]">2.200 € und 3.500 € pro Monat</strong>. Was viele nicht wissen: Die Pflegekasse übernimmt je nach Pflegegrad einen erheblichen Teil. Nach Abzug von Pflegegeld, Verhinderungspflege und Entlastungsbetrag liegt der tatsächliche <strong className="text-[#3D3D3D]">Eigenanteil oft bei nur 1.200–1.800 € monatlich</strong> — und damit häufig deutlich unter den Kosten eines Pflegeheims.
             </p>
 
             {/* Tabelle Pflegegeld */}
@@ -415,10 +430,10 @@ export default function Page() {
                   <tbody className="divide-y divide-[#E5E3DF]">
                     {[
                       { grad: 'Pflegegrad 1', geld: '—', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 2', geld: '332 €', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 3', geld: '573 €', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 4', geld: '765 €', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 5', geld: '947 €', entlastung: '125 €' },
+                      { grad: 'Pflegegrad 2', geld: '347 €', entlastung: '125 €' },
+                      { grad: 'Pflegegrad 3', geld: '599 €', entlastung: '125 €' },
+                      { grad: 'Pflegegrad 4', geld: '800 €', entlastung: '125 €' },
+                      { grad: 'Pflegegrad 5', geld: '990 €', entlastung: '125 €' },
                     ].map((row, i) => (
                       <tr key={i} className="hover:bg-white transition-colors">
                         <td className="px-5 py-3 font-medium text-[#3D3D3D]">{row.grad}</td>

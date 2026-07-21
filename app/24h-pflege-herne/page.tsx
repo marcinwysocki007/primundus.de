@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Herne',
     description: '24h-Betreuungskräfte in Herne. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-herne/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Herne' },
     priceRange: '2.200–3.500 €/Monat',

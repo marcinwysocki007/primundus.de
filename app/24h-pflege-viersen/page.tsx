@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Viersen',
     description: '24h-Betreuungskräfte in Viersen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-viersen/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Viersen' },
     priceRange: '2.200–3.500 €/Monat',

@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Lüdenscheid',
     description: '24h-Betreuungskräfte in Lüdenscheid. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-luedenscheid/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Lüdenscheid' },
     priceRange: '2.200–3.500 €/Monat',

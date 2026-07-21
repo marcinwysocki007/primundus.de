@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Rheydt',
     description: '24h-Betreuungskräfte in Rheydt. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-moenchengladbach-rheydt/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Rheydt' },
     priceRange: '2.200–3.500 €/Monat',

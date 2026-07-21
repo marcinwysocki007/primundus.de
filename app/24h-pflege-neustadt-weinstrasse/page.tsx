@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Neustadt an der Weinstraße',
     description: '24h-Betreuungskräfte in Neustadt an der Weinstraße. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-neustadt-weinstrasse/',
-    telephone: '+498920000083',
+    telephone: '+498920000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Neustadt an der Weinstraße' },
     priceRange: '2.200–3.500 €/Monat',
@@ -33,7 +33,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Neustadt an der Weinstraße', item: 'https://primundus.de/24h-pflege/neustadt-weinstrasse/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Neustadt an der Weinstraße', item: 'https://primundus.de/24h-pflege-neustadt-weinstrasse/' },
     ],
   },
   {
