@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'kriterien', title: 'Die wichtigsten Kriterien' }, { id: 'rechtssicherheit', title: 'Rechtssicherheit zuerst' }, { id: 'qualitaet', title: 'Qualitätsprüfung' }, { id: 'transparenz', title: 'Kosten & Transparenz' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -67,6 +68,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Ratgeber · 6 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">24h-Pflege Anbieter vergleichen — worauf es wirklich ankommt</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Nicht jeder 24h-Pflege-Anbieter ist gleich. Manche vermitteln über Marktplätze ohne Qualitätskontrolle, andere arbeiten im rechtlichen Graubereich. Diese Seite zeigt die entscheidenden Kriterien beim Anbietervergleich.</p>
           <h2 id="kriterien" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Die wichtigsten Kriterien beim Anbietervergleich</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Der Markt für 24h-Pflege ist unübersichtlich — von seriösen Agenturen bis zu fragwürdigen Vermittlungsportalen. Drei Kriterien sind entscheidend: Rechtssicherheit des Modells, aktive Qualitätsprüfung der Kräfte, und Transparenz bei Kosten und Vertrag.</p>

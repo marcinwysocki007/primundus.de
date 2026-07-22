@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was bedeutet Pflegegrad 4?' },
@@ -82,6 +83,8 @@ export default function Pflegegrad4() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Pflegegrad 4 — Leistungen & Beträge 2026
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Pflegegrad 4 bedeutet schwerste Beeinträchtigung der Selbstständigkeit. Betroffene erhalten 800 € Pflegegeld pro Monat, 1.859 € Sachleistungen und 3.539 € Entlastungsbudget pro Jahr. Mit einer 24h-Betreuungskraft ist zuhause bleiben bei PG 4 in den meisten Fällen möglich.

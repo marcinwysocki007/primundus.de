@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'unterschied', title: 'Der grundlegende Unterschied' }, { id: 'wann-kurz', title: 'Wann Kurzzeitpflege' }, { id: 'wann-24h', title: 'Wann 24h-Pflege' }, { id: 'kosten', title: 'Kostenvergleich' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -66,6 +67,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Ratgeber · 5 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">Kurzzeitpflege oder 24h-Pflege — was passt zu Ihrer Situation?</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Nach dem Krankenhausaufenthalt, beim Ausfall des pflegenden Angehörigen, in einer Übergangssituation — welche Lösung ist die richtige? Kurzzeitpflege oder direkt 24h-Pflege zuhause? Dieser Ratgeber hilft bei der Entscheidung.</p>
           <h2 id="unterschied" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Der grundlegende Unterschied</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Kurzzeitpflege ist stationär und zeitlich begrenzt — die Person zieht vorübergehend in eine Einrichtung. 24h-Pflege ist dauerhaft häuslich — eine Kraft zieht ein und bleibt so lange wie nötig.</p>

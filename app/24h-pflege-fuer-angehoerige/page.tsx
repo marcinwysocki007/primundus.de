@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'einstieg', title: 'Wann ist der richtige Zeitpunkt?' }, { id: 'ablauf', title: 'Wie läuft die Organisation ab?' }, { id: 'kosten', title: 'Was kostet es die Familie?' }, { id: 'entlastung', title: 'Entlastung für pflegende Angehörige' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -67,6 +68,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Ratgeber · 7 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">24h-Pflege für Angehörige — wie Familien die Betreuung organisieren</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Die Eltern brauchen Pflege — aber das Pflegeheim kommt nicht in Frage. Und selbst rund um die Uhr da sein ist nicht möglich. 24h-Pflege ist die Lösung: eine Betreuungskraft zieht ein, übernimmt alles, und die Familie kann wieder aufatmen.</p>
           <h2 id="einstieg" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Wann ist der richtige Zeitpunkt?</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Viele Familien warten zu lange. Die Zeichen sind oft schleichend: der Herd bleibt an, Medikamente werden vergessen, die Wohnung vernachlässigt. Der richtige Zeitpunkt ist nicht wenn nichts mehr geht — sondern wenn man merkt, dass die aktuelle Situation nicht mehr sicher ist.</p>

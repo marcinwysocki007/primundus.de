@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [
   { id: 'auswahl', title: 'Wie Primundus Kräfte auswählt' },
@@ -80,6 +81,8 @@ export default function Qualitaet() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Qualität der 24h-Pflege — wie Primundus Kräfte prüft und sichert
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
             Über 20 Jahre, mehr als 60.000 Betreuungen, Testsieger DIE WELT — diese Zahlen entstehen nicht durch Zufall. Sie entstehen durch ein konsequentes Qualitätssystem: aktive Prüfung vor jedem Einsatz, laufende Betreuung während des Einsatzes, und die Bereitschaft sofort zu reagieren wenn etwas nicht stimmt.

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'alltag', title: 'Alltag sicher gestalten' }, { id: 'orientierung', title: 'Orientierung im Haushalt' }, { id: 'aufgaben', title: 'Aufgaben der Kraft' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -66,6 +67,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Krankheiten · 4 Min</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">Pflege bei Sehbehinderung und Blindheit — was zu beachten ist</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Sehverlust im Alter ist häufig — durch Makuladegeneration, Glaukom oder Diabetische Retinopathie. Eine gute Betreuungskraft kann den Alltag trotzdem sicher und würdevoll gestalten.</p>
           <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Alltag sicher gestalten</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Dieser Ratgeber gibt Ihnen einen kompakten Überblick über das Thema — praxisnah und auf die Situation pflegender Familien zugeschnitten.</p>

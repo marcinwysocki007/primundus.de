@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'betraege', title: 'Aktuelle Beträge 2026' }, { id: 'einstufung', title: 'Wie wird eingestuft?' }, { id: 'beantragen', title: 'Pflegegrad beantragen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -67,6 +68,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Pflegegrade · 5 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">Pflegegrade 2025/2026 — aktuelle Beträge und Übersicht</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Die Pflegegrade bestimmen welche Leistungen die Pflegekasse zahlt. 2026 gelten die nach der Pflegereform 2025 angehobenen Beträge. Hier die vollständige Übersicht.</p>
           <div className="bg-[#E8F5EE] border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
             <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-3">Pflegegeld 2026 — aktuelle Beträge</p>

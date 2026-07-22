@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'aenderungen', title: 'Die wichtigsten Änderungen' }, { id: 'entlastungsbudget', title: 'Das neue Entlastungsbudget' }, { id: 'auswirkungen', title: 'Was das für Familien bedeutet' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -67,6 +68,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Ratgeber · 5 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">Pflegereform 2025 — alle wichtigen Änderungen im Überblick</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Juli 2025: Die größte Pflegereform seit Jahren tritt in Kraft. Das neue Entlastungsbudget fasst Verhinderungspflege und Kurzzeitpflege zusammen. Leistungsbeträge steigen. Was das für Familien bedeutet.</p>
           <div className="bg-[#E8F5EE] border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
             <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-3">Die wichtigsten Änderungen ab Juli 2025</p>

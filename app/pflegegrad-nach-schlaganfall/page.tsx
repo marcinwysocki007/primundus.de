@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [
   { id: 'welcher-pflegegrad', title: 'Welcher Pflegegrad nach Schlaganfall?' },
@@ -79,6 +80,8 @@ export default function PflegegradNachSchlaganfall() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Pflegegrad nach Schlaganfall — welcher Grad & wie beantragen
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Nach einem Schlaganfall ändert sich oft alles innerhalb von Stunden. Der Pflegegrad bestimmt welche Kassenzuschüsse zur Verfügung stehen — und sollte so früh wie möglich beantragt werden, da er rückwirkend ab Antragsdatum gilt. Welcher Pflegegrad realistisch ist, hängt vom tatsächlichen Ausmaß der Folgeschäden ab.

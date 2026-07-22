@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [
   { id: 'was-inbegriffen', title: 'Was ist inbegriffen?' },
@@ -77,6 +78,8 @@ export default function Leistungen() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Leistungen der 24h-Pflege — was eine Betreuungskraft macht
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Eine 24h-Betreuungskraft von Primundus ist weit mehr als eine Pflegehilfe — sie ist Begleiterin, Haushälterin, Gesellschafterin und Ansprechpartnerin in einem. Rund um die Uhr, dauerhaft im Haushalt, vertraut mit dem Pflegebedürftigen. Hier ist der vollständige Überblick was inbegriffen ist.

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'vorteile', title: 'Warum Bewegung wichtig ist' }, { id: 'uebungen', title: 'Einfache Übungen' }, { id: 'sturzpraevention', title: 'Sturzprävention' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -66,6 +67,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Alltag · 5 Min</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">Bewegung für Senioren zuhause — was geht auch bei eingeschränkter Mobilität</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Regelmäßige Bewegung erhält die Selbstständigkeit, beugt Stürzen vor und hebt die Stimmung. Auch bei eingeschränkter Mobilität gibt es viele Möglichkeiten — die Betreuungskraft kann aktiv unterstützen.</p>
           <h2 id="vorteile" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Warum Bewegung wichtig ist</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Dieser Ratgeber gibt Ihnen einen kompakten Überblick über das Thema — praxisnah und auf die Situation pflegender Familien zugeschnitten.</p>

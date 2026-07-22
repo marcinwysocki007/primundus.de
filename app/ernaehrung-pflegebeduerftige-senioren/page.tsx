@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [
   { id: 'grundlagen', title: 'Grundlagen der Seniorenernährung' },
@@ -79,6 +80,8 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Ernährung pflegebedürftiger Senioren — was wirklich wichtig ist
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Gute Ernährung ist in der Pflege oft unterschätzt — dabei ist sie eine der wirksamsten Maßnahmen für Wohlbefinden, Heilung und Lebensqualität. Pflegebedürftige Senioren haben andere Bedürfnisse als jüngere Menschen: weniger Hunger, aber höherer Nährstoffbedarf, vermindertes Durstgefühl, oft Schluckprobleme. Eine 24h-Betreuungskraft die frisch kocht macht den Unterschied.

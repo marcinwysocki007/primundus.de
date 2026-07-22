@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [
   { id: 'grundlagen', title: 'Was absetzbar ist' },
@@ -83,6 +84,8 @@ export default function PflegeSteuerlichAbsetzen() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Pflege steuerlich absetzen 2026 — was geht & wie viel?
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Pflegekosten sind steuerlich absetzbar — und das lohnt sich erheblich. Wer 24h-Pflege nutzt, kann 20 % der jährlichen Kosten direkt von der Steuerschuld abziehen — maximal 4.000 Euro pro Jahr. Bei typischen Primundus-Kosten von 2.700 €/Monat sind das die volle Maximalersparnis von 4.000 Euro jährlich.

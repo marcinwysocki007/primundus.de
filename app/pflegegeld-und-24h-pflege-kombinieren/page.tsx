@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'pflegegeld', title: 'Pflegegeld bei 24h-Pflege' }, { id: 'kombinationen', title: 'Alle Kombinationsmöglichkeiten' }, { id: 'rechnung', title: 'Rechenbeispiel PG 3' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -67,6 +68,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Finanzierung · 6 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">Pflegegeld und 24h-Pflege kombinieren — alle Optionen 2026</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Pflegegeld und 24h-Pflege schließen sich nicht aus — im Gegenteil. Mit der richtigen Kombination aller Kassenleistungen kann der Eigenanteil erheblich gesenkt werden. Dieser Ratgeber zeigt alle Optionen.</p>
           <h2 id="pflegegeld" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Pflegegeld bei 24h-Pflege — was geht?</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Bei professioneller 24h-Pflege über eine Agentur wird das Pflegegeld nicht direkt gezahlt — stattdessen gibt es Sachleistungen. Aber: Das Pflegegeld kann trotzdem fließen wenn ein Angehöriger offiziell als Pflegeperson eingetragen ist und die Pflege (anteilig) selbst übernimmt.</p>

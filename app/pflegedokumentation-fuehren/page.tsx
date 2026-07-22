@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist Pflegedokumentation?' }, { id: 'inhalt', title: 'Was wird dokumentiert?' }, { id: 'praxis', title: 'Praktisch umsetzen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -66,6 +67,8 @@ export default function Page() {
           </nav>
           <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">Rechtliches · 4 Min</p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">Pflegedokumentation in der häuslichen Pflege — was ist nötig?</h1>
+
+          <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">Eine strukturierte Pflegedokumentation schützt alle Beteiligten — und verbessert die Pflegequalität. Für Agenturen wie Primundus ist sie selbstverständlich.</p>
           <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Was ist Pflegedokumentation?</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Dieser Ratgeber gibt Ihnen einen kompakten Überblick über das Thema — praxisnah und auf die Situation pflegender Familien zugeschnitten.</p>
