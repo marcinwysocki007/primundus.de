@@ -7,6 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [
   { id: 'was-ist', title: 'Was bedeutet Pflegegrad 3?' },
   { id: 'leistungen', title: 'Leistungen & Beträge 2026' },
+  { id: 'kosten-24h', title: 'Kosten der 24-Stunden-Pflege' },
   { id: 'voraussetzungen', title: 'Voraussetzungen & Einstufung' },
   { id: 'beantragen', title: 'Pflegegrad 3 beantragen' },
   { id: 'hoeher', title: 'Höherstufung auf PG 4' },
@@ -190,6 +191,29 @@ export default function Pflegegrad3() {
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Eigenanteil senken:{' '}
             <a href="/eigenanteil-24h-pflege-senken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Möglichkeiten 2026</a>
+          </p>
+
+          {/* SECTION: Kosten 24h-Pflege */}
+          <h2 id="kosten-24h" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+            Was kostet 24-Stunden-Pflege bei Pflegegrad 3?
+          </h2>
+          <p className="text-[15px] text-[#2E2E2E] mb-4 leading-relaxed">
+            24-Stunden-Pflege kostet bei Pflegegrad 3 in der Regel <strong>2.200–3.500 € brutto pro Monat</strong>, je nach Pflegebedarf und Qualifikation der Betreuungskraft. Die Pflegekasse übernimmt einen erheblichen Teil — der tatsächliche Eigenanteil liegt oft <strong>unter 2.000 € monatlich</strong> und damit häufig günstiger als ein Pflegeheim (Ø 2.871 €/Monat Eigenanteil).
+          </p>
+          <p className="text-[15px] text-[#2E2E2E] mb-3">Diese Leistungen senken bei Pflegegrad 3 den Eigenanteil:</p>
+          <ul className="text-[15px] text-[#2E2E2E] mb-4 space-y-1.5 list-disc pl-5">
+            <li><strong>Pflegegeld:</strong> 599 €/Monat</li>
+            <li><strong>Entlastungsbetrag:</strong> 131 €/Monat</li>
+            <li><strong>Entlastungsbudget:</strong> 3.539 €/Jahr (Verhinderungs- & Kurzzeitpflege, seit Juli 2025 flexibel einsetzbar)</li>
+            <li><strong>Steuervorteil:</strong> 20 % der Kosten, bis zu 4.000 €/Jahr Steuerersparnis</li>
+          </ul>
+          <p className="text-[15px] text-[#2E2E2E] mb-3">
+            → Individuelle Berechnung:{' '}
+            <a href="https://kostenrechner.primundus.de" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten & passende Pflegekräfte in 2 Minuten</a>
+          </p>
+          <p className="text-[15px] text-[#2E2E2E] mb-10">
+            → Alle Kostenfaktoren im Detail:{' '}
+            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24-Stunden-Pflege? Kosten & Zuschüsse 2026</a>
           </p>
 
           {/* SECTION 3 */}

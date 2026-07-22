@@ -429,11 +429,11 @@ export default function Page() {
                   </thead>
                   <tbody className="divide-y divide-[#E5E3DF]">
                     {[
-                      { grad: 'Pflegegrad 1', geld: '—', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 2', geld: '347 €', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 3', geld: '599 €', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 4', geld: '800 €', entlastung: '125 €' },
-                      { grad: 'Pflegegrad 5', geld: '990 €', entlastung: '125 €' },
+                      { grad: 'Pflegegrad 1', geld: '—', entlastung: '131 €' },
+                      { grad: 'Pflegegrad 2', geld: '347 €', entlastung: '131 €' },
+                      { grad: 'Pflegegrad 3', geld: '599 €', entlastung: '131 €' },
+                      { grad: 'Pflegegrad 4', geld: '800 €', entlastung: '131 €' },
+                      { grad: 'Pflegegrad 5', geld: '990 €', entlastung: '131 €' },
                     ].map((row, i) => (
                       <tr key={i} className="hover:bg-white transition-colors">
                         <td className="px-5 py-3 font-medium text-[#3D3D3D]">{row.grad}</td>
