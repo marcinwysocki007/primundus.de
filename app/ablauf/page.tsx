@@ -32,6 +32,7 @@ const schemaMarkup = [
     headline: 'Ablauf der 24h-Pflege mit Primundus — von Anfrage bis Start',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-25',
     dateModified: '2026-04-25',
     mainEntityOfPage: 'https://primundus.de/ablauf/',
   },

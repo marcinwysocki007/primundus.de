@@ -26,6 +26,7 @@ const schemaMarkup = [
     headline: 'Vorteile der 24h-Pflege zuhause — was sie von anderen Lösungen unterscheidet',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-30',
     dateModified: '2026-04-30',
     mainEntityOfPage: 'https://primundus.de/vorteile-24h-pflege/',
   },

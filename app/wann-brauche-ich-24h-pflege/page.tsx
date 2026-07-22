@@ -33,6 +33,7 @@ const schemaMarkup = [
     headline: 'Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-25',
     dateModified: '2026-04-25',
     mainEntityOfPage: 'https://primundus.de/wann-brauche-ich-24h-pflege/',
   },

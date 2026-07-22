@@ -26,6 +26,7 @@ const schemaMarkup = [
     headline: '24h-Pflege Checkliste — alles was Familien vor dem Start vorbereiten sollten',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-30',
     dateModified: '2026-04-30',
     mainEntityOfPage: 'https://primundus.de/24h-pflege-checkliste/',
   },

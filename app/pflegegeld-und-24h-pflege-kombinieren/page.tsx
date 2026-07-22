@@ -26,6 +26,7 @@ const schemaMarkup = [
     headline: 'Pflegegeld und 24h-Pflege kombinieren — alle Optionen 2026',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-30',
     dateModified: '2026-04-30',
     mainEntityOfPage: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren/',
   },

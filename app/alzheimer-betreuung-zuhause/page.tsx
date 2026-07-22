@@ -34,6 +34,7 @@ const schemaMarkup = [
     headline: 'Alzheimer Betreuung zuhause — Stadien, Alltag & 24h-Pflege',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-25',
     dateModified: '2026-04-25',
     mainEntityOfPage: 'https://primundus.de/alzheimer-betreuung-zuhause/',
   },

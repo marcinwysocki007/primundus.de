@@ -45,6 +45,7 @@ const schemaMarkup = [
       name: 'Primundus',
       logo: 'https://primundus.de/images/primundus_logo_header.webp',
     },
+    datePublished: '2026-04-25',
     dateModified: '2026-04-25',
     mainEntityOfPage: 'https://primundus.de/pflegegrad-beantragen/',
   },

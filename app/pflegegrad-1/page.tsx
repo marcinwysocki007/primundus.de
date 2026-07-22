@@ -34,6 +34,7 @@ const schemaMarkup = [
     headline: 'Pflegegrad 1 — Leistungen, Entlastungsbetrag & Beantragen 2026',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-25',
     dateModified: '2026-04-25',
     mainEntityOfPage: 'https://primundus.de/pflegegrad-1/',
   },

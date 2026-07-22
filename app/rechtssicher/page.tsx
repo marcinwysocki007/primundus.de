@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { AuthorByline } from '@/components/AuthorByline'
 
 const SECTIONS = [
   { id: 'das-problem', title: 'Das rechtliche Problem' },
@@ -32,6 +33,7 @@ const schemaMarkup = [
     headline: 'Rechtssichere 24h-Pflege — wie es funktioniert',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
+    datePublished: '2026-04-25',
     dateModified: '2026-04-25',
     mainEntityOfPage: 'https://primundus.de/rechtssicher/',
   },
@@ -75,6 +77,8 @@ export default function Rechtssicher() {
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Rechtssichere 24h-Pflege — wie Primundus das sicherstellt
           </h1>
+
+          <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Das Thema Rechtssicherheit ist in der 24h-Pflege entscheidend — und wird von vielen Familien unterschätzt. Tausende Haushalte in Deutschland beschäftigen Pflegekräfte auf unsichere Weise und wissen es nicht. Primundus arbeitet seit über 20 Jahren ausschließlich im rechtssicheren Entsendemodell. Kein einziger Kundenfall mit rechtlichen Konsequenzen.
