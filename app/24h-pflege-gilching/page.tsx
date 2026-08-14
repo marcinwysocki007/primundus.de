@@ -77,7 +77,7 @@ export default function GilchingPage() {
             24h-Pflege Gilching — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Gilching, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Gilching und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Gilching, Argelsried oder Geisenbrunn: Am Rand des Fünfseenlands wohnt man ruhig — und möchte genau dort alt werden. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

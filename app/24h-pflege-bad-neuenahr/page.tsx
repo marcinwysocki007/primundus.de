@@ -77,7 +77,7 @@ export default function BadNeuenahrAhrweilerPage() {
             24h-Pflege Bad Neuenahr-Ahrweiler — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bad Neuenahr-Ahrweiler, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bad Neuenahr-Ahrweiler und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob im Kurviertel, in Ahrweiler oder mit Blick auf die Weinberge: Wer an der Ahr zuhause ist, bleibt hier — gerade jetzt. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function MiesbachPage() {
             24h-Pflege Miesbach — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Miesbach, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Miesbach und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Kreisstadt im Oberland, Parsberg oder das Umland Richtung Schliersee: Miesbacher geben ihr Zuhause nicht her. Eine Betreuungskraft von Primundus sorgt dafür, dass es so bleibt — sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

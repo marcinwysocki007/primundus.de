@@ -77,7 +77,7 @@ export default function HolzkirchenPage() {
             24h-Pflege Holzkirchen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Holzkirchen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Holzkirchen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Holzkirchen, Föching oder Hartpenning: Im Oberland wohnt man mit Bergblick und bleibt — auch wenn die Kinder in München arbeiten. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

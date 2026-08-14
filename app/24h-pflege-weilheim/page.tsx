@@ -77,7 +77,7 @@ export default function WeilheiminOberbayernPage() {
             24h-Pflege Weilheim in Oberbayern — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Weilheim in Oberbayern, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Weilheim in Oberbayern und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Im Pfaffenwinkel — in Weilheim, Polling oder Wielenbach an der Ammer — wohnt man mit Blick auf die Berge und bleibt. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

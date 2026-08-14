@@ -77,7 +77,7 @@ export default function GaertringenPage() {
             24h-Pflege Gärtringen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Gärtringen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Gärtringen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Im Gäu zwischen Böblingen und Herrenberg — in Gärtringen oder Rohrau — hält man an Haus und Garten fest. Eine Betreuungskraft von Primundus sorgt dafür, dass das Alter daran nichts ändert: Sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

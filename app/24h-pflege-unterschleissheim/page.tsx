@@ -77,7 +77,7 @@ export default function UnterschleissheimPage() {
             24h-Pflege Unterschleißheim — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Unterschleißheim, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Unterschleißheim und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Unterschleißheim und Lohhof: Viele sind einst für die Arbeit in den Münchner Norden gezogen — geblieben sind sie fürs Zuhause. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function RheydtPage() {
             24h-Pflege Rheydt — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Rheydt, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Rheydt und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Rheydt hat sein eigenes Zentrum, seinen eigenen Markt — und Menschen, die genau hier zuhause sind, ob in Odenkirchen, Giesenkirchen oder rund um den Rheydter Ring. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
