@@ -8,6 +8,7 @@ const moneyPages = [
   'ablauf',
   'rechtssicher',
   'qualitaet',
+  'testsieger-24-stunden-pflege',
   'kontakt',
   'beratungsgespraech',
   'franchisepartner',
