@@ -77,7 +77,7 @@ export default function LeipzigPage() {
             24h-Pflege Leipzig — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Leipzig, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Leipzig und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Gohlis, Schleußig, Connewitz: Leipzigs schöne Gründerzeitwohnungen haben oft eines gemeinsam — viele Treppen und keinen Aufzug. Trotzdem müssen Eltern deshalb nicht ins Heim: Eine Betreuungskraft von Primundus zieht mit ein, übernimmt Einkäufe, Haushalt und Begleitung und ist rund um die Uhr da — auch in Markkleeberg und Taucha. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function SaarbrueckenPage() {
             24h-Pflege Saarbrücken — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Saarbrücken, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Saarbrücken und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Von St. Johann über Dudweiler bis Burbach: Saarbrücker bleiben ihrem Viertel treu — oft ein Leben lang. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, im vertrauten Zuhause statt im Heim, auch im Umland bis Völklingen und Sulzbach. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

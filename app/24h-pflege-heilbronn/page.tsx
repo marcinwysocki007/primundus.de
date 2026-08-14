@@ -77,7 +77,7 @@ export default function HeilbronnPage() {
             24h-Pflege Heilbronn — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Heilbronn, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Heilbronn und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Das Haus mit Blick auf die Weinberge am Wartberg, die Wohnung in Böckingen oder Sontheim: Heilbronner geben ihr Zuhause nicht leichtfertig auf — schon gar nicht für ein Pflegeheim mit Warteliste. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist rund um die Uhr da, auch im ganzen Landkreis. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function GueterslohPage() {
             24h-Pflege Gütersloh — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Gütersloh, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Gütersloh und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ein Arbeitsleben bei Miele, Bertelsmann oder auf dem Hof im Umland — und den Ruhestand dann im eigenen Zuhause in Isselhorst, Spexard oder Avenwedde verbringen: So stellen sich die meisten Gütersloher das Alter vor. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

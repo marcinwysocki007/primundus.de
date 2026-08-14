@@ -77,7 +77,7 @@ export default function DormagenPage() {
             24h-Pflege Dormagen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Dormagen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Dormagen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Viele Dormagener Familien kennen das: Die Kinder arbeiten in Köln oder Düsseldorf, die Eltern wohnen in Nievenheim, Hackenbroich oder bei der alten Zollfeste in Zons — und brauchen plötzlich mehr Hilfe, als sich mit Besuchen am Wochenende leisten lässt. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

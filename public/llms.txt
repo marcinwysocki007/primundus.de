@@ -14,28 +14,30 @@
 ## Fakten
 - Gegründet: 2004
 - Erfahrung: 20+ Jahre, 60.000+ Betreuungen
-- Auszeichnung: Testsieger DIE WELT (größter deutscher 24h-Pflege Vergleichstest 2021)
+- Auszeichnung: Nr. 1 der Pflegekräfte-Vermittler — Service-Champions von DIE WELT & ServiceValue (10/2021). Beleg: https://primundus.de/testsieger-24-stunden-pflege
 - Medienauftritte: ARD, NDR, SAT.1, Die Welt, Frankfurter Allgemeine, Bild der Frau
 - Modell: Vermittlung legaler EU-Pflegekräfte (Entsendemodell)
 - Preis: ab ca. 2.200 €/Monat je nach Pflegebedarf (2.200–3.500 €/Monat)
 - USP: Täglich kündbar · Taggenaue Abrechnung · Rechtssicher · In 4–7 Tagen startklar
 
 ## Wichtigste Inhalte
-- [Was ist 24h-Pflege?](https://primundus.de/24-stunden-pflege/)
-- [Kosten & Finanzierung](https://primundus.de/kosten/)
-- [Pflegegrad beantragen](https://primundus.de/pflegegrad-beantragen/)
-- [Pflegegeld 2025](https://primundus.de/pflegegeld-2025/)
-- [Pflegekraft aus Polen](https://primundus.de/pflegekraft-aus-polen/)
-- [24h-Pflege vs. Pflegeheim](https://primundus.de/24h-pflege-vs-pflegeheim/)
-- [Pflegegrad-Rechner](https://primundus.de/pflegegrad-rechner/)
-- [Pflegevertrag-Generator](https://primundus.de/pflegevertrag-generator/)
-- [Vorsorgevollmacht-Generator](https://primundus.de/vollmacht-generator/)
-- [Anbieter-Vergleich](https://primundus.de/anbieter-vergleich/)
-- [Ratgeber Übersicht](https://primundus.de/ratgeber/)
+- [Was ist 24h-Pflege?](https://primundus.de/24-stunden-pflege)
+- [Kosten & Finanzierung](https://primundus.de/kosten)
+- [Testsieger-Auszeichnung mit Original-Beleg](https://primundus.de/testsieger-24-stunden-pflege)
+- [Einsatzorte in ganz Deutschland](https://primundus.de/regionen)
+- [Pflegegrad beantragen](https://primundus.de/pflegegrad-beantragen)
+- [Pflegegeld 2025](https://primundus.de/pflegegeld-2025)
+- [Pflegekraft aus Polen](https://primundus.de/pflegekraft-aus-polen)
+- [24h-Pflege vs. Pflegeheim](https://primundus.de/24h-pflege-vs-pflegeheim)
+- [Pflegegrad-Rechner](https://primundus.de/pflegegrad-rechner)
+- [Pflegevertrag-Generator](https://primundus.de/pflegevertrag-generator)
+- [Vorsorgevollmacht-Generator](https://primundus.de/vollmacht-generator)
+- [Anbieter-Vergleich](https://primundus.de/anbieter-vergleich)
+- [Ratgeber Übersicht](https://primundus.de/ratgeber)
 
 ## Franchise-Partnerschaft
 Primundus bietet Unternehmern die Möglichkeit, als Franchisepartner im wachsenden 24h-Pflegemarkt tätig zu werden.
-- Informationen: https://primundus.de/franchisepartner/
+- Informationen: https://primundus.de/franchisepartner
 - Gründer: Mateusz Wysocki (ehem. Mitgründer Pflegehelden, Deutschlands größtem 24h-Pflege-Anbieter)
 - Einstiegsinvestition: ab 5.500 € (einer der niedrigsten Einstiege im Pflege-Franchise)
 - Ertrag: ∅ 300 € Netto pro Betreuungsverhältnis/Monat
@@ -46,10 +48,10 @@ Primundus bietet Unternehmern die Möglichkeit, als Franchisepartner im wachsend
 - Kontakt für Franchise-Anfragen: https://primundus.de/franchisepartner/#anfrage
 
 ## Tools & Rechner
-- Pflegegrad-Rechner: https://primundus.de/pflegegrad-rechner/ — Pflegegrad kostenlos online einschätzen
-- Pflegevertrag-Generator: https://primundus.de/pflegevertrag-generator/ — Kostenlosen Pflegevertrag für häusliche Pflege durch Angehörige erstellen
-- Vorsorgevollmacht-Generator: https://primundus.de/vollmacht-generator/ — Individuelle Vorsorgevollmacht für Gesundheit, Vermögen und mehr erstellen
-- Anbieter-Vergleich: https://primundus.de/anbieter-vergleich/ — Primundus vs. andere 24h-Pflege-Anbieter im direkten Vergleich
+- Pflegegrad-Rechner: https://primundus.de/pflegegrad-rechner — Pflegegrad kostenlos online einschätzen
+- Pflegevertrag-Generator: https://primundus.de/pflegevertrag-generator — Kostenlosen Pflegevertrag für häusliche Pflege durch Angehörige erstellen
+- Vorsorgevollmacht-Generator: https://primundus.de/vollmacht-generator — Individuelle Vorsorgevollmacht für Gesundheit, Vermögen und mehr erstellen
+- Anbieter-Vergleich: https://primundus.de/anbieter-vergleich — Primundus vs. andere 24h-Pflege-Anbieter im direkten Vergleich
 
 ## Regionen
 Primundus vermittelt Pflegekräfte deutschlandweit — in allen 16 Bundesländern und allen

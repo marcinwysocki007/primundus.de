@@ -77,7 +77,7 @@ export default function IserlohnPage() {
             24h-Pflege Iserlohn — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Iserlohn, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Iserlohn und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Waldstadt lässt man nicht gern los: das eigene Haus in Letmathe oder Hennen, der Blick ins Grüne am Seilersee, die Nachbarn von nebenan. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie leisten kann, zieht eine Betreuungskraft von Primundus mit ein — und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
