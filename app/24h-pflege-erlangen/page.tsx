@@ -77,7 +77,7 @@ export default function ErlangenPage() {
             24h-Pflege Erlangen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Erlangen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Erlangen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Bruck, Büchenbach oder Tennenlohe: Viele Erlanger haben ihr Berufsleben bei Siemens oder an der Uni verbracht — und möchten im vertrauten Zuhause alt werden, während die Kinder verstreut arbeiten. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

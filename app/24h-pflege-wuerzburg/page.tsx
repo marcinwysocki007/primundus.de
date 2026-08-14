@@ -77,7 +77,7 @@ export default function WuerzburgPage() {
             24h-Pflege Würzburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Würzburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Würzburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Frauenland, Zellerau oder Heidingsfeld: Mit Blick auf Festung und Weinberge wird man in Würzburg gern alt — im eigenen Zuhause, nicht im Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da, auch im Umland an Main und Fränkischem Weinland. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

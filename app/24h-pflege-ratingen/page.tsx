@@ -77,7 +77,7 @@ export default function RatingenPage() {
             24h-Pflege Ratingen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Ratingen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Ratingen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Lintorf, Hösel oder Ratingen-West: Wer hier wohnt, hat oft in Düsseldorf gearbeitet und im Grünen gelebt — und will genau das behalten. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

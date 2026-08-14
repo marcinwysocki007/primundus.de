@@ -77,7 +77,7 @@ export default function MuelheimRuhrPage() {
             24h-Pflege Mülheim an der Ruhr — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Mülheim an der Ruhr, mit 1:1-Betreuung, täglich kündbar. In Mülheim an der Ruhr, zwischen Essen und Duisburg, vermittelt Primundus geprüfte Kräfte seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            In Saarn, Speldorf oder Broich wohnt man an der Ruhr mit Grün vor der Tür — und gibt das im Alter nicht her. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt: Sie zieht mit ein, übernimmt den Alltag und ist auch nachts da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

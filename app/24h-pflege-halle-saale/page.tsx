@@ -77,7 +77,7 @@ export default function HalleSaalePage() {
             24h-Pflege Halle (Saale) — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Halle (Saale), mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Halle (Saale) und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Das Paulusviertel mit seinen Gründerzeithäusern, Kröllwitz oder Giebichenstein an der Saale: Hallenser hängen an ihren Wohnungen — Treppen hin oder her. Eine Betreuungskraft von Primundus zieht mit ein, übernimmt Einkäufe und Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function KonstanzPage() {
             24h-Pflege Konstanz — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Konstanz, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Konstanz und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Petershausen, Allmannsdorf oder Wollmatingen: Mit dem Bodensee vor der Tür wird man in Konstanz gern alt — im eigenen Zuhause, nicht hinter Heimtüren. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

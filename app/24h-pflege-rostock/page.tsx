@@ -77,7 +77,7 @@ export default function RostockPage() {
             24h-Pflege Rostock — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Rostock, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Rostock und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Warnemünde, Reutershagen oder Brinckmansdorf: Rostocker bleiben, wo die Ostsee nah ist — im vertrauten Zuhause mit Möwen überm Dach. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

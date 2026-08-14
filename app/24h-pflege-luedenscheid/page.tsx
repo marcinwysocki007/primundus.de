@@ -77,7 +77,7 @@ export default function LuedenscheidPage() {
             24h-Pflege Lüdenscheid — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Lüdenscheid, mit 1:1-Betreuung, täglich kündbar. In Lüdenscheid und dem Märkischen Sauerland vermittelt Primundus geprüfte Kräfte seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob in Brügge, Gevelndorf oder oben in der Bergstadt: Lüdenscheider wohnen im Sauerland mit Hanglage und Weitblick — und bleiben. Eine Betreuungskraft von Primundus zieht mit ein, begleitet jeden Weg und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

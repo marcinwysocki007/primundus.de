@@ -77,7 +77,7 @@ export default function ViersenPage() {
             24h-Pflege Viersen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Viersen, mit 1:1-Betreuung, täglich kündbar. In Viersen und dem Kreis Viersen am linken Niederrhein vermittelt Primundus geprüfte Kräfte seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Dülken, Süchteln oder Boisheim: Am Niederrhein bleibt man seinem Ort treu — und dem eigenen Haus sowieso. Eine Betreuungskraft von Primundus zieht mit ein, wenn Mutter oder Vater Hilfe brauchen, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

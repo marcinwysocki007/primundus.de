@@ -77,7 +77,7 @@ export default function DuerenPage() {
             24h-Pflege Düren — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Düren, mit 1:1-Betreuung, täglich kündbar. In Düren und dem Kreis Düren vermittelt Primundus geprüfte Kräfte seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Birkesdorf, Gürzenich oder Lendersdorf: Zwischen Köln und Aachen wohnt man in Düren mit der Rur vor der Tür — und möchte dort auch alt werden. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

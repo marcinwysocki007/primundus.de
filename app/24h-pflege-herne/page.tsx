@@ -77,7 +77,7 @@ export default function HernePage() {
             24h-Pflege Herne — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Herne, mit 1:1-Betreuung, täglich kündbar. In Herne im Ruhrgebiet vermittelt Primundus geprüfte Kräfte seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Wanne-Eickel, Sodingen und Börnig wohnt man in Herne nah beieinander — und bleibt am liebsten im eigenen Zuhause. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
