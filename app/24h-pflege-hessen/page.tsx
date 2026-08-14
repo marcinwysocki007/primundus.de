@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Hessen?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2040 €/Monat — oft günstiger als ein Pflegeheim in Hessen (Ø 2,600–3,400 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2040 €/Monat — oft günstiger als ein Pflegeheim in Hessen (Ø 2.600–3.400 €/Monat Eigenanteil).'.replace(',', '.') },
       },
     ],
   },

@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Bayern?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2400 €/Monat — oft günstiger als ein Pflegeheim in Bayern (Ø 2,800–4,000 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2400 €/Monat — oft günstiger als ein Pflegeheim in Bayern (Ø 2.800–4.000 €/Monat Eigenanteil).'.replace(',', '.') },
       },
     ],
   },

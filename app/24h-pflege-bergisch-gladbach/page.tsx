@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Bergisch Gladbach?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Pflegeheim in Bergisch Gladbach (Ø 2,700–3,200 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Pflegeheim in Bergisch Gladbach (Ø 2.700–3.200 €/Monat Eigenanteil).'.replace(',', '.') },
       },
       {
         '@type': 'Question',
@@ -198,7 +198,7 @@ export default function BergischGladbachPage() {
               </div>
             </div>
             <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-5 py-3">
-              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim Bergisch Gladbach: Eigenanteil Ø 2,700–3,200 €/Monat — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
+              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim Bergisch Gladbach: Eigenanteil Ø 2.700–3.200 €/Monat — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
             </div>
           </div>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
@@ -234,7 +234,7 @@ export default function BergischGladbachPage() {
           <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Bergisch Gladbach</h2>
           <div className="space-y-3 mb-12">
             {[
-              { q: 'Was kostet eine 24h-Pflegekraft in Bergisch Gladbach?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Pflegeheim in Bergisch Gladbach (Ø 2,700–3,200 €/Monat Eigenanteil).' },
+              { q: 'Was kostet eine 24h-Pflegekraft in Bergisch Gladbach?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Pflegeheim in Bergisch Gladbach (Ø 2.700–3.200 €/Monat Eigenanteil).' },
               { q: 'Wie schnell kann eine Pflegekraft in Bergisch Gladbach starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. In dringenden Situationen oft schneller möglich.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bergisch Gladbach rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit über 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },

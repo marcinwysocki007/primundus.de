@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Bremen?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Pflegeheim in Bremen (Ø 2,400–2,900 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Pflegeheim in Bremen (Ø 2.400–2.900 €/Monat Eigenanteil).'.replace(',', '.') },
       },
     ],
   },

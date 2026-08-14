@@ -135,7 +135,7 @@ export default function FranchisePage() {
             <div className="h-8 w-px bg-[#E5E3DF] hidden sm:block" />
             <div>
               <p className="text-[13px] font-semibold text-[#3D3D3D]">Testsieger DIE WELT</p>
-              <p className="text-[12px] text-[#8B8B8B]">Deutschlands größter 24h-Pflege-Vergleichstest</p>
+              <p className="text-[12px] text-[#8B8B8B]">Nr. 1 der Pflegekräfte-Vermittler — DIE WELT & ServiceValue</p>
             </div>
             <div className="h-8 w-px bg-[#E5E3DF] hidden sm:block" />
             <div>
