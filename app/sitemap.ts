@@ -64,6 +64,7 @@ const artikel = [
   'sozialhilfe-bei-pflegebedarf',
   'pflegegeld-und-24h-pflege-kombinieren',
   'eigenanteil-24h-pflege-senken',
+  '24-stunden-pflege-kostenuebernahme',
   'pflegereform-2025',
   'foerderungen-nach-bundesland',
   'pflegekasse-antrag-stellen',
