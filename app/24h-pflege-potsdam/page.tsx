@@ -77,7 +77,7 @@ export default function PotsdamPage() {
             24h-Pflege Potsdam — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Potsdam, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Potsdam und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Babelsberg, Bornstedt und den Havelseen wohnt man zu schön, um fürs Alter wegzuziehen. Eine Betreuungskraft von Primundus sorgt dafür, dass niemand muss: Sie zieht mit ein, ist Tag und Nacht da und hält den vertrauten Alltag am Laufen — in Potsdam und im Umland. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

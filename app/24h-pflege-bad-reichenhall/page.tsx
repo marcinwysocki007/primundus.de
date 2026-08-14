@@ -77,7 +77,7 @@ export default function BadReichenhallPage() {
             24h-Pflege Bad Reichenhall — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bad Reichenhall, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bad Reichenhall und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Alpenkurstadt mit Salzgeschichte: In Bad Reichenhall, Kirchberg oder drüben in Bayerisch Gmain lebt man mit Bergblick — und möchte genau dort gepflegt werden, nicht hinter Heimtüren. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

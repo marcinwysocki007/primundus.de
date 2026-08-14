@@ -77,7 +77,7 @@ export default function TrierPage() {
             24h-Pflege Trier — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Trier, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Trier und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Deutschlands älteste Stadt ist zum Bleiben gebaut: die Wohnung in Trier-Süd, das Haus in Ehrang oder Heiligkreuz, die Mosel vor der Tür. Eine Betreuungskraft von Primundus sorgt dafür, dass das Zuhause auch mit Pflegebedarf Zuhause bleibt — sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

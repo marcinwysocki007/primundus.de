@@ -77,7 +77,7 @@ export default function OldenburgPage() {
             24h-Pflege Oldenburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Oldenburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Oldenburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            In Eversten, Osternburg oder Ofenerdiek wohnt man gern mit Garten und Fahrradweg vor der Tür — und möchte genau dort auch alt werden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, im vertrauten Zuhause, auch im Ammerland und Umland. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

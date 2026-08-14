@@ -77,7 +77,7 @@ export default function BergischGladbachPage() {
             24h-Pflege Bergisch Gladbach — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bergisch Gladbach, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bergisch Gladbach und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            In Bensberg, Refrath oder Paffrath wohnen viele, deren Kinder täglich nach Köln pendeln — und die ihr Haus im Grünen um nichts in der Welt aufgeben wollen. Müssen sie auch nicht: Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da, wenn allein leben nicht mehr geht. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

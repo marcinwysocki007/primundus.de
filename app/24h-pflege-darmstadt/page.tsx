@@ -77,7 +77,7 @@ export default function DarmstadtPage() {
             24h-Pflege Darmstadt — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Darmstadt, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Darmstadt und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob Jugendstilwohnung nahe der Mathildenhöhe, Haus in Bessungen oder Eberstadt: Darmstädter möchten im Alter dort bleiben, wo ihr Leben stattgefunden hat. Eine Betreuungskraft von Primundus macht das möglich — sie zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da, bis Arheilgen und ins Umland. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function AachenPage() {
             24h-Pflege Aachen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Aachen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Aachen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob in Burtscheid, Brand oder Laurensberg: Aachener bleiben ihrer Stadt im Dreiländereck treu — und ihrem Zuhause erst recht. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie leisten kann, zieht eine Betreuungskraft von Primundus mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

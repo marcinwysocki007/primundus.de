@@ -77,7 +77,7 @@ export default function PfaffenhofenanderIlmPage() {
             24h-Pflege Pfaffenhofen an der Ilm — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Pfaffenhofen an der Ilm, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Pfaffenhofen an der Ilm und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Hopfengärten der Hallertau, der Ilm und den Dörfern Richtung Wolnzach und Scheyern: Rund um Pfaffenhofen bleibt man auf dem eigenen Grund — auch wenn München und Ingolstadt nah sind, das Zuhause ist näher. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

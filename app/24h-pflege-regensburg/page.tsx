@@ -77,7 +77,7 @@ export default function RegensburgPage() {
             24h-Pflege Regensburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Regensburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Regensburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob Altbau in Stadtamhof, Wohnung in Kumpfmühl oder Haus in Reinhausen: Regensburger geben ihren Platz an der Donau nicht her. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist rund um die Uhr da — im vertrauten Zuhause statt im Heim. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

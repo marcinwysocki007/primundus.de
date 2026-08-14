@@ -77,7 +77,7 @@ export default function SingenamHohentwielPage() {
             24h-Pflege Singen am Hohentwiel — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Singen am Hohentwiel, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Singen am Hohentwiel und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Mit dem Hohentwiel vor dem Fenster wird man ungern woanders alt: Singener bleiben in ihrem Haus, ob stadtnah oder in Rielasingen und Gottmadingen. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da — im ganzen Hegau bis zum Bodensee. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

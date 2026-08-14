@@ -77,7 +77,7 @@ export default function KrefeldPage() {
             24h-Pflege Krefeld — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Krefeld, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Krefeld und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Uerdingen am Rhein, Bockum, Hüls: Die Samt- und Seidenstadt hält ihre Menschen — und die halten an ihrem Zuhause fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht: Sie führt den Haushalt, begleitet den Tag und ist nachts da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

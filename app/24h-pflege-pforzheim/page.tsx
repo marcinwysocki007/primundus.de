@@ -77,7 +77,7 @@ export default function PforzheimPage() {
             24h-Pflege Pforzheim — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Pforzheim, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Pforzheim und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Goldstadt lässt ihre Menschen nicht los: Wer in Brötzingen, auf dem Buckenberg oder in Huchenfeld sein Haus hat, will es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da — zwischen Enz und Schwarzwaldrand, im vertrauten Zuhause. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
