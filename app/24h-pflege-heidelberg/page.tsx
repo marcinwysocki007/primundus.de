@@ -77,7 +77,7 @@ export default function HeidelbergPage() {
             24h-Pflege Heidelberg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Heidelberg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Heidelberg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Handschuhsheim, Neuenheim oder Rohrbach: Heidelberger Wohnungen mit Blick auf Schloss oder Neckar gibt man nicht auf — auch nicht, wenn die Kinder längst woanders forschen und arbeiten. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

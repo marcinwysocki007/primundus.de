@@ -77,7 +77,7 @@ export default function HanauPage() {
             24h-Pflege Hanau — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Hanau, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Hanau und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Steinheim, Großauheim oder Kesselstadt: Hanauer wohnen am Main mit Geschichte — und wollen im Alter genau dort bleiben. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein, übernimmt den Alltag und ist auch nachts da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

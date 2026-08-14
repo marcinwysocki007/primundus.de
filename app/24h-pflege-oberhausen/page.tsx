@@ -77,7 +77,7 @@ export default function OberhausenPage() {
             24h-Pflege Oberhausen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Oberhausen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Oberhausen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Sterkrade, Osterfeld oder Alt-Oberhausen: Wer hier sein Haus abbezahlt hat, will es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt — sie zieht mit ein, führt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

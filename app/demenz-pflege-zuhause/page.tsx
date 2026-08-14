@@ -14,11 +14,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Demenz Pflege zuhause — was möglich ist & wann 24h-Pflege hilft | Primundus',
-  description: 'Demenzpflege zuhause: Was Angehörige leisten können, ab wann 24h-Pflege sinnvoll ist und welche Kassenzuschüsse 2026 helfen. Mit konkreten Alltagstipps.',
+  title: 'Demenzbetreuung zu Hause: Was möglich ist & wann 24h-Pflege hilft | Primundus',
+  description: 'Demenzbetreuung zu Hause: Was Angehörige leisten können, ab wann eine 24-Stunden-Betreuung bei Demenz sinnvoll ist und welche Kassenzuschüsse 2026 helfen.',
   alternates: { canonical: 'https://primundus.de/demenz-pflege-zuhause' },
   openGraph: {
-    title: 'Demenz Pflege zuhause | Primundus',
+    title: 'Demenzbetreuung zu Hause: 24h-Pflege bei Demenz | Primundus',
     description: 'Was bei Demenz zuhause möglich ist, ab wann 24h-Pflege nötig wird und welche Leistungen die Pflegekasse zahlt.',
     url: 'https://primundus.de/demenz-pflege-zuhause',
     siteName: 'Primundus',
@@ -84,7 +84,7 @@ export default function DemenzPflegeZuhause() {
           </p>
 
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            Demenz Pflege zuhause — was möglich ist & wann 24h-Pflege hilft
+            Demenzbetreuung zu Hause: Was möglich ist — und wann 24h-Pflege hilft
           </h1>
 
           <AuthorByline updated="25. April 2026" />

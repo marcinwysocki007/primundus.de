@@ -77,7 +77,7 @@ export default function BraunschweigPage() {
             24h-Pflege Braunschweig — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Braunschweig, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Braunschweig und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Östliches Ringgebiet, Melverode oder raus Richtung Riddagshausen: Braunschweiger bleiben ihrer Löwenstadt treu — und dem eigenen Zuhause erst recht. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

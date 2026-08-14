@@ -77,7 +77,7 @@ export default function WolfsburgPage() {
             24h-Pflege Wolfsburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Wolfsburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Wolfsburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Fallersleben, Vorsfelde oder Detmerode: Ein Arbeitsleben bei VW, ein Haus mit Garten — und der Wunsch, genau dort alt zu werden. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein, wenn Hilfe nötig wird, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
