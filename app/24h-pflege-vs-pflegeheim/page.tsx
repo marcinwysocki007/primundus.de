@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'kosten', title: 'Kostenvergleich 2026' }, { id: 'qualit
 export const metadata: Metadata = {
   title: '24h-Pflege vs. Pflegeheim — vollständiger Vergleich 2026 | Primundus',
   description: '24h-Pflege zuhause oder Pflegeheim? Kosten, Qualität, Alltag — vollständiger Vergleich 2026 mit echten Zahlen. Wann was die bessere Wahl ist.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim' },
   openGraph: {
     title: '24h-Pflege vs. Pflegeheim 2026 | Primundus',
     description: '24h-Pflege zuhause oder Pflegeheim? Kosten, Qualität, Alltag — vollständiger Vergleich 2026 mit echten Zahlen. Wann was die bessere Wahl ist.',
-    url: 'https://primundus.de/24h-pflege-vs-pflegeheim/',
+    url: 'https://primundus.de/24h-pflege-vs-pflegeheim',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-pflegeheim/',
+    mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-pflegeheim',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: '24h-Pflege vs. Pflegeheim', item: 'https://primundus.de/24h-pflege-vs-pflegeheim/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: '24h-Pflege vs. Pflegeheim', item: 'https://primundus.de/24h-pflege-vs-pflegeheim' },
     ],
   },
   {

@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekraft aus Bulgarien — legal, Kosten & Entsendemodell | Primundus',
   description: 'Pflegekraft aus Bulgarien: Wie das Entsendemodell funktioniert, was eine bulgarische Betreuungskraft kostet und worauf bei der Auswahl zu achten ist.',
-  alternates: { canonical: 'https://primundus.de/pflegekraft-aus-bulgarien/' },
+  alternates: { canonical: 'https://primundus.de/pflegekraft-aus-bulgarien' },
   openGraph: {
     title: 'Pflegekraft aus Bulgarien | Primundus',
     description: 'Pflegekraft aus Bulgarien im Entsendemodell: legal, sicher und oft eine gute Wahl.',
-    url: 'https://primundus.de/pflegekraft-aus-bulgarien/',
+    url: 'https://primundus.de/pflegekraft-aus-bulgarien',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekraft-aus-bulgarien/',
+    mainEntityOfPage: 'https://primundus.de/pflegekraft-aus-bulgarien',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekraft aus Bulgarien', item: 'https://primundus.de/pflegekraft-aus-bulgarien/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekraft aus Bulgarien', item: 'https://primundus.de/pflegekraft-aus-bulgarien' },
     ],
   },
   {

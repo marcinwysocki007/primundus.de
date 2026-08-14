@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Bensheim — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Bensheim: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-bensheim/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-bensheim' },
   openGraph: {
     title: '24h-Pflege Bensheim — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Bensheim. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-bensheim/',
+    url: 'https://primundus.de/24h-pflege-bensheim',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Bensheim',
     description: '24h-Betreuungskräfte in Bensheim. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-bensheim/',
+    url: 'https://primundus.de/24h-pflege-bensheim',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bensheim' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bensheim', item: 'https://primundus.de/24h-pflege-bensheim/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bensheim', item: 'https://primundus.de/24h-pflege-bensheim' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function BensheimPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="bensheim" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Bensheim die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

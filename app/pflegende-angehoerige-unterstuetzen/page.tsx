@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegende Angehörige unterstützen — Entlastung & Hilfe | Primundus',
   description: 'Wie man pflegende Angehörige unterstützt: Konkrete Entlastungsangebote, Selbstfürsorge-Tipps und wie man Hilfe annimmt. Für pflegende und für diejenigen die helfen wollen.',
-  alternates: { canonical: 'https://primundus.de/pflegende-angehoerige-unterstuetzen/' },
+  alternates: { canonical: 'https://primundus.de/pflegende-angehoerige-unterstuetzen' },
   openGraph: {
     title: 'Pflegende Angehörige unterstützen | Primundus',
     description: 'Wie man pflegende Angehörige wirklich unterstützt — konkrete Hilfe statt gut gemeinter Ratschläge.',
-    url: 'https://primundus.de/pflegende-angehoerige-unterstuetzen/',
+    url: 'https://primundus.de/pflegende-angehoerige-unterstuetzen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegende-angehoerige-unterstuetzen/',
+    mainEntityOfPage: 'https://primundus.de/pflegende-angehoerige-unterstuetzen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegende Angehörige unterstützen', item: 'https://primundus.de/pflegende-angehoerige-unterstuetzen/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegende Angehörige unterstützen', item: 'https://primundus.de/pflegende-angehoerige-unterstuetzen' },
     ],
   },
 ]

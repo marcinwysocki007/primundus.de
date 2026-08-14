@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Selbst pflegen oder 24h-Pflege? — Ehrlicher Vergleich | Primundus',
   description: 'Selbst pflegen oder eine 24h-Betreuungskraft? Ein ehrlicher Vergleich: wann Angehörigenpflege funktioniert, wann sie an Grenzen stößt und welche Kombination am besten trägt.',
-  alternates: { canonical: 'https://primundus.de/selbst-pflegen-oder-24h-pflege/' },
+  alternates: { canonical: 'https://primundus.de/selbst-pflegen-oder-24h-pflege' },
   openGraph: {
     title: 'Selbst pflegen oder 24h-Pflege? | Primundus',
     description: 'Wann Angehörigenpflege reicht — und wann eine 24h-Kraft die bessere Entscheidung ist.',
-    url: 'https://primundus.de/selbst-pflegen-oder-24h-pflege/',
+    url: 'https://primundus.de/selbst-pflegen-oder-24h-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/selbst-pflegen-oder-24h-pflege/',
+    mainEntityOfPage: 'https://primundus.de/selbst-pflegen-oder-24h-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche/' },
-      { '@type': 'ListItem', position: 3, name: 'Selbst pflegen oder 24h-Pflege', item: 'https://primundus.de/selbst-pflegen-oder-24h-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche' },
+      { '@type': 'ListItem', position: 3, name: 'Selbst pflegen oder 24h-Pflege', item: 'https://primundus.de/selbst-pflegen-oder-24h-pflege' },
     ],
   },
 ]

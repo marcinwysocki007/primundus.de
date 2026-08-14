@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: '24h-Pflege-Anbieter im Vergleich 2026 | Primundus',
   description: 'Primundus im Vergleich: Sofortangebot, täglich kündbar, tagsgenaue Abrechnung, Pflegekräfte im Kundenportal. Was andere 24h-Pflege-Anbieter nicht leisten.',
-  alternates: { canonical: 'https://primundus.de/anbieter-vergleich/' },
+  alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
     title: '24h-Pflege-Anbieter im Vergleich 2026 | Primundus',
     description: 'Sofortangebot statt Wartezeit, täglich kündbar statt 14 Tage, tagsgenaue Abrechnung — Primundus vs. andere 24h-Anbieter.',
-    url: 'https://primundus.de/anbieter-vergleich/',
+    url: 'https://primundus.de/anbieter-vergleich',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools/' },
-      { '@type': 'ListItem', position: 3, name: 'Anbieter-Vergleich', item: 'https://primundus.de/anbieter-vergleich/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Anbieter-Vergleich', item: 'https://primundus.de/anbieter-vergleich' },
     ],
   },
   {

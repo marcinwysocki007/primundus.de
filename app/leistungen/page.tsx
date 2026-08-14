@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht | Primundus',
   description: 'Was macht eine 24h-Betreuungskraft? Pflege, Haushalt, Begleitung, medizinische Unterstützung — alle Leistungen der Primundus 24h-Pflege im Überblick.',
-  alternates: { canonical: 'https://primundus.de/leistungen/' },
+  alternates: { canonical: 'https://primundus.de/leistungen' },
   openGraph: {
     title: 'Leistungen der 24h-Pflege | Primundus',
     description: 'Was eine 24h-Betreuungskraft macht — alle Leistungen im Überblick.',
-    url: 'https://primundus.de/leistungen/',
+    url: 'https://primundus.de/leistungen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,14 +35,14 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/leistungen/',
+    mainEntityOfPage: 'https://primundus.de/leistungen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Leistungen', item: 'https://primundus.de/leistungen/' },
+      { '@type': 'ListItem', position: 2, name: 'Leistungen', item: 'https://primundus.de/leistungen' },
     ],
   },
   {

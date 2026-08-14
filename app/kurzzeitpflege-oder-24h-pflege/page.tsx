@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'unterschied', title: 'Der grundlegende Unterschied' }, 
 export const metadata: Metadata = {
   title: 'Kurzzeitpflege oder 24h-Pflege — was ist besser? | Primundus',
   description: 'Kurzzeitpflege vs. 24h-Pflege zuhause: Wann was sinnvoll ist, Kostenvergleich 2026 und welche Lösung für welche Situation passt.',
-  alternates: { canonical: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege/' },
+  alternates: { canonical: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege' },
   openGraph: {
     title: 'Kurzzeitpflege oder 24h-Pflege? | Primundus',
     description: 'Kurzzeitpflege vs. 24h-Pflege zuhause: Wann was sinnvoll ist, Kostenvergleich 2026 und welche Lösung für welche Situation passt.',
-    url: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege/',
+    url: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege/',
+    mainEntityOfPage: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Kurzzeitpflege oder 24h-Pflege', item: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Kurzzeitpflege oder 24h-Pflege', item: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege' },
     ],
   },
   {

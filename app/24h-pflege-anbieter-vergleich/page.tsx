@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'kriterien', title: 'Die wichtigsten Kriterien' }, { id:
 export const metadata: Metadata = {
   title: '24h-Pflege Anbieter Vergleich 2026 — worauf es ankommt | Primundus',
   description: 'Worauf man beim Vergleich von 24h-Pflege-Anbietern achten sollte: Rechtssicherheit, Qualitätsprüfung, Transparenz, Kosten. Primundus im Vergleich.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-anbieter-vergleich/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-anbieter-vergleich' },
   openGraph: {
     title: '24h-Pflege Anbieter Vergleich 2026 | Primundus',
     description: 'Worauf man beim Vergleich von 24h-Pflege-Anbietern achten sollte: Rechtssicherheit, Qualitätsprüfung, Transparenz, Kosten. Primundus im Vergleich.',
-    url: 'https://primundus.de/24h-pflege-anbieter-vergleich/',
+    url: 'https://primundus.de/24h-pflege-anbieter-vergleich',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/24h-pflege-anbieter-vergleich/',
+    mainEntityOfPage: 'https://primundus.de/24h-pflege-anbieter-vergleich',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: '24h-Pflege Anbieter Vergleich', item: 'https://primundus.de/24h-pflege-anbieter-vergleich/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: '24h-Pflege Anbieter Vergleich', item: 'https://primundus.de/24h-pflege-anbieter-vergleich' },
     ],
   },
   {

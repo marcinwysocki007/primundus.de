@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflege und Beruf vereinbaren — Rechte, Tipps & Lösungen 2026 | Primundus',
   description: 'Pflege und Beruf vereinbaren: Pflegezeit, Familienpflegezeit, Freistellungsansprüche und wie eine 24h-Betreuungskraft die Doppelbelastung löst.',
-  alternates: { canonical: 'https://primundus.de/pflege-und-beruf-vereinbaren/' },
+  alternates: { canonical: 'https://primundus.de/pflege-und-beruf-vereinbaren' },
   openGraph: {
     title: 'Pflege und Beruf vereinbaren 2026 | Primundus',
     description: 'Rechte, Freistellungen und praktische Lösungen wenn Pflege und Beruf zusammenkommen.',
-    url: 'https://primundus.de/pflege-und-beruf-vereinbaren/',
+    url: 'https://primundus.de/pflege-und-beruf-vereinbaren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflege-und-beruf-vereinbachen/',
+    mainEntityOfPage: 'https://primundus.de/pflege-und-beruf-vereinbachen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflege und Beruf vereinbaren', item: 'https://primundus.de/pflege-und-beruf-vereinbaren/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Pflege und Beruf vereinbaren', item: 'https://primundus.de/pflege-und-beruf-vereinbaren' },
     ],
   },
   {

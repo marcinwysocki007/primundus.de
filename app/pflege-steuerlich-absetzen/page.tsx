@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflege steuerlich absetzen 2026 — was geht & wie viel? | Primundus',
   description: 'Pflege steuerlich absetzen 2026: 20 % der Kosten als haushaltsnahe Dienstleistung, max. 4.000 € Ersparnis/Jahr. Außergewöhnliche Belastungen zusätzlich möglich.',
-  alternates: { canonical: 'https://primundus.de/pflege-steuerlich-absetzen/' },
+  alternates: { canonical: 'https://primundus.de/pflege-steuerlich-absetzen' },
   openGraph: {
     title: 'Pflege steuerlich absetzen 2026 | Primundus',
     description: '20 % der Pflegekosten absetzbar — max. 4.000 € Steuerersparnis/Jahr. Wie es geht und was zusätzlich möglich ist.',
-    url: 'https://primundus.de/pflege-steuerlich-absetzen/',
+    url: 'https://primundus.de/pflege-steuerlich-absetzen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflege-steuerlich-absetzen/',
+    mainEntityOfPage: 'https://primundus.de/pflege-steuerlich-absetzen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflege steuerlich absetzen', item: 'https://primundus.de/pflege-steuerlich-absetzen/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Pflege steuerlich absetzen', item: 'https://primundus.de/pflege-steuerlich-absetzen' },
     ],
   },
   {

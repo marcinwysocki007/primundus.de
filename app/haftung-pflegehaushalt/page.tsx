@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'haftung-kraft', title: 'Haftung der Kraft' }, { id: 'ha
 export const metadata: Metadata = {
   title: 'Haftung im Pflegehaushalt — wer haftet wofür? | Primundus',
   description: 'Haftungsfragen in der 24h-Pflege: Was passiert wenn die Kraft einen Schaden verursacht? Wer haftet bei Unfällen? Alles Wichtige kompakt.',
-  alternates: { canonical: 'https://primundus.de/haftung-pflegehaushalt/' },
+  alternates: { canonical: 'https://primundus.de/haftung-pflegehaushalt' },
   openGraph: {
     title: 'Haftung Pflegehaushalt',
     description: 'Haftungsfragen in der 24h-Pflege: Was passiert wenn die Kraft einen Schaden verursacht? Wer haftet bei Unfällen? Alles Wichtige kompakt.',
-    url: 'https://primundus.de/haftung-pflegehaushalt/',
+    url: 'https://primundus.de/haftung-pflegehaushalt',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/haftung-pflegehaushalt/',
+    mainEntityOfPage: 'https://primundus.de/haftung-pflegehaushalt',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Haftung im Pflegehaushalt', item: 'https://primundus.de/haftung-pflegehaushalt/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Haftung im Pflegehaushalt', item: 'https://primundus.de/haftung-pflegehaushalt' },
     ],
   },
   {

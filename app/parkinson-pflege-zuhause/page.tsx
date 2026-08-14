@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Parkinson Pflege zuhause — Alltag, Tipps & 24h-Pflege | Primundus',
   description: 'Parkinson Pflege zuhause: Besonderheiten, Alltagstipps, welcher Pflegegrad möglich ist und wann eine 24h-Betreuungskraft die richtige Unterstützung bietet.',
-  alternates: { canonical: 'https://primundus.de/parkinson-pflege-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/parkinson-pflege-zuhause' },
   openGraph: {
     title: 'Parkinson Pflege zuhause | Primundus',
     description: 'Parkinson-Pflege zuhause: Alltagstipps, Pflegegrade und wie 24h-Pflege hilft.',
-    url: 'https://primundus.de/parkinson-pflege-zuhause/',
+    url: 'https://primundus.de/parkinson-pflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/parkinson-pflege-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/parkinson-pflege-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Parkinson Pflege zuhause', item: 'https://primundus.de/parkinson-pflege-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Parkinson Pflege zuhause', item: 'https://primundus.de/parkinson-pflege-zuhause' },
     ],
   },
   {

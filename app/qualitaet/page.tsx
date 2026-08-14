@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Qualität der 24h-Pflege bei Primundus — wie wir Kräfte prüfen | Primundus',
   description: 'Wie Primundus die Qualität der Betreuungskräfte sicherstellt: aktive Prüfung von Deutschkenntnissen, Erfahrung und Referenzen. Laufende Qualitätssicherung, täglich kündbar.',
-  alternates: { canonical: 'https://primundus.de/qualitaet/' },
+  alternates: { canonical: 'https://primundus.de/qualitaet' },
   openGraph: {
     title: 'Qualität der 24h-Pflege | Primundus',
     description: 'Wie Primundus Betreuungskräfte prüft und Qualität dauerhaft sicherstellt.',
-    url: 'https://primundus.de/qualitaet/',
+    url: 'https://primundus.de/qualitaet',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,14 +35,14 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/qualitaet/',
+    mainEntityOfPage: 'https://primundus.de/qualitaet',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Qualität', item: 'https://primundus.de/qualitaet/' },
+      { '@type': 'ListItem', position: 2, name: 'Qualität', item: 'https://primundus.de/qualitaet' },
     ],
   },
   {

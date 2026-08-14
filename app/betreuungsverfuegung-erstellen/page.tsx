@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'was-ist', title: 'Was ist eine Betreuungsverfügung?' }
 export const metadata: Metadata = {
   title: 'Betreuungsverfügung erstellen — Anleitung & Muster 2026 | Primundus',
   description: 'Betreuungsverfügung erstellen: was sie ist, wie sie sich von der Vorsorgevollmacht unterscheidet und was reingehört. Mit Checkliste.',
-  alternates: { canonical: 'https://primundus.de/betreuungsverfuegung-erstellen/' },
+  alternates: { canonical: 'https://primundus.de/betreuungsverfuegung-erstellen' },
   openGraph: {
     title: 'Betreuungsverfügung erstellen',
     description: 'Betreuungsverfügung erstellen: was sie ist, wie sie sich von der Vorsorgevollmacht unterscheidet und was reingehört. Mit Checkliste.',
-    url: 'https://primundus.de/betreuungsverfuegung-erstellen/',
+    url: 'https://primundus.de/betreuungsverfuegung-erstellen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/betreuungsverfuegung-erstellen/',
+    mainEntityOfPage: 'https://primundus.de/betreuungsverfuegung-erstellen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Betreuungsverfügung erstellen', item: 'https://primundus.de/betreuungsverfuegung-erstellen/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Betreuungsverfügung erstellen', item: 'https://primundus.de/betreuungsverfuegung-erstellen' },
     ],
   },
   {

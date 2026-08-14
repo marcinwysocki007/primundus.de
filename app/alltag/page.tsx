@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: 'Alltag & Angehörige — Ratgeber für pflegende Familien | Primundus',
   description: 'Ratgeber für pflegende Angehörige: Burnout vermeiden, Pflege und Beruf vereinbaren, Vorsorgevollmacht, Patientenverfügung, Hausnotruf, barrierefreies Wohnen.',
-  alternates: { canonical: 'https://primundus.de/alltag/' },
+  alternates: { canonical: 'https://primundus.de/alltag' },
   openGraph: {
     title: 'Alltag & Angehörige | Primundus',
     description: 'Alle Ratgeber für pflegende Familien — von Burnout-Prävention bis Patientenverfügung.',
-    url: 'https://primundus.de/alltag/',
+    url: 'https://primundus.de/alltag',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
     ],
   },
 ])

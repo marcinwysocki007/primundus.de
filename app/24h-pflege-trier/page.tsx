@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Trier — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Trier: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-trier/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-trier' },
   openGraph: {
     title: '24h-Pflege Trier — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Trier. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-trier/',
+    url: 'https://primundus.de/24h-pflege-trier',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Trier',
     description: '24h-Betreuungskräfte in Trier. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-trier/',
+    url: 'https://primundus.de/24h-pflege-trier',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Trier' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Trier', item: 'https://primundus.de/24h-pflege-trier/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Trier', item: 'https://primundus.de/24h-pflege-trier' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function TrierPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="trier" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Trier die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

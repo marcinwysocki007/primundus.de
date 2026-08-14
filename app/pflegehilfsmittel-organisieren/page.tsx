@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'uebersicht', title: 'Übersicht Hilfsmittel' }, { id: '
 export const metadata: Metadata = {
   title: 'Pflegehilfsmittel organisieren & verwalten | Primundus',
   description: 'Alle Pflegehilfsmittel im Überblick: technische Hilfsmittel, Verbrauchsprodukte, wie man alles organisiert und was Betreuungskräfte brauchen.',
-  alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-organisieren/' },
+  alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-organisieren' },
   openGraph: {
     title: 'Pflegehilfsmittel organisieren',
     description: 'Alle Pflegehilfsmittel im Überblick: technische Hilfsmittel, Verbrauchsprodukte, wie man alles organisiert und was Betreuungskräfte brauchen.',
-    url: 'https://primundus.de/pflegehilfsmittel-organisieren/',
+    url: 'https://primundus.de/pflegehilfsmittel-organisieren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegehilfsmittel-organisieren/',
+    mainEntityOfPage: 'https://primundus.de/pflegehilfsmittel-organisieren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegehilfsmittel organisieren', item: 'https://primundus.de/pflegehilfsmittel-organisieren/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegehilfsmittel organisieren', item: 'https://primundus.de/pflegehilfsmittel-organisieren' },
     ],
   },
   {

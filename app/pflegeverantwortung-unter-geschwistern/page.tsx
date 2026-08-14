@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'konflikte', title: 'Typische Konflikte' }, { id: 'aufte
 export const metadata: Metadata = {
   title: 'Pflegeverantwortung unter Geschwistern aufteilen | Primundus',
   description: 'Wenn Geschwister sich die Pflege der Eltern aufteilen müssen: wie man faire Vereinbarungen trifft und Konflikte vermeidet.',
-  alternates: { canonical: 'https://primundus.de/pflegeverantwortung-unter-geschwistern/' },
+  alternates: { canonical: 'https://primundus.de/pflegeverantwortung-unter-geschwistern' },
   openGraph: {
     title: 'Pflegeverantwortung Geschwister',
     description: 'Wenn Geschwister sich die Pflege der Eltern aufteilen müssen: wie man faire Vereinbarungen trifft und Konflikte vermeidet.',
-    url: 'https://primundus.de/pflegeverantwortung-unter-geschwistern/',
+    url: 'https://primundus.de/pflegeverantwortung-unter-geschwistern',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegeverantwortung-unter-geschwistern/',
+    mainEntityOfPage: 'https://primundus.de/pflegeverantwortung-unter-geschwistern',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegeverantwortung unter Geschwistern', item: 'https://primundus.de/pflegeverantwortung-unter-geschwistern/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegeverantwortung unter Geschwistern', item: 'https://primundus.de/pflegeverantwortung-unter-geschwistern' },
     ],
   },
   {

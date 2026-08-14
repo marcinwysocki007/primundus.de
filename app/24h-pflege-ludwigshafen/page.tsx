@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Ludwigshafen am Rhein — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Ludwigshafen am Rhein: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-ludwigshafen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-ludwigshafen' },
   openGraph: {
     title: '24h-Pflege Ludwigshafen am Rhein — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Ludwigshafen am Rhein. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-ludwigshafen/',
+    url: 'https://primundus.de/24h-pflege-ludwigshafen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Ludwigshafen am Rhein',
     description: '24h-Betreuungskräfte in Ludwigshafen am Rhein. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-ludwigshafen/',
+    url: 'https://primundus.de/24h-pflege-ludwigshafen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Ludwigshafen am Rhein' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Ludwigshafen am Rhein', item: 'https://primundus.de/24h-pflege-ludwigshafen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Ludwigshafen am Rhein', item: 'https://primundus.de/24h-pflege-ludwigshafen' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function LudwigshafenamRheinPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="ludwigshafen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Ludwigshafen am Rhein die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

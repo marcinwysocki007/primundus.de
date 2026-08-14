@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Rosenheim — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Rosenheim: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-rosenheim/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-rosenheim' },
   openGraph: {
     title: '24h-Pflege Rosenheim — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Rosenheim. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-rosenheim/',
+    url: 'https://primundus.de/24h-pflege-rosenheim',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Rosenheim',
     description: '24h-Betreuungskräfte in Rosenheim. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-rosenheim/',
+    url: 'https://primundus.de/24h-pflege-rosenheim',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Rosenheim' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Rosenheim', item: 'https://primundus.de/24h-pflege-rosenheim/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Rosenheim', item: 'https://primundus.de/24h-pflege-rosenheim' },
     ],
   },
   {
@@ -317,6 +318,8 @@ export default function RosenheimPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="rosenheim" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Rosenheim die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

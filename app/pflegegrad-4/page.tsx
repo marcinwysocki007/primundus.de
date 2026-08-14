@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad 4 — Leistungen & 800 € Pflegegeld 2026 | Primundus',
   description: 'Pflegegrad 4: 800 € Pflegegeld/Monat, 1.859 € Sachleistungen, 3.539 € Entlastungsbudget/Jahr. Schwerste Beeinträchtigung — alle Leistungen und ob 24h-Pflege möglich ist.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-4/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-4' },
   openGraph: {
     title: 'Pflegegrad 4 — Leistungen & Beträge 2026 | Primundus',
     description: 'Pflegegrad 4: 800 € Pflegegeld + 1.859 € Sachleistungen. Schwerste Beeinträchtigung — alle Leistungen 2026.',
-    url: 'https://primundus.de/pflegegrad-4/',
+    url: 'https://primundus.de/pflegegrad-4',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-4/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-4',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 4', item: 'https://primundus.de/pflegegrad-4/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 4', item: 'https://primundus.de/pflegegrad-4' },
     ],
   },
   {

@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: 'Pflegegrade — alle 5 Grade, Beträge & Leistungen 2026 | Primundus',
   description: 'Pflegegrade 2026: Alle 5 Pflegegrade erklärt — Voraussetzungen, Pflegegeld (347–990 €/Monat), Sachleistungen und wie man richtig eingestuft wird.',
-  alternates: { canonical: 'https://primundus.de/pflegegrade/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrade' },
   openGraph: {
     title: 'Pflegegrade 2026 — alle 5 Grade im Überblick | Primundus',
     description: 'Pflegegrade 1–5: Voraussetzungen, Pflegegeld, Sachleistungen und Beantragung. Alles erklärt.',
-    url: 'https://primundus.de/pflegegrade/',
+    url: 'https://primundus.de/pflegegrade',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
     ],
   },
   {

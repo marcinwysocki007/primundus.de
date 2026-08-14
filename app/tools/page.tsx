@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige | Primundus',
   description: 'Kostenloser Pflegegrad-Rechner, Zuschuss-Rechner und 24h-Pflegekostenrechner — alle Tools für Ihre Pflegeplanung 2026. Anonym, kostenlos, sofort nutzbar.',
   alternates: {
-    canonical: 'https://primundus.de/tools/',
+    canonical: 'https://primundus.de/tools',
   },
   openGraph: {
     title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige | Primundus',
     description: 'Pflegegrad einschätzen, Zuschüsse berechnen, Kosten vergleichen — alle Werkzeuge für Ihre Pflegeplanung.',
-    url: 'https://primundus.de/tools/',
+    url: 'https://primundus.de/tools',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -24,7 +24,7 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflege-Tools & Rechner', item: 'https://primundus.de/tools/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflege-Tools & Rechner', item: 'https://primundus.de/tools' },
     ],
   },
   {

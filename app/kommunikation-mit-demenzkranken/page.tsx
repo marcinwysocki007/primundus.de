@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Kommunikation mit Demenzkranken — was hilft & was schadet | Primundus',
   description: 'Kommunikation mit Demenzkranken: 5 Grundprinzipien, konkrete Gesprächstipps und wie man schwierige Situationen (Aggression, Verweigerung, Weinen) meistert.',
-  alternates: { canonical: 'https://primundus.de/kommunikation-mit-demenzkranken/' },
+  alternates: { canonical: 'https://primundus.de/kommunikation-mit-demenzkranken' },
   openGraph: {
     title: 'Kommunikation mit Demenzkranken | Primundus',
     description: 'Was bei der Kommunikation mit Demenzkranken hilft und was schadet — 5 Grundprinzipien und konkrete Tipps.',
-    url: 'https://primundus.de/kommunikation-mit-demenzkranken/',
+    url: 'https://primundus.de/kommunikation-mit-demenzkranken',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/kommunikation-mit-demenzkranken/',
+    mainEntityOfPage: 'https://primundus.de/kommunikation-mit-demenzkranken',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Kommunikation mit Demenzkranken', item: 'https://primundus.de/kommunikation-mit-demenzkranken/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Kommunikation mit Demenzkranken', item: 'https://primundus.de/kommunikation-mit-demenzkranken' },
     ],
   },
   {

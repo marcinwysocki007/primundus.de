@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Greifswald — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Greifswald: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1400 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-greifswald/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-greifswald' },
   openGraph: {
     title: '24h-Pflege Greifswald — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Greifswald. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-greifswald/',
+    url: 'https://primundus.de/24h-pflege-greifswald',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Greifswald',
     description: '24h-Betreuungskräfte in Greifswald. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-greifswald/',
+    url: 'https://primundus.de/24h-pflege-greifswald',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Greifswald' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Greifswald', item: 'https://primundus.de/24h-pflege-greifswald/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Greifswald', item: 'https://primundus.de/24h-pflege-greifswald' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function GreifswaldPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="greifswald" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Greifswald die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

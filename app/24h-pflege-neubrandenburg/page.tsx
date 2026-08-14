@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Neubrandenburg — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Neubrandenburg: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1400 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-neubrandenburg/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-neubrandenburg' },
   openGraph: {
     title: '24h-Pflege Neubrandenburg — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Neubrandenburg. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-neubrandenburg/',
+    url: 'https://primundus.de/24h-pflege-neubrandenburg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Neubrandenburg',
     description: '24h-Betreuungskräfte in Neubrandenburg. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-neubrandenburg/',
+    url: 'https://primundus.de/24h-pflege-neubrandenburg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Neubrandenburg' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Neubrandenburg', item: 'https://primundus.de/24h-pflege-neubrandenburg/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Neubrandenburg', item: 'https://primundus.de/24h-pflege-neubrandenburg' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function NeubrandenburgPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="neubrandenburg" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Neubrandenburg die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

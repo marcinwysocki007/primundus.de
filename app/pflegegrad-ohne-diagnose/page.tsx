@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'grundsatz', title: 'Was bewertet der MD?' }, { id: 'dia
 export const metadata: Metadata = {
   title: 'Pflegegrad ohne Diagnose — geht das? | Primundus',
   description: 'Kann man einen Pflegegrad beantragen ohne offizielle Diagnose? Was der MD bewertet und warum eine Diagnose oft trotzdem hilfreich ist.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-ohne-diagnose/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-ohne-diagnose' },
   openGraph: {
     title: 'Pflegegrad ohne Diagnose',
     description: 'Kann man einen Pflegegrad beantragen ohne offizielle Diagnose? Was der MD bewertet und warum eine Diagnose oft trotzdem hilfreich ist.',
-    url: 'https://primundus.de/pflegegrad-ohne-diagnose/',
+    url: 'https://primundus.de/pflegegrad-ohne-diagnose',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-ohne-diagnose/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-ohne-diagnose',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad ohne Diagnose', item: 'https://primundus.de/pflegegrad-ohne-diagnose/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad ohne Diagnose', item: 'https://primundus.de/pflegegrad-ohne-diagnose' },
     ],
   },
   {

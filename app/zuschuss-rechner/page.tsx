@@ -4,11 +4,11 @@ import { ZuschussRechnerClient } from './ZuschussRechnerClient'
 export const metadata: Metadata = {
   title: 'Pflegezuschüsse 2026 — alle Leistungen im Überblick | Primundus',
   description: 'Welche Zuschüsse stehen Ihnen zu? Pflegegrad wählen und sofort alle Leistungen 2026 sehen: Pflegegeld, Entlastungsbudget und Steuerabzug.',
-  alternates: { canonical: 'https://primundus.de/zuschuss-rechner/' },
+  alternates: { canonical: 'https://primundus.de/zuschuss-rechner' },
   openGraph: {
     title: 'Zuschuss & Förderung 2026 | Primundus',
     description: 'Alle Pflegeleistungen nach Pflegegrad — Pflegegeld, Entlastungsbudget, Steuerabzug. Eigenanteil für 24h-Pflege sofort berechnen.',
-    url: 'https://primundus.de/zuschuss-rechner/',
+    url: 'https://primundus.de/zuschuss-rechner',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools/' },
-      { '@type': 'ListItem', position: 3, name: 'Zuschuss & Förderung 2026', item: 'https://primundus.de/zuschuss-rechner/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Zuschuss & Förderung 2026', item: 'https://primundus.de/zuschuss-rechner' },
     ],
   },
   {

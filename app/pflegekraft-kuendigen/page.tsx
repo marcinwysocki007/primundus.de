@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekraft kündigen — Fristen, Muster & Ablauf 2026 | Primundus',
   description: 'Pflegekraft kündigen 2026: Kündigungsfristen je nach Beschäftigungsmodell, Musterschreiben und was bei Kündigung aus wichtigem Grund gilt.',
-  alternates: { canonical: 'https://primundus.de/pflegekraft-kuendigen/' },
+  alternates: { canonical: 'https://primundus.de/pflegekraft-kuendigen' },
   openGraph: {
     title: 'Pflegekraft kündigen 2026 | Primundus',
     description: 'Kündigungsfristen, Musterschreiben und Ablauf — je nach Beschäftigungsmodell.',
-    url: 'https://primundus.de/pflegekraft-kuendigen/',
+    url: 'https://primundus.de/pflegekraft-kuendigen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekraft-kuendigen/',
+    mainEntityOfPage: 'https://primundus.de/pflegekraft-kuendigen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekraft kündigen', item: 'https://primundus.de/pflegekraft-kuendigen/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekraft kündigen', item: 'https://primundus.de/pflegekraft-kuendigen' },
     ],
   },
 ]

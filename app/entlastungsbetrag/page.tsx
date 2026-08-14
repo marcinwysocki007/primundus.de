@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen | Primundus',
   description: 'Entlastungsbetrag 2026: 131 €/Monat für alle Pflegegrade 1–5. Wofür er nutzbar ist, wie man ihn beantragt und wie er mit Pflegegeld und 24h-Pflege kombiniert wird.',
-  alternates: { canonical: 'https://primundus.de/entlastungsbetrag/' },
+  alternates: { canonical: 'https://primundus.de/entlastungsbetrag' },
   openGraph: {
     title: 'Entlastungsbetrag 2026 — 131 €/Monat | Primundus',
     description: '131 €/Monat für alle Pflegegrade 1–5. Wofür nutzbar, wie beantragen, wie kombinieren.',
-    url: 'https://primundus.de/entlastungsbetrag/',
+    url: 'https://primundus.de/entlastungsbetrag',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/entlastungsbetrag/',
+    mainEntityOfPage: 'https://primundus.de/entlastungsbetrag',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Entlastungsbetrag', item: 'https://primundus.de/entlastungsbetrag/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Entlastungsbetrag', item: 'https://primundus.de/entlastungsbetrag' },
     ],
   },
   {

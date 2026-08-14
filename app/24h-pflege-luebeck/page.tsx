@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Lübeck — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Lübeck: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-luebeck/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-luebeck' },
   openGraph: {
     title: '24h-Pflege Lübeck — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Lübeck. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-luebeck/',
+    url: 'https://primundus.de/24h-pflege-luebeck',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Lübeck',
     description: '24h-Betreuungskräfte in Lübeck. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-luebeck/',
+    url: 'https://primundus.de/24h-pflege-luebeck',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Lübeck' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Lübeck', item: 'https://primundus.de/24h-pflege-luebeck/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Lübeck', item: 'https://primundus.de/24h-pflege-luebeck' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function LuebeckPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="luebeck" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Lübeck die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

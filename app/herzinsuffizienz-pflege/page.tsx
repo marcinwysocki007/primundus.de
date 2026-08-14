@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Herzinsuffizienz Pflege zuhause — was möglich ist 2026 | Primundus',
   description: 'Herzinsuffizienz Pflege zuhause: Was in welchem NYHA-Stadium möglich ist, worauf täglich geachtet werden muss und ab wann eine 24h-Betreuungskraft sinnvoll ist.',
-  alternates: { canonical: 'https://primundus.de/herzinsuffizienz-pflege/' },
+  alternates: { canonical: 'https://primundus.de/herzinsuffizienz-pflege' },
   openGraph: {
     title: 'Herzinsuffizienz Pflege zuhause | Primundus',
     description: 'Was bei Herzinsuffizienz zuhause möglich ist und ab wann 24h-Pflege sinnvoll wird.',
-    url: 'https://primundus.de/herzinsuffizienz-pflege/',
+    url: 'https://primundus.de/herzinsuffizienz-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/herzinsuffizienz-pflege/',
+    mainEntityOfPage: 'https://primundus.de/herzinsuffizienz-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Herzinsuffizienz Pflege', item: 'https://primundus.de/herzinsuffizienz-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Herzinsuffizienz Pflege', item: 'https://primundus.de/herzinsuffizienz-pflege' },
     ],
   },
   {

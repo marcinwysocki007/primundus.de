@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Kombinationsleistung Pflege — Pflegegeld + Sachleistung kombinieren | Primundus',
   description: 'Kombinationsleistung Pflege: Pflegesachleistungen und Pflegegeld gleichzeitig nutzen. Berechnung, Rechenbeispiel und wann die Kombination besonders sinnvoll ist.',
-  alternates: { canonical: 'https://primundus.de/kombinationsleistung-pflege/' },
+  alternates: { canonical: 'https://primundus.de/kombinationsleistung-pflege' },
   openGraph: {
     title: 'Kombinationsleistung Pflege | Primundus',
     description: 'Pflegegeld und Sachleistungen kombinieren — wie es geht und was dabei rauskommt.',
-    url: 'https://primundus.de/kombinationsleistung-pflege/',
+    url: 'https://primundus.de/kombinationsleistung-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/kombinationsleistung-pflege/',
+    mainEntityOfPage: 'https://primundus.de/kombinationsleistung-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Kombinationsleistung', item: 'https://primundus.de/kombinationsleistung-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Kombinationsleistung', item: 'https://primundus.de/kombinationsleistung-pflege' },
     ],
   },
   {

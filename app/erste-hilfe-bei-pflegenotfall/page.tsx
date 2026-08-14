@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'notfallplan', title: 'Notfallplan' }, { id: 'sturz', ti
 export const metadata: Metadata = {
   title: 'Erste Hilfe bei Pflegenotfall — was zu tun ist | Primundus',
   description: 'Was tun bei Sturz, Bewusstlosigkeit oder Herzprobleme in der Pflegesituation? Schritt-für-Schritt-Anleitung und Notfallplan.',
-  alternates: { canonical: 'https://primundus.de/erste-hilfe-bei-pflegenotfall/' },
+  alternates: { canonical: 'https://primundus.de/erste-hilfe-bei-pflegenotfall' },
   openGraph: {
     title: 'Erste Hilfe Pflegenotfall',
     description: 'Was tun bei Sturz, Bewusstlosigkeit oder Herzprobleme in der Pflegesituation? Schritt-für-Schritt-Anleitung und Notfallplan.',
-    url: 'https://primundus.de/erste-hilfe-bei-pflegenotfall/',
+    url: 'https://primundus.de/erste-hilfe-bei-pflegenotfall',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/erste-hilfe-bei-pflegenotfall/',
+    mainEntityOfPage: 'https://primundus.de/erste-hilfe-bei-pflegenotfall',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Erste Hilfe Pflegenotfall', item: 'https://primundus.de/erste-hilfe-bei-pflegenotfall/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Erste Hilfe Pflegenotfall', item: 'https://primundus.de/erste-hilfe-bei-pflegenotfall' },
     ],
   },
   {

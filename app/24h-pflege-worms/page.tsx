@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Worms — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Worms: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-worms/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-worms' },
   openGraph: {
     title: '24h-Pflege Worms — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Worms. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-worms/',
+    url: 'https://primundus.de/24h-pflege-worms',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Worms',
     description: '24h-Betreuungskräfte in Worms. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-worms/',
+    url: 'https://primundus.de/24h-pflege-worms',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Worms' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Worms', item: 'https://primundus.de/24h-pflege-worms/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Worms', item: 'https://primundus.de/24h-pflege-worms' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function WormsPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="worms" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Worms die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

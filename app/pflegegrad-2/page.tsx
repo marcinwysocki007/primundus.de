@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad 2 — Leistungen & 347 € Pflegegeld 2026 | Primundus',
   description: 'Pflegegrad 2: 347 € Pflegegeld/Monat, 796 € Sachleistungen, 3.539 € Entlastungsbudget/Jahr. Alle Leistungen, Voraussetzungen und ob 24h-Pflege sinnvoll ist.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-2/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-2' },
   openGraph: {
     title: 'Pflegegrad 2 — Leistungen & Beträge 2026 | Primundus',
     description: 'Pflegegrad 2: 347 € Pflegegeld + 796 € Sachleistungen + 3.539 € Entlastungsbudget. Alle Leistungen 2026.',
-    url: 'https://primundus.de/pflegegrad-2/',
+    url: 'https://primundus.de/pflegegrad-2',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-2/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-2',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 2', item: 'https://primundus.de/pflegegrad-2/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 2', item: 'https://primundus.de/pflegegrad-2' },
     ],
   },
   {

@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekraft Sozialversicherung anmelden — Anleitung 2026 | Primundus',
   description: 'Pflegekraft bei der Sozialversicherung anmelden: Minijob, reguläre Beschäftigung oder Entsendemodell — wann was gilt und wie die Anmeldung läuft. 2026.',
-  alternates: { canonical: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden/' },
+  alternates: { canonical: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden' },
   openGraph: {
     title: 'Pflegekraft Sozialversicherung anmelden 2026 | Primundus',
     description: 'Sozialversicherungsanmeldung für Pflegekräfte — Minijob, regulär oder Entsendemodell.',
-    url: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden/',
+    url: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden/',
+    mainEntityOfPage: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekraft Sozialversicherung anmelden', item: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden/' },
+      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekraft Sozialversicherung anmelden', item: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden' },
     ],
   },
 ]

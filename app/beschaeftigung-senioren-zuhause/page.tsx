@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'ideen', title: 'Praktische Ideen' }, { id: 'demenz', ti
 export const metadata: Metadata = {
   title: 'Beschäftigung von Senioren zuhause — Ideen & Tipps | Primundus',
   description: 'Wie Senioren zuhause aktiv und geistig fit bleiben: praktische Ideen für Beschäftigung, Tagesstruktur und soziale Teilhabe.',
-  alternates: { canonical: 'https://primundus.de/beschaeftigung-senioren-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/beschaeftigung-senioren-zuhause' },
   openGraph: {
     title: 'Beschäftigung Senioren zuhause',
     description: 'Wie Senioren zuhause aktiv und geistig fit bleiben: praktische Ideen für Beschäftigung, Tagesstruktur und soziale Teilhabe.',
-    url: 'https://primundus.de/beschaeftigung-senioren-zuhause/',
+    url: 'https://primundus.de/beschaeftigung-senioren-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/beschaeftigung-senioren-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/beschaeftigung-senioren-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Beschäftigung Senioren zuhause', item: 'https://primundus.de/beschaeftigung-senioren-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Beschäftigung Senioren zuhause', item: 'https://primundus.de/beschaeftigung-senioren-zuhause' },
     ],
   },
   {

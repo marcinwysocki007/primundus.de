@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Marl — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Marl: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-marl/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-marl' },
   openGraph: {
     title: '24h-Pflege Marl — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Marl. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-marl/',
+    url: 'https://primundus.de/24h-pflege-marl',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Marl',
     description: '24h-Betreuungskräfte in Marl. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-marl/',
+    url: 'https://primundus.de/24h-pflege-marl',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Marl' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Marl', item: 'https://primundus.de/24h-pflege-marl/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Marl', item: 'https://primundus.de/24h-pflege-marl' },
     ],
   },
   {
@@ -308,6 +309,8 @@ export default function MarlPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="marl" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Marl die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

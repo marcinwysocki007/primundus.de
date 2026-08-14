@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Bad Nauheim — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Bad Nauheim: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-nauheim/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-nauheim' },
   openGraph: {
     title: '24h-Pflege Bad Nauheim — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Bad Nauheim. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-nauheim/',
+    url: 'https://primundus.de/24h-pflege-bad-nauheim',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Bad Nauheim',
     description: '24h-Betreuungskräfte in Bad Nauheim. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-nauheim/',
+    url: 'https://primundus.de/24h-pflege-bad-nauheim',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bad Nauheim' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Nauheim', item: 'https://primundus.de/24h-pflege-bad-nauheim/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Nauheim', item: 'https://primundus.de/24h-pflege-bad-nauheim' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function BadNauheimPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="bad-nauheim" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Bad Nauheim die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

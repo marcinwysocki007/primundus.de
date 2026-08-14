@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekraft aus Polen — legal, sicher & bezahlbar 2026 | Primundus',
   description: 'Pflegekraft aus Polen: 2.200–3.500 €/Monat, legal über Entsendemodell mit A1-Bescheinigung. Was kostet es, wie funktioniert es rechtlich und worauf achten?',
-  alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen/' },
+  alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen' },
   openGraph: {
     title: 'Pflegekraft aus Polen — legal & sicher 2026 | Primundus',
     description: 'Pflegekraft aus Polen: 2.200–3.500 €/Monat, legal über Entsendemodell. Kosten, Rechtliches & Qualität erklärt.',
-    url: 'https://primundus.de/pflegekraft-aus-polen/',
+    url: 'https://primundus.de/pflegekraft-aus-polen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekraft-aus-polen/',
+    mainEntityOfPage: 'https://primundus.de/pflegekraft-aus-polen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekraft aus Polen', item: 'https://primundus.de/pflegekraft-aus-polen/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekraft aus Polen', item: 'https://primundus.de/pflegekraft-aus-polen' },
     ],
   },
   {

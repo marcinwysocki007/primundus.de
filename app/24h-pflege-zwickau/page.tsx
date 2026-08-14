@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Zwickau — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Zwickau: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1400 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-zwickau/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-zwickau' },
   openGraph: {
     title: '24h-Pflege Zwickau — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Zwickau. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-zwickau/',
+    url: 'https://primundus.de/24h-pflege-zwickau',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Zwickau',
     description: '24h-Betreuungskräfte in Zwickau. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-zwickau/',
+    url: 'https://primundus.de/24h-pflege-zwickau',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Zwickau' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Zwickau', item: 'https://primundus.de/24h-pflege-zwickau/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Zwickau', item: 'https://primundus.de/24h-pflege-zwickau' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function ZwickauPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="zwickau" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Zwickau die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

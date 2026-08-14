@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegevertrag aufsetzen — was muss rein? Muster & Tipps | Primundus',
   description: 'Pflegevertrag aufsetzen: Was in einen Pflegevertrag gehört, welches Modell für wen gilt und worauf bei der Kündigung geachtet werden muss. Mit Checkliste.',
-  alternates: { canonical: 'https://primundus.de/pflegevertrag-aufsetzen/' },
+  alternates: { canonical: 'https://primundus.de/pflegevertrag-aufsetzen' },
   openGraph: {
     title: 'Pflegevertrag aufsetzen | Primundus',
     description: 'Was in einen Pflegevertrag gehört, Beschäftigungsmodelle und Kündigungsfristen — Checkliste und Tipps.',
-    url: 'https://primundus.de/pflegevertrag-aufsetzen/',
+    url: 'https://primundus.de/pflegevertrag-aufsetzen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegevertrag-aufsetzen/',
+    mainEntityOfPage: 'https://primundus.de/pflegevertrag-aufsetzen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegevertrag aufsetzen', item: 'https://primundus.de/pflegevertrag-aufsetzen/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegevertrag aufsetzen', item: 'https://primundus.de/pflegevertrag-aufsetzen' },
     ],
   },
   {

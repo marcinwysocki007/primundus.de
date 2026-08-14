@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Bad Neuenahr-Ahrweiler — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Bad Neuenahr-Ahrweiler: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-neuenahr/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-neuenahr' },
   openGraph: {
     title: '24h-Pflege Bad Neuenahr-Ahrweiler — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Bad Neuenahr-Ahrweiler. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-neuenahr/',
+    url: 'https://primundus.de/24h-pflege-bad-neuenahr',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Bad Neuenahr-Ahrweiler',
     description: '24h-Betreuungskräfte in Bad Neuenahr-Ahrweiler. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-neuenahr/',
+    url: 'https://primundus.de/24h-pflege-bad-neuenahr',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bad Neuenahr-Ahrweiler' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Neuenahr-Ahrweiler', item: 'https://primundus.de/24h-pflege-bad-neuenahr/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Neuenahr-Ahrweiler', item: 'https://primundus.de/24h-pflege-bad-neuenahr' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function BadNeuenahrAhrweilerPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="bad-neuenahr" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Bad Neuenahr-Ahrweiler die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

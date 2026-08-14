@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Wuppertal — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Wuppertal: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-wuppertal/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-wuppertal' },
   openGraph: {
     title: '24h-Pflege Wuppertal — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Wuppertal. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-wuppertal/',
+    url: 'https://primundus.de/24h-pflege-wuppertal',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Wuppertal',
     description: '24h-Betreuungskräfte in Wuppertal. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-wuppertal/',
+    url: 'https://primundus.de/24h-pflege-wuppertal',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Wuppertal' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Wuppertal', item: 'https://primundus.de/24h-pflege-wuppertal/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Wuppertal', item: 'https://primundus.de/24h-pflege-wuppertal' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function WuppertalPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="wuppertal" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Wuppertal die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

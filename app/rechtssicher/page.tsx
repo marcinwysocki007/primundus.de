@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Rechtssichere 24h-Pflege — wie es funktioniert | Primundus',
   description: '24h-Pflege rechtssicher organisieren: Warum das Entsendemodell die einzig sichere Lösung ist, wie A1-Bescheinigung schützt und was bei einer Kontrolle passiert.',
-  alternates: { canonical: 'https://primundus.de/rechtssicher/' },
+  alternates: { canonical: 'https://primundus.de/rechtssicher' },
   openGraph: {
     title: 'Rechtssichere 24h-Pflege | Primundus',
     description: 'Wie 24h-Pflege rechtssicher funktioniert — Entsendemodell, A1-Bescheinigung, keine Scheinselbstständigkeit.',
-    url: 'https://primundus.de/rechtssicher/',
+    url: 'https://primundus.de/rechtssicher',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,14 +35,14 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/rechtssicher/',
+    mainEntityOfPage: 'https://primundus.de/rechtssicher',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Rechtssicher', item: 'https://primundus.de/rechtssicher/' },
+      { '@type': 'ListItem', position: 2, name: 'Rechtssicher', item: 'https://primundus.de/rechtssicher' },
     ],
   },
   {

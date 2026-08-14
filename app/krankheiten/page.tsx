@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: 'Krankheiten & Pflege zuhause — Ratgeber für alle Diagnosen | Primundus',
   description: 'Pflege zuhause bei Demenz, Alzheimer, Parkinson, Schlaganfall, Herzinsuffizienz, MS und mehr. Alle Krankheits-Ratgeber von Primundus auf einen Blick.',
-  alternates: { canonical: 'https://primundus.de/krankheiten/' },
+  alternates: { canonical: 'https://primundus.de/krankheiten' },
   openGraph: {
     title: 'Krankheiten & Pflege zuhause | Primundus',
     description: 'Ratgeber für alle Diagnosen: Demenz, Alzheimer, Parkinson, Schlaganfall, MS, Herzinsuffizienz.',
-    url: 'https://primundus.de/krankheiten/',
+    url: 'https://primundus.de/krankheiten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflege bei Krankheiten', item: 'https://primundus.de/krankheiten/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflege bei Krankheiten', item: 'https://primundus.de/krankheiten' },
     ],
   },
 ])

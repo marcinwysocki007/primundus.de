@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Gauting — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Gauting: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-gauting/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-gauting' },
   openGraph: {
     title: '24h-Pflege Gauting — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Gauting. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-gauting/',
+    url: 'https://primundus.de/24h-pflege-gauting',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Gauting',
     description: '24h-Betreuungskräfte in Gauting. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-gauting/',
+    url: 'https://primundus.de/24h-pflege-gauting',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Gauting' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Gauting', item: 'https://primundus.de/24h-pflege-gauting/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Gauting', item: 'https://primundus.de/24h-pflege-gauting' },
     ],
   },
   {
@@ -320,6 +321,8 @@ export default function GautingPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="gauting" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Gauting die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

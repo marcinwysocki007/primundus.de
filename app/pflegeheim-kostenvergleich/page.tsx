@@ -4,11 +4,11 @@ import { PflegeheimVergleichClient } from './PflegeheimVergleichClient'
 export const metadata: Metadata = {
   title: 'Pflegeheim vs. 24h-Pflege Kostenvergleich 2026 | Primundus',
   description: 'Pflegeheim kostet 2026 im Schnitt 2.871 €/Monat Eigenanteil. 24h-Pflege zuhause oft günstiger — jetzt Kosten nach Pflegegrad und Bundesland vergleichen.',
-  alternates: { canonical: 'https://primundus.de/pflegeheim-kostenvergleich/' },
+  alternates: { canonical: 'https://primundus.de/pflegeheim-kostenvergleich' },
   openGraph: {
     title: 'Pflegeheim vs. 24h-Pflege — Kostenvergleich 2026 | Primundus',
     description: 'Direkter Vergleich der Eigenanteile — Pflegegrad und Bundesland wählen, sofort sehen wie viel 24h-Pflege spart.',
-    url: 'https://primundus.de/pflegeheim-kostenvergleich/',
+    url: 'https://primundus.de/pflegeheim-kostenvergleich',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegeheim-Kostenvergleich', item: 'https://primundus.de/pflegeheim-kostenvergleich/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegeheim-Kostenvergleich', item: 'https://primundus.de/pflegeheim-kostenvergleich' },
     ],
   },
   {

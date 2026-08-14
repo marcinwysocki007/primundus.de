@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'was-zahlt', title: 'Was zahlt die Kasse?' }, { id: 'ant
 export const metadata: Metadata = {
   title: 'Rollstuhl & Hilfsmittel beantragen — so geht es | Primundus',
   description: 'Rollstuhl, Rollator, Pflegebett beantragen: Was zahlt die Kasse, wie läuft der Antrag, was braucht man? Schritt-für-Schritt.',
-  alternates: { canonical: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen/' },
+  alternates: { canonical: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen' },
   openGraph: {
     title: 'Hilfsmittel Rollstuhl beantragen',
     description: 'Rollstuhl, Rollator, Pflegebett beantragen: Was zahlt die Kasse, wie läuft der Antrag, was braucht man? Schritt-für-Schritt.',
-    url: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen/',
+    url: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen/',
+    mainEntityOfPage: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Hilfsmittel Rollstuhl beantragen', item: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Hilfsmittel Rollstuhl beantragen', item: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen' },
     ],
   },
   {

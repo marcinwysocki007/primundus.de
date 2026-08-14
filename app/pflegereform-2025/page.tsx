@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'aenderungen', title: 'Die wichtigsten Änderungen' }, {
 export const metadata: Metadata = {
   title: 'Pflegereform 2025 — was hat sich geändert? | Primundus',
   description: 'Pflegereform 2025: Das neue Entlastungsbudget, höhere Leistungsbeträge, Änderungen bei Verhinderungs- und Kurzzeitpflege. Alle Änderungen kompakt.',
-  alternates: { canonical: 'https://primundus.de/pflegereform-2025/' },
+  alternates: { canonical: 'https://primundus.de/pflegereform-2025' },
   openGraph: {
     title: 'Pflegereform 2025 | Primundus',
     description: 'Pflegereform 2025: Das neue Entlastungsbudget, höhere Leistungsbeträge, Änderungen bei Verhinderungs- und Kurzzeitpflege. Alle Änderungen kompakt.',
-    url: 'https://primundus.de/pflegereform-2025/',
+    url: 'https://primundus.de/pflegereform-2025',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegereform-2025/',
+    mainEntityOfPage: 'https://primundus.de/pflegereform-2025',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegereform 2025', item: 'https://primundus.de/pflegereform-2025/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegereform 2025', item: 'https://primundus.de/pflegereform-2025' },
     ],
   },
   {

@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Hausnotruf für Senioren — Kosten, Kassenzuschuss & Auswahl 2026 | Primundus',
   description: 'Hausnotruf für Senioren: Kosten ab 20 €/Monat, Kassenzuschuss möglich. Was ein Hausnotruf leistet, welche Systeme es gibt und wann er sinnvoll ist.',
-  alternates: { canonical: 'https://primundus.de/hausnotruf-senioren/' },
+  alternates: { canonical: 'https://primundus.de/hausnotruf-senioren' },
   openGraph: {
     title: 'Hausnotruf für Senioren 2026 | Primundus',
     description: 'Hausnotruf: Kosten, Kassenzuschuss und welche Systeme für wen geeignet sind.',
-    url: 'https://primundus.de/hausnotruf-senioren/',
+    url: 'https://primundus.de/hausnotruf-senioren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/hausnotruf-senioren/',
+    mainEntityOfPage: 'https://primundus.de/hausnotruf-senioren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Hausnotruf Senioren', item: 'https://primundus.de/hausnotruf-senioren/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Hausnotruf Senioren', item: 'https://primundus.de/hausnotruf-senioren' },
     ],
   },
   {

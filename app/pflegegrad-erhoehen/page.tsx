@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad erhöhen — wann & wie Höherstufung beantragen | Primundus',
   description: 'Pflegegrad erhöhen 2026: Wann ein Antrag auf Höherstufung sinnvoll ist, wie man ihn stellt und wie die Begutachtung vorbereitet wird. Mit Checkliste.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-erhoehen/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-erhoehen' },
   openGraph: {
     title: 'Pflegegrad erhöhen — Höherstufung beantragen | Primundus',
     description: 'Wann und wie man einen höheren Pflegegrad beantragt — Anleitung und Vorbereitung.',
-    url: 'https://primundus.de/pflegegrad-erhoehen/',
+    url: 'https://primundus.de/pflegegrad-erhoehen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-erhoehen/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-erhoehen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad erhöhen', item: 'https://primundus.de/pflegegrad-erhoehen/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad erhöhen', item: 'https://primundus.de/pflegegrad-erhoehen' },
     ],
   },
   {

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Friedrichshafen — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Friedrichshafen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-friedrichshafen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-friedrichshafen' },
   openGraph: {
     title: '24h-Pflege Friedrichshafen — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Friedrichshafen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-friedrichshafen/',
+    url: 'https://primundus.de/24h-pflege-friedrichshafen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Friedrichshafen',
     description: '24h-Betreuungskräfte in Friedrichshafen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-friedrichshafen/',
+    url: 'https://primundus.de/24h-pflege-friedrichshafen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Friedrichshafen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Friedrichshafen', item: 'https://primundus.de/24h-pflege-friedrichshafen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Friedrichshafen', item: 'https://primundus.de/24h-pflege-friedrichshafen' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function FriedrichshafenPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="friedrichshafen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Friedrichshafen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

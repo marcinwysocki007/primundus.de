@@ -4,11 +4,11 @@ import { PflegebedarfClient } from './PflegebedarfClient'
 export const metadata: Metadata = {
   title: 'Pflegebedarf einschätzen — kostenloser Self-Check | Primundus',
   description: 'In 3 Minuten den Pflegebedarf einschätzen. 20 Fragen aus 6 Bereichen — Sofort-Auswertung mit voraussichtlichem Pflegegrad und Empfehlung.',
-  alternates: { canonical: 'https://primundus.de/pflegebedarf-einschaetzen/' },
+  alternates: { canonical: 'https://primundus.de/pflegebedarf-einschaetzen' },
   openGraph: {
     title: 'Pflegebedarf einschätzen — Self-Check 2026 | Primundus',
     description: '20 Fragen, sofort Auswertung: voraussichtlicher Pflegegrad + konkrete Empfehlung für die nächsten Schritte.',
-    url: 'https://primundus.de/pflegebedarf-einschaetzen/',
+    url: 'https://primundus.de/pflegebedarf-einschaetzen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegebedarf einschätzen', item: 'https://primundus.de/pflegebedarf-einschaetzen/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegebedarf einschätzen', item: 'https://primundus.de/pflegebedarf-einschaetzen' },
     ],
   },
   {

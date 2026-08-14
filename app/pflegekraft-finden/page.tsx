@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekraft finden — worauf achten & wie vorgehen 2026 | Primundus',
   description: 'Pflegekraft finden: Agentur, Direktsuche oder Selbstständige? Worauf bei der Auswahl zu achten ist, welche Qualifikationen wichtig sind und wie Primundus dabei hilft.',
-  alternates: { canonical: 'https://primundus.de/pflegekraft-finden/' },
+  alternates: { canonical: 'https://primundus.de/pflegekraft-finden' },
   openGraph: {
     title: 'Pflegekraft finden 2026 | Primundus',
     description: 'Wie man eine zuverlässige Pflegekraft findet — Agentur vs. Direktsuche, Qualifikationen, Auswahlkriterien.',
-    url: 'https://primundus.de/pflegekraft-finden/',
+    url: 'https://primundus.de/pflegekraft-finden',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekraft-finden/',
+    mainEntityOfPage: 'https://primundus.de/pflegekraft-finden',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekraft finden', item: 'https://primundus.de/pflegekraft-finden/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekraft finden', item: 'https://primundus.de/pflegekraft-finden' },
     ],
   },
   {

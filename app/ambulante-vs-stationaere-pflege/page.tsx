@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'unterschied', title: 'Der Unterschied' }, { id: 'kosten
 export const metadata: Metadata = {
   title: 'Ambulante vs. stationäre Pflege — Unterschiede & Kosten 2026',
   description: 'Ambulante Pflege zu Hause oder stationäres Pflegeheim? Vollständiger Vergleich mit Kosten, Leistungen und Entscheidungshilfe.',
-  alternates: { canonical: 'https://primundus.de/ambulante-vs-stationaere-pflege/' },
+  alternates: { canonical: 'https://primundus.de/ambulante-vs-stationaere-pflege' },
   openGraph: {
     title: 'Ambulante vs. stationäre Pflege',
     description: 'Ambulante Pflege zu Hause oder stationäres Pflegeheim? Vollständiger Vergleich mit Kosten, Leistungen und Entscheidungshilfe.',
-    url: 'https://primundus.de/ambulante-vs-stationaere-pflege/',
+    url: 'https://primundus.de/ambulante-vs-stationaere-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/ambulante-vs-stationaere-pflege/',
+    mainEntityOfPage: 'https://primundus.de/ambulante-vs-stationaere-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Ambulante vs. stationäre Pflege', item: 'https://primundus.de/ambulante-vs-stationaere-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Ambulante vs. stationäre Pflege', item: 'https://primundus.de/ambulante-vs-stationaere-pflege' },
     ],
   },
   {

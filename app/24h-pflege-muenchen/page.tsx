@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege München — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in München: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-muenchen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-muenchen' },
   openGraph: {
     title: '24h-Pflege München — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in München. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-muenchen/',
+    url: 'https://primundus.de/24h-pflege-muenchen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege München',
     description: '24h-Betreuungskräfte in München. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-muenchen/',
+    url: 'https://primundus.de/24h-pflege-muenchen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'München' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege München', item: 'https://primundus.de/24h-pflege-muenchen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege München', item: 'https://primundus.de/24h-pflege-muenchen' },
     ],
   },
   {
@@ -317,6 +318,8 @@ export default function MuenchenPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="muenchen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in München die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

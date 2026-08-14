@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Notfallplan Pflege — was hineingehört & Vorlage | Primundus',
   description: 'Notfallplan Pflege: Was in jeden Pflegenotfallplan gehört, eine kostenlose Vorlage und wie man den Plan aktuell hält. Für zuhause, Betreuungskräfte und Angehörige.',
-  alternates: { canonical: 'https://primundus.de/notfallplan-pflege/' },
+  alternates: { canonical: 'https://primundus.de/notfallplan-pflege' },
   openGraph: {
     title: 'Notfallplan Pflege — Vorlage & Anleitung | Primundus',
     description: 'Notfallplan für die häusliche Pflege — was reingehört und wie man ihn aktuell hält.',
-    url: 'https://primundus.de/notfallplan-pflege/',
+    url: 'https://primundus.de/notfallplan-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/notfallplan-pflege/',
+    mainEntityOfPage: 'https://primundus.de/notfallplan-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Notfallplan Pflege', item: 'https://primundus.de/notfallplan-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Notfallplan Pflege', item: 'https://primundus.de/notfallplan-pflege' },
     ],
   },
 ]

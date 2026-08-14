@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Prien am Chiemsee — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Prien am Chiemsee: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-prien/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-prien' },
   openGraph: {
     title: '24h-Pflege Prien am Chiemsee — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Prien am Chiemsee. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-prien/',
+    url: 'https://primundus.de/24h-pflege-prien',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Prien am Chiemsee',
     description: '24h-Betreuungskräfte in Prien am Chiemsee. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-prien/',
+    url: 'https://primundus.de/24h-pflege-prien',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Prien am Chiemsee' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Prien am Chiemsee', item: 'https://primundus.de/24h-pflege-prien/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Prien am Chiemsee', item: 'https://primundus.de/24h-pflege-prien' },
     ],
   },
   {
@@ -320,6 +321,8 @@ export default function PrienamChiemseePage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="prien" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Prien am Chiemsee die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

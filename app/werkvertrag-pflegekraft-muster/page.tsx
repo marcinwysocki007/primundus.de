@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'risiken', title: 'Risiken' }, { id: 'scheinselbstaendig
 export const metadata: Metadata = {
   title: 'Werkvertrag Pflegekraft — Risiken & rechtssichere Alternativen | Primundus',
   description: 'Werkvertrag mit Pflegekraft: Warum das fast immer Scheinselbstständigkeit ist und welche Alternativen rechtssicher sind.',
-  alternates: { canonical: 'https://primundus.de/werkvertrag-pflegekraft-muster/' },
+  alternates: { canonical: 'https://primundus.de/werkvertrag-pflegekraft-muster' },
   openGraph: {
     title: 'Werkvertrag Pflegekraft',
     description: 'Werkvertrag mit Pflegekraft: Warum das fast immer Scheinselbstständigkeit ist und welche Alternativen rechtssicher sind.',
-    url: 'https://primundus.de/werkvertrag-pflegekraft-muster/',
+    url: 'https://primundus.de/werkvertrag-pflegekraft-muster',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/werkvertrag-pflegekraft-muster/',
+    mainEntityOfPage: 'https://primundus.de/werkvertrag-pflegekraft-muster',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Werkvertrag Pflegekraft', item: 'https://primundus.de/werkvertrag-pflegekraft-muster/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Werkvertrag Pflegekraft', item: 'https://primundus.de/werkvertrag-pflegekraft-muster' },
     ],
   },
   {

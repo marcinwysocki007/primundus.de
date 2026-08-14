@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'risiken', title: 'Risiken' }, { id: 'organisation', tit
 export const metadata: Metadata = {
   title: 'Medikamente für Senioren verwalten — sicher und fehlerfrei | Primundus',
   description: 'Wie Medikamente bei Senioren sicher verwaltet werden: Wochendosierer, Medikamentenliste, was die Betreuungskraft darf und nicht darf.',
-  alternates: { canonical: 'https://primundus.de/medikamente-senioren-verwalten/' },
+  alternates: { canonical: 'https://primundus.de/medikamente-senioren-verwalten' },
   openGraph: {
     title: 'Medikamente Senioren verwalten',
     description: 'Wie Medikamente bei Senioren sicher verwaltet werden: Wochendosierer, Medikamentenliste, was die Betreuungskraft darf und nicht darf.',
-    url: 'https://primundus.de/medikamente-senioren-verwalten/',
+    url: 'https://primundus.de/medikamente-senioren-verwalten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/medikamente-senioren-verwalten/',
+    mainEntityOfPage: 'https://primundus.de/medikamente-senioren-verwalten',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Medikamente Senioren verwalten', item: 'https://primundus.de/medikamente-senioren-verwalten/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Medikamente Senioren verwalten', item: 'https://primundus.de/medikamente-senioren-verwalten' },
     ],
   },
   {

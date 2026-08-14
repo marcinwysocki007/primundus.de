@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'kostenlos', title: 'Kostenlose Beratung' }, { id: 'pfle
 export const metadata: Metadata = {
   title: 'Pflegeberater finden — wer hilft, was kostet es | Primundus',
   description: 'Pflegeberater in Deutschland: kostenlose Beratung durch Pflegestützpunkte, wann ein privater Berater sinnvoll ist und wie Primundus berät.',
-  alternates: { canonical: 'https://primundus.de/pflegeberater-finden/' },
+  alternates: { canonical: 'https://primundus.de/pflegeberater-finden' },
   openGraph: {
     title: 'Pflegeberater finden',
     description: 'Pflegeberater in Deutschland: kostenlose Beratung durch Pflegestützpunkte, wann ein privater Berater sinnvoll ist und wie Primundus berät.',
-    url: 'https://primundus.de/pflegeberater-finden/',
+    url: 'https://primundus.de/pflegeberater-finden',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegeberater-finden/',
+    mainEntityOfPage: 'https://primundus.de/pflegeberater-finden',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegeberater finden', item: 'https://primundus.de/pflegeberater-finden/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegeberater finden', item: 'https://primundus.de/pflegeberater-finden' },
     ],
   },
   {

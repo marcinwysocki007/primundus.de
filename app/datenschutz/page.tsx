@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung | Primundus',
   description: 'Datenschutzerklärung der Primundus — Informationen zum Umgang mit Ihren personenbezogenen Daten.',
-  alternates: { canonical: 'https://primundus.de/datenschutz/' },
+  alternates: { canonical: 'https://primundus.de/datenschutz' },
   robots: { index: false, follow: true },
 }
 

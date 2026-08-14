@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24h-Pflege vs. ambulante Pflege — Vergleich 2026 | Primundus',
   description: '24h-Pflege vs. ambulanter Pflegedienst: Was kostet was, wann ist welche Form sinnvoll und wann wird aus ambulant eine 24h-Betreuung notwendig? Vollständiger Vergleich.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-vs-ambulante-pflege/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-vs-ambulante-pflege' },
   openGraph: {
     title: '24h-Pflege vs. ambulante Pflege 2026 | Primundus',
     description: 'Vollständiger Vergleich: Kosten, Leistungen und wann welche Pflegeform sinnvoll ist.',
-    url: 'https://primundus.de/24h-pflege-vs-ambulante-pflege/',
+    url: 'https://primundus.de/24h-pflege-vs-ambulante-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-ambulante-pflege/',
+    mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-ambulante-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche/' },
-      { '@type': 'ListItem', position: 3, name: '24h-Pflege vs. ambulante Pflege', item: 'https://primundus.de/24h-pflege-vs-ambulante-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche' },
+      { '@type': 'ListItem', position: 3, name: '24h-Pflege vs. ambulante Pflege', item: 'https://primundus.de/24h-pflege-vs-ambulante-pflege' },
     ],
   },
   {

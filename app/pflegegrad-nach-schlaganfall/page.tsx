@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad nach Schlaganfall — welcher Grad & wie beantragen | Primundus',
   description: 'Pflegegrad nach Schlaganfall: Welcher Grad ist realistisch, wie bereitet man die Begutachtung vor und welche Leistungen stehen zu? Alles erklärt für 2026.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-nach-schlaganfall/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-nach-schlaganfall' },
   openGraph: {
     title: 'Pflegegrad nach Schlaganfall 2026 | Primundus',
     description: 'Welcher Pflegegrad nach Schlaganfall — Begutachtung, Leistungen und Antrag.',
-    url: 'https://primundus.de/pflegegrad-nach-schlaganfall/',
+    url: 'https://primundus.de/pflegegrad-nach-schlaganfall',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-nach-schlaganfall/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-nach-schlaganfall',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad nach Schlaganfall', item: 'https://primundus.de/pflegegrad-nach-schlaganfall/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad nach Schlaganfall', item: 'https://primundus.de/pflegegrad-nach-schlaganfall' },
     ],
   },
   {

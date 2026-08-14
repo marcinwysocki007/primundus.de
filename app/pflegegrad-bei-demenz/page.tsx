@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad bei Demenz — welcher Grad & wie beantragen? 2026 | Primundus',
   description: 'Pflegegrad bei Demenz 2026: Leichte Demenz meist PG 2–3, mittlere PG 3–4, schwere PG 4–5. Begutachtung vorbereiten, höhere Einstufung erreichen — alle Tipps.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-bei-demenz/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-bei-demenz' },
   openGraph: {
     title: 'Pflegegrad bei Demenz 2026 | Primundus',
     description: 'Welcher Pflegegrad bei Demenz? Einstufung, Tipps für höheren Grad und alle Leistungen 2026.',
-    url: 'https://primundus.de/pflegegrad-bei-demenz/',
+    url: 'https://primundus.de/pflegegrad-bei-demenz',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-bei-demenz/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-bei-demenz',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad bei Demenz', item: 'https://primundus.de/pflegegrad-bei-demenz/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad bei Demenz', item: 'https://primundus.de/pflegegrad-bei-demenz' },
     ],
   },
   {

@@ -17,11 +17,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad 3 — Leistungen & 599 € Pflegegeld 2026 | Primundus',
   description: 'Pflegegrad 3: 599 € Pflegegeld + 1.497 € Sachleistungen + 3.539 € Entlastungsbudget pro Jahr. Alle Leistungen, Voraussetzungen und wie 24h-Pflege kombiniert wird.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-3/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-3' },
   openGraph: {
     title: 'Pflegegrad 3 — Leistungen & 599 € Pflegegeld 2026 | Primundus',
     description: 'Pflegegrad 3: 599 € Pflegegeld + 1.497 € Sachleistungen + 3.539 € Entlastungsbudget pro Jahr.',
-    url: 'https://primundus.de/pflegegrad-3/',
+    url: 'https://primundus.de/pflegegrad-3',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -38,15 +38,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-3/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-3',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 3', item: 'https://primundus.de/pflegegrad-3/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 3', item: 'https://primundus.de/pflegegrad-3' },
     ],
   },
   {

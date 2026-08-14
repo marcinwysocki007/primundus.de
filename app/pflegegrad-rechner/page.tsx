@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Kostenloser Pflegegrad-Rechner 2026 | Primundus',
   description: 'Pflegebedarf selbst einschätzen — in 3 Minuten. Unser kostenloser Rechner gibt einen ersten Hinweis auf Ihren Pflegegrad vor der offiziellen Begutachtung.',
   alternates: {
-    canonical: 'https://primundus.de/pflegegrad-rechner/',
+    canonical: 'https://primundus.de/pflegegrad-rechner',
   },
   openGraph: {
     title: 'Kostenloser Pflegegrad-Rechner 2026 | Primundus',
     description: 'Pflegebedarf selbst einschätzen — in 3 Minuten. Unser kostenloser Rechner gibt einen ersten Hinweis auf Ihren Pflegegrad vor der offiziellen Begutachtung.',
-    url: 'https://primundus.de/pflegegrad-rechner/',
+    url: 'https://primundus.de/pflegegrad-rechner',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',

@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Förderungen nach Bundesland — alle Pflegezuschüsse 2026 | Primundus',
   description: 'Pflege-Förderungen 2026: Bundesweite Pflegekasse-Leistungen plus Landesförderungen in Bayern, NRW, BW und weiteren Bundesländern. Mit vollständiger Checkliste.',
-  alternates: { canonical: 'https://primundus.de/foerderungen-nach-bundesland/' },
+  alternates: { canonical: 'https://primundus.de/foerderungen-nach-bundesland' },
   openGraph: {
     title: 'Förderungen nach Bundesland — Pflegezuschüsse 2026 | Primundus',
     description: 'Welche Pflege-Förderungen gibt es 2026 — bundesweit und je Bundesland?',
-    url: 'https://primundus.de/foerderungen-nach-bundesland/',
+    url: 'https://primundus.de/foerderungen-nach-bundesland',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/foerderungen-nach-bundesland/',
+    mainEntityOfPage: 'https://primundus.de/foerderungen-nach-bundesland',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Förderungen nach Bundesland', item: 'https://primundus.de/foerderungen-nach-bundesland/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Förderungen nach Bundesland', item: 'https://primundus.de/foerderungen-nach-bundesland' },
     ],
   },
   {

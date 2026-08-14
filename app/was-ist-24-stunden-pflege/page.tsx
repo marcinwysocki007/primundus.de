@@ -38,12 +38,12 @@ export const metadata: Metadata = {
   title: 'Was ist 24-Stunden-Pflege? Definition, Kosten & Ablauf | Primundus',
   description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet 2.200–3.500 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
   alternates: {
-    canonical: 'https://primundus.de/was-ist-24-stunden-pflege/',
+    canonical: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   openGraph: {
     title: 'Was ist 24-Stunden-Pflege? | Primundus',
     description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet 2.200–3.500 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
-    url: 'https://primundus.de/was-ist-24-stunden-pflege/',
+    url: 'https://primundus.de/was-ist-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -69,15 +69,15 @@ const schemaMarkup = [
     },
     datePublished: '2026-04-24',
     dateModified: '2026-04-24',
-    mainEntityOfPage: 'https://primundus.de/was-ist-24-stunden-pflege/',
+    mainEntityOfPage: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Was ist 24-Stunden-Pflege?', item: 'https://primundus.de/was-ist-24-stunden-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Was ist 24-Stunden-Pflege?', item: 'https://primundus.de/was-ist-24-stunden-pflege' },
     ],
   },
   {

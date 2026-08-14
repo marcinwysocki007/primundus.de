@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'grundsatz', title: 'Was gilt?' }, { id: 'praxis', title
 export const metadata: Metadata = {
   title: 'Datenschutz in der Pflegesituation — was Familien wissen müssen | Primundus',
   description: 'Datenschutz in der Pflege: Was darf die Kraft, was darf die Agentur, welche Rechte haben Pflegebedürftige? Praxistipps.',
-  alternates: { canonical: 'https://primundus.de/datenschutz-pflegesituation/' },
+  alternates: { canonical: 'https://primundus.de/datenschutz-pflegesituation' },
   openGraph: {
     title: 'Datenschutz Pflege',
     description: 'Datenschutz in der Pflege: Was darf die Kraft, was darf die Agentur, welche Rechte haben Pflegebedürftige? Praxistipps.',
-    url: 'https://primundus.de/datenschutz-pflegesituation/',
+    url: 'https://primundus.de/datenschutz-pflegesituation',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/datenschutz-pflegesituation/',
+    mainEntityOfPage: 'https://primundus.de/datenschutz-pflegesituation',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Datenschutz Pflege', item: 'https://primundus.de/datenschutz-pflegesituation/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Datenschutz Pflege', item: 'https://primundus.de/datenschutz-pflegesituation' },
     ],
   },
   {

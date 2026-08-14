@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'darf-kraft', title: 'Was darf die Kraft?' }, { id: 'pfl
 export const metadata: Metadata = {
   title: 'Wunden verbinden zuhause — was Betreuungskräfte dürfen | Primundus',
   description: 'Was bei der häuslichen Wundversorgung zu beachten ist: Was die Betreuungskraft darf, wann der Pflegedienst nötig ist.',
-  alternates: { canonical: 'https://primundus.de/wunden-verbinden-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/wunden-verbinden-zuhause' },
   openGraph: {
     title: 'Wunden verbinden zuhause',
     description: 'Was bei der häuslichen Wundversorgung zu beachten ist: Was die Betreuungskraft darf, wann der Pflegedienst nötig ist.',
-    url: 'https://primundus.de/wunden-verbinden-zuhause/',
+    url: 'https://primundus.de/wunden-verbinden-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/wunden-verbinden-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/wunden-verbinden-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Wunden verbinden zuhause', item: 'https://primundus.de/wunden-verbinden-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Wunden verbinden zuhause', item: 'https://primundus.de/wunden-verbinden-zuhause' },
     ],
   },
   {

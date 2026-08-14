@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegeld 2026 — Beträge, Anspruch & Kombinationen | Primundus',
   description: 'Pflegegeld 2026: 347 € (PG 2) bis 990 € (PG 5) pro Monat. Wer Anspruch hat, wie es mit 24h-Pflege kombiniert wird und was sich 2026 geändert hat.',
-  alternates: { canonical: 'https://primundus.de/pflegegeld/' },
+  alternates: { canonical: 'https://primundus.de/pflegegeld' },
   openGraph: {
     title: 'Pflegegeld 2026 — Beträge & Anspruch | Primundus',
     description: 'Pflegegeld 2026: 347–990 €/Monat je nach Pflegegrad. Alle Beträge, Anspruchsvoraussetzungen und Kombinationsmöglichkeiten.',
-    url: 'https://primundus.de/pflegegeld/',
+    url: 'https://primundus.de/pflegegeld',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegeld/',
+    mainEntityOfPage: 'https://primundus.de/pflegegeld',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegeld 2026', item: 'https://primundus.de/pflegegeld/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegeld 2026', item: 'https://primundus.de/pflegegeld' },
     ],
   },
   {

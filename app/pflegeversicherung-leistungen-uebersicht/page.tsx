@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'geldleistungen', title: 'Geldleistungen' }, { id: 'sach
 export const metadata: Metadata = {
   title: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht | Primundus',
   description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
-  alternates: { canonical: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht/' },
+  alternates: { canonical: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht' },
   openGraph: {
     title: 'Pflegeversicherung Leistungen 2026 | Primundus',
     description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
-    url: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht/',
+    url: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht/',
+    mainEntityOfPage: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegeversicherung Leistungen 2026', item: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht/' },
+      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegeversicherung Leistungen 2026', item: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht' },
     ],
   },
   {

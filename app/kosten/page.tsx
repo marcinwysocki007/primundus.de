@@ -21,11 +21,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Kosten 24h-Pflege 2026 — Preise, Zuschüsse & Vergleich | Primundus',
   description: '24h-Pflege kostet 2.200–3.500 €/Monat. Mit Pflegegeld (bis 990 €) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil deutlich. Alle Zahlen 2026.',
-  alternates: { canonical: 'https://primundus.de/kosten/' },
+  alternates: { canonical: 'https://primundus.de/kosten' },
   openGraph: {
     title: 'Kosten 24h-Pflege 2026 | Primundus',
     description: '24h-Pflege kostet 2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil deutlich. Alle Zahlen 2026.',
-    url: 'https://primundus.de/kosten/',
+    url: 'https://primundus.de/kosten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -42,15 +42,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-01-15',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/kosten/',
+    mainEntityOfPage: 'https://primundus.de/kosten',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24-Stunden-Pflege', item: 'https://primundus.de/24-stunden-pflege/' },
-      { '@type': 'ListItem', position: 3, name: 'Kosten', item: 'https://primundus.de/kosten/' },
+      { '@type': 'ListItem', position: 2, name: '24-Stunden-Pflege', item: 'https://primundus.de/24-stunden-pflege' },
+      { '@type': 'ListItem', position: 3, name: 'Kosten', item: 'https://primundus.de/kosten' },
     ],
   },
   {

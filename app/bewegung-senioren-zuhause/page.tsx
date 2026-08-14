@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'vorteile', title: 'Warum Bewegung wichtig ist' }, { id:
 export const metadata: Metadata = {
   title: 'Bewegung für Senioren zuhause — einfache Übungen & Tipps | Primundus',
   description: 'Einfache Bewegungsübungen für Senioren zuhause: was geht auch bei eingeschränkter Mobilität, wie Stürze verhindert werden, was die Kraft unterstützen kann.',
-  alternates: { canonical: 'https://primundus.de/bewegung-senioren-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/bewegung-senioren-zuhause' },
   openGraph: {
     title: 'Bewegung Senioren zuhause',
     description: 'Einfache Bewegungsübungen für Senioren zuhause: was geht auch bei eingeschränkter Mobilität, wie Stürze verhindert werden, was die Kraft unterstützen kann.',
-    url: 'https://primundus.de/bewegung-senioren-zuhause/',
+    url: 'https://primundus.de/bewegung-senioren-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/bewegung-senioren-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/bewegung-senioren-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Bewegung Senioren zuhause', item: 'https://primundus.de/bewegung-senioren-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Bewegung Senioren zuhause', item: 'https://primundus.de/bewegung-senioren-zuhause' },
     ],
   },
   {

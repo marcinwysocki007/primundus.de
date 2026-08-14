@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Vorsorgevollmacht erstellen — Anleitung, Inhalt & Kosten | Primundus',
   description: 'Vorsorgevollmacht erstellen: Was reinmuss, ob Notar nötig ist, wie sie registriert wird und warum sie für die Organisation der 24h-Pflege unverzichtbar ist.',
-  alternates: { canonical: 'https://primundus.de/vorsorgevollmacht-erstellen/' },
+  alternates: { canonical: 'https://primundus.de/vorsorgevollmacht-erstellen' },
   openGraph: {
     title: 'Vorsorgevollmacht erstellen | Primundus',
     description: 'Vorsorgevollmacht: Was reinmuss, ob Notar nötig ist und warum sie für die Pflege-Organisation unverzichtbar ist.',
-    url: 'https://primundus.de/vorsorgevollmacht-erstellen/',
+    url: 'https://primundus.de/vorsorgevollmacht-erstellen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/vorsorgevollmacht-erstellen/',
+    mainEntityOfPage: 'https://primundus.de/vorsorgevollmacht-erstellen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Vorsorgevollmacht erstellen', item: 'https://primundus.de/vorsorgevollmacht-erstellen/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Vorsorgevollmacht erstellen', item: 'https://primundus.de/vorsorgevollmacht-erstellen' },
     ],
   },
   {

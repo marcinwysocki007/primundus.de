@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung | Primundus',
   description: 'Pflegesachleistungen 2026: 796 € (PG 2) bis 2.299 € (PG 5) pro Monat für ambulante Pflegedienste. Was absetzbar ist, wie man kombiniert und was nicht geht.',
-  alternates: { canonical: 'https://primundus.de/pflegesachleistungen/' },
+  alternates: { canonical: 'https://primundus.de/pflegesachleistungen' },
   openGraph: {
     title: 'Pflegesachleistungen 2026 | Primundus',
     description: 'Pflegesachleistungen: Beträge, Anspruch und wie man sie mit Pflegegeld kombiniert.',
-    url: 'https://primundus.de/pflegesachleistungen/',
+    url: 'https://primundus.de/pflegesachleistungen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegesachleistungen/',
+    mainEntityOfPage: 'https://primundus.de/pflegesachleistungen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegesachleistungen', item: 'https://primundus.de/pflegesachleistungen/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegesachleistungen', item: 'https://primundus.de/pflegesachleistungen' },
     ],
   },
   {

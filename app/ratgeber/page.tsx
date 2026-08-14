@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Ratgeber 24h-Pflege 2026 — alle Themen für Angehörige | Primundus',
   description: 'Alle Themen rund um 24-Stunden-Pflege: Pflegegrade, Finanzierung, Kosten, Rechtliches und Unterstützung für pflegende Angehörige. Aktuell 2026.',
   alternates: {
-    canonical: 'https://primundus.de/ratgeber/',
+    canonical: 'https://primundus.de/ratgeber',
   },
   openGraph: {
     title: 'Ratgeber 24h-Pflege | Primundus',
     description: 'Alle Themen rund um 24-Stunden-Pflege: Pflegegrade, Finanzierung, Organisation, Krankheiten, Alltag, Rechtliches und Unterstützung für Angehörige.',
-    url: 'https://primundus.de/ratgeber/',
+    url: 'https://primundus.de/ratgeber',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Grevenbroich — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Grevenbroich: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-grevenbroich/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-grevenbroich' },
   openGraph: {
     title: '24h-Pflege Grevenbroich — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Grevenbroich. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-grevenbroich/',
+    url: 'https://primundus.de/24h-pflege-grevenbroich',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Grevenbroich',
     description: '24h-Betreuungskräfte in Grevenbroich. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-grevenbroich/',
+    url: 'https://primundus.de/24h-pflege-grevenbroich',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Grevenbroich' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Grevenbroich', item: 'https://primundus.de/24h-pflege-grevenbroich/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Grevenbroich', item: 'https://primundus.de/24h-pflege-grevenbroich' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function GrevenbroichPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="grevenbroich" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Grevenbroich die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

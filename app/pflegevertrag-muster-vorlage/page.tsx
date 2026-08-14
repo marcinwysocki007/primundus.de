@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegevertrag Muster & Vorlage 2026 — kostenlos | Primundus',
   description: 'Pflegevertrag Vorlage 2026: Vollständiges Muster mit allen Pflichtangaben — Leistungsumfang, Vergütung, Kost und Logis, Kündigung. Kostenlos zum Ausdrucken.',
-  alternates: { canonical: 'https://primundus.de/pflegevertrag-muster-vorlage/' },
+  alternates: { canonical: 'https://primundus.de/pflegevertrag-muster-vorlage' },
   openGraph: {
     title: 'Pflegevertrag Muster & Vorlage 2026 | Primundus',
     description: 'Kostenloses Pflegevertrag-Muster mit allen Pflichtangaben für die häusliche 24h-Pflege.',
-    url: 'https://primundus.de/pflegevertrag-muster-vorlage/',
+    url: 'https://primundus.de/pflegevertrag-muster-vorlage',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegevertrag-muster-vorlage/',
+    mainEntityOfPage: 'https://primundus.de/pflegevertrag-muster-vorlage',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegevertrag Muster', item: 'https://primundus.de/pflegevertrag-muster-vorlage/' },
+      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegevertrag Muster', item: 'https://primundus.de/pflegevertrag-muster-vorlage' },
     ],
   },
   {

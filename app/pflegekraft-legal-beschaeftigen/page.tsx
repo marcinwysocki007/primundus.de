@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekraft legal beschäftigen — die 3 Modelle 2026 | Primundus',
   description: 'Pflegekraft legal beschäftigen: Entsendemodell, Direktanstellung oder Selbstständigkeit? Was legal ist, was Scheinselbstständigkeit kostet und was die A1-Bescheinigung bedeutet.',
-  alternates: { canonical: 'https://primundus.de/pflegekraft-legal-beschaeftigen/' },
+  alternates: { canonical: 'https://primundus.de/pflegekraft-legal-beschaeftigen' },
   openGraph: {
     title: 'Pflegekraft legal beschäftigen — 3 Modelle | Primundus',
     description: 'Entsendemodell, Direktanstellung, Scheinselbstständigkeit: Was legal ist und was teuer werden kann.',
-    url: 'https://primundus.de/pflegekraft-legal-beschaeftigen/',
+    url: 'https://primundus.de/pflegekraft-legal-beschaeftigen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekraft-legal-beschaeftigen/',
+    mainEntityOfPage: 'https://primundus.de/pflegekraft-legal-beschaeftigen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekraft legal beschäftigen', item: 'https://primundus.de/pflegekraft-legal-beschaeftigen/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekraft legal beschäftigen', item: 'https://primundus.de/pflegekraft-legal-beschaeftigen' },
     ],
   },
   {

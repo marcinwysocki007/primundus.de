@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Lünen — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Lünen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-luenen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-luenen' },
   openGraph: {
     title: '24h-Pflege Lünen — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Lünen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-luenen/',
+    url: 'https://primundus.de/24h-pflege-luenen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Lünen',
     description: '24h-Betreuungskräfte in Lünen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-luenen/',
+    url: 'https://primundus.de/24h-pflege-luenen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Lünen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Lünen', item: 'https://primundus.de/24h-pflege-luenen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Lünen', item: 'https://primundus.de/24h-pflege-luenen' },
     ],
   },
   {
@@ -308,6 +309,8 @@ export default function LuenenPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="luenen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Lünen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

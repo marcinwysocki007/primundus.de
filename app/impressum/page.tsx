@@ -5,7 +5,7 @@ import { Phone, Mail } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Impressum | Primundus',
   description: 'Impressum und Kontaktdaten der Primundus — 24-Stunden-Pflege & Betreuung.',
-  alternates: { canonical: 'https://primundus.de/impressum/' },
+  alternates: { canonical: 'https://primundus.de/impressum' },
   robots: { index: false, follow: true },
 }
 

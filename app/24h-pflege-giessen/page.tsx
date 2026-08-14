@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Gießen — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Gießen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-giessen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-giessen' },
   openGraph: {
     title: '24h-Pflege Gießen — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Gießen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-giessen/',
+    url: 'https://primundus.de/24h-pflege-giessen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Gießen',
     description: '24h-Betreuungskräfte in Gießen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-giessen/',
+    url: 'https://primundus.de/24h-pflege-giessen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Gießen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Gießen', item: 'https://primundus.de/24h-pflege-giessen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Gießen', item: 'https://primundus.de/24h-pflege-giessen' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function GiessenPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="giessen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Gießen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

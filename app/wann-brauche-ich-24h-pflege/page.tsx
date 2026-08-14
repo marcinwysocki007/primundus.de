@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen | Primundus',
   description: 'Wann ist 24h-Pflege notwendig? 10 klare Zeichen, typische Pflegesituationen und eine Checkliste die hilft die richtige Entscheidung zu treffen.',
-  alternates: { canonical: 'https://primundus.de/wann-brauche-ich-24h-pflege/' },
+  alternates: { canonical: 'https://primundus.de/wann-brauche-ich-24h-pflege' },
   openGraph: {
     title: 'Wann brauche ich 24h-Pflege? | Primundus',
     description: '10 klare Zeichen die zeigen wann eine 24h-Betreuungskraft die richtige Lösung ist.',
-    url: 'https://primundus.de/wann-brauche-ich-24h-pflege/',
+    url: 'https://primundus.de/wann-brauche-ich-24h-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/wann-brauche-ich-24h-pflege/',
+    mainEntityOfPage: 'https://primundus.de/wann-brauche-ich-24h-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24-Stunden-Pflege', item: 'https://primundus.de/24-stunden-pflege/' },
-      { '@type': 'ListItem', position: 3, name: 'Wann brauche ich 24h-Pflege?', item: 'https://primundus.de/wann-brauche-ich-24h-pflege/' },
+      { '@type': 'ListItem', position: 2, name: '24-Stunden-Pflege', item: 'https://primundus.de/24-stunden-pflege' },
+      { '@type': 'ListItem', position: 3, name: 'Wann brauche ich 24h-Pflege?', item: 'https://primundus.de/wann-brauche-ich-24h-pflege' },
     ],
   },
   {

@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Demenz Pflege zuhause — was möglich ist & wann 24h-Pflege hilft | Primundus',
   description: 'Demenzpflege zuhause: Was Angehörige leisten können, ab wann 24h-Pflege sinnvoll ist und welche Kassenzuschüsse 2026 helfen. Mit konkreten Alltagstipps.',
-  alternates: { canonical: 'https://primundus.de/demenz-pflege-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/demenz-pflege-zuhause' },
   openGraph: {
     title: 'Demenz Pflege zuhause | Primundus',
     description: 'Was bei Demenz zuhause möglich ist, ab wann 24h-Pflege nötig wird und welche Leistungen die Pflegekasse zahlt.',
-    url: 'https://primundus.de/demenz-pflege-zuhause/',
+    url: 'https://primundus.de/demenz-pflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/demenz-pflege-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/demenz-pflege-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Demenz Pflege zuhause', item: 'https://primundus.de/demenz-pflege-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Demenz Pflege zuhause', item: 'https://primundus.de/demenz-pflege-zuhause' },
     ],
   },
   {

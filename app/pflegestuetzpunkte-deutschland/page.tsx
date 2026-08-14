@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'was-bieten', title: 'Was bieten sie?' }, { id: 'finden'
 export const metadata: Metadata = {
   title: 'Pflegestützpunkte in Deutschland — kostenlose Beratung | Primundus',
   description: 'Pflegestützpunkte: Was sie bieten, wie man den nächsten findet und wann sie die beste Anlaufstelle sind.',
-  alternates: { canonical: 'https://primundus.de/pflegestuetzpunkte-deutschland/' },
+  alternates: { canonical: 'https://primundus.de/pflegestuetzpunkte-deutschland' },
   openGraph: {
     title: 'Pflegestützpunkte Deutschland',
     description: 'Pflegestützpunkte: Was sie bieten, wie man den nächsten findet und wann sie die beste Anlaufstelle sind.',
-    url: 'https://primundus.de/pflegestuetzpunkte-deutschland/',
+    url: 'https://primundus.de/pflegestuetzpunkte-deutschland',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegestuetzpunkte-deutschland/',
+    mainEntityOfPage: 'https://primundus.de/pflegestuetzpunkte-deutschland',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegestützpunkte Deutschland', item: 'https://primundus.de/pflegestuetzpunkte-deutschland/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegestützpunkte Deutschland', item: 'https://primundus.de/pflegestuetzpunkte-deutschland' },
     ],
   },
   {

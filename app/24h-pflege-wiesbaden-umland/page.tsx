@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Taunusstein — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Taunusstein: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-wiesbaden-umland/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-wiesbaden-umland' },
   openGraph: {
     title: '24h-Pflege Taunusstein — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Taunusstein. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-wiesbaden-umland/',
+    url: 'https://primundus.de/24h-pflege-wiesbaden-umland',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Taunusstein',
     description: '24h-Betreuungskräfte in Taunusstein. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-wiesbaden-umland/',
+    url: 'https://primundus.de/24h-pflege-wiesbaden-umland',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Taunusstein' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Taunusstein', item: 'https://primundus.de/24h-pflege-wiesbaden-umland/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Taunusstein', item: 'https://primundus.de/24h-pflege-wiesbaden-umland' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function TaunussteinPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="wiesbaden-umland" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Taunusstein die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

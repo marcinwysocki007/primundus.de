@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'pflegezeit', title: 'Pflegezeit' }, { id: 'familienpfle
 export const metadata: Metadata = {
   title: 'Pflegezeitgesetz — Auszeit für pflegende Angehörige | Primundus',
   description: 'Pflegezeitgesetz und Familienpflegezeit: Was pflegende Angehörige an Rechten haben, wie Freistellung beantragt wird.',
-  alternates: { canonical: 'https://primundus.de/pflegezeit-gesetz-angehoerige/' },
+  alternates: { canonical: 'https://primundus.de/pflegezeit-gesetz-angehoerige' },
   openGraph: {
     title: 'Pflegezeitgesetz Angehörige',
     description: 'Pflegezeitgesetz und Familienpflegezeit: Was pflegende Angehörige an Rechten haben, wie Freistellung beantragt wird.',
-    url: 'https://primundus.de/pflegezeit-gesetz-angehoerige/',
+    url: 'https://primundus.de/pflegezeit-gesetz-angehoerige',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegezeit-gesetz-angehoerige/',
+    mainEntityOfPage: 'https://primundus.de/pflegezeit-gesetz-angehoerige',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegezeitgesetz', item: 'https://primundus.de/pflegezeit-gesetz-angehoerige/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegezeitgesetz', item: 'https://primundus.de/pflegezeit-gesetz-angehoerige' },
     ],
   },
   {

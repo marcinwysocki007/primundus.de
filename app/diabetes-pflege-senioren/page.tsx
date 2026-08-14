@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Diabetes Pflege Senioren — Blutzucker, Hypoglykämie & 24h-Betreuung | Primundus',
   description: 'Diabetes Pflege bei älteren Menschen: Blutzuckermessen, Insulingabe, Hypoglykämie erkennen, richtige Ernährung und ab wann eine 24h-Betreuungskraft sinnvoll ist.',
-  alternates: { canonical: 'https://primundus.de/diabetes-pflege-senioren/' },
+  alternates: { canonical: 'https://primundus.de/diabetes-pflege-senioren' },
   openGraph: {
     title: 'Diabetes Pflege Senioren | Primundus',
     description: 'Diabetesmanagement bei pflegebedürftigen Senioren — Blutzucker, Hypoglykämie, 24h-Betreuung.',
-    url: 'https://primundus.de/diabetes-pflege-senioren/',
+    url: 'https://primundus.de/diabetes-pflege-senioren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/diabetes-pflege-senioren/',
+    mainEntityOfPage: 'https://primundus.de/diabetes-pflege-senioren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Diabetes Pflege Senioren', item: 'https://primundus.de/diabetes-pflege-senioren/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Diabetes Pflege Senioren', item: 'https://primundus.de/diabetes-pflege-senioren' },
     ],
   },
   {

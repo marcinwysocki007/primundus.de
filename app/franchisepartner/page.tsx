@@ -5,11 +5,11 @@ import FranchiseFormClient from './FranchiseFormClient'
 export const metadata: Metadata = {
   title: 'Franchisepartner werden — 24h-Pflege | Primundus',
   description: 'Franchisepartner der Testsieger-Marke Primundus werden. Wachsender Pflegemarkt, eigene Software, tägliche Kündbarkeit — Informationspaket jetzt anfordern.',
-  alternates: { canonical: 'https://primundus.de/franchisepartner/' },
+  alternates: { canonical: 'https://primundus.de/franchisepartner' },
   openGraph: {
     title: 'Franchisepartner werden | Primundus 24h-Pflege',
     description: 'Werden Sie Partner der Testsieger-Marke Primundus im wachsenden 24h-Pflegemarkt.',
-    url: 'https://primundus.de/franchisepartner/',
+    url: 'https://primundus.de/franchisepartner',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -23,7 +23,7 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Franchisepartner werden', item: 'https://primundus.de/franchisepartner/' },
+      { '@type': 'ListItem', position: 2, name: 'Franchisepartner werden', item: 'https://primundus.de/franchisepartner' },
     ],
   },
   {

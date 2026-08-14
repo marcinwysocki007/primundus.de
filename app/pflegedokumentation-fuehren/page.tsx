@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'was-ist', title: 'Was ist Pflegedokumentation?' }, { id
 export const metadata: Metadata = {
   title: 'Pflegedokumentation führen — was ist Pflicht? | Primundus',
   description: 'Pflegedokumentation in der häuslichen Pflege: Was dokumentiert werden muss, wie es einfach geht und was die Betreuungskraft aufschreibt.',
-  alternates: { canonical: 'https://primundus.de/pflegedokumentation-fuehren/' },
+  alternates: { canonical: 'https://primundus.de/pflegedokumentation-fuehren' },
   openGraph: {
     title: 'Pflegedokumentation führen',
     description: 'Pflegedokumentation in der häuslichen Pflege: Was dokumentiert werden muss, wie es einfach geht und was die Betreuungskraft aufschreibt.',
-    url: 'https://primundus.de/pflegedokumentation-fuehren/',
+    url: 'https://primundus.de/pflegedokumentation-fuehren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegedokumentation-fuehren/',
+    mainEntityOfPage: 'https://primundus.de/pflegedokumentation-fuehren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegedokumentation führen', item: 'https://primundus.de/pflegedokumentation-fuehren/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegedokumentation führen', item: 'https://primundus.de/pflegedokumentation-fuehren' },
     ],
   },
   {

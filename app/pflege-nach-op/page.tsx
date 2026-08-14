@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflege nach OP zuhause — Betreuung & Unterstützung | Primundus',
   description: 'Pflege nach Operation zuhause: Was nach Hüft-OP, Knie-OP und Herzoperationen zu beachten ist, welche Unterstützung nötig ist und welche Kassenzuschüsse greifen.',
-  alternates: { canonical: 'https://primundus.de/pflege-nach-op/' },
+  alternates: { canonical: 'https://primundus.de/pflege-nach-op' },
   openGraph: {
     title: 'Pflege nach OP zuhause | Primundus',
     description: 'Häusliche Betreuung nach einer Operation — was nötig ist und wer die Kosten trägt.',
-    url: 'https://primundus.de/pflege-nach-op/',
+    url: 'https://primundus.de/pflege-nach-op',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflege-nach-op/',
+    mainEntityOfPage: 'https://primundus.de/pflege-nach-op',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflege nach OP', item: 'https://primundus.de/pflege-nach-op/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Pflege nach OP', item: 'https://primundus.de/pflege-nach-op' },
     ],
   },
 ]

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { RegionenSearch, type StadtEntry } from '@/components/RegionenSearch'
+import { AllRegionsIndex } from '@/components/CityIndex'
 
 export const metadata: Metadata = {
   title: '24h-Pflege in Ihrer Region — alle Städte & Bundesländer | Primundus',
   description: 'Primundus vermittelt 24h-Betreuungskräfte in ganz Deutschland. PLZ oder Ort eingeben — sofort passende Informationen und Anfrage starten.',
-  alternates: { canonical: 'https://primundus.de/regionen/' },
+  alternates: { canonical: 'https://primundus.de/regionen' },
   openGraph: {
     title: '24h-Pflege in Ihrer Region | Primundus',
     description: 'PLZ oder Ort eingeben — 24h-Pflege in Ihrer Stadt finden.',
-    url: 'https://primundus.de/regionen/',
+    url: 'https://primundus.de/regionen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege in Ihrer Region', item: 'https://primundus.de/regionen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege in Ihrer Region', item: 'https://primundus.de/regionen' },
     ],
   },
 ])
@@ -396,6 +397,17 @@ export default function RegionenHub() {
               </div>
             )
           })}
+
+          {/* Vollständiger, crawlbarer Städte-Index — die Suchbox oben ist
+              clientseitig und für Suchmaschinen unsichtbar; erst dieser Block
+              macht die 187 Städteseiten intern erreichbar (SEO 14.08.2026). */}
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug mt-12">
+            Alle Einsatzorte im Überblick
+          </h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
+            Klicken Sie Ihre Stadt an — dort finden Sie Preise, Ablauf und alles Wichtige für Ihre Region:
+          </p>
+          <AllRegionsIndex />
 
           {/* Nicht dabei */}
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 mt-10 mb-12">

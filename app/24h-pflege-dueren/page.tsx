@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Düren — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Düren: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-dueren/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-dueren' },
   openGraph: {
     title: '24h-Pflege Düren — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Düren. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-dueren/',
+    url: 'https://primundus.de/24h-pflege-dueren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Düren',
     description: '24h-Betreuungskräfte in Düren. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-dueren/',
+    url: 'https://primundus.de/24h-pflege-dueren',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Düren' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Düren', item: 'https://primundus.de/24h-pflege-dueren/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Düren', item: 'https://primundus.de/24h-pflege-dueren' },
     ],
   },
   {
@@ -308,6 +309,8 @@ export default function DuerenPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="dueren" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Düren die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

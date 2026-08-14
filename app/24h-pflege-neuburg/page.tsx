@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Neuburg an der Donau — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Neuburg an der Donau: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-neuburg/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-neuburg' },
   openGraph: {
     title: '24h-Pflege Neuburg an der Donau — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Neuburg an der Donau. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-neuburg/',
+    url: 'https://primundus.de/24h-pflege-neuburg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Neuburg an der Donau',
     description: '24h-Betreuungskräfte in Neuburg an der Donau. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-neuburg/',
+    url: 'https://primundus.de/24h-pflege-neuburg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Neuburg an der Donau' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Neuburg an der Donau', item: 'https://primundus.de/24h-pflege-neuburg/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Neuburg an der Donau', item: 'https://primundus.de/24h-pflege-neuburg' },
     ],
   },
   {
@@ -320,6 +321,8 @@ export default function NeuburganderDonauPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="neuburg" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Neuburg an der Donau die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

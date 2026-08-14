@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad 1 — Leistungen, Entlastungsbetrag & Beantragen 2026 | Primundus',
   description: 'Pflegegrad 1: 131 € Entlastungsbetrag/Monat, kein Pflegegeld. Voraussetzungen (12,5–26,9 NBA-Punkte), welche Leistungen möglich sind und wann PG 2 sinnvoller ist.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-1/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-1' },
   openGraph: {
     title: 'Pflegegrad 1 — Leistungen & Entlastungsbetrag 2026 | Primundus',
     description: 'Pflegegrad 1: 131 € Entlastungsbetrag, kein Pflegegeld. Voraussetzungen und wann PG 2 sinnvoller ist.',
-    url: 'https://primundus.de/pflegegrad-1/',
+    url: 'https://primundus.de/pflegegrad-1',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-1/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-1',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 1', item: 'https://primundus.de/pflegegrad-1/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad 1', item: 'https://primundus.de/pflegegrad-1' },
     ],
   },
   {

@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Ernährung pflegebedürftiger Senioren — was wichtig ist | Primundus',
   description: 'Ernährung pflegebedürftiger Senioren: Grundlagen, häufige Probleme, Mangelernährung erkennen und praktische Tipps für Betreuungskräfte und Angehörige.',
-  alternates: { canonical: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren/' },
+  alternates: { canonical: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren' },
   openGraph: {
     title: 'Ernährung pflegebedürftiger Senioren | Primundus',
     description: 'Was pflegebedürftige Senioren essen sollten und wie man Mangelernährung verhindert.',
-    url: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren/',
+    url: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren/',
+    mainEntityOfPage: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Ernährung pflegebedürftiger Senioren', item: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Ernährung pflegebedürftiger Senioren', item: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren' },
     ],
   },
   {

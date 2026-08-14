@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Ablauf der 24h-Pflege mit Primundus — von Anfrage bis Start | Primundus',
   description: 'So läuft die 24h-Pflege mit Primundus ab: Beratungsgespräch, Kraftauswahl, Vertragsabschluss, Anreise in 4–7 Tagen. Der vollständige Ablauf erklärt.',
-  alternates: { canonical: 'https://primundus.de/ablauf/' },
+  alternates: { canonical: 'https://primundus.de/ablauf' },
   openGraph: {
     title: 'Ablauf der 24h-Pflege mit Primundus | Primundus',
     description: 'Von der Anfrage bis zur Betreuungskraft zuhause: der vollständige Ablauf erklärt.',
-    url: 'https://primundus.de/ablauf/',
+    url: 'https://primundus.de/ablauf',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,14 +35,14 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/ablauf/',
+    mainEntityOfPage: 'https://primundus.de/ablauf',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ablauf', item: 'https://primundus.de/ablauf/' },
+      { '@type': 'ListItem', position: 2, name: 'Ablauf', item: 'https://primundus.de/ablauf' },
     ],
   },
   {

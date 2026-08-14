@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { CitiesOfRegion } from '@/components/CityIndex'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Thüringen — Betreuungskraft | Primundus',
   description: '24h-Pflege in Thüringen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-thueringen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-thueringen' },
   openGraph: {
     title: '24h-Pflege Thüringen | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Thüringen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-thueringen/',
+    url: 'https://primundus.de/24h-pflege-thueringen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Thüringen',
     description: '24h-Betreuungskräfte in Thüringen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-thueringen/',
+    url: 'https://primundus.de/24h-pflege-thueringen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Thüringen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Thüringen', item: 'https://primundus.de/24h-pflege-thueringen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Thüringen', item: 'https://primundus.de/24h-pflege-thueringen' },
     ],
   },
   {
@@ -303,6 +304,8 @@ export default function ThueringenPage() {
           </div>
 
           {/* CTA */}
+          <CitiesOfRegion region="thueringen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Thüringen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

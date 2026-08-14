@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Offenbach am Main — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Offenbach am Main: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-offenbach/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-offenbach' },
   openGraph: {
     title: '24h-Pflege Offenbach am Main — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Offenbach am Main. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-offenbach/',
+    url: 'https://primundus.de/24h-pflege-offenbach',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Offenbach am Main',
     description: '24h-Betreuungskräfte in Offenbach am Main. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-offenbach/',
+    url: 'https://primundus.de/24h-pflege-offenbach',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Offenbach am Main' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Offenbach am Main', item: 'https://primundus.de/24h-pflege-offenbach/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Offenbach am Main', item: 'https://primundus.de/24h-pflege-offenbach' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function OffenbachamMainPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="offenbach" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Offenbach am Main die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Tagespflege vs. 24h-Betreuung — Vergleich 2026 | Primundus',
   description: 'Tagespflege oder 24h-Betreuung zuhause? Kostenvergleich, Kassenzuschüsse und wann welche Form sinnvoll ist — vollständiger Vergleich für 2026.',
-  alternates: { canonical: 'https://primundus.de/tagespflege-vs-24h-betreuung/' },
+  alternates: { canonical: 'https://primundus.de/tagespflege-vs-24h-betreuung' },
   openGraph: {
     title: 'Tagespflege vs. 24h-Betreuung 2026 | Primundus',
     description: 'Vollständiger Vergleich: Kosten, Leistungen und wann welche Pflegeform besser passt.',
-    url: 'https://primundus.de/tagespflege-vs-24h-betreuung/',
+    url: 'https://primundus.de/tagespflege-vs-24h-betreuung',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/tagespflege-vs-24h-betreuung/',
+    mainEntityOfPage: 'https://primundus.de/tagespflege-vs-24h-betreuung',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche/' },
-      { '@type': 'ListItem', position: 3, name: 'Tagespflege vs. 24h', item: 'https://primundus.de/tagespflege-vs-24h-betreuung/' },
+      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche' },
+      { '@type': 'ListItem', position: 3, name: 'Tagespflege vs. 24h', item: 'https://primundus.de/tagespflege-vs-24h-betreuung' },
     ],
   },
   {

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: 'Pflegegrad beantragen — Schritt für Schritt 2026 | Primundus',
   description: 'Pflegegrad beantragen: Antrag bei der Pflegekasse, MD-Begutachtung, Einstufung in 5 Schritten. Mit Tipps für höhere Einstufung. Aktuell für 2026.',
   alternates: {
-    canonical: 'https://primundus.de/pflegegrad-beantragen/',
+    canonical: 'https://primundus.de/pflegegrad-beantragen',
   },
   openGraph: {
     title: 'Pflegegrad beantragen — Schritt für Schritt 2026 | Primundus',
     description: 'Pflegegrad beantragen: Antrag bei der Pflegekasse, MD-Begutachtung, Einstufung in 5 Schritten. Mit Tipps für höhere Einstufung. Aktuell für 2026.',
-    url: 'https://primundus.de/pflegegrad-beantragen/',
+    url: 'https://primundus.de/pflegegrad-beantragen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -48,15 +48,15 @@ const schemaMarkup = [
     },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-beantragen/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-beantragen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad beantragen', item: 'https://primundus.de/pflegegrad-beantragen/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad beantragen', item: 'https://primundus.de/pflegegrad-beantragen' },
     ],
   },
   {

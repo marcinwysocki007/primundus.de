@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekraft wechseln — wann & wie | Primundus',
   description: 'Pflegekraft wechseln: Wann ein Wechsel sinnvoll ist, wie der reguläre Kraftwechsel alle 6–8 Wochen funktioniert und was eine gute Übergabe ausmacht.',
-  alternates: { canonical: 'https://primundus.de/pflegekraft-wechseln/' },
+  alternates: { canonical: 'https://primundus.de/pflegekraft-wechseln' },
   openGraph: {
     title: 'Pflegekraft wechseln | Primundus',
     description: 'Wann und wie man eine 24h-Betreuungskraft wechselt — regulär und kurzfristig.',
-    url: 'https://primundus.de/pflegekraft-wechseln/',
+    url: 'https://primundus.de/pflegekraft-wechseln',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekraft-wechseln/',
+    mainEntityOfPage: 'https://primundus.de/pflegekraft-wechseln',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekraft wechseln', item: 'https://primundus.de/pflegekraft-wechseln/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekraft wechseln', item: 'https://primundus.de/pflegekraft-wechseln' },
     ],
   },
 ]

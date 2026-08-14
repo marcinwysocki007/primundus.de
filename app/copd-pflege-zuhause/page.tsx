@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'was-ist', title: 'Was ist COPD?' }, { id: 'aufgaben', t
 export const metadata: Metadata = {
   title: 'COPD Pflege zuhause — was Betreuungskräfte wissen müssen | Primundus',
   description: 'COPD zuhause pflegen: was zu beachten ist, welche Aufgaben die Kraft übernimmt, wie Notfälle verhindert werden. Mit Checkliste.',
-  alternates: { canonical: 'https://primundus.de/copd-pflege-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/copd-pflege-zuhause' },
   openGraph: {
     title: 'COPD Pflege zuhause',
     description: 'COPD zuhause pflegen: was zu beachten ist, welche Aufgaben die Kraft übernimmt, wie Notfälle verhindert werden. Mit Checkliste.',
-    url: 'https://primundus.de/copd-pflege-zuhause/',
+    url: 'https://primundus.de/copd-pflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/copd-pflege-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/copd-pflege-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'COPD Pflege zuhause', item: 'https://primundus.de/copd-pflege-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'COPD Pflege zuhause', item: 'https://primundus.de/copd-pflege-zuhause' },
     ],
   },
   {

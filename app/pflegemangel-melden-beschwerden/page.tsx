@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegemangel melden — Beschwerden richtig einreichen | Primundus',
   description: 'Pflegemangel melden: An wen man sich bei Problemen in der Pflege wendet, wie eine Beschwerde eingereicht wird und welche Stellen zuständig sind.',
-  alternates: { canonical: 'https://primundus.de/pflegemangel-melden-beschwerden/' },
+  alternates: { canonical: 'https://primundus.de/pflegemangel-melden-beschwerden' },
   openGraph: {
     title: 'Pflegemangel melden | Primundus',
     description: 'Probleme in der Pflege melden — welche Stellen zuständig sind und wie man vorgeht.',
-    url: 'https://primundus.de/pflegemangel-melden-beschwerden/',
+    url: 'https://primundus.de/pflegemangel-melden-beschwerden',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegemangel-melden-beschwerden/',
+    mainEntityOfPage: 'https://primundus.de/pflegemangel-melden-beschwerden',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegemangel melden', item: 'https://primundus.de/pflegemangel-melden-beschwerden/' },
+      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegemangel melden', item: 'https://primundus.de/pflegemangel-melden-beschwerden' },
     ],
   },
   {

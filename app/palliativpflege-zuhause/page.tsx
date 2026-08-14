@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Palliativpflege zuhause — würdevoll bis zum Ende | Primundus',
   description: 'Palliativpflege zuhause: Was möglich ist, welches Team gebraucht wird und wie Angehörige in der letzten Lebensphase unterstützt werden können.',
-  alternates: { canonical: 'https://primundus.de/palliativpflege-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/palliativpflege-zuhause' },
   openGraph: {
     title: 'Palliativpflege zuhause | Primundus',
     description: 'Würdevolle Begleitung in der letzten Lebensphase zuhause — was möglich ist und was gebraucht wird.',
-    url: 'https://primundus.de/palliativpflege-zuhause/',
+    url: 'https://primundus.de/palliativpflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/palliativpflege-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/palliativpflege-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Palliativpflege zuhause', item: 'https://primundus.de/palliativpflege-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Palliativpflege zuhause', item: 'https://primundus.de/palliativpflege-zuhause' },
     ],
   },
   {

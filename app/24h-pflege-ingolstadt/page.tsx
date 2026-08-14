@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Ingolstadt — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Ingolstadt: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-ingolstadt/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-ingolstadt' },
   openGraph: {
     title: '24h-Pflege Ingolstadt — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Ingolstadt. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-ingolstadt/',
+    url: 'https://primundus.de/24h-pflege-ingolstadt',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Ingolstadt',
     description: '24h-Betreuungskräfte in Ingolstadt. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-ingolstadt/',
+    url: 'https://primundus.de/24h-pflege-ingolstadt',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Ingolstadt' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Ingolstadt', item: 'https://primundus.de/24h-pflege-ingolstadt/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Ingolstadt', item: 'https://primundus.de/24h-pflege-ingolstadt' },
     ],
   },
   {
@@ -317,6 +318,8 @@ export default function IngolstadtPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="ingolstadt" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Ingolstadt die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

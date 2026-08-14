@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: '24h-Pflege finanzieren — alle Kassenzuschüsse 2026 | Primundus',
   description: '24h-Pflege finanzieren: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr + 4.000 € Steuerersparnis. Alle Zuschüsse 2026 optimal kombiniert.',
-  alternates: { canonical: 'https://primundus.de/finanzierung/' },
+  alternates: { canonical: 'https://primundus.de/finanzierung' },
   openGraph: {
     title: '24h-Pflege finanzieren — alle Zuschüsse 2026 | Primundus',
     description: 'Pflegegeld + Entlastungsbudget + Steuerabzug: So senken Sie den Eigenanteil der 24h-Pflege.',
-    url: 'https://primundus.de/finanzierung/',
+    url: 'https://primundus.de/finanzierung',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Finanzierung & Zuschüsse', item: 'https://primundus.de/finanzierung/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Finanzierung & Zuschüsse', item: 'https://primundus.de/finanzierung' },
     ],
   },
   {

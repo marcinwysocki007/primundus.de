@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Bremen — Betreuungskraft | Primundus',
   description: '24h-Pflege in Bremen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-bremen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-bremen' },
   openGraph: {
     title: '24h-Pflege Bremen | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Bremen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-bremen/',
+    url: 'https://primundus.de/24h-pflege-bremen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Bremen',
     description: '24h-Betreuungskräfte in Bremen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-bremen/',
+    url: 'https://primundus.de/24h-pflege-bremen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Bremen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bremen', item: 'https://primundus.de/24h-pflege-bremen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bremen', item: 'https://primundus.de/24h-pflege-bremen' },
     ],
   },
   {
@@ -303,6 +304,8 @@ export default function BremenPage() {
           </div>
 
           {/* CTA */}
+          <NearbyCities current="bremen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Bremen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

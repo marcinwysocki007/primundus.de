@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Schongau — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Schongau: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-weilheim-schongau/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-weilheim-schongau' },
   openGraph: {
     title: '24h-Pflege Schongau — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Schongau. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-weilheim-schongau/',
+    url: 'https://primundus.de/24h-pflege-weilheim-schongau',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Schongau',
     description: '24h-Betreuungskräfte in Schongau. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-weilheim-schongau/',
+    url: 'https://primundus.de/24h-pflege-weilheim-schongau',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Schongau' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Schongau', item: 'https://primundus.de/24h-pflege-weilheim-schongau/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Schongau', item: 'https://primundus.de/24h-pflege-weilheim-schongau' },
     ],
   },
   {
@@ -320,6 +321,8 @@ export default function SchongauPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="weilheim-schongau" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Schongau die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

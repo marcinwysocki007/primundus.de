@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'kasse', title: 'Pflegekasse zahlt' }, { id: 'weitere', 
 export const metadata: Metadata = {
   title: 'Wohnraumanpassung Förderung 2026 — alle Zuschüsse | Primundus',
   description: 'Wohnraumanpassung Förderung: Was die Pflegekasse zahlt (bis 4.000 €), welche weiteren Förderungen es gibt und wie der Antrag läuft.',
-  alternates: { canonical: 'https://primundus.de/wohnraumanpassung-foerderung/' },
+  alternates: { canonical: 'https://primundus.de/wohnraumanpassung-foerderung' },
   openGraph: {
     title: 'Wohnraumanpassung Förderung',
     description: 'Wohnraumanpassung Förderung: Was die Pflegekasse zahlt (bis 4.000 €), welche weiteren Förderungen es gibt und wie der Antrag läuft.',
-    url: 'https://primundus.de/wohnraumanpassung-foerderung/',
+    url: 'https://primundus.de/wohnraumanpassung-foerderung',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/wohnraumanpassung-foerderung/',
+    mainEntityOfPage: 'https://primundus.de/wohnraumanpassung-foerderung',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten/' },
-      { '@type': 'ListItem', position: 3, name: 'Wohnraumanpassung Förderung', item: 'https://primundus.de/wohnraumanpassung-foerderung/' },
+      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten' },
+      { '@type': 'ListItem', position: 3, name: 'Wohnraumanpassung Förderung', item: 'https://primundus.de/wohnraumanpassung-foerderung' },
     ],
   },
   {

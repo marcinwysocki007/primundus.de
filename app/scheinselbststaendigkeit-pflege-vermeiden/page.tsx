@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Scheinselbstständigkeit in der Pflege vermeiden | Primundus',
   description: 'Scheinselbstständigkeit bei Pflegekräften: Was sie ist, woran Behörden sie erkennen, welche Folgen drohen und wie man das Risiko vollständig vermeidet.',
-  alternates: { canonical: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden/' },
+  alternates: { canonical: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden' },
   openGraph: {
     title: 'Scheinselbstständigkeit in der Pflege vermeiden | Primundus',
     description: 'Was Scheinselbstständigkeit ist und wie man das Risiko bei der 24h-Pflege vollständig vermeidet.',
-    url: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden/',
+    url: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden/',
+    mainEntityOfPage: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches/' },
-      { '@type': 'ListItem', position: 3, name: 'Scheinselbstständigkeit vermeiden', item: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden/' },
+      { '@type': 'ListItem', position: 2, name: 'Rechtliches', item: 'https://primundus.de/rechtliches' },
+      { '@type': 'ListItem', position: 3, name: 'Scheinselbstständigkeit vermeiden', item: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden' },
     ],
   },
   {

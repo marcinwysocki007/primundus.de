@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'nachteile', title: 'Die wichtigsten Nachteile' }, { id:
 export const metadata: Metadata = {
   title: 'Nachteile der 24h-Pflege — was man wissen sollte | Primundus',
   description: 'Ehrliche Übersicht der Nachteile der 24h-Pflege: Privatsphäre, Sprachbarrieren, Kraftwechsel, Kosten. Was die Lösung ist und wann 24h-Pflege nicht passt.',
-  alternates: { canonical: 'https://primundus.de/nachteile-24h-pflege/' },
+  alternates: { canonical: 'https://primundus.de/nachteile-24h-pflege' },
   openGraph: {
     title: 'Nachteile der 24h-Pflege | Primundus',
     description: 'Ehrliche Übersicht der Nachteile der 24h-Pflege: Privatsphäre, Sprachbarrieren, Kraftwechsel, Kosten. Was die Lösung ist und wann 24h-Pflege nicht passt.',
-    url: 'https://primundus.de/nachteile-24h-pflege/',
+    url: 'https://primundus.de/nachteile-24h-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/nachteile-24h-pflege/',
+    mainEntityOfPage: 'https://primundus.de/nachteile-24h-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Nachteile der 24h-Pflege', item: 'https://primundus.de/nachteile-24h-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Nachteile der 24h-Pflege', item: 'https://primundus.de/nachteile-24h-pflege' },
     ],
   },
   {

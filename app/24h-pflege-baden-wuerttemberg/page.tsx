@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { CitiesOfRegion } from '@/components/CityIndex'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Baden-Württemberg — Betreuungskraft | Primundus',
   description: '24h-Pflege in Baden-Württemberg: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-baden-wuerttemberg/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-baden-wuerttemberg' },
   openGraph: {
     title: '24h-Pflege Baden-Württemberg | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Baden-Württemberg. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-baden-wuerttemberg/',
+    url: 'https://primundus.de/24h-pflege-baden-wuerttemberg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Baden-Württemberg',
     description: '24h-Betreuungskräfte in Baden-Württemberg. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-baden-wuerttemberg/',
+    url: 'https://primundus.de/24h-pflege-baden-wuerttemberg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Baden-Württemberg' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Baden-Württemberg', item: 'https://primundus.de/24h-pflege-baden-wuerttemberg/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Baden-Württemberg', item: 'https://primundus.de/24h-pflege-baden-wuerttemberg' },
     ],
   },
   {
@@ -303,6 +304,8 @@ export default function BadenWuerttembergPage() {
           </div>
 
           {/* CTA */}
+          <CitiesOfRegion region="baden-wuerttemberg" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Baden-Württemberg die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

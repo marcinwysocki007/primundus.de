@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { CitiesOfRegion } from '@/components/CityIndex'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Rheinland-Pfalz — Betreuungskraft | Primundus',
   description: '24h-Pflege in Rheinland-Pfalz: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-rheinland-pfalz/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-rheinland-pfalz' },
   openGraph: {
     title: '24h-Pflege Rheinland-Pfalz | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Rheinland-Pfalz. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-rheinland-pfalz/',
+    url: 'https://primundus.de/24h-pflege-rheinland-pfalz',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Rheinland-Pfalz',
     description: '24h-Betreuungskräfte in Rheinland-Pfalz. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-rheinland-pfalz/',
+    url: 'https://primundus.de/24h-pflege-rheinland-pfalz',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Rheinland-Pfalz' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Rheinland-Pfalz', item: 'https://primundus.de/24h-pflege-rheinland-pfalz/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Rheinland-Pfalz', item: 'https://primundus.de/24h-pflege-rheinland-pfalz' },
     ],
   },
   {
@@ -303,6 +304,8 @@ export default function RheinlandPfalzPage() {
           </div>
 
           {/* CTA */}
+          <CitiesOfRegion region="rheinland-pfalz" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Rheinland-Pfalz die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

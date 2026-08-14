@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Villingen-Schwenningen — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Villingen-Schwenningen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-villingen-schwenningen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-villingen-schwenningen' },
   openGraph: {
     title: '24h-Pflege Villingen-Schwenningen — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Villingen-Schwenningen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-villingen-schwenningen/',
+    url: 'https://primundus.de/24h-pflege-villingen-schwenningen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Villingen-Schwenningen',
     description: '24h-Betreuungskräfte in Villingen-Schwenningen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-villingen-schwenningen/',
+    url: 'https://primundus.de/24h-pflege-villingen-schwenningen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Villingen-Schwenningen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Villingen-Schwenningen', item: 'https://primundus.de/24h-pflege-villingen-schwenningen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Villingen-Schwenningen', item: 'https://primundus.de/24h-pflege-villingen-schwenningen' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function VillingenSchwenningenPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="villingen-schwenningen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Villingen-Schwenningen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

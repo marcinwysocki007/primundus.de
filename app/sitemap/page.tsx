@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Sitemap — alle Seiten im Überblick | Primundus',
   description: 'Alle Seiten von Primundus auf einen Blick — 24h-Pflege, Ratgeber, Regionen, Tools und mehr.',
-  alternates: { canonical: 'https://primundus.de/sitemap/' },
+  alternates: { canonical: 'https://primundus.de/sitemap' },
   robots: { index: false, follow: true },
 }
 

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Duisburg — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Duisburg: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-duisburg/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-duisburg' },
   openGraph: {
     title: '24h-Pflege Duisburg — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Duisburg. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-duisburg/',
+    url: 'https://primundus.de/24h-pflege-duisburg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Duisburg',
     description: '24h-Betreuungskräfte in Duisburg. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-duisburg/',
+    url: 'https://primundus.de/24h-pflege-duisburg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Duisburg' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Duisburg', item: 'https://primundus.de/24h-pflege-duisburg/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Duisburg', item: 'https://primundus.de/24h-pflege-duisburg' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function DuisburgPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="duisburg" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Duisburg die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

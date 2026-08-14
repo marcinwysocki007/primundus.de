@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde | Primundus',
   description: 'Inkontinenz bei pflegebedürftigen Senioren: Formen, Hilfsmittel (Kassenzuschuss bis 40 €/Mo), Alltagstipps und wie man Würde beim Umgang bewahrt.',
-  alternates: { canonical: 'https://primundus.de/inkontinenz-pflege-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/inkontinenz-pflege-zuhause' },
   openGraph: {
     title: 'Inkontinenz Pflege zuhause | Primundus',
     description: 'Inkontinenz in der häuslichen Pflege — Hilfsmittel, Alltag und Würde bewahren.',
-    url: 'https://primundus.de/inkontinenz-pflege-zuhause/',
+    url: 'https://primundus.de/inkontinenz-pflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/inkontinenz-pflege-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/inkontinenz-pflege-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Inkontinenz Pflege zuhause', item: 'https://primundus.de/inkontinenz-pflege-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Inkontinenz Pflege zuhause', item: 'https://primundus.de/inkontinenz-pflege-zuhause' },
     ],
   },
   {

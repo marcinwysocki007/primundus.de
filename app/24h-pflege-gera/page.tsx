@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Gera — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Gera: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1400 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-gera/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-gera' },
   openGraph: {
     title: '24h-Pflege Gera — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Gera. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-gera/',
+    url: 'https://primundus.de/24h-pflege-gera',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Gera',
     description: '24h-Betreuungskräfte in Gera. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-gera/',
+    url: 'https://primundus.de/24h-pflege-gera',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Gera' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Gera', item: 'https://primundus.de/24h-pflege-gera/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Gera', item: 'https://primundus.de/24h-pflege-gera' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function GeraPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="gera" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Gera die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

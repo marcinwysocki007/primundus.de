@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Osteoporose Pflege zuhause — Sturzschutz & Alltag | Primundus',
   description: 'Osteoporose Pflege zuhause: Warum Sturzprävention das Wichtigste ist, wie man den Alltag sicher gestaltet und was Ernährung und Vitamin D beitragen.',
-  alternates: { canonical: 'https://primundus.de/osteoporose-pflege-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/osteoporose-pflege-zuhause' },
   openGraph: {
     title: 'Osteoporose Pflege zuhause | Primundus',
     description: 'Häusliche Pflege bei Osteoporose — Sturzschutz, Alltag und Ernährung.',
-    url: 'https://primundus.de/osteoporose-pflege-zuhause/',
+    url: 'https://primundus.de/osteoporose-pflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/osteoporose-pflege-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/osteoporose-pflege-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Osteoporose Pflege', item: 'https://primundus.de/osteoporose-pflege-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Osteoporose Pflege', item: 'https://primundus.de/osteoporose-pflege-zuhause' },
     ],
   },
 ]

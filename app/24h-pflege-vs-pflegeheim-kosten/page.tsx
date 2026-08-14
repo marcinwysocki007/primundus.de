@@ -22,11 +22,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
   description: 'Pflegeheim: Ø 2.871 €/Monat Eigenanteil. 24h-Pflege: ab ca. 1.500 €/Monat nach Kassenzuschüssen. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten' },
   openGraph: {
     title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
     description: 'Was kostet mehr — Pflegeheim oder 24h-Pflege? Vollständiger Vergleich mit aktuellen Zahlen 2026.',
-    url: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten/',
+    url: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -43,15 +43,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten/',
+    mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche/' },
-      { '@type': 'ListItem', position: 3, name: '24h-Pflege vs. Pflegeheim', item: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten/' },
+      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche' },
+      { '@type': 'ListItem', position: 3, name: '24h-Pflege vs. Pflegeheim', item: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten' },
     ],
   },
   {

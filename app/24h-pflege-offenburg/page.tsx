@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Offenburg — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Offenburg: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-offenburg/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-offenburg' },
   openGraph: {
     title: '24h-Pflege Offenburg — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Offenburg. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-offenburg/',
+    url: 'https://primundus.de/24h-pflege-offenburg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Offenburg',
     description: '24h-Betreuungskräfte in Offenburg. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-offenburg/',
+    url: 'https://primundus.de/24h-pflege-offenburg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Offenburg' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Offenburg', item: 'https://primundus.de/24h-pflege-offenburg/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Offenburg', item: 'https://primundus.de/24h-pflege-offenburg' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function OffenburgPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="offenburg" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Offenburg die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

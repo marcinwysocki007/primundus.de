@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Barrierefreies Zuhause gestalten — Tipps & Förderung 2026 | Primundus',
   description: 'Barrierefreies Zuhause: Die wichtigsten Maßnahmen, wie Pflegekasse bis 4.180 €/Maßnahme fördert und was sofort umgesetzt werden kann. Mit Raum-für-Raum Checkliste.',
-  alternates: { canonical: 'https://primundus.de/barrierefreies-zuhause-gestalten/' },
+  alternates: { canonical: 'https://primundus.de/barrierefreies-zuhause-gestalten' },
   openGraph: {
     title: 'Barrierefreies Zuhause gestalten 2026 | Primundus',
     description: 'Wohnraumanpassung: Maßnahmen, Förderung bis 4.180 €/Maßnahme und Checkliste.',
-    url: 'https://primundus.de/barrierefreies-zuhause-gestalten/',
+    url: 'https://primundus.de/barrierefreies-zuhause-gestalten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/barrierefreies-zuhause-gestalten/',
+    mainEntityOfPage: 'https://primundus.de/barrierefreies-zuhause-gestalten',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Barrierefreies Zuhause', item: 'https://primundus.de/barrierefreies-zuhause-gestalten/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Barrierefreies Zuhause', item: 'https://primundus.de/barrierefreies-zuhause-gestalten' },
     ],
   },
   {

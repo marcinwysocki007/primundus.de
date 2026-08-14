@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Alzheimer Betreuung zuhause — was möglich ist & wie 24h-Pflege hilft | Primundus',
   description: 'Alzheimer Betreuung zuhause: Was in welchem Stadium möglich ist, wie der Alltag gestaltet wird und wann eine 24h-Betreuungskraft die richtige Unterstützung bietet.',
-  alternates: { canonical: 'https://primundus.de/alzheimer-betreuung-zuhause/' },
+  alternates: { canonical: 'https://primundus.de/alzheimer-betreuung-zuhause' },
   openGraph: {
     title: 'Alzheimer Betreuung zuhause | Primundus',
     description: 'Alzheimer zuhause betreuen: Was in welchem Stadium möglich ist und wie 24h-Pflege hilft.',
-    url: 'https://primundus.de/alzheimer-betreuung-zuhause/',
+    url: 'https://primundus.de/alzheimer-betreuung-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/alzheimer-betreuung-zuhause/',
+    mainEntityOfPage: 'https://primundus.de/alzheimer-betreuung-zuhause',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Alzheimer Betreuung zuhause', item: 'https://primundus.de/alzheimer-betreuung-zuhause/' },
+      { '@type': 'ListItem', position: 2, name: 'Krankheiten', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Alzheimer Betreuung zuhause', item: 'https://primundus.de/alzheimer-betreuung-zuhause' },
     ],
   },
   {

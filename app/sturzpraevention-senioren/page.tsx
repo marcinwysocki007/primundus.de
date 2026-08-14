@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Sturzprävention Senioren — wie man Stürze verhindert | Primundus',
   description: 'Sturzprävention Senioren 2026: Risikofaktoren erkennen, Wohnung sichern, Gleichgewichtsübungen und Hilfsmittel — wie man Stürze im Alter effektiv verhindert.',
-  alternates: { canonical: 'https://primundus.de/sturzpraevention-senioren/' },
+  alternates: { canonical: 'https://primundus.de/sturzpraevention-senioren' },
   openGraph: {
     title: 'Sturzprävention Senioren | Primundus',
     description: 'Wie man Stürze im Alter verhindert — Risikofaktoren, Wohnungssicherung, Übungen, Hilfsmittel.',
-    url: 'https://primundus.de/sturzpraevention-senioren/',
+    url: 'https://primundus.de/sturzpraevention-senioren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/sturzpraevention-senioren/',
+    mainEntityOfPage: 'https://primundus.de/sturzpraevention-senioren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Sturzprävention Senioren', item: 'https://primundus.de/sturzpraevention-senioren/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Sturzprävention Senioren', item: 'https://primundus.de/sturzpraevention-senioren' },
     ],
   },
   {

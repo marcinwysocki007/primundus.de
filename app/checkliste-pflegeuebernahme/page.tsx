@@ -4,11 +4,11 @@ import { ChecklisteClient } from './ChecklisteClient'
 export const metadata: Metadata = {
   title: 'Checkliste Pflegeübernahme — 30 Schritte in 5 Phasen | Primundus',
   description: 'Strukturierte Checkliste für die Pflegeübernahme — von den ersten Tagen bis zur stabilen Pflegesituation. 30 konkrete Schritte, Fortschritt wird gespeichert.',
-  alternates: { canonical: 'https://primundus.de/checkliste-pflegeuebernahme/' },
+  alternates: { canonical: 'https://primundus.de/checkliste-pflegeuebernahme' },
   openGraph: {
     title: 'Checkliste Pflegeübernahme | Primundus',
     description: '30 konkrete Schritte in 5 Phasen — vom ersten Tag bis zur stabilen Pflegesituation. Mit Fortschrittsanzeige.',
-    url: 'https://primundus.de/checkliste-pflegeuebernahme/',
+    url: 'https://primundus.de/checkliste-pflegeuebernahme',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools/' },
-      { '@type': 'ListItem', position: 3, name: 'Checkliste Pflegeübernahme', item: 'https://primundus.de/checkliste-pflegeuebernahme/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools & Rechner', item: 'https://primundus.de/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Checkliste Pflegeübernahme', item: 'https://primundus.de/checkliste-pflegeuebernahme' },
     ],
   },
   {

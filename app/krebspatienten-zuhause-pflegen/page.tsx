@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'beduerfnisse', title: 'Besondere Bedürfnisse' }, { id:
 export const metadata: Metadata = {
   title: 'Krebspatienten zuhause pflegen — Leitfaden für Familien | Primundus',
   description: 'Krebspatienten zuhause betreuen: Was die Betreuungskraft übernimmt, wie der Alltag gestaltet wird und wann Palliativpflege nötig wird.',
-  alternates: { canonical: 'https://primundus.de/krebspatienten-zuhause-pflegen/' },
+  alternates: { canonical: 'https://primundus.de/krebspatienten-zuhause-pflegen' },
   openGraph: {
     title: 'Krebspatienten zuhause pflegen',
     description: 'Krebspatienten zuhause betreuen: Was die Betreuungskraft übernimmt, wie der Alltag gestaltet wird und wann Palliativpflege nötig wird.',
-    url: 'https://primundus.de/krebspatienten-zuhause-pflegen/',
+    url: 'https://primundus.de/krebspatienten-zuhause-pflegen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/krebspatienten-zuhause-pflegen/',
+    mainEntityOfPage: 'https://primundus.de/krebspatienten-zuhause-pflegen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Krebspatienten zuhause pflegen', item: 'https://primundus.de/krebspatienten-zuhause-pflegen/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Krebspatienten zuhause pflegen', item: 'https://primundus.de/krebspatienten-zuhause-pflegen' },
     ],
   },
   {

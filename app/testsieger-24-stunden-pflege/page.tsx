@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   title: 'Testsieger 24-Stunden-Pflege: Primundus ist die Nr. 1',
   description:
     'Primundus ist Testsieger: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Jetzt Beleg ansehen und Kosten in 2 Minuten berechnen.',
-  alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege/' },
+  alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     title: 'Testsieger 24-Stunden-Pflege: Primundus ist die Nr. 1',
     description:
       'Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet von DIE WELT und ServiceValue. Mit Original-Beleg als PDF.',
-    url: 'https://primundus.de/testsieger-24-stunden-pflege/',
+    url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -30,7 +30,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Testsieger 24-Stunden-Pflege', item: 'https://primundus.de/testsieger-24-stunden-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Testsieger 24-Stunden-Pflege', item: 'https://primundus.de/testsieger-24-stunden-pflege' },
     ],
   },
   {

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { CitiesOfRegion } from '@/components/CityIndex'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Niedersachsen — Betreuungskraft | Primundus',
   description: '24h-Pflege in Niedersachsen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-niedersachsen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-niedersachsen' },
   openGraph: {
     title: '24h-Pflege Niedersachsen | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Niedersachsen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-niedersachsen/',
+    url: 'https://primundus.de/24h-pflege-niedersachsen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Niedersachsen',
     description: '24h-Betreuungskräfte in Niedersachsen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-niedersachsen/',
+    url: 'https://primundus.de/24h-pflege-niedersachsen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Niedersachsen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Niedersachsen', item: 'https://primundus.de/24h-pflege-niedersachsen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Niedersachsen', item: 'https://primundus.de/24h-pflege-niedersachsen' },
     ],
   },
   {
@@ -303,6 +304,8 @@ export default function NiedersachsenPage() {
           </div>
 
           {/* CTA */}
+          <CitiesOfRegion region="niedersachsen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Niedersachsen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

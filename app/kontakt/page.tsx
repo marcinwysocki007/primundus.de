@@ -4,11 +4,11 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Kontakt — persönliche Beratung zur 24h-Pflege | Primundus',
   description: 'Primundus persönlich erreichen: 089 200 000 830 · Mo–So 8–20 Uhr · info@primundus.de. Kostenlose Beratung zur 24-Stunden-Pflege.',
-  alternates: { canonical: 'https://primundus.de/kontakt/' },
+  alternates: { canonical: 'https://primundus.de/kontakt' },
   openGraph: {
     title: 'Kontakt | Primundus — 24h-Pflege',
     description: 'Primundus persönlich erreichen: 089 200 000 830 · Mo–So 8–20 Uhr.',
-    url: 'https://primundus.de/kontakt/',
+    url: 'https://primundus.de/kontakt',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',

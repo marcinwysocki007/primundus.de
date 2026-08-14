@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'wann', title: 'Wann melden?' }, { id: 'antrag', title: 
 export const metadata: Metadata = {
   title: 'Pflegegrad-Änderung melden — wann und wie | Primundus',
   description: 'Wenn sich der Zustand verschlechtert: Wann und wie eine Höherstufung beantragt wird, was zu beachten ist und wie man vorgeht.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-aenderung-melden/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-aenderung-melden' },
   openGraph: {
     title: 'Pflegegrad-Änderung melden',
     description: 'Wenn sich der Zustand verschlechtert: Wann und wie eine Höherstufung beantragt wird, was zu beachten ist und wie man vorgeht.',
-    url: 'https://primundus.de/pflegegrad-aenderung-melden/',
+    url: 'https://primundus.de/pflegegrad-aenderung-melden',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-aenderung-melden/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-aenderung-melden',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad-Änderung melden', item: 'https://primundus.de/pflegegrad-aenderung-melden/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad-Änderung melden', item: 'https://primundus.de/pflegegrad-aenderung-melden' },
     ],
   },
   {

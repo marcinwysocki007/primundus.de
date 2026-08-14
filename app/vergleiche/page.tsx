@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: 'Pflege vergleichen — alle Vergleiche auf einen Blick | Primundus',
   description: 'Pflegeformen, Kosten und Betreuungsmodelle vergleichen: 24h-Pflege vs. Pflegeheim, ambulante Pflege, Tagespflege, osteuropäische Pflegekräfte. Alle Vergleiche.',
-  alternates: { canonical: 'https://primundus.de/vergleiche/' },
+  alternates: { canonical: 'https://primundus.de/vergleiche' },
   openGraph: {
     title: 'Pflege vergleichen | Primundus',
     description: 'Alle Pflegevergleiche auf einen Blick — von Pflegeheim vs. 24h bis ambulant vs. stationär.',
-    url: 'https://primundus.de/vergleiche/',
+    url: 'https://primundus.de/vergleiche',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Vergleiche', item: 'https://primundus.de/vergleiche/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Vergleiche', item: 'https://primundus.de/vergleiche' },
     ],
   },
 ])

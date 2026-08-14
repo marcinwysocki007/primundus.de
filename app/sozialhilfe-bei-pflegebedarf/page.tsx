@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Sozialhilfe bei Pflegebedarf — Hilfe zur Pflege beantragen | Primundus',
   description: 'Sozialhilfe Pflege 2026: Was Hilfe zur Pflege (§61 SGB XII) ist, wer Anspruch hat, ob Kinder zahlen müssen und wie man den Antrag stellt.',
-  alternates: { canonical: 'https://primundus.de/sozialhilfe-bei-pflegebedarf/' },
+  alternates: { canonical: 'https://primundus.de/sozialhilfe-bei-pflegebedarf' },
   openGraph: {
     title: 'Sozialhilfe bei Pflegebedarf 2026 | Primundus',
     description: 'Hilfe zur Pflege (§61 SGB XII): Wer Anspruch hat, ob Kinder zahlen müssen und wie man Antrag stellt.',
-    url: 'https://primundus.de/sozialhilfe-bei-pflegebedarf/',
+    url: 'https://primundus.de/sozialhilfe-bei-pflegebedarf',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/sozialhilfe-bei-pflegebedarf/',
+    mainEntityOfPage: 'https://primundus.de/sozialhilfe-bei-pflegebedarf',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Sozialhilfe bei Pflegebedarf', item: 'https://primundus.de/sozialhilfe-bei-pflegebedarf/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Sozialhilfe bei Pflegebedarf', item: 'https://primundus.de/sozialhilfe-bei-pflegebedarf' },
     ],
   },
   {

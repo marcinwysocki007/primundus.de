@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: 'Rechtliches zur 24h-Pflege — alle rechtlichen Aspekte | Primundus',
   description: 'Rechtliches zur 24h-Pflege: Beschäftigungsmodelle, Scheinselbstständigkeit vermeiden, Pflegevertrag, Vorsorgevollmacht, Patientenverfügung und Steuerrecht.',
-  alternates: { canonical: 'https://primundus.de/rechtliches/' },
+  alternates: { canonical: 'https://primundus.de/rechtliches' },
   openGraph: {
     title: 'Rechtliches zur 24h-Pflege | Primundus',
     description: 'Alle rechtlichen Aspekte der 24h-Pflege — Beschäftigung, Verträge, Steuern.',
-    url: 'https://primundus.de/rechtliches/',
+    url: 'https://primundus.de/rechtliches',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Rechtliches & Vorsorge', item: 'https://primundus.de/rechtliches/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Rechtliches & Vorsorge', item: 'https://primundus.de/rechtliches' },
     ],
   },
 ])

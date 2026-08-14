@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'MD-Begutachtung vorbereiten — Checkliste & 7 Tipps | Primundus',
   description: 'MD-Begutachtung vorbereiten: Pflegetagebuch führen, den schlechtesten Tag schildern, Vertrauensperson einladen. Checkliste + 7 Tipps für höhere Pflegegrad-Einstufung.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten' },
   openGraph: {
     title: 'MD-Begutachtung vorbereiten | Primundus',
     description: 'Checkliste und 7 Tipps für die MD-Begutachtung — so erreichen Sie eine faire und korrekte Einstufung.',
-    url: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten/',
+    url: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Begutachtung vorbereiten', item: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Begutachtung vorbereiten', item: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten' },
     ],
   },
   {

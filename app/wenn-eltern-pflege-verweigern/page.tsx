@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Wenn Eltern Pflege verweigern — was jetzt hilft | Primundus',
   description: 'Eltern verweigern Pflege oder Betreuungskraft? Warum das passiert, welche Strategien wirklich helfen und wo die Grenzen der Selbstbestimmung liegen.',
-  alternates: { canonical: 'https://primundus.de/wenn-eltern-pflege-verweigern/' },
+  alternates: { canonical: 'https://primundus.de/wenn-eltern-pflege-verweigern' },
   openGraph: {
     title: 'Wenn Eltern Pflege verweigern | Primundus',
     description: 'Was man tun kann wenn Eltern Pflege oder eine Betreuungskraft ablehnen.',
-    url: 'https://primundus.de/wenn-eltern-pflege-verweigern/',
+    url: 'https://primundus.de/wenn-eltern-pflege-verweigern',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/wenn-eltern-pflege-verweigern/',
+    mainEntityOfPage: 'https://primundus.de/wenn-eltern-pflege-verweigern',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Wenn Eltern Pflege verweigern', item: 'https://primundus.de/wenn-eltern-pflege-verweigern/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Wenn Eltern Pflege verweigern', item: 'https://primundus.de/wenn-eltern-pflege-verweigern' },
     ],
   },
   {

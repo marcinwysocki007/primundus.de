@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24h-Pflege organisieren — Checkliste & Schritt-für-Schritt | Primundus',
   description: '24h-Pflege organisieren: Was vor dem Start geregelt sein muss, wie man Wohnraum vorbereitet und was laufend zu organisieren ist. Mit vollständiger Checkliste.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-organisieren/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-organisieren' },
   openGraph: {
     title: '24h-Pflege organisieren | Primundus',
     description: 'Schritt-für-Schritt: Was vor und nach dem Start der 24h-Pflege organisiert werden muss.',
-    url: 'https://primundus.de/24h-pflege-organisieren/',
+    url: 'https://primundus.de/24h-pflege-organisieren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/24h-pflege-organisieren/',
+    mainEntityOfPage: 'https://primundus.de/24h-pflege-organisieren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: '24h-Pflege organisieren', item: 'https://primundus.de/24h-pflege-organisieren/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: '24h-Pflege organisieren', item: 'https://primundus.de/24h-pflege-organisieren' },
     ],
   },
 ]

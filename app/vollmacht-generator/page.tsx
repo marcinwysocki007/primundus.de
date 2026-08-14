@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Vorsorgevollmacht-Generator 2026 — kostenlos | Primundus',
   description: 'Kostenlose Vorsorgevollmacht in 5 Minuten erstellen. Gesundheitssorge, Vermögen, Wohnung — individuell konfigurierbar, sofort als PDF drucken.',
   alternates: {
-    canonical: 'https://primundus.de/vollmacht-generator/',
+    canonical: 'https://primundus.de/vollmacht-generator',
   },
   openGraph: {
     title: 'Vorsorgevollmacht-Generator 2026 — kostenlos | Primundus',
     description: 'Kostenlose Vorsorgevollmacht in 5 Minuten erstellen. Gesundheitssorge, Vermögen, Wohnung — individuell konfigurierbar, sofort als PDF drucken.',
-    url: 'https://primundus.de/vollmacht-generator/',
+    url: 'https://primundus.de/vollmacht-generator',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',

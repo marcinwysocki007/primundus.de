@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Bad Aibling — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Bad Aibling: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-aibling/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-aibling' },
   openGraph: {
     title: '24h-Pflege Bad Aibling — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Bad Aibling. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-aibling/',
+    url: 'https://primundus.de/24h-pflege-bad-aibling',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Bad Aibling',
     description: '24h-Betreuungskräfte in Bad Aibling. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-aibling/',
+    url: 'https://primundus.de/24h-pflege-bad-aibling',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bad Aibling' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Aibling', item: 'https://primundus.de/24h-pflege-bad-aibling/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Aibling', item: 'https://primundus.de/24h-pflege-bad-aibling' },
     ],
   },
   {
@@ -320,6 +321,8 @@ export default function BadAiblingPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="bad-aibling" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Bad Aibling die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

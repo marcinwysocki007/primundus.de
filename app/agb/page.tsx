@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Allgemeine Geschäftsbedingungen (AGB) | Primundus',
   description: 'Allgemeine Geschäftsbedingungen der Primundus für die Vermittlung von 24-Stunden-Betreuungskräften nach Deutschland.',
-  alternates: { canonical: 'https://primundus.de/agb/' },
+  alternates: { canonical: 'https://primundus.de/agb' },
   robots: { index: true, follow: true },
 }
 

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { CitiesOfRegion } from '@/components/CityIndex'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Mecklenburg-Vorpommern — Betreuungskraft | Primundus',
   description: '24h-Pflege in Mecklenburg-Vorpommern: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern' },
   openGraph: {
     title: '24h-Pflege Mecklenburg-Vorpommern | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Mecklenburg-Vorpommern. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern/',
+    url: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Mecklenburg-Vorpommern',
     description: '24h-Betreuungskräfte in Mecklenburg-Vorpommern. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern/',
+    url: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Mecklenburg-Vorpommern' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Mecklenburg-Vorpommern', item: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Mecklenburg-Vorpommern', item: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern' },
     ],
   },
   {
@@ -303,6 +304,8 @@ export default function MecklenburgVorpommernPage() {
           </div>
 
           {/* CTA */}
+          <CitiesOfRegion region="mecklenburg-vorpommern" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Mecklenburg-Vorpommern die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

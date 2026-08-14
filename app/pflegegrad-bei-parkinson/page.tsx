@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad bei Parkinson — welcher Grad & wie beantragen | Primundus',
   description: 'Pflegegrad bei Parkinson 2026: Welcher Grad ist realistisch, was bei der Begutachtung zu beachten ist und wie die Leistungen sich staffeln. Vollständiger Ratgeber.',
-  alternates: { canonical: 'https://primundus.de/pflegegrad-bei-parkinson/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrad-bei-parkinson' },
   openGraph: {
     title: 'Pflegegrad bei Parkinson 2026 | Primundus',
     description: 'Welcher Pflegegrad bei Parkinson — Begutachtung, Leistungen und Höherstufung.',
-    url: 'https://primundus.de/pflegegrad-bei-parkinson/',
+    url: 'https://primundus.de/pflegegrad-bei-parkinson',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegegrad-bei-parkinson/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrad-bei-parkinson',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrad bei Parkinson', item: 'https://primundus.de/pflegegrad-bei-parkinson/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrad bei Parkinson', item: 'https://primundus.de/pflegegrad-bei-parkinson' },
     ],
   },
   {

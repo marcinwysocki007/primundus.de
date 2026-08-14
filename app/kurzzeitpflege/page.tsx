@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'was-ist', title: 'Was ist Kurzzeitpflege?' }, { id: 'le
 export const metadata: Metadata = {
   title: 'Kurzzeitpflege 2026 — Anspruch, Kosten & Beantragung | Primundus',
   description: 'Kurzzeitpflege: Was es ist, wie viel die Kasse zahlt (2026: bis 3.539 €/Jahr), wie man es beantragt und wann 24h-Pflege die bessere Alternative ist.',
-  alternates: { canonical: 'https://primundus.de/kurzzeitpflege/' },
+  alternates: { canonical: 'https://primundus.de/kurzzeitpflege' },
   openGraph: {
     title: 'Kurzzeitpflege 2026 | Primundus',
     description: 'Kurzzeitpflege: Was es ist, wie viel die Kasse zahlt (2026: bis 3.539 €/Jahr), wie man es beantragt und wann 24h-Pflege die bessere Alternative ist.',
-    url: 'https://primundus.de/kurzzeitpflege/',
+    url: 'https://primundus.de/kurzzeitpflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/kurzzeitpflege/',
+    mainEntityOfPage: 'https://primundus.de/kurzzeitpflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten/' },
-      { '@type': 'ListItem', position: 3, name: 'Kurzzeitpflege', item: 'https://primundus.de/kurzzeitpflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten' },
+      { '@type': 'ListItem', position: 3, name: 'Kurzzeitpflege', item: 'https://primundus.de/kurzzeitpflege' },
     ],
   },
   {

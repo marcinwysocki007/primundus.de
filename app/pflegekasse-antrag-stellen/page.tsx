@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegekasse Antrag stellen — Schritt für Schritt 2026 | Primundus',
   description: 'Pflegekasse Antrag stellen 2026: Pflegegrad beantragen, welche Leistungen es gibt, Fristen und was bei Ablehnung zu tun ist. Mit Musterschreiben.',
-  alternates: { canonical: 'https://primundus.de/pflegekasse-antrag-stellen/' },
+  alternates: { canonical: 'https://primundus.de/pflegekasse-antrag-stellen' },
   openGraph: {
     title: 'Pflegekasse Antrag stellen 2026 | Primundus',
     description: 'Pflegegrad und Pflegeleistungen bei der Pflegekasse beantragen — Schritt für Schritt erklärt.',
-    url: 'https://primundus.de/pflegekasse-antrag-stellen/',
+    url: 'https://primundus.de/pflegekasse-antrag-stellen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegekasse-antrag-stellen/',
+    mainEntityOfPage: 'https://primundus.de/pflegekasse-antrag-stellen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegekasse Antrag stellen', item: 'https://primundus.de/pflegekasse-antrag-stellen/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegekasse Antrag stellen', item: 'https://primundus.de/pflegekasse-antrag-stellen' },
     ],
   },
   {

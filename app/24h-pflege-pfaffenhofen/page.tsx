@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Pfaffenhofen an der Ilm — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Pfaffenhofen an der Ilm: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-pfaffenhofen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-pfaffenhofen' },
   openGraph: {
     title: '24h-Pflege Pfaffenhofen an der Ilm — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Pfaffenhofen an der Ilm. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-pfaffenhofen/',
+    url: 'https://primundus.de/24h-pflege-pfaffenhofen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Pfaffenhofen an der Ilm',
     description: '24h-Betreuungskräfte in Pfaffenhofen an der Ilm. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-pfaffenhofen/',
+    url: 'https://primundus.de/24h-pflege-pfaffenhofen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Pfaffenhofen an der Ilm' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Pfaffenhofen an der Ilm', item: 'https://primundus.de/24h-pflege-pfaffenhofen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Pfaffenhofen an der Ilm', item: 'https://primundus.de/24h-pflege-pfaffenhofen' },
     ],
   },
   {
@@ -320,6 +321,8 @@ export default function PfaffenhofenanderIlmPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="pfaffenhofen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Pfaffenhofen an der Ilm die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

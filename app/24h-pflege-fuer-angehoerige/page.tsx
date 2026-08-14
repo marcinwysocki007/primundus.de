@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'einstieg', title: 'Wann ist der richtige Zeitpunkt?' },
 export const metadata: Metadata = {
   title: '24h-Pflege für Angehörige organisieren — Leitfaden für Familien | Primundus',
   description: '24h-Pflege für Eltern oder Angehörige organisieren: was zu beachten ist, wie der Ablauf läuft, welche Kosten entstehen und wie Primundus unterstützt.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-fuer-angehoerige/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-fuer-angehoerige' },
   openGraph: {
     title: '24h-Pflege für Angehörige | Primundus',
     description: '24h-Pflege für Eltern oder Angehörige organisieren: was zu beachten ist, wie der Ablauf läuft, welche Kosten entstehen und wie Primundus unterstützt.',
-    url: 'https://primundus.de/24h-pflege-fuer-angehoerige/',
+    url: 'https://primundus.de/24h-pflege-fuer-angehoerige',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/24h-pflege-fuer-angehoerige/',
+    mainEntityOfPage: 'https://primundus.de/24h-pflege-fuer-angehoerige',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: '24h-Pflege für Angehörige', item: 'https://primundus.de/24h-pflege-fuer-angehoerige/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: '24h-Pflege für Angehörige', item: 'https://primundus.de/24h-pflege-fuer-angehoerige' },
     ],
   },
   {

@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'erstberatung', title: 'Erstberatung' }, { id: 'massnahm
 export const metadata: Metadata = {
   title: 'Wohnraumanpassung planen — Schritt für Schritt | Primundus',
   description: 'Wie man eine Wohnraumanpassung plant: Was zu beachten ist, welche Fachleute helfen und wie man Zuschüsse bekommt.',
-  alternates: { canonical: 'https://primundus.de/wohnraumanpassung-planen/' },
+  alternates: { canonical: 'https://primundus.de/wohnraumanpassung-planen' },
   openGraph: {
     title: 'Wohnraumanpassung planen',
     description: 'Wie man eine Wohnraumanpassung plant: Was zu beachten ist, welche Fachleute helfen und wie man Zuschüsse bekommt.',
-    url: 'https://primundus.de/wohnraumanpassung-planen/',
+    url: 'https://primundus.de/wohnraumanpassung-planen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/wohnraumanpassung-planen/',
+    mainEntityOfPage: 'https://primundus.de/wohnraumanpassung-planen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Wohnraumanpassung planen', item: 'https://primundus.de/wohnraumanpassung-planen/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Wohnraumanpassung planen', item: 'https://primundus.de/wohnraumanpassung-planen' },
     ],
   },
   {

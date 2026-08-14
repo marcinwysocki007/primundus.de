@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Breisach am Rhein — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Breisach am Rhein: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-freiburg-umland/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-freiburg-umland' },
   openGraph: {
     title: '24h-Pflege Breisach am Rhein — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Breisach am Rhein. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-freiburg-umland/',
+    url: 'https://primundus.de/24h-pflege-freiburg-umland',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Breisach am Rhein',
     description: '24h-Betreuungskräfte in Breisach am Rhein. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-freiburg-umland/',
+    url: 'https://primundus.de/24h-pflege-freiburg-umland',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Breisach am Rhein' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Breisach am Rhein', item: 'https://primundus.de/24h-pflege-freiburg-umland/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Breisach am Rhein', item: 'https://primundus.de/24h-pflege-freiburg-umland' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function BreisachamRheinPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="freiburg-umland" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Breisach am Rhein die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Patientenverfügung aufsetzen — Anleitung & was rein muss | Primundus',
   description: 'Patientenverfügung aufsetzen: Was hineingehört, wie man sie gültig erstellt und was der Unterschied zur Vorsorgevollmacht ist. Mit Checkliste der Pflichtinhalte.',
-  alternates: { canonical: 'https://primundus.de/patientenverfuegung-aufsetzen/' },
+  alternates: { canonical: 'https://primundus.de/patientenverfuegung-aufsetzen' },
   openGraph: {
     title: 'Patientenverfügung aufsetzen | Primundus',
     description: 'Was in eine Patientenverfügung gehört und wie man sie rechtsgültig erstellt — Anleitung und Checkliste.',
-    url: 'https://primundus.de/patientenverfuegung-aufsetzen/',
+    url: 'https://primundus.de/patientenverfuegung-aufsetzen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/patientenverfuegung-aufsetzen/',
+    mainEntityOfPage: 'https://primundus.de/patientenverfuegung-aufsetzen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Patientenverfügung aufsetzen', item: 'https://primundus.de/patientenverfuegung-aufsetzen/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Patientenverfügung aufsetzen', item: 'https://primundus.de/patientenverfuegung-aufsetzen' },
     ],
   },
   {

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Ludwigsburg — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Ludwigsburg: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-ludwigsburg/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-ludwigsburg' },
   openGraph: {
     title: '24h-Pflege Ludwigsburg — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Ludwigsburg. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-ludwigsburg/',
+    url: 'https://primundus.de/24h-pflege-ludwigsburg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Ludwigsburg',
     description: '24h-Betreuungskräfte in Ludwigsburg. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-ludwigsburg/',
+    url: 'https://primundus.de/24h-pflege-ludwigsburg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Ludwigsburg' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Ludwigsburg', item: 'https://primundus.de/24h-pflege-ludwigsburg/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Ludwigsburg', item: 'https://primundus.de/24h-pflege-ludwigsburg' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function LudwigsburgPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="ludwigsburg" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Ludwigsburg die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

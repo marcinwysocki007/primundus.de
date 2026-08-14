@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'risiken', title: 'Warum Einsamkeit gefährlich ist' }, 
 export const metadata: Metadata = {
   title: 'Einsamkeit bei Senioren — was wirklich hilft | Primundus',
   description: 'Einsamkeit im Alter ist ein Gesundheitsrisiko. Was Angehörige und Betreuungskräfte tun können und wie 24h-Pflege dagegen wirkt.',
-  alternates: { canonical: 'https://primundus.de/einsamkeit-senioren-bekaempfen/' },
+  alternates: { canonical: 'https://primundus.de/einsamkeit-senioren-bekaempfen' },
   openGraph: {
     title: 'Einsamkeit Senioren',
     description: 'Einsamkeit im Alter ist ein Gesundheitsrisiko. Was Angehörige und Betreuungskräfte tun können und wie 24h-Pflege dagegen wirkt.',
-    url: 'https://primundus.de/einsamkeit-senioren-bekaempfen/',
+    url: 'https://primundus.de/einsamkeit-senioren-bekaempfen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/einsamkeit-senioren-bekaempfen/',
+    mainEntityOfPage: 'https://primundus.de/einsamkeit-senioren-bekaempfen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Einsamkeit bei Senioren', item: 'https://primundus.de/einsamkeit-senioren-bekaempfen/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Einsamkeit bei Senioren', item: 'https://primundus.de/einsamkeit-senioren-bekaempfen' },
     ],
   },
   {

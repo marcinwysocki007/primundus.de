@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'betraege', title: 'Aktuelle Beträge 2026' }, { id: 'ei
 export const metadata: Metadata = {
   title: 'Pflegegrade 2025/2026 — aktuelle Beträge & Übersicht | Primundus',
   description: 'Pflegegrade 2025 und 2026: Aktuelle Pflegegeldbeträge, Sachleistungen, was sich geändert hat und wie der Pflegegrad beantragt wird.',
-  alternates: { canonical: 'https://primundus.de/pflegegrade-2025/' },
+  alternates: { canonical: 'https://primundus.de/pflegegrade-2025' },
   openGraph: {
     title: 'Pflegegrade 2025/2026 | Primundus',
     description: 'Pflegegrade 2025 und 2026: Aktuelle Pflegegeldbeträge, Sachleistungen, was sich geändert hat und wie der Pflegegrad beantragt wird.',
-    url: 'https://primundus.de/pflegegrade-2025/',
+    url: 'https://primundus.de/pflegegrade-2025',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegegrade-2025/',
+    mainEntityOfPage: 'https://primundus.de/pflegegrade-2025',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegrade 2025/2026', item: 'https://primundus.de/pflegegrade-2025/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegrade 2025/2026', item: 'https://primundus.de/pflegegrade-2025' },
     ],
   },
   {

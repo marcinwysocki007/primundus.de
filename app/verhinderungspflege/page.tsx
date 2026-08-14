@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Verhinderungspflege 2026 — neues Entlastungsbudget erklärt | Primundus',
   description: 'Verhinderungspflege 2026: Seit Juli 2025 gemeinsames Entlastungsbudget von 3.539 €/Jahr. Was sich geändert hat, wie man es beantragt und wie es mit 24h-Pflege kombiniert wird.',
-  alternates: { canonical: 'https://primundus.de/verhinderungspflege/' },
+  alternates: { canonical: 'https://primundus.de/verhinderungspflege' },
   openGraph: {
     title: 'Verhinderungspflege 2026 — neues Entlastungsbudget | Primundus',
     description: 'Verhinderungspflege und Kurzzeitpflege wurden zum Entlastungsbudget (3.539 €/Jahr) zusammengelegt. Alles erklärt.',
-    url: 'https://primundus.de/verhinderungspflege/',
+    url: 'https://primundus.de/verhinderungspflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/verhinderungspflege/',
+    mainEntityOfPage: 'https://primundus.de/verhinderungspflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Verhinderungspflege', item: 'https://primundus.de/verhinderungspflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Verhinderungspflege', item: 'https://primundus.de/verhinderungspflege' },
     ],
   },
   {

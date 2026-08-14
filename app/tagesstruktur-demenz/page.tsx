@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Tagesstruktur bei Demenz — Tipps & Tagesplan | Primundus',
   description: 'Tagesstruktur bei Demenz: Warum feste Routinen entscheidend sind, ein konkreter Tagesplan mit sinnvollen Aktivitäten und wie 24h-Betreuung den Alltag stabilisiert.',
-  alternates: { canonical: 'https://primundus.de/tagesstruktur-demenz/' },
+  alternates: { canonical: 'https://primundus.de/tagesstruktur-demenz' },
   openGraph: {
     title: 'Tagesstruktur bei Demenz | Primundus',
     description: 'Feste Routinen und Tagesstruktur bei Demenz: Warum sie wirken und wie man sie umsetzt.',
-    url: 'https://primundus.de/tagesstruktur-demenz/',
+    url: 'https://primundus.de/tagesstruktur-demenz',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -36,15 +36,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/tagesstruktur-demenz/',
+    mainEntityOfPage: 'https://primundus.de/tagesstruktur-demenz',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag/' },
-      { '@type': 'ListItem', position: 3, name: 'Tagesstruktur bei Demenz', item: 'https://primundus.de/tagesstruktur-demenz/' },
+      { '@type': 'ListItem', position: 2, name: 'Alltag & Angehörige', item: 'https://primundus.de/alltag' },
+      { '@type': 'ListItem', position: 3, name: 'Tagesstruktur bei Demenz', item: 'https://primundus.de/tagesstruktur-demenz' },
     ],
   },
   {

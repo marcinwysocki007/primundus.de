@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Landsberg am Lech — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Landsberg am Lech: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-landsberg/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-landsberg' },
   openGraph: {
     title: '24h-Pflege Landsberg am Lech — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Landsberg am Lech. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-landsberg/',
+    url: 'https://primundus.de/24h-pflege-landsberg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Landsberg am Lech',
     description: '24h-Betreuungskräfte in Landsberg am Lech. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-landsberg/',
+    url: 'https://primundus.de/24h-pflege-landsberg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Landsberg am Lech' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Landsberg am Lech', item: 'https://primundus.de/24h-pflege-landsberg/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Landsberg am Lech', item: 'https://primundus.de/24h-pflege-landsberg' },
     ],
   },
   {
@@ -320,6 +321,8 @@ export default function LandsbergamLechPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="landsberg" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Landsberg am Lech die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

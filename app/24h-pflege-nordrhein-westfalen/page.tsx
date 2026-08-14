@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { CitiesOfRegion } from '@/components/CityIndex'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Nordrhein-Westfalen — Betreuungskraft | Primundus',
   description: '24h-Pflege in Nordrhein-Westfalen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-nordrhein-westfalen/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-nordrhein-westfalen' },
   openGraph: {
     title: '24h-Pflege Nordrhein-Westfalen | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Nordrhein-Westfalen. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-nordrhein-westfalen/',
+    url: 'https://primundus.de/24h-pflege-nordrhein-westfalen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Nordrhein-Westfalen',
     description: '24h-Betreuungskräfte in Nordrhein-Westfalen. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-nordrhein-westfalen/',
+    url: 'https://primundus.de/24h-pflege-nordrhein-westfalen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Nordrhein-Westfalen' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Nordrhein-Westfalen', item: 'https://primundus.de/24h-pflege-nordrhein-westfalen/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Nordrhein-Westfalen', item: 'https://primundus.de/24h-pflege-nordrhein-westfalen' },
     ],
   },
   {
@@ -303,6 +304,8 @@ export default function NordrheinWestfalenPage() {
           </div>
 
           {/* CTA */}
+          <CitiesOfRegion region="nordrhein-westfalen" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Nordrhein-Westfalen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

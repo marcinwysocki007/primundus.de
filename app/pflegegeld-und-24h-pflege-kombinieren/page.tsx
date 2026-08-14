@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'pflegegeld', title: 'Pflegegeld bei 24h-Pflege' }, { id
 export const metadata: Metadata = {
   title: 'Pflegegeld und 24h-Pflege kombinieren — so geht es | Primundus',
   description: 'Pflegegeld mit 24h-Pflege kombinieren: Was geht, was nicht, wie viel die Kasse zahlt und wie der Eigenanteil maximal gesenkt wird. Alle Optionen 2026.',
-  alternates: { canonical: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren/' },
+  alternates: { canonical: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren' },
   openGraph: {
     title: 'Pflegegeld und 24h-Pflege kombinieren | Primundus',
     description: 'Pflegegeld mit 24h-Pflege kombinieren: Was geht, was nicht, wie viel die Kasse zahlt und wie der Eigenanteil maximal gesenkt wird. Alle Optionen 2026.',
-    url: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren/',
+    url: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren/',
+    mainEntityOfPage: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegegeld und 24h-Pflege kombinieren', item: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren/' },
+      { '@type': 'ListItem', position: 2, name: 'Kosten', item: 'https://primundus.de/kosten' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegegeld und 24h-Pflege kombinieren', item: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren' },
     ],
   },
   {

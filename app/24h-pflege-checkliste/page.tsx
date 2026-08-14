@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'wohnung', title: 'Wohnung vorbereiten' }, { id: 'dokume
 export const metadata: Metadata = {
   title: '24h-Pflege Checkliste — alles was Familien brauchen | Primundus',
   description: 'Vollständige Checkliste für den Start der 24h-Pflege: Was vorzubereiten ist, welche Dokumente gebraucht werden, wie der erste Tag abläuft.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-checkliste/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-checkliste' },
   openGraph: {
     title: '24h-Pflege Checkliste 2026 | Primundus',
     description: 'Vollständige Checkliste für den Start der 24h-Pflege: Was vorzubereiten ist, welche Dokumente gebraucht werden, wie der erste Tag abläuft.',
-    url: 'https://primundus.de/24h-pflege-checkliste/',
+    url: 'https://primundus.de/24h-pflege-checkliste',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/24h-pflege-checkliste/',
+    mainEntityOfPage: 'https://primundus.de/24h-pflege-checkliste',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: '24h-Pflege Checkliste', item: 'https://primundus.de/24h-pflege-checkliste/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: '24h-Pflege Checkliste', item: 'https://primundus.de/24h-pflege-checkliste' },
     ],
   },
   {

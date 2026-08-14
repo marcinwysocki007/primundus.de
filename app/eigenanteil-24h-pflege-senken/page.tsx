@@ -16,11 +16,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026 | Primundus',
   description: 'Eigenanteil der 24h-Pflege senken: Pflegegrad erhöhen, Entlastungsbudget nutzen, Steuerabzug, Hilfsmittel. Mit allen Maßnahmen auf unter 1.500 €/Monat.',
-  alternates: { canonical: 'https://primundus.de/eigenanteil-24h-pflege-senken/' },
+  alternates: { canonical: 'https://primundus.de/eigenanteil-24h-pflege-senken' },
   openGraph: {
     title: 'Eigenanteil 24h-Pflege senken | Primundus',
     description: 'Alle Möglichkeiten um den Eigenanteil der 24h-Pflege 2026 zu senken.',
-    url: 'https://primundus.de/eigenanteil-24h-pflege-senken/',
+    url: 'https://primundus.de/eigenanteil-24h-pflege-senken',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -37,15 +37,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/eigenanteil-24h-pflege-senken/',
+    mainEntityOfPage: 'https://primundus.de/eigenanteil-24h-pflege-senken',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung/' },
-      { '@type': 'ListItem', position: 3, name: 'Eigenanteil senken', item: 'https://primundus.de/eigenanteil-24h-pflege-senken/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Eigenanteil senken', item: 'https://primundus.de/eigenanteil-24h-pflege-senken' },
     ],
   },
   {

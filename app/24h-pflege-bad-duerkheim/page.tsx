@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24h-Pflege Bad Dürkheim — Betreuungskraft zuhause | Primundus',
   description: '24h-Pflege in Bad Dürkheim: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-duerkheim/' },
+  alternates: { canonical: 'https://primundus.de/24h-pflege-bad-duerkheim' },
   openGraph: {
     title: '24h-Pflege Bad Dürkheim — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Bad Dürkheim. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-duerkheim/',
+    url: 'https://primundus.de/24h-pflege-bad-duerkheim',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,7 +23,7 @@ const schemaMarkup = [
     '@type': 'LocalBusiness',
     name: 'Primundus — 24h-Pflege Bad Dürkheim',
     description: '24h-Betreuungskräfte in Bad Dürkheim. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-duerkheim/',
+    url: 'https://primundus.de/24h-pflege-bad-duerkheim',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bad Dürkheim' },
@@ -33,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Dürkheim', item: 'https://primundus.de/24h-pflege-bad-duerkheim/' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Bad Dürkheim', item: 'https://primundus.de/24h-pflege-bad-duerkheim' },
     ],
   },
   {
@@ -309,6 +310,8 @@ export default function BadDuerkheimPage() {
           </div>
 
           {/* ⑩ CTA */}
+          <NearbyCities current="bad-duerkheim" />
+
           <ArticleCTA
             headline="Ist 24h-Pflege in Bad Dürkheim die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."

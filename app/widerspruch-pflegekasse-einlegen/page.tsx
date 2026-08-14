@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Widerspruch Pflegekasse einlegen — Muster & Tipps 2026 | Primundus',
   description: 'Widerspruch gegen Pflegegrad-Bescheid: Wie man ihn einlegt, Musterschreiben und welche Erfolgschancen realistisch sind. Frist: 1 Monat nach Bescheid.',
-  alternates: { canonical: 'https://primundus.de/widerspruch-pflegekasse-einlegen/' },
+  alternates: { canonical: 'https://primundus.de/widerspruch-pflegekasse-einlegen' },
   openGraph: {
     title: 'Widerspruch Pflegekasse 2026 | Primundus',
     description: 'Widerspruch gegen zu niedrigen Pflegegrad — Muster, Fristen und Erfolgschancen.',
-    url: 'https://primundus.de/widerspruch-pflegekasse-einlegen/',
+    url: 'https://primundus.de/widerspruch-pflegekasse-einlegen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/widerspruch-pflegekasse-einlegen/',
+    mainEntityOfPage: 'https://primundus.de/widerspruch-pflegekasse-einlegen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'Widerspruch einlegen', item: 'https://primundus.de/widerspruch-pflegekasse-einlegen/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'Widerspruch einlegen', item: 'https://primundus.de/widerspruch-pflegekasse-einlegen' },
     ],
   },
   {

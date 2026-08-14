@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Osteuropäische Pflegekraft direkt oder über Agentur? | Primundus',
   description: 'Osteuropäische Pflegekraft direkt suchen oder über eine Agentur? Vollständiger Vergleich: Kosten, Rechtssicherheit, Qualität und was bei der Agenturwahl wirklich zählt.',
-  alternates: { canonical: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur/' },
+  alternates: { canonical: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur' },
   openGraph: {
     title: 'Osteuropäische Pflegekraft oder Agentur? | Primundus',
     description: 'Direktvermittlung oder Agentur: Was ist besser, günstiger und rechtssicherer?',
-    url: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur/',
+    url: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur/',
+    mainEntityOfPage: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche/' },
-      { '@type': 'ListItem', position: 3, name: 'Osteuropäische Pflegekraft oder Agentur', item: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur/' },
+      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche' },
+      { '@type': 'ListItem', position: 3, name: 'Osteuropäische Pflegekraft oder Agentur', item: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur' },
     ],
   },
 ]

@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'was-zahlt', title: 'Was zahlt die Kasse?' }, { id: 'pro
 export const metadata: Metadata = {
   title: 'Pflegehilfsmittel beantragen — kostenlos & einfach | Primundus',
   description: 'Pflegehilfsmittel 2026: Was die Kasse zahlt (42 €/Monat), welche Produkte dazu gehören und wie der Antrag läuft.',
-  alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-beantragen/' },
+  alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-beantragen' },
   openGraph: {
     title: 'Pflegehilfsmittel beantragen',
     description: 'Pflegehilfsmittel 2026: Was die Kasse zahlt (42 €/Monat), welche Produkte dazu gehören und wie der Antrag läuft.',
-    url: 'https://primundus.de/pflegehilfsmittel-beantragen/',
+    url: 'https://primundus.de/pflegehilfsmittel-beantragen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/pflegehilfsmittel-beantragen/',
+    mainEntityOfPage: 'https://primundus.de/pflegehilfsmittel-beantragen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegehilfsmittel beantragen', item: 'https://primundus.de/pflegehilfsmittel-beantragen/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegehilfsmittel beantragen', item: 'https://primundus.de/pflegehilfsmittel-beantragen' },
     ],
   },
   {

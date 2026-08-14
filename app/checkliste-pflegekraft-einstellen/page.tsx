@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Checkliste Pflegekraft einstellen — vollständige Anleitung | Primundus',
   description: 'Checkliste Pflegekraft einstellen: Was vor der Auswahl, beim Gespräch, vor Anreise und in der ersten Woche zu beachten ist. Mit konkreten Fragen für das Auswahlgespräch.',
-  alternates: { canonical: 'https://primundus.de/checkliste-pflegekraft-einstellen/' },
+  alternates: { canonical: 'https://primundus.de/checkliste-pflegekraft-einstellen' },
   openGraph: {
     title: 'Checkliste Pflegekraft einstellen | Primundus',
     description: 'Vollständige Checkliste: Was bei der Einstellung einer 24h-Betreuungskraft zu beachten ist.',
-    url: 'https://primundus.de/checkliste-pflegekraft-einstellen/',
+    url: 'https://primundus.de/checkliste-pflegekraft-einstellen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/checkliste-pflegekraft-einstellen/',
+    mainEntityOfPage: 'https://primundus.de/checkliste-pflegekraft-einstellen',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation/' },
-      { '@type': 'ListItem', position: 3, name: 'Checkliste Pflegekraft einstellen', item: 'https://primundus.de/checkliste-pflegekraft-einstellen/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Checkliste Pflegekraft einstellen', item: 'https://primundus.de/checkliste-pflegekraft-einstellen' },
     ],
   },
 ]

@@ -4,11 +4,11 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 export const metadata: Metadata = {
   title: 'Organisation der 24h-Pflege — so geht es 2026 | Primundus',
   description: 'Organisation der 24h-Pflege: Beschäftigungsmodelle, Pflegekraft finden, Verträge, rechtliche Absicherung — alles was Familien wissen müssen. Mit Schritt-für-Schritt-Ablauf.',
-  alternates: { canonical: 'https://primundus.de/organisation/' },
+  alternates: { canonical: 'https://primundus.de/organisation' },
   openGraph: {
     title: 'Organisation der 24h-Pflege 2026 | Primundus',
     description: 'Beschäftigungsmodelle, Pflegekraft finden, Verträge — der vollständige Organisations-Ratgeber.',
-    url: 'https://primundus.de/organisation/',
+    url: 'https://primundus.de/organisation',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -22,8 +22,8 @@ const schemaMarkup = JSON.stringify([
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber/' },
-      { '@type': 'ListItem', position: 3, name: 'Organisation', item: 'https://primundus.de/organisation/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/ratgeber' },
+      { '@type': 'ListItem', position: 3, name: 'Organisation', item: 'https://primundus.de/organisation' },
     ],
   },
 ])

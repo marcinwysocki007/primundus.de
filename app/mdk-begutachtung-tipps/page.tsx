@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'MDK-Begutachtung Tipps — so bereiten Sie sich vor | Primundus',
   description: 'MDK-Begutachtung vorbereiten: Wie der Besuch abläuft, was geprüft wird, welche Tipps wirklich helfen und wie ein Pflegetagebuch den Pflegegrad sichert.',
-  alternates: { canonical: 'https://primundus.de/mdk-begutachtung-tipps/' },
+  alternates: { canonical: 'https://primundus.de/mdk-begutachtung-tipps' },
   openGraph: {
     title: 'MDK-Begutachtung Tipps 2026 | Primundus',
     description: 'MDK-Besuch vorbereiten: Ablauf, Checkliste, Pflegetagebuch — so sichern Sie den richtigen Pflegegrad.',
-    url: 'https://primundus.de/mdk-begutachtung-tipps/',
+    url: 'https://primundus.de/mdk-begutachtung-tipps',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/mdk-begutachtung-tipps/',
+    mainEntityOfPage: 'https://primundus.de/mdk-begutachtung-tipps',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade/' },
-      { '@type': 'ListItem', position: 3, name: 'MDK-Begutachtung Tipps', item: 'https://primundus.de/mdk-begutachtung-tipps/' },
+      { '@type': 'ListItem', position: 2, name: 'Pflegegrade', item: 'https://primundus.de/pflegegrade' },
+      { '@type': 'ListItem', position: 3, name: 'MDK-Begutachtung Tipps', item: 'https://primundus.de/mdk-begutachtung-tipps' },
     ],
   },
   {

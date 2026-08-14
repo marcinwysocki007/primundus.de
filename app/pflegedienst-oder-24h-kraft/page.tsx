@@ -15,11 +15,11 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegedienst oder 24h-Kraft — was ist besser? | Primundus',
   description: 'Ambulanter Pflegedienst oder 24h-Betreuungskraft? Vollständiger Vergleich: Kosten, Leistungen, wann was sinnvoll ist und wann eine Kombination am besten trägt.',
-  alternates: { canonical: 'https://primundus.de/pflegedienst-oder-24h-kraft/' },
+  alternates: { canonical: 'https://primundus.de/pflegedienst-oder-24h-kraft' },
   openGraph: {
     title: 'Pflegedienst oder 24h-Kraft? | Primundus',
     description: 'Ambulanter Pflegedienst vs. 24h-Betreuungskraft — ehrlicher Vergleich 2026.',
-    url: 'https://primundus.de/pflegedienst-oder-24h-kraft/',
+    url: 'https://primundus.de/pflegedienst-oder-24h-kraft',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -35,15 +35,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
-    mainEntityOfPage: 'https://primundus.de/pflegedienst-oder-24h-kraft/',
+    mainEntityOfPage: 'https://primundus.de/pflegedienst-oder-24h-kraft',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche/' },
-      { '@type': 'ListItem', position: 3, name: 'Pflegedienst oder 24h-Kraft', item: 'https://primundus.de/pflegedienst-oder-24h-kraft/' },
+      { '@type': 'ListItem', position: 2, name: 'Vergleiche', item: 'https://primundus.de/vergleiche' },
+      { '@type': 'ListItem', position: 3, name: 'Pflegedienst oder 24h-Kraft', item: 'https://primundus.de/pflegedienst-oder-24h-kraft' },
     ],
   },
   {

@@ -9,11 +9,11 @@ const SECTIONS = [{ id: 'erkennen', title: 'Zeichen erkennen' }, { id: 'hilfe', 
 export const metadata: Metadata = {
   title: 'Depression im Alter — Erkennen, Helfen, Pflegen | Primundus',
   description: 'Depression im Alter richtig erkennen und damit umgehen: Zeichen, wie die Betreuungskraft helfen kann und wann professionelle Hilfe nötig ist.',
-  alternates: { canonical: 'https://primundus.de/depression-im-alter-pflege/' },
+  alternates: { canonical: 'https://primundus.de/depression-im-alter-pflege' },
   openGraph: {
     title: 'Depression im Alter',
     description: 'Depression im Alter richtig erkennen und damit umgehen: Zeichen, wie die Betreuungskraft helfen kann und wann professionelle Hilfe nötig ist.',
-    url: 'https://primundus.de/depression-im-alter-pflege/',
+    url: 'https://primundus.de/depression-im-alter-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
@@ -29,15 +29,15 @@ const schemaMarkup = [
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
     dateModified: '2026-04-30',
-    mainEntityOfPage: 'https://primundus.de/depression-im-alter-pflege/',
+    mainEntityOfPage: 'https://primundus.de/depression-im-alter-pflege',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten/' },
-      { '@type': 'ListItem', position: 3, name: 'Depression im Alter', item: 'https://primundus.de/depression-im-alter-pflege/' },
+      { '@type': 'ListItem', position: 2, name: 'Ratgeber', item: 'https://primundus.de/krankheiten' },
+      { '@type': 'ListItem', position: 3, name: 'Depression im Alter', item: 'https://primundus.de/depression-im-alter-pflege' },
     ],
   },
   {
