@@ -77,7 +77,7 @@ export default function JenaPage() {
             24h-Pflege Jena — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Jena, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Jena und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob Altbau in der Innenstadt, Wohnung in Winzerla oder Haus unterm Kernberg-Hang: Jenaer bleiben ihrer Stadt an der Saale verbunden. Damit das auch mit Pflegebedarf gilt, zieht eine Betreuungskraft von Primundus mit ein — rund um die Uhr da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

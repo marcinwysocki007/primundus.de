@@ -77,7 +77,7 @@ export default function ErfurtPage() {
             24h-Pflege Erfurt — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Erfurt, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Erfurt und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Wohnung in der Andreasvorstadt, das Haus in Hochheim, der Garten vor der Stadt: Erfurter bleiben gern, wo Dom und Krämerbrücke zum Alltag gehören. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein — rund um die Uhr da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

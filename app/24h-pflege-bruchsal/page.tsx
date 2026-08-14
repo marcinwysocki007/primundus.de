@@ -77,7 +77,7 @@ export default function BruchsalPage() {
             24h-Pflege Bruchsal — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bruchsal, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bruchsal und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Kraichgau-Hügeln und Spargelfeldern wohnt man in Bruchsal, Heidelsheim oder Untergrombach gern im eigenen Haus — und möchte dort auch alt werden. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

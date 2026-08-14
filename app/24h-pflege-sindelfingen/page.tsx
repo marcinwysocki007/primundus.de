@@ -77,7 +77,7 @@ export default function SindelfingenPage() {
             24h-Pflege Sindelfingen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Sindelfingen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Sindelfingen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ein Arbeitsleben im Werk, ein Haus in Maichingen oder Darmsheim, ein Garten für die Enkel: So sieht der Ruhestand vieler Sindelfinger aus — und so soll er bleiben. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

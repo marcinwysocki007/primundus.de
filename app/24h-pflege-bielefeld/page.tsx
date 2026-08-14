@@ -77,7 +77,7 @@ export default function BielefeldPage() {
             24h-Pflege Bielefeld — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bielefeld, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bielefeld und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Schildesche, Brackwede oder am Hang zum Teutoburger Wald: Bielefelder wohnen solide — oft seit Jahrzehnten im selben Haus. Wenn Mutter oder Vater mehr Hilfe brauchen, zieht eine Betreuungskraft von Primundus mit ein und ist rund um die Uhr da, mit Blick auf die Sparrenburg statt auf eine Warteliste. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

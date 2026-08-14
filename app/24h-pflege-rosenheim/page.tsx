@@ -77,7 +77,7 @@ export default function RosenheimPage() {
             24h-Pflege Rosenheim — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Rosenheim, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Rosenheim und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Mit den Bergen vor der Tür und dem Inn durch die Stadt ist Rosenheim ein Zuhause, das man nicht freiwillig verlässt — ob in Happing, Aising oder Westerndorf. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

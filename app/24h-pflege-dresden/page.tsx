@@ -77,7 +77,7 @@ export default function DresdenPage() {
             24h-Pflege Dresden — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Dresden, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Dresden und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Villa in Blasewitz, der Altbau in Striesen, das Häuschen am Elbhang in Loschwitz: Dresdner Zuhause sind zum Bleiben gebaut. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein — rund um die Uhr da, mit Blick auf die Elbe statt auf Heimflure. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
