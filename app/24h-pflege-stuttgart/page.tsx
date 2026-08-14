@@ -77,7 +77,7 @@ export default function StuttgartPage() {
             24h-Pflege Stuttgart — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Stuttgart, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Stuttgart und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob am Killesberg, in Degerloch oder unten im Westen: Stuttgarter Wohnungen mit Halbhöhen-Blick gibt man nicht her — und die Staffeln, die einst selbstverständlich waren, werden im Alter zur Hürde. Eine Betreuungskraft von Primundus zieht mit ein, begleitet jeden Weg und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

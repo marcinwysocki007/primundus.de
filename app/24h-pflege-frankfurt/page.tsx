@@ -77,7 +77,7 @@ export default function FrankfurtamMainPage() {
             24h-Pflege Frankfurt am Main — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Frankfurt am Main, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Frankfurt am Main und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Bornheim, Sachsenhausen, Bockenheim: Wer in Frankfurt seine Wohnung seit Jahrzehnten hält, gibt sie nicht für einen Heimplatz auf — schon gar nicht zu den Preisen der Stadt. Eine Betreuungskraft von Primundus zieht mit ein, während die Kinder im Bankenviertel oder längst in anderen Städten arbeiten, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

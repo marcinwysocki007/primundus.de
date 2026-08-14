@@ -77,7 +77,7 @@ export default function BonnPage() {
             24h-Pflege Bonn — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bonn, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bonn und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Bad Godesberg, Beuel oder Poppelsdorf: Bonner Wohnungen erzählen oft ein halbes Leben — Ministerien, Universität, Rhein-Spaziergänge. Damit das Zuhause auch mit Pflegebedarf bleibt, zieht eine Betreuungskraft von Primundus mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

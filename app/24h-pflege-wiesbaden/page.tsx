@@ -77,7 +77,7 @@ export default function WiesbadenPage() {
             24h-Pflege Wiesbaden — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Wiesbaden, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Wiesbaden und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Altbauwohnung im Dichterviertel, das Haus in Sonnenberg oder Bierstadt: Wiesbadener geben ihre Kurstadt nicht her — schon gar nicht fürs Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da, damit das Zuhause Zuhause bleibt. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function KarlsruhePage() {
             24h-Pflege Karlsruhe — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Karlsruhe, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Karlsruhe und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob in der Weststadt, in Durlach oder Rüppurr: Karlsruher bleiben im Fächer — im vertrauten Zuhause zwischen Schloss und Turmberg. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist rund um die Uhr da, auch wenn die Kinder längst woanders leben. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

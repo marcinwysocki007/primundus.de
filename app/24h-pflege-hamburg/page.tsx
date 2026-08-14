@@ -72,7 +72,7 @@ export default function HamburgPage() {
             24h-Pflege Hamburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Hamburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Hamburg seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Eppendorf, Barmbek, Blankenese oder die Walddörfer: Hamburger bleiben in ihrem Viertel — zwischen Alster, Elbe und dem Bäcker, der einen seit 30 Jahren kennt. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

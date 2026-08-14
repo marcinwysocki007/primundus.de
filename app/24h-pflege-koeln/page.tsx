@@ -77,7 +77,7 @@ export default function KoelnPage() {
             24h-Pflege Köln — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Köln, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Köln und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Nippes, Sülz, Ehrenfeld oder rechtsrheinisch in Deutz: Kölner verlassen ihr Veedel nicht — da können die Heim-Wartelisten der Stadt noch so lang sein. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da, damit das Zuhause mit Dom-Blick oder Hinterhof-Garten genau das bleibt. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function EssenPage() {
             24h-Pflege Essen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Essen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Essen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Rüttenscheid, Borbeck oder oben in Kettwig: Essener haben ihr Zuhause oft ein Arbeitsleben lang gehalten — von der Zeche bis zum Ruhestand. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt: Sie zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

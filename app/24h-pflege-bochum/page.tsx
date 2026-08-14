@@ -77,7 +77,7 @@ export default function BochumPage() {
             24h-Pflege Bochum — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bochum, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bochum und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Ehrenfeld, Wiemelhausen und Langendreer wohnt man in Bochum bodenständig — und bleibt, wo man verwurzelt ist. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie stemmen kann, zieht eine Betreuungskraft von Primundus mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
