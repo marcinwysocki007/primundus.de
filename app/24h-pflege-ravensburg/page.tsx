@@ -77,7 +77,7 @@ export default function RavensburgPage() {
             24h-Pflege Ravensburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Ravensburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Ravensburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            In der Türme-Stadt, der Weststadt oder Weißenau: Ravensburger wohnen im Schussental verwurzelt — und möchten genau dort alt werden. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

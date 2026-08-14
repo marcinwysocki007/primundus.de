@@ -77,7 +77,7 @@ export default function WaiblingenPage() {
             24h-Pflege Waiblingen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Waiblingen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Waiblingen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Fachwerk an der Rems, Beinstein oder Hegnach: Waiblinger bleiben ihrer Altstadt und ihrem Haus treu. Eine Betreuungskraft von Primundus zieht mit ein, wenn Mutter oder Vater Hilfe brauchen, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

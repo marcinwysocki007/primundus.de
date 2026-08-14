@@ -77,7 +77,7 @@ export default function BadKreuznachPage() {
             24h-Pflege Bad Kreuznach — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bad Kreuznach, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bad Kreuznach und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Kurstadt an der Nahe mit ihren Brückenhäusern ist zum Bleiben gebaut — ob stadtnah oder in Planig. Eine Betreuungskraft von Primundus sorgt dafür, dass das Zuhause auch mit Pflegebedarf Zuhause bleibt: Sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

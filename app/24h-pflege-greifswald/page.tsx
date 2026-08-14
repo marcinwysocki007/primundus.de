@@ -77,7 +77,7 @@ export default function GreifswaldPage() {
             24h-Pflege Greifswald — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Greifswald, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Greifswald und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Innenstadt, Schönwalde oder Eldena an der Klosterruine: Greifswalder wohnen zwischen Uni und Bodden — und geben das im Alter nicht her. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

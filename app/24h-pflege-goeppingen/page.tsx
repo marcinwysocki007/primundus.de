@@ -77,7 +77,7 @@ export default function GoeppingenPage() {
             24h-Pflege Göppingen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Göppingen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Göppingen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Mit dem Hohenstaufen am Horizont wohnt man in Göppingen, Faurndau oder Jebenhausen bodenständig — und bleibt. Eine Betreuungskraft von Primundus sorgt dafür, dass das eigene Zuhause der Mittelpunkt bleibt: Sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

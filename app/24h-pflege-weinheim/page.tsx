@@ -77,7 +77,7 @@ export default function WeinheimPage() {
             24h-Pflege Weinheim — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Weinheim, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Weinheim und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Unter den zwei Burgen an der Bergstraße — in Lützelsachsen, Hohensachsen oder der Altstadt — wird man gern alt. Eine Betreuungskraft von Primundus macht es im eigenen Zuhause möglich: Sie zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

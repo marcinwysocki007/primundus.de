@@ -77,7 +77,7 @@ export default function FriedrichshafenPage() {
             24h-Pflege Friedrichshafen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Friedrichshafen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Friedrichshafen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ein Arbeitsleben bei ZF oder Zeppelin, ein Zuhause in Fischbach oder Ailingen mit dem See vor der Tür: Häfler bleiben am Bodensee. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

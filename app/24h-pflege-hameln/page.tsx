@@ -77,7 +77,7 @@ export default function HamelnPage() {
             24h-Pflege Hameln — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Hameln, mit 1:1-Betreuung, täglich kündbar. In Hameln und der Region Weserbergland vermittelt Primundus geprüfte Kräfte seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            In der Altstadt an der Weser oder draußen Richtung Aerzen und Hessisch Oldendorf: Hamelner halten an Haus und Garten fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

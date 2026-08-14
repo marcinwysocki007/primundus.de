@@ -77,7 +77,7 @@ export default function LandauinderPfalzPage() {
             24h-Pflege Landau in der Pfalz — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Landau in der Pfalz, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Landau in der Pfalz und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Queichheim, Arzheim oder mitten in der Stadt an der Weinstraße: Landauer bleiben in der Südpfalz — beim Wein, beim Markt, im eigenen Zuhause. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
