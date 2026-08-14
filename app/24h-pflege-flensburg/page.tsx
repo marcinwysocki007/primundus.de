@@ -77,7 +77,7 @@ export default function FlensburgPage() {
             24h-Pflege Flensburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Flensburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Flensburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            An der Förde bleibt man gern: ob in Mürwik, Weiche oder drüben in Glücksburg und Harrislee. Wenn die Kräfte nachlassen, muss deshalb niemand ins Heim — eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

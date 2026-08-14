@@ -14,11 +14,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft aus Polen — legal, sicher & bezahlbar 2026 | Primundus',
-  description: 'Pflegekraft aus Polen: 2.200–3.500 €/Monat, legal über Entsendemodell mit A1-Bescheinigung. Was kostet es, wie funktioniert es rechtlich und worauf achten?',
+  title: 'Polnische Pflegekräfte — legal, sicher & bezahlbar 2026 | Primundus',
+  description: 'Polnische Pflegekräfte für die 24h-Pflege: 2.200–3.500 €/Monat, legal über das Entsendemodell mit A1-Bescheinigung. Kosten, Recht und Auswahl — einfach erklärt.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen' },
   openGraph: {
-    title: 'Pflegekraft aus Polen — legal & sicher 2026 | Primundus',
+    title: 'Polnische Pflegekräfte — legal & sicher 2026 | Primundus',
     description: 'Pflegekraft aus Polen: 2.200–3.500 €/Monat, legal über Entsendemodell. Kosten, Rechtliches & Qualität erklärt.',
     url: 'https://primundus.de/pflegekraft-aus-polen',
     siteName: 'Primundus',
@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft aus Polen — legal beschäftigen 2026',
+    headline: 'Polnische Pflegekräfte — legal beschäftigen 2026',
     author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -84,13 +84,13 @@ export default function PflegekraftAusPolen() {
           </p>
 
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            Pflegekraft aus Polen — legal, sicher & bezahlbar
+            Polnische Pflegekräfte — legal, sicher & bezahlbar
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Eine Pflegekraft aus Polen kostet 2.200–3.500 Euro pro Monat und ist über das Entsendemodell vollständig legal — mit A1-Bescheinigung, sozialversichert in Polen, rechtlich abgesichert in Deutschland. Polen ist das meistgenutzte Herkunftsland für 24h-Betreuungskräfte in Deutschland: gute Sprachkenntnisse, kulturelle Nähe, kurze Anreise.
+            Eine polnische Pflegekraft kostet 2.200–3.500 Euro pro Monat und ist über das Entsendemodell vollständig legal — mit A1-Bescheinigung, sozialversichert in Polen, rechtlich abgesichert in Deutschland. Polen ist das meistgenutzte Herkunftsland für 24h-Betreuungskräfte in Deutschland: gute Sprachkenntnisse, kulturelle Nähe, kurze Anreise.
           </p>
 
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">

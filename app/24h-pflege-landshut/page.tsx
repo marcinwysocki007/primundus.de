@@ -77,7 +77,7 @@ export default function LandshutPage() {
             24h-Pflege Landshut — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Landshut, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Landshut und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Altstadt und Ergolding, in Altdorf oder draußen in Vilsbiburg: Wer in und um Landshut alt geworden ist, hängt an seinem Zuhause — am Garten, an den Nachbarn, am Blick auf die Burg Trausnitz. Eine Betreuungskraft von Primundus zieht mit ein, damit das so bleibt: 1:1-Betreuung rund um die Uhr, täglich kündbar, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

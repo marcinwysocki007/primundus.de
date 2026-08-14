@@ -77,7 +77,7 @@ export default function PirmasensPage() {
             24h-Pflege Pirmasens — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Pirmasens, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Pirmasens und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Pirmasens hat viele Menschen, die ihr Leben lang hier gearbeitet haben — oft in der Schuhindustrie — und jetzt in den eigenen vier Wänden alt werden möchten, ob in Winzeln, auf der Ruhbank oder in der Innenstadt. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
