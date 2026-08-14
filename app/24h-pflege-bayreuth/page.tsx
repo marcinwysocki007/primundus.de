@@ -77,7 +77,7 @@ export default function BayreuthPage() {
             24h-Pflege Bayreuth — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bayreuth, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bayreuth und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob in der Gartenstadt, in St. Georgen oder draußen in Bindlach: Wer in Bayreuth alt geworden ist, will die Festspielstadt und das eigene Zuhause nicht verlassen. Muss auch niemand — eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da, in der Stadt und im ganzen Umland. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

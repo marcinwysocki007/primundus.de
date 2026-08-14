@@ -72,7 +72,7 @@ export default function BadenWuerttembergPage() {
             24h-Pflege Baden-Württemberg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Baden-Württemberg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Baden-Württemberg seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Vom Bodensee bis in den Odenwald, von Stuttgarts Halbhöhenlagen bis in die Dörfer der Schwäbischen Alb: In Baden-Württemberg wird das eigene Haus oft über Generationen gehalten — und genau dort möchten die meisten auch gepflegt werden. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -72,7 +72,7 @@ export default function ThueringenPage() {
             24h-Pflege Thüringen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Thüringen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Thüringen seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Fachwerk in Erfurt, Plattenbau in Jena, Haus am Waldrand im Thüringer Wald: Zuhause ist in Thüringen mehr als eine Adresse. Damit es auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein — rund um die Uhr da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -72,7 +72,7 @@ export default function RheinlandPfalzPage() {
             24h-Pflege Rheinland-Pfalz — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Rheinland-Pfalz, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Rheinland-Pfalz seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Weinbergen an der Mosel, Dörfern in der Eifel und Städten wie Mainz und Koblenz: In Rheinland-Pfalz bleibt man seinem Ort treu — oft ein Leben lang. Eine Betreuungskraft von Primundus sorgt dafür, dass das auch mit Pflegebedarf gilt: Sie zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

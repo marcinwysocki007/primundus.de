@@ -72,7 +72,7 @@ export default function SchleswigHolsteinPage() {
             24h-Pflege Schleswig-Holstein — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Schleswig-Holstein, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Schleswig-Holstein seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Nordsee, Ostsee und Hamburger Speckgürtel bleibt man gern, wo man verwurzelt ist — im Backsteinhaus in Kiel, in Lübeck oder im Dorf hinterm Deich. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

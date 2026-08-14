@@ -77,7 +77,7 @@ export default function WittenPage() {
             24h-Pflege Witten — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Witten, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Witten und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Ruhr und Ardey-Wald wohnt man in Witten oft ein Leben lang — in Annen, Herbede oder Bommern, im Haus mit Garten oder der Wohnung nahe der Innenstadt. Damit das so bleiben kann, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, 1:1, im eigenen Zuhause statt im Heim. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

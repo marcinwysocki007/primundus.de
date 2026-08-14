@@ -72,7 +72,7 @@ export default function BerlinPage() {
             24h-Pflege Berlin — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Berlin, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Berlin seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Wohnung in Charlottenburg seit 40 Jahren, das Reihenhaus in Pankow, der Garten in Spandau: Berliner geben ihr Zuhause nicht auf — und Heimplätze mit kurzer Warteliste sind in der Stadt ohnehin rar. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist Tag und Nacht da, von Steglitz bis Weißensee. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

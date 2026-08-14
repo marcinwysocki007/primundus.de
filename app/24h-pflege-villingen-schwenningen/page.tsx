@@ -77,7 +77,7 @@ export default function VillingenSchwenningenPage() {
             24h-Pflege Villingen-Schwenningen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Villingen-Schwenningen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Villingen-Schwenningen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwei Städte, ein Zuhause: Ob im Villinger Zähringerviertel oder auf der Schwenninger Seite Richtung Neckarquelle — wer hier alt geworden ist, bleibt gern. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht, und ist rund um die Uhr da, auch im Umland vom Schwarzwald bis zur Baar. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

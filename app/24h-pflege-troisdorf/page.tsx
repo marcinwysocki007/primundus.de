@@ -77,7 +77,7 @@ export default function TroisdorfPage() {
             24h-Pflege Troisdorf — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Troisdorf, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Troisdorf und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Köln und Bonn gelegen, ist Troisdorf für viele Familien der Ort, an dem die Eltern wohnen — in Spich, Sieglar oder Bergheim — während die Kinder im Rheinland pendeln. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

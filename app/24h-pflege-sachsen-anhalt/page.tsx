@@ -72,7 +72,7 @@ export default function SachsenAnhaltPage() {
             24h-Pflege Sachsen-Anhalt — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Sachsen-Anhalt, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Sachsen-Anhalt seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob Altbau in Halle, Einfamilienhaus in Magdeburg oder Hof in der Altmark: In Sachsen-Anhalt sind die Wege zu Kindern und Heimen oft weit — das Zuhause aber ist nah. Eine Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da, damit niemand es verlassen muss. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

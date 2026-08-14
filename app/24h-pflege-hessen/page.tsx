@@ -72,7 +72,7 @@ export default function HessenPage() {
             24h-Pflege Hessen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Hessen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Hessen seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Frankfurter Skyline und Vogelsberg-Dörfern liegt ein Land voller Eigenheime — und voller Familien, die pendeln, während die Eltern in Wetterau, Taunus oder Odenwald zuhause sind. Wenn Hilfe nötig wird, zieht eine Betreuungskraft von Primundus mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

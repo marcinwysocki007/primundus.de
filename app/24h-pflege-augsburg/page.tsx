@@ -77,7 +77,7 @@ export default function AugsburgPage() {
             24h-Pflege Augsburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Augsburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Augsburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Göggingen, Pfersee, Haunstetten oder das Lechviertel: Augsburger sind ihrem Viertel treu — und dem eigenen Zuhause sowieso. Wenn Mutter oder Vater mehr Hilfe brauchen, als Besuche leisten können, zieht eine Betreuungskraft von Primundus mit ein und ist Tag und Nacht da, auch im Umland bis Königsbrunn und Friedberg. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

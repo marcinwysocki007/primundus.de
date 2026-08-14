@@ -72,7 +72,7 @@ export default function BayernPage() {
             24h-Pflege Bayern — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bayern, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Bayern seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob Hof im Oberland, Reihenhaus in Nürnberg oder Wohnung in München-Schwabing: In Bayern gehört das Zuhause zur Familie — hergeben will es niemand, schon gar nicht fürs Pflegeheim. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da, von Franken bis ins Allgäu. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

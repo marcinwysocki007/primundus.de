@@ -72,7 +72,7 @@ export default function BrandenburgPage() {
             24h-Pflege Brandenburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Brandenburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Brandenburg seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Das Haus am Stadtrand von Potsdam, die Wohnung in Berlin, das Grundstück in der Uckermark: Rund um die Hauptstadt wohnen viele Eltern, deren Kinder mitten im Berliner Alltag stecken. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht — rund um die Uhr da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

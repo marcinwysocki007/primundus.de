@@ -72,7 +72,7 @@ export default function NordrheinWestfalenPage() {
             24h-Pflege Nordrhein-Westfalen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Nordrhein-Westfalen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Nordrhein-Westfalen seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Reihenhaus im Ruhrgebiet, Hof im Münsterland, Wohnung am Rhein: Nirgendwo leben mehr Pflegebedürftige als in Nordrhein-Westfalen — und nirgendwo sind die Heim-Wartelisten länger. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist rund um die Uhr da, von Aachen bis Minden. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -72,7 +72,7 @@ export default function NiedersachsenPage() {
             24h-Pflege Niedersachsen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Niedersachsen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Niedersachsen seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Vom Emsland bis in die Börde, von der Nordseeküste bis in den Harz: In Niedersachsen und Bremen steht das eigene Haus oft seit Generationen — und soll auch im Alter das Zuhause bleiben. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da, auch dort, wo der nächste Pflegedienst weit fährt. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

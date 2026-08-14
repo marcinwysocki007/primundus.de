@@ -77,7 +77,7 @@ export default function BadKissingenPage() {
             24h-Pflege Bad Kissingen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Bad Kissingen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Bad Kissingen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Bad Kissingen kennt sich mit gutem Altwerden aus — Kurgarten, Rosengarten, kurze Wege, Kurtradition seit Generationen. Wenn es allein in der Wohnung am Kurpark oder im Haus in Garitz nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, damit das Zuhause bleibt, was es ist. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

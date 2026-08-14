@@ -72,7 +72,7 @@ export default function SaarlandPage() {
             24h-Pflege Saarland — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Saarland, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in ganz Saarland seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Im Saarland wohnt man nah beieinander — und trotzdem können Kinder nicht rund um die Uhr bei den Eltern in Saarbrücken, Völklingen oder St. Wendel sein. Eine Betreuungskraft von Primundus schließt genau diese Lücke: Sie zieht mit ein und ist Tag und Nacht da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

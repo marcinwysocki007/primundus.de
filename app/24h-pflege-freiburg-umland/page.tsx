@@ -77,7 +77,7 @@ export default function BreisachamRheinPage() {
             24h-Pflege Breisach am Rhein — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Breisach am Rhein, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Breisach am Rhein und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Vom Kaiserstuhl bis ins Dreisamtal: Rund um Freiburg wohnt man mit Blick auf Reben und Schwarzwald — in Gundelfingen, Denzlingen, Bad Krozingen oder Kirchzarten. Damit das Zuhause auch mit Pflegebedarf bleibt, zieht eine Betreuungskraft von Primundus mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

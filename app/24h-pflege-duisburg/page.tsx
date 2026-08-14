@@ -77,7 +77,7 @@ export default function DuisburgPage() {
             24h-Pflege Duisburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Duisburg, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Duisburg und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            In Duisburg wohnt man bodenständig — in Buchholz, Rheinhausen oder Walsum, oft seit Jahrzehnten im selben Haus. Wenn die Kräfte nachlassen, muss das nicht enden: Eine Betreuungskraft von Primundus zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

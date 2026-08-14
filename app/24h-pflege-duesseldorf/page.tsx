@@ -77,7 +77,7 @@ export default function DuesseldorfPage() {
             24h-Pflege Düsseldorf — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Düsseldorf, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Düsseldorf und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Die Wohnung in Oberkassel, das Haus in Gerresheim, der Garten in Kaiserswerth: Düsseldorfer geben ihr Zuhause ungern auf — schon gar nicht für einen Heimplatz mit Wartezeit. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist Tag und Nacht da, von Benrath bis Wittlaer. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

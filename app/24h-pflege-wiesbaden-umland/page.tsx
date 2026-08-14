@@ -77,7 +77,7 @@ export default function TaunussteinPage() {
             24h-Pflege Taunusstein — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Taunusstein, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Taunusstein und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob in Taunusstein, Niedernhausen oder unten am Rhein in Walluf: Rund um Wiesbaden lebt man gern im eigenen Haus mit Garten — und möchte dort auch alt werden. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist Tag und Nacht da, wenn allein leben nicht mehr geht. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

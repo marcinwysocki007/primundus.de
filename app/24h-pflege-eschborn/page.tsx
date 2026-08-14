@@ -77,7 +77,7 @@ export default function EschbornPage() {
             24h-Pflege Eschborn — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Eschborn, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Eschborn und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Viele Eschborner haben Jahrzehnte zwischen Hochhäusern in Frankfurt gearbeitet und wohnen gern ruhig — in Niederhöchstadt oder im alten Ortskern. Damit das Zuhause auch mit Pflegebedarf bleibt, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, 1:1-Betreuung statt Heimalltag. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
