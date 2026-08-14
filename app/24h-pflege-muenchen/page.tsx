@@ -4,11 +4,11 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege München — Betreuungskraft zuhause | Primundus',
-  description: '24h-Pflege in München: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
+  title: '24h-Pflege München — polnische Pflegekräfte & Betreuung zuhause | Primundus',
+  description: 'Vermittlung polnischer Pflegekräfte in München: geprüfte 24h-Betreuung zuhause, rechtssicher & täglich kündbar. Eigenanteil ab ca. 1.100 €/Monat (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muenchen' },
   openGraph: {
-    title: '24h-Pflege München — Betreuungskraft zuhause | Primundus',
+    title: '24h-Pflege München — polnische Pflegekräfte & Betreuung zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in München. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-muenchen',
     siteName: 'Primundus',
@@ -77,7 +77,7 @@ export default function MuenchenPage() {
             24h-Pflege München — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in München, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in München und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Schwabing, Sendling, Pasing oder draußen in Trudering: Münchner geben ihre Wohnung nicht her — schon gar nicht bei den Heimkosten der Stadt. Primundus vermittelt in München seit über 20 Jahren geprüfte <a href="/pflegekraft-aus-polen" className="text-[#8B7355] underline underline-offset-2">polnische Pflegekräfte</a>, die mit einziehen und rund um die Uhr da sind. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

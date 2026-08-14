@@ -66,6 +66,7 @@ const artikel = [
   'eigenanteil-24h-pflege-senken',
   '24-stunden-pflege-kostenuebernahme',
   '24-stunden-pflege-wirkliche-kosten',
+  '24-stunden-pflege-krankenhausaufenthalt',
   'pflegereform-2025',
   'foerderungen-nach-bundesland',
   'pflegekasse-antrag-stellen',
