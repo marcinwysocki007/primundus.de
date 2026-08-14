@@ -77,7 +77,7 @@ export default function FreisingPage() {
             24h-Pflege Freising — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Freising, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Freising und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Zwischen Domberg und Weihenstephan wird man gern alt — in Lerchenfeld, Neustift oder Vötting, mit dem Wochenmarkt und den Isarauen vor der Tür. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt: Sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function LudwigshafenamRheinPage() {
             24h-Pflege Ludwigshafen am Rhein — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Ludwigshafen am Rhein, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Ludwigshafen am Rhein und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ein Arbeitsleben bei der BASF, ein Zuhause in Friesenheim, Oggersheim oder der Gartenstadt: Ludwigshafener wissen, was sie sich aufgebaut haben — und wollen es im Alter nicht verlassen. Eine Betreuungskraft von Primundus zieht mit ein und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

@@ -77,7 +77,7 @@ export default function MemmingenPage() {
             24h-Pflege Memmingen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Memmingen, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Memmingen und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Ob in der Altstadt mit ihren Giebeln, in Amendingen oder Steinheim: Memminger bleiben ihrem Stück Allgäu treu. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie leisten kann, zieht eine Betreuungskraft von Primundus mit ein — rund um die Uhr da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

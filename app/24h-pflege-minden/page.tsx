@@ -77,7 +77,7 @@ export default function MindenPage() {
             24h-Pflege Minden — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Eine Betreuungskraft zieht ein, ist rund um die Uhr da — im vertrauten Zuhause in Minden, mit 1:1-Betreuung, täglich kündbar. Primundus vermittelt geprüfte Kräfte in Minden und der gesamten Region seit über 20 Jahren. Rechtssicher, transparent, startklar.
+            Rechts oder links der Weser, in Rodenbeck oder draußen in Todtenhausen: Mindener wohnen bodenständig — oft seit Jahrzehnten im selben Haus. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein, übernimmt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
