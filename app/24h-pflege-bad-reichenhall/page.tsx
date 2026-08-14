@@ -293,7 +293,7 @@ export default function BadReichenhallPage() {
               <img src="/images/primundus_testsieger-2021.webp" alt="Testsieger DIE WELT" className="w-10 h-12 object-contain flex-shrink-0" />
               <div>
                 <p className="text-[14px] font-bold text-[#1C1C1C]">Testsieger bei DIE WELT</p>
-                <p className="text-[13px] text-[#8B8B8B] italic">„Primundus überzeugte mit der besten Kombination aus Preis, Qualität und Kundenservice."</p>
+                <p className="text-[13px] text-[#8B8B8B]">Nr. 1 der Pflegekräfte-Vermittler — <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-[#8B7355]">zur Auszeichnung mit Beleg</a></p>
               </div>
             </div>
           </div>

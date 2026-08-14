@@ -365,12 +365,13 @@ export default function Page() {
                     <div>
                       <p className="text-[11px] font-bold text-[#D4A843] uppercase tracking-wider mb-0.5">Testsieger · DIE WELT</p>
                       <p className="text-[17px] font-bold text-[#3D3D3D] leading-tight">Nr. 1 der Pflegekräfte-Vermittler</p>
-                      <p className="text-[12px] text-[#8B8B8B] mt-0.5">Deutschlands größter 24h-Pflege Vergleichstest</p>
+                      <p className="text-[12px] text-[#8B8B8B] mt-0.5">Ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue</p>
                     </div>
                   </div>
                   <div className="border-t border-[#F0EBE3] pt-3">
-                    <p className="text-[14px] italic text-[#5A5A5A] leading-relaxed">
-                      „Primundus überzeugte mit der besten Kombination aus Preis, Qualität und Kundenservice."
+                    <p className="text-[14px] text-[#5A5A5A] leading-relaxed">
+                      Als bester Vermittler von 24-Stunden-Pflegekräften ausgezeichnet — die beste Kombination aus Preis, Qualität und Kundenservice.{' '}
+                      <a href="/testsieger-24-stunden-pflege" className="text-[#8B7355] underline underline-offset-2 font-semibold">Zur Auszeichnung mit Original-Beleg</a>
                     </p>
                   </div>
                 </div>

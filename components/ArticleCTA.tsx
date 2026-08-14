@@ -100,8 +100,8 @@ export function ArticleCTA() {
               <p className="text-[12px] font-bold text-[#3D3D3D]">
                 Testsieger <span className="text-[#8B7355]">DIE WELT</span>
               </p>
-              <p className="text-[10px] italic text-[#6B5A45] leading-relaxed mt-0.5">
-                Ausgezeichnet für Preis, Qualität & Kundenservice
+              <p className="text-[10px] text-[#6B5A45] leading-relaxed mt-0.5">
+                <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-[#8B7355]">Ausgezeichnet für Preis, Qualität &amp; Kundenservice — zum Beleg</a>
               </p>
             </div>
           </div>
