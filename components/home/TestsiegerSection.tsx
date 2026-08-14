@@ -22,11 +22,12 @@ export function TestsiegerSection() {
               </h3>
 
               <p className="text-[14px] text-[#8A8279] mb-4">
-                Deutschlands größter Vergleichstest für 24-Stunden-Pflege
+                Nr. 1 der Pflegekräfte-Vermittler – ausgezeichnet von DIE WELT und ServiceValue
               </p>
 
-              <p className="text-[15px] italic text-[#5A5A5A] leading-relaxed lg:px-0 px-2">
-                „Primundus überzeugte mit der besten Kombination aus Preis, Qualität und Kundenservice."
+              <p className="text-[15px] text-[#5A5A5A] leading-relaxed lg:px-0 px-2">
+                Als bester Vermittler von 24-Stunden-Pflegekräften ausgezeichnet: die beste Kombination aus Preis, Qualität und Kundenservice.{' '}
+                <a href="/testsieger-24-stunden-pflege" className="text-[#8B7355] underline underline-offset-2 font-semibold">Zur Auszeichnung mit Beleg</a>
               </p>
             </div>
           </div>

@@ -165,9 +165,10 @@ export default function Page() {
               <h2 className="text-[22px] md:text-[26px] font-bold text-[#3D3D3D] leading-tight mb-2">
                 Nr. 1 der Pflegekräfte-Vermittler
               </h2>
-              <p className="text-[15px] text-[#5A5A5A] mb-3">Deutschlands größter 24h-Pflege Vergleichstest</p>
-              <p className="text-[15px] italic text-[#5A5A5A] leading-relaxed border-t border-[#F0EBE3] pt-3">
-                „Primundus überzeugte mit der besten Kombination aus Preis, Qualität und Kundenservice."
+              <p className="text-[15px] text-[#5A5A5A] mb-3">Ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue</p>
+              <p className="text-[15px] text-[#5A5A5A] leading-relaxed border-t border-[#F0EBE3] pt-3">
+                Als bester Vermittler von 24-Stunden-Pflegekräften ausgezeichnet — die beste Kombination aus Preis, Qualität und Kundenservice.{' '}
+                <a href="/testsieger-24-stunden-pflege" className="text-[#8B7355] underline underline-offset-2 font-semibold">Zur Auszeichnung mit Original-Beleg</a>
               </p>
             </div>
           </div>
