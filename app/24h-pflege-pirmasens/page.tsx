@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Pirmasens',
     description: '24h-Betreuungskräfte in Pirmasens. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-pirmasens/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Pirmasens' },
     priceRange: '2.200–3.500 €/Monat',

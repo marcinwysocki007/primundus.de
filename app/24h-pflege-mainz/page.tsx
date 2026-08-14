@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Mainz',
     description: '24h-Betreuungskräfte in Mainz. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-mainz/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Mainz' },
     priceRange: '2.200–3.500 €/Monat',

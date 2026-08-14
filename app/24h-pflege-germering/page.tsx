@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Germering',
     description: '24h-Betreuungskräfte in Germering. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-germering/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Germering' },
     priceRange: '2.200–3.500 €/Monat',

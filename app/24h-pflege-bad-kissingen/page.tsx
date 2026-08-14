@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Bad Kissingen',
     description: '24h-Betreuungskräfte in Bad Kissingen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-bad-kissingen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bad Kissingen' },
     priceRange: '2.200–3.500 €/Monat',

@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Halle (Saale)',
     description: '24h-Betreuungskräfte in Halle (Saale). Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-halle-saale/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Halle (Saale)' },
     priceRange: '2.200–3.500 €/Monat',

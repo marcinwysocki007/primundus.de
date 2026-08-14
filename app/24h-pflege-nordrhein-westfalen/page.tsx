@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Nordrhein-Westfalen',
     description: '24h-Betreuungskräfte in Nordrhein-Westfalen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-nordrhein-westfalen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Nordrhein-Westfalen' },
     priceRange: '2.200–3.500 €/Monat',

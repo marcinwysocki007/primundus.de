@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Pforzheim',
     description: '24h-Betreuungskräfte in Pforzheim. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-pforzheim/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Pforzheim' },
     priceRange: '2.200–3.500 €/Monat',

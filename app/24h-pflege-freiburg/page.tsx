@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Freiburg im Breisgau',
     description: '24h-Betreuungskräfte in Freiburg im Breisgau. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-freiburg/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Freiburg im Breisgau' },
     priceRange: '2.200–3.500 €/Monat',

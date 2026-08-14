@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Neuburg an der Donau',
     description: '24h-Betreuungskräfte in Neuburg an der Donau. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-neuburg/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Neuburg an der Donau' },
     priceRange: '2.200–3.500 €/Monat',

@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Offenburg',
     description: '24h-Betreuungskräfte in Offenburg. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-offenburg/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Offenburg' },
     priceRange: '2.200–3.500 €/Monat',

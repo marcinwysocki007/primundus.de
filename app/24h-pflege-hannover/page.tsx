@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Hannover',
     description: '24h-Betreuungskräfte in Hannover. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-hannover/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Hannover' },
     priceRange: '2.200–3.500 €/Monat',

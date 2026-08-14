@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Bad Dürkheim',
     description: '24h-Betreuungskräfte in Bad Dürkheim. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-bad-duerkheim/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bad Dürkheim' },
     priceRange: '2.200–3.500 €/Monat',

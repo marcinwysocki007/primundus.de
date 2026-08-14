@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Starnberg',
     description: '24h-Betreuungskräfte in Starnberg. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-starnberg/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Starnberg' },
     priceRange: '2.200–3.500 €/Monat',

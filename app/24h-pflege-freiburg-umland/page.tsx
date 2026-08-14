@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Breisach am Rhein',
     description: '24h-Betreuungskräfte in Breisach am Rhein. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-freiburg-umland/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Breisach am Rhein' },
     priceRange: '2.200–3.500 €/Monat',

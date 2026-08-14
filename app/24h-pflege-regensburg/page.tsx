@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Regensburg',
     description: '24h-Betreuungskräfte in Regensburg. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-regensburg/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Regensburg' },
     priceRange: '2.200–3.500 €/Monat',

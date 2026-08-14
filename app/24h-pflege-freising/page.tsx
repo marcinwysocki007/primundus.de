@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Freising',
     description: '24h-Betreuungskräfte in Freising. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-freising/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Freising' },
     priceRange: '2.200–3.500 €/Monat',

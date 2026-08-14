@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Pfaffenhofen an der Ilm',
     description: '24h-Betreuungskräfte in Pfaffenhofen an der Ilm. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-pfaffenhofen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Pfaffenhofen an der Ilm' },
     priceRange: '2.200–3.500 €/Monat',

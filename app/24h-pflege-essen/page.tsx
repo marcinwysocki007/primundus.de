@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Essen',
     description: '24h-Betreuungskräfte in Essen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-essen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Essen' },
     priceRange: '2.200–3.500 €/Monat',

@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Weilheim in Oberbayern',
     description: '24h-Betreuungskräfte in Weilheim in Oberbayern. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-weilheim/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Weilheim in Oberbayern' },
     priceRange: '2.200–3.500 €/Monat',

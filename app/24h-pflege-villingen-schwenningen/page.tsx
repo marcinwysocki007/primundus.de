@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Villingen-Schwenningen',
     description: '24h-Betreuungskräfte in Villingen-Schwenningen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-villingen-schwenningen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Villingen-Schwenningen' },
     priceRange: '2.200–3.500 €/Monat',

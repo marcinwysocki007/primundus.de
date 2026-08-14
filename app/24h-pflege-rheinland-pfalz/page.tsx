@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Rheinland-Pfalz',
     description: '24h-Betreuungskräfte in Rheinland-Pfalz. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-rheinland-pfalz/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Rheinland-Pfalz' },
     priceRange: '2.200–3.500 €/Monat',

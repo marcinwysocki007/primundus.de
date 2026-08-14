@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Bayern',
     description: '24h-Betreuungskräfte in Bayern. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-bayern/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Bayern' },
     priceRange: '2.200–3.500 €/Monat',

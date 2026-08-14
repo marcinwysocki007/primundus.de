@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Amberg',
     description: '24h-Betreuungskräfte in Amberg. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-amberg/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Amberg' },
     priceRange: '2.200–3.500 €/Monat',

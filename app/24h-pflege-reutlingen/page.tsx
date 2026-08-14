@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Reutlingen',
     description: '24h-Betreuungskräfte in Reutlingen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-reutlingen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Reutlingen' },
     priceRange: '2.200–3.500 €/Monat',

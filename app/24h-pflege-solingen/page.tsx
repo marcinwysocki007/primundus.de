@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Solingen',
     description: '24h-Betreuungskräfte in Solingen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-solingen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Solingen' },
     priceRange: '2.200–3.500 €/Monat',

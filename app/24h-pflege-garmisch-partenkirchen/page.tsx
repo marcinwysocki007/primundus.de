@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Garmisch-Partenkirchen',
     description: '24h-Betreuungskräfte in Garmisch-Partenkirchen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-garmisch-partenkirchen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Garmisch-Partenkirchen' },
     priceRange: '2.200–3.500 €/Monat',

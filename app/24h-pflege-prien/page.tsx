@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Prien am Chiemsee',
     description: '24h-Betreuungskräfte in Prien am Chiemsee. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-prien/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Prien am Chiemsee' },
     priceRange: '2.200–3.500 €/Monat',

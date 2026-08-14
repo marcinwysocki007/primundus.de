@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Dormagen',
     description: '24h-Betreuungskräfte in Dormagen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-dormagen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Dormagen' },
     priceRange: '2.200–3.500 €/Monat',

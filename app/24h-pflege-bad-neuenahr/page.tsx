@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Bad Neuenahr-Ahrweiler',
     description: '24h-Betreuungskräfte in Bad Neuenahr-Ahrweiler. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-bad-neuenahr/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bad Neuenahr-Ahrweiler' },
     priceRange: '2.200–3.500 €/Monat',

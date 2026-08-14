@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Stralsund',
     description: '24h-Betreuungskräfte in Stralsund. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-stralsund/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Stralsund' },
     priceRange: '2.200–3.500 €/Monat',

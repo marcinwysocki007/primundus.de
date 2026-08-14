@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Bietigheim-Bissingen',
     description: '24h-Betreuungskräfte in Bietigheim-Bissingen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-bietigheim-bissingen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bietigheim-Bissingen' },
     priceRange: '2.200–3.500 €/Monat',

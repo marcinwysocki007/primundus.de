@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Kaiserslautern',
     description: '24h-Betreuungskräfte in Kaiserslautern. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-kaiserslautern/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Kaiserslautern' },
     priceRange: '2.200–3.500 €/Monat',

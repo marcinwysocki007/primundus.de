@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Weiden in der Oberpfalz',
     description: '24h-Betreuungskräfte in Weiden in der Oberpfalz. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-weiden/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Weiden in der Oberpfalz' },
     priceRange: '2.200–3.500 €/Monat',

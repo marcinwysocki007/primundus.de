@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Mannheim',
     description: '24h-Betreuungskräfte in Mannheim. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-mannheim/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Mannheim' },
     priceRange: '2.200–3.500 €/Monat',

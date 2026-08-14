@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Landshut',
     description: '24h-Betreuungskräfte in Landshut. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-landshut/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Landshut' },
     priceRange: '2.200–3.500 €/Monat',

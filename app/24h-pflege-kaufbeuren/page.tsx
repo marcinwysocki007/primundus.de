@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Kaufbeuren',
     description: '24h-Betreuungskräfte in Kaufbeuren. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-kaufbeuren/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Kaufbeuren' },
     priceRange: '2.200–3.500 €/Monat',

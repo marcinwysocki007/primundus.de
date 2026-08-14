@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Chemnitz',
     description: '24h-Betreuungskräfte in Chemnitz. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-chemnitz/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Chemnitz' },
     priceRange: '2.200–3.500 €/Monat',

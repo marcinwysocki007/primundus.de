@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Bottrop',
     description: '24h-Betreuungskräfte in Bottrop. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-bottrop/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Bottrop' },
     priceRange: '2.200–3.500 €/Monat',

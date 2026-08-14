@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Siegen',
     description: '24h-Betreuungskräfte in Siegen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-siegen/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'City', name: 'Siegen' },
     priceRange: '2.200–3.500 €/Monat',

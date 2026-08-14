@@ -23,7 +23,7 @@ const schemaMarkup = [
     name: 'Primundus — 24h-Pflege Baden-Württemberg',
     description: '24h-Betreuungskräfte in Baden-Württemberg. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-baden-wuerttemberg/',
-    telephone: '+498920000830',
+    telephone: '+4989200000830',
     email: 'info@primundus.de',
     areaServed: { '@type': 'State', name: 'Baden-Württemberg' },
     priceRange: '2.200–3.500 €/Monat',
