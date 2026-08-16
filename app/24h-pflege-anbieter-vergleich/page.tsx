@@ -4,7 +4,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
 
-const SECTIONS = [{ id: 'kriterien', title: 'Die wichtigsten Kriterien' }, { id: 'rechtssicherheit', title: 'Rechtssicherheit zuerst' }, { id: 'qualitaet', title: 'Qualitätsprüfung' }, { id: 'transparenz', title: 'Kosten & Transparenz' }, { id: 'unterschied', title: 'Primundus im Vergleich' }, { id: 'faq', title: 'Häufige Fragen' }]
+const SECTIONS = [{ id: 'kriterien', title: 'Die wichtigsten Kriterien' }, { id: 'rechtssicherheit', title: 'Rechtssicherheit zuerst' }, { id: 'qualitaet', title: 'Qualitätsprüfung' }, { id: 'transparenz', title: 'Kosten & Transparenz' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
   title: '24h-Pflege Anbieter Vergleich 2026 — worauf es ankommt | Primundus',
@@ -103,61 +103,6 @@ export default function Page() {
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Die einzige saubere Lösung ist das Entsendemodell: Die Kraft wird von einer Agentur in ihrem Heimatland (z.B. Polen) beschäftigt und nach Deutschland entsendet. Mit A1-Bescheinigung, vollem Krankenversicherungsschutz, ohne deutsche Sozialabgaben für die Familie.</p>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Primundus arbeitet seit über 20 Jahren ausschließlich in diesem Modell — über 60.000 Betreuungen ohne einen einzigen Rechtsfall für Kundenfamilien.</p>
 
-          <h2 id="unterschied" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Der große Unterschied: Primundus im Vergleich mit typischen Anbietern</h2>
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8 overflow-x-auto">
-            <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">
-              Fast alle großen Vermittler arbeiten nach demselben Muster: Erst Fragebogen oder
-              Beratungsgespräch, dann Rückruf, dann irgendwann ein Preis. Wir haben die Websites der
-              größten Anbieter analysiert (Stand: August 2026) — und uns bewusst anders aufgestellt:
-            </p>
-            <table className="w-full text-[14px] text-[#2E2E2E]">
-              <thead>
-                <tr className="border-b-2 border-[#E5E3DF] text-left">
-                  <th className="py-3 pr-4 font-bold text-[#1C1C1C]"></th>
-                  <th className="py-3 pr-4 font-bold text-[#1C1C1C]">Primundus</th>
-                  <th className="py-3 font-bold text-[#1C1C1C]">Typische Anbieter</th>
-                </tr>
-              </thead>
-              <tbody className="align-top">
-                <tr className="border-b border-[#F0EDE8]">
-                  <td className="py-3 pr-4 font-semibold">Preis erfahren</td>
-                  <td className="py-3 pr-4">✅ Sofortangebot online in 2 Minuten — ohne Gespräch</td>
-                  <td className="py-3">Erst Fragebogen oder Beratungsgespräch, Preis oft erst nach Rückruf</td>
-                </tr>
-                <tr className="border-b border-[#F0EDE8]">
-                  <td className="py-3 pr-4 font-semibold">Pflegekräfte sehen</td>
-                  <td className="py-3 pr-4">✅ Sofort und kostenlos einsehen — vor jeder Entscheidung</td>
-                  <td className="py-3">Meist erst nach Gespräch oder Vertragsschluss</td>
-                </tr>
-                <tr className="border-b border-[#F0EDE8]">
-                  <td className="py-3 pr-4 font-semibold">Vertrag</td>
-                  <td className="py-3 pr-4">✅ Kein Vertrag nötig, bevor Sie Ihre Pflegekraft ausgewählt haben</td>
-                  <td className="py-3">Vertrag häufig vor der Kraft-Auswahl</td>
-                </tr>
-                <tr className="border-b border-[#F0EDE8]">
-                  <td className="py-3 pr-4 font-semibold">Vermittlungsgebühr</td>
-                  <td className="py-3 pr-4">✅ Keine</td>
-                  <td className="py-3">Teils Aufnahme-/Vermittlungsgebühren, oft erst spät beziffert</td>
-                </tr>
-                <tr className="border-b border-[#F0EDE8]">
-                  <td className="py-3 pr-4 font-semibold">Kündigung</td>
-                  <td className="py-3 pr-4">✅ Täglich kündbar, taggenaue Abrechnung</td>
-                  <td className="py-3">Fristen auf den Websites oft nicht genannt</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-4 font-semibold">Erfahrung &amp; Beleg</td>
-                  <td className="py-3 pr-4">✅ 20+ Jahre, 60.000+ Betreuungen — Auszeichnung <a href="/testsieger-24-stunden-pflege" className="text-[#8B7355] underline underline-offset-2">mit Original-Beleg</a></td>
-                  <td className="py-3">Siegel und Bewertungen häufig ohne verlinkten Nachweis</td>
-                </tr>
-              </tbody>
-            </table>
-            <p className="text-[13px] text-[#8B8B8B] mt-4">
-              Warum das für Sie zählt: Angehörige in einer Pflegesituation haben keine Zeit für
-              Rückruf-Schleifen — und verdienen Preise, die man vergleichen kann, bevor man seine
-              Telefonnummer hergibt. Prüfen Sie uns an unserem eigenen Maßstab:{' '}
-              <a href="/24-stunden-pflege-wirkliche-kosten" className="text-[#8B7355] underline underline-offset-2">die 7 Fragen an jeden Anbieter</a>.
-            </p>
-          </div>
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             <details className="bg-white rounded-xl border border-[#E5E3DF] group">
