@@ -77,7 +77,7 @@ const rows: { feature: string; desc: string; primundus: string; andere: string; 
     feature: 'Pflegekräfte einsehen',
     desc: 'Vorab im Kundenportal einsehbar?',
     primundus: 'Sofort im Kundenportal',
-    andere: 'Nicht möglich',
+    andere: 'Oft erst nach Gespräch',
   },
   {
     feature: 'Erfahrung',
@@ -86,28 +86,40 @@ const rows: { feature: string; desc: string; primundus: string; andere: string; 
     andere: 'Oft keine Angaben',
   },
   {
+    feature: 'Vermittlungsgebühr',
+    desc: 'Extra-Gebühr für die Vermittlung?',
+    primundus: 'Keine',
+    andere: 'Teils Aufnahme- oder Vermittlungsgebühr',
+  },
+  {
+    feature: 'Vertrag',
+    desc: 'Vertrag vor der Kraft-Auswahl nötig?',
+    primundus: 'Nein — erst aussuchen, dann buchen',
+    andere: 'Häufig vor der Auswahl',
+  },
+  {
     feature: 'Kündigung',
     desc: 'Wie kurzfristig kündbar?',
     primundus: 'Täglich',
-    andere: 'Meist 14 Tage',
+    andere: 'Oft 7 Tage bis 1 Monat Frist',
   },
   {
     feature: 'Abrechnung',
     desc: 'Wie wird abgerechnet?',
     primundus: 'Tagesgenau',
-    andere: 'Monatspauschale',
+    andere: 'Teils Monatspauschale',
   },
   {
     feature: 'Pflegekräfte',
     desc: 'Angestellt oder vermittelt?',
-    primundus: 'Eigene Festangestellte',
-    andere: 'Oft Vermittlung',
+    primundus: 'Eigenes Personal — bei uns angestellt',
+    andere: 'Meist Vermittlung fremder Kräfte',
   },
   {
     feature: 'Qualitätskontrolle',
     desc: 'Werden Einsätze geprüft?',
     primundus: 'Regelmäßig & systematisch',
-    andere: 'Selten',
+    andere: 'Oft ohne Angabe',
   },
   {
     feature: 'Beratung',
@@ -119,7 +131,7 @@ const rows: { feature: string; desc: string; primundus: string; andere: string; 
     feature: 'Preistransparenz',
     desc: 'Alle Kosten klar ausgewiesen?',
     primundus: 'Vollständig transparent',
-    andere: 'Oft versteckte Kosten',
+    andere: 'Teils Zusatzgebühren',
   },
   {
     feature: 'Kosten',
