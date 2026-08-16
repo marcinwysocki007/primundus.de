@@ -26,7 +26,7 @@ const schemaMarkup = JSON.stringify({
       logo: 'https://primundus.de/images/primundus_logo_header.webp',
       telephone: '+4989200000830',
       email: 'info@primundus.de',
-      description: 'Primundus vermittelt rechtssichere 24-Stunden-Pflege zu Hause. Über 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, Testsieger DIE WELT.',
+      description: 'Primundus bietet rechtssichere 24-Stunden-Pflege zu Hause. Über 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, Testsieger DIE WELT.',
       founder: { '@id': 'https://primundus.de/#mateusz-wysocki' },
       employee: { '@id': 'https://primundus.de/#ilka-wysocki' },
       award: 'Testsieger DIE WELT — Größter deutscher 24h-Pflege Vergleichstest',
@@ -111,7 +111,7 @@ export default function Page() {
               Menschen, die wirklich passen — das ist unser Anspruch
             </h2>
             <p className="text-[16px] text-[#5A5A5A] leading-[1.7] mb-4">
-              Primundus basiert auf über 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Wir vermitteln keine anonymen Arbeitskräfte — wir finden Menschen, die zu Ihnen und Ihrer Familie passen.
+              Primundus basiert auf über 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die zu Ihnen und Ihrer Familie passen.
             </p>
             <p className="text-[16px] text-[#5A5A5A] leading-[1.7] mb-4">
               Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Unser Team ist Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echte Ansprechpartner, die Ihre Situation kennen.
@@ -209,7 +209,7 @@ export default function Page() {
               },
               {
                 title: 'Deutschlandweit',
-                text: 'Wir vermitteln Betreuungskräfte in ganz Deutschland — von München bis Hamburg, von der Großstadt bis in ländliche Regionen.',
+                text: 'Unsere Betreuungskräfte sind in ganz Deutschland im Einsatz — von München bis Hamburg, von der Großstadt bis in ländliche Regionen.',
                 icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064',
               },
             ].map((item, i) => (

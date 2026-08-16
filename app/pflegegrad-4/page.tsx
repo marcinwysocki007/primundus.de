@@ -53,7 +53,7 @@ const schemaMarkup = [
     mainEntity: [
       { '@type': 'Question', name: 'Was bekommt man bei Pflegegrad 4?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 4 gibt es 800 € Pflegegeld/Monat, 1.859 € Pflegesachleistungen/Monat, 131 € Entlastungsbetrag/Monat und 3.539 € Entlastungsbudget/Jahr. Zusätzlich: erhöhte Zuschläge im Pflegeheim (30 % ab 13. Monat).' } },
       { '@type': 'Question', name: 'Was sind die Voraussetzungen für Pflegegrad 4?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegrad 4 wird vergeben wenn beim NBA 70 bis 89,9 Punkte erreicht werden. Es liegt schwerste Beeinträchtigung der Selbstständigkeit vor — kaum eigenständige Körperpflege, umfangreiche Mobilitätshilfe, oft Inkontinenz.' } },
-      { '@type': 'Question', name: 'Kann man mit Pflegegrad 4 zuhause bleiben?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — mit einer 24h-Betreuungskraft ist zuhause bleiben bei PG 4 in den meisten Fällen möglich. Der Pflegebedarf ist hoch, aber eine professionelle Kraft kann das sicher leisten. Primundus vermittelt in 4–7 Tagen.' } },
+      { '@type': 'Question', name: 'Kann man mit Pflegegrad 4 zuhause bleiben?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — mit einer 24h-Betreuungskraft ist zuhause bleiben bei PG 4 in den meisten Fällen möglich. Der Pflegebedarf ist hoch, aber eine professionelle Kraft kann das sicher leisten. Primundus ist mit eigenen Betreuungskräften in 4–7 Tagen.' } },
     ],
   },
 ]

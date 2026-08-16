@@ -39,7 +39,7 @@ const schemaMarkup = [
       telephone: '+4989200000830',
       award: 'Testsieger DIE WELT',
     },
-    description: 'Vermittlung geprüfter Betreuungskräfte für die häusliche 24-Stunden-Pflege in Deutschland. Täglich kündbar, taggenaue Abrechnung, Start in 4–7 Tagen.',
+    description: '24-Stunden-Betreuung zu Hause mit eigenem, fest angestelltem Personal in Deutschland. Täglich kündbar, taggenaue Abrechnung, Start in 4–7 Tagen.',
     areaServed: 'DE',
     serviceType: '24-Stunden-Pflege',
     offers: { '@type': 'Offer', priceRange: '2200-3500 €/Monat' },
@@ -59,7 +59,7 @@ const schemaMarkup = [
       { '@type': 'Question', name: 'Was ist 24-Stunden-Pflege?', acceptedAnswer: { '@type': 'Answer', text: '24-Stunden-Pflege bedeutet: Eine Betreuungskraft lebt dauerhaft im Haushalt des Pflegebedürftigen und ist rund um die Uhr erreichbar — für Grundpflege, Haushaltsführung und Gesellschaft. Sie ist die meistgenutzte Alternative zum Pflegeheim in Deutschland.' } },
       { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege bei Primundus?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat, je nach Pflegebedarf. Mit Pflegegeld (bis 990 €/Monat) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil deutlich. Kostenlose Beratung: 089 200 000 830.' } },
       { '@type': 'Question', name: 'Wie schnell kann 24h-Pflege starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.' } },
-      { '@type': 'Question', name: 'Ist 24-Stunden-Pflege bei Primundus legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus vermittelt ausschließlich im rechtssicheren Entsendemodell. Alle Betreuungskräfte sind im Heimatland sozialversichert und mit A1-Bescheinigung legal in Deutschland tätig.' } },
+      { '@type': 'Question', name: 'Ist 24-Stunden-Pflege bei Primundus legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus arbeitet ausschließlich im rechtssicheren Entsendemodell. Alle Betreuungskräfte sind im Heimatland sozialversichert und mit A1-Bescheinigung legal in Deutschland tätig.' } },
       { '@type': 'Question', name: 'Warum ist Primundus Testsieger?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus wurde bei DIE WELT im größten deutschen 24h-Pflege Vergleichstest als Testsieger ausgezeichnet — für die beste Kombination aus Preis, Qualität und Kundenservice. Seit 2004 über 60.000 Betreuungen vermittelt.' } },
     ],
   },
@@ -90,7 +90,7 @@ export default function VierUndZwanzigStundenPflege() {
           </h1>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Primundus vermittelt seit 2004 geprüfte Betreuungskräfte für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT.
+            Primundus betreut seit 2004 geprüfte Betreuungskräfte für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT.
           </p>
 
           {/* USP-Box */}
@@ -136,7 +136,7 @@ export default function VierUndZwanzigStundenPflege() {
             Was leistet Primundus?
           </h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
-            Primundus vermittelt — das bedeutet: Wir suchen, prüfen und organisieren die passende Betreuungskraft für Ihre Situation. Die Kraft ist bei einem EU-Partnerunternehmen angestellt und wird im Entsendemodell nach Deutschland entsandt.
+            Bei Primundus gibt es keinen Vermittler dazwischen: Die Betreuungskräfte sind bei uns angestellt. Wir wählen die Kraft aus, die zu Ihrer Situation passt, und entsenden sie im rechtssicheren Entsendemodell mit A1-Bescheinigung zu Ihnen nach Hause. Ein Ansprechpartner, ein Vertrag, klare Verantwortung.
           </p>
           <div className="space-y-3 mb-6">
             {[
@@ -290,7 +290,7 @@ export default function VierUndZwanzigStundenPflege() {
               { q: 'Was ist 24-Stunden-Pflege?', a: 'Eine Betreuungskraft lebt dauerhaft im Haushalt und ist rund um die Uhr erreichbar — für Grundpflege, Haushalt und Gesellschaft. Sie ist die meistgenutzte Alternative zum Pflegeheim in Deutschland.' },
               { q: 'Was kostet 24-Stunden-Pflege bei Primundus?', a: '2.200–3.500 €/Monat je nach Pflegebedarf. Mit Pflegegeld (bis 990 €/Monat) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil erheblich. Kostenlose Beratung: 089 200 000 830.' },
               { q: 'Wie schnell kann 24h-Pflege bei Primundus starten?', a: 'In 4–7 Tagen nach dem ersten Gespräch — täglich kündbar, taggenaue Abrechnung.' },
-              { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja — Primundus vermittelt ausschließlich im Entsendemodell mit A1-Bescheinigung. Vollständig rechtssicher, kein Risiko für die Familie.' },
+              { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja — Primundus setzt ausschließlich eigene Betreuungskräfte im Entsendemodell mit A1-Bescheinigung. Vollständig rechtssicher, kein Risiko für die Familie.' },
               { q: 'Warum ist Primundus Testsieger?', a: 'Testsieger DIE WELT im größten deutschen Vergleichstest — für beste Kombination aus Preis, Qualität und Kundenservice. Seit 2004, 60.000+ Betreuungen.' },
               { q: 'Was passiert wenn die Betreuungskraft krank wird?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke. Das ist einer der zentralen Vorteile der Agenturvermittlung.' },
             ].map((item, i) => (

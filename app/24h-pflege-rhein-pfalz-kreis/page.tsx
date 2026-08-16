@@ -135,7 +135,7 @@ export default function RheinPfalzKreisPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
-              Wir vermitteln im gesamten Kreis: <strong>Schifferstadt</strong>, <strong>Limburgerhof</strong>,{' '}
+              Wir sind im gesamten Kreis im Einsatz: <strong>Schifferstadt</strong>, <strong>Limburgerhof</strong>,{' '}
               <strong>Mutterstadt</strong>, <strong>Maxdorf</strong>, <strong>Böhl-Iggelheim</strong>,{' '}
               <strong>Dudenhofen</strong>, <strong>Römerberg</strong>, <strong>Altrip</strong> und allen
               weiteren Gemeinden. Für die Nachbarstädte gibt es eigene Seiten:{' '}

@@ -135,7 +135,7 @@ export default function RheinischBergischerKreisPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
-              Wir vermitteln im gesamten Kreis:{' '}
+              Wir sind im gesamten Kreis im Einsatz:{' '}
               <a href="/24h-pflege-bergisch-gladbach" className="text-[#8B7355] underline underline-offset-2">Bergisch Gladbach</a>{' '}
               mit Bensberg und Refrath, <strong>Wermelskirchen</strong>, <strong>Overath</strong>,{' '}
               <strong>Rösrath</strong>, <strong>Leichlingen</strong>, <strong>Burscheid</strong>,{' '}

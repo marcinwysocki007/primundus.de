@@ -50,7 +50,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Ist eine Pflegekraft aus Bulgarien legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — wenn sie im Entsendemodell über eine seriöse Agentur vermittelt wird. Die bulgarische Betreuungskraft ist bei einem Unternehmen in Bulgarien angestellt und wird mit A1-Bescheinigung legal nach Deutschland entsandt. Primundus vermittelt ausschließlich im rechtssicheren Entsendemodell.' } },
+      { '@type': 'Question', name: 'Ist eine Pflegekraft aus Bulgarien legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — wenn sie im Entsendemodell über eine seriöse Agentur vermittelt wird. Die bulgarische Betreuungskraft ist bei einem Unternehmen in Bulgarien angestellt und wird mit A1-Bescheinigung legal nach Deutschland entsandt. Primundus arbeitet ausschließlich im rechtssicheren Entsendemodell.' } },
       { '@type': 'Question', name: 'Was kostet eine Pflegekraft aus Bulgarien?', acceptedAnswer: { '@type': 'Answer', text: 'Die Kosten entsprechen dem allgemeinen Primundus-Preisrahmen: 2.200–3.500 €/Monat je nach Pflegebedarf — unabhängig ob die Kraft aus Polen, Bulgarien oder einem anderen EU-Land kommt.' } },
     ],
   },
@@ -85,7 +85,7 @@ export default function PflegekraftAusBulgarien() {
           <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Bulgarien ist EU-Mitglied — das bedeutet: Betreuungskräfte aus Bulgarien können im selben rechtlich abgesicherten Entsendemodell nach Deutschland kommen wie Kräfte aus Polen oder Rumänien. Primundus vermittelt auf Wunsch auch bulgarische Betreuungskräfte — im selben Preisrahmen, derselben Rechtssicherheit, denselben Qualitätsstandards.
+            Bulgarien ist EU-Mitglied — das bedeutet: Betreuungskräfte aus Bulgarien können im selben rechtlich abgesicherten Entsendemodell nach Deutschland kommen wie Kräfte aus Polen oder Rumänien. Primundus arbeitet auf Wunsch auch bulgarische Betreuungskräfte — im selben Preisrahmen, derselben Rechtssicherheit, denselben Qualitätsstandards.
           </p>
 
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
@@ -199,7 +199,7 @@ export default function PflegekraftAusBulgarien() {
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
-              { q: 'Ist eine Pflegekraft aus Bulgarien legal?', a: 'Ja — wenn sie im Entsendemodell über eine seriöse Agentur vermittelt wird. A1-Bescheinigung aus Bulgarien belegt den legalen EU-Entsendestatus. Primundus vermittelt ausschließlich im rechtssicheren Entsendemodell.' },
+              { q: 'Ist eine Pflegekraft aus Bulgarien legal?', a: 'Ja — wenn sie im Entsendemodell über eine seriöse Agentur vermittelt wird. A1-Bescheinigung aus Bulgarien belegt den legalen EU-Entsendestatus. Primundus arbeitet ausschließlich im rechtssicheren Entsendemodell.' },
               { q: 'Was kostet eine Pflegekraft aus Bulgarien?', a: 'Identisch zum allgemeinen Primundus-Preisrahmen: 2.200–3.500 €/Monat — das Herkunftsland hat keinen Einfluss auf den Preis.' },
               { q: 'Wie unterscheiden sich polnische und bulgarische Betreuungskräfte?', a: 'Rechtlich und preislich identisch — beide EU-Länder, beide im Entsendemodell. Qualitätsstandards sind bei Primundus für alle Kräfte gleich. Manchmal passt die Persönlichkeit einer bulgarischen Kraft besser — das wird individuell berücksichtigt.' },
               { q: 'Wie finde ich eine passende Betreuungskraft aus Bulgarien?', a: 'Primundus wählt aus dem gesamten EU-Pool die passende Kraft aus — auf Wunsch aus Bulgarien. Anfrage genügt: 089 200 000 830 oder info@primundus.de.' },

@@ -135,7 +135,7 @@ export default function WittmundPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
-              Wir vermitteln im ganzen Harlingerland: <strong>Wittmund</strong>, <strong>Esens</strong>,{' '}
+              Wir sind im ganzen Harlingerland im Einsatz: <strong>Wittmund</strong>, <strong>Esens</strong>,{' '}
               <strong>Carolinensiel</strong> und <strong>Harlesiel</strong>, <strong>Neuharlingersiel</strong>,{' '}
               <strong>Westerholt</strong>, <strong>Friedeburg</strong> und allen Dörfern dazwischen — bis an
               die Nordseeküste. Auch{' '}

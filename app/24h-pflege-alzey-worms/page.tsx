@@ -136,7 +136,7 @@ export default function AlzeyWormsPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
-              Wir vermitteln Betreuungskräfte im gesamten Landkreis: in <strong>Alzey</strong> und
+              Wir sind im gesamten Landkreis im Einsatz: in <strong>Alzey</strong> und
               <strong> Wörrstadt</strong> genauso wie in <strong>Osthofen</strong>, <strong>Westhofen</strong>,
               <strong> Gau-Odernheim</strong>, <strong>Flonheim</strong>, <strong>Wöllstein</strong> und den
               kleineren Gemeinden dazwischen. Auch wenn Ihr Ort hier nicht steht: Rheinhessen ist unser

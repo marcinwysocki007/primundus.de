@@ -230,7 +230,7 @@ export default function HessenPage() {
           <div className="space-y-3 mb-12">
             {[
               { q: 'Was kostet eine 24h-Pflegekraft in Hessen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2040 €/Monat — oft günstiger als ein Pflegeheim in Hessen (Ø 2600–3400 €/Monat Eigenanteil).' },
-              { q: 'Wie schnell kann eine Pflegekraft in Hessen starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. Primundus vermittelt in ganz Hessen — auch in ländlichen Regionen.' },
+              { q: 'Wie schnell kann eine Pflegekraft in Hessen starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. Primundus ist mit eigenen Betreuungskräften in ganz Hessen — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Hessen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit über 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
             ].map((item, i) => (

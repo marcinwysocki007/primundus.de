@@ -77,7 +77,7 @@ export default function MuenchenPage() {
             24h-Pflege München — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Schwabing, Sendling, Pasing oder draußen in Trudering: Münchner geben ihre Wohnung nicht her — schon gar nicht bei den Heimkosten der Stadt. Primundus vermittelt in München seit über 20 Jahren geprüfte <a href="/pflegekraft-aus-polen" className="text-[#8B7355] underline underline-offset-2">polnische Pflegekräfte</a>, die mit einziehen und rund um die Uhr da sind. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
+            Schwabing, Sendling, Pasing oder draußen in Trudering: Münchner geben ihre Wohnung nicht her — schon gar nicht bei den Heimkosten der Stadt. Primundus ist mit eigenen Betreuungskräften in München seit über 20 Jahren geprüfte <a href="/pflegekraft-aus-polen" className="text-[#8B7355] underline underline-offset-2">polnische Pflegekräfte</a>, die mit einziehen und rund um die Uhr da sind. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}

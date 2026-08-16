@@ -7,13 +7,13 @@ import { TestimonialCard } from '@/components/home/TestimonialCard'
 
 export const metadata: Metadata = {
   title: 'Primundus — 24-Stunden-Pflege | Testsieger & 20 Jahre Erfahrung',
-  description: 'Primundus vermittelt rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Betreuung in 4–7 Tagen. Kostenlose Beratung: 089 200 000 830.',
+  description: 'Primundus bietet rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Betreuung in 4–7 Tagen. Kostenlose Beratung: 089 200 000 830.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
     title: 'Primundus — 24-Stunden-Pflege | Testsieger & 20 Jahre Erfahrung',
-    description: 'Primundus vermittelt rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Betreuung in 4–7 Tagen. Kostenlose Beratung: 089 200 000 830.',
+    description: 'Primundus bietet rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Betreuung in 4–7 Tagen. Kostenlose Beratung: 089 200 000 830.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -117,7 +117,7 @@ export default function Page() {
                 24-Stunden-Pflege im eigenen Zuhause
               </h1>
               <p className="text-[17px] leading-[1.6] text-[#5A5A5A] mb-8 max-w-md mx-auto">
-                Primundus vermittelt geprüfte Betreuungskräfte für die 24-Stunden-Pflege zuhause — rechtssicher, persönlich, täglich kündbar.
+                Primundus betreut mit eigenen, geprüften Betreuungskräften für die 24-Stunden-Pflege zuhause — rechtssicher, persönlich, täglich kündbar.
               </p>
               <div className="flex flex-col gap-3 max-w-sm mx-auto">
                 <a
@@ -337,7 +337,7 @@ export default function Page() {
                   Persönlich. Erfahren. Verlässlich.
                 </h2>
                 <p className="text-[16px] md:text-[17px] leading-[1.7] text-[#5A5A5A] mb-5">
-                  Primundus basiert auf über 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Wir vermitteln keine anonymen Arbeitskräfte — wir finden Menschen, die wirklich passen.
+                  Primundus basiert auf über 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die wirklich passen.
                 </p>
                 <p className="text-[16px] md:text-[17px] leading-[1.7] text-[#5A5A5A] mb-8">
                   Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Ilka Wysocki und ihr Team sind Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echter Ansprechpartner, der Ihre Situation kennt.

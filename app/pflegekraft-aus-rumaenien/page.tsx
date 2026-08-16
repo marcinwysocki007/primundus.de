@@ -77,7 +77,7 @@ export default function PflegekraftAusRumaenien() {
           <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Rumänien ist EU-Mitglied seit 2007 — rumänische Betreuungskräfte können im selben rechtlich abgesicherten Entsendemodell nach Deutschland kommen wie Kräfte aus Polen oder Bulgarien. Primundus vermittelt auf Wunsch auch rumänische Betreuungskräfte — vollständig rechtssicher, mit A1-Bescheinigung und denselben Qualitätsstandards.
+            Rumänien ist EU-Mitglied seit 2007 — rumänische Betreuungskräfte können im selben rechtlich abgesicherten Entsendemodell nach Deutschland kommen wie Kräfte aus Polen oder Bulgarien. Primundus arbeitet auf Wunsch auch rumänische Betreuungskräfte — vollständig rechtssicher, mit A1-Bescheinigung und denselben Qualitätsstandards.
           </p>
 
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">

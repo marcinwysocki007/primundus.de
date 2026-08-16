@@ -5,7 +5,7 @@ import { AllRegionsIndex } from '@/components/CityIndex'
 
 export const metadata: Metadata = {
   title: '24h-Pflege in Ihrer Region — alle Städte & Bundesländer | Primundus',
-  description: 'Primundus vermittelt 24h-Betreuungskräfte in ganz Deutschland. PLZ oder Ort eingeben — sofort passende Informationen und Anfrage starten.',
+  description: 'Primundus ist mit eigenen 24h-Betreuungskräften in ganz Deutschland im Einsatz. PLZ oder Ort eingeben — sofort passende Informationen und Anfrage starten.',
   alternates: { canonical: 'https://primundus.de/regionen' },
   openGraph: {
     title: '24h-Pflege in Ihrer Region | Primundus',
@@ -340,7 +340,7 @@ export default function RegionenHub() {
             24h-Pflege in Ihrer Region finden
           </h1>
           <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-10 max-w-[620px]">
-            Primundus vermittelt in ganz Deutschland — Großstadt, Kleinstadt, Land. Geben Sie Ihren Ort oder Ihre PLZ ein.
+            Primundus ist mit eigenen Betreuungskräften in ganz Deutschland — Großstadt, Kleinstadt, Land. Geben Sie Ihren Ort oder Ihre PLZ ein.
           </p>
 
           {/* ── SUCHE ── */}
@@ -413,7 +413,7 @@ export default function RegionenHub() {
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 mt-10 mb-12">
             <p className="text-[15px] font-bold text-[#6B5A44] mb-2">Ihre Stadt nicht dabei?</p>
             <p className="text-[14px] text-[#6B5A44] leading-relaxed mb-4">
-              Wir vermitteln in ganz Deutschland — auch in Ihrer Region. Einfach anfragen.
+              Wir sind in ganz Deutschland im Einsatz — auch in Ihrer Region. Einfach anfragen.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a

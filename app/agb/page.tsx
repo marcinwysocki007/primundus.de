@@ -50,7 +50,7 @@ export default function Page() {
           <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 2 Leistungen von Primundus</h2>
             <p className="mb-3">
-              (1) Primundus vermittelt selbständig tätige Betreuungskräfte oder Betreuungskräfte im Entsendemodell
+              (1) Primundus beschäftigt selbständig tätige Betreuungskräfte oder Betreuungskräfte im Entsendemodell
               (A1-Bescheinigung) zur 24-Stunden-Betreuung pflegebedürftiger Personen im häuslichen Umfeld.
             </p>
             <p className="mb-3">

@@ -135,7 +135,7 @@ export default function HochtaunuskreisPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
-              Wir vermitteln im ganzen Kreis: <a href="/24h-pflege-bad-homburg" className="text-[#8B7355] underline underline-offset-2">Bad Homburg</a>,{' '}
+              Wir sind im ganzen Kreis im Einsatz: <a href="/24h-pflege-bad-homburg" className="text-[#8B7355] underline underline-offset-2">Bad Homburg</a>,{' '}
               <strong>Oberursel</strong>, <strong>Königstein</strong>, <strong>Kronberg</strong>,{' '}
               <strong>Friedrichsdorf</strong>, <strong>Steinbach</strong> — und genauso im Usinger Land:{' '}
               <strong>Usingen</strong>, <strong>Neu-Anspach</strong>, <strong>Wehrheim</strong>,{' '}

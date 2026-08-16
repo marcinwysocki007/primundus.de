@@ -100,7 +100,7 @@ export default function AlzheimerBetreuungZuhause() {
                 'Ab mittlerem Stadium: 24h-Präsenz für Sicherheit und Tagesstruktur notwendig',
                 'Pflegegrad 2–5 je nach Stadium — frühzeitig beantragen',
                 'Pflegegeld: 347–990 €/Monat · Entlastungsbudget: 3.539 €/Jahr',
-                'Primundus vermittelt Kräfte mit Alzheimer/Demenz-Erfahrung in 4–7 Tagen',
+                'Primundus setzt eigene Kräfte mit Alzheimer/Demenz-Erfahrung ein — Start in 4–7 Tagen',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
                   <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
