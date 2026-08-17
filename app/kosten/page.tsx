@@ -59,7 +59,7 @@ const schemaMarkup = [
     mainEntity: [
       { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege im Monat?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat, je nach Pflegebedarf und Qualifikation der Betreuungskraft. Hinzu kommen Kost und Logis (ca. 200–300 €/Monat). Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil deutlich.' } },
       { '@type': 'Question', name: 'Was zahlt die Pflegekasse bei 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse zahlt Pflegegeld (347–990 €/Monat je nach Pflegegrad), den Entlastungsbetrag (131 €/Monat) und das Entlastungsbudget (3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege). Bei Pflegegrad 3 macht das zusammen bis zu 870 € monatliche Entlastung.' } },
-      { '@type': 'Question', name: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ja — der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.300 €/Monat. Bei Pflegegrad 3 kann der Eigenanteil bei 24h-Pflege mit Kassenzuschüssen auf unter 2.000 €/Monat sinken. Gleichzeitig bleibt der Pflegebedürftige im eigenen Zuhause.' } },
+      { '@type': 'Question', name: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ja — der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat. Bei Pflegegrad 3 kann der Eigenanteil bei 24h-Pflege mit Kassenzuschüssen auf unter 2.000 €/Monat sinken. Gleichzeitig bleibt der Pflegebedürftige im eigenen Zuhause.' } },
       { '@type': 'Question', name: 'Was ist das Entlastungsbudget 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Das Entlastungsbudget beträgt 3.539 €/Jahr und fasst seit Juli 2025 Verhinderungspflege und Kurzzeitpflege zusammen. Es gilt für PG 2–5 und kann flexibel eingesetzt werden. 2026 ist das erste volle Jahr ohne Übergangsregelungen.' } },
       { '@type': 'Question', name: 'Kann man Pflegekosten von der Steuer absetzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — 20 % der Aufwendungen für haushaltsnahe Dienstleistungen können als Steuerermäßigung geltend gemacht werden, maximal 4.000 € Steuerersparnis pro Jahr. Das entspricht bei Kosten von 2.500 €/Monat einer jährlichen Entlastung von bis zu 4.000 €.' } },
     ],
@@ -117,7 +117,7 @@ export default function Kosten() {
                 'Entlastungsbetrag: 131 €/Monat zusätzlich für alle Pflegegrade',
                 'Entlastungsbudget: 3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege (neu 2026)',
                 'Steuer: 20 % der Kosten absetzbar — max. 4.000 € Ersparnis/Jahr',
-                'Pflegeheim-Vergleich: Eigenanteil Ø 3.300 €/Monat — oft teurer als 24h-Pflege',
+                'Pflegeheim-Vergleich: Eigenanteil Ø 3.364 €/Monat — oft teurer als 24h-Pflege',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
                   <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
@@ -257,7 +257,7 @@ export default function Kosten() {
             24h-Pflege vs. Pflegeheim — was ist günstiger?
           </h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
-            Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit <strong>3.300 Euro pro Monat</strong> — und ist 2024 erneut um 211 Euro gestiegen. Bei der 24h-Pflege zuhause sinkt der Eigenanteil durch Kassenzuschüsse auf ein vergleichbares oder oft niedrigeres Niveau. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.
+            Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit <strong>3.364 Euro pro Monat</strong> — und ist 2024 erneut um 211 Euro gestiegen. Bei der 24h-Pflege zuhause sinkt der Eigenanteil durch Kassenzuschüsse auf ein vergleichbares oder oft niedrigeres Niveau. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.
           </p>
 
           <GrafikKostenvergleich />
@@ -304,7 +304,7 @@ export default function Kosten() {
             {[
               { q: 'Was kostet 24-Stunden-Pflege im Monat?', a: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 € pro Monat je nach Pflegebedarf. Hinzu kommen Kost und Logis (ca. 200–300 €/Monat). Mit Pflegegeld und Entlastungsbetrag sinkt der Eigenanteil bei Pflegegrad 3 auf ca. 1.700–2.000 € pro Monat.' },
               { q: 'Was zahlt die Pflegekasse bei 24h-Pflege?', a: 'Pflegegeld (347–990 €/Monat je nach Pflegegrad) + Entlastungsbetrag (131 €/Monat) + Entlastungsbudget (3.539 €/Jahr). Bei PG 3 macht das zusammen bis zu 730 € monatliche Entlastung plus 295 €/Monat aus dem Entlastungsbudget.' },
-              { q: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', a: 'Oft ja — der Pflegeheim-Eigenanteil liegt bundesweit bei Ø 3.300 €/Monat (2026). Bei PG 3 kann der 24h-Pflege-Eigenanteil mit Kassenzuschüssen auf unter 2.000 €/Monat sinken. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.' },
+              { q: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', a: 'Oft ja — der Pflegeheim-Eigenanteil liegt bundesweit bei Ø 3.364 €/Monat (2026). Bei PG 3 kann der 24h-Pflege-Eigenanteil mit Kassenzuschüssen auf unter 2.000 €/Monat sinken. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.' },
               { q: 'Was ist das Entlastungsbudget 2026?', a: '3.539 €/Jahr, seit Juli 2025 als gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Gilt für PG 2–5, flexibel aufteilbar, Vorpflegezeit entfällt. 2026 ist das erste volle Jahr ohne Übergangsregelungen. Achtung: verfällt am 31. Dezember.' },
               { q: 'Kann man Pflegekosten von der Steuer absetzen?', a: '20 % der Aufwendungen für haushaltsnahe Dienstleistungen — max. 4.000 € Steuerersparnis/Jahr. Bei 2.500 €/Monat Betreuungskosten (30.000 €/Jahr) ergibt das die volle Maximalerstattung von 4.000 €.' },
               { q: 'Wie kann ich den Eigenanteil senken?', a: 'Pflegegrad korrekt und vollständig beantragen, Entlastungsbudget voll ausschöpfen, steuerlich absetzen, Pflegehilfsmittel (42 €/Monat) beantragen, Wohnraumanpassungsförderung (bis 4.180 € je Maßnahme) nutzen.' },

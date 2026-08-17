@@ -14,7 +14,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Pflegeheim Kosten Deutschland 2026 — Eigenanteil & Vergleich',
-  description: 'Pflegeheim Kosten 2026: Eigenanteil Ø 3.300 €/Monat (bundesweit). Regionale Unterschiede, Kassenzuschüsse und warum 24h-Pflege zuhause oft günstiger ist.',
+  description: 'Pflegeheim Kosten 2026: Eigenanteil Ø 3.364 €/Monat (bundesweit). Regionale Unterschiede, Kassenzuschüsse und warum 24h-Pflege zuhause oft günstiger ist.',
   alternates: { canonical: 'https://primundus.de/pflegeheim-kosten-deutschland' },
   openGraph: {
     title: 'Pflegeheim Kosten Deutschland 2026 | Primundus',
@@ -50,8 +50,8 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was kostet ein Pflegeheim in Deutschland 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit ca. 3.300 €/Monat (Pflege + Unterkunft + Verpflegung + Investitionskosten). Die Pflegekasse zahlt dazu je nach Pflegegrad 770–2.005 €/Monat — deckt aber nie die vollen Kosten.' } },
-      { '@type': 'Question', name: 'Ist das Pflegeheim oder 24h-Pflege zuhause günstiger?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege zuhause kann günstiger sein: Bei PG 3 ist der Eigenanteil mit Primundus (optimiert) ca. 1.500–2.000 €/Monat — also bis zu 1.300 € weniger als im Pflegeheim (Ø 3.300 €/Monat). Dazu kommt der nicht messbare Wert: die vertraute Umgebung.' } },
+      { '@type': 'Question', name: 'Was kostet ein Pflegeheim in Deutschland 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit ca. 3.364 €/Monat (Pflege + Unterkunft + Verpflegung + Investitionskosten). Die Pflegekasse zahlt dazu je nach Pflegegrad 770–2.005 €/Monat — deckt aber nie die vollen Kosten.' } },
+      { '@type': 'Question', name: 'Ist das Pflegeheim oder 24h-Pflege zuhause günstiger?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege zuhause kann günstiger sein: Bei PG 3 ist der Eigenanteil mit Primundus (optimiert) ca. 1.500–2.000 €/Monat — also bis zu 1.300 € weniger als im Pflegeheim (Ø 3.364 €/Monat). Dazu kommt der nicht messbare Wert: die vertraute Umgebung.' } },
     ],
   },
 ]
@@ -85,13 +85,13 @@ export default function PflegeheimKosten() {
           <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit ca. 3.300 Euro pro Monat — und steigt seit Jahren. Gleichzeitig wissen viele Familien nicht dass 24h-Pflege zuhause bei vergleichbarem Pflegebedarf oft deutlich günstiger ist — und das Leben im eigenen Zuhause erhält.
+            Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit ca. 3.364 Euro pro Monat — und steigt seit Jahren. Gleichzeitig wissen viele Familien nicht dass 24h-Pflege zuhause bei vergleichbarem Pflegebedarf oft deutlich günstiger ist — und das Leben im eigenen Zuhause erhält.
           </p>
 
           <div className="bg-[#FDF0EE] border border-[rgba(231,111,99,0.15)] rounded-2xl p-5 mb-10">
             <p className="text-[14px] font-bold text-[#8B3E2F] mb-2">Der Eigenanteil im Pflegeheim steigt jedes Jahr</p>
             <p className="text-[14px] text-[#8B3E2F] leading-relaxed">
-              Der einrichtungseinheitliche Eigenanteil (EEE) hat sich seit 2022 für viele Bewohner erhöht. 2026 liegt der bundesweite Durchschnitt bei ca. 3.300 €/Monat — ohne Garantie auf Stabilität. Die Pflegekasse deckt einen festen Zuschuss — der Rest wird teurer.
+              Der einrichtungseinheitliche Eigenanteil (EEE) hat sich seit 2022 für viele Bewohner erhöht. 2026 liegt der bundesweite Durchschnitt bei ca. 3.364 €/Monat — ohne Garantie auf Stabilität. Die Pflegekasse deckt einen festen Zuschuss — der Rest wird teurer.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function PflegeheimKosten() {
                     ['Investitionskosten', '200–600 €/Monat', 'Bewohner'],
                     ['Kassenzuschuss Pflege', '770–2.005 €/Monat', 'Pflegekasse (je PG)'],
                     ['Gesamtkosten Heim', '2.500–5.000+ €/Monat', 'Bewohner + Kasse'],
-                    ['Eigenanteil Ø bundesweit', 'ca. 3.300 €/Monat', 'Bewohner'],
+                    ['Eigenanteil Ø bundesweit', 'ca. 3.364 €/Monat', 'Bewohner'],
                   ].map(([block, betrag, wer], i) => (
                     <tr key={block} className={i === 6 ? 'bg-[#FDF0EE]' : i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
                       <td className={`px-4 py-3 text-[14px] border-b border-[#E5E3DF] ${i === 6 ? 'font-bold text-[#8B3E2F]' : 'font-semibold text-[#1C1C1C]'}`}>{block}</td>
@@ -158,7 +158,7 @@ export default function PflegeheimKosten() {
                     ['NRW (Köln, Düsseldorf)', 'ca. 2.800–3.500 €'],
                     ['Sachsen, Thüringen', 'ca. 1.800–2.400 €'],
                     ['Mecklenburg-Vorpommern', 'ca. 1.700–2.200 €'],
-                    ['Bundesweit Ø', 'ca. 3.300 €'],
+                    ['Bundesweit Ø', 'ca. 3.364 €'],
                   ].map(([region, eigenanteil], i) => (
                     <tr key={region} className={i === 5 ? 'bg-[#F2EDE6]' : i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
                       <td className={`px-4 py-3 text-[14px] border-b border-[#E5E3DF] ${i === 5 ? 'font-bold text-[#8B7355]' : 'text-[#2E2E2E]'}`}>{region}</td>
@@ -225,7 +225,7 @@ export default function PflegeheimKosten() {
                 </thead>
                 <tbody>
                   {[
-                    ['Eigenanteil Ø (PG 3)', 'ca. 3.300 €/Monat', 'ca. 1.500–2.000 €/Monat*'],
+                    ['Eigenanteil Ø (PG 3)', 'ca. 3.364 €/Monat', 'ca. 1.500–2.000 €/Monat*'],
                     ['Umgebung', 'Fremde Einrichtung', 'Eigenes Zuhause'],
                     ['Individualität', 'Heimplan', '1:1-Betreuung'],
                     ['Vertraute Bezugsperson', 'Wechselndes Personal', 'Feste Kraft (8–12 Wo)'],
@@ -256,9 +256,9 @@ export default function PflegeheimKosten() {
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
-              { q: 'Was kostet ein Pflegeheim in Deutschland 2026?', a: 'Eigenanteil bundesweit Ø ca. 3.300 €/Monat (Pflege + Unterkunft + Verpflegung + Investitionskosten). Je nach Region und Einrichtung 1.700–4.000+ €/Monat. Pflegekasse zahlt 770–2.005 €/Monat je nach Pflegegrad dazu.' },
+              { q: 'Was kostet ein Pflegeheim in Deutschland 2026?', a: 'Eigenanteil bundesweit Ø ca. 3.364 €/Monat (Pflege + Unterkunft + Verpflegung + Investitionskosten). Je nach Region und Einrichtung 1.700–4.000+ €/Monat. Pflegekasse zahlt 770–2.005 €/Monat je nach Pflegegrad dazu.' },
               { q: 'Was deckt die Pflegekasse im Pflegeheim?', a: 'Die Pflegekasse zahlt einen festen Zuschuss für den Pflegeanteil: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €/Monat. Unterkunft, Verpflegung und Investitionskosten trägt der Bewohner selbst.' },
-              { q: 'Ist Pflegeheim günstiger als 24h-Pflege zuhause?', a: 'Oft nicht — bei PG 3 ist der Eigenanteil mit 24h-Pflege zuhause (optimiert mit Zuschüssen) ca. 1.500–2.000 €/Monat — also bis zu 1.300 € weniger als im Pflegeheim (Ø 3.300 €/Monat).' },
+              { q: 'Ist Pflegeheim günstiger als 24h-Pflege zuhause?', a: 'Oft nicht — bei PG 3 ist der Eigenanteil mit 24h-Pflege zuhause (optimiert mit Zuschüssen) ca. 1.500–2.000 €/Monat — also bis zu 1.300 € weniger als im Pflegeheim (Ø 3.364 €/Monat).' },
               { q: 'Was passiert wenn das Geld für das Pflegeheim nicht reicht?', a: 'Wenn Rente und Eigenkapital nicht reichen, werden zunächst Vermögen und unter bestimmten Umständen Kinder zur Zuzahlung herangezogen. Sozialhilfe (§61 SGB XII) springt als letztes Mittel ein.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">

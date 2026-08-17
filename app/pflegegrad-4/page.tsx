@@ -216,7 +216,7 @@ export default function Pflegegrad4() {
                 ['Abzüglich Pflegegeld PG 4', '– 800 €/Monat'],
                 ['Abzüglich Entlastungsbetrag', '– 131 €/Monat'],
                 ['Eigenanteil ca.', 'ca. 2.070 €/Monat'],
-                ['Pflegeheim Eigenanteil Ø', '3.300 €/Monat (steigend)'],
+                ['Pflegeheim Eigenanteil Ø', '3.364 €/Monat (steigend)'],
               ].map(([label, wert]) => (
                 <div key={label} className="flex justify-between text-[14px] text-[#2A5C3F]">
                   <span>{label}</span>

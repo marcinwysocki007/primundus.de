@@ -21,7 +21,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
-  description: 'Pflegeheim: Ø 3.300 €/Monat Eigenanteil. 24h-Pflege: ab ca. 1.500 €/Monat nach Kassenzuschüssen. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
+  description: 'Pflegeheim: Ø 3.364 €/Monat Eigenanteil. 24h-Pflege: ab ca. 1.500 €/Monat nach Kassenzuschüssen. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten' },
   openGraph: {
     title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was kostet ein Pflegeheim 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit 3.300 Euro pro Monat im ersten Jahr. Er steigt mit der Aufenthaltsdauer (Zuschläge der Pflegekasse nach 12, 24 und 36 Monaten). Darin sind Pflegekosten, Unterkunft, Verpflegung und Investitionsumlage enthalten.' } },
+      { '@type': 'Question', name: 'Was kostet ein Pflegeheim 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit 3.364 Euro pro Monat im ersten Jahr. Er steigt mit der Aufenthaltsdauer (Zuschläge der Pflegekasse nach 12, 24 und 36 Monaten). Darin sind Pflegekosten, Unterkunft, Verpflegung und Investitionsumlage enthalten.' } },
       { '@type': 'Question', name: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 €/Monat brutto. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3), Entlastungsbetrag (131 €/Monat) und Entlastungsbudget (ca. 295 €/Monat) sinkt der Eigenanteil auf ca. 1.700–2.000 €/Monat — oft deutlich weniger als ein Pflegeheim.' } },
       { '@type': 'Question', name: 'Wann ist ein Pflegeheim günstiger als 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Ab dem zweiten oder dritten Jahr können die Pflegekasse-Zuschläge im Pflegeheim den Eigenanteil deutlich senken — nach 24 Monaten übernimmt die Kasse 30 % mehr. Bei Pflegegrad 5 mit sehr hohem Pflege- und Behandlungsbedarf kann das Pflegeheim unter bestimmten Umständen günstiger werden.' } },
       { '@type': 'Question', name: 'Ist 24h-Pflege zuhause besser als Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Pflegesituationen ja — die vertraute Umgebung verlangsamt Demenzverläufe, individuelle 1:1-Betreuung ist möglich und der Eigenanteil ist oft geringer. Ein Pflegeheim ist besser wenn intensivmedizinische Behandlung rund um die Uhr nötig ist oder kein geeigneter Wohnraum vorhanden ist.' } },
@@ -95,14 +95,14 @@ export default function VsKosten() {
           <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.300 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung.
+            Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung.
           </p>
 
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
             <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
-                'Pflegeheim-Eigenanteil 2026: Ø 3.300 €/Monat (1. Jahr) — steigt jährlich',
+                'Pflegeheim-Eigenanteil 2026: Ø 3.364 €/Monat (1. Jahr) — steigt jährlich',
                 '24h-Pflege zuhause: 2.200–3.500 €/Monat brutto bei Primundus',
                 'Nach Kassenzuschüssen (PG 3): Eigenanteil ca. 1.700–2.000 €/Monat',
                 '24h-Pflege ist oft günstiger UND bietet mehr individuelle Betreuung',
@@ -145,7 +145,7 @@ export default function VsKosten() {
                     ['Unterkunft & Verpflegung', 'Ø 900 €/Monat', 'Je nach Zimmerausstattung und Region'],
                     ['Investitionsumlage', 'Ø 500–600 €/Monat', 'Für Gebäude, Ausstattung — zahlt Bewohner'],
                     ['Ausbildungsumlage', 'ca. 60–100 €/Monat', 'Seit 2020 bundeseinheitlich'],
-                    ['Gesamteigenanteil (Ø 1. Jahr)', '3.300 €/Monat', 'Bundesweiter Durchschnitt 2026'],
+                    ['Gesamteigenanteil (Ø 1. Jahr)', '3.364 €/Monat', 'Bundesweiter Durchschnitt 2026'],
                   ].map(([pos, wert, hinweis], i) => (
                     <tr key={pos} className={i === 4 ? 'bg-[#F2EDE6]' : i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
                       <td className="px-5 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{pos}</td>
@@ -224,7 +224,7 @@ export default function VsKosten() {
                 </thead>
                 <tbody>
                   {[
-                    ['Eigenanteil/Monat (PG 3)', 'ca. 1.700–2.000 €', 'Ø 3.300 € (steigend)'],
+                    ['Eigenanteil/Monat (PG 3)', 'ca. 1.700–2.000 €', 'Ø 3.364 € (steigend)'],
                     ['Umgebung', 'Eigenes Zuhause', 'Neue, fremde Umgebung'],
                     ['Betreuungsintensität', '1:1 rund um die Uhr', 'Geteilt, nach Dienstplan'],
                     ['Tagesrhythmus', 'Vollständig eigener Rhythmus', 'Heimstruktur und -zeiten'],
@@ -277,7 +277,7 @@ export default function VsKosten() {
           </h2>
           <div className="space-y-4 mb-12">
             {[
-              { q: 'Was kostet ein Pflegeheim 2026?', a: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.300 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
+              { q: 'Was kostet ein Pflegeheim 2026?', a: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
               { q: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', a: 'Bei Primundus 2.200–3.500 €/Monat brutto. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.700–2.000 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
               { q: 'Ist 24h-Pflege zuhause besser als ein Pflegeheim?', a: 'Für die meisten Pflegesituationen ja — günstigerer Eigenanteil, eigenes Zuhause, individuelle 1:1-Betreuung, kein Umzugsstress. Ein Pflegeheim ist besser bei intensivmedizinischem Dauerbedarf oder fehlendem Wohnraum.' },
               { q: 'Wann kann das Pflegeheim günstiger werden?', a: 'Ab dem dritten Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % des pflegebedingten Eigenanteils. Bei sehr hohem Pflegegrad (PG 4–5) kann das langfristig die Rechnung zugunsten des Heims ändern.' },

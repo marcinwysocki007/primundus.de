@@ -157,7 +157,7 @@ export default function AlzeyWormsPage() {
               nachts Hilfe nötig ist. Die Pflegekasse zahlt kräftig mit: Mit Pflegegeld, Entlastungsbetrag
               und Verhinderungspflege bleiben bei Pflegegrad 3 oft nur <strong>rund 1.500 bis 2.400 Euro</strong>{' '}
               im Monat selbst zu tragen. Zum Vergleich: Ein Heimplatz in Rheinland-Pfalz kostet im Schnitt
-              rund 3.300 Euro Eigenanteil — ohne dass jemand rund um die Uhr nur für Ihre Mutter da wäre.
+              rund 3.364 Euro Eigenanteil — ohne dass jemand rund um die Uhr nur für Ihre Mutter da wäre.
             </p>
             <a
               href="https://kostenrechner.primundus.de/"

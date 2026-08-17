@@ -107,7 +107,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.300 Euro pro Monat — ohne individuelle Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Eins-zu-eins-Betreuung und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat — ohne individuelle Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Eins-zu-eins-Betreuung und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
       },
       {
         '@type': 'Question',
@@ -267,7 +267,7 @@ export default function WasIst24StundenPflege() {
             Was kostet 24-Stunden-Pflege — und was zahlt die Kasse 2026?
           </h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
-            24-Stunden-Pflege kostet monatlich 2.500 bis 4.000 Euro — je nach Pflegebedarf, Qualifikation der Betreuungskraft und Anbieter. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.300 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
+            24-Stunden-Pflege kostet monatlich 2.500 bis 4.000 Euro — je nach Pflegebedarf, Qualifikation der Betreuungskraft und Anbieter. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.364 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-6">
             → Vollständiger Kostenvergleich:{' '}
@@ -414,7 +414,7 @@ export default function WasIst24StundenPflege() {
               },
               {
                 q: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?',
-                a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.300 Euro pro Monat — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Betreuung rund um die Uhr und zahlt oft vergleichbare oder geringere Gesamtkosten.',
+                a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Betreuung rund um die Uhr und zahlt oft vergleichbare oder geringere Gesamtkosten.',
               },
               {
                 q: 'Wie schnell kann eine 24h-Betreuung beginnen?',
