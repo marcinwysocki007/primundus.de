@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Verhinderungspflege 2026 — neues Entlastungsbudget erklärt | Primundus',
-  description: 'Verhinderungspflege 2026: Seit Juli 2025 gemeinsames Entlastungsbudget von 3.539 €/Jahr. Was sich geändert hat, wie man es beantragt und wie es mit 24h-Pflege kombiniert wird.',
+  title: 'Verhinderungspflege 2026 — neues Entlastungsbudget erklärt',
+  description: 'Verhinderungspflege 2026: Seit Juli 2025 gemeinsames Entlastungsbudget von 3.539 €/Jahr. Was sich geändert hat,',
   alternates: { canonical: 'https://primundus.de/verhinderungspflege' },
   openGraph: {
     title: 'Verhinderungspflege 2026 — neues Entlastungsbudget | Primundus',

@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Multiple Sklerose Pflege zuhause — was möglich ist | Primundus',
+  title: 'Multiple Sklerose Pflege zuhause — was möglich ist',
   description: 'Multiple Sklerose Pflege zuhause: Was in welchem MS-Verlauf möglich ist, konkrete Alltagstipps und ab wann eine 24h-Betreuungskraft sinnvoll wird. 2026.',
   alternates: { canonical: 'https://primundus.de/multiple-sklerose-pflege' },
   openGraph: {

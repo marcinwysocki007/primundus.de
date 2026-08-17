@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Sturzprävention Senioren — wie man Stürze verhindert | Primundus',
+  title: 'Sturzprävention Senioren — wie man Stürze verhindert',
   description: 'Sturzprävention Senioren 2026: Risikofaktoren erkennen, Wohnung sichern, Gleichgewichtsübungen und Hilfsmittel — wie man Stürze im Alter effektiv verhindert.',
   alternates: { canonical: 'https://primundus.de/sturzpraevention-senioren' },
   openGraph: {

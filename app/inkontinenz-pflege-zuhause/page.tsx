@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde | Primundus',
+  title: 'Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde',
   description: 'Inkontinenz bei pflegebedürftigen Senioren: Formen, Hilfsmittel (Kassenzuschuss bis 40 €/Mo), Alltagstipps und wie man Würde beim Umgang bewahrt.',
   alternates: { canonical: 'https://primundus.de/inkontinenz-pflege-zuhause' },
   openGraph: {

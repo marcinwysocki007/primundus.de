@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Checkliste Pflegekraft einstellen — vollständige Anleitung | Primundus',
-  description: 'Checkliste Pflegekraft einstellen: Was vor der Auswahl, beim Gespräch, vor Anreise und in der ersten Woche zu beachten ist. Mit konkreten Fragen für das Auswahlgespräch.',
+  title: 'Checkliste Pflegekraft einstellen — vollständige Anleitung',
+  description: 'Checkliste Pflegekraft einstellen: Was vor der Auswahl, beim Gespräch, vor Anreise und in der ersten Woche zu beachten ist.',
   alternates: { canonical: 'https://primundus.de/checkliste-pflegekraft-einstellen' },
   openGraph: {
     title: 'Checkliste Pflegekraft einstellen | Primundus',

@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht | Primundus',
+  title: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht',
   description: 'Was macht eine 24h-Betreuungskraft? Pflege, Haushalt, Begleitung, medizinische Unterstützung — alle Leistungen der Primundus 24h-Pflege im Überblick.',
   alternates: { canonical: 'https://primundus.de/leistungen' },
   openGraph: {

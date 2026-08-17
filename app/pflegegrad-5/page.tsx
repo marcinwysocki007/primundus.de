@@ -12,8 +12,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad 5 — Leistungen & 990 € Pflegegeld 2026 | Primundus',
-  description: 'Pflegegrad 5: 990 € Pflegegeld/Monat, 2.299 € Sachleistungen, 3.539 € Entlastungsbudget/Jahr. Höchster Pflegegrad — alle Leistungen und zuhause bleiben mit 24h-Pflege.',
+  title: 'Pflegegrad 5 — Leistungen & 990 € Pflegegeld 2026',
+  description: 'Pflegegrad 5: 990 € Pflegegeld/Monat, 2.299 € Sachleistungen, 3.539 € Entlastungsbudget/Jahr. Höchster Pflegegrad —',
   alternates: { canonical: 'https://primundus.de/pflegegrad-5' },
   openGraph: {
     title: 'Pflegegrad 5 — Leistungen & Beträge 2026 | Primundus',

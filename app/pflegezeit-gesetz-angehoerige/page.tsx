@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'pflegezeit', title: 'Pflegezeit' }, { id: 'familienpflegezeit', title: 'Familienpflegezeit' }, { id: 'notfall', title: 'Kurzfristige Freistellung' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegezeitgesetz — Auszeit für pflegende Angehörige | Primundus',
+  title: 'Pflegezeitgesetz — Auszeit für pflegende Angehörige',
   description: 'Pflegezeitgesetz und Familienpflegezeit: Was pflegende Angehörige an Rechten haben, wie Freistellung beantragt wird.',
   alternates: { canonical: 'https://primundus.de/pflegezeit-gesetz-angehoerige' },
   openGraph: {

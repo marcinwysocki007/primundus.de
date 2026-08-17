@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Landau in der Pfalz — Betreuungskraft zuhause | Primundus',
+  title: '24h-Pflege Landau in der Pfalz — Betreuungskraft zuhause',
   description: '24h-Pflege in Landau in der Pfalz: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1300 €/Monat (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-landau' },
   openGraph: {

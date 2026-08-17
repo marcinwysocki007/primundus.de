@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Kommunikation mit Demenzkranken — was hilft & was schadet | Primundus',
+  title: 'Kommunikation mit Demenzkranken — was hilft & was schadet',
   description: 'Kommunikation mit Demenzkranken: 5 Grundprinzipien, konkrete Gesprächstipps und wie man schwierige Situationen (Aggression, Verweigerung, Weinen) meistert.',
   alternates: { canonical: 'https://primundus.de/kommunikation-mit-demenzkranken' },
   openGraph: {

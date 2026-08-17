@@ -7,9 +7,11 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'kriterien', title: 'Die wichtigsten Kriterien' }, { id: 'rechtssicherheit', title: 'Rechtssicherheit zuerst' }, { id: 'qualitaet', title: 'Qualitätsprüfung' }, { id: 'transparenz', title: 'Kosten & Transparenz' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Anbieter Vergleich 2026 — worauf es ankommt | Primundus',
+  title: '24h-Pflege Anbieter Vergleich 2026 — worauf es ankommt',
   description: 'Worauf man beim Vergleich von 24h-Pflege-Anbietern achten sollte: Rechtssicherheit, Qualitätsprüfung, Transparenz, Kosten. Primundus im Vergleich.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-anbieter-vergleich' },
+  // Konsolidierung 17.08.: /anbieter-vergleich rankt (Pos. 4,8), diese Seite
+  // nicht — Signale werden dort gebündelt statt sich gegenseitig zu schwächen.
+  alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
     title: '24h-Pflege Anbieter Vergleich 2026 | Primundus',
     description: 'Worauf man beim Vergleich von 24h-Pflege-Anbietern achten sollte: Rechtssicherheit, Qualitätsprüfung, Transparenz, Kosten. Primundus im Vergleich.',

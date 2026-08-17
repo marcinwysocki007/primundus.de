@@ -14,7 +14,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Kombinationsleistung Pflege — Pflegegeld + Sachleistung kombinieren | Primundus',
-  description: 'Kombinationsleistung Pflege: Pflegesachleistungen und Pflegegeld gleichzeitig nutzen. Berechnung, Rechenbeispiel und wann die Kombination besonders sinnvoll ist.',
+  description: 'Kombinationsleistung Pflege: Pflegesachleistungen und Pflegegeld gleichzeitig nutzen. Berechnung,',
   alternates: { canonical: 'https://primundus.de/kombinationsleistung-pflege' },
   openGraph: {
     title: 'Kombinationsleistung Pflege | Primundus',

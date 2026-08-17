@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: 'Pflegegrade — alle 5 Grade, Beträge & Leistungen 2026 | Primundus',
+  title: 'Pflegegrade — alle 5 Grade, Beträge & Leistungen 2026',
   description: 'Pflegegrade 2026: Alle 5 Pflegegrade erklärt — Voraussetzungen, Pflegegeld (347–990 €/Monat), Sachleistungen und wie man richtig eingestuft wird.',
   alternates: { canonical: 'https://primundus.de/pflegegrade' },
   openGraph: {

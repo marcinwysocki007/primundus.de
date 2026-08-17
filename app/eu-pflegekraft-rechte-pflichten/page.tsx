@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'EU-Pflegekraft — Rechte und Pflichten im Entsendemodell | Primundus',
-  description: 'EU-Pflegekraft Rechte und Pflichten: Was das Entsendemodell regelt, welche Rechte Betreuungskräfte haben und was Familien wissen müssen. Vollständig erklärt für 2026.',
+  title: 'EU-Pflegekraft — Rechte und Pflichten im Entsendemodell',
+  description: 'EU-Pflegekraft Rechte und Pflichten: Was das Entsendemodell regelt, welche Rechte Betreuungskräfte haben und was Familien wissen müssen.',
   alternates: { canonical: 'https://primundus.de/eu-pflegekraft-rechte-pflichten' },
   openGraph: {
     title: 'EU-Pflegekraft Rechte & Pflichten | Primundus',

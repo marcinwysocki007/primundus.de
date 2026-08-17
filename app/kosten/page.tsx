@@ -19,7 +19,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Kosten 24h-Pflege 2026 — Preise, Zuschüsse & Vergleich | Primundus',
+  title: 'Kosten 24h-Pflege 2026 — Preise, Zuschüsse & Vergleich',
   description: '24h-Pflege kostet 2.200–3.500 €/Monat. Mit Pflegegeld (bis 990 €) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil deutlich. Alle Zahlen 2026.',
   alternates: { canonical: 'https://primundus.de/kosten' },
   openGraph: {

@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Widerspruch Pflegekasse einlegen — Muster & Tipps 2026 | Primundus',
+  title: 'Widerspruch Pflegekasse einlegen — Muster & Tipps 2026',
   description: 'Widerspruch gegen Pflegegrad-Bescheid: Wie man ihn einlegt, Musterschreiben und welche Erfolgschancen realistisch sind. Frist: 1 Monat nach Bescheid.',
   alternates: { canonical: 'https://primundus.de/widerspruch-pflegekasse-einlegen' },
   openGraph: {

@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Patientenverfügung aufsetzen — Anleitung & was rein muss | Primundus',
-  description: 'Patientenverfügung aufsetzen: Was hineingehört, wie man sie gültig erstellt und was der Unterschied zur Vorsorgevollmacht ist. Mit Checkliste der Pflichtinhalte.',
+  title: 'Patientenverfügung aufsetzen — Anleitung & was rein muss',
+  description: 'Patientenverfügung aufsetzen: Was hineingehört, wie man sie gültig erstellt und was der Unterschied zur Vorsorgevollmacht ist.',
   alternates: { canonical: 'https://primundus.de/patientenverfuegung-aufsetzen' },
   openGraph: {
     title: 'Patientenverfügung aufsetzen | Primundus',

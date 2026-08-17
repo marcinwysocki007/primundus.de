@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'beduerfnisse', title: 'Besondere Bedürfnisse' }, { id: 'aufgaben', title: 'Aufgaben der Kraft' }, { id: 'palliativ', title: 'Übergang zur Palliativpflege' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Krebspatienten zuhause pflegen — Leitfaden für Familien | Primundus',
+  title: 'Krebspatienten zuhause pflegen — Leitfaden für Familien',
   description: 'Krebspatienten zuhause betreuen: Was die Betreuungskraft übernimmt, wie der Alltag gestaltet wird und wann Palliativpflege nötig wird.',
   alternates: { canonical: 'https://primundus.de/krebspatienten-zuhause-pflegen' },
   openGraph: {

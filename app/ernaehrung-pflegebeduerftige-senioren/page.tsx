@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Ernährung pflegebedürftiger Senioren — was wichtig ist | Primundus',
+  title: 'Ernährung pflegebedürftiger Senioren — was wichtig ist',
   description: 'Ernährung pflegebedürftiger Senioren: Grundlagen, häufige Probleme, Mangelernährung erkennen und praktische Tipps für Betreuungskräfte und Angehörige.',
   alternates: { canonical: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren' },
   openGraph: {

@@ -14,7 +14,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Diabetes Pflege Senioren — Blutzucker, Hypoglykämie & 24h-Betreuung | Primundus',
-  description: 'Diabetes Pflege bei älteren Menschen: Blutzuckermessen, Insulingabe, Hypoglykämie erkennen, richtige Ernährung und ab wann eine 24h-Betreuungskraft sinnvoll ist.',
+  description: 'Diabetes Pflege bei älteren Menschen: Blutzuckermessen, Insulingabe, Hypoglykämie erkennen, richtige Ernährung und ab wann eine 24h-Betreuungskraft sinnvoll.',
   alternates: { canonical: 'https://primundus.de/diabetes-pflege-senioren' },
   openGraph: {
     title: 'Diabetes Pflege Senioren | Primundus',

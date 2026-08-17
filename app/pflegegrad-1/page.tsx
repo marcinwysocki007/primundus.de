@@ -15,7 +15,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Pflegegrad 1 — Leistungen, Entlastungsbetrag & Beantragen 2026 | Primundus',
-  description: 'Pflegegrad 1: 131 € Entlastungsbetrag/Monat, kein Pflegegeld. Voraussetzungen (12,5–26,9 NBA-Punkte), welche Leistungen möglich sind und wann PG 2 sinnvoller ist.',
+  description: 'Pflegegrad 1: 131 € Entlastungsbetrag/Monat, kein Pflegegeld. Voraussetzungen (12,5–26,9 NBA-Punkte),',
   alternates: { canonical: 'https://primundus.de/pflegegrad-1' },
   openGraph: {
     title: 'Pflegegrad 1 — Leistungen & Entlastungsbetrag 2026 | Primundus',

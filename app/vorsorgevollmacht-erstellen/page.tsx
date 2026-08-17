@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Vorsorgevollmacht erstellen — Anleitung, Inhalt & Kosten | Primundus',
+  title: 'Vorsorgevollmacht erstellen — Anleitung, Inhalt & Kosten',
   description: 'Vorsorgevollmacht erstellen: Was reinmuss, ob Notar nötig ist, wie sie registriert wird und warum sie für die Organisation der 24h-Pflege unverzichtbar ist.',
   alternates: { canonical: 'https://primundus.de/vorsorgevollmacht-erstellen' },
   openGraph: {

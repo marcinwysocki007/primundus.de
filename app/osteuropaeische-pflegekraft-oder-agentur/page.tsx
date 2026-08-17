@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Osteuropäische Pflegekraft direkt oder über Agentur? | Primundus',
-  description: 'Osteuropäische Pflegekraft direkt suchen oder über eine Agentur? Vollständiger Vergleich: Kosten, Rechtssicherheit, Qualität und was bei der Agenturwahl wirklich zählt.',
+  title: 'Osteuropäische Pflegekraft direkt oder über Agentur?',
+  description: 'Osteuropäische Pflegekraft direkt suchen oder über eine Agentur? Vollständiger Vergleich: Kosten, Rechtssicherheit,',
   alternates: { canonical: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur' },
   openGraph: {
     title: 'Osteuropäische Pflegekraft oder Agentur? | Primundus',

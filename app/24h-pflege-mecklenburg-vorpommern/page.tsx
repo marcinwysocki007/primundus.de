@@ -4,7 +4,7 @@ import { CitiesOfRegion } from '@/components/CityIndex'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Mecklenburg-Vorpommern — Betreuungskraft | Primundus',
+  title: '24h-Pflege Mecklenburg-Vorpommern — Betreuungskraft',
   description: '24h-Pflege in Mecklenburg-Vorpommern: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern' },
   openGraph: {

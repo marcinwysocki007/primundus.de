@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Parkinson Pflege zuhause — Alltag, Tipps & 24h-Pflege | Primundus',
+  title: 'Parkinson Pflege zuhause — Alltag, Tipps & 24h-Pflege',
   description: 'Parkinson Pflege zuhause: Besonderheiten, Alltagstipps, welcher Pflegegrad möglich ist und wann eine 24h-Betreuungskraft die richtige Unterstützung bietet.',
   alternates: { canonical: 'https://primundus.de/parkinson-pflege-zuhause' },
   openGraph: {

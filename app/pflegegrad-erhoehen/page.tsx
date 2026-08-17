@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad erhöhen — wann & wie Höherstufung beantragen | Primundus',
+  title: 'Pflegegrad erhöhen — wann & wie Höherstufung beantragen',
   description: 'Pflegegrad erhöhen 2026: Wann ein Antrag auf Höherstufung sinnvoll ist, wie man ihn stellt und wie die Begutachtung vorbereitet wird. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-erhoehen' },
   openGraph: {

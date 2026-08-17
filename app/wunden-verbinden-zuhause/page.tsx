@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'darf-kraft', title: 'Was darf die Kraft?' }, { id: 'pflegedienst', title: 'Wann Pflegedienst?' }, { id: 'praxis', title: 'Praktisch vorgehen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Wunden verbinden zuhause — was Betreuungskräfte dürfen | Primundus',
+  title: 'Wunden verbinden zuhause — was Betreuungskräfte dürfen',
   description: 'Was bei der häuslichen Wundversorgung zu beachten ist: Was die Betreuungskraft darf, wann der Pflegedienst nötig ist.',
   alternates: { canonical: 'https://primundus.de/wunden-verbinden-zuhause' },
   openGraph: {

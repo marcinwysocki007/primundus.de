@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'geldleistungen', title: 'Geldleistungen' }, { id: 'sachleistungen', title: 'Sachleistungen' }, { id: 'entlastung', title: 'Entlastungsleistungen' }, { id: 'weitere', title: 'Weitere Leistungen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht | Primundus',
+  title: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht',
   description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
   alternates: { canonical: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht' },
   openGraph: {

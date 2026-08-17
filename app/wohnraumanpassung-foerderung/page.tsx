@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'kasse', title: 'Pflegekasse zahlt' }, { id: 'weitere', title: 'Weitere Förderungen' }, { id: 'antrag', title: 'Antrag stellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Wohnraumanpassung Förderung 2026 — alle Zuschüsse | Primundus',
+  title: 'Wohnraumanpassung Förderung 2026 — alle Zuschüsse',
   description: 'Wohnraumanpassung Förderung: Was die Pflegekasse zahlt (bis 4.000 €), welche weiteren Förderungen es gibt und wie der Antrag läuft.',
   alternates: { canonical: 'https://primundus.de/wohnraumanpassung-foerderung' },
   openGraph: {

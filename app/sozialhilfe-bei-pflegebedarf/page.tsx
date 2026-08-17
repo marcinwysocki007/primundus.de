@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Sozialhilfe bei Pflegebedarf — Hilfe zur Pflege beantragen | Primundus',
+  title: 'Sozialhilfe bei Pflegebedarf — Hilfe zur Pflege beantragen',
   description: 'Sozialhilfe Pflege 2026: Was Hilfe zur Pflege (§61 SGB XII) ist, wer Anspruch hat, ob Kinder zahlen müssen und wie man den Antrag stellt.',
   alternates: { canonical: 'https://primundus.de/sozialhilfe-bei-pflegebedarf' },
   openGraph: {

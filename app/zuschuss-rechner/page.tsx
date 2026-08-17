@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ZuschussRechnerClient } from './ZuschussRechnerClient'
 
 export const metadata: Metadata = {
-  title: 'Pflegezuschüsse 2026 — alle Leistungen im Überblick | Primundus',
+  title: 'Pflegezuschüsse 2026 — alle Leistungen im Überblick',
   description: 'Welche Zuschüsse stehen Ihnen zu? Pflegegrad wählen und sofort alle Leistungen 2026 sehen: Pflegegeld, Entlastungsbudget und Steuerabzug.',
   alternates: { canonical: 'https://primundus.de/zuschuss-rechner' },
   openGraph: {

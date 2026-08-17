@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegemangel melden — Beschwerden richtig einreichen | Primundus',
+  title: 'Pflegemangel melden — Beschwerden richtig einreichen',
   description: 'Pflegemangel melden: An wen man sich bei Problemen in der Pflege wendet, wie eine Beschwerde eingereicht wird und welche Stellen zuständig sind.',
   alternates: { canonical: 'https://primundus.de/pflegemangel-melden-beschwerden' },
   openGraph: {

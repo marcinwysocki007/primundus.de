@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Selbst pflegen oder 24h-Pflege? — Ehrlicher Vergleich | Primundus',
-  description: 'Selbst pflegen oder eine 24h-Betreuungskraft? Ein ehrlicher Vergleich: wann Angehörigenpflege funktioniert, wann sie an Grenzen stößt und welche Kombination am besten trägt.',
+  title: 'Selbst pflegen oder 24h-Pflege? — Ehrlicher Vergleich',
+  description: 'Selbst pflegen oder eine 24h-Betreuungskraft? Ein ehrlicher Vergleich: wann Angehörigenpflege funktioniert,',
   alternates: { canonical: 'https://primundus.de/selbst-pflegen-oder-24h-pflege' },
   openGraph: {
     title: 'Selbst pflegen oder 24h-Pflege? | Primundus',

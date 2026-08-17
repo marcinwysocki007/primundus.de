@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegeld 2026 — Beträge, Anspruch & Kombinationen | Primundus',
+  title: 'Pflegegeld 2026 — Beträge, Anspruch & Kombinationen',
   description: 'Pflegegeld 2026: 347 € (PG 2) bis 990 € (PG 5) pro Monat. Wer Anspruch hat, wie es mit 24h-Pflege kombiniert wird und was sich 2026 geändert hat.',
   alternates: { canonical: 'https://primundus.de/pflegegeld' },
   openGraph: {

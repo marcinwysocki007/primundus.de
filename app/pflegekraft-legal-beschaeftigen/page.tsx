@@ -14,8 +14,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft legal beschäftigen — die 3 Modelle 2026 | Primundus',
-  description: 'Pflegekraft legal beschäftigen: Entsendemodell, Direktanstellung oder Selbstständigkeit? Was legal ist, was Scheinselbstständigkeit kostet und was die A1-Bescheinigung bedeutet.',
+  title: 'Pflegekraft legal beschäftigen — die 3 Modelle 2026',
+  description: 'Pflegekraft legal beschäftigen: Entsendemodell, Direktanstellung oder Selbstständigkeit? Was legal ist,',
   alternates: { canonical: 'https://primundus.de/pflegekraft-legal-beschaeftigen' },
   openGraph: {
     title: 'Pflegekraft legal beschäftigen — 3 Modelle | Primundus',

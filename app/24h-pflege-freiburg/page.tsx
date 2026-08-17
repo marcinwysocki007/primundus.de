@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Freiburg im Breisgau — Betreuungskraft zuhause | Primundus',
+  title: '24h-Pflege Freiburg im Breisgau — Betreuungskraft zuhause',
   description: '24h-Pflege in Freiburg im Breisgau: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1200 €/Monat (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-freiburg' },
   openGraph: {

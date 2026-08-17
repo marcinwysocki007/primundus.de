@@ -9,7 +9,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 // müssen am Ende die Kinder ran?" (Antwort: 100.000-€-Regel).
 
 export const metadata: Metadata = {
-  title: 'Kostenübernahme 24-Stunden-Pflege: Wer zahlt was? | Primundus',
+  title: 'Kostenübernahme 24-Stunden-Pflege: Wer zahlt was?',
   description:
     'Wer übernimmt die Kosten der 24-Stunden-Pflege? Pflegekasse, Sozialamt, Steuervorteil — und wann Kinder zahlen müssen (100.000-€-Grenze). Einfach erklärt.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege-kostenuebernahme' },

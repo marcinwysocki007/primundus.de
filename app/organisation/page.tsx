@@ -3,7 +3,7 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
   title: 'Organisation der 24h-Pflege — so geht es 2026 | Primundus',
-  description: 'Organisation der 24h-Pflege: Beschäftigungsmodelle, Pflegekraft finden, Verträge, rechtliche Absicherung — alles was Familien wissen müssen. Mit Schritt-für-Schritt-Ablauf.',
+  description: 'Organisation der 24h-Pflege: Beschäftigungsmodelle, Pflegekraft finden, Verträge, rechtliche Absicherung — alles was Familien wissen müssen.',
   alternates: { canonical: 'https://primundus.de/organisation' },
   openGraph: {
     title: 'Organisation der 24h-Pflege 2026 | Primundus',

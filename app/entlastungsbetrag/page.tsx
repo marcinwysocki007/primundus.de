@@ -14,8 +14,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen | Primundus',
-  description: 'Entlastungsbetrag 2026: 131 €/Monat für alle Pflegegrade 1–5. Wofür er nutzbar ist, wie man ihn beantragt und wie er mit Pflegegeld und 24h-Pflege kombiniert wird.',
+  title: 'Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen',
+  description: 'Entlastungsbetrag 2026: 131 €/Monat für alle Pflegegrade 1–5. Wofür er nutzbar ist, wie man ihn beantragt und wie er mit Pflegegeld und 24h-Pflege.',
   alternates: { canonical: 'https://primundus.de/entlastungsbetrag' },
   openGraph: {
     title: 'Entlastungsbetrag 2026 — 131 €/Monat | Primundus',

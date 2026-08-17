@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist Intensivpflege?' }, { id: 'moeglich', title: 'Was ist zuhause möglich?' }, { id: 'grenzen', title: 'Wo sind die Grenzen?' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Intensivpflege zuhause — wann möglich, wann nicht | Primundus',
+  title: 'Intensivpflege zuhause — wann möglich, wann nicht',
   description: 'Intensivpflege zuhause: Was ist möglich, welche Fachkräfte werden gebraucht und wann ist stationäre Versorgung nötig?',
   alternates: { canonical: 'https://primundus.de/intensivpflege-zuhause' },
   openGraph: {

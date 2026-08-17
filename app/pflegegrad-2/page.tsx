@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad 2 — Leistungen & 347 € Pflegegeld 2026 | Primundus',
+  title: 'Pflegegrad 2 — Leistungen & 347 € Pflegegeld 2026',
   description: 'Pflegegrad 2: 347 € Pflegegeld/Monat, 796 € Sachleistungen, 3.539 € Entlastungsbudget/Jahr. Alle Leistungen, Voraussetzungen und ob 24h-Pflege sinnvoll ist.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-2' },
   openGraph: {

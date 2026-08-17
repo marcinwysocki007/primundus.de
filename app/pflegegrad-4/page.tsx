@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad 4 — Leistungen & 800 € Pflegegeld 2026 | Primundus',
-  description: 'Pflegegrad 4: 800 € Pflegegeld/Monat, 1.859 € Sachleistungen, 3.539 € Entlastungsbudget/Jahr. Schwerste Beeinträchtigung — alle Leistungen und ob 24h-Pflege möglich ist.',
+  title: 'Pflegegrad 4 — Leistungen & 800 € Pflegegeld 2026',
+  description: 'Pflegegrad 4: 800 € Pflegegeld/Monat, 1.859 € Sachleistungen, 3.539 € Entlastungsbudget/Jahr. Schwerste Beeinträchtigung —',
   alternates: { canonical: 'https://primundus.de/pflegegrad-4' },
   openGraph: {
     title: 'Pflegegrad 4 — Leistungen & Beträge 2026 | Primundus',

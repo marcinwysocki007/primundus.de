@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege und Beruf vereinbaren — Rechte, Tipps & Lösungen 2026 | Primundus',
+  title: 'Pflege und Beruf vereinbaren — Rechte, Tipps & Lösungen 2026',
   description: 'Pflege und Beruf vereinbaren: Pflegezeit, Familienpflegezeit, Freistellungsansprüche und wie eine 24h-Betreuungskraft die Doppelbelastung löst.',
   alternates: { canonical: 'https://primundus.de/pflege-und-beruf-vereinbaren' },
   openGraph: {

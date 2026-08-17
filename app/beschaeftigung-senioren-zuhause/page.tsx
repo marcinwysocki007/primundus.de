@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'ideen', title: 'Praktische Ideen' }, { id: 'demenz', title: 'Bei Demenz' }, { id: 'tagesstruktur', title: 'Tagesstruktur' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Beschäftigung von Senioren zuhause — Ideen & Tipps | Primundus',
+  title: 'Beschäftigung von Senioren zuhause — Ideen & Tipps',
   description: 'Wie Senioren zuhause aktiv und geistig fit bleiben: praktische Ideen für Beschäftigung, Tagesstruktur und soziale Teilhabe.',
   alternates: { canonical: 'https://primundus.de/beschaeftigung-senioren-zuhause' },
   openGraph: {

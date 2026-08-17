@@ -14,7 +14,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Qualität der 24h-Pflege bei Primundus — wie wir Kräfte prüfen | Primundus',
-  description: 'Wie Primundus die Qualität der Betreuungskräfte sicherstellt: aktive Prüfung von Deutschkenntnissen, Erfahrung und Referenzen. Laufende Qualitätssicherung, täglich kündbar.',
+  description: 'Wie Primundus die Qualität der Betreuungskräfte sicherstellt: aktive Prüfung von Deutschkenntnissen, Erfahrung und Referenzen. Laufende Qualitätssicherung,',
   alternates: { canonical: 'https://primundus.de/qualitaet' },
   openGraph: {
     title: 'Qualität der 24h-Pflege | Primundus',

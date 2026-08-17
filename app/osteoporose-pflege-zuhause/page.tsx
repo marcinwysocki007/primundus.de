@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Osteoporose Pflege zuhause — Sturzschutz & Alltag | Primundus',
+  title: 'Osteoporose Pflege zuhause — Sturzschutz & Alltag',
   description: 'Osteoporose Pflege zuhause: Warum Sturzprävention das Wichtigste ist, wie man den Alltag sicher gestaltet und was Ernährung und Vitamin D beitragen.',
   alternates: { canonical: 'https://primundus.de/osteoporose-pflege-zuhause' },
   openGraph: {

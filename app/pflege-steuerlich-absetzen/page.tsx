@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege steuerlich absetzen 2026 — was geht & wie viel? | Primundus',
+  title: 'Pflege steuerlich absetzen 2026 — was geht & wie viel?',
   description: 'Pflege steuerlich absetzen 2026: 20 % der Kosten als haushaltsnahe Dienstleistung, max. 4.000 € Ersparnis/Jahr. Außergewöhnliche Belastungen zusätzlich möglich.',
   alternates: { canonical: 'https://primundus.de/pflege-steuerlich-absetzen' },
   openGraph: {

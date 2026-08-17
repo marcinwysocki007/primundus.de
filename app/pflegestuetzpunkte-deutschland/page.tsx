@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'was-bieten', title: 'Was bieten sie?' }, { id: 'finden', title: 'Wie finden?' }, { id: 'abgrenzung', title: 'Abgrenzung zu anderen Stellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegestützpunkte in Deutschland — kostenlose Beratung | Primundus',
+  title: 'Pflegestützpunkte in Deutschland — kostenlose Beratung',
   description: 'Pflegestützpunkte: Was sie bieten, wie man den nächsten findet und wann sie die beste Anlaufstelle sind.',
   alternates: { canonical: 'https://primundus.de/pflegestuetzpunkte-deutschland' },
   openGraph: {

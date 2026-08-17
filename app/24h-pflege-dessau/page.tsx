@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Dessau-Roßlau — Betreuungskraft zuhause | Primundus',
+  title: '24h-Pflege Dessau-Roßlau — Betreuungskraft zuhause',
   description: '24h-Pflege in Dessau-Roßlau: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1400 €/Monat (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-dessau' },
   openGraph: {

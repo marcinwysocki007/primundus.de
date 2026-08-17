@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege nach Schlaganfall zuhause — Reha, Kosten & 24h-Pflege | Primundus',
-  description: 'Pflege nach Schlaganfall: Was zuhause möglich ist, wie die Reha-Phase organisiert wird und wann eine 24h-Betreuungskraft die richtige Lösung ist. Alle Infos 2026.',
+  title: 'Pflege nach Schlaganfall zuhause — Reha, Kosten & 24h-Pflege',
+  description: 'Pflege nach Schlaganfall: Was zuhause möglich ist, wie die Reha-Phase organisiert wird und wann eine 24h-Betreuungskraft die richtige Lösung ist.',
   alternates: { canonical: 'https://primundus.de/schlaganfall-pflege-zuhause' },
   openGraph: {
     title: 'Pflege nach Schlaganfall zuhause | Primundus',

@@ -14,7 +14,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Tagesstruktur bei Demenz — Tipps & Tagesplan | Primundus',
-  description: 'Tagesstruktur bei Demenz: Warum feste Routinen entscheidend sind, ein konkreter Tagesplan mit sinnvollen Aktivitäten und wie 24h-Betreuung den Alltag stabilisiert.',
+  description: 'Tagesstruktur bei Demenz: Warum feste Routinen entscheidend sind, ein konkreter Tagesplan mit sinnvollen Aktivitäten und wie 24h-Betreuung den Alltag.',
   alternates: { canonical: 'https://primundus.de/tagesstruktur-demenz' },
   openGraph: {
     title: 'Tagesstruktur bei Demenz | Primundus',

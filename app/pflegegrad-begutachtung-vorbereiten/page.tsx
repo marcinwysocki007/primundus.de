@@ -14,8 +14,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'MD-Begutachtung vorbereiten — Checkliste & 7 Tipps | Primundus',
-  description: 'MD-Begutachtung vorbereiten: Pflegetagebuch führen, den schlechtesten Tag schildern, Vertrauensperson einladen. Checkliste + 7 Tipps für höhere Pflegegrad-Einstufung.',
+  title: 'MD-Begutachtung vorbereiten — Checkliste & 7 Tipps',
+  description: 'MD-Begutachtung vorbereiten: Pflegetagebuch führen, den schlechtesten Tag schildern, Vertrauensperson einladen.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten' },
   openGraph: {
     title: 'MD-Begutachtung vorbereiten | Primundus',

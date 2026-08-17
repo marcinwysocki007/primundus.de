@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Förderungen nach Bundesland — alle Pflegezuschüsse 2026 | Primundus',
+  title: 'Förderungen nach Bundesland — alle Pflegezuschüsse 2026',
   description: 'Pflege-Förderungen 2026: Bundesweite Pflegekasse-Leistungen plus Landesförderungen in Bayern, NRW, BW und weiteren Bundesländern. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/foerderungen-nach-bundesland' },
   openGraph: {

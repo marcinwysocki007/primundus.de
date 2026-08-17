@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft Sozialversicherung anmelden — Anleitung 2026 | Primundus',
+  title: 'Pflegekraft Sozialversicherung anmelden — Anleitung 2026',
   description: 'Pflegekraft bei der Sozialversicherung anmelden: Minijob, reguläre Beschäftigung oder Entsendemodell — wann was gilt und wie die Anmeldung läuft. 2026.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden' },
   openGraph: {

@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegevertrag aufsetzen — was muss rein? Muster & Tipps | Primundus',
+  title: 'Pflegevertrag aufsetzen — was muss rein? Muster & Tipps',
   description: 'Pflegevertrag aufsetzen: Was in einen Pflegevertrag gehört, welches Modell für wen gilt und worauf bei der Kündigung geachtet werden muss. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/pflegevertrag-aufsetzen' },
   openGraph: {

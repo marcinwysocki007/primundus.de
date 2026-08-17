@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'vorteile', title: 'Warum Bewegung wichtig ist' }, { id: 'uebungen', title: 'Einfache Übungen' }, { id: 'sturzpraevention', title: 'Sturzprävention' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Bewegung für Senioren zuhause — einfache Übungen & Tipps | Primundus',
+  title: 'Bewegung für Senioren zuhause — einfache Übungen & Tipps',
   description: 'Einfache Bewegungsübungen für Senioren zuhause: was geht auch bei eingeschränkter Mobilität, wie Stürze verhindert werden, was die Kraft unterstützen kann.',
   alternates: { canonical: 'https://primundus.de/bewegung-senioren-zuhause' },
   openGraph: {

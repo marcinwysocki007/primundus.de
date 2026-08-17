@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft aus Bulgarien — legal, Kosten & Entsendemodell | Primundus',
+  title: 'Pflegekraft aus Bulgarien — legal, Kosten & Entsendemodell',
   description: 'Pflegekraft aus Bulgarien: Wie das Entsendemodell funktioniert, was eine bulgarische Betreuungskraft kostet und worauf bei der Auswahl zu achten ist.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-bulgarien' },
   openGraph: {

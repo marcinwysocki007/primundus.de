@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist Kurzzeitpflege?' }, { id: 'leistungen', title: 'Leistungen 2026' }, { id: 'beantragen', title: 'Wie beantragen' }, { id: 'alternative', title: 'Wann 24h-Pflege besser ist' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Kurzzeitpflege 2026 — Anspruch, Kosten & Beantragung | Primundus',
+  title: 'Kurzzeitpflege 2026 — Anspruch, Kosten & Beantragung',
   description: 'Kurzzeitpflege: Was es ist, wie viel die Kasse zahlt (2026: bis 3.539 €/Jahr), wie man es beantragt und wann 24h-Pflege die bessere Alternative ist.',
   alternates: { canonical: 'https://primundus.de/kurzzeitpflege' },
   openGraph: {

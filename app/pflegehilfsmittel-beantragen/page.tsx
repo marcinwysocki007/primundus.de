@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'was-zahlt', title: 'Was zahlt die Kasse?' }, { id: 'produkte', title: 'Welche Produkte?' }, { id: 'antrag', title: 'Antrag stellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegehilfsmittel beantragen — kostenlos & einfach | Primundus',
+  title: 'Pflegehilfsmittel beantragen — kostenlos & einfach',
   description: 'Pflegehilfsmittel 2026: Was die Kasse zahlt (42 €/Monat), welche Produkte dazu gehören und wie der Antrag läuft.',
   alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-beantragen' },
   openGraph: {

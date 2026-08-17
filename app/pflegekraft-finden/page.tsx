@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft finden — worauf achten & wie vorgehen 2026 | Primundus',
-  description: 'Pflegekraft finden: Agentur, Direktsuche oder Selbstständige? Worauf bei der Auswahl zu achten ist, welche Qualifikationen wichtig sind und wie Primundus dabei hilft.',
+  title: 'Pflegekraft finden — worauf achten & wie vorgehen 2026',
+  description: 'Pflegekraft finden: Agentur, Direktsuche oder Selbstständige? Worauf bei der Auswahl zu achten ist,',
   alternates: { canonical: 'https://primundus.de/pflegekraft-finden' },
   openGraph: {
     title: 'Pflegekraft finden 2026 | Primundus',

@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'kosten', title: 'Kostenvergleich 2026' }, { id: 'qualitaet', title: 'Betreuungsqualität' }, { id: 'alltag', title: 'Alltag & Lebensqualität' }, { id: 'wann-was', title: 'Wann was sinnvoll ist' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege vs. Pflegeheim — vollständiger Vergleich 2026 | Primundus',
+  title: '24h-Pflege vs. Pflegeheim — vollständiger Vergleich 2026',
   description: '24h-Pflege zuhause oder Pflegeheim? Kosten, Qualität, Alltag — vollständiger Vergleich 2026 mit echten Zahlen. Wann was die bessere Wahl ist.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim' },
   openGraph: {

@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad bei Demenz — welcher Grad & wie beantragen? 2026 | Primundus',
+  title: 'Pflegegrad bei Demenz — welcher Grad & wie beantragen? 2026',
   description: 'Pflegegrad bei Demenz 2026: Leichte Demenz meist PG 2–3, mittlere PG 3–4, schwere PG 4–5. Begutachtung vorbereiten, höhere Einstufung erreichen — alle Tipps.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-bei-demenz' },
   openGraph: {

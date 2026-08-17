@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: 'Pflege vergleichen — alle Vergleiche auf einen Blick | Primundus',
+  title: 'Pflege vergleichen — alle Vergleiche auf einen Blick',
   description: 'Pflegeformen, Kosten und Betreuungsmodelle vergleichen: 24h-Pflege vs. Pflegeheim, ambulante Pflege, Tagespflege, osteuropäische Pflegekräfte. Alle Vergleiche.',
   alternates: { canonical: 'https://primundus.de/vergleiche' },
   openGraph: {

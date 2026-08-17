@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: 'Rechtliches zur 24h-Pflege — alle rechtlichen Aspekte | Primundus',
+  title: 'Rechtliches zur 24h-Pflege — alle rechtlichen Aspekte',
   description: 'Rechtliches zur 24h-Pflege: Beschäftigungsmodelle, Scheinselbstständigkeit vermeiden, Pflegevertrag, Vorsorgevollmacht, Patientenverfügung und Steuerrecht.',
   alternates: { canonical: 'https://primundus.de/rechtliches' },
   openGraph: {

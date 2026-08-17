@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'risiken', title: 'Risiken' }, { id: 'organisation', title: 'Wie organisieren' }, { id: 'betreuungskraft', title: 'Was die Kraft darf' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Medikamente für Senioren verwalten — sicher und fehlerfrei | Primundus',
+  title: 'Medikamente für Senioren verwalten — sicher und fehlerfrei',
   description: 'Wie Medikamente bei Senioren sicher verwaltet werden: Wochendosierer, Medikamentenliste, was die Betreuungskraft darf und nicht darf.',
   alternates: { canonical: 'https://primundus.de/medikamente-senioren-verwalten' },
   openGraph: {

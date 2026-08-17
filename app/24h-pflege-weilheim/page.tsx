@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Weilheim in Oberbayern — Betreuungskraft zuhause | Primundus',
+  title: '24h-Pflege Weilheim in Oberbayern — Betreuungskraft zuhause',
   description: '24h-Pflege in Weilheim in Oberbayern: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-weilheim' },
   openGraph: {

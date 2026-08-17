@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege | Primundus',
+  title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
   description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
@@ -37,7 +37,7 @@ const schemaMarkup = JSON.stringify({
       name: 'Mateusz Wysocki',
       jobTitle: 'Gründer & Geschäftsführer',
       worksFor: { '@id': 'https://primundus.de/#organization' },
-      description: 'Gründer von Primundus, seit 2006 in der häuslichen 24-Stunden-Pflege tätig und ehemaliger Mitgründer von Pflegehelden, einem der größten 24h-Pflege-Anbieter Deutschlands.',
+      description: 'Gründer von Primundus, seit 2006 in der häuslichen 24-Stunden-Pflege tätig und ehemaliger Mitgründer von Pflegehelden,',
       knowsAbout: ['24-Stunden-Pflege', 'häusliche Betreuung', 'Pflegevermittlung', 'Pflegemarkt Deutschland'],
     },
     {

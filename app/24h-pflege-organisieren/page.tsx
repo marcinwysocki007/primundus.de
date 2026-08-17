@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege organisieren — Checkliste & Schritt-für-Schritt | Primundus',
+  title: '24h-Pflege organisieren — Checkliste & Schritt-für-Schritt',
   description: '24h-Pflege organisieren: Was vor dem Start geregelt sein muss, wie man Wohnraum vorbereitet und was laufend zu organisieren ist. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-organisieren' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ChecklisteClient } from './ChecklisteClient'
 
 export const metadata: Metadata = {
-  title: 'Checkliste Pflegeübernahme — 30 Schritte in 5 Phasen | Primundus',
+  title: 'Checkliste Pflegeübernahme — 30 Schritte in 5 Phasen',
   description: 'Strukturierte Checkliste für die Pflegeübernahme — von den ersten Tagen bis zur stabilen Pflegesituation. 30 konkrete Schritte, Fortschritt wird gespeichert.',
   alternates: { canonical: 'https://primundus.de/checkliste-pflegeuebernahme' },
   openGraph: {

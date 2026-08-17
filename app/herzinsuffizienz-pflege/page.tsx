@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Herzinsuffizienz Pflege zuhause — was möglich ist 2026 | Primundus',
+  title: 'Herzinsuffizienz Pflege zuhause — was möglich ist 2026',
   description: 'Herzinsuffizienz Pflege zuhause: Was in welchem NYHA-Stadium möglich ist, worauf täglich geachtet werden muss und ab wann eine 24h-Betreuungskraft sinnvoll ist.',
   alternates: { canonical: 'https://primundus.de/herzinsuffizienz-pflege' },
   openGraph: {

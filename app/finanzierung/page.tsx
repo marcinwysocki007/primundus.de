@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege finanzieren — alle Kassenzuschüsse 2026 | Primundus',
+  title: '24h-Pflege finanzieren — alle Kassenzuschüsse 2026',
   description: '24h-Pflege finanzieren: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr + 4.000 € Steuerersparnis. Alle Zuschüsse 2026 optimal kombiniert.',
   alternates: { canonical: 'https://primundus.de/finanzierung' },
   openGraph: {

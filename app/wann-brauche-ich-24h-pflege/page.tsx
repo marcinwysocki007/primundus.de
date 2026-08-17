@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen | Primundus',
+  title: 'Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen',
   description: 'Wann ist 24h-Pflege notwendig? 10 klare Zeichen, typische Pflegesituationen und eine Checkliste die hilft die richtige Entscheidung zu treffen.',
   alternates: { canonical: 'https://primundus.de/wann-brauche-ich-24h-pflege' },
   openGraph: {

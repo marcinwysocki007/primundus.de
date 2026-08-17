@@ -107,7 +107,6 @@ const artikel = [
   'palliativpflege-zuhause',
   'intensivpflege-zuhause',
   '24h-pflege-vs-pflegeheim-kosten',
-  '24h-pflege-anbieter-vergleich',
   'osteuropaeische-pflegekraft-oder-agentur',
   'pflegeheim-kosten-deutschland',
   'selbst-pflegen-oder-24h-pflege',

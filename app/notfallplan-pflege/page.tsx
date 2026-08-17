@@ -14,7 +14,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Notfallplan Pflege — was hineingehört & Vorlage | Primundus',
-  description: 'Notfallplan Pflege: Was in jeden Pflegenotfallplan gehört, eine kostenlose Vorlage und wie man den Plan aktuell hält. Für zuhause, Betreuungskräfte und Angehörige.',
+  description: 'Notfallplan Pflege: Was in jeden Pflegenotfallplan gehört, eine kostenlose Vorlage und wie man den Plan aktuell hält. Für zuhause,',
   alternates: { canonical: 'https://primundus.de/notfallplan-pflege' },
   openGraph: {
     title: 'Notfallplan Pflege — Vorlage & Anleitung | Primundus',

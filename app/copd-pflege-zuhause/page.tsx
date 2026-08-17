@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist COPD?' }, { id: 'aufgaben', title: 'Aufgaben der Betreuungskraft' }, { id: 'notfall', title: 'Notfallsituationen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'COPD Pflege zuhause — was Betreuungskräfte wissen müssen | Primundus',
+  title: 'COPD Pflege zuhause — was Betreuungskräfte wissen müssen',
   description: 'COPD zuhause pflegen: was zu beachten ist, welche Aufgaben die Kraft übernimmt, wie Notfälle verhindert werden. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/copd-pflege-zuhause' },
   openGraph: {

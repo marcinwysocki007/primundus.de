@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Barrierefreies Zuhause gestalten — Tipps & Förderung 2026 | Primundus',
-  description: 'Barrierefreies Zuhause: Die wichtigsten Maßnahmen, wie Pflegekasse bis 4.180 €/Maßnahme fördert und was sofort umgesetzt werden kann. Mit Raum-für-Raum Checkliste.',
+  title: 'Barrierefreies Zuhause gestalten — Tipps & Förderung 2026',
+  description: 'Barrierefreies Zuhause: Die wichtigsten Maßnahmen, wie Pflegekasse bis 4.180 €/Maßnahme fördert und was sofort umgesetzt werden kann.',
   alternates: { canonical: 'https://primundus.de/barrierefreies-zuhause-gestalten' },
   openGraph: {
     title: 'Barrierefreies Zuhause gestalten 2026 | Primundus',

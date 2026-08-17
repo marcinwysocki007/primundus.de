@@ -13,8 +13,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad bei Parkinson — welcher Grad & wie beantragen | Primundus',
-  description: 'Pflegegrad bei Parkinson 2026: Welcher Grad ist realistisch, was bei der Begutachtung zu beachten ist und wie die Leistungen sich staffeln. Vollständiger Ratgeber.',
+  title: 'Pflegegrad bei Parkinson — welcher Grad & wie beantragen',
+  description: 'Pflegegrad bei Parkinson 2026: Welcher Grad ist realistisch, was bei der Begutachtung zu beachten ist und wie die Leistungen sich staffeln.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-bei-parkinson' },
   openGraph: {
     title: 'Pflegegrad bei Parkinson 2026 | Primundus',

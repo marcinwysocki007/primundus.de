@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: 'Ratgeber 24h-Pflege 2026 — alle Themen für Angehörige | Primundus',
+  title: 'Ratgeber 24h-Pflege 2026 — alle Themen für Angehörige',
   description: 'Alle Themen rund um 24-Stunden-Pflege: Pflegegrade, Finanzierung, Kosten, Rechtliches und Unterstützung für pflegende Angehörige. Aktuell 2026.',
   alternates: {
     canonical: 'https://primundus.de/ratgeber',

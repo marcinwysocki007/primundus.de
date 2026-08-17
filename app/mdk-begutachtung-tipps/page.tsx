@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'MDK-Begutachtung Tipps — so bereiten Sie sich vor | Primundus',
+  title: 'MDK-Begutachtung Tipps — so bereiten Sie sich vor',
   description: 'MDK-Begutachtung vorbereiten: Wie der Besuch abläuft, was geprüft wird, welche Tipps wirklich helfen und wie ein Pflegetagebuch den Pflegegrad sichert.',
   alternates: { canonical: 'https://primundus.de/mdk-begutachtung-tipps' },
   openGraph: {

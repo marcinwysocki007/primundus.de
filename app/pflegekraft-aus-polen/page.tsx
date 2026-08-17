@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Polnische Pflegekräfte — legal, sicher & bezahlbar 2026 | Primundus',
+  title: 'Polnische Pflegekräfte — legal, sicher & bezahlbar 2026',
   description: 'Polnische Pflegekräfte für die 24h-Pflege: 2.200–3.500 €/Monat, legal über das Entsendemodell mit A1-Bescheinigung. Kosten, Recht und Auswahl — einfach erklärt.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen' },
   openGraph: {

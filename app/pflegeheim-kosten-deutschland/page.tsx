@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegeheim Kosten Deutschland 2026 — Eigenanteil & Vergleich | Primundus',
+  title: 'Pflegeheim Kosten Deutschland 2026 — Eigenanteil & Vergleich',
   description: 'Pflegeheim Kosten 2026: Eigenanteil Ø 2.871 €/Monat (bundesweit). Regionale Unterschiede, Kassenzuschüsse und warum 24h-Pflege zuhause oft günstiger ist.',
   alternates: { canonical: 'https://primundus.de/pflegeheim-kosten-deutschland' },
   openGraph: {

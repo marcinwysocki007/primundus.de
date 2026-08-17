@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad nach Schlaganfall — welcher Grad & wie beantragen | Primundus',
+  title: 'Pflegegrad nach Schlaganfall — welcher Grad & wie beantragen',
   description: 'Pflegegrad nach Schlaganfall: Welcher Grad ist realistisch, wie bereitet man die Begutachtung vor und welche Leistungen stehen zu? Alles erklärt für 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-nach-schlaganfall' },
   openGraph: {

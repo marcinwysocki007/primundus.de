@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: 'Krankheiten & Pflege zuhause — Ratgeber für alle Diagnosen | Primundus',
+  title: 'Krankheiten & Pflege zuhause — Ratgeber für alle Diagnosen',
   description: 'Pflege zuhause bei Demenz, Alzheimer, Parkinson, Schlaganfall, Herzinsuffizienz, MS und mehr. Alle Krankheits-Ratgeber von Primundus auf einen Blick.',
   alternates: { canonical: 'https://primundus.de/krankheiten' },
   openGraph: {

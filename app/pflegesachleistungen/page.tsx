@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung | Primundus',
+  title: 'Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung',
   description: 'Pflegesachleistungen 2026: 796 € (PG 2) bis 2.299 € (PG 5) pro Monat für ambulante Pflegedienste. Was absetzbar ist, wie man kombiniert und was nicht geht.',
   alternates: { canonical: 'https://primundus.de/pflegesachleistungen' },
   openGraph: {

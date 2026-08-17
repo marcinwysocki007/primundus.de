@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'fristen', title: 'Fristen' }, { id: 'begruendung', title: 'Begründung' }, { id: 'ablauf', title: 'Ablauf' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad Widerspruch einlegen — Schritt für Schritt | Primundus',
+  title: 'Pflegegrad Widerspruch einlegen — Schritt für Schritt',
   description: 'Pflegegrad Widerspruch einlegen: Fristen, Begründung, Chancen. Wie man gegen einen zu niedrigen Bescheid vorgeht.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-widerspruch-einlegen' },
   openGraph: {

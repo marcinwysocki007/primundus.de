@@ -11,7 +11,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 // Tagessatz (Tagessatz = Monatspreis/30).
 
 export const metadata: Metadata = {
-  title: 'Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24h-Pflege? | Primundus',
+  title: 'Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24h-Pflege?',
   description:
     'Mutter im Krankenhaus — zahle ich die 24h-Pflege weiter? Was gilt, wenn die Betreuungskraft krank wird? Die klaren Antworten, die sonst keiner gibt.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege-krankenhausaufenthalt' },

@@ -15,7 +15,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Alzheimer Betreuung zuhause — was möglich ist & wie 24h-Pflege hilft | Primundus',
-  description: 'Alzheimer Betreuung zuhause: Was in welchem Stadium möglich ist, wie der Alltag gestaltet wird und wann eine 24h-Betreuungskraft die richtige Unterstützung bietet.',
+  description: 'Alzheimer Betreuung zuhause: Was in welchem Stadium möglich ist, wie der Alltag gestaltet wird und wann eine 24h-Betreuungskraft die richtige Unterstützung.',
   alternates: { canonical: 'https://primundus.de/alzheimer-betreuung-zuhause' },
   openGraph: {
     title: 'Alzheimer Betreuung zuhause | Primundus',

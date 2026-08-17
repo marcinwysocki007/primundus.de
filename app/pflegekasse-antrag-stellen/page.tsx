@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekasse Antrag stellen — Schritt für Schritt 2026 | Primundus',
+  title: 'Pflegekasse Antrag stellen — Schritt für Schritt 2026',
   description: 'Pflegekasse Antrag stellen 2026: Pflegegrad beantragen, welche Leistungen es gibt, Fristen und was bei Ablehnung zu tun ist. Mit Musterschreiben.',
   alternates: { canonical: 'https://primundus.de/pflegekasse-antrag-stellen' },
   openGraph: {

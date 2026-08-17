@@ -4,7 +4,7 @@ import { RegionenSearch, type StadtEntry } from '@/components/RegionenSearch'
 import { AllRegionsIndex } from '@/components/CityIndex'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege in Ihrer Region — alle Städte & Bundesländer | Primundus',
+  title: '24h-Pflege in Ihrer Region — alle Städte & Bundesländer',
   description: 'Primundus ist mit eigenen 24h-Betreuungskräften in ganz Deutschland im Einsatz. PLZ oder Ort eingeben — sofort passende Informationen und Anfrage starten.',
   alternates: { canonical: 'https://primundus.de/regionen' },
   openGraph: {

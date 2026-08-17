@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft aus Rumänien — legal, Kosten & Entsendemodell | Primundus',
+  title: 'Pflegekraft aus Rumänien — legal, Kosten & Entsendemodell',
   description: 'Pflegekraft aus Rumänien im Entsendemodell: Wie es funktioniert, was es kostet und worauf bei der Auswahl zu achten ist. Rechtssicher mit A1-Bescheinigung.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-rumaenien' },
   openGraph: {

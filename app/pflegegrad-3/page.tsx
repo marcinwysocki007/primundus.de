@@ -15,8 +15,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad 3 — Leistungen & 599 € Pflegegeld 2026 | Primundus',
-  description: 'Pflegegrad 3: 599 € Pflegegeld + 1.497 € Sachleistungen + 3.539 € Entlastungsbudget pro Jahr. Alle Leistungen, Voraussetzungen und wie 24h-Pflege kombiniert wird.',
+  title: 'Pflegegrad 3 — Leistungen & 599 € Pflegegeld 2026',
+  description: 'Pflegegrad 3: 599 € Pflegegeld + 1.497 € Sachleistungen + 3.539 € Entlastungsbudget pro Jahr. Alle Leistungen,',
   alternates: { canonical: 'https://primundus.de/pflegegrad-3' },
   openGraph: {
     title: 'Pflegegrad 3 — Leistungen & 599 € Pflegegeld 2026 | Primundus',

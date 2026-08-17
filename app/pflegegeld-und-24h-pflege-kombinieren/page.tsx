@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'pflegegeld', title: 'Pflegegeld bei 24h-Pflege' }, { id: 'kombinationen', title: 'Alle Kombinationsmöglichkeiten' }, { id: 'rechnung', title: 'Rechenbeispiel PG 3' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegegeld und 24h-Pflege kombinieren — so geht es | Primundus',
+  title: 'Pflegegeld und 24h-Pflege kombinieren — so geht es',
   description: 'Pflegegeld mit 24h-Pflege kombinieren: Was geht, was nicht, wie viel die Kasse zahlt und wie der Eigenanteil maximal gesenkt wird. Alle Optionen 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren' },
   openGraph: {

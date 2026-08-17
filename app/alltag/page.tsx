@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: 'Alltag & Angehörige — Ratgeber für pflegende Familien | Primundus',
+  title: 'Alltag & Angehörige — Ratgeber für pflegende Familien',
   description: 'Ratgeber für pflegende Angehörige: Burnout vermeiden, Pflege und Beruf vereinbaren, Vorsorgevollmacht, Patientenverfügung, Hausnotruf, barrierefreies Wohnen.',
   alternates: { canonical: 'https://primundus.de/alltag' },
   openGraph: {

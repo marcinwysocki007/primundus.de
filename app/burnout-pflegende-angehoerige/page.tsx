@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Burnout pflegende Angehörige — Warnsignale & Hilfe | Primundus',
+  title: 'Burnout pflegende Angehörige — Warnsignale & Hilfe',
   description: 'Burnout durch Pflege erkennen: Erschöpfung, Isolation, Reizbarkeit. Was sofort hilft und wie eine 24h-Betreuungskraft pflegende Angehörige dauerhaft entlastet.',
   alternates: { canonical: 'https://primundus.de/burnout-pflegende-angehoerige' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 
 export const metadata: Metadata = {
-  title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige | Primundus',
+  title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige',
   description: 'Kostenloser Pflegegrad-Rechner, Zuschuss-Rechner und 24h-Pflegekostenrechner — alle Tools für Ihre Pflegeplanung 2026. Anonym, kostenlos, sofort nutzbar.',
   alternates: {
     canonical: 'https://primundus.de/tools',

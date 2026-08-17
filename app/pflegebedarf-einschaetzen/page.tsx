@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { PflegebedarfClient } from './PflegebedarfClient'
 
 export const metadata: Metadata = {
-  title: 'Pflegebedarf einschätzen — kostenloser Self-Check | Primundus',
+  title: 'Pflegebedarf einschätzen — kostenloser Self-Check',
   description: 'In 3 Minuten den Pflegebedarf einschätzen. 20 Fragen aus 6 Bereichen — Sofort-Auswertung mit voraussichtlichem Pflegegrad und Empfehlung.',
   alternates: { canonical: 'https://primundus.de/pflegebedarf-einschaetzen' },
   openGraph: {

@@ -13,7 +13,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft kündigen — Fristen, Muster & Ablauf 2026 | Primundus',
+  title: 'Pflegekraft kündigen — Fristen, Muster & Ablauf 2026',
   description: 'Pflegekraft kündigen 2026: Kündigungsfristen je nach Beschäftigungsmodell, Musterschreiben und was bei Kündigung aus wichtigem Grund gilt.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-kuendigen' },
   openGraph: {

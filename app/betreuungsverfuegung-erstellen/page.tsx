@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist eine Betreuungsverfügung?' }, { id: 'unterschied', title: 'Unterschied zur Vorsorgevollmacht' }, { id: 'erstellen', title: 'Wie erstellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Betreuungsverfügung erstellen — Anleitung & Muster 2026 | Primundus',
+  title: 'Betreuungsverfügung erstellen — Anleitung & Muster 2026',
   description: 'Betreuungsverfügung erstellen: was sie ist, wie sie sich von der Vorsorgevollmacht unterscheidet und was reingehört. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/betreuungsverfuegung-erstellen' },
   openGraph: {

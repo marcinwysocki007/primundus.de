@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026 | Primundus',
+  title: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026',
   description: 'Eigenanteil der 24h-Pflege senken: Pflegegrad erhöhen, Entlastungsbudget nutzen, Steuerabzug, Hilfsmittel. Mit allen Maßnahmen auf unter 1.500 €/Monat.',
   alternates: { canonical: 'https://primundus.de/eigenanteil-24h-pflege-senken' },
   openGraph: {

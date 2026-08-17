@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 const SECTIONS = [{ id: 'betraege', title: 'Aktuelle Beträge 2026' }, { id: 'einstufung', title: 'Wie wird eingestuft?' }, { id: 'beantragen', title: 'Pflegegrad beantragen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrade 2025/2026 — aktuelle Beträge & Übersicht | Primundus',
+  title: 'Pflegegrade 2025/2026 — aktuelle Beträge & Übersicht',
   description: 'Pflegegrade 2025 und 2026: Aktuelle Pflegegeldbeträge, Sachleistungen, was sich geändert hat und wie der Pflegegrad beantragt wird.',
   alternates: { canonical: 'https://primundus.de/pflegegrade-2025' },
   openGraph: {
