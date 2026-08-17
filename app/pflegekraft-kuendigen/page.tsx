@@ -133,7 +133,7 @@ export default function PflegekraftKuendigen() {
           </ol>
           <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
             <p className="text-[14px] font-bold text-[#2A5C3F] mb-1">Kein Risiko, keine Fristen</p>
-            <p className="text-[14px] text-[#2A5C3F]">Täglich kündbar, keine Mindestlaufzeit, kein Aufwand. So ist es bei Primundus seit über 20 Jahren.</p>
+            <p className="text-[14px] text-[#2A5C3F]">Täglich kündbar, keine Mindestlaufzeit, kein Aufwand. So ist es bei Primundus seit 20 Jahren.</p>
           </div>
 
           <h2 id="direktanstellung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">

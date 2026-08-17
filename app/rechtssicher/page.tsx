@@ -81,7 +81,7 @@ export default function Rechtssicher() {
           <AuthorByline updated="25. April 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Das Thema Rechtssicherheit ist in der 24h-Pflege entscheidend — und wird von vielen Familien unterschätzt. Tausende Haushalte in Deutschland beschäftigen Pflegekräfte auf unsichere Weise und wissen es nicht. Primundus arbeitet seit über 20 Jahren ausschließlich im rechtssicheren Entsendemodell. Kein einziger Kundenfall mit rechtlichen Konsequenzen.
+            Das Thema Rechtssicherheit ist in der 24h-Pflege entscheidend — und wird von vielen Familien unterschätzt. Tausende Haushalte in Deutschland beschäftigen Pflegekräfte auf unsichere Weise und wissen es nicht. Primundus arbeitet seit 20 Jahren ausschließlich im rechtssicheren Entsendemodell. Kein einziger Kundenfall mit rechtlichen Konsequenzen.
           </p>
 
           {/* Trust-Indikatoren */}
@@ -109,7 +109,7 @@ export default function Rechtssicher() {
             {[
               { modell: '❌ "Selbstständige Pflegekraft"', risiko: 'Scheinselbstständigkeit — in der Praxis bei 24h-Pflege fast immer vorhanden. Behörden prüfen aktiv. Folge: Nachzahlung aller Sozialversicherungsbeiträge (bis 4 Jahre rückwirkend), Bußgelder, Strafverfolgung.' },
               { modell: '⚠️ Direktanstellung ohne korrekte Anmeldung', risiko: 'Lohnsteuerhinterziehung und fehlende Sozialversicherungsanmeldung. Ebenfalls strafbar. Häufig als "günstigere Alternative" beworben.' },
-              { modell: '✓ Entsendemodell über seriöse Agentur', risiko: 'Vollständig rechtssicher. EU-Recht, A1-Bescheinigung, kein eigenes Arbeitsverhältnis der Familie. Das Modell das Primundus seit über 20 Jahren anwendet.' },
+              { modell: '✓ Entsendemodell über seriöse Agentur', risiko: 'Vollständig rechtssicher. EU-Recht, A1-Bescheinigung, kein eigenes Arbeitsverhältnis der Familie. Das Modell das Primundus seit 20 Jahren anwendet.' },
             ].map((item) => (
               <div key={item.modell} className={`rounded-xl p-5 border ${item.modell.startsWith('✓') ? 'bg-white border-[#8B7355] border-2' : item.modell.startsWith('⚠️') ? 'bg-[#FDF0EE] border-[rgba(231,111,99,0.15)]' : 'bg-[#FDF0EE] border-[rgba(231,111,99,0.2)]'}`}>
                 <p className={`text-[15px] font-bold mb-1 ${item.modell.startsWith('✓') ? 'text-[#1C1C1C]' : 'text-[#8B3E2F]'}`}>{item.modell}</p>
@@ -194,7 +194,7 @@ export default function Rechtssicher() {
               { q: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', a: 'Über das Entsendemodell mit A1-Bescheinigung. Kraft ist im EU-Heimatland angestellt, kommt mit A1-Bescheinigung, Familie hat kein eigenes Arbeitsverhältnis.' },
               { q: 'Was passiert bei einer behördlichen Kontrolle?', a: 'A1-Bescheinigung vorzeigen, Primundus-Vertrag zeigen, Primundus anrufen (089 200 000 830). Kein Problem bei korrektem Entsendemodell.' },
               { q: 'Warum ist "selbstständige Pflegekraft" riskant?', a: 'Scheinselbstständigkeit — bei 24h-Pflege fast immer vorhanden. Behörden fordern Sozialversicherungsbeiträge für bis zu 4 Jahre nach, plus Bußgelder und Strafverfolgung.' },
-              { q: 'Ist das Entsendemodell in ganz Deutschland legal?', a: 'Ja — das Entsendemodell basiert auf EU-Recht und gilt in allen 16 Bundesländern. Primundus wendet es seit über 20 Jahren ohne einen einzigen Rechtsfall an.' },
+              { q: 'Ist das Entsendemodell in ganz Deutschland legal?', a: 'Ja — das Entsendemodell basiert auf EU-Recht und gilt in allen 16 Bundesländern. Primundus wendet es seit 20 Jahren ohne einen einzigen Rechtsfall an.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

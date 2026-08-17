@@ -180,7 +180,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
               { q: 'Was ist Scheinselbstständigkeit in der Pflege?', a: 'Wenn eine "selbstständige" Pflegekraft faktisch wie eine Angestellte tätig ist — feste Zeiten, nur ein Auftraggeber, persönliche Leistungserbringung. Die Behörden werten das als verstecktes Arbeitsverhältnis.' },
               { q: 'Welche Konsequenzen drohen?', a: 'Nachzahlung aller Sozialversicherungsbeiträge (bis 4 Jahre rückwirkend), Bußgelder, strafrechtliche Verfolgung nach §266a StGB (bis 5 Jahre Freiheitsstrafe). Die Familie haftet als Arbeitgeberin.' },
               { q: 'Wie vermeidet man Scheinselbstständigkeit?', a: 'Entsendemodell über eine seriöse Agentur — kein eigenes Arbeitsverhältnis, A1-Bescheinigung aus EU-Land, vollständig rechtssicher. Alternative: Direktanstellung mit Arbeitsvertrag und Sozialversicherungsanmeldung.' },
-              { q: 'Ist das Entsendemodell wirklich legal?', a: 'Ja — das Entsendemodell ist nach EU-Recht und deutschem Recht vollständig legal. Die A1-Bescheinigung belegt den legalen EU-Entsendestatus. Primundus hat in über 20 Jahren und 60.000+ Betreuungen kein einziges rechtliches Problem dieser Art gehabt.' },
+              { q: 'Ist das Entsendemodell wirklich legal?', a: 'Ja — das Entsendemodell ist nach EU-Recht und deutschem Recht vollständig legal. Die A1-Bescheinigung belegt den legalen EU-Entsendestatus. Primundus hat in 20 Jahren und 60.000+ Betreuungen kein einziges rechtliches Problem dieser Art gehabt.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

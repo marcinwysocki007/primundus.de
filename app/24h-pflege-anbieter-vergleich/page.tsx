@@ -101,7 +101,7 @@ export default function Page() {
           </div>          <h2 id="rechtssicherheit" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">Rechtssicherheit zuerst</h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Das häufigste Problem in der Branche: Kräfte die offiziell selbstständig sind aber faktisch weisungsgebunden arbeiten — Scheinselbstständigkeit. Das kann für Familien teuer werden: Nachzahlungen von Sozialabgaben, Bußgelder, strafrechtliche Konsequenzen.</p>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Die einzige saubere Lösung ist das Entsendemodell: Die Kraft wird von einer Agentur in ihrem Heimatland (z.B. Polen) beschäftigt und nach Deutschland entsendet. Mit A1-Bescheinigung, vollem Krankenversicherungsschutz, ohne deutsche Sozialabgaben für die Familie.</p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Primundus arbeitet seit über 20 Jahren ausschließlich in diesem Modell — über 60.000 Betreuungen ohne einen einzigen Rechtsfall für Kundenfamilien.</p>
+          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell — über 60.000 Betreuungen ohne einen einzigen Rechtsfall für Kundenfamilien.</p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">

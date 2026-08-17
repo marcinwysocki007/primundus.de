@@ -75,7 +75,7 @@ export default function Page() {
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 2.871 €/Monat bundesweit — in Bayern und Baden-Württemberg deutlich höher. 24h-Pflege über Primundus kostet 2.200–3.500 €/Monat, mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 typisch auf 1.500–2.000 €/Monat.</p>
           <div className="bg-[#E8F5EE] border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
             <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-3">Kosten im Vergleich — Pflegegrad 3</p>
-              <div className="flex gap-2 text-[13px] text-[#2A5C3F] py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Pflegeheim bundesweit: Ø 2.871 €/Monat Eigenanteil</div>
+              <div className="flex gap-2 text-[13px] text-[#2A5C3F] py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Pflegeheim bundesweit: Ø über 3.300 €/Monat Eigenanteil</div>
               <div className="flex gap-2 text-[13px] text-[#2A5C3F] py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Pflegeheim Bayern/BW: bis 4.000 €/Monat Eigenanteil</div>
               <div className="flex gap-2 text-[13px] text-[#2A5C3F] py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>24h-Pflege brutto: 2.200–3.500 €/Monat</div>
               <div className="flex gap-2 text-[13px] text-[#2A5C3F] py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>24h-Pflege nach Zuschüssen: ca. 1.500–2.000 €/Monat</div>

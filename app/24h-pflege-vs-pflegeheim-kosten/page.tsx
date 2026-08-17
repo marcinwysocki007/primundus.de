@@ -21,7 +21,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
-  description: 'Pflegeheim: Ø 2.871 €/Monat Eigenanteil. 24h-Pflege: ab ca. 1.500 €/Monat nach Kassenzuschüssen. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
+  description: 'Pflegeheim: Ø über 3.300 €/Monat Eigenanteil. 24h-Pflege: ab ca. 1.500 €/Monat nach Kassenzuschüssen. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten' },
   openGraph: {
     title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',

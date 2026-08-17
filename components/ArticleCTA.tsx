@@ -110,7 +110,7 @@ export function ArticleCTA() {
           <div className="order-2 sm:order-3 sm:col-span-2 rounded-xl border border-[#E5E3DF] overflow-hidden">
             <ul className="divide-y divide-[#F0EDE8] sm:divide-y-0 sm:grid sm:grid-cols-3 sm:divide-x">
               {[
-                { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', text: 'Über 20 Jahre Erfahrung' },
+                { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', text: '20 Jahre Erfahrung' },
                 { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z', text: '60.000+ betreute Einsätze' },
                 { icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z', text: 'Persönlicher Ansprechpartner, 7 Tage/Woche' },
               ].map(({ icon, text }) => (

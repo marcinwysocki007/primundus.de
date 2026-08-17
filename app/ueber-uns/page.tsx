@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege | Primundus',
-  description: 'Primundus basiert auf über 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
+  description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
     title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
-    description: 'Primundus basiert auf über 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen.',
+    description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen.',
     url: 'https://primundus.de/ueber-uns',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,7 +26,7 @@ const schemaMarkup = JSON.stringify({
       logo: 'https://primundus.de/images/primundus_logo_header.webp',
       telephone: '+4989200000830',
       email: 'info@primundus.de',
-      description: 'Primundus bietet rechtssichere 24-Stunden-Pflege zu Hause. Über 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, Testsieger DIE WELT.',
+      description: 'Primundus bietet rechtssichere 24-Stunden-Pflege zu Hause. 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, Testsieger DIE WELT.',
       founder: { '@id': 'https://primundus.de/#mateusz-wysocki' },
       employee: { '@id': 'https://primundus.de/#ilka-wysocki' },
       award: 'Testsieger DIE WELT — Größter deutscher 24h-Pflege Vergleichstest',
@@ -37,7 +37,7 @@ const schemaMarkup = JSON.stringify({
       name: 'Mateusz Wysocki',
       jobTitle: 'Gründer & Geschäftsführer',
       worksFor: { '@id': 'https://primundus.de/#organization' },
-      description: 'Gründer von Primundus, seit 2004 in der häuslichen 24-Stunden-Pflege tätig und ehemaliger Mitgründer von Pflegehelden, einem der größten 24h-Pflege-Anbieter Deutschlands.',
+      description: 'Gründer von Primundus, seit 2006 in der häuslichen 24-Stunden-Pflege tätig und ehemaliger Mitgründer von Pflegehelden, einem der größten 24h-Pflege-Anbieter Deutschlands.',
       knowsAbout: ['24-Stunden-Pflege', 'häusliche Betreuung', 'Pflegevermittlung', 'Pflegemarkt Deutschland'],
     },
     {
@@ -72,7 +72,7 @@ export default function Page() {
             Persönlich. Erfahren. Verlässlich.
           </h1>
           <p className="text-[17px] md:text-[19px] text-[#5A5A5A] leading-[1.7] max-w-2xl">
-            Primundus ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland — mit über 20 Jahren Erfahrung und mehr als 60.000 erfolgreich begleiteten Betreuungen.
+            Primundus ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland — mit 20 Jahren Erfahrung und mehr als 60.000 erfolgreich begleiteten Betreuungen.
           </p>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function Page() {
               Menschen, die wirklich passen — das ist unser Anspruch
             </h2>
             <p className="text-[16px] text-[#5A5A5A] leading-[1.7] mb-4">
-              Primundus basiert auf über 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die zu Ihnen und Ihrer Familie passen.
+              Primundus basiert auf 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die zu Ihnen und Ihrer Familie passen.
             </p>
             <p className="text-[16px] text-[#5A5A5A] leading-[1.7] mb-4">
               Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Unser Team ist Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echte Ansprechpartner, die Ihre Situation kennen.
@@ -140,7 +140,7 @@ export default function Page() {
               </div>
             </div>
             <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 flex gap-5">
-              <img src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0" />
+              <img width={44} height={44} src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0" />
               <div>
                 <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Ilka Wysocki</h3>
                 <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Persönliche Ansprechpartnerin &amp; Pflegeberaterin</p>
@@ -245,7 +245,7 @@ export default function Page() {
               href="tel:+4989200000830"
               className="inline-flex items-center justify-center gap-3 px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-[16px] rounded-xl transition-all duration-200"
             >
-              <img src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover object-top" />
+              <img width={44} height={44} src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover object-top" />
               089 200 000 830
             </a>
           </div>

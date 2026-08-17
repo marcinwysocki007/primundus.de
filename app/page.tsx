@@ -130,7 +130,7 @@ export default function Page() {
                   href="tel:+4989200000830"
                   className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-white border border-[#E5E3DF] hover:border-[#8B7355] text-[#3D3D3D] font-bold text-[16px] rounded-xl transition-all duration-200"
                 >
-                  <img src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
+                  <img width={44} height={44} src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
                   089 200 000 830
                 </a>
               </div>
@@ -142,20 +142,20 @@ export default function Page() {
                     <div className="relative overflow-hidden">
                       <div className="flex animate-scroll">
                         <div className="flex items-center gap-8 shrink-0">
-                          <img src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
                         </div>
                         <div className="flex items-center gap-8 shrink-0 ml-8">
-                          <img src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
-                          <img src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
                         </div>
                       </div>
                     </div>
@@ -165,7 +165,7 @@ export default function Page() {
                       { label: 'Persönlicher Ansprechpartner 7 Tage/Woche', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
                       { label: 'Täglich kündbar & taggenaue Abrechnung', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' },
                       { label: 'Betreuung startklar in 4–7 Tagen', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-                      { label: '20+ Jahre Erfahrung & Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
+                      { label: '20 Jahre Erfahrung & Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
                     ].map((usp, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <div className="flex-shrink-0 w-9 h-9 rounded-full bg-[#8B7355]/10 flex items-center justify-center">
@@ -202,20 +202,20 @@ export default function Page() {
                   <div className="relative overflow-hidden">
                     <div className="flex animate-scroll">
                       <div className="flex items-center gap-7 shrink-0">
-                        <img src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
                       </div>
                       <div className="flex items-center gap-7 shrink-0 ml-7">
-                        <img src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-60" />
-                        <img src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-60" />
-                        <img src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60" />
-                        <img src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-60" />
-                        <img src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-60" />
-                        <img src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60" />
                       </div>
                     </div>
                   </div>
@@ -226,7 +226,7 @@ export default function Page() {
                     { label: 'Persönlicher Ansprechpartner 7 Tage/Woche', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
                     { label: 'Täglich kündbar & taggenaue Abrechnung', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' },
                     { label: 'Betreuung startklar in 4–7 Tagen', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-                    { label: '20+ Jahre Erfahrung & Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
+                    { label: '20 Jahre Erfahrung & Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
                   ].map((usp, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B7355]/10 flex items-center justify-center">
@@ -268,7 +268,7 @@ export default function Page() {
                     href="tel:+4989200000830"
                     className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-[#F8F7F5] hover:bg-[#F0EBE3] border border-[#E5E3DF] hover:border-[#8B7355] text-[#3D3D3D] font-bold text-[15px] rounded-xl transition-all duration-200"
                   >
-                    <img src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
+                    <img width={44} height={44} src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
                     089 200 000 830
                   </a>
                 </div>
@@ -337,7 +337,7 @@ export default function Page() {
                   Persönlich. Erfahren. Verlässlich.
                 </h2>
                 <p className="text-[16px] md:text-[17px] leading-[1.7] text-[#5A5A5A] mb-5">
-                  Primundus basiert auf über 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die wirklich passen.
+                  Primundus basiert auf 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die wirklich passen.
                 </p>
                 <p className="text-[16px] md:text-[17px] leading-[1.7] text-[#5A5A5A] mb-8">
                   Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Ilka Wysocki und ihr Team sind Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echter Ansprechpartner, der Ihre Situation kennt.

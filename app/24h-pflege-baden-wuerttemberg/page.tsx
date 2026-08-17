@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Baden-Württemberg?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2100 €/Monat — oft günstiger als ein Pflegeheim in Baden-Württemberg (Ø 2.700–3.500 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2100 €/Monat — oft günstiger als ein Pflegeheim in Baden-Württemberg (Ø über 3.300 €/Monat Eigenanteil).'.replace(',', '.') },
       },
     ],
   },
@@ -232,7 +232,7 @@ export default function BadenWuerttembergPage() {
               { q: 'Was kostet eine 24h-Pflegekraft in Baden-Württemberg?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2100 €/Monat — oft günstiger als ein Pflegeheim in Baden-Württemberg (Ø 2700–3500 €/Monat Eigenanteil).' },
               { q: 'Wie schnell kann eine Pflegekraft in Baden-Württemberg starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. Primundus ist mit eigenen Betreuungskräften in ganz Baden-Württemberg — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-              { q: 'Ist 24h-Pflege über Primundus in Baden-Württemberg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit über 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Ist 24h-Pflege über Primundus in Baden-Württemberg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
@@ -273,7 +273,7 @@ export default function BadenWuerttembergPage() {
               </div>
             ))}
             <div className="flex items-center gap-3 pt-4 mt-1 border-t border-[#E5E3DF]">
-              <img src="/images/primundus_testsieger-2021.webp" alt="Testsieger DIE WELT" className="w-10 h-12 object-contain flex-shrink-0" />
+              <img width={40} height={48} src="/images/primundus_testsieger-2021.webp" alt="Testsieger DIE WELT" className="w-10 h-12 object-contain flex-shrink-0" />
               <div>
                 <p className="text-[14px] font-bold text-[#1C1C1C]">Testsieger bei DIE WELT</p>
                 <p className="text-[13px] text-[#8B8B8B]">Nr. 1 der Pflegekräfte-Vermittler — <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-[#8B7355]">zur Auszeichnung mit Beleg</a></p>

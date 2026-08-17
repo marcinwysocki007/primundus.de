@@ -44,7 +44,7 @@ export function SiteFooter() {
               </h3>
             </Link>
             <p className="text-[15px] leading-relaxed text-gray-300 mb-6">
-              24-Stunden-Pflege & Betreuung mit über 20 Jahren Erfahrung. Testsieger DIE WELT.
+              24-Stunden-Pflege & Betreuung mit 20 Jahren Erfahrung. Testsieger DIE WELT.
               60.000+ erfolgreiche Betreuungen.
             </p>
             {/* Contact + Seal side by side */}

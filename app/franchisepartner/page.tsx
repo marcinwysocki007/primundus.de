@@ -330,7 +330,7 @@ export default function FranchisePage() {
           </h2>
           <p className="text-[15px] text-[#5A5A5A] leading-relaxed max-w-[520px] mb-10">
             Jeder Prozess, jede Zeile Code, jeder Vertrag entstand als direkte Reaktion
-            auf echte Schwachstellen — aus über 20 Jahren Branchenerfahrung.
+            auf echte Schwachstellen — aus 20 Jahren Branchenerfahrung.
           </p>
 
           <div className="flex flex-col gap-px bg-[#E5E3DF] border border-[#E5E3DF] rounded-2xl overflow-hidden">

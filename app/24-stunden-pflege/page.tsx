@@ -82,7 +82,7 @@ export default function VierUndZwanzigStundenPflege() {
           </nav>
 
           <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
-            Testsieger DIE WELT · 20+ Jahre Erfahrung · 60.000+ Betreuungen
+            Testsieger DIE WELT · 20 Jahre Erfahrung · 60.000+ Betreuungen
           </p>
 
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
@@ -90,7 +90,7 @@ export default function VierUndZwanzigStundenPflege() {
           </h1>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
-            Primundus betreut seit 2004 geprüfte Betreuungskräfte für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT.
+            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT.
           </p>
 
           {/* USP-Box */}
