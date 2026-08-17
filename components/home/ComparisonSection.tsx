@@ -58,7 +58,7 @@ export function ComparisonSection() {
             <div className="border-t-2 border-[#E5E3DF] pt-6">
               <div className="text-center">
                 <p className="text-sm text-[#5A5A5A] mb-2">Durchschnittlicher Eigenanteil pro Monat:</p>
-                <p className="text-4xl font-bold text-[#C85A54]">3.245 €</p>
+                <p className="text-4xl font-bold text-[#C85A54]">3.364 €</p>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ export function ComparisonSection() {
                 <p className="text-sm text-[#3D3D3D] mb-2">Durchschnittlicher Eigenanteil pro Monat:</p>
                 <p className="text-4xl font-bold text-[#708A95]">1.500 €</p>
                 <p className="text-sm font-semibold text-[#708A95] mt-2">
-                  Bis zu 2.000 € günstiger!
+                  Rund 1.860 € günstiger!
                 </p>
               </div>
             </div>
