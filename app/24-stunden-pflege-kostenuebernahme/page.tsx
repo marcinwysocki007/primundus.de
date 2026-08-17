@@ -166,7 +166,7 @@ export default function KostenuebernahmePage() {
               gehen ab: 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige
               Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.450 Euro
               im Monat</strong> — für eine Kraft, die rund um die Uhr im Haus ist. Zum Vergleich: Ein
-              Heimplatz kostet im Bundesdurchschnitt deutlich über 2.500 Euro Eigenanteil, und das Haus
+              Heimplatz kostet im Bundesdurchschnitt rund 3.300 Euro Eigenanteil, und das Haus
               steht leer.
             </p>
             <a

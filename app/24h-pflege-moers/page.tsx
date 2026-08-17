@@ -198,7 +198,7 @@ export default function MoersPage() {
               </div>
             </div>
             <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-5 py-3">
-              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim Moers: Eigenanteil Ø 2.500–3.000 €/Monat — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
+              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim Moers: Eigenanteil Ø 3.300 €/Monat — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
             </div>
           </div>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">

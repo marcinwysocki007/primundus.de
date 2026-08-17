@@ -94,7 +94,7 @@ export default function Vergleiche() {
                 </thead>
                 <tbody>
                   {[
-                    ['Pflegeheim', '2.500–5.000 €', '~2.871 € Ø', 'Kein eigenes Zuhause'],
+                    ['Pflegeheim', '2.500–5.000 €', '~3.300 € Ø', 'Kein eigenes Zuhause'],
                     ['24h-Pflege (Primundus)', '2.200–3.500 €', 'ca. 1.500–2.000 €', 'Eigenes Zuhause, 24h Betreuung'],
                     ['Ambulante Pflege', '800–2.500 €', 'ca. 0–1.000 €', 'Nur zu Einsatzzeiten da'],
                     ['Tagespflege', '800–2.000 €', 'ca. 0–500 €', 'Nur tagsüber, keine Nacht'],

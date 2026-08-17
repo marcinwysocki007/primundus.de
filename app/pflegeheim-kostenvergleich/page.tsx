@@ -3,7 +3,7 @@ import { PflegeheimVergleichClient } from './PflegeheimVergleichClient'
 
 export const metadata: Metadata = {
   title: 'Pflegeheim vs. 24h-Pflege Kostenvergleich 2026 | Primundus',
-  description: 'Pflegeheim kostet 2026 im Schnitt 2.871 €/Monat Eigenanteil. 24h-Pflege zuhause oft günstiger — jetzt Kosten nach Pflegegrad und Bundesland vergleichen.',
+  description: 'Pflegeheim kostet 2026 im Schnitt 3.300 €/Monat Eigenanteil. 24h-Pflege zuhause oft günstiger — jetzt Kosten nach Pflegegrad und Bundesland vergleichen.',
   alternates: { canonical: 'https://primundus.de/pflegeheim-kostenvergleich' },
   openGraph: {
     title: 'Pflegeheim vs. 24h-Pflege — Kostenvergleich 2026 | Primundus',
@@ -35,7 +35,7 @@ const schemaMarkup = JSON.stringify([
         name: 'Was kostet ein Pflegeheim 2026 im Monat?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Der durchschnittliche Eigenanteil im Pflegeheim liegt 2026 bei rund 2.871 €/Monat — bundesweit. In Bayern (≈ 3.389 €) und Baden-Württemberg (≈ 3.273 €) deutlich höher, in Sachsen-Anhalt und Thüringen (≈ 2.240 €) deutlich niedriger. Hinzu kommen pflegegradabhängige Pflegekosten zwischen 805 € (PG 2) und 2.096 € (PG 5).',
+          text: 'Der durchschnittliche Eigenanteil im Pflegeheim liegt 2026 bei rund 3.300 €/Monat — bundesweit. In Bayern (≈ 3.389 €) und Baden-Württemberg (≈ 3.273 €) deutlich höher, in Sachsen-Anhalt und Thüringen (≈ 2.240 €) deutlich niedriger. Hinzu kommen pflegegradabhängige Pflegekosten zwischen 805 € (PG 2) und 2.096 € (PG 5).',
         },
       },
       {
@@ -100,11 +100,11 @@ const argumente = [
 const faqs = [
   {
     q: 'Was kostet ein Pflegeheim 2026 im Monat?',
-    a: 'Bundesweit im Schnitt 2.871 € Eigenanteil/Monat. In Bayern (≈ 3.389 €) und BW (≈ 3.273 €) deutlich höher, in Sachsen-Anhalt und Thüringen (≈ 2.240 €) deutlich niedriger. Hinzu kommen pflegegradabhängige Pflegekosten von 805–2.096 €.',
+    a: 'Bundesweit im Schnitt 3.300 € Eigenanteil/Monat. In Bayern (≈ 3.389 €) und BW (≈ 3.273 €) deutlich höher, in Sachsen-Anhalt und Thüringen (≈ 2.240 €) deutlich niedriger. Hinzu kommen pflegegradabhängige Pflegekosten von 805–2.096 €.',
   },
   {
     q: 'Ist 24h-Pflege günstiger als ein Pflegeheim?',
-    a: 'In den meisten Fällen ja — vor allem ab PG 3. Eigenanteil 24h-Pflege: 1.500–2.500 €/Monat, Pflegeheim: 2.700–3.500 €. Hochgerechnet 8.000–12.000 € Ersparnis pro Jahr.',
+    a: 'In den meisten Fällen ja — vor allem ab PG 3. Eigenanteil 24h-Pflege: 1.500–2.500 €/Monat, Pflegeheim: Ø 3.300 €. Hochgerechnet 8.000–12.000 € Ersparnis pro Jahr.',
   },
   {
     q: 'Warum sind Pflegeheime in Bayern und BW so teuer?',

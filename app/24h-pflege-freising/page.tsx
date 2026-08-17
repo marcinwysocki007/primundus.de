@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Freising?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2100 €/Monat — deutlich günstiger als ein Pflegeheim in Freising (Ø über 3.300 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2100 €/Monat — deutlich günstiger als ein Pflegeheim in Freising (Ø 3.300 €/Monat Eigenanteil).'.replace(',', '.') },
       },
       {
         '@type': 'Question',
@@ -198,7 +198,7 @@ export default function FreisingPage() {
               </div>
             </div>
             <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-5 py-3">
-              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim Freising: Eigenanteil Ø 3.000–3.700 €/Monat — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
+              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim Freising: Eigenanteil Ø 3.300 €/Monat — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
             </div>
           </div>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
@@ -241,7 +241,7 @@ export default function FreisingPage() {
           <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Freising</h2>
           <div className="space-y-3 mb-12">
             {[
-              { q: 'Was kostet eine 24h-Pflegekraft in Freising?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2100 €/Monat — deutlich günstiger als ein Pflegeheim in Freising (Ø über 3.300 €/Monat Eigenanteil).' },
+              { q: 'Was kostet eine 24h-Pflegekraft in Freising?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2100 €/Monat — deutlich günstiger als ein Pflegeheim in Freising (Ø 3.300 €/Monat Eigenanteil).' },
             {
               q: 'Gibt es in Bayern besondere Pflegeförderungen?',
               a: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.',

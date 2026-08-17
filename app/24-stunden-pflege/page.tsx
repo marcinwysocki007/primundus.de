@@ -245,7 +245,7 @@ export default function VierUndZwanzigStundenPflege() {
             Vorteile gegenüber dem Pflegeheim
           </h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
-            Der Eigenanteil im Pflegeheim liegt bundesweit bei durchschnittlich 2.871 Euro pro Monat — und steigt jährlich. 24h-Pflege zuhause ist damit oft nicht teurer, bietet aber deutlich mehr.
+            Der Eigenanteil im Pflegeheim liegt bundesweit bei durchschnittlich 3.300 Euro pro Monat — und steigt jährlich. 24h-Pflege zuhause ist damit oft nicht teurer, bietet aber deutlich mehr.
           </p>
           <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
             <div className="overflow-x-auto">
@@ -259,7 +259,7 @@ export default function VierUndZwanzigStundenPflege() {
                 </thead>
                 <tbody>
                   {[
-                    ['Eigenanteil/Monat', 'ab ca. 1.500 € (mit Zuschüssen)', 'Ø 2.871 € (2026)'],
+                    ['Eigenanteil/Monat', 'ab ca. 1.500 € (mit Zuschüssen)', 'Ø 3.300 € (2026)'],
                     ['Vertraute Umgebung', '✓ Eigenes Zuhause', '✗ Neue Einrichtung'],
                     ['Betreuungsintensität', '1:1 rund um die Uhr', 'Geteilte Betreuung'],
                     ['Eigener Tagesrhythmus', '✓ Vollständig erhalten', '✗ Heimstruktur'],

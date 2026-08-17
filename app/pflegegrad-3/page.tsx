@@ -198,7 +198,7 @@ export default function Pflegegrad3() {
             Was kostet 24-Stunden-Pflege bei Pflegegrad 3?
           </h2>
           <p className="text-[15px] text-[#2E2E2E] mb-4 leading-relaxed">
-            24-Stunden-Pflege kostet bei Pflegegrad 3 in der Regel <strong>2.200–3.500 € brutto pro Monat</strong>, je nach Pflegebedarf und Qualifikation der Betreuungskraft. Die Pflegekasse übernimmt einen erheblichen Teil — der tatsächliche Eigenanteil liegt oft <strong>unter 2.000 € monatlich</strong> und damit häufig günstiger als ein Pflegeheim (Ø über 3.300 €/Monat Eigenanteil).
+            24-Stunden-Pflege kostet bei Pflegegrad 3 in der Regel <strong>2.200–3.500 € brutto pro Monat</strong>, je nach Pflegebedarf und Qualifikation der Betreuungskraft. Die Pflegekasse übernimmt einen erheblichen Teil — der tatsächliche Eigenanteil liegt oft <strong>unter 2.000 € monatlich</strong> und damit häufig günstiger als ein Pflegeheim (Ø 3.300 €/Monat Eigenanteil).
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-3">Diese Leistungen senken bei Pflegegrad 3 den Eigenanteil:</p>
           <ul className="text-[15px] text-[#2E2E2E] mb-4 space-y-1.5 list-disc pl-5">
