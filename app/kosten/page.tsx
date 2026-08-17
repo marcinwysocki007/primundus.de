@@ -257,7 +257,7 @@ export default function Kosten() {
             24h-Pflege vs. Pflegeheim — was ist günstiger?
           </h2>
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
-            Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit <strong>3.364 Euro pro Monat</strong> — und ist 2024 erneut um 211 Euro gestiegen. Bei der 24h-Pflege zuhause sinkt der Eigenanteil durch Kassenzuschüsse auf ein vergleichbares oder oft niedrigeres Niveau. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.
+            Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit <strong>3.364 Euro pro Monat (Quelle: vdek-Auswertung, Stand 1. Juli 2026)</strong> — und ist 2024 erneut um 211 Euro gestiegen. Bei der 24h-Pflege zuhause sinkt der Eigenanteil durch Kassenzuschüsse auf ein vergleichbares oder oft niedrigeres Niveau. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.
           </p>
 
           <GrafikKostenvergleich />
