@@ -262,7 +262,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
               <a
-                href="https://kostenrechner.primundus.de"
+                href="https://kostenrechner.primundus.de/?start=1&src=apex-anbieter-vergleich"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-[#E76F63] hover:bg-[#D45F53] transition-colors text-white font-bold text-[15px] px-6 py-3.5 rounded-xl"

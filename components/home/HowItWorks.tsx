@@ -80,7 +80,7 @@ export function HowItWorks() {
         {/* CTA */}
         <div className="mt-10 md:mt-12 lg:mt-14 text-center">
           <a
-            href="https://kostenrechner.primundus.de"
+            href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-base md:text-lg rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Kosten & Pflegekräfte ansehen

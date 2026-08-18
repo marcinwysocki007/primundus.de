@@ -142,7 +142,7 @@ export function ArticleCTA() {
 
         {/* 7 — Aktion */}
         <a
-          href="https://kostenrechner.primundus.de"
+          href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
           className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
         >
           Kosten & Pflegekräfte ansehen

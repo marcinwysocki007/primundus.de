@@ -99,7 +99,7 @@ export default function Kosten() {
           </p>
 
           <a
-            href="https://kostenrechner.primundus.de"
+            href="https://kostenrechner.primundus.de/?start=1&src=apex-kosten"
             className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-sm hover:shadow-md mb-10 whitespace-nowrap"
           >
             Mein persönliches Angebot ansehen

@@ -306,7 +306,7 @@ export default function BayernPage() {
             ))}
           </div>
           <div className="text-center mb-12">
-            <a href="https://kostenrechner.primundus.de" className="inline-flex items-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[16px] py-4 px-10 rounded-full transition-all duration-200">
+            <a href="https://kostenrechner.primundus.de/?start=1&src=apex-24h-pflege-bayern" className="inline-flex items-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[16px] py-4 px-10 rounded-full transition-all duration-200">
               Kosten & Pflegekräfte ansehen
             </a>
           </div>

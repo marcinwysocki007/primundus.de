@@ -138,7 +138,7 @@ export function RegionenSearch(_props: Props) {
           </p>
           <div className="flex flex-col sm:flex-row gap-2">
             <a
-              href="https://kostenrechner.primundus.de"
+              href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-2.5 px-5 rounded-xl transition-colors"

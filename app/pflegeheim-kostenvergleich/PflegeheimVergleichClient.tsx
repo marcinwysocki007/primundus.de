@@ -209,7 +209,7 @@ export function PflegeheimVergleichClient() {
                     Kostenfreie Beratung →
                   </a>
                   <a
-                    href="https://kostenrechner.primundus.de"
+                    href="https://kostenrechner.primundus.de/?start=1&src=apex-pflegeheim-kostenvergleich"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-white border border-[#8B7355] text-[#8B7355] font-semibold text-[14px] py-3 px-5 rounded-xl hover:bg-[#F2EDE6] transition-colors"

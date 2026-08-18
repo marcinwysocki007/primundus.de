@@ -417,7 +417,7 @@ export default function RegionenHub() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://kostenrechner.primundus.de"
+                href="https://kostenrechner.primundus.de/?start=1&src=apex-regionen"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-3 px-6 rounded-xl transition-colors"

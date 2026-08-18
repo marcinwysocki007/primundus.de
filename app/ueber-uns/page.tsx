@@ -236,7 +236,7 @@ export default function Page() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="https://kostenrechner.primundus.de"
+              href="https://kostenrechner.primundus.de/?start=1&src=apex-ueber-uns"
               className="inline-flex items-center justify-center px-7 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[16px] rounded-xl transition-all duration-200 shadow-md"
             >
               Kosten & Pflegekräfte ansehen

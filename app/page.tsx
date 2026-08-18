@@ -121,7 +121,7 @@ export default function Page() {
               </p>
               <div className="flex flex-col gap-3 max-w-sm mx-auto">
                 <a
-                  href="https://kostenrechner.primundus.de"
+                  href="https://kostenrechner.primundus.de/?start=1&src=apex-startseite"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[16px] rounded-xl transition-all duration-200 shadow-md"
                 >
                   Kosten & Pflegekräfte ansehen
@@ -259,7 +259,7 @@ export default function Page() {
                 <p className="text-[13px] text-[#5A5A5A] text-center mb-5">Kostenlos & unverbindlich — in 2 Minuten</p>
                 <div className="flex flex-col gap-3">
                   <a
-                    href="https://kostenrechner.primundus.de"
+                    href="https://kostenrechner.primundus.de/?start=1&src=apex-startseite"
                     className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[16px] rounded-xl transition-all duration-200 shadow-md hover:shadow-lg"
                   >
                     Kosten & Pflegekräfte ansehen
@@ -376,7 +376,7 @@ export default function Page() {
                   </div>
                 </div>
                 <a
-                  href="https://kostenrechner.primundus.de"
+                  href="https://kostenrechner.primundus.de/?start=1&src=apex-startseite"
                   className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-md"
                 >
                   Kosten & Pflegekräfte ansehen
@@ -449,7 +449,7 @@ export default function Page() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://kostenrechner.primundus.de"
+                href="https://kostenrechner.primundus.de/?start=1&src=apex-startseite"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-md"
               >
                 Eigenanteil jetzt berechnen
