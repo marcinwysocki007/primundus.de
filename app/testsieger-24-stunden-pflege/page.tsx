@@ -145,7 +145,7 @@ export default function TestsiegerPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-3">
               {[
-                { icon: '💶', title: 'Bestpreis-Garantie', desc: 'Faire, transparente Preise ohne versteckte Gebühren' },
+                { icon: '💶', title: 'Keine Vermittlungsgebühr', desc: 'Keine Anzahlung, keine Aufnahmegebühr — der Monatspreis ist der Preis' },
                 { icon: '📅', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, kein Risiko' },
                 { icon: '🧾', title: 'Taggenaue Abrechnung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist' },
                 { icon: '⚡', title: 'Start in 4–7 Tagen', desc: 'Auch bei dringendem Bedarf' },

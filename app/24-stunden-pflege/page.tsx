@@ -60,7 +60,7 @@ const schemaMarkup = [
       { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege bei Primundus?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat, je nach Pflegebedarf. Mit Pflegegeld (bis 990 €/Monat) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil deutlich. Kostenlose Beratung: 089 200 000 830.' } },
       { '@type': 'Question', name: 'Wie schnell kann 24h-Pflege starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.' } },
       { '@type': 'Question', name: 'Ist 24-Stunden-Pflege bei Primundus legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus arbeitet ausschließlich im rechtssicheren Entsendemodell. Alle Betreuungskräfte sind im Heimatland sozialversichert und mit A1-Bescheinigung legal in Deutschland tätig.' } },
-      { '@type': 'Question', name: 'Warum ist Primundus Testsieger?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus wurde bei DIE WELT im größten deutschen 24h-Pflege Vergleichstest als Testsieger ausgezeichnet — für die beste Kombination aus Preis, Qualität und Kundenservice. Seit 2004 über 60.000 Betreuungen vermittelt.' } },
+      { '@type': 'Question', name: 'Warum ist Primundus Testsieger?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Nr. 1 der Pflegekräfte-Vermittler ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' } },
     ],
   },
 ]
@@ -98,7 +98,7 @@ export default function VierUndZwanzigStundenPflege() {
             <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Warum Primundus?</p>
             <div className="grid md:grid-cols-2 gap-3">
               {[
-                { icon: '★', title: 'Testsieger DIE WELT', desc: 'Bestes Preis-Leistungs-Verhältnis im größten deutschen Vergleichstest' },
+                { icon: '★', title: 'Testsieger DIE WELT', desc: 'Nr. 1 der Pflegekräfte-Vermittler — Service-Studie DIE WELT/ServiceValue 2021' },
                 { icon: '✓', title: 'Rechtssicher', desc: 'Entsendemodell mit A1-Bescheinigung — kein rechtliches Risiko für die Familie' },
                 { icon: '↺', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung — volle Flexibilität' },
                 { icon: '⚡', title: 'In 4–7 Tagen startklar', desc: 'Vom ersten Gespräch bis zur Anreise der Betreuungskraft' },
@@ -291,7 +291,7 @@ export default function VierUndZwanzigStundenPflege() {
               { q: 'Was kostet 24-Stunden-Pflege bei Primundus?', a: '2.200–3.500 €/Monat je nach Pflegebedarf. Mit Pflegegeld (bis 990 €/Monat) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil erheblich. Kostenlose Beratung: 089 200 000 830.' },
               { q: 'Wie schnell kann 24h-Pflege bei Primundus starten?', a: 'In 4–7 Tagen nach dem ersten Gespräch — täglich kündbar, taggenaue Abrechnung.' },
               { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja — Primundus setzt ausschließlich eigene Betreuungskräfte im Entsendemodell mit A1-Bescheinigung. Vollständig rechtssicher, kein Risiko für die Familie.' },
-              { q: 'Warum ist Primundus Testsieger?', a: 'Testsieger DIE WELT im größten deutschen Vergleichstest — für beste Kombination aus Preis, Qualität und Kundenservice. Seit 2004, 60.000+ Betreuungen.' },
+              { q: 'Warum ist Primundus Testsieger?', a: 'Primundus wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Nr. 1 der Pflegekräfte-Vermittler ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
               { q: 'Was passiert wenn die Betreuungskraft krank wird?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke. Das ist einer der zentralen Vorteile der Agenturvermittlung.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">

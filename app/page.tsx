@@ -6,14 +6,14 @@ import { FinalCTA } from '@/components/home/FinalCTA'
 import { TestimonialCard } from '@/components/home/TestimonialCard'
 
 export const metadata: Metadata = {
-  title: 'Primundus — 24-Stunden-Pflege | Testsieger & 20 Jahre Erfahrung',
-  description: 'Primundus bietet rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Betreuung in 4–7 Tagen. Kostenlose Beratung: 089 200 000 830.',
+  title: '24-Stunden-Pflege vom Testsieger — Preis in 2 Minuten | Primundus',
+  description: 'Nr. 1 der Pflegekräfte-Vermittler (DIE WELT/ServiceValue 2021). Preis und Betreuungskräfte online in 2 Minuten — keine Vermittlungsgebühr, täglich kündbar.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
-    title: 'Primundus — 24-Stunden-Pflege | Testsieger & 20 Jahre Erfahrung',
-    description: 'Primundus bietet rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Betreuung in 4–7 Tagen. Kostenlose Beratung: 089 200 000 830.',
+    title: '24-Stunden-Pflege vom Testsieger — Preis in 2 Minuten | Primundus',
+    description: 'Nr. 1 der Pflegekräfte-Vermittler (DIE WELT/ServiceValue 2021). Preis und Betreuungskräfte online in 2 Minuten — keine Vermittlungsgebühr, täglich kündbar.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -44,7 +44,7 @@ const schemaMarkup = JSON.stringify([
     "telephone": "+4989200000830",
     "email": "info@primundus.de",
     "founder": { "@type": "Person", "name": "Ilka Wysocki" },
-    "award": "Testsieger DIE WELT — Größter deutscher 24h-Pflege Vergleichstest"
+    "award": "Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021)"
   },
   {
     "@context": "https://schema.org",
@@ -65,12 +65,12 @@ const schemaMarkup = JSON.stringify([
       {
         "@type": "Question",
         "name": "Wie schnell kann eine Betreuungskraft starten?",
-        "acceptedAnswer": { "@type": "Answer", "text": "In der Regel können wir innerhalb von 4–7 Tagen eine passende Betreuungskraft vermitteln. Bei dringendem Bedarf auch schneller – sprechen Sie uns einfach an." }
+        "acceptedAnswer": { "@type": "Answer", "text": "In der Regel kann innerhalb von 4–7 Tagen eine passende Betreuungskraft bei Ihnen starten. Bei dringendem Bedarf auch schneller – sprechen Sie uns einfach an." }
       },
       {
         "@type": "Question",
         "name": "Was passiert, wenn die Betreuungskraft krank wird?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Wir organisieren schnellstmöglich eine Ersatzkraft. Unser Netzwerk umfasst tausende geprüfte Betreuungskräfte, sodass wir in der Regel innerhalb kurzer Zeit Ersatz stellen können." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Wir stellen schnellstmöglich eine Ersatzkraft. Weil unsere Betreuungskräfte bei uns angestellt sind, können wir kurzfristig umplanen – die Anreise der Ersatzkraft übernehmen wir." }
       },
       {
         "@type": "Question",
@@ -117,7 +117,7 @@ export default function Page() {
                 24-Stunden-Pflege im eigenen Zuhause
               </h1>
               <p className="text-[17px] leading-[1.6] text-[#5A5A5A] mb-8 max-w-md mx-auto">
-                Primundus betreut mit eigenen, geprüften Betreuungskräften für die 24-Stunden-Pflege zuhause — rechtssicher, persönlich, täglich kündbar.
+                Primundus betreut mit eigenen, geprüften Betreuungskräften zuhause — rechtssicher, täglich kündbar, einsatzbereit in 4–7 Tagen.
               </p>
               <div className="flex flex-col gap-3 max-w-sm mx-auto">
                 <a
@@ -162,10 +162,12 @@ export default function Page() {
                   </div>
                   <div className="grid grid-cols-1 gap-4 text-left">
                     {[
-                      { label: 'Persönlicher Ansprechpartner 7 Tage/Woche', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
+                      { label: 'Preis & Betreuungskräfte online in 2 Minuten', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+                      { label: 'Kein Vertrag, bevor Sie gewählt haben', icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
+                      { label: 'Keine Vermittlungsgebühr', icon: 'M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' },
                       { label: 'Täglich kündbar & taggenaue Abrechnung', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' },
-                      { label: 'Betreuung startklar in 4–7 Tagen', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-                      { label: '20 Jahre Erfahrung & Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
+                      { label: 'Fester Ansprechpartner, 7 Tage die Woche', icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' },
+                      { label: '20 Jahre Erfahrung & Testsieger 2021', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
                     ].map((usp, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <div className="flex-shrink-0 w-9 h-9 rounded-full bg-[#8B7355]/10 flex items-center justify-center">
@@ -191,7 +193,7 @@ export default function Page() {
                 24-Stunden-Pflege im eigenen Zuhause
               </h1>
               <p className="text-[18px] leading-[1.6] text-[#5A5A5A] mb-8">
-                Bezahlbare Alternative zum Pflegeheim — Betreuung in 4–7 Tagen organisiert.
+                Betreut von unseren eigenen, geprüften Betreuungskräften — bezahlbare Alternative zum Pflegeheim, einsatzbereit in 4–7 Tagen.
               </p>
 
               {/* USP-Box mit Medienlogos */}
@@ -223,10 +225,12 @@ export default function Page() {
                 {/* Vorteile */}
                 <div className="grid grid-cols-1 gap-3">
                   {[
-                    { label: 'Persönlicher Ansprechpartner 7 Tage/Woche', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
+                    { label: 'Preis & Betreuungskräfte online in 2 Minuten', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+                    { label: 'Kein Vertrag, bevor Sie gewählt haben', icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
+                    { label: 'Keine Vermittlungsgebühr', icon: 'M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' },
                     { label: 'Täglich kündbar & taggenaue Abrechnung', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' },
-                    { label: 'Betreuung startklar in 4–7 Tagen', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-                    { label: '20 Jahre Erfahrung & Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
+                    { label: 'Fester Ansprechpartner, 7 Tage die Woche', icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' },
+                    { label: '20 Jahre Erfahrung & Testsieger 2021', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
                   ].map((usp, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B7355]/10 flex items-center justify-center">
@@ -273,6 +277,99 @@ export default function Page() {
                   </a>
                 </div>
                 <p className="text-[12px] text-[#8B8B8B] text-center mt-3">Ilka Wysocki · Mo – So 8 – 20 Uhr</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 2. WORAUF SIE SICH VERLASSEN KÖNNEN ─────────────────────────── */}
+        <section className="py-14 md:py-16 lg:py-20 px-5 bg-white">
+          <div className="max-w-[1100px] mx-auto">
+            <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#A89279] mb-2">Warum Primundus</p>
+            <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-[#3D3D3D] mb-3">
+              Worauf Sie sich bei uns verlassen können
+            </h2>
+            <p className="text-[16px] md:text-[17px] text-[#5A5A5A] leading-[1.6] mb-10 max-w-2xl">
+              Eine 24-Stunden-Betreuung ist eine große Entscheidung — und sie kommt meist unter Zeitdruck. Bei uns wissen Sie an jeder Stelle, woran Sie sind: beim Preis, bei der Betreuungskraft und beim Vertrag.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {[
+                {
+                  title: 'Ihr Preis steht in 2 Minuten',
+                  text: 'Kein Rückruf, kein Warten auf ein Angebot. Sie beantworten ein paar Fragen zur Pflegesituation und sehen sofort, was die Betreuung kostet — samt der Zuschüsse, die für Ihre Situation infrage kommen.',
+                  icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+                },
+                {
+                  title: 'Sie sehen die Betreuungskräfte vorher',
+                  text: 'Keine Betreuungskraft, die unangekündigt vor der Tür steht. In Ihrem persönlichen Bereich sehen Sie, wer zu Ihnen kommen könnte — mit Angaben zu Erfahrung, Deutschkenntnissen und Führerschein.',
+                  icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z',
+                },
+                {
+                  title: 'Sie unterschreiben erst, wenn Sie sicher sind',
+                  text: 'Unterschrieben wird erst, wenn eine bestimmte Betreuungskraft feststeht und Sie einverstanden sind. Bis dahin gehen Sie keinerlei Verpflichtung ein.',
+                  icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+                },
+                {
+                  title: 'Der Monatspreis ist der Preis',
+                  text: 'Keine Anzahlung, keine Aufnahmegebühr, keine Bearbeitungspauschale. Der Monatspreis, den Sie sehen, ist der Preis — ohne Aufschlag für die Vermittlung.',
+                  icon: 'M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z',
+                },
+                {
+                  title: 'Sie zahlen nur die Tage, die Sie brauchen',
+                  text: 'Es gibt keine Mindestlaufzeit. Endet die Betreuung früher als gedacht, zahlen Sie nur die Tage, an denen tatsächlich jemand da war.',
+                  icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+                },
+                {
+                  title: 'Bei uns angestellt — nicht vermittelt',
+                  text: 'Unsere Betreuungskräfte sind bei uns fest angestellt und werden mit A1-Bescheinigung nach Deutschland entsandt. Für Sie heißt das klare Verhältnisse — getragen von 20 Jahren Erfahrung und der Auszeichnung als Testsieger 2021.',
+                  icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z',
+                },
+              ].map((item, i) => (
+                <div key={i} className="bg-[#F8F7F5] border border-[#E5E3DF] rounded-2xl p-6">
+                  <div className="w-11 h-11 rounded-xl bg-[#8B7355]/10 flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-[#8B7355]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d={item.icon} />
+                    </svg>
+                  </div>
+                  <h3 className="text-[17px] font-bold text-[#3D3D3D] mb-2 leading-snug">{item.title}</h3>
+                  <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* 7. USP — bewusst als breiter Abschluss: der Mensch hinter dem Angebot */}
+            <div className="mt-5 bg-[#F8F7F5] border border-[#E5E3DF] rounded-2xl p-6 md:p-8">
+              <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-7">
+                <img
+                  width={72}
+                  height={72}
+                  src="/images/ilka-wysocki_pm-mallorca.webp"
+                  alt="Ilka Wysocki, Primundus"
+                  className="w-[72px] h-[72px] rounded-full object-cover object-top flex-shrink-0"
+                />
+                <div className="flex-1">
+                  <h3 className="text-[17px] md:text-[19px] font-bold text-[#3D3D3D] mb-2 leading-snug">
+                    Ein fester Ansprechpartner — 7 Tage die Woche
+                  </h3>
+                  <p className="text-[14px] md:text-[15px] text-[#5A5A5A] leading-[1.6]">
+                    Ilka Wysocki und ihr Team sind Mo–So von 8 bis 20 Uhr für Sie da — auch am Wochenende und auch dann, wenn kurzfristig etwas dazwischenkommt.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://kostenrechner.primundus.de/?start=1&src=apex-usp"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-md"
+                >
+                  Preis & Betreuungskräfte ansehen
+                </a>
+                <a
+                  href="tel:+4989200000830"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-[#E5E3DF] hover:border-[#8B7355] text-[#3D3D3D] font-semibold text-[15px] rounded-xl transition-all duration-200"
+                >
+                  Lieber sprechen? 089 200 000 830
+                </a>
               </div>
             </div>
           </div>
@@ -411,7 +508,7 @@ export default function Page() {
               Was kostet 24-Stunden-Pflege?
             </h2>
             <p className="text-[16px] md:text-[17px] leading-[1.7] text-[#5A5A5A] mb-6">
-              Die Kosten für eine 24-Stunden-Betreuung liegen je nach Pflegebedarf und Qualifikation der Betreuungskraft zwischen <strong className="text-[#3D3D3D]">2.200 € und 3.500 € pro Monat</strong>. Was viele nicht wissen: Die Pflegekasse übernimmt je nach Pflegegrad einen erheblichen Teil. Nach Abzug von Pflegegeld, Verhinderungspflege und Entlastungsbetrag liegt der tatsächliche <strong className="text-[#3D3D3D]">Eigenanteil oft bei nur 1.200–1.800 € monatlich</strong> — und damit häufig deutlich unter den Kosten eines Pflegeheims.
+              Die Kosten für eine 24-Stunden-Betreuung liegen je nach Pflegebedarf und Qualifikation der Betreuungskraft zwischen <strong className="text-[#3D3D3D]">2.200 € und 3.500 € pro Monat</strong>. Was viele nicht wissen: Die Pflegekasse übernimmt je nach Pflegegrad einen erheblichen Teil. Nach Abzug von Pflegegeld, Verhinderungspflege und Entlastungsbetrag liegt der tatsächliche <strong className="text-[#3D3D3D]">Eigenanteil meist bei 1.500–2.500 € monatlich</strong> — und damit häufig deutlich unter den Kosten eines Pflegeheims.
             </p>
 
             {/* Tabelle Pflegegeld */}

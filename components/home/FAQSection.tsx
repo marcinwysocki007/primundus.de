@@ -17,11 +17,11 @@ export function FAQSection() {
     },
     {
       question: "Wie schnell kann eine Betreuungskraft starten?",
-      answer: "In der Regel können wir innerhalb von 4–7 Tagen eine passende Betreuungskraft vermitteln. Bei dringendem Bedarf auch schneller – sprechen Sie uns einfach an."
+      answer: "In der Regel kann innerhalb von 4–7 Tagen eine passende Betreuungskraft bei Ihnen starten. Bei dringendem Bedarf auch schneller – sprechen Sie uns einfach an."
     },
     {
       question: "Was passiert, wenn die Betreuungskraft krank wird?",
-      answer: "Wir organisieren schnellstmöglich eine Ersatzkraft. Unser Netzwerk umfasst tausende geprüfte Betreuungskräfte, sodass wir in der Regel innerhalb kurzer Zeit Ersatz stellen können."
+      answer: "Wir stellen schnellstmöglich eine Ersatzkraft. Weil unsere Betreuungskräfte bei uns angestellt sind, können wir kurzfristig umplanen – die Anreise der Ersatzkraft übernehmen wir."
     },
     {
       question: "Kann ich die Betreuung jederzeit kündigen?",

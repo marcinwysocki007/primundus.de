@@ -4,8 +4,8 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Fürth — Betreuungskraft zuhause | Primundus',
-  description: '24h-Pflege in Fürth: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Eigenanteil ab ca. 1100 €/Monat (PG 3).',
+  title: '24-Stunden-Pflege in Fürth & Umgebung | Primundus',
+  description: '24-Stunden-Pflege in Fürth: Eigenanteil ab ca. 1100 €/Monat (PG 3). Eigene Betreuungskräfte, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-fuerth' },
   openGraph: {
     title: '24h-Pflege Fürth — Betreuungskraft zuhause | Primundus',
@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Fürth?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2200 €/Monat — deutlich günstiger als ein Pflegeheim in Fürth (Ø 3.364 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2200 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
       },
       {
         '@type': 'Question',
@@ -198,7 +198,7 @@ export default function FuerthPage() {
               </div>
             </div>
             <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-5 py-3">
-              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim Fürth: Eigenanteil Ø 3.364 €/Monat — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
+              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim in Bayern: Eigenanteil rund 3.200 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
             </div>
           </div>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
@@ -241,7 +241,7 @@ export default function FuerthPage() {
           <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Fürth</h2>
           <div className="space-y-3 mb-12">
             {[
-              { q: 'Was kostet eine 24h-Pflegekraft in Fürth?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2200 €/Monat — deutlich günstiger als ein Pflegeheim in Fürth (Ø 3.364 €/Monat Eigenanteil).' },
+              { q: 'Was kostet eine 24h-Pflegekraft in Fürth?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2200 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
             {
               q: 'Gibt es in Bayern besondere Pflegeförderungen?',
               a: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.',
@@ -302,9 +302,9 @@ export default function FuerthPage() {
           <h2 className="text-[22px] md:text-[26px] font-bold text-[#1C1C1C] text-center mb-8">In 2 Minuten zu Ihrem persönlichen Angebot</h2>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { n: '1', title: 'Angebot online einholen', desc: 'Wenige Fragen zur Pflegesituation — individueller Preis inklusive Zuschüsse und Steuervorteile.', chip: '⏱ Dauert unter 2 Minuten' },
-              { n: '2', title: 'Fundierte Entscheidungsgrundlage', desc: 'Vollständige Übersicht aller Zuschüsse, Steuervorteile und Finanzierungsoptionen.', chip: '✉ Auch per E-Mail erhältlich' },
-              { n: '3', title: 'Passende Pflegekräfte erhalten', desc: 'Auf Wunsch direkt passende Pflegekräfte-Profile — ohne weiteren Aufwand für Sie.', chip: '✓ Mit Bestpreis-Garantie' },
+              { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation — Sie sehen sofort Ihren Preis, samt Zuschüssen und Steuervorteilen.', chip: '⏱ Dauert unter 2 Minuten' },
+              { n: '2', title: 'Betreuungskräfte ansehen', desc: 'In Ihrem persönlichen Bereich sehen Sie, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Auch per E-Mail erhältlich' },
+              { n: '3', title: 'Auswählen und starten', desc: 'Erst wenn Sie sich für eine Betreuungskraft entschieden haben, wird der Vertrag geschlossen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="w-11 h-11 rounded-full bg-[#3d2314] text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>

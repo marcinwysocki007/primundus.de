@@ -44,7 +44,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Sachsen-Anhalt?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Pflegeheim in Sachsen-Anhalt (Ø 3.364 €/Monat Eigenanteil).'.replace(',', '.') },
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Sachsen-Anhalt (Eigenanteil rund 2.890 €/Monat, vdek 07/2026).' },
       },
     ],
   },
@@ -229,7 +229,7 @@ export default function SachsenAnhaltPage() {
           <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Sachsen-Anhalt</h2>
           <div className="space-y-3 mb-12">
             {[
-              { q: 'Was kostet eine 24h-Pflegekraft in Sachsen-Anhalt?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Pflegeheim in Sachsen-Anhalt (Ø 2000–2500 €/Monat Eigenanteil).' },
+              { q: 'Was kostet eine 24h-Pflegekraft in Sachsen-Anhalt?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Sachsen-Anhalt (Eigenanteil rund 2.890 €/Monat, vdek 07/2026).' },
               { q: 'Wie schnell kann eine Pflegekraft in Sachsen-Anhalt starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. Primundus ist mit eigenen Betreuungskräften in ganz Sachsen-Anhalt — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Sachsen-Anhalt rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
@@ -285,9 +285,9 @@ export default function SachsenAnhaltPage() {
           <h2 className="text-[22px] md:text-[26px] font-bold text-[#1C1C1C] text-center mb-8">In 2 Minuten zu Ihrem persönlichen Angebot</h2>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { n: '1', title: 'Angebot online einholen', desc: 'Wenige Fragen zur Pflegesituation — individueller Preis inklusive Zuschüsse und Steuervorteile.', chip: '⏱ Dauert unter 2 Minuten' },
-              { n: '2', title: 'Fundierte Entscheidungsgrundlage', desc: 'Vollständige Übersicht aller Zuschüsse, Steuervorteile und Finanzierungsoptionen.', chip: '✉ Auch per E-Mail erhältlich' },
-              { n: '3', title: 'Passende Pflegekräfte erhalten', desc: 'Auf Wunsch direkt passende Pflegekräfte-Profile — ohne weiteren Aufwand für Sie.', chip: '✓ Mit Bestpreis-Garantie' },
+              { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation — Sie sehen sofort Ihren Preis, samt Zuschüssen und Steuervorteilen.', chip: '⏱ Dauert unter 2 Minuten' },
+              { n: '2', title: 'Betreuungskräfte ansehen', desc: 'In Ihrem persönlichen Bereich sehen Sie, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Auch per E-Mail erhältlich' },
+              { n: '3', title: 'Auswählen und starten', desc: 'Erst wenn Sie sich für eine Betreuungskraft entschieden haben, wird der Vertrag geschlossen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="w-11 h-11 rounded-full bg-[#3d2314] text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>

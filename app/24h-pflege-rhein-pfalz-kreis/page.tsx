@@ -8,7 +8,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 // umschlossen) hat eine eigene Seite — wird verlinkt.
 
 export const metadata: Metadata = {
-  title: '24h-Pflege im Rhein-Pfalz-Kreis — Betreuung zuhause',
+  title: '24-Stunden-Pflege in Rhein-Pfalz-Kreis & Umgebung | Primundus',
   description:
     '24h-Pflege im Rhein-Pfalz-Kreis: Betreuungskraft zuhause in Schifferstadt, Limburgerhof, Mutterstadt & dem ganzen Kreis. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis' },

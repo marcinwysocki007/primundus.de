@@ -71,7 +71,7 @@ export function HowItWorks() {
               </p>
               <span className="inline-flex items-center gap-1.5 bg-[#E8F5E9] text-[#2E7D32] px-3 py-1.5 rounded-lg text-xs font-semibold md:mx-auto">
                 <Check className="w-3.5 h-3.5" strokeWidth={2.5} />
-                Mit Bestpreis-Garantie vom Testsieger
+                Kein Vertrag vor Ihrer Auswahl
               </span>
             </div>
           </div>

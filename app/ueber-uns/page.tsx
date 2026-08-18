@@ -29,7 +29,7 @@ const schemaMarkup = JSON.stringify({
       description: 'Primundus bietet rechtssichere 24-Stunden-Pflege zu Hause. 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, Testsieger DIE WELT.',
       founder: { '@id': 'https://primundus.de/#mateusz-wysocki' },
       employee: { '@id': 'https://primundus.de/#ilka-wysocki' },
-      award: 'Testsieger DIE WELT — Größter deutscher 24h-Pflege Vergleichstest',
+      award: 'Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021)',
     },
     {
       '@type': 'Person',
@@ -135,7 +135,7 @@ export default function Page() {
                 <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Mateusz Wysocki</h3>
                 <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Gründer &amp; Geschäftsführer</p>
                 <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">
-                  Seit 2004 in der häuslichen 24-Stunden-Pflege. Mateusz war Mitgründer von Pflegehelden — einem der größten 24h-Pflege-Anbieter Deutschlands — und gründete Primundus mit dem Anspruch, Vermittlung ehrlich, rechtssicher und persönlich zu machen.
+                  Seit rund 20 Jahren in der häuslichen 24-Stunden-Pflege. Mateusz war Mitgründer von Pflegehelden — einem der größten 24h-Pflege-Anbieter Deutschlands — und gründete Primundus mit dem Anspruch, häusliche Betreuung ehrlich, rechtssicher und persönlich zu machen.
                 </p>
               </div>
             </div>

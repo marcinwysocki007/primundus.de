@@ -8,7 +8,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 // Bad Homburg hat eine eigene Seite — wird hier verlinkt, kein Duplikat.
 
 export const metadata: Metadata = {
-  title: '24h-Pflege im Hochtaunuskreis — Betreuung zuhause',
+  title: '24-Stunden-Pflege in Hochtaunuskreis & Umgebung | Primundus',
   description:
     '24h-Pflege im Hochtaunuskreis: Betreuungskraft zuhause in Oberursel, Königstein, Kronberg, Usingen & Umgebung. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hochtaunuskreis' },
