@@ -51,7 +51,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Müssen Kinder für Pflege der Eltern zahlen?', acceptedAnswer: { '@type': 'Answer', text: 'Grundsätzlich ja — Kinder sind gegenüber Eltern unterhaltspflichtig. Jedoch gilt seit 2020: Elternunterhalt für Pflegekosten wird erst verlangt wenn das eigene Jahreseinkommen des Kindes über 100.000 € brutto liegt. Unter dieser Grenze müssen Kinder nicht zahlen.' } },
-      { '@type': 'Question', name: 'Was ist Hilfe zur Pflege nach §61 SGB XII?', acceptedAnswer: { '@type': 'Answer', text: 'Hilfe zur Pflege ist die Sozialhilfeleistung die greift wenn Rente, Vermögen und Pflegekasse-Leistungen die Pflegekosten nicht decken. Das Sozialamt übernimmt dann den nicht gedeckten Teil — nach Prüfung von Einkommen und Vermögen.' } },
+      { '@type': 'Question', name: 'Was ist Hilfe zur Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Hilfe zur Pflege ist die Sozialhilfeleistung die greift wenn Rente, Vermögen und Pflegekasse-Leistungen die Pflegekosten nicht decken. Das Sozialamt übernimmt dann den nicht gedeckten Teil — nach Prüfung von Einkommen und Vermögen.' } },
     ],
   },
 ]

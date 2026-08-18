@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie schnell kann eine 24h-Pflegekraft starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist ein Start in 4–7 Tagen nach dem ersten Beratungsgespräch realistisch. In dringenden Fällen ist ein schnellerer Start möglich — Primundus bitte direkt kontaktieren.' } },
+      { '@type': 'Question', name: 'Wie schnell kann eine 24h-Pflegekraft starten?', acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' } },
     ],
   },
 ]

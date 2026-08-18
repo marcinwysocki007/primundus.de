@@ -49,7 +49,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Pflegekraft in Viersen starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist ein Start nach dem ersten Beratungsgespräch möglich.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
     ],
   },
@@ -234,7 +234,7 @@ export default function ViersenPage() {
           <div className="space-y-3 mb-12">
             {[
               { q: 'Was kostet eine 24h-Pflegekraft in Viersen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Pflegeheim in Viersen.' },
-              { q: 'Wie schnell kann eine Pflegekraft in Viersen starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. In dringenden Situationen oft schneller möglich.' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Viersen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Viersen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
               { q: 'Welches Einzugsgebiet wird in Viersen bedient?', a: 'Viersen und Umland: Mönchengladbach, Krefeld, Nettetal, Willich, Tönisvorst und alle Gemeinden im Kreis Viersen' },

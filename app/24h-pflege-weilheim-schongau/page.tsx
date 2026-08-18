@@ -49,7 +49,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Pflegekraft in Schongau starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist ein Start nach dem ersten Beratungsgespräch möglich.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
     ],
   },
@@ -246,7 +246,7 @@ export default function SchongauPage() {
               q: 'Gibt es in Bayern besondere Pflegeförderungen?',
               a: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.',
             },
-              { q: 'Wie schnell kann eine Pflegekraft in Schongau starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. In dringenden Situationen oft schneller möglich.' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Schongau starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Schongau rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
               { q: 'Welches Einzugsgebiet wird in Schongau bedient?', a: 'Schongau und südlicher Landkreis Weilheim-Schongau: Peiting, Steingaden, Rottenbuch und alle Gemeinden im südlichen Landkreis Weilheim-Schongau' },

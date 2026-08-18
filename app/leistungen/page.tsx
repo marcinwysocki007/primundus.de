@@ -50,7 +50,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was macht eine 24h-Betreuungskraft?', acceptedAnswer: { '@type': 'Answer', text: 'Eine 24h-Betreuungskraft übernimmt: Körperpflege (Waschen, Ankleiden, Zahnpflege), Haushalt (Kochen, Einkaufen, Putzen, Wäsche), Begleitung und Gesellschaft, Medikamentenerinnerung, Mobilisierung, Begleitung zu Arzt- und Therapieterminen. Sie lebt dauerhaft im Haushalt und ist rund um die Uhr erreichbar.' } },
-      { '@type': 'Question', name: 'Was macht eine 24h-Kraft NICHT?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft ist keine examinierte Krankenpflegerin. Medizinische Behandlungspflege (Injektionen, Verbandswechsel, Katheterversorgung) wird durch einen ambulanten Pflegedienst erbracht. Primundus koordiniert auf Wunsch die Zusammenarbeit.' } },
+      { '@type': 'Question', name: 'Was macht eine 24h-Kraft nicht?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft ist keine examinierte Krankenpflegerin. Medizinische Behandlungspflege (Injektionen, Verbandswechsel, Katheterversorgung) wird durch einen ambulanten Pflegedienst erbracht. Primundus koordiniert auf Wunsch die Zusammenarbeit.' } },
     ],
   },
 ]

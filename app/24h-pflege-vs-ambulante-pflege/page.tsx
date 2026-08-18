@@ -50,7 +50,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was ist der Unterschied zwischen 24h-Pflege und ambulantem Pflegedienst?', acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Pflegedienst kommt für definierte Einsätze (typischerweise 1–3 Mal täglich) und ist außerhalb dieser Zeiten nicht vor Ort. Eine 24h-Betreuungskraft lebt dauerhaft im Haushalt und ist rund um die Uhr erreichbar — für Notfälle, Gesellschaft und alle Pflegeaufgaben.' } },
+      { '@type': 'Question', name: 'Was ist der Unterschied zwischen ambulanter Pflege und 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Pflegedienst kommt für definierte Einsätze (typischerweise 1–3 Mal täglich) und ist außerhalb dieser Zeiten nicht vor Ort. Eine 24h-Betreuungskraft lebt dauerhaft im Haushalt und ist rund um die Uhr erreichbar — für Notfälle, Gesellschaft und alle Pflegeaufgaben.' } },
       { '@type': 'Question', name: 'Wann ist ein ambulanter Pflegedienst ausreichend?', acceptedAnswer: { '@type': 'Answer', text: 'Bei leichtem bis moderatem Pflegebedarf (PG 2–3) und wenn Angehörige den Rest der Zeit übernehmen können. Wenn keine Sturzgefahr in der Nacht besteht, keine Demenz mit Weglaufen vorliegt und die Person tagsüber weitgehend selbstständig ist.' } },
       { '@type': 'Question', name: 'Was kostet ein ambulanter Pflegedienst im Monat?', acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Pflegedienst kostet typischerweise 800–2.500 €/Monat je nach Leistungsumfang und Einsatzhäufigkeit. Bei PG 2–5 können Sachleistungen (796–2.299 €/Monat) für den Pflegedienst eingesetzt werden — der Eigenanteil kann gering sein oder entfallen.' } },
     ],

@@ -52,7 +52,7 @@ const schemaMarkup = [
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Was ist der Unterschied zwischen ambulantem Pflegedienst und 24h-Kraft?',
+        name: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?',
         acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Pflegedienst kommt zu definierten Zeiten (typisch 1–3 Mal täglich) und geht danach wieder. Eine 24h-Betreuungskraft lebt dauerhaft im Haushalt und ist rund um die Uhr — einschließlich Nächten — erreichbar. Der Pflegedienst ist auf Grundpflege und Behandlungspflege spezialisiert; die 24h-Kraft übernimmt zusätzlich Haushalt, Gesellschaft und Begleitung.' },
       },
     ],

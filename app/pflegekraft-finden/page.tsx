@@ -52,7 +52,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie findet man eine gute Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Der zuverlässigste Weg ist die Vermittlung über eine seriöse Agentur wie Primundus. Die Agentur prüft Qualifikation, Erfahrung und Deutschkenntnisse, stellt Ersatz bei Ausfall und regelt das Rechtliche. Direktsuche über Portale ist möglich, erfordert aber mehr Eigenaufwand und rechtliches Know-how.' } },
-      { '@type': 'Question', name: 'Worauf sollte man bei der Auswahl einer Pflegekraft achten?', acceptedAnswer: { '@type': 'Answer', text: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung (Anzahl und Art früherer Einsätze), Referenzen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen (Demenz, Parkinson) auf Spezialerfahrung achten.' } },
+      { '@type': 'Question', name: 'Worauf sollte man bei der Auswahl achten?', acceptedAnswer: { '@type': 'Answer', text: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung (Anzahl und Art früherer Einsätze), Referenzen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen (Demenz, Parkinson) auf Spezialerfahrung achten.' } },
       { '@type': 'Question', name: 'Wie schnell findet Primundus eine Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus findet typischerweise innerhalb von 4–7 Tagen nach dem ersten Beratungsgespräch eine passende Betreuungskraft. In dringenden Fällen ist ein schnellerer Start möglich.' } },
     ],
   },

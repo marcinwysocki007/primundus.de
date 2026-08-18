@@ -51,7 +51,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was ist Scheinselbstständigkeit in der Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Scheinselbstständigkeit liegt vor wenn eine Pflegekraft als "selbstständig" abgerechnet wird, tatsächlich aber wie eine Angestellte arbeitet: feste Arbeitszeiten, persönliche Leistungserbringung, keine eigenen Auftraggeber, kein eigenes Unternehmerrisiko. Die Behörden stufen sie als verstecktes Arbeitsverhältnis ein — mit erheblichen rechtlichen Folgen.' } },
-      { '@type': 'Question', name: 'Welche Konsequenzen drohen bei Scheinselbstständigkeit?', acceptedAnswer: { '@type': 'Answer', text: 'Nachzahlung aller Sozialversicherungsbeiträge (Arbeitgeber- und Arbeitnehmeranteil) für bis zu 4 Jahre rückwirkend. Bußgelder. Strafrechtliche Verfolgung wegen Vorenthaltung von Sozialversicherungsbeiträgen. Die Familie haftet als Arbeitgeberin.' } },
+      { '@type': 'Question', name: 'Welche Konsequenzen drohen?', acceptedAnswer: { '@type': 'Answer', text: 'Nachzahlung aller Sozialversicherungsbeiträge (Arbeitgeber- und Arbeitnehmeranteil) für bis zu 4 Jahre rückwirkend. Bußgelder. Strafrechtliche Verfolgung wegen Vorenthaltung von Sozialversicherungsbeiträgen. Die Familie haftet als Arbeitgeberin.' } },
     ],
   },
 ]

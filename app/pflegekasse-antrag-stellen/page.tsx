@@ -51,7 +51,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie stelle ich einen Antrag bei der Pflegekasse?', acceptedAnswer: { '@type': 'Answer', text: 'Der Antrag ist formlos — ein kurzes Schreiben oder Anruf genügt: "Ich beantrage Leistungen der Pflegeversicherung." Die Pflegekasse organisiert dann die Begutachtung durch den Medizinischen Dienst. Der Antrag ist auch telefonisch oder per E-Mail möglich. Wichtig: Das Datum des Antrags ist entscheidend — Leistungen gelten rückwirkend ab diesem Datum.' } },
-      { '@type': 'Question', name: 'Wie lange dauert die Bearbeitung eines Pflegegrad-Antrags?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse hat 25 Arbeitstage Zeit für die Bearbeitung. Bei Entlassung aus dem Krankenhaus verkürzt sich die Frist auf 1 Woche. Bei Überschreitung der Frist hat der Antragsteller Anspruch auf 70 € Entschädigung pro Woche Verzögerung.' } },
+      { '@type': 'Question', name: 'Wie lange dauert die Bearbeitung?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse hat 25 Arbeitstage Zeit für die Bearbeitung. Bei Entlassung aus dem Krankenhaus verkürzt sich die Frist auf 1 Woche. Bei Überschreitung der Frist hat der Antragsteller Anspruch auf 70 € Entschädigung pro Woche Verzögerung.' } },
     ],
   },
 ]

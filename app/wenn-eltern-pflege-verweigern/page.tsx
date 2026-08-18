@@ -50,7 +50,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was kann ich tun wenn mein Vater oder meine Mutter Pflege verweigert?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht konfrontativ vorgehen. Ursache der Ablehnung verstehen (Angst vor Kontrollverlust, Scham, Verleugnung). Schrittweise kleine Unterstützungen einführen. Dritte einbeziehen (Hausarzt, Vertrauensperson). Autonomie respektieren solange keine Selbstgefährdung vorliegt.' } },
+      { '@type': 'Question', name: 'Was kann ich tun wenn meine Eltern Pflege verweigern?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht konfrontativ vorgehen. Ursache der Ablehnung verstehen (Angst vor Kontrollverlust, Scham, Verleugnung). Schrittweise kleine Unterstützungen einführen. Dritte einbeziehen (Hausarzt, Vertrauensperson). Autonomie respektieren solange keine Selbstgefährdung vorliegt.' } },
       { '@type': 'Question', name: 'Darf ich meinen Eltern Pflege aufzwingen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — Erwachsene haben das Recht auf Selbstbestimmung, auch wenn sie schlechte Entscheidungen treffen. Ausnahme: Bei Demenz oder Geschäftsunfähigkeit kann eine Betreuung vom Gericht angeordnet werden. Bis dahin gilt: überzeugen statt erzwingen.' } },
     ],
   },

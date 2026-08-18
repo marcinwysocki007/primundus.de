@@ -54,7 +54,7 @@ const schemaMarkup = [
     mainEntity: [
       { '@type': 'Question', name: 'Was bekommt man bei Pflegegrad 1?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 1 gibt es 131 € Entlastungsbetrag pro Monat — kein Pflegegeld, keine Pflegesachleistungen. Der Entlastungsbetrag ist zweckgebunden für anerkannte Betreuungs- und Entlastungsangebote.' } },
       { '@type': 'Question', name: 'Was sind die Voraussetzungen für Pflegegrad 1?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegrad 1 wird vergeben wenn im NBA-Begutachtungsverfahren 12,5 bis 26,9 Punkte erreicht werden — geringe Beeinträchtigung der Selbstständigkeit in mindestens einem Lebensbereich.' } },
-      { '@type': 'Question', name: 'Wie unterscheidet sich Pflegegrad 1 von Pflegegrad 2?', acceptedAnswer: { '@type': 'Answer', text: 'Bei PG 1 gibt es nur den Entlastungsbetrag (131 €/Monat), kein Pflegegeld und keine Sachleistungen. Bei PG 2 kommen 347 € Pflegegeld, 796 € Sachleistungen und 3.539 € Entlastungsbudget/Jahr dazu. Wer zwischen PG 1 und 2 steht, sollte die Begutachtung sorgfältig vorbereiten.' } },
+      { '@type': 'Question', name: 'Wie unterscheidet sich PG 1 von PG 2?', acceptedAnswer: { '@type': 'Answer', text: 'Bei PG 1 gibt es nur den Entlastungsbetrag (131 €/Monat), kein Pflegegeld und keine Sachleistungen. Bei PG 2 kommen 347 € Pflegegeld, 796 € Sachleistungen und 3.539 € Entlastungsbudget/Jahr dazu. Wer zwischen PG 1 und 2 steht, sollte die Begutachtung sorgfältig vorbereiten.' } },
     ],
   },
 ]

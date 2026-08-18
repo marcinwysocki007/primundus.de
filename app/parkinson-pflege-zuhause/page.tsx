@@ -51,7 +51,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was sind die besonderen Herausforderungen bei der Parkinson-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Parkinson hat einen schwankenden Tagesverlauf: Morgens nach dem Aufwachen und am späten Nachmittag ("Off-Phasen") sind Betroffene steifer und langsamer — kurz nach der Medikation ("On-Phase") funktioniert vieles wieder. Dieser Rhythmus muss in der Pflege konsequent berücksichtigt werden.' } },
+      { '@type': 'Question', name: 'Was sind die besonderen Herausforderungen der Parkinson-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Parkinson hat einen schwankenden Tagesverlauf: Morgens nach dem Aufwachen und am späten Nachmittag ("Off-Phasen") sind Betroffene steifer und langsamer — kurz nach der Medikation ("On-Phase") funktioniert vieles wieder. Dieser Rhythmus muss in der Pflege konsequent berücksichtigt werden.' } },
       { '@type': 'Question', name: 'Welchen Pflegegrad hat man bei Parkinson?', acceptedAnswer: { '@type': 'Answer', text: 'Je nach Stadium PG 2 bis 5. Frühes Stadium: PG 2. Mittleres Stadium mit Sturzgefahr und Alltagshilfe: PG 3. Fortgeschrittenes Stadium mit vollständiger Pflegebedürftigkeit: PG 4–5.' } },
       { '@type': 'Question', name: 'Kann man mit Parkinson zuhause bleiben?', acceptedAnswer: { '@type': 'Answer', text: 'In den meisten Stadien ja — eine 24h-Betreuungskraft, die den Medikationsrhythmus kennt und auf On- und Off-Phasen reagieren kann, ermöglicht ein sicheres Leben im eigenen Zuhause.' } },
     ],

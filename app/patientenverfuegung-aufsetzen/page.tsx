@@ -53,7 +53,7 @@ const schemaMarkup = [
     mainEntity: [
       { '@type': 'Question', name: 'Was ist eine Patientenverfügung?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Patientenverfügung ist ein schriftliches Dokument in dem man im Voraus festlegt welche medizinischen Maßnahmen man im Fall der eigenen Entscheidungsunfähigkeit wünscht oder ablehnt. Sie ist rechtlich verbindlich und muss von Ärzten und Pflegepersonen beachtet werden.' } },
       { '@type': 'Question', name: 'Muss eine Patientenverfügung notariell beglaubigt werden?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — eine Patientenverfügung ist bereits ohne Notar rechtsgültig, wenn sie handschriftlich unterschrieben und datiert ist. Eine notarielle Beglaubigung erhöht die Beweissicherheit, ist aber keine Pflicht.' } },
-      { '@type': 'Question', name: 'Was ist der Unterschied zwischen Patientenverfügung und Vorsorgevollmacht?', acceptedAnswer: { '@type': 'Answer', text: 'Die Patientenverfügung regelt direkt welche Behandlungen gewünscht oder abgelehnt werden. Die Vorsorgevollmacht bestimmt eine Person die im Ernstfall stellvertretend Entscheidungen trifft. Beide zusammen geben den größten Schutz.' } },
+      { '@type': 'Question', name: 'Was ist der Unterschied zur Vorsorgevollmacht?', acceptedAnswer: { '@type': 'Answer', text: 'Die Patientenverfügung regelt direkt welche Behandlungen gewünscht oder abgelehnt werden. Die Vorsorgevollmacht bestimmt eine Person die im Ernstfall stellvertretend Entscheidungen trifft. Beide zusammen geben den größten Schutz.' } },
     ],
   },
 ]

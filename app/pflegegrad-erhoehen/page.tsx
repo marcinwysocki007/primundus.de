@@ -51,7 +51,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie beantrage ich einen höheren Pflegegrad?', acceptedAnswer: { '@type': 'Answer', text: 'Formloser schriftlicher Antrag bei der Pflegekasse: "Ich beantrage eine Überprüfung meines Pflegegrades aufgrund einer Verschlechterung meines Pflegezustands." Danach neue Begutachtung durch den MD. Pflegetagebuch 1–2 Wochen führen um die Verschlechterung zu dokumentieren.' } },
-      { '@type': 'Question', name: 'Gibt es eine Sperrfrist beim Antrag auf Höherstufung?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — einen Antrag auf Höherstufung kann man jederzeit stellen, es gibt keine Sperrfrist. Bei einer Wiederbegutachtung wird der aktuelle Pflegebedarf neu bewertet.' } },
+      { '@type': 'Question', name: 'Gibt es eine Sperrfrist?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — einen Antrag auf Höherstufung kann man jederzeit stellen, es gibt keine Sperrfrist. Bei einer Wiederbegutachtung wird der aktuelle Pflegebedarf neu bewertet.' } },
     ],
   },
 ]

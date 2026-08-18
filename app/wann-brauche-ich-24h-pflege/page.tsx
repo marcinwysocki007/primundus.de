@@ -202,7 +202,7 @@ export default function WannBraucheIch24hPflege() {
               { q: 'Wann ist 24h-Pflege notwendig?', a: 'Spätestens wenn der Pflegebedürftige nicht mehr allein gelassen werden kann, Stürze ein Thema sind, Demenz-Sicherheitsrisiken entstehen oder Angehörige erschöpft sind.' },
               { q: 'Ab welchem Pflegegrad braucht man 24h-Pflege?', a: 'Ab PG 2 bei Alleinleben oder Demenz. Bei PG 3 wenn Angehörige nicht täglich präsent sein können. Bei PG 4–5 fast immer wenn zuhause bleiben gewünscht ist.' },
               { q: 'Kann man zu früh mit 24h-Pflege anfangen?', a: 'Nein — früher Einsatz ermöglicht der Betreuungskraft die Person kennen zu lernen bevor Krisen auftreten. Und er entlastet Angehörige bevor der Burnout eintritt.' },
-              { q: 'Wie schnell kann Primundus eine Betreuungskraft stellen?', a: 'In 4–7 Tagen nach dem ersten Gespräch — täglich kündbar, taggenaue Abrechnung.' },
+              { q: 'Wie schnell kann Primundus eine Betreuungskraft stellen?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

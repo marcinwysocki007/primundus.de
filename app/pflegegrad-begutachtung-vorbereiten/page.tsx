@@ -65,8 +65,8 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was passiert bei der MD-Begutachtung?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Gutachter des Medizinischen Dienstes (MD) kommt nach Hause und bewertet die Selbstständigkeit in sechs Lebensbereichen: Mobilität, kognitive Fähigkeiten, Verhaltensweisen, Selbstversorgung, krankheitsbedingte Anforderungen und Alltagsleben. Die Punktzahl bestimmt den Pflegegrad.' } },
-      { '@type': 'Question', name: 'Wie lange dauert die MD-Begutachtung?', acceptedAnswer: { '@type': 'Answer', text: 'Typischerweise 30–90 Minuten — je nach Pflegesituation und wie viele Unterlagen vorliegen. Der Gutachter stellt Fragen zu den einzelnen Lebensbereichen und beobachtet teilweise direkt.' } },
-      { '@type': 'Question', name: 'Was ist das Pflegetagebuch und warum ist es so wichtig?', acceptedAnswer: { '@type': 'Answer', text: 'Das Pflegetagebuch ist eine tägliche Dokumentation welche Hilfe bei welchen Tätigkeiten benötigt wird und wie lange das dauert. Es ist das stärkste Argument für eine korrekte und faire Einstufung — weil es Schwankungen im Pflegebedarf objektiv belegt.' } },
+      { '@type': 'Question', name: 'Wie lange dauert die Begutachtung?', acceptedAnswer: { '@type': 'Answer', text: 'Typischerweise 30–90 Minuten — je nach Pflegesituation und wie viele Unterlagen vorliegen. Der Gutachter stellt Fragen zu den einzelnen Lebensbereichen und beobachtet teilweise direkt.' } },
+      { '@type': 'Question', name: 'Was ist das Pflegetagebuch und warum ist es wichtig?', acceptedAnswer: { '@type': 'Answer', text: 'Das Pflegetagebuch ist eine tägliche Dokumentation welche Hilfe bei welchen Tätigkeiten benötigt wird und wie lange das dauert. Es ist das stärkste Argument für eine korrekte und faire Einstufung — weil es Schwankungen im Pflegebedarf objektiv belegt.' } },
     ],
   },
 ]

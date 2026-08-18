@@ -50,7 +50,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was fördert die Pflegekasse bei Wohnraumanpassung?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse fördert Maßnahmen zur Wohnraumanpassung mit bis zu 4.180 € je Maßnahme (§ 40 SGB XI). Bei mehreren Personen im Haushalt bis zu 16.720 €. Typische Maßnahmen: Treppenlift, Badumbau, Türverbreiterung, Haltegriffe, Rampen. Antrag vor Beginn der Maßnahme stellen.' } },
+      { '@type': 'Question', name: 'Was fördert die Pflegekasse bei der Wohnraumanpassung?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse fördert Maßnahmen zur Wohnraumanpassung mit bis zu 4.180 € je Maßnahme (§ 40 SGB XI). Bei mehreren Personen im Haushalt bis zu 16.720 €. Typische Maßnahmen: Treppenlift, Badumbau, Türverbreiterung, Haltegriffe, Rampen. Antrag vor Beginn der Maßnahme stellen.' } },
       { '@type': 'Question', name: 'Welche Maßnahmen sind die wichtigsten für ein barrierefreies Zuhause?', acceptedAnswer: { '@type': 'Answer', text: 'Die wichtigsten Maßnahmen: Badumbau (begehbare Dusche, Haltegriffe), Treppenlift oder Rampen, Türverbreiterung auf 90 cm, rutschfeste Böden, Haltegriffe an Toilette, höhenverstellbares Bett, ausreichend Beleuchtung.' } },
     ],
   },

@@ -51,7 +51,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie lege ich Widerspruch gegen den Pflegegrad ein?', acceptedAnswer: { '@type': 'Answer', text: 'Schriftlich innerhalb eines Monats nach dem Bescheiddatum an die Pflegekasse: "Ich lege Widerspruch gegen den Bescheid vom [Datum] ein." Kein Formular nötig, formloser Brief reicht. Danach das MD-Gutachten anfordern, Pflegetagebuch und neue Arztberichte nachreichen.' } },
-      { '@type': 'Question', name: 'Wie hoch sind die Erfolgschancen beim Widerspruch?', acceptedAnswer: { '@type': 'Answer', text: 'Rund ein Drittel aller Widersprüche gegen Pflegegrad-Bescheide sind erfolgreich. Die Chancen steigen erheblich wenn ein neues Pflegetagebuch nachgereicht wird und konkrete Beispiele der Einschränkungen dokumentiert sind.' } },
+      { '@type': 'Question', name: 'Wie hoch sind die Erfolgschancen?', acceptedAnswer: { '@type': 'Answer', text: 'Rund ein Drittel aller Widersprüche gegen Pflegegrad-Bescheide sind erfolgreich. Die Chancen steigen erheblich wenn ein neues Pflegetagebuch nachgereicht wird und konkrete Beispiele der Einschränkungen dokumentiert sind.' } },
       { '@type': 'Question', name: 'Wie lange hat man Zeit für den Widerspruch?', acceptedAnswer: { '@type': 'Answer', text: 'Genau einen Monat nach dem Datum des Bescheids — nicht nach Eingang des Bescheids. Bei Versäumnis der Frist kann in Ausnahmefällen Wiedereinsetzung beantragt werden.' } },
     ],
   },
