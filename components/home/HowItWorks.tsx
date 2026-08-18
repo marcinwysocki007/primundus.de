@@ -51,7 +51,7 @@ export function HowItWorks() {
               </p>
               <span className="inline-flex items-center gap-1.5 bg-[#E8F5E9] text-[#2E7D32] px-3 py-1.5 rounded-lg text-xs font-semibold md:mx-auto">
                 <Mail className="w-3.5 h-3.5" strokeWidth={2} />
-                Auch per E-Mail erhältlich
+                Ihr Zugang kommt auch per E-Mail
               </span>
             </div>
           </div>

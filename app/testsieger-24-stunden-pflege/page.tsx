@@ -139,9 +139,9 @@ export default function TestsiegerPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Wenn Sie eine Betreuungskraft für Ihre Eltern oder Ihren Partner suchen, wollen Sie sich auf den Vermittler
-              verlassen können. Die Auszeichnung zeigt: Familien, die mit Primundus gearbeitet haben, waren zufriedener als
-              bei allen anderen bewerteten Vermittlern. Dazu kommen Leistungen, die Sie so nur bei uns bekommen:
+              Wenn Sie eine Betreuungskraft für Ihre Eltern oder Ihren Partner suchen, wollen Sie sich auf Ihren Anbieter
+              verlassen können. In der Service-Studie 2021 bewerteten Familien Primundus besser als alle anderen
+              untersuchten Anbieter der Kategorie. Dazu kommen diese Leistungen:
             </p>
             <div className="grid md:grid-cols-2 gap-3">
               {[

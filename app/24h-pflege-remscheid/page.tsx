@@ -291,9 +291,9 @@ export default function RemscheidPage() {
           <h2 className="text-[22px] md:text-[26px] font-bold text-[#1C1C1C] text-center mb-8">In 2 Minuten zu Ihrem persönlichen Angebot</h2>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation — Sie sehen sofort Ihren Preis, samt Zuschüssen und Steuervorteilen.', chip: '⏱ Dauert unter 2 Minuten' },
-              { n: '2', title: 'Betreuungskräfte ansehen', desc: 'In Ihrem persönlichen Bereich sehen Sie, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Auch per E-Mail erhältlich' },
-              { n: '3', title: 'Auswählen und starten', desc: 'Erst wenn Sie sich für eine Betreuungskraft entschieden haben, wird der Vertrag geschlossen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
+              { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', chip: '⏱ Dauert unter 2 Minuten' },
+              { n: '2', title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Ihr Zugang kommt auch per E-Mail' },
+              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, meist in 4–7 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="w-11 h-11 rounded-full bg-[#3d2314] text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>
