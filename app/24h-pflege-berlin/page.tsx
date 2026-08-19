@@ -5,7 +5,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Berlin & Umgebung | Primundus',
-  description: '24-Stunden-Pflege in Berlin: Eigene Betreuungskräfte, keine Vermittlungsgebühr, täglich kündbar.',
+  description: '24-Stunden-Pflege in Berlin: Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-berlin' },
   openGraph: {
     title: '24h-Pflege Berlin | Primundus',

@@ -5,7 +5,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Amberg & Umgebung | Primundus',
-  description: '24-Stunden-Pflege in Amberg: Eigenanteil ab ca. 1100 €/Monat (PG 3). Eigene Betreuungskräfte, keine Vermittlungsgebühr, täglich kündbar.',
+  description: '24-Stunden-Pflege in Amberg: Eigenanteil ab ca. 1100 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-amberg' },
   openGraph: {
     title: '24h-Pflege Amberg — Betreuungskraft zuhause | Primundus',

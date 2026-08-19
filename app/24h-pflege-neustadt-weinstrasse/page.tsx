@@ -5,7 +5,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Neustadt an der Weinstraße & Umgebung',
-  description: '24-Stunden-Pflege in Neustadt an der Weinstraße: Eigenanteil ab ca. 1300 €/Monat (PG 3). Eigene Betreuungskräfte, keine Vermittlungsgebühr, täglich kündbar.',
+  description: '24-Stunden-Pflege in Neustadt an der Weinstraße: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-neustadt-weinstrasse' },
   openGraph: {
     title: '24h-Pflege Neustadt an der Weinstraße — Betreuungskraft zuhause | Primundus',

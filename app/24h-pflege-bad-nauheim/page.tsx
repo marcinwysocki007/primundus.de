@@ -5,7 +5,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bad Nauheim & Umgebung | Primundus',
-  description: '24-Stunden-Pflege in Bad Nauheim: Eigenanteil ab ca. 1200 €/Monat (PG 3). Eigene Betreuungskräfte, keine Vermittlungsgebühr, täglich kündbar.',
+  description: '24-Stunden-Pflege in Bad Nauheim: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-nauheim' },
   openGraph: {
     title: '24h-Pflege Bad Nauheim — Betreuungskraft zuhause | Primundus',

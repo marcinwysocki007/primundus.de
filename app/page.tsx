@@ -6,14 +6,14 @@ import { FinalCTA } from '@/components/home/FinalCTA'
 import { TestimonialCard } from '@/components/home/TestimonialCard'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege vom Testsieger — Preis in 2 Minuten | Primundus',
-  description: 'Nr. 1 der Pflegekräfte-Vermittler (DIE WELT/ServiceValue 2021). Preis und Betreuungskräfte online in 2 Minuten — keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege — Preis & Pflegekräfte in 2 Minuten sehen',
+  description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. Testsieger 2021.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
-    title: '24-Stunden-Pflege vom Testsieger — Preis in 2 Minuten | Primundus',
-    description: 'Nr. 1 der Pflegekräfte-Vermittler (DIE WELT/ServiceValue 2021). Preis und Betreuungskräfte online in 2 Minuten — keine Vermittlungsgebühr, täglich kündbar.',
+    title: '24-Stunden-Pflege — Preis & Pflegekräfte in 2 Minuten sehen',
+    description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. Testsieger 2021.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',

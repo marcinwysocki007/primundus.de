@@ -5,7 +5,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in München & Umgebung | Primundus',
-  description: '24-Stunden-Pflege in München: Eigene Betreuungskräfte, keine Vermittlungsgebühr, täglich kündbar.',
+  description: '24-Stunden-Pflege in München: Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muenchen' },
   openGraph: {
     title: '24h-Pflege München — polnische Pflegekräfte & Betreuung zuhause | Primundus',

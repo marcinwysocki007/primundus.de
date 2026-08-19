@@ -5,7 +5,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Lünen & Umgebung | Primundus',
-  description: '24-Stunden-Pflege in Lünen: Eigenanteil ab ca. 1200 €/Monat (PG 3). Eigene Betreuungskräfte, keine Vermittlungsgebühr, täglich kündbar.',
+  description: '24-Stunden-Pflege in Lünen: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-luenen' },
   openGraph: {
     title: '24h-Pflege Lünen — Betreuungskraft zuhause | Primundus',
