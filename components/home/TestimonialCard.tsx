@@ -57,7 +57,10 @@ export function TestimonialCard() {
             <Star key={i} className="w-3.5 h-3.5 fill-[#FBBC04] text-[#FBBC04]" />
           ))}
         </div>
-        <span className="text-xs text-[#8B8B8B]">4.8 von 5</span>
+        {/* Stand 19.08.2026: das Google-Unternehmensprofil hat 5,0 aus 3 Bewertungen.
+            Die frühere Angabe „4.8 von 5" war durch nichts gedeckt. Bei jeder neuen
+            Bewertung hier nachziehen — oder den Block entfernen, solange es zu wenige sind. */}
+        <span className="text-xs text-[#8B8B8B]">5,0 aus 3 Bewertungen</span>
       </div>
 
       <div className="overflow-x-auto -mx-5 px-5 pb-2">
