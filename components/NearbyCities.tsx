@@ -20,7 +20,7 @@ export function NearbyCities({ current }: { current: string }) {
         Auch in Ihrer Nähe
       </p>
       <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">
-        Primundus vermittelt Betreuungskräfte in ganz {REGION_NAMEN[me.region]} — auch dort, wo Ihre
+        Unsere Betreuungskräfte sind in ganz {REGION_NAMEN[me.region]} im Einsatz — auch dort, wo Ihre
         Eltern wirklich wohnen. Vielleicht ist einer dieser Orte näher dran:
       </p>
       <div className="flex flex-wrap gap-2">
