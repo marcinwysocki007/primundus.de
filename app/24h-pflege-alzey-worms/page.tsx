@@ -8,7 +8,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 // bewusst KEIN Klon des Städte-Templates (92 % Duplikat-Befund 14.08.).
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Kreis Alzey-Worms & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Kreis Alzey-Worms',
   description:
     '24h-Pflege im Landkreis Alzey-Worms: geprüfte Betreuungskraft zuhause in Alzey, Wörrstadt, Osthofen & Umgebung. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-alzey-worms' },

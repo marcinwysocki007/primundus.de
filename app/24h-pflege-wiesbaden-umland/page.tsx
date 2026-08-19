@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Wiesbaden & Umland & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Wiesbaden & Umland',
   description: '24-Stunden-Pflege in Wiesbaden & Umland: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-wiesbaden-umland' },
   openGraph: {
@@ -74,7 +74,7 @@ export default function TaunussteinPage() {
             24h-Pflege in Taunusstein · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24h-Pflege Taunusstein — Betreuungskraft zuhause
+            24-Stunden-Pflege und Betreuung in Wiesbaden & Umland
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
             Ob in Taunusstein, Niedernhausen oder unten am Rhein in Walluf: Rund um Wiesbaden lebt man gern im eigenen Haus mit Garten — und möchte dort auch alt werden. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist Tag und Nacht da, wenn allein leben nicht mehr geht. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
@@ -82,11 +82,11 @@ export default function TaunussteinPage() {
 
           {/* ① WAS IST 24H-PFLEGE */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?
+            Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Wiesbaden & Umland heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[

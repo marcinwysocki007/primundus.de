@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Witten & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Witten | Primundus',
   description: '24-Stunden-Pflege in Witten: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-witten' },
   openGraph: {
@@ -74,7 +74,7 @@ export default function WittenPage() {
             24h-Pflege in Witten · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24h-Pflege Witten — Betreuungskraft zuhause
+            24-Stunden-Pflege und Betreuung in Witten
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
             Zwischen Ruhr und Ardey-Wald wohnt man in Witten oft ein Leben lang — in Annen, Herbede oder Bommern, im Haus mit Garten oder der Wohnung nahe der Innenstadt. Damit das so bleiben kann, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, 1:1, im eigenen Zuhause statt im Heim. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
@@ -82,11 +82,11 @@ export default function WittenPage() {
 
           {/* ① WAS IST 24H-PFLEGE */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?
+            Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Witten heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[

@@ -8,7 +8,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 // Bergisch Gladbach hat eine eigene Seite — wird verlinkt, kein Duplikat.
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rheinisch-Bergischer Kreis & Umgebung',
+  title: '24-Stunden-Pflege & Betreuung in Rheinisch-Bergischer Kreis',
   description:
     '24h-Pflege im Rheinisch-Bergischen Kreis: Betreuungskraft zuhause in Wermelskirchen, Overath, Rösrath & dem ganzen Kreis. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis' },

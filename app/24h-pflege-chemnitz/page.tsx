@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Chemnitz & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Chemnitz | Primundus',
   description: '24-Stunden-Pflege in Chemnitz: Eigenanteil ab ca. 1400 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-chemnitz' },
   openGraph: {
@@ -74,7 +74,7 @@ export default function ChemnitzPage() {
             24h-Pflege in Chemnitz · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24h-Pflege Chemnitz — Betreuungskraft zuhause
+            24-Stunden-Pflege und Betreuung in Chemnitz
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
             Die Gründerzeitwohnung auf dem Kaßberg, das Haus in Gablenz oder am Stadtrand Richtung Erzgebirge: Chemnitzer bleiben, wo sie zuhause sind — Treppen und Etagen hin oder her. Eine Betreuungskraft von Primundus zieht mit ein, übernimmt Einkäufe, Haushalt und Begleitung und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
@@ -82,11 +82,11 @@ export default function ChemnitzPage() {
 
           {/* ① WAS IST 24H-PFLEGE */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?
+            Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Chemnitz heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[

@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Worms & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Worms | Primundus',
   description: '24-Stunden-Pflege in Worms: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-worms' },
   openGraph: {
@@ -74,7 +74,7 @@ export default function WormsPage() {
             24h-Pflege in Worms · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24h-Pflege Worms — Betreuungskraft zuhause
+            24-Stunden-Pflege und Betreuung in Worms
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
             Ob in der Innenstadt nahe dem Dom, in Pfeddersheim oder draußen in Herrnsheim: Die meisten Wormser wollen im Alter dort bleiben, wo sie ihr Leben verbracht haben. Eine Betreuungskraft von Primundus zieht mit ein und macht genau das möglich — rund um die Uhr da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
@@ -82,11 +82,11 @@ export default function WormsPage() {
 
           {/* ① WAS IST 24H-PFLEGE */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?
+            Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Worms heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[

@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Berlin & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Berlin | Primundus',
   description: '24-Stunden-Pflege in Berlin: Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-berlin' },
   openGraph: {
@@ -69,7 +69,7 @@ export default function BerlinPage() {
             24h-Pflege in Berlin · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24h-Pflege Berlin — Betreuungskraft zuhause
+            24-Stunden-Pflege und Betreuung in Berlin
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
             Die Wohnung in Charlottenburg seit 40 Jahren, das Reihenhaus in Pankow, der Garten in Spandau: Berliner geben ihr Zuhause nicht auf — und Heimplätze mit kurzer Warteliste sind in der Stadt ohnehin rar. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist Tag und Nacht da, von Steglitz bis Weißensee. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
@@ -77,11 +77,11 @@ export default function BerlinPage() {
 
           {/* ① WAS IST 24H-PFLEGE */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?
+            Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Berlin heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[

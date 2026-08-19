@@ -4,7 +4,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Frankfurt & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Frankfurt | Primundus',
   description: '24-Stunden-Pflege in Frankfurt: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-frankfurt' },
   openGraph: {
@@ -74,7 +74,7 @@ export default function FrankfurtamMainPage() {
             24h-Pflege in Frankfurt am Main · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24h-Pflege Frankfurt am Main — Betreuungskraft zuhause
+            24-Stunden-Pflege und Betreuung in Frankfurt
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
             Bornheim, Sachsenhausen, Bockenheim: Wer in Frankfurt seine Wohnung seit Jahrzehnten hält, gibt sie nicht für einen Heimplatz auf — schon gar nicht zu den Preisen der Stadt. Eine Betreuungskraft von Primundus zieht mit ein, während die Kinder im Bankenviertel oder längst in anderen Städten arbeiten, und ist Tag und Nacht da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
@@ -82,11 +82,11 @@ export default function FrankfurtamMainPage() {
 
           {/* ① WAS IST 24H-PFLEGE */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?
+            Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Frankfurt heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[

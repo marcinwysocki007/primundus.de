@@ -8,7 +8,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 // ohne jede Seite. Ostfriesland: weite Wege, wenige Heimplätze.
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Wittmund & Umgebung | Primundus',
+  title: '24-Stunden-Pflege & Betreuung in Wittmund | Primundus',
   description:
     '24h-Pflege im Kreis Wittmund: Betreuungskraft zuhause in Wittmund, Esens, Carolinensiel & ganz Ostfriesland. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-wittmund' },
