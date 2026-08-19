@@ -49,7 +49,7 @@ export function ArticleCTA() {
             <div className="relative flex-shrink-0">
               <div className="w-11 h-11 rounded-xl overflow-hidden border border-[#E5E3DF]">
                 <Image
-                  src="/images/ilka-wysocki_pm-mallorca.webp"
+                  src="/images/ilka-wysocki-2026.webp"
                   alt="Ilka Wysocki – Pflegeberaterin Primundus"
                   width={44}
                   height={44}

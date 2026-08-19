@@ -43,7 +43,7 @@ export function FinalCTA() {
           <div className="flex items-center gap-6">
             <div className="w-20 h-20 rounded-full overflow-hidden bg-white/10 flex-shrink-0">
               <img
-                src="/images/ilka-wysocki_pm-mallorca.webp"
+                src="/images/ilka-wysocki-2026.webp"
                 alt="Ilka Wysocki"
                 className="w-full h-full object-cover object-top"
               />

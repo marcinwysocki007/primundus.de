@@ -130,7 +130,7 @@ export default function Page() {
                   href="tel:+4989200000830"
                   className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-white border border-[#E5E3DF] hover:border-[#8B7355] text-[#3D3D3D] font-bold text-[16px] rounded-xl transition-all duration-200"
                 >
-                  <img width={44} height={44} src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
+                  <img width={44} height={44} src="/images/ilka-wysocki-2026.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
                   089 200 000 830
                 </a>
               </div>
@@ -272,7 +272,7 @@ export default function Page() {
                     href="tel:+4989200000830"
                     className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-[#F8F7F5] hover:bg-[#F0EBE3] border border-[#E5E3DF] hover:border-[#8B7355] text-[#3D3D3D] font-bold text-[15px] rounded-xl transition-all duration-200"
                   >
-                    <img width={44} height={44} src="/images/ilka-wysocki_pm-mallorca.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
+                    <img width={44} height={44} src="/images/ilka-wysocki-2026.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
                     089 200 000 830
                   </a>
                 </div>
@@ -344,7 +344,7 @@ export default function Page() {
                 <img
                   width={72}
                   height={72}
-                  src="/images/ilka-wysocki_pm-mallorca.webp"
+                  src="/images/ilka-wysocki-2026.webp"
                   alt="Ilka Wysocki, Primundus"
                   className="w-[72px] h-[72px] rounded-full object-cover object-top flex-shrink-0"
                 />

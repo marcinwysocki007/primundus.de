@@ -43,7 +43,7 @@ export function SiteHeader() {
               className="hidden md:flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-lg bg-[#F8F7F5] hover:bg-[#8B7355] hover:text-white transition-all duration-200 group"
             >
               <Image
-                src="/images/ilka-wysocki_pm-mallorca.webp"
+                src="/images/ilka-wysocki-2026.webp"
                 alt="Ilka Wysocki"
                 width={40}
                 height={40}
@@ -153,7 +153,7 @@ export function SiteHeader() {
               <div className="flex items-center gap-3 px-4 py-3 border-b border-[#E5E3DF]">
                 <div className="relative flex-shrink-0">
                   <Image
-                    src="/images/ilka-wysocki_pm-mallorca.webp"
+                    src="/images/ilka-wysocki-2026.webp"
                     alt="Ilka Wysocki"
                     width={44}
                     height={44}
