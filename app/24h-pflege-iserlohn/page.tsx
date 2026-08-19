@@ -225,6 +225,9 @@ export default function IserlohnPage() {
           
 
           {/* ⑤ EINZUGSGEBIET */}
+          {/* ⑤ KREIS-H2 */}
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege im Märkischen Kreis</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen in Iserlohn und im Märkischen Kreis ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
           <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
             <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Iserlohn</p>
             <p className="text-[13px] text-[#6B5A44] leading-relaxed">Iserlohn und Märkischer Kreis: Lüdenscheid, Hemer, Menden, Plettenberg und alle Gemeinden im Märkischen Kreis</p>
