@@ -8,6 +8,7 @@ const SECTIONS = [
   { id: 'moeglich', title: 'Was ist zuhause möglich?' },
   { id: 'alltag', title: 'Alltag mit Demenz gestalten' },
   { id: 'pflege-24h', title: 'Wann braucht es 24h-Pflege?' },
+  { id: 'zuhause-oder-heim', title: 'Zuhause oder Heim?' },
   { id: 'pflegegrad', title: 'Pflegegrad & Leistungen' },
   { id: 'grenzen', title: 'Grenzen der häuslichen Pflege' },
   { id: 'faq', title: 'Häufige Fragen' },
@@ -52,11 +53,13 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Kann man Demenzkranke zuhause pflegen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — in den meisten Stadien ist Demenzpflege zuhause möglich, besonders mit einer 24h-Betreuungskraft. Die vertraute Umgebung verlangsamt nachweislich den Krankheitsverlauf. Die eigene Küche, die bekannten Räume, der gewohnte Garten — das gibt Orientierung und Sicherheit.' } },
-      { '@type': 'Question', name: 'Ab wann braucht man 24h-Pflege bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Spätestens wenn der Demenzkranke nicht mehr allein gelassen werden kann — also wenn Weglaufen (Hinlaufen), Herdplatten-Vergessen oder nächtliche Unruhe zur Gefahr werden. Auch wenn pflegende Angehörige an ihre Belastungsgrenze kommen, ist eine professionelle 24h-Kraft die richtige Lösung.' } },
-      { '@type': 'Question', name: 'Welchen Pflegegrad bekommt man bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Das hängt vom Stadium ab. Leichte Demenz führt oft zu Pflegegrad 2 oder 3, mittlere Demenz zu PG 3 oder 4, schwere Demenz zu PG 4 oder 5. Seit 2017 werden kognitive Einschränkungen im Begutachtungsinstrument (NBA) stärker gewichtet als früher.' } },
-      { '@type': 'Question', name: 'Wie viel kostet Demenzpflege zuhause?', acceptedAnswer: { '@type': 'Answer', text: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat je nach Pflegebedarf. Mit Pflegegeld (z.B. 599–800 €/Monat bei PG 3–4) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.500 €/Monat.' } },
-      { '@type': 'Question', name: 'Wie gestaltet man den Alltag mit Demenzkranken?', acceptedAnswer: { '@type': 'Answer', text: 'Feste Tagesstrukturen geben Orientierung. Bekannte Rituale beibehalten — Kaffeezeit, Lieblingsmusik, täglicher Spaziergang. Überreizung vermeiden. Kurze, einfache Sätze. Sanfte Beschäftigung die an frühere Interessen anknüpft. Konfrontation mit dem Vergessen vermeiden.' } },
+      { '@type': 'Question', name: 'Kann man Demenzkranke zuhause pflegen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — in den meisten Stadien ist Demenzpflege zuhause möglich und empfehlenswert. Die vertraute Umgebung gibt Orientierung und verlangsamt nachweislich den Krankheitsverlauf. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei zunehmendem Pflegebedarf erhalten.' } },
+      { '@type': 'Question', name: 'Ab wann braucht man 24h-Pflege bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Spätestens wenn der Demenzkranke nicht mehr allein gelassen werden kann — bei Weglaufen, gefährlichem Vergessen (Herd), Nachtunruhe oder wenn Angehörige erschöpft sind. Dann ist eine rund um die Uhr präsente Betreuungskraft die richtige Lösung.' } },
+      { '@type': 'Question', name: 'Welchen Pflegegrad bekommt man bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Je nach Stadium PG 2–5. Leichte Demenz: oft PG 2–3. Mittlere Demenz: PG 3–4. Schwere Demenz: PG 4–5. Seit 2017 werden kognitive Einschränkungen im Begutachtungsverfahren stärker gewichtet — Demenzbetroffene werden besser eingestuft als früher.' } },
+      { '@type': 'Question', name: 'Wie viel kostet Demenzpflege zuhause?', acceptedAnswer: { '@type': 'Answer', text: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.800 €/Monat.' } },
+      { '@type': 'Question', name: 'Ist bei Demenz das Zuhause oder das Pflegeheim besser?', acceptedAnswer: { '@type': 'Answer', text: 'Solange die Sicherheit gewährleistet ist, spricht bei Demenz vieles für das Zuhause: Die vertraute Umgebung gibt Orientierung, eine feste Betreuungskraft ist eine verlässliche Bezugsperson. Das Heim ist die bessere Wahl bei ausgeprägter Selbst- oder Fremdgefährdung oder wenn intensive medizinische Versorgung zuhause nicht sicherzustellen ist.' } },
+      { '@type': 'Question', name: 'Wie gestaltet man den Alltag mit Demenzkranken?', acceptedAnswer: { '@type': 'Answer', text: 'Feste Tagesstrukturen, bekannte Rituale beibehalten, kurze einfache Kommunikation, keine Korrektur des Vergessens. Sinnvolle Beschäftigung die an frühere Interessen anknüpft. Überreizung und Konfrontation mit dem Vergessen vermeiden.' } },
+      { '@type': 'Question', name: 'Wann ist ein Pflegeheim besser als Demenzpflege zuhause?', acceptedAnswer: { '@type': 'Answer', text: 'Wenn intensivmedizinische Behandlungspflege rund um die Uhr nötig ist, wenn aggressive Verhaltensweisen die Sicherheit gefährden, oder wenn kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist.' } }
     ],
   },
 ]
@@ -216,6 +219,32 @@ export default function DemenzPflegeZuhause() {
             <a href="/burnout-pflegende-angehoerige/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Burnout pflegende Angehörige</a>
           </p>
 
+          {/* SECTION 3b — Zuhause oder Heim */}
+          <h2 id="zuhause-oder-heim" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+            Demenz: zu Hause pflegen oder ins Heim?
+          </h2>
+          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+            Die Frage stellt sich in fast jeder Familie — und sie hat keine pauschale Antwort. Was sich
+            sagen lässt: Bei Demenz wiegt das Vertraute schwerer als bei jeder anderen Erkrankung. Wer die
+            eigene Küche, den Blick aus dem Fenster und die gewohnten Wege verliert, verliert Orientierung —
+            ein Umzug ist für Demenzkranke oft ein spürbarer Einschnitt. Zuhause mit einer festen
+            Betreuungskraft gibt es 1:1-Zuwendung von einem vertrauten Gesicht; im Heim wechseln
+            Bezugspersonen im Schichtdienst.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5">
+              <p className="text-[13px] font-bold text-[#3D7A5C] mb-2">Was für das Zuhause spricht</p>
+              <p className="text-[14px] text-[#2E2E2E] leading-relaxed">Vertraute Umgebung gibt Orientierung und Ruhe · eine feste Bezugsperson statt wechselnder Schichten · Tagesablauf nach den eigenen Gewohnheiten · Angehörige bleiben nah — und mit Kassenzuschüssen ist der Eigenanteil oft niedriger als der Heim-Eigenanteil von bundesweit Ø 3.364 €/Monat (vdek, Stand Juli 2026).</p>
+            </div>
+            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5">
+              <p className="text-[13px] font-bold text-[#8B7355] mb-2">Wann das Heim die bessere Wahl sein kann</p>
+              <p className="text-[14px] text-[#2E2E2E] leading-relaxed">Bei ausgeprägter Weglauftendenz mit Selbstgefährdung, die auch eine anwesende Betreuungskraft nicht auffangen kann · bei schweren Verhaltensauffälligkeiten mit Fremdgefährdung · wenn zusätzlich intensive medizinische Versorgung nötig ist, die zuhause nicht sicherzustellen ist. Spezialisierte Demenz-Wohnbereiche sind dafür eingerichtet.</p>
+            </div>
+          </div>
+          <p className="text-[15px] text-[#2E2E2E] mb-10">
+            → Zahlen im Detail: <a href="/pflegeheim-kostenvergleich/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege und Pflegeheim im Kostenvergleich</a>
+          </p>
+
           {/* SECTION 4 */}
           <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
             Pflegegrad bei Demenz & Kassenzuschüsse 2026
@@ -302,6 +331,7 @@ export default function DemenzPflegeZuhause() {
               { q: 'Ab wann braucht man 24h-Pflege bei Demenz?', a: 'Spätestens wenn der Demenzkranke nicht mehr allein gelassen werden kann — bei Weglaufen, gefährlichem Vergessen (Herd), Nachtunruhe oder wenn Angehörige erschöpft sind. Dann ist eine rund um die Uhr präsente Betreuungskraft die richtige Lösung.' },
               { q: 'Welchen Pflegegrad bekommt man bei Demenz?', a: 'Je nach Stadium PG 2–5. Leichte Demenz: oft PG 2–3. Mittlere Demenz: PG 3–4. Schwere Demenz: PG 4–5. Seit 2017 werden kognitive Einschränkungen im Begutachtungsverfahren stärker gewichtet — Demenzbetroffene werden besser eingestuft als früher.' },
               { q: 'Wie viel kostet Demenzpflege zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.800 €/Monat.' },
+              { q: 'Ist bei Demenz das Zuhause oder das Pflegeheim besser?', a: 'Solange die Sicherheit gewährleistet ist, spricht bei Demenz vieles für das Zuhause: Die vertraute Umgebung gibt Orientierung, eine feste Betreuungskraft ist eine verlässliche Bezugsperson. Das Heim ist die bessere Wahl bei ausgeprägter Selbst- oder Fremdgefährdung oder wenn intensive medizinische Versorgung zuhause nicht sicherzustellen ist.' },
               { q: 'Wie gestaltet man den Alltag mit Demenzkranken?', a: 'Feste Tagesstrukturen, bekannte Rituale beibehalten, kurze einfache Kommunikation, keine Korrektur des Vergessens. Sinnvolle Beschäftigung die an frühere Interessen anknüpft. Überreizung und Konfrontation mit dem Vergessen vermeiden.' },
               { q: 'Wann ist ein Pflegeheim besser als Demenzpflege zuhause?', a: 'Wenn intensivmedizinische Behandlungspflege rund um die Uhr nötig ist, wenn aggressive Verhaltensweisen die Sicherheit gefährden, oder wenn kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist.' },
             ].map((item, i) => (

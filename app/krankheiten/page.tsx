@@ -95,7 +95,7 @@ export default function Krankheiten() {
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Herzinsuffizienz — Pflege', href: '/herzinsuffizienz-pflege/', desc: 'Tägliche Gewichtskontrolle, Medikamentengabe, Notfallzeichen erkennen.' },
-              { titel: 'COPD — Pflege zuhause', href: '/copd-pflege-zuhause/', desc: 'Atemübungen, Sauerstofftherapie, Notfallplan für COPD-Patienten.' },
+              { titel: 'COPD — Pflege zuhause', href: '/copd-pflege-zuhause/', desc: 'Kräfte einteilen, Atemnot ruhig begleiten, Infekte fernhalten — und wann der Arzt gerufen werden muss' },
               { titel: 'Diabetes — Pflege Senioren', href: '/diabetes-pflege-senioren/', desc: 'Blutzuckerkontrolle, Ernährung, Fußpflege und Hypoglykämie im Pflegealltag.' },
               { titel: 'Osteoporose — Pflege zuhause', href: '/osteoporose-pflege-zuhause/', desc: 'Sturzprävention, Schmerzkontrolle, Mobilität erhalten bei Osteoporose.' },
               { titel: 'Krebspatienten — Pflege zuhause', href: '/krebspatienten-zuhause-pflegen/', desc: 'Unterstützung während Therapie und in der palliativen Phase zu Hause.' },
