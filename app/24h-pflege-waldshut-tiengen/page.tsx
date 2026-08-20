@@ -4,13 +4,13 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Berlin | Primundus',
-  description: '24-Stunden-Pflege in Berlin: Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-berlin' },
+  title: '24-Stunden-Pflege & Betreuung in Waldshut-Tiengen',
+  description: '24-Stunden-Pflege in Waldshut-Tiengen: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  alternates: { canonical: 'https://primundus.de/24h-pflege-waldshut-tiengen' },
   openGraph: {
-    title: '24h-Pflege Berlin | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Berlin. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-berlin',
+    title: '24h-Pflege Waldshut-Tiengen — Betreuungskraft zuhause | Primundus',
+    description: 'Geprüfte 24h-Betreuungskraft in Waldshut-Tiengen. Täglich kündbar, rechtssicher, startklar.',
+    url: 'https://primundus.de/24h-pflege-waldshut-tiengen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -21,12 +21,12 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Primundus — 24h-Pflege Berlin',
-    description: '24h-Betreuungskräfte in Berlin. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-berlin',
+    name: 'Primundus — 24h-Pflege Waldshut-Tiengen',
+    description: '24h-Betreuungskräfte in Waldshut-Tiengen. Rechtssicher, täglich kündbar, startklar.',
+    url: 'https://primundus.de/24h-pflege-waldshut-tiengen',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
-    areaServed: { '@type': 'State', name: 'Berlin' },
+    areaServed: { '@type': 'City', name: 'Waldshut-Tiengen' },
     priceRange: '2.200–3.500 €/Monat',
   },
   {
@@ -34,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Berlin', item: 'https://primundus.de/24h-pflege-berlin' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Waldshut-Tiengen', item: 'https://primundus.de/24h-pflege-waldshut-tiengen' },
     ],
   },
   {
@@ -43,14 +43,19 @@ const schemaMarkup = [
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Berlin?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
+        name: 'Was kostet eine 24h-Pflegekraft in Waldshut-Tiengen?',
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie schnell kann eine 24h-Pflegekraft in Waldshut-Tiengen starten?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
     ],
   },
 ]
 
-export default function BerlinPage() {
+export default function WaldshutTiengenPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
@@ -62,17 +67,17 @@ export default function BerlinPage() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">24h-Pflege Berlin</span>
+            <span className="text-[#1C1C1C]">24h-Pflege Waldshut-Tiengen</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
-            24h-Pflege in Berlin · Aktualisiert April 2026
+          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">
+            24h-Pflege in Waldshut-Tiengen · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24-Stunden-Pflege und Betreuung in Berlin
+            24-Stunden-Pflege und Betreuung in Waldshut-Tiengen
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Die Wohnung in Charlottenburg seit 40 Jahren, das Reihenhaus in Pankow, der Garten in Spandau: Berliner geben ihr Zuhause nicht auf — und Heimplätze mit kurzer Warteliste sind in der Stadt ohnehin rar. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist Tag und Nacht da, von Steglitz bis Weißensee. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
+            Ob in der Waldshuter Altstadt, in Tiengen oder in den Ortsteilen ringsum: Am Hochrhein bleibt man dort, wo man verwurzelt ist. Eine Betreuungskraft von Primundus sorgt dafür, dass das Alter daran nichts ändert: Sie zieht mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
@@ -81,7 +86,7 @@ export default function BerlinPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Berlin heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Waldshut-Tiengen heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[
@@ -169,11 +174,11 @@ export default function BerlinPage() {
 
           {/* ④ KOSTEN */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Kosten & Kassenzuschüsse in Berlin 2026
+            Kosten & Kassenzuschüsse in Waldshut-Tiengen 2026
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
             <div className="bg-[#F8F7F5] px-5 py-3 border-b border-[#E5E3DF]">
-              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Kostenbeispiel — Pflegegrad 3 in Berlin</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Kostenbeispiel — Pflegegrad 3 in Waldshut-Tiengen</p>
             </div>
             <div className="px-5 py-4 space-y-2">
               {[
@@ -189,11 +194,11 @@ export default function BerlinPage() {
               ))}
               <div className="flex justify-between items-center text-[15px] font-bold pt-3 mt-1 border-t border-[#E5E3DF]">
                 <span className="text-[#1C1C1C]">Ihr Eigenanteil ca.</span>
-                <span className="text-[#8B7355]">ca. 1000–2000 €/Monat</span>
+                <span className="text-[#8B7355]">ca. 1200–2300 €/Monat</span>
               </div>
             </div>
             <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-5 py-3">
-              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim in Brandenburg: Eigenanteil rund 3.020 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
+              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim in Baden-Württemberg: Eigenanteil rund 3.660 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
             </div>
           </div>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
@@ -221,21 +226,22 @@ export default function BerlinPage() {
 
           {/* ⑤ EINZUGSGEBIET */}
           {/* ⑤ KREIS-H2 */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege in allen Berliner Bezirken</h2>
-          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen in ganz Berlin ein — in Charlottenburg-Wilmersdorf ebenso wie in Steglitz-Zehlendorf, Pankow, Tempelhof-Schöneberg, Reinickendorf oder Spandau. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege im Landkreis Waldshut</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen in Waldshut-Tiengen und im Landkreis Waldshut ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
           <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Berlin</p>
-            <p className="text-[13px] text-[#6B5A44] leading-relaxed">Alle Berliner Bezirke: Mitte, Charlottenburg-Wilmersdorf, Steglitz-Zehlendorf, Tempelhof-Schöneberg, Kreuzberg-Friedrichshain, Pankow, Treptow-Köpenick, Marzahn-Hellersdorf, Lichtenberg, Neukölln, Reinickendorf, Spandau</p>
+            <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Waldshut-Tiengen</p>
+            <p className="text-[13px] text-[#6B5A44] leading-relaxed">Waldshut-Tiengen und Landkreis Waldshut: Bad Säckingen, Laufenburg, St. Blasien, Bonndorf und alle Gemeinden im Landkreis Waldshut</p>
           </div>
 
           {/* ⑥ FAQ */}
-          <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Berlin</h2>
+          <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Waldshut-Tiengen</h2>
           <div className="space-y-3 mb-12">
             {[
-              { q: 'Was kostet eine 24h-Pflegekraft in Berlin?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
-              { q: 'Wie schnell kann eine 24h-Pflegekraft in Berlin starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Berlin — auch in ländlichen Regionen.' },
+              { q: 'Was kostet eine 24h-Pflegekraft in Waldshut-Tiengen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Waldshut-Tiengen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-              { q: 'Ist 24h-Pflege über Primundus in Berlin rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Ist 24h-Pflege über Primundus in Waldshut-Tiengen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Welches Einzugsgebiet wird in Waldshut-Tiengen bedient?', a: 'Waldshut-Tiengen und Landkreis Waldshut: Bad Säckingen, Laufenburg, St. Blasien, Bonndorf und alle Gemeinden im Landkreis Waldshut' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
@@ -247,25 +253,25 @@ export default function BerlinPage() {
             ))}
           </div>
 
-          {/* TRENNLINIE */}
+          {/* ⑦ TRENNLINIE */}
           <div className="flex items-center gap-4 my-10">
             <div className="flex-1 h-px bg-[#E5E3DF]" />
             <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8B8B8B] whitespace-nowrap">So arbeiten wir</p>
             <div className="flex-1 h-px bg-[#E5E3DF]" />
           </div>
 
-          {/* KONDITIONEN */}
+          {/* ⑧ KONDITIONEN */}
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5 mb-8">
-            <div className="flex items-start gap-3 pb-4 mb-2 border-b border-[#E5E3DF]">
-              <span className="w-7 h-7 rounded-full bg-[#8B7355] text-white text-[13px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
-              <div className="flex-1 min-w-0"><span className="text-[15px] font-bold text-[#1C1C1C] block mb-1">Unsere Konditionen</span>
-              <span className="bg-[#E8F5EE] text-[#2A5C3F] text-[11px] font-semibold px-3 py-1 rounded-full inline-block">100% Sorgenfrei und ohne Risiko</span></div>
+            <div className="flex items-center gap-3 pb-4 mb-2 border-b border-[#E5E3DF]">
+              <span className="w-7 h-7 rounded-full bg-[#8B7355] text-white text-[13px] font-bold flex items-center justify-center flex-shrink-0">2</span>
+              <span className="text-[15px] font-bold text-[#1C1C1C] flex-1">Unsere Konditionen</span>
+              <span className="bg-[#E8F5EE] text-[#2A5C3F] text-[11px] font-semibold px-3 py-1 rounded-full whitespace-nowrap">100% Sorgenfrei und ohne Risiko</span>
             </div>
             {[
               { icon: '🛡', title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
               { icon: '📄', title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
               { icon: '⏱', title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
-              { icon: '👤', title: 'Persönlicher Ansprechpartner', desc: '7 Tage/Woche für Sie da' },
+              { icon: '👤', title: 'Persönlicher Ansprechpartner', desc: '7 Tage die Woche für Sie da' },
             ].map((item) => (
               <div key={item.title} className="flex gap-3 py-3 border-b border-[#F0EDE8] last:border-0">
                 <div className="w-9 h-9 rounded-lg border border-[#E5E3DF] flex items-center justify-center flex-shrink-0 text-lg">{item.icon}</div>
@@ -284,7 +290,7 @@ export default function BerlinPage() {
             </div>
           </div>
 
-          {/* ABLAUF */}
+          {/* ⑨ ABLAUF */}
           <h2 className="text-[22px] md:text-[26px] font-bold text-[#1C1C1C] text-center mb-8">In 2 Minuten zu Ihrem persönlichen Angebot</h2>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
@@ -301,16 +307,16 @@ export default function BerlinPage() {
             ))}
           </div>
           <div className="text-center mb-12">
-            <a href="https://kostenrechner.primundus.de/?start=1&src=apex-24h-pflege-berlin" className="inline-flex items-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[16px] py-4 px-10 rounded-full transition-all duration-200">
-              Kosten & Pflegekräfte ansehen
+            <a href="https://kostenrechner.primundus.de/?start=1&src=apex-24h-pflege-waldshut-tiengen" className="inline-flex items-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[16px] py-4 px-10 rounded-full transition-all duration-200 shadow-sm hover:shadow-md">
+              Betreuung anfragen
             </a>
           </div>
 
-          {/* CTA */}
-          <NearbyCities current="berlin" />
+          {/* ⑩ CTA */}
+          <NearbyCities current="aalen" />
 
           <ArticleCTA
-            headline="Ist 24h-Pflege in Berlin die richtige Lösung?"
+            headline="Ist 24h-Pflege in Waldshut-Tiengen die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."
           />
 

@@ -203,6 +203,7 @@ export const STAEDTE: Stadt[] = [
   { slug: 'viersen', name: 'Viersen', region: 'nordrhein-westfalen' },
   { slug: 'villingen-schwenningen', name: 'Villingen-Schwenningen', region: 'baden-wuerttemberg' },
   { slug: 'waiblingen', name: 'Waiblingen', region: 'baden-wuerttemberg' },
+  { slug: 'waldshut-tiengen', name: 'Waldshut-Tiengen', region: 'baden-wuerttemberg' },
   { slug: 'weiden', name: 'Weiden i.d. Oberpfalz', region: 'bayern' },
   { slug: 'weilheim', name: 'Weilheim', region: 'bayern' },
   { slug: 'weilheim-schongau', name: 'Weilheim-Schongau', region: 'bayern' },

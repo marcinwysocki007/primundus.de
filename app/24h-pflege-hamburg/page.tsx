@@ -220,6 +220,9 @@ export default function HamburgPage() {
           
 
           {/* ⑤ EINZUGSGEBIET */}
+          {/* ⑤ KREIS-H2 */}
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege in allen Hamburger Bezirken</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen in ganz Hamburg ein — in Wandsbek und Volksdorf ebenso wie in Altona, Eimsbüttel, Hamburg-Nord, Bergedorf oder Harburg. Auch im Umland sind wir da: in Quickborn, Norderstedt und Pinneberg, in Ahrensburg und im Kreis Stormarn. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
           <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
             <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Hamburg</p>
             <p className="text-[13px] text-[#6B5A44] leading-relaxed">Alle Hamburger Bezirke: Altona, Eimsbüttel, Hamburg-Mitte, Hamburg-Nord, Harburg, Bergedorf, Wandsbek sowie angrenzende Landkreise Pinneberg, Stormarn, Harburg und Lüneburg</p>
