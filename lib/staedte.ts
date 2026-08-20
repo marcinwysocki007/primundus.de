@@ -57,6 +57,7 @@ export const STAEDTE: Stadt[] = [
   { slug: 'bremen', name: 'Bremen', region: 'niedersachsen' },
   { slug: 'bremerhaven', name: 'Bremerhaven', region: 'niedersachsen' },
   { slug: 'bruchsal', name: 'Bruchsal', region: 'baden-wuerttemberg' },
+  { slug: 'charlottenburg', name: 'Berlin-Charlottenburg', region: 'brandenburg' },
   { slug: 'chemnitz', name: 'Chemnitz', region: 'sachsen' },
   { slug: 'cochem', name: 'Cochem an der Mosel', region: 'rheinland-pfalz' },
   { slug: 'cottbus', name: 'Cottbus', region: 'brandenburg' },

@@ -224,6 +224,9 @@ export default function BreisachamRheinPage() {
           </div>
           
 
+          {/* ④b POLEN */}
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">Polnische Betreuungskräfte in Freiburg & Umland</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-8">Unsere Betreuungskräfte kommen überwiegend aus Polen — bei Primundus angestellt, mit geprüften Deutschkenntnissen und Erfahrung in der häuslichen Betreuung. Auch in Freiburg & Umland und Umgebung sind sie im Einsatz. Wer gerade verfügbar ist, sehen Sie direkt mit Ihrem Angebot — mit Profil, Erfahrung und Sprachniveau. Was eine polnische Betreuungskraft kostet, wie das Entsendemodell rechtlich funktioniert und wie schnell es geht: <a href="/pflegekraft-aus-polen" className="text-[#8B7355] font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</p>
           {/* ⑤ EINZUGSGEBIET */}
           {/* ⑤ KREIS-H2 */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege im westlichen Breisgau-Hochschwarzwald</h2>

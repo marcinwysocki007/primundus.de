@@ -4,13 +4,13 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Gütersloh | Primundus',
-  description: '24-Stunden-Pflege in Gütersloh: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
-  alternates: { canonical: 'https://primundus.de/24h-pflege-guetersloh' },
+  title: '24-Stunden-Pflege & Betreuung in Berlin-Charlottenburg',
+  description: '24-Stunden-Pflege in Berlin-Charlottenburg: Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  alternates: { canonical: 'https://primundus.de/24h-pflege-charlottenburg' },
   openGraph: {
-    title: '24h-Pflege Gütersloh — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Gütersloh. Täglich kündbar, rechtssicher, startklar.',
-    url: 'https://primundus.de/24h-pflege-guetersloh',
+    title: '24h-Pflege Berlin-Charlottenburg | Primundus',
+    description: 'Geprüfte 24h-Betreuungskraft in Berlin-Charlottenburg. Täglich kündbar, rechtssicher, startklar.',
+    url: 'https://primundus.de/24h-pflege-charlottenburg',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
@@ -21,12 +21,12 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Primundus — 24h-Pflege Gütersloh',
-    description: '24h-Betreuungskräfte in Gütersloh. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-guetersloh',
+    name: 'Primundus — 24h-Pflege Berlin-Charlottenburg',
+    description: '24h-Betreuungskräfte in Berlin-Charlottenburg. Rechtssicher, täglich kündbar, startklar.',
+    url: 'https://primundus.de/24h-pflege-charlottenburg',
     telephone: '+4989200000830',
     email: 'info@primundus.de',
-    areaServed: { '@type': 'City', name: 'Gütersloh' },
+    areaServed: { '@type': 'State', name: 'Berlin-Charlottenburg' },
     priceRange: '2.200–3.500 €/Monat',
   },
   {
@@ -34,7 +34,7 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Gütersloh', item: 'https://primundus.de/24h-pflege-guetersloh' },
+      { '@type': 'ListItem', position: 2, name: '24h-Pflege Berlin-Charlottenburg', item: 'https://primundus.de/24h-pflege-charlottenburg' },
     ],
   },
   {
@@ -43,19 +43,14 @@ const schemaMarkup = [
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Gütersloh?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1300–2400 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Gütersloh starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+        name: 'Was kostet eine 24h-Pflegekraft in Berlin-Charlottenburg?',
+        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
       },
     ],
   },
 ]
 
-export default function GueterslohPage() {
+export default function BerlinCharlottenburgPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
@@ -67,18 +62,17 @@ export default function GueterslohPage() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">24h-Pflege Gütersloh</span>
+            <span className="text-[#1C1C1C]">24h-Pflege Berlin-Charlottenburg</span>
           </nav>
 
           <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
-            24h-Pflege in Gütersloh · Aktualisiert April 2026
+            24h-Pflege in Berlin-Charlottenburg · Aktualisiert April 2026
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
-            24-Stunden-Pflege und Betreuung in Gütersloh
+            24-Stunden-Pflege und Betreuung in Berlin-Charlottenburg
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
-            Ein Arbeitsleben bei Miele, Bertelsmann oder auf dem Hof im Umland — und den Ruhestand dann im eigenen Zuhause in Isselhorst, Spexard oder Avenwedde verbringen: So stellen sich die meisten Gütersloher das Alter vor. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
-          </p>
+            Die Altbauwohnung an der Kantstraße, das Haus am Lietzensee, die Etage in Schmargendorf: Wer in Charlottenburg alt geworden ist, will hier nicht weg — und Heimplätze im Berliner Westen sind knapp. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist rund um die Uhr da. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.</p>
 
           {/* ① WAS IST 24H-PFLEGE */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
@@ -86,7 +80,7 @@ export default function GueterslohPage() {
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
-              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Gütersloh heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
+              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Berlin-Charlottenburg heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[
@@ -174,11 +168,11 @@ export default function GueterslohPage() {
 
           {/* ④ KOSTEN */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
-            Kosten & Kassenzuschüsse in Gütersloh 2026
+            Kosten & Kassenzuschüsse in Berlin-Charlottenburg 2026
           </h2>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
             <div className="bg-[#F8F7F5] px-5 py-3 border-b border-[#E5E3DF]">
-              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Kostenbeispiel — Pflegegrad 3 in Gütersloh</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Kostenbeispiel — Pflegegrad 3 in Berlin-Charlottenburg</p>
             </div>
             <div className="px-5 py-4 space-y-2">
               {[
@@ -194,11 +188,11 @@ export default function GueterslohPage() {
               ))}
               <div className="flex justify-between items-center text-[15px] font-bold pt-3 mt-1 border-t border-[#E5E3DF]">
                 <span className="text-[#1C1C1C]">Ihr Eigenanteil ca.</span>
-                <span className="text-[#8B7355]">ca. 1300–2400 €/Monat</span>
+                <span className="text-[#8B7355]">ca. 1000–2000 €/Monat</span>
               </div>
             </div>
             <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-5 py-3">
-              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim in Nordrhein-Westfalen: Eigenanteil rund 3.580 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
+              <p className="text-[12px] text-[#8B8B8B]">Pflegeheim in Brandenburg: Eigenanteil rund 3.020 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
             </div>
           </div>
           <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
@@ -225,26 +219,25 @@ export default function GueterslohPage() {
           
 
           {/* ④b POLEN */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">Polnische Betreuungskräfte in Gütersloh</h2>
-          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-8">Unsere Betreuungskräfte kommen überwiegend aus Polen — bei Primundus angestellt, mit geprüften Deutschkenntnissen und Erfahrung in der häuslichen Betreuung. Auch in Gütersloh und Umgebung sind sie im Einsatz. Wer gerade verfügbar ist, sehen Sie direkt mit Ihrem Angebot — mit Profil, Erfahrung und Sprachniveau. Was eine polnische Betreuungskraft kostet, wie das Entsendemodell rechtlich funktioniert und wie schnell es geht: <a href="/pflegekraft-aus-polen" className="text-[#8B7355] font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</p>
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">Polnische Betreuungskräfte in Berlin-Charlottenburg</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-8">Unsere Betreuungskräfte kommen überwiegend aus Polen — bei Primundus angestellt, mit geprüften Deutschkenntnissen und Erfahrung in der häuslichen Betreuung. Auch in Berlin-Charlottenburg und Umgebung sind sie im Einsatz. Wer gerade verfügbar ist, sehen Sie direkt mit Ihrem Angebot — mit Profil, Erfahrung und Sprachniveau. Was eine polnische Betreuungskraft kostet, wie das Entsendemodell rechtlich funktioniert und wie schnell es geht: <a href="/pflegekraft-aus-polen" className="text-[#8B7355] font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</p>
           {/* ⑤ EINZUGSGEBIET */}
           {/* ⑤ KREIS-H2 */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege im Kreis Gütersloh</h2>
-          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen in Gütersloh und im Kreis Gütersloh ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege in Charlottenburg-Wilmersdorf und im Berliner Westen</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen im ganzen Bezirk ein — in Charlottenburg und Westend ebenso wie in Wilmersdorf, Schmargendorf, Halensee oder Grunewald. Auch die Nachbarbezirke Spandau und Steglitz-Zehlendorf sind abgedeckt. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
           <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Gütersloh</p>
-            <p className="text-[13px] text-[#6B5A44] leading-relaxed">Gütersloh und Kreis Gütersloh: Bielefeld-Südost, Rheda-Wiedenbrück, Herzebrock-Clarholz, Borgholzhausen und alle Gemeinden im Kreis Gütersloh</p>
+            <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Berlin-Charlottenburg</p>
+            <p className="text-[13px] text-[#6B5A44] leading-relaxed">Charlottenburg-Wilmersdorf mit allen Ortsteilen: Charlottenburg, Westend, Wilmersdorf, Schmargendorf, Halensee, Grunewald sowie die Nachbarbezirke Spandau und Steglitz-Zehlendorf</p>
           </div>
 
           {/* ⑥ FAQ */}
-          <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Gütersloh</h2>
+          <h2 className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen — 24h-Pflege in Berlin-Charlottenburg</h2>
           <div className="space-y-3 mb-12">
             {[
-              { q: 'Was kostet eine 24h-Pflegekraft in Gütersloh?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1300–2400 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-              { q: 'Wie schnell kann eine 24h-Pflegekraft in Gütersloh starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+              { q: 'Was kostet eine 24h-Pflegekraft in Berlin-Charlottenburg?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Berlin-Charlottenburg starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Berlin — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-              { q: 'Ist 24h-Pflege über Primundus in Gütersloh rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-              { q: 'Welches Einzugsgebiet wird in Gütersloh bedient?', a: 'Gütersloh und Kreis Gütersloh: Bielefeld-Südost, Rheda-Wiedenbrück, Herzebrock-Clarholz, Borgholzhausen und alle Gemeinden im Kreis Gütersloh' },
+              { q: 'Ist 24h-Pflege über Primundus in Berlin-Charlottenburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
@@ -256,14 +249,14 @@ export default function GueterslohPage() {
             ))}
           </div>
 
-          {/* ⑦ TRENNLINIE */}
+          {/* TRENNLINIE */}
           <div className="flex items-center gap-4 my-10">
             <div className="flex-1 h-px bg-[#E5E3DF]" />
             <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8B8B8B] whitespace-nowrap">So arbeiten wir</p>
             <div className="flex-1 h-px bg-[#E5E3DF]" />
           </div>
 
-          {/* ⑧ KONDITIONEN */}
+          {/* KONDITIONEN */}
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5 mb-8">
             <div className="flex items-start gap-3 pb-4 mb-2 border-b border-[#E5E3DF]">
               <span className="w-7 h-7 rounded-full bg-[#8B7355] text-white text-[13px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
@@ -293,7 +286,7 @@ export default function GueterslohPage() {
             </div>
           </div>
 
-          {/* ⑨ ABLAUF */}
+          {/* ABLAUF */}
           <h2 className="text-[22px] md:text-[26px] font-bold text-[#1C1C1C] text-center mb-8">In 2 Minuten zu Ihrem persönlichen Angebot</h2>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
@@ -310,16 +303,16 @@ export default function GueterslohPage() {
             ))}
           </div>
           <div className="text-center mb-12">
-            <a href="https://kostenrechner.primundus.de/?start=1&src=apex-24h-pflege-guetersloh" className="inline-flex items-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[16px] py-4 px-10 rounded-full transition-all duration-200 shadow-sm hover:shadow-md">
+            <a href="https://kostenrechner.primundus.de/?start=1&src=apex-24h-pflege-charlottenburg" className="inline-flex items-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[16px] py-4 px-10 rounded-full transition-all duration-200">
               Kosten & Pflegekräfte ansehen
             </a>
           </div>
 
-          {/* ⑩ CTA */}
-          <NearbyCities current="guetersloh" />
+          {/* CTA */}
+          <NearbyCities current="berlin" />
 
           <ArticleCTA
-            headline="Ist 24h-Pflege in Gütersloh die richtige Lösung?"
+            headline="Ist 24h-Pflege in Berlin-Charlottenburg die richtige Lösung?"
             subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."
           />
 

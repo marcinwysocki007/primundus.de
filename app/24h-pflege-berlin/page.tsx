@@ -219,10 +219,13 @@ export default function BerlinPage() {
           </div>
           
 
+          {/* ④b POLEN */}
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">Polnische Betreuungskräfte in Berlin</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-8">Unsere Betreuungskräfte kommen überwiegend aus Polen — bei Primundus angestellt, mit geprüften Deutschkenntnissen und Erfahrung in der häuslichen Betreuung. Auch in Berlin und Umgebung sind sie im Einsatz. Wer gerade verfügbar ist, sehen Sie direkt mit Ihrem Angebot — mit Profil, Erfahrung und Sprachniveau. Was eine polnische Betreuungskraft kostet, wie das Entsendemodell rechtlich funktioniert und wie schnell es geht: <a href="/pflegekraft-aus-polen" className="text-[#8B7355] font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</p>
           {/* ⑤ EINZUGSGEBIET */}
           {/* ⑤ KREIS-H2 */}
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">24-Stunden-Pflege in allen Berliner Bezirken</h2>
-          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen in ganz Berlin ein — in Charlottenburg-Wilmersdorf ebenso wie in Steglitz-Zehlendorf, Pankow, Tempelhof-Schöneberg, Reinickendorf oder Spandau. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">Unsere Betreuungskräfte ziehen in ganz Berlin ein — in <a href="/24h-pflege-charlottenburg" className="text-[#8B7355] font-semibold hover:underline">Charlottenburg-Wilmersdorf</a> ebenso wie in Steglitz-Zehlendorf, Pankow, Tempelhof-Schöneberg, Reinickendorf oder Spandau. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
           <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
             <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Berlin</p>
             <p className="text-[13px] text-[#6B5A44] leading-relaxed">Alle Berliner Bezirke: Mitte, Charlottenburg-Wilmersdorf, Steglitz-Zehlendorf, Tempelhof-Schöneberg, Kreuzberg-Friedrichshain, Pankow, Treptow-Köpenick, Marzahn-Hellersdorf, Lichtenberg, Neukölln, Reinickendorf, Spandau</p>

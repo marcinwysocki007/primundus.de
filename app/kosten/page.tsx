@@ -13,6 +13,8 @@ const GrafikKostenvergleich = dynamic(
 const SECTIONS = [
   { id: 'kosten-uebersicht', title: 'Was kostet 24h-Pflege?' },
   { id: 'kassenzuschuesse', title: 'Kassenzuschüsse 2026' },
+  { id: 'pflegegrad-kosten', title: 'Kosten nach Pflegegrad' },
+  { id: 'polnische-pflegekraft', title: 'Polnische Pflegekraft' },
   { id: 'vergleich', title: 'Vergleich: 24h-Pflege vs. Pflegeheim' },
   { id: 'eigenanteil', title: 'Eigenanteil senken' },
   { id: 'faq', title: 'Häufige Fragen' },
@@ -57,11 +59,15 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege im Monat?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat, je nach Pflegebedarf und Qualifikation der Betreuungskraft. Hinzu kommen Kost und Logis (ca. 200–300 €/Monat). Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil deutlich.' } },
-      { '@type': 'Question', name: 'Was zahlt die Pflegekasse bei 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse zahlt Pflegegeld (347–990 €/Monat je nach Pflegegrad), den Entlastungsbetrag (131 €/Monat) und das Entlastungsbudget (3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege). Bei Pflegegrad 3 macht das zusammen bis zu 870 € monatliche Entlastung.' } },
-      { '@type': 'Question', name: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ja — der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat. Bei Pflegegrad 3 kann der Eigenanteil bei 24h-Pflege mit Kassenzuschüssen auf unter 2.000 €/Monat sinken. Gleichzeitig bleibt der Pflegebedürftige im eigenen Zuhause.' } },
-      { '@type': 'Question', name: 'Was ist das Entlastungsbudget 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Das Entlastungsbudget beträgt 3.539 €/Jahr und fasst seit Juli 2025 Verhinderungspflege und Kurzzeitpflege zusammen. Es gilt für PG 2–5 und kann flexibel eingesetzt werden. 2026 ist das erste volle Jahr ohne Übergangsregelungen.' } },
-      { '@type': 'Question', name: 'Kann man Pflegekosten von der Steuer absetzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — 20 % der Aufwendungen für haushaltsnahe Dienstleistungen können als Steuerermäßigung geltend gemacht werden, maximal 4.000 € Steuerersparnis pro Jahr. Das entspricht bei Kosten von 2.500 €/Monat einer jährlichen Entlastung von bis zu 4.000 €.' } },
+      { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege im Monat?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 € pro Monat je nach Pflegebedarf. Hinzu kommen Kost und Logis (ca. 200–300 €/Monat). Mit Pflegegeld und Entlastungsbetrag sinkt der Eigenanteil bei Pflegegrad 3 auf ca. 1.700–2.000 € pro Monat.' } },
+      { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 3?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 3 zahlt die Pflegekasse 599 € Pflegegeld und anteilig ca. 295 € aus dem Entlastungsbudget. Bei Kosten ab 2.200 €/Monat beginnt der Eigenanteil damit bei ca. 1.310 €/Monat — die Steuerermäßigung für haushaltsnahe Dienstleistungen senkt ihn weiter.' } },
+      { '@type': 'Question', name: 'Was kostet eine polnische Pflegekraft im Monat?', acceptedAnswer: { '@type': 'Answer', text: 'Eine polnische Betreuungskraft kostet bei Primundus 2.200–3.500 € pro Monat — angestellt bei Primundus, legal über das Entsendemodell mit A1-Bescheinigung. Mit Pflegegeld und anteiligem Entlastungsbudget sinkt der Eigenanteil je nach Pflegegrad auf ca. 920–1.560 € im Monat.' } },
+      { '@type': 'Question', name: 'Was kostet eine 24-Stunden-Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Eine 24-Stunden-Pflegekraft kostet bei Primundus 2.200–3.500 € pro Monat, abhängig von Deutschkenntnissen und Pflegebedarf. Darin enthalten sind Lohn und Sozialabgaben der Betreuungskraft sowie Ersatz bei Ausfall; hinzu kommen Kost und Logis (ca. 200–300 €/Monat).' } },
+      { '@type': 'Question', name: 'Was zahlt die Pflegekasse bei 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegeld (347–990 €/Monat je nach Pflegegrad) + Entlastungsbetrag (131 €/Monat) + Entlastungsbudget (3.539 €/Jahr). Bei PG 3 macht das zusammen bis zu 730 € monatliche Entlastung plus 295 €/Monat aus dem Entlastungsbudget.' } },
+      { '@type': 'Question', name: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ja — der Pflegeheim-Eigenanteil liegt bundesweit bei Ø 3.364 €/Monat (2026). Bei PG 3 kann der 24h-Pflege-Eigenanteil mit Kassenzuschüssen auf unter 2.000 €/Monat sinken. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.' } },
+      { '@type': 'Question', name: 'Was ist das Entlastungsbudget 2026?', acceptedAnswer: { '@type': 'Answer', text: '3.539 €/Jahr, seit Juli 2025 als gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Gilt für PG 2–5, flexibel aufteilbar, Vorpflegezeit entfällt. 2026 ist das erste volle Jahr ohne Übergangsregelungen. Achtung: verfällt am 31. Dezember.' } },
+      { '@type': 'Question', name: 'Kann man Pflegekosten von der Steuer absetzen?', acceptedAnswer: { '@type': 'Answer', text: '20 % der Aufwendungen für haushaltsnahe Dienstleistungen — max. 4.000 € Steuerersparnis/Jahr. Bei 2.500 €/Monat Betreuungskosten (30.000 €/Jahr) ergibt das die volle Maximalerstattung von 4.000 €.' } },
+      { '@type': 'Question', name: 'Wie kann ich den Eigenanteil senken?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegrad korrekt und vollständig beantragen, Entlastungsbudget voll ausschöpfen, steuerlich absetzen, Pflegehilfsmittel (42 €/Monat) beantragen, Wohnraumanpassungsförderung (bis 4.180 € je Maßnahme) nutzen.' } }
     ],
   },
 ]
@@ -252,6 +258,60 @@ export default function Kosten() {
             <a href="/pflegegeld/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegeld 2026 — Beträge & Anspruch</a>
           </p>
 
+
+          {/* SECTION 2b — Kosten nach Pflegegrad */}
+          <h2 id="pflegegrad-kosten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+            Was kostet 24-Stunden-Pflege nach Pflegegrad?
+          </h2>
+          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+            Der Preis der Betreuung selbst hängt nicht vom Pflegegrad ab — wohl aber Ihr Eigenanteil,
+            denn mit dem Pflegegrad steigen die Kassenleistungen. Bei Kosten von 2.200–3.500 €/Monat
+            ergibt sich nach Abzug von Pflegegeld und anteiligem Entlastungsbudget (ca. 295 €/Monat):
+          </p>
+          <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-4">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[520px]">
+                <thead><tr className="bg-[#F8F7F5]">
+                  {['Pflegegrad', 'Pflegegeld/Monat', 'Entlastungsbudget anteilig', 'Eigenanteil ab ca.'].map((h) => (
+                    <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {[['PG 2', '347 €', 'ca. 295 €', 'ab ca. 1.560 €/Monat'], ['PG 3', '599 €', 'ca. 295 €', 'ab ca. 1.310 €/Monat'], ['PG 4', '800 €', 'ca. 295 €', 'ab ca. 1.110 €/Monat'], ['PG 5', '990 €', 'ca. 295 €', 'ab ca. 920 €/Monat']].map(([pg, geld, budget, rest], i) => (
+                    <tr key={pg} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
+                      <td className="px-4 py-3 text-[13px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{pg}</td>
+                      <td className="px-4 py-3 text-[13px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{geld}</td>
+                      <td className="px-4 py-3 text-[13px] text-[#3D7A5C] border-b border-[#E5E3DF]">{budget}</td>
+                      <td className="px-4 py-3 text-[13px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{rest}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-4 py-3">
+              <p className="text-[12px] text-[#8B8B8B]">Rechenbeispiel mit dem Einstiegspreis von 2.200 €/Monat; bei höherem Betreuungsbedarf entsprechend mehr. Dazu kommen Kost und Logis. Die Steuerermäßigung für haushaltsnahe Dienstleistungen (bis zu 333 €/Monat) senkt den Betrag zusätzlich.</p>
+            </div>
+          </div>
+          <p className="text-[15px] text-[#2E2E2E] mb-10">
+            → Ihren persönlichen Preis samt Zuschüssen sehen Sie in 2 Minuten im{' '}
+            <a href="https://kostenrechner.primundus.de/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kostenrechner</a>
+          </p>
+
+          {/* SECTION 2c — Polnische Pflegekraft */}
+          <h2 id="polnische-pflegekraft" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+            Was kostet eine polnische Pflegekraft?
+          </h2>
+          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+            Unsere Betreuungskräfte kommen überwiegend aus Polen — der Preis von 2.200–3.500 €/Monat
+            ist derselbe. Darin enthalten: Lohn und Sozialabgaben der Betreuungskraft, die Organisation
+            der Einsätze und Ersatz bei Ausfall. Die Kraft ist bei Primundus angestellt und wird legal
+            über das Entsendemodell mit A1-Bescheinigung beschäftigt.
+          </p>
+          <p className="text-[15px] text-[#2E2E2E] mb-10">
+            → Alles über Kosten, Rechtliches und Ablauf:{' '}
+            <a href="/pflegekraft-aus-polen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Polen — der große Ratgeber</a>
+          </p>
+
           {/* SECTION 3 — Grafik */}
           <h2 id="vergleich" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
             24h-Pflege vs. Pflegeheim — was ist günstiger?
@@ -303,6 +363,9 @@ export default function Kosten() {
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was kostet 24-Stunden-Pflege im Monat?', a: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 € pro Monat je nach Pflegebedarf. Hinzu kommen Kost und Logis (ca. 200–300 €/Monat). Mit Pflegegeld und Entlastungsbetrag sinkt der Eigenanteil bei Pflegegrad 3 auf ca. 1.700–2.000 € pro Monat.' },
+              { q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 3?', a: 'Bei Pflegegrad 3 zahlt die Pflegekasse 599 € Pflegegeld und anteilig ca. 295 € aus dem Entlastungsbudget. Bei Kosten ab 2.200 €/Monat beginnt der Eigenanteil damit bei ca. 1.310 €/Monat — die Steuerermäßigung für haushaltsnahe Dienstleistungen senkt ihn weiter.' },
+              { q: 'Was kostet eine polnische Pflegekraft im Monat?', a: 'Eine polnische Betreuungskraft kostet bei Primundus 2.200–3.500 € pro Monat — angestellt bei Primundus, legal über das Entsendemodell mit A1-Bescheinigung. Mit Pflegegeld und anteiligem Entlastungsbudget sinkt der Eigenanteil je nach Pflegegrad auf ca. 920–1.560 € im Monat.' },
+              { q: 'Was kostet eine 24-Stunden-Pflegekraft?', a: 'Eine 24-Stunden-Pflegekraft kostet bei Primundus 2.200–3.500 € pro Monat, abhängig von Deutschkenntnissen und Pflegebedarf. Darin enthalten sind Lohn und Sozialabgaben der Betreuungskraft sowie Ersatz bei Ausfall; hinzu kommen Kost und Logis (ca. 200–300 €/Monat).' },
               { q: 'Was zahlt die Pflegekasse bei 24h-Pflege?', a: 'Pflegegeld (347–990 €/Monat je nach Pflegegrad) + Entlastungsbetrag (131 €/Monat) + Entlastungsbudget (3.539 €/Jahr). Bei PG 3 macht das zusammen bis zu 730 € monatliche Entlastung plus 295 €/Monat aus dem Entlastungsbudget.' },
               { q: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', a: 'Oft ja — der Pflegeheim-Eigenanteil liegt bundesweit bei Ø 3.364 €/Monat (2026). Bei PG 3 kann der 24h-Pflege-Eigenanteil mit Kassenzuschüssen auf unter 2.000 €/Monat sinken. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.' },
               { q: 'Was ist das Entlastungsbudget 2026?', a: '3.539 €/Jahr, seit Juli 2025 als gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Gilt für PG 2–5, flexibel aufteilbar, Vorpflegezeit entfällt. 2026 ist das erste volle Jahr ohne Übergangsregelungen. Achtung: verfällt am 31. Dezember.' },

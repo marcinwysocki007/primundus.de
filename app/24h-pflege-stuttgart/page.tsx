@@ -224,6 +224,9 @@ export default function StuttgartPage() {
           </div>
           
 
+          {/* ④b POLEN */}
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">Polnische Betreuungskräfte in Stuttgart</h2>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-8">Unsere Betreuungskräfte kommen überwiegend aus Polen — bei Primundus angestellt, mit geprüften Deutschkenntnissen und Erfahrung in der häuslichen Betreuung. Auch in Stuttgart und Umgebung sind sie im Einsatz. Wer gerade verfügbar ist, sehen Sie direkt mit Ihrem Angebot — mit Profil, Erfahrung und Sprachniveau. Was eine polnische Betreuungskraft kostet, wie das Entsendemodell rechtlich funktioniert und wie schnell es geht: <a href="/pflegekraft-aus-polen" className="text-[#8B7355] font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</p>
           {/* ⑤ EINZUGSGEBIET */}
           <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
             <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Einzugsgebiet Stuttgart</p>
