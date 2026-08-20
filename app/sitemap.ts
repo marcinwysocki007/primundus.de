@@ -153,6 +153,7 @@ const tools = [
   'pflegebedarf-einschaetzen',
   'pflegeheim-kostenvergleich',
   'anbieter-vergleich',
+  'pflegehelden-alternative',
   'checkliste-pflegeuebernahme',
   'pflegevertrag-generator',
   'vollmacht-generator',

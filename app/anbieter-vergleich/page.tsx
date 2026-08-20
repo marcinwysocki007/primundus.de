@@ -1,13 +1,16 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { ANBIETER, PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND, type Anbieter, type Wertung } from '@/lib/anbieterVergleich'
 
 export const metadata: Metadata = {
-  title: '24h-Pflege-Anbieter im Vergleich 2026 | Primundus',
-  description: 'Primundus im Vergleich: Sofortangebot, täglich kündbar, tagsgenaue Abrechnung, Pflegekräfte im Kundenportal. Was andere 24h-Pflege-Anbieter nicht leisten.',
+  title: 'Anbieter-Vergleich 2026: Pflegehelden, Promedica24 & Co.',
+  description:
+    'Pflegehelden, Promedica24, Hausengel, marta, Linara und Primundus im Vergleich: Preise, Gebühren, Vertragsbindung und wann Sie die Betreuungskraft auswählen. Stand August 2026.',
   alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
     title: '24h-Pflege-Anbieter im Vergleich 2026 | Primundus',
-    description: 'Sofortangebot statt Wartezeit, täglich kündbar statt 14 Tage, tagsgenaue Abrechnung — Primundus vs. andere 24h-Anbieter.',
+    description:
+      'Sechs bekannte Anbieter und Primundus im Faktenvergleich: Preise, Gebühren, Vertragsbindung, Auswahl der Betreuungskraft.',
     url: 'https://primundus.de/anbieter-vergleich',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -15,6 +18,29 @@ export const metadata: Metadata = {
     images: [{ url: '/images/primundus_logo_header.webp' }],
   },
 }
+
+const faqs = [
+  {
+    q: 'Welcher 24h-Pflege-Anbieter zeigt Preise sofort online?',
+    a: 'Primundus zeigt den Preis in 2 Minuten online — ohne Rückruf. marta veröffentlicht Preistabellen auf der Website. Bei Pflegehelden, Promedica24, Hausengel und Deutsche Seniorenbetreuung gibt es ein verbindliches Angebot erst nach Fragebogen oder Beratungsgespräch (Stand August 2026, eigene Angaben der Anbieter).',
+  },
+  {
+    q: 'Bei welchem Anbieter sehe ich Betreuungskräfte vor dem Vertrag?',
+    a: 'Bei Primundus sehen Sie passende Betreuungskräfte sofort mit dem Angebot — und wählen aus, bevor ein Vertrag unterschrieben wird. Bei marta sind Profile nach kostenloser Registrierung einsehbar. Die übrigen verglichenen Anbieter zeigen keine offen einsehbaren Profile; Vorschläge kommen dort erst im Vermittlungsprozess.',
+  },
+  {
+    q: 'Welche Vermittlungsgebühren verlangen 24h-Pflege-Anbieter?',
+    a: 'Primundus berechnet keine Vermittlungs- oder Aufnahmegebühr. Nach eigenen Angaben verlangt Linara eine Erstaufnahmepauschale von 418 €, marta eine Aufnahmegebühr von 99 € bis 999 € je nach Plan, Deutsche Seniorenbetreuung 280 € bei Einsätzen unter 40 Tagen. Pflegehelden weist keine separate Gebühr aus („Agenturgebühren einkalkuliert").',
+  },
+  {
+    q: 'Kann ich den Vertrag bei Primundus jederzeit kündigen?',
+    a: 'Ja. Primundus-Verträge sind täglich kündbar — ohne Mindestlaufzeit, ohne Fristen. Die Abrechnung erfolgt taggenau: bezahlt wird nur, was stattfindet.',
+  },
+  {
+    q: 'Was unterscheidet Primundus von anderen 24h-Pflegeanbietern?',
+    a: 'Primundus beschäftigt eigenes Betreuungspersonal und zeigt Preis und passende Betreuungskräfte sofort online. Sie wählen Ihre Betreuungskraft aus, bevor ein Vertrag unterschrieben wird. Dazu: keine Vermittlungsgebühr, keine Mindestlaufzeit, taggenaue Abrechnung und ein fester Ansprechpartner an 7 Tagen die Woche.',
+  },
+]
 
 const schemaMarkup = JSON.stringify([
   {
@@ -29,150 +55,29 @@ const schemaMarkup = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was unterscheidet Primundus von anderen 24h-Pflegeanbietern?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Primundus ist Testsieger bei DIE WELT und bietet als einziger Anbieter ein Sofortangebot mit direkt einsehbaren Pflegekräften im Kundenportal. Verträge sind täglich kündbar (andere: meist 14 Tage), die Abrechnung erfolgt tagesgenau, und alle Pflegekräfte sind fest bei Primundus angestellt.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Kann ich den Vertrag bei Primundus jederzeit kündigen?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ja. Primundus-Verträge sind täglich kündbar — ohne Mindestlaufzeit, ohne Fristen. Die meisten anderen 24h-Anbieter haben Kündigungsfristen von 14 Tagen oder mehr.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was bedeutet tagsgenaue Abrechnung?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Sie zahlen nur für Tage, an denen die Betreuungskraft tatsächlich im Einsatz ist — nicht für Ausfälle, Krankheit oder Urlaub der Kraft. Bei monatlichen Pauschalen zahlen Sie immer den vollen Betrag.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist das Primundus Kundenportal?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Im Primundus Kundenportal sehen Familien verfügbare Pflegekräfte sofort — mit Profil, Erfahrung und Verfügbarkeit. Dieses Feature gibt es ausschließlich bei Primundus.',
-        },
-      },
-    ],
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ])
 
-const rows: { feature: string; desc: string; primundus: string; andere: string; noIcon?: boolean }[] = [
-  {
-    feature: 'Angebot',
-    desc: 'Wie schnell erhalten Sie ein Angebot?',
-    primundus: 'Sofortangebot',
-    andere: '2–5 Werktage',
-  },
-  {
-    feature: 'Pflegekräfte einsehen',
-    desc: 'Vorab im Kundenportal einsehbar?',
-    primundus: 'Sofort im Kundenportal',
-    andere: 'Oft erst nach Gespräch',
-  },
-  {
-    feature: 'Erfahrung',
-    desc: 'Nachgewiesene Einsätze',
-    primundus: '60.000+ Einsätze',
-    andere: 'Oft keine Angaben',
-  },
-  {
-    feature: 'Vermittlungsgebühr',
-    desc: 'Extra-Gebühr für die Vermittlung?',
-    primundus: 'Keine',
-    andere: 'Teils Aufnahme- oder Vermittlungsgebühr',
-  },
-  {
-    feature: 'Vertrag',
-    desc: 'Vertrag vor der Kraft-Auswahl nötig?',
-    primundus: 'Nein — erst aussuchen, dann buchen',
-    andere: 'Häufig vor der Auswahl',
-  },
-  {
-    feature: 'Kündigung',
-    desc: 'Wie kurzfristig kündbar?',
-    primundus: 'Täglich',
-    andere: 'Oft 7 Tage bis 1 Monat Frist',
-  },
-  {
-    feature: 'Abrechnung',
-    desc: 'Wie wird abgerechnet?',
-    primundus: 'Tagesgenau',
-    andere: 'Teils Monatspauschale',
-  },
-  {
-    feature: 'Pflegekräfte',
-    desc: 'Angestellt oder vermittelt?',
-    primundus: 'Eigenes Personal — bei uns angestellt',
-    andere: 'Meist Vermittlung fremder Kräfte',
-  },
-  {
-    feature: 'Qualitätskontrolle',
-    desc: 'Werden Einsätze geprüft?',
-    primundus: 'Regelmäßig & systematisch',
-    andere: 'Oft ohne Angabe',
-  },
-  {
-    feature: 'Beratung',
-    desc: 'Persönliche Erreichbarkeit',
-    primundus: 'Mo–So 8–20 Uhr',
-    andere: 'Eingeschränkt',
-  },
-  {
-    feature: 'Preistransparenz',
-    desc: 'Alle Kosten klar ausgewiesen?',
-    primundus: 'Vollständig transparent',
-    andere: 'Teils Zusatzgebühren',
-  },
-  {
-    feature: 'Kosten',
-    desc: 'Monatlich (ohne Zuschüsse)',
-    primundus: 'Ab 2.200 €/Monat',
-    andere: 'Oft ab 2.500 €',
-    noIcon: true,
-  },
-  {
-    feature: 'Auszeichnung',
-    desc: 'Unabhängige Bewertung',
-    primundus: 'Testsieger DIE WELT',
-    andere: '—',
-  },
-]
+const ICON: Record<Wertung, { sym: string; cls: string }> = {
+  ja: { sym: '✓', cls: 'text-[#3D7A5C]' },
+  teils: { sym: '◐', cls: 'text-[#B08A3E]' },
+  nein: { sym: '—', cls: 'text-[#B0553E]' },
+  ka: { sym: '?', cls: 'text-[#8B8B8B]' },
+}
 
-const faqs = [
-  {
-    q: 'Was unterscheidet Primundus von anderen 24h-Pflegeanbietern?',
-    a: 'Primundus ist Testsieger bei DIE WELT und bietet als einziger Anbieter ein Sofortangebot mit direkt einsehbaren Pflegekräften im Kundenportal. Verträge sind täglich kündbar, die Abrechnung erfolgt tagesgenau, alle Pflegekräfte sind fest bei Primundus angestellt.',
-  },
-  {
-    q: 'Kann ich den Vertrag bei Primundus jederzeit kündigen?',
-    a: 'Ja. Primundus-Verträge sind täglich kündbar — ohne Mindestlaufzeit, ohne Fristen. Die meisten anderen 24h-Anbieter haben Kündigungsfristen von 14 Tagen oder mehr.',
-  },
-  {
-    q: 'Was bedeutet tagsgenaue Abrechnung?',
-    a: 'Sie zahlen nur für Tage, an denen die Betreuungskraft tatsächlich im Einsatz ist. Bei monatlichen Pauschalen (üblich bei anderen Anbietern) zahlen Sie auch für krankheits- oder urlaubsbedingte Ausfälle.',
-  },
-  {
-    q: 'Was ist das Primundus Kundenportal?',
-    a: 'Im Primundus Kundenportal sehen Familien verfügbare Pflegekräfte sofort — mit Profil, Erfahrung und Verfügbarkeit. Dieses Feature gibt es ausschließlich bei Primundus.',
-  },
-]
+const ALLE: Anbieter[] = [PRIMUNDUS, ...ANBIETER]
 
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
       <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[800px] mx-auto px-5 py-14">
+        <div className="max-w-[980px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
           <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2 flex-wrap" aria-label="Breadcrumb">
@@ -184,141 +89,184 @@ export default function Page() {
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">TOOLS & RECHNER</p>
+          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+            Anbieter-Vergleich · Stand {STAND}
+          </p>
           <h1 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-4">
-            Primundus vs. andere 24h-Anbieter
+            24h-Pflege-Anbieter im Vergleich: Wer bietet was?
           </h1>
-          <p className="text-[16px] text-[#5A5A5A] leading-relaxed mb-10 max-w-[680px]">
-            Primundus ist <strong className="text-[#3D3D3D]">Testsieger bei DIE WELT</strong> und mit über <strong className="text-[#3D3D3D]">60.000 erfolgreichen Einsätzen</strong> einer der erfahrensten 24h-Pflegeanbieter in Deutschland.
-            Während andere Anbieter Tage brauchen, gibt es bei Primundus ein <strong className="text-[#3D3D3D]">Sofortangebot</strong> — mit verfügbaren Pflegekräften sofort im Kundenportal einsehbar, so bei keinem anderen Anbieter.
-            Verträge sind <strong className="text-[#3D3D3D]">täglich kündbar</strong> (andere: meist 14 Tage), die Abrechnung erfolgt <strong className="text-[#3D3D3D]">tagesgenau</strong> statt als Monatspauschale, alle Pflegekräfte sind fest bei Primundus angestellt — ohne Vermittler dazwischen, weshalb die Kosten <strong className="text-[#3D3D3D]">ab 2.200 €/Monat</strong> statt oft 2.500 € bei anderen Anbietern beginnen. Das Beratungsteam ist <strong className="text-[#3D3D3D]">Mo–So 8–20 Uhr</strong> erreichbar.
+          <p className="text-[16px] text-[#5A5A5A] leading-relaxed mb-4 max-w-[720px]">
+            Pflegehelden, Promedica24, Hausengel, marta, Linara, Deutsche Seniorenbetreuung — und Primundus:
+            Hier sehen Sie die Unterschiede, die im Alltag wirklich zählen. Wann sehen Sie den Preis?
+            Wann die Betreuungskraft? Was kostet der Einstieg, und wie lange binden Sie sich?
+            Primundus geht dabei bewusst den direkteren, moderneren Weg: Preis und Betreuungskräfte
+            sofort online, Vertrag erst nach Ihrer Auswahl, keine Vermittlungsgebühr, keine
+            Mindestlaufzeit — ab 2.200 €/Monat.
+          </p>
+          <p className="text-[13px] text-[#8B8B8B] leading-relaxed mb-10 max-w-[720px]">
+            Alle Angaben zu anderen Anbietern stammen von deren eigenen Websites (Stand {STAND}) und sind
+            als solche gekennzeichnet. Kein Anspruch auf Vollständigkeit — Konditionen können sich ändern.
           </p>
 
-          {/* Comparison Table */}
-          <section className="mb-14">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">Direkter Vergleich</h2>
-
-            <div className="overflow-x-auto -mx-5 px-5">
-            <div className="rounded-2xl overflow-hidden border border-[#E5E3DF] min-w-[520px]">
-              <table className="w-full border-collapse">
-                <colgroup>
-                  <col style={{ width: '38%' }} />
-                  <col style={{ width: '33%' }} />
-                  <col style={{ width: '29%' }} />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th className="bg-[#F8F7F5] px-3 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-[#8B8B8B] border-b border-[#E5E3DF]">
-                      Kriterium
-                    </th>
-                    <th className="bg-[#2E2319] px-3 py-3 text-left border-b border-[#1A110A]">
-                      <span className="block text-[13px] font-black text-white">Primundus</span>
-                      <span className="block text-[10px] text-[#C5B89E] mt-0.5">24h-Pflege</span>
-                    </th>
-                    <th className="bg-[#F8F7F5] px-3 py-3 text-left text-[11px] font-bold text-[#8B8B8B] border-b border-[#E5E3DF]">
-                      Andere<br />24h-Anbieter
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map((row, i) => (
-                    <tr
-                      key={row.feature}
-                      className={i % 2 === 0 ? 'bg-white' : 'bg-[#FDFCFA]'}
-                    >
-                      <td className={`px-3 py-3 align-middle ${i < rows.length - 1 ? 'border-b border-[#F0EDE8]' : ''}`}>
-                        <p className="text-[13px] font-semibold text-[#3D3D3D]">{row.feature}</p>
-                        <p className="text-[11px] text-[#A0A0A0] mt-0.5 leading-snug">{row.desc}</p>
-                      </td>
-                      <td className={`px-3 py-3 bg-[#F8F4EF] align-middle border-x border-[#E5DDD3] ${i < rows.length - 1 ? 'border-b border-[#EAE3D8]' : ''}`}>
-                        <span className="flex items-center gap-1">
-                          <span className="text-[#3D7A5C] font-bold text-[12px] flex-shrink-0">✓</span>
-                          <span className="text-[12px] font-semibold text-[#3D3D3D] leading-snug">{row.primundus}</span>
-                        </span>
-                      </td>
-                      <td className={`px-3 py-3 align-middle ${i < rows.length - 1 ? 'border-b border-[#F0EDE8]' : ''}`}>
-                        <span className="flex items-center gap-1">
-                          {row.andere !== '—' && !row.noIcon && <span className="text-[#B91C1C] font-bold text-[12px] flex-shrink-0">✗</span>}
-                          <span className="text-[12px] text-[#8B8B8B] leading-snug">{row.andere}</span>
-                        </span>
-                      </td>
+          {/* ── Vergleichstabelle (Desktop) ── */}
+          <section className="mb-6 hidden md:block">
+            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">Der direkte Vergleich</h2>
+            <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[860px]">
+                  <thead>
+                    <tr className="bg-[#F8F7F5]">
+                      <th className="sticky left-0 bg-[#F8F7F5] px-4 py-3 text-left text-[12px] font-semibold text-[#8B8B8B] border-b border-[#E5E3DF] min-w-[190px]">Kriterium</th>
+                      {ALLE.map((a) => (
+                        <th key={a.slug} className={`px-3 py-3 text-left text-[12px] font-bold border-b border-[#E5E3DF] min-w-[150px] ${a.slug === 'primundus' ? 'text-[#8B7355] bg-[#F2EDE6]' : 'text-[#3D3D3D]'}`}>
+                          {a.name}
+                        </th>
+                      ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="sticky left-0 bg-white px-4 py-3 text-[13px] font-semibold text-[#3D3D3D] border-b border-[#F0EDE8]">Preis ab</td>
+                      {ALLE.map((a) => (
+                        <td key={a.slug} className={`px-3 py-3 text-[13px] border-b border-[#F0EDE8] ${a.slug === 'primundus' ? 'bg-[#FBF9F5] font-semibold text-[#3D3D3D]' : 'text-[#5A5A5A]'}`}>
+                          {a.preisAb}
+                        </td>
+                      ))}
+                    </tr>
+                    {KRITERIEN.map((k) => (
+                      <tr key={k.key}>
+                        <td className="sticky left-0 bg-white px-4 py-3 text-[13px] font-semibold text-[#3D3D3D] border-b border-[#F0EDE8]">{k.label}</td>
+                        {ALLE.map((a) => {
+                          const kr = a[k.key]
+                          return (
+                            <td key={a.slug} className={`px-3 py-3 text-[12.5px] leading-snug border-b border-[#F0EDE8] ${a.slug === 'primundus' ? 'bg-[#FBF9F5] text-[#3D3D3D]' : 'text-[#5A5A5A]'}`}>
+                              <span className={`font-bold mr-1 ${ICON[kr.wertung].cls}`}>{ICON[kr.wertung].sym}</span>
+                              {kr.kurz}
+                            </td>
+                          )
+                        })}
+                      </tr>
+                    ))}
+                    <tr>
+                      <td className="sticky left-0 bg-white px-4 py-3 text-[13px] font-semibold text-[#3D3D3D]">Modell</td>
+                      {ALLE.map((a) => (
+                        <td key={a.slug} className={`px-3 py-3 text-[12.5px] leading-snug ${a.slug === 'primundus' ? 'bg-[#FBF9F5] text-[#3D3D3D]' : 'text-[#5A5A5A]'}`}>
+                          {a.modell}
+                        </td>
+                      ))}
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="bg-[#F8F7F5] border-t border-[#E5E3DF] px-4 py-3 space-y-1">
+                <p className="text-[11px] text-[#8B8B8B]">
+                  ✓ = bietet der Anbieter · ◐ = teilweise / mit Einschränkung · — = bietet er nicht · k. A. = keine Angabe auf der Website ·
+                  Quellen: eigene Websites der Anbieter, Stand {STAND}
+                </p>
+                {FUSSNOTEN.map((f) => (
+                  <p key={f.nr} className="text-[11px] text-[#8B8B8B]">{f.nr} {f.text}</p>
+                ))}
+              </div>
             </div>
           </section>
 
-          {/* CTA Banner */}
-          <div className="bg-[#2E2319] rounded-2xl p-6 md:p-8 mb-14 flex flex-col md:flex-row gap-5 md:items-center">
-            <div className="flex-1">
-              <p className="text-[11px] font-bold uppercase tracking-wider text-[#C5B89E] mb-2">Kostenlos & unverbindlich</p>
-              <h2 className="text-[20px] font-bold text-white mb-2">Sofortangebot anfordern</h2>
-              <p className="text-[14px] text-[#C5B89E] leading-relaxed max-w-[380px]">
-                In 2 Minuten zum persönlichen Angebot — inkl. Kosten, Zuschüsse und passende
-                Pflegekräfte für Ihre Region.
+          {/* ── Vergleich als Karten (Mobil) ── */}
+          <section className="mb-6 md:hidden">
+            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">Der direkte Vergleich</h2>
+            <div className="space-y-4">
+              {ALLE.map((a) => (
+                <div key={a.slug} className={`bg-white border rounded-2xl overflow-hidden ${a.slug === 'primundus' ? 'border-[#8B7355]' : 'border-[#E5E3DF]'}`}>
+                  <div className={`px-4 py-3 ${a.slug === 'primundus' ? 'bg-[#8B7355]' : 'bg-[#F8F7F5] border-b border-[#E5E3DF]'}`}>
+                    <p className={`text-[15px] font-bold ${a.slug === 'primundus' ? 'text-white' : 'text-[#3D3D3D]'}`}>{a.name}</p>
+                    <p className={`text-[12px] ${a.slug === 'primundus' ? 'text-white/80' : 'text-[#8B8B8B]'}`}>{a.kurz} · {a.preisAb}</p>
+                  </div>
+                  <div className="px-4 py-2">
+                    {KRITERIEN.map((k) => {
+                      const kr = a[k.key]
+                      return (
+                        <div key={k.key} className="py-2 border-b border-[#F0EDE8] last:border-0">
+                          <p className="text-[11px] font-semibold uppercase tracking-wide text-[#8B8B8B] mb-0.5">{k.label}</p>
+                          <p className="text-[13px] text-[#3D3D3D] leading-snug">
+                            <span className={`font-bold mr-1 ${ICON[kr.wertung].cls}`}>{ICON[kr.wertung].sym}</span>
+                            {kr.kurz}
+                          </p>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 space-y-1">
+              <p className="text-[11px] text-[#8B8B8B]">Quellen: eigene Websites der Anbieter, Stand {STAND}</p>
+              {FUSSNOTEN.map((f) => (
+                <p key={f.nr} className="text-[11px] text-[#8B8B8B]">{f.nr} {f.text}</p>
+              ))}
+            </div>
+          </section>
+
+          {/* Fairness-Block */}
+          <section className="mb-14">
+            <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5">
+              <p className="text-[13px] font-bold text-[#6B5A44] mb-1">Der Fairness halber</p>
+              <p className="text-[13px] text-[#6B5A44] leading-relaxed">
+                Jeder Anbieter hat Stärken: Pflegehelden und Promedica24 arbeiten mit persönlichen Ansprechpartnern
+                vor Ort, marta macht Profile und Preise online vergleichbar, Linara und Hausengel setzen auf
+                langjährige Markterfahrung. Dieser Vergleich zeigt die Konditionen — welche davon Ihnen wichtig
+                sind, entscheiden Sie.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-              <a
-                href="https://kostenrechner.primundus.de/?start=1&src=apex-anbieter-vergleich"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[#E76F63] hover:bg-[#D45F53] transition-colors text-white font-bold text-[15px] px-6 py-3.5 rounded-xl"
-              >
-                Angebot anfordern →
-              </a>
-              <a
-                href="tel:+4989200000830"
-                className="inline-flex items-center justify-center border border-[#C5B89E] text-[#C5B89E] hover:bg-[#3D2E22] transition-colors font-semibold text-[14px] px-5 py-3.5 rounded-xl"
-              >
-                089 200 000 830
-              </a>
+          </section>
+
+          {/* Kurzprofile */}
+          <section className="mb-14">
+            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">Die Anbieter im Kurzprofil</h2>
+            <div className="space-y-4">
+              {ANBIETER.map((a) => (
+                <div key={a.slug} className="bg-white border border-[#E5E3DF] rounded-2xl p-5">
+                  <div className="flex items-baseline justify-between gap-3 flex-wrap mb-1.5">
+                    <h3 className="text-[16px] font-bold text-[#3D3D3D]">{a.name}</h3>
+                    <span className="text-[11px] text-[#8B8B8B]">Quelle: {a.quelle}, Stand {a.stand}</span>
+                  </div>
+                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed mb-2">{a.kurz} · {a.modell} · {a.preisAb}.</p>
+                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
+                    <strong className="text-[#3D3D3D]">Stärken:</strong> {a.staerken.join(' · ')}
+                  </p>
+                  {a.slug === 'pflegehelden' && (
+                    <p className="text-[13px] text-[#8B7355] font-semibold mt-2">
+                      <a href="/pflegehelden-alternative" className="hover:underline">→ Ausführlicher Vergleich: Pflegehelden oder Primundus?</a>
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
-          </div>
+          </section>
+
+          {/* CTA */}
+          <ArticleCTA />
 
           {/* FAQ */}
-          <section className="mb-14">
+          <section className="mt-14 mb-14">
             <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">Häufige Fragen</h2>
-            <div className="flex flex-col gap-3">
-              {faqs.map((faq) => (
-                <details key={faq.q} className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden group">
-                  <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
-                    <span className="text-[15px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
-                    <span className="text-[#8B7355] text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
+            <div className="space-y-3">
+              {faqs.map((f) => (
+                <details key={f.q} className="bg-white border border-[#E5E3DF] rounded-xl px-5 py-4 group">
+                  <summary className="cursor-pointer list-none flex items-start justify-between gap-3">
+                    <h3 className="text-[15px] font-semibold text-[#3D3D3D] pr-2">{f.q}</h3>
+                    <span className="text-[#8B7355] font-bold text-[18px] leading-none group-open:rotate-45 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5 pt-1 border-t border-[#F0EDE8]">
-                    <p className="text-[14px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
-                  </div>
+                  <p className="text-[14px] text-[#5A5A5A] leading-relaxed mt-3">{f.a}</p>
                 </details>
               ))}
             </div>
           </section>
 
-          {/* Related tools */}
-          <section className="mb-14">
-            <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Weitere hilfreiche Tools</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {[
-                { href: '/pflegeheim-kostenvergleich/', label: 'Pflegeheim-Kostenvergleich', desc: 'Pflegeheim vs. 24h-Pflege im Vergleich' },
-                { href: '/zuschuss-rechner/', label: 'Zuschuss-Rechner', desc: 'Alle Förderleistungen 2026' },
-                { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil individuell ermitteln', external: true },
-              ].map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  {...('external' in item && item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="bg-white border border-[#E5E3DF] rounded-xl px-4 py-3.5 hover:border-[#8B7355] transition-colors"
-                >
-                  <p className="text-[14px] font-semibold text-[#3D3D3D] mb-0.5">→ {item.label}</p>
-                  <p className="text-[12px] text-[#8B8B8B]">{item.desc}</p>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          <ArticleCTA />
+          {/* Korrektur-Hinweis */}
+          <p className="text-[12px] text-[#8B8B8B] leading-relaxed">
+            Hinweis: Wir prüfen die Angaben regelmäßig anhand der öffentlich zugänglichen Informationen der
+            Anbieter. Sollte eine Angabe nicht mehr aktuell sein, korrigieren wir sie umgehend —
+            schreiben Sie uns gern an <a href="mailto:info@primundus.de" className="text-[#8B7355] hover:underline">info@primundus.de</a>.
+          </p>
 
         </div>
       </div>
