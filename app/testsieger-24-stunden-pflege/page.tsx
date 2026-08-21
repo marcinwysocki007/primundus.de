@@ -9,12 +9,12 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 // Beleg (PDF + Siegel) liegt lokal unter /downloads bzw. /images.
 
 export const metadata: Metadata = {
-  title: 'Testsieger 24-Stunden-Pflege: Primundus ist die Nr. 1',
+  title: 'Testsieger 24-Stunden-Pflege 2026: Primundus ist die Nr. 1',
   description:
-    'Primundus ist Testsieger: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Jetzt Beleg ansehen und Kosten in 2 Minuten berechnen.',
+    'Primundus ist Testsieger: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel ansehen, Anbieter vergleichen — Preis in 2 Minuten.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
-    title: 'Testsieger 24-Stunden-Pflege: Primundus ist die Nr. 1',
+    title: 'Testsieger 24-Stunden-Pflege 2026: Primundus ist die Nr. 1',
     description:
       'Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet von DIE WELT und ServiceValue. Mit Original-Beleg als PDF.',
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
@@ -164,6 +164,24 @@ export default function TestsiegerPage() {
           </div>
 
           {/* ④ FAQ — Texte identisch zum FAQPage-Schema oben */}
+          {/* VERGLEICH */}
+          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
+            Vergleichen Sie selbst
+          </h2>
+          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
+            <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-3">
+              Eine Auszeichnung ist ein Anhaltspunkt — die Konditionen entscheiden. Wir haben die
+              bekannten Anbieter nebeneinandergelegt: Preise, Gebühren, Vertragsbindung und wann Sie
+              die Betreuungskraft auswählen.
+            </p>
+            <p className="text-[14px] font-semibold">
+              <a href="/anbieter-vergleich" className="text-[#8B7355] hover:underline">→ 24h-Pflege-Anbieter im Vergleich 2026</a>
+            </p>
+            <p className="text-[14px] font-semibold mt-1.5">
+              <a href="/pflegehelden-alternative" className="text-[#8B7355] hover:underline">→ Pflegehelden oder Primundus? Der direkte Vergleich</a>
+            </p>
+          </div>
+
           <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
             Häufige Fragen zur Auszeichnung
           </h2>

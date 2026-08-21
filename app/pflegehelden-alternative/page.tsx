@@ -203,6 +203,9 @@ export default function Page() {
                 </div>
               ))}
             </div>
+            <p className="text-[13px] font-semibold mt-3">
+              <a href="/testsieger-24-stunden-pflege" className="text-[#8B7355] hover:underline">→ Die Auszeichnung im Detail: Testsieger 24-Stunden-Pflege</a>
+            </p>
           </section>
 
           {/* Ablauf-Vergleich */}
