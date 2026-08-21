@@ -1,0 +1,42 @@
+// lib/lastmod.ts — echtes Änderungsdatum je Seite für die Sitemap (zur Buildzeit gelesen).
+// Quelle 1: dateModified: 'YYYY-MM-DD' im JSON-LD der Seite (123 Seiten)
+// Quelle 2: sichtbares „Aktualisiert <Monat> <Jahr>" bzw. „Aktualisiert am <Tag>. <Monat> <Jahr>"
+// Sonst: undefined → das Feld wird in der Sitemap weggelassen.
+// Hintergrund: Vorher stand an allen ~358 URLs derselbe Build-Zeitstempel — für
+// Suchmaschinen/AI-Retrieval wertlos. Ehrliches Weglassen schlägt falsche Frische.
+import fs from 'fs'
+import path from 'path'
+
+const MONATE: Record<string, number> = {
+  Januar: 0, Februar: 1, 'März': 2, Maerz: 2, April: 3, Mai: 4, Juni: 5,
+  Juli: 6, August: 7, September: 8, Oktober: 9, November: 10, Dezember: 11,
+}
+
+const cache = new Map<string, Date | undefined>()
+
+export function lastmodFuerSlug(slug: string): Date | undefined {
+  if (cache.has(slug)) return cache.get(slug)
+  let result: Date | undefined
+  try {
+    const file = slug === ''
+      ? path.join(process.cwd(), 'app', 'page.tsx')
+      : path.join(process.cwd(), 'app', slug, 'page.tsx')
+    const src = fs.readFileSync(file, 'utf8')
+    const dm = src.match(/dateModified['"]?\s*:\s*['"](\d{4}-\d{2}-\d{2})/)
+    if (dm) {
+      result = new Date(dm[1] + 'T00:00:00.000Z')
+    } else {
+      const akt = src.match(
+        /Aktualisiert(?:\s+am)?\s+(?:\d{1,2}\.\s*)?(Januar|Februar|März|Maerz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})/
+      )
+      if (akt) result = new Date(Date.UTC(parseInt(akt[2], 10), MONATE[akt[1]], 1))
+    }
+    if (result && isNaN(result.getTime())) result = undefined
+    // Zukunftsdaten (Tippfehler) nicht ausliefern
+    if (result && result.getTime() > Date.now()) result = undefined
+  } catch {
+    result = undefined
+  }
+  cache.set(slug, result)
+  return result
+}

@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { STAEDTE } from '@/lib/staedte'
+import { lastmodFuerSlug } from '@/lib/lastmod'
 
 const moneyPages = [
   '',
@@ -144,12 +145,14 @@ const artikel = [
   'widerspruch-pflegekasse-einlegen',
   'mdk-begutachtung-tipps',
   'pflegemangel-melden-beschwerden',
+  'pflegegeld',
 ]
 
+// Hinweis: 'eigenanteil-rechner' und 'kostenrechner' fehlen bewusst —
+// beide Routen leiten extern auf kostenrechner.primundus.de weiter.
 const tools = [
   'pflegegrad-rechner',
   'zuschuss-rechner',
-  'eigenanteil-rechner',
   'pflegebedarf-einschaetzen',
   'pflegeheim-kostenvergleich',
   'anbieter-vergleich',
@@ -172,28 +175,28 @@ const regionen = [
   ...STAEDTE.map((s) => `24h-pflege-${s.slug}`),
 ]
 
+// impressum/datenschutz/sitemap sind noindex → gehören nicht in die Sitemap.
 const trust = [
   'ueber-uns',
-  'impressum',
-  'datenschutz',
   'agb',
-  'sitemap',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://primundus.de'
-  const now = new Date()
 
   const toEntry = (
     slug: string,
     priority: number,
     freq: MetadataRoute.Sitemap[0]['changeFrequency']
-  ) => ({
-    url: slug ? `${base}/${slug}` : `${base}/`,
-    lastModified: now,
-    changeFrequency: freq,
-    priority,
-  })
+  ): MetadataRoute.Sitemap[0] => {
+    const lastModified = lastmodFuerSlug(slug)
+    return {
+      url: slug ? `${base}/${slug}` : `${base}/`,
+      ...(lastModified ? { lastModified } : {}),
+      changeFrequency: freq,
+      priority,
+    }
+  }
 
   return [
     ...moneyPages.map((s) => toEntry(s, s === '' ? 1.0 : 0.95, 'daily')),
