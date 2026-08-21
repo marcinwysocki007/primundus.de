@@ -67,7 +67,7 @@ const schemaMarkup = JSON.stringify([
         name: 'Wie schütze ich mich vor einem Pflege-Burnout?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Wichtigste Maßnahmen: Verhinderungspflege rechtzeitig planen (bis 1.612 €/Jahr für Vertretung), regelmäßige Auszeiten einplanen, Pflegekurse besuchen (kostenlos über Pflegekasse), Pflegeverantwortung unter Geschwistern fair aufteilen, soziale Kontakte erhalten sowie professionelle Hilfe in Anspruch nehmen — z.B. durch 24h-Betreuungskraft als dauerhafte Entlastung.',
+          text: 'Wichtigste Maßnahmen: Verhinderungspflege rechtzeitig planen (bis 3.539 €/Jahr aus dem Entlastungsbudget für Vertretung), regelmäßige Auszeiten einplanen, Pflegekurse besuchen (kostenlos über Pflegekasse), Pflegeverantwortung unter Geschwistern fair aufteilen, soziale Kontakte erhalten sowie professionelle Hilfe in Anspruch nehmen — z.B. durch 24h-Betreuungskraft als dauerhafte Entlastung.',
         },
       },
     ],
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     q: 'Wie schütze ich mich vor Pflege-Burnout?',
-    a: 'Verhinderungspflege planen (bis 1.612 €/Jahr für Vertretung), Auszeiten einplanen, Pflegekurse (kostenlos über Pflegekasse) besuchen, Verantwortung unter Geschwistern fair teilen, professionelle Hilfe wie 24h-Betreuungskraft als dauerhafte Entlastung.',
+    a: 'Verhinderungspflege planen (bis 3.539 €/Jahr aus dem Entlastungsbudget für Vertretung), Auszeiten einplanen, Pflegekurse (kostenlos über Pflegekasse) besuchen, Verantwortung unter Geschwistern fair teilen, professionelle Hilfe wie 24h-Betreuungskraft als dauerhafte Entlastung.',
   },
   {
     q: 'Werden meine Häkchen gespeichert?',

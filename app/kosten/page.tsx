@@ -167,7 +167,7 @@ export default function Kosten() {
             <div className="divide-y divide-[#F0EDE8]">
               {[
                 { label: 'Primundus-Kosten (Agenturgebühr)', value: '2.500 €' },
-                { label: 'Pflegegeld Pflegegrad 3', value: '− 573 €', green: true },
+                { label: 'Pflegegeld Pflegegrad 3', value: '− 599 €', green: true },
                 { label: 'Entlastungsbudget (monatl. Anteil)', value: '− 295 €', green: true },
               ].map(({ label, value, green }) => (
                 <div key={label} className="flex items-center justify-between px-5 py-3 bg-white">
@@ -177,7 +177,7 @@ export default function Kosten() {
               ))}
               <div className="flex items-center justify-between px-5 py-4 bg-[#F8F7F5]">
                 <span className="text-[15px] font-bold text-[#1C1C1C]">Eigenanteil pro Monat</span>
-                <span className="text-[18px] font-bold text-[#1C1C1C]">ca. 1.632 €</span>
+                <span className="text-[18px] font-bold text-[#1C1C1C]">ca. 1.606 €</span>
               </div>
               <div className="flex items-center justify-between px-5 py-3 bg-[#F0FDF4]">
                 <span className="text-[13px] text-[#2E7D32]">Steuerersparnis (20 % der Kosten)</span>

@@ -166,7 +166,7 @@ export default function FoerderungenNachBundesland() {
                 land: 'Alle Bundesländer',
                 leistungen: [
                   { name: 'Pflegestützpunkte', detail: 'Jedes Bundesland betreibt ein Netz aus kostenlosen Pflegestützpunkten für unabhängige Beratung.' },
-                  { name: 'Verhinderungspflege', detail: 'Bis 1.612 €/Jahr (bundesweit) für Ersatzpflege wenn die Hauptpflegeperson ausfällt.' },
+                  { name: 'Verhinderungs- & Kurzzeitpflege', detail: 'Gemeinsames Entlastungsbudget bis 3.539 €/Jahr (bundesweit, seit Juli 2025) für Ersatzpflege, wenn die Hauptpflegeperson ausfällt.' },
                 ],
               },
             ].map((block) => (
@@ -211,9 +211,9 @@ export default function FoerderungenNachBundesland() {
               <p className="text-[13px] text-[#8B8B8B]">→ Details: <a href="/pflege-steuerlich-absetzen" className="text-[#8B7355] underline">Pflege steuerlich absetzen</a></p>
             </div>
             <div className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-              <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">Verhinderungspflege — bis 1.612 €/Jahr</p>
+              <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">Verhinderungspflege — bis 3.539 €/Jahr aus dem Entlastungsbudget</p>
               <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-3">
-                Wenn die Hauptpflegeperson ausfällt (Urlaub, Krankheit), zahlt die Pflegekasse bis 1.612 €/Jahr für eine Ersatzkraft — ab PG 2, wenn die Hauptpflegeperson seit mindestens 6 Monaten pflegt.
+                Wenn die Hauptpflegeperson ausfällt (Urlaub, Krankheit), zahlt die Pflegekasse aus dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege bis zu 3.539 €/Jahr für eine Ersatzkraft — ab PG 2. Die frühere 6-Monats-Vorpflegezeit ist seit Juli 2025 entfallen.
               </p>
               <p className="text-[13px] text-[#8B8B8B]">→ Details: <a href="/verhinderungspflege" className="text-[#8B7355] underline">Verhinderungspflege erklärt</a></p>
             </div>
@@ -230,7 +230,7 @@ export default function FoerderungenNachBundesland() {
               { check: 'Entlastungsbudget für anerkannte Leistungen genutzt (3.539 €/Jahr)', link: '/entlastungsbetrag' },
               { check: 'Wohnraumanpassung beantragt (bis 4.180 €/Maßnahme, VOR Beginn beantragen)', link: '/barrierefreies-zuhause-gestalten' },
               { check: 'Pflegehilfsmittel-Pauschale (42 €/Mo) genutzt', link: null },
-              { check: 'Verhinderungspflege eingeplant (bis 1.612 €/Jahr)', link: '/verhinderungspflege' },
+              { check: 'Verhinderungspflege eingeplant (Teil des Entlastungsbudgets, bis 3.539 €/Jahr)', link: '/verhinderungspflege' },
               { check: 'Steuerliche Absetzbarkeit geprüft (bis 4.000 €/Jahr)', link: '/pflege-steuerlich-absetzen' },
               { check: 'KfW-Kredit für größere Wohnraumanpassung geprüft (kfw.de)', link: null },
               { check: 'Landespflegegeld Bayern (1.000 €/Jahr) beantragt — falls zutreffend', link: null },

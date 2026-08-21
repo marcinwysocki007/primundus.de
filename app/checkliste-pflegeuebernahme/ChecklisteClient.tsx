@@ -63,7 +63,7 @@ const PHASEN: Phase[] = [
     titel: 'Phase 5 — Langfristig stabil',
     untertitel: 'Pflege als Dauerthema gut managen',
     items: [
-      { id: 'eigene-pause', label: 'Eigene Auszeiten und Verhinderungspflege planen', desc: 'Bis 1.612 €/Jahr für Vertretung — wichtig zur Burnout-Prävention' },
+      { id: 'eigene-pause', label: 'Eigene Auszeiten und Verhinderungspflege planen', desc: 'Bis 3.539 €/Jahr aus dem Entlastungsbudget für Vertretung — wichtig zur Burnout-Prävention' },
       { id: 'angehoerige', label: 'Pflegeverantwortung unter Geschwistern fair verteilen', desc: 'Wer macht was? Schriftliche Vereinbarung hilft' },
       { id: 'pflegekurs', label: 'Pflegekurs besuchen (kostenlos über Pflegekasse)', desc: 'Sicherer im Umgang mit der pflegebedürftigen Person' },
       { id: 'beratung', label: 'Regelmäßige Beratungsbesuche (§ 37.3 SGB XI)', desc: 'Halbjährlich bei PG 2–3, vierteljährlich bei PG 4–5 — Pflicht!' },

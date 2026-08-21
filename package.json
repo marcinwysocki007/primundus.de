@@ -9,7 +9,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "verify": "next build && npm run verify:nobuild",
-    "verify:nobuild": "node scripts/check-links.mjs && node scripts/check-jsonld.mjs && node scripts/check-sitemap.mjs && node scripts/check-fakten.mjs --warn-only && node scripts/check-tsc.mjs"
+    "verify:nobuild": "node scripts/check-links.mjs && node scripts/check-jsonld.mjs && node scripts/check-sitemap.mjs && node scripts/check-fakten.mjs && node scripts/check-tsc.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

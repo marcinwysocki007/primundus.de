@@ -24,10 +24,14 @@ const SCAN_DIRS = ['app', 'components', 'lib']
 const SCAN_FILES = ['public/llms.txt']
 const SELF = path.join('scripts', 'check-fakten.mjs')
 
+// Erlaubte Vorkommen: historische Vorher/Nachher-Darstellung der Pflegereform
+// (dort sind die Altwerte 1.612/1.774/3.224 € bewusst und korrekt als "bis Juni 2025" benannt).
+const ALLOW_FILES = new Set([path.join('app', 'pflegereform-2025', 'page.tsx')])
+
 const findings = []
 function scanFile(file) {
   const rel = path.relative(ROOT, file)
-  if (rel === SELF) return
+  if (rel === SELF || ALLOW_FILES.has(rel)) return
   const text = fs.readFileSync(file, 'utf8')
   for (const [desc, re] of STALE) {
     re.lastIndex = 0

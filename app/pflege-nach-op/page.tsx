@@ -184,7 +184,7 @@ export default function PflegeNachOp() {
           <div className="space-y-3 mb-10">
             {[
               { leistung: 'Pflegegrad beantragen', detail: 'Nach einer OP mit Einschränkungen sofort Antrag stellen. Rückwirkend ab Antragsdatum. Typisch nach Hüft- oder Knie-OP: PG 1–3 je nach verbleibendem Hilfebedarf.' },
-              { leistung: 'Kurzzeitpflege (§ 42 SGB XI)', detail: 'Bis 1.612 €/Jahr wenn nach Krankenhausaufenthalt vorübergehend vollstationäre Pflege nötig ist. Alternativ: zu Hause durch Betreuungskraft organisiert.' },
+              { leistung: 'Kurzzeitpflege (§ 42 SGB XI)', detail: 'Bis zu 3.539 €/Jahr aus dem gemeinsamen Entlastungsbudget, wenn nach dem Krankenhausaufenthalt vorübergehend vollstationäre Pflege nötig ist. Alternativ: zu Hause durch Betreuungskraft organisiert.' },
               { leistung: 'Behandlungspflege (SGB V)', detail: 'Wundversorgung, Injektionen durch Pflegedienst — von der Krankenversicherung übernommen. Hausarzt-Verordnung holen.' },
               { leistung: 'Hilfsmittelversorgung (SGB V)', detail: 'Rollator, Gehstock, Sitzerhöhung, Badehilfen — mit Rezept von der Krankenkasse. Nach OP schnell verordnen lassen.' },
             ].map((item) => (

@@ -92,7 +92,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet 24-Stunden-Pflege 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Die Kosten liegen zwischen 2.200 und 3.500 Euro pro Monat. Das Pflegegeld (bis 947 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Die Kosten liegen zwischen 2.200 und 3.500 Euro pro Monat. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.' },
       },
       {
         '@type': 'Question',
@@ -177,7 +177,7 @@ export default function WasIst24StundenPflege() {
               {[
                 'Betreuungskraft lebt dauerhaft im Haushalt — rund um die Uhr erreichbar',
                 'Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf und Anbieter',
-                'Pflegekasse zahlt: Pflegegeld bis 947 €/Monat + Entlastungsbudget 3.539 €/Jahr (neu 2026)',
+                'Pflegekasse zahlt: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr (seit Juli 2025)',
                 'Geeignet bei Demenz, nach Schlaganfall, bei Parkinson und vielen weiteren Situationen',
                 'Rechtlich sicher über Entsendemodell mit A1-Bescheinigung',
                 'Betreuung startet in 4–7 Tagen — täglich kündbar',
@@ -402,7 +402,7 @@ export default function WasIst24StundenPflege() {
               },
               {
                 q: 'Was kostet 24-Stunden-Pflege 2026?',
-                a: 'Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Das Pflegegeld (bis 947 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.',
+                a: 'Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.',
               },
               {
                 q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?',
