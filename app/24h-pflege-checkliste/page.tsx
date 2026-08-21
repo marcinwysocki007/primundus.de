@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Vollständige Checkliste für den Start der 24h-Pflege: Was vorzubereiten ist, welche Dokumente gebraucht werden, wie der erste Tag abläuft.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-checkliste' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Checkliste 2026 | Primundus',
     description: 'Vollständige Checkliste für den Start der 24h-Pflege: Was vorzubereiten ist, welche Dokumente gebraucht werden, wie der erste Tag abläuft.',
     url: 'https://primundus.de/24h-pflege-checkliste',

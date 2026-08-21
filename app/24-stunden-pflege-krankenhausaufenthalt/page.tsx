@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'Mutter im Krankenhaus — zahle ich die 24h-Pflege weiter? Was gilt, wenn die Betreuungskraft krank wird? Die klaren Antworten, die sonst keiner gibt.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege-krankenhausaufenthalt' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24h-Pflege? | Primundus',
     description: 'Die klaren Antworten auf die Fragen, die sonst kein Anbieter öffentlich beantwortet.',
     url: 'https://primundus.de/24-stunden-pflege-krankenhausaufenthalt',

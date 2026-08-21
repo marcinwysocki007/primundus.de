@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
     description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen.',
     url: 'https://primundus.de/ueber-uns',

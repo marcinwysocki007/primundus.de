@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: '24-Stunden-Pflege in Dessau-Roßlau: Eigenanteil ab ca. 1400 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-dessau' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Dessau-Roßlau — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Dessau-Roßlau. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-dessau',

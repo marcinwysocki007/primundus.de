@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Alle Pflegehilfsmittel im Überblick: technische Hilfsmittel, Verbrauchsprodukte, wie man alles organisiert und was Betreuungskräfte brauchen.',
   alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-organisieren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegehilfsmittel organisieren',
     description: 'Alle Pflegehilfsmittel im Überblick: technische Hilfsmittel, Verbrauchsprodukte, wie man alles organisiert und was Betreuungskräfte brauchen.',
     url: 'https://primundus.de/pflegehilfsmittel-organisieren',

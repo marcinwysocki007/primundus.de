@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Palliativpflege zuhause: Was möglich ist, welches Team gebraucht wird und wie Angehörige in der letzten Lebensphase unterstützt werden können.',
   alternates: { canonical: 'https://primundus.de/palliativpflege-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Palliativpflege zuhause | Primundus',
     description: 'Würdevolle Begleitung in der letzten Lebensphase zuhause — was möglich ist und was gebraucht wird.',
     url: 'https://primundus.de/palliativpflege-zuhause',

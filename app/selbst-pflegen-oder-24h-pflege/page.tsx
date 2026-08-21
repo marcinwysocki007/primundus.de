@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Selbst pflegen oder eine 24h-Betreuungskraft? Ein ehrlicher Vergleich: wann Angehörigenpflege funktioniert,',
   alternates: { canonical: 'https://primundus.de/selbst-pflegen-oder-24h-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Selbst pflegen oder 24h-Pflege? | Primundus',
     description: 'Wann Angehörigenpflege reicht — und wann eine 24h-Kraft die bessere Entscheidung ist.',
     url: 'https://primundus.de/selbst-pflegen-oder-24h-pflege',

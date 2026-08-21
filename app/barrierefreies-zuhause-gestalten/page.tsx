@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Barrierefreies Zuhause: Die wichtigsten Maßnahmen, wie Pflegekasse bis 4.180 €/Maßnahme fördert und was sofort umgesetzt werden kann.',
   alternates: { canonical: 'https://primundus.de/barrierefreies-zuhause-gestalten' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Barrierefreies Zuhause gestalten 2026 | Primundus',
     description: 'Wohnraumanpassung: Maßnahmen, Förderung bis 4.180 €/Maßnahme und Checkliste.',
     url: 'https://primundus.de/barrierefreies-zuhause-gestalten',

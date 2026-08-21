@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Einfache Bewegungsübungen für Senioren zuhause: was geht auch bei eingeschränkter Mobilität, wie Stürze verhindert werden, was die Kraft unterstützen kann.',
   alternates: { canonical: 'https://primundus.de/bewegung-senioren-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Bewegung Senioren zuhause',
     description: 'Einfache Bewegungsübungen für Senioren zuhause: was geht auch bei eingeschränkter Mobilität, wie Stürze verhindert werden, was die Kraft unterstützen kann.',
     url: 'https://primundus.de/bewegung-senioren-zuhause',

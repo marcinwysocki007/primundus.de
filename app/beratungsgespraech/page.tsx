@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wie ein Beratungsgespräch bei Primundus abläuft, welche Fragen gestellt werden und was danach passiert. Kostenlos und unverbindlich.',
   alternates: { canonical: 'https://primundus.de/beratungsgespraech' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Beratungsgespräch Pflege',
     description: 'Wie ein Beratungsgespräch bei Primundus abläuft, welche Fragen gestellt werden und was danach passiert. Kostenlos und unverbindlich.',
     url: 'https://primundus.de/beratungsgespraech',

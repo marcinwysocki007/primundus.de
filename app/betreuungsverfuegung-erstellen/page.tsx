@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Betreuungsverfügung erstellen: was sie ist, wie sie sich von der Vorsorgevollmacht unterscheidet und was reingehört. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/betreuungsverfuegung-erstellen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Betreuungsverfügung erstellen',
     description: 'Betreuungsverfügung erstellen: was sie ist, wie sie sich von der Vorsorgevollmacht unterscheidet und was reingehört. Mit Checkliste.',
     url: 'https://primundus.de/betreuungsverfuegung-erstellen',

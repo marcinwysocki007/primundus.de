@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'So läuft die 24h-Pflege mit Primundus ab: Beratungsgespräch, Kraftauswahl, Vertragsabschluss, Anreise in 4–7 Tagen. Der vollständige Ablauf erklärt.',
   alternates: { canonical: 'https://primundus.de/ablauf' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Ablauf der 24h-Pflege mit Primundus | Primundus',
     description: 'Von der Anfrage bis zur Betreuungskraft zuhause: der vollständige Ablauf erklärt.',
     url: 'https://primundus.de/ablauf',

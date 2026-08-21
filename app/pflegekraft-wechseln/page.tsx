@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegekraft wechseln: Wann ein Wechsel sinnvoll ist, wie der reguläre Kraftwechsel alle 6–8 Wochen funktioniert und was eine gute Übergabe ausmacht.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-wechseln' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegekraft wechseln | Primundus',
     description: 'Wann und wie man eine 24h-Betreuungskraft wechselt — regulär und kurzfristig.',
     url: 'https://primundus.de/pflegekraft-wechseln',

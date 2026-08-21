@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegekraft aus Rumänien im Entsendemodell: Wie es funktioniert, was es kostet und worauf bei der Auswahl zu achten ist. Rechtssicher mit A1-Bescheinigung.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-rumaenien' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegekraft aus Rumänien | Primundus',
     description: 'Rumänische Pflegekraft im Entsendemodell: legal, geprüft, rechtssicher.',
     url: 'https://primundus.de/pflegekraft-aus-rumaenien',

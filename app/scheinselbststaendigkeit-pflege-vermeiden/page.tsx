@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Scheinselbstständigkeit bei Pflegekräften: Was sie ist, woran Behörden sie erkennen, welche Folgen drohen und wie man das Risiko vollständig vermeidet.',
   alternates: { canonical: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Scheinselbstständigkeit in der Pflege vermeiden | Primundus',
     description: 'Was Scheinselbstständigkeit ist und wie man das Risiko bei der 24h-Pflege vollständig vermeidet.',
     url: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden',

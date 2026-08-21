@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegekasse Antrag stellen 2026: Pflegegrad beantragen, welche Leistungen es gibt, Fristen und was bei Ablehnung zu tun ist. Mit Musterschreiben.',
   alternates: { canonical: 'https://primundus.de/pflegekasse-antrag-stellen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegekasse Antrag stellen 2026 | Primundus',
     description: 'Pflegegrad und Pflegeleistungen bei der Pflegekasse beantragen — Schritt für Schritt erklärt.',
     url: 'https://primundus.de/pflegekasse-antrag-stellen',

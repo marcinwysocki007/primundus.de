@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'Wer übernimmt die Kosten der 24-Stunden-Pflege? Pflegekasse, Sozialamt, Steuervorteil — und wann Kinder zahlen müssen (100.000-€-Grenze). Einfach erklärt.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege-kostenuebernahme' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Kostenübernahme 24-Stunden-Pflege: Wer zahlt was? | Primundus',
     description: 'Pflegekasse, Sozialamt, Steuervorteil — und die 100.000-€-Regel für Angehörige. Einfach erklärt.',
     url: 'https://primundus.de/24-stunden-pflege-kostenuebernahme',

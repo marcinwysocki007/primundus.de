@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegekraft bei der Sozialversicherung anmelden: Minijob, reguläre Beschäftigung oder Entsendemodell — wann was gilt und wie die Anmeldung läuft. 2026.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegekraft Sozialversicherung anmelden 2026 | Primundus',
     description: 'Sozialversicherungsanmeldung für Pflegekräfte — Minijob, regulär oder Entsendemodell.',
     url: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden',

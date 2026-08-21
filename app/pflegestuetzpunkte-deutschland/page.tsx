@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegestützpunkte: Was sie bieten, wie man den nächsten findet und wann sie die beste Anlaufstelle sind.',
   alternates: { canonical: 'https://primundus.de/pflegestuetzpunkte-deutschland' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegestützpunkte Deutschland',
     description: 'Pflegestützpunkte: Was sie bieten, wie man den nächsten findet und wann sie die beste Anlaufstelle sind.',
     url: 'https://primundus.de/pflegestuetzpunkte-deutschland',

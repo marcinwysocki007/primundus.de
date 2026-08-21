@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Werkvertrag mit Pflegekraft: Warum das fast immer Scheinselbstständigkeit ist und welche Alternativen rechtssicher sind.',
   alternates: { canonical: 'https://primundus.de/werkvertrag-pflegekraft-muster' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Werkvertrag Pflegekraft',
     description: 'Werkvertrag mit Pflegekraft: Warum das fast immer Scheinselbstständigkeit ist und welche Alternativen rechtssicher sind.',
     url: 'https://primundus.de/werkvertrag-pflegekraft-muster',

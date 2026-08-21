@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegehilfsmittel 2026: Was die Kasse zahlt (42 €/Monat), welche Produkte dazu gehören und wie der Antrag läuft.',
   alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-beantragen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegehilfsmittel beantragen',
     description: 'Pflegehilfsmittel 2026: Was die Kasse zahlt (42 €/Monat), welche Produkte dazu gehören und wie der Antrag läuft.',
     url: 'https://primundus.de/pflegehilfsmittel-beantragen',

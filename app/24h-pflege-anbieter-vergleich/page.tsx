@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   // nicht — Signale werden dort gebündelt statt sich gegenseitig zu schwächen.
   alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Anbieter Vergleich 2026 | Primundus',
     description: 'Worauf man beim Vergleich von 24h-Pflege-Anbietern achten sollte: Rechtssicherheit, Qualitätsprüfung, Transparenz, Kosten. Primundus im Vergleich.',
     url: 'https://primundus.de/24h-pflege-anbieter-vergleich',

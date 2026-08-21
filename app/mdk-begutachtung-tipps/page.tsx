@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'MDK-Begutachtung vorbereiten: Wie der Besuch abläuft, was geprüft wird, welche Tipps wirklich helfen und wie ein Pflegetagebuch den Pflegegrad sichert.',
   alternates: { canonical: 'https://primundus.de/mdk-begutachtung-tipps' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'MDK-Begutachtung Tipps 2026 | Primundus',
     description: 'MDK-Besuch vorbereiten: Ablauf, Checkliste, Pflegetagebuch — so sichern Sie den richtigen Pflegegrad.',
     url: 'https://primundus.de/mdk-begutachtung-tipps',

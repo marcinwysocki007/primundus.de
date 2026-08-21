@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: '24h-Pflege für Eltern oder Angehörige organisieren: was zu beachten ist, wie der Ablauf läuft, welche Kosten entstehen und wie Primundus unterstützt.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-fuer-angehoerige' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege für Angehörige | Primundus',
     description: '24h-Pflege für Eltern oder Angehörige organisieren: was zu beachten ist, wie der Ablauf läuft, welche Kosten entstehen und wie Primundus unterstützt.',
     url: 'https://primundus.de/24h-pflege-fuer-angehoerige',

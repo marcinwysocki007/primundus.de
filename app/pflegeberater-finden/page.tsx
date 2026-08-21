@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegeberater in Deutschland: kostenlose Beratung durch Pflegestützpunkte, wann ein privater Berater sinnvoll ist und wie Primundus berät.',
   alternates: { canonical: 'https://primundus.de/pflegeberater-finden' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegeberater finden',
     description: 'Pflegeberater in Deutschland: kostenlose Beratung durch Pflegestützpunkte, wann ein privater Berater sinnvoll ist und wie Primundus berät.',
     url: 'https://primundus.de/pflegeberater-finden',

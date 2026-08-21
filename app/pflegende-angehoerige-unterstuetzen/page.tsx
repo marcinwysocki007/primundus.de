@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Wie man pflegende Angehörige unterstützt: Konkrete Entlastungsangebote, Selbstfürsorge-Tipps und wie man Hilfe annimmt.',
   alternates: { canonical: 'https://primundus.de/pflegende-angehoerige-unterstuetzen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegende Angehörige unterstützen | Primundus',
     description: 'Wie man pflegende Angehörige wirklich unterstützt — konkrete Hilfe statt gut gemeinter Ratschläge.',
     url: 'https://primundus.de/pflegende-angehoerige-unterstuetzen',

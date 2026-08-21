@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'Pflegerische Unterstützung bei COPD: was im Alltag hilft, was die Betreuungskraft übernimmt, wann der Arzt gerufen werden muss und welcher Pflegegrad möglich ist.',
   alternates: { canonical: 'https://primundus.de/copd-pflege-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflege bei COPD zuhause',
     description: 'Was im Alltag mit COPD hilft, was die Betreuungskraft übernimmt und welcher Pflegegrad möglich ist.',
     url: 'https://primundus.de/copd-pflege-zuhause',

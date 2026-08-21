@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Osteuropäische Pflegekraft direkt suchen oder über eine Agentur? Vollständiger Vergleich: Kosten, Rechtssicherheit,',
   alternates: { canonical: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Osteuropäische Pflegekraft oder Agentur? | Primundus',
     description: 'Direktvermittlung oder Agentur: Was ist besser, günstiger und rechtssicherer?',
     url: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur',

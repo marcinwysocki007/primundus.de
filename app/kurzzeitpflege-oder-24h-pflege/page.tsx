@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Kurzzeitpflege vs. 24h-Pflege zuhause: Wann was sinnvoll ist, Kostenvergleich 2026 und welche Lösung für welche Situation passt.',
   alternates: { canonical: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Kurzzeitpflege oder 24h-Pflege? | Primundus',
     description: 'Kurzzeitpflege vs. 24h-Pflege zuhause: Wann was sinnvoll ist, Kostenvergleich 2026 und welche Lösung für welche Situation passt.',
     url: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Osteoporose Pflege zuhause: Warum Sturzprävention das Wichtigste ist, wie man den Alltag sicher gestaltet und was Ernährung und Vitamin D beitragen.',
   alternates: { canonical: 'https://primundus.de/osteoporose-pflege-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Osteoporose Pflege zuhause | Primundus',
     description: 'Häusliche Pflege bei Osteoporose — Sturzschutz, Alltag und Ernährung.',
     url: 'https://primundus.de/osteoporose-pflege-zuhause',

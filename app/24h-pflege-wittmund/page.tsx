@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     '24h-Pflege im Kreis Wittmund: Betreuungskraft zuhause in Wittmund, Esens, Carolinensiel & ganz Ostfriesland. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-wittmund' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege in Wittmund & Harlingerland | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft im Kreis Wittmund. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-wittmund',

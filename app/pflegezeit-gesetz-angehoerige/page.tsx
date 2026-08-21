@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegezeitgesetz und Familienpflegezeit: Was pflegende Angehörige an Rechten haben, wie Freistellung beantragt wird.',
   alternates: { canonical: 'https://primundus.de/pflegezeit-gesetz-angehoerige' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegezeitgesetz Angehörige',
     description: 'Pflegezeitgesetz und Familienpflegezeit: Was pflegende Angehörige an Rechten haben, wie Freistellung beantragt wird.',
     url: 'https://primundus.de/pflegezeit-gesetz-angehoerige',

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: '24-Stunden-Pflege in Hameln: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hameln' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Hameln — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Hameln. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-hameln',

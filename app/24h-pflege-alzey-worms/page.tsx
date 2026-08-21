@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     '24h-Pflege im Landkreis Alzey-Worms: geprüfte Betreuungskraft zuhause in Alzey, Wörrstadt, Osthofen & Umgebung. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-alzey-worms' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege im Kreis Alzey-Worms — Betreuung zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Alzey-Worms. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-alzey-worms',

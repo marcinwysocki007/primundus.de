@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Ehrliche Übersicht der Nachteile der 24h-Pflege: Privatsphäre, Sprachbarrieren, Kraftwechsel, Kosten. Was die Lösung ist und wann 24h-Pflege nicht passt.',
   alternates: { canonical: 'https://primundus.de/nachteile-24h-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Nachteile der 24h-Pflege | Primundus',
     description: 'Ehrliche Übersicht der Nachteile der 24h-Pflege: Privatsphäre, Sprachbarrieren, Kraftwechsel, Kosten. Was die Lösung ist und wann 24h-Pflege nicht passt.',
     url: 'https://primundus.de/nachteile-24h-pflege',

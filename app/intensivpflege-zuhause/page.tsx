@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Intensivpflege zuhause: Was ist möglich, welche Fachkräfte werden gebraucht und wann ist stationäre Versorgung nötig?',
   alternates: { canonical: 'https://primundus.de/intensivpflege-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Intensivpflege zuhause',
     description: 'Intensivpflege zuhause: Was ist möglich, welche Fachkräfte werden gebraucht und wann ist stationäre Versorgung nötig?',
     url: 'https://primundus.de/intensivpflege-zuhause',

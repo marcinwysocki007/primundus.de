@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Eltern verweigern Pflege oder Betreuungskraft? Warum das passiert, welche Strategien wirklich helfen und wo die Grenzen der Selbstbestimmung liegen.',
   alternates: { canonical: 'https://primundus.de/wenn-eltern-pflege-verweigern' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Wenn Eltern Pflege verweigern | Primundus',
     description: 'Was man tun kann wenn Eltern Pflege oder eine Betreuungskraft ablehnen.',
     url: 'https://primundus.de/wenn-eltern-pflege-verweigern',

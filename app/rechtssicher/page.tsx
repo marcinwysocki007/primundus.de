@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: '24h-Pflege rechtssicher organisieren: Warum das Entsendemodell die einzig sichere Lösung ist, wie A1-Bescheinigung schützt und was bei einer Kontrolle passiert.',
   alternates: { canonical: 'https://primundus.de/rechtssicher' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Rechtssichere 24h-Pflege | Primundus',
     description: 'Wie 24h-Pflege rechtssicher funktioniert — Entsendemodell, A1-Bescheinigung, keine Scheinselbstständigkeit.',
     url: 'https://primundus.de/rechtssicher',

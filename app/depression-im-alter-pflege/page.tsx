@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Depression im Alter richtig erkennen und damit umgehen: Zeichen, wie die Betreuungskraft helfen kann und wann professionelle Hilfe nötig ist.',
   alternates: { canonical: 'https://primundus.de/depression-im-alter-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Depression im Alter',
     description: 'Depression im Alter richtig erkennen und damit umgehen: Zeichen, wie die Betreuungskraft helfen kann und wann professionelle Hilfe nötig ist.',
     url: 'https://primundus.de/depression-im-alter-pflege',

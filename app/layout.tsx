@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
-    images: [{ url: '/images/primundus_logo_header.webp' }],
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [{ url: '/images/primundus_logo_header.webp' }],
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
   },
 }
 

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
   alternates: { canonical: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegeversicherung Leistungen 2026 | Primundus',
     description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
     url: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht',

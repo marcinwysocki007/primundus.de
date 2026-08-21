@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegekraft aus Bulgarien: Wie das Entsendemodell funktioniert, was eine bulgarische Betreuungskraft kostet und worauf bei der Auswahl zu achten ist.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-bulgarien' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegekraft aus Bulgarien | Primundus',
     description: 'Pflegekraft aus Bulgarien im Entsendemodell: legal, sicher und oft eine gute Wahl.',
     url: 'https://primundus.de/pflegekraft-aus-bulgarien',

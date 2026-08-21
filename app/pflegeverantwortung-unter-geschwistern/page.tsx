@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wenn Geschwister sich die Pflege der Eltern aufteilen müssen: wie man faire Vereinbarungen trifft und Konflikte vermeidet.',
   alternates: { canonical: 'https://primundus.de/pflegeverantwortung-unter-geschwistern' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegeverantwortung Geschwister',
     description: 'Wenn Geschwister sich die Pflege der Eltern aufteilen müssen: wie man faire Vereinbarungen trifft und Konflikte vermeidet.',
     url: 'https://primundus.de/pflegeverantwortung-unter-geschwistern',

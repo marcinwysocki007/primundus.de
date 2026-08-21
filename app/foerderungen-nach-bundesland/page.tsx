@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflege-Förderungen 2026: Bundesweite Pflegekasse-Leistungen plus Landesförderungen in Bayern, NRW, BW und weiteren Bundesländern. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/foerderungen-nach-bundesland' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Förderungen nach Bundesland — Pflegezuschüsse 2026 | Primundus',
     description: 'Welche Pflege-Förderungen gibt es 2026 — bundesweit und je Bundesland?',
     url: 'https://primundus.de/foerderungen-nach-bundesland',

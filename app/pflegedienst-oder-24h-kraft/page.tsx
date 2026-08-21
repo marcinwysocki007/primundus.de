@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Ambulanter Pflegedienst oder 24h-Betreuungskraft? Vollständiger Vergleich: Kosten, Leistungen, wann was sinnvoll ist und wann eine Kombination am besten trägt.',
   alternates: { canonical: 'https://primundus.de/pflegedienst-oder-24h-kraft' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegedienst oder 24h-Kraft? | Primundus',
     description: 'Ambulanter Pflegedienst vs. 24h-Betreuungskraft — ehrlicher Vergleich 2026.',
     url: 'https://primundus.de/pflegedienst-oder-24h-kraft',

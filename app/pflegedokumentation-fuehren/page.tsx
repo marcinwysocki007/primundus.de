@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegedokumentation in der häuslichen Pflege: Was dokumentiert werden muss, wie es einfach geht und was die Betreuungskraft aufschreibt.',
   alternates: { canonical: 'https://primundus.de/pflegedokumentation-fuehren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegedokumentation führen',
     description: 'Pflegedokumentation in der häuslichen Pflege: Was dokumentiert werden muss, wie es einfach geht und was die Betreuungskraft aufschreibt.',
     url: 'https://primundus.de/pflegedokumentation-fuehren',

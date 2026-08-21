@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Sturzprävention Senioren 2026: Risikofaktoren erkennen, Wohnung sichern, Gleichgewichtsübungen und Hilfsmittel — wie man Stürze im Alter effektiv verhindert.',
   alternates: { canonical: 'https://primundus.de/sturzpraevention-senioren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Sturzprävention Senioren | Primundus',
     description: 'Wie man Stürze im Alter verhindert — Risikofaktoren, Wohnungssicherung, Übungen, Hilfsmittel.',
     url: 'https://primundus.de/sturzpraevention-senioren',

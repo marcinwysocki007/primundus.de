@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflege aus der Ferne koordinieren: Wie man Kommunikation strukturiert, welche digitalen Hilfsmittel helfen und warum eine 24h-Betreuungskraft die.',
   alternates: { canonical: 'https://primundus.de/pflege-aus-der-ferne-koordinieren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflege aus der Ferne koordinieren | Primundus',
     description: 'Wie man häusliche Pflege aus der Entfernung organisiert und koordiniert.',
     url: 'https://primundus.de/pflege-aus-der-ferne-koordinieren',

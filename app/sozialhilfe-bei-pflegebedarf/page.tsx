@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Sozialhilfe Pflege 2026: Was Hilfe zur Pflege (§61 SGB XII) ist, wer Anspruch hat, ob Kinder zahlen müssen und wie man den Antrag stellt.',
   alternates: { canonical: 'https://primundus.de/sozialhilfe-bei-pflegebedarf' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Sozialhilfe bei Pflegebedarf 2026 | Primundus',
     description: 'Hilfe zur Pflege (§61 SGB XII): Wer Anspruch hat, ob Kinder zahlen müssen und wie man Antrag stellt.',
     url: 'https://primundus.de/sozialhilfe-bei-pflegebedarf',

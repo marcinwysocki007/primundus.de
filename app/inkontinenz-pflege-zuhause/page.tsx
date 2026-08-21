@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Inkontinenz bei pflegebedürftigen Senioren: Formen, Hilfsmittel (Kassenzuschuss bis 40 €/Mo), Alltagstipps und wie man Würde beim Umgang bewahrt.',
   alternates: { canonical: 'https://primundus.de/inkontinenz-pflege-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Inkontinenz Pflege zuhause | Primundus',
     description: 'Inkontinenz in der häuslichen Pflege — Hilfsmittel, Alltag und Würde bewahren.',
     url: 'https://primundus.de/inkontinenz-pflege-zuhause',

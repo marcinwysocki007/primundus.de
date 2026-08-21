@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Notfallplan Pflege: Was in jeden Pflegenotfallplan gehört, eine kostenlose Vorlage und wie man den Plan aktuell hält. Für zuhause,',
   alternates: { canonical: 'https://primundus.de/notfallplan-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Notfallplan Pflege — Vorlage & Anleitung | Primundus',
     description: 'Notfallplan für die häusliche Pflege — was reingehört und wie man ihn aktuell hält.',
     url: 'https://primundus.de/notfallplan-pflege',

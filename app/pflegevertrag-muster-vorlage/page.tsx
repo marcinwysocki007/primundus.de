@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegevertrag Vorlage 2026: Vollständiges Muster mit allen Pflichtangaben — Leistungsumfang, Vergütung, Kost und Logis, Kündigung. Kostenlos zum Ausdrucken.',
   alternates: { canonical: 'https://primundus.de/pflegevertrag-muster-vorlage' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegevertrag Muster & Vorlage 2026 | Primundus',
     description: 'Kostenloses Pflegevertrag-Muster mit allen Pflichtangaben für die häusliche 24h-Pflege.',
     url: 'https://primundus.de/pflegevertrag-muster-vorlage',

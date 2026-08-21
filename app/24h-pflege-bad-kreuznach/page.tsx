@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: '24-Stunden-Pflege in Bad Kreuznach: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-kreuznach' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Bad Kreuznach — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Bad Kreuznach. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-bad-kreuznach',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Haftungsfragen in der 24h-Pflege: Was passiert wenn die Kraft einen Schaden verursacht? Wer haftet bei Unfällen? Alles Wichtige kompakt.',
   alternates: { canonical: 'https://primundus.de/haftung-pflegehaushalt' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Haftung Pflegehaushalt',
     description: 'Haftungsfragen in der 24h-Pflege: Was passiert wenn die Kraft einen Schaden verursacht? Wer haftet bei Unfällen? Alles Wichtige kompakt.',
     url: 'https://primundus.de/haftung-pflegehaushalt',

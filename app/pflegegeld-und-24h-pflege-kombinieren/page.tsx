@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegegeld mit 24h-Pflege kombinieren: Was geht, was nicht, wie viel die Kasse zahlt und wie der Eigenanteil maximal gesenkt wird. Alle Optionen 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegegeld und 24h-Pflege kombinieren | Primundus',
     description: 'Pflegegeld mit 24h-Pflege kombinieren: Was geht, was nicht, wie viel die Kasse zahlt und wie der Eigenanteil maximal gesenkt wird. Alle Optionen 2026.',
     url: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren',

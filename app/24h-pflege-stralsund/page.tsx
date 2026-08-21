@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: '24-Stunden-Pflege in Stralsund: Eigenanteil ab ca. 1400 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-stralsund' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Stralsund — Betreuungskraft zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Stralsund. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-stralsund',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wenn sich der Zustand verschlechtert: Wann und wie eine Höherstufung beantragt wird, was zu beachten ist und wie man vorgeht.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-aenderung-melden' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegegrad-Änderung melden',
     description: 'Wenn sich der Zustand verschlechtert: Wann und wie eine Höherstufung beantragt wird, was zu beachten ist und wie man vorgeht.',
     url: 'https://primundus.de/pflegegrad-aenderung-melden',

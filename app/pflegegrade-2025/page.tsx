@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegegrade 2025 und 2026: Aktuelle Pflegegeldbeträge, Sachleistungen, was sich geändert hat und wie der Pflegegrad beantragt wird.',
   alternates: { canonical: 'https://primundus.de/pflegegrade-2025' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegegrade 2025/2026 | Primundus',
     description: 'Pflegegrade 2025 und 2026: Aktuelle Pflegegeldbeträge, Sachleistungen, was sich geändert hat und wie der Pflegegrad beantragt wird.',
     url: 'https://primundus.de/pflegegrade-2025',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: '24h-Pflege organisieren: Was vor dem Start geregelt sein muss, wie man Wohnraum vorbereitet und was laufend zu organisieren ist. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-organisieren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege organisieren | Primundus',
     description: 'Schritt-für-Schritt: Was vor und nach dem Start der 24h-Pflege organisiert werden muss.',
     url: 'https://primundus.de/24h-pflege-organisieren',

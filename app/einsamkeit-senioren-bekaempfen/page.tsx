@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Einsamkeit im Alter ist ein Gesundheitsrisiko. Was Angehörige und Betreuungskräfte tun können und wie 24h-Pflege dagegen wirkt.',
   alternates: { canonical: 'https://primundus.de/einsamkeit-senioren-bekaempfen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Einsamkeit Senioren',
     description: 'Einsamkeit im Alter ist ein Gesundheitsrisiko. Was Angehörige und Betreuungskräfte tun können und wie 24h-Pflege dagegen wirkt.',
     url: 'https://primundus.de/einsamkeit-senioren-bekaempfen',

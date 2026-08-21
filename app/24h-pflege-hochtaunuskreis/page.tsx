@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     '24h-Pflege im Hochtaunuskreis: Betreuungskraft zuhause in Oberursel, Königstein, Kronberg, Usingen & Umgebung. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hochtaunuskreis' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege im Hochtaunuskreis — Betreuung zuhause | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft im Hochtaunuskreis. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-hochtaunuskreis',

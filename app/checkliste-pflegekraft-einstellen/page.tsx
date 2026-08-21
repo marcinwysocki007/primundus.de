@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Checkliste Pflegekraft einstellen: Was vor der Auswahl, beim Gespräch, vor Anreise und in der ersten Woche zu beachten ist.',
   alternates: { canonical: 'https://primundus.de/checkliste-pflegekraft-einstellen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Checkliste Pflegekraft einstellen | Primundus',
     description: 'Vollständige Checkliste: Was bei der Einstellung einer 24h-Betreuungskraft zu beachten ist.',
     url: 'https://primundus.de/checkliste-pflegekraft-einstellen',

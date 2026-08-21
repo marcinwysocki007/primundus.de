@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegeheim Kosten 2026: Eigenanteil Ø 3.364 €/Monat (bundesweit). Regionale Unterschiede, Kassenzuschüsse und warum 24h-Pflege zuhause oft günstiger ist.',
   alternates: { canonical: 'https://primundus.de/pflegeheim-kosten-deutschland' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegeheim Kosten Deutschland 2026 | Primundus',
     description: 'Pflegeheimkosten 2026: Durchschnitt, regionale Unterschiede und Vergleich mit 24h-Pflege zuhause.',
     url: 'https://primundus.de/pflegeheim-kosten-deutschland',

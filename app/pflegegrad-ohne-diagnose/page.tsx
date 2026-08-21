@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Kann man einen Pflegegrad beantragen ohne offizielle Diagnose? Was der MD bewertet und warum eine Diagnose oft trotzdem hilfreich ist.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-ohne-diagnose' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegegrad ohne Diagnose',
     description: 'Kann man einen Pflegegrad beantragen ohne offizielle Diagnose? Was der MD bewertet und warum eine Diagnose oft trotzdem hilfreich ist.',
     url: 'https://primundus.de/pflegegrad-ohne-diagnose',

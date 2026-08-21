@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wohnraumanpassung Förderung: Was die Pflegekasse zahlt (bis 4.000 €), welche weiteren Förderungen es gibt und wie der Antrag läuft.',
   alternates: { canonical: 'https://primundus.de/wohnraumanpassung-foerderung' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Wohnraumanpassung Förderung',
     description: 'Wohnraumanpassung Förderung: Was die Pflegekasse zahlt (bis 4.000 €), welche weiteren Förderungen es gibt und wie der Antrag läuft.',
     url: 'https://primundus.de/wohnraumanpassung-foerderung',

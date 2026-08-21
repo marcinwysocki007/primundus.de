@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Schlafstörungen im Alter: Ursachen, was die Betreuungskraft tun kann und welche einfachen Maßnahmen wirklich helfen.',
   alternates: { canonical: 'https://primundus.de/schlafprobleme-senioren-loesen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Schlafprobleme Senioren',
     description: 'Schlafstörungen im Alter: Ursachen, was die Betreuungskraft tun kann und welche einfachen Maßnahmen wirklich helfen.',
     url: 'https://primundus.de/schlafprobleme-senioren-loesen',

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: '24-Stunden-Pflege in Berlin-Charlottenburg: Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-charlottenburg' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Berlin-Charlottenburg | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Berlin-Charlottenburg. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-charlottenburg',

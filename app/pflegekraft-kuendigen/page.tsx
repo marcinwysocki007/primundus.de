@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegekraft kündigen 2026: Kündigungsfristen je nach Beschäftigungsmodell, Musterschreiben und was bei Kündigung aus wichtigem Grund gilt.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-kuendigen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegekraft kündigen 2026 | Primundus',
     description: 'Kündigungsfristen, Musterschreiben und Ablauf — je nach Beschäftigungsmodell.',
     url: 'https://primundus.de/pflegekraft-kuendigen',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Hausnotruf für Senioren: Kosten ab 20 €/Monat, Kassenzuschuss möglich. Was ein Hausnotruf leistet, welche Systeme es gibt und wann er sinnvoll ist.',
   alternates: { canonical: 'https://primundus.de/hausnotruf-senioren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Hausnotruf für Senioren 2026 | Primundus',
     description: 'Hausnotruf: Kosten, Kassenzuschuss und welche Systeme für wen geeignet sind.',
     url: 'https://primundus.de/hausnotruf-senioren',

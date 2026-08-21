@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegemangel melden: An wen man sich bei Problemen in der Pflege wendet, wie eine Beschwerde eingereicht wird und welche Stellen zuständig sind.',
   alternates: { canonical: 'https://primundus.de/pflegemangel-melden-beschwerden' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegemangel melden | Primundus',
     description: 'Probleme in der Pflege melden — welche Stellen zuständig sind und wie man vorgeht.',
     url: 'https://primundus.de/pflegemangel-melden-beschwerden',

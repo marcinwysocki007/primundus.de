@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Multiple Sklerose Pflege zuhause: Was in welchem MS-Verlauf möglich ist, konkrete Alltagstipps und ab wann eine 24h-Betreuungskraft sinnvoll wird. 2026.',
   alternates: { canonical: 'https://primundus.de/multiple-sklerose-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Multiple Sklerose Pflege zuhause | Primundus',
     description: 'Was bei MS zuhause möglich ist und ab wann 24h-Pflege sinnvoll wird.',
     url: 'https://primundus.de/multiple-sklerose-pflege',

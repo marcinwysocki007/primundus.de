@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Kurzzeitpflege: Was es ist, wie viel die Kasse zahlt (2026: bis 3.539 €/Jahr), wie man es beantragt und wann 24h-Pflege die bessere Alternative ist.',
   alternates: { canonical: 'https://primundus.de/kurzzeitpflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Kurzzeitpflege 2026 | Primundus',
     description: 'Kurzzeitpflege: Was es ist, wie viel die Kasse zahlt (2026: bis 3.539 €/Jahr), wie man es beantragt und wann 24h-Pflege die bessere Alternative ist.',
     url: 'https://primundus.de/kurzzeitpflege',

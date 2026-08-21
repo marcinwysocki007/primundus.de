@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wie man eine Wohnraumanpassung plant: Was zu beachten ist, welche Fachleute helfen und wie man Zuschüsse bekommt.',
   alternates: { canonical: 'https://primundus.de/wohnraumanpassung-planen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Wohnraumanpassung planen',
     description: 'Wie man eine Wohnraumanpassung plant: Was zu beachten ist, welche Fachleute helfen und wie man Zuschüsse bekommt.',
     url: 'https://primundus.de/wohnraumanpassung-planen',

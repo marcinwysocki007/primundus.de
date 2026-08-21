@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Wie Primundus die Qualität der Betreuungskräfte sicherstellt: aktive Prüfung von Deutschkenntnissen, Erfahrung und Referenzen. Laufende Qualitätssicherung,',
   alternates: { canonical: 'https://primundus.de/qualitaet' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Qualität der 24h-Pflege | Primundus',
     description: 'Wie Primundus Betreuungskräfte prüft und Qualität dauerhaft sicherstellt.',
     url: 'https://primundus.de/qualitaet',

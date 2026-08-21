@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegegrad Widerspruch einlegen: Fristen, Begründung, Chancen. Wie man gegen einen zu niedrigen Bescheid vorgeht.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-widerspruch-einlegen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegegrad Widerspruch einlegen',
     description: 'Pflegegrad Widerspruch einlegen: Fristen, Begründung, Chancen. Wie man gegen einen zu niedrigen Bescheid vorgeht.',
     url: 'https://primundus.de/pflegegrad-widerspruch-einlegen',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegegrad bei Parkinson 2026: Welcher Grad ist realistisch, was bei der Begutachtung zu beachten ist und wie die Leistungen sich staffeln.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-bei-parkinson' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegegrad bei Parkinson 2026 | Primundus',
     description: 'Welcher Pflegegrad bei Parkinson — Begutachtung, Leistungen und Höherstufung.',
     url: 'https://primundus.de/pflegegrad-bei-parkinson',

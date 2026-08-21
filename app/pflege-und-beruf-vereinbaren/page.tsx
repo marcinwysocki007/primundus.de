@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflege und Beruf vereinbaren: Pflegezeit, Familienpflegezeit, Freistellungsansprüche und wie eine 24h-Betreuungskraft die Doppelbelastung löst.',
   alternates: { canonical: 'https://primundus.de/pflege-und-beruf-vereinbaren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflege und Beruf vereinbaren 2026 | Primundus',
     description: 'Rechte, Freistellungen und praktische Lösungen wenn Pflege und Beruf zusammenkommen.',
     url: 'https://primundus.de/pflege-und-beruf-vereinbaren',

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: 'Primundus ist mit eigenen 24h-Betreuungskräften in ganz Deutschland im Einsatz. PLZ oder Ort eingeben — sofort passende Informationen und Anfrage starten.',
   alternates: { canonical: 'https://primundus.de/regionen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege in Ihrer Region | Primundus',
     description: 'PLZ oder Ort eingeben — 24h-Pflege in Ihrer Stadt finden.',
     url: 'https://primundus.de/regionen',

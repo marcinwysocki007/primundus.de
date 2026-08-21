@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflegegrad nach Schlaganfall: Welcher Grad ist realistisch, wie bereitet man die Begutachtung vor und welche Leistungen stehen zu? Alles erklärt für 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-nach-schlaganfall' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegegrad nach Schlaganfall 2026 | Primundus',
     description: 'Welcher Pflegegrad nach Schlaganfall — Begutachtung, Leistungen und Antrag.',
     url: 'https://primundus.de/pflegegrad-nach-schlaganfall',

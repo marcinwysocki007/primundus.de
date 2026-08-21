@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: '24h-Pflege in Sachsen-Anhalt: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-sachsen-anhalt' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Sachsen-Anhalt | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Sachsen-Anhalt. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-sachsen-anhalt',

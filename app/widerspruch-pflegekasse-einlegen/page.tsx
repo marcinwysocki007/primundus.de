@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Widerspruch gegen Pflegegrad-Bescheid: Wie man ihn einlegt, Musterschreiben und welche Erfolgschancen realistisch sind. Frist: 1 Monat nach Bescheid.',
   alternates: { canonical: 'https://primundus.de/widerspruch-pflegekasse-einlegen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Widerspruch Pflegekasse 2026 | Primundus',
     description: 'Widerspruch gegen zu niedrigen Pflegegrad — Muster, Fristen und Erfolgschancen.',
     url: 'https://primundus.de/widerspruch-pflegekasse-einlegen',

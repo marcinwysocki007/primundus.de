@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: '24h-Pflege zuhause oder Pflegeheim? Kosten, Qualität, Alltag — vollständiger Vergleich 2026 mit echten Zahlen. Wann was die bessere Wahl ist.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege vs. Pflegeheim 2026 | Primundus',
     description: '24h-Pflege zuhause oder Pflegeheim? Kosten, Qualität, Alltag — vollständiger Vergleich 2026 mit echten Zahlen. Wann was die bessere Wahl ist.',
     url: 'https://primundus.de/24h-pflege-vs-pflegeheim',

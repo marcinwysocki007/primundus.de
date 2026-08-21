@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Was bei der häuslichen Wundversorgung zu beachten ist: Was die Betreuungskraft darf, wann der Pflegedienst nötig ist.',
   alternates: { canonical: 'https://primundus.de/wunden-verbinden-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Wunden verbinden zuhause',
     description: 'Was bei der häuslichen Wundversorgung zu beachten ist: Was die Betreuungskraft darf, wann der Pflegedienst nötig ist.',
     url: 'https://primundus.de/wunden-verbinden-zuhause',

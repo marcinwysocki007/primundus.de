@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Datenschutz in der Pflege: Was darf die Kraft, was darf die Agentur, welche Rechte haben Pflegebedürftige? Praxistipps.',
   alternates: { canonical: 'https://primundus.de/datenschutz-pflegesituation' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Datenschutz Pflege',
     description: 'Datenschutz in der Pflege: Was darf die Kraft, was darf die Agentur, welche Rechte haben Pflegebedürftige? Praxistipps.',
     url: 'https://primundus.de/datenschutz-pflegesituation',

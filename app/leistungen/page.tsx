@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Was macht eine 24h-Betreuungskraft? Pflege, Haushalt, Begleitung, medizinische Unterstützung — alle Leistungen der Primundus 24h-Pflege im Überblick.',
   alternates: { canonical: 'https://primundus.de/leistungen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Leistungen der 24h-Pflege | Primundus',
     description: 'Was eine 24h-Betreuungskraft macht — alle Leistungen im Überblick.',
     url: 'https://primundus.de/leistungen',

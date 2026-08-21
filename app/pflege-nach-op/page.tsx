@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Pflege nach Operation zuhause: Was nach Hüft-OP, Knie-OP und Herzoperationen zu beachten ist, welche Unterstützung nötig ist und welche Kassenzuschüsse greifen.',
   alternates: { canonical: 'https://primundus.de/pflege-nach-op' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflege nach OP zuhause | Primundus',
     description: 'Häusliche Betreuung nach einer Operation — was nötig ist und wer die Kosten trägt.',
     url: 'https://primundus.de/pflege-nach-op',

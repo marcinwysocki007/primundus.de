@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wie Medikamente bei Senioren sicher verwaltet werden: Wochendosierer, Medikamentenliste, was die Betreuungskraft darf und nicht darf.',
   alternates: { canonical: 'https://primundus.de/medikamente-senioren-verwalten' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Medikamente Senioren verwalten',
     description: 'Wie Medikamente bei Senioren sicher verwaltet werden: Wochendosierer, Medikamentenliste, was die Betreuungskraft darf und nicht darf.',
     url: 'https://primundus.de/medikamente-senioren-verwalten',

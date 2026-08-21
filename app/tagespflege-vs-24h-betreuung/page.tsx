@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Tagespflege oder 24h-Betreuung zuhause? Kostenvergleich, Kassenzuschüsse und wann welche Form sinnvoll ist — vollständiger Vergleich für 2026.',
   alternates: { canonical: 'https://primundus.de/tagespflege-vs-24h-betreuung' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Tagespflege vs. 24h-Betreuung 2026 | Primundus',
     description: 'Vollständiger Vergleich: Kosten, Leistungen und wann welche Pflegeform besser passt.',
     url: 'https://primundus.de/tagespflege-vs-24h-betreuung',

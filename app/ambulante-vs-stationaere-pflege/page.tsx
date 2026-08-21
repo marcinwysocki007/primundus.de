@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Ambulante Pflege zu Hause oder stationäres Pflegeheim? Vollständiger Vergleich mit Kosten, Leistungen und Entscheidungshilfe.',
   alternates: { canonical: 'https://primundus.de/ambulante-vs-stationaere-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Ambulante vs. stationäre Pflege',
     description: 'Ambulante Pflege zu Hause oder stationäres Pflegeheim? Vollständiger Vergleich mit Kosten, Leistungen und Entscheidungshilfe.',
     url: 'https://primundus.de/ambulante-vs-stationaere-pflege',

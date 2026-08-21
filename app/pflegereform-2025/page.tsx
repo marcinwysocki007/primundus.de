@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Pflegereform 2025: Das neue Entlastungsbudget, höhere Leistungsbeträge, Änderungen bei Verhinderungs- und Kurzzeitpflege. Alle Änderungen kompakt.',
   alternates: { canonical: 'https://primundus.de/pflegereform-2025' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Pflegereform 2025 | Primundus',
     description: 'Pflegereform 2025: Das neue Entlastungsbudget, höhere Leistungsbeträge, Änderungen bei Verhinderungs- und Kurzzeitpflege. Alle Änderungen kompakt.',
     url: 'https://primundus.de/pflegereform-2025',

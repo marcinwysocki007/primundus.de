@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Kommunikation mit Demenzkranken: 5 Grundprinzipien, konkrete Gesprächstipps und wie man schwierige Situationen (Aggression, Verweigerung, Weinen) meistert.',
   alternates: { canonical: 'https://primundus.de/kommunikation-mit-demenzkranken' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Kommunikation mit Demenzkranken | Primundus',
     description: 'Was bei der Kommunikation mit Demenzkranken hilft und was schadet — 5 Grundprinzipien und konkrete Tipps.',
     url: 'https://primundus.de/kommunikation-mit-demenzkranken',

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'Rollator oder Rollstuhl auf Rezept: Die Krankenkasse zahlt — ganz ohne Pflegegrad. Ablauf über Arzt und Sanitätshaus, Zuzahlung, Fristen und Widerspruch.',
   alternates: { canonical: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Rollator & Rollstuhl beantragen',
     description: 'Auf Rezept über die Krankenkasse — ohne Pflegegrad. Ablauf, Kosten, Ablehnung.',
     url: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen',

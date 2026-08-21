@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Was tun bei Sturz, Bewusstlosigkeit oder Herzprobleme in der Pflegesituation? Schritt-für-Schritt-Anleitung und Notfallplan.',
   alternates: { canonical: 'https://primundus.de/erste-hilfe-bei-pflegenotfall' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Erste Hilfe Pflegenotfall',
     description: 'Was tun bei Sturz, Bewusstlosigkeit oder Herzprobleme in der Pflegesituation? Schritt-für-Schritt-Anleitung und Notfallplan.',
     url: 'https://primundus.de/erste-hilfe-bei-pflegenotfall',

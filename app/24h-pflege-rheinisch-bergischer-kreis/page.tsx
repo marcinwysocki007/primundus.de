@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     '24h-Pflege im Rheinisch-Bergischen Kreis: Betreuungskraft zuhause in Wermelskirchen, Overath, Rösrath & dem ganzen Kreis. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege im Rheinisch-Bergischen Kreis | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft im Rheinisch-Bergischen Kreis. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis',

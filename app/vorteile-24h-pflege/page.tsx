@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Alle Vorteile der 24h-Pflege zuhause im Überblick: eigenes Zuhause, 1:1-Betreuung, günstiger als Pflegeheim, täglich kündbar. Mit ehrlichem Vergleich.',
   alternates: { canonical: 'https://primundus.de/vorteile-24h-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Vorteile der 24h-Pflege | Primundus',
     description: 'Alle Vorteile der 24h-Pflege zuhause im Überblick: eigenes Zuhause, 1:1-Betreuung, günstiger als Pflegeheim, täglich kündbar. Mit ehrlichem Vergleich.',
     url: 'https://primundus.de/vorteile-24h-pflege',

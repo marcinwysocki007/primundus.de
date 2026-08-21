@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     '24h-Pflege im Rhein-Pfalz-Kreis: Betreuungskraft zuhause in Schifferstadt, Limburgerhof, Mutterstadt & dem ganzen Kreis. Täglich kündbar, Start in 4–7 Tagen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege im Rhein-Pfalz-Kreis | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft im Rhein-Pfalz-Kreis. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis',

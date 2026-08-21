@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Ernährung pflegebedürftiger Senioren: Grundlagen, häufige Probleme, Mangelernährung erkennen und praktische Tipps für Betreuungskräfte und Angehörige.',
   alternates: { canonical: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Ernährung pflegebedürftiger Senioren | Primundus',
     description: 'Was pflegebedürftige Senioren essen sollten und wie man Mangelernährung verhindert.',
     url: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Krebspatienten zuhause betreuen: Was die Betreuungskraft übernimmt, wie der Alltag gestaltet wird und wann Palliativpflege nötig wird.',
   alternates: { canonical: 'https://primundus.de/krebspatienten-zuhause-pflegen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Krebspatienten zuhause pflegen',
     description: 'Krebspatienten zuhause betreuen: Was die Betreuungskraft übernimmt, wie der Alltag gestaltet wird und wann Palliativpflege nötig wird.',
     url: 'https://primundus.de/krebspatienten-zuhause-pflegen',

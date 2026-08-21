@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: '24h-Pflege vs. ambulanter Pflegedienst: Was kostet was, wann ist welche Form sinnvoll und wann wird aus ambulant eine 24h-Betreuung notwendig? Vollständiger.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-ambulante-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege vs. ambulante Pflege 2026 | Primundus',
     description: 'Vollständiger Vergleich: Kosten, Leistungen und wann welche Pflegeform sinnvoll ist.',
     url: 'https://primundus.de/24h-pflege-vs-ambulante-pflege',

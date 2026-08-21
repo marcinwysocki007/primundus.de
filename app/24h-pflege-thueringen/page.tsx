@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: '24h-Pflege in Thüringen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
   alternates: { canonical: 'https://primundus.de/24h-pflege-thueringen' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24h-Pflege Thüringen | Primundus',
     description: 'Geprüfte 24h-Betreuungskraft in Thüringen. Täglich kündbar, rechtssicher, startklar.',
     url: 'https://primundus.de/24h-pflege-thueringen',

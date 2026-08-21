@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'Tagespreise, „ab"-Angebote, versteckte Nebenkosten: Woran Sie Lockangebote in der 24-Stunden-Pflege erkennen — und die ehrliche Gesamtrechnung mit allen Posten.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege-wirkliche-kosten' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Was kostet 24-Stunden-Pflege wirklich? | Primundus',
     description: 'Die ehrliche Gesamtrechnung — und die 7 Fragen, die Sie jedem Anbieter stellen sollten.',
     url: 'https://primundus.de/24-stunden-pflege-wirkliche-kosten',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wie Senioren zuhause aktiv und geistig fit bleiben: praktische Ideen für Beschäftigung, Tagesstruktur und soziale Teilhabe.',
   alternates: { canonical: 'https://primundus.de/beschaeftigung-senioren-zuhause' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Beschäftigung Senioren zuhause',
     description: 'Wie Senioren zuhause aktiv und geistig fit bleiben: praktische Ideen für Beschäftigung, Tagesstruktur und soziale Teilhabe.',
     url: 'https://primundus.de/beschaeftigung-senioren-zuhause',

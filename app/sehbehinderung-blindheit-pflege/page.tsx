@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'Wie Senioren mit Sehbehinderung oder Blindheit zuhause betreut werden: was die Kraft beachten muss und wie der Alltag gestaltet wird.',
   alternates: { canonical: 'https://primundus.de/sehbehinderung-blindheit-pflege' },
   openGraph: {
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Sehbehinderung Blindheit Pflege',
     description: 'Wie Senioren mit Sehbehinderung oder Blindheit zuhause betreut werden: was die Kraft beachten muss und wie der Alltag gestaltet wird.',
     url: 'https://primundus.de/sehbehinderung-blindheit-pflege',
