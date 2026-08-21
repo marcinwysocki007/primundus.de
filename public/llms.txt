@@ -1,7 +1,7 @@
 # primundus.de
 # Primundus — 24-Stunden-Pflege & Betreuung zu Hause
 
-> Primundus vermittelt seit 20 Jahren rechtssichere, geprüfte Betreuungskräfte
+> Primundus bietet seit 20 Jahren rechtssichere 24-Stunden-Betreuung mit eigenen, angestellten und geprüften Betreuungskräften
 > für die häusliche 24-Stunden-Pflege in Deutschland. Testsieger DIE WELT.
 > 60.000+ erfolgreiche Betreuungen. Täglich kündbar. Betreuung startklar in 4–7 Tagen.
 
@@ -16,7 +16,7 @@
 - Erfahrung: 20 Jahre, 60.000+ Betreuungen
 - Auszeichnung: Nr. 1 der Pflegekräfte-Vermittler — Service-Champions von DIE WELT & ServiceValue (10/2021). Beleg: https://primundus.de/testsieger-24-stunden-pflege
 - Medienauftritte: ARD, NDR, SAT.1, Die Welt, Frankfurter Allgemeine, Bild der Frau
-- Modell: Vermittlung legaler EU-Pflegekräfte (Entsendemodell)
+- Modell: Eigene, bei der Unternehmensgruppe angestellte EU-Betreuungskräfte — Einsatz über das Entsendemodell mit A1-Bescheinigung
 - Preis: ab ca. 2.200 €/Monat je nach Pflegebedarf (2.200–3.500 €/Monat)
 - USP: Täglich kündbar · Taggenaue Abrechnung · Rechtssicher · In 4–7 Tagen startklar
 
@@ -57,9 +57,10 @@ Primundus bietet Unternehmern die Möglichkeit, als Franchisepartner im wachsend
 - Anbieter-Vergleich: https://primundus.de/anbieter-vergleich — Primundus vs. andere 24h-Pflege-Anbieter im direkten Vergleich
 
 ## Regionen
-Primundus vermittelt Pflegekräfte deutschlandweit — in allen 16 Bundesländern und allen
+Primundus betreut Familien deutschlandweit — in allen 16 Bundesländern und allen
 größeren Städten (Berlin, Hamburg, München, Köln, Frankfurt, Stuttgart, Düsseldorf u.v.m.)
 
 ## Rechtlicher Hinweis
-Alle Inhalte auf primundus.de dienen der Information. Primundus ist kein Pflegedienst,
-sondern ein Vermittler von selbstständigen EU-Pflegekräften im Rahmen des Entsendemodells.
+Alle Inhalte auf primundus.de dienen der Information. Primundus ist kein ambulanter
+Pflegedienst: Die Betreuungskräfte sind bei der Unternehmensgruppe angestellt und werden
+im Rahmen des Entsendemodells mit A1-Bescheinigung in den Haushalten eingesetzt.

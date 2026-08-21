@@ -50,7 +50,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', acceptedAnswer: { '@type': 'Answer', text: 'Über das Entsendemodell mit A1-Bescheinigung. Die Betreuungskraft ist bei einem EU-Unternehmen angestellt, kommt mit A1-Bescheinigung nach Deutschland und ist vollständig sozialversicherungsrechtlich im Heimatland abgesichert. Die Familie hat kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Bei Kontrollen: A1-Bescheinigung vorzeigen.' } },
+      { '@type': 'Question', name: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', acceptedAnswer: { '@type': 'Answer', text: 'Über das Entsendemodell mit A1-Bescheinigung. Die Betreuungskraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, kommt mit A1-Bescheinigung nach Deutschland und ist vollständig sozialversicherungsrechtlich im Heimatland abgesichert. Die Familie hat kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Bei Kontrollen: A1-Bescheinigung vorzeigen.' } },
     ],
   },
 ]
@@ -192,7 +192,7 @@ export default function Rechtssicher() {
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
-              { q: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', a: 'Über das Entsendemodell mit A1-Bescheinigung. Kraft ist im EU-Heimatland angestellt, kommt mit A1-Bescheinigung, Familie hat kein eigenes Arbeitsverhältnis.' },
+              { q: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', a: 'Über das Entsendemodell mit A1-Bescheinigung. Die Kraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, kommt mit A1-Bescheinigung, die Familie hat kein eigenes Arbeitsverhältnis.' },
               { q: 'Was passiert bei einer behördlichen Kontrolle?', a: 'A1-Bescheinigung vorzeigen, Primundus-Vertrag zeigen, Primundus anrufen (089 200 000 830). Kein Problem bei korrektem Entsendemodell.' },
               { q: 'Warum ist "selbstständige Pflegekraft" riskant?', a: 'Scheinselbstständigkeit — bei 24h-Pflege fast immer vorhanden. Behörden fordern Sozialversicherungsbeiträge für bis zu 4 Jahre nach, plus Bußgelder und Strafverfolgung.' },
               { q: 'Ist das Entsendemodell in ganz Deutschland legal?', a: 'Ja — das Entsendemodell basiert auf EU-Recht und gilt in allen 16 Bundesländern. Primundus wendet es seit 20 Jahren ohne einen einzigen Rechtsfall an.' },
