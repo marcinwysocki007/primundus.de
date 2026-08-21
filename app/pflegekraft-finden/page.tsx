@@ -32,7 +32,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegekraft finden — worauf achten und wie vorgehen 2026',
-    author: { '@type': 'Person', name: 'Ilka Wysocki', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
     dateModified: '2026-04-25',
@@ -149,7 +149,7 @@ export default function PflegekraftFinden() {
               { vorteil: 'Rechtliche Absicherung', beschreibung: 'Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher. Die Familie hat kein eigenes Arbeitsverhältnis.' },
               { vorteil: 'Ersatz bei Ausfall', beschreibung: 'Wird die Betreuungskraft krank oder muss wechseln — Primundus stellt sofort eine Ersatzkraft. Kein Versorgungsausfall.' },
               { vorteil: 'Nahtlose Rotation', beschreibung: 'Wechsel der Kraft alle 6–8 Wochen ist organisiert und wird von Primundus koordiniert — Familie muss sich nicht selbst darum kümmern.' },
-              { vorteil: 'Persönliche Beratung', beschreibung: 'Ilka Wysocki und das Primundus-Team begleiten die Familie — von der ersten Anfrage bis zur laufenden Betreuung.' },
+              { vorteil: 'Persönliche Beratung', beschreibung: 'Marta Kapcio und das Primundus-Team begleiten die Familie — von der ersten Anfrage bis zur laufenden Betreuung.' },
             ].map((item) => (
               <div key={item.vorteil} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
                 <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.vorteil}</p>

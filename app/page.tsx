@@ -102,7 +102,7 @@ export default function Page() {
                   href="tel:+4989200000830"
                   className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-white border border-[#E5E3DF] hover:border-[#8B7355] text-[#3D3D3D] font-bold text-[16px] rounded-xl transition-all duration-200"
                 >
-                  <img width={44} height={44} src="/images/ilka-wysocki-2026.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
+                  <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
                   089 200 000 830
                 </a>
               </div>
@@ -244,11 +244,11 @@ export default function Page() {
                     href="tel:+4989200000830"
                     className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-[#F8F7F5] hover:bg-[#F0EBE3] border border-[#E5E3DF] hover:border-[#8B7355] text-[#3D3D3D] font-bold text-[15px] rounded-xl transition-all duration-200"
                   >
-                    <img width={44} height={44} src="/images/ilka-wysocki-2026.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover" />
+                    <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
                     089 200 000 830
                   </a>
                 </div>
-                <p className="text-[12px] text-[#8B8B8B] text-center mt-3">Ilka Wysocki · Mo – So 8 – 20 Uhr</p>
+                <p className="text-[12px] text-[#8B8B8B] text-center mt-3">Marta Kapcio · Mo – So 8 – 20 Uhr</p>
               </div>
             </div>
           </div>
@@ -316,8 +316,8 @@ export default function Page() {
                 <img
                   width={72}
                   height={72}
-                  src="/images/ilka-wysocki-2026.webp"
-                  alt="Ilka Wysocki, Primundus"
+                  src="/images/marta-kapcio.jpg"
+                  alt="Marta Kapcio, Primundus"
                   className="w-[72px] h-[72px] rounded-full object-cover object-top flex-shrink-0"
                 />
                 <div className="flex-1">
@@ -325,7 +325,7 @@ export default function Page() {
                     Ein fester Ansprechpartner — 7 Tage die Woche
                   </h3>
                   <p className="text-[14px] md:text-[15px] text-[#5A5A5A] leading-[1.6]">
-                    Ilka Wysocki und ihr Team sind Mo–So von 8 bis 20 Uhr für Sie da — auch am Wochenende und auch dann, wenn kurzfristig etwas dazwischenkommt.
+                    Marta Kapcio und ihr Team sind Mo–So von 8 bis 20 Uhr für Sie da — auch am Wochenende und auch dann, wenn kurzfristig etwas dazwischenkommt.
                   </p>
                 </div>
               </div>
@@ -409,7 +409,7 @@ export default function Page() {
                   Primundus basiert auf 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die wirklich passen.
                 </p>
                 <p className="text-[16px] md:text-[17px] leading-[1.7] text-[#5A5A5A] mb-8">
-                  Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Ilka Wysocki und ihr Team sind Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echter Ansprechpartner, der Ihre Situation kennt.
+                  Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Marta Kapcio und ihr Team sind Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echter Ansprechpartner, der Ihre Situation kennt.
                 </p>
                 {/* Fakten */}
                 <div className="flex items-center mb-6 bg-[#F8F7F5] rounded-xl border border-[#E5E3DF] overflow-hidden">
@@ -456,12 +456,12 @@ export default function Page() {
                 <div className="rounded-2xl overflow-hidden aspect-[3/4] bg-[#F0EBE3]">
                   <img
                     src="/images/Teamblid-Primundus-Mallorca.webp"
-                    alt="Ilka Wysocki — Primundus Gründerin"
+                    alt="Marta Kapcio — Primundus Gründerin"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute bottom-4 left-4 bg-white rounded-xl px-4 py-3 shadow-lg border border-[#E5E3DF]">
-                  <p className="text-[13px] font-bold text-[#3D3D3D]">Ilka Wysocki</p>
+                  <p className="text-[13px] font-bold text-[#3D3D3D]">Marta Kapcio</p>
                   <p className="text-[12px] text-[#8B8B8B]">Mo – So · 8 – 20 Uhr · 089 200 000 830</p>
                 </div>
               </div>

@@ -43,8 +43,8 @@ export function SiteHeader() {
               className="hidden md:flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-lg bg-[#F8F7F5] hover:bg-[#8B7355] hover:text-white transition-all duration-200 group"
             >
               <Image
-                src="/images/ilka-wysocki-2026.webp"
-                alt="Ilka Wysocki"
+                src="/images/marta-kapcio.jpg"
+                alt="Marta Kapcio"
                 width={40}
                 height={40}
                 className="rounded-full w-10 h-10 object-cover"
@@ -53,7 +53,7 @@ export function SiteHeader() {
               <Phone className="w-4 h-4 text-[#8B7355] group-hover:text-white transition-colors" />
               <div className="flex flex-col">
                 <span className="text-xs text-gray-500 group-hover:text-white/80 leading-tight">
-                  Ilka Wysocki
+                  Marta Kapcio
                 </span>
                 <span className="text-sm font-semibold text-[#3D2B1F] group-hover:text-white leading-tight">
                   089 200 000 830
@@ -153,8 +153,8 @@ export function SiteHeader() {
               <div className="flex items-center gap-3 px-4 py-3 border-b border-[#E5E3DF]">
                 <div className="relative flex-shrink-0">
                   <Image
-                    src="/images/ilka-wysocki-2026.webp"
-                    alt="Ilka Wysocki"
+                    src="/images/marta-kapcio.jpg"
+                    alt="Marta Kapcio"
                     width={44}
                     height={44}
                     className="rounded-full w-11 h-11 object-cover"
@@ -163,7 +163,7 @@ export function SiteHeader() {
                   <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-[#5C9F6E] rounded-full border-2 border-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[13px] font-bold text-[#3D3D3D] leading-tight">Ilka Wysocki</p>
+                  <p className="text-[13px] font-bold text-[#3D3D3D] leading-tight">Marta Kapcio</p>
                   <p className="text-[11px] text-[#8B8B8B] leading-tight">Pflegeberaterin · Mo – So 8 – 20 Uhr</p>
                 </div>
               </div>

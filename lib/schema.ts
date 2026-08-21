@@ -54,6 +54,8 @@ export function siteGraph() {
         award: AWARD,
         sameAs: [
           'https://kostenrechner.primundus.de',
+          'https://share.google/u2axb21OVWp838DPl',
+          'https://www.trustpilot.com/review/primundus.de',
           'https://www.goyellow.de/home/altenpflegeheim-primundus-muenchen--4nvssd.html',
         ],
       },

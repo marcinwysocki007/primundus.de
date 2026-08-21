@@ -45,7 +45,7 @@ export default function FranchiseFormClient() {
             </div>
             <h2 className="text-[26px] font-bold text-[#3D3D3D] mb-3">Anfrage erhalten</h2>
             <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-6">
-              Vielen Dank, {data.vorname}. Mateusz Wysocki oder sein Team meldet sich innerhalb von
+              Vielen Dank, {data.vorname}. Unser Franchise-Team meldet sich innerhalb von
               24 Stunden persönlich bei Ihnen — mit einem ersten Überblick über die Franchise-Möglichkeit in{' '}
               <strong>{data.standort || 'Ihrer Region'}</strong>.
             </p>
@@ -72,7 +72,7 @@ export default function FranchiseFormClient() {
             Jetzt Informationspaket anfordern
           </h2>
           <p className="text-[15px] text-[#5A5A5A] max-w-[480px] mx-auto leading-relaxed">
-            Mateusz Wysocki meldet sich persönlich. Kein Sales-Skript, kein Callcenter —
+            Die Geschäftsleitung meldet sich persönlich. Kein Sales-Skript, kein Callcenter —
             ein echtes Gespräch über Ihre Situation und Chancen.
           </p>
         </div>

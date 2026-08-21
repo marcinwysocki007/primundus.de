@@ -130,7 +130,7 @@ export default function Krankheiten() {
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 mb-12">
             <p className="text-[14px] font-bold text-[#6B5A44] mb-2">Ihre Erkrankung nicht gefunden?</p>
             <p className="text-[14px] text-[#6B5A44] leading-relaxed">
-              Ilka Wysocki und das Primundus-Team beraten Sie kostenlos zu Ihrer spezifischen Pflegesituation — welche Erfahrungen eine Betreuungskraft mitbringen sollte und wie die Finanzierung aussehen könnte.
+              Marta Kapcio und das Primundus-Team beraten Sie kostenlos zu Ihrer spezifischen Pflegesituation — welche Erfahrungen eine Betreuungskraft mitbringen sollte und wie die Finanzierung aussehen könnte.
             </p>
             <p className="text-[14px] font-bold text-[#6B5A44] mt-2">089 200 000 830 · Mo – So 8 – 20 Uhr</p>
           </div>

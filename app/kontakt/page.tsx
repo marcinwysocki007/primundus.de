@@ -61,7 +61,7 @@ export default function Page() {
               href="tel:+4989200000830"
               className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[15px] rounded-xl transition-all duration-200"
             >
-              <img width={44} height={44} src="/images/ilka-wysocki-2026.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover object-top" />
+              <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover object-top" />
               Jetzt anrufen
             </a>
           </div>

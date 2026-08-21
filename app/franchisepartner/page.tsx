@@ -68,7 +68,7 @@ const unterschiede = [
 ]
 
 const schritte = [
-  { titel: 'Erstgespräch', text: 'Ein 30-minütiges Gespräch mit Mateusz Wysocki persönlich — offen, ohne Skript, ohne Verpflichtung.' },
+  { titel: 'Erstgespräch', text: 'Ein 30-minütiges Gespräch mit der Geschäftsleitung persönlich — offen, ohne Skript, ohne Verpflichtung.' },
   { titel: 'Informationspaket', text: 'Vollständiges Exposé mit Kennzahlen, Gebührenstruktur, Gebietsanalyse und Mustervertrag.' },
   { titel: 'Prüfphase', text: 'Gemeinsame Due Diligence. Sie prüfen uns — wir prüfen Sie. Letter of Intent bei Übereinstimmung.' },
   { titel: 'Onboarding', text: 'Einarbeitung in München: Software, Personalgewinnung, Vertrieb — bis zum eigenständigen Start.' },
@@ -103,8 +103,8 @@ export default function FranchisePage() {
             Primundus ist einer davon.
           </p>
           <p className="text-[17px] text-[#5A5A5A] leading-relaxed max-w-[580px] mb-10">
-            Als Franchisepartner bauen Sie auf einem System auf, das von Mateusz Wysocki
-            entwickelt wurde — ehemaliger Mitgründer von Pflegehelden, dem größten 24h-Anbieter
+            Als Franchisepartner bauen Sie auf einem System auf, das von Branchen-Insidern
+            entwickelt wurde — mit Erfahrung aus dem Aufbau eines der größten 24h-Anbieter
             Deutschlands. Alle Kinderkrankheiten der Branche bereits gelöst.
           </p>
 
@@ -284,16 +284,15 @@ export default function FranchisePage() {
 
             <div>
               <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
-                Der Gründer
+                Die Erfahrung dahinter
               </p>
               <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] mb-6">
-                Mateusz Wysocki
+                Aus der Branche, für die Branche
               </h2>
               <div className="space-y-4 text-[15px] text-[#5A5A5A] leading-relaxed">
                 <p>
-                  Mateusz Wysocki ist kein Quereinsteiger. Als Mitgründer von{' '}
-                  <strong className="text-[#3D3D3D] font-semibold">Pflegehelden</strong> hat er
-                  Deutschlands größten 24h-Pflege-Anbieter mit aufgebaut — und dabei aus erster
+                  Hinter Primundus stehen keine Quereinsteiger: Das Team hat einen der größten
+                  24h-Pflege-Anbieter Deutschlands mit aufgebaut — und dabei aus erster
                   Hand erfahren, was in der Branche strukturell nicht funktioniert.
                 </p>
                 <p>
@@ -308,7 +307,7 @@ export default function FranchisePage() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                {['Mitgründer Pflegehelden', 'Testsieger DIE WELT', 'Eigene Software', 'Eigenes Personal'].map((tag) => (
+                {['Branchen-Erfahrung seit 2006', 'Testsieger DIE WELT', 'Eigene Software', 'Eigenes Personal'].map((tag) => (
                   <span key={tag} className="text-[12px] text-[#8B7355] border border-[#D4C5B0] rounded-full px-3 py-1 bg-[#FDFCFA]">
                     {tag}
                   </span>

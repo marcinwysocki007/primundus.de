@@ -103,7 +103,7 @@ export default function VierUndZwanzigStundenPflege() {
                 { icon: '↺', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung — volle Flexibilität' },
                 { icon: '⚡', title: 'In 4–7 Tagen startklar', desc: 'Vom ersten Gespräch bis zur Anreise der Betreuungskraft' },
                 { icon: '🛡', title: 'Ersatzkraft bei Ausfall', desc: 'Primundus stellt sofort Ersatz — kein Versorgungsausfall' },
-                { icon: '♥', title: 'Persönliche Beratung', desc: 'Ilka Wysocki & Team, Mo – So 8 – 20 Uhr, 7 Tage/Woche erreichbar' },
+                { icon: '♥', title: 'Persönliche Beratung', desc: 'Marta Kapcio & Team, Mo – So 8 – 20 Uhr, 7 Tage/Woche erreichbar' },
               ].map((usp) => (
                 <div key={usp.title} className="flex items-start gap-3">
                   <span className="text-[#8B7355] text-[18px] flex-shrink-0 w-6 text-center">{usp.icon}</span>

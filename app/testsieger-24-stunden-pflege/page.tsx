@@ -150,7 +150,7 @@ export default function TestsiegerPage() {
                 { icon: '📅', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, kein Risiko' },
                 { icon: '🧾', title: 'Taggenaue Abrechnung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist' },
                 { icon: '⚡', title: 'Start in 4–7 Tagen', desc: 'Auch bei dringendem Bedarf' },
-                { icon: '👩', title: 'Persönliche Ansprechpartnerin', desc: 'Ilka Wysocki begleitet Sie von der Anfrage bis zum Start' },
+                { icon: '👩', title: 'Persönliche Ansprechpartnerin', desc: 'Marta Kapcio begleitet Sie von der Anfrage bis zum Start' },
                 { icon: '🛡️', title: 'Rechtssicher', desc: 'Offiziell in der EU angestellte, sozialversicherte Betreuungskräfte' },
               ].map((item) => (
                 <div key={item.title} className="bg-[#F8F7F5] rounded-xl p-4 flex gap-3 items-start">

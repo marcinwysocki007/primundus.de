@@ -59,7 +59,7 @@ const schemaMarkup = [
     description: 'Definition, Leistungen, Kosten und aktuelle Kassenzuschüsse 2026 der 24h-Pflege in Deutschland.',
     author: {
       '@type': 'Person',
-      name: 'Ilka Wysocki',
+      name: 'Marta Kapcio',
       worksFor: { '@type': 'Organization', name: 'Primundus' },
     },
     publisher: {

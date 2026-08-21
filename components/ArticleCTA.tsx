@@ -37,20 +37,20 @@ export function ArticleCTA() {
 
       <div className="p-5 space-y-4">
 
-        {/* 3+4+5 — Ilka / USPs / Testsieger (reordered mobile vs desktop) */}
+        {/* 3+4+5 — Beraterin / USPs / Testsieger (reordered mobile vs desktop) */}
         <p className="text-[11px] font-semibold text-[#8B8B8B] uppercase tracking-wider text-center sm:text-left">
           Kostenlose Beratung
         </p>
 
         <div className="flex flex-col sm:grid sm:grid-cols-[3fr_2fr] sm:gap-x-3 gap-y-4">
 
-          {/* Ilka — with inline phone + WA buttons */}
+          {/* Beraterin — with inline phone + WA buttons */}
           <div className="order-1 flex items-center gap-3">
             <div className="relative flex-shrink-0">
               <div className="w-11 h-11 rounded-xl overflow-hidden border border-[#E5E3DF]">
                 <Image
-                  src="/images/ilka-wysocki-2026.webp"
-                  alt="Ilka Wysocki – Pflegeberaterin Primundus"
+                  src="/images/marta-kapcio.jpg"
+                  alt="Marta Kapcio – Pflegeberaterin Primundus"
                   width={44}
                   height={44}
                   className="object-cover object-top w-full h-full"
@@ -59,7 +59,7 @@ export function ArticleCTA() {
               <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-[#5C9F6E] rounded-full border-2 border-white" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-[#3D3D3D] text-[13px]">Ilka Wysocki</p>
+              <p className="font-bold text-[#3D3D3D] text-[13px]">Marta Kapcio</p>
               <p className="text-[11px] text-[#8B8B8B] leading-snug">Pflegeberaterin</p>
               <p className="text-[11px] text-[#8B8B8B] leading-snug">Mo – So, 8 – 20 Uhr</p>
             </div>

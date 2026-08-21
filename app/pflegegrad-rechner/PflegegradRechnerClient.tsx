@@ -455,7 +455,7 @@ export default function PflegegradRechnerClient() {
               Pflegegrad beantragen →
             </a>
           </div>
-          <p className="text-[12px] text-[#8B8B8B] mt-3 text-center">Mo – So 8 – 20 Uhr · Ilka Wysocki · 089 200 000 830</p>
+          <p className="text-[12px] text-[#8B8B8B] mt-3 text-center">Mo – So 8 – 20 Uhr · Marta Kapcio · 089 200 000 830</p>
         </div>
 
         {/* Restart */}

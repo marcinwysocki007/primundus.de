@@ -38,7 +38,7 @@ const schemaMarkup = [
     description: 'Wie man einen Pflegegrad beantragt, was bei der MD-Begutachtung passiert und wie man eine höhere Einstufung erreicht.',
     author: {
       '@type': 'Person',
-      name: 'Ilka Wysocki',
+      name: 'Marta Kapcio',
       worksFor: { '@type': 'Organization', name: 'Primundus' },
     },
     publisher: {

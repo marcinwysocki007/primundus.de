@@ -43,8 +43,8 @@ export function FinalCTA() {
           <div className="flex items-center gap-6">
             <div className="w-20 h-20 rounded-full overflow-hidden bg-white/10 flex-shrink-0">
               <img
-                src="/images/ilka-wysocki-2026.webp"
-                alt="Ilka Wysocki"
+                src="/images/marta-kapcio.jpg"
+                alt="Marta Kapcio"
                 className="w-full h-full object-cover object-top"
               />
             </div>
@@ -56,7 +56,7 @@ export function FinalCTA() {
               >
                 089 200 000 830
               </a>
-              <p className="text-white/60 text-[13px] mt-1">Ilka Wysocki · Mo – So 8 – 20 Uhr</p>
+              <p className="text-white/60 text-[13px] mt-1">Marta Kapcio · Mo – So 8 – 20 Uhr</p>
             </div>
           </div>
         </div>

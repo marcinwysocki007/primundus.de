@@ -23,14 +23,14 @@ const schemaMarkup = JSON.stringify({
   '@graph': [
     {
       '@type': 'Person',
-      '@id': 'https://primundus.de/#ilka-wysocki',
-      name: 'Ilka Wysocki',
+      '@id': 'https://primundus.de/#marta-kapcio',
+      name: 'Marta Kapcio',
       jobTitle: 'Persönliche Ansprechpartnerin & Pflegeberaterin',
       worksFor: { '@id': 'https://primundus.de/#organization' },
       description: 'Persönliche Ansprechpartnerin bei Primundus. Berät Familien zu 24-Stunden-Pflege, Kosten und der Auswahl passender Betreuungskräfte — Mo–So von 8 bis 20 Uhr.',
       telephone: '+4989200000830',
       knowsAbout: ['24-Stunden-Pflege', 'Pflegeberatung', 'Pflegegrade', 'Pflegefinanzierung'],
-      image: 'https://primundus.de/images/ilka-wysocki-2026.webp',
+      image: 'https://primundus.de/images/marta-kapcio.jpg',
     },
   ],
 })
@@ -216,7 +216,7 @@ export default function Page() {
               href="tel:+4989200000830"
               className="inline-flex items-center justify-center gap-3 px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-[16px] rounded-xl transition-all duration-200"
             >
-              <img width={44} height={44} src="/images/ilka-wysocki-2026.webp" alt="Ilka Wysocki" className="w-7 h-7 rounded-full object-cover object-top" />
+              <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover object-top" />
               089 200 000 830
             </a>
           </div>
