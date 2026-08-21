@@ -23,7 +23,7 @@ export default function Page() {
           Allgemeine Geschäftsbedingungen
         </h1>
         <p className="text-[15px] text-[#8B8B8B] mb-10">
-          Stand: 1. Januar 2026 · Primundus — eine Marke der Vitanas Group sp. z o.o.
+          Stand: 1. Januar 2026 · Primundus — ein Angebot der PRIMUNDUS Sp. z o.o.
         </p>
 
         <div className="space-y-8 text-[15px] text-[#5A5A5A] leading-[1.75]">
@@ -32,7 +32,7 @@ export default function Page() {
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 1 Geltungsbereich</h2>
             <p className="mb-3">
               (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") gelten für sämtliche Verträge zwischen der
-              Vitanas Group sp. z o.o., Poznańska 21/48, 00-685 Warszawa, Polen (nachfolgend „Primundus") und
+              PRIMUNDUS Sp. z o.o., Poznańska 21/48, 00-685 Warszawa, Polen (nachfolgend „Primundus") und
               ihren Kundinnen und Kunden (nachfolgend „Kunde") über die Vermittlung von 24-Stunden-Betreuungskräften
               aus der Europäischen Union zur häuslichen Betreuung pflegebedürftiger Personen in Deutschland.
             </p>

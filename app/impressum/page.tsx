@@ -37,13 +37,12 @@ export default function Page() {
               </div>
               <div className="border-t border-[#E5E3DF] pt-6">
                 <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">Rechtlicher Sitz</h3>
-                <p className="text-[15px] text-[#5A5A5A] font-semibold mb-1">Primundus ist eine Marke von:</p>
-                <p className="text-[15px] text-[#5A5A5A]">Vitanas Group spolka zoo</p>
-                <p className="text-[15px] text-[#5A5A5A]">Poznanska 21/48</p>
+                <p className="text-[15px] text-[#5A5A5A]">PRIMUNDUS Sp. z o.o.</p>
+                <p className="text-[15px] text-[#5A5A5A]">Poznańska 21/48</p>
                 <p className="text-[15px] text-[#5A5A5A]">00-685 Warszawa, Polen</p>
                 <div className="mt-3 space-y-1">
-                  <p className="text-[14px] text-[#8B8B8B]">NIP (Steuer-ID): 7011172300</p>
-                  <p className="text-[14px] text-[#8B8B8B]">REGON: 526823071</p>
+                  <p className="text-[14px] text-[#8B8B8B]">NIP (Steuer-ID): 7011326714</p>
+                  <p className="text-[14px] text-[#8B8B8B]">KRS: 0001259402</p>
                 </div>
               </div>
             </div>
@@ -70,7 +69,7 @@ export default function Page() {
 
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">Vertretungsberechtigte Geschäftsführung</h2>
-            <p className="text-[15px] text-[#3D3D3D] font-semibold">Kamila Bilska</p>
+            <p className="text-[15px] text-[#3D3D3D] font-semibold">Karolina Jakubowska</p>
             <p className="text-[15px] text-[#5A5A5A] mt-1">Erreichbar über die oben genannten Kontaktdaten.</p>
           </div>
 
@@ -78,14 +77,14 @@ export default function Page() {
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">Registereintrag</h2>
             <div className="space-y-1 text-[15px] text-[#5A5A5A]">
               <p>Registergericht: Warszawa</p>
-              <p>REGON-Nummer: 526823071</p>
-              <p>NIP (Steuer-ID): 7011172300</p>
+              <p>KRS: 0001259402</p>
+              <p>NIP (Steuer-ID): 7011326714</p>
             </div>
           </div>
 
           <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-            <p className="text-[15px] text-[#3D3D3D] font-semibold">Kamila Bilska</p>
+            <p className="text-[15px] text-[#3D3D3D] font-semibold">Karolina Jakubowska</p>
             <p className="text-[15px] text-[#5A5A5A]">Geschäftsführung Primundus</p>
             <p className="text-[15px] text-[#5A5A5A]">Landsberger Str. 155, 80687 München</p>
           </div>

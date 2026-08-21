@@ -22,37 +22,9 @@ export const metadata: Metadata = {
   },
 }
 
+// Organization/WebSite kommen zentral aus lib/schema.ts (Root-Layout) —
+// hier nur noch das seitenspezifische FAQ-Schema.
 const schemaMarkup = JSON.stringify([
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Primundus",
-    "url": "https://primundus.de",
-    "description": "Primundus — Deutschlands führender Anbieter für 24h-Pflege zuhause. Über 60.000 erfolgreiche Pflegeeinsätze, täglich kündbar, Testsieger DIE WELT.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": { "@type": "EntryPoint", "urlTemplate": "https://primundus.de/ratgeber/?q={search_term_string}" },
-      "query-input": "required name=search_term_string"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Primundus",
-    "url": "https://primundus.de",
-    "logo": "https://primundus.de/images/primundus_logo_header.webp",
-    "telephone": "+4989200000830",
-    "email": "info@primundus.de",
-    "founder": { "@type": "Person", "name": "Ilka Wysocki" },
-    "award": "Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021)"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Primundus 24h-Pflege",
-    "priceRange": "ab 2.200 €/Monat",
-    "areaServed": "DE"
-  },
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",

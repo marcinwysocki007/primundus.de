@@ -35,7 +35,7 @@ export default function Page() {
               <p>Landsberger Str. 155</p>
               <p>80687 München</p>
               <p className="pt-2">Primundus ist eine Marke von:</p>
-              <p>Vitanas Group spolka zoo · Poznanska 21/48 · 00-685 Warszawa</p>
+              <p>PRIMUNDUS Sp. z o.o. · Poznańska 21/48 · 00-685 Warszawa</p>
               <p>NIP 7011172300 · REGON 526823071</p>
               <p className="pt-2">
                 Telefon:{' '}

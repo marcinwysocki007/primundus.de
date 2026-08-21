@@ -6,6 +6,8 @@ import { SiteHeader } from '@/components/layout/Header'
 import { SiteFooter } from '@/components/layout/Footer'
 import { CookieConsent } from '@/components/CookieConsent'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
+import { JsonLd } from '@/components/JsonLd'
+import { siteGraph } from '@/lib/schema'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de">
       <body className={inter.className}>
+        <JsonLd data={siteGraph()} />
         {/* Google Tag Manager */}
         <Script
           id="gtm"

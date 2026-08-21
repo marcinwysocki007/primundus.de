@@ -16,31 +16,11 @@ export const metadata: Metadata = {
   },
 }
 
+// Organization + Gründerin (Karolina Jakubowska) kommen zentral aus lib/schema.ts
+// (Root-Layout). Hier nur die zusätzliche Ansprechpartnerin dieser Seite.
 const schemaMarkup = JSON.stringify({
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://primundus.de/#organization',
-      name: 'Primundus',
-      url: 'https://primundus.de/',
-      logo: 'https://primundus.de/images/primundus_logo_header.webp',
-      telephone: '+4989200000830',
-      email: 'info@primundus.de',
-      description: 'Primundus bietet rechtssichere 24-Stunden-Pflege zu Hause. 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, Testsieger DIE WELT.',
-      founder: { '@id': 'https://primundus.de/#mateusz-wysocki' },
-      employee: { '@id': 'https://primundus.de/#ilka-wysocki' },
-      award: 'Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021)',
-    },
-    {
-      '@type': 'Person',
-      '@id': 'https://primundus.de/#mateusz-wysocki',
-      name: 'Mateusz Wysocki',
-      jobTitle: 'Gründer & Geschäftsführer',
-      worksFor: { '@id': 'https://primundus.de/#organization' },
-      description: 'Gründer von Primundus, seit 2006 in der häuslichen 24-Stunden-Pflege tätig und ehemaliger Mitgründer von Pflegehelden,',
-      knowsAbout: ['24-Stunden-Pflege', 'häusliche Betreuung', 'Pflegevermittlung', 'Pflegemarkt Deutschland'],
-    },
     {
       '@type': 'Person',
       '@id': 'https://primundus.de/#ilka-wysocki',
@@ -131,22 +111,12 @@ export default function Page() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 flex gap-5">
-              <div className="w-16 h-16 rounded-full bg-[#8B7355] text-white flex items-center justify-center font-bold text-[18px] flex-shrink-0">MW</div>
+              <div className="w-16 h-16 rounded-full bg-[#8B7355] text-white flex items-center justify-center font-bold text-[18px] flex-shrink-0">KJ</div>
               <div>
-                <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Mateusz Wysocki</h3>
-                <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Gründer &amp; Geschäftsführer</p>
+                <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Karolina Jakubowska</h3>
+                <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Gründerin &amp; Geschäftsführerin</p>
                 <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">
-                  Seit rund 20 Jahren in der häuslichen 24-Stunden-Pflege. Mateusz war Mitgründer von Pflegehelden — einem der größten 24h-Pflege-Anbieter Deutschlands — und gründete Primundus mit dem Anspruch, häusliche Betreuung ehrlich, rechtssicher und persönlich zu machen.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 flex gap-5">
-              <img width={44} height={44} src="/images/ilka-wysocki-2026.webp" alt="Ilka Wysocki" className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0" />
-              <div>
-                <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Ilka Wysocki</h3>
-                <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Persönliche Ansprechpartnerin &amp; Pflegeberaterin</p>
-                <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">
-                  Ilka ist für viele Familien die erste Stimme bei Primundus. Sie begleitet von der ersten Frage bis zur passenden Betreuungskraft — persönlich, ohne Callcenter, Mo–So von 8 bis 20 Uhr.
+                  Karolina führt Primundus mit dem Anspruch, häusliche Betreuung ehrlich, rechtssicher und persönlich zu machen. Die Firmengruppe hinter Primundus bringt Erfahrung in der häuslichen 24-Stunden-Pflege seit 2006 mit.
                 </p>
               </div>
             </div>
