@@ -1,0 +1,447 @@
+app/24-stunden-pflege-kostenuebernahme/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24-stunden-pflege-krankenhausaufenthalt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24-stunden-pflege-wirkliche-kosten/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-aachen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-aalen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-alzey-worms/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-amberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-aschaffenburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-augsburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-aibling/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-duerkheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-homburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-kissingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-kreuznach/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-nauheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-neuenahr/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-reichenhall/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-toelz/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bad-vilbel/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-baden-wuerttemberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bamberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bayern/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bayreuth/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bensheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-berchtesgaden/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bergisch-gladbach/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-berlin/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bielefeld/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bietigheim-bissingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bocholt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bochum/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bonn/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bottrop/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-brandenburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-braunschweig/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bremen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bremerhaven/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-bruchsal/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-charlottenburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-chemnitz/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-cochem/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-cottbus/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-dachau/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-darmstadt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-deggendorf/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-dessau/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-dormagen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-dortmund/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-dresden/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-dueren/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-duesseldorf/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-duisburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ebersberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-erding/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-erfurt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-erlangen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-eschborn/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-essen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-flensburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-frankfurt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-freiburg-umland/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-freiburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-freising/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-friedrichshafen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-fuerth/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-gaertringen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-garmisch-partenkirchen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-gauting/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-gelsenkirchen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-gera/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-germering/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-germersheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-giessen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-gilching/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-goeppingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-goettingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-greifswald/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-grevenbroich/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-guetersloh/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hagen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-halle-saale/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hamburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hameln/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hamm/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hanau/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hannover/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-heidelberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-heilbronn/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-heinsberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-herne/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hessen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hildesheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-hochtaunuskreis/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-holzkirchen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ingolstadt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-iserlohn/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-jena/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-kaiserslautern/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-karlsruhe/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-kassel/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-kaufbeuren/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-kempten/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-kiel/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-koblenz/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-koeln/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-konstanz/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-krefeld/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-landau/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-landsberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-landshut/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-leipzig/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-leverkusen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ludwigsburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ludwigshafen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-luebeck/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-luedenscheid/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-luenen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-magdeburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-mainz/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-mannheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-marburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-marl/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-mecklenburg-vorpommern/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-memmingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-miesbach/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-minden/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-moenchengladbach-rheydt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-moenchengladbach/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-moers/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-muehldorf/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-muelheim-ruhr/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-muenchen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-muenster/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-neubrandenburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-neuburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-neumarkt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-neuss/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-neustadt-weinstrasse/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-niedersachsen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-nordrhein-westfalen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-nuernberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-nuertingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-oberhausen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-offenbach/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-offenburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-oldenburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-osnabrueck/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-paderborn/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-passau/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-pfaffenhofen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-pforzheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-pirmasens/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-potsdam/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-prien/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ratingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ravensburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-recklinghausen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-regensburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-remscheid/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-reutlingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-rhein-pfalz-kreis/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-rheinisch-bergischer-kreis/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-rheinland-pfalz/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-rosenheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-rostock/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ruesselsheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-saarbruecken/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-saarland/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-sachsen-anhalt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-sachsen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-salzgitter/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-schleswig-holstein/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-schweinfurt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-schwerin/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-siegen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-sindelfingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-singen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-solingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-speyer/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-starnberg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-stralsund/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-straubing/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-stuttgart/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-thueringen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-traunstein/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-trier/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-troisdorf/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-tuebingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-ulm/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-unterschleissheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-vaterstetten/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-velbert/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-viersen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-villingen-schwenningen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-waiblingen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-waldshut-tiengen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-weiden/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-weilheim-schongau/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-weilheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-weinheim/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-wiesbaden-umland/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-wiesbaden/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-witten/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-wittmund/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-wolfratshausen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-wolfsburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-worms/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-wuerzburg/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-wuppertal/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/24h-pflege-zwickau/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+app/ablauf/page.tsx: error TS1117: An object literal cannot have multiple properties with the same name.
+app/ablauf/page.tsx: error TS1117: An object literal cannot have multiple properties with the same name.
+app/pflegegrad-rechner/PflegegradRechnerClient.tsx: error TS18047: 'mod.score' is possibly 'null'.
+app/pflegegrad-rechner/PflegegradRechnerClient.tsx: error TS18047: 's' is possibly 'null'.
+app/pflegegrad-rechner/PflegegradRechnerClient.tsx: error TS18047: 'sum' is possibly 'null'.
+app/pflegegrad-rechner/PflegegradRechnerClient.tsx: error TS2345: Argument of type 'number | null' is not assignable to parameter of type 'number'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/regionen/page.tsx: error TS2322: Type 'string[]' is not assignable to type 'string'.
+app/testsieger-24-stunden-pflege/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
+components/ui/toaster.tsx: error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+components/ui/toaster.tsx: error TS7031: Binding element 'action' implicitly has an 'any' type.
+components/ui/toaster.tsx: error TS7031: Binding element 'description' implicitly has an 'any' type.
+components/ui/toaster.tsx: error TS7031: Binding element 'id' implicitly has an 'any' type.
+components/ui/toaster.tsx: error TS7031: Binding element 'title' implicitly has an 'any' type.
