@@ -70,7 +70,7 @@ export default function PflegevertragAufsetzen() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/organisation/" className="hover:text-[#8B7355] transition-colors">Organisation</a>
+            <a href="/organisation" className="hover:text-[#8B7355] transition-colors">Organisation</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegevertrag aufsetzen</span>
           </nav>
@@ -166,7 +166,7 @@ export default function PflegevertragAufsetzen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Modelle erklärt:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Wege</a>
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Wege</a>
           </p>
 
           <h2 id="kuendigung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -203,7 +203,7 @@ export default function PflegevertragAufsetzen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Pflegekraft wechseln:{' '}
-            <a href="/pflegekraft-wechseln/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft wechseln — so geht es reibungslos</a>
+            <a href="/pflegekraft-wechseln" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft wechseln — so geht es reibungslos</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">

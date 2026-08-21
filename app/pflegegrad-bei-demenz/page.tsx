@@ -72,7 +72,7 @@ export default function PflegegradBeiDemenz() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegegrad bei Demenz</span>
           </nav>
@@ -205,9 +205,9 @@ export default function PflegegradBeiDemenz() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Zuschüsse:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege</a>
             {' · '}
-            <a href="/demenz-pflege-zuhause/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Demenz Pflege zuhause</a>
+            <a href="/demenz-pflege-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Demenz Pflege zuhause</a>
           </p>
 
           <h2 id="tipps" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">

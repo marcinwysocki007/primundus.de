@@ -49,7 +49,7 @@ export default function Finanzierung() {
           <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Finanzierung & Zuschüsse</span>
           </nav>
@@ -89,11 +89,11 @@ export default function Finanzierung() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegegeld & Kassenzuschüsse</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Pflegegeld 2026 — Beträge & Anspruch', href: '/pflegegeld/', desc: 'Wer Pflegegeld bekommt, wie hoch es ist und was bei gleichzeitiger 24h-Pflege gilt.' },
-              { titel: 'Pflegegeld & 24h-Pflege kombinieren', href: '/pflegegeld-und-24h-pflege-kombinieren/', desc: 'Wie Pflegegeld und 24h-Betreuungskraft gleichzeitig möglich sind.' },
-              { titel: 'Pflegesachleistungen', href: '/pflegesachleistungen/', desc: 'Wann Pflegesachleistungen statt Pflegegeld sinnvoll sind und wie man sie beantragt.' },
-              { titel: 'Kombinationsleistung Pflege', href: '/kombinationsleistung-pflege/', desc: 'Pflegegeld und Sachleistungen gleichzeitig nutzen — wie das geht.' },
-              { titel: 'Pflegeversicherung Leistungen Übersicht', href: '/pflegeversicherung-leistungen-uebersicht/', desc: 'Vollständige Übersicht aller Leistungen der Pflegeversicherung 2026.' },
+              { titel: 'Pflegegeld 2026 — Beträge & Anspruch', href: '/pflegegeld', desc: 'Wer Pflegegeld bekommt, wie hoch es ist und was bei gleichzeitiger 24h-Pflege gilt.' },
+              { titel: 'Pflegegeld & 24h-Pflege kombinieren', href: '/pflegegeld-und-24h-pflege-kombinieren', desc: 'Wie Pflegegeld und 24h-Betreuungskraft gleichzeitig möglich sind.' },
+              { titel: 'Pflegesachleistungen', href: '/pflegesachleistungen', desc: 'Wann Pflegesachleistungen statt Pflegegeld sinnvoll sind und wie man sie beantragt.' },
+              { titel: 'Kombinationsleistung Pflege', href: '/kombinationsleistung-pflege', desc: 'Pflegegeld und Sachleistungen gleichzeitig nutzen — wie das geht.' },
+              { titel: 'Pflegeversicherung Leistungen Übersicht', href: '/pflegeversicherung-leistungen-uebersicht', desc: 'Vollständige Übersicht aller Leistungen der Pflegeversicherung 2026.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -106,10 +106,10 @@ export default function Finanzierung() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Entlastungsbudget & Kurzzeitpflege</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Verhinderungspflege & Entlastungsbudget 2026', href: '/verhinderungspflege/', desc: '3.539 €/Jahr flexibel für Verhinderungs- und Kurzzeitpflege — alle Regeln 2026.' },
-              { titel: 'Kurzzeitpflege', href: '/kurzzeitpflege/', desc: 'Kurzzeitpflege beantragen, Kosten und wie das Budget optimal genutzt wird.' },
-              { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege/', desc: 'Wann Kurzzeitpflege reicht und wann eine 24h-Kraft die bessere Lösung ist.' },
-              { titel: 'Entlastungsbetrag — 131 €/Monat nutzen', href: '/entlastungsbetrag/', desc: 'Was der Entlastungsbetrag ist, für was er genutzt werden kann und wie man ihn beantragt.' },
+              { titel: 'Verhinderungspflege & Entlastungsbudget 2026', href: '/verhinderungspflege', desc: '3.539 €/Jahr flexibel für Verhinderungs- und Kurzzeitpflege — alle Regeln 2026.' },
+              { titel: 'Kurzzeitpflege', href: '/kurzzeitpflege', desc: 'Kurzzeitpflege beantragen, Kosten und wie das Budget optimal genutzt wird.' },
+              { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege', desc: 'Wann Kurzzeitpflege reicht und wann eine 24h-Kraft die bessere Lösung ist.' },
+              { titel: 'Entlastungsbetrag — 131 €/Monat nutzen', href: '/entlastungsbetrag', desc: 'Was der Entlastungsbetrag ist, für was er genutzt werden kann und wie man ihn beantragt.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -122,12 +122,12 @@ export default function Finanzierung() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Steuer & weitere Förderungen</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen/', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie man es richtig macht.' },
-              { titel: 'Eigenanteil 24h-Pflege senken', href: '/eigenanteil-24h-pflege-senken/', desc: 'Alle Möglichkeiten 2026 um den monatlichen Eigenanteil zu reduzieren.' },
-              { titel: 'Sozialhilfe bei Pflegebedarf', href: '/sozialhilfe-bei-pflegebedarf/', desc: 'Wenn das Einkommen nicht reicht — Hilfe zur Pflege und Sozialhilfe im Überblick.' },
-              { titel: 'Förderungen nach Bundesland', href: '/foerderungen-nach-bundesland/', desc: 'Landesspezifische Förderprogramme für Pflege — alle Bundesländer im Überblick.' },
-              { titel: 'Pflegehilfsmittel beantragen', href: '/pflegehilfsmittel-beantragen/', desc: '42 €/Monat für Pflegehilfsmittel zum Verbrauch — was dazugehört und wie man es beantragt.' },
-              { titel: 'Wohnraumanpassung — Förderung beantragen', href: '/wohnraumanpassung-foerderung/', desc: 'Bis zu 4.180 € je Maßnahme — welche Umbaumaßnahmen gefördert werden und wie man den Zuschuss beantragt.' },
+              { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie man es richtig macht.' },
+              { titel: 'Eigenanteil 24h-Pflege senken', href: '/eigenanteil-24h-pflege-senken', desc: 'Alle Möglichkeiten 2026 um den monatlichen Eigenanteil zu reduzieren.' },
+              { titel: 'Sozialhilfe bei Pflegebedarf', href: '/sozialhilfe-bei-pflegebedarf', desc: 'Wenn das Einkommen nicht reicht — Hilfe zur Pflege und Sozialhilfe im Überblick.' },
+              { titel: 'Förderungen nach Bundesland', href: '/foerderungen-nach-bundesland', desc: 'Landesspezifische Förderprogramme für Pflege — alle Bundesländer im Überblick.' },
+              { titel: 'Pflegehilfsmittel beantragen', href: '/pflegehilfsmittel-beantragen', desc: '42 €/Monat für Pflegehilfsmittel zum Verbrauch — was dazugehört und wie man es beantragt.' },
+              { titel: 'Wohnraumanpassung — Förderung beantragen', href: '/wohnraumanpassung-foerderung', desc: 'Bis zu 4.180 € je Maßnahme — welche Umbaumaßnahmen gefördert werden und wie man den Zuschuss beantragt.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -172,7 +172,7 @@ export default function Finanzierung() {
           </div>
           <p className="text-[14px] text-[#5A5A5A] mb-12">
             → Welcher Pflegegrad gilt für Sie?{' '}
-            <a href="/pflegegrade/" className="text-[#8B7355] underline hover:text-[#7D6848]">Alle Pflegegrade 2026 im Überblick</a>
+            <a href="/pflegegrade" className="text-[#8B7355] underline hover:text-[#7D6848]">Alle Pflegegrade 2026 im Überblick</a>
           </p>
 
           <ArticleCTA />

@@ -29,7 +29,7 @@ export function ZuschussRechnerClient() {
         <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
           <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
           <span>›</span>
-          <a href="/tools/" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+          <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
           <span>›</span>
           <span className="text-[#5A5A5A]">Zuschuss & Förderung</span>
         </nav>
@@ -63,7 +63,7 @@ export function ZuschussRechnerClient() {
           {!selected && (
             <p className="mt-3 text-[13px] text-[#8B8B8B]">
               Pflegegrad noch nicht bekannt?{' '}
-              <a href="/pflegegrad-rechner/" className="text-[#8B7355] underline hover:text-[#7D6848]">Jetzt einschätzen →</a>
+              <a href="/pflegegrad-rechner" className="text-[#8B7355] underline hover:text-[#7D6848]">Jetzt einschätzen →</a>
             </p>
           )}
         </div>
@@ -199,7 +199,7 @@ export function ZuschussRechnerClient() {
               Unser Pflegegrad-Rechner gibt in 3 Minuten eine erste Einschätzung.
             </p>
             <a
-              href="/pflegegrad-rechner/"
+              href="/pflegegrad-rechner"
               className="inline-flex items-center gap-2 bg-[#8B7355] hover:bg-[#7D6848] text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
             >
               Pflegegrad einschätzen →

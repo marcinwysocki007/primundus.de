@@ -146,7 +146,7 @@ export default function WasIst24StundenPflege() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Was ist 24-Stunden-Pflege?</span>
           </nav>
@@ -214,7 +214,7 @@ export default function WasIst24StundenPflege() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Leistungen im Detail:{' '}
-            <a href="/leistungen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/leistungen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Was Primundus leistet — vollständige Übersicht
             </a>
           </p>
@@ -271,7 +271,7 @@ export default function WasIst24StundenPflege() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-6">
             → Vollständiger Kostenvergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               24h-Pflege vs. Pflegeheim — was ist günstiger?
             </a>
           </p>
@@ -301,13 +301,13 @@ export default function WasIst24StundenPflege() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Wie das Entlastungsbudget kombiniert wird:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Finanzierung der 24h-Pflege — alle Zuschüsse 2026
             </a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Steuerlich absetzbar:{' '}
-            <a href="/pflege-steuerlich-absetzen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflege-steuerlich-absetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Pflege steuerlich absetzen — was geht 2026?
             </a>
           </p>
@@ -333,13 +333,13 @@ export default function WasIst24StundenPflege() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-2">
             → Alle Modelle im Vergleich:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Pflegekraft legal beschäftigen — die 3 Wege
             </a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Was im Vertrag stehen muss:{' '}
-            <a href="/pflegevertrag-aufsetzen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegevertrag-aufsetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Pflegevertrag aufsetzen — worauf achten?
             </a>
           </p>
@@ -356,22 +356,22 @@ export default function WasIst24StundenPflege() {
               {
                 title: 'Demenz und Alzheimer',
                 desc: 'Tagesstruktur, Orientierung und konstante Bezugsperson — eine feste Betreuungskraft zuhause bietet das besser als jede Einrichtung.',
-                link: { text: 'Demenzpflege zuhause — was ist möglich?', href: '/demenz-pflege-zuhause/' },
+                link: { text: 'Demenzpflege zuhause — was ist möglich?', href: '/demenz-pflege-zuhause' },
               },
               {
                 title: 'Nach Schlaganfall oder Operation',
                 desc: 'Kontinuierliche Unterstützung in der Reha-Phase ermöglicht Entlassung aus dem Krankenhaus ohne Umzug ins Heim.',
-                link: { text: 'Pflege nach OP — Organisation und Kosten', href: '/pflege-nach-op/' },
+                link: { text: 'Pflege nach OP — Organisation und Kosten', href: '/pflege-nach-op' },
               },
               {
                 title: 'Parkinson, MS, Herzinsuffizienz',
                 desc: 'Chronische Erkrankungen mit schwankendem Tagesverlauf — eine feste Kraft kennt die Muster und reagiert richtig.',
-                link: { text: 'Parkinson Pflege zuhause', href: '/parkinson-pflege-zuhause/' },
+                link: { text: 'Parkinson Pflege zuhause', href: '/parkinson-pflege-zuhause' },
               },
               {
                 title: 'Sturzgefahr und eingeschränkte Mobilität',
                 desc: 'Prävention, Mobilisierung, sichere Begleitung — rund um die Uhr.',
-                link: { text: 'Sturzprävention bei Senioren', href: '/sturzpraevention-senioren/' },
+                link: { text: 'Sturzprävention bei Senioren', href: '/sturzpraevention-senioren' },
               },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
@@ -385,7 +385,7 @@ export default function WasIst24StundenPflege() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Direkter Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               24h-Pflege vs. Pflegeheim — was passt besser?
             </a>
           </p>

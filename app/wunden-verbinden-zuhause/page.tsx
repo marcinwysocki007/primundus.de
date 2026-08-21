@@ -61,7 +61,7 @@ export default function Page() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Wunden verbinden zuhause</span>
           </nav>

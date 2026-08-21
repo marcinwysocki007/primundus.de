@@ -85,7 +85,7 @@ export default function Page() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Rollator & Rollstuhl beantragen</span>
           </nav>
@@ -154,11 +154,11 @@ export default function Page() {
             Türverbreiterungen, damit der Rollstuhl überhaupt durchpasst.
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
-            → Noch kein Pflegegrad? <a href="/pflegegrad-rechner/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Erste Einschätzung im Pflegegrad-Rechner</a>
+            → Noch kein Pflegegrad? <a href="/pflegegrad-rechner" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Erste Einschätzung im Pflegegrad-Rechner</a>
             {' · '}
-            <a href="/pflegehilfsmittel-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegehilfsmittel beantragen</a>
+            <a href="/pflegehilfsmittel-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegehilfsmittel beantragen</a>
             {' · '}
-            <a href="/wohnraumanpassung-foerderung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Wohnumbau-Förderung</a>
+            <a href="/wohnraumanpassung-foerderung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Wohnumbau-Förderung</a>
           </p>
 
           {/* ④ ABLEHNUNG */}

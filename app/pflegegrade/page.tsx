@@ -61,7 +61,7 @@ export default function Pflegegrade() {
           <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Pflegegrade</span>
           </nav>
@@ -80,11 +80,11 @@ export default function Pflegegrade() {
           {/* 5-Grade Schnell-Navigation */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
             {[
-              { grad: 'PG 1', href: '/pflegegrad-1/', betrag: '131 €/Mo', label: 'Entlastungsbetrag' },
-              { grad: 'PG 2', href: '/pflegegrad-2/', betrag: '347 €/Mo', label: 'Pflegegeld' },
-              { grad: 'PG 3', href: '/pflegegrad-3/', betrag: '599 €/Mo', label: 'Pflegegeld' },
-              { grad: 'PG 4', href: '/pflegegrad-4/', betrag: '800 €/Mo', label: 'Pflegegeld' },
-              { grad: 'PG 5', href: '/pflegegrad-5/', betrag: '990 €/Mo', label: 'Pflegegeld' },
+              { grad: 'PG 1', href: '/pflegegrad-1', betrag: '131 €/Mo', label: 'Entlastungsbetrag' },
+              { grad: 'PG 2', href: '/pflegegrad-2', betrag: '347 €/Mo', label: 'Pflegegeld' },
+              { grad: 'PG 3', href: '/pflegegrad-3', betrag: '599 €/Mo', label: 'Pflegegeld' },
+              { grad: 'PG 4', href: '/pflegegrad-4', betrag: '800 €/Mo', label: 'Pflegegeld' },
+              { grad: 'PG 5', href: '/pflegegrad-5', betrag: '990 €/Mo', label: 'Pflegegeld' },
             ].map((item) => (
               <a key={item.grad} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-4 text-center hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[18px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors">{item.grad}</p>
@@ -98,11 +98,11 @@ export default function Pflegegrade() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Alle 5 Pflegegrade im Überblick</h2>
           <div className="space-y-3 mb-10">
             {[
-              { grad: 'Pflegegrad 1', punkte: '12,5–26,9', titel: 'Geringe Beeinträchtigung', desc: 'Einschränkungen in mindestens einem Lebensbereich, die meisten Alltagsaktivitäten noch selbst möglich. Kein Pflegegeld, aber 131 €/Monat Entlastungsbetrag.', href: '/pflegegrad-1/', pg: '—', eb: '131 €/Mo' },
-              { grad: 'Pflegegrad 2', punkte: '27–47,4', titel: 'Erhebliche Beeinträchtigung', desc: 'Hilfe bei mehreren Alltagstätigkeiten nötig, vieles noch selbst möglich. Häufigste Einstufung in Deutschland — ca. 2,5 Millionen Betroffene.', href: '/pflegegrad-2/', pg: '347 €/Mo', eb: '131 €/Mo' },
-              { grad: 'Pflegegrad 3', punkte: '47,5–69,9', titel: 'Schwere Beeinträchtigung', desc: 'Umfangreicher Hilfebedarf bei Körperpflege, Mobilität und Haushalt. 24h-Pflege wird ab PG 3 für viele Familien zur tragenden Versorgungsform.', href: '/pflegegrad-3/', pg: '599 €/Mo', eb: '131 €/Mo' },
-              { grad: 'Pflegegrad 4', punkte: '70–89,9', titel: 'Schwerste Beeinträchtigung', desc: 'Vollständige oder nahezu vollständige Abhängigkeit bei Körperpflege, Mobilität und Haushalt. Intensive 24h-Betreuung notwendig.', href: '/pflegegrad-4/', pg: '800 €/Mo', eb: '131 €/Mo' },
-              { grad: 'Pflegegrad 5', punkte: '90–100', titel: 'Schwerste Beeinträchtigung + besondere Anforderungen', desc: 'Vollständige Abhängigkeit mit besonders hohem Pflegeaufwand — z.B. Beatmungspflege oder schwerste Demenz.', href: '/pflegegrad-5/', pg: '990 €/Mo', eb: '131 €/Mo' },
+              { grad: 'Pflegegrad 1', punkte: '12,5–26,9', titel: 'Geringe Beeinträchtigung', desc: 'Einschränkungen in mindestens einem Lebensbereich, die meisten Alltagsaktivitäten noch selbst möglich. Kein Pflegegeld, aber 131 €/Monat Entlastungsbetrag.', href: '/pflegegrad-1', pg: '—', eb: '131 €/Mo' },
+              { grad: 'Pflegegrad 2', punkte: '27–47,4', titel: 'Erhebliche Beeinträchtigung', desc: 'Hilfe bei mehreren Alltagstätigkeiten nötig, vieles noch selbst möglich. Häufigste Einstufung in Deutschland — ca. 2,5 Millionen Betroffene.', href: '/pflegegrad-2', pg: '347 €/Mo', eb: '131 €/Mo' },
+              { grad: 'Pflegegrad 3', punkte: '47,5–69,9', titel: 'Schwere Beeinträchtigung', desc: 'Umfangreicher Hilfebedarf bei Körperpflege, Mobilität und Haushalt. 24h-Pflege wird ab PG 3 für viele Familien zur tragenden Versorgungsform.', href: '/pflegegrad-3', pg: '599 €/Mo', eb: '131 €/Mo' },
+              { grad: 'Pflegegrad 4', punkte: '70–89,9', titel: 'Schwerste Beeinträchtigung', desc: 'Vollständige oder nahezu vollständige Abhängigkeit bei Körperpflege, Mobilität und Haushalt. Intensive 24h-Betreuung notwendig.', href: '/pflegegrad-4', pg: '800 €/Mo', eb: '131 €/Mo' },
+              { grad: 'Pflegegrad 5', punkte: '90–100', titel: 'Schwerste Beeinträchtigung + besondere Anforderungen', desc: 'Vollständige Abhängigkeit mit besonders hohem Pflegeaufwand — z.B. Beatmungspflege oder schwerste Demenz.', href: '/pflegegrad-5', pg: '990 €/Mo', eb: '131 €/Mo' },
             ].map((item) => (
               <a key={item.grad} href={item.href} className="block bg-white border border-[#E5E3DF] rounded-2xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <div className="flex items-start justify-between gap-4">
@@ -129,10 +129,10 @@ export default function Pflegegrade() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegegrad beantragen & Begutachtung</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Pflegegrad beantragen — Schritt für Schritt', href: '/pflegegrad-beantragen/', desc: 'Antrag bei der Pflegekasse, was zu beachten ist und wie man sich richtig vorbereitet.' },
-              { titel: 'MD-Begutachtung vorbereiten', href: '/pflegegrad-begutachtung-vorbereiten/', desc: 'Pflegetagebuch, schlechtesten Tag schildern — wie man die Begutachtung optimal nutzt.' },
-              { titel: 'Pflegekasse Antrag stellen', href: '/pflegekasse-antrag-stellen/', desc: 'Vollständige Anleitung: Antrag, Fristen, Formulare und was danach passiert.' },
-              { titel: 'MDK-Begutachtung — Tipps', href: '/mdk-begutachtung-tipps/', desc: 'Insider-Tipps vom Gutachtertermin — was Familien wissen müssen.' },
+              { titel: 'Pflegegrad beantragen — Schritt für Schritt', href: '/pflegegrad-beantragen', desc: 'Antrag bei der Pflegekasse, was zu beachten ist und wie man sich richtig vorbereitet.' },
+              { titel: 'MD-Begutachtung vorbereiten', href: '/pflegegrad-begutachtung-vorbereiten', desc: 'Pflegetagebuch, schlechtesten Tag schildern — wie man die Begutachtung optimal nutzt.' },
+              { titel: 'Pflegekasse Antrag stellen', href: '/pflegekasse-antrag-stellen', desc: 'Vollständige Anleitung: Antrag, Fristen, Formulare und was danach passiert.' },
+              { titel: 'MDK-Begutachtung — Tipps', href: '/mdk-begutachtung-tipps', desc: 'Insider-Tipps vom Gutachtertermin — was Familien wissen müssen.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -145,10 +145,10 @@ export default function Pflegegrade() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Widerspruch & Höherstufung</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Pflegegrad erhöhen — wann und wie', href: '/pflegegrad-erhoehen/', desc: 'Wann ein Höherstufungsantrag sinnvoll ist und wie man ihn erfolgreich stellt.' },
-              { titel: 'Widerspruch einlegen', href: '/widerspruch-pflegekasse-einlegen/', desc: 'Widerspruch gegen den Bescheid — Fristen, Formulierungen und Erfolgschancen.' },
-              { titel: 'Pflegegrad Änderung melden', href: '/pflegegrad-aenderung-melden/', desc: 'Wann und wie Änderungen der Pflegesituation der Pflegekasse gemeldet werden.' },
-              { titel: 'Pflegegrade 2025 — alle Änderungen', href: '/pflegegrade-2025/', desc: 'Was sich 2025 bei Pflegegraden und Leistungsbeträgen verändert hat.' },
+              { titel: 'Pflegegrad erhöhen — wann und wie', href: '/pflegegrad-erhoehen', desc: 'Wann ein Höherstufungsantrag sinnvoll ist und wie man ihn erfolgreich stellt.' },
+              { titel: 'Widerspruch einlegen', href: '/widerspruch-pflegekasse-einlegen', desc: 'Widerspruch gegen den Bescheid — Fristen, Formulierungen und Erfolgschancen.' },
+              { titel: 'Pflegegrad Änderung melden', href: '/pflegegrad-aenderung-melden', desc: 'Wann und wie Änderungen der Pflegesituation der Pflegekasse gemeldet werden.' },
+              { titel: 'Pflegegrade 2025 — alle Änderungen', href: '/pflegegrade-2025', desc: 'Was sich 2025 bei Pflegegraden und Leistungsbeträgen verändert hat.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -161,10 +161,10 @@ export default function Pflegegrade() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegegrad bei spezifischen Erkrankungen</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Pflegegrad bei Demenz', href: '/pflegegrad-bei-demenz/', desc: 'Wie Demenz in der NBA-Begutachtung bewertet wird und welcher Grad realistisch ist.' },
-              { titel: 'Pflegegrad bei Parkinson', href: '/pflegegrad-bei-parkinson/', desc: 'Einstufung bei Parkinson — motorische und kognitive Einschränkungen richtig belegen.' },
-              { titel: 'Pflegegrad nach Schlaganfall', href: '/pflegegrad-nach-schlaganfall/', desc: 'Welcher Pflegegrad nach dem Schlaganfall und wie man die Rehabilitationsphase nutzt.' },
-              { titel: 'Pflegegrad ohne Diagnose', href: '/pflegegrad-ohne-diagnose/', desc: 'Auch ohne feste Diagnose kann ein Pflegegrad beantragt werden — so geht es.' },
+              { titel: 'Pflegegrad bei Demenz', href: '/pflegegrad-bei-demenz', desc: 'Wie Demenz in der NBA-Begutachtung bewertet wird und welcher Grad realistisch ist.' },
+              { titel: 'Pflegegrad bei Parkinson', href: '/pflegegrad-bei-parkinson', desc: 'Einstufung bei Parkinson — motorische und kognitive Einschränkungen richtig belegen.' },
+              { titel: 'Pflegegrad nach Schlaganfall', href: '/pflegegrad-nach-schlaganfall', desc: 'Welcher Pflegegrad nach dem Schlaganfall und wie man die Rehabilitationsphase nutzt.' },
+              { titel: 'Pflegegrad ohne Diagnose', href: '/pflegegrad-ohne-diagnose', desc: 'Auch ohne feste Diagnose kann ein Pflegegrad beantragt werden — so geht es.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -212,7 +212,7 @@ export default function Pflegegrade() {
           </div>
           <p className="text-[14px] text-[#5A5A5A] mb-12">
             → Alle Zuschüsse optimal kombinieren:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6848]">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6848]">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
           </p>
 
           <ArticleCTA />

@@ -61,7 +61,7 @@ export default function OsteoporosePflegeZuhause() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten/" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
+            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Osteoporose Pflege zuhause</span>
           </nav>
@@ -129,7 +129,7 @@ export default function OsteoporosePflegeZuhause() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständige Sturzprävention:{' '}
-            <a href="/sturzpraevention-senioren/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Sturzprävention Senioren — alle Maßnahmen</a>
+            <a href="/sturzpraevention-senioren" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Sturzprävention Senioren — alle Maßnahmen</a>
           </p>
 
           <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">

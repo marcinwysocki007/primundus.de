@@ -70,7 +70,7 @@ export default function WiderspruchPflegekasseEinlegen() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Widerspruch einlegen</span>
           </nav>
@@ -171,9 +171,9 @@ export default function WiderspruchPflegekasseEinlegen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Begutachtung besser vorbereiten:{' '}
-            <a href="/pflegegrad-begutachtung-vorbereiten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung — Checkliste & 7 Tipps</a>
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung — Checkliste & 7 Tipps</a>
             {' · '}
-            <a href="/pflegegrad-erhoehen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Höherstufungsantrag stellen</a>
+            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Höherstufungsantrag stellen</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen zum Widerspruch</h2>

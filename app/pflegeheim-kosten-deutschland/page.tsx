@@ -69,7 +69,7 @@ export default function PflegeheimKosten() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/vergleiche/" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
+            <a href="/vergleiche" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegeheim Kosten</span>
           </nav>
@@ -248,9 +248,9 @@ export default function PflegeheimKosten() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständiger Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — Kostenvergleich</a>
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — Kostenvergleich</a>
             {' · '}
-            <a href="/eigenanteil-24h-pflege-senken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken — alle Möglichkeiten</a>
+            <a href="/eigenanteil-24h-pflege-senken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken — alle Möglichkeiten</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

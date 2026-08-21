@@ -83,7 +83,7 @@ export default function Page() {
           <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2 flex-wrap" aria-label="Breadcrumb">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span aria-hidden="true">›</span>
-            <a href="/tools/" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+            <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
             <span aria-hidden="true">›</span>
             <span className="text-[#3D3D3D]">Anbieter-Vergleich</span>
           </nav>

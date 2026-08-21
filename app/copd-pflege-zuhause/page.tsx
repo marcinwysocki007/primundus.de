@@ -86,7 +86,7 @@ export default function Page() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">COPD Pflege zuhause</span>
           </nav>
@@ -226,8 +226,8 @@ export default function Page() {
             enorm.
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
-            → Erste Einschätzung in wenigen Minuten: <a href="/pflegegrad-rechner/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad-Rechner</a> ·
-            Schritt für Schritt: <a href="/pflegegrad-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen</a>
+            → Erste Einschätzung in wenigen Minuten: <a href="/pflegegrad-rechner" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad-Rechner</a> ·
+            Schritt für Schritt: <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen</a>
           </p>
 
           {/* FAQ */}

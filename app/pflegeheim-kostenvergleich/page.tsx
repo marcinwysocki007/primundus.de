@@ -178,9 +178,9 @@ export default function Page() {
             <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Vertiefende Vergleiche</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/24h-pflege-vs-pflegeheim/', label: '24h-Pflege vs. Pflegeheim', desc: 'Detaillierter Vergleich mit allen Vor- und Nachteilen' },
-                { href: '/24h-pflege-vs-pflegeheim-kosten/', label: 'Kosten im Detail', desc: 'Tiefer Einblick in Kostenstrukturen' },
-                { href: '/pflegeheim-kosten-deutschland/', label: 'Pflegeheim-Kosten nach Region', desc: 'Eigenanteile in allen Bundesländern' },
+                { href: '/24h-pflege-vs-pflegeheim', label: '24h-Pflege vs. Pflegeheim', desc: 'Detaillierter Vergleich mit allen Vor- und Nachteilen' },
+                { href: '/24h-pflege-vs-pflegeheim-kosten', label: 'Kosten im Detail', desc: 'Tiefer Einblick in Kostenstrukturen' },
+                { href: '/pflegeheim-kosten-deutschland', label: 'Pflegeheim-Kosten nach Region', desc: 'Eigenanteile in allen Bundesländern' },
                 { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil individuell ermitteln', external: true },
               ].map((item) => (
                 <a

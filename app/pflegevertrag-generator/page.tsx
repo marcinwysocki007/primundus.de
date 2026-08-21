@@ -99,10 +99,10 @@ const faqs = [
 ]
 
 const relatedTools = [
-  { href: '/zuschuss-rechner/', label: 'Zuschuss-Rechner', desc: 'Alle Leistungen nach Pflegegrad berechnen' },
+  { href: '/zuschuss-rechner', label: 'Zuschuss-Rechner', desc: 'Alle Leistungen nach Pflegegrad berechnen' },
   { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
-  { href: '/vollmacht-generator/', label: 'Vollmacht-Generator', desc: 'Vorsorgevollmacht erstellen und drucken' },
-  { href: '/pflegegeld/', label: 'Pflegegeld-Übersicht', desc: 'Alle Pflegegeld-Beträge 2026 auf einen Blick' },
+  { href: '/vollmacht-generator', label: 'Vollmacht-Generator', desc: 'Vorsorgevollmacht erstellen und drucken' },
+  { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Pflegegeld-Beträge 2026 auf einen Blick' },
 ]
 
 export default function Page() {

@@ -256,7 +256,7 @@ export default function FranchiseFormClient() {
               </div>
               <span className="text-[13px] text-[#5A5A5A] leading-relaxed">
                 Ich habe die{' '}
-                <a href="/datenschutz/" className="text-[#8B7355] underline hover:no-underline">
+                <a href="/datenschutz" className="text-[#8B7355] underline hover:no-underline">
                   Datenschutzerklärung
                 </a>{' '}
                 gelesen und stimme der Verarbeitung meiner Daten für die Kontaktaufnahme zu.{' '}

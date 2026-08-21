@@ -77,13 +77,13 @@ const schemaMarkup = JSON.stringify([
 
 const categories = [
   {
-    href: '/pflegegrade/',
+    href: '/pflegegrade',
     title: 'Pflegegrade',
     description: 'Pflegegrad beantragen, erhöhen und verstehen',
     articles: [
-      { label: 'Pflegegrad beantragen', href: '/pflegegrad-beantragen/' },
-      { label: 'Pflegegrad erhöhen', href: '/pflegegrad-erhoehen/' },
-      { label: 'Begutachtung vorbereiten', href: '/pflegegrad-begutachtung-vorbereiten/' },
+      { label: 'Pflegegrad beantragen', href: '/pflegegrad-beantragen' },
+      { label: 'Pflegegrad erhöhen', href: '/pflegegrad-erhoehen' },
+      { label: 'Begutachtung vorbereiten', href: '/pflegegrad-begutachtung-vorbereiten' },
     ],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -95,13 +95,13 @@ const categories = [
     ),
   },
   {
-    href: '/finanzierung/',
+    href: '/finanzierung',
     title: 'Finanzierung & Zuschüsse',
     description: 'Pflegegeld, Entlastungsbudget, Steuer & Sozialhilfe',
     articles: [
-      { label: 'Pflegegeld', href: '/pflegegeld/' },
-      { label: 'Entlastungsbetrag', href: '/entlastungsbetrag/' },
-      { label: 'Steuerlich absetzen', href: '/pflege-steuerlich-absetzen/' },
+      { label: 'Pflegegeld', href: '/pflegegeld' },
+      { label: 'Entlastungsbetrag', href: '/entlastungsbetrag' },
+      { label: 'Steuerlich absetzen', href: '/pflege-steuerlich-absetzen' },
     ],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -113,13 +113,13 @@ const categories = [
     ),
   },
   {
-    href: '/organisation/',
+    href: '/organisation',
     title: 'Organisation',
     description: 'Pflegekraft finden, Vertrag, Wechsel & Alltag',
     articles: [
-      { label: 'Pflegekraft finden', href: '/pflegekraft-finden/' },
-      { label: 'Ablauf & Prozess', href: '/ablauf/' },
-      { label: 'Pflegevertrag aufsetzen', href: '/pflegevertrag-aufsetzen/' },
+      { label: 'Pflegekraft finden', href: '/pflegekraft-finden' },
+      { label: 'Ablauf & Prozess', href: '/ablauf' },
+      { label: 'Pflegevertrag aufsetzen', href: '/pflegevertrag-aufsetzen' },
     ],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -134,13 +134,13 @@ const categories = [
     ),
   },
   {
-    href: '/krankheiten/',
+    href: '/krankheiten',
     title: 'Pflege bei Krankheiten',
     description: 'Demenz, Alzheimer, Parkinson, Schlaganfall & mehr',
     articles: [
-      { label: 'Demenz', href: '/demenz-pflege-zuhause/' },
-      { label: 'Alzheimer', href: '/alzheimer-betreuung-zuhause/' },
-      { label: 'Parkinson', href: '/parkinson-pflege-zuhause/' },
+      { label: 'Demenz', href: '/demenz-pflege-zuhause' },
+      { label: 'Alzheimer', href: '/alzheimer-betreuung-zuhause' },
+      { label: 'Parkinson', href: '/parkinson-pflege-zuhause' },
     ],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -151,13 +151,13 @@ const categories = [
     ),
   },
   {
-    href: '/alltag/',
+    href: '/alltag',
     title: 'Alltag & Betreuung',
     description: 'Bewegung, Ernährung, Beschäftigung & Sturzprävention',
     articles: [
-      { label: 'Beschäftigung Senioren', href: '/beschaeftigung-senioren-zuhause/' },
-      { label: 'Ernährung', href: '/ernaehrung-pflegebeduerftige-senioren/' },
-      { label: 'Sturzprävention', href: '/sturzpraevention-senioren/' },
+      { label: 'Beschäftigung Senioren', href: '/beschaeftigung-senioren-zuhause' },
+      { label: 'Ernährung', href: '/ernaehrung-pflegebeduerftige-senioren' },
+      { label: 'Sturzprävention', href: '/sturzpraevention-senioren' },
     ],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -167,13 +167,13 @@ const categories = [
     ),
   },
   {
-    href: '/rechtliches/',
+    href: '/rechtliches',
     title: 'Rechtliches & Vorsorge',
     description: 'Patientenverfügung, Vollmacht & rechtliche Absicherung',
     articles: [
-      { label: 'Patientenverfügung', href: '/patientenverfuegung-aufsetzen/' },
-      { label: 'Vorsorgevollmacht', href: '/vorsorgevollmacht-erstellen/' },
-      { label: 'Betreuungsverfügung', href: '/betreuungsverfuegung-erstellen/' },
+      { label: 'Patientenverfügung', href: '/patientenverfuegung-aufsetzen' },
+      { label: 'Vorsorgevollmacht', href: '/vorsorgevollmacht-erstellen' },
+      { label: 'Betreuungsverfügung', href: '/betreuungsverfuegung-erstellen' },
     ],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -183,13 +183,13 @@ const categories = [
     ),
   },
   {
-    href: '/24h-pflege-fuer-angehoerige/',
+    href: '/24h-pflege-fuer-angehoerige',
     title: 'Für Angehörige',
     description: 'Pflege koordinieren, Belastung erkennen & Unterstützung finden',
     articles: [
-      { label: 'Pflege und Beruf', href: '/pflege-und-beruf-vereinbaren/' },
-      { label: 'Burnout Angehörige', href: '/burnout-pflegende-angehoerige/' },
-      { label: 'Pflege aus der Ferne', href: '/pflege-aus-der-ferne-koordinieren/' },
+      { label: 'Pflege und Beruf', href: '/pflege-und-beruf-vereinbaren' },
+      { label: 'Burnout Angehörige', href: '/burnout-pflegende-angehoerige' },
+      { label: 'Pflege aus der Ferne', href: '/pflege-aus-der-ferne-koordinieren' },
     ],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -281,7 +281,7 @@ export default function Page() {
               <p className="text-[13px] text-[#5A5A5A] mt-0.5">Interaktive Rechner für Ihre Pflegesituation</p>
             </div>
             <a
-              href="/tools/"
+              href="/tools"
               className="shrink-0 inline-flex items-center gap-2 text-[14px] font-semibold text-[#8B7355] hover:text-[#7D6848] transition-colors whitespace-nowrap"
             >
               Zu den Tools →

@@ -69,7 +69,7 @@ export function PflegeheimVergleichClient() {
         <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
           <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
           <span>›</span>
-          <a href="/tools/" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+          <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
           <span>›</span>
           <span className="text-[#5A5A5A]">Pflegeheim-Vergleich</span>
         </nav>
@@ -203,7 +203,7 @@ export function PflegeheimVergleichClient() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="/beratungsgespraech/"
+                    href="/beratungsgespraech"
                     className="inline-flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
                   >
                     Kostenfreie Beratung →

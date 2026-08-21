@@ -72,7 +72,7 @@ export default function PflegeSteuerlichAbsetzen() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/finanzierung/" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
+            <a href="/finanzierung" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflege steuerlich absetzen</span>
           </nav>
@@ -238,9 +238,9 @@ export default function PflegeSteuerlichAbsetzen() {
           </ol>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Finanzierungsmöglichkeiten:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
             {' · '}
-            <a href="/eigenanteil-24h-pflege-senken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken — alle Möglichkeiten</a>
+            <a href="/eigenanteil-24h-pflege-senken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken — alle Möglichkeiten</a>
           </p>
 
           {/* FAQ */}

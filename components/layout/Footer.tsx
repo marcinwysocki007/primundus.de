@@ -4,31 +4,31 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const ratgeberLinks = [
-  { label: 'Pflegegrade', href: '/pflegegrade/' },
-  { label: 'Finanzierung', href: '/finanzierung/' },
-  { label: 'Organisation', href: '/organisation/' },
-  { label: 'Krankheiten', href: '/krankheiten/' },
-  { label: 'Alltag & Betreuung', href: '/alltag/' },
-  { label: 'Ratgeber Übersicht', href: '/ratgeber/' },
+  { label: 'Pflegegrade', href: '/pflegegrade' },
+  { label: 'Finanzierung', href: '/finanzierung' },
+  { label: 'Organisation', href: '/organisation' },
+  { label: 'Krankheiten', href: '/krankheiten' },
+  { label: 'Alltag & Betreuung', href: '/alltag' },
+  { label: 'Ratgeber Übersicht', href: '/ratgeber' },
 ]
 
 const serviceLinks = [
   { label: 'Kostenrechner', href: 'https://kostenrechner.primundus.de', external: true },
-  { label: 'Pflegegrad-Rechner', href: '/pflegegrad-rechner/' },
-  { label: 'Pflegevertrag-Generator', href: '/pflegevertrag-generator/' },
-  { label: 'Vollmacht-Generator', href: '/vollmacht-generator/' },
-  { label: 'Anbieter-Vergleich', href: '/anbieter-vergleich/' },
-  { label: 'Beratungsgespräch', href: '/beratungsgespraech/' },
-  { label: 'Kontakt', href: '/kontakt/' },
-  { label: '24h-Pflege', href: '/24-stunden-pflege/' },
-  { label: 'Kosten', href: '/kosten/' },
-  { label: 'Franchisepartner werden', href: '/franchisepartner/' },
+  { label: 'Pflegegrad-Rechner', href: '/pflegegrad-rechner' },
+  { label: 'Pflegevertrag-Generator', href: '/pflegevertrag-generator' },
+  { label: 'Vollmacht-Generator', href: '/vollmacht-generator' },
+  { label: 'Anbieter-Vergleich', href: '/anbieter-vergleich' },
+  { label: 'Beratungsgespräch', href: '/beratungsgespraech' },
+  { label: 'Kontakt', href: '/kontakt' },
+  { label: '24h-Pflege', href: '/24-stunden-pflege' },
+  { label: 'Kosten', href: '/kosten' },
+  { label: 'Franchisepartner werden', href: '/franchisepartner' },
 ]
 
 const rechtlichLinks = [
-  { label: 'Impressum', href: '/impressum/' },
-  { label: 'Datenschutz', href: '/datenschutz/' },
-  { label: 'Sitemap', href: '/sitemap/' },
+  { label: 'Impressum', href: '/impressum' },
+  { label: 'Datenschutz', href: '/datenschutz' },
+  { label: 'Sitemap', href: '/sitemap' },
 ]
 
 export function SiteFooter() {
@@ -155,13 +155,13 @@ export function SiteFooter() {
             </p>
             <div className="flex flex-wrap gap-5">
               <Link
-                href="/datenschutz/"
+                href="/datenschutz"
                 className="text-sm text-gray-400 hover:text-white transition-colors"
               >
                 Datenschutz
               </Link>
               <Link
-                href="/impressum/"
+                href="/impressum"
                 className="text-sm text-gray-400 hover:text-white transition-colors"
               >
                 Impressum

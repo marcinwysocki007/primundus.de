@@ -74,7 +74,7 @@ export default function PflegekraftAusPolen() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/organisation/" className="hover:text-[#8B7355] transition-colors">Organisation</a>
+            <a href="/organisation" className="hover:text-[#8B7355] transition-colors">Organisation</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegekraft aus Polen</span>
           </nav>
@@ -136,7 +136,7 @@ export default function PflegekraftAusPolen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Was genau inbegriffen ist:{' '}
-            <a href="/leistungen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Leistungen der 24h-Pflege bei Primundus</a>
+            <a href="/leistungen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Leistungen der 24h-Pflege bei Primundus</a>
           </p>
 
           {/* SECTION 2 */}
@@ -176,9 +176,9 @@ export default function PflegekraftAusPolen() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Kosten im Detail:{' '}
-            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24h-Pflege? — vollständige Kostenübersicht</a>
+            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24h-Pflege? — vollständige Kostenübersicht</a>
             {' · '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Zuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Zuschüsse 2026</a>
           </p>
 
           <h2 id="pflegekasse" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -187,7 +187,7 @@ export default function PflegekraftAusPolen() {
           <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
             Die Pflegekasse zahlt die Betreuungskraft nicht direkt. Das <strong>Pflegegeld</strong> überweist
             sie Ihnen monatlich aufs Konto — darüber können Sie frei verfügen. Den{' '}
-            <a href="/entlastungsbetrag/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Entlastungsbetrag</a>{' '}
+            <a href="/entlastungsbetrag" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Entlastungsbetrag</a>{' '}
             von 131 € bekommen Sie dagegen gegen Rechnung erstattet, wenn die Betreuung über einen
             anerkannten Anbieter läuft. Wir sagen Ihnen, was in Ihrem Bundesland anerkannt ist.
           </p>
@@ -252,7 +252,7 @@ export default function PflegekraftAusPolen() {
             1.700–2.100 € im Monat. Bei Pflegegrad 4 oder 5 wird es entsprechend weniger,
             bei Pflegegrad 1 mehr. Wer zusätzlich das Entlastungsbudget nutzt, kommt oft
             noch darunter.{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Zuschüsse im Überblick</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Zuschüsse im Überblick</a>
           </p>
 
           <h2 id="versicherung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -311,11 +311,11 @@ export default function PflegekraftAusPolen() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Alle Beschäftigungsmodelle im Vergleich:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Wege</a>
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Wege</a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Was im Vertrag stehen muss:{' '}
-            <a href="/pflegevertrag-aufsetzen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegevertrag aufsetzen — worauf achten?</a>
+            <a href="/pflegevertrag-aufsetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegevertrag aufsetzen — worauf achten?</a>
           </p>
 
           {/* SECTION 4 */}
@@ -379,9 +379,9 @@ export default function PflegekraftAusPolen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Andere Herkunftsländer:{' '}
-            <a href="/pflegekraft-aus-bulgarien/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Bulgarien</a>
+            <a href="/pflegekraft-aus-bulgarien" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Bulgarien</a>
             {' · '}
-            <a href="/pflegekraft-aus-rumaenien/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Rumänien</a>
+            <a href="/pflegekraft-aus-rumaenien" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Rumänien</a>
           </p>
 
           {/* FAQ */}

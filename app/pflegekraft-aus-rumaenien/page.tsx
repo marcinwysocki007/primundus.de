@@ -61,7 +61,7 @@ export default function PflegekraftAusRumaenien() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/organisation/" className="hover:text-[#8B7355] transition-colors">Organisation</a>
+            <a href="/organisation" className="hover:text-[#8B7355] transition-colors">Organisation</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegekraft aus Rumänien</span>
           </nav>
@@ -129,11 +129,11 @@ export default function PflegekraftAusRumaenien() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständige Erklärung:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen</a>
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen</a>
             {' · '}
-            <a href="/pflegekraft-aus-polen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Polen</a>
+            <a href="/pflegekraft-aus-polen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Polen</a>
             {' · '}
-            <a href="/pflegekraft-aus-bulgarien/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Bulgarien</a>
+            <a href="/pflegekraft-aus-bulgarien" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Bulgarien</a>
           </p>
 
           <h2 id="qualifikation" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -178,9 +178,9 @@ export default function PflegekraftAusRumaenien() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Kosten:{' '}
-            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24h-Pflege?</a>
+            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24h-Pflege?</a>
             {' · '}
-            <a href="/eigenanteil-24h-pflege-senken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken</a>
+            <a href="/eigenanteil-24h-pflege-senken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

@@ -148,10 +148,10 @@ export default function Page() {
             <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Nächste Schritte</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/zuschuss-rechner/', label: 'Zuschüsse berechnen', desc: 'Alle Leistungen nach Pflegegrad im Überblick' },
+                { href: '/zuschuss-rechner', label: 'Zuschüsse berechnen', desc: 'Alle Leistungen nach Pflegegrad im Überblick' },
                 { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
-                { href: '/pflegegrad-beantragen/', label: 'Pflegegrad beantragen', desc: 'Schritt-für-Schritt Anleitung' },
-                { href: '/pflegegeld/', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
+                { href: '/pflegegrad-beantragen', label: 'Pflegegrad beantragen', desc: 'Schritt-für-Schritt Anleitung' },
+                { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
               ].map((item) => (
                 <a
                   key={item.href}

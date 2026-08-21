@@ -69,7 +69,7 @@ export default function MultipleSklerosePflege() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten/" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
+            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Multiple Sklerose Pflege</span>
           </nav>
@@ -217,9 +217,9 @@ export default function MultipleSklerosePflege() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Pflegegrad beantragen:{' '}
-            <a href="/pflegegrad-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Schritt-für-Schritt Anleitung</a>
+            <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Schritt-für-Schritt Anleitung</a>
             {' · '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Kassenzuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Kassenzuschüsse 2026</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

@@ -69,7 +69,7 @@ export default function PflegegradBeiParkinson() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegegrad bei Parkinson</span>
           </nav>
@@ -152,7 +152,7 @@ export default function PflegegradBeiParkinson() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständige Vorbereitung:{' '}
-            <a href="/pflegegrad-begutachtung-vorbereiten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung vorbereiten</a>
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung vorbereiten</a>
           </p>
 
           <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -209,9 +209,9 @@ export default function PflegegradBeiParkinson() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Höherstufungsantrag:{' '}
-            <a href="/pflegegrad-erhoehen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen — wann und wie</a>
+            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen — wann und wie</a>
             {' · '}
-            <a href="/parkinson-pflege-zuhause/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Parkinson Pflege zuhause</a>
+            <a href="/parkinson-pflege-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Parkinson Pflege zuhause</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

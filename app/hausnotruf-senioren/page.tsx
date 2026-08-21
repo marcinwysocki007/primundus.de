@@ -69,7 +69,7 @@ export default function HausnotrufSenioren() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag/" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Hausnotruf Senioren</span>
           </nav>
@@ -172,7 +172,7 @@ export default function HausnotrufSenioren() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Entlastungsbetrag richtig nutzen:{' '}
-            <a href="/entlastungsbetrag/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Entlastungsbetrag 2026 — 131 €/Monat</a>
+            <a href="/entlastungsbetrag" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Entlastungsbetrag 2026 — 131 €/Monat</a>
           </p>
 
           <h2 id="wann-sinnvoll" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">

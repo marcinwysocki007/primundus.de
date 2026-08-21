@@ -71,7 +71,7 @@ export default function EigenanteilSenken() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/finanzierung/" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
+            <a href="/finanzierung" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Eigenanteil senken</span>
           </nav>
@@ -178,9 +178,9 @@ export default function EigenanteilSenken() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständige Anleitung:{' '}
-            <a href="/pflegegrad-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen</a>
+            <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen</a>
             {' · '}
-            <a href="/pflegegrad-erhoehen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen</a>
+            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen</a>
           </p>
 
           <h2 id="kassenzuschuesse" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -188,9 +188,9 @@ export default function EigenanteilSenken() {
           </h2>
           <div className="space-y-3 mb-6">
             {[
-              { title: 'Pflegegeld — monatlich', desc: '347–990 €/Monat je nach Pflegegrad. Wird automatisch ausgezahlt — aber nur wenn Beratungseinsätze wahrgenommen werden (PG 2–3: halbjährlich, PG 4–5: vierteljährlich).', link: '/pflegegeld/' },
-              { title: 'Entlastungsbetrag — 131 €/Monat', desc: 'Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen. Kann bis 30. Juni des Folgejahres angespart werden (max. 1.572 €).', link: '/entlastungsbetrag/' },
-              { title: 'Entlastungsbudget — 3.539 €/Jahr', desc: 'Für Verhinderungs- und Kurzzeitpflege. Verfällt am 31. Dezember — rechtzeitig nutzen und einreichen. Vorpflegezeit entfällt seit Juli 2025.', link: '/verhinderungspflege/' },
+              { title: 'Pflegegeld — monatlich', desc: '347–990 €/Monat je nach Pflegegrad. Wird automatisch ausgezahlt — aber nur wenn Beratungseinsätze wahrgenommen werden (PG 2–3: halbjährlich, PG 4–5: vierteljährlich).', link: '/pflegegeld' },
+              { title: 'Entlastungsbetrag — 131 €/Monat', desc: 'Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen. Kann bis 30. Juni des Folgejahres angespart werden (max. 1.572 €).', link: '/entlastungsbetrag' },
+              { title: 'Entlastungsbudget — 3.539 €/Jahr', desc: 'Für Verhinderungs- und Kurzzeitpflege. Verfällt am 31. Dezember — rechtzeitig nutzen und einreichen. Vorpflegezeit entfällt seit Juli 2025.', link: '/verhinderungspflege' },
               { title: 'Pflegehilfsmittel — 42 €/Monat', desc: 'Handschuhe, Desinfektionsmittel, Bettschutzeinlagen. Bei der Pflegekasse beantragen — werden direkt nach Hause geliefert. Kaum jemand nutzt das.', link: null },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
@@ -204,7 +204,7 @@ export default function EigenanteilSenken() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Zuschüsse in einer Übersicht:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
           </p>
 
           <h2 id="steuer" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -218,7 +218,7 @@ export default function EigenanteilSenken() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Ausführlich erklärt:{' '}
-            <a href="/pflege-steuerlich-absetzen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflege steuerlich absetzen 2026</a>
+            <a href="/pflege-steuerlich-absetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflege steuerlich absetzen 2026</a>
           </p>
 
           <h2 id="foerderungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">

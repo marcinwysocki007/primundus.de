@@ -40,7 +40,7 @@ export default function Vergleiche() {
           <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Vergleiche</span>
           </nav>
@@ -60,13 +60,13 @@ export default function Vergleiche() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegeformen vergleichen</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: '24h-Pflege vs. Pflegeheim', href: '/24h-pflege-vs-pflegeheim/', desc: 'Der vollständige Vergleich — Kosten, Lebensqualität und wann welche Form besser passt.' },
-              { titel: '24h-Pflege vs. Pflegeheim — Kosten', href: '/24h-pflege-vs-pflegeheim-kosten/', desc: 'Detaillierter Kostenvergleich mit konkreten Zahlen für 2026.' },
-              { titel: '24h-Pflege vs. ambulante Pflege', href: '/24h-pflege-vs-ambulante-pflege/', desc: 'Wann reicht ein ambulanter Pflegedienst — und wann wird eine 24h-Kraft nötig?' },
-              { titel: 'Ambulante vs. stationäre Pflege', href: '/ambulante-vs-stationaere-pflege/', desc: 'Unterschiede, Kosten und wann welche Versorgungsform die richtige Wahl ist.' },
-              { titel: 'Tagespflege vs. 24h-Betreuung', href: '/tagespflege-vs-24h-betreuung/', desc: 'Tagespflege entlastet tagsüber — 24h-Betreuung ist immer da. Wann was besser passt.' },
-              { titel: 'Pflegedienst oder 24h-Kraft', href: '/pflegedienst-oder-24h-kraft/', desc: 'Ambulanter Pflegedienst vs. 24h-Betreuungskraft — der direkte Vergleich.' },
-              { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege/', desc: 'Wann Kurzzeitpflege reicht und wann eine dauerhaft 24h-Kraft nötig ist.' },
+              { titel: '24h-Pflege vs. Pflegeheim', href: '/24h-pflege-vs-pflegeheim', desc: 'Der vollständige Vergleich — Kosten, Lebensqualität und wann welche Form besser passt.' },
+              { titel: '24h-Pflege vs. Pflegeheim — Kosten', href: '/24h-pflege-vs-pflegeheim-kosten', desc: 'Detaillierter Kostenvergleich mit konkreten Zahlen für 2026.' },
+              { titel: '24h-Pflege vs. ambulante Pflege', href: '/24h-pflege-vs-ambulante-pflege', desc: 'Wann reicht ein ambulanter Pflegedienst — und wann wird eine 24h-Kraft nötig?' },
+              { titel: 'Ambulante vs. stationäre Pflege', href: '/ambulante-vs-stationaere-pflege', desc: 'Unterschiede, Kosten und wann welche Versorgungsform die richtige Wahl ist.' },
+              { titel: 'Tagespflege vs. 24h-Betreuung', href: '/tagespflege-vs-24h-betreuung', desc: 'Tagespflege entlastet tagsüber — 24h-Betreuung ist immer da. Wann was besser passt.' },
+              { titel: 'Pflegedienst oder 24h-Kraft', href: '/pflegedienst-oder-24h-kraft', desc: 'Ambulanter Pflegedienst vs. 24h-Betreuungskraft — der direkte Vergleich.' },
+              { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege', desc: 'Wann Kurzzeitpflege reicht und wann eine dauerhaft 24h-Kraft nötig ist.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -116,10 +116,10 @@ export default function Vergleiche() {
 
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Pflegeheim Kosten in Deutschland', href: '/pflegeheim-kosten-deutschland/', desc: 'Was ein Pflegeheim kostet, regionale Unterschiede und warum 24h-Pflege oft günstiger ist.' },
-              { titel: 'Pflegeheim Kostenvergleich', href: '/pflegeheim-kostenvergleich/', desc: 'Interaktiver Vergleich: Was zahlen Sie im Pflegeheim vs. 24h-Pflege zuhause?' },
-              { titel: 'Eigenanteil bei 24h-Pflege senken', href: '/eigenanteil-24h-pflege-senken/', desc: 'Alle Möglichkeiten 2026 um den monatlichen Eigenanteil zu reduzieren.' },
-              { titel: 'Was kostet 24h-Pflege?', href: '/kosten/', desc: 'Vollständige Kostenübersicht mit allen Zuschüssen und realistischen Eigenanteilen.' },
+              { titel: 'Pflegeheim Kosten in Deutschland', href: '/pflegeheim-kosten-deutschland', desc: 'Was ein Pflegeheim kostet, regionale Unterschiede und warum 24h-Pflege oft günstiger ist.' },
+              { titel: 'Pflegeheim Kostenvergleich', href: '/pflegeheim-kostenvergleich', desc: 'Interaktiver Vergleich: Was zahlen Sie im Pflegeheim vs. 24h-Pflege zuhause?' },
+              { titel: 'Eigenanteil bei 24h-Pflege senken', href: '/eigenanteil-24h-pflege-senken', desc: 'Alle Möglichkeiten 2026 um den monatlichen Eigenanteil zu reduzieren.' },
+              { titel: 'Was kostet 24h-Pflege?', href: '/kosten', desc: 'Vollständige Kostenübersicht mit allen Zuschüssen und realistischen Eigenanteilen.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -132,9 +132,9 @@ export default function Vergleiche() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Anbieter & Modelle vergleichen</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Osteuropäische Pflegekraft oder Agentur', href: '/osteuropaeische-pflegekraft-oder-agentur/', desc: 'Direkte Suche vs. Agentur — Risiken, Aufwand und was wirklich besser ist.' },
-              { titel: 'Selbst pflegen oder 24h-Pflege', href: '/selbst-pflegen-oder-24h-pflege/', desc: 'Wann die Familie an ihre Grenzen stößt und professionelle Unterstützung nötig wird.' },
-              { titel: '24h-Pflege Anbieter vergleichen', href: '/anbieter-vergleich/', desc: 'Neutraler Vergleich der wichtigsten 24h-Pflegeagenturen.' },
+              { titel: 'Osteuropäische Pflegekraft oder Agentur', href: '/osteuropaeische-pflegekraft-oder-agentur', desc: 'Direkte Suche vs. Agentur — Risiken, Aufwand und was wirklich besser ist.' },
+              { titel: 'Selbst pflegen oder 24h-Pflege', href: '/selbst-pflegen-oder-24h-pflege', desc: 'Wann die Familie an ihre Grenzen stößt und professionelle Unterstützung nötig wird.' },
+              { titel: '24h-Pflege Anbieter vergleichen', href: '/anbieter-vergleich', desc: 'Neutraler Vergleich der wichtigsten 24h-Pflegeagenturen.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -147,9 +147,9 @@ export default function Vergleiche() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegekräfte aus EU-Ländern</h2>
           <div className="grid gap-3 mb-12">
             {[
-              { titel: 'Pflegekraft aus Polen', href: '/pflegekraft-aus-polen/', desc: 'Polen — das häufigste Herkunftsland. Entsendemodell, Kosten, Qualifikation.' },
-              { titel: 'Pflegekraft aus Bulgarien', href: '/pflegekraft-aus-bulgarien/', desc: 'Bulgarische Pflegekräfte im Entsendemodell — was zu beachten ist.' },
-              { titel: 'Pflegekraft aus Rumänien', href: '/pflegekraft-aus-rumaenien/', desc: 'Rumänien — zweithäufigstes Herkunftsland. Rechtlich und preislich identisch.' },
+              { titel: 'Pflegekraft aus Polen', href: '/pflegekraft-aus-polen', desc: 'Polen — das häufigste Herkunftsland. Entsendemodell, Kosten, Qualifikation.' },
+              { titel: 'Pflegekraft aus Bulgarien', href: '/pflegekraft-aus-bulgarien', desc: 'Bulgarische Pflegekräfte im Entsendemodell — was zu beachten ist.' },
+              { titel: 'Pflegekraft aus Rumänien', href: '/pflegekraft-aus-rumaenien', desc: 'Rumänien — zweithäufigstes Herkunftsland. Rechtlich und preislich identisch.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>

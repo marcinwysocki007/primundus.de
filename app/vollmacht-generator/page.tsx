@@ -184,10 +184,10 @@ export default function Page() {
             <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Weitere hilfreiche Tools & Ratgeber</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/pflegegrad-rechner/', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf selbst einschätzen — in 3 Minuten' },
-                { href: '/pflegevertrag-generator/', label: 'Pflegevertrag-Generator', desc: 'Rechtssicheren Pflegevertrag kostenlos erstellen' },
+                { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf selbst einschätzen — in 3 Minuten' },
+                { href: '/pflegevertrag-generator', label: 'Pflegevertrag-Generator', desc: 'Rechtssicheren Pflegevertrag kostenlos erstellen' },
                 { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
-                { href: '/pflegegeld/', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
+                { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
               ].map((item) => (
                 <a
                   key={item.href}

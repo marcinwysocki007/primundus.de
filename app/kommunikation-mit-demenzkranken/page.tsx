@@ -70,7 +70,7 @@ export default function KommunikationMitDemenzkranken() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag/" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Kommunikation mit Demenzkranken</span>
           </nav>
@@ -217,11 +217,11 @@ export default function KommunikationMitDemenzkranken() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Mehr:{' '}
-            <a href="/demenz-pflege-zuhause/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Demenzpflege zuhause</a>
+            <a href="/demenz-pflege-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Demenzpflege zuhause</a>
             {' · '}
-            <a href="/tagesstruktur-demenz/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Tagesstruktur bei Demenz</a>
+            <a href="/tagesstruktur-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Tagesstruktur bei Demenz</a>
             {' · '}
-            <a href="/alzheimer-betreuung-zuhause/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alzheimer zuhause betreuen</a>
+            <a href="/alzheimer-betreuung-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alzheimer zuhause betreuen</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

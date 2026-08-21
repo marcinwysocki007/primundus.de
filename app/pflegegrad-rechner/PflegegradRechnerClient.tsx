@@ -180,7 +180,7 @@ export default function PflegegradRechnerClient() {
           <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/tools/" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+            <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
             <span>›</span>
             <span className="text-[#3D3D3D]">Pflegegrad-Rechner</span>
           </nav>
@@ -343,7 +343,7 @@ export default function PflegegradRechnerClient() {
         <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2 flex-wrap">
           <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
           <span>›</span>
-          <a href="/tools/" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+          <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
           <span>›</span>
           <span className="text-[#3D3D3D]">Pflegegrad-Rechner</span>
         </nav>
@@ -449,7 +449,7 @@ export default function PflegegradRechnerClient() {
               📞 Jetzt kostenlos beraten lassen
             </a>
             <a
-              href="/pflegegrad-beantragen/"
+              href="/pflegegrad-beantragen"
               className="flex-1 flex items-center justify-center gap-2 bg-white border-2 border-[#8B7355] text-[#8B7355] font-bold text-[15px] px-6 py-4 rounded-xl hover:bg-[#FAF8F5] transition-all duration-200"
             >
               Pflegegrad beantragen →
@@ -470,13 +470,13 @@ export default function PflegegradRechnerClient() {
 
         {/* Related links */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <a href="/pflegegrad-beantragen/" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegrad-beantragen" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
             → Pflegegrad beantragen
           </a>
-          <a href="/pflegegrade/" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegrade" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
             → Alle Pflegegrade
           </a>
-          <a href="/pflegegeld/" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegeld" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
             → Pflegegeld-Übersicht
           </a>
         </div>

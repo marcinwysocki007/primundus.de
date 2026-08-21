@@ -85,7 +85,7 @@ export default function Kosten() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/24-stunden-pflege/" className="hover:text-[#8B7355] transition-colors">24-Stunden-Pflege</a>
+            <a href="/24-stunden-pflege" className="hover:text-[#8B7355] transition-colors">24-Stunden-Pflege</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Kosten</span>
           </nav>
@@ -251,11 +251,11 @@ export default function Kosten() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Alle Zuschüsse kombinieren:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — vollständige Übersicht</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — vollständige Übersicht</a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Pflegegeld im Detail:{' '}
-            <a href="/pflegegeld/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegeld 2026 — Beträge & Anspruch</a>
+            <a href="/pflegegeld" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegeld 2026 — Beträge & Anspruch</a>
           </p>
 
 
@@ -309,7 +309,7 @@ export default function Kosten() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alles über Kosten, Rechtliches und Ablauf:{' '}
-            <a href="/pflegekraft-aus-polen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Polen — der große Ratgeber</a>
+            <a href="/pflegekraft-aus-polen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft aus Polen — der große Ratgeber</a>
           </p>
 
           {/* SECTION 3 — Grafik */}
@@ -324,7 +324,7 @@ export default function Kosten() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständiger Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
           </p>
 
           {/* SECTION 4 */}
@@ -336,11 +336,11 @@ export default function Kosten() {
           </p>
           <div className="space-y-3 mb-6">
             {[
-              { title: '1. Pflegegrad korrekt beantragen', desc: 'Jede Pflegegrad-Stufe bedeutet hunderte Euro mehr Kassenzuschuss pro Monat. Wer zu niedrig eingestuft ist, verschenkt Geld. Im Zweifel: Widerspruch einlegen.', link: { text: 'Pflegegrad beantragen', href: '/pflegegrad-beantragen/' } },
-              { title: '2. Entlastungsbudget voll ausschöpfen', desc: '3.539 €/Jahr verfallen wenn sie nicht genutzt werden. Belege rechtzeitig einreichen, Pflegekasse nach anerkannten Anbietern fragen.', link: { text: 'Verhinderungspflege & Entlastungsbudget', href: '/verhinderungspflege/' } },
-              { title: '3. Steuerlich absetzen', desc: '20 % der Betreuungskosten als haushaltsnahe Dienstleistung — max. 4.000 € Steuerersparnis pro Jahr. In der Steuererklärung Anlage V eintragen.', link: { text: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen/' } },
+              { title: '1. Pflegegrad korrekt beantragen', desc: 'Jede Pflegegrad-Stufe bedeutet hunderte Euro mehr Kassenzuschuss pro Monat. Wer zu niedrig eingestuft ist, verschenkt Geld. Im Zweifel: Widerspruch einlegen.', link: { text: 'Pflegegrad beantragen', href: '/pflegegrad-beantragen' } },
+              { title: '2. Entlastungsbudget voll ausschöpfen', desc: '3.539 €/Jahr verfallen wenn sie nicht genutzt werden. Belege rechtzeitig einreichen, Pflegekasse nach anerkannten Anbietern fragen.', link: { text: 'Verhinderungspflege & Entlastungsbudget', href: '/verhinderungspflege' } },
+              { title: '3. Steuerlich absetzen', desc: '20 % der Betreuungskosten als haushaltsnahe Dienstleistung — max. 4.000 € Steuerersparnis pro Jahr. In der Steuererklärung Anlage V eintragen.', link: { text: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen' } },
               { title: '4. Pflegehilfsmittel nutzen', desc: '42 €/Monat für Verbrauchsmittel (Handschuhe, Desinfektionsmittel) — direkt zur Pflegekasse beantragen, werden nach Hause geliefert.', link: null },
-              { title: '5. Wohnraumanpassung fördern lassen', desc: 'Bis 4.180 € je Maßnahme für Umbaumaßnahmen — Treppenlift, Badumbau, Türverbreiterung. Mehrfach nutzbar bei mehreren Maßnahmen.', link: { text: 'Wohnraumanpassung Förderung', href: '/wohnraumanpassung-foerderung/' } },
+              { title: '5. Wohnraumanpassung fördern lassen', desc: 'Bis 4.180 € je Maßnahme für Umbaumaßnahmen — Treppenlift, Badumbau, Türverbreiterung. Mehrfach nutzbar bei mehreren Maßnahmen.', link: { text: 'Wohnraumanpassung Förderung', href: '/wohnraumanpassung-foerderung' } },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
                 <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
@@ -353,7 +353,7 @@ export default function Kosten() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Tipps kompakt:{' '}
-            <a href="/eigenanteil-24h-pflege-senken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken — alle Möglichkeiten 2026</a>
+            <a href="/eigenanteil-24h-pflege-senken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil senken — alle Möglichkeiten 2026</a>
           </p>
 
           {/* FAQ */}
@@ -392,33 +392,33 @@ export default function Kosten() {
 
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Zuschüsse &amp; Leistungen</p>
-                <a href="/pflegegeld/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegegeld 2026</a>
-                <a href="/entlastungsbetrag/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Entlastungsbetrag</a>
-                <a href="/verhinderungspflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Verhinderungspflege &amp; Entlastungsbudget</a>
-                <a href="/pflegesachleistungen/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegesachleistungen</a>
+                <a href="/pflegegeld" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegegeld 2026</a>
+                <a href="/entlastungsbetrag" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Entlastungsbetrag</a>
+                <a href="/verhinderungspflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Verhinderungspflege &amp; Entlastungsbudget</a>
+                <a href="/pflegesachleistungen" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegesachleistungen</a>
               </div>
 
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Eigenanteil senken</p>
-                <a href="/eigenanteil-24h-pflege-senken/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Eigenanteil senken — alle Möglichkeiten</a>
-                <a href="/pflege-steuerlich-absetzen/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflege steuerlich absetzen</a>
-                <a href="/kombinationsleistung-pflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Kombinationsleistung nutzen</a>
-                <a href="/sozialhilfe-bei-pflegebedarf/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Sozialhilfe bei Pflegebedarf</a>
+                <a href="/eigenanteil-24h-pflege-senken" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Eigenanteil senken — alle Möglichkeiten</a>
+                <a href="/pflege-steuerlich-absetzen" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflege steuerlich absetzen</a>
+                <a href="/kombinationsleistung-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Kombinationsleistung nutzen</a>
+                <a href="/sozialhilfe-bei-pflegebedarf" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Sozialhilfe bei Pflegebedarf</a>
               </div>
 
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Finanzierung</p>
-                <a href="/finanzierung/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Finanzierung der 24h-Pflege</a>
-                <a href="/pflegeversicherung-leistungen-uebersicht/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegeversicherung: alle Leistungen</a>
-                <a href="/foerderungen-nach-bundesland/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Förderungen nach Bundesland</a>
-                <a href="/kurzzeitpflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Kurzzeitpflege nutzen</a>
+                <a href="/finanzierung" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Finanzierung der 24h-Pflege</a>
+                <a href="/pflegeversicherung-leistungen-uebersicht" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegeversicherung: alle Leistungen</a>
+                <a href="/foerderungen-nach-bundesland" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Förderungen nach Bundesland</a>
+                <a href="/kurzzeitpflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Kurzzeitpflege nutzen</a>
               </div>
 
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Vergleiche</p>
-                <a href="/pflegeheim-kosten-deutschland/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegeheim-Kosten Deutschland</a>
-                <a href="/pflegeheim-kostenvergleich/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegeheim-Kostenvergleich</a>
-                <a href="/24h-pflege-vs-pflegeheim-kosten/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim: Kosten</a>
+                <a href="/pflegeheim-kosten-deutschland" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegeheim-Kosten Deutschland</a>
+                <a href="/pflegeheim-kostenvergleich" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegeheim-Kostenvergleich</a>
+                <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim: Kosten</a>
               </div>
 
             </div>

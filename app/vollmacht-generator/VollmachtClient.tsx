@@ -753,7 +753,7 @@ export default function VollmachtClient() {
           <nav className="text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/tools/" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+            <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
             <span>›</span>
             <span className="text-[#3D3D3D]">Vorsorgevollmacht-Generator</span>
           </nav>
@@ -983,7 +983,7 @@ export default function VollmachtClient() {
                 <span className="text-[18px] flex-shrink-0">💡</span>
                 <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
                   <strong className="text-[#3D3D3D]">Tipp:</strong> Ergänzen Sie die Vollmacht um eine{' '}
-                  <a href="/patientenverfuegung-aufsetzen/" className="text-[#8B7355] hover:underline font-medium">
+                  <a href="/patientenverfuegung-aufsetzen" className="text-[#8B7355] hover:underline font-medium">
                     Patientenverfügung
                   </a>
                   , um Ihre konkreten Behandlungswünsche festzuhalten. Die Vollmacht regelt, <em>wer</em> entscheidet — die Patientenverfügung regelt, <em>was</em> entschieden wird.

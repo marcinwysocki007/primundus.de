@@ -72,7 +72,7 @@ export default function FoerderungenNachBundesland() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/finanzierung/" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
+            <a href="/finanzierung" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Förderungen nach Bundesland</span>
           </nav>
@@ -207,14 +207,14 @@ export default function FoerderungenNachBundesland() {
               <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-3">
                 Pflege- und Betreuungskosten können bis zu 4.000 € pro Jahr als außergewöhnliche Belastung oder haushaltsnahe Dienstleistung von der Steuer abgesetzt werden. Bei Primundus-Kosten von 2.200–3.500 €/Monat ist der Steuereffekt erheblich.
               </p>
-              <p className="text-[13px] text-[#8B8B8B]">→ Details: <a href="/pflege-steuerlich-absetzen/" className="text-[#8B7355] underline">Pflege steuerlich absetzen</a></p>
+              <p className="text-[13px] text-[#8B8B8B]">→ Details: <a href="/pflege-steuerlich-absetzen" className="text-[#8B7355] underline">Pflege steuerlich absetzen</a></p>
             </div>
             <div className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
               <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">Verhinderungspflege — bis 1.612 €/Jahr</p>
               <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-3">
                 Wenn die Hauptpflegeperson ausfällt (Urlaub, Krankheit), zahlt die Pflegekasse bis 1.612 €/Jahr für eine Ersatzkraft — ab PG 2, wenn die Hauptpflegeperson seit mindestens 6 Monaten pflegt.
               </p>
-              <p className="text-[13px] text-[#8B8B8B]">→ Details: <a href="/verhinderungspflege/" className="text-[#8B7355] underline">Verhinderungspflege erklärt</a></p>
+              <p className="text-[13px] text-[#8B8B8B]">→ Details: <a href="/verhinderungspflege" className="text-[#8B7355] underline">Verhinderungspflege erklärt</a></p>
             </div>
           </div>
 
@@ -223,14 +223,14 @@ export default function FoerderungenNachBundesland() {
           </h2>
           <div className="space-y-2 mb-10">
             {[
-              { check: 'Pflegegrad beantragt (Antrag sofort stellen — rückwirkend ab Antragsdatum)', link: '/pflegegrad-beantragen/' },
-              { check: 'Pflegegeld oder Sachleistungen gewählt (oder Kombinationsleistung)', link: '/kombinationsleistung-pflege/' },
-              { check: 'Entlastungsbetrag (131 €/Mo) separat bei Pflegekasse beantragt', link: '/entlastungsbetrag/' },
-              { check: 'Entlastungsbudget für anerkannte Leistungen genutzt (3.539 €/Jahr)', link: '/entlastungsbetrag/' },
-              { check: 'Wohnraumanpassung beantragt (bis 4.180 €/Maßnahme, VOR Beginn beantragen)', link: '/barrierefreies-zuhause-gestalten/' },
+              { check: 'Pflegegrad beantragt (Antrag sofort stellen — rückwirkend ab Antragsdatum)', link: '/pflegegrad-beantragen' },
+              { check: 'Pflegegeld oder Sachleistungen gewählt (oder Kombinationsleistung)', link: '/kombinationsleistung-pflege' },
+              { check: 'Entlastungsbetrag (131 €/Mo) separat bei Pflegekasse beantragt', link: '/entlastungsbetrag' },
+              { check: 'Entlastungsbudget für anerkannte Leistungen genutzt (3.539 €/Jahr)', link: '/entlastungsbetrag' },
+              { check: 'Wohnraumanpassung beantragt (bis 4.180 €/Maßnahme, VOR Beginn beantragen)', link: '/barrierefreies-zuhause-gestalten' },
               { check: 'Pflegehilfsmittel-Pauschale (42 €/Mo) genutzt', link: null },
-              { check: 'Verhinderungspflege eingeplant (bis 1.612 €/Jahr)', link: '/verhinderungspflege/' },
-              { check: 'Steuerliche Absetzbarkeit geprüft (bis 4.000 €/Jahr)', link: '/pflege-steuerlich-absetzen/' },
+              { check: 'Verhinderungspflege eingeplant (bis 1.612 €/Jahr)', link: '/verhinderungspflege' },
+              { check: 'Steuerliche Absetzbarkeit geprüft (bis 4.000 €/Jahr)', link: '/pflege-steuerlich-absetzen' },
               { check: 'KfW-Kredit für größere Wohnraumanpassung geprüft (kfw.de)', link: null },
               { check: 'Landespflegegeld Bayern (1.000 €/Jahr) beantragt — falls zutreffend', link: null },
               { check: 'Lokalen Pflegestützpunkt kontaktiert für weitere Beratung', link: null },
@@ -247,9 +247,9 @@ export default function FoerderungenNachBundesland() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Kassenzuschüsse kombiniert:{' '}
-            <a href="/eigenanteil-24h-pflege-senken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil bei 24h-Pflege senken</a>
+            <a href="/eigenanteil-24h-pflege-senken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Eigenanteil bei 24h-Pflege senken</a>
             {' · '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierungsübersicht 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierungsübersicht 2026</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

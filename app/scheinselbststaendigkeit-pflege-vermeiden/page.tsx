@@ -69,7 +69,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/rechtliches/" className="hover:text-[#8B7355] transition-colors">Rechtliches</a>
+            <a href="/rechtliches" className="hover:text-[#8B7355] transition-colors">Rechtliches</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Scheinselbstständigkeit vermeiden</span>
           </nav>
@@ -171,7 +171,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständige Erklärung:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Modelle</a>
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Modelle</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

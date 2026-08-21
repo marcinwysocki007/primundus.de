@@ -183,9 +183,9 @@ export default function Rechtssicher() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Hintergründe:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Modelle</a>
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Modelle</a>
             {' · '}
-            <a href="/scheinselbststaendigkeit-pflege-vermeiden/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Scheinselbstständigkeit vermeiden</a>
+            <a href="/scheinselbststaendigkeit-pflege-vermeiden" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Scheinselbstständigkeit vermeiden</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>

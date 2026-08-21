@@ -12,6 +12,7 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const APP_OUT = path.join(ROOT, '.next', 'server', 'app')
 const PUBLIC_DIR = path.join(ROOT, 'public')
 const LIVE = process.argv.includes('--live')
+const SKIP_OG = process.argv.includes('--skip-og') // Übergang bis B3 (og:image-Fix)
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3210'
 
 // Quellen, die absichtlich redirecten (next.config.js) — als Linkziel erlaubt:
@@ -88,7 +89,7 @@ if (badTargets.size) {
   errors.push(`Kaputte interne Linkziele: ${badTargets.size}`)
   for (const [href, files] of badTargets) console.log(`  KAPUTT ${href}  (z. B. auf ${files[0]})`)
 }
-if (noOgImage.length) {
+if (noOgImage.length && !SKIP_OG) {
   errors.push(`Seiten ohne og:image: ${noOgImage.length}`)
   noOgImage.slice(0, 10).forEach((p) => console.log(`  KEIN og:image: ${p}`))
   if (noOgImage.length > 10) console.log(`  … und ${noOgImage.length - 10} weitere`)

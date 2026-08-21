@@ -71,7 +71,7 @@ export default function SchlaganfallPflegeZuhause() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten/" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
+            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Schlaganfall Pflege zuhause</span>
           </nav>
@@ -186,11 +186,11 @@ export default function SchlaganfallPflegeZuhause() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Pflegegrad schnell beantragen:{' '}
-            <a href="/pflegegrad-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen — Schritt für Schritt</a>
+            <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen — Schritt für Schritt</a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Pflegegrad nach Schlaganfall:{' '}
-            <a href="/pflegegrad-nach-schlaganfall/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Welcher Pflegegrad nach Schlaganfall?</a>
+            <a href="/pflegegrad-nach-schlaganfall" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Welcher Pflegegrad nach Schlaganfall?</a>
           </p>
 
           <h2 id="24h" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -212,9 +212,9 @@ export default function SchlaganfallPflegeZuhause() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Mehr zu 24h-Pflege allgemein:{' '}
-            <a href="/was-ist-24-stunden-pflege/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege?</a>
+            <a href="/was-ist-24-stunden-pflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege?</a>
             {' · '}
-            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten & Kassenzuschüsse 2026</a>
+            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten & Kassenzuschüsse 2026</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">

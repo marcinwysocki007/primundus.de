@@ -1027,7 +1027,7 @@ export default function PflegevertragClient() {
           <nav className="text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/tools/" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+            <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
             <span>›</span>
             <span className="text-[#3D3D3D]">Pflegevertrag-Generator</span>
           </nav>

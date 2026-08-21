@@ -69,7 +69,7 @@ export default function PflegegradErhoehen() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegegrad erhöhen</span>
           </nav>
@@ -154,7 +154,7 @@ export default function PflegegradErhoehen() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Antrag vollständig erklärt:{' '}
-            <a href="/pflegegrad-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen — Schritt für Schritt</a>
+            <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen — Schritt für Schritt</a>
           </p>
 
           <h2 id="vorbereitung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -179,7 +179,7 @@ export default function PflegegradErhoehen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Tipps:{' '}
-            <a href="/pflegegrad-begutachtung-vorbereiten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung vorbereiten — Checkliste & 7 Tipps</a>
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung vorbereiten — Checkliste & 7 Tipps</a>
           </p>
 
           <h2 id="unterschied" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">

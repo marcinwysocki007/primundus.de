@@ -72,7 +72,7 @@ export default function MdkBegutachtungTipps() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">MDK-Begutachtung Tipps</span>
           </nav>
@@ -198,7 +198,7 @@ export default function MdkBegutachtungTipps() {
             <p className="text-[14px] font-bold text-[#2A5C3F] mb-2">Ergebnis zu niedrig? Widerspruch einlegen!</p>
             <p className="text-[14px] text-[#2A5C3F] leading-relaxed">
               Wer den Bescheid für zu niedrig hält, kann innerhalb von 4 Wochen Widerspruch einlegen — kostenlos und ohne Risiko. Eine erneute Begutachtung wird angesetzt.{' '}
-              <a href="/widerspruch-pflegekasse-einlegen/" className="underline font-semibold">Widerspruch einlegen — wie es geht</a>
+              <a href="/widerspruch-pflegekasse-einlegen" className="underline font-semibold">Widerspruch einlegen — wie es geht</a>
             </p>
           </div>
 

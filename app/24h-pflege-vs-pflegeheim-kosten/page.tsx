@@ -79,7 +79,7 @@ export default function VsKosten() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/vergleiche/" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
+            <a href="/vergleiche" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">24h-Pflege vs. Pflegeheim</span>
           </nav>
@@ -170,7 +170,7 @@ export default function VsKosten() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Mehr zum Thema:{' '}
-            <a href="/pflegeheim-kosten-deutschland/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegeheim Kosten Deutschland 2026 — vollständige Übersicht</a>
+            <a href="/pflegeheim-kosten-deutschland" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegeheim Kosten Deutschland 2026 — vollständige Übersicht</a>
           </p>
 
           {/* SECTION 3 */}
@@ -266,9 +266,9 @@ export default function VsKosten() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Was zuhause möglich ist:{' '}
-            <a href="/was-ist-24-stunden-pflege/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege? — alle Fakten</a>
+            <a href="/was-ist-24-stunden-pflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege? — alle Fakten</a>
             {' · '}
-            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten der 24h-Pflege im Detail</a>
+            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten der 24h-Pflege im Detail</a>
           </p>
 
           {/* FAQ */}

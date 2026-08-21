@@ -179,7 +179,7 @@ export default function Page() {
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 9 Datenschutz</h2>
             <p>
               Die Verarbeitung personenbezogener Daten erfolgt gemäß der{' '}
-              <Link href="/datenschutz/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Datenschutzerklärung</Link>{' '}
+              <Link href="/datenschutz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Datenschutzerklärung</Link>{' '}
               von Primundus. Der Kunde willigt in die Verarbeitung der für die Vermittlung erforderlichen
               Gesundheits- und Pflegedaten ein. Diese Einwilligung kann jederzeit mit Wirkung für die Zukunft
               widerrufen werden.

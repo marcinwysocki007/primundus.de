@@ -72,7 +72,7 @@ export default function Pflegegrad2() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegegrad 2</span>
           </nav>
@@ -165,7 +165,7 @@ export default function Pflegegrad2() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Zuschüsse kombinieren:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
           </p>
 
           <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -205,9 +205,9 @@ export default function Pflegegrad2() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Pflegegrad beantragen:{' '}
-            <a href="/pflegegrad-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Schritt für Schritt Anleitung</a>
+            <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Schritt für Schritt Anleitung</a>
             {' · '}
-            <a href="/pflegegrad-begutachtung-vorbereiten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Begutachtung vorbereiten</a>
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Begutachtung vorbereiten</a>
           </p>
 
           <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -231,7 +231,7 @@ export default function Pflegegrad2() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Wann 24h-Pflege die richtige Lösung ist:{' '}
-            <a href="/wann-brauche-ich-24h-pflege/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Wann brauche ich 24h-Pflege?</a>
+            <a href="/wann-brauche-ich-24h-pflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Wann brauche ich 24h-Pflege?</a>
           </p>
 
           <h2 id="hoeher" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
@@ -242,9 +242,9 @@ export default function Pflegegrad2() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Details:{' '}
-            <a href="/pflegegrad-3/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad 3 — Leistungen & Beträge</a>
+            <a href="/pflegegrad-3" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad 3 — Leistungen & Beträge</a>
             {' · '}
-            <a href="/pflegegrad-erhoehen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen — wann und wie</a>
+            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen — wann und wie</a>
           </p>
 
           <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">

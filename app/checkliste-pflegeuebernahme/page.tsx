@@ -171,10 +171,10 @@ export default function Page() {
             <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Vertiefende Themen</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/pflegegrad-beantragen/', label: 'Pflegegrad beantragen', desc: 'Schritt für Schritt zum Bescheid' },
-                { href: '/burnout-pflegende-angehoerige/', label: 'Burnout vermeiden', desc: 'Strategien für pflegende Angehörige' },
-                { href: '/pflegekraft-finden/', label: 'Pflegekraft finden', desc: 'Die richtige Betreuungskraft auswählen' },
-                { href: '/pflegevertrag-generator/', label: 'Pflegevertrag erstellen', desc: 'Rechtssichere Vorlage' },
+                { href: '/pflegegrad-beantragen', label: 'Pflegegrad beantragen', desc: 'Schritt für Schritt zum Bescheid' },
+                { href: '/burnout-pflegende-angehoerige', label: 'Burnout vermeiden', desc: 'Strategien für pflegende Angehörige' },
+                { href: '/pflegekraft-finden', label: 'Pflegekraft finden', desc: 'Die richtige Betreuungskraft auswählen' },
+                { href: '/pflegevertrag-generator', label: 'Pflegevertrag erstellen', desc: 'Rechtssichere Vorlage' },
               ].map((item) => (
                 <a
                   key={item.href}

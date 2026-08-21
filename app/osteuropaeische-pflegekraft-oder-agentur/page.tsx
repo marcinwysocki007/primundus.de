@@ -61,7 +61,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/vergleiche/" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
+            <a href="/vergleiche" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Osteuropäische Pflegekraft oder Agentur</span>
           </nav>

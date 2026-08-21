@@ -77,7 +77,7 @@ export default function DemenzPflegeZuhause() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten/" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
+            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Demenz Pflege zuhause</span>
           </nav>
@@ -139,9 +139,9 @@ export default function DemenzPflegeZuhause() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alzheimer im Speziellen:{' '}
-            <a href="/alzheimer-betreuung-zuhause/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alzheimer Betreuung zuhause</a>
+            <a href="/alzheimer-betreuung-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alzheimer Betreuung zuhause</a>
             {' · '}
-            <a href="/pflegegrad-bei-demenz/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz — Einstufung</a>
+            <a href="/pflegegrad-bei-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz — Einstufung</a>
           </p>
 
           {/* SECTION 2 */}
@@ -167,9 +167,9 @@ export default function DemenzPflegeZuhause() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Tagesstruktur bei Demenz:{' '}
-            <a href="/tagesstruktur-demenz/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Tagesstruktur bei Demenz — praktische Tipps</a>
+            <a href="/tagesstruktur-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Tagesstruktur bei Demenz — praktische Tipps</a>
             {' · '}
-            <a href="/kommunikation-mit-demenzkranken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kommunikation mit Demenzkranken</a>
+            <a href="/kommunikation-mit-demenzkranken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kommunikation mit Demenzkranken</a>
           </p>
 
           {/* SECTION 3 */}
@@ -214,9 +214,9 @@ export default function DemenzPflegeZuhause() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Was 24h-Pflege kostet:{' '}
-            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten der 24h-Pflege 2026</a>
+            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten der 24h-Pflege 2026</a>
             {' · '}
-            <a href="/burnout-pflegende-angehoerige/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Burnout pflegende Angehörige</a>
+            <a href="/burnout-pflegende-angehoerige" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Burnout pflegende Angehörige</a>
           </p>
 
           {/* SECTION 3b — Zuhause oder Heim */}
@@ -242,7 +242,7 @@ export default function DemenzPflegeZuhause() {
             </div>
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
-            → Zahlen im Detail: <a href="/pflegeheim-kostenvergleich/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege und Pflegeheim im Kostenvergleich</a>
+            → Zahlen im Detail: <a href="/pflegeheim-kostenvergleich" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege und Pflegeheim im Kostenvergleich</a>
           </p>
 
           {/* SECTION 4 */}
@@ -289,11 +289,11 @@ export default function DemenzPflegeZuhause() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Pflegegrad bei Demenz beantragen:{' '}
-            <a href="/pflegegrad-bei-demenz/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz — Einstufung & Tipps</a>
+            <a href="/pflegegrad-bei-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz — Einstufung & Tipps</a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Zuschüsse kombinieren:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
           </p>
 
           {/* SECTION 5 */}
@@ -318,7 +318,7 @@ export default function DemenzPflegeZuhause() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Häusliche vs. stationäre Pflege:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — was ist besser?</a>
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — was ist besser?</a>
           </p>
 
           {/* FAQ */}

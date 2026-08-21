@@ -70,7 +70,7 @@ export default function WannBraucheIch24hPflege() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/24-stunden-pflege/" className="hover:text-[#8B7355] transition-colors">24-Stunden-Pflege</a>
+            <a href="/24-stunden-pflege" className="hover:text-[#8B7355] transition-colors">24-Stunden-Pflege</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Wann brauche ich 24h-Pflege?</span>
           </nav>
@@ -139,10 +139,10 @@ export default function WannBraucheIch24hPflege() {
           </h2>
           <div className="space-y-3 mb-10">
             {[
-              { title: 'Nach Schlaganfall oder OP', desc: 'Direkte Entlassung aus Krankenhaus oder Reha nach Hause — mit 24h-Betreuungskraft die die Lücke schließt die kein ambulanter Dienst füllen kann.', link: '/schlaganfall-pflege-zuhause/' },
-              { title: 'Mittlere bis schwere Demenz', desc: 'Wenn eigenständige Aktivitäten nicht mehr sicher möglich sind und Weglaufen, Nachtunruhe oder Selbstgefährdung auftreten.', link: '/demenz-pflege-zuhause/' },
-              { title: 'Fortgeschrittenes Parkinson-Stadium', desc: 'On-Off-Phasen, Sturzgefahr, Medikamenten-Timing — ein fester Ansprechpartner rund um die Uhr ist entscheidend.', link: '/parkinson-pflege-zuhause/' },
-              { title: 'Angehörige an der Belastungsgrenze', desc: 'Wenn Kinder oder Partner erschöpft sind und die Pflege nicht mehr leisten können — ohne dass das Pflegeheim die einzige Alternative sein muss.', link: '/burnout-pflegende-angehoerige/' },
+              { title: 'Nach Schlaganfall oder OP', desc: 'Direkte Entlassung aus Krankenhaus oder Reha nach Hause — mit 24h-Betreuungskraft die die Lücke schließt die kein ambulanter Dienst füllen kann.', link: '/schlaganfall-pflege-zuhause' },
+              { title: 'Mittlere bis schwere Demenz', desc: 'Wenn eigenständige Aktivitäten nicht mehr sicher möglich sind und Weglaufen, Nachtunruhe oder Selbstgefährdung auftreten.', link: '/demenz-pflege-zuhause' },
+              { title: 'Fortgeschrittenes Parkinson-Stadium', desc: 'On-Off-Phasen, Sturzgefahr, Medikamenten-Timing — ein fester Ansprechpartner rund um die Uhr ist entscheidend.', link: '/parkinson-pflege-zuhause' },
+              { title: 'Angehörige an der Belastungsgrenze', desc: 'Wenn Kinder oder Partner erschöpft sind und die Pflege nicht mehr leisten können — ohne dass das Pflegeheim die einzige Alternative sein muss.', link: '/burnout-pflegende-angehoerige' },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
                 <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>

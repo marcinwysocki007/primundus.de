@@ -61,7 +61,7 @@ export default function ChecklistePflegekraftEinstellen() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/organisation/" className="hover:text-[#8B7355] transition-colors">Organisation</a>
+            <a href="/organisation" className="hover:text-[#8B7355] transition-colors">Organisation</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Checkliste Pflegekraft einstellen</span>
           </nav>

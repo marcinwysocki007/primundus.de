@@ -40,7 +40,7 @@ export default function Rechtliches() {
           <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber/" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Rechtliches & Vorsorge</span>
           </nav>
@@ -68,11 +68,11 @@ export default function Rechtliches() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Rechtssichere Beschäftigung von Pflegekräften</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Pflegekraft legal beschäftigen', href: '/pflegekraft-legal-beschaeftigen/', desc: 'Die 3 legalen Modelle — Entsendemodell, Direktanstellung, Scheinselbstständigkeit — erklärt und verglichen.' },
-              { titel: 'Scheinselbstständigkeit vermeiden', href: '/scheinselbststaendigkeit-pflege-vermeiden/', desc: 'Was Scheinselbstständigkeit ist, woran die Behörden sie erkennen und wie man das Risiko vollständig vermeidet.' },
-              { titel: 'Pflegevertrag aufsetzen', href: '/pflegevertrag-aufsetzen/', desc: 'Was in jeden Pflegevertrag gehört — Leistungsumfang, Vergütung, Kündigung, Kost und Logis.' },
-              { titel: 'EU-Pflegekraft: Rechte & Pflichten', href: '/eu-pflegekraft-rechte-pflichten/', desc: 'Was das A1-Entsendemodell bedeutet und welche Regeln für EU-Pflegekräfte gelten.' },
-              { titel: 'Haftung im Pflegehaushalt', href: '/haftung-pflegehaushalt/', desc: 'Wer haftet bei Schäden — Familie, Agentur oder Pflegekraft?' },
+              { titel: 'Pflegekraft legal beschäftigen', href: '/pflegekraft-legal-beschaeftigen', desc: 'Die 3 legalen Modelle — Entsendemodell, Direktanstellung, Scheinselbstständigkeit — erklärt und verglichen.' },
+              { titel: 'Scheinselbstständigkeit vermeiden', href: '/scheinselbststaendigkeit-pflege-vermeiden', desc: 'Was Scheinselbstständigkeit ist, woran die Behörden sie erkennen und wie man das Risiko vollständig vermeidet.' },
+              { titel: 'Pflegevertrag aufsetzen', href: '/pflegevertrag-aufsetzen', desc: 'Was in jeden Pflegevertrag gehört — Leistungsumfang, Vergütung, Kündigung, Kost und Logis.' },
+              { titel: 'EU-Pflegekraft: Rechte & Pflichten', href: '/eu-pflegekraft-rechte-pflichten', desc: 'Was das A1-Entsendemodell bedeutet und welche Regeln für EU-Pflegekräfte gelten.' },
+              { titel: 'Haftung im Pflegehaushalt', href: '/haftung-pflegehaushalt', desc: 'Wer haftet bei Schäden — Familie, Agentur oder Pflegekraft?' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -85,11 +85,11 @@ export default function Rechtliches() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Verträge & Vollmachten</h2>
           <div className="grid gap-3 mb-10">
             {[
-              { titel: 'Vorsorgevollmacht erstellen', href: '/vorsorgevollmacht-erstellen/', desc: 'Was eine Vorsorgevollmacht regelt, wie man sie erstellt und warum jeder sie braucht.' },
-              { titel: 'Patientenverfügung aufsetzen', href: '/patientenverfuegung-aufsetzen/', desc: 'Was hineingehört, wie man sie gültig erstellt — Anleitung und Muster.' },
-              { titel: 'Betreuungsverfügung erstellen', href: '/betreuungsverfuegung-erstellen/', desc: 'Wann eine Betreuungsverfügung sinnvoll ist und was sie von der Vollmacht unterscheidet.' },
-              { titel: 'Pflegevertrag Muster & Vorlage', href: '/pflegevertrag-muster-vorlage/', desc: 'Musterpflegevertrag mit allen Pflichtangaben — als Vorlage zum Download.' },
-              { titel: 'Werkvertrag Pflegekraft Muster', href: '/werkvertrag-pflegekraft-muster/', desc: 'Vorlage und wichtige Hinweise zum Werkvertrag in der Pflege.' },
+              { titel: 'Vorsorgevollmacht erstellen', href: '/vorsorgevollmacht-erstellen', desc: 'Was eine Vorsorgevollmacht regelt, wie man sie erstellt und warum jeder sie braucht.' },
+              { titel: 'Patientenverfügung aufsetzen', href: '/patientenverfuegung-aufsetzen', desc: 'Was hineingehört, wie man sie gültig erstellt — Anleitung und Muster.' },
+              { titel: 'Betreuungsverfügung erstellen', href: '/betreuungsverfuegung-erstellen', desc: 'Wann eine Betreuungsverfügung sinnvoll ist und was sie von der Vollmacht unterscheidet.' },
+              { titel: 'Pflegevertrag Muster & Vorlage', href: '/pflegevertrag-muster-vorlage', desc: 'Musterpflegevertrag mit allen Pflichtangaben — als Vorlage zum Download.' },
+              { titel: 'Werkvertrag Pflegekraft Muster', href: '/werkvertrag-pflegekraft-muster', desc: 'Vorlage und wichtige Hinweise zum Werkvertrag in der Pflege.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
@@ -102,12 +102,12 @@ export default function Rechtliches() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Steuern & Sozialversicherung</h2>
           <div className="grid gap-3 mb-12">
             {[
-              { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen/', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie man es richtig macht.' },
-              { titel: 'Pflegekraft Sozialversicherung anmelden', href: '/pflegekraft-sozialversicherung-anmelden/', desc: 'Was bei Direktanstellung zu tun ist — Kranken-, Renten-, Pflegeversicherung.' },
-              { titel: 'Datenschutz in der Pflegesituation', href: '/datenschutz-pflegesituation/', desc: 'Was Familien und Pflegekräfte bei Gesundheitsdaten beachten müssen.' },
-              { titel: 'Pflegezeit-Gesetz für Angehörige', href: '/pflegezeit-gesetz-angehoerige/', desc: 'Freistellung, Pflegeunterstützungsgeld, kurzzeitige Arbeitsverhinderung — alle Rechte.' },
-              { titel: 'Widerspruch Pflegekasse einlegen', href: '/widerspruch-pflegekasse-einlegen/', desc: 'Widerspruch gegen Pflegekassen-Bescheid — Fristen, Formulierungen, Erfolgschancen.' },
-              { titel: 'MDK-Begutachtung — Tipps', href: '/mdk-begutachtung-tipps/', desc: 'Was beim Gutachtertermin zählt und wie man die Begutachtung richtig vorbereitet.' },
+              { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie man es richtig macht.' },
+              { titel: 'Pflegekraft Sozialversicherung anmelden', href: '/pflegekraft-sozialversicherung-anmelden', desc: 'Was bei Direktanstellung zu tun ist — Kranken-, Renten-, Pflegeversicherung.' },
+              { titel: 'Datenschutz in der Pflegesituation', href: '/datenschutz-pflegesituation', desc: 'Was Familien und Pflegekräfte bei Gesundheitsdaten beachten müssen.' },
+              { titel: 'Pflegezeit-Gesetz für Angehörige', href: '/pflegezeit-gesetz-angehoerige', desc: 'Freistellung, Pflegeunterstützungsgeld, kurzzeitige Arbeitsverhinderung — alle Rechte.' },
+              { titel: 'Widerspruch Pflegekasse einlegen', href: '/widerspruch-pflegekasse-einlegen', desc: 'Widerspruch gegen Pflegekassen-Bescheid — Fristen, Formulierungen, Erfolgschancen.' },
+              { titel: 'MDK-Begutachtung — Tipps', href: '/mdk-begutachtung-tipps', desc: 'Was beim Gutachtertermin zählt und wie man die Begutachtung richtig vorbereitet.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>

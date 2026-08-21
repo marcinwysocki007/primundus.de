@@ -137,7 +137,7 @@ export default function PflegegradBeantragen() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegegrad beantragen</span>
           </nav>
@@ -208,11 +208,11 @@ export default function PflegegradBeantragen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Welcher Pflegegrad bei welcher Erkrankung in Frage kommt:{' '}
-            <a href="/pflegegrad-bei-demenz/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz</a>
+            <a href="/pflegegrad-bei-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz</a>
             {' · '}
-            <a href="/pflegegrad-nach-schlaganfall/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad nach Schlaganfall</a>
+            <a href="/pflegegrad-nach-schlaganfall" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad nach Schlaganfall</a>
             {' · '}
-            <a href="/pflegegrad-bei-parkinson/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Parkinson</a>
+            <a href="/pflegegrad-bei-parkinson" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Parkinson</a>
           </p>
 
           {/* ── SECTION 2 ── */}
@@ -353,7 +353,7 @@ export default function PflegegradBeantragen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Ausführliche Vorbereitung:{' '}
-            <a href="/pflegegrad-begutachtung-vorbereiten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               MD-Begutachtung vorbereiten — Checkliste und Tipps
             </a>
           </p>
@@ -422,17 +422,17 @@ export default function PflegegradBeantragen() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Einzelne Pflegegrade im Detail:{' '}
-            <a href="/pflegegrad-2/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 2</a>
+            <a href="/pflegegrad-2" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 2</a>
             {' · '}
-            <a href="/pflegegrad-3/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 3</a>
+            <a href="/pflegegrad-3" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 3</a>
             {' · '}
-            <a href="/pflegegrad-4/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 4</a>
+            <a href="/pflegegrad-4" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 4</a>
             {' · '}
-            <a href="/pflegegrad-5/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 5</a>
+            <a href="/pflegegrad-5" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 5</a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Wie alle Zuschüsse kombiniert werden:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Finanzierung der 24h-Pflege — alle Zuschüsse 2026
             </a>
           </p>
@@ -475,11 +475,11 @@ export default function PflegegradBeantragen() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Schritt für Schritt:{' '}
-            <a href="/pflegegrad-widerspruch-einlegen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegegrad-widerspruch-einlegen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Pflegegrad Widerspruch einlegen — Muster und Tipps
             </a>
             {' · '}
-            <a href="/pflegegrad-erhoehen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
               Pflegegrad erhöhen — wann und wie
             </a>
           </p>

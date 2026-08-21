@@ -7,13 +7,13 @@ import { Phone, Menu, X, MessageSquare, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 
 const nav = [
-  { label: '24h-Pflege', href: '/24-stunden-pflege/' },
-  { label: 'Kosten', href: '/kosten/' },
-  { label: 'Ratgeber', href: '/ratgeber/' },
-  { label: 'Tools', href: '/tools/' },
-  { label: 'Regionen', href: '/regionen/' },
-  { label: 'Über uns', href: '/ueber-uns/' },
-  { label: 'Franchise', href: '/franchisepartner/' },
+  { label: '24h-Pflege', href: '/24-stunden-pflege' },
+  { label: 'Kosten', href: '/kosten' },
+  { label: 'Ratgeber', href: '/ratgeber' },
+  { label: 'Tools', href: '/tools' },
+  { label: 'Regionen', href: '/regionen' },
+  { label: 'Über uns', href: '/ueber-uns' },
+  { label: 'Franchise', href: '/franchisepartner' },
 ]
 
 export function SiteHeader() {

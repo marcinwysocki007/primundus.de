@@ -76,7 +76,7 @@ export default function Pflegegrad3() {
           <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
             <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade/" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
             <span>›</span>
             <span className="text-[#1C1C1C]">Pflegegrad 3</span>
           </nav>
@@ -186,11 +186,11 @@ export default function Pflegegrad3() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Alle Kombinationsmöglichkeiten:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Eigenanteil senken:{' '}
-            <a href="/eigenanteil-24h-pflege-senken/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Möglichkeiten 2026</a>
+            <a href="/eigenanteil-24h-pflege-senken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Möglichkeiten 2026</a>
           </p>
 
           {/* SECTION: Kosten 24h-Pflege */}
@@ -213,7 +213,7 @@ export default function Pflegegrad3() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Kostenfaktoren im Detail:{' '}
-            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24-Stunden-Pflege? Kosten & Zuschüsse 2026</a>
+            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24-Stunden-Pflege? Kosten & Zuschüsse 2026</a>
           </p>
 
           {/* SECTION 3 */}
@@ -282,9 +282,9 @@ export default function Pflegegrad3() {
           </ol>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständige Anleitung:{' '}
-            <a href="/pflegegrad-beantragen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen — Schritt für Schritt</a>
+            <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen — Schritt für Schritt</a>
             {' · '}
-            <a href="/pflegegrad-begutachtung-vorbereiten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung vorbereiten</a>
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung vorbereiten</a>
           </p>
 
           {/* SECTION 5 */}
@@ -307,9 +307,9 @@ export default function Pflegegrad3() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Details:{' '}
-            <a href="/pflegegrad-erhoehen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen — wann und wie</a>
+            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen — wann und wie</a>
             {' · '}
-            <a href="/pflegegrad-4/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad 4 — Leistungen & Beträge</a>
+            <a href="/pflegegrad-4" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad 4 — Leistungen & Beträge</a>
           </p>
 
           {/* FAQ */}

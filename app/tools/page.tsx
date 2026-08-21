@@ -69,7 +69,7 @@ const schemaMarkup = JSON.stringify([
 
 const gridTools = [
   {
-    href: '/pflegegrad-rechner/',
+    href: '/pflegegrad-rechner',
     external: false,
     name: 'Pflegegrad-Rechner',
     description: 'Pflegebedarf selbst einschätzen — 15 Fragen, 3 Minuten. Gibt einen ersten Hinweis auf den Pflegegrad vor der offiziellen Begutachtung.',
@@ -82,7 +82,7 @@ const gridTools = [
     ),
   },
   {
-    href: '/zuschuss-rechner/',
+    href: '/zuschuss-rechner',
     external: false,
     name: 'Zuschuss & Förderung 2026',
     description: 'Pflegegrad wählen — alle Leistungen sofort sehen: Pflegegeld, Entlastungsbudget, Steuerabzug und Eigenanteil bei 24h-Pflege.',
@@ -95,7 +95,7 @@ const gridTools = [
     ),
   },
   {
-    href: '/pflegevertrag-generator/',
+    href: '/pflegevertrag-generator',
     external: false,
     name: 'Pflegevertrag-Generator',
     description: 'Rechtssicheren Pflegevertrag erstellen — individuell anpassbar, sofort zum Download.',
@@ -109,7 +109,7 @@ const gridTools = [
     ),
   },
   {
-    href: '/vollmacht-generator/',
+    href: '/vollmacht-generator',
     external: false,
     name: 'Vollmacht-Generator',
     description: 'Vorsorgevollmacht Schritt für Schritt erstellen — das wichtigste Vorsorgedokument, schnell und rechtssicher.',
@@ -121,7 +121,7 @@ const gridTools = [
     ),
   },
   {
-    href: '/anbieter-vergleich/',
+    href: '/anbieter-vergleich',
     external: false,
     name: 'Anbieter-Vergleich',
     description: '24h-Pflege-Anbieter neutral vergleichen — Preise, Leistungen und Bewertungen auf einen Blick.',
@@ -137,7 +137,7 @@ const gridTools = [
     ),
   },
   {
-    href: '/pflegeheim-kostenvergleich/',
+    href: '/pflegeheim-kostenvergleich',
     external: false,
     name: 'Pflegeheim-Kostenvergleich',
     description: 'Pflegeheim vs. 24h-Pflege im direkten Kostenvergleich — mit aktuellen Durchschnittswerten für alle Bundesländer.',

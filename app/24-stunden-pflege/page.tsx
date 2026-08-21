@@ -128,7 +128,7 @@ export default function VierUndZwanzigStundenPflege() {
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Ausführliche Erklärung:{' '}
-            <a href="/was-ist-24-stunden-pflege/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege? — alle Fakten</a>
+            <a href="/was-ist-24-stunden-pflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege? — alle Fakten</a>
           </p>
 
           {/* SECTION 2 */}
@@ -154,9 +154,9 @@ export default function VierUndZwanzigStundenPflege() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Vollständige Leistungsübersicht:{' '}
-            <a href="/leistungen/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was Primundus leistet</a>
+            <a href="/leistungen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was Primundus leistet</a>
             {' · '}
-            <a href="/rechtssicher/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Rechtssicherheit & Entsendemodell</a>
+            <a href="/rechtssicher" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Rechtssicherheit & Entsendemodell</a>
           </p>
 
           {/* SECTION 3 */}
@@ -204,11 +204,11 @@ export default function VierUndZwanzigStundenPflege() {
 
           <p className="text-[15px] text-[#2E2E2E] mb-3">
             → Alle Kosten im Detail:{' '}
-            <a href="/kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24h-Pflege? — vollständige Übersicht</a>
+            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24h-Pflege? — vollständige Übersicht</a>
           </p>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Alle Zuschüsse optimal nutzen:{' '}
-            <a href="/finanzierung/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung — alle Kassenzuschüsse 2026</a>
+            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung — alle Kassenzuschüsse 2026</a>
           </p>
 
           {/* SECTION 4 */}
@@ -237,7 +237,7 @@ export default function VierUndZwanzigStundenPflege() {
           </ol>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Schritt für Schritt erklärt:{' '}
-            <a href="/ablauf/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Ablauf der 24h-Pflege bei Primundus</a>
+            <a href="/ablauf" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Ablauf der 24h-Pflege bei Primundus</a>
           </p>
 
           {/* SECTION 5 */}
@@ -278,7 +278,7 @@ export default function VierUndZwanzigStundenPflege() {
           </div>
           <p className="text-[15px] text-[#2E2E2E] mb-10">
             → Detaillierter Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten/" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
           </p>
 
           {/* FAQ */}
@@ -315,37 +315,37 @@ export default function VierUndZwanzigStundenPflege() {
               {/* Grundlagen */}
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Grundlagen</p>
-                <a href="/was-ist-24-stunden-pflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Was ist 24h-Pflege?</a>
-                <a href="/wann-brauche-ich-24h-pflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Wann brauche ich 24h-Pflege?</a>
-                <a href="/vorteile-24h-pflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Vorteile der 24h-Pflege</a>
-                <a href="/nachteile-24h-pflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Nachteile ehrlich betrachtet</a>
+                <a href="/was-ist-24-stunden-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Was ist 24h-Pflege?</a>
+                <a href="/wann-brauche-ich-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Wann brauche ich 24h-Pflege?</a>
+                <a href="/vorteile-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Vorteile der 24h-Pflege</a>
+                <a href="/nachteile-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Nachteile ehrlich betrachtet</a>
               </div>
 
               {/* Ablauf & Organisation */}
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Ablauf & Organisation</p>
-                <a href="/ablauf/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› So läuft's ab</a>
-                <a href="/24h-pflege-organisieren/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege organisieren</a>
-                <a href="/pflegekraft-finden/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegekraft finden</a>
-                <a href="/checkliste-pflegekraft-einstellen/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Checkliste: Pflegekraft einstellen</a>
+                <a href="/ablauf" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› So läuft's ab</a>
+                <a href="/24h-pflege-organisieren" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege organisieren</a>
+                <a href="/pflegekraft-finden" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegekraft finden</a>
+                <a href="/checkliste-pflegekraft-einstellen" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Checkliste: Pflegekraft einstellen</a>
               </div>
 
               {/* Vergleiche */}
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Vergleiche</p>
-                <a href="/24h-pflege-vs-pflegeheim/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim</a>
-                <a href="/24h-pflege-vs-ambulante-pflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› vs. ambulante Pflege</a>
-                <a href="/selbst-pflegen-oder-24h-pflege/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Selbst pflegen oder 24h-Pflege?</a>
-                <a href="/tagespflege-vs-24h-betreuung/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› vs. Tagespflege</a>
+                <a href="/24h-pflege-vs-pflegeheim" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim</a>
+                <a href="/24h-pflege-vs-ambulante-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› vs. ambulante Pflege</a>
+                <a href="/selbst-pflegen-oder-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Selbst pflegen oder 24h-Pflege?</a>
+                <a href="/tagespflege-vs-24h-betreuung" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› vs. Tagespflege</a>
               </div>
 
               {/* Pflegekräfte */}
               <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Pflegekräfte</p>
-                <a href="/pflegekraft-aus-rumaenien/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegekraft aus Rumänien</a>
-                <a href="/pflegekraft-aus-polen/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› aus Polen</a>
-                <a href="/pflegekraft-aus-bulgarien/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› aus Bulgarien</a>
-                <a href="/eu-pflegekraft-rechte-pflichten/" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› EU-Pflegekraft: Rechte & Pflichten</a>
+                <a href="/pflegekraft-aus-rumaenien" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegekraft aus Rumänien</a>
+                <a href="/pflegekraft-aus-polen" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› aus Polen</a>
+                <a href="/pflegekraft-aus-bulgarien" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› aus Bulgarien</a>
+                <a href="/eu-pflegekraft-rechte-pflichten" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› EU-Pflegekraft: Rechte & Pflichten</a>
               </div>
             </div>
           </div>
