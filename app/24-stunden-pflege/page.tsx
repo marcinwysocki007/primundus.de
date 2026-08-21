@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { KurzAntwort } from '@/components/KurzAntwort'
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist 24-Stunden-Pflege?' },
@@ -92,6 +93,10 @@ export default function VierUndZwanzigStundenPflege() {
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT.
           </p>
+
+          <KurzAntwort frage="Was unterscheidet Primundus von Vermittlungsagenturen?">
+            Die Betreuungskräfte sind bei unserer Unternehmensgruppe angestellt — nicht als Selbstständige vermittelt. Sie sehen Preis und passende Betreuungskräfte vor Vertragsabschluss, zahlen keine Vermittlungsgebühr, haben keine Mindestlaufzeit und können täglich kündigen; abgerechnet wird taggenau.
+          </KurzAntwort>
 
           {/* USP-Box */}
           <div className="bg-white border-2 border-[#8B7355] rounded-2xl p-6 mb-10 shadow-sm">

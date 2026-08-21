@@ -189,6 +189,59 @@ export default function Kosten() {
             </div>
           </div>
 
+          {/* Eigenanteil-Tabelle je Pflegegrad — zitierfähige Referenz mit Quellen */}
+          <h3 className="text-[19px] md:text-[22px] font-bold text-[#1C1C1C] mt-2 mb-3 leading-snug">
+            Eigenanteil je Pflegegrad — Kosten-Tabelle (Stand: August 2026)
+          </h3>
+          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">
+            Dieselbe Beispielrechnung für alle Pflegegrade: Betreuungskosten von beispielhaft 2.500 €/Monat,
+            abzüglich Pflegegeld und dem monatlichen Anteil des gemeinsamen Jahresbetrags für Verhinderungs- und
+            Kurzzeitpflege (3.539 € ÷ 12 ≈ 295 €). Die Steuerermäßigung von 20 % (max. 4.000 €/Jahr) kommt
+            individuell hinzu.
+          </p>
+          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-4 shadow-sm">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-[#F8F7F5]">
+                    {['Pflegegrad', 'Betreuungskosten (Beispiel)', '− Pflegegeld', '− Budget-Anteil/Monat', '= Eigenanteil'].map((h) => (
+                      <th key={h} className="px-3 py-3 text-[11px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ['Pflegegrad 2', '2.500 €', '− 347 €', '− 295 €', '1.858 €'],
+                    ['Pflegegrad 3', '2.500 €', '− 599 €', '− 295 €', '1.606 €'],
+                    ['Pflegegrad 4', '2.500 €', '− 800 €', '− 295 €', '1.405 €'],
+                    ['Pflegegrad 5', '2.500 €', '− 990 €', '− 295 €', '1.215 €'],
+                  ].map(([pg, kosten, pflegegeld, budget, eigen], i) => (
+                    <tr key={pg} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
+                      <td className="px-3 py-3 text-[13px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{pg}</td>
+                      <td className="px-3 py-3 text-[13px] text-[#2E2E2E] border-b border-[#E5E3DF] tabular-nums">{kosten}</td>
+                      <td className="px-3 py-3 text-[13px] text-[#3D7A5C] border-b border-[#E5E3DF] tabular-nums">{pflegegeld}</td>
+                      <td className="px-3 py-3 text-[13px] text-[#3D7A5C] border-b border-[#E5E3DF] tabular-nums">{budget}</td>
+                      <td className="px-3 py-3 text-[13px] font-bold text-[#1C1C1C] border-b border-[#E5E3DF] tabular-nums">{eigen}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="px-5 py-3">
+              <p className="text-[11px] text-[#8B8B8B]">
+                Beispielrechnung · zzgl. Kost &amp; Logis (individuell) · Budget-Anteil setzt anerkannte Verhinderungspflege-Nutzung voraus · Ihr persönlicher Preis hängt vom Betreuungsbedarf ab.
+              </p>
+            </div>
+          </div>
+          <p className="text-[13px] text-[#8B8B8B] mb-10">
+            Quellen:{' '}
+            <a href="https://www.gesetze-im-internet.de/sgb_11/__37.html" target="_blank" rel="noopener noreferrer" className="text-[#8B7355] underline">§ 37 SGB XI (Pflegegeld)</a>{' · '}
+            <a href="https://www.gesetze-im-internet.de/sgb_11/__42a.html" target="_blank" rel="noopener noreferrer" className="text-[#8B7355] underline">§ 42a SGB XI (gemeinsamer Jahresbetrag)</a>{' · '}
+            <a href="https://www.gesetze-im-internet.de/sgb_11/__45b.html" target="_blank" rel="noopener noreferrer" className="text-[#8B7355] underline">§ 45b SGB XI (Entlastungsbetrag)</a>{' · '}
+            <a href="https://www.bundesgesundheitsministerium.de/themen/pflege/online-ratgeber-pflege/leistungen-der-pflegeversicherung/leistungen-im-ueberblick" target="_blank" rel="noopener noreferrer" className="text-[#8B7355] underline">BMG-Leistungsübersicht</a>{' '}
+            · Stand: August 2026
+          </p>
+
           {/* SECTION 2 */}
           <h2 id="kassenzuschuesse" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
             Kassenzuschüsse 2026 — was zahlt die Pflegekasse?

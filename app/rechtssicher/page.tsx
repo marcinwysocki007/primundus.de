@@ -3,6 +3,7 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { KurzAntwort } from '@/components/KurzAntwort'
 
 const SECTIONS = [
   { id: 'das-problem', title: 'Das rechtliche Problem' },
@@ -80,6 +81,10 @@ export default function Rechtssicher() {
           </h1>
 
           <AuthorByline updated="25. April 2026" />
+
+          <KurzAntwort frage="Ist 24-Stunden-Pflege legal?" stand="August 2026">
+            Ja. Legal ist die 24-Stunden-Betreuung im Entsendemodell: Die Betreuungskraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, für jeden Einsatz liegt eine A1-Bescheinigung vor, und Arbeits- und Ruhezeiten werden im Betreuungsalltag eingehalten. Eine einzelne Kraft arbeitet dabei nicht 24 Stunden durch — sie lebt im Haushalt, ist nach Plan tätig und für Notfälle erreichbar.
+          </KurzAntwort>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Das Thema Rechtssicherheit ist in der 24h-Pflege entscheidend — und wird von vielen Familien unterschätzt. Tausende Haushalte in Deutschland beschäftigen Pflegekräfte auf unsichere Weise und wissen es nicht. Primundus arbeitet seit 20 Jahren ausschließlich im rechtssicheren Entsendemodell. Kein einziger Kundenfall mit rechtlichen Konsequenzen.

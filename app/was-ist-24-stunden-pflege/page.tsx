@@ -4,6 +4,7 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { KurzAntwort } from '@/components/KurzAntwort'
 
 const SECTIONS = [
   { id: 'leistungen',  title: 'Was leistet eine Betreuungskraft?' },
@@ -162,6 +163,10 @@ export default function WasIst24StundenPflege() {
           </h1>
 
           <AuthorByline updated="24. April 2026" />
+
+          <KurzAntwort frage="Andere Namen für dasselbe Modell">
+            24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.
+          </KurzAntwort>
 
           {/* Lead */}
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">

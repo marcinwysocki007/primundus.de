@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { AuthorByline } from '@/components/AuthorByline'
+import { KurzAntwort } from '@/components/KurzAntwort'
 
 // Nachfrage-Lücke (GSC 08/2026): "24 stunden pflege kostenübernahme"
 // 38 Impr. auf Pos. 66 — keine fokussierte Seite. Kaufnahe Query; die
@@ -100,6 +101,10 @@ export default function KostenuebernahmePage() {
           </h1>
 
           <AuthorByline updated="14. August 2026" />
+
+          <KurzAntwort frage="Wer zahlt bei einer 24-Stunden-Betreuung dazu?" stand="August 2026">
+            Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.
+          </KurzAntwort>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Die kurze, ehrliche Antwort: <strong>Komplett übernimmt die Kosten niemand</strong> — aber es
