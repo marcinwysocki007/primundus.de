@@ -396,7 +396,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ── 4. ILKA / MARKE ─────────────────────────────────────────────── */}
+        {/* ── 4. MARTA / MARKE ─────────────────────────────────────────────── */}
         <section className="py-14 md:py-16 lg:py-20 px-5 bg-white">
           <div className="max-w-[1100px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-center">
