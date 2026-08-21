@@ -69,7 +69,7 @@ const schemaMarkup = [
       logo: 'https://primundus.de/images/primundus_logo_header.webp',
     },
     datePublished: '2026-04-24',
-    dateModified: '2026-04-24',
+    dateModified: '2026-08-21',
     mainEntityOfPage: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   {
@@ -154,7 +154,7 @@ export default function WasIst24StundenPflege() {
 
           {/* Eyebrow */}
           <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Apr. 2026
+            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Aug. 2026
           </p>
 
           {/* H1 */}
@@ -162,7 +162,7 @@ export default function WasIst24StundenPflege() {
             Was ist 24-Stunden-Pflege?
           </h1>
 
-          <AuthorByline updated="24. April 2026" />
+          <AuthorByline updated="21. August 2026" />
 
           <KurzAntwort frage="Andere Namen für dasselbe Modell">
             24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.

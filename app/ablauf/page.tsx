@@ -36,7 +36,7 @@ const schemaMarkup = [
     author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: '2026-08-21',
     mainEntityOfPage: 'https://primundus.de/ablauf',
   },
   {
@@ -89,7 +89,7 @@ export default function Ablauf() {
             Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated="21. August 2026" />
 
           <KurzAntwort frage="Wie schnell kann die Betreuung starten?">
             In der Regel startet die Betreuungskraft 4–7 Tage nach der Anfrage. Vorher sehen Sie Profile mit Foto, Erfahrung und Sprachkenntnissen und wählen selbst aus — ein Vertrag entsteht erst nach Ihrer Entscheidung. Bei dringendem Bedarf, etwa nach einer Krankenhausentlassung, geht es oft schneller.

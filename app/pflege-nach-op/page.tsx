@@ -35,7 +35,7 @@ const schemaMarkup = [
     author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: '2026-08-21',
     mainEntityOfPage: 'https://primundus.de/pflege-nach-op',
   },
   {
@@ -68,14 +68,14 @@ export default function PflegeNachOp() {
           </nav>
 
           <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
+            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Aug. 2026
           </p>
 
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
             Pflege nach OP zuhause — Betreuung & Unterstützung
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated="21. August 2026" />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
             Nach einer Operation werden ältere Menschen heute schnell aus dem Krankenhaus entlassen — oft schneller als ihre Angehörigen gewappnet sind. Die ersten Wochen zuhause sind kritisch: Wundversorgung durch den Pflegedienst, Mobilisierung, Hilfsbedarf bei allen Alltagsaufgaben. Eine 24h-Betreuungskraft überbrückt diese Zeit — und lässt sich schon vor der OP planen.

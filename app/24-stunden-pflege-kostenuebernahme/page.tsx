@@ -33,7 +33,7 @@ const schemaMarkup = [
     author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-08-14',
-    dateModified: '2026-08-14',
+    dateModified: '2026-08-21',
     mainEntityOfPage: 'https://primundus.de/24-stunden-pflege-kostenuebernahme',
   },
   {
@@ -100,7 +100,7 @@ export default function KostenuebernahmePage() {
             Kostenübernahme bei der 24-Stunden-Pflege: Wer zahlt was?
           </h1>
 
-          <AuthorByline updated="14. August 2026" />
+          <AuthorByline updated="21. August 2026" />
 
           <KurzAntwort frage="Wer zahlt bei einer 24-Stunden-Betreuung dazu?" stand="August 2026">
             Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.

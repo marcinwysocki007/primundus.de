@@ -36,7 +36,7 @@ const schemaMarkup = [
     author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: '2026-08-21',
     mainEntityOfPage: 'https://primundus.de/rechtssicher',
   },
   {
@@ -80,7 +80,7 @@ export default function Rechtssicher() {
             Rechtssichere 24h-Pflege — wie Primundus das sicherstellt
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated="21. August 2026" />
 
           <KurzAntwort frage="Ist 24-Stunden-Pflege legal?" stand="August 2026">
             Ja. Legal ist die 24-Stunden-Betreuung im Entsendemodell: Die Betreuungskraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, für jeden Einsatz liegt eine A1-Bescheinigung vor, und Arbeits- und Ruhezeiten werden im Betreuungsalltag eingehalten. Eine einzelne Kraft arbeitet dabei nicht 24 Stunden durch — sie lebt im Haushalt, ist nach Plan tätig und für Notfälle erreichbar.
