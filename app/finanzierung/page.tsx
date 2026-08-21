@@ -109,6 +109,7 @@ export default function Finanzierung() {
               { titel: 'Verhinderungspflege & Entlastungsbudget 2026', href: '/verhinderungspflege', desc: '3.539 €/Jahr flexibel für Verhinderungs- und Kurzzeitpflege — alle Regeln 2026.' },
               { titel: 'Kurzzeitpflege', href: '/kurzzeitpflege', desc: 'Kurzzeitpflege beantragen, Kosten und wie das Budget optimal genutzt wird.' },
               { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege', desc: 'Wann Kurzzeitpflege reicht und wann eine 24h-Kraft die bessere Lösung ist.' },
+              { titel: 'Pflegereform 2025 — alle Änderungen', href: '/pflegereform-2025', desc: 'Gemeinsamer Jahresbetrag, höhere Leistungen — was die Reform für Familien bedeutet.' },
               { titel: 'Entlastungsbetrag — 131 €/Monat nutzen', href: '/entlastungsbetrag', desc: 'Was der Entlastungsbetrag ist, für was er genutzt werden kann und wie man ihn beantragt.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">

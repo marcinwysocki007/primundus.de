@@ -150,6 +150,30 @@ const gridTools = [
       </svg>
     ),
   },
+  {
+    href: '/pflegebedarf-einschaetzen',
+    external: false,
+    name: 'Pflegebedarf einschätzen',
+    description: 'Selbsttest für Angehörige: Wie viel Unterstützung braucht Ihr Familienmitglied wirklich — und welche Betreuungsform passt dazu?',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21v-1a7 7 0 0 1 14 0v1" />
+      </svg>
+    ),
+  },
+  {
+    href: '/checkliste-pflegeuebernahme',
+    external: false,
+    name: 'Checkliste Pflegeübernahme',
+    description: 'Interaktive Checkliste für den Start in die Pflege — alle Anträge, Fristen und Organisationspunkte zum Abhaken.',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M9 11l3 3L22 4" />
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </svg>
+    ),
+  },
 ]
 
 const steps = [

@@ -28,6 +28,7 @@ const serviceLinks = [
 const rechtlichLinks = [
   { label: 'Impressum', href: '/impressum' },
   { label: 'Datenschutz', href: '/datenschutz' },
+  { label: 'AGB', href: '/agb' },
   { label: 'Sitemap', href: '/sitemap' },
 ]
 

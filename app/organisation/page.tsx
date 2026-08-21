@@ -117,6 +117,7 @@ export default function Organisation() {
               { titel: 'Notfallplan Pflege erstellen', href: '/notfallplan-pflege', desc: 'Wer wird informiert, wer übernimmt — Notfallplan für Pflegehaushalte.' },
               { titel: 'Pflegeberater finden', href: '/pflegeberater-finden', desc: 'Wann ein unabhängiger Pflegeberater hilft und wie man den richtigen findet.' },
               { titel: 'Pflegestützpunkte in Deutschland', href: '/pflegestuetzpunkte-deutschland', desc: 'Kostenlose Beratung vor Ort — wo Pflegestützpunkte sind und was sie leisten.' },
+              { titel: 'Betreuung nach dem Krankenhausaufenthalt', href: '/24-stunden-pflege-krankenhausaufenthalt', desc: 'Entlassung steht an und niemand kann da sein? So wird die Betreuung schnell organisiert.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>

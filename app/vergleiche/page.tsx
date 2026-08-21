@@ -135,6 +135,7 @@ export default function Vergleiche() {
               { titel: 'Osteuropäische Pflegekraft oder Agentur', href: '/osteuropaeische-pflegekraft-oder-agentur', desc: 'Direkte Suche vs. Agentur — Risiken, Aufwand und was wirklich besser ist.' },
               { titel: 'Selbst pflegen oder 24h-Pflege', href: '/selbst-pflegen-oder-24h-pflege', desc: 'Wann die Familie an ihre Grenzen stößt und professionelle Unterstützung nötig wird.' },
               { titel: '24h-Pflege Anbieter vergleichen', href: '/anbieter-vergleich', desc: 'Neutraler Vergleich der wichtigsten 24h-Pflegeagenturen.' },
+              { titel: 'Checkliste: Worauf bei 24h-Pflege achten', href: '/24h-pflege-checkliste', desc: 'Die wichtigsten Prüfpunkte vor der Anbieter-Entscheidung — kompakt zum Abhaken.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>

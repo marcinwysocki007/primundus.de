@@ -108,6 +108,7 @@ export default function Rechtliches() {
               { titel: 'Pflegezeit-Gesetz für Angehörige', href: '/pflegezeit-gesetz-angehoerige', desc: 'Freistellung, Pflegeunterstützungsgeld, kurzzeitige Arbeitsverhinderung — alle Rechte.' },
               { titel: 'Widerspruch Pflegekasse einlegen', href: '/widerspruch-pflegekasse-einlegen', desc: 'Widerspruch gegen Pflegekassen-Bescheid — Fristen, Formulierungen, Erfolgschancen.' },
               { titel: 'MDK-Begutachtung — Tipps', href: '/mdk-begutachtung-tipps', desc: 'Was beim Gutachtertermin zählt und wie man die Begutachtung richtig vorbereitet.' },
+              { titel: 'Pflegemängel melden — Beschwerdewege', href: '/pflegemangel-melden-beschwerden', desc: 'An wen sich Familien bei Mängeln wenden können und welche Rechte sie haben.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
