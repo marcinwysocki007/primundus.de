@@ -59,7 +59,7 @@ export default function PflegeOrganisieren() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -77,11 +77,11 @@ export default function PflegeOrganisieren() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die Organisation der 24h-Pflege wirkt am Anfang überwältigend — ist es aber nicht wenn man es systematisch angeht. Wer mit Primundus arbeitet, hat einen festen Ansprechpartner der die meiste Arbeit übernimmt. Trotzdem gibt es Dinge die die Familie selbst regeln muss. Hier ist die vollständige Übersicht.
           </p>
 
-          <h2 id="schritt-fuer-schritt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="schritt-fuer-schritt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Schritt-für-Schritt-Planung
           </h2>
           <ol className="space-y-4 mb-10">
@@ -108,7 +108,7 @@ export default function PflegeOrganisieren() {
             ))}
           </ol>
 
-          <h2 id="was-regeln" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-regeln" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was vor dem Start geregelt sein muss
           </h2>
           <div className="space-y-3 mb-10">
@@ -125,7 +125,7 @@ export default function PflegeOrganisieren() {
             ))}
           </div>
 
-          <h2 id="wohnen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wohnen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wohnen, Zimmer & Alltag vorbereiten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -150,7 +150,7 @@ export default function PflegeOrganisieren() {
             ))}
           </div>
 
-          <h2 id="laufend" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="laufend" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Laufende Organisation — was regelmäßig anfällt
           </h2>
           <div className="space-y-3 mb-10">
@@ -161,13 +161,13 @@ export default function PflegeOrganisieren() {
               { turnus: 'Jährlich', aufgaben: 'Steuerliche Absetzbarkeit prüfen (bis 4.000 €), Pflegegrad auf Höherstufungsbedarf prüfen, Entlastungsbudget-Saldo prüfen.' },
             ].map((item) => (
               <div key={item.turnus} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.turnus}</p>
+                <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.turnus}</p>
                 <p className="text-[14px] text-pm-body leading-relaxed">{item.aufgaben}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was muss ich vor dem Start der 24h-Pflege organisieren?', a: 'Pflegekasse-Antrag stellen, Beschäftigungsmodell wählen, Kraft auswählen, Zimmer vorbereiten, Schlüssel bereitstellen, Hausarzt informieren, Medikamentenliste bereithalten, Vorsorgevollmacht prüfen.' },

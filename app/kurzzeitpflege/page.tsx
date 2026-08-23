@@ -60,21 +60,21 @@ export default function Page() {
       <ArticleTOC sections={SECTIONS} />
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/kosten" className="hover:text-pm-taupe transition-colors">Kosten</a>
             <span>›</span>
             <span className="text-pm-ink">Kurzzeitpflege</span>
           </nav>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 5 Min Lesezeit · Aktualisiert April 2026</p>
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 5 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Kurzzeitpflege 2026 — Anspruch, Kosten und wann 24h-Pflege besser ist</h1>
 
           <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Kurzzeitpflege überbrückt Phasen wenn die häusliche Pflege vorübergehend nicht sichergestellt werden kann — nach Krankenhausaufenthalt, bei Urlaub des pflegenden Angehörigen, in Krisensituationen. Seit Juli 2025 ist sie ins Entlastungsbudget integriert.</p>
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Was ist Kurzzeitpflege?</h2>
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Was ist Kurzzeitpflege?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Kurzzeitpflege ist vorübergehende vollstationäre Pflege in einer anerkannten Einrichtung — typisch nach Krankenhaus-Aufenthalten, bei Ausfall der Pflegeperson oder in Übergangssituationen. Seit Juli 2025 ist sie Teil des neuen Entlastungsbudgets.</p>
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Leistungen der Pflegekasse 2026</h2>
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Leistungen der Pflegekasse 2026</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Das Entlastungsbudget beträgt 2026 insgesamt 3.539 €/Jahr — es umfasst Verhinderungspflege und Kurzzeitpflege gemeinsam und flexibel. Pflegegrad 2–5, keine starre Aufteilung mehr.</p>
           <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
             <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Entlastungsbudget 2026 — Überblick</p>
@@ -83,11 +83,11 @@ export default function Page() {
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Flexibel einsetzbar — keine starre Aufteilung</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Nicht verbrauchte Mittel verfallen zum Jahresende</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Antrag bei der Pflegekasse</div>
-          </div>          <h2 id="alternative" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Wann ist 24h-Pflege besser als Kurzzeitpflege?</h2>
+          </div>          <h2 id="alternative" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Wann ist 24h-Pflege besser als Kurzzeitpflege?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Kurzzeitpflege eignet sich für kurze Übergangsphasen. Wenn der Bedarf dauerhaft ist — oder wenn das Pflegeheim als Lösung nicht in Frage kommt — ist die 24h-Pflege zuhause die bessere und oft günstigere Alternative.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bei Primundus ist ein Start in 4–7 Tagen möglich. Täglich kündbar — auch wenn der Bedarf sich als kürzer herausstellt als gedacht.</p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             <details className="bg-white rounded-xl border border-pm-line group">
               <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

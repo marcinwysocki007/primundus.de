@@ -34,30 +34,30 @@ export default function Krankheiten() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
-            <span className="text-[#5A5A5A]">Pflege bei Krankheiten</span>
+            <span className="text-pm-body">Pflege bei Krankheiten</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             RATGEBER
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflege bei Krankheiten
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-12 max-w-[620px]">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Jede Erkrankung stellt andere Anforderungen an die häusliche Pflege. Alle krankheitsspezifischen Ratgeber — direkt auf Ihre Situation zugeschnitten.
           </p>
 
           {/* Demenzerkrankungen */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Demenzerkrankungen</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Demenzerkrankungen</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Demenz — Pflege zuhause', href: '/demenz-pflege-zuhause', desc: 'Was möglich ist, wie man den Alltag gestaltet und ab wann eine 24h-Kraft nötig wird.' },
@@ -67,14 +67,14 @@ export default function Krankheiten() {
               { titel: 'Kommunikation mit Demenzkranken', href: '/kommunikation-mit-demenzkranken', desc: '5 Grundprinzipien und wie man schwierige Situationen meistert.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Neurologische Erkrankungen */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Neurologische Erkrankungen</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Neurologische Erkrankungen</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Parkinson — Pflege zuhause', href: '/parkinson-pflege-zuhause', desc: 'Motorische Einschränkungen, Medikamentengabe, Alltagssicherheit bei Parkinson.' },
@@ -84,14 +84,14 @@ export default function Krankheiten() {
               { titel: 'Pflegegrad bei Parkinson', href: '/pflegegrad-bei-parkinson', desc: 'Einstufung und Kassenzuschüsse bei Parkinson-Erkrankung.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Herz-Kreislauf & weitere Erkrankungen */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Herz-Kreislauf & weitere Erkrankungen</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Herz-Kreislauf & weitere Erkrankungen</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Herzinsuffizienz — Pflege', href: '/herzinsuffizienz-pflege', desc: 'Tägliche Gewichtskontrolle, Medikamentengabe, Notfallzeichen erkennen.' },
@@ -101,14 +101,14 @@ export default function Krankheiten() {
               { titel: 'Krebspatienten — Pflege zuhause', href: '/krebspatienten-zuhause-pflegen', desc: 'Unterstützung während Therapie und in der palliativen Phase zu Hause.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Palliativ & Intensiv */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Palliativ- & Intensivpflege</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Palliativ- & Intensivpflege</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Palliativpflege zuhause', href: '/palliativpflege-zuhause', desc: 'Würdevolle Begleitung in der letzten Lebensphase zuhause.' },
@@ -120,7 +120,7 @@ export default function Krankheiten() {
               { titel: 'Wunden verbinden zuhause', href: '/wunden-verbinden-zuhause', desc: 'Wundversorgung im Pflegealltag — was Laien können und wann ein Pflegedienst muss.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}

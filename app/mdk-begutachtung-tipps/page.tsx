@@ -70,7 +70,7 @@ export default function MdkBegutachtungTipps() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -88,7 +88,7 @@ export default function MdkBegutachtungTipps() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die MDK-Begutachtung (seit 2023: MDS — Medizinischer Dienst) entscheidet über den Pflegegrad — und damit über hunderte Euro monatlich an Kassenzuschüssen. Viele Familien unterschätzen wie wichtig die Vorbereitung ist. Der Gutachter sieht den Pflegebedürftigen einmal, für etwa eine Stunde. Was in dieser Stunde gesagt und gezeigt wird, zählt.
           </p>
 
@@ -99,7 +99,7 @@ export default function MdkBegutachtungTipps() {
             </p>
           </div>
 
-          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie die MDK-Begutachtung abläuft
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -122,7 +122,7 @@ export default function MdkBegutachtungTipps() {
             ))}
           </ol>
 
-          <h2 id="vorbereitung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vorbereitung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Konkrete Vorbereitung — Checkliste
           </h2>
           <div className="space-y-2 mb-10">
@@ -150,7 +150,7 @@ export default function MdkBegutachtungTipps() {
             ))}
           </div>
 
-          <h2 id="pflegetagebuch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegetagebuch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Das Pflegetagebuch — das wichtigste Vorbereitungsinstrument
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -176,7 +176,7 @@ export default function MdkBegutachtungTipps() {
             </div>
           </div>
 
-          <h2 id="am-tag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="am-tag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Am Begutachtungstag — was zu beachten ist
           </h2>
           <div className="space-y-3 mb-10">
@@ -203,7 +203,7 @@ export default function MdkBegutachtungTipps() {
             </p>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie bereitet man sich auf die MDK-Begutachtung vor?', a: 'Pflegetagebuch führen (2+ Wochen vorher), Medikamente und Diagnosen auflisten, Hilfsmittel sichtbar lassen, Angehörige dabei haben, schlechtesten typischen Tag beschreiben — nicht den guten.' },

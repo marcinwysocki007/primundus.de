@@ -210,23 +210,23 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2" aria-label="Breadcrumb">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap" aria-label="Breadcrumb">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span aria-hidden="true">›</span>
-            <span className="text-[#3D3D3D]">Tools & Rechner</span>
+            <span className="text-pm-ink">Tools & Rechner</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             TOOLS & RECHNER
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Kostenlose Pflege-Tools & Rechner 2026
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-10 max-w-[640px]">
+          <p className="text-[17px] text-pm-body leading-relaxed mb-10 max-w-[640px]">
             Mit diesen kostenlosen Werkzeugen planen Sie die häusliche Betreuung von A bis Z — Pflegegrad einschätzen,
             Zuschüsse berechnen und Kosten vergleichen. Anonym, ohne Registrierung, sofort nutzbar.
           </p>
@@ -252,7 +252,7 @@ export default function Page() {
                 </p>
               </div>
               <div className="flex-shrink-0">
-                <span className="inline-flex items-center gap-2 bg-pm-coral group-hover:bg-pm-coral-deep transition-colors text-white font-bold text-[15px] px-6 py-3.5 rounded-xl">
+                <span className="inline-flex items-center gap-2 bg-pm-coral group-hover:bg-pm-coral-deep transition-colors text-white font-bold text-[15px] px-6 py-3.5 rounded-full">
                   Kosten berechnen →
                 </span>
               </div>
@@ -271,10 +271,10 @@ export default function Page() {
                     {tool.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h2 className="text-[15px] font-bold text-[#3D3D3D] mb-1 leading-snug">
+                    <h2 className="text-[15px] font-bold text-pm-ink mb-1 leading-snug">
                       {tool.name}
                     </h2>
-                    <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
+                    <p className="text-[13px] text-pm-body leading-relaxed">
                       {tool.description}
                     </p>
                   </div>
@@ -292,10 +292,10 @@ export default function Page() {
 
           {/* Steps Section */}
           <section className="mb-14">
-            <h2 className="text-[24px] font-bold text-[#3D3D3D] mb-2">
+            <h2 className="text-[24px] font-bold text-pm-ink mb-2">
               Pflegeplanung in 4 Schritten
             </h2>
-            <p className="text-[15px] text-[#5A5A5A] mb-8 max-w-[580px]">
+            <p className="text-[15px] text-pm-body mb-8 max-w-[580px]">
               Diese Tools bauen aufeinander auf — so bekommen Sie in wenigen Minuten ein vollständiges Bild Ihrer Situation.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -305,8 +305,8 @@ export default function Page() {
                     {step.num}
                   </div>
                   <div>
-                    <p className="text-[14px] font-bold text-[#3D3D3D] mb-1">{step.title}</p>
-                    <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{step.desc}</p>
+                    <p className="text-[14px] font-bold text-pm-ink mb-1">{step.title}</p>
+                    <p className="text-[13px] text-pm-body leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -315,7 +315,7 @@ export default function Page() {
 
           {/* FAQ Section */}
           <section className="mb-14">
-            <h2 className="text-[24px] font-bold text-[#3D3D3D] mb-6">
+            <h2 className="text-[24px] font-bold text-pm-ink mb-6">
               Häufige Fragen
             </h2>
             <div className="flex flex-col gap-3">
@@ -325,7 +325,7 @@ export default function Page() {
                   className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
-                    <span className="text-[15px] font-semibold text-[#3D3D3D] leading-snug">
+                    <span className="text-[15px] font-semibold text-pm-ink leading-snug">
                       {faq.q}
                     </span>
                     <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">
@@ -333,7 +333,7 @@ export default function Page() {
                     </span>
                   </summary>
                   <div className="px-5 pb-5 pt-1 border-t border-pm-line-soft">
-                    <p className="text-[14px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
+                    <p className="text-[14px] text-pm-body leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
               ))}

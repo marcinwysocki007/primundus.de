@@ -80,29 +80,29 @@ export default function FranchisePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       {/* ─── HERO ─── */}
-      <section className="bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 pt-10 pb-20">
-          <nav className="text-sm text-[#8B8B8B] mb-12 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+      <section className="bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">Franchisepartner werden</span>
+            <span className="text-pm-ink">Franchisepartner werden</span>
           </nav>
 
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Franchise-Opportunity
           </p>
 
-          <h1 className="text-[36px] md:text-[50px] font-bold text-[#3D3D3D] leading-[1.1] mb-6 max-w-[680px]">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink leading-[1.1] mb-6 max-w-[680px]">
             Partner werden bei Primundus —<br className="hidden md:block" />
             dem Testsieger der 24h-Pflege
           </h1>
 
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed max-w-[580px] mb-4">
+          <p className="text-[17px] text-pm-body leading-relaxed max-w-[580px] mb-4">
             Der deutsche Pflegemarkt wächst strukturell — und hat noch wenige Anbieter,
             die Qualität, Technologie und echte Transparenz vereinen.
             Primundus ist einer davon.
           </p>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed max-w-[580px] mb-10">
+          <p className="text-[17px] text-pm-body leading-relaxed max-w-[580px] mb-10">
             Als Franchisepartner bauen Sie auf einem System auf, das von Branchen-Insidern
             entwickelt wurde — mit Erfahrung aus dem Aufbau eines der größten 24h-Anbieter
             Deutschlands. Alle Kinderkrankheiten der Branche bereits gelöst.
@@ -111,20 +111,20 @@ export default function FranchisePage() {
           <div className="flex flex-wrap gap-3 items-center">
             <a
               href="#anfrage"
-              className="inline-flex items-center gap-2 bg-[#E76F63] text-white px-7 py-3.5 rounded-xl font-bold text-[15px] hover:bg-[#D4625A] transition-colors"
+              className="inline-flex items-center gap-2 bg-pm-coral text-white px-7 py-3.5 rounded-xl font-bold text-[15px] hover:bg-pm-coral-deep transition-colors"
             >
               Informationspaket anfordern
             </a>
             <a
               href="#markt"
-              className="text-[14px] font-semibold text-[#8B7355] hover:text-[#7A6347] transition-colors"
+              className="text-[14px] font-semibold text-pm-taupe hover:text-[#7A6347] transition-colors"
             >
               Marktdaten ansehen ↓
             </a>
           </div>
 
           {/* Testsieger strip */}
-          <div className="mt-14 pt-8 border-t border-[#E5E3DF] flex flex-wrap items-center gap-8">
+          <div className="mt-14 pt-8 border-t border-pm-line flex flex-wrap items-center gap-8">
             <Image
               src="/images/primundus_testsieger-2021.webp"
               alt="Primundus Testsieger DIE WELT"
@@ -132,29 +132,29 @@ export default function FranchisePage() {
               height={72}
               className="object-contain"
             />
-            <div className="h-8 w-px bg-[#E5E3DF] hidden sm:block" />
+            <div className="h-8 w-px bg-pm-line hidden sm:block" />
             <div>
-              <p className="text-[13px] font-semibold text-[#3D3D3D]">Testsieger DIE WELT</p>
-              <p className="text-[12px] text-[#8B8B8B]">Nr. 1 der Pflegekräfte-Vermittler — DIE WELT & ServiceValue</p>
+              <p className="text-[13px] font-semibold text-pm-ink">Testsieger DIE WELT</p>
+              <p className="text-[12px] text-pm-mute">Nr. 1 der Pflegekräfte-Vermittler — DIE WELT & ServiceValue</p>
             </div>
-            <div className="h-8 w-px bg-[#E5E3DF] hidden sm:block" />
+            <div className="h-8 w-px bg-pm-line hidden sm:block" />
             <div>
-              <p className="text-[13px] font-semibold text-[#3D3D3D]">ab 5.500 € Einstieg</p>
-              <p className="text-[12px] text-[#8B8B8B]">Einer der niedrigsten im Pflege-Franchise</p>
+              <p className="text-[13px] font-semibold text-pm-ink">ab 5.500 € Einstieg</p>
+              <p className="text-[12px] text-pm-mute">Einer der niedrigsten im Pflege-Franchise</p>
             </div>
-            <div className="h-8 w-px bg-[#E5E3DF] hidden sm:block" />
+            <div className="h-8 w-px bg-pm-line hidden sm:block" />
             <div>
-              <p className="text-[13px] font-semibold text-[#3D3D3D]">∅ 300 € Netto/Kunde</p>
-              <p className="text-[12px] text-[#8B8B8B]">Break-Even ab 8–12 Betreuungen</p>
+              <p className="text-[13px] font-semibold text-pm-ink">∅ 300 € Netto/Kunde</p>
+              <p className="text-[12px] text-pm-mute">Break-Even ab 8–12 Betreuungen</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ─── PARTNER ─── */}
-      <section className="bg-white border-t border-b border-[#E5E3DF] py-10">
-        <div className="max-w-[860px] mx-auto px-5">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-7">
+      <section className="bg-white border-t border-b border-pm-line py-10">
+        <div className="max-w-article mx-auto px-5">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Netzwerk & Partner
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -162,36 +162,36 @@ export default function FranchisePage() {
               href="https://pflegebund.eu"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-5 p-5 rounded-xl border border-[#E5E3DF] hover:border-[#8B7355] transition-colors bg-[#FDFCFA]"
+              className="group flex items-center gap-5 p-5 rounded-xl border border-pm-line hover:border-pm-taupe transition-colors bg-[#FDFCFA]"
             >
-              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white border border-[#E5E3DF] flex items-center justify-center">
+              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white border border-pm-line flex items-center justify-center">
                 <div className="text-center leading-none px-1">
                   <span className="block text-[9px] font-black text-[#2D6A9F] tracking-tight uppercase">Pflege</span>
                   <span className="block text-[9px] font-black text-[#1A3A5C] tracking-tight uppercase">Bund</span>
-                  <span className="block text-[8px] text-[#8B8B8B] font-medium">.eu</span>
+                  <span className="block text-[8px] text-pm-mute font-medium">.eu</span>
                 </div>
               </div>
               <div>
-                <p className="text-[14px] font-semibold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors">pflegebund.eu</p>
-                <p className="text-[12px] text-[#8B8B8B] leading-snug mt-0.5">Europäisches Pflegenetzwerk · Qualitätsstandards & Fachkräfte-Pool</p>
+                <p className="text-[14px] font-semibold text-pm-ink group-hover:text-pm-taupe transition-colors">pflegebund.eu</p>
+                <p className="text-[12px] text-pm-mute leading-snug mt-0.5">Europäisches Pflegenetzwerk · Qualitätsstandards & Fachkräfte-Pool</p>
               </div>
             </a>
             <a
               href="https://mamamia.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-5 p-5 rounded-xl border border-[#E5E3DF] hover:border-[#8B7355] transition-colors bg-[#FDFCFA]"
+              className="group flex items-center gap-5 p-5 rounded-xl border border-pm-line hover:border-pm-taupe transition-colors bg-[#FDFCFA]"
             >
-              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white border border-[#E5E3DF] flex items-center justify-center">
+              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white border border-pm-line flex items-center justify-center">
                 <div className="text-center leading-none">
-                  <span className="block text-[11px] font-black text-[#E76F63] tracking-tight">mama</span>
-                  <span className="block text-[11px] font-black text-[#3D3D3D] tracking-tight">mia</span>
-                  <span className="block text-[8px] text-[#8B8B8B] font-medium">.de</span>
+                  <span className="block text-[11px] font-black text-pm-coral tracking-tight">mama</span>
+                  <span className="block text-[11px] font-black text-pm-ink tracking-tight">mia</span>
+                  <span className="block text-[8px] text-pm-mute font-medium">.de</span>
                 </div>
               </div>
               <div>
-                <p className="text-[14px] font-semibold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors">mamamia.de</p>
-                <p className="text-[12px] text-[#8B8B8B] leading-snug mt-0.5">Digitale Pflegeplattform · Gemeinsames Ökosystem für Familien & Partner</p>
+                <p className="text-[14px] font-semibold text-pm-ink group-hover:text-pm-taupe transition-colors">mamamia.de</p>
+                <p className="text-[12px] text-pm-mute leading-snug mt-0.5">Digitale Pflegeplattform · Gemeinsames Ökosystem für Familien & Partner</p>
               </div>
             </a>
           </div>
@@ -199,15 +199,15 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── MARKT ─── */}
-      <section id="markt" className="bg-[#F8F7F5] py-20">
-        <div className="max-w-[860px] mx-auto px-5">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
+      <section id="markt" className="bg-pm-paper py-20">
+        <div className="max-w-article mx-auto px-5">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Marktlage
           </p>
-          <h2 className="text-[28px] md:text-[36px] font-bold text-[#3D3D3D] mb-5 max-w-[560px]">
+          <h2 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6 max-w-[560px]">
             Ein Markt, der strukturell wächst — unabhängig von Konjunktur
           </h2>
-          <p className="text-[15px] text-[#5A5A5A] leading-relaxed max-w-[580px] mb-12">
+          <p className="text-[15px] text-pm-body leading-relaxed max-w-[580px] mb-12">
             Demografischer Wandel ist kein Risiko, sondern ein verlässlicher Rückenwind.
             Die Babyboomer-Generation erreicht das Pflegealter. Bis 2035 wird die Zahl
             der Pflegebedürftigen in Deutschland auf über 6,4 Millionen steigen —
@@ -215,19 +215,19 @@ export default function FranchisePage() {
           </p>
 
           {/* Clean bar chart */}
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7 mb-10">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-6">
+          <div className="bg-white border border-pm-line rounded-2xl p-7 mb-10">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Pflegebedürftige in Deutschland (in Millionen)
             </p>
             <div className="space-y-3">
               {marketBars.map((bar) => (
                 <div key={bar.year} className="flex items-center gap-4">
-                  <span className={`text-[12px] font-bold w-9 flex-shrink-0 tabular-nums ${bar.current ? 'text-[#3D7A5C]' : bar.forecast ? 'text-[#8B7355]' : 'text-[#C0BDB8]'}`}>
+                  <span className={`text-[12px] font-bold w-9 flex-shrink-0 tabular-nums ${bar.current ? 'text-pm-green' : bar.forecast ? 'text-pm-taupe' : 'text-[#C0BDB8]'}`}>
                     {bar.year}
                   </span>
-                  <div className="flex-1 bg-[#F0EDE8] rounded-full h-7 overflow-hidden">
+                  <div className="flex-1 bg-pm-line-soft rounded-full h-7 overflow-hidden">
                     <div
-                      className={`h-full rounded-full flex items-center px-3 ${bar.current ? 'bg-[#3D7A5C]' : bar.forecast ? 'bg-[#8B7355]' : 'bg-[#D4C8BC]'}`}
+                      className={`h-full rounded-full flex items-center px-3 ${bar.current ? 'bg-pm-green' : bar.forecast ? 'bg-pm-taupe' : 'bg-[#D4C8BC]'}`}
                       style={{ width: `${bar.pct}%` }}
                     >
                       <span className="text-[11px] font-semibold text-white whitespace-nowrap">
@@ -244,15 +244,15 @@ export default function FranchisePage() {
           </div>
 
           {/* 3 numbers — inline, calm */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[#E5E3DF] border border-[#E5E3DF] rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-pm-line border border-pm-line rounded-2xl overflow-hidden">
             {[
               { n: 'Jede 3. Familie', sub: 'in Deutschland ist von einem Pflegefall betroffen oder wird es bald sein' },
               { n: '500.000+', sub: 'Haushalte mit heutigem Bedarf an 24h-Betreuung — bei noch wenigen Qualitätsanbietern' },
               { n: '∅ 300 € netto', sub: 'Ertrag pro Betreuungsverhältnis pro Monat — stabiler, wiederkehrender Cashflow' },
             ].map((c) => (
               <div key={c.n} className="bg-white px-6 py-7">
-                <p className="text-[22px] font-bold text-[#8B7355] mb-2">{c.n}</p>
-                <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{c.sub}</p>
+                <p className="text-[22px] font-bold text-pm-taupe mb-2">{c.n}</p>
+                <p className="text-[13px] text-pm-body leading-relaxed">{c.sub}</p>
               </div>
             ))}
           </div>
@@ -260,18 +260,18 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── GRÜNDER ─── */}
-      <section className="bg-white border-t border-[#E5E3DF] py-20">
-        <div className="max-w-[860px] mx-auto px-5">
+      <section className="bg-white border-t border-pm-line py-20">
+        <div className="max-w-article mx-auto px-5">
           <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-12 items-start">
             <div className="relative">
               <Image
-                src="/images/Teamblid-Primundus-Mallorca.webp"
-                alt="Primundus Team"
+                src="/images/team-primundus-deutschland.webp"
+                alt="Das Team von Primundus"
                 width={260}
                 height={300}
                 className="rounded-2xl object-cover w-full aspect-[4/5]"
               />
-              <div className="absolute -bottom-3 -right-3 bg-white border border-[#E5E3DF] rounded-xl p-2.5 shadow-sm">
+              <div className="absolute -bottom-3 -right-3 bg-white border border-pm-line rounded-xl p-2.5 shadow-sm">
                 <Image
                   src="/images/primundus_testsieger-2021.webp"
                   alt="Testsieger DIE WELT"
@@ -283,13 +283,13 @@ export default function FranchisePage() {
             </div>
 
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
+              <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
                 Die Erfahrung dahinter
               </p>
-              <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] mb-6">
+              <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink mb-6">
                 Aus der Branche, für die Branche
               </h2>
-              <div className="space-y-4 text-[15px] text-[#5A5A5A] leading-relaxed">
+              <div className="space-y-4 text-[15px] text-pm-body leading-relaxed">
                 <p>
                   Hinter Primundus stehen keine Quereinsteiger: Das Team hat einen der größten
                   24h-Pflege-Anbieter Deutschlands mit aufgebaut — und dabei aus erster
@@ -308,7 +308,7 @@ export default function FranchisePage() {
 
               <div className="mt-8 flex flex-wrap gap-2">
                 {['Branchen-Erfahrung seit 2006', 'Testsieger DIE WELT', 'Eigene Software', 'Eigenes Personal'].map((tag) => (
-                  <span key={tag} className="text-[12px] text-[#8B7355] border border-[#D4C5B0] rounded-full px-3 py-1 bg-[#FDFCFA]">
+                  <span key={tag} className="text-[12px] text-pm-taupe border border-[#D4C5B0] rounded-full px-3 py-1 bg-[#FDFCFA]">
                     {tag}
                   </span>
                 ))}
@@ -319,29 +319,29 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── UNTERSCHIEDE ─── */}
-      <section className="bg-[#F8F7F5] border-t border-[#E5E3DF] py-20">
-        <div className="max-w-[860px] mx-auto px-5">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
+      <section className="bg-pm-paper border-t border-pm-line py-20">
+        <div className="max-w-article mx-auto px-5">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Was Primundus anders macht
           </p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] mb-5 max-w-[540px]">
+          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink mb-5 max-w-[540px]">
             Die Branche hat Probleme. Primundus hat Antworten.
           </h2>
-          <p className="text-[15px] text-[#5A5A5A] leading-relaxed max-w-[520px] mb-10">
+          <p className="text-[15px] text-pm-body leading-relaxed max-w-[520px] mb-10">
             Jeder Prozess, jede Zeile Code, jeder Vertrag entstand als direkte Reaktion
             auf echte Schwachstellen — aus 20 Jahren Branchenerfahrung.
           </p>
 
-          <div className="flex flex-col gap-px bg-[#E5E3DF] border border-[#E5E3DF] rounded-2xl overflow-hidden">
+          <div className="flex flex-col gap-px bg-pm-line border border-pm-line rounded-2xl overflow-hidden">
             {unterschiede.map((u, i) => (
               <div key={i} className="grid grid-cols-1 md:grid-cols-2 bg-white">
-                <div className="px-6 py-5 border-b md:border-b-0 md:border-r border-[#F0EDE8]">
+                <div className="px-6 py-5 border-b md:border-b-0 md:border-r border-pm-line-soft">
                   <p className="text-[11px] font-bold uppercase tracking-wider text-[#C0504A] mb-1.5">Branche</p>
-                  <p className="text-[14px] text-[#5A5A5A]">{u.problem}</p>
+                  <p className="text-[14px] text-pm-body">{u.problem}</p>
                 </div>
                 <div className="px-6 py-5 bg-[#FDFCFA]">
-                  <p className="text-[11px] font-bold uppercase tracking-wider text-[#3D7A5C] mb-1.5">Primundus</p>
-                  <p className="text-[14px] text-[#3D3D3D] font-medium">{u.loesung}</p>
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-pm-green mb-1.5">Primundus</p>
+                  <p className="text-[14px] text-pm-ink font-medium">{u.loesung}</p>
                 </div>
               </div>
             ))}
@@ -350,12 +350,12 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── WAS SIE BEKOMMEN ─── */}
-      <section className="bg-white border-t border-[#E5E3DF] py-20">
-        <div className="max-w-[860px] mx-auto px-5">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
+      <section className="bg-white border-t border-pm-line py-20">
+        <div className="max-w-article mx-auto px-5">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Ihr Paket
           </p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] mb-10 max-w-[540px]">
+          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink mb-10 max-w-[540px]">
             Was Sie als Partner erhalten
           </h2>
 
@@ -369,12 +369,12 @@ export default function FranchisePage() {
               { titel: 'Zentrales Marketing', text: 'SEO, Performance-Marketing und Referral-Netzwerk laufen zentral. Sie profitieren direkt.' },
             ].map((item, i) => (
               <div key={item.titel} className="flex gap-4">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#8B7355]/10 text-[#8B7355] text-[12px] font-bold flex items-center justify-center mt-0.5">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-pm-taupe/10 text-pm-taupe text-[12px] font-bold flex items-center justify-center mt-0.5">
                   {i + 1}
                 </span>
                 <div>
-                  <p className="text-[14px] font-bold text-[#3D3D3D] mb-1">{item.titel}</p>
-                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{item.text}</p>
+                  <p className="text-[14px] font-bold text-pm-ink mb-1">{item.titel}</p>
+                  <p className="text-[13px] text-pm-body leading-relaxed">{item.text}</p>
                 </div>
               </div>
             ))}
@@ -383,39 +383,39 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── INVESTMENT ─── */}
-      <section className="bg-[#F8F7F5] border-t border-[#E5E3DF] py-20">
-        <div className="max-w-[860px] mx-auto px-5">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
+      <section className="bg-pm-paper border-t border-pm-line py-20">
+        <div className="max-w-article mx-auto px-5">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Wirtschaftlichkeit
           </p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] mb-5 max-w-[500px]">
+          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink mb-5 max-w-[500px]">
             Was die Partnerschaft wirtschaftlich bedeutet
           </h2>
-          <p className="text-[15px] text-[#5A5A5A] leading-relaxed max-w-[520px] mb-10">
+          <p className="text-[15px] text-pm-body leading-relaxed max-w-[520px] mb-10">
             Alle Angaben sind Orientierungswerte. Das vollständige Zahlenwerk
             erhalten Sie im vertraulichen Informationspaket.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden mb-8">
+          <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-8">
             {[
               { label: 'Einstiegsinvestition', value: 'ab 5.500 €', note: 'Einer der niedrigsten Einstiege im gesamten Pflege-Franchise-Bereich' },
               { label: 'Netto-Ertrag pro Betreuung', value: '∅ 300 € / Monat', note: 'Stabiler, planbarer wiederkehrender Cashflow' },
               { label: 'Break-Even', value: '8–12 Betreuungen', note: 'Typischerweise nach 2–4 Monaten erreichbar' },
               { label: 'Ertragspotenzial (40–60 Betreuungen)', value: '144.000–216.000 € / Jahr', note: '∅ 300 € × Anzahl Kunden × 12 Monate' },
             ].map((row, i, arr) => (
-              <div key={row.label} className={`grid grid-cols-[1fr_auto] gap-6 px-7 py-5 ${i < arr.length - 1 ? 'border-b border-[#F0EDE8]' : ''}`}>
+              <div key={row.label} className={`grid grid-cols-[1fr_auto] gap-6 px-7 py-5 ${i < arr.length - 1 ? 'border-b border-pm-line-soft' : ''}`}>
                 <div>
-                  <p className="text-[13px] font-semibold text-[#3D3D3D]">{row.label}</p>
-                  <p className="text-[12px] text-[#A89279] mt-0.5">{row.note}</p>
+                  <p className="text-[13px] font-semibold text-pm-ink">{row.label}</p>
+                  <p className="text-[12px] text-pm-taupe-light mt-0.5">{row.note}</p>
                 </div>
-                <p className="text-[14px] font-bold text-[#8B7355] whitespace-nowrap self-center">{row.value}</p>
+                <p className="text-[14px] font-bold text-pm-taupe whitespace-nowrap self-center">{row.value}</p>
               </div>
             ))}
           </div>
 
           <a
             href="#anfrage"
-            className="inline-flex items-center gap-2 bg-[#E76F63] text-white px-7 py-3.5 rounded-xl font-bold text-[15px] hover:bg-[#D4625A] transition-colors"
+            className="inline-flex items-center gap-2 bg-pm-coral text-white px-7 py-3.5 rounded-xl font-bold text-[15px] hover:bg-pm-coral-deep transition-colors"
           >
             Informationspaket anfordern →
           </a>
@@ -423,12 +423,12 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── SCHRITTE ─── */}
-      <section className="bg-white border-t border-[#E5E3DF] py-20">
-        <div className="max-w-[860px] mx-auto px-5">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-5">
+      <section className="bg-white border-t border-pm-line py-20">
+        <div className="max-w-article mx-auto px-5">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Ablauf
           </p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] mb-12">
+          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink mb-12">
             In vier Schritten zur Partnerschaft
           </h2>
 
@@ -436,16 +436,16 @@ export default function FranchisePage() {
             {schritte.map((s, i) => (
               <div key={s.titel} className={`flex gap-8 ${i < schritte.length - 1 ? 'pb-10' : ''}`}>
                 <div className="flex flex-col items-center">
-                  <div className="w-9 h-9 rounded-full border-2 border-[#8B7355] flex items-center justify-center flex-shrink-0">
-                    <span className="text-[12px] font-bold text-[#8B7355]">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="w-9 h-9 rounded-full border-2 border-pm-taupe flex items-center justify-center flex-shrink-0">
+                    <span className="text-[12px] font-bold text-pm-taupe">{String(i + 1).padStart(2, '0')}</span>
                   </div>
                   {i < schritte.length - 1 && (
-                    <div className="w-px flex-1 bg-[#E5E3DF] mt-2" />
+                    <div className="w-px flex-1 bg-pm-line mt-2" />
                   )}
                 </div>
                 <div className={i < schritte.length - 1 ? 'pb-2' : ''}>
-                  <p className="text-[15px] font-bold text-[#3D3D3D] mb-1.5">{s.titel}</p>
-                  <p className="text-[14px] text-[#5A5A5A] leading-relaxed">{s.text}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1.5">{s.titel}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{s.text}</p>
                 </div>
               </div>
             ))}
@@ -454,9 +454,9 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="bg-[#F8F7F5] border-t border-[#E5E3DF] py-16">
-        <div className="max-w-[860px] mx-auto px-5">
-          <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-8">Häufige Fragen</h2>
+      <section className="bg-pm-paper border-t border-pm-line py-16">
+        <div className="max-w-article mx-auto px-5">
+          <h2 className="text-[22px] font-bold text-pm-ink mb-8">Häufige Fragen</h2>
           <div className="flex flex-col gap-2">
             {[
               { q: 'Brauche ich Erfahrung in der Pflege?', a: 'Nein. Unternehmerisches Denken und Führungskompetenz sind entscheidender als Fachkenntnisse. Das gesamte operative Know-how — Personalgewinnung, Betreuungskoordination, Software — wird im Onboarding vollständig vermittelt.' },
@@ -465,13 +465,13 @@ export default function FranchisePage() {
               { q: 'Sind noch Gebiete verfügbar?', a: 'Deutschland ist noch weitgehend offen. Gebiete werden exklusiv und klar abgegrenzt vergeben. Verfügbarkeit Ihrer Wunschregion klären wir im Erstgespräch.' },
               { q: 'Was unterscheidet Primundus von anderen Pflege-Franchises?', a: 'Die meisten Anbieter sind reine Vermittler ohne eigene Software, eigenes Personal oder echte Qualitätssicherung. Primundus ist ein vollständiges Betriebssystem — bewährt, ausgezeichnet und kontinuierlich weiterentwickelt.' },
             ].map((faq) => (
-              <details key={faq.q} className="bg-white border border-[#E5E3DF] rounded-xl overflow-hidden group">
+              <details key={faq.q} className="bg-white border border-pm-line rounded-xl overflow-hidden group">
                 <summary className="px-6 py-5 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
-                  <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
-                  <span className="text-[#8B7355] text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
+                  <span className="text-[14px] font-semibold text-pm-ink leading-snug">{faq.q}</span>
+                  <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
                 </summary>
-                <div className="px-6 pb-5 pt-1 border-t border-[#F0EDE8]">
-                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
+                <div className="px-6 pb-5 pt-1 border-t border-pm-line-soft">
+                  <p className="text-[13px] text-pm-body leading-relaxed">{faq.a}</p>
                 </div>
               </details>
             ))}

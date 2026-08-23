@@ -135,10 +135,10 @@ export default function Page() {
 
           {/* Was regelt eine Vorsorgevollmacht */}
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-3">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-3">
               Was regelt eine Vorsorgevollmacht?
             </h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-6">
+            <p className="text-[15px] text-pm-body leading-relaxed mb-6">
               Eine Vorsorgevollmacht kann für verschiedene Lebensbereiche gelten. Je nach Ihrer Situation
               können Sie einzelne Bereiche auswählen oder eine umfassende Vollmacht für alle Bereiche erteilen.
               Die folgende Übersicht zeigt, was jeder Bereich umfasst.
@@ -146,11 +146,11 @@ export default function Page() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {vollmachtBereiche.map((item) => (
                 <div key={item.title} className="bg-white border border-pm-line rounded-xl px-5 py-4">
-                  <p className="text-[14px] font-bold text-[#3D3D3D] mb-1 flex items-center gap-2">
+                  <p className="text-[14px] font-bold text-pm-ink mb-1 flex items-center gap-2">
                     <span>{item.icon}</span>
                     <span>{item.title}</span>
                   </p>
-                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{item.desc}</p>
+                  <p className="text-[13px] text-pm-body leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -158,7 +158,7 @@ export default function Page() {
 
           {/* FAQ */}
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-6">
               Häufige Fragen zur Vorsorgevollmacht
             </h2>
             <div className="flex flex-col gap-3">
@@ -168,11 +168,11 @@ export default function Page() {
                   className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
-                    <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
+                    <span className="text-[14px] font-semibold text-pm-ink leading-snug">{faq.q}</span>
                     <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
                   </summary>
                   <div className="px-5 pb-4 pt-1 border-t border-pm-line-soft">
-                    <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
+                    <p className="text-[13px] text-pm-body leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
               ))}
@@ -181,7 +181,7 @@ export default function Page() {
 
           {/* Related Tools */}
           <section>
-            <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Weitere hilfreiche Tools & Ratgeber</h2>
+            <h2 className="text-[18px] font-bold text-pm-ink mb-4">Weitere hilfreiche Tools & Ratgeber</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf selbst einschätzen — in 3 Minuten' },
@@ -195,7 +195,7 @@ export default function Page() {
                   {...('external' in item && item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className="bg-white border border-pm-line rounded-xl px-4 py-3.5 hover:border-pm-taupe transition-colors"
                 >
-                  <p className="text-[14px] font-semibold text-[#3D3D3D] mb-0.5">→ {item.label}</p>
+                  <p className="text-[14px] font-semibold text-pm-ink mb-0.5">→ {item.label}</p>
                   <p className="text-[12px] text-pm-mute">{item.desc}</p>
                 </a>
               ))}

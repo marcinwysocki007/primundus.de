@@ -134,7 +134,7 @@ export default function PflegegradBeantragen() {
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -155,13 +155,13 @@ export default function PflegegradBeantragen() {
           <AuthorByline updated="25. April 2026" />
 
           {/* Lead */}
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegrad beantragen geht in zwei Schritten: Antrag bei der Pflegekasse stellen, dann kommt der Medizinische Dienst zur Begutachtung nach Hause. Die Entscheidung fällt innerhalb von 25 Arbeitstagen. Wer gut vorbereitet ist, erreicht einen höheren Pflegegrad — mit deutlich mehr Leistungen.
           </p>
 
           {/* Quick Answer Box */}
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Auf einen Blick
             </p>
             <ul className="space-y-2.5">
@@ -182,7 +182,7 @@ export default function PflegegradBeantragen() {
           </div>
 
           {/* ── SECTION 1 ── */}
-          <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="voraussetzungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wer kann einen Pflegegrad beantragen?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -216,7 +216,7 @@ export default function PflegegradBeantragen() {
           </p>
 
           {/* ── SECTION 2 ── */}
-          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="antrag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag stellen — Schritt für Schritt
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -296,7 +296,7 @@ export default function PflegegradBeantragen() {
           </div>
 
           {/* ── SECTION 3 ── */}
-          <h2 id="begutachtung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="begutachtung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Begutachtung durch den MD
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -359,7 +359,7 @@ export default function PflegegradBeantragen() {
           </p>
 
           {/* ── SECTION 4 ── */}
-          <h2 id="pflegegrade" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrade" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrade und ihre Leistungen 2026
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -438,7 +438,7 @@ export default function PflegegradBeantragen() {
           </p>
 
           {/* ── SECTION 5 ── */}
-          <h2 id="widerspruch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="widerspruch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Widerspruch einlegen — wenn die Einstufung zu niedrig ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -485,7 +485,7 @@ export default function PflegegradBeantragen() {
           </p>
 
           {/* ── FAQ ── */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zum Pflegegrad beantragen
           </h2>
           <div className="space-y-4 mb-12">

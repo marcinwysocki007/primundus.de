@@ -60,14 +60,14 @@ export default function Page() {
       <ArticleTOC sections={SECTIONS} />
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-pm-ink">Pflegereform 2025</span>
           </nav>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 5 Min Lesezeit · Aktualisiert April 2026</p>
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 5 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Pflegereform 2025 — alle wichtigen Änderungen im Überblick</h1>
 
           <AuthorByline updated="30. April 2026" />
@@ -79,13 +79,13 @@ export default function Page() {
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Entlastungsbetrag: weiterhin 131 €/Monat für alle PG 1–5</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Pflegegeld: PG 2 = 347 €, PG 3 = 599 €, PG 4 = 800 €, PG 5 = 990 €</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Sachleistungen: PG 2 = 796 €, PG 3 = 1.497 €, PG 4 = 1.859 €, PG 5 = 2.299 €</div>
-          </div>          <h2 id="entlastungsbudget" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Das neue Entlastungsbudget — was ist neu?</h2>
+          </div>          <h2 id="entlastungsbudget" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Das neue Entlastungsbudget — was ist neu?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bis Juni 2025 gab es getrennte Töpfe: Verhinderungspflege (bis 1.612 €/Jahr, ausbaubar auf 3.224 €) und Kurzzeitpflege (bis 1.774 €/Jahr). Das war kompliziert und führte oft zu nicht genutzten Mitteln.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Ab Juli 2025 gilt ein einheitliches Entlastungsbudget: 3.539 €/Jahr — flexibel einsetzbar für beide Leistungsarten, kein Umschichten mehr nötig. 2026 ist das erste volle Jahr ohne Übergangsregelungen.</p>
-          <h2 id="auswirkungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Was das für Familien bedeutet</h2>
+          <h2 id="auswirkungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Was das für Familien bedeutet</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Für Familien mit 24h-Pflege: Der Entlastungsbetrag (131 €/Mo) läuft weiter. Das Entlastungsbudget kann für Auszeiten der Kraft (Verhinderungspflege) genutzt werden. Insgesamt mehr Flexibilität, weniger Bürokratie.</p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             <details className="bg-white rounded-xl border border-pm-line group">
               <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

@@ -59,7 +59,7 @@ export default function SelbstPflegenOder24h() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
@@ -77,11 +77,11 @@ export default function SelbstPflegenOder24h() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die Entscheidung zwischen Selbstpflege und professioneller 24h-Betreuung ist eine der schwierigsten die pflegende Familien treffen. Sie ist emotional aufgeladen — und wird oft zu lange hinausgezögert. Dieser Ratgeber gibt keine schnelle Antwort. Aber er stellt die Fragen die gestellt werden müssen.
           </p>
 
-          <h2 id="ehrliche-fragen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="ehrliche-fragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Die ehrlichen Fragen — Selbsttest
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -103,7 +103,7 @@ export default function SelbstPflegenOder24h() {
             ))}
           </div>
 
-          <h2 id="wenn-selbst" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wenn-selbst" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann Selbstpflege funktioniert
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -125,7 +125,7 @@ export default function SelbstPflegenOder24h() {
             ))}
           </div>
 
-          <h2 id="grenzen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="grenzen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Grenzen der Selbstpflege — Warnsignale
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -153,7 +153,7 @@ export default function SelbstPflegenOder24h() {
             <a href="/burnout-pflegende-angehoerige" className="text-pm-taupe underline hover:text-pm-taupe-deep">Burnout pflegender Angehöriger — Warnsignale & Hilfe</a>
           </p>
 
-          <h2 id="kombination" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kombination" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die beste Lösung: Kombination aus Angehörigen + 24h-Kraft
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -192,7 +192,7 @@ export default function SelbstPflegenOder24h() {
             </div>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wann reicht Angehörigenpflege aus?', a: 'Wenn: Pflegebedarf klar begrenzt, mehrere Angehörige teilen die Last, es gibt Auszeiten und einen Notfallplan, körperliche und emotionale Grenzen noch nicht erreicht.' },

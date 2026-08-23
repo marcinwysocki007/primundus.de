@@ -66,7 +66,7 @@ export default function PflegevertragMusterVorlage() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
@@ -84,7 +84,7 @@ export default function PflegevertragMusterVorlage() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ein Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt was geleistet wird, was es kostet, wie Kost und Logis angerechnet werden und wie gekündigt werden kann. Wer mit Primundus im Entsendemodell arbeitet, bekommt einen fertigen Vertrag — wer direkt anstellt, braucht dieses Muster.
           </p>
 
@@ -95,7 +95,7 @@ export default function PflegevertragMusterVorlage() {
             </p>
           </div>
 
-          <h2 id="was-muss-rein" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-muss-rein" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was muss in den Pflegevertrag?
           </h2>
           <div className="space-y-3 mb-10">
@@ -118,7 +118,7 @@ export default function PflegevertragMusterVorlage() {
             ))}
           </div>
 
-          <h2 id="vorlage" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vorlage" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vorlage — vollständiges Pflegevertrag-Muster
           </h2>
           <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[13px] leading-[1.8] text-pm-body overflow-x-auto">
@@ -181,7 +181,7 @@ export default function PflegevertragMusterVorlage() {
             <p>Unterschrift Arbeitgeber &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift Arbeitnehmer</p>
           </div>
 
-          <h2 id="kost-logis" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kost-logis" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kost & Logis richtig regeln
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -214,7 +214,7 @@ export default function PflegevertragMusterVorlage() {
             </div>
           </div>
 
-          <h2 id="kuendigung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kuendigung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kündigung — was gesetzlich gilt
           </h2>
           <div className="space-y-3 mb-10">
@@ -240,7 +240,7 @@ export default function PflegevertragMusterVorlage() {
             <a href="/pflegevertrag-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegevertrag aufsetzen — alle Pflichtangaben</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was muss in einen Pflegevertrag?', a: 'Vertragsparteien, Beginn/Laufzeit, Leistungsumfang, Arbeitszeit, Vergütung, Kost & Logis (Sachbezugswert), Urlaub, Krankheit, Kündigung, Verschwiegenheit.' },

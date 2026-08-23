@@ -60,19 +60,19 @@ export default function Page() {
       <ArticleTOC sections={SECTIONS} />
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/kosten" className="hover:text-pm-taupe transition-colors">Kosten</a>
             <span>›</span>
             <span className="text-pm-ink">Pflegegeld und 24h-Pflege kombinieren</span>
           </nav>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 6 Min Lesezeit · Aktualisiert April 2026</p>
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 6 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Pflegegeld und 24h-Pflege kombinieren — alle Optionen 2026</h1>
 
           <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Pflegegeld und 24h-Pflege schließen sich nicht aus — im Gegenteil. Mit der richtigen Kombination aller Kassenleistungen kann der Eigenanteil erheblich gesenkt werden. Dieser Ratgeber zeigt alle Optionen.</p>
-          <h2 id="pflegegeld" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Pflegegeld bei 24h-Pflege — was geht?</h2>
+          <h2 id="pflegegeld" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Pflegegeld bei 24h-Pflege — was geht?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bei professioneller 24h-Pflege über eine Agentur wird das Pflegegeld nicht direkt gezahlt — stattdessen gibt es Sachleistungen. Aber: Das Pflegegeld kann trotzdem fließen wenn ein Angehöriger offiziell als Pflegeperson eingetragen ist und die Pflege (anteilig) selbst übernimmt.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Die häufigste Lösung ist die Kombination aus Sachleistungen (für die Agenturkraft) und Pflegegeld (für einen pflegenden Angehörigen). Das nennt sich Kombinationsleistung.</p>
           <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
@@ -83,11 +83,11 @@ export default function Page() {
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Sachleistungen: 796–2.299 €/Mo — für ambulante Pflegedienste</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Steuerabzug: bis 4.000 €/Jahr Steuerersparnis</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Bayern: Landespflegegeld 1.000 €/Jahr zusätzlich</div>
-          </div>          <h2 id="rechnung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Rechenbeispiel — Pflegegrad 3</h2>
+          </div>          <h2 id="rechnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Rechenbeispiel — Pflegegrad 3</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">24h-Kraft (Primundus): 2.800 €/Monat. Entlastungsbetrag: −131 €. Entlastungsbudget anteilig: −295 €. Steuerabzug: −200 €. Eigenanteil: ca. 2.174 €/Monat — ohne Pflegegeld.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Mit Kombinationsleistung (Angehöriger übernimmt Grundpflege anteilig): Sachleistungen bis 50% = 748 € für Agentur, Pflegegeld 50% = 300 € für Angehörigen. Eigenanteil Agentur sinkt auf ca. 1.426 €/Monat.</p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             <details className="bg-white rounded-xl border border-pm-line group">
               <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

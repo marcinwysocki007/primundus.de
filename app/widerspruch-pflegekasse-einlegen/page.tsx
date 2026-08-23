@@ -68,7 +68,7 @@ export default function WiderspruchPflegekasseEinlegen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -86,7 +86,7 @@ export default function WiderspruchPflegekasseEinlegen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Rund ein Drittel aller Widersprüche gegen Pflegegrad-Bescheide sind erfolgreich. Das Zeitfenster ist eng: genau ein Monat nach dem Bescheiddatum. Der Widerspruch selbst ist formlos — was danach kommt, entscheidet über den Erfolg: Pflegetagebuch, Arztberichte, konkretes Gutachten.
           </p>
 
@@ -97,7 +97,7 @@ export default function WiderspruchPflegekasseEinlegen() {
             </p>
           </div>
 
-          <h2 id="wann" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann sollte man Widerspruch einlegen?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -117,7 +117,7 @@ export default function WiderspruchPflegekasseEinlegen() {
             ))}
           </div>
 
-          <h2 id="wie" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wie" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             So wird Widerspruch eingelegt — Schritt für Schritt
           </h2>
           <ol className="space-y-3 mb-10">
@@ -138,7 +138,7 @@ export default function WiderspruchPflegekasseEinlegen() {
             ))}
           </ol>
 
-          <h2 id="muster" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="muster" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Musterschreiben für den Widerspruch
           </h2>
           <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[14px] leading-relaxed text-pm-body">
@@ -152,7 +152,7 @@ export default function WiderspruchPflegekasseEinlegen() {
             <p className="mb-4">Mit freundlichen Grüßen,<br />[Unterschrift]<br />[Name]</p>
           </div>
 
-          <h2 id="erfolgschancen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="erfolgschancen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Erfolgschancen & nächste Schritte
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -177,7 +177,7 @@ export default function WiderspruchPflegekasseEinlegen() {
             <a href="/pflegegrad-erhoehen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Höherstufungsantrag stellen</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen zum Widerspruch</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen zum Widerspruch</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie lege ich Widerspruch gegen den Pflegegrad ein?', a: 'Schriftlich innerhalb eines Monats nach Bescheiddatum. Formloser Brief reicht: "Ich lege Widerspruch gegen den Bescheid vom [Datum] ein." Danach MD-Gutachten anfordern, Pflegetagebuch und Arztberichte nachreichen.' },

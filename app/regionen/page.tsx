@@ -324,23 +324,23 @@ export default function RegionenHub() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#5A5A5A]">24h-Pflege in Ihrer Region</span>
+            <span className="text-pm-body">24h-Pflege in Ihrer Region</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             REGIONEN
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             24h-Pflege in Ihrer Region finden
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-10 max-w-[620px]">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Primundus ist mit eigenen Betreuungskräften in ganz Deutschland — Großstadt, Kleinstadt, Land. Geben Sie Ihren Ort oder Ihre PLZ ein.
           </p>
 
@@ -348,7 +348,7 @@ export default function RegionenHub() {
           <RegionenSearch staedte={staedte} />
 
           {/* ── BUNDESLÄNDER ── */}
-          <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-5">
+          <h2 className="text-[22px] font-bold text-pm-ink mb-5">
             Nach Bundesland
           </h2>
           <div className="grid md:grid-cols-2 gap-3 mb-14">
@@ -362,7 +362,7 @@ export default function RegionenHub() {
                   {land.kuerzel}
                 </div>
                 <div>
-                  <p className="text-[14px] font-bold text-[#3D3D3D] mb-0.5">{land.name}</p>
+                  <p className="text-[14px] font-bold text-pm-ink mb-0.5">{land.name}</p>
                   <p className="text-[12px] text-pm-mute leading-snug">{land.staedte}</p>
                 </div>
               </a>
@@ -370,7 +370,7 @@ export default function RegionenHub() {
           </div>
 
           {/* ── STÄDTE A–Z ── */}
-          <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-1">
+          <h2 className="text-[22px] font-bold text-pm-ink mb-1">
             Nach Stadt
           </h2>
           <p className="text-[13px] text-pm-mute mb-6">{staedteAlpha.length} Städte — alphabetisch</p>
@@ -388,7 +388,7 @@ export default function RegionenHub() {
                     <a
                       key={stadt.slug}
                       href={`/24h-pflege-${stadt.slug}`}
-                      className="text-[13px] text-[#5A5A5A] hover:text-pm-taupe py-1.5 px-3 rounded-lg hover:bg-white transition-all flex items-center gap-2 group"
+                      className="text-[13px] text-pm-body hover:text-pm-taupe py-1.5 px-3 rounded-lg hover:bg-white transition-all flex items-center gap-2 group"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-pm-line group-hover:bg-pm-taupe flex-shrink-0 transition-colors" />
                       {stadt.name}
@@ -421,7 +421,7 @@ export default function RegionenHub() {
                 href="https://kostenrechner.primundus.de/?start=1&src=apex-regionen"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-full transition-colors"
               >
                 Angebot in 2 Minuten
               </a>

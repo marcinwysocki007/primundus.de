@@ -60,22 +60,22 @@ export default function Page() {
       <ArticleTOC sections={SECTIONS} />
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-pm-ink">Vorteile der 24h-Pflege</span>
           </nav>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 6 Min Lesezeit · Aktualisiert April 2026</p>
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 6 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Vorteile der 24h-Pflege zuhause — was sie von anderen Lösungen unterscheidet</h1>
 
           <AuthorByline updated="30. April 2026" />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">24h-Pflege zuhause ist keine Notlösung — sie ist für viele Menschen die bessere Lösung. Warum? Weil das eigene Zuhause bleibt, weil eine vertraute Person immer da ist, und weil die Kosten oft günstiger sind als ein Pflegeheim. Hier alle Vorteile im Überblick.</p>
-          <h2 id="zuhause" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Im eigenen Zuhause bleiben</h2>
+          <h2 id="zuhause" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Im eigenen Zuhause bleiben</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Das eigene Zuhause ist mehr als vier Wände — es ist Identität, Erinnerung, Sicherheit. Jeder gewohnte Handgriff, jedes vertraute Gesicht in der Nachbarschaft, der eigene Garten. Ein Pflegeheim kann das nicht ersetzen.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bei der 24h-Pflege bleibt das alles erhalten. Die Betreuungskraft kommt in das Zuhause des Pflegebedürftigen — nicht umgekehrt. Das reduziert nachweislich Desorientierung, besonders bei Demenz.</p>
-          <h2 id="eins-zu-eins" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">1:1-Betreuung rund um die Uhr</h2>
+          <h2 id="eins-zu-eins" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">1:1-Betreuung rund um die Uhr</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Im Pflegeheim teilen sich viele Bewohner eine Pflegekraft. Zu Stoßzeiten fehlt die Zeit für den Einzelnen. Bei der 24h-Pflege ist eine Kraft ausschließlich für eine Person da — ganztags, nachts, bei Arztbesuchen, beim Kochen.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Das schafft Vertrauen, Kontinuität und echte Beziehung — besonders wichtig bei Demenz, Parkinson oder nach einem Schlaganfall.</p>
           <div className="space-y-3 mb-8">
@@ -103,11 +103,11 @@ export default function Page() {
               <p className="text-[15px] font-bold text-pm-ink mb-1">Rechtssicher</p>
               <p className="text-[14px] text-pm-body leading-relaxed">Entsendemodell mit A1-Bescheinigung — keine deutschen Sozialabgaben.</p>
             </div>
-          </div>          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">Kosten oft günstiger als das Pflegeheim</h2>
+          </div>          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Kosten oft günstiger als das Pflegeheim</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat — Tendenz steigend. 24h-Pflege über Primundus kostet 2.200–3.500 €/Monat, davon können mit Pflegegeld, Entlastungsbetrag und Steuerabzug mehrere hundert Euro monatlich abgezogen werden.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bei Pflegegrad 3 sinkt der Eigenanteil mit allen Zuschüssen oft auf unter 1.500–2.000 €/Monat. Das ist deutlich weniger als viele Pflegeheime — bei deutlich besserer Betreuungsqualität.</p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             <details className="bg-white rounded-xl border border-pm-line group">
               <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

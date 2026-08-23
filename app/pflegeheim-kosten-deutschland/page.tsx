@@ -67,7 +67,7 @@ export default function PflegeheimKosten() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
@@ -85,7 +85,7 @@ export default function PflegeheimKosten() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit ca. 3.364 Euro pro Monat — und steigt seit Jahren. Gleichzeitig wissen viele Familien nicht dass 24h-Pflege zuhause bei vergleichbarem Pflegebedarf oft deutlich günstiger ist — und das Leben im eigenen Zuhause erhält.
           </p>
 
@@ -96,7 +96,7 @@ export default function PflegeheimKosten() {
             </p>
           </div>
 
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was kostet ein Pflegeheim in Deutschland 2026?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -136,7 +136,7 @@ export default function PflegeheimKosten() {
             </div>
           </div>
 
-          <h2 id="eigenanteil" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="eigenanteil" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Eigenanteil nach Bundesland — regionale Unterschiede
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -174,7 +174,7 @@ export default function PflegeheimKosten() {
             </div>
           </div>
 
-          <h2 id="kassenzuschuss" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kassenzuschuss" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kassenzuschuss im Pflegeheim
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -211,7 +211,7 @@ export default function PflegeheimKosten() {
             </div>
           </div>
 
-          <h2 id="vergleich" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vergleich" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegeheim vs. 24h-Pflege zuhause — direkter Vergleich
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -254,7 +254,7 @@ export default function PflegeheimKosten() {
             <a href="/eigenanteil-24h-pflege-senken" className="text-pm-taupe underline hover:text-pm-taupe-deep">Eigenanteil senken — alle Möglichkeiten</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was kostet ein Pflegeheim in Deutschland 2026?', a: 'Eigenanteil bundesweit Ø ca. 3.364 €/Monat (Pflege + Unterkunft + Verpflegung + Investitionskosten). Je nach Region und Einrichtung 1.700–4.000+ €/Monat. Pflegekasse zahlt 770–2.005 €/Monat je nach Pflegegrad dazu.' },

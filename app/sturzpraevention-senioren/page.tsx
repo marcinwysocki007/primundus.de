@@ -67,7 +67,7 @@ export default function SturzpraventionSenioren() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -85,12 +85,12 @@ export default function SturzpraventionSenioren() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein reduziert das Sturzrisiko nachweislich um 30–40 Prozent. Die Wohnungssicherung tut ihr Übriges.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — die wirksamsten Maßnahmen</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick — die wirksamsten Maßnahmen</p>
             <ul className="space-y-2.5">
               {[
                 'Gleichgewichtstraining: reduziert Sturzrisiko um 30–40 % (täglich 10–15 Min reichen)',
@@ -108,7 +108,7 @@ export default function SturzpraventionSenioren() {
             </ul>
           </div>
 
-          <h2 id="risikofaktoren" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="risikofaktoren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Risikofaktoren erkennen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -134,7 +134,7 @@ export default function SturzpraventionSenioren() {
             ))}
           </div>
 
-          <h2 id="wohnung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wohnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wohnung sichern — die wichtigsten Maßnahmen
           </h2>
           <div className="space-y-3 mb-10">
@@ -155,7 +155,7 @@ export default function SturzpraventionSenioren() {
             <a href="/barrierefreies-zuhause-gestalten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Barrierefreies Zuhause gestalten</a>
           </p>
 
-          <h2 id="uebungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="uebungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Übungen & Training — was wirklich hilft
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -179,7 +179,7 @@ export default function SturzpraventionSenioren() {
             ))}
           </div>
 
-          <h2 id="hilfsmittel" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="hilfsmittel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Hilfsmittel & Versorgung
           </h2>
           <div className="space-y-3 mb-10">
@@ -199,7 +199,7 @@ export default function SturzpraventionSenioren() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (30–40 % weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },

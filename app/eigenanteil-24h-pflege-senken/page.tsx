@@ -68,7 +68,7 @@ export default function EigenanteilSenken() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -86,12 +86,12 @@ export default function EigenanteilSenken() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             24h-Pflege kostet 2.200–3.500 Euro brutto — aber wer alle verfügbaren Leistungen kennt und kombiniert, kann den tatsächlichen Eigenanteil auf unter 1.500 Euro pro Monat senken. Viele Familien verschenken hunderte Euro monatlich weil sie nicht alle Möglichkeiten nutzen.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Potenzielle Ersparnis pro Monat (Pflegegrad 3)</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Potenzielle Ersparnis pro Monat (Pflegegrad 3)</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegegeld: – 599 €/Monat',
@@ -109,7 +109,7 @@ export default function EigenanteilSenken() {
             </ul>
           </div>
 
-          <h2 id="uebersicht" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="uebersicht" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alle Stellschrauben im Überblick
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -143,7 +143,7 @@ export default function EigenanteilSenken() {
             </div>
           </div>
 
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             1. Pflegegrad korrekt beantragen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -183,7 +183,7 @@ export default function EigenanteilSenken() {
             <a href="/pflegegrad-erhoehen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad erhöhen</a>
           </p>
 
-          <h2 id="kassenzuschuesse" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kassenzuschuesse" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             2. Alle Kassenzuschüsse voll ausschöpfen
           </h2>
           <div className="space-y-3 mb-6">
@@ -207,7 +207,7 @@ export default function EigenanteilSenken() {
             <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
           </p>
 
-          <h2 id="steuer" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="steuer" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             3. Steuerlich absetzen — bis 4.000 € pro Jahr
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -221,7 +221,7 @@ export default function EigenanteilSenken() {
             <a href="/pflege-steuerlich-absetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflege steuerlich absetzen 2026</a>
           </p>
 
-          <h2 id="foerderungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="foerderungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             4. Wohnraumanpassung & Hilfsmittel fördern lassen
           </h2>
           <div className="space-y-3 mb-6">
@@ -237,7 +237,7 @@ export default function EigenanteilSenken() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen
           </h2>
           <div className="space-y-4 mb-12">

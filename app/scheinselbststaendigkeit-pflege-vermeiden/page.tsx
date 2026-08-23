@@ -67,7 +67,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
@@ -85,7 +85,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Tausende Familien beschäftigen "selbstständige Pflegekräfte" ohne zu wissen dass sie damit ein erhebliches rechtliches Risiko eingehen. Scheinselbstständigkeit bedeutet: Die Behörden werten das Verhältnis als verstecktes Arbeitsverhältnis — und fordern alle Sozialversicherungsbeiträge nach. Rückwirkend. Für bis zu vier Jahre.
           </p>
 
@@ -96,7 +96,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             </p>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist Scheinselbstständigkeit?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -106,7 +106,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             Der Begriff kommt daher dass Selbstständigkeit nur "vorgetäuscht" wird — um Sozialversicherungsbeiträge und Arbeitsrecht zu umgehen. Das ist strafbar.
           </p>
 
-          <h2 id="kriterien" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kriterien" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Woran erkennen Behörden Scheinselbstständigkeit?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -128,7 +128,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             ))}
           </div>
 
-          <h2 id="folgen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="folgen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Folgen & Risiken bei Scheinselbstständigkeit
           </h2>
           <div className="space-y-3 mb-10">
@@ -145,7 +145,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             ))}
           </div>
 
-          <h2 id="vermeiden" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vermeiden" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie man das Risiko vollständig vermeidet
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -175,7 +175,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft legal beschäftigen — die 3 Modelle</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was ist Scheinselbstständigkeit in der Pflege?', a: 'Wenn eine "selbstständige" Pflegekraft faktisch wie eine Angestellte tätig ist — feste Zeiten, nur ein Auftraggeber, persönliche Leistungserbringung. Die Behörden werten das als verstecktes Arbeitsverhältnis.' },

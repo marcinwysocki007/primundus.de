@@ -67,7 +67,7 @@ export default function PflegevertragAufsetzen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -85,12 +85,12 @@ export default function PflegevertragAufsetzen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ein schriftlicher Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt Leistungen, Arbeitszeiten, Vergütung und Kündigungsmodalitäten klar und verbindlich. Was genau hineingehört, hängt vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist der Vertrag standardisiert und rechtssicher.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Pflicht-Inhalte jedes Pflegevertrags</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Pflicht-Inhalte jedes Pflegevertrags</p>
             <ul className="space-y-2.5">
               {[
                 'Vertragsparteien: vollständige Namen und Adressen beider Seiten',
@@ -109,7 +109,7 @@ export default function PflegevertragAufsetzen() {
             </ul>
           </div>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="warum" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Warum ein Pflegevertrag so wichtig ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -119,7 +119,7 @@ export default function PflegevertragAufsetzen() {
             Rechtlich ist ein schriftlicher Vertrag bei Direktanstellung Pflicht. Beim Entsendemodell regelt der Vertrag mit der Agentur alle wesentlichen Punkte. Auf keinen Fall sollte auf einen Vertrag verzichtet werden — auch nicht bei vertrauensvollen Verhältnissen.
           </p>
 
-          <h2 id="inhalte" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="inhalte" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was in den Pflegevertrag gehört — vollständige Checkliste
           </h2>
           <div className="space-y-3 mb-10">
@@ -139,7 +139,7 @@ export default function PflegevertragAufsetzen() {
             ))}
           </div>
 
-          <h2 id="modelle" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="modelle" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vertrag je nach Beschäftigungsmodell
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -169,7 +169,7 @@ export default function PflegevertragAufsetzen() {
             <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft legal beschäftigen — die 3 Wege</a>
           </p>
 
-          <h2 id="kuendigung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kuendigung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kündigung & Fristen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -206,7 +206,7 @@ export default function PflegevertragAufsetzen() {
             <a href="/pflegekraft-wechseln" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft wechseln — so geht es reibungslos</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zum Pflegevertrag
           </h2>
           <div className="space-y-4 mb-12">

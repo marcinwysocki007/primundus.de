@@ -69,7 +69,7 @@ export default function AlzheimerBetreuungZuhause() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
@@ -87,12 +87,12 @@ export default function AlzheimerBetreuungZuhause() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Alzheimer ist die häufigste Demenzform — und häusliche Betreuung ist in allen Stadien grundsätzlich möglich. Die vertraute Umgebung mit den bekannten Geräuschen, Gerüchen und Gesichtern gibt Orientierung, die kein Pflegeheim ersetzen kann. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei fortgeschrittenem Alzheimer erhalten.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Häusliche Betreuung ist in allen Alzheimer-Stadien grundsätzlich möglich',
@@ -110,7 +110,7 @@ export default function AlzheimerBetreuungZuhause() {
             </ul>
           </div>
 
-          <h2 id="verlauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="verlauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alzheimer verstehen — Stadien & Verlauf
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -132,7 +132,7 @@ export default function AlzheimerBetreuungZuhause() {
             ))}
           </div>
 
-          <h2 id="zuhause" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="zuhause" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was zuhause möglich ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -151,7 +151,7 @@ export default function AlzheimerBetreuungZuhause() {
             ))}
           </div>
 
-          <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alltagsgestaltung bei Alzheimer — was wirklich hilft
           </h2>
           <div className="space-y-3 mb-6">
@@ -176,7 +176,7 @@ export default function AlzheimerBetreuungZuhause() {
             <a href="/tagesstruktur-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Tagesstruktur bei Demenz</a>
           </p>
 
-          <h2 id="pflege24h" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflege24h" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann 24h-Pflege bei Alzheimer die richtige Lösung ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -202,7 +202,7 @@ export default function AlzheimerBetreuungZuhause() {
             <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was kostet 24h-Pflege 2026?</a>
           </p>
 
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrad bei Alzheimer & Kassenzuschüsse 2026
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -245,7 +245,7 @@ export default function AlzheimerBetreuungZuhause() {
             <a href="/pflegegrad-bei-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad bei Demenz</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur Alzheimer-Betreuung
           </h2>
           <div className="space-y-4 mb-12">

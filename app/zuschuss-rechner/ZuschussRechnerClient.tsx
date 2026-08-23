@@ -24,27 +24,27 @@ export function ZuschussRechnerClient() {
 
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-[720px] mx-auto px-5 py-14">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
           <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
-          <span className="text-[#5A5A5A]">Zuschuss & Förderung</span>
+          <span className="text-pm-body">Zuschuss & Förderung</span>
         </nav>
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">TOOLS & RECHNER</p>
-        <h1 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-4">
+        <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">TOOLS & RECHNER</p>
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Zuschuss & Förderung 2026
         </h1>
-        <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-10 max-w-[580px]">
+        <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
           Welche Leistungen stehen Ihnen zu? Pflegegrad wählen — alle Zuschüsse sofort sehen.
         </p>
 
         {/* Pflegegrad Auswahl */}
         <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm mb-6">
-          <p className="text-[14px] font-bold text-[#3D3D3D] mb-4">Welchen Pflegegrad hat die pflegebedürftige Person?</p>
+          <p className="text-[14px] font-bold text-pm-ink mb-4">Welchen Pflegegrad hat die pflegebedürftige Person?</p>
           <div className="flex flex-wrap gap-3">
             {PFLEGEGRADE.map(p => (
               <button
@@ -53,7 +53,7 @@ export function ZuschussRechnerClient() {
                 className={`px-5 py-2.5 rounded-xl border-2 text-[14px] font-semibold transition-all ${
                   selected === p.pg
                     ? 'border-pm-taupe bg-pm-taupe text-white'
-                    : 'border-pm-line bg-white text-[#3D3D3D] hover:border-pm-taupe'
+                    : 'border-pm-line bg-white text-pm-ink hover:border-pm-taupe'
                 }`}
               >
                 PG {p.pg}
@@ -128,7 +128,7 @@ export function ZuschussRechnerClient() {
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-3">
-                        <span className="text-[14px] font-semibold text-[#3D3D3D]">{row.label}</span>
+                        <span className="text-[14px] font-semibold text-pm-ink">{row.label}</span>
                         <span className={`text-[14px] font-bold whitespace-nowrap ${row.active ? 'text-pm-green' : 'text-[#C0BAB2]'}`}>
                           {row.value}
                         </span>
@@ -142,7 +142,7 @@ export function ZuschussRechnerClient() {
               {/* Eigenanteil */}
               <div className="bg-pm-shell border-t border-pm-line px-5 py-4">
                 <div className="flex items-start justify-between gap-3 mb-1">
-                  <span className="text-[14px] font-bold text-[#3D3D3D]">Ihr Eigenanteil bei 24h-Pflege (Primundus)</span>
+                  <span className="text-[14px] font-bold text-pm-ink">Ihr Eigenanteil bei 24h-Pflege (Primundus)</span>
                   <span className="text-[16px] font-bold text-pm-taupe whitespace-nowrap">
                     ca. {eigenMin.toLocaleString('de')}–{eigenMax.toLocaleString('de')} €/Mo
                   </span>
@@ -157,7 +157,7 @@ export function ZuschussRechnerClient() {
             <div className="bg-white border border-pm-line rounded-xl px-5 py-4 mb-6 shadow-sm">
               <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-mute mb-2">Zum Vergleich — Pflegeheim</p>
               <div className="flex items-center justify-between gap-2">
-                <span className="text-[14px] text-[#5A5A5A]">Eigenanteil Ø Deutschland (alle PG)</span>
+                <span className="text-[14px] text-pm-body">Eigenanteil Ø Deutschland (alle PG)</span>
                 <span className="text-[14px] font-bold text-pm-coral">≈ 2.871 €/Monat</span>
               </div>
               <p className="text-[12px] text-pm-mute mt-1">
@@ -178,7 +178,7 @@ export function ZuschussRechnerClient() {
                 href={`https://kostenrechner.primundus.de?pflegegrad=${pg.pg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] py-3.5 px-6 rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] py-3.5 px-6 rounded-full transition-colors"
               >
                 Persönliches Angebot anfordern →
               </a>
@@ -194,13 +194,13 @@ export function ZuschussRechnerClient() {
 
         {!selected && (
           <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm">
-            <p className="text-[15px] font-bold text-[#3D3D3D] mb-2">Pflegegrad noch nicht bekannt?</p>
-            <p className="text-[14px] text-[#5A5A5A] mb-5">
+            <p className="text-[15px] font-bold text-pm-ink mb-2">Pflegegrad noch nicht bekannt?</p>
+            <p className="text-[14px] text-pm-body mb-5">
               Unser Pflegegrad-Rechner gibt in 3 Minuten eine erste Einschätzung.
             </p>
             <a
               href="/pflegegrad-rechner"
-              className="inline-flex items-center gap-2 bg-pm-taupe hover:bg-[#7D6848] text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
             >
               Pflegegrad einschätzen →
             </a>

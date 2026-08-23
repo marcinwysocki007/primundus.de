@@ -40,7 +40,7 @@ export function SiteHeader() {
             {/* Desktop: phone button */}
             <a
               href="tel:+4989200000830"
-              className="hidden md:flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-lg bg-pm-paper hover:bg-pm-taupe hover:text-white transition-all duration-200 group"
+              className="hidden md:flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full bg-pm-paper hover:bg-pm-taupe hover:text-white transition-all duration-200 group"
             >
               <Image
                 src="/images/marta-kapcio.jpg"
@@ -64,7 +64,7 @@ export function SiteHeader() {
             {/* Desktop: CTA button */}
             <a
               href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-              className="hidden md:inline-flex items-center gap-2 px-4 py-2.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-semibold text-[14px] rounded-lg transition-all duration-200 shadow-sm"
+              className="hidden md:inline-flex items-center gap-2 px-4 py-2.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-semibold text-[14px] rounded-full transition-all duration-200 shadow-sm"
             >
               Kosten & Pflegekräfte ansehen
               <ChevronRight className="w-4 h-4" />
@@ -95,9 +95,9 @@ export function SiteHeader() {
               aria-label="Navigation"
             >
               {mobileOpen ? (
-                <X className="w-5 h-5 text-[#3D3D3D]" />
+                <X className="w-5 h-5 text-pm-ink" />
               ) : (
-                <Menu className="w-5 h-5 text-[#3D3D3D]" />
+                <Menu className="w-5 h-5 text-pm-ink" />
               )}
             </button>
           </div>
@@ -115,7 +115,7 @@ export function SiteHeader() {
                 className={`text-[14px] font-medium transition-colors relative pb-0.5 ${
                   active
                     ? 'text-pm-taupe after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-pm-taupe after:rounded-full'
-                    : 'text-[#5A5A5A] hover:text-pm-taupe'
+                    : 'text-pm-body hover:text-pm-taupe'
                 }`}
               >
                 {item.label}
@@ -137,7 +137,7 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={`flex items-center justify-between py-2.5 border-b border-[#F0EEE9] last:border-0 transition-colors ${
-                    active ? 'text-pm-taupe' : 'text-[#3D3D3D] hover:text-pm-taupe'
+                    active ? 'text-pm-taupe' : 'text-pm-ink hover:text-pm-taupe'
                   }`}
                   onClick={() => setMobileOpen(false)}
                 >
@@ -163,14 +163,14 @@ export function SiteHeader() {
                   <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-[#5C9F6E] rounded-full border-2 border-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[13px] font-bold text-[#3D3D3D] leading-tight">Marta Kapcio</p>
+                  <p className="text-[13px] font-bold text-pm-ink leading-tight">Marta Kapcio</p>
                   <p className="text-[11px] text-pm-mute leading-tight">Pflegeberaterin · Mo – So 8 – 20 Uhr</p>
                 </div>
               </div>
               <div className="flex flex-col gap-2 p-3">
                 <a
                   href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-                  className="flex items-center justify-center gap-1.5 py-2.5 bg-pm-coral hover:bg-pm-coral-deep rounded-lg text-[13px] font-bold text-white transition-colors"
+                  className="flex items-center justify-center gap-1.5 py-2.5 bg-pm-coral hover:bg-pm-coral-deep rounded-full text-[13px] font-bold text-white transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   Kosten & Pflegekräfte ansehen
@@ -179,7 +179,7 @@ export function SiteHeader() {
                 <div className="flex gap-2">
                   <a
                     href="tel:+4989200000830"
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-white border border-pm-line rounded-lg text-[13px] font-semibold text-[#3D3D3D] hover:border-pm-taupe transition-colors"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-white border border-pm-line rounded-full text-[13px] font-semibold text-pm-ink hover:border-pm-taupe transition-colors"
                   >
                     <Phone className="w-3.5 h-3.5 text-pm-taupe" />
                     Anrufen
@@ -188,7 +188,7 @@ export function SiteHeader() {
                     href="https://wa.me/4989200000830?text=Hallo%20Frau%20Wysocki%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#25D366] hover:bg-[#20C05A] rounded-lg text-[13px] font-bold text-white transition-colors"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-[#25D366] hover:bg-[#20C05A] rounded-full text-[13px] font-bold text-white transition-colors"
                     onClick={() => setMobileOpen(false)}
                   >
                     <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">

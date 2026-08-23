@@ -65,13 +65,13 @@ export default function StarnbergPage() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-pm-ink">24h-Pflege Starnberg</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             24h-Pflege in Starnberg · Aktualisiert April 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
@@ -242,7 +242,7 @@ export default function StarnbergPage() {
           </div>
 
           {/* ⑥ FAQ */}
-          <h2 className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Starnberg</h2>
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Starnberg</h2>
           <div className="space-y-3 mb-12">
             {[
               { q: 'Was kostet eine 24h-Pflegekraft in Starnberg?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1100–2100 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },

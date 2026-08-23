@@ -37,28 +37,23 @@ const schemaMarkup = JSON.stringify({
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
+    <div className="min-h-screen bg-pm-paper">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      {/* Header */}
-      <div className="bg-white border-b border-[#E5E3DF]">
-        <div className="max-w-[1100px] mx-auto px-5 py-16">
-          <nav className="text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <Link href="/" className="hover:text-[#8B7355] transition-colors">Startseite</Link>
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
+            <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
             <span>›</span>
-            <span className="text-[#3D3D3D]">Über uns</span>
+            <span className="text-pm-ink">Über uns</span>
           </nav>
-          <p className="text-xs font-bold uppercase tracking-wider text-[#A89279] mb-3">Über Primundus</p>
-          <h1 className="text-[32px] md:text-[46px] font-bold text-[#3D3D3D] leading-tight mb-5 max-w-3xl">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Über Primundus</p>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Persönlich. Erfahren. Verlässlich.
           </h1>
-          <p className="text-[17px] md:text-[19px] text-[#5A5A5A] leading-[1.7] max-w-2xl">
+          <p className="text-[17px] md:text-[19px] text-pm-body leading-[1.7] max-w-2xl mb-12">
             Primundus ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland — mit 20 Jahren Erfahrung und mehr als 60.000 erfolgreich begleiteten Betreuungen.
           </p>
-        </div>
-      </div>
 
-      <div className="max-w-[1100px] mx-auto px-5 py-14">
 
         {/* Fakten */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
@@ -68,9 +63,9 @@ export default function Page() {
             { zahl: 'Nr. 1', label: 'Testsieger DIE WELT' },
             { zahl: 'Mo–So', label: '8 – 20 Uhr erreichbar' },
           ].map((item) => (
-            <div key={item.label} className="bg-white border border-[#E5E3DF] rounded-2xl p-5 text-center">
-              <p className="text-[26px] font-bold text-[#3D3D3D] leading-none">{item.zahl}</p>
-              <p className="text-[13px] text-[#8B8B8B] mt-1.5">{item.label}</p>
+            <div key={item.label} className="bg-white border border-pm-line rounded-2xl p-5 text-center">
+              <p className="text-[26px] font-bold text-pm-ink leading-none">{item.zahl}</p>
+              <p className="text-[13px] text-pm-mute mt-1.5">{item.label}</p>
             </div>
           ))}
         </div>
@@ -80,24 +75,24 @@ export default function Page() {
           <div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F0EBE3]">
               <img
-                src="/images/Teamblid-Primundus-Mallorca.webp"
-                alt="Das Primundus Team"
+                src="/images/team-primundus-deutschland.webp"
+                alt="Das Team von Primundus"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-[#A89279] mb-3">Wer wir sind</p>
-            <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] leading-tight mb-5">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Wer wir sind</p>
+            <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink leading-tight mb-5">
               Menschen, die wirklich passen — das ist unser Anspruch
             </h2>
-            <p className="text-[16px] text-[#5A5A5A] leading-[1.7] mb-4">
+            <p className="text-[16px] text-pm-body leading-[1.7] mb-4">
               Primundus basiert auf 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die zu Ihnen und Ihrer Familie passen.
             </p>
-            <p className="text-[16px] text-[#5A5A5A] leading-[1.7] mb-4">
+            <p className="text-[16px] text-pm-body leading-[1.7] mb-4">
               Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Unser Team ist Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echte Ansprechpartner, die Ihre Situation kennen.
             </p>
-            <p className="text-[16px] text-[#5A5A5A] leading-[1.7]">
+            <p className="text-[16px] text-pm-body leading-[1.7]">
               Wir arbeiten rechtssicher, transparent und ohne versteckte Kosten. Täglich kündbar — weil wir überzeugen wollen, nicht binden.
             </p>
           </div>
@@ -105,17 +100,17 @@ export default function Page() {
 
         {/* Team */}
         <div className="mb-14" id="team">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#A89279] mb-3">Die Menschen hinter Primundus</p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] leading-tight mb-8">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Die Menschen hinter Primundus</p>
+          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink leading-tight mb-8">
             Wer für Sie da ist
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 flex gap-5">
-              <div className="w-16 h-16 rounded-full bg-[#8B7355] text-white flex items-center justify-center font-bold text-[18px] flex-shrink-0">KJ</div>
+            <div className="bg-white border border-pm-line rounded-2xl p-6 flex gap-5">
+              <div className="w-16 h-16 rounded-full bg-pm-taupe text-white flex items-center justify-center font-bold text-[18px] flex-shrink-0">KJ</div>
               <div>
-                <h3 className="text-[18px] font-bold text-[#3D3D3D] leading-tight">Karolina Jakubowska</h3>
-                <p className="text-[13px] font-semibold text-[#8B7355] mb-2">Gründerin &amp; Geschäftsführerin</p>
-                <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">
+                <h3 className="text-[18px] font-bold text-pm-ink leading-tight">Karolina Jakubowska</h3>
+                <p className="text-[13px] font-semibold text-pm-taupe mb-2">Gründerin &amp; Geschäftsführerin</p>
+                <p className="text-[14px] text-pm-body leading-[1.6]">
                   Karolina führt Primundus mit dem Anspruch, häusliche Betreuung ehrlich, rechtssicher und persönlich zu machen. Die Firmengruppe hinter Primundus bringt Erfahrung in der häuslichen 24-Stunden-Pflege seit 2006 mit.
                 </p>
               </div>
@@ -124,7 +119,7 @@ export default function Page() {
         </div>
 
         {/* Testsieger */}
-        <div className="bg-white border-2 border-[#D4A843] rounded-2xl p-7 md:p-10 mb-14">
+        <div className="bg-white border-2 border-pm-gold rounded-2xl p-7 md:p-10 mb-14">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <img
               src="/images/primundus_testsieger-2021.webp"
@@ -132,14 +127,14 @@ export default function Page() {
               className="h-[100px] w-[100px] object-contain flex-shrink-0"
             />
             <div>
-              <p className="text-[12px] font-bold text-[#D4A843] uppercase tracking-wider mb-1">Testsieger · DIE WELT</p>
-              <h2 className="text-[22px] md:text-[26px] font-bold text-[#3D3D3D] leading-tight mb-2">
+              <p className="text-[12px] font-bold text-pm-gold uppercase tracking-wider mb-1">Testsieger · DIE WELT</p>
+              <h2 className="text-[22px] md:text-[26px] font-bold text-pm-ink leading-tight mb-2">
                 Nr. 1 der Pflegekräfte-Vermittler
               </h2>
-              <p className="text-[15px] text-[#5A5A5A] mb-3">Ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue</p>
-              <p className="text-[15px] text-[#5A5A5A] leading-relaxed border-t border-[#F0EBE3] pt-3">
+              <p className="text-[15px] text-pm-body mb-3">Ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue</p>
+              <p className="text-[15px] text-pm-body leading-relaxed border-t border-[#F0EBE3] pt-3">
                 Als bester Vermittler von 24-Stunden-Pflegekräften ausgezeichnet — die beste Kombination aus Preis, Qualität und Kundenservice.{' '}
-                <a href="/testsieger-24-stunden-pflege" className="text-[#8B7355] underline underline-offset-2 font-semibold">Zur Auszeichnung mit Original-Beleg</a>
+                <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe underline underline-offset-2 font-semibold">Zur Auszeichnung mit Original-Beleg</a>
               </p>
             </div>
           </div>
@@ -147,8 +142,8 @@ export default function Page() {
 
         {/* Was uns unterscheidet */}
         <div className="mb-14">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#A89279] mb-3">Was uns unterscheidet</p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-[#3D3D3D] leading-tight mb-8">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Was uns unterscheidet</p>
+          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink leading-tight mb-8">
             Unser Versprechen an Sie
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -184,22 +179,22 @@ export default function Page() {
                 icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064',
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white border border-[#E5E3DF] rounded-2xl p-6 hover:border-[#8B7355] transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-[#8B7355]/10 flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-[#8B7355]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={i} className="bg-white border border-pm-line rounded-2xl p-6 hover:border-pm-taupe transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-pm-taupe/10 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d={item.icon} />
                   </svg>
                 </div>
-                <h3 className="text-[16px] font-bold text-[#3D3D3D] mb-2">{item.title}</h3>
-                <p className="text-[14px] text-[#5A5A5A] leading-[1.6]">{item.text}</p>
+                <h3 className="text-[16px] font-bold text-pm-ink mb-2">{item.title}</h3>
+                <p className="text-[14px] text-pm-body leading-[1.6]">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA */}
-        <div className="bg-[#8B7355] rounded-2xl p-8 md:p-10 text-center">
-          <h2 className="text-[24px] md:text-[28px] font-bold text-white mb-3">
+        <div className="bg-pm-taupe rounded-2xl p-8 md:p-10 text-center">
+          <h2 className="text-h2 md:text-h2-lg font-bold text-white mb-3">
             Lernen Sie uns kennen
           </h2>
           <p className="text-[16px] text-white/80 mb-7 max-w-xl mx-auto">
@@ -208,7 +203,7 @@ export default function Page() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="https://kostenrechner.primundus.de/?start=1&src=apex-ueber-uns"
-              className="inline-flex items-center justify-center px-7 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[16px] rounded-xl transition-all duration-200 shadow-md"
+              className="inline-flex items-center justify-center px-7 py-4 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[16px] rounded-xl transition-all duration-200 shadow-md"
             >
               Kosten & Pflegekräfte ansehen
             </a>

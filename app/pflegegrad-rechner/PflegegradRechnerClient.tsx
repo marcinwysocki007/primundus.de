@@ -175,21 +175,21 @@ export default function PflegegradRechnerClient() {
   if (screen === 'intro') {
     return (
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[720px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
           {/* Breadcrumb */}
-          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2 flex-wrap">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">Pflegegrad-Rechner</span>
+            <span className="text-pm-ink">Pflegegrad-Rechner</span>
           </nav>
 
           {/* Hero */}
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Kostenloser Pflegegrad-Rechner 2026
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
+          <p className="text-[17px] text-pm-body leading-relaxed mb-8">
             Schätzen Sie den Pflegebedarf in nur 3 Minuten ein — anonym, kostenlos und unverbindlich.
             Der Rechner gibt Ihnen einen ersten Hinweis auf den möglichen Pflegegrad vor der offiziellen Begutachtung.
           </p>
@@ -203,7 +203,7 @@ export default function PflegegradRechnerClient() {
             ].map((item) => (
               <div key={item.label} className="bg-white border border-pm-line rounded-xl shadow-sm p-3.5 text-center">
                 <div className="text-xl mb-1">{item.icon}</div>
-                <div className="font-bold text-[#3D3D3D] text-[13px]">{item.label}</div>
+                <div className="font-bold text-pm-ink text-[13px]">{item.label}</div>
                 <div className="text-[11px] text-pm-mute mt-0.5">{item.desc}</div>
               </div>
             ))}
@@ -212,7 +212,7 @@ export default function PflegegradRechnerClient() {
           {/* CTA */}
           <button
             onClick={() => setScreen('quiz')}
-            className="w-full sm:w-auto bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[17px] px-10 py-4 rounded-xl transition-all duration-200 shadow-sm"
+            className="w-full sm:w-auto bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[17px] px-10 py-4 rounded-full transition-all duration-200 shadow-sm"
           >
             Rechner starten →
           </button>
@@ -230,7 +230,7 @@ export default function PflegegradRechnerClient() {
   if (screen === 'quiz') {
     return (
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[720px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
           {/* Progress bar */}
           <div className="mb-8">
             <div className="flex items-center justify-between text-[13px] text-pm-mute mb-2">
@@ -247,10 +247,10 @@ export default function PflegegradRechnerClient() {
 
           {/* Question card */}
           <div className="bg-white border border-pm-line rounded-2xl shadow-sm p-7 mb-6">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               {currentQ.moduleName}
             </p>
-            <h2 className="text-[20px] md:text-[22px] font-bold text-[#3D3D3D] leading-snug mb-8">
+            <h2 className="text-[20px] md:text-[22px] font-bold text-pm-ink leading-snug mb-8">
               {currentQ.text}
             </h2>
 
@@ -266,7 +266,7 @@ export default function PflegegradRechnerClient() {
                       'text-left px-5 py-4 rounded-xl border-2 font-medium text-[15px] transition-all duration-150',
                       isSelected
                         ? 'border-pm-taupe bg-pm-taupe text-white shadow-sm'
-                        : 'border-pm-line bg-white text-[#3D3D3D] hover:border-pm-taupe hover:bg-[#FAF8F5]',
+                        : 'border-pm-line bg-white text-pm-ink hover:border-pm-taupe hover:bg-[#FAF8F5]',
                     ].join(' ')}
                   >
                     <span className={[
@@ -288,7 +288,7 @@ export default function PflegegradRechnerClient() {
           <div className="flex items-center gap-4">
             <button
               onClick={handleBack}
-              className="text-[14px] text-pm-mute hover:text-[#3D3D3D] transition-colors px-4 py-3"
+              className="text-[14px] text-pm-mute hover:text-pm-ink transition-colors px-4 py-3"
             >
               ← Zurück
             </button>
@@ -338,17 +338,17 @@ export default function PflegegradRechnerClient() {
 
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-[720px] mx-auto px-5 py-14">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
         {/* Breadcrumb */}
-        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2 flex-wrap">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
           <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
-          <span className="text-[#3D3D3D]">Pflegegrad-Rechner</span>
+          <span className="text-pm-ink">Pflegegrad-Rechner</span>
         </nav>
 
-        <h1 className="text-[28px] md:text-[36px] font-bold text-[#3D3D3D] leading-tight mb-2">
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Ihr Ergebnis
         </h1>
         <p className="text-[15px] text-pm-mute mb-8">
@@ -372,8 +372,8 @@ export default function PflegegradRechnerClient() {
               {pflegegrad}
             </div>
           )}
-          <p className="text-[18px] font-semibold text-[#3D3D3D] mb-2">{gradeDesc}</p>
-          <p className="text-[14px] text-[#5A5A5A]">
+          <p className="text-[18px] font-semibold text-pm-ink mb-2">{gradeDesc}</p>
+          <p className="text-[14px] text-pm-body">
             Gesamtpunktzahl: <strong>{totalScore}</strong> von {TOTAL_QUESTIONS * 3}
           </p>
 
@@ -405,14 +405,14 @@ export default function PflegegradRechnerClient() {
 
         {/* Module breakdown */}
         <div className="bg-white border border-pm-line rounded-2xl shadow-sm p-6 mb-6">
-          <h2 className="text-[16px] font-bold text-[#3D3D3D] mb-5">Auswertung nach Modulen</h2>
+          <h2 className="text-[16px] font-bold text-pm-ink mb-5">Auswertung nach Modulen</h2>
           <div className="flex flex-col gap-4">
             {moduleScores.map((mod) => {
               const pct = (mod.score / mod.max) * 100
               return (
                 <div key={mod.name}>
                   <div className="flex items-center justify-between text-[13px] mb-1">
-                    <span className="font-medium text-[#3D3D3D]">{mod.name}</span>
+                    <span className="font-medium text-pm-ink">{mod.name}</span>
                     <span className="text-pm-mute">{mod.score} / {mod.max}</span>
                   </div>
                   <div className="h-2 bg-pm-line-soft rounded-full overflow-hidden">
@@ -432,19 +432,19 @@ export default function PflegegradRechnerClient() {
 
         {/* CTAs */}
         <div className="bg-white border border-pm-line rounded-2xl shadow-sm p-7 mb-6">
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Kostenlose Beratung
           </p>
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-2">
+          <h2 className="text-[20px] font-bold text-pm-ink mb-2">
             Jetzt kostenlos beraten lassen
           </h2>
-          <p className="text-[14px] text-[#5A5A5A] mb-5">
+          <p className="text-[14px] text-pm-body mb-5">
             Unsere Pflegeexperten helfen Ihnen beim Pflegegrad-Antrag und bei der Wahl der passenden Versorgung.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="tel:+4989200000830"
-              className="flex-1 flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[16px] px-8 py-4 rounded-xl transition-all duration-200 shadow-sm"
+              className="flex-1 flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[16px] px-8 py-4 rounded-full transition-all duration-200 shadow-sm"
             >
               📞 Jetzt kostenlos beraten lassen
             </a>
@@ -470,13 +470,13 @@ export default function PflegegradRechnerClient() {
 
         {/* Related links */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <a href="/pflegegrad-beantragen" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegrad-beantragen" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">
             → Pflegegrad beantragen
           </a>
-          <a href="/pflegegrade" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegrade" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">
             → Alle Pflegegrade
           </a>
-          <a href="/pflegegeld" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegeld" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">
             → Pflegegeld-Übersicht
           </a>
         </div>

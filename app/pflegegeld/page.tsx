@@ -96,7 +96,7 @@ export default function Pflegegeld() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -114,12 +114,12 @@ export default function Pflegegeld() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegeld 2026 beträgt 347 € (Pflegegrad 2) bis 990 € (Pflegegrad 5) pro Monat — identisch zu 2025. Die letzte Erhöhung um 4,5 % galt ab Januar 2025, die nächste Dynamisierung kommt frühestens Januar 2028. Neu seit Juli 2025: Das Entlastungsbudget von 3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege — 2026 erstmals vollständig nutzbar.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegegeld 2026: 347 € (PG 2) · 599 € (PG 3) · 800 € (PG 4) · 990 € (PG 5)',
@@ -138,7 +138,7 @@ export default function Pflegegeld() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist Pflegegeld?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -160,7 +160,7 @@ export default function Pflegegeld() {
           </div>
 
           {/* SECTION 2 */}
-          <h2 id="betraege" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="betraege" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegeld Beträge 2026 — alle Pflegegrade
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -222,7 +222,7 @@ export default function Pflegegeld() {
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="anspruch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="anspruch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wer hat Anspruch auf Pflegegeld?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -279,7 +279,7 @@ export default function Pflegegeld() {
           </p>
 
           {/* SECTION 4 */}
-          <h2 id="kombinieren" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kombinieren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegeld kombinieren — alle Möglichkeiten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -326,7 +326,7 @@ export default function Pflegegeld() {
           </p>
 
           {/* SECTION 5 */}
-          <h2 id="beantragen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegeld beantragen — so geht es
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -358,7 +358,7 @@ export default function Pflegegeld() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zum Pflegegeld 2026
           </h2>
           <div className="space-y-4 mb-12">

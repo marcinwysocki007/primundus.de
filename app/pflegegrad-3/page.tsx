@@ -73,7 +73,7 @@ export default function Pflegegrad3() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -91,12 +91,12 @@ export default function Pflegegrad3() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegrad 3 bedeutet schwere Beeinträchtigung der Selbstständigkeit. Betroffene erhalten 599 € Pflegegeld pro Monat, 1.497 € Sachleistungen und 3.539 € Entlastungsbudget pro Jahr. PG 3 ist der häufigste Pflegegrad bei der 24h-Pflege zu Hause — mit einer Betreuungskraft bleibt ein sicheres Leben im eigenen Zuhause in fast allen Fällen möglich.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — Pflegegrad 3</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick — Pflegegrad 3</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegegeld: 599 €/Monat (wenn Angehörige oder nicht-professionelle Kräfte pflegen)',
@@ -115,7 +115,7 @@ export default function Pflegegrad3() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was bedeutet Pflegegrad 3?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -139,7 +139,7 @@ export default function Pflegegrad3() {
           </div>
 
           {/* SECTION 2 */}
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Leistungen & Beträge 2026
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -194,7 +194,7 @@ export default function Pflegegrad3() {
           </p>
 
           {/* SECTION: Kosten 24h-Pflege */}
-          <h2 id="kosten-24h" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten-24h" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was kostet 24-Stunden-Pflege bei Pflegegrad 3?
           </h2>
           <p className="text-[15px] text-pm-body mb-4 leading-relaxed">
@@ -217,7 +217,7 @@ export default function Pflegegrad3() {
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="voraussetzungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Voraussetzungen & Einstufung
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -258,7 +258,7 @@ export default function Pflegegrad3() {
           </div>
 
           {/* SECTION 4 */}
-          <h2 id="beantragen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrad 3 beantragen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -288,7 +288,7 @@ export default function Pflegegrad3() {
           </p>
 
           {/* SECTION 5 */}
-          <h2 id="hoeher" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="hoeher" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Höherstufung auf Pflegegrad 4
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -313,7 +313,7 @@ export default function Pflegegrad3() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zu Pflegegrad 3
           </h2>
           <div className="space-y-4 mb-12">

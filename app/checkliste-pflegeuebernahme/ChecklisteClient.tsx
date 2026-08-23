@@ -111,21 +111,21 @@ export function ChecklisteClient() {
 
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-[720px] mx-auto px-5 py-14">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
           <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
-          <span className="text-[#5A5A5A]">Checkliste Pflegeübernahme</span>
+          <span className="text-pm-body">Checkliste Pflegeübernahme</span>
         </nav>
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">TOOLS & RECHNER</p>
-        <h1 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-4">
+        <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">TOOLS & RECHNER</p>
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Checkliste Pflegeübernahme
         </h1>
-        <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-10 max-w-[580px]">
+        <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
           {PHASEN.length} Phasen, {totalItems} konkrete Schritte — vom ersten Tag bis zur stabilen Pflegesituation.
           Ihr Fortschritt wird lokal im Browser gespeichert.
         </p>
@@ -133,7 +133,7 @@ export function ChecklisteClient() {
         {/* Fortschritt */}
         <div className="bg-white border border-pm-line rounded-2xl p-5 mb-6 shadow-sm sticky top-4 z-10">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[13px] font-semibold text-[#3D3D3D]">
+            <span className="text-[13px] font-semibold text-pm-ink">
               {completedItems} von {totalItems} Schritten erledigt
             </span>
             <span className="text-[15px] font-bold text-pm-taupe">{prozent} %</span>
@@ -165,7 +165,7 @@ export function ChecklisteClient() {
                   <span className="w-7 h-7 rounded-full bg-pm-taupe text-white font-bold text-[13px] flex items-center justify-center flex-shrink-0">
                     {idx + 1}
                   </span>
-                  <p className="text-[15px] font-bold text-[#3D3D3D] flex-1">{phase.titel}</p>
+                  <p className="text-[15px] font-bold text-pm-ink flex-1">{phase.titel}</p>
                   <span className="text-[12px] font-bold text-pm-taupe whitespace-nowrap">
                     {phasenDone}/{phase.items.length}
                   </span>
@@ -196,7 +196,7 @@ export function ChecklisteClient() {
                       <p className={`text-[14px] leading-snug ${
                         done[item.id]
                           ? 'text-pm-mute line-through decoration-pm-taupe-light'
-                          : 'text-[#3D3D3D] font-medium'
+                          : 'text-pm-ink font-medium'
                       }`}>
                         {item.label}
                       </p>
@@ -217,14 +217,14 @@ export function ChecklisteClient() {
 
         {/* CTA */}
         <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm mt-8">
-          <p className="text-[15px] font-bold text-[#3D3D3D] mb-2">Brauchen Sie Unterstützung?</p>
-          <p className="text-[14px] text-[#5A5A5A] mb-5 leading-relaxed">
+          <p className="text-[15px] font-bold text-pm-ink mb-2">Brauchen Sie Unterstützung?</p>
+          <p className="text-[14px] text-pm-body mb-5 leading-relaxed">
             Wir begleiten Sie kostenlos durch alle Schritte — von der Antragstellung bis zur passenden Pflegekraft.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="/beratungsgespraech"
-              className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-5 rounded-full transition-colors"
             >
               Kostenfreie Beratung →
             </a>

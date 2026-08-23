@@ -3,15 +3,15 @@
 export function ComparisonSection() {
   return (
     <section id="kostenvergleich" className="bg-white py-16 md:py-20 scroll-mt-20">
-      <div className="w-full max-w-[520px] md:max-w-[720px] lg:max-w-[1080px] mx-auto px-5">
+      <div className="w-full max-w-[640px] md:max-w-[900px] lg:max-w-wide mx-auto px-5">
         <div className="text-center mb-12">
           <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
             Kostenvergleich
           </p>
-          <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-[#3D3D3D] mb-4">
+          <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-pm-ink mb-4">
             24h-Pflege vs. Pflegeheim
           </h2>
-          <p className="text-[15px] md:text-[17px] text-[#5A5A5A] max-w-2xl mx-auto">
+          <p className="text-[15px] md:text-[17px] text-pm-body max-w-2xl mx-auto">
             Die 24-Stunden-Betreuung zu Hause ist nicht nur persönlicher, sondern auch deutlich günstiger als ein Pflegeheimplatz.
           </p>
         </div>
@@ -21,11 +21,11 @@ export function ComparisonSection() {
           <div className="bg-pm-paper rounded-2xl p-8 border-2 border-pm-line">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-pm-line rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#5A5A5A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-pm-body" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-[#3D3D3D] mb-2">Pflegeheim</h3>
+              <h3 className="text-2xl font-bold text-pm-ink mb-2">Pflegeheim</h3>
             </div>
 
             <div className="space-y-4 mb-6">
@@ -33,83 +33,83 @@ export function ComparisonSection() {
                 <svg className="w-5 h-5 text-[#C85A54] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                <span className="text-[15px] text-[#5A5A5A]">Fremde Umgebung</span>
+                <span className="text-[15px] text-pm-body">Fremde Umgebung</span>
               </div>
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#C85A54] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                <span className="text-[15px] text-[#5A5A5A]">Geteiltes Zimmer möglich</span>
+                <span className="text-[15px] text-pm-body">Geteiltes Zimmer möglich</span>
               </div>
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#C85A54] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                <span className="text-[15px] text-[#5A5A5A]">Feste Besuchszeiten</span>
+                <span className="text-[15px] text-pm-body">Feste Besuchszeiten</span>
               </div>
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#C85A54] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                <span className="text-[15px] text-[#5A5A5A]">Standardisierte Abläufe</span>
+                <span className="text-[15px] text-pm-body">Standardisierte Abläufe</span>
               </div>
             </div>
 
             <div className="border-t-2 border-pm-line pt-6">
               <div className="text-center">
-                <p className="text-sm text-[#5A5A5A] mb-2">Durchschnittlicher Eigenanteil pro Monat:</p>
+                <p className="text-sm text-pm-body mb-2">Durchschnittlicher Eigenanteil pro Monat:</p>
                 <p className="text-4xl font-bold text-[#C85A54]">3.364 €</p>
               </div>
             </div>
           </div>
 
           {/* 24h-Pflege */}
-          <div className="bg-[#E8EEF1] rounded-2xl p-8 border-2 border-[#708A95] relative">
-            <div className="absolute -top-3 right-6 bg-[#708A95] text-white text-xs font-bold px-4 py-1 rounded-full">
+          <div className="bg-[#E8EEF1] rounded-2xl p-8 border-2 border-[#8B8B8B] relative">
+            <div className="absolute -top-3 right-6 bg-[#8B8B8B] text-white text-xs font-bold px-4 py-1 rounded-full">
               EMPFOHLEN
             </div>
 
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-[#708A95] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#8B8B8B] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-[#708A95] mb-2">24h-Pflege zu Hause</h3>
+              <h3 className="text-2xl font-bold text-[#8B8B8B] mb-2">24h-Pflege zu Hause</h3>
             </div>
 
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#708A95] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#8B8B8B] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-[15px] text-[#3D3D3D]">Im gewohnten Zuhause bleiben</span>
+                <span className="text-[15px] text-pm-ink">Im gewohnten Zuhause bleiben</span>
               </div>
               <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#708A95] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#8B8B8B] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-[15px] text-[#3D3D3D]">1:1 Betreuung rund um die Uhr</span>
+                <span className="text-[15px] text-pm-ink">1:1 Betreuung rund um die Uhr</span>
               </div>
               <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#708A95] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#8B8B8B] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-[15px] text-[#3D3D3D]">Familie bleibt in der Nähe</span>
+                <span className="text-[15px] text-pm-ink">Familie bleibt in der Nähe</span>
               </div>
               <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#708A95] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#8B8B8B] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-[15px] text-[#3D3D3D]">Individuelle Tagesgestaltung</span>
+                <span className="text-[15px] text-pm-ink">Individuelle Tagesgestaltung</span>
               </div>
             </div>
 
-            <div className="border-t-2 border-[#708A95] pt-6">
+            <div className="border-t-2 border-[#8B8B8B] pt-6">
               <div className="text-center">
-                <p className="text-sm text-[#3D3D3D] mb-2">Durchschnittlicher Eigenanteil pro Monat:</p>
-                <p className="text-4xl font-bold text-[#708A95]">1.500 €</p>
-                <p className="text-sm font-semibold text-[#708A95] mt-2">
+                <p className="text-sm text-pm-ink mb-2">Durchschnittlicher Eigenanteil pro Monat:</p>
+                <p className="text-4xl font-bold text-[#8B8B8B]">1.500 €</p>
+                <p className="text-sm font-semibold text-[#8B8B8B] mt-2">
                   Rund 1.860 € günstiger!
                 </p>
               </div>
@@ -118,8 +118,8 @@ export function ComparisonSection() {
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-sm text-[#5A5A5A] max-w-2xl mx-auto mb-6">
-            <strong className="font-semibold text-[#3D3D3D]">Hinweis:</strong> Die Kosten können je nach Pflegegrad und Region variieren.
+          <p className="text-sm text-pm-body max-w-2xl mx-auto mb-6">
+            <strong className="font-semibold text-pm-ink">Hinweis:</strong> Die Kosten können je nach Pflegegrad und Region variieren.
             Mit unserem Kostenrechner erhalten Sie eine individuelle Berechnung für Ihre Situation.
           </p>
 

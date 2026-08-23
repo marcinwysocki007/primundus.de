@@ -67,7 +67,7 @@ export default function PflegegradBeiParkinson() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -85,7 +85,7 @@ export default function PflegegradBeiParkinson() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Parkinson ist eine progrediente Erkrankung — der Pflegebedarf nimmt über Zeit zu, der Pflegegrad auch. Was Menschen mit Parkinson bei der Begutachtung wissen müssen: Das On-Off-Phänomen führt häufig zu Untereinstufungen, weil der Gutachtertermin in einer guten Phase liegen kann. Dieses Risiko lässt sich durch gute Vorbereitung minimieren.
           </p>
 
@@ -96,7 +96,7 @@ export default function PflegegradBeiParkinson() {
             </p>
           </div>
 
-          <h2 id="welcher-pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="welcher-pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Welcher Pflegegrad bei Parkinson?
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -131,7 +131,7 @@ export default function PflegegradBeiParkinson() {
             </div>
           </div>
 
-          <h2 id="besonderheiten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="besonderheiten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Besonderheiten der Begutachtung bei Parkinson
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -156,7 +156,7 @@ export default function PflegegradBeiParkinson() {
             <a href="/pflegegrad-begutachtung-vorbereiten" className="text-pm-taupe underline hover:text-pm-taupe-deep">MD-Begutachtung vorbereiten</a>
           </p>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Leistungen & Kassenzuschüsse bei Parkinson
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -188,7 +188,7 @@ export default function PflegegradBeiParkinson() {
             </div>
           </div>
 
-          <h2 id="hoehergruppierung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="hoehergruppierung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Höherstufung bei Parkinson — wann und wie
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -203,7 +203,7 @@ export default function PflegegradBeiParkinson() {
               'Alleinbleiben ist nicht mehr sicher (Sturzrisiko)',
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
+                <span className="w-5 h-5 rounded-xl bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
                 <p className="text-[14px] text-pm-body">{item}</p>
               </div>
             ))}
@@ -215,7 +215,7 @@ export default function PflegegradBeiParkinson() {
             <a href="/parkinson-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Parkinson Pflege zuhause</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Welchen Pflegegrad bekommt man bei Parkinson?', a: 'Je nach Stadium: PG 1 bei leichten Einschränkungen, PG 2–3 bei moderaten Gangstörungen und Hilfebedarf, PG 3–4 bei schwerem Parkinson mit On-Off-Phasen, PG 4–5 bei vollständiger Pflegeabhängigkeit.' },

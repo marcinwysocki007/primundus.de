@@ -67,7 +67,7 @@ export default function BarrierefreiesZuhause() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -85,7 +85,7 @@ export default function BarrierefreiesZuhause() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ein sicheres, barrierefreies Zuhause ist die Grundlage für häusliche Pflege. Die Pflegekasse fördert Wohnraumanpassungen mit bis zu 4.180 Euro je Maßnahme — und viele der wirksamsten Maßnahmen kosten nur wenige hundert Euro. Wichtig: Antrag vor Beginn der Maßnahme stellen.
           </p>
 
@@ -96,7 +96,7 @@ export default function BarrierefreiesZuhause() {
             </p>
           </div>
 
-          <h2 id="massnahmen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="massnahmen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die wichtigsten Maßnahmen im Überblick
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -136,7 +136,7 @@ export default function BarrierefreiesZuhause() {
             </div>
           </div>
 
-          <h2 id="bad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="bad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Bad & WC sichern — die wichtigsten Räume
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -161,7 +161,7 @@ export default function BarrierefreiesZuhause() {
             ))}
           </div>
 
-          <h2 id="foerderung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="foerderung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Förderung beantragen — so geht es
           </h2>
           <ol className="space-y-3 mb-10">
@@ -181,7 +181,7 @@ export default function BarrierefreiesZuhause() {
             ))}
           </ol>
 
-          <h2 id="checkliste" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="checkliste" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Raum-für-Raum Checkliste
           </h2>
           <div className="space-y-4 mb-10">
@@ -204,7 +204,7 @@ export default function BarrierefreiesZuhause() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was fördert die Pflegekasse bei der Wohnraumanpassung?', a: 'Bis zu 4.180 € je Maßnahme (§40 SGB XI). Typische Maßnahmen: Treppenlift, Badumbau, Haltegriffe, Türverbreiterung, Rampen. Antrag muss vor Beginn der Maßnahme gestellt werden.' },

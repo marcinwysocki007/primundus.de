@@ -59,7 +59,7 @@ export default function ChecklistePflegekraftEinstellen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -77,11 +77,11 @@ export default function ChecklistePflegekraftEinstellen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die Entscheidung für eine 24h-Betreuungskraft ist richtig — aber worauf kommt es bei der Auswahl an? Was muss vor der Anreise vorbereitet sein? Und wie gelingt der Start in der ersten Woche? Diese Checkliste führt durch jeden Schritt — mit konkreten Fragen für das Auswahlgespräch.
           </p>
 
-          <h2 id="vor-der-auswahl" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="vor-der-auswahl" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Vor der Auswahl — was klar sein muss
           </h2>
           <div className="space-y-2 mb-10">
@@ -104,7 +104,7 @@ export default function ChecklistePflegekraftEinstellen() {
             ))}
           </div>
 
-          <h2 id="auswahlgespräch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="auswahlgespräch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Auswahlgespräch — diese Fragen stellen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -155,7 +155,7 @@ export default function ChecklistePflegekraftEinstellen() {
             ))}
           </div>
 
-          <h2 id="vor-anreise" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vor-anreise" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vor der Anreise — Checkliste
           </h2>
           <div className="space-y-2 mb-10">
@@ -178,7 +178,7 @@ export default function ChecklistePflegekraftEinstellen() {
             ))}
           </div>
 
-          <h2 id="erste-woche" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="erste-woche" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Erste Woche — so gelingt die Eingewöhnung
           </h2>
           <div className="space-y-3 mb-10">
@@ -190,13 +190,13 @@ export default function ChecklistePflegekraftEinstellen() {
               { tag: 'Ende erste Woche', aufgabe: 'Kurzes Feedbackgespräch: Was läuft gut? Was braucht die Kraft noch? Gibt es Probleme? Primundus informieren wenn nötig.' },
             ].map((item) => (
               <div key={item.tag} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.tag}</p>
+                <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.tag}</p>
                 <p className="text-[14px] text-pm-body leading-relaxed">{item.aufgabe}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie wähle ich die richtige Betreuungskraft aus?', a: 'Erfahrung mit der spezifischen Diagnose, aktive Deutschkenntnisse, Persönlichkeit die passt. Telefonat vorab nutzen. Bei Primundus Profil anfordern, Referenzen prüfen.' },

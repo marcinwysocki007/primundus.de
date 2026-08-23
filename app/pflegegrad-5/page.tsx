@@ -66,7 +66,7 @@ export default function Pflegegrad5() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -84,12 +84,12 @@ export default function Pflegegrad5() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegrad 5 ist der höchste Pflegegrad — er bedeutet schwerste Beeinträchtigung plus besonderen Beaufsichtigungsbedarf. Betroffene erhalten 990 € Pflegegeld pro Monat und 2.299 € Sachleistungen. Mit einer 24h-Betreuungskraft ist zuhause bleiben auch bei PG 5 in vielen Fällen möglich.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — Pflegegrad 5</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick — Pflegegrad 5</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegegeld: 990 €/Monat — höchster Satz',
@@ -107,7 +107,7 @@ export default function Pflegegrad5() {
             </ul>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was bedeutet Pflegegrad 5?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -126,7 +126,7 @@ export default function Pflegegrad5() {
             ))}
           </div>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Leistungen & Beträge 2026
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -162,7 +162,7 @@ export default function Pflegegrad5() {
             <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung — alle Kassenzuschüsse 2026</a>
           </p>
 
-          <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Zuhause mit Pflegegrad 5 — ist das möglich?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -186,7 +186,7 @@ export default function Pflegegrad5() {
             <a href="/pflegegrad-4" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad 4</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zu Pflegegrad 5
           </h2>
           <div className="space-y-4 mb-12">

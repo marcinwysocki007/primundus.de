@@ -69,7 +69,7 @@ export default function Entlastungsbetrag() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -87,12 +87,12 @@ export default function Entlastungsbetrag() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Der Entlastungsbetrag beträgt 131 Euro pro Monat — für alle Pflegegrade 1 bis 5, zusätzlich zum Pflegegeld. Er ist zweckgebunden, wird von vielen Familien nicht vollständig genutzt, und kann bis zu 1.572 Euro angespart werden. Wer die Regeln kennt, holt das Maximum heraus.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Betrag: 131 €/Monat — für alle Pflegegrade 1 bis 5',
@@ -111,7 +111,7 @@ export default function Entlastungsbetrag() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist der Entlastungsbetrag?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -125,7 +125,7 @@ export default function Entlastungsbetrag() {
           </p>
 
           {/* SECTION 2 */}
-          <h2 id="wofuer" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wofuer" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wofür kann man den Entlastungsbetrag nutzen?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -148,7 +148,7 @@ export default function Entlastungsbetrag() {
           </div>
 
           {/* SECTION 3 */}
-          <h2 id="anspruch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="anspruch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wer hat Anspruch?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -180,7 +180,7 @@ export default function Entlastungsbetrag() {
           </div>
 
           {/* SECTION 4 */}
-          <h2 id="beantragen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Beantragen & abrechnen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -211,7 +211,7 @@ export default function Entlastungsbetrag() {
           </div>
 
           {/* SECTION 5 */}
-          <h2 id="kombination" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kombination" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Mit anderen Leistungen kombinieren
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -235,7 +235,7 @@ export default function Entlastungsbetrag() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zum Entlastungsbetrag
           </h2>
           <div className="space-y-4 mb-12">

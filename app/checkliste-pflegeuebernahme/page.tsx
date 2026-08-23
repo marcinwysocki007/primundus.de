@@ -122,10 +122,10 @@ export default function Page() {
         <div className="max-w-[720px] mx-auto px-5 pb-16">
 
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-3">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-3">
               Pflegeübernahme in 5 Phasen — der vollständige Überblick
             </h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-6">
+            <p className="text-[15px] text-pm-body leading-relaxed mb-6">
               Pflege übernehmen ist kein Sprint, sondern ein Marathon. Diese Checkliste teilt die Aufgaben
               in fünf logische Phasen — von akuter Soforthilfe bis zur dauerhaft stabilen Pflegesituation.
             </p>
@@ -137,10 +137,10 @@ export default function Page() {
                   </span>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between gap-3 mb-1">
-                      <p className="text-[14px] font-bold text-[#3D3D3D]">{p.titel}</p>
+                      <p className="text-[14px] font-bold text-pm-ink">{p.titel}</p>
                       <span className="text-[11px] font-bold text-pm-taupe-light whitespace-nowrap">{p.anzahl} Schritte</span>
                     </div>
-                    <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{p.focus}</p>
+                    <p className="text-[13px] text-pm-body leading-relaxed">{p.focus}</p>
                   </div>
                 </div>
               ))}
@@ -148,7 +148,7 @@ export default function Page() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">Häufige Fragen zur Pflegeübernahme</h2>
+            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Häufige Fragen zur Pflegeübernahme</h2>
             <div className="flex flex-col gap-3">
               {faqs.map((faq) => (
                 <details
@@ -156,11 +156,11 @@ export default function Page() {
                   className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
-                    <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
+                    <span className="text-[14px] font-semibold text-pm-ink leading-snug">{faq.q}</span>
                     <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
                   </summary>
                   <div className="px-5 pb-4 pt-1 border-t border-pm-line-soft">
-                    <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
+                    <p className="text-[13px] text-pm-body leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
               ))}
@@ -168,7 +168,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Vertiefende Themen</h2>
+            <h2 className="text-[18px] font-bold text-pm-ink mb-4">Vertiefende Themen</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { href: '/pflegegrad-beantragen', label: 'Pflegegrad beantragen', desc: 'Schritt für Schritt zum Bescheid' },
@@ -181,7 +181,7 @@ export default function Page() {
                   href={item.href}
                   className="bg-white border border-pm-line rounded-xl px-4 py-3.5 hover:border-pm-taupe transition-colors"
                 >
-                  <p className="text-[14px] font-semibold text-[#3D3D3D] mb-0.5">→ {item.label}</p>
+                  <p className="text-[14px] font-semibold text-pm-ink mb-0.5">→ {item.label}</p>
                   <p className="text-[12px] text-pm-mute">{item.desc}</p>
                 </a>
               ))}

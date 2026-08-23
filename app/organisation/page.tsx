@@ -34,30 +34,30 @@ export default function Organisation() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
-            <span className="text-[#5A5A5A]">Organisation</span>
+            <span className="text-pm-body">Organisation</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             RATGEBER
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Organisation der 24h-Pflege
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-12 max-w-[620px]">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Von der Suche nach der richtigen Pflegekraft bis zum laufenden Betrieb — alle Schritte und Ratgeber zur praktischen Organisation der 24h-Pflege.
           </p>
 
           {/* Pflegekraft finden */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegekraft finden & auswählen</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Pflegekraft finden & auswählen</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Pflegekraft finden — worauf achten?', href: '/pflegekraft-finden', desc: 'Deutschkenntnisse, Erfahrung, Persönlichkeit — die wichtigsten Auswahlkriterien.' },
@@ -67,14 +67,14 @@ export default function Organisation() {
               { titel: 'Pflegekraft aus Rumänien', href: '/pflegekraft-aus-rumaenien', desc: 'Rumänische Betreuungskräfte — Erfahrung, Leistung und Kosten.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Rechtliches & Verträge */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Rechtliches & Verträge</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Rechtliches & Verträge</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Pflegekraft legal beschäftigen', href: '/pflegekraft-legal-beschaeftigen', desc: 'Die 3 Modelle: Entsendemodell, Direktanstellung, Selbstständigkeit — mit allen Risiken.' },
@@ -84,14 +84,14 @@ export default function Organisation() {
               { titel: 'Scheinselbstständigkeit vermeiden', href: '/scheinselbststaendigkeit-pflege-vermeiden', desc: 'Warum Scheinselbstständigkeit ein hohes Risiko ist und wie man es vermeidet.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Wechsel & laufende Betreuung */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Wechsel & laufende Betreuung</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Wechsel & laufende Betreuung</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Pflegekraft wechseln', href: '/pflegekraft-wechseln', desc: 'Wann ein Wechsel sinnvoll ist, wie er reibungslos läuft und was zu beachten ist.' },
@@ -101,14 +101,14 @@ export default function Organisation() {
               { titel: 'Pflegeberater finden', href: '/pflegeberater-finden', desc: 'Wann ein unabhängiger Pflegeberater hilft und wie man den richtigen findet.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Koordination & Notfall */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Koordination & Notfall</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Koordination & Notfall</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: '24h-Pflege organisieren — Schritt für Schritt', href: '/24h-pflege-organisieren', desc: 'Von der ersten Überlegung bis zur laufenden Betreuung — vollständiger Ablauf.' },
@@ -120,14 +120,14 @@ export default function Organisation() {
               { titel: 'Betreuung nach dem Krankenhausaufenthalt', href: '/24-stunden-pflege-krankenhausaufenthalt', desc: 'Entlassung steht an und niemand kann da sein? So wird die Betreuung schnell organisiert.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Hilfsmittel & Wohnen */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Hilfsmittel & Wohnen</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Hilfsmittel & Wohnen</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Pflegehilfsmittel organisieren', href: '/pflegehilfsmittel-organisieren', desc: 'Welche Hilfsmittel im Pflegealltag sinnvoll sind und wie man sie bekommt.' },
@@ -135,7 +135,7 @@ export default function Organisation() {
               { titel: 'Rollstuhl & Hilfsmittel beantragen', href: '/hilfsmittel-rollstuhl-beantragen', desc: 'Rollstuhl, Pflegebett, Gehilfen — Antrag, Fristen und was die Kasse zahlt.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
@@ -144,9 +144,9 @@ export default function Organisation() {
           {/* Ablauf bei Primundus */}
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-12">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-1">Primundus Ablauf</p>
-              <p className="text-[15px] font-semibold text-[#3D3D3D]">In 4–7 Tagen zur Betreuungskraft</p>
-              <p className="text-[13px] text-[#5A5A5A] mt-0.5">Transparent, rechtssicher, täglich kündbar</p>
+              <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Primundus Ablauf</p>
+              <p className="text-[15px] font-semibold text-pm-ink">In 4–7 Tagen zur Betreuungskraft</p>
+              <p className="text-[13px] text-pm-body mt-0.5">Transparent, rechtssicher, täglich kündbar</p>
             </div>
             <a
               href="/ablauf"

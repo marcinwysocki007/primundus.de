@@ -67,7 +67,7 @@ export default function Kombinationsleistung() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -85,12 +85,12 @@ export default function Kombinationsleistung() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wer nicht alle Sachleistungen durch einen ambulanten Pflegedienst nutzt, bekommt anteiliges Pflegegeld für den Rest — das ist die Kombinationsleistung nach § 38 SGB XI. Damit lassen sich ambulanter Pflegedienst und private Betreuung durch Angehörige oder eine 24h-Kraft optimal kombinieren.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Die Grundformel</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Die Grundformel</p>
             <div className="bg-pm-paper rounded-xl p-4 text-center mb-3">
               <p className="text-[16px] font-bold text-pm-ink">Nicht genutzte Sachleistungen × Pflegegeld = Anteiliges Pflegegeld</p>
             </div>
@@ -99,7 +99,7 @@ export default function Kombinationsleistung() {
             </p>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist die Kombinationsleistung?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -109,7 +109,7 @@ export default function Kombinationsleistung() {
             Voraussetzung: Der ambulante Pflegedienst rechnet direkt mit der Pflegekasse ab und gibt an welcher Anteil der Sachleistungen genutzt wurde. Den Rest bekommt die pflegebedürftige Person als Pflegegeld.
           </p>
 
-          <h2 id="berechnung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="berechnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Berechnung & Rechenbeispiele
           </h2>
           <div className="space-y-4 mb-10">
@@ -153,7 +153,7 @@ export default function Kombinationsleistung() {
             ))}
           </div>
 
-          <h2 id="wann-sinnvoll" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann-sinnvoll" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist die Kombinationsleistung besonders sinnvoll?
           </h2>
           <div className="space-y-3 mb-10">
@@ -169,7 +169,7 @@ export default function Kombinationsleistung() {
             ))}
           </div>
 
-          <h2 id="beantragen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie man die Kombinationsleistung beantragt
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -199,7 +199,7 @@ export default function Kombinationsleistung() {
             <a href="/pflegegeld" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegeld 2026</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was ist die Kombinationsleistung in der Pflege?', a: '§38 SGB XI: Wenn nicht alle Sachleistungen durch einen Pflegedienst genutzt werden, bekommt man für den ungenutzten Anteil anteiliges Pflegegeld. Pflegedienst + private Pflege lassen sich so kombinieren.' },

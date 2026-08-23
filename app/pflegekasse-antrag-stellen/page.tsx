@@ -67,7 +67,7 @@ export default function PflegekasseAntragStellen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -85,7 +85,7 @@ export default function PflegekasseAntragStellen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Der Antrag bei der Pflegekasse ist der erste und wichtigste Schritt — denn alle Leistungen gelten rückwirkend ab Antragsdatum, nicht ab dem Datum der Begutachtung. Der Antrag selbst ist formlos: Ein kurzes Schreiben oder ein Telefonanruf genügt.
           </p>
 
@@ -96,7 +96,7 @@ export default function PflegekasseAntragStellen() {
             </p>
           </div>
 
-          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="antrag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag stellen — so geht es
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -126,7 +126,7 @@ export default function PflegekasseAntragStellen() {
             ))}
           </div>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Welche Leistungen beantragen?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -148,7 +148,7 @@ export default function PflegekasseAntragStellen() {
             ))}
           </div>
 
-          <h2 id="fristen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="fristen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Fristen & Bearbeitungszeiten
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -179,7 +179,7 @@ export default function PflegekasseAntragStellen() {
             </div>
           </div>
 
-          <h2 id="ablehnung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="ablehnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag abgelehnt oder zu niedrig eingestuft — was tun?
           </h2>
           <div className="space-y-3 mb-10">
@@ -203,7 +203,7 @@ export default function PflegekasseAntragStellen() {
             <a href="/widerspruch-pflegekasse-einlegen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Widerspruch einlegen — Muster & Tipps</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie stelle ich einen Antrag bei der Pflegekasse?', a: 'Formlos — per Brief, Telefon oder E-Mail: "Ich beantrage Leistungen der Pflegeversicherung." Name, Versichertennummer, Datum. Die Pflegekasse veranlasst die Begutachtung.' },

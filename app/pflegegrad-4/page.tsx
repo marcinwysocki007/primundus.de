@@ -68,7 +68,7 @@ export default function Pflegegrad4() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -86,12 +86,12 @@ export default function Pflegegrad4() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegrad 4 bedeutet schwerste Beeinträchtigung der Selbstständigkeit. Betroffene erhalten 800 € Pflegegeld pro Monat, 1.859 € Sachleistungen und 3.539 € Entlastungsbudget pro Jahr. Mit einer 24h-Betreuungskraft ist zuhause bleiben bei PG 4 in den meisten Fällen möglich.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — Pflegegrad 4</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick — Pflegegrad 4</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegegeld: 800 €/Monat (wenn Angehörige oder private Kräfte pflegen)',
@@ -109,7 +109,7 @@ export default function Pflegegrad4() {
             </ul>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was bedeutet Pflegegrad 4?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -132,7 +132,7 @@ export default function Pflegegrad4() {
             ))}
           </div>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Leistungen & Beträge 2026
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -170,7 +170,7 @@ export default function Pflegegrad4() {
             <a href="/pflegegeld" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegeld 2026</a>
           </p>
 
-          <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="voraussetzungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Voraussetzungen — Pflegegrad im Vergleich
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -202,7 +202,7 @@ export default function Pflegegrad4() {
             </div>
           </div>
 
-          <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             24h-Pflege bei Pflegegrad 4 — zuhause bleiben
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -230,7 +230,7 @@ export default function Pflegegrad4() {
             <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zu Pflegegrad 4
           </h2>
           <div className="space-y-4 mb-12">

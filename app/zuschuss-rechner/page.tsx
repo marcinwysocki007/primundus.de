@@ -139,10 +139,10 @@ export default function ZuschussRechnerPage() {
 
           {/* Leistungsübersicht */}
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-3">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-3">
               Alle Pflegeleistungen 2026 im Überblick
             </h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-6">
+            <p className="text-[15px] text-pm-body leading-relaxed mb-6">
               Die Pflegekasse leistet mehrere unabhängige Zuschüsse — viele davon können kombiniert werden.
               Hier ein Überblick über alle wichtigen Leistungen, die bei 24h-Pflege zuhause relevant sind.
             </p>
@@ -150,10 +150,10 @@ export default function ZuschussRechnerPage() {
               {leistungen.map((l) => (
                 <div key={l.name} className="bg-white border border-pm-line rounded-xl px-5 py-4">
                   <div className="flex items-start justify-between gap-3 mb-1">
-                    <p className="text-[14px] font-bold text-[#3D3D3D]">{l.name}</p>
+                    <p className="text-[14px] font-bold text-pm-ink">{l.name}</p>
                     <span className="text-[13px] font-bold text-pm-green whitespace-nowrap">{l.max}</span>
                   </div>
-                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed mb-1">{l.beschreibung}</p>
+                  <p className="text-[13px] text-pm-body leading-relaxed mb-1">{l.beschreibung}</p>
                   <p className="text-[11px] text-pm-taupe-light font-semibold uppercase tracking-wide">Ab {l.ab}</p>
                 </div>
               ))}
@@ -162,7 +162,7 @@ export default function ZuschussRechnerPage() {
 
           {/* FAQ */}
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-6">
               Häufige Fragen zu Zuschüssen & Förderung
             </h2>
             <div className="flex flex-col gap-3">
@@ -172,11 +172,11 @@ export default function ZuschussRechnerPage() {
                   className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
-                    <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
+                    <span className="text-[14px] font-semibold text-pm-ink leading-snug">{faq.q}</span>
                     <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
                   </summary>
                   <div className="px-5 pb-4 pt-1 border-t border-pm-line-soft">
-                    <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
+                    <p className="text-[13px] text-pm-body leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
               ))}
@@ -185,7 +185,7 @@ export default function ZuschussRechnerPage() {
 
           {/* Related tools */}
           <section>
-            <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Weitere hilfreiche Tools</h2>
+            <h2 className="text-[18px] font-bold text-pm-ink mb-4">Weitere hilfreiche Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf in 3 Minuten einschätzen' },
@@ -199,7 +199,7 @@ export default function ZuschussRechnerPage() {
                   {...('external' in item && item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className="bg-white border border-pm-line rounded-xl px-4 py-3.5 hover:border-pm-taupe transition-colors"
                 >
-                  <p className="text-[14px] font-semibold text-[#3D3D3D] mb-0.5">→ {item.label}</p>
+                  <p className="text-[14px] font-semibold text-pm-ink mb-0.5">→ {item.label}</p>
                   <p className="text-[12px] text-pm-mute">{item.desc}</p>
                 </a>
               ))}

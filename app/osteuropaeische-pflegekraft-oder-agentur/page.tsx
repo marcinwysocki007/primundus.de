@@ -59,7 +59,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
@@ -77,11 +77,11 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Viele Familien fragen sich: Warum nicht die Pflegekraft direkt in Polen oder Rumänien suchen statt über eine Agentur? Klingt günstiger. Die Realität ist komplexer — direktes Suchen bedeutet: selbst prüfen, selbst Rechtssicherheit herstellen, selbst Ersatz organisieren wenn die Kraft krank wird. Dieser Vergleich zeigt was wirklich anders ist.
           </p>
 
-          <h2 id="direkt-vs-agentur" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="direkt-vs-agentur" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Direkt vs. Agentur — vollständiger Vergleich
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -116,7 +116,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
             </div>
           </div>
 
-          <h2 id="vorteile-agentur" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vorteile-agentur" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Warum die meisten Familien auf eine Agentur setzen
           </h2>
           <div className="space-y-3 mb-10">
@@ -134,7 +134,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
             ))}
           </div>
 
-          <h2 id="worauf-achten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="worauf-achten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Worauf bei der Wahl einer Agentur achten?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -155,7 +155,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
             ))}
           </div>
 
-          <h2 id="primunus" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="primunus" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was Primundus anders macht
           </h2>
           <div className="space-y-3 mb-10">
@@ -176,7 +176,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Ist Direktsuche einer Pflegekraft günstiger?', a: 'Evtl. auf dem Papier — aber dann muss die Familie selbst Rechtssicherheit herstellen, selbst prüfen, selbst Ersatz organisieren. Der versteckte Aufwand und das rechtliche Risiko werden selten einkalkuliert.' },

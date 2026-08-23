@@ -152,18 +152,18 @@ const sections = [
 export default function Page() {
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-[1100px] mx-auto px-5 py-16">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
-          <span className="text-[#3D3D3D]">Sitemap</span>
+          <span className="text-pm-ink">Sitemap</span>
         </nav>
 
-        <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-3">
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Alle Seiten im Überblick
         </h1>
-        <p className="text-[16px] text-[#5A5A5A] mb-12 max-w-2xl">
+        <p className="text-[16px] text-pm-body mb-12 max-w-2xl">
           Hier finden Sie eine vollständige Übersicht aller Bereiche und Seiten von primundus.de.
         </p>
 
@@ -178,7 +178,7 @@ export default function Page() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[14px] text-[#5A5A5A] hover:text-pm-taupe transition-colors"
+                      className="text-[14px] text-pm-body hover:text-pm-taupe transition-colors"
                     >
                       {link.label}
                     </Link>

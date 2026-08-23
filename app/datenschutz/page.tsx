@@ -11,27 +11,27 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-article mx-auto px-5 py-16">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
-          <span className="text-[#3D3D3D]">Datenschutzerklärung</span>
+          <span className="text-pm-ink">Datenschutzerklärung</span>
         </nav>
 
-        <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-10">
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Datenschutzerklärung
         </h1>
 
         <div className="space-y-6">
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">1. Verantwortliche Stelle</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-4">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">1. Verantwortliche Stelle</h2>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-4">
               Verantwortlich für die Datenverarbeitung auf dieser Website ist:
             </p>
-            <div className="bg-pm-paper rounded-xl p-5 text-[15px] text-[#5A5A5A] space-y-1">
-              <p className="font-semibold text-[#3D3D3D]">Primundus Deutschland</p>
+            <div className="bg-pm-paper rounded-xl p-5 text-[15px] text-pm-body space-y-1">
+              <p className="font-semibold text-pm-ink">Primundus Deutschland</p>
               <p>Landsberger Str. 155</p>
               <p>80687 München</p>
               <p className="pt-2">Primundus ist eine Marke von:</p>
@@ -49,35 +49,35 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">2. Erhebung und Speicherung personenbezogener Daten</h2>
-            <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">2.1 Besuch unserer Website</h3>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">2. Erhebung und Speicherung personenbezogener Daten</h2>
+            <h3 className="text-[15px] font-semibold text-pm-ink mb-2">2.1 Besuch unserer Website</h3>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
               Bei der bloß informatorischen Nutzung unserer Website erheben wir nur die personenbezogenen Daten, die Ihr Browser an unseren Server übermittelt (Logfile-Daten):
             </p>
-            <ul className="list-disc pl-5 mb-5 space-y-1 text-[15px] text-[#5A5A5A]">
+            <ul className="list-disc pl-5 mb-5 space-y-1 text-[15px] text-pm-body">
               <li>IP-Adresse des anfragenden Rechners</li>
               <li>Datum und Uhrzeit des Zugriffs</li>
               <li>Name und URL der abgerufenen Datei</li>
               <li>Referrer-URL (Website, von der aus zugegriffen wird)</li>
               <li>Verwendeter Browser und Betriebssystem</li>
             </ul>
-            <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">2.2 Nutzung des Kostenrechners & Kontoerstellung</h3>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
+            <h3 className="text-[15px] font-semibold text-pm-ink mb-2">2.2 Nutzung des Kostenrechners & Kontoerstellung</h3>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
               Bei der Nutzung unseres Kostenrechners unter <a href="https://kostenrechner.primundus.de" className="text-pm-taupe hover:underline">kostenrechner.primundus.de</a> erheben wir folgende Daten:
             </p>
-            <ul className="list-disc pl-5 mb-4 space-y-1 text-[15px] text-[#5A5A5A]">
+            <ul className="list-disc pl-5 mb-4 space-y-1 text-[15px] text-pm-body">
               <li>Angaben zur Pflegesituation (Pflegegrad, Wohnsituation, benötigte Leistungen)</li>
               <li>Kontaktdaten (Name, E-Mail-Adresse, Telefonnummer)</li>
               <li>Berechnete Kostenkalkulation und individuelle Zuschüsse</li>
             </ul>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+            <p className="text-[15px] text-pm-body leading-[1.7]">
               Mit dem Abschluss des Formulars wird automatisch ein persönliches Kundenkonto angelegt. Über dieses Konto können Sie Ihr individuelles Angebot einsehen, passende Pflegekräfte-Profile ansehen und Betreuungskräfte direkt einladen. Der Zugang erfolgt über einen Ihnen per E-Mail zugesandten persönlichen Einmal-Link (Magic Link) — es ist kein separates Passwort erforderlich.
             </p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">3. Zweck der Datenverarbeitung</h2>
-            <ul className="list-disc pl-5 space-y-2 text-[15px] text-[#5A5A5A]">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">3. Zweck der Datenverarbeitung</h2>
+            <ul className="list-disc pl-5 space-y-2 text-[15px] text-pm-body">
               <li>Bereitstellung und technische Administration der Website</li>
               <li>Erstellung und Verwaltung Ihres persönlichen Kundenkontos</li>
               <li>Bereitstellung Ihres individuellen Angebots inkl. passender Pflegekräfte-Profile</li>
@@ -89,8 +89,8 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">4. Rechtsgrundlage der Verarbeitung</h2>
-            <ul className="list-disc pl-5 space-y-2 text-[15px] text-[#5A5A5A]">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">4. Rechtsgrundlage der Verarbeitung</h2>
+            <ul className="list-disc pl-5 space-y-2 text-[15px] text-pm-body">
               <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) — bei Angebotsanfragen</li>
               <li>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung)</li>
               <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) — für technische Administration und Statistik</li>
@@ -98,22 +98,22 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">5. Weitergabe von Daten</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">5. Weitergabe von Daten</h2>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
               Wir geben Ihre personenbezogenen Daten nur weiter, wenn Sie ausdrücklich eingewilligt haben, dies für die Erbringung unserer Dienstleistung erforderlich ist oder eine gesetzliche Verpflichtung besteht. Eine Übermittlung an Drittländer findet nicht statt.
             </p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">6. Speicherdauer</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">6. Speicherdauer</h2>
+            <p className="text-[15px] text-pm-body leading-[1.7]">
               Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies für die Erfüllung der genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Anfragedaten werden nach Abschluss der Bearbeitung oder auf Ihren Wunsch gelöscht.
             </p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">7. Ihre Rechte</h2>
-            <ul className="list-disc pl-5 space-y-2 text-[15px] text-[#5A5A5A]">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">7. Ihre Rechte</h2>
+            <ul className="list-disc pl-5 space-y-2 text-[15px] text-pm-body">
               <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
               <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
               <li>Recht auf Löschung (Art. 17 DSGVO)</li>
@@ -123,37 +123,37 @@ export default function Page() {
               <li>Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
               <li>Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
             </ul>
-            <p className="text-[15px] text-[#5A5A5A] mt-4">
+            <p className="text-[15px] text-pm-body mt-4">
               Zur Ausübung Ihrer Rechte wenden Sie sich an:{' '}
               <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a>
             </p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">8. Cookies und Tracking</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">8. Cookies und Tracking</h2>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
               Unsere Website verwendet Cookies und Tracking-Technologien:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-[15px] text-[#5A5A5A]">
+            <ul className="list-disc pl-5 space-y-2 text-[15px] text-pm-body">
               <li>Technisch notwendige Cookies für die Funktionalität der Website</li>
               <li>Analyse-Cookies zur Verbesserung unseres Angebots (Google Analytics) — nur mit Ihrer Einwilligung</li>
               <li>Conversion-Tracking für Werbezwecke (Google Ads) — nur mit Ihrer Einwilligung</li>
             </ul>
-            <p className="text-[15px] text-[#5A5A5A] mt-3">
+            <p className="text-[15px] text-pm-body mt-3">
               Sie können Ihre Cookie-Einstellungen jederzeit über den entsprechenden Link im Footer anpassen.
             </p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">9. Datensicherheit</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">9. Datensicherheit</h2>
+            <p className="text-[15px] text-pm-body leading-[1.7]">
               Wir verwenden geeignete technische und organisatorische Sicherheitsmaßnahmen, um Ihre Daten gegen Manipulationen, Verlust, Zerstörung oder unberechtigten Zugriff zu schützen. Unsere Maßnahmen werden entsprechend der technologischen Entwicklung fortlaufend verbessert.
             </p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">10. Aktualität dieser Datenschutzerklärung</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-3">10. Aktualität dieser Datenschutzerklärung</h2>
+            <p className="text-[15px] text-pm-body leading-[1.7]">
               Diese Datenschutzerklärung hat den Stand Februar 2026. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher Vorgaben kann es notwendig werden, diese Erklärung zu ändern.
             </p>
           </div>

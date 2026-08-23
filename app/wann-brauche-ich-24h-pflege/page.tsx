@@ -67,7 +67,7 @@ export default function WannBraucheIch24hPflege() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/24-stunden-pflege" className="hover:text-pm-taupe transition-colors">24-Stunden-Pflege</a>
@@ -75,7 +75,7 @@ export default function WannBraucheIch24hPflege() {
             <span className="text-pm-ink">Wann brauche ich 24h-Pflege?</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Ratgeber · 6 Min Lesezeit · Aktualisiert April 2026
           </p>
 
@@ -85,12 +85,12 @@ export default function WannBraucheIch24hPflege() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Viele Familien warten zu lang mit der Entscheidung für 24h-Pflege — aus Kostengründen, aus Gewohnheit, oder weil sie die Zeichen nicht deuten. Dabei gibt es klare Situationen in denen 24h-Präsenz nicht mehr optional ist. Wer zu lange wartet, riskiert einen Sturz, einen Krankenhausaufenthalt oder den Zusammenbruch pflegender Angehöriger.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — klare Zeichen für 24h-Pflege</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick — klare Zeichen für 24h-Pflege</p>
             <ul className="space-y-2.5">
               {[
                 'Der Pflegebedürftige kann nicht mehr allein gelassen werden',
@@ -108,7 +108,7 @@ export default function WannBraucheIch24hPflege() {
             </ul>
           </div>
 
-          <h2 id="zeichen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="zeichen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die 10 klaren Zeichen für 24h-Pflege
           </h2>
           <div className="space-y-4 mb-10">
@@ -134,7 +134,7 @@ export default function WannBraucheIch24hPflege() {
             ))}
           </div>
 
-          <h2 id="situationen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="situationen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Typische Pflegesituationen in denen 24h-Pflege startet
           </h2>
           <div className="space-y-3 mb-10">
@@ -152,7 +152,7 @@ export default function WannBraucheIch24hPflege() {
             ))}
           </div>
 
-          <h2 id="checkliste" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="checkliste" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Entscheidungs-Checkliste
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -178,7 +178,7 @@ export default function WannBraucheIch24hPflege() {
             </div>
           </div>
 
-          <h2 id="alternativen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="alternativen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alternativen zur 24h-Pflege — wann sie ausreichen
           </h2>
           <div className="space-y-3 mb-10">
@@ -194,7 +194,7 @@ export default function WannBraucheIch24hPflege() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen
           </h2>
           <div className="space-y-4 mb-12">

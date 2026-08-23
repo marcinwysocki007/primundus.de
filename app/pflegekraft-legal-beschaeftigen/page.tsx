@@ -70,7 +70,7 @@ export default function PflegekraftLegalBeschaeftigen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -88,12 +88,12 @@ export default function PflegekraftLegalBeschaeftigen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Es gibt drei Wege eine Pflegekraft zu beschäftigen — nur zwei davon sind legal, einer ist eindeutig empfehlenswert. Das Entsendemodell über eine Agentur ist der rechtssicherste, unkomplizierteste und meistgenutzte Weg. Scheinselbstständigkeit dagegen ist strafbar und kostet im Ernstfall tausende Euro.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Entsendemodell: Empfohlen — Kraft ist im EU-Heimatland angestellt, A1-Bescheinigung',
@@ -112,7 +112,7 @@ export default function PflegekraftLegalBeschaeftigen() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="modelle" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="modelle" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die 3 Beschäftigungsmodelle im Überblick
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -148,7 +148,7 @@ export default function PflegekraftLegalBeschaeftigen() {
           </div>
 
           {/* SECTION 2 */}
-          <h2 id="entsendemodell" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="entsendemodell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Entsendemodell — der rechtssichere Weg
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -172,7 +172,7 @@ export default function PflegekraftLegalBeschaeftigen() {
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="direktanstellung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="direktanstellung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Direktanstellung — legal aber aufwendig
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -192,7 +192,7 @@ export default function PflegekraftLegalBeschaeftigen() {
           </div>
 
           {/* SECTION 4 */}
-          <h2 id="scheinselbststaendigkeit" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="scheinselbststaendigkeit" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Scheinselbstständigkeit — das größte Risiko
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -225,7 +225,7 @@ export default function PflegekraftLegalBeschaeftigen() {
           </p>
 
           {/* SECTION 5 */}
-          <h2 id="a1-bescheinigung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="a1-bescheinigung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die A1-Bescheinigung — was sie bedeutet
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -249,7 +249,7 @@ export default function PflegekraftLegalBeschaeftigen() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur legalen Beschäftigung
           </h2>
           <div className="space-y-4 mb-12">

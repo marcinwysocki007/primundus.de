@@ -74,9 +74,9 @@ const LEISTUNGEN_OPTIONS = [
 // ─── Shared UI helpers ────────────────────────────────────────────────────────
 
 const inputClass =
-  'w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] text-[#3D3D3D] bg-white focus:outline-none focus:border-pm-taupe transition-colors'
+  'w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] text-pm-ink bg-white focus:outline-none focus:border-pm-taupe transition-colors'
 
-const labelClass = 'block text-[13px] font-semibold text-[#3D3D3D] mb-1.5'
+const labelClass = 'block text-[13px] font-semibold text-pm-ink mb-1.5'
 
 function Field({
   label,
@@ -157,7 +157,7 @@ function NavButtons({
       {step > 1 ? (
         <button
           onClick={onBack}
-          className="px-5 py-2.5 rounded-xl border border-pm-line text-[14px] font-semibold text-[#5A5A5A] hover:border-pm-taupe hover:text-pm-taupe transition-colors"
+          className="px-5 py-2.5 rounded-xl border border-pm-line text-[14px] font-semibold text-pm-body hover:border-pm-taupe hover:text-pm-taupe transition-colors"
         >
           ← Zurück
         </button>
@@ -167,14 +167,14 @@ function NavButtons({
       {step < 5 ? (
         <button
           onClick={onNext}
-          className="px-6 py-2.5 rounded-xl bg-pm-taupe hover:bg-[#7A6347] text-white text-[14px] font-bold transition-colors"
+          className="px-6 py-2.5 rounded-xl bg-pm-taupe hover:bg-pm-taupe-deep text-white text-[14px] font-bold transition-colors"
         >
           Weiter →
         </button>
       ) : (
         <button
           onClick={onPrint}
-          className="px-6 py-2.5 rounded-xl bg-pm-taupe hover:bg-[#7A6347] text-white text-[14px] font-bold transition-colors"
+          className="px-6 py-2.5 rounded-xl bg-pm-taupe hover:bg-pm-taupe-deep text-white text-[14px] font-bold transition-colors"
         >
           Pflegevertrag drucken / als PDF speichern
         </button>
@@ -189,7 +189,7 @@ function Step1({ data, onChange }: { data: FormData; onChange: (key: keyof FormD
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Pflegebedürftige Person</h2>
+        <h2 className="text-[20px] font-bold text-pm-ink mb-1">Pflegebedürftige Person</h2>
         <p className="text-[14px] text-pm-mute">Angaben zur Person, die gepflegt wird</p>
       </div>
 
@@ -280,7 +280,7 @@ function Step2({ data, onChange }: { data: FormData; onChange: (key: keyof FormD
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Pflegeperson</h2>
+        <h2 className="text-[20px] font-bold text-pm-ink mb-1">Pflegeperson</h2>
         <p className="text-[14px] text-pm-mute">Angaben zur pflegenden Person</p>
       </div>
 
@@ -371,7 +371,7 @@ function Step3({
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Pflegeleistungen</h2>
+        <h2 className="text-[20px] font-bold text-pm-ink mb-1">Pflegeleistungen</h2>
         <p className="text-[14px] text-pm-mute">Welche Leistungen werden erbracht?</p>
       </div>
 
@@ -388,8 +388,8 @@ function Step3({
                 className={[
                   'flex items-center gap-3 px-4 py-3 rounded-xl border text-left text-[14px] transition-all',
                   checked
-                    ? 'border-pm-taupe bg-[#F8F5EF] text-[#3D3D3D] font-medium'
-                    : 'border-pm-line bg-white text-[#5A5A5A] hover:border-[#C8B99A]',
+                    ? 'border-pm-taupe bg-[#F8F5EF] text-pm-ink font-medium'
+                    : 'border-pm-line bg-white text-pm-body hover:border-[#C8B99A]',
                 ].join(' ')}
               >
                 <span
@@ -451,7 +451,7 @@ function Step4({
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Vergütung & Vertrag</h2>
+        <h2 className="text-[20px] font-bold text-pm-ink mb-1">Vergütung & Vertrag</h2>
         <p className="text-[14px] text-pm-mute">Vereinbarte Konditionen und Vertragslaufzeit</p>
       </div>
 
@@ -515,8 +515,8 @@ function Step4({
           className={[
             'flex items-center gap-3 px-4 py-3 rounded-xl border text-left text-[14px] w-full transition-all',
             data.aufwandsersatz
-              ? 'border-pm-taupe bg-[#F8F5EF] text-[#3D3D3D] font-medium'
-              : 'border-pm-line bg-white text-[#5A5A5A] hover:border-[#C8B99A]',
+              ? 'border-pm-taupe bg-[#F8F5EF] text-pm-ink font-medium'
+              : 'border-pm-line bg-white text-pm-body hover:border-[#C8B99A]',
           ].join(' ')}
         >
           <span
@@ -566,7 +566,7 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Vorschau & Download</h2>
+        <h2 className="text-[20px] font-bold text-pm-ink mb-1">Vorschau & Download</h2>
         <p className="text-[14px] text-pm-mute">Bitte prüfen Sie die Angaben vor dem Drucken</p>
       </div>
 
@@ -580,7 +580,7 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
             </svg>
           </div>
           <div>
-            <p className="text-[13px] font-bold text-[#3D3D3D]">PFLEGEVERTRAG</p>
+            <p className="text-[13px] font-bold text-pm-ink">PFLEGEVERTRAG</p>
             <p className="text-[12px] text-pm-mute">
               {data.vertragsbeginn
                 ? `Vertragsbeginn: ${formatDate(data.vertragsbeginn)}`
@@ -614,13 +614,13 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
             </p>
             <ul className="flex flex-col gap-1">
               {data.leistungen.map((l) => (
-                <li key={l} className="text-[13px] text-[#3D3D3D] flex items-start gap-2">
+                <li key={l} className="text-[13px] text-pm-ink flex items-start gap-2">
                   <span className="text-pm-taupe mt-0.5">✓</span>
                   {l}
                 </li>
               ))}
               {data.weitereLeistungen && (
-                <li className="text-[13px] text-[#3D3D3D] flex items-start gap-2">
+                <li className="text-[13px] text-pm-ink flex items-start gap-2">
                   <span className="text-pm-taupe mt-0.5">✓</span>
                   {data.weitereLeistungen}
                 </li>
@@ -648,7 +648,7 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
       {/* Print button */}
       <button
         onClick={onPrint}
-        className="w-full py-4 rounded-xl bg-pm-taupe hover:bg-[#7A6347] text-white text-[15px] font-bold transition-colors shadow-sm"
+        className="w-full py-4 rounded-xl bg-pm-taupe hover:bg-pm-taupe-deep text-white text-[15px] font-bold transition-colors shadow-sm"
       >
         Pflegevertrag drucken / als PDF speichern
       </button>
@@ -668,7 +668,7 @@ function PreviewRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex justify-between gap-4">
       <span className="text-[12px] text-pm-mute flex-shrink-0">{label}</span>
-      <span className="text-[13px] font-medium text-[#3D3D3D] text-right">{value}</span>
+      <span className="text-[13px] font-medium text-pm-ink text-right">{value}</span>
     </div>
   )
 }
@@ -1020,27 +1020,27 @@ export default function PflegevertragClient() {
 
   return (
     <div className="bg-pm-paper min-h-screen">
-      <div className="max-w-[680px] mx-auto px-5 py-10">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
         {/* Page heading */}
         <div className="mb-8">
-          <nav className="text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">Pflegevertrag-Generator</span>
+            <span className="text-pm-ink">Pflegevertrag-Generator</span>
           </nav>
           <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe mb-2">
             Kostenlos · Kein Konto nötig
           </p>
-          <h1 className="text-[28px] md:text-[36px] font-bold text-[#3D3D3D] leading-tight mb-3">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegevertrag-Generator
           </h1>
-          <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-3">
+          <p className="text-[15px] text-pm-body leading-relaxed mb-3">
             Erstellen Sie in 5 Minuten einen rechtssicheren Pflegevertrag — kostenlos, individuell anpassbar, sofort druckfertig.
           </p>
-          <p className="text-[15px] text-[#5A5A5A] leading-relaxed">
+          <p className="text-[15px] text-pm-body leading-relaxed">
             Wenn Angehörige die Pflege übernehmen und dafür Pflegegeld beziehen, sollte die Vereinbarung schriftlich festgehalten sein —
             das schützt beide Seiten und ist Voraussetzung für die steuerliche Anerkennung der Pflegekosten.
           </p>

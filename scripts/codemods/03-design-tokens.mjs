@@ -17,11 +17,7 @@ function walk(dir, out = []) {
   return out;
 }
 
-const EXCLUDE = [
-  'app/page.tsx',
-  'app/ueber-uns/page.tsx',
-  'app/franchisepartner/page.tsx',
-];
+const EXCLUDE = [];  // seit Etappe B/C: keine Ausnahmen mehr
 const files = [
   ...walk('app'),
   ...walk('components'),

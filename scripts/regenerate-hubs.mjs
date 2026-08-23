@@ -212,7 +212,7 @@ for (const hub of hubs) {
     childGrid = `
           {/* Tools */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
-            ${toolSlugs.map(s => `<a href="/${s}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-[#3D3D3D]">→ ${toTitle(s)}</a>`).join('\n            ')}
+            ${toolSlugs.map(s => `<a href="/${s}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-pm-ink">→ ${toTitle(s)}</a>`).join('\n            ')}
           </div>`;
   } else if (isRegionen) {
     childGrid = `
@@ -224,7 +224,7 @@ for (const hub of hubs) {
     childGrid = `
           {/* Artikel dieser Kategorie */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
-            ${children.map(a => `<a href="/${a.slug}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-[#3D3D3D]">\n              → ${a.h1.replace(/\s*—.*/, '')}\n            </a>`).join('\n            ')}
+            ${children.map(a => `<a href="/${a.slug}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-pm-ink">\n              → ${a.h1.replace(/\s*—.*/, '')}\n            </a>`).join('\n            ')}
           </div>`;
   }
 
@@ -257,26 +257,26 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-16">
-          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">${title}</span>
+            <span className="text-pm-ink">${title}</span>
           </nav>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             ${h1}
           </h1>
 
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-10">
+          <p className="text-[17px] text-pm-body leading-relaxed mb-10">
             ${desc}
           </p>
 ${childGrid}
           <div className="bg-white border border-pm-line rounded-2xl p-8 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Kostenlose Beratung
             </p>
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-4">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-4">
               Jetzt Pflegesituation besprechen
             </h2>
             <a

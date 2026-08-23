@@ -66,7 +66,7 @@ export default function Rechtssicher() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-pm-ink">Rechtssicher</span>
@@ -86,7 +86,7 @@ export default function Rechtssicher() {
             Ja. Legal ist die 24-Stunden-Betreuung im Entsendemodell: Die Betreuungskraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, für jeden Einsatz liegt eine A1-Bescheinigung vor, und Arbeits- und Ruhezeiten werden im Betreuungsalltag eingehalten. Eine einzelne Kraft arbeitet dabei nicht 24 Stunden durch — sie lebt im Haushalt, ist nach Plan tätig und für Notfälle erreichbar.
           </KurzAntwort>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Das Thema Rechtssicherheit ist in der 24h-Pflege entscheidend — und wird von vielen Familien unterschätzt. Tausende Haushalte in Deutschland beschäftigen Pflegekräfte auf unsichere Weise und wissen es nicht. Primundus arbeitet seit 20 Jahren ausschließlich im rechtssicheren Entsendemodell. Kein einziger Kundenfall mit rechtlichen Konsequenzen.
           </p>
 
@@ -105,7 +105,7 @@ export default function Rechtssicher() {
             ))}
           </div>
 
-          <h2 id="das-problem" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="das-problem" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Das rechtliche Problem bei unseriösen Modellen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -124,7 +124,7 @@ export default function Rechtssicher() {
             ))}
           </div>
 
-          <h2 id="entsendemodell" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="entsendemodell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Lösung: Das Entsendemodell
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -147,7 +147,7 @@ export default function Rechtssicher() {
             ))}
           </div>
 
-          <h2 id="primundus" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="primundus" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie Primundus Rechtssicherheit herstellt
           </h2>
           <div className="space-y-3 mb-10">
@@ -165,7 +165,7 @@ export default function Rechtssicher() {
             ))}
           </div>
 
-          <h2 id="kontrolle" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kontrolle" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was bei einer Kontrolle passiert
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -194,7 +194,7 @@ export default function Rechtssicher() {
             <a href="/scheinselbststaendigkeit-pflege-vermeiden" className="text-pm-taupe underline hover:text-pm-taupe-deep">Scheinselbstständigkeit vermeiden</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', a: 'Über das Entsendemodell mit A1-Bescheinigung. Die Kraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, kommt mit A1-Bescheinigung, die Familie hat kein eigenes Arbeitsverhältnis.' },

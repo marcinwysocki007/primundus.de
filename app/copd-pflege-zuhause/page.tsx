@@ -84,14 +84,14 @@ export default function Page() {
       <ArticleTOC sections={SECTIONS} />
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-pm-ink">COPD Pflege zuhause</span>
           </nav>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Krankheiten · 8 Min</p>
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Krankheiten · 8 Min</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflege bei COPD: Wie Sie den Alltag zuhause sicher machen
           </h1>
@@ -105,7 +105,7 @@ export default function Page() {
           </p>
 
           {/* ① WAS IST COPD */}
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist COPD — und was bedeutet sie für den Alltag?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -124,7 +124,7 @@ export default function Page() {
           </p>
 
           {/* ② PFLEGERISCHE UNTERSTÜTZUNG */}
-          <h2 id="unterstuetzung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="unterstuetzung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegerische Unterstützung bei COPD: worauf es im Alltag ankommt
           </h2>
           <div className="space-y-4 mb-8">
@@ -144,7 +144,7 @@ export default function Page() {
           </div>
 
           {/* ③ AUFGABEN */}
-          <h2 id="aufgaben" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="aufgaben" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was übernimmt die Betreuungskraft — und was der Pflegedienst?
           </h2>
           <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-4">
@@ -174,7 +174,7 @@ export default function Page() {
           </div>
 
           {/* ④ NACHTS */}
-          <h2 id="nachts" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="nachts" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Nachts ist die Angst am größten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -187,7 +187,7 @@ export default function Page() {
           </p>
 
           {/* ⑤ NOTFALL */}
-          <h2 id="notfall" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="notfall" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Notfall erkennen: wann zum Arzt, wann die 112
           </h2>
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-4">
@@ -211,7 +211,7 @@ export default function Page() {
           </p>
 
           {/* ⑥ PFLEGEGRAD */}
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             COPD und Pflegegrad: Was steht Ihnen zu?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -232,7 +232,7 @@ export default function Page() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {faqs.map((f) => (
               <details key={f.q} className="bg-white rounded-xl border border-pm-line group">

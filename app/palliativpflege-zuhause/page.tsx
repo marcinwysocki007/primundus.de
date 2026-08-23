@@ -67,7 +67,7 @@ export default function PalliativpflegeZuhause() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
@@ -85,7 +85,7 @@ export default function PalliativpflegeZuhause() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die meisten Menschen möchten in ihrem Zuhause sterben — umgeben von vertrauten Menschen und Gegenständen. Mit dem richtigen Team ist das in den meisten Fällen möglich: Hausarzt, SAPV-Team, palliative Pflegekraft und Hospizbegleiter ermöglichen eine würdevolle letzte Lebensphase zuhause.
           </p>
 
@@ -96,7 +96,7 @@ export default function PalliativpflegeZuhause() {
             </p>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist Palliativpflege zuhause?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -119,7 +119,7 @@ export default function PalliativpflegeZuhause() {
             ))}
           </div>
 
-          <h2 id="team" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="team" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Das palliative Team zuhause
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -140,7 +140,7 @@ export default function PalliativpflegeZuhause() {
             ))}
           </div>
 
-          <h2 id="schmerz" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="schmerz" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schmerztherapie & Symptomkontrolle zuhause
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -160,7 +160,7 @@ export default function PalliativpflegeZuhause() {
             ))}
           </div>
 
-          <h2 id="angehoerige" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="angehoerige" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Unterstützung für Angehörige
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -186,7 +186,7 @@ export default function PalliativpflegeZuhause() {
             <a href="/pflege-und-beruf-vereinbaren" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflege und Beruf vereinbaren</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was ist Palliativpflege zuhause?', a: 'Würdevolle Begleitung und Versorgung in der letzten Lebensphase im eigenen Zuhause. Ziel: Schmerzfreiheit, Komfort und Lebensqualität bis zum Tod — nicht Heilung oder Lebensverlängerung.' },

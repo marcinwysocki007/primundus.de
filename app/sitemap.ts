@@ -157,6 +157,8 @@ const tools = [
   'pflegeheim-kostenvergleich',
   'anbieter-vergleich',
   'pflegehelden-alternative',
+  'promedica24-alternative',
+  'hausengel-alternative',
   'checkliste-pflegeuebernahme',
   'pflegevertrag-generator',
   'vollmacht-generator',

@@ -69,7 +69,7 @@ export default function PflegegradBeiDemenz() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -87,12 +87,12 @@ export default function PflegegradBeiDemenz() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Seit der Pflegereform 2017 werden kognitive Einschränkungen bei der Begutachtung deutlich stärker bewertet. Demenzkranke erhalten heute erheblich höhere Pflegegrade als früher. Leichte Demenz führt meist zu PG 2–3, mittlere zu PG 3–4, schwere zu PG 4–5. Die Begutachtung muss gut vorbereitet sein — weil Betroffene ihre eigenen Einschränkungen oft minimieren.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Leichte Demenz: meist Pflegegrad 2–3 (347–599 €/Monat)',
@@ -110,7 +110,7 @@ export default function PflegegradBeiDemenz() {
             </ul>
           </div>
 
-          <h2 id="wie-hoch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wie-hoch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Welcher Pflegegrad bei welchem Demenzstadium?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -150,7 +150,7 @@ export default function PflegegradBeiDemenz() {
             </div>
           </div>
 
-          <h2 id="begutachtung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="begutachtung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Begutachtung bei Demenz — was besonders zählt
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -169,7 +169,7 @@ export default function PflegegradBeiDemenz() {
             ))}
           </div>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Leistungen 2026 nach Pflegegrad
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -210,7 +210,7 @@ export default function PflegegradBeiDemenz() {
             <a href="/demenz-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Demenz Pflege zuhause</a>
           </p>
 
-          <h2 id="tipps" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="tipps" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Tipps für höhere Einstufung bei Demenz
           </h2>
           <div className="space-y-3 mb-10">
@@ -227,7 +227,7 @@ export default function PflegegradBeiDemenz() {
             ))}
           </div>
 
-          <h2 id="verlauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="verlauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrad bei Demenzfortschritt anpassen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -237,7 +237,7 @@ export default function PflegegradBeiDemenz() {
             Anzeichen für Höherstufung: Neue Verhaltensauffälligkeiten, Weglaufen beginnt, Körperpflege nicht mehr möglich, Nahrungsaufnahme braucht Hilfe, nächtliche Unruhe intensiver. Dann: Antrag auf Höherstufung plus neue Pflegetagebücher.
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen — Pflegegrad bei Demenz
           </h2>
           <div className="space-y-4 mb-12">

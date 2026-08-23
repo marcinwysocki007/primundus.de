@@ -75,7 +75,7 @@ export default function Ablauf() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-pm-ink">Ablauf</span>
@@ -95,12 +95,12 @@ export default function Ablauf() {
             In der Regel startet die Betreuungskraft 4–7 Tage nach der Anfrage. Vorher sehen Sie Profile mit Foto, Erfahrung und Sprachkenntnissen und wählen selbst aus — ein Vertrag entsteht erst nach Ihrer Entscheidung. Bei dringendem Bedarf, etwa nach einer Krankenhausentlassung, geht es oft schneller.
           </KurzAntwort>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             In 2 Minuten sehen Sie Ihr persönliches Angebot und passende Pflegekräfte — sofort, ohne Wartezeit. Primundus übernimmt danach die gesamte Organisation: Kraftauswahl, A1-Bescheinigung, Vertragsabschluss, Anreise. Bis zur Betreuungskraft zuhause vergehen typischerweise 4–7 Tage.
           </p>
 
           <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <div className="grid md:grid-cols-4 gap-4">
               {[
                 { schritt: 'Sofort', titel: 'Angebot einholen', desc: 'Online-Formular, 2 Min — sofort Kosten & Pflegekräfte sehen' },
@@ -109,7 +109,7 @@ export default function Ablauf() {
                 { schritt: 'Tag 4–7', titel: 'Start', desc: 'Je nach Wunschtermin & Reaktion — Betreuungskraft reist an' },
               ].map((item) => (
                 <div key={item.schritt} className="text-center">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.schritt}</p>
+                  <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.schritt}</p>
                   <p className="text-[16px] font-bold text-pm-ink mb-1">{item.titel}</p>
                   <p className="text-[13px] text-pm-mute">{item.desc}</p>
                 </div>
@@ -126,7 +126,7 @@ export default function Ablauf() {
             </p>
           </div>
 
-          <h2 id="schritte" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="schritte" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schritt für Schritt — der vollständige Ablauf
           </h2>
           <ol className="space-y-4 mb-10">
@@ -178,7 +178,7 @@ export default function Ablauf() {
                     {'cta' in step && step.cta && (
                       <a
                         href={step.cta.href}
-                        className="inline-flex items-center gap-1.5 mt-3 px-4 py-2 bg-pm-coral hover:bg-pm-coral-deep text-white text-[13px] font-bold rounded-lg transition-colors"
+                        className="inline-flex items-center gap-1.5 mt-3 px-4 py-2 bg-pm-coral hover:bg-pm-coral-deep text-white text-[13px] font-bold rounded-full transition-colors"
                       >
                         {step.cta.label}
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,7 +192,7 @@ export default function Ablauf() {
             ))}
           </ol>
 
-          <h2 id="auswahl" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="auswahl" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kraft auswählen & Anreise — wie die Auswahl funktioniert
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -213,7 +213,7 @@ export default function Ablauf() {
             ))}
           </div>
 
-          <h2 id="wechsel" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wechsel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kraftwechsel & laufende Betreuung
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -233,7 +233,7 @@ export default function Ablauf() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie schnell kann eine 24h-Pflegekraft starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. In dringenden Fällen ist ein schnellerer Start möglich — direkt anrufen: 089 200 000 830.' },

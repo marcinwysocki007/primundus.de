@@ -74,7 +74,7 @@ export default function DemenzPflegeZuhause() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
@@ -92,12 +92,12 @@ export default function DemenzPflegeZuhause() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Demenzpflege zuhause ist in den meisten Stadien möglich — und oft die bessere Wahl. Die vertraute Umgebung gibt Orientierung, verlangsamt nachweislich den Krankheitsverlauf und bewahrt die Würde. Mit einer 24h-Betreuungskraft bleibt die eigene Wohnung erhalten, auch wenn der Pflegebedarf wächst.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Häusliche Pflege ist bei Demenz in den meisten Stadien möglich und empfehlenswert',
@@ -116,7 +116,7 @@ export default function DemenzPflegeZuhause() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="moeglich" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="moeglich" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist bei der Demenzpflege zuhause möglich?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -145,7 +145,7 @@ export default function DemenzPflegeZuhause() {
           </p>
 
           {/* SECTION 2 */}
-          <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alltag mit Demenz zuhause gestalten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -173,7 +173,7 @@ export default function DemenzPflegeZuhause() {
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="pflege-24h" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflege-24h" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann braucht es 24h-Pflege bei Demenz?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -220,7 +220,7 @@ export default function DemenzPflegeZuhause() {
           </p>
 
           {/* SECTION 3b — Zuhause oder Heim */}
-          <h2 id="zuhause-oder-heim" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="zuhause-oder-heim" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Demenz: zu Hause pflegen oder ins Heim?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -246,7 +246,7 @@ export default function DemenzPflegeZuhause() {
           </p>
 
           {/* SECTION 4 */}
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrad bei Demenz & Kassenzuschüsse 2026
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -297,7 +297,7 @@ export default function DemenzPflegeZuhause() {
           </p>
 
           {/* SECTION 5 */}
-          <h2 id="grenzen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="grenzen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann stößt häusliche Pflege an ihre Grenzen?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -311,7 +311,7 @@ export default function DemenzPflegeZuhause() {
               'Der Betroffene ausdrücklich selbst ins Pflegeheim möchte (wenn noch entscheidungsfähig)',
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
+                <span className="w-5 h-5 rounded-xl bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
                 <p className="text-[14px] text-pm-body leading-relaxed">{item}</p>
               </div>
             ))}
@@ -322,7 +322,7 @@ export default function DemenzPflegeZuhause() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur Demenzpflege zuhause
           </h2>
           <div className="space-y-4 mb-12">

@@ -66,7 +66,7 @@ export default function Leistungen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-pm-ink">Leistungen</span>
@@ -82,12 +82,12 @@ export default function Leistungen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Eine 24h-Betreuungskraft von Primundus ist weit mehr als eine Pflegehilfe — sie ist Begleiterin, Haushälterin, Gesellschafterin und Ansprechpartnerin in einem. Rund um die Uhr, dauerhaft im Haushalt, vertraut mit dem Pflegebedürftigen. Hier ist der vollständige Überblick was inbegriffen ist.
           </p>
 
           <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Alle Leistungen auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Alle Leistungen auf einen Blick</p>
             <div className="grid md:grid-cols-2 gap-3">
               {[
                 '✓ Körperpflege — Waschen, Ankleiden, Zahnpflege',
@@ -109,7 +109,7 @@ export default function Leistungen() {
             </div>
           </div>
 
-          <h2 id="was-inbegriffen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-inbegriffen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist inbegriffen — das Gesamtpaket
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -135,7 +135,7 @@ export default function Leistungen() {
             ))}
           </div>
 
-          <h2 id="betreuung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="betreuung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Betreuung & Pflege — was das im Alltag bedeutet
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -154,14 +154,14 @@ export default function Leistungen() {
             ))}
           </div>
 
-          <h2 id="haushalt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="haushalt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Haushalt & Alltag — vollständig übernommen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-10">
             Die Betreuungskraft führt den Haushalt eigenständig. Frische Mahlzeiten, saubere Wäsche, ordentliche Wohnung — alles läuft, ohne dass Angehörige eingreifen müssen. Das ist einer der wichtigsten Entlastungseffekte für pflegende Familien.
           </p>
 
-          <h2 id="medizinisch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="medizinisch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Medizinische Unterstützung — was geht, was nicht
           </h2>
           <div className="space-y-3 mb-6">
@@ -185,7 +185,7 @@ export default function Leistungen() {
             Für Behandlungspflege koordiniert Primundus auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst — nahtlos und ohne zusätzlichen Aufwand für die Familie.
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was macht eine 24h-Betreuungskraft?', a: 'Körperpflege, Haushalt (Kochen, Einkaufen, Putzen), Gesellschaft und Begleitung rund um die Uhr, Medikamentenerinnerung, Mobilisierung, Arzttermine begleiten, Nachtbereitschaft.' },

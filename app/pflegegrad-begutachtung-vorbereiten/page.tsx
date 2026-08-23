@@ -81,7 +81,7 @@ export default function BegutachtungVorbereiten() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -99,12 +99,12 @@ export default function BegutachtungVorbereiten() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die MD-Begutachtung entscheidet über den Pflegegrad — und damit über hunderte Euro Kassenzuschuss pro Monat. Wer gut vorbereitet ist, bekommt eine faire Einstufung. Wer aus Scham minimiert, verschenkt Geld. Die wichtigste Vorbereitung: Das Pflegetagebuch. Es dauert 5 Minuten täglich und macht den größten Unterschied.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegetagebuch: 1–2 Wochen vor dem Termin beginnen — wichtigstes Vorbereitungsmittel',
@@ -123,7 +123,7 @@ export default function BegutachtungVorbereiten() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="vorbereitung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vorbereitung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die wichtigste Vorbereitung: Das Pflegetagebuch
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -167,7 +167,7 @@ export default function BegutachtungVorbereiten() {
           </div>
 
           {/* SECTION 2 */}
-          <h2 id="checkliste" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="checkliste" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Checkliste für den Begutachtungstermin
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -192,7 +192,7 @@ export default function BegutachtungVorbereiten() {
           </div>
 
           {/* SECTION 3 */}
-          <h2 id="tipps" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="tipps" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             7 Tipps für eine korrekte und faire Einstufung
           </h2>
           <div className="space-y-4 mb-10">
@@ -216,7 +216,7 @@ export default function BegutachtungVorbereiten() {
           </div>
 
           {/* SECTION 4 */}
-          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was beim Termin passiert
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -239,7 +239,7 @@ export default function BegutachtungVorbereiten() {
           </div>
 
           {/* SECTION 5 */}
-          <h2 id="danach" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="danach" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Nach der Begutachtung — Bescheid prüfen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -265,7 +265,7 @@ export default function BegutachtungVorbereiten() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur MD-Begutachtung
           </h2>
           <div className="space-y-4 mb-12">

@@ -67,7 +67,7 @@ export default function SozialhilfeBeiPflegebedarf() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -85,7 +85,7 @@ export default function SozialhilfeBeiPflegebedarf() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wenn Rente, Ersparnisse und Pflegekasse-Leistungen die Pflegekosten nicht decken, greift die Hilfe zur Pflege nach §61 SGB XII. Das Sozialamt übernimmt den nicht gedeckten Teil. Und seit 2020 gilt: Kinder müssen erst dann für elterliche Pflegekosten aufkommen wenn ihr eigenes Jahreseinkommen 100.000 Euro brutto übersteigt.
           </p>
 
@@ -96,7 +96,7 @@ export default function SozialhilfeBeiPflegebedarf() {
             </p>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist Hilfe zur Pflege (§61 SGB XII)?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -120,7 +120,7 @@ export default function SozialhilfeBeiPflegebedarf() {
             Das Sozialamt übernimmt dann die Differenz zwischen den verfügbaren Mitteln und den tatsächlichen Pflegekosten — in der Regel für Heimkosten oder anerkannte ambulante Pflegeleistungen.
           </p>
 
-          <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="voraussetzungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Voraussetzungen & Vermögen
           </h2>
           <div className="space-y-3 mb-10">
@@ -137,7 +137,7 @@ export default function SozialhilfeBeiPflegebedarf() {
             ))}
           </div>
 
-          <h2 id="unterhalt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="unterhalt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Müssen Kinder für die Pflege der Eltern zahlen?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -170,7 +170,7 @@ export default function SozialhilfeBeiPflegebedarf() {
             </div>
           </div>
 
-          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="antrag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag stellen — so geht es
           </h2>
           <ol className="space-y-3 mb-10">
@@ -191,7 +191,7 @@ export default function SozialhilfeBeiPflegebedarf() {
             ))}
           </ol>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was ist Hilfe zur Pflege?', a: 'Die Sozialhilfeleistung nach §61 SGB XII — greift wenn Rente, Vermögen und Pflegekasse nicht reichen. Das Sozialamt übernimmt den Differenzbetrag zwischen verfügbaren Mitteln und Pflegekosten.' },

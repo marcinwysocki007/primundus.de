@@ -70,7 +70,7 @@ export default function FoerderungenNachBundesland() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -88,11 +88,11 @@ export default function FoerderungenNachBundesland() {
 
           <AuthorByline updated="21. August 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Viele Familien kennen die Pflegekassen-Zuschüsse — aber nicht alle wissen: Darüber hinaus gibt es KfW-Förderkredite für Wohnraumanpassung, steuerliche Absetzbarkeit, und in mehreren Bundesländern eigene Landeszuschüsse. Wer alle Förderungen kombiniert, kann den Eigenanteil bei der 24h-Pflege erheblich senken.
           </p>
 
-          <h2 id="bundesweit" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="bundesweit" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Bundesweite Kassenzuschüsse 2026 — die Basis
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -133,7 +133,7 @@ export default function FoerderungenNachBundesland() {
             </div>
           </div>
 
-          <h2 id="laender" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="laender" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Zusatzförderungen der Bundesländer
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -192,7 +192,7 @@ export default function FoerderungenNachBundesland() {
             </p>
           </div>
 
-          <h2 id="kfw" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kfw" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             KfW-Förderung & Steuerabzug — unterschätzte Möglichkeiten
           </h2>
           <div className="space-y-4 mb-10">
@@ -219,7 +219,7 @@ export default function FoerderungenNachBundesland() {
             </div>
           </div>
 
-          <h2 id="checkliste" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="checkliste" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Checkliste: Alle Förderungen nutzen
           </h2>
           <div className="space-y-2 mb-10">
@@ -253,7 +253,7 @@ export default function FoerderungenNachBundesland() {
             <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierungsübersicht 2026</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Gibt es Pflegeförderungen die über die Pflegekasse hinausgehen?', a: 'Ja: KfW-Förderkredit (bis 50.000 €) für Wohnraumanpassung, Steuerabzug (bis 4.000 €/Jahr), Landespflegegeld Bayern (1.000 €/Jahr), kommunale Zuschüsse regional. Pflegestützpunkt berät kostenlos.' },

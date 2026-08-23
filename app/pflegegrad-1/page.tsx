@@ -69,7 +69,7 @@ export default function Pflegegrad1() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -87,12 +87,12 @@ export default function Pflegegrad1() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegrad 1 ist die niedrigste Einstufung und bedeutet geringe Beeinträchtigung der Selbstständigkeit. Es gibt keinen Pflegegeld-Anspruch — aber den Entlastungsbetrag von 131 Euro pro Monat, Wohnraumanpassungsförderung und Pflegehilfsmittel. Wer zwischen PG 1 und 2 liegt, sollte die Begutachtung gut vorbereiten — die Unterschiede bei den Leistungen sind erheblich.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — Pflegegrad 1</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick — Pflegegrad 1</p>
             <ul className="space-y-2.5">
               {[
                 'Kein Pflegegeld bei PG 1 — nur Entlastungsbetrag 131 €/Monat',
@@ -110,7 +110,7 @@ export default function Pflegegrad1() {
             </ul>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was bedeutet Pflegegrad 1?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -126,7 +126,7 @@ export default function Pflegegrad1() {
             </p>
           </div>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Leistungen bei Pflegegrad 1 — 2026
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -157,7 +157,7 @@ export default function Pflegegrad1() {
             <a href="/entlastungsbetrag" className="text-pm-taupe underline hover:text-pm-taupe-deep">Entlastungsbetrag 2026 — 131 €/Monat</a>
           </p>
 
-          <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="voraussetzungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Voraussetzungen — wann wird PG 1 vergeben?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -167,7 +167,7 @@ export default function Pflegegrad1() {
             Mit 27 Punkten oder mehr erfolgt die Einstufung in Pflegegrad 2 — das bedeutet Pflegegeld, Sachleistungen und das Entlastungsbudget. Der Unterschied von einem Punkt kann monatlich über 500 Euro Kassenzuschuss ausmachen. Eine gute Vorbereitung der Begutachtung ist deshalb besonders wichtig.
           </p>
 
-          <h2 id="beantragen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Beantragen & Begutachtung vorbereiten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -192,7 +192,7 @@ export default function Pflegegrad1() {
             <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad beantragen</a>
           </p>
 
-          <h2 id="pg2" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pg2" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann wird Pflegegrad 2 sinnvoller?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -218,7 +218,7 @@ export default function Pflegegrad1() {
             <a href="/pflegegrad-widerspruch-einlegen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Widerspruch einlegen wenn Einstufung zu niedrig</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zu Pflegegrad 1
           </h2>
           <div className="space-y-4 mb-12">

@@ -69,7 +69,7 @@ export default function Verhinderungspflege() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
@@ -87,7 +87,7 @@ export default function Verhinderungspflege() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Seit 1. Juli 2025 gibt es keine eigenständige Verhinderungspflege mehr. Sie wurde mit der Kurzzeitpflege zum gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengefasst. 2026 ist das erste volle Jahr ohne Übergangsregelungen — wer das Budget nicht kennt, verschenkt bares Geld.
           </p>
 
@@ -112,7 +112,7 @@ export default function Verhinderungspflege() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist das Entlastungsbudget? (früher: Verhinderungspflege)
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -131,7 +131,7 @@ export default function Verhinderungspflege() {
           </div>
 
           {/* SECTION 2 */}
-          <h2 id="neu-2026" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="neu-2026" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was sich 2026 geändert hat
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -178,7 +178,7 @@ export default function Verhinderungspflege() {
           </div>
 
           {/* SECTION 3 */}
-          <h2 id="beantragen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Entlastungsbudget beantragen & nutzen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -202,7 +202,7 @@ export default function Verhinderungspflege() {
           </ol>
 
           {/* SECTION 4 */}
-          <h2 id="kombinieren" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kombinieren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Mit 24h-Pflege kombinieren
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -228,7 +228,7 @@ export default function Verhinderungspflege() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur Verhinderungspflege 2026
           </h2>
           <div className="space-y-4 mb-12">

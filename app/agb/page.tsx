@@ -11,25 +11,25 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-article mx-auto px-5 py-16">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
-          <span className="text-[#3D3D3D]">AGB</span>
+          <span className="text-pm-ink">AGB</span>
         </nav>
 
-        <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-3">
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Allgemeine Geschäftsbedingungen
         </h1>
         <p className="text-[15px] text-pm-mute mb-10">
           Stand: 1. Januar 2026 · Primundus — ein Angebot der PRIMUNDUS Sp. z o.o.
         </p>
 
-        <div className="space-y-8 text-[15px] text-[#5A5A5A] leading-[1.75]">
+        <div className="space-y-8 text-[15px] text-pm-body leading-[1.75]">
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 1 Geltungsbereich</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 1 Geltungsbereich</h2>
             <p className="mb-3">
               (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") gelten für sämtliche Verträge zwischen der
               PRIMUNDUS Sp. z o.o., Poznańska 21/48, 00-685 Warszawa, Polen (nachfolgend „Primundus") und
@@ -48,7 +48,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 2 Leistungen von Primundus</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 2 Leistungen von Primundus</h2>
             <p className="mb-3">
               (1) Primundus beschäftigt selbständig tätige Betreuungskräfte oder Betreuungskräfte im Entsendemodell
               (A1-Bescheinigung) zur 24-Stunden-Betreuung pflegebedürftiger Personen im häuslichen Umfeld.
@@ -67,7 +67,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 3 Vertragsabschluss</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 3 Vertragsabschluss</h2>
             <p className="mb-3">
               (1) Die Darstellung der Leistungen auf der Webseite primundus.de stellt kein rechtlich bindendes
               Angebot dar, sondern eine Aufforderung zur Abgabe eines Angebots.
@@ -83,7 +83,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 4 Widerrufsrecht für Verbraucher</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 4 Widerrufsrecht für Verbraucher</h2>
             <p className="mb-3">
               (1) Verbraucher im Sinne von § 13 BGB haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen
               den Vertrag zu widerrufen. Die Widerrufsfrist beginnt mit dem Tag des Vertragsschlusses.
@@ -102,7 +102,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 5 Pflichten des Kunden</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 5 Pflichten des Kunden</h2>
             <p className="mb-3">
               (1) Der Kunde stellt der Betreuungskraft kostenfrei ein eigenes, beheiztes und abschließbares Zimmer mit
               Bett, Schrank und Tageslicht zur Verfügung. Die Mitbenutzung von Bad, Küche und Aufenthaltsräumen
@@ -123,7 +123,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 6 Vergütung und Zahlungsbedingungen</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 6 Vergütung und Zahlungsbedingungen</h2>
             <p className="mb-3">
               (1) Die Vergütung richtet sich nach dem individuellen Angebot. Der monatliche Pauschalpreis umfasst
               Vermittlung, Organisation, Wechsel- und Anreisekosten sowie die Vergütung der Betreuungskraft.
@@ -139,7 +139,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 7 Laufzeit und Kündigung</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 7 Laufzeit und Kündigung</h2>
             <p className="mb-3">
               (1) Der Vermittlungsvertrag wird auf unbestimmte Zeit geschlossen. Die Mindestlaufzeit beträgt
               — sofern im Einzelangebot nicht abweichend geregelt — drei Monate ab Anreise der ersten
@@ -158,7 +158,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 8 Haftung</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 8 Haftung</h2>
             <p className="mb-3">
               (1) Primundus haftet unbeschränkt für Schäden aus Verletzung des Lebens, des Körpers oder der
               Gesundheit sowie für vorsätzlich oder grob fahrlässig verursachte Schäden.
@@ -176,7 +176,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 9 Datenschutz</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 9 Datenschutz</h2>
             <p>
               Die Verarbeitung personenbezogener Daten erfolgt gemäß der{' '}
               <Link href="/datenschutz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Datenschutzerklärung</Link>{' '}
@@ -187,7 +187,7 @@ export default function Page() {
           </section>
 
           <section className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 10 Schlussbestimmungen</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 10 Schlussbestimmungen</h2>
             <p className="mb-3">
               (1) Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Verbraucherschützende Vorschriften
               des Landes, in dem der Kunde seinen gewöhnlichen Aufenthalt hat, bleiben unberührt.

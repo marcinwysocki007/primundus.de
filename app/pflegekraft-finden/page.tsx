@@ -68,7 +68,7 @@ export default function PflegekraftFinden() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -86,12 +86,12 @@ export default function PflegekraftFinden() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Eine zuverlässige Pflegekraft zu finden ist die wichtigste Entscheidung bei der Organisation der 24h-Pflege. Der sicherste Weg führt über eine seriöse Agentur — sie prüft Qualifikation und Erfahrung, stellt Ersatz bei Ausfall und regelt alles Rechtliche. Bei Primundus ist die passende Kraft in 4–7 Tagen vor Ort.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Agentur wie Primundus: sicherster Weg — Prüfung, Ersatz, Rechtssicherheit',
@@ -109,7 +109,7 @@ export default function PflegekraftFinden() {
             </ul>
           </div>
 
-          <h2 id="wege" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wege" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wege zur Pflegekraft — was gibt es?
           </h2>
           <div className="space-y-3 mb-10">
@@ -137,7 +137,7 @@ export default function PflegekraftFinden() {
             ))}
           </div>
 
-          <h2 id="agentur" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="agentur" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Über eine Agentur — was die Vorteile sind
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -158,7 +158,7 @@ export default function PflegekraftFinden() {
             ))}
           </div>
 
-          <h2 id="worauf-achten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="worauf-achten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Worauf bei der Auswahl zu achten ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -182,7 +182,7 @@ export default function PflegekraftFinden() {
             ))}
           </div>
 
-          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Ablauf bei Primundus — von Anfrage bis Start
           </h2>
           <ol className="space-y-3 mb-10">
@@ -203,7 +203,7 @@ export default function PflegekraftFinden() {
             ))}
           </ol>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen
           </h2>
           <div className="space-y-4 mb-12">

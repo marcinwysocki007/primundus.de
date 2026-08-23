@@ -67,7 +67,7 @@ export default function HausnotrufSenioren() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -85,12 +85,12 @@ export default function HausnotrufSenioren() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse kann über den Entlastungsbetrag die Kosten übernehmen. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall sowieso immer vor Ort.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Klassischer Hausnotruf: 20–50 €/Monat — Knopf am Handgelenk oder als Anhänger',
@@ -108,7 +108,7 @@ export default function HausnotrufSenioren() {
             </ul>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist ein Hausnotruf?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -118,7 +118,7 @@ export default function HausnotrufSenioren() {
             Die Leitstelle klärt zunächst per Mikrofon die Situation — und alarmiert dann je nach Bedarf Angehörige, den Rettungsdienst oder einen lokalen Ersthelfer. Das System funktioniert 24 Stunden am Tag, 7 Tage/Woche, auch wenn der Nutzer bewusstlos ist (automatische Sturzerkennung bei modernen Systemen).
           </p>
 
-          <h2 id="arten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="arten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Arten von Hausnotruf-Systemen
           </h2>
           <div className="space-y-3 mb-10">
@@ -159,7 +159,7 @@ export default function HausnotrufSenioren() {
             ))}
           </div>
 
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kosten & Kassenzuschuss
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -176,7 +176,7 @@ export default function HausnotrufSenioren() {
             <a href="/entlastungsbetrag" className="text-pm-taupe underline hover:text-pm-taupe-deep">Entlastungsbetrag 2026 — 131 €/Monat</a>
           </p>
 
-          <h2 id="wann-sinnvoll" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann-sinnvoll" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist ein Hausnotruf sinnvoll?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -203,7 +203,7 @@ export default function HausnotrufSenioren() {
             </p>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was kostet ein Hausnotruf?', a: 'Klassischer Hausnotruf: 20–50 €/Monat. Mobilfunk-Notruf mit GPS: 30–80 €/Monat. Einmalige Anschlussgebühr 20–80 € (viele Anbieter ohne). Entlastungsbetrag (131 €/Monat) der Pflegekasse kann die Kosten decken.' },

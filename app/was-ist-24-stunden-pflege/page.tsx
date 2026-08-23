@@ -144,7 +144,7 @@ export default function WasIst24StundenPflege() {
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
@@ -169,13 +169,13 @@ export default function WasIst24StundenPflege() {
           </KurzAntwort>
 
           {/* Lead */}
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
           </p>
 
           {/* Quick Answer Box */}
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Auf einen Blick
             </p>
             <ul className="space-y-2.5">
@@ -196,7 +196,7 @@ export default function WasIst24StundenPflege() {
           </div>
 
           {/* ── SECTION 1 ── */}
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was leistet eine 24-Stunden-Betreuungskraft?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -225,7 +225,7 @@ export default function WasIst24StundenPflege() {
           </p>
 
           {/* ── SECTION 2 ── */}
-          <h2 id="verbreitung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="verbreitung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie viele Menschen nutzen 24h-Pflege in Deutschland?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -268,7 +268,7 @@ export default function WasIst24StundenPflege() {
           <GrafikPflegestatistik />
 
           {/* ── SECTION 3 ── */}
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was kostet 24-Stunden-Pflege — und was zahlt die Kasse 2026?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -318,7 +318,7 @@ export default function WasIst24StundenPflege() {
           </p>
 
           {/* ── SECTION 4 ── */}
-          <h2 id="rechtliches" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="rechtliches" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Ist 24-Stunden-Pflege legal?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -350,7 +350,7 @@ export default function WasIst24StundenPflege() {
           </p>
 
           {/* ── SECTION 5 ── */}
-          <h2 id="wann" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist 24h-Pflege die richtige Wahl?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -396,7 +396,7 @@ export default function WasIst24StundenPflege() {
           </p>
 
           {/* ── FAQ ── */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur 24-Stunden-Pflege
           </h2>
           <div className="space-y-4 mb-12">

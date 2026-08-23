@@ -34,25 +34,25 @@ export default function Rechtliches() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
-            <span className="text-[#5A5A5A]">Rechtliches & Vorsorge</span>
+            <span className="text-pm-body">Rechtliches & Vorsorge</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             RATGEBER
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Rechtliches & Vorsorge
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-12 max-w-[620px]">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Rechtssichere Beschäftigung, Verträge, Vollmachten und Steuerrecht — alle wichtigen rechtlichen Themen rund um die 24h-Pflege.
           </p>
 
@@ -65,7 +65,7 @@ export default function Rechtliches() {
           </div>
 
           {/* Rechtssichere Beschäftigung */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Rechtssichere Beschäftigung von Pflegekräften</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Rechtssichere Beschäftigung von Pflegekräften</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Pflegekraft legal beschäftigen', href: '/pflegekraft-legal-beschaeftigen', desc: 'Die 3 legalen Modelle — Entsendemodell, Direktanstellung, Scheinselbstständigkeit — erklärt und verglichen.' },
@@ -75,14 +75,14 @@ export default function Rechtliches() {
               { titel: 'Haftung im Pflegehaushalt', href: '/haftung-pflegehaushalt', desc: 'Wer haftet bei Schäden — Familie, Agentur oder Pflegekraft?' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Verträge & Vollmachten */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Verträge & Vollmachten</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Verträge & Vollmachten</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Vorsorgevollmacht erstellen', href: '/vorsorgevollmacht-erstellen', desc: 'Was eine Vorsorgevollmacht regelt, wie man sie erstellt und warum jeder sie braucht.' },
@@ -92,14 +92,14 @@ export default function Rechtliches() {
               { titel: 'Werkvertrag Pflegekraft Muster', href: '/werkvertrag-pflegekraft-muster', desc: 'Vorlage und wichtige Hinweise zum Werkvertrag in der Pflege.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Steuern & Sozialversicherung */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Steuern & Sozialversicherung</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Steuern & Sozialversicherung</h2>
           <div className="grid gap-3 mb-12">
             {[
               { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie man es richtig macht.' },
@@ -111,7 +111,7 @@ export default function Rechtliches() {
               { titel: 'Pflegemängel melden — Beschwerdewege', href: '/pflegemangel-melden-beschwerden', desc: 'An wen sich Familien bei Mängeln wenden können und welche Rechte sie haben.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}

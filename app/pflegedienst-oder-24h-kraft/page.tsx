@@ -70,7 +70,7 @@ export default function PflegedienstOder24hKraft() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
@@ -88,11 +88,11 @@ export default function PflegedienstOder24hKraft() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ambulanter Pflegedienst oder 24h-Betreuungskraft zuhause — das ist oft die erste Frage wenn Pflege notwendig wird. Beide sind legitime Lösungen. Welche besser passt, hängt vom Pflegebedarf, den Lebensumständen und dem Budget ab. Und sehr oft ist die Antwort: beide zusammen.
           </p>
 
-          <h2 id="unterschied" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="unterschied" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Der grundlegende Unterschied
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -131,7 +131,7 @@ export default function PflegedienstOder24hKraft() {
             </div>
           </div>
 
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kostenvergleich 2026
           </h2>
           <div className="space-y-4 mb-10">
@@ -147,7 +147,7 @@ export default function PflegedienstOder24hKraft() {
             </div>
           </div>
 
-          <h2 id="wann-was" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann-was" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist was sinnvoll?
           </h2>
           <div className="space-y-3 mb-10">
@@ -178,7 +178,7 @@ export default function PflegedienstOder24hKraft() {
             ))}
           </div>
 
-          <h2 id="kombination" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kombination" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kombination — oft die beste Lösung
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -203,7 +203,7 @@ export default function PflegedienstOder24hKraft() {
             <a href="/kombinationsleistung-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kombinationsleistung erklärt</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?', a: 'Pflegedienst: kommt zu festen Zeiten, geht dann wieder. Kernkompetenz Grund- und Behandlungspflege. 24h-Kraft: lebt im Haushalt, ist immer da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft, Nacht.' },

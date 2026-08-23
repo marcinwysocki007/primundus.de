@@ -85,7 +85,7 @@ export default function KostenuebernahmePage() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/kosten" className="hover:text-pm-taupe transition-colors">Kosten</a>
@@ -93,7 +93,7 @@ export default function KostenuebernahmePage() {
             <span className="text-pm-ink">Kostenübernahme</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Kosten &amp; Finanzierung · Aktualisiert August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
@@ -106,7 +106,7 @@ export default function KostenuebernahmePage() {
             Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.
           </KurzAntwort>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die kurze, ehrliche Antwort: <strong>Komplett übernimmt die Kosten niemand</strong> — aber es
             zahlen mehr Stellen mit, als die meisten Familien denken. Die Pflegekasse steuert je nach
             Pflegegrad oft 700 bis 1.200 Euro im Monat bei, das Finanzamt bis zu 4.000 Euro im Jahr, und
@@ -177,7 +177,7 @@ export default function KostenuebernahmePage() {
             </p>
             <a
               href="https://kostenrechner.primundus.de/"
-              className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-full transition-colors"
             >
               Ihre Zuschüsse in 2 Minuten berechnen
             </a>

@@ -71,7 +71,7 @@ export default function PflegekraftAusPolen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -89,12 +89,12 @@ export default function PflegekraftAusPolen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Eine polnische Pflegekraft kostet 2.200–3.500 Euro pro Monat und ist über das Entsendemodell vollständig legal — mit A1-Bescheinigung, sozialversichert in Polen, rechtlich abgesichert in Deutschland. Polen ist das meistgenutzte Herkunftsland für 24h-Betreuungskräfte in Deutschland: gute Sprachkenntnisse, kulturelle Nähe, kurze Anreise.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf + Kost & Logis',
@@ -113,7 +113,7 @@ export default function PflegekraftAusPolen() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="was-bedeutet" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-bedeutet" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was bedeutet „Pflegekraft aus Polen"?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -140,7 +140,7 @@ export default function PflegekraftAusPolen() {
           </p>
 
           {/* SECTION 2 */}
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kosten & was inbegriffen ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -181,7 +181,7 @@ export default function PflegekraftAusPolen() {
             <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Zuschüsse 2026</a>
           </p>
 
-          <h2 id="pflegekasse" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegekasse" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was zahlt die Pflegekasse dazu?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -229,11 +229,11 @@ export default function PflegekraftAusPolen() {
                     <div key={grad} className="bg-white rounded-xl border border-pm-line p-4 shadow-sm">
                       <p className="text-[15px] font-bold text-pm-ink mb-2">{grad}</p>
                       <div className="flex justify-between text-[14px] mb-1">
-                        <span className="text-[#5A5A5A]">Pflegegeld, frei verfügbar</span>
+                        <span className="text-pm-body">Pflegegeld, frei verfügbar</span>
                         <span className="font-semibold text-pm-green">{geld}</span>
                       </div>
                       <div className="flex justify-between text-[14px]">
-                        <span className="text-[#5A5A5A]">Entlastungsbetrag, als Erstattung</span>
+                        <span className="text-pm-body">Entlastungsbetrag, als Erstattung</span>
                         <span className="font-semibold text-pm-green">{entlastung}</span>
                       </div>
                     </div>
@@ -255,7 +255,7 @@ export default function PflegekraftAusPolen() {
             <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Zuschüsse im Überblick</a>
           </p>
 
-          <h2 id="versicherung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="versicherung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie ist die Betreuungskraft versichert?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -271,7 +271,7 @@ export default function PflegekraftAusPolen() {
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="legal" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="legal" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Legal beschäftigen — so funktioniert das Entsendemodell
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -319,7 +319,7 @@ export default function PflegekraftAusPolen() {
           </p>
 
           {/* SECTION 4 */}
-          <h2 id="qualitaet" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="qualitaet" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Qualität & Auswahl der richtigen Kraft
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -340,7 +340,7 @@ export default function PflegekraftAusPolen() {
           </div>
 
           {/* SECTION 5 */}
-          <h2 id="alternativen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="alternativen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Polen vs. andere Herkunftsländer
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -385,7 +385,7 @@ export default function PflegekraftAusPolen() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur Pflegekraft aus Polen
           </h2>
           <div className="space-y-4 mb-12">

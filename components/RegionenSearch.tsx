@@ -90,7 +90,7 @@ export function RegionenSearch(_props: Props) {
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Ort oder PLZ eingeben — z. B. München oder 80331"
-            className="flex-1 text-[16px] text-[#3D3D3D] placeholder-[#C0BAB2] bg-transparent outline-none"
+            className="flex-1 text-[16px] text-pm-ink placeholder-[#C0BAB2] bg-transparent outline-none"
           />
           {query && (
             <button
@@ -132,7 +132,7 @@ export function RegionenSearch(_props: Props) {
       {/* Fehler */}
       {error && (
         <div className="mt-2 bg-white border border-pm-line rounded-xl px-5 py-5 shadow-sm">
-          <p className="text-[14px] font-bold text-[#3D3D3D] mb-1">Suche nicht verfügbar</p>
+          <p className="text-[14px] font-bold text-pm-ink mb-1">Suche nicht verfügbar</p>
           <p className="text-[13px] text-pm-mute mb-4">
             Kein Problem — starten Sie direkt eine Anfrage oder rufen Sie uns an.
           </p>
@@ -141,7 +141,7 @@ export function RegionenSearch(_props: Props) {
               href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-2.5 px-5 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-2.5 px-5 rounded-full transition-colors"
             >
               Jetzt Anfrage starten →
             </a>
@@ -158,7 +158,7 @@ export function RegionenSearch(_props: Props) {
       {/* Kein Treffer — Ortsname */}
       {showNoResults && (
         <div className="mt-2 bg-white border border-pm-line rounded-xl px-5 py-5 shadow-sm">
-          <p className="text-[14px] font-bold text-[#3D3D3D] mb-1">
+          <p className="text-[14px] font-bold text-pm-ink mb-1">
             Keine eigene Seite für „{capitalizeCity(query)}" — wir vermitteln trotzdem dort
           </p>
           <p className="text-[13px] text-pm-mute mb-4">
@@ -169,7 +169,7 @@ export function RegionenSearch(_props: Props) {
               href={`https://kostenrechner.primundus.de?ort=${encodeURIComponent(capitalizeCity(query))}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-2.5 px-5 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-2.5 px-5 rounded-full transition-colors"
             >
               Anfrage für {capitalizeCity(query)} starten →
             </a>
@@ -195,7 +195,7 @@ function ResultCard({ stadt, query, isNearby }: { stadt: StadtEntry; query: stri
   return (
     <div className="bg-white border border-pm-line rounded-xl px-5 py-4 flex items-center justify-between gap-4 shadow-sm">
       <div className="min-w-0">
-        <p className="text-[15px] font-bold text-[#3D3D3D] truncate">
+        <p className="text-[15px] font-bold text-pm-ink truncate">
           {stadt.name}
           {isNearby && <span className="ml-2 text-[11px] font-normal text-pm-mute">in der Nähe</span>}
         </p>
@@ -214,7 +214,7 @@ function ResultCard({ stadt, query, isNearby }: { stadt: StadtEntry; query: stri
           href={ctaHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[13px] font-bold bg-pm-coral hover:bg-pm-coral-deep text-white rounded-lg px-3 py-2 transition-colors whitespace-nowrap"
+          className="text-[13px] font-bold bg-pm-coral hover:bg-pm-coral-deep text-white rounded-full px-3 py-2 transition-colors whitespace-nowrap"
         >
           Anfrage starten
         </a>
@@ -227,14 +227,14 @@ function DirectCTA({ query, className }: { query: string; className?: string }) 
   const city = capitalizeCity(query)
   return (
     <div className={`bg-pm-paper border border-pm-line rounded-xl px-5 py-4 ${className ?? ''}`}>
-      <p className="text-[13px] text-[#5A5A5A] mb-3">
+      <p className="text-[13px] text-pm-body mb-3">
         Ihre genaue Adresse ist kein Problem — wir vermitteln überall in Deutschland.
       </p>
       <a
         href={`https://kostenrechner.primundus.de?ort=${encodeURIComponent(city)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[13px] py-2 px-4 rounded-lg transition-colors"
+        className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[13px] py-2 px-4 rounded-full transition-colors"
       >
         Direkte Anfrage starten →
       </a>

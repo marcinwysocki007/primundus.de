@@ -59,7 +59,7 @@ export default function NotfallplanPflege() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -77,18 +77,18 @@ export default function NotfallplanPflege() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Im Notfall zählen Sekunden. Wer dann erst suchen muss welche Medikamente jemand nimmt, welcher Arzt zuständig ist, oder wer bei einem Sturz als Erstes angerufen werden soll — verliert wertvolle Zeit. Ein Notfallplan kostet einmal 30 Minuten und gibt Jahre lang Sicherheit.
           </p>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="warum" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Warum ein Notfallplan?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Ein Notfallplan ist für drei Situationen gedacht: Akuter Notfall (Sturz, Herzinfarkt, Bewusstlosigkeit), Ausfall der Hauptpflegeperson (Krankheit, Unfall), und Wissenstransfer wenn eine neue Betreuungskraft beginnt. Mit einem vollständigen Notfallplan kann jede Person die den Pflegebedürftigen vorfindet sofort richtig handeln — auch wenn sie die Details nicht kennt.
           </p>
 
-          <h2 id="inhalt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="inhalt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was in den Notfallplan gehört
           </h2>
           <div className="space-y-4 mb-10">
@@ -167,7 +167,7 @@ export default function NotfallplanPflege() {
             ))}
           </div>
 
-          <h2 id="vorlage" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vorlage" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vorlage: Notfallplan zum Ausfüllen
           </h2>
           <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[13px] leading-loose text-pm-body">
@@ -197,7 +197,7 @@ export default function NotfallplanPflege() {
             <p className="font-bold">Bevollmächtigte Person: ________ Tel: _______</p>
           </div>
 
-          <h2 id="aufbewahren" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="aufbewahren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wo aufbewahren & wie aktuell halten
           </h2>
           <div className="space-y-3 mb-10">
@@ -220,7 +220,7 @@ export default function NotfallplanPflege() {
             </p>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was muss in einen Pflegenotfallplan?', a: 'Persönliche Daten, Notfallkontakte (112, Arzt, Familie, Primundus), Medikamentenliste mit Allergien, Diagnosen, Ort der Vorsorgevollmacht. Plus für die Kraft: was tun bei Sturz/Bewusstlosigkeit.' },

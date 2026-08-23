@@ -69,7 +69,7 @@ export default function VorsorgevollmachtErstellen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -87,12 +87,12 @@ export default function VorsorgevollmachtErstellen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Eine Vorsorgevollmacht ist das wichtigste Dokument für den Pflegefall — und wird von den meisten Menschen zu spät erstellt. Wer eine Pflegesituation organisiert ohne gültige Vollmacht, verliert wertvolle Wochen durch gerichtliche Betreuungsverfahren. Erstellen dauert einen Nachmittag — und gilt ein Leben lang.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Vorsorgevollmacht: Vertrauensperson entscheidet wenn man selbst nicht mehr kann',
@@ -110,7 +110,7 @@ export default function VorsorgevollmachtErstellen() {
             </ul>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist eine Vorsorgevollmacht?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -131,7 +131,7 @@ export default function VorsorgevollmachtErstellen() {
             ))}
           </div>
 
-          <h2 id="inhalt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="inhalt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was muss in die Vorsorgevollmacht?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -151,7 +151,7 @@ export default function VorsorgevollmachtErstellen() {
             ))}
           </div>
 
-          <h2 id="erstellen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="erstellen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vorsorgevollmacht erstellen — Schritt für Schritt
           </h2>
           <ol className="space-y-3 mb-6">
@@ -172,7 +172,7 @@ export default function VorsorgevollmachtErstellen() {
             ))}
           </ol>
 
-          <h2 id="beglaubigung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="beglaubigung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Notariell oder nicht — was ist nötig?
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -202,7 +202,7 @@ export default function VorsorgevollmachtErstellen() {
             </div>
           </div>
 
-          <h2 id="pflege" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflege" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Bedeutung für die Pflege-Organisation
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -227,7 +227,7 @@ export default function VorsorgevollmachtErstellen() {
             <a href="/pflegevertrag-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegevertrag aufsetzen</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur Vorsorgevollmacht
           </h2>
           <div className="space-y-4 mb-12">

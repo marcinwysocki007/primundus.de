@@ -59,7 +59,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
@@ -77,7 +77,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wer eine Pflegekraft direkt anstellt, wird zum Arbeitgeber — mit allen Pflichten: Sozialversicherungsanmeldung, Lohnabrechnung, Beitragsabführung. Beim Entsendemodell über Primundus entfällt das vollständig. Dieser Ratgeber erklärt beide Wege.
           </p>
 
@@ -88,7 +88,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
             </p>
           </div>
 
-          <h2 id="wann-nötig" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann-nötig" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist eine Sozialversicherungsanmeldung nötig?
           </h2>
           <div className="space-y-3 mb-10">
@@ -107,7 +107,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
             ))}
           </div>
 
-          <h2 id="minijob" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="minijob" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Minijob — Haushaltshilfe über die Minijob-Zentrale
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -145,7 +145,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
             </div>
           </div>
 
-          <h2 id="regulaer" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="regulaer" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Reguläre Beschäftigung — Anmeldung und Kosten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -172,7 +172,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
             </p>
           </div>
 
-          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Anmeldung Schritt für Schritt (Direktanstellung)
           </h2>
           <ol className="space-y-3 mb-10">
@@ -192,7 +192,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
             ))}
           </ol>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Muss ich eine Pflegekraft aus Polen bei der Sozialversicherung anmelden?', a: 'Nicht beim Entsendemodell über Primundus — die Kraft ist im polnischen Heimatland sozialversichert (A1-Bescheinigung). Nur bei Direktanstellung (deutsches Arbeitsverhältnis) ist eine Anmeldung bei der deutschen Sozialversicherung nötig.' },

@@ -67,7 +67,7 @@ export default function PflegekraftAusBulgarien() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -85,12 +85,12 @@ export default function PflegekraftAusBulgarien() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Bulgarien ist EU-Mitglied — das bedeutet: Betreuungskräfte aus Bulgarien können im selben rechtlich abgesicherten Entsendemodell nach Deutschland kommen wie Kräfte aus Polen oder Rumänien. Primundus arbeitet auf Wunsch auch bulgarische Betreuungskräfte — im selben Preisrahmen, derselben Rechtssicherheit, denselben Qualitätsstandards.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Bulgarien ist EU-Mitglied — Entsendemodell funktioniert identisch wie bei Polen',
@@ -108,7 +108,7 @@ export default function PflegekraftAusBulgarien() {
             </ul>
           </div>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="warum" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Warum Pflegekraft aus Bulgarien?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -118,7 +118,7 @@ export default function PflegekraftAusBulgarien() {
             Entscheidend ist letztlich nicht das Herkunftsland — sondern die Qualifikation, Erfahrung, Deutschkenntnisse und Persönlichkeit der einzelnen Person. Primundus wählt die passende Kraft aus dem gesamten EU-Pool aus.
           </p>
 
-          <h2 id="entsendemodell" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="entsendemodell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Das Entsendemodell — legal & sicher
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -143,7 +143,7 @@ export default function PflegekraftAusBulgarien() {
             <a href="/pflegekraft-aus-polen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft aus Polen</a>
           </p>
 
-          <h2 id="qualifikation" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="qualifikation" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Qualifikation & Deutschkenntnisse
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -163,7 +163,7 @@ export default function PflegekraftAusBulgarien() {
             ))}
           </div>
 
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kosten & Kassenzuschüsse
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -197,7 +197,7 @@ export default function PflegekraftAusBulgarien() {
             <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Kassenzuschüsse 2026</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Ist eine Pflegekraft aus Bulgarien legal?', a: 'Ja — wenn sie im Entsendemodell über eine seriöse Agentur vermittelt wird. A1-Bescheinigung aus Bulgarien belegt den legalen EU-Entsendestatus. Primundus arbeitet ausschließlich im rechtssicheren Entsendemodell.' },

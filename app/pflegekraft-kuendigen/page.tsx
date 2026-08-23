@@ -59,7 +59,7 @@ export default function PflegekraftKuendigen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -77,11 +77,11 @@ export default function PflegekraftKuendigen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wie man eine Pflegekraft kündigt hängt komplett vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist die Kündigung denkbar einfach: täglich kündbar, ein Anruf genügt, Primundus stellt sofort Ersatz. Bei der Direktanstellung gelten die gesetzlichen Kündigungsfristen nach deutschem Arbeitsrecht.
           </p>
 
-          <h2 id="modell" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="modell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Kündigung je nach Beschäftigungsmodell
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -111,7 +111,7 @@ export default function PflegekraftKuendigen() {
             </div>
           </div>
 
-          <h2 id="entsendemodell" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="entsendemodell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kündigung beim Entsendemodell (Primundus) — so einfach geht es
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -137,7 +137,7 @@ export default function PflegekraftKuendigen() {
             <p className="text-[14px] text-pm-green-deep">Täglich kündbar, keine Mindestlaufzeit, kein Aufwand. So ist es bei Primundus seit 20 Jahren.</p>
           </div>
 
-          <h2 id="direktanstellung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="direktanstellung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kündigung bei Direktanstellung — gesetzliche Fristen
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -169,7 +169,7 @@ export default function PflegekraftKuendigen() {
             <p className="mt-3">Mit freundlichen Grüßen,<br />[Unterschrift]<br />[Name]</p>
           </div>
 
-          <h2 id="sonderfall" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="sonderfall" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kündigung aus wichtigem Grund — fristlos
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -188,7 +188,7 @@ export default function PflegekraftKuendigen() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie kündige ich eine Pflegekraft beim Entsendemodell?', a: 'Primundus anrufen (089 200 000 830) — fertig. Täglich kündbar, kein Formular, keine Fristen.' },

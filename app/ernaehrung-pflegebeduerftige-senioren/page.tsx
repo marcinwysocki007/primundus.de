@@ -66,7 +66,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -84,12 +84,12 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Gute Ernährung ist in der Pflege oft unterschätzt — dabei ist sie eine der wirksamsten Maßnahmen für Wohlbefinden, Heilung und Lebensqualität. Pflegebedürftige Senioren haben andere Bedürfnisse als jüngere Menschen: weniger Hunger, aber höherer Nährstoffbedarf, vermindertes Durstgefühl, oft Schluckprobleme. Eine 24h-Betreuungskraft die frisch kocht macht den Unterschied.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Die wichtigsten Grundsätze</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Die wichtigsten Grundsätze</p>
             <ul className="space-y-2.5">
               {[
                 'Energie- und nährstoffdichte Kost — nicht wenig, aber kompakt',
@@ -107,7 +107,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
             </ul>
           </div>
 
-          <h2 id="grundlagen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="grundlagen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Grundlagen der Seniorenernährung
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -127,7 +127,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
             ))}
           </div>
 
-          <h2 id="haeufige-probleme" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="haeufige-probleme" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Häufige Ernährungsprobleme — und was hilft
           </h2>
           <div className="space-y-3 mb-10">
@@ -145,7 +145,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
             ))}
           </div>
 
-          <h2 id="mangelernährung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="mangelernährung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Mangelernährung erkennen & verhindern
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -160,7 +160,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
               { zeichen: 'Wunden heilen schlecht', detail: 'Druckgeschwüre und Wunden die nicht heilen — Proteinstatus prüfen lassen.' },
             ].map((item) => (
               <div key={item.zeichen} className="flex gap-4 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
+                <span className="w-5 h-5 rounded-xl bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
                 <div>
                   <p className="text-[14px] font-bold text-pm-ink mb-0.5">{item.zeichen}</p>
                   <p className="text-[13px] text-pm-body">{item.detail}</p>
@@ -169,7 +169,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
             ))}
           </div>
 
-          <h2 id="kochpraxis" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kochpraxis" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kochpraxis für Betreuungskräfte — konkrete Tipps
           </h2>
           <div className="space-y-3 mb-10">
@@ -187,7 +187,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was sollten pflegebedürftige Senioren essen?', a: 'Energie- und nährstoffdichte Kost: genug Protein (1–1,2 g/kg/Tag), viel Flüssigkeit (1,5+ Liter), Vitamin D und Kalzium, Ballaststoffe. Kleine Mahlzeiten 5–6× täglich. Nach Vorlieben und Gewohnheiten kochen.' },

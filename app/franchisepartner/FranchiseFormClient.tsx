@@ -43,8 +43,8 @@ export default function FranchiseFormClient() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-[26px] font-bold text-[#3D3D3D] mb-3">Anfrage erhalten</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-6">
+            <h2 className="text-[26px] font-bold text-pm-ink mb-3">Anfrage erhalten</h2>
+            <p className="text-[15px] text-pm-body leading-relaxed mb-6">
               Vielen Dank, {data.vorname}. Unser Franchise-Team meldet sich innerhalb von
               24 Stunden persönlich bei Ihnen — mit einem ersten Überblick über die Franchise-Möglichkeit in{' '}
               <strong>{data.standort || 'Ihrer Region'}</strong>.
@@ -65,13 +65,13 @@ export default function FranchiseFormClient() {
     <section id="anfrage" className="bg-pm-paper py-20">
       <div className="max-w-[720px] mx-auto px-5">
         <div className="text-center mb-10">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Unverbindliche Erstanfrage
           </p>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] mb-4">
+          <h2 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Jetzt Informationspaket anfordern
           </h2>
-          <p className="text-[15px] text-[#5A5A5A] max-w-[480px] mx-auto leading-relaxed">
+          <p className="text-[15px] text-pm-body max-w-[480px] mx-auto leading-relaxed">
             Die Geschäftsleitung meldet sich persönlich. Kein Sales-Skript, kein Callcenter —
             ein echtes Gespräch über Ihre Situation und Chancen.
           </p>
@@ -95,7 +95,7 @@ export default function FranchiseFormClient() {
                   className={`px-5 py-2.5 rounded-xl text-[14px] font-medium border transition-all ${
                     data.anrede === a
                       ? 'bg-pm-taupe text-white border-pm-taupe'
-                      : 'bg-white text-[#5A5A5A] border-pm-line hover:border-pm-taupe'
+                      : 'bg-white text-pm-body border-pm-line hover:border-pm-taupe'
                   }`}
                 >
                   {a}
@@ -116,7 +116,7 @@ export default function FranchiseFormClient() {
                 value={data.vorname}
                 onChange={(e) => set('vorname', e.target.value)}
                 placeholder="Max"
-                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
             <div>
@@ -129,7 +129,7 @@ export default function FranchiseFormClient() {
                 value={data.nachname}
                 onChange={(e) => set('nachname', e.target.value)}
                 placeholder="Mustermann"
-                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function FranchiseFormClient() {
                 value={data.email}
                 onChange={(e) => set('email', e.target.value)}
                 placeholder="max@beispiel.de"
-                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
             <div>
@@ -159,7 +159,7 @@ export default function FranchiseFormClient() {
                 value={data.telefon}
                 onChange={(e) => set('telefon', e.target.value)}
                 placeholder="+49 89 000 000"
-                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function FranchiseFormClient() {
               value={data.standort}
               onChange={(e) => set('standort', e.target.value)}
               placeholder="z. B. München, Bayern oder PLZ-Bereich 80xxx"
-              className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
+              className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
             />
           </div>
 
@@ -188,7 +188,7 @@ export default function FranchiseFormClient() {
               <select
                 value={data.hintergrund}
                 onChange={(e) => set('hintergrund', e.target.value)}
-                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] focus:outline-none focus:border-pm-taupe transition-colors bg-white"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink focus:outline-none focus:border-pm-taupe transition-colors bg-white"
               >
                 <option value="">Bitte wählen</option>
                 <option value="Pflege / Gesundheitswesen">Pflege / Gesundheitswesen</option>
@@ -205,7 +205,7 @@ export default function FranchiseFormClient() {
               <select
                 value={data.kapital}
                 onChange={(e) => set('kapital', e.target.value)}
-                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] focus:outline-none focus:border-pm-taupe transition-colors bg-white"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink focus:outline-none focus:border-pm-taupe transition-colors bg-white"
               >
                 <option value="">Bitte wählen</option>
                 <option value="25.000–50.000 €">25.000–50.000 €</option>
@@ -226,7 +226,7 @@ export default function FranchiseFormClient() {
               onChange={(e) => set('nachricht', e.target.value)}
               rows={4}
               placeholder="Kurze Beschreibung Ihrer Situation, Ihrer Motivation und was Sie sich von der Partnerschaft erhoffen…"
-              className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors resize-none"
+              className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-pm-ink placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors resize-none"
             />
           </div>
 
@@ -254,7 +254,7 @@ export default function FranchiseFormClient() {
                   )}
                 </div>
               </div>
-              <span className="text-[13px] text-[#5A5A5A] leading-relaxed">
+              <span className="text-[13px] text-pm-body leading-relaxed">
                 Ich habe die{' '}
                 <a href="/datenschutz" className="text-pm-taupe underline hover:no-underline">
                   Datenschutzerklärung
@@ -269,7 +269,7 @@ export default function FranchiseFormClient() {
           <button
             type="submit"
             disabled={submitting || !data.datenschutz}
-            className="w-full bg-pm-coral hover:bg-pm-coral-deep disabled:bg-pm-line disabled:text-[#A0A0A0] text-white font-bold text-[16px] py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2"
+            className="w-full bg-pm-coral hover:bg-pm-coral-deep disabled:bg-pm-line disabled:text-[#A0A0A0] text-white font-bold text-[16px] py-4 rounded-full transition-all duration-200 flex items-center justify-center gap-2"
           >
             {submitting ? (
               <>

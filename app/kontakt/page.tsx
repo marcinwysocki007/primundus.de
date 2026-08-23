@@ -19,19 +19,19 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-article mx-auto px-5 py-16">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
-          <span className="text-[#3D3D3D]">Kontakt</span>
+          <span className="text-pm-ink">Kontakt</span>
         </nav>
 
-        <p className="text-xs font-bold uppercase tracking-wider text-pm-taupe-light mb-3">Wir sind für Sie da</p>
-        <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+        <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Wir sind für Sie da</p>
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Persönliche Beratung — kostenlos & unverbindlich
         </h1>
-        <p className="text-[17px] text-[#5A5A5A] leading-[1.7] mb-10 max-w-xl">
+        <p className="text-[17px] text-pm-body leading-[1.7] mb-10 max-w-xl">
           Sprechen Sie direkt mit uns. Kein Callcenter, kein Warteschleife — ein echter Ansprechpartner, der Ihre Situation kennt.
         </p>
 
@@ -53,13 +53,13 @@ export default function Page() {
             </div>
             <a
               href="tel:+4989200000830"
-              className="text-[28px] font-bold text-[#3D3D3D] hover:text-pm-taupe transition-colors block mb-4"
+              className="text-[28px] font-bold text-pm-ink hover:text-pm-taupe transition-colors block mb-4"
             >
               089 200 000 830
             </a>
             <a
               href="tel:+4989200000830"
-              className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-xl transition-all duration-200"
+              className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-full transition-all duration-200"
             >
               <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover object-top" />
               Jetzt anrufen
@@ -79,7 +79,7 @@ export default function Page() {
               </div>
               <a
                 href="mailto:info@primundus.de"
-                className="text-[18px] font-semibold text-[#3D3D3D] hover:text-pm-taupe transition-colors"
+                className="text-[18px] font-semibold text-pm-ink hover:text-pm-taupe transition-colors"
               >
                 info@primundus.de
               </a>
@@ -94,10 +94,10 @@ export default function Page() {
                 </div>
                 <p className="text-[12px] font-bold uppercase tracking-wider text-pm-taupe-light">Online</p>
               </div>
-              <p className="text-[14px] text-[#5A5A5A] mb-3">Kosten sofort berechnen & Pflegekräfte ansehen</p>
+              <p className="text-[14px] text-pm-body mb-3">Kosten sofort berechnen & Pflegekräfte ansehen</p>
               <a
                 href="https://kostenrechner.primundus.de"
-                className="text-[15px] font-semibold text-pm-taupe hover:text-[#5C4033] transition-colors"
+                className="text-[15px] font-semibold text-pm-taupe hover:text-pm-taupe-ink transition-colors"
               >
                 Zum Kostenrechner →
               </a>
@@ -114,8 +114,8 @@ export default function Page() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <div className="text-[15px] text-[#5A5A5A] leading-[1.8]">
-              <p className="font-semibold text-[#3D3D3D]">Primundus Deutschland</p>
+            <div className="text-[15px] text-pm-body leading-[1.8]">
+              <p className="font-semibold text-pm-ink">Primundus Deutschland</p>
               <p>Landsberger Str. 155</p>
               <p>80687 München</p>
             </div>
@@ -124,7 +124,7 @@ export default function Page() {
 
         {/* Note */}
         <div className="bg-[#F0EBE3] rounded-2xl p-6 text-center">
-          <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+          <p className="text-[15px] text-pm-body leading-[1.7]">
             Keine Anfrage zu groß oder zu klein — wir helfen Ihnen gerne dabei, die richtige Lösung für Ihre Situation zu finden. Komplett kostenlos und ohne Verpflichtung.
           </p>
         </div>

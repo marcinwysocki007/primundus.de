@@ -59,7 +59,7 @@ export default function EuPflegekraftRechtenPflichten() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
@@ -77,11 +77,11 @@ export default function EuPflegekraftRechtenPflichten() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Das Entsendemodell ist die rechtssichere Grundlage für die meisten 24h-Betreuungsverhältnisse in Deutschland. Es schützt beide Seiten — die Familie und die Betreuungskraft. Trotzdem gibt es häufige Missverständnisse: Was darf die Familie verlangen? Was hat die Kraft Anspruch auf? Dieser Ratgeber klärt auf.
           </p>
 
-          <h2 id="entsendemodell" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="entsendemodell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Das Entsendemodell — wie es funktioniert
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -101,7 +101,7 @@ export default function EuPflegekraftRechtenPflichten() {
             ))}
           </div>
 
-          <h2 id="rechte-kraft" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="rechte-kraft" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Rechte der Betreuungskraft
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -123,7 +123,7 @@ export default function EuPflegekraftRechtenPflichten() {
             ))}
           </div>
 
-          <h2 id="pflichten-kraft" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflichten-kraft" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflichten der Betreuungskraft
           </h2>
           <div className="space-y-3 mb-10">
@@ -141,7 +141,7 @@ export default function EuPflegekraftRechtenPflichten() {
             ))}
           </div>
 
-          <h2 id="rechte-familie" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="rechte-familie" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Rechte & Pflichten der Familie
           </h2>
           <div className="space-y-3 mb-10">
@@ -169,7 +169,7 @@ export default function EuPflegekraftRechtenPflichten() {
             </p>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Welche Rechte hat eine EU-Pflegekraft in Deutschland?', a: 'Anspruch auf deutschen Mindestlohn, eigenes Zimmer, Ruhezeiten (min. 11 Std./Tag), anteiligen Urlaub, Krankenversicherung über EHIC und würdevollen Umgang.' },

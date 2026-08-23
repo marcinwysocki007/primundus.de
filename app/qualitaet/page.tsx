@@ -69,7 +69,7 @@ export default function Qualitaet() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-pm-ink">Qualität</span>
@@ -103,7 +103,7 @@ export default function Qualitaet() {
             ))}
           </div>
 
-          <h2 id="auswahl" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="auswahl" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie Primundus Betreuungskräfte auswählt
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -127,7 +127,7 @@ export default function Qualitaet() {
             ))}
           </div>
 
-          <h2 id="pruefung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pruefung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was aktiv geprüft wird — und was nicht reicht
           </h2>
           <div className="grid md:grid-cols-2 gap-4 mb-10">
@@ -162,7 +162,7 @@ export default function Qualitaet() {
             </div>
           </div>
 
-          <h2 id="laufend" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="laufend" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Laufende Qualitätssicherung während des Einsatzes
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -182,7 +182,7 @@ export default function Qualitaet() {
             ))}
           </div>
 
-          <h2 id="wechsel" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wechsel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was wenn es nicht passt — täglich kündbar
           </h2>
           <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10">
@@ -204,7 +204,7 @@ export default function Qualitaet() {
             </div>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen zur Qualität</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen zur Qualität</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie stellt Primundus die Qualität der Betreuungskräfte sicher?', a: 'Aktive Prüfung vor jedem Einsatz: Deutschkenntnisse im Gespräch bewertet, Erfahrung und Referenzen geprüft, Spezialerfahrung abgeglichen. Laufende Betreuung durch Primundus als Ansprechpartner. Bei Qualitätsproblemen sofortiger Wechsel — täglich kündbar.' },

@@ -67,7 +67,7 @@ export default function TagesstrukturDemenz() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -85,11 +85,11 @@ export default function TagesstrukturDemenz() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Feste Tagesstrukturen sind das wirksamste nicht-medikamentöse Mittel bei Demenz. Sie reduzieren Angst, Unruhe und Verhaltensauffälligkeiten erheblich — weil sie Orientierung geben ohne Gedächtnis zu brauchen. Der Körper erinnert sich auch wenn der Kopf es nicht mehr kann.
           </p>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="warum" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Warum Tagesstruktur bei Demenz so wichtig ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -116,7 +116,7 @@ export default function TagesstrukturDemenz() {
             </ul>
           </div>
 
-          <h2 id="tagesplan" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="tagesplan" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Idealer Tagesplan bei Demenz — Beispiel
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -155,7 +155,7 @@ export default function TagesstrukturDemenz() {
             </div>
           </div>
 
-          <h2 id="aktivitaeten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="aktivitaeten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Sinnvolle Aktivitäten je Stadium
           </h2>
           <div className="space-y-3 mb-10">
@@ -187,7 +187,7 @@ export default function TagesstrukturDemenz() {
             ))}
           </div>
 
-          <h2 id="schlafroutine" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="schlafroutine" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schlaf & Nachtunruhe — die größte Herausforderung
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -213,7 +213,7 @@ export default function TagesstrukturDemenz() {
             <a href="/kommunikation-mit-demenzkranken" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kommunikation mit Demenzkranken</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur Tagesstruktur bei Demenz
           </h2>
           <div className="space-y-4 mb-12">

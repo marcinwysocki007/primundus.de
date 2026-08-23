@@ -87,7 +87,7 @@ export default function WirklicheKostenPage() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/kosten" className="hover:text-pm-taupe transition-colors">Kosten</a>
@@ -95,7 +95,7 @@ export default function WirklicheKostenPage() {
             <span className="text-pm-ink">Die ehrliche Gesamtrechnung</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Kosten &amp; Finanzierung · Aktualisiert August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
@@ -104,7 +104,7 @@ export default function WirklicheKostenPage() {
 
           <AuthorByline updated="14. August 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wer Angebote für 24-Stunden-Pflege vergleicht, stößt auf erstaunlich unterschiedliche Zahlen:
             mal „105 Euro am Tag", mal „ab 945 Euro Eigenanteil", mal „ab 2.850 Euro". Alle drei Angaben
             können sich am Ende auf denselben Monatsbetrag summieren — sie sind nur unterschiedlich

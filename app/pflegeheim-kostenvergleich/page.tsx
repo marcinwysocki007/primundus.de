@@ -137,25 +137,25 @@ export default function Page() {
         <div className="max-w-[720px] mx-auto px-5 pb-16">
 
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-3">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-3">
               5 Gründe, warum 24h-Pflege oft die bessere Wahl ist
             </h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-6">
+            <p className="text-[15px] text-pm-body leading-relaxed mb-6">
               Neben dem reinen Kostenvergleich gibt es Argumente, die sich nicht in Zahlen ausdrücken lassen.
               Hier die wichtigsten:
             </p>
             <div className="flex flex-col gap-3">
               {argumente.map((a) => (
                 <div key={a.name} className="bg-white border border-pm-line rounded-xl px-5 py-4">
-                  <p className="text-[14px] font-bold text-[#3D3D3D] mb-1">{a.name}</p>
-                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{a.desc}</p>
+                  <p className="text-[14px] font-bold text-pm-ink mb-1">{a.name}</p>
+                  <p className="text-[13px] text-pm-body leading-relaxed">{a.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-6">Häufige Fragen zum Kostenvergleich</h2>
+            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Häufige Fragen zum Kostenvergleich</h2>
             <div className="flex flex-col gap-3">
               {faqs.map((faq) => (
                 <details
@@ -163,11 +163,11 @@ export default function Page() {
                   className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
-                    <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
+                    <span className="text-[14px] font-semibold text-pm-ink leading-snug">{faq.q}</span>
                     <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
                   </summary>
                   <div className="px-5 pb-4 pt-1 border-t border-pm-line-soft">
-                    <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
+                    <p className="text-[13px] text-pm-body leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
               ))}
@@ -175,7 +175,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-4">Vertiefende Vergleiche</h2>
+            <h2 className="text-[18px] font-bold text-pm-ink mb-4">Vertiefende Vergleiche</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { href: '/24h-pflege-vs-pflegeheim', label: '24h-Pflege vs. Pflegeheim', desc: 'Detaillierter Vergleich mit allen Vor- und Nachteilen' },
@@ -189,7 +189,7 @@ export default function Page() {
                   {...('external' in item && item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className="bg-white border border-pm-line rounded-xl px-4 py-3.5 hover:border-pm-taupe transition-colors"
                 >
-                  <p className="text-[14px] font-semibold text-[#3D3D3D] mb-0.5">→ {item.label}</p>
+                  <p className="text-[14px] font-semibold text-pm-ink mb-0.5">→ {item.label}</p>
                   <p className="text-[12px] text-pm-mute">{item.desc}</p>
                 </a>
               ))}

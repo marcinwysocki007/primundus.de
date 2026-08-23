@@ -64,21 +64,21 @@ export function PflegeheimVergleichClient() {
 
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-[720px] mx-auto px-5 py-14">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
           <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
-          <span className="text-[#5A5A5A]">Pflegeheim-Vergleich</span>
+          <span className="text-pm-body">Pflegeheim-Vergleich</span>
         </nav>
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">TOOLS & RECHNER</p>
-        <h1 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-4">
+        <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">TOOLS & RECHNER</p>
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Pflegeheim vs. 24h-Pflege — Kostenvergleich 2026
         </h1>
-        <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-10 max-w-[580px]">
+        <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
           Pflegegrad und Bundesland wählen — und sehen, wie viel Sie mit 24h-Pflege im Vergleich zum Heim sparen.
         </p>
 
@@ -86,7 +86,7 @@ export function PflegeheimVergleichClient() {
         <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm mb-5">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-7 h-7 rounded-full bg-pm-shell text-pm-taupe font-bold text-[14px] flex items-center justify-center flex-shrink-0">1</span>
-            <p className="text-[15px] font-bold text-[#3D3D3D]">Pflegegrad auswählen</p>
+            <p className="text-[15px] font-bold text-pm-ink">Pflegegrad auswählen</p>
           </div>
           <div className="flex flex-wrap gap-3">
             {PFLEGEGRADE.map(p => (
@@ -96,7 +96,7 @@ export function PflegeheimVergleichClient() {
                 className={`px-5 py-2.5 rounded-xl border-2 text-[14px] font-semibold transition-all ${
                   pgWahl === p.pg
                     ? 'border-pm-taupe bg-pm-taupe text-white'
-                    : 'border-pm-line bg-white text-[#3D3D3D] hover:border-pm-taupe'
+                    : 'border-pm-line bg-white text-pm-ink hover:border-pm-taupe'
                 }`}
               >
                 PG {p.pg}
@@ -113,12 +113,12 @@ export function PflegeheimVergleichClient() {
           <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm mb-5">
             <div className="flex items-center gap-3 mb-4">
               <span className="w-7 h-7 rounded-full bg-pm-shell text-pm-taupe font-bold text-[14px] flex items-center justify-center flex-shrink-0">2</span>
-              <p className="text-[15px] font-bold text-[#3D3D3D]">Bundesland wählen</p>
+              <p className="text-[15px] font-bold text-pm-ink">Bundesland wählen</p>
             </div>
             <select
               value={bundesland}
               onChange={(e) => setBundesland(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-pm-line rounded-xl text-[14px] text-[#3D3D3D] bg-white focus:border-pm-taupe focus:outline-none transition-colors"
+              className="w-full px-4 py-3 border-2 border-pm-line rounded-xl text-[14px] text-pm-ink bg-white focus:border-pm-taupe focus:outline-none transition-colors"
             >
               {BUNDESLAENDER.map(b => (
                 <option key={b.name} value={b.name}>{b.name}</option>
@@ -144,7 +144,7 @@ export function PflegeheimVergleichClient() {
                     {ergebnis.heimEigenanteil.toLocaleString('de')} €
                   </p>
                   <p className="text-[12px] text-pm-mute mb-4">Eigenanteil pro Monat</p>
-                  <div className="text-[12px] text-[#5A5A5A] space-y-1">
+                  <div className="text-[12px] text-pm-body space-y-1">
                     <p>• Pflegekosten: {pg.heimanteil} €</p>
                     <p>• Unterkunft/Verpflegung: {bl.heimEA} €</p>
                     <p>• Investitionskosten: ca. 500 €</p>
@@ -163,7 +163,7 @@ export function PflegeheimVergleichClient() {
                     {ergebnis.eaMin.toLocaleString('de')}–{ergebnis.eaMax.toLocaleString('de')} €
                   </p>
                   <p className="text-[12px] text-pm-mute mb-4">Eigenanteil pro Monat</p>
-                  <div className="text-[12px] text-[#5A5A5A] space-y-1">
+                  <div className="text-[12px] text-pm-body space-y-1">
                     <p>• Brutto-Kosten: {ergebnis.bruttoMin.toLocaleString('de')}–{ergebnis.bruttoMax.toLocaleString('de')} €</p>
                     <p>- Pflegegeld (50 %): {ergebnis.pgHalb} €</p>
                     <p>- Entlastungsbetrag: 131 €</p>
@@ -195,8 +195,8 @@ export function PflegeheimVergleichClient() {
                   </div>
                 </div>
                 <div className="bg-pm-paper rounded-xl px-4 py-3 mb-5">
-                  <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
-                    <strong className="text-[#3D3D3D]">Hochgerechnet:</strong>{' '}
+                  <p className="text-[13px] text-pm-body leading-relaxed">
+                    <strong className="text-pm-ink">Hochgerechnet:</strong>{' '}
                     {(ergebnis.ersparnis * 12).toLocaleString('de')} € pro Jahr — bei gleichzeitig vertrautem Umfeld,
                     persönlicher 1:1-Betreuung und höherer Lebensqualität.
                   </p>
@@ -204,7 +204,7 @@ export function PflegeheimVergleichClient() {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href="/beratungsgespraech"
-                    className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
+                    className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-5 rounded-full transition-colors"
                   >
                     Kostenfreie Beratung →
                   </a>

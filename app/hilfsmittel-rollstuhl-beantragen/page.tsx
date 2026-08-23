@@ -83,14 +83,14 @@ export default function Page() {
       <ArticleTOC sections={SECTIONS} />
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-pm-ink">Rollator & Rollstuhl beantragen</span>
           </nav>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Hilfsmittel · 7 Min</p>
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Hilfsmittel · 7 Min</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Rollator & Rollstuhl beantragen: auf Rezept, ohne Pflegegrad
           </h1>
@@ -104,7 +104,7 @@ export default function Page() {
           </p>
 
           {/* ① WELCHE KASSE */}
-          <h2 id="was-zahlt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-zahlt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Krankenkasse oder Pflegekasse — wer zahlt was?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -118,7 +118,7 @@ export default function Page() {
           </p>
 
           {/* ② REZEPT */}
-          <h2 id="rezept" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="rezept" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Rollator oder Rollstuhl auf Rezept: so läuft der Antrag
           </h2>
           <div className="space-y-3 mb-4">
@@ -143,7 +143,7 @@ export default function Page() {
           </p>
 
           {/* ③ PFLEGEGRAD */}
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was der Pflegegrad zusätzlich bringt
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -163,7 +163,7 @@ export default function Page() {
           </p>
 
           {/* ④ ABLEHNUNG */}
-          <h2 id="ablehnung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="ablehnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wenn die Kasse ablehnt: Widerspruch lohnt sich
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -175,7 +175,7 @@ export default function Page() {
           </p>
 
           {/* ⑤ ÜBERBLICK */}
-          <h2 id="hilfsmittel" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="hilfsmittel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wichtige Hilfsmittel im Überblick
           </h2>
           <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-10">
@@ -211,7 +211,7 @@ export default function Page() {
           </div>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {faqs.map((f) => (
               <details key={f.q} className="bg-white rounded-xl border border-pm-line group">

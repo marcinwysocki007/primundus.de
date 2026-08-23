@@ -70,7 +70,7 @@ export default function PflegemangelMeldenBeschwerden() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
@@ -88,11 +88,11 @@ export default function PflegemangelMeldenBeschwerden() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wer Pflegemängel erlebt — schlechte Versorgung, Vernachlässigung, unwürdige Behandlung — hat das Recht etwas dagegen zu tun. Dieser Ratgeber zeigt wann und wie man Beschwerden einreicht, an wen man sich wendet, und welche Stellen in Deutschland zuständig sind.
           </p>
 
-          <h2 id="wann-melden" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="wann-melden" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Wann eine Beschwerde sinnvoll ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -116,7 +116,7 @@ export default function PflegemangelMeldenBeschwerden() {
             ))}
           </div>
 
-          <h2 id="an-wen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="an-wen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             An wen wendet man sich?
           </h2>
           <div className="space-y-3 mb-10">
@@ -163,7 +163,7 @@ export default function PflegemangelMeldenBeschwerden() {
             ))}
           </div>
 
-          <h2 id="wie-melden" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wie-melden" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie eine Beschwerde einreichen — Schritt für Schritt
           </h2>
           <ol className="space-y-3 mb-10">
@@ -184,7 +184,7 @@ export default function PflegemangelMeldenBeschwerden() {
             ))}
           </ol>
 
-          <h2 id="heimaufsicht" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="heimaufsicht" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Heimaufsicht & Medizinischer Dienst
           </h2>
           <div className="space-y-3 mb-10">
@@ -202,7 +202,7 @@ export default function PflegemangelMeldenBeschwerden() {
             </div>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wo kann man Pflegemängel melden?', a: 'Bei häuslicher Pflege: zunächst direkt bei der Agentur (Primundus: 089 200 000 830), dann bei der Pflegekasse. Bei Pflegeheimen: Heimaufsicht des Bundeslandes und Medizinischer Dienst. Für Beratung: Pflegestützpunkt kostenlos und unabhängig.' },

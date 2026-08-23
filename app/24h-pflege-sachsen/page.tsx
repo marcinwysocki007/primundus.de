@@ -60,7 +60,7 @@ export default function SachsenPage() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-pm-ink">24h-Pflege Sachsen</span>
@@ -227,7 +227,7 @@ export default function SachsenPage() {
           </div>
 
           {/* ⑥ FAQ */}
-          <h2 className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Sachsen</h2>
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Sachsen</h2>
           <div className="space-y-3 mb-12">
             {[
               { q: 'Was kostet eine 24h-Pflegekraft in Sachsen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Sachsen (Eigenanteil rund 2.990 €/Monat, vdek 07/2026).' },

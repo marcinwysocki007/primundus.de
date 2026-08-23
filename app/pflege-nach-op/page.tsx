@@ -59,7 +59,7 @@ export default function PflegeNachOp() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
@@ -77,7 +77,7 @@ export default function PflegeNachOp() {
 
           <AuthorByline updated="21. August 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Nach einer Operation werden ältere Menschen heute schnell aus dem Krankenhaus entlassen — oft schneller als ihre Angehörigen gewappnet sind. Die ersten Wochen zuhause sind kritisch: Wundversorgung durch den Pflegedienst, Mobilisierung, Hilfsbedarf bei allen Alltagsaufgaben. Eine 24h-Betreuungskraft überbrückt diese Zeit — und lässt sich schon vor der OP planen.
           </p>
 
@@ -88,7 +88,7 @@ export default function PflegeNachOp() {
             </p>
           </div>
 
-          <h2 id="nach-entlassung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="nach-entlassung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Zeit nach der Entlassung — was zuhause nötig ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -101,13 +101,13 @@ export default function PflegeNachOp() {
               { phase: 'Ab Woche 6–8', was: 'Viele Patienten sind deutlich selbstständiger. Entscheidung: Braucht es weitere Unterstützung oder kann auf Alltagsunterstützung durch ambulante Dienste umgestellt werden?' },
             ].map((item) => (
               <div key={item.phase} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.phase}</p>
+                <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.phase}</p>
                 <p className="text-[14px] text-pm-body leading-relaxed">{item.was}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="haeufige-ops" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="haeufige-ops" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Häufige OPs im Alter — was zu beachten ist
           </h2>
           <div className="space-y-4 mb-10">
@@ -159,7 +159,7 @@ export default function PflegeNachOp() {
             ))}
           </div>
 
-          <h2 id="betreuung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="betreuung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was die Betreuungskraft nach OP übernimmt
           </h2>
           <div className="space-y-3 mb-6">
@@ -178,7 +178,7 @@ export default function PflegeNachOp() {
             ))}
           </div>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kassenzuschüsse nach OP
           </h2>
           <div className="space-y-3 mb-10">
@@ -195,7 +195,7 @@ export default function PflegeNachOp() {
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wann brauche ich nach einer OP eine Betreuungskraft?', a: 'Immer wenn man alleine lebt oder Angehörige nicht dauerhaft die Betreuung übernehmen können. Nach Hüft-OP, Knie-OP oder Herzeingriff: 4–12 Wochen intensive Unterstützung nötig.' },

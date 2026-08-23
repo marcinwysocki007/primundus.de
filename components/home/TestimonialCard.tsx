@@ -27,13 +27,13 @@ export function TestimonialCard() {
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
             </svg>
-            <span className="text-sm font-semibold text-[#3D3D3D]">Google Bewertungen</span>
+            <span className="text-sm font-semibold text-pm-ink">Google Bewertungen</span>
           </div>
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-4 h-4 fill-[#FBBC04] text-[#FBBC04]" />
             ))}
-            <span className="text-[14px] font-bold text-[#3D3D3D] ml-1">5,0</span>
+            <span className="text-[14px] font-bold text-pm-ink ml-1">5,0</span>
           </div>
           <p className="text-[12px] text-pm-mute">3 Bewertungen · Stand August 2026 · Profil ansehen →</p>
         </a>
@@ -45,9 +45,9 @@ export function TestimonialCard() {
         >
           <div className="flex items-center gap-2">
             <img src="/images/primundus_testsieger-2021.webp" alt="Testsieger-Siegel DIE WELT/ServiceValue 2021" width={28} height={28} className="w-7 h-7 object-contain" />
-            <span className="text-sm font-semibold text-[#3D3D3D]">Testsieger-Auszeichnung</span>
+            <span className="text-sm font-semibold text-pm-ink">Testsieger-Auszeichnung</span>
           </div>
-          <p className="text-[13px] text-[#5A5A5A] leading-snug">
+          <p className="text-[13px] text-pm-body leading-snug">
             Nr. 1 der Pflegekräfte-Vermittler — DIE WELT &amp; ServiceValue (10/2021)
           </p>
           <p className="text-[12px] text-pm-mute">Zur Auszeichnung mit Beleg →</p>
@@ -62,9 +62,9 @@ export function TestimonialCard() {
         >
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 2l2.9 6.9L22 9.2l-5.4 4.9L18.2 22 12 18.1 5.8 22l1.6-7.9L2 9.2l7.1-.3z"/></svg>
-            <span className="text-sm font-semibold text-[#3D3D3D]">Trustpilot</span>
+            <span className="text-sm font-semibold text-pm-ink">Trustpilot</span>
           </div>
-          <p className="text-[13px] text-[#5A5A5A] leading-snug">
+          <p className="text-[13px] text-pm-body leading-snug">
             Ihre Erfahrung hilft anderen Familien bei der Entscheidung.
           </p>
           <p className="text-[12px] text-pm-mute">Primundus auf Trustpilot bewerten →</p>

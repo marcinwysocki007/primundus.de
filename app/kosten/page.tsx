@@ -82,7 +82,7 @@ export default function Kosten() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/24-stunden-pflege" className="hover:text-pm-taupe transition-colors">24-Stunden-Pflege</a>
@@ -106,7 +106,7 @@ export default function Kosten() {
 
           <a
             href="https://kostenrechner.primundus.de/?start=1&src=apex-kosten"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-sm hover:shadow-md mb-10 whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-full transition-all duration-200 shadow-sm hover:shadow-md mb-10 whitespace-nowrap"
           >
             Mein persönliches Angebot ansehen
             <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,7 +115,7 @@ export default function Kosten() {
           </a>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Monatliche Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf',
@@ -134,7 +134,7 @@ export default function Kosten() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="kosten-uebersicht" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten-uebersicht" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was kostet 24h-Pflege bei Primundus?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -243,7 +243,7 @@ export default function Kosten() {
           </p>
 
           {/* SECTION 2 */}
-          <h2 id="kassenzuschuesse" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kassenzuschuesse" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kassenzuschüsse 2026 — was zahlt die Pflegekasse?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -313,7 +313,7 @@ export default function Kosten() {
 
 
           {/* SECTION 2b — Kosten nach Pflegegrad */}
-          <h2 id="pflegegrad-kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad-kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was kostet 24-Stunden-Pflege nach Pflegegrad?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -351,7 +351,7 @@ export default function Kosten() {
           </p>
 
           {/* SECTION 2c — Polnische Pflegekraft */}
-          <h2 id="polnische-pflegekraft" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="polnische-pflegekraft" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was kostet eine polnische Pflegekraft?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -366,7 +366,7 @@ export default function Kosten() {
           </p>
 
           {/* SECTION 3 — Grafik */}
-          <h2 id="vergleich" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vergleich" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             24h-Pflege vs. Pflegeheim — was ist günstiger?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -381,7 +381,7 @@ export default function Kosten() {
           </p>
 
           {/* SECTION 4 */}
-          <h2 id="eigenanteil" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="eigenanteil" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Eigenanteil senken — alle Möglichkeiten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -410,7 +410,7 @@ export default function Kosten() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zu den Kosten der 24h-Pflege
           </h2>
           <div className="space-y-4 mb-12">
@@ -439,12 +439,12 @@ export default function Kosten() {
 
           {/* Hub: Alle Artikel zu Kosten & Finanzierung */}
           <div className="mt-12 mb-4">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Alle Artikel zu Kosten &amp; Finanzierung</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Alle Artikel zu Kosten &amp; Finanzierung</p>
             <h2 className="text-[22px] font-bold text-pm-ink mb-6">Weitere Themen im Überblick</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
               <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Zuschüsse &amp; Leistungen</p>
+                <p className="text-[14px] font-bold text-pm-ink mb-2">Zuschüsse &amp; Leistungen</p>
                 <a href="/pflegegeld" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegegeld 2026</a>
                 <a href="/entlastungsbetrag" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Entlastungsbetrag</a>
                 <a href="/verhinderungspflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Verhinderungspflege &amp; Entlastungsbudget</a>
@@ -452,7 +452,7 @@ export default function Kosten() {
               </div>
 
               <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Eigenanteil senken</p>
+                <p className="text-[14px] font-bold text-pm-ink mb-2">Eigenanteil senken</p>
                 <a href="/eigenanteil-24h-pflege-senken" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Eigenanteil senken — alle Möglichkeiten</a>
                 <a href="/pflege-steuerlich-absetzen" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflege steuerlich absetzen</a>
                 <a href="/kombinationsleistung-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Kombinationsleistung nutzen</a>
@@ -460,7 +460,7 @@ export default function Kosten() {
               </div>
 
               <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Finanzierung</p>
+                <p className="text-[14px] font-bold text-pm-ink mb-2">Finanzierung</p>
                 <a href="/finanzierung" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Finanzierung der 24h-Pflege</a>
                 <a href="/pflegeversicherung-leistungen-uebersicht" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegeversicherung: alle Leistungen</a>
                 <a href="/foerderungen-nach-bundesland" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Förderungen nach Bundesland</a>
@@ -468,7 +468,7 @@ export default function Kosten() {
               </div>
 
               <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Vergleiche</p>
+                <p className="text-[14px] font-bold text-pm-ink mb-2">Vergleiche</p>
                 <a href="/pflegeheim-kosten-deutschland" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegeheim-Kosten Deutschland</a>
                 <a href="/pflegeheim-kostenvergleich" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegeheim-Kostenvergleich</a>
                 <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim: Kosten</a>

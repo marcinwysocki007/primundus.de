@@ -86,7 +86,7 @@ export default function KrankenhausPage() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
@@ -94,7 +94,7 @@ export default function KrankenhausPage() {
             <span className="text-pm-ink">Krankenhaus, Ausfall &amp; Wechsel</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Organisation · Aktualisiert August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
@@ -103,7 +103,7 @@ export default function KrankenhausPage() {
 
           <AuthorByline updated="14. August 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Es sind die Fragen, die Familien nachts wachhalten — und auf die man bei den meisten
             Anbietern keine öffentliche Antwort findet: Was passiert, wenn Mutter plötzlich ins
             Krankenhaus muss? Was, wenn die Betreuungskraft selbst krank wird? Und was kostet es,
@@ -122,7 +122,7 @@ export default function KrankenhausPage() {
             <div className="grid md:grid-cols-2 gap-4 mb-5">
               <div className="bg-pm-paper rounded-xl p-5">
                 <p className="text-[14px] font-bold text-pm-ink mb-2">Die Betreuungskraft bleibt im Haus</p>
-                <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
+                <p className="text-[13px] text-pm-body leading-relaxed">
                   Die Zahlung läuft weiter — dafür bleibt das Zuhause versorgt: Wäsche, Post, Blumen,
                   Haustier. Ihre Mutter kommt in ein geführtes Zuhause zurück, nicht in eine verwaiste
                   Wohnung, und die vertraute Kraft ist vom ersten Tag an wieder da. Bei kurzen
@@ -131,7 +131,7 @@ export default function KrankenhausPage() {
               </div>
               <div className="bg-pm-paper rounded-xl p-5">
                 <p className="text-[14px] font-bold text-pm-ink mb-2">Die Betreuungskraft reist ab</p>
-                <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
+                <p className="text-[13px] text-pm-body leading-relaxed">
                   Sie zahlen nur noch bis zur Abreise — in der Regel 2 bis 3 Tage. Bei längeren
                   Klinik- oder Reha-Aufenthalten die wirtschaftliche Wahl; zur Rückkehr organisieren
                   wir rechtzeitig eine neue Kraft (es fallen nur die üblichen Anreisekosten an).

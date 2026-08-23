@@ -67,7 +67,7 @@ export default function TagespflegeVs24h() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
@@ -85,11 +85,11 @@ export default function TagespflegeVs24h() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Tagespflege und 24h-Betreuung sind zwei sehr unterschiedliche Modelle. Tagespflege entlastet Angehörige tagsüber und bietet soziale Kontakte für den Pflegebedürftigen — abends kommen alle nach Hause. Eine 24h-Betreuungskraft ist rund um die Uhr da und sinnvoll wenn Tag und Nacht Betreuung nötig ist.
           </p>
 
-          <h2 id="unterschied" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
+          <h2 id="unterschied" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Der grundlegende Unterschied
           </h2>
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
@@ -124,7 +124,7 @@ export default function TagespflegeVs24h() {
             </div>
           </div>
 
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kostenvergleich 2026 — mit Kassenzuschüssen
           </h2>
           <div className="space-y-4 mb-10">
@@ -143,7 +143,7 @@ export default function TagespflegeVs24h() {
             </div>
           </div>
 
-          <h2 id="wann-was" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann-was" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist was sinnvoll?
           </h2>
           <div className="space-y-3 mb-10">
@@ -186,7 +186,7 @@ export default function TagespflegeVs24h() {
             ))}
           </div>
 
-          <h2 id="kombination" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kombination" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Tagespflege + 24h-Kraft kombinieren?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -199,7 +199,7 @@ export default function TagespflegeVs24h() {
             <a href="/24h-pflege-vs-ambulante-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">24h-Pflege vs. ambulante Pflege</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was ist der Unterschied zwischen Tagespflege und 24h-Betreuung?', a: 'Tagespflege: Pflegebedürftige verbringen den Tag in einer Einrichtung, abends nach Hause. 24h-Betreuung: Kraft lebt dauerhaft im Haushalt, rund um die Uhr anwesend — für Fälle wo Tag und Nacht Betreuung nötig ist.' },

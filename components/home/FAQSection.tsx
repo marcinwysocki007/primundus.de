@@ -43,15 +43,15 @@ export function FAQSection() {
 
   return (
     <section className="py-16 md:py-18 lg:py-20 px-5 bg-gradient-to-b from-white to-[#FAFAF9]">
-      <div className="max-w-[640px] md:max-w-[900px] lg:max-w-[1100px] mx-auto">
+      <div className="max-w-[640px] md:max-w-[900px] lg:max-w-wide mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             Häufige Fragen
           </p>
-          <h2 className="text-[32px] md:text-[36px] lg:text-[42px] leading-[1.2] font-bold text-[#3D3D3D] mb-4">
+          <h2 className="text-[32px] md:text-[36px] lg:text-[42px] leading-[1.2] font-bold text-pm-ink mb-4">
             Noch Fragen? Hier sind Antworten.
           </h2>
-          <p className="text-[15px] md:text-[16px] lg:text-[17px] text-[#6B6B6B] max-w-[480px] md:max-w-[600px] mx-auto">
+          <p className="text-[15px] md:text-[16px] lg:text-[17px] text-pm-mute max-w-[480px] md:max-w-[600px] mx-auto">
             Wir beantworten die wichtigsten Fragen zur 24-Stunden-Pflege
           </p>
         </div>
@@ -66,7 +66,7 @@ export function FAQSection() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-[#FAFAF9] transition-colors duration-200"
               >
-                <span className="font-semibold text-[16px] text-[#3D3D3D] pr-4 leading-[1.4]">
+                <span className="font-semibold text-[16px] text-pm-ink pr-4 leading-[1.4]">
                   {faq.question}
                 </span>
                 <div className={`w-8 h-8 rounded-full bg-[#F5F3F0] flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
@@ -91,7 +91,7 @@ export function FAQSection() {
                 }`}
               >
                 <div className="px-6 pb-6 pt-2">
-                  <p className="text-[15px] leading-[1.7] text-[#5A5A5A]">
+                  <p className="text-[15px] leading-[1.7] text-pm-body">
                     {faq.answer}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export function FAQSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-sm text-[#6B6B6B] mb-4">
+          <p className="text-sm text-pm-mute mb-4">
             Weitere Fragen? Wir beraten Sie gerne persönlich.
           </p>
           <a

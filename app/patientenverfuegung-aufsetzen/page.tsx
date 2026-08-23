@@ -68,7 +68,7 @@ export default function PatientenverfuegungAufsetzen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
@@ -86,12 +86,12 @@ export default function PatientenverfuegungAufsetzen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Eine Patientenverfügung legt verbindlich fest welche medizinischen Maßnahmen man im Fall der Entscheidungsunfähigkeit wünscht oder ablehnt. Sie muss schriftlich sein und eigenhändig unterschrieben werden — ein Notar ist nicht nötig. Je konkreter die Formulierungen, desto wirksamer das Dokument.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Rechtlich verbindlich — Ärzte und Pflegepersonen müssen sie beachten',
@@ -109,7 +109,7 @@ export default function PatientenverfuegungAufsetzen() {
             </ul>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist eine Patientenverfügung?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -122,7 +122,7 @@ export default function PatientenverfuegungAufsetzen() {
             Typische Situationen in denen sie greift: Wachkoma, schwere Demenz im Endstadium, fortgeschrittener Krebs, schwerster Schlaganfall. Sie kann sowohl lebenserhaltende Maßnahmen ausdrücklich wünschen als auch ablehnen.
           </p>
 
-          <h2 id="inhalte" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="inhalte" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was muss in die Patientenverfügung?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -141,14 +141,14 @@ export default function PatientenverfuegungAufsetzen() {
               <div key={item.titel} className="bg-white rounded-xl p-5 border border-pm-line">
                 <div className="flex items-center gap-2 mb-1">
                   <p className="text-[15px] font-bold text-pm-ink">{item.titel}</p>
-                  {item.pflicht && <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-pm-coral-tint text-pm-coral-ink">Pflicht</span>}
+                  {item.pflicht && <span className="text-[11px] font-semibold px-2 py-0.5 rounded-xl bg-pm-coral-tint text-pm-coral-ink">Pflicht</span>}
                 </div>
                 <p className="text-[14px] text-pm-body leading-relaxed">{item.inhalt}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="aufsetzen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="aufsetzen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schritt für Schritt aufsetzen
           </h2>
           <ol className="space-y-3 mb-6">
@@ -170,7 +170,7 @@ export default function PatientenverfuegungAufsetzen() {
             ))}
           </ol>
 
-          <h2 id="unterschied" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="unterschied" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Unterschied zur Vorsorgevollmacht
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -209,7 +209,7 @@ export default function PatientenverfuegungAufsetzen() {
             <a href="/vorsorgevollmacht-erstellen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Vorsorgevollmacht erstellen — Anleitung & Muster</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zur Patientenverfügung
           </h2>
           <div className="space-y-4 mb-12">

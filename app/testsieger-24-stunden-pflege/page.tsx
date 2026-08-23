@@ -75,13 +75,13 @@ export default function TestsiegerPage() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-pm-ink">Testsieger 24-Stunden-Pflege</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Auszeichnung · Aktualisiert August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
@@ -95,7 +95,7 @@ export default function TestsiegerPage() {
           </p>
 
           {/* ① SIEGEL + BELEG */}
-          <div className="bg-white border-2 border-[#D4A843] rounded-2xl p-6 md:p-8 mb-10">
+          <div className="bg-white border-2 border-pm-gold rounded-2xl p-6 md:p-8 mb-10">
             <div className="flex flex-col md:flex-row md:items-center gap-6 text-center md:text-left">
               <img
                 src="/images/service-champions-2021.png"

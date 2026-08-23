@@ -392,16 +392,16 @@ function pageContent(h1, slug, breadcrumbLabel) {
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-16">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
           {/* Breadcrumb */}
-          ${!isRoot ? `<nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+          ${!isRoot ? `<nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">${breadcrumbLabel}</span>
+            <span className="text-pm-ink">${breadcrumbLabel}</span>
           </nav>` : ''}
 
           {/* H1 */}
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             ${h1}
           </h1>
 
@@ -412,10 +412,10 @@ function pageContent(h1, slug, breadcrumbLabel) {
 
           {/* CTA Box */}
           <div className="bg-white border border-pm-line rounded-2xl p-8 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Kostenlose Beratung
             </p>
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-4">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-4">
               Jetzt Pflegesituation besprechen
             </h2>
             <a
@@ -579,16 +579,16 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-16">
-          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/tools/" className="hover:text-pm-taupe transition-colors">Tools</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">${title}</span>
+            <span className="text-pm-ink">${title}</span>
           </nav>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             ${h1}
           </h1>
 
@@ -597,10 +597,10 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-8 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Kostenlose Beratung
             </p>
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-4">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-4">
               Jetzt Pflegesituation besprechen
             </h2>
             <a
@@ -613,9 +613,9 @@ export default function Page() {
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <a href="/ratgeber/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">→ Ratgeber</a>
-            <a href="/24-stunden-pflege/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">→ 24h-Pflege</a>
-            <a href="/beratungsgespraech/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">→ Beratungsgespräch</a>
+            <a href="/ratgeber/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">→ Ratgeber</a>
+            <a href="/24-stunden-pflege/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">→ 24h-Pflege</a>
+            <a href="/beratungsgespraech/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">→ Beratungsgespräch</a>
           </div>
         </div>
       </div>
@@ -667,16 +667,16 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-16">
-          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/regionen/" className="hover:text-pm-taupe transition-colors">Regionen</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">${city}</span>
+            <span className="text-pm-ink">${city}</span>
           </nav>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             ${h1}
           </h1>
 
@@ -685,10 +685,10 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-8 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Kostenlose Beratung für ${city}
             </p>
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-4">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-4">
               24h-Pflege in ${city} beauftragen
             </h2>
             <a
@@ -701,9 +701,9 @@ export default function Page() {
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <a href="/24-stunden-pflege/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">→ Was ist 24h-Pflege?</a>
-            <a href="https://kostenrechner.primundus.de" target="_blank" rel="noopener" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">→ Kostenrechner</a>
-            <a href="/kosten/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">→ Kosten & Zuschüsse</a>
+            <a href="/24-stunden-pflege/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">→ Was ist 24h-Pflege?</a>
+            <a href="https://kostenrechner.primundus.de" target="_blank" rel="noopener" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">→ Kostenrechner</a>
+            <a href="/kosten/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-pm-ink">→ Kosten & Zuschüsse</a>
           </div>
         </div>
       </div>
@@ -726,7 +726,7 @@ function generateHubPage({ slug, title, desc, h1, children }) {
     ? `
           {/* Child article links */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
-            ${children.map(c => `<a href="/${c}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-[#3D3D3D]">→ ${toTitle(c)}</a>`).join('\n            ')}
+            ${children.map(c => `<a href="/${c}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-pm-ink">→ ${toTitle(c)}</a>`).join('\n            ')}
           </div>`
     : '';
 
@@ -759,14 +759,14 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-16">
-          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">${title}</span>
+            <span className="text-pm-ink">${title}</span>
           </nav>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             ${h1}
           </h1>
 
@@ -775,10 +775,10 @@ export default function Page() {
           </div>
 ${childLinks}
           <div className="bg-white border border-pm-line rounded-2xl p-8 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
               Kostenlose Beratung
             </p>
-            <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-4">
+            <h2 className="text-[22px] font-bold text-pm-ink mb-4">
               Jetzt Pflegesituation besprechen
             </h2>
             <a

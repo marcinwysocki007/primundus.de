@@ -48,6 +48,7 @@ const config: Config = {
           mint: '#E8F5EE',
           coral: { DEFAULT: '#E76F63', deep: '#D45F53', tint: '#FDF0EE', ink: '#8B3E2F' },
           cocoa: '#3D2314',
+          gold: '#D4A843',
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

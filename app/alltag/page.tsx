@@ -34,30 +34,30 @@ export default function Alltag() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
-            <span className="text-[#5A5A5A]">Alltag & Angehörige</span>
+            <span className="text-pm-body">Alltag & Angehörige</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             RATGEBER
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Alltag & Angehörige
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-12 max-w-[620px]">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflege betrifft den gesamten Alltag — der Pflegebedürftigen und der pflegenden Angehörigen. Alle Ratgeber zu den Themen die wirklich zählen.
           </p>
 
           {/* Für pflegende Angehörige */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Für pflegende Angehörige</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Für pflegende Angehörige</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Pflegende Angehörige unterstützen', href: '/pflegende-angehoerige-unterstuetzen', desc: 'Was pflegende Angehörige brauchen — Entlastung, Anerkennung und praktische Hilfen.' },
@@ -68,14 +68,14 @@ export default function Alltag() {
               { titel: 'Kommunikation mit Demenzkranken', href: '/kommunikation-mit-demenzkranken', desc: '5 Grundprinzipien und schwierige Situationen meistern.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Vorsorge & Rechtliches */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Vorsorge & Rechtliches</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Vorsorge & Rechtliches</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Vorsorgevollmacht erstellen', href: '/vorsorgevollmacht-erstellen', desc: 'Was eine Vorsorgevollmacht regelt, wie man sie erstellt und worauf zu achten ist.' },
@@ -84,14 +84,14 @@ export default function Alltag() {
               { titel: 'Wann brauche ich 24h-Pflege?', href: '/wann-brauche-ich-24h-pflege', desc: '10 Warnsignale und der ehrliche Selbsttest.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Wohnen & Sicherheit */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Wohnen & Sicherheit</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Wohnen & Sicherheit</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Barrierefreies Zuhause gestalten', href: '/barrierefreies-zuhause-gestalten', desc: 'Wohnraumanpassung, Fördermittel bis 4.180 €/Maßnahme, was wirklich hilft.' },
@@ -99,14 +99,14 @@ export default function Alltag() {
               { titel: 'Sturzprävention Senioren', href: '/sturzpraevention-senioren', desc: 'Stürze sind die häufigste Unfallursache im Alter — wie man sie verhindert.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Beschäftigung & Wohlbefinden */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Beschäftigung & Wohlbefinden</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Beschäftigung & Wohlbefinden</h2>
           <div className="grid gap-3 mb-12">
             {[
               { titel: 'Medikamente für Senioren verwalten', href: '/medikamente-senioren-verwalten', desc: 'Einnahmezeiten, Wechselwirkungen, Dosierungshilfen — sicher im Pflegealltag.' },
@@ -117,7 +117,7 @@ export default function Alltag() {
               { titel: 'Schlafprobleme bei Senioren', href: '/schlafprobleme-senioren-loesen', desc: 'Ursachen und wirksame Maßnahmen für besseren Schlaf im Alter.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}

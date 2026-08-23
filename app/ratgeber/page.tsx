@@ -210,23 +210,23 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#5A5A5A]">Ratgeber</span>
+            <span className="text-pm-body">Ratgeber</span>
           </nav>
 
           {/* Eyebrow + H1 + Intro */}
-          <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Ratgeber
           </p>
-          <h1 className="text-[30px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-5">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Ratgeber 24-Stunden-Pflege
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-12 max-w-[640px]">
+          <p className="text-[17px] text-pm-body leading-relaxed mb-12 max-w-[640px]">
             Fundierte Informationen zu allen Fragen rund um die 24h-Pflege zu Hause — von Pflegegraden und Finanzierung bis zu praktischen Tipps für Angehörige.
           </p>
 
@@ -241,7 +241,7 @@ export default function Page() {
                 <div className="flex items-start gap-3 mb-3">
                   <div className="mt-0.5 shrink-0">{cat.icon}</div>
                   <div>
-                    <p className="text-[17px] font-bold text-[#3D3D3D] leading-snug">{cat.title}</p>
+                    <p className="text-[17px] font-bold text-pm-ink leading-snug">{cat.title}</p>
                     <p className="text-[13px] text-pm-mute mt-0.5 leading-snug">{cat.description}</p>
                   </div>
                 </div>
@@ -252,7 +252,7 @@ export default function Page() {
                     <li key={article.href}>
                       <a
                         href={article.href}
-                        className="text-[13px] text-[#5A5A5A] hover:text-pm-taupe transition-colors"
+                        className="text-[13px] text-pm-body hover:text-pm-taupe transition-colors"
                       >
                         › {article.label}
                       </a>
@@ -276,9 +276,9 @@ export default function Page() {
           {/* Tools Teaser */}
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-12">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-1">Tools</p>
-              <p className="text-[15px] font-semibold text-[#3D3D3D]">Kostenrechner, Pflegegrad-Rechner & mehr</p>
-              <p className="text-[13px] text-[#5A5A5A] mt-0.5">Interaktive Rechner für Ihre Pflegesituation</p>
+              <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Tools</p>
+              <p className="text-[15px] font-semibold text-pm-ink">Kostenrechner, Pflegegrad-Rechner & mehr</p>
+              <p className="text-[13px] text-pm-body mt-0.5">Interaktive Rechner für Ihre Pflegesituation</p>
             </div>
             <a
               href="/tools"

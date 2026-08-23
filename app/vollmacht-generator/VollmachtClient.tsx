@@ -403,7 +403,7 @@ ${gesundheitsSection}
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <label className="block text-[13px] font-semibold text-[#3D3D3D] mb-1.5">
+    <label className="block text-[13px] font-semibold text-pm-ink mb-1.5">
       {children}
     </label>
   )
@@ -426,7 +426,7 @@ function Input({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className="w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-pm-taupe bg-white text-[#3D3D3D] placeholder-[#BABABA] transition-colors"
+      className="w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-pm-taupe bg-white text-pm-ink placeholder-[#BABABA] transition-colors"
     />
   )
 }
@@ -446,7 +446,7 @@ function Select({
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-pm-taupe bg-white text-[#3D3D3D] transition-colors appearance-none"
+      className="w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-pm-taupe bg-white text-pm-ink transition-colors appearance-none"
     >
       {placeholder && <option value="">{placeholder}</option>}
       {options.map((o) => (
@@ -574,7 +574,7 @@ function StepIndicator({
                 >
                   {isCompleted ? '✓' : stepNum}
                 </div>
-                <span className={`text-[10px] hidden sm:block max-w-[70px] text-center leading-tight ${isCurrent ? 'text-[#3D3D3D] font-semibold' : 'text-pm-mute'}`}>
+                <span className={`text-[10px] hidden sm:block max-w-[70px] text-center leading-tight ${isCurrent ? 'text-pm-ink font-semibold' : 'text-pm-mute'}`}>
                   {label}
                 </span>
               </div>
@@ -625,8 +625,8 @@ function BereichCard({
           )}
         </div>
         <div>
-          <p className="text-[14px] font-semibold text-[#3D3D3D]">{label}</p>
-          <p className="text-[12px] text-[#5A5A5A] mt-0.5 leading-snug">{description}</p>
+          <p className="text-[14px] font-semibold text-pm-ink">{label}</p>
+          <p className="text-[12px] text-pm-body mt-0.5 leading-snug">{description}</p>
         </div>
       </div>
     </button>
@@ -663,7 +663,7 @@ function CheckboxItem({
           </svg>
         )}
       </div>
-      <span className="text-[14px] text-[#3D3D3D] leading-snug">{label}</span>
+      <span className="text-[14px] text-pm-ink leading-snug">{label}</span>
     </button>
   )
 }
@@ -746,27 +746,27 @@ export default function VollmachtClient() {
 
   return (
     <div className="bg-pm-paper min-h-screen">
-      <div className="max-w-[720px] mx-auto px-5 py-10">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
         {/* Header */}
         <div className="mb-8">
-          <nav className="text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
             <span>›</span>
-            <span className="text-[#3D3D3D]">Vorsorgevollmacht-Generator</span>
+            <span className="text-pm-ink">Vorsorgevollmacht-Generator</span>
           </nav>
           <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe mb-2">
             Kostenlos · Kein Konto nötig
           </p>
-          <h1 className="text-[28px] md:text-[36px] font-bold text-[#3D3D3D] leading-tight mb-3">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Vorsorgevollmacht-Generator
           </h1>
-          <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-3">
+          <p className="text-[15px] text-pm-body leading-relaxed mb-3">
             Erstellen Sie in 5 Minuten eine individuelle Vorsorgevollmacht — kostenlos, verständlich erklärt, sofort druckfertig.
           </p>
-          <p className="text-[15px] text-[#5A5A5A] leading-relaxed">
+          <p className="text-[15px] text-pm-body leading-relaxed">
             Ohne Vorsorgevollmacht bestellt das Gericht einen gesetzlichen Betreuer — auch einen Fremden.
             Mit dieser Vollmacht legen Sie selbst fest, wer für Sie entscheidet, wenn Sie es nicht mehr können:
             bei Krankheit, Unfall oder im Alter. Für Gesundheit, Aufenthalt, Finanzen und mehr.
@@ -785,8 +785,8 @@ export default function VollmachtClient() {
           {/* ── Step 1: Vollmachtgeber ── */}
           {visibleStep === 1 && (
             <div>
-              <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-1">Vollmachtgeber</h2>
-              <p className="text-[14px] text-[#5A5A5A] mb-6">
+              <h2 className="text-[18px] font-bold text-pm-ink mb-1">Vollmachtgeber</h2>
+              <p className="text-[14px] text-pm-body mb-6">
                 Ihre persönlichen Daten — die Person, die die Vollmacht erteilt.
               </p>
               <PersonForm
@@ -800,8 +800,8 @@ export default function VollmachtClient() {
           {/* ── Step 2: Bevollmächtigte Person ── */}
           {visibleStep === 2 && (
             <div>
-              <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-1">Bevollmächtigte Person</h2>
-              <p className="text-[14px] text-[#5A5A5A] mb-6">
+              <h2 className="text-[18px] font-bold text-pm-ink mb-1">Bevollmächtigte Person</h2>
+              <p className="text-[14px] text-pm-body mb-6">
                 Wen möchten Sie bevollmächtigen? Diese Person entscheidet für Sie, wenn Sie es selbst nicht können.
               </p>
               <PersonForm
@@ -828,7 +828,7 @@ export default function VollmachtClient() {
                       }`}
                     />
                   </div>
-                  <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">
+                  <span className="text-[14px] font-semibold text-pm-ink leading-snug">
                     Ersatzbevollmächtigte Person hinzufügen
                     <span className="block text-[12px] font-normal text-pm-mute">
                       Falls die erste Person nicht verfügbar ist
@@ -838,7 +838,7 @@ export default function VollmachtClient() {
 
                 {formData.hasErsatz && (
                   <div className="mt-5 pt-5 border-t border-pm-line-soft">
-                    <p className="text-[13px] font-semibold text-[#3D3D3D] mb-4">Ersatzbevollmächtigte/r</p>
+                    <p className="text-[13px] font-semibold text-pm-ink mb-4">Ersatzbevollmächtigte/r</p>
                     <PersonForm
                       data={formData.ersatzbevollmaechtigter}
                       onChange={updateEB}
@@ -853,8 +853,8 @@ export default function VollmachtClient() {
           {/* ── Step 3: Umfang ── */}
           {visibleStep === 3 && (
             <div>
-              <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-1">Umfang der Vollmacht</h2>
-              <p className="text-[14px] text-[#5A5A5A] mb-6">
+              <h2 className="text-[18px] font-bold text-pm-ink mb-1">Umfang der Vollmacht</h2>
+              <p className="text-[14px] text-pm-body mb-6">
                 Für welche Bereiche soll die Vollmacht gelten?
               </p>
               <div className="flex flex-col gap-2.5 mb-6">
@@ -897,7 +897,7 @@ export default function VollmachtClient() {
               </div>
 
               <div className="border-t border-pm-line-soft pt-5">
-                <p className="text-[13px] font-semibold text-[#3D3D3D] mb-3">Wann gilt die Vollmacht?</p>
+                <p className="text-[13px] font-semibold text-pm-ink mb-3">Wann gilt die Vollmacht?</p>
                 <div className="flex flex-col gap-2.5">
                   {(
                     [
@@ -933,8 +933,8 @@ export default function VollmachtClient() {
                         )}
                       </div>
                       <div>
-                        <p className="text-[14px] font-semibold text-[#3D3D3D]">{label}</p>
-                        <p className="text-[12px] text-[#5A5A5A] mt-0.5 leading-snug">{desc}</p>
+                        <p className="text-[14px] font-semibold text-pm-ink">{label}</p>
+                        <p className="text-[12px] text-pm-body mt-0.5 leading-snug">{desc}</p>
                       </div>
                     </button>
                   ))}
@@ -946,8 +946,8 @@ export default function VollmachtClient() {
           {/* ── Step 4: Gesundheitssorge (conditional) ── */}
           {visibleStep === 4 && hasGesundheitssorge && (
             <div>
-              <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-1">Gesundheitssorge — Details</h2>
-              <p className="text-[14px] text-[#5A5A5A] mb-6">
+              <h2 className="text-[18px] font-bold text-pm-ink mb-1">Gesundheitssorge — Details</h2>
+              <p className="text-[14px] text-pm-body mb-6">
                 Für den Bereich Gesundheitssorge können Sie weitere Entscheidungen festlegen.
               </p>
               <div className="flex flex-col gap-2.5 mb-5">
@@ -981,8 +981,8 @@ export default function VollmachtClient() {
               {/* Tip box */}
               <div className="bg-[#FFF8EE] border border-[#F0D9A0] rounded-xl px-4 py-3.5 flex gap-3">
                 <span className="text-[18px] flex-shrink-0">💡</span>
-                <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
-                  <strong className="text-[#3D3D3D]">Tipp:</strong> Ergänzen Sie die Vollmacht um eine{' '}
+                <p className="text-[13px] text-pm-body leading-relaxed">
+                  <strong className="text-pm-ink">Tipp:</strong> Ergänzen Sie die Vollmacht um eine{' '}
                   <a href="/patientenverfuegung-aufsetzen" className="text-pm-taupe hover:underline font-medium">
                     Patientenverfügung
                   </a>
@@ -995,8 +995,8 @@ export default function VollmachtClient() {
           {/* ── Step 5: Vorschau ── */}
           {visibleStep === 5 && (
             <div>
-              <h2 className="text-[18px] font-bold text-[#3D3D3D] mb-1">Vorschau & Download</h2>
-              <p className="text-[14px] text-[#5A5A5A] mb-6">
+              <h2 className="text-[18px] font-bold text-pm-ink mb-1">Vorschau & Download</h2>
+              <p className="text-[14px] text-pm-body mb-6">
                 Prüfen Sie Ihre Angaben. Anschließend können Sie die Vollmacht drucken oder als PDF speichern.
               </p>
 
@@ -1006,15 +1006,15 @@ export default function VollmachtClient() {
 
                   <div>
                     <p className="text-[11px] uppercase tracking-wider font-bold text-pm-taupe mb-1">Vollmachtgeber</p>
-                    <p className="text-[14px] font-semibold text-[#3D3D3D]">
+                    <p className="text-[14px] font-semibold text-pm-ink">
                       {formData.vollmachtgeber.vorname || '–'} {formData.vollmachtgeber.nachname}
                     </p>
-                    <p className="text-[13px] text-[#5A5A5A]">
+                    <p className="text-[13px] text-pm-body">
                       {formData.vollmachtgeber.strasse} {formData.vollmachtgeber.hausnummer}
                       {formData.vollmachtgeber.ort && `, ${formData.vollmachtgeber.plz} ${formData.vollmachtgeber.ort}`}
                     </p>
                     {formData.vollmachtgeber.geburtsdatum && (
-                      <p className="text-[13px] text-[#5A5A5A]">
+                      <p className="text-[13px] text-pm-body">
                         Geb.: {formData.vollmachtgeber.geburtsdatum}
                         {formData.vollmachtgeber.geburtsort && ` · ${formData.vollmachtgeber.geburtsort}`}
                       </p>
@@ -1023,15 +1023,15 @@ export default function VollmachtClient() {
 
                   <div className="border-t border-pm-line pt-4">
                     <p className="text-[11px] uppercase tracking-wider font-bold text-pm-taupe mb-1">Bevollmächtigte/r</p>
-                    <p className="text-[14px] font-semibold text-[#3D3D3D]">
+                    <p className="text-[14px] font-semibold text-pm-ink">
                       {formData.bevollmaechtigter.vorname || '–'} {formData.bevollmaechtigter.nachname}
                     </p>
-                    <p className="text-[13px] text-[#5A5A5A]">
+                    <p className="text-[13px] text-pm-body">
                       {formData.bevollmaechtigter.strasse} {formData.bevollmaechtigter.hausnummer}
                       {formData.bevollmaechtigter.ort && `, ${formData.bevollmaechtigter.plz} ${formData.bevollmaechtigter.ort}`}
                     </p>
                     {formData.bevollmaechtigter.beziehung && (
-                      <p className="text-[13px] text-[#5A5A5A]">{formData.bevollmaechtigter.beziehung}</p>
+                      <p className="text-[13px] text-pm-body">{formData.bevollmaechtigter.beziehung}</p>
                     )}
                     {formData.hasErsatz && formData.ersatzbevollmaechtigter.vorname && (
                       <p className="text-[12px] text-pm-mute mt-1">
@@ -1060,7 +1060,7 @@ export default function VollmachtClient() {
 
                   <div className="border-t border-pm-line pt-4">
                     <p className="text-[11px] uppercase tracking-wider font-bold text-pm-taupe mb-1">Geltung</p>
-                    <p className="text-[14px] text-[#3D3D3D]">
+                    <p className="text-[14px] text-pm-ink">
                       {formData.geltung === 'sofort'
                         ? '✓ Sofort gültig (ab Unterzeichnung)'
                         : '✓ Im Vorsorgefall (bei Handlungsunfähigkeit)'}
@@ -1074,7 +1074,7 @@ export default function VollmachtClient() {
               <button
                 type="button"
                 onClick={() => generateAndPrint(formData)}
-                className="w-full bg-pm-taupe hover:bg-[#7A6347] text-white font-bold text-[16px] py-4 rounded-xl transition-colors mb-4 flex items-center justify-center gap-2"
+                className="w-full bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[16px] py-4 rounded-xl transition-colors mb-4 flex items-center justify-center gap-2"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="6 9 12 15 18 9" />
@@ -1084,8 +1084,8 @@ export default function VollmachtClient() {
 
               {/* Disclaimer */}
               <div className="bg-[#FFF8EE] border border-[#F0D9A0] rounded-xl px-4 py-3.5 mb-4">
-                <p className="text-[12px] text-[#5A5A5A] leading-relaxed">
-                  <strong className="text-[#3D3D3D]">Hinweis:</strong> Diese Vollmacht dient als Vorlage und ersetzt keine Rechtsberatung.
+                <p className="text-[12px] text-pm-body leading-relaxed">
+                  <strong className="text-pm-ink">Hinweis:</strong> Diese Vollmacht dient als Vorlage und ersetzt keine Rechtsberatung.
                   Für Immobilien und Bankgeschäfte empfehlen wir notarielle Beglaubigung.
                   Für komplexe Situationen sollten Sie einen Rechtsanwalt hinzuziehen.
                 </p>
@@ -1119,7 +1119,7 @@ export default function VollmachtClient() {
               <button
                 type="button"
                 onClick={goNext}
-                className="bg-pm-taupe hover:bg-[#7A6347] text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
+                className="bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
               >
                 Weiter →
               </button>
@@ -1127,7 +1127,7 @@ export default function VollmachtClient() {
               <button
                 type="button"
                 onClick={() => generateAndPrint(formData)}
-                className="bg-pm-taupe hover:bg-[#7A6347] text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
+                className="bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
               >
                 Jetzt erstellen →
               </button>

@@ -59,7 +59,7 @@ export default function PflegeAusDerFerneKoordinieren() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
@@ -77,7 +77,7 @@ export default function PflegeAusDerFerneKoordinieren() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Viele Kinder leben hunderte Kilometer von ihren Eltern entfernt — und tragen trotzdem Verantwortung für die Pflege. Fernbetreuung ist anspruchsvoll: die ständige Sorge, die Hilflosigkeit bei Problemen, die Schuldgefühle wenn man nicht vor Ort ist. Eine 24h-Betreuungskraft mit Primundus als Ansprechpartner verändert diese Situation grundlegend.
           </p>
 
@@ -88,7 +88,7 @@ export default function PflegeAusDerFerneKoordinieren() {
             </p>
           </div>
 
-          <h2 id="herausforderung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="herausforderung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Herausforderung der Fernbetreuung
           </h2>
           <div className="space-y-3 mb-10">
@@ -105,7 +105,7 @@ export default function PflegeAusDerFerneKoordinieren() {
             ))}
           </div>
 
-          <h2 id="struktur" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="struktur" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Struktur & Kommunikation aufbauen
           </h2>
           <div className="space-y-3 mb-10">
@@ -123,7 +123,7 @@ export default function PflegeAusDerFerneKoordinieren() {
             ))}
           </div>
 
-          <h2 id="digital" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="digital" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Digitale Hilfsmittel für die Fernbetreuung
           </h2>
           <div className="space-y-3 mb-10">
@@ -141,7 +141,7 @@ export default function PflegeAusDerFerneKoordinieren() {
             ))}
           </div>
 
-          <h2 id="notfall" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="notfall" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Notfallplan & lokale Unterstützung
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -165,7 +165,7 @@ export default function PflegeAusDerFerneKoordinieren() {
             <a href="/notfallplan-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Notfallplan Pflege — was reingehört</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie koordiniert man Pflege aus der Ferne?', a: 'Täglicher Kurzkontakt mit der Kraft, wöchentliches Videotelefon, klares Eskalationsprotokoll, Familien-Gruppe für Kommunikation, lokale Vertrauensperson als Backup. Primundus als laufender Ansprechpartner.' },

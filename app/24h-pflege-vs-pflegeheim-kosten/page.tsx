@@ -76,7 +76,7 @@ export default function VsKosten() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
@@ -94,12 +94,12 @@ export default function VsKosten() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegeheim-Eigenanteil 2026: Ø 3.364 €/Monat (1. Jahr) — steigt jährlich',
@@ -118,7 +118,7 @@ export default function VsKosten() {
           </div>
 
           {/* SECTION 1 — Grafik */}
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Kosten im direkten Vergleich
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -127,7 +127,7 @@ export default function VsKosten() {
           <GrafikKostenvergleich />
 
           {/* SECTION 2 */}
-          <h2 id="pflegeheim" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegeheim" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was das Pflegeheim wirklich kostet
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -174,7 +174,7 @@ export default function VsKosten() {
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="24h" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="24h" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was 24h-Pflege wirklich kostet
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -206,7 +206,7 @@ export default function VsKosten() {
           </div>
 
           {/* SECTION 4 */}
-          <h2 id="qualitaet" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="qualitaet" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Mehr als nur Kosten — was wirklich zählt
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -245,7 +245,7 @@ export default function VsKosten() {
           </div>
 
           {/* SECTION 5 */}
-          <h2 id="wann-heim" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann-heim" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist das Pflegeheim die bessere Wahl?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -272,7 +272,7 @@ export default function VsKosten() {
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
             Häufige Fragen zum Kostenvergleich
           </h2>
           <div className="space-y-4 mb-12">

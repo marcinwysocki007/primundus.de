@@ -67,7 +67,7 @@ export default function DiabetesPflegeSenioren() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
@@ -85,7 +85,7 @@ export default function DiabetesPflegeSenioren() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Diabetes Typ 2 ist bei Senioren über 70 eine der häufigsten Erkrankungen — und bei pflegebedürftigen Menschen oft eines von mehreren gleichzeitigen Problemen. Die häusliche Pflege von Menschen mit Diabetes erfordert strukturiertes Management: regelmäßige Mahlzeiten, Blutzuckerkontrolle, Medikamentensicherheit und das sichere Erkennen einer Unterzuckerung.
           </p>
 
@@ -96,7 +96,7 @@ export default function DiabetesPflegeSenioren() {
             </p>
           </div>
 
-          <h2 id="besonderheiten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="besonderheiten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Besonderheiten bei Diabetes im Alter
           </h2>
           <div className="space-y-3 mb-10">
@@ -113,7 +113,7 @@ export default function DiabetesPflegeSenioren() {
             ))}
           </div>
 
-          <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Diabetesmanagement im Alltag — was die Betreuungskraft übernimmt
           </h2>
           <div className="space-y-3 mb-6">
@@ -132,7 +132,7 @@ export default function DiabetesPflegeSenioren() {
             ))}
           </div>
 
-          <h2 id="hypo" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="hypo" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Hypoglykämie erkennen & richtig handeln
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -152,7 +152,7 @@ export default function DiabetesPflegeSenioren() {
             ))}
           </div>
 
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrad & Kassenzuschüsse bei Diabetes
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -177,7 +177,7 @@ export default function DiabetesPflegeSenioren() {
             <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Schritt-für-Schritt Anleitung</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was macht eine 24h-Betreuungskraft bei Diabetes?', a: 'Blutzucker messen, Medikamentenerinnerung, diabetesgerechte Mahlzeiten kochen, Flüssigkeit anbieten, Hypoglykämie-Zeichen beobachten. Insulin spritzen ist Behandlungspflege — übernimmt ambulanter Pflegedienst.' },

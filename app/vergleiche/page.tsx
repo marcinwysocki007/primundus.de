@@ -34,30 +34,30 @@ export default function Vergleiche() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
       <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-[900px] mx-auto px-5 py-14">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
-            <span className="text-[#5A5A5A]">Vergleiche</span>
+            <span className="text-pm-body">Vergleiche</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             RATGEBER
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflege vergleichen
           </h1>
-          <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-12 max-w-[620px]">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Alle ehrlichen Vergleiche — mit konkreten Zahlen, klaren Kriterien und ohne Schönfärberei.
           </p>
 
           {/* Pflegeformen vergleichen */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegeformen vergleichen</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Pflegeformen vergleichen</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: '24h-Pflege vs. Pflegeheim', href: '/24h-pflege-vs-pflegeheim', desc: 'Der vollständige Vergleich — Kosten, Lebensqualität und wann welche Form besser passt.' },
@@ -69,14 +69,14 @@ export default function Vergleiche() {
               { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege', desc: 'Wann Kurzzeitpflege reicht und wann eine dauerhaft 24h-Kraft nötig ist.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Kostenvergleiche */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Kostenvergleiche</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Kostenvergleiche</h2>
 
           {/* Vergleichstabelle */}
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -100,8 +100,8 @@ export default function Vergleiche() {
                     ['Tagespflege', '800–2.000 €', 'ca. 0–500 €', 'Nur tagsüber, keine Nacht'],
                   ].map(([form, gesamt, eigenanteil, besonderheit], i) => (
                     <tr key={form} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#3D3D3D] border-b border-pm-line">{form}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#5A5A5A] border-b border-pm-line whitespace-nowrap">{gesamt}</td>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{form}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line whitespace-nowrap">{gesamt}</td>
                       <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line whitespace-nowrap">{eigenanteil}</td>
                       <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{besonderheit}</td>
                     </tr>
@@ -122,14 +122,14 @@ export default function Vergleiche() {
               { titel: 'Was kostet 24h-Pflege?', href: '/kosten', desc: 'Vollständige Kostenübersicht mit allen Zuschüssen und realistischen Eigenanteilen.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Anbieter vergleichen */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Anbieter & Modelle vergleichen</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Anbieter & Modelle vergleichen</h2>
           <div className="grid gap-3 mb-10">
             {[
               { titel: 'Osteuropäische Pflegekraft oder Agentur', href: '/osteuropaeische-pflegekraft-oder-agentur', desc: 'Direkte Suche vs. Agentur — Risiken, Aufwand und was wirklich besser ist.' },
@@ -138,14 +138,14 @@ export default function Vergleiche() {
               { titel: 'Checkliste: Worauf bei 24h-Pflege achten', href: '/24h-pflege-checkliste', desc: 'Die wichtigsten Prüfpunkte vor der Anbieter-Entscheidung — kompakt zum Abhaken.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Pflegekräfte nach Herkunftsland */}
-          <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Pflegekräfte aus EU-Ländern</h2>
+          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Pflegekräfte aus EU-Ländern</h2>
           <div className="grid gap-3 mb-12">
             {[
               { titel: 'Pflegekraft aus Polen', href: '/pflegekraft-aus-polen', desc: 'Polen — das häufigste Herkunftsland. Entsendemodell, Kosten, Qualifikation.' },
@@ -153,7 +153,7 @@ export default function Vergleiche() {
               { titel: 'Pflegekraft aus Rumänien', href: '/pflegekraft-aus-rumaenien', desc: 'Rumänien — zweithäufigstes Herkunftsland. Rechtlich und preislich identisch.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
                 <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}

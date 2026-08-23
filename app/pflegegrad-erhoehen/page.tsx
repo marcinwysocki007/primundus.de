@@ -67,7 +67,7 @@ export default function PflegegradErhoehen() {
       <div className="min-h-screen bg-pm-paper">
         <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
             <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
@@ -85,12 +85,12 @@ export default function PflegegradErhoehen() {
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wenn sich der Pflegebedarf verschlechtert, sollte sofort ein Antrag auf Höherstufung gestellt werden — denn jede Pflegegrad-Stufe bedeutet hunderte Euro mehr Kassenzuschuss pro Monat. Es gibt keine Sperrfrist. Der Antrag ist formlos, die Leistungen gelten ab Antragsdatum.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Was sich bei Höherstufung ändert</p>
+            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Was sich bei Höherstufung ändert</p>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
@@ -118,7 +118,7 @@ export default function PflegegradErhoehen() {
             </div>
           </div>
 
-          <h2 id="wann" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="wann" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann sollte man Höherstufung beantragen?
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -138,7 +138,7 @@ export default function PflegegradErhoehen() {
             ))}
           </div>
 
-          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="antrag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag stellen — so einfach geht es
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">
@@ -158,7 +158,7 @@ export default function PflegegradErhoehen() {
             <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad beantragen — Schritt für Schritt</a>
           </p>
 
-          <h2 id="vorbereitung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="vorbereitung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Begutachtung für Höherstufung vorbereiten
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -183,7 +183,7 @@ export default function PflegegradErhoehen() {
             <a href="/pflegegrad-begutachtung-vorbereiten" className="text-pm-taupe underline hover:text-pm-taupe-deep">MD-Begutachtung vorbereiten — Checkliste & 7 Tipps</a>
           </p>
 
-          <h2 id="unterschied" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
+          <h2 id="unterschied" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was sich bei Höherstufung finanziell ändert
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
@@ -219,7 +219,7 @@ export default function PflegegradErhoehen() {
             </div>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen zur Höherstufung</h2>
+          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen zur Höherstufung</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie beantrage ich einen höheren Pflegegrad?', a: 'Formloser schriftlicher Antrag bei der Pflegekasse: "Ich beantrage eine Überprüfung meines Pflegegrades aufgrund einer Verschlechterung." Danach neue MD-Begutachtung. Pflegetagebuch 1–2 Wochen führen.' },

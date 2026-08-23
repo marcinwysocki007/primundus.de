@@ -12,34 +12,34 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-article mx-auto px-5 py-16">
+      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
           <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
-          <span className="text-[#3D3D3D]">Impressum</span>
+          <span className="text-pm-ink">Impressum</span>
         </nav>
 
-        <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-10">
+        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
           Impressum
         </h1>
 
         <div className="space-y-8">
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-5">Angaben gemäß § 5 TMG</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-5">Angaben gemäß § 5 TMG</h2>
             <div className="space-y-6">
               <div>
-                <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">Anschrift Deutschland</h3>
-                <p className="text-[15px] text-[#5A5A5A]">Primundus Deutschland</p>
-                <p className="text-[15px] text-[#5A5A5A]">Landsberger Str. 155</p>
-                <p className="text-[15px] text-[#5A5A5A]">80687 München</p>
+                <h3 className="text-[15px] font-semibold text-pm-ink mb-2">Anschrift Deutschland</h3>
+                <p className="text-[15px] text-pm-body">Primundus Deutschland</p>
+                <p className="text-[15px] text-pm-body">Landsberger Str. 155</p>
+                <p className="text-[15px] text-pm-body">80687 München</p>
               </div>
               <div className="border-t border-pm-line pt-6">
-                <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">Rechtlicher Sitz</h3>
-                <p className="text-[15px] text-[#5A5A5A]">PRIMUNDUS Sp. z o.o.</p>
-                <p className="text-[15px] text-[#5A5A5A]">Poznańska 21/48</p>
-                <p className="text-[15px] text-[#5A5A5A]">00-685 Warszawa, Polen</p>
+                <h3 className="text-[15px] font-semibold text-pm-ink mb-2">Rechtlicher Sitz</h3>
+                <p className="text-[15px] text-pm-body">PRIMUNDUS Sp. z o.o.</p>
+                <p className="text-[15px] text-pm-body">Poznańska 21/48</p>
+                <p className="text-[15px] text-pm-body">00-685 Warszawa, Polen</p>
                 <div className="mt-3 space-y-1">
                   <p className="text-[14px] text-pm-mute">NIP (Steuer-ID): 7011326714</p>
                   <p className="text-[14px] text-pm-mute">KRS: 0001259402</p>
@@ -49,17 +49,17 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-5">Kontakt</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-5">Kontakt</h2>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-pm-taupe flex-shrink-0" />
-                <a href="tel:+4989200000830" className="text-[15px] text-[#3D3D3D] hover:text-pm-taupe font-semibold transition-colors">
+                <a href="tel:+4989200000830" className="text-[15px] text-pm-ink hover:text-pm-taupe font-semibold transition-colors">
                   +49 89 200 000 830
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-pm-taupe flex-shrink-0" />
-                <a href="mailto:info@primundus.de" className="text-[15px] text-[#3D3D3D] hover:text-pm-taupe transition-colors">
+                <a href="mailto:info@primundus.de" className="text-[15px] text-pm-ink hover:text-pm-taupe transition-colors">
                   info@primundus.de
                 </a>
               </div>
@@ -68,14 +68,14 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">Vertretungsberechtigte Geschäftsführung</h2>
-            <p className="text-[15px] text-[#3D3D3D] font-semibold">Karolina Jakubowska</p>
-            <p className="text-[15px] text-[#5A5A5A] mt-1">Erreichbar über die oben genannten Kontaktdaten.</p>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-3">Vertretungsberechtigte Geschäftsführung</h2>
+            <p className="text-[15px] text-pm-ink font-semibold">Karolina Jakubowska</p>
+            <p className="text-[15px] text-pm-body mt-1">Erreichbar über die oben genannten Kontaktdaten.</p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">Registereintrag</h2>
-            <div className="space-y-1 text-[15px] text-[#5A5A5A]">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-3">Registereintrag</h2>
+            <div className="space-y-1 text-[15px] text-pm-body">
               <p>Registergericht: Warszawa</p>
               <p>KRS: 0001259402</p>
               <p>NIP (Steuer-ID): 7011326714</p>
@@ -83,43 +83,43 @@ export default function Page() {
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-            <p className="text-[15px] text-[#3D3D3D] font-semibold">Karolina Jakubowska</p>
-            <p className="text-[15px] text-[#5A5A5A]">Geschäftsführung Primundus</p>
-            <p className="text-[15px] text-[#5A5A5A]">Landsberger Str. 155, 80687 München</p>
+            <h2 className="text-[20px] font-bold text-pm-ink mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+            <p className="text-[15px] text-pm-ink font-semibold">Karolina Jakubowska</p>
+            <p className="text-[15px] text-pm-body">Geschäftsführung Primundus</p>
+            <p className="text-[15px] text-pm-body">Landsberger Str. 155, 80687 München</p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7 space-y-5">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D]">Haftungsausschluss</h2>
+            <h2 className="text-[20px] font-bold text-pm-ink">Haftungsausschluss</h2>
             <div>
-              <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">Haftung für Inhalte</h3>
-              <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+              <h3 className="text-[15px] font-semibold text-pm-ink mb-2">Haftung für Inhalte</h3>
+              <p className="text-[15px] text-pm-body leading-[1.7]">
                 Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
               </p>
             </div>
             <div>
-              <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">Haftung für Links</h3>
-              <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+              <h3 className="text-[15px] font-semibold text-pm-ink mb-2">Haftung für Links</h3>
+              <p className="text-[15px] text-pm-body leading-[1.7]">
                 Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
               </p>
             </div>
             <div>
-              <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">Urheberrecht</h3>
-              <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+              <h3 className="text-[15px] font-semibold text-pm-ink mb-2">Urheberrecht</h3>
+              <p className="text-[15px] text-pm-body leading-[1.7]">
                 Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors.
               </p>
             </div>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">Streitschlichtung</h2>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
+            <h2 className="text-[20px] font-bold text-pm-ink mb-3">Streitschlichtung</h2>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
               Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
               <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-pm-taupe hover:underline">
                 https://ec.europa.eu/consumers/odr
               </a>
             </p>
-            <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
+            <p className="text-[15px] text-pm-body leading-[1.7]">
               Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
           </div>
