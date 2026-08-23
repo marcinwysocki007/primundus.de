@@ -64,33 +64,33 @@ export default function PflegevertragAufsetzen() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/organisation" className="hover:text-[#8B7355] transition-colors">Organisation</a>
+            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegevertrag aufsetzen</span>
+            <span className="text-pm-ink">Pflegevertrag aufsetzen</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegevertrag aufsetzen — was muss rein?
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Ein schriftlicher Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt Leistungen, Arbeitszeiten, Vergütung und Kündigungsmodalitäten klar und verbindlich. Was genau hineingehört, hängt vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist der Vertrag standardisiert und rechtssicher.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Pflicht-Inhalte jedes Pflegevertrags</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Pflicht-Inhalte jedes Pflegevertrags</p>
             <ul className="space-y-2.5">
               {[
                 'Vertragsparteien: vollständige Namen und Adressen beider Seiten',
@@ -101,25 +101,25 @@ export default function PflegevertragAufsetzen() {
                 'Urlaubs- und Krankheitsregelungen',
                 'Kündigungsfristen',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Warum ein Pflegevertrag so wichtig ist
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Ohne schriftlichen Vertrag entstehen schnell Missverständnisse: Welche Tätigkeiten sind inbegriffen? Wie viele Stunden? Was passiert bei Krankheit der Betreuungskraft? Wer kümmert sich um Ersatz? Ein klarer Vertrag schafft von Anfang an Klarheit und vermeidet Konflikte.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-10">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
             Rechtlich ist ein schriftlicher Vertrag bei Direktanstellung Pflicht. Beim Entsendemodell regelt der Vertrag mit der Agentur alle wesentlichen Punkte. Auf keinen Fall sollte auf einen Vertrag verzichtet werden — auch nicht bei vertrauensvollen Verhältnissen.
           </p>
 
-          <h2 id="inhalte" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="inhalte" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was in den Pflegevertrag gehört — vollständige Checkliste
           </h2>
           <div className="space-y-3 mb-10">
@@ -132,17 +132,17 @@ export default function PflegevertragAufsetzen() {
               { titel: 'Kündigungsregelung', inhalt: 'Kündigungsfristen für beide Seiten, außerordentliche Kündigung bei schwerem Fehlverhalten, Übergabeprozess bei Kündigung.' },
               { titel: 'Datenschutz', inhalt: 'Einwilligung für die Verarbeitung personenbezogener Daten der pflegebedürftigen Person, Schweigepflicht der Betreuungskraft.' },
             ].map((item) => (
-              <div key={item.titel} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.titel}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.inhalt}</p>
+              <div key={item.titel} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.titel}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.inhalt}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="modelle" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="modelle" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vertrag je nach Beschäftigungsmodell
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Das Beschäftigungsmodell bestimmt wer mit wem einen Vertrag schließt.
           </p>
           <div className="space-y-3 mb-6">
@@ -158,30 +158,30 @@ export default function PflegevertragAufsetzen() {
                 highlight: false,
               },
             ].map((item) => (
-              <div key={item.modell} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-[#8B7355] border-2' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.modell}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.vertrag}</p>
+              <div key={item.modell} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.modell}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.vertrag}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Alle Modelle erklärt:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft legal beschäftigen — die 3 Wege</a>
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft legal beschäftigen — die 3 Wege</a>
           </p>
 
-          <h2 id="kuendigung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="kuendigung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kündigung & Fristen
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Bei Primundus ist der Vertrag täglich kündbar — das ist ein zentraler Vorteil des Entsendemodells. Bei Direktanstellung gelten die gesetzlichen Kündigungsfristen nach Beschäftigungsdauer.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Modell', 'Kündigungsfrist', 'Ersatz bei Kündigung'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -191,22 +191,22 @@ export default function PflegevertragAufsetzen() {
                     ['Direktanstellung <6 Monate', '2 Wochen', 'Familie muss selbst suchen'],
                     ['Direktanstellung >2 Jahre', '2 Monate', 'Familie muss selbst suchen'],
                   ].map(([modell, frist, ersatz], i) => (
-                    <tr key={modell} className={i === 0 ? 'bg-[#F2EDE6]' : i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className={`px-4 py-3 text-[14px] font-semibold border-b border-[#E5E3DF] ${i === 0 ? 'text-[#8B7355]' : 'text-[#1C1C1C]'}`}>{modell}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{frist}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{ersatz}</td>
+                    <tr key={modell} className={i === 0 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className={`px-4 py-3 text-[14px] font-semibold border-b border-pm-line ${i === 0 ? 'text-pm-taupe' : 'text-pm-ink'}`}>{modell}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{frist}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{ersatz}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Pflegekraft wechseln:{' '}
-            <a href="/pflegekraft-wechseln" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegekraft wechseln — so geht es reibungslos</a>
+            <a href="/pflegekraft-wechseln" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft wechseln — so geht es reibungslos</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zum Pflegevertrag
           </h2>
           <div className="space-y-4 mb-12">
@@ -216,13 +216,13 @@ export default function PflegevertragAufsetzen() {
               { q: 'Kann man den Pflegevertrag bei Primundus täglich kündigen?', a: 'Ja — Primundus-Verträge sind täglich kündbar, taggenaue Abrechnung. Das ist einer der zentralen Vorteile des Entsendemodells.' },
               { q: 'Muss der Pflegevertrag schriftlich sein?', a: 'Bei Direktanstellung ist Schriftform Pflicht. Beim Entsendemodell regelt der Agenturvertrag alle wesentlichen Punkte schriftlich. Auf einen schriftlichen Vertrag sollte in keinem Fall verzichtet werden.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

@@ -63,18 +63,18 @@ export function PflegeheimVergleichClient() {
   }, [pg, bl])
 
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
+    <div className="min-h-screen bg-pm-paper">
       <div className="max-w-[720px] mx-auto px-5 py-14">
 
-        <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-          <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+        <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
-          <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+          <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
           <span className="text-[#5A5A5A]">Pflegeheim-Vergleich</span>
         </nav>
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">TOOLS & RECHNER</p>
+        <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">TOOLS & RECHNER</p>
         <h1 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-4">
           Pflegeheim vs. 24h-Pflege — Kostenvergleich 2026
         </h1>
@@ -83,9 +83,9 @@ export function PflegeheimVergleichClient() {
         </p>
 
         {/* Pflegegrad */}
-        <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 shadow-sm mb-5">
+        <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm mb-5">
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-7 h-7 rounded-full bg-[#F2EDE6] text-[#8B7355] font-bold text-[14px] flex items-center justify-center flex-shrink-0">1</span>
+            <span className="w-7 h-7 rounded-full bg-pm-shell text-pm-taupe font-bold text-[14px] flex items-center justify-center flex-shrink-0">1</span>
             <p className="text-[15px] font-bold text-[#3D3D3D]">Pflegegrad auswählen</p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -95,36 +95,36 @@ export function PflegeheimVergleichClient() {
                 onClick={() => setPgWahl(p.pg)}
                 className={`px-5 py-2.5 rounded-xl border-2 text-[14px] font-semibold transition-all ${
                   pgWahl === p.pg
-                    ? 'border-[#8B7355] bg-[#8B7355] text-white'
-                    : 'border-[#E5E3DF] bg-white text-[#3D3D3D] hover:border-[#8B7355]'
+                    ? 'border-pm-taupe bg-pm-taupe text-white'
+                    : 'border-pm-line bg-white text-[#3D3D3D] hover:border-pm-taupe'
                 }`}
               >
                 PG {p.pg}
               </button>
             ))}
           </div>
-          <p className="mt-3 text-[12px] text-[#8B8B8B]">
+          <p className="mt-3 text-[12px] text-pm-mute">
             Hinweis: Bei PG 1 ist weder ein Pflegeheim noch eine 24h-Pflege üblich — der Vergleich beginnt ab PG 2.
           </p>
         </div>
 
         {/* Bundesland */}
         {pgWahl && (
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 shadow-sm mb-5">
+          <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm mb-5">
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-7 h-7 rounded-full bg-[#F2EDE6] text-[#8B7355] font-bold text-[14px] flex items-center justify-center flex-shrink-0">2</span>
+              <span className="w-7 h-7 rounded-full bg-pm-shell text-pm-taupe font-bold text-[14px] flex items-center justify-center flex-shrink-0">2</span>
               <p className="text-[15px] font-bold text-[#3D3D3D]">Bundesland wählen</p>
             </div>
             <select
               value={bundesland}
               onChange={(e) => setBundesland(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] bg-white focus:border-[#8B7355] focus:outline-none transition-colors"
+              className="w-full px-4 py-3 border-2 border-pm-line rounded-xl text-[14px] text-[#3D3D3D] bg-white focus:border-pm-taupe focus:outline-none transition-colors"
             >
               {BUNDESLAENDER.map(b => (
                 <option key={b.name} value={b.name}>{b.name}</option>
               ))}
             </select>
-            <p className="mt-3 text-[12px] text-[#8B8B8B]">
+            <p className="mt-3 text-[12px] text-pm-mute">
               Pflegeheim-Eigenanteile variieren stark — in Bayern und BW deutlich höher als im Osten.
             </p>
           </div>
@@ -135,34 +135,34 @@ export function PflegeheimVergleichClient() {
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               {/* Pflegeheim */}
-              <div className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden shadow-sm">
-                <div className="bg-[#FDF0EE] border-b border-[#E5E3DF] px-5 py-3">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B3E2F]">Pflegeheim</p>
+              <div className="bg-white border border-pm-line rounded-2xl overflow-hidden shadow-sm">
+                <div className="bg-pm-coral-tint border-b border-pm-line px-5 py-3">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-coral-ink">Pflegeheim</p>
                 </div>
                 <div className="p-5">
-                  <p className="text-[28px] font-bold text-[#E76F63] mb-1">
+                  <p className="text-[28px] font-bold text-pm-coral mb-1">
                     {ergebnis.heimEigenanteil.toLocaleString('de')} €
                   </p>
-                  <p className="text-[12px] text-[#8B8B8B] mb-4">Eigenanteil pro Monat</p>
+                  <p className="text-[12px] text-pm-mute mb-4">Eigenanteil pro Monat</p>
                   <div className="text-[12px] text-[#5A5A5A] space-y-1">
                     <p>• Pflegekosten: {pg.heimanteil} €</p>
                     <p>• Unterkunft/Verpflegung: {bl.heimEA} €</p>
                     <p>• Investitionskosten: ca. 500 €</p>
-                    <p className="text-[#8B8B8B] pt-1">- Sachleistung: {pg.sachleistung} €</p>
+                    <p className="text-pm-mute pt-1">- Sachleistung: {pg.sachleistung} €</p>
                   </div>
                 </div>
               </div>
 
               {/* 24h-Pflege */}
-              <div className="bg-white border-2 border-[#8B7355] rounded-2xl overflow-hidden shadow-sm">
-                <div className="bg-[#F2EDE6] border-b border-[#E5E3DF] px-5 py-3">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#6B5A44]">24h-Pflege zuhause</p>
+              <div className="bg-white border-2 border-pm-taupe rounded-2xl overflow-hidden shadow-sm">
+                <div className="bg-pm-shell border-b border-pm-line px-5 py-3">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe-ink">24h-Pflege zuhause</p>
                 </div>
                 <div className="p-5">
-                  <p className="text-[28px] font-bold text-[#3D7A5C] mb-1">
+                  <p className="text-[28px] font-bold text-pm-green mb-1">
                     {ergebnis.eaMin.toLocaleString('de')}–{ergebnis.eaMax.toLocaleString('de')} €
                   </p>
-                  <p className="text-[12px] text-[#8B8B8B] mb-4">Eigenanteil pro Monat</p>
+                  <p className="text-[12px] text-pm-mute mb-4">Eigenanteil pro Monat</p>
                   <div className="text-[12px] text-[#5A5A5A] space-y-1">
                     <p>• Brutto-Kosten: {ergebnis.bruttoMin.toLocaleString('de')}–{ergebnis.bruttoMax.toLocaleString('de')} €</p>
                     <p>- Pflegegeld (50 %): {ergebnis.pgHalb} €</p>
@@ -174,27 +174,27 @@ export function PflegeheimVergleichClient() {
             </div>
 
             {/* Ersparnis */}
-            <div className="bg-white border-2 border-[#3D7A5C] rounded-2xl overflow-hidden shadow-md mb-6">
-              <div className="bg-[#E8F5EE] px-6 py-4">
-                <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#3D7A5C] mb-1">Ihre Ersparnis</p>
+            <div className="bg-white border-2 border-pm-green rounded-2xl overflow-hidden shadow-md mb-6">
+              <div className="bg-pm-mint px-6 py-4">
+                <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-green mb-1">Ihre Ersparnis</p>
                 <p className="text-[16px] font-bold text-[#2F5A44]">Mit 24h-Pflege sparen Sie</p>
               </div>
               <div className="p-6">
                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-5">
                   <div>
-                    <p className="text-[36px] font-bold text-[#3D7A5C] leading-none">
+                    <p className="text-[36px] font-bold text-pm-green leading-none">
                       {ergebnis.ersparnis > 0 ? '−' : '+'}{Math.abs(ergebnis.ersparnis).toLocaleString('de')} €
                     </p>
-                    <p className="text-[12px] text-[#8B8B8B] mt-1">pro Monat im Schnitt</p>
+                    <p className="text-[12px] text-pm-mute mt-1">pro Monat im Schnitt</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-[24px] font-bold text-[#3D7A5C] leading-none">
+                    <p className="text-[24px] font-bold text-pm-green leading-none">
                       {ergebnis.ersparnisProzent > 0 ? '−' : '+'}{Math.abs(ergebnis.ersparnisProzent)} %
                     </p>
-                    <p className="text-[12px] text-[#8B8B8B] mt-1">gegenüber Pflegeheim</p>
+                    <p className="text-[12px] text-pm-mute mt-1">gegenüber Pflegeheim</p>
                   </div>
                 </div>
-                <div className="bg-[#F8F7F5] rounded-xl px-4 py-3 mb-5">
+                <div className="bg-pm-paper rounded-xl px-4 py-3 mb-5">
                   <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
                     <strong className="text-[#3D3D3D]">Hochgerechnet:</strong>{' '}
                     {(ergebnis.ersparnis * 12).toLocaleString('de')} € pro Jahr — bei gleichzeitig vertrautem Umfeld,
@@ -204,7 +204,7 @@ export function PflegeheimVergleichClient() {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href="/beratungsgespraech"
-                    className="inline-flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
+                    className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
                   >
                     Kostenfreie Beratung →
                   </a>
@@ -212,7 +212,7 @@ export function PflegeheimVergleichClient() {
                     href="https://kostenrechner.primundus.de/?start=1&src=apex-pflegeheim-kostenvergleich"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-white border border-[#8B7355] text-[#8B7355] font-semibold text-[14px] py-3 px-5 rounded-xl hover:bg-[#F2EDE6] transition-colors"
+                    className="inline-flex items-center justify-center gap-2 bg-white border border-pm-taupe text-pm-taupe font-semibold text-[14px] py-3 px-5 rounded-xl hover:bg-pm-shell transition-colors"
                   >
                     Detaillierter Kostenrechner →
                   </a>
@@ -220,7 +220,7 @@ export function PflegeheimVergleichClient() {
               </div>
             </div>
 
-            <p className="text-[12px] text-[#8B8B8B] leading-relaxed">
+            <p className="text-[12px] text-pm-mute leading-relaxed">
               <strong>Datenquelle:</strong> Pflegeheim-Eigenanteile aus VDEK-Pflegelotse (Stand 2026).
               24h-Pflege-Werte sind Marktpreise für seriöse EU-Vermittlungen.
             </p>

@@ -2,7 +2,7 @@
 
 export function FinalCTA() {
   return (
-    <section className="py-16 px-5 bg-[#8B7355]">
+    <section className="py-16 px-5 bg-pm-taupe">
       <div className="max-w-[640px] mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-[26px] leading-[1.25] font-bold text-white mb-2">
@@ -16,7 +16,7 @@ export function FinalCTA() {
         <div className="flex flex-col items-center gap-6">
           <a
             href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white rounded-full text-base md:text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-pm-coral hover:bg-pm-coral-deep text-white rounded-full text-base md:text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-200"
           >
             Kosten & Pflegekräfte ansehen
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

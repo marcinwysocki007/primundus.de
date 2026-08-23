@@ -64,33 +64,33 @@ export default function SturzpraventionSenioren() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Sturzprävention Senioren</span>
+            <span className="text-pm-ink">Sturzprävention Senioren</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Sturzprävention Senioren — wie man Stürze wirklich verhindert
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein reduziert das Sturzrisiko nachweislich um 30–40 Prozent. Die Wohnungssicherung tut ihr Übriges.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick — die wirksamsten Maßnahmen</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — die wirksamsten Maßnahmen</p>
             <ul className="space-y-2.5">
               {[
                 'Gleichgewichtstraining: reduziert Sturzrisiko um 30–40 % (täglich 10–15 Min reichen)',
@@ -100,18 +100,18 @@ export default function SturzpraventionSenioren() {
                 'Beleuchtung: Nachtlicht auf Toilettenweg, Bewegungsmelder im Flur',
                 'Sehvermögen: regelmäßige Augencheck — schlechtes Sehen = hohes Sturzrisiko',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="risikofaktoren" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="risikofaktoren" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Risikofaktoren erkennen
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Wer die Risikofaktoren kennt, kann gezielt ansetzen. Viele sind modifizierbar — das heißt: behandelbar oder ausschaltbar.
           </p>
           <div className="grid md:grid-cols-2 gap-3 mb-10">
@@ -121,12 +121,12 @@ export default function SturzpraventionSenioren() {
               { kategorie: 'Umgebungsrisiken', items: ['Lose Teppiche, Kabel am Boden', 'Schlechte Beleuchtung', 'Fehlende Haltegriffe', 'Nasse Böden im Bad', 'Ungeeignetes Schuhwerk'] },
               { kategorie: 'Psychische Faktoren', items: ['Sturzangst (paradoxerweise erhöht Sturzrisiko)', 'Unterschätzung eigener Einschränkungen', 'Eile, Ungeduld', 'Nachts keine Brille aufsetzen'] },
             ].map((item) => (
-              <div key={item.kategorie} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[14px] font-bold text-[#1C1C1C] mb-3">{item.kategorie}</p>
+              <div key={item.kategorie} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[14px] font-bold text-pm-ink mb-3">{item.kategorie}</p>
                 <ul className="space-y-1">
                   {item.items.map(i => (
-                    <li key={i} className="text-[13px] text-[#2E2E2E] flex gap-2">
-                      <span className="text-[#E76F63] flex-shrink-0">!</span>{i}
+                    <li key={i} className="text-[13px] text-pm-body flex gap-2">
+                      <span className="text-pm-coral flex-shrink-0">!</span>{i}
                     </li>
                   ))}
                 </ul>
@@ -134,7 +134,7 @@ export default function SturzpraventionSenioren() {
             ))}
           </div>
 
-          <h2 id="wohnung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wohnung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wohnung sichern — die wichtigsten Maßnahmen
           </h2>
           <div className="space-y-3 mb-10">
@@ -144,21 +144,21 @@ export default function SturzpraventionSenioren() {
               { ort: 'Schlafzimmer', massnahmen: 'Bett auf optimale Höhe einstellen (Fußsohlen vollständig auf dem Boden beim Sitzen). Nachtlampe griffbereit. Rutschfeste Schuhe neben dem Bett.' },
               { ort: 'Wohnzimmer', massnahmen: 'Lose Teppiche entfernen oder befestigen. Kabel wegräumen. Freie Wege ohne Hindernisse. Sessel und Sofa auf optimale Aufstehehöhe prüfen.' },
             ].map((item) => (
-              <div key={item.ort} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.ort}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.massnahmen}</p>
+              <div key={item.ort} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.ort}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.massnahmen}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Förderung bis 4.180 €/Maßnahme:{' '}
-            <a href="/barrierefreies-zuhause-gestalten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Barrierefreies Zuhause gestalten</a>
+            <a href="/barrierefreies-zuhause-gestalten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Barrierefreies Zuhause gestalten</a>
           </p>
 
-          <h2 id="uebungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="uebungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Übungen & Training — was wirklich hilft
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Gleichgewichts- und Krafttraining sind die wirksamsten Maßnahmen gegen Sturzrisiko. Studien zeigen: Regelmäßiges Training reduziert das Sturzrisiko um 30–40 %. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag pro Woche.
           </p>
           <div className="space-y-3 mb-10">
@@ -169,17 +169,17 @@ export default function SturzpraventionSenioren() {
               { uebung: 'Zehenspitzenstand', ablauf: 'An Stuhl festhalten, auf Zehenspitzen heben und langsam senken. 15 Wiederholungen. Stärkt Unterschenkelmuskulatur und verbessert Gleichgewicht.', schwerpunkt: 'Kraft' },
               { uebung: 'Tai Chi oder Yoga für Senioren', ablauf: 'Kurse in Volkshochschulen oder Sportvereinen, auch als Video möglich. Besonders wirksam in Studien — reduziert Sturzrisiko um bis zu 40 %.', schwerpunkt: 'Gleichgewicht & Kraft' },
             ].map((item) => (
-              <div key={item.uebung} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
+              <div key={item.uebung} className="bg-white rounded-xl p-5 border border-pm-line">
                 <div className="flex items-center gap-3 mb-2">
-                  <p className="text-[15px] font-bold text-[#1C1C1C]">{item.uebung}</p>
-                  <span className="text-[11px] bg-[#F2EDE6] text-[#8B7355] font-semibold px-2 py-0.5 rounded-full">{item.schwerpunkt}</span>
+                  <p className="text-[15px] font-bold text-pm-ink">{item.uebung}</p>
+                  <span className="text-[11px] bg-pm-shell text-pm-taupe font-semibold px-2 py-0.5 rounded-full">{item.schwerpunkt}</span>
                 </div>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.ablauf}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.ablauf}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="hilfsmittel" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="hilfsmittel" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Hilfsmittel & Versorgung
           </h2>
           <div className="space-y-3 mb-10">
@@ -189,17 +189,17 @@ export default function SturzpraventionSenioren() {
               { hilfsmittel: 'Hausnotruf', erstattung: 'Entlastungsbetrag (131 €/Mo)', hinweis: 'Wenn Sturz passiert und niemand da ist: Hausnotruf ermöglicht schnelle Hilfe.' },
               { hilfsmittel: 'Orthopädische Schuhe', erstattung: 'Krankenkasse (ärztl. Verordnung)', hinweis: 'Bei Gangstörungen oder Fehlstellungen die Sturzrisiko erhöhen.' },
             ].map((item) => (
-              <div key={item.hilfsmittel} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
+              <div key={item.hilfsmittel} className="bg-white rounded-xl p-5 border border-pm-line">
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <p className="text-[15px] font-bold text-[#1C1C1C]">{item.hilfsmittel}</p>
-                  <span className="text-[12px] bg-[#E8F5EE] text-[#3D7A5C] font-semibold px-2 py-0.5 rounded-full flex-shrink-0">{item.erstattung}</span>
+                  <p className="text-[15px] font-bold text-pm-ink">{item.hilfsmittel}</p>
+                  <span className="text-[12px] bg-pm-mint text-pm-green font-semibold px-2 py-0.5 rounded-full flex-shrink-0">{item.erstattung}</span>
                 </div>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.hinweis}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.hinweis}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (30–40 % weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },
@@ -207,13 +207,13 @@ export default function SturzpraventionSenioren() {
               { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: über Entlastungsbetrag (131 €/Monat) der Pflegekasse. Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
               { q: 'Was tun wenn jemand gestürzt ist?', a: 'Nicht sofort aufrichten wenn Verletzung möglich. Notarzt rufen bei Verdacht auf Knochenbruch, Kopfverletzung oder Bewusstlosigkeit. Danach Arzt aufsuchen, Ursache des Sturzes analysieren, Präventionsmaßnahmen anpassen.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

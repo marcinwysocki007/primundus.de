@@ -18,7 +18,7 @@ export function TestimonialCard() {
           href={GOOGLE_PROFIL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white border border-[#E5E3DF] rounded-2xl p-5 flex flex-col gap-2 hover:border-[#8B7355] transition-colors no-underline"
+          className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
         >
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -35,13 +35,13 @@ export function TestimonialCard() {
             ))}
             <span className="text-[14px] font-bold text-[#3D3D3D] ml-1">5,0</span>
           </div>
-          <p className="text-[12px] text-[#8B8B8B]">3 Bewertungen · Stand August 2026 · Profil ansehen →</p>
+          <p className="text-[12px] text-pm-mute">3 Bewertungen · Stand August 2026 · Profil ansehen →</p>
         </a>
 
         {/* Testsieger */}
         <a
           href="/testsieger-24-stunden-pflege"
-          className="bg-white border border-[#E5E3DF] rounded-2xl p-5 flex flex-col gap-2 hover:border-[#8B7355] transition-colors no-underline"
+          className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
         >
           <div className="flex items-center gap-2">
             <img src="/images/primundus_testsieger-2021.webp" alt="Testsieger-Siegel DIE WELT/ServiceValue 2021" width={28} height={28} className="w-7 h-7 object-contain" />
@@ -50,7 +50,7 @@ export function TestimonialCard() {
           <p className="text-[13px] text-[#5A5A5A] leading-snug">
             Nr. 1 der Pflegekräfte-Vermittler — DIE WELT &amp; ServiceValue (10/2021)
           </p>
-          <p className="text-[12px] text-[#8B8B8B]">Zur Auszeichnung mit Beleg →</p>
+          <p className="text-[12px] text-pm-mute">Zur Auszeichnung mit Beleg →</p>
         </a>
 
         {/* Trustpilot */}
@@ -58,7 +58,7 @@ export function TestimonialCard() {
           href={TRUSTPILOT_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white border border-[#E5E3DF] rounded-2xl p-5 flex flex-col gap-2 hover:border-[#8B7355] transition-colors no-underline"
+          className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
         >
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 2l2.9 6.9L22 9.2l-5.4 4.9L18.2 22 12 18.1 5.8 22l1.6-7.9L2 9.2l7.1-.3z"/></svg>
@@ -67,11 +67,11 @@ export function TestimonialCard() {
           <p className="text-[13px] text-[#5A5A5A] leading-snug">
             Ihre Erfahrung hilft anderen Familien bei der Entscheidung.
           </p>
-          <p className="text-[12px] text-[#8B8B8B]">Primundus auf Trustpilot bewerten →</p>
+          <p className="text-[12px] text-pm-mute">Primundus auf Trustpilot bewerten →</p>
         </a>
       </div>
 
-      <p className="text-[12px] text-[#8B8B8B] mt-4">
+      <p className="text-[12px] text-pm-mute mt-4">
         Wir zeigen nur belegbare Bewertungen mit Link zur Quelle — jede einzelne zählt.
       </p>
     </div>

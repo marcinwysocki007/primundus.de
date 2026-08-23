@@ -64,33 +64,33 @@ export default function WannBraucheIch24hPflege() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/24-stunden-pflege" className="hover:text-[#8B7355] transition-colors">24-Stunden-Pflege</a>
+            <a href="/24-stunden-pflege" className="hover:text-pm-taupe transition-colors">24-Stunden-Pflege</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Wann brauche ich 24h-Pflege?</span>
+            <span className="text-pm-ink">Wann brauche ich 24h-Pflege?</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Ratgeber · 6 Min Lesezeit · Aktualisiert April 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Viele Familien warten zu lang mit der Entscheidung für 24h-Pflege — aus Kostengründen, aus Gewohnheit, oder weil sie die Zeichen nicht deuten. Dabei gibt es klare Situationen in denen 24h-Präsenz nicht mehr optional ist. Wer zu lange wartet, riskiert einen Sturz, einen Krankenhausaufenthalt oder den Zusammenbruch pflegender Angehöriger.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick — klare Zeichen für 24h-Pflege</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick — klare Zeichen für 24h-Pflege</p>
             <ul className="space-y-2.5">
               {[
                 'Der Pflegebedürftige kann nicht mehr allein gelassen werden',
@@ -100,15 +100,15 @@ export default function WannBraucheIch24hPflege() {
                 'Entlassung aus Krankenhaus nur mit gesicherter Nachversorgung möglich',
                 'Pflegebedarf überschreitet was ambulante Dienste leisten können',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="zeichen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="zeichen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die 10 klaren Zeichen für 24h-Pflege
           </h2>
           <div className="space-y-4 mb-10">
@@ -124,17 +124,17 @@ export default function WannBraucheIch24hPflege() {
               { n: '9', title: 'Ambulanter Pflegedienst nicht ausreichend', desc: 'Wenn der Dienst zweimal täglich kommt, aber dazwischen viel unkontrolliert passiert — Stürze, Verweigerung von Essen, Unsauberkeit. 24h-Präsenz schließt diese Lücken.' },
               { n: '10', title: 'Pflegebedürftiger wünscht es', desc: 'Wenn der Betroffene selbst sagt: "Ich möchte nicht allein sein" oder "Ich traue mich das nicht mehr alleine" — das ist der deutlichste aller Hinweise.' },
             ].map((item) => (
-              <div key={item.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0 mt-0.5">{item.n}</span>
+              <div key={item.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0 mt-0.5">{item.n}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <h2 id="situationen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="situationen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Typische Pflegesituationen in denen 24h-Pflege startet
           </h2>
           <div className="space-y-3 mb-10">
@@ -144,21 +144,21 @@ export default function WannBraucheIch24hPflege() {
               { title: 'Fortgeschrittenes Parkinson-Stadium', desc: 'On-Off-Phasen, Sturzgefahr, Medikamenten-Timing — ein fester Ansprechpartner rund um die Uhr ist entscheidend.', link: '/parkinson-pflege-zuhause' },
               { title: 'Angehörige an der Belastungsgrenze', desc: 'Wenn Kinder oder Partner erschöpft sind und die Pflege nicht mehr leisten können — ohne dass das Pflegeheim die einzige Alternative sein muss.', link: '/burnout-pflegende-angehoerige' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-2">{item.desc}</p>
-                <a href={item.link} className="text-[13px] text-[#8B7355] underline hover:text-[#7D6E5D]">→ Mehr lesen</a>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed mb-2">{item.desc}</p>
+                <a href={item.link} className="text-[13px] text-pm-taupe underline hover:text-pm-taupe-deep">→ Mehr lesen</a>
               </div>
             ))}
           </div>
 
-          <h2 id="checkliste" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="checkliste" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Entscheidungs-Checkliste
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Wenn Sie 3 oder mehr dieser Fragen mit "Ja" beantworten, ist eine 24h-Betreuungskraft die richtige Lösung:
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] p-6 mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line p-6 mb-10 shadow-sm">
             <div className="space-y-3">
               {[
                 'Kann der Pflegebedürftige nicht mehr sicher allein gelassen werden?',
@@ -171,14 +171,14 @@ export default function WannBraucheIch24hPflege() {
                 'Lebt der Pflegebedürftige allein ohne tägliche familiäre Unterstützung?',
               ].map((frage, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="w-5 h-5 rounded border-2 border-[#8B7355] flex-shrink-0 mt-0.5" />
-                  <p className="text-[14px] text-[#2E2E2E]">{frage}</p>
+                  <span className="w-5 h-5 rounded border-2 border-pm-taupe flex-shrink-0 mt-0.5" />
+                  <p className="text-[14px] text-pm-body">{frage}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <h2 id="alternativen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="alternativen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alternativen zur 24h-Pflege — wann sie ausreichen
           </h2>
           <div className="space-y-3 mb-10">
@@ -187,14 +187,14 @@ export default function WannBraucheIch24hPflege() {
               { title: 'Tagespflege', desc: 'Tagesweise Betreuung in einer Einrichtung — entlastet Angehörige tagsüber. Ausreichend wenn nachts keine Betreuung nötig ist.' },
               { title: 'Kurzzeitpflege', desc: 'Überbrückung für einige Wochen — nach Krankenhaus, zur Entlastung von Angehörigen. Aus dem Entlastungsbudget finanzierbar.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen
           </h2>
           <div className="space-y-4 mb-12">
@@ -204,13 +204,13 @@ export default function WannBraucheIch24hPflege() {
               { q: 'Kann man zu früh mit 24h-Pflege anfangen?', a: 'Nein — früher Einsatz ermöglicht der Betreuungskraft die Person kennen zu lernen bevor Krisen auftreten. Und er entlastet Angehörige bevor der Burnout eintritt.' },
               { q: 'Wie schnell kann Primundus eine Betreuungskraft stellen?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

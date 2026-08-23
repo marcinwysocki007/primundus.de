@@ -56,32 +56,32 @@ export default function ChecklistePflegekraftEinstellen() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/organisation" className="hover:text-[#8B7355] transition-colors">Organisation</a>
+            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Checkliste Pflegekraft einstellen</span>
+            <span className="text-pm-ink">Checkliste Pflegekraft einstellen</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Checkliste Pflegekraft einstellen — vollständige Anleitung
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Die Entscheidung für eine 24h-Betreuungskraft ist richtig — aber worauf kommt es bei der Auswahl an? Was muss vor der Anreise vorbereitet sein? Und wie gelingt der Start in der ersten Woche? Diese Checkliste führt durch jeden Schritt — mit konkreten Fragen für das Auswahlgespräch.
           </p>
 
-          <h2 id="vor-der-auswahl" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="vor-der-auswahl" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Vor der Auswahl — was klar sein muss
           </h2>
           <div className="space-y-2 mb-10">
@@ -94,20 +94,20 @@ export default function ChecklistePflegekraftEinstellen() {
               ['Beschäftigungsmodell gewählt', 'Entsendemodell (empfohlen), Direktanstellung oder andere Lösung?'],
               ['Budget definiert', 'Was kann und soll monatlich ausgegeben werden (inkl. Kassenzuschüsse)?'],
             ].map(([punkt, detail]) => (
-              <div key={punkt} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <span className="w-5 h-5 rounded border-2 border-[#8B7355] flex-shrink-0 mt-0.5" />
+              <div key={punkt} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
+                <span className="w-5 h-5 rounded border-2 border-pm-taupe flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-[14px] font-semibold text-[#1C1C1C]">{punkt}</p>
-                  <p className="text-[13px] text-[#8B8B8B]">{detail}</p>
+                  <p className="text-[14px] font-semibold text-pm-ink">{punkt}</p>
+                  <p className="text-[13px] text-pm-mute">{detail}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <h2 id="auswahlgespräch" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="auswahlgespräch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Auswahlgespräch — diese Fragen stellen
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Ein Telefonat vorab ist möglich — nutzen Sie es. Diese Fragen helfen einzuschätzen ob die Kraft wirklich passt.
           </p>
           <div className="space-y-4 mb-10">
@@ -140,14 +140,14 @@ export default function ChecklistePflegekraftEinstellen() {
                 ],
               },
             ].map((block) => (
-              <div key={block.kategorie} className="bg-white rounded-xl border border-[#E5E3DF] overflow-hidden">
-                <div className="bg-[#F8F7F5] px-5 py-3 border-b border-[#E5E3DF]">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#A89279]">{block.kategorie}</p>
+              <div key={block.kategorie} className="bg-white rounded-xl border border-pm-line overflow-hidden">
+                <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light">{block.kategorie}</p>
                 </div>
-                <ul className="divide-y divide-[#F8F7F5]">
+                <ul className="divide-y divide-pm-paper">
                   {block.fragen.map(f => (
-                    <li key={f} className="px-5 py-3 text-[14px] text-[#2E2E2E] flex gap-2">
-                      <span className="text-[#8B7355] flex-shrink-0">?</span>{f}
+                    <li key={f} className="px-5 py-3 text-[14px] text-pm-body flex gap-2">
+                      <span className="text-pm-taupe flex-shrink-0">?</span>{f}
                     </li>
                   ))}
                 </ul>
@@ -155,7 +155,7 @@ export default function ChecklistePflegekraftEinstellen() {
             ))}
           </div>
 
-          <h2 id="vor-anreise" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="vor-anreise" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vor der Anreise — Checkliste
           </h2>
           <div className="space-y-2 mb-10">
@@ -171,14 +171,14 @@ export default function ChecklistePflegekraftEinstellen() {
               'Pflegevertrag unterzeichnet',
               'Pflegekasse über neue Versorgungsform informiert',
             ].map((punkt) => (
-              <div key={punkt} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <span className="w-5 h-5 rounded border-2 border-[#8B7355] flex-shrink-0 mt-0.5" />
-                <p className="text-[14px] text-[#2E2E2E]">{punkt}</p>
+              <div key={punkt} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
+                <span className="w-5 h-5 rounded border-2 border-pm-taupe flex-shrink-0 mt-0.5" />
+                <p className="text-[14px] text-pm-body">{punkt}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="erste-woche" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="erste-woche" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Erste Woche — so gelingt die Eingewöhnung
           </h2>
           <div className="space-y-3 mb-10">
@@ -189,14 +189,14 @@ export default function ChecklistePflegekraftEinstellen() {
               { tag: 'Ganze erste Woche', aufgabe: 'Erreichbar bleiben für Rückfragen. Nicht zu viele Anweisungen auf einmal. Der Kraft Raum geben eigene Beziehung mit dem Pflegebedürftigen aufzubauen.' },
               { tag: 'Ende erste Woche', aufgabe: 'Kurzes Feedbackgespräch: Was läuft gut? Was braucht die Kraft noch? Gibt es Probleme? Primundus informieren wenn nötig.' },
             ].map((item) => (
-              <div key={item.tag} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#A89279] mb-1">{item.tag}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.aufgabe}</p>
+              <div key={item.tag} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.tag}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.aufgabe}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie wähle ich die richtige Betreuungskraft aus?', a: 'Erfahrung mit der spezifischen Diagnose, aktive Deutschkenntnisse, Persönlichkeit die passt. Telefonat vorab nutzen. Bei Primundus Profil anfordern, Referenzen prüfen.' },
@@ -204,13 +204,13 @@ export default function ChecklistePflegekraftEinstellen() {
               { q: 'Was wenn die Kraft in der ersten Woche nicht passt?', a: 'Täglich kündbar bei Primundus. Einfach mitteilen — Primundus stellt sofort Ersatz. Keine langen Kündigungsfristen, kein Risiko.' },
               { q: 'Muss ich bei Primundus selbst die Kraft auswählen?', a: 'Nein — Primundus wählt die passende Kraft aus und schlägt sie vor. Auf Wunsch ist ein Telefonat vorab möglich. Die Auswahl kann aber auch komplett Primundus überlassen werden.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

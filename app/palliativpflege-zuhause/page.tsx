@@ -64,45 +64,45 @@ export default function PalliativpflegeZuhause() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
+            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Palliativpflege zuhause</span>
+            <span className="text-pm-ink">Palliativpflege zuhause</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Palliativpflege zuhause — würdevoll bis zum Ende
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Die meisten Menschen möchten in ihrem Zuhause sterben — umgeben von vertrauten Menschen und Gegenständen. Mit dem richtigen Team ist das in den meisten Fällen möglich: Hausarzt, SAPV-Team, palliative Pflegekraft und Hospizbegleiter ermöglichen eine würdevolle letzte Lebensphase zuhause.
           </p>
 
-          <div className="bg-[#F2EDE6] border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-[#6B5A44] mb-2">Was Palliativpflege bedeutet</p>
-            <p className="text-[14px] text-[#6B5A44] leading-relaxed">
+          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
+            <p className="text-[14px] font-bold text-pm-taupe-ink mb-2">Was Palliativpflege bedeutet</p>
+            <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
               Palliativpflege ist keine Aufgabe — es ist eine Haltung. Ziel ist nicht Lebensverlängerung um jeden Preis, sondern Schmerzfreiheit, Würde und Lebensqualität bis zum Tod. Und die Unterstützung der Menschen die jemanden begleiten.
             </p>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist Palliativpflege zuhause?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Palliativpflege (von lateinisch "pallium" = Mantel) umfasst alle Maßnahmen die das Wohlbefinden und die Lebensqualität von Menschen mit unheilbarer Erkrankung verbessern — ohne auf Heilung abzuzielen.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             In Deutschland gibt es ein gut ausgebautes Netz an ambulanter Palliativversorgung. Die <strong>Spezialisierte Ambulante Palliativversorgung (SAPV)</strong> ist ein gesetzlicher Anspruch für Menschen mit unheilbarer Erkrankung — kostenlos und über den Hausarzt verordnet.
           </p>
           <div className="space-y-3 mb-10">
@@ -112,17 +112,17 @@ export default function PalliativpflegeZuhause() {
               { was: 'Psychologische Begleitung', desc: 'Für den Sterbenden und die Angehörigen. Palliativteam und Hospizbegleiter begleiten emotional durch die schwierigste Zeit.' },
               { was: 'Praktische Pflege', desc: 'Körperpflege, Lagerung, Mundpflege, Inkontinenzversorgung. Betreuungskraft und Pflegedienst arbeiten zusammen.' },
             ].map((item) => (
-              <div key={item.was} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.was}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.was} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.was}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="team" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="team" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Das palliative Team zuhause
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Palliativpflege zuhause ist Teamarbeit. Niemand muss das alleine stemmen.
           </p>
           <div className="space-y-3 mb-10">
@@ -133,17 +133,17 @@ export default function PalliativpflegeZuhause() {
               { rolle: '24h-Betreuungskraft', aufgabe: 'Rund um die Uhr vor Ort — Gesellschaft, praktische Unterstützung, Sicherheit. Entlastet Angehörige. Meldet Veränderungen sofort.' },
               { rolle: 'Hospizbegleiter', aufgabe: 'Ehrenamtliche die sterbende Menschen und ihre Familien begleiten. Kostenlos über lokale Hospizdienste. Seelische Unterstützung, Dasein, Gespräche.' },
             ].map((item) => (
-              <div key={item.rolle} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#A89279] mb-1">{item.rolle}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.aufgabe}</p>
+              <div key={item.rolle} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.rolle}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.aufgabe}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="schmerz" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="schmerz" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schmerztherapie & Symptomkontrolle zuhause
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Die Angst "zuhause nicht ausreichend versorgt zu sein" ist einer der Hauptgründe warum Menschen die letzte Phase im Krankenhaus oder Hospiz verbringen — obwohl sie zuhause sterben möchten. Diese Angst ist unbegründet: Mit SAPV ist medizinische Palliativversorgung zuhause auf Krankenhausniveau möglich.
           </p>
           <div className="space-y-3 mb-10">
@@ -153,17 +153,17 @@ export default function PalliativpflegeZuhause() {
               { symptom: 'Übelkeit & Erbrechen', therapie: 'Antiemetika nach ärztlicher Verordnung. Kleine Mahlzeiten, kein Essenszwang. Ingwertee kann helfen.' },
               { symptom: 'Unruhe & Angst', therapie: 'Ruhige Atmosphäre, vertraute Personen, Musik. Bei starker Unruhe: medikamentöse Sedierung möglich und ethisch vertretbar.' },
             ].map((item) => (
-              <div key={item.symptom} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.symptom}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.therapie}</p>
+              <div key={item.symptom} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.symptom}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.therapie}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="angehoerige" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="angehoerige" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Unterstützung für Angehörige
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Palliativbegleitung ist auch Begleitung der Familie. Angehörige die einen sterbenden Menschen begleiten brauchen selbst Unterstützung — das ist kein Zeichen von Schwäche, sondern menschlich.
           </p>
           <div className="space-y-3 mb-6">
@@ -173,20 +173,20 @@ export default function PalliativpflegeZuhause() {
               { hilfe: 'Psychologische Trauerbegleitung', desc: 'Viele Hospizdienste und Beratungsstellen bieten Trauerbegleitung auch schon während der Palliativphase an — nicht erst nach dem Tod.' },
               { hilfe: 'Pflegezeit / Pflegeunterstützungsgeld', desc: 'Angehörige können für die Begleitung in der Sterbephase bezahlte Freistellung (Pflegeunterstützungsgeld) in Anspruch nehmen.' },
             ].map((item) => (
-              <div key={item.hilfe} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.hilfe}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.hilfe} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.hilfe}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Mehr:{' '}
-            <a href="/burnout-pflegende-angehoerige" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Burnout pflegender Angehöriger</a>
+            <a href="/burnout-pflegende-angehoerige" className="text-pm-taupe underline hover:text-pm-taupe-deep">Burnout pflegender Angehöriger</a>
             {' · '}
-            <a href="/pflege-und-beruf-vereinbaren" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflege und Beruf vereinbaren</a>
+            <a href="/pflege-und-beruf-vereinbaren" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflege und Beruf vereinbaren</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was ist Palliativpflege zuhause?', a: 'Würdevolle Begleitung und Versorgung in der letzten Lebensphase im eigenen Zuhause. Ziel: Schmerzfreiheit, Komfort und Lebensqualität bis zum Tod — nicht Heilung oder Lebensverlängerung.' },
@@ -195,13 +195,13 @@ export default function PalliativpflegeZuhause() {
               { q: 'Kann man Schmerzen zuhause ausreichend behandeln?', a: 'Ja — mit SAPV ist Schmerztherapie auf Krankenhausniveau zuhause möglich. Morphin und andere starke Schmerzmittel sind bei ärztlicher Verordnung zuhause legal und sicher anwendbar.' },
               { q: 'Wer unterstützt Angehörige in der Palliativphase?', a: 'SAPV-Team, Hospizbegleiter (kostenlos), psychologische Trauerbegleitung, Betreuungskraft die praktische Aufgaben übernimmt. Pflegeunterstützungsgeld bei Freistellung vom Beruf.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

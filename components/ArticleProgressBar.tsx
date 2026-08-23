@@ -18,7 +18,7 @@ export function ArticleProgressBar() {
   return (
     <div className="fixed top-16 md:top-[121px] left-0 right-0 z-40 h-[3px] bg-transparent">
       <div
-        className="h-full bg-[#E76F63] transition-none"
+        className="h-full bg-pm-coral transition-none"
         style={{ width: `${progress}%` }}
       />
     </div>

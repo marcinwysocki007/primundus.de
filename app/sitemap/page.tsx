@@ -151,11 +151,11 @@ const sections = [
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
+    <div className="min-h-screen bg-pm-paper">
       <div className="max-w-[1100px] mx-auto px-5 py-16">
 
-        <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2">
-          <Link href="/" className="hover:text-[#8B7355] transition-colors">Startseite</Link>
+        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+          <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
           <span className="text-[#3D3D3D]">Sitemap</span>
         </nav>
@@ -169,8 +169,8 @@ export default function Page() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sections.map((section) => (
-            <div key={section.title} className="bg-white border border-[#E5E3DF] rounded-2xl p-6">
-              <h2 className="text-[13px] font-bold uppercase tracking-wider text-[#A89279] mb-4">
+            <div key={section.title} className="bg-white border border-pm-line rounded-2xl p-6">
+              <h2 className="text-[13px] font-bold uppercase tracking-wider text-pm-taupe-light mb-4">
                 {section.title}
               </h2>
               <ul className="space-y-2">
@@ -178,7 +178,7 @@ export default function Page() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[14px] text-[#5A5A5A] hover:text-[#8B7355] transition-colors"
+                      className="text-[14px] text-[#5A5A5A] hover:text-pm-taupe transition-colors"
                     >
                       {link.label}
                     </Link>

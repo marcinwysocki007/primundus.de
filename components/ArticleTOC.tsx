@@ -73,13 +73,13 @@ export function ArticleTOC({ sections }: ArticleTOCProps) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="flex items-center gap-2.5 bg-white border border-[#E5E3DF] shadow-lg rounded-full px-4 py-2.5 text-[13px] font-semibold text-[#3D3D3D] hover:border-[#8B7355] transition-all"
+          className="flex items-center gap-2.5 bg-white border border-pm-line shadow-lg rounded-full px-4 py-2.5 text-[13px] font-semibold text-[#3D3D3D] hover:border-pm-taupe transition-all"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#E76F63] flex-shrink-0" />
+          <span className="w-1.5 h-1.5 rounded-full bg-pm-coral flex-shrink-0" />
           <span className="max-w-[220px] truncate lg:max-w-[180px]">
             {activeSection?.title ?? 'Inhalt'}
           </span>
-          <svg className="w-3.5 h-3.5 text-[#8B8B8B] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3.5 h-3.5 text-pm-mute flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
@@ -87,10 +87,10 @@ export function ArticleTOC({ sections }: ArticleTOCProps) {
 
       {/* Expanded panel */}
       {open && (
-        <div className="bg-white border border-[#E5E3DF] shadow-xl rounded-2xl overflow-hidden w-[280px]">
-          <div className="flex items-center justify-between px-4 py-3 border-b border-[#F0EDE8]">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[#8B8B8B]">Inhaltsverzeichnis</p>
-            <button onClick={() => setOpen(false)} className="text-[#8B8B8B] hover:text-[#3D3D3D] transition-colors">
+        <div className="bg-white border border-pm-line shadow-xl rounded-2xl overflow-hidden w-[280px]">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-pm-line-soft">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-mute">Inhaltsverzeichnis</p>
+            <button onClick={() => setOpen(false)} className="text-pm-mute hover:text-[#3D3D3D] transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -101,18 +101,18 @@ export function ArticleTOC({ sections }: ArticleTOCProps) {
               <button
                 key={s.id}
                 onClick={() => scrollTo(s.id)}
-                className={`w-full flex items-start gap-3 px-4 py-2.5 text-left transition-colors hover:bg-[#F8F7F5] ${
-                  activeId === s.id ? 'text-[#E76F63]' : 'text-[#3D3D3D]'
+                className={`w-full flex items-start gap-3 px-4 py-2.5 text-left transition-colors hover:bg-pm-paper ${
+                  activeId === s.id ? 'text-pm-coral' : 'text-[#3D3D3D]'
                 }`}
               >
-                <span className={`text-[11px] font-bold mt-0.5 flex-shrink-0 ${activeId === s.id ? 'text-[#E76F63]' : 'text-[#B0A898]'}`}>
+                <span className={`text-[11px] font-bold mt-0.5 flex-shrink-0 ${activeId === s.id ? 'text-pm-coral' : 'text-[#B0A898]'}`}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span className={`text-[13px] leading-snug ${activeId === s.id ? 'font-semibold' : 'font-normal'}`}>
                   {s.title}
                 </span>
                 {activeId === s.id && (
-                  <span className="ml-auto w-1 h-4 bg-[#E76F63] rounded-full flex-shrink-0 mt-0.5" />
+                  <span className="ml-auto w-1 h-4 bg-pm-coral rounded-full flex-shrink-0 mt-0.5" />
                 )}
               </button>
             ))}

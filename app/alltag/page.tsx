@@ -33,20 +33,20 @@ export default function Alltag() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Alltag & Angehörige</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             RATGEBER
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -67,9 +67,9 @@ export default function Alltag() {
               { titel: 'Tagesstruktur bei Demenz', href: '/tagesstruktur-demenz', desc: 'Feste Routinen als wirksamstes Mittel — Muster-Tagesplan.' },
               { titel: 'Kommunikation mit Demenzkranken', href: '/kommunikation-mit-demenzkranken', desc: '5 Grundprinzipien und schwierige Situationen meistern.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -83,9 +83,9 @@ export default function Alltag() {
               { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie.' },
               { titel: 'Wann brauche ich 24h-Pflege?', href: '/wann-brauche-ich-24h-pflege', desc: '10 Warnsignale und der ehrliche Selbsttest.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -98,9 +98,9 @@ export default function Alltag() {
               { titel: 'Hausnotruf für Senioren', href: '/hausnotruf-senioren', desc: 'Kosten, Kassenzuschuss und welche Systeme für wen geeignet sind.' },
               { titel: 'Sturzprävention Senioren', href: '/sturzpraevention-senioren', desc: 'Stürze sind die häufigste Unfallursache im Alter — wie man sie verhindert.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -116,9 +116,9 @@ export default function Alltag() {
               { titel: 'Einsamkeit im Alter bekämpfen', href: '/einsamkeit-senioren-bekaempfen', desc: 'Soziale Kontakte fördern und Isolation verhindern.' },
               { titel: 'Schlafprobleme bei Senioren', href: '/schlafprobleme-senioren-loesen', desc: 'Ursachen und wirksame Maßnahmen für besseren Schlaf im Alter.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>

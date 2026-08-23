@@ -64,33 +64,33 @@ export default function Pflegesachleistungen() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/finanzierung" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
+            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegesachleistungen</span>
+            <span className="text-pm-ink">Pflegesachleistungen</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Pflegesachleistungen sind Kassengelder die direkt an ambulante Pflegedienste fließen — nicht an die Familie. Sie betragen 796 Euro (PG 2) bis 2.299 Euro (PG 5) pro Monat. Wer Sachleistungen nicht vollständig nutzt, bekommt anteiliges Pflegegeld — die Kombinationsleistung.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Pflegesachleistungen 2026 nach Pflegegrad</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Pflegesachleistungen 2026 nach Pflegegrad</p>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <tbody>
@@ -101,29 +101,29 @@ export default function Pflegesachleistungen() {
                     ['Pflegegrad 4', '1.859 €/Monat', 'Für ambulante Pflegedienste'],
                     ['Pflegegrad 5', '2.299 €/Monat', 'Für ambulante Pflegedienste'],
                   ].map(([grad, betrag, hinweis], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="py-3 pr-4 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{grad}</td>
-                      <td className={`py-3 pr-4 text-[14px] font-bold border-b border-[#E5E3DF] ${betrag === '—' ? 'text-[#C8C3BA]' : 'text-[#3D7A5C]'}`}>{betrag}</td>
-                      <td className="py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{hinweis}</td>
+                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="py-3 pr-4 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
+                      <td className={`py-3 pr-4 text-[14px] font-bold border-b border-pm-line ${betrag === '—' ? 'text-[#C8C3BA]' : 'text-pm-green'}`}>{betrag}</td>
+                      <td className="py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[11px] text-[#8B8B8B] mt-2">Stand 2026 · Identisch zu 2025</p>
+            <p className="text-[11px] text-pm-mute mt-2">Stand 2026 · Identisch zu 2025</p>
           </div>
 
-          <h2 id="was-sind" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="was-sind" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was sind Pflegesachleistungen?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Pflegesachleistungen (§ 36 SGB XI) sind Kassengelder die nicht an den Pflegebedürftigen ausgezahlt werden — sondern direkt an einen zugelassenen ambulanten Pflegedienst. Die Kasse bezahlt den Dienst im Rahmen des monatlichen Budgets.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-10">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
             Im Unterschied zum Pflegegeld: Pflegegeld wird frei ausgezahlt (für private Betreuung durch Angehörige). Sachleistungen können nur für zugelassene Pflegedienste genutzt werden.
           </p>
 
-          <h2 id="wofuer" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wofuer" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wofür können Pflegesachleistungen genutzt werden?
           </h2>
           <div className="space-y-3 mb-6">
@@ -134,22 +134,22 @@ export default function Pflegesachleistungen() {
               { titel: '✗ Nicht: Haushaltshilfe', desc: 'Putzen, Einkaufen, Kochen sind Sachleistungen nach SGB XI nicht zugeordnet — dafür gibt es den Entlastungsbetrag oder Kombinationsleistung.' },
               { titel: '✗ Nicht: Private Betreuung durch Angehörige', desc: 'Sachleistungen können nur für zugelassene Dienste genutzt werden, nicht für die Arbeit von Angehörigen.' },
             ].map((item) => (
-              <div key={item.titel} className={`rounded-xl p-4 border ${item.titel.startsWith('✗') ? 'bg-[#FDF0EE] border-[rgba(231,111,99,0.15)]' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className={`text-[14px] font-bold mb-1 ${item.titel.startsWith('✗') ? 'text-[#8B3E2F]' : 'text-[#1C1C1C]'}`}>{item.titel}</p>
-                <p className={`text-[14px] leading-relaxed ${item.titel.startsWith('✗') ? 'text-[#8B3E2F]' : 'text-[#2E2E2E]'}`}>{item.desc}</p>
+              <div key={item.titel} className={`rounded-xl p-4 border ${item.titel.startsWith('✗') ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.15)]' : 'bg-white border-pm-line'}`}>
+                <p className={`text-[14px] font-bold mb-1 ${item.titel.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-ink'}`}>{item.titel}</p>
+                <p className={`text-[14px] leading-relaxed ${item.titel.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-body'}`}>{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="kombination" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="kombination" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegeld + Sachleistungen kombinieren — Kombinationsleistung
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Wer Sachleistungen nicht vollständig ausschöpft, bekommt für den ungenutzten Anteil anteiliges Pflegegeld — das ist die Kombinationsleistung nach § 38 SGB XI.
           </p>
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-6">
-            <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-3">Rechenbeispiel — Kombinationsleistung PG 3</p>
-            <div className="space-y-2 text-[14px] text-[#2A5C3F]">
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-6">
+            <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Rechenbeispiel — Kombinationsleistung PG 3</p>
+            <div className="space-y-2 text-[14px] text-pm-green-deep">
               <div className="flex gap-3"><span className="font-bold w-[200px] flex-shrink-0">Sachleistungen PG 3:</span><span>1.497 €/Monat</span></div>
               <div className="flex gap-3"><span className="font-bold w-[200px] flex-shrink-0">Genutzter Anteil:</span><span>748 € (50 %)</span></div>
               <div className="flex gap-3"><span className="font-bold w-[200px] flex-shrink-0">Ungenutzter Anteil:</span><span>50 %</span></div>
@@ -158,14 +158,14 @@ export default function Pflegesachleistungen() {
               <div className="flex gap-3 font-bold mt-2 pt-2 border-t border-[rgba(61,122,92,0.2)]"><span className="w-[200px] flex-shrink-0">Gesamtentlastung:</span><span>748 € + 299,50 € = 1.047,50 €/Monat</span></div>
             </div>
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Alle Kombinationen:{' '}
-            <a href="/kombinationsleistung-pflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kombinationsleistung erklärt</a>
+            <a href="/kombinationsleistung-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kombinationsleistung erklärt</a>
             {' · '}
-            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alle Zuschüsse 2026</a>
+            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Zuschüsse 2026</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was sind Pflegesachleistungen?', a: 'Kassengelder die direkt an zugelassene ambulante Pflegedienste gezahlt werden. 796 € (PG 2), 1.497 € (PG 3), 1.859 € (PG 4), 2.299 € (PG 5) pro Monat.' },
@@ -173,13 +173,13 @@ export default function Pflegesachleistungen() {
               { q: 'Wer kann Pflegesachleistungen in Anspruch nehmen?', a: 'Pflegebedürftige mit PG 2–5 die zu Hause von einem zugelassenen ambulanten Pflegedienst versorgt werden. PG 1 hat keinen Sachleistungsanspruch.' },
               { q: 'Können Sachleistungen für eine 24h-Betreuungskraft genutzt werden?', a: 'Nur wenn die Betreuungskraft über einen zugelassenen Pflegedienst tätig ist. Bei der Primundus-Vermittlung im Entsendemodell werden stattdessen Pflegegeld und Entlastungsbudget genutzt.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

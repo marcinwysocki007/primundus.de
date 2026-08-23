@@ -33,20 +33,20 @@ export default function Krankheiten() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Pflege bei Krankheiten</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             RATGEBER
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -66,9 +66,9 @@ export default function Krankheiten() {
               { titel: 'Tagesstruktur bei Demenz', href: '/tagesstruktur-demenz', desc: 'Feste Routinen als wichtigstes Werkzeug — Muster-Tagesplan und konkrete Tipps.' },
               { titel: 'Kommunikation mit Demenzkranken', href: '/kommunikation-mit-demenzkranken', desc: '5 Grundprinzipien und wie man schwierige Situationen meistert.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -83,9 +83,9 @@ export default function Krankheiten() {
               { titel: 'Pflegegrad nach Schlaganfall', href: '/pflegegrad-nach-schlaganfall', desc: 'Welcher Pflegegrad nach dem Schlaganfall — Begutachtung und Leistungen.' },
               { titel: 'Pflegegrad bei Parkinson', href: '/pflegegrad-bei-parkinson', desc: 'Einstufung und Kassenzuschüsse bei Parkinson-Erkrankung.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -100,9 +100,9 @@ export default function Krankheiten() {
               { titel: 'Osteoporose — Pflege zuhause', href: '/osteoporose-pflege-zuhause', desc: 'Sturzprävention, Schmerzkontrolle, Mobilität erhalten bei Osteoporose.' },
               { titel: 'Krebspatienten — Pflege zuhause', href: '/krebspatienten-zuhause-pflegen', desc: 'Unterstützung während Therapie und in der palliativen Phase zu Hause.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -119,20 +119,20 @@ export default function Krankheiten() {
               { titel: 'Inkontinenz — Pflege zuhause', href: '/inkontinenz-pflege-zuhause', desc: 'Würdevoller Umgang mit Inkontinenz im Pflegealltag.' },
               { titel: 'Wunden verbinden zuhause', href: '/wunden-verbinden-zuhause', desc: 'Wundversorgung im Pflegealltag — was Laien können und wann ein Pflegedienst muss.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Info box */}
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 mb-12">
-            <p className="text-[14px] font-bold text-[#6B5A44] mb-2">Ihre Erkrankung nicht gefunden?</p>
-            <p className="text-[14px] text-[#6B5A44] leading-relaxed">
+            <p className="text-[14px] font-bold text-pm-taupe-ink mb-2">Ihre Erkrankung nicht gefunden?</p>
+            <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
               Marta Kapcio und das Primundus-Team beraten Sie kostenlos zu Ihrer spezifischen Pflegesituation — welche Erfahrungen eine Betreuungskraft mitbringen sollte und wie die Finanzierung aussehen könnte.
             </p>
-            <p className="text-[14px] font-bold text-[#6B5A44] mt-2">089 200 000 830 · Mo – So 8 – 20 Uhr</p>
+            <p className="text-[14px] font-bold text-pm-taupe-ink mt-2">089 200 000 830 · Mo – So 8 – 20 Uhr</p>
           </div>
 
           <ArticleCTA />

@@ -66,33 +66,33 @@ export default function VorsorgevollmachtErstellen() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Vorsorgevollmacht erstellen</span>
+            <span className="text-pm-ink">Vorsorgevollmacht erstellen</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Vorsorgevollmacht erstellen — Anleitung, Inhalt & Kosten
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Eine Vorsorgevollmacht ist das wichtigste Dokument für den Pflegefall — und wird von den meisten Menschen zu spät erstellt. Wer eine Pflegesituation organisiert ohne gültige Vollmacht, verliert wertvolle Wochen durch gerichtliche Betreuungsverfahren. Erstellen dauert einen Nachmittag — und gilt ein Leben lang.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Vorsorgevollmacht: Vertrauensperson entscheidet wenn man selbst nicht mehr kann',
@@ -102,21 +102,21 @@ export default function VorsorgevollmachtErstellen() {
                 'Für Pflege unverzichtbar: Pflegegrad beantragen, Verträge unterschreiben',
                 'Jederzeit widerrufbar — solange man geschäftsfähig ist',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist eine Vorsorgevollmacht?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Eine Vorsorgevollmacht ist ein rechtliches Dokument das einer selbst gewählten Vertrauensperson die Befugnis gibt, im Fall der eigenen Geschäfts- oder Einwilligungsunfähigkeit alle wichtigen Entscheidungen zu treffen — für Gesundheit, Finanzen und rechtliche Angelegenheiten.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Ohne Vorsorgevollmacht kann niemand — nicht einmal der Ehepartner oder die Kinder — automatisch für den Betroffenen entscheiden. Das Familiengericht muss dann einen gesetzlichen Betreuer bestellen. Das dauert in der Praxis oft Wochen bis Monate und verursacht erheblichen bürokratischen und emotionalen Aufwand.
           </p>
           <div className="space-y-3 mb-10">
@@ -124,17 +124,17 @@ export default function VorsorgevollmachtErstellen() {
               { title: 'Vorsorgevollmacht vs. Betreuungsverfügung', desc: 'Die Vollmacht bevollmächtigt eine Privatperson direkt. Die Betreuungsverfügung sagt dem Gericht wen es als gesetzlichen Betreuer bestellen soll — weniger direkt und effektiv.' },
               { title: 'Vorsorgevollmacht vs. Patientenverfügung', desc: 'Die Patientenverfügung regelt medizinische Entscheidungen für konkrete Behandlungssituationen. Die Vorsorgevollmacht benennt wer diese Entscheidungen treffen darf. Beide Dokumente ergänzen sich.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="inhalt" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="inhalt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was muss in die Vorsorgevollmacht?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Eine Vorsorgevollmacht sollte alle Lebensbereiche abdecken in denen Entscheidungen anfallen könnten. Die wichtigsten Bereiche:
           </p>
           <div className="space-y-3 mb-10">
@@ -144,14 +144,14 @@ export default function VorsorgevollmachtErstellen() {
               { title: 'Vermögensverwaltung', desc: 'Bankkonten führen, Rechnungen bezahlen, Steuererklärung einreichen, Verträge unterschreiben, Immobilien verwalten.' },
               { title: 'Behörden und Ämter', desc: 'Post entgegennehmen, Behördenkommunikation führen, Kranken- und Pflegekasse kontaktieren.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="erstellen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="erstellen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vorsorgevollmacht erstellen — Schritt für Schritt
           </h2>
           <ol className="space-y-3 mb-6">
@@ -162,26 +162,26 @@ export default function VorsorgevollmachtErstellen() {
               { n: '4', title: 'Im Zentralen Vorsorgeregister registrieren', desc: 'Bundesnotarkammer.de → Zentrales Vorsorgeregister. Kostenpflichtig (ca. 15 €) aber empfohlen: So kann die Vollmacht im Notfall schnell gefunden werden.' },
               { n: '5', title: 'Original sicher aufbewahren und Kopien verteilen', desc: 'Original an einem sicheren Ort. Kopie beim Bevollmächtigten. Kopie beim Hausarzt. Kopie beim Notar wenn notariell beglaubigt.' },
             ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF] list-none">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
+              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{step.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{step.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
                 </div>
               </li>
             ))}
           </ol>
 
-          <h2 id="beglaubigung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="beglaubigung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Notariell oder nicht — was ist nötig?
           </h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Form', 'Wann ausreichend', 'Kosten'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -191,10 +191,10 @@ export default function VorsorgevollmachtErstellen() {
                     ['Notarielle Beglaubigung', 'Viele Banken fordern das für Kontovollmacht', 'Ca. 70 €'],
                     ['Notarielle Beurkundung', 'Pflicht für Immobiliengeschäfte', 'Ca. 150–500 € je nach Wert'],
                   ].map(([form, wann, kosten], i) => (
-                    <tr key={form} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{form}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{wann}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{kosten}</td>
+                    <tr key={form} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{form}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{wann}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{kosten}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -202,10 +202,10 @@ export default function VorsorgevollmachtErstellen() {
             </div>
           </div>
 
-          <h2 id="pflege" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pflege" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Bedeutung für die Pflege-Organisation
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Wer Pflege organisiert — ob 24h-Pflege oder Pflegeheim — braucht eine gültige Vollmacht. Ohne sie kann niemand für den Pflegebedürftigen unterschreiben oder entscheiden.
           </p>
           <div className="space-y-3 mb-6">
@@ -214,20 +214,20 @@ export default function VorsorgevollmachtErstellen() {
               { title: 'Pflegevertrag mit Primundus unterschreiben', desc: 'Der Betreuungsvertrag muss von einer handlungsfähigen Person unterschrieben werden. Der Bevollmächtigte kann das sofort tun.' },
               { title: 'Medizinische Entscheidungen', desc: 'Einwilligung in Operationen, Ablehnung von Behandlungen, Entlassung aus dem Krankenhaus — all das erfordert die Unterschrift des Bevollmächtigten.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Weitere wichtige Dokumente:{' '}
-            <a href="/patientenverfuegung-aufsetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Patientenverfügung aufsetzen</a>
+            <a href="/patientenverfuegung-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Patientenverfügung aufsetzen</a>
             {' · '}
-            <a href="/pflegevertrag-aufsetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegevertrag aufsetzen</a>
+            <a href="/pflegevertrag-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegevertrag aufsetzen</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zur Vorsorgevollmacht
           </h2>
           <div className="space-y-4 mb-12">
@@ -238,13 +238,13 @@ export default function VorsorgevollmachtErstellen() {
               { q: 'Kann man eine Vorsorgevollmacht widerrufen?', a: 'Ja — jederzeit, solange man geschäftsfähig ist. Das Original zurückfordern und eine schriftliche Widerrufserklärung ausstellen. Im Zentralen Vorsorgeregister ggf. löschen lassen.' },
               { q: 'Was kostet eine Vorsorgevollmacht?', a: 'Selbst erstellt: kostenlos (Vorlage vom Bundesministerium der Justiz). Notarielle Beglaubigung: ca. 70 €. Notarielle Beurkundung: ca. 150–500 €. Registrierung im Zentralen Vorsorgeregister: ca. 15 €.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

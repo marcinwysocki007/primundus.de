@@ -7,7 +7,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 
 const GrafikKostenvergleich = dynamic(
   () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),
-  { loading: () => <div className="my-10 h-[420px] bg-[#F8F7F5] rounded-2xl border border-[#E5E3DF] animate-pulse" />, ssr: false }
+  { loading: () => <div className="my-10 h-[420px] bg-pm-paper rounded-2xl border border-pm-line animate-pulse" />, ssr: false }
 )
 
 const SECTIONS = [
@@ -73,33 +73,33 @@ export default function VsKosten() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/vergleiche" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
+            <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">24h-Pflege vs. Pflegeheim</span>
+            <span className="text-pm-ink">24h-Pflege vs. Pflegeheim</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             24h-Pflege vs. Pflegeheim — Kostenvergleich 2026
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegeheim-Eigenanteil 2026: Ø 3.364 €/Monat (1. Jahr) — steigt jährlich',
@@ -109,8 +109,8 @@ export default function VsKosten() {
                 'Pflegeheim kann nach 2+ Jahren durch Kassenzuschläge günstiger werden',
                 'Vertraute Umgebung verlangsamt Demenzverläufe — gesundheitlicher Mehrwert',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
@@ -118,24 +118,24 @@ export default function VsKosten() {
           </div>
 
           {/* SECTION 1 — Grafik */}
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Kosten im direkten Vergleich
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Der entscheidende Vergleich ist nicht Brutto gegen Brutto — sondern der tatsächliche Eigenanteil nach allen Kassenzuschüssen. Und dabei schneidet die 24h-Pflege zuhause in den meisten Fällen besser ab.
           </p>
           <GrafikKostenvergleich />
 
           {/* SECTION 2 */}
-          <h2 id="pflegeheim" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pflegeheim" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was das Pflegeheim wirklich kostet
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Der Pflegeheimpreis besteht aus vier Komponenten. Die Pflegekasse übernimmt einen einheitlichen Betrag je Pflegegrad — alles darüber ist Eigenanteil.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Pflegeheimkosten 2026 — was setzt sich zusammen</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Pflegeheimkosten 2026 — was setzt sich zusammen</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -147,42 +147,42 @@ export default function VsKosten() {
                     ['Ausbildungsumlage', 'ca. 60–100 €/Monat', 'Seit 2020 bundeseinheitlich'],
                     ['Gesamteigenanteil (Ø 1. Jahr)', '3.364 €/Monat', 'Bundesweiter Durchschnitt 2026'],
                   ].map(([pos, wert, hinweis], i) => (
-                    <tr key={pos} className={i === 4 ? 'bg-[#F2EDE6]' : i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-5 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{pos}</td>
-                      <td className={`px-5 py-3 text-[14px] font-bold border-b border-[#E5E3DF] ${i === 4 ? 'text-[#8B7355]' : 'text-[#1C1C1C]'}`}>{wert}</td>
-                      <td className="px-5 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{hinweis}</td>
+                    <tr key={pos} className={i === 4 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{pos}</td>
+                      <td className={`px-5 py-3 text-[14px] font-bold border-b border-pm-line ${i === 4 ? 'text-pm-taupe' : 'text-pm-ink'}`}>{wert}</td>
+                      <td className="px-5 py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Quelle: vdek Pflegeversicherungsbericht 2024 · Bundesweiter Durchschnitt</p>
+              <p className="text-[11px] text-pm-mute">Quelle: vdek Pflegeversicherungsbericht 2024 · Bundesweiter Durchschnitt</p>
             </div>
           </div>
 
-          <div className="bg-[#FDF0EE] border border-[rgba(231,111,99,0.15)] rounded-2xl p-5 mb-6">
-            <p className="text-[14px] font-bold text-[#8B3E2F] mb-2">Wichtig: Der Eigenanteil steigt jährlich</p>
-            <p className="text-[14px] text-[#8B3E2F] leading-relaxed">
+          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.15)] rounded-2xl p-5 mb-6">
+            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Wichtig: Der Eigenanteil steigt jährlich</p>
+            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
               Im Pflegeheim steigt der Eigenanteil typischerweise 3–5 % pro Jahr — weil Personalkosten steigen aber die Kassenzuschüsse eingefroren sind (bis Jan. 2028). 2024 stieg der Eigenanteil um durchschnittlich 211 €/Monat.
             </p>
           </div>
 
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Mehr zum Thema:{' '}
-            <a href="/pflegeheim-kosten-deutschland" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegeheim Kosten Deutschland 2026 — vollständige Übersicht</a>
+            <a href="/pflegeheim-kosten-deutschland" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegeheim Kosten Deutschland 2026 — vollständige Übersicht</a>
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="24h" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="24h" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was 24h-Pflege wirklich kostet
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat — je nach Pflegebedarf. Mit allen Kassenzuschüssen sinkt der tatsächliche Eigenanteil deutlich.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Eigenanteil 24h-Pflege nach Kassenzuschüssen — Pflegegrad 3</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Eigenanteil 24h-Pflege nach Kassenzuschüssen — Pflegegrad 3</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -195,9 +195,9 @@ export default function VsKosten() {
                     ['– Entlastungsbudget (anteilig)', '– ca. 295 €/Monat', 'positive'],
                     ['Eigenanteil', 'ca. 1.925 €/Monat', 'result'],
                   ].map(([pos, wert, type], i) => (
-                    <tr key={pos} className={type === 'result' ? 'bg-[#EBF5F0]' : i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-5 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{pos}</td>
-                      <td className={`px-5 py-3 text-[14px] font-bold text-right border-b border-[#E5E3DF] ${type === 'positive' ? 'text-[#3D7A5C]' : type === 'result' ? 'text-[#3D7A5C]' : 'text-[#1C1C1C]'}`}>{wert}</td>
+                    <tr key={pos} className={type === 'result' ? 'bg-[#EBF5F0]' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{pos}</td>
+                      <td className={`px-5 py-3 text-[14px] font-bold text-right border-b border-pm-line ${type === 'positive' ? 'text-pm-green' : type === 'result' ? 'text-pm-green' : 'text-pm-ink'}`}>{wert}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -206,20 +206,20 @@ export default function VsKosten() {
           </div>
 
           {/* SECTION 4 */}
-          <h2 id="qualitaet" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="qualitaet" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Mehr als nur Kosten — was wirklich zählt
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Der Kostenvergleich ist wichtig — aber die Entscheidung für oder gegen ein Pflegeheim hängt von mehr ab als nur dem Preis.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">Kriterium</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B7355] text-left border-b border-[#E5E3DF]">24h-Pflege zuhause</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">Pflegeheim</th>
+                  <tr className="bg-pm-paper">
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Kriterium</th>
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-taupe text-left border-b border-pm-line">24h-Pflege zuhause</th>
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Pflegeheim</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -233,10 +233,10 @@ export default function VsKosten() {
                     ['Flexibilität', 'Täglich kündbar', 'Meist Kündigungsfristen'],
                     ['Ersatz bei Ausfall', 'Primundus stellt sofort Ersatz', 'Immer Personal vorhanden'],
                   ].map(([kriterium, zuhause, heim], i) => (
-                    <tr key={kriterium} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{kriterium}</td>
-                      <td className="px-5 py-3 text-[14px] text-[#3D7A5C] font-medium border-b border-[#E5E3DF]">{zuhause}</td>
-                      <td className="px-5 py-3 text-[14px] text-[#8B8B8B] border-b border-[#E5E3DF]">{heim}</td>
+                    <tr key={kriterium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{kriterium}</td>
+                      <td className="px-5 py-3 text-[14px] text-pm-green font-medium border-b border-pm-line">{zuhause}</td>
+                      <td className="px-5 py-3 text-[14px] text-pm-mute border-b border-pm-line">{heim}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -245,10 +245,10 @@ export default function VsKosten() {
           </div>
 
           {/* SECTION 5 */}
-          <h2 id="wann-heim" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wann-heim" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist das Pflegeheim die bessere Wahl?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             In bestimmten Situationen ist das Pflegeheim tatsächlich die bessere oder einzige Option:
           </p>
           <div className="space-y-3 mb-6">
@@ -258,21 +258,21 @@ export default function VsKosten() {
               { title: 'Expliziter Wunsch des Betroffenen', desc: 'Wenn der pflegebedürftige Mensch selbst — solange noch entscheidungsfähig — ins Pflegeheim möchte, um Gemeinschaft zu erleben.' },
               { title: 'Langzeit finanziell', desc: 'Ab dem 3. Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % mehr — das kann den Eigenanteil erheblich senken. Bei sehr hohem Pflegegrad kann das die Rechnung zugunsten des Heims kippen.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Was zuhause möglich ist:{' '}
-            <a href="/was-ist-24-stunden-pflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege? — alle Fakten</a>
+            <a href="/was-ist-24-stunden-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was ist 24-Stunden-Pflege? — alle Fakten</a>
             {' · '}
-            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten der 24h-Pflege im Detail</a>
+            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kosten der 24h-Pflege im Detail</a>
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zum Kostenvergleich
           </h2>
           <div className="space-y-4 mb-12">
@@ -283,13 +283,13 @@ export default function VsKosten() {
               { q: 'Wann kann das Pflegeheim günstiger werden?', a: 'Ab dem dritten Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % des pflegebedingten Eigenanteils. Bei sehr hohem Pflegegrad (PG 4–5) kann das langfristig die Rechnung zugunsten des Heims ändern.' },
               { q: 'Was zahlt die Pflegekasse im Pflegeheim?', a: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

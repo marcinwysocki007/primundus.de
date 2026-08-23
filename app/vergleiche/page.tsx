@@ -33,20 +33,20 @@ export default function Vergleiche() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Vergleiche</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             RATGEBER
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -68,9 +68,9 @@ export default function Vergleiche() {
               { titel: 'Pflegedienst oder 24h-Kraft', href: '/pflegedienst-oder-24h-kraft', desc: 'Ambulanter Pflegedienst vs. 24h-Betreuungskraft — der direkte Vergleich.' },
               { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege', desc: 'Wann Kurzzeitpflege reicht und wann eine dauerhaft 24h-Kraft nötig ist.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -79,16 +79,16 @@ export default function Vergleiche() {
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Kostenvergleiche</h2>
 
           {/* Vergleichstabelle */}
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Eigenanteil im Vergleich — Beispiel Pflegegrad 3 (2026)</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Eigenanteil im Vergleich — Beispiel Pflegegrad 3 (2026)</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr>
                     {['Pflegeform', 'Gesamtkosten/Mo', 'Eigenanteil/Mo', 'Besonderheit'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -99,18 +99,18 @@ export default function Vergleiche() {
                     ['Ambulante Pflege', '800–2.500 €', 'ca. 0–1.000 €', 'Nur zu Einsatzzeiten da'],
                     ['Tagespflege', '800–2.000 €', 'ca. 0–500 €', 'Nur tagsüber, keine Nacht'],
                   ].map(([form, gesamt, eigenanteil, besonderheit], i) => (
-                    <tr key={form} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#3D3D3D] border-b border-[#E5E3DF]">{form}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#5A5A5A] border-b border-[#E5E3DF] whitespace-nowrap">{gesamt}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF] whitespace-nowrap">{eigenanteil}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{besonderheit}</td>
+                    <tr key={form} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-[#3D3D3D] border-b border-pm-line">{form}</td>
+                      <td className="px-4 py-3 text-[13px] text-[#5A5A5A] border-b border-pm-line whitespace-nowrap">{gesamt}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line whitespace-nowrap">{eigenanteil}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{besonderheit}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Eigenanteil 24h-Pflege mit Pflegegeld + Entlastungsbetrag + Entlastungsbudget optimiert · Stand 2026</p>
+              <p className="text-[11px] text-pm-mute">Eigenanteil 24h-Pflege mit Pflegegeld + Entlastungsbetrag + Entlastungsbudget optimiert · Stand 2026</p>
             </div>
           </div>
 
@@ -121,9 +121,9 @@ export default function Vergleiche() {
               { titel: 'Eigenanteil bei 24h-Pflege senken', href: '/eigenanteil-24h-pflege-senken', desc: 'Alle Möglichkeiten 2026 um den monatlichen Eigenanteil zu reduzieren.' },
               { titel: 'Was kostet 24h-Pflege?', href: '/kosten', desc: 'Vollständige Kostenübersicht mit allen Zuschüssen und realistischen Eigenanteilen.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -137,9 +137,9 @@ export default function Vergleiche() {
               { titel: '24h-Pflege Anbieter vergleichen', href: '/anbieter-vergleich', desc: 'Neutraler Vergleich der wichtigsten 24h-Pflegeagenturen.' },
               { titel: 'Checkliste: Worauf bei 24h-Pflege achten', href: '/24h-pflege-checkliste', desc: 'Die wichtigsten Prüfpunkte vor der Anbieter-Entscheidung — kompakt zum Abhaken.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -152,9 +152,9 @@ export default function Vergleiche() {
               { titel: 'Pflegekraft aus Bulgarien', href: '/pflegekraft-aus-bulgarien', desc: 'Bulgarische Pflegekräfte im Entsendemodell — was zu beachten ist.' },
               { titel: 'Pflegekraft aus Rumänien', href: '/pflegekraft-aus-rumaenien', desc: 'Rumänien — zweithäufigstes Herkunftsland. Rechtlich und preislich identisch.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>

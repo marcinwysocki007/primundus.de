@@ -44,7 +44,7 @@ export function RequirementsSection() {
     <section className="bg-white py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-10 md:mb-14">
-          <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#A89279] mb-2">
+          <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
             Voraussetzungen
           </p>
           <h2 className="text-[28px] md:text-[36px] lg:text-[42px] leading-[1.2] font-bold text-[#3D3D3D] mb-6">
@@ -59,7 +59,7 @@ export function RequirementsSection() {
           {requirements.map((requirement, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-[#F8F7F5] to-white rounded-xl p-6 border border-[#E5E3DF] hover:shadow-md transition-shadow duration-200"
+              className="bg-gradient-to-br from-pm-paper to-white rounded-xl p-6 border border-pm-line hover:shadow-md transition-shadow duration-200"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#708A95] flex items-center justify-center">
@@ -95,7 +95,7 @@ export function RequirementsSection() {
             </p>
             <a
               href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-base md:text-lg rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-base md:text-lg rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Kosten & Pflegekräfte ansehen
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

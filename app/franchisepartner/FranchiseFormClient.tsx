@@ -35,11 +35,11 @@ export default function FranchiseFormClient() {
 
   if (submitted) {
     return (
-      <section id="anfrage" className="bg-[#F8F7F5] py-20">
+      <section id="anfrage" className="bg-pm-paper py-20">
         <div className="max-w-[640px] mx-auto px-5 text-center">
-          <div className="bg-white border border-[#E5E3DF] rounded-3xl p-12 shadow-sm">
-            <div className="w-16 h-16 bg-[#3D7A5C]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-[#3D7A5C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-white border border-pm-line rounded-3xl p-12 shadow-sm">
+            <div className="w-16 h-16 bg-pm-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-pm-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -49,9 +49,9 @@ export default function FranchiseFormClient() {
               24 Stunden persönlich bei Ihnen — mit einem ersten Überblick über die Franchise-Möglichkeit in{' '}
               <strong>{data.standort || 'Ihrer Region'}</strong>.
             </p>
-            <p className="text-[13px] text-[#8B8B8B]">
+            <p className="text-[13px] text-pm-mute">
               Oder rufen Sie direkt an:{' '}
-              <a href="tel:+4989200000830" className="text-[#8B7355] font-semibold">
+              <a href="tel:+4989200000830" className="text-pm-taupe font-semibold">
                 089 200 000 830
               </a>
             </p>
@@ -62,10 +62,10 @@ export default function FranchiseFormClient() {
   }
 
   return (
-    <section id="anfrage" className="bg-[#F8F7F5] py-20">
+    <section id="anfrage" className="bg-pm-paper py-20">
       <div className="max-w-[720px] mx-auto px-5">
         <div className="text-center mb-10">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-3">
             Unverbindliche Erstanfrage
           </p>
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] mb-4">
@@ -79,11 +79,11 @@ export default function FranchiseFormClient() {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white border border-[#E5E3DF] rounded-3xl p-8 md:p-10 shadow-sm"
+          className="bg-white border border-pm-line rounded-3xl p-8 md:p-10 shadow-sm"
         >
           {/* Anrede */}
           <div className="mb-6">
-            <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
+            <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
               Anrede
             </label>
             <div className="flex gap-3">
@@ -94,8 +94,8 @@ export default function FranchiseFormClient() {
                   onClick={() => set('anrede', a)}
                   className={`px-5 py-2.5 rounded-xl text-[14px] font-medium border transition-all ${
                     data.anrede === a
-                      ? 'bg-[#8B7355] text-white border-[#8B7355]'
-                      : 'bg-white text-[#5A5A5A] border-[#E5E3DF] hover:border-[#8B7355]'
+                      ? 'bg-pm-taupe text-white border-pm-taupe'
+                      : 'bg-white text-[#5A5A5A] border-pm-line hover:border-pm-taupe'
                   }`}
                 >
                   {a}
@@ -107,8 +107,8 @@ export default function FranchiseFormClient() {
           {/* Name */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
-                Vorname <span className="text-[#E76F63]">*</span>
+              <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
+                Vorname <span className="text-pm-coral">*</span>
               </label>
               <input
                 type="text"
@@ -116,12 +116,12 @@ export default function FranchiseFormClient() {
                 value={data.vorname}
                 onChange={(e) => set('vorname', e.target.value)}
                 placeholder="Max"
-                className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-[#8B7355] transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
             <div>
-              <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
-                Nachname <span className="text-[#E76F63]">*</span>
+              <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
+                Nachname <span className="text-pm-coral">*</span>
               </label>
               <input
                 type="text"
@@ -129,7 +129,7 @@ export default function FranchiseFormClient() {
                 value={data.nachname}
                 onChange={(e) => set('nachname', e.target.value)}
                 placeholder="Mustermann"
-                className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-[#8B7355] transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
           </div>
@@ -137,8 +137,8 @@ export default function FranchiseFormClient() {
           {/* Kontakt */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
-                E-Mail <span className="text-[#E76F63]">*</span>
+              <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
+                E-Mail <span className="text-pm-coral">*</span>
               </label>
               <input
                 type="email"
@@ -146,12 +146,12 @@ export default function FranchiseFormClient() {
                 value={data.email}
                 onChange={(e) => set('email', e.target.value)}
                 placeholder="max@beispiel.de"
-                className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-[#8B7355] transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
             <div>
-              <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
-                Telefon <span className="text-[#E76F63]">*</span>
+              <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
+                Telefon <span className="text-pm-coral">*</span>
               </label>
               <input
                 type="tel"
@@ -159,15 +159,15 @@ export default function FranchiseFormClient() {
                 value={data.telefon}
                 onChange={(e) => set('telefon', e.target.value)}
                 placeholder="+49 89 000 000"
-                className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-[#8B7355] transition-colors"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
               />
             </div>
           </div>
 
           {/* Standort */}
           <div className="mb-4">
-            <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
-              Gewünschte Region / Standort <span className="text-[#E76F63]">*</span>
+            <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
+              Gewünschte Region / Standort <span className="text-pm-coral">*</span>
             </label>
             <input
               type="text"
@@ -175,20 +175,20 @@ export default function FranchiseFormClient() {
               value={data.standort}
               onChange={(e) => set('standort', e.target.value)}
               placeholder="z. B. München, Bayern oder PLZ-Bereich 80xxx"
-              className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-[#8B7355] transition-colors"
+              className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors"
             />
           </div>
 
           {/* Dropdowns */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
+              <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
                 Beruflicher Hintergrund
               </label>
               <select
                 value={data.hintergrund}
                 onChange={(e) => set('hintergrund', e.target.value)}
-                className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] focus:outline-none focus:border-[#8B7355] transition-colors bg-white"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] focus:outline-none focus:border-pm-taupe transition-colors bg-white"
               >
                 <option value="">Bitte wählen</option>
                 <option value="Pflege / Gesundheitswesen">Pflege / Gesundheitswesen</option>
@@ -199,13 +199,13 @@ export default function FranchiseFormClient() {
               </select>
             </div>
             <div>
-              <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
+              <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
                 Verfügbares Kapital
               </label>
               <select
                 value={data.kapital}
                 onChange={(e) => set('kapital', e.target.value)}
-                className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] focus:outline-none focus:border-[#8B7355] transition-colors bg-white"
+                className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] focus:outline-none focus:border-pm-taupe transition-colors bg-white"
               >
                 <option value="">Bitte wählen</option>
                 <option value="25.000–50.000 €">25.000–50.000 €</option>
@@ -218,7 +218,7 @@ export default function FranchiseFormClient() {
 
           {/* Nachricht */}
           <div className="mb-6">
-            <label className="block text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-2">
+            <label className="block text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-2">
               Was motiviert Sie? (optional)
             </label>
             <textarea
@@ -226,7 +226,7 @@ export default function FranchiseFormClient() {
               onChange={(e) => set('nachricht', e.target.value)}
               rows={4}
               placeholder="Kurze Beschreibung Ihrer Situation, Ihrer Motivation und was Sie sich von der Partnerschaft erhoffen…"
-              className="w-full px-4 py-3 border border-[#E5E3DF] rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-[#8B7355] transition-colors resize-none"
+              className="w-full px-4 py-3 border border-pm-line rounded-xl text-[14px] text-[#3D3D3D] placeholder-[#C0BDB8] focus:outline-none focus:border-pm-taupe transition-colors resize-none"
             />
           </div>
 
@@ -244,7 +244,7 @@ export default function FranchiseFormClient() {
                 <div
                   onClick={() => set('datenschutz', !data.datenschutz)}
                   className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
-                    data.datenschutz ? 'bg-[#8B7355] border-[#8B7355]' : 'bg-white border-[#D0CCC7]'
+                    data.datenschutz ? 'bg-pm-taupe border-pm-taupe' : 'bg-white border-[#D0CCC7]'
                   }`}
                 >
                   {data.datenschutz && (
@@ -256,11 +256,11 @@ export default function FranchiseFormClient() {
               </div>
               <span className="text-[13px] text-[#5A5A5A] leading-relaxed">
                 Ich habe die{' '}
-                <a href="/datenschutz" className="text-[#8B7355] underline hover:no-underline">
+                <a href="/datenschutz" className="text-pm-taupe underline hover:no-underline">
                   Datenschutzerklärung
                 </a>{' '}
                 gelesen und stimme der Verarbeitung meiner Daten für die Kontaktaufnahme zu.{' '}
-                <span className="text-[#E76F63]">*</span>
+                <span className="text-pm-coral">*</span>
               </span>
             </label>
           </div>
@@ -269,7 +269,7 @@ export default function FranchiseFormClient() {
           <button
             type="submit"
             disabled={submitting || !data.datenschutz}
-            className="w-full bg-[#E76F63] hover:bg-[#D4625A] disabled:bg-[#E5E3DF] disabled:text-[#A0A0A0] text-white font-bold text-[16px] py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2"
+            className="w-full bg-pm-coral hover:bg-pm-coral-deep disabled:bg-pm-line disabled:text-[#A0A0A0] text-white font-bold text-[16px] py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2"
           >
             {submitting ? (
               <>
@@ -284,7 +284,7 @@ export default function FranchiseFormClient() {
             )}
           </button>
 
-          <p className="text-[12px] text-center text-[#A89279] mt-4">
+          <p className="text-[12px] text-center text-pm-taupe-light mt-4">
             Kostenlos & unverbindlich · Antwort innerhalb von 24 Stunden · Kein Sales-Druck
           </p>
         </form>

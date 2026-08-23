@@ -33,20 +33,20 @@ export default function Organisation() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Organisation</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             RATGEBER
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -66,9 +66,9 @@ export default function Organisation() {
               { titel: 'Pflegekraft aus Bulgarien', href: '/pflegekraft-aus-bulgarien', desc: 'EU-Entsendung aus Bulgarien — rechtssicher und transparent.' },
               { titel: 'Pflegekraft aus Rumänien', href: '/pflegekraft-aus-rumaenien', desc: 'Rumänische Betreuungskräfte — Erfahrung, Leistung und Kosten.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -83,9 +83,9 @@ export default function Organisation() {
               { titel: 'Pflegevertrag Muster & Vorlage', href: '/pflegevertrag-muster-vorlage', desc: 'Musterpflegevertrag als Vorlage zum Download.' },
               { titel: 'Scheinselbstständigkeit vermeiden', href: '/scheinselbststaendigkeit-pflege-vermeiden', desc: 'Warum Scheinselbstständigkeit ein hohes Risiko ist und wie man es vermeidet.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -100,9 +100,9 @@ export default function Organisation() {
               { titel: 'Pflegedokumentation führen', href: '/pflegedokumentation-fuehren', desc: 'Was dokumentiert werden muss und wie man es sinnvoll organisiert.' },
               { titel: 'Pflegeberater finden', href: '/pflegeberater-finden', desc: 'Wann ein unabhängiger Pflegeberater hilft und wie man den richtigen findet.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -119,9 +119,9 @@ export default function Organisation() {
               { titel: 'Pflegestützpunkte in Deutschland', href: '/pflegestuetzpunkte-deutschland', desc: 'Kostenlose Beratung vor Ort — wo Pflegestützpunkte sind und was sie leisten.' },
               { titel: 'Betreuung nach dem Krankenhausaufenthalt', href: '/24-stunden-pflege-krankenhausaufenthalt', desc: 'Entlassung steht an und niemand kann da sein? So wird die Betreuung schnell organisiert.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -134,9 +134,9 @@ export default function Organisation() {
               { titel: 'Wohnraumanpassung planen', href: '/wohnraumanpassung-planen', desc: 'Welche Umbaumaßnahmen sinnvoll sind und wie man sie Schritt für Schritt umsetzt.' },
               { titel: 'Rollstuhl & Hilfsmittel beantragen', href: '/hilfsmittel-rollstuhl-beantragen', desc: 'Rollstuhl, Pflegebett, Gehilfen — Antrag, Fristen und was die Kasse zahlt.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -144,13 +144,13 @@ export default function Organisation() {
           {/* Ablauf bei Primundus */}
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-12">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-1">Primundus Ablauf</p>
+              <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-1">Primundus Ablauf</p>
               <p className="text-[15px] font-semibold text-[#3D3D3D]">In 4–7 Tagen zur Betreuungskraft</p>
               <p className="text-[13px] text-[#5A5A5A] mt-0.5">Transparent, rechtssicher, täglich kündbar</p>
             </div>
             <a
               href="/ablauf"
-              className="shrink-0 inline-flex items-center gap-2 text-[14px] font-semibold text-[#8B7355] hover:text-[#7D6848] transition-colors whitespace-nowrap"
+              className="shrink-0 inline-flex items-center gap-2 text-[14px] font-semibold text-pm-taupe hover:text-[#7D6848] transition-colors whitespace-nowrap"
             >
               Zum Ablauf →
             </a>

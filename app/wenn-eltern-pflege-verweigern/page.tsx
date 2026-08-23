@@ -64,35 +64,35 @@ export default function WennElternPflegeVerweigern() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Wenn Eltern Pflege verweigern</span>
+            <span className="text-pm-ink">Wenn Eltern Pflege verweigern</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Wenn Eltern Pflege verweigern — was jetzt hilft
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             "Ich brauche keine Hilfe" — drei Wörter die pflegende Kinder verzweifeln lassen. Gleichzeitig sehen sie wie der Vater immer schwächer wird, die Mutter Medikamente vergisst, die Wohnung verwahrlost. Die Ablehnung von Pflege ist häufig — und fast immer versteht man sie erst wenn man den wahren Grund dahinter kennt.
           </p>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Warum lehnen Eltern Pflege ab?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Hinter der Ablehnung steckt fast nie Sturheit — sondern Angst, Scham oder Verleugnung. Wer den wahren Grund kennt, kann gezielt ansetzen.
           </p>
           <div className="space-y-3 mb-10">
@@ -103,14 +103,14 @@ export default function WennElternPflegeVerweigern() {
               { grund: 'Angst vor dem Pflegeheim', erklaerung: 'Viele Menschen verbinden Pflege automatisch mit Pflegeheim — und lehnen deshalb jede Unterstützung ab, aus Angst dass Pflegeheim als nächstes kommt. Eine 24h-Betreuungskraft zuhause ist das Gegenteil davon.' },
               { grund: 'Schlechte frühere Erfahrungen', erklaerung: 'Eine unpassende Haushaltshilfe, ein überfordernder Pflegedienst — wer einmal schlechte Erfahrungen gemacht hat, sperrt sich gegen alle weitere Hilfe.' },
             ].map((item) => (
-              <div key={item.grund} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.grund}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.erklaerung}</p>
+              <div key={item.grund} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.grund}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.erklaerung}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="strategien" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="strategien" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Strategien die wirklich helfen
           </h2>
           <div className="space-y-3 mb-10">
@@ -122,20 +122,20 @@ export default function WennElternPflegeVerweigern() {
               { strategie: 'Probezeit vorschlagen', desc: '"Können wir das mal 4 Wochen ausprobieren?" Eine zeitlich begrenzte Probezeit fühlt sich weniger endgültig an als eine dauerhafte Entscheidung. Viele die skeptisch starten, möchten nach 4 Wochen nicht mehr ohne.' },
               { strategie: 'Vertrauensperson einbeziehen', desc: 'Geschwister, gute Freunde, Pfarrer — manchmal hört man auf jemanden der nicht der eigene Sohn oder die eigene Tochter ist. Nicht allein kämpfen.' },
             ].map((item) => (
-              <div key={item.strategie} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.strategie}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.strategie} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.strategie}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="grenzen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="grenzen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Grenzen der Selbstbestimmung — wann muss gehandelt werden?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Erwachsene haben das Recht auf Selbstbestimmung — auch das Recht schlechte Entscheidungen zu treffen. Solange keine akute Selbstgefährdung vorliegt, muss die Entscheidung respektiert werden.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Es gibt aber Situationen wo gehandelt werden muss:
           </p>
           <div className="space-y-3 mb-6">
@@ -144,14 +144,14 @@ export default function WennElternPflegeVerweigern() {
               { situation: 'Demenz und fehlende Einsichtsfähigkeit', handlung: 'Bei fortgeschrittener Demenz kann die Fähigkeit zur Einwilligung fehlen. Dann kann eine gesetzliche Betreuung beim Amtsgericht beantragt werden — die bevollmächtigte Person (oder ein gerichtlich bestellter Betreuer) trifft Entscheidungen.' },
               { situation: 'Gefährdung anderer', handlung: 'Wenn das Verhalten des Pflegebedürftigen andere Menschen gefährdet (z.B. vergessener Herd, Weglaufen bei Demenz), kann unabhängig vom eigenen Willen gehandelt werden.' },
             ].map((item) => (
-              <div key={item.situation} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#A89279] mb-1">{item.situation}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.handlung}</p>
+              <div key={item.situation} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.situation}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.handlung}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="praktisch" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="praktisch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Erste praktische Schritte
           </h2>
           <ol className="space-y-3 mb-10">
@@ -161,17 +161,17 @@ export default function WennElternPflegeVerweigern() {
               { n: '3', title: 'Probezeit als Einstieg', desc: '"4 Wochen Probezeit — wenn es nicht passt, hören wir auf." Fast immer der beste Einstieg.' },
               { n: '4', title: 'Passende Persönlichkeit der Betreuungskraft wählen', desc: 'Bei Primundus Telefonat vorab möglich — Kraft mit Charakter wählen der zur Persönlichkeit passt. Manchmal stimmt die Chemie von Anfang an.' },
             ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF] list-none">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
+              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{step.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{step.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
                 </div>
               </li>
             ))}
           </ol>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was kann ich tun wenn meine Eltern Pflege verweigern?', a: 'Ursache verstehen (Angst, Scham, Verleugnung). Nicht konfrontativ vorgehen. Hausarzt einbeziehen. Klein anfangen — Probezeit vorschlagen. Autonomie betonen. Vertrauensperson einbeziehen.' },
@@ -179,13 +179,13 @@ export default function WennElternPflegeVerweigern() {
               { q: 'Wie spreche ich das Thema Pflege mit meinen Eltern an?', a: 'Im ruhigen Moment, nicht nach einem Sturz. Als Gespräch unter Gleichen: "Ich mache mir Sorgen um dich." Nicht über Pflegeheim reden — sondern über Unterstützung zuhause. Probezeit vorschlagen.' },
               { q: 'Was wenn ein Elternteil sagt "Ich will nicht in ein Heim"?', a: 'Dann genau das versichern: Eine 24h-Betreuungskraft zuhause ist das Gegenteil eines Pflegeheims. Sie ermöglicht das Leben in der eigenen Wohnung zu erhalten. Das Framing als "Alternative zum Pflegeheim" hilft oft.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

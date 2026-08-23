@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --primundus-primary: #8B7355;
-  --primundus-primary-dark: #7D6E5D;
-  --primundus-primary-light: #A18973;
-  --primundus-anthracite: #3D3D3D;
-  --primundus-text-secondary: #8B8B8B;
-  --primundus-bg: #F8F7F5;
-  --primundus-border: #E5E3DF;
   --header-offset: 100px;
 }
 

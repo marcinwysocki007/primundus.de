@@ -130,38 +130,38 @@ export default function PflegegradBeantragen() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegegrad beantragen</span>
+            <span className="text-pm-ink">Pflegegrad beantragen</span>
           </nav>
 
           {/* Eyebrow */}
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
           </p>
 
           {/* H1 */}
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegegrad beantragen — Schritt für Schritt
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
           {/* Lead */}
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Pflegegrad beantragen geht in zwei Schritten: Antrag bei der Pflegekasse stellen, dann kommt der Medizinische Dienst zur Begutachtung nach Hause. Die Entscheidung fällt innerhalb von 25 Arbeitstagen. Wer gut vorbereitet ist, erreicht einen höheren Pflegegrad — mit deutlich mehr Leistungen.
           </p>
 
           {/* Quick Answer Box */}
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">
               Auf einen Blick
             </p>
             <ul className="space-y-2.5">
@@ -173,8 +173,8 @@ export default function PflegegradBeantragen() {
                 'Pflegetagebuch führen: stärkstes Hilfsmittel für höhere Einstufung',
                 'Ablehnung oder zu niedrige Einstufung: Widerspruch innerhalb eines Monats möglich',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
@@ -182,16 +182,16 @@ export default function PflegegradBeantragen() {
           </div>
 
           {/* ── SECTION 1 ── */}
-          <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="voraussetzungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wer kann einen Pflegegrad beantragen?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Einen Pflegegrad kann jeder beantragen, der wegen einer körperlichen, geistigen oder psychischen Erkrankung auf dauerhafte Hilfe im Alltag angewiesen ist — und das voraussichtlich für mindestens sechs Monate. Alter spielt dabei keine Rolle: Pflegegrade werden sowohl für Kinder als auch für Hochbetagte vergeben.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Den Antrag können stellen: der Pflegebedürftige selbst, nahe Angehörige, oder Personen mit schriftlicher Vollmacht. Eine Vorsorgevollmacht vereinfacht den Prozess erheblich, wenn die betroffene Person nicht mehr selbst handeln kann.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             <strong>Wichtig:</strong> Die Pflegeleistungen gelten rückwirkend ab dem Tag, an dem der Antrag bei der Pflegekasse eingegangen ist — nicht erst ab dem Begutachtungstermin. Deshalb lohnt es sich, den Antrag so früh wie möglich zu stellen, auch wenn der genaue Pflegebedarf noch unklar ist.
           </p>
           <div className="space-y-3 mb-6">
@@ -200,26 +200,26 @@ export default function PflegegradBeantragen() {
               { title: 'Kognitive und psychische Erkrankungen', desc: 'Demenz, Alzheimer, Depression, geistige Behinderung, Psychosen. Demenz wird beim Pflegegrad oft besser berücksichtigt als früher bei Pflegestufen.' },
               { title: 'Kinder mit Pflegebedarf', desc: 'Kinder unter 18 Jahren werden mit einem Vergleichskind gleichen Alters gemessen — der Mehrbedarf gegenüber altersüblicher Entwicklung zählt.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Welcher Pflegegrad bei welcher Erkrankung in Frage kommt:{' '}
-            <a href="/pflegegrad-bei-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz</a>
+            <a href="/pflegegrad-bei-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad bei Demenz</a>
             {' · '}
-            <a href="/pflegegrad-nach-schlaganfall" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad nach Schlaganfall</a>
+            <a href="/pflegegrad-nach-schlaganfall" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad nach Schlaganfall</a>
             {' · '}
-            <a href="/pflegegrad-bei-parkinson" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Parkinson</a>
+            <a href="/pflegegrad-bei-parkinson" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad bei Parkinson</a>
           </p>
 
           {/* ── SECTION 2 ── */}
-          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag stellen — Schritt für Schritt
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Der Antrag läuft über die Pflegekasse — das ist immer der Pflegebereich der gesetzlichen Krankenkasse. Bei privat Versicherten übernimmt das private Pflegeversicherungsunternehmen.
           </p>
           <ol className="space-y-3 mb-8">
@@ -229,44 +229,44 @@ export default function PflegegradBeantragen() {
                 title: 'Antrag bei der Pflegekasse stellen',
                 desc: 'Telefonisch, schriftlich oder per Online-Formular — je nach Krankenkasse. Ein einfaches Schreiben reicht: "Ich beantrage hiermit die Feststellung der Pflegebedürftigkeit nach SGB XI." Das Datum des Eingangs gilt rückwirkend für alle Leistungen.',
                 tag: 'Sofort erledigen',
-                tagColor: 'bg-[#E8F5EE] text-[#2A5C3F]',
+                tagColor: 'bg-pm-mint text-pm-green-deep',
               },
               {
                 n: '2',
                 title: 'Pflegetagebuch beginnen',
                 desc: 'Mindestens 1–2 Wochen vor der Begutachtung täglich dokumentieren: Welche Hilfe wird bei welcher Tätigkeit benötigt? Wie lange dauert das? Was kann selbst gemacht werden, was nicht? Das Pflegetagebuch ist das stärkste Argument für eine höhere Einstufung.',
                 tag: 'Wichtigstes Vorbereitungsmittel',
-                tagColor: 'bg-[#E8F5EE] text-[#2A5C3F]',
+                tagColor: 'bg-pm-mint text-pm-green-deep',
               },
               {
                 n: '3',
                 title: 'Begutachtungstermin vereinbaren',
                 desc: 'Der MD (Medizinischer Dienst bei gesetzlich Versicherten) oder MEDICPROOF (bei privat Versicherten) meldet sich und vereinbart einen Termin. Die Begutachtung findet zu Hause statt — Krankenhäuser und Pflegeheime sind ebenfalls möglich.',
                 tag: 'Wird von der Pflegekasse organisiert',
-                tagColor: 'bg-[#F8F7F5] text-[#8B8B8B]',
+                tagColor: 'bg-pm-paper text-pm-mute',
               },
               {
                 n: '4',
                 title: 'Begutachtungstermin wahrnehmen',
                 desc: 'Den Gutachter empfangen, Pflegetagebuch und ärztliche Atteste bereithalten. Eine Vertrauensperson darf anwesend sein — das ist ausdrücklich empfohlen. Nichts beschönigen: Den tatsächlichen schlechtesten Tagesverlauf schildern, nicht den guten Tag.',
                 tag: 'Vertrauensperson einladen',
-                tagColor: 'bg-[#F8F7F5] text-[#8B8B8B]',
+                tagColor: 'bg-pm-paper text-pm-mute',
               },
               {
                 n: '5',
                 title: 'Bescheid abwarten und prüfen',
                 desc: 'Die Pflegekasse schickt den schriftlichen Bescheid. Prüfen: Ist der Pflegegrad korrekt? Stimmen die angegebenen Einschränkungen? Bei Zweifeln sofort Widerspruch einlegen — die Frist beträgt einen Monat ab Bescheiddatum.',
                 tag: 'Frist: 1 Monat ab Bescheid',
-                tagColor: 'bg-[#FDF0EE] text-[#8B3E2F]',
+                tagColor: 'bg-pm-coral-tint text-pm-coral-ink',
               },
             ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF] list-none">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0 mt-0.5">
+              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0 mt-0.5">
                   {step.n}
                 </span>
                 <div className="flex-1">
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{step.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-2">{step.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed mb-2">{step.desc}</p>
                   <span className={`inline-block text-[11px] font-semibold px-2.5 py-1 rounded-full ${step.tagColor}`}>
                     {step.tag}
                   </span>
@@ -276,8 +276,8 @@ export default function PflegegradBeantragen() {
           </ol>
 
           {/* Fristen-Box */}
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-10">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-2">
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-10">
+            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-2">
               Gesetzliche Fristen — Rechte kennen
             </p>
             <div className="space-y-2">
@@ -288,25 +288,25 @@ export default function PflegegradBeantragen() {
                 { frist: '1 Monat', text: 'Widerspruchsfrist nach Bescheiddatum — danach verfällt der Anspruch' },
               ].map((item) => (
                 <div key={item.frist} className="flex items-baseline gap-3">
-                  <span className="text-[14px] font-bold text-[#3D7A5C] flex-shrink-0 w-[110px]">{item.frist}</span>
-                  <span className="text-[14px] text-[#2A5C3F]">{item.text}</span>
+                  <span className="text-[14px] font-bold text-pm-green flex-shrink-0 w-[110px]">{item.frist}</span>
+                  <span className="text-[14px] text-pm-green-deep">{item.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* ── SECTION 3 ── */}
-          <h2 id="begutachtung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="begutachtung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Begutachtung durch den MD
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Der Gutachter des Medizinischen Dienstes bewertet die Selbstständigkeit in sechs Lebensbereichen. Das Ergebnis ist eine Punktzahl — sie bestimmt den Pflegegrad. Entscheidend ist nicht die Diagnose, sondern wie stark die Selbstständigkeit tatsächlich eingeschränkt ist.
           </p>
 
           {/* 6 Lebensbereiche */}
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">
                 Die 6 Lebensbereiche der Begutachtung (NBA)
               </p>
             </div>
@@ -321,9 +321,9 @@ export default function PflegegradBeantragen() {
                     ['Krankheitsbedingte Anforderungen', 'Medikamente, Verbandswechsel, Arztbesuche, Therapien'],
                     ['Alltagsleben & soziale Kontakte', 'Tagesstruktur, Freizeitgestaltung, Kontakte zu anderen Menschen'],
                   ].map(([bereich, inhalt], i) => (
-                    <tr key={bereich} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF] w-[42%]">{bereich}</td>
-                      <td className="px-5 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{inhalt}</td>
+                    <tr key={bereich} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line w-[42%]">{bereich}</td>
+                      <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{inhalt}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -331,13 +331,13 @@ export default function PflegegradBeantragen() {
             </div>
           </div>
 
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Jeder Bereich wird gewichtet und in Punkte umgerechnet. Die Summe ergibt den Pflegegrad. Der Bereich <strong>Selbstversorgung</strong> hat das höchste Gewicht (36 %), danach folgen kognitive Fähigkeiten und krankheitsbedingte Anforderungen.
           </p>
 
           {/* Tipps für die Begutachtung */}
           <div className="space-y-3 mb-6">
-            <p className="text-[15px] font-bold text-[#1C1C1C]">Die 5 wichtigsten Tipps für die Begutachtung:</p>
+            <p className="text-[15px] font-bold text-pm-ink">Die 5 wichtigsten Tipps für die Begutachtung:</p>
             {[
               { tip: 'Den schlechtesten Tag schildern', desc: 'Nicht den guten Durchschnittstag beschreiben. Der Gutachter fragt nach dem typischen schlechtesten Verlauf — genau das berichten.' },
               { tip: 'Pflegetagebuch vorlegen', desc: 'Tagesprotokoll der letzten 1–2 Wochen zeigen: Was wurde wann gemacht, welche Hilfe war nötig, wie lange hat es gedauert?' },
@@ -345,40 +345,40 @@ export default function PflegegradBeantragen() {
               { tip: 'Nichts übertreiben — aber nichts verschweigen', desc: 'Reale Einschränkungen vollständig schildern. Wer aus Scham minimiert, bekommt einen zu niedrigen Pflegegrad.' },
               { tip: 'Arztberichte und Atteste bereithalten', desc: 'Aktuelle ärztliche Unterlagen, Krankenhausentlassbriefe, Medikamentenliste — alles was den Pflegebedarf belegt.' },
             ].map((item) => (
-              <div key={item.tip} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.tip}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.tip} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tip}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Ausführliche Vorbereitung:{' '}
-            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               MD-Begutachtung vorbereiten — Checkliste und Tipps
             </a>
           </p>
 
           {/* ── SECTION 4 ── */}
-          <h2 id="pflegegrade" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrade" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrade und ihre Leistungen 2026
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Je höher der Pflegegrad, desto mehr Leistungen zahlt die Pflegekasse. Die Beträge 2026 sind identisch zu 2025 — keine Erhöhung, nächste Dynamisierung frühestens Januar 2028.
           </p>
 
           {/* Pflegegrade Tabelle */}
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-4 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-4 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">
                 Pflegegeld & Sachleistungen 2026 — alle Pflegegrade
               </p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Pflegegrad', 'Punkte NBA', 'Pflegegeld/Monat', 'Pflegesachleistungen', '+ Entlastungsbetrag'].map((h) => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF] last:text-right">
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line last:text-right">
                         {h}
                       </th>
                     ))}
@@ -392,56 +392,56 @@ export default function PflegegradBeantragen() {
                     ['PG 4', '70–89,9', '800 €', '1.859 €', '131 €'],
                     ['PG 5', '90–100', '990 €', '2.299 €', '131 €'],
                   ].map(([grad, punkte, pg, sach, eb], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{grad}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{punkte}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#3D7A5C] border-b border-[#E5E3DF]">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{sach}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF] text-right">{eb}</td>
+                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{punkte}</td>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-green border-b border-pm-line">{pg}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{sach}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line text-right">{eb}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Stand: 2026 — identisch zu 2025 (4,5 % Erhöhung ab Jan. 2025). Nächste Dynamisierung frühestens Jan. 2028. Quelle: GKV-Spitzenverband</p>
+              <p className="text-[11px] text-pm-mute">Stand: 2026 — identisch zu 2025 (4,5 % Erhöhung ab Jan. 2025). Nächste Dynamisierung frühestens Jan. 2028. Quelle: GKV-Spitzenverband</p>
             </div>
           </div>
 
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-2">
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-6">
+            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-2">
               Zusätzlich — Entlastungsbudget 2026
             </p>
-            <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">
+            <p className="text-[15px] font-bold text-pm-ink mb-2">
               3.539 € pro Jahr für Verhinderungs- und Kurzzeitpflege (ab PG 2)
             </p>
-            <p className="text-[14px] text-[#2A5C3F]">
+            <p className="text-[14px] text-pm-green-deep">
               Das gemeinsame Entlastungsbudget seit Juli 2025 ersetzt die frühere getrennte Verhinderungs- und Kurzzeitpflege. Es kann flexibel aufgeteilt werden — max. 8 Wochen pro Leistungsart. 2026 ist das erste volle Jahr ohne Übergangsregelungen.
             </p>
           </div>
 
-          <p className="text-[15px] text-[#2E2E2E] mb-3">
+          <p className="text-[15px] text-pm-body mb-3">
             → Einzelne Pflegegrade im Detail:{' '}
-            <a href="/pflegegrad-2" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 2</a>
+            <a href="/pflegegrad-2" className="text-pm-taupe underline hover:text-pm-taupe-deep">PG 2</a>
             {' · '}
-            <a href="/pflegegrad-3" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 3</a>
+            <a href="/pflegegrad-3" className="text-pm-taupe underline hover:text-pm-taupe-deep">PG 3</a>
             {' · '}
-            <a href="/pflegegrad-4" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 4</a>
+            <a href="/pflegegrad-4" className="text-pm-taupe underline hover:text-pm-taupe-deep">PG 4</a>
             {' · '}
-            <a href="/pflegegrad-5" className="text-[#8B7355] underline hover:text-[#7D6E5D]">PG 5</a>
+            <a href="/pflegegrad-5" className="text-pm-taupe underline hover:text-pm-taupe-deep">PG 5</a>
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Wie alle Zuschüsse kombiniert werden:{' '}
-            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Finanzierung der 24h-Pflege — alle Zuschüsse 2026
             </a>
           </p>
 
           {/* ── SECTION 5 ── */}
-          <h2 id="widerspruch" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="widerspruch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Widerspruch einlegen — wenn die Einstufung zu niedrig ist
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Wer mit dem Bescheid nicht einverstanden ist, hat einen Monat Zeit für den Widerspruch. Widersprüche sind häufig erfolgreich — besonders wenn der Pflegebedarf nicht gut dokumentiert war. Die Pflegekasse muss dann erneut prüfen.
           </p>
           <div className="space-y-3 mb-6">
@@ -467,25 +467,25 @@ export default function PflegegradBeantragen() {
                 highlight: false,
               },
             ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-[#8B7355] border-2' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Schritt für Schritt:{' '}
-            <a href="/pflegegrad-widerspruch-einlegen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegegrad-widerspruch-einlegen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Pflegegrad Widerspruch einlegen — Muster und Tipps
             </a>
             {' · '}
-            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegegrad-erhoehen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Pflegegrad erhöhen — wann und wie
             </a>
           </p>
 
           {/* ── FAQ ── */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zum Pflegegrad beantragen
           </h2>
           <div className="space-y-4 mb-12">
@@ -523,13 +523,13 @@ export default function PflegegradBeantragen() {
                 a: 'Ja — jederzeit wenn sich der Pflegebedarf verschlechtert. Antrag auf Höherstufung bei der Pflegekasse stellen, der MD begutachtet erneut. Es gibt keine Sperrfrist.',
               },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

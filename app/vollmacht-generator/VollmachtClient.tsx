@@ -426,7 +426,7 @@ function Input({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className="w-full border border-[#E5E3DF] rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-[#8B7355] bg-white text-[#3D3D3D] placeholder-[#BABABA] transition-colors"
+      className="w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-pm-taupe bg-white text-[#3D3D3D] placeholder-[#BABABA] transition-colors"
     />
   )
 }
@@ -446,7 +446,7 @@ function Select({
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full border border-[#E5E3DF] rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-[#8B7355] bg-white text-[#3D3D3D] transition-colors appearance-none"
+      className="w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-pm-taupe bg-white text-[#3D3D3D] transition-colors appearance-none"
     >
       {placeholder && <option value="">{placeholder}</option>}
       {options.map((o) => (
@@ -552,7 +552,7 @@ function StepIndicator({
 }) {
   return (
     <div className="mb-8">
-      <p className="text-[12px] text-[#8B8B8B] mb-3 text-center">
+      <p className="text-[12px] text-pm-mute mb-3 text-center">
         Schritt {currentStep} von {totalSteps}
       </p>
       <div className="flex items-center justify-center gap-2">
@@ -566,20 +566,20 @@ function StepIndicator({
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-[12px] font-bold transition-all ${
                     isCompleted
-                      ? 'bg-[#8B7355] text-white'
+                      ? 'bg-pm-taupe text-white'
                       : isCurrent
-                      ? 'bg-[#8B7355] text-white ring-4 ring-[#8B7355]/20'
-                      : 'bg-[#E5E3DF] text-[#8B8B8B]'
+                      ? 'bg-pm-taupe text-white ring-4 ring-pm-taupe/20'
+                      : 'bg-pm-line text-pm-mute'
                   }`}
                 >
                   {isCompleted ? '✓' : stepNum}
                 </div>
-                <span className={`text-[10px] hidden sm:block max-w-[70px] text-center leading-tight ${isCurrent ? 'text-[#3D3D3D] font-semibold' : 'text-[#8B8B8B]'}`}>
+                <span className={`text-[10px] hidden sm:block max-w-[70px] text-center leading-tight ${isCurrent ? 'text-[#3D3D3D] font-semibold' : 'text-pm-mute'}`}>
                   {label}
                 </span>
               </div>
               {idx < stepLabels.length - 1 && (
-                <div className={`w-8 h-[2px] mb-4 rounded ${stepNum < currentStep ? 'bg-[#8B7355]' : 'bg-[#E5E3DF]'}`} />
+                <div className={`w-8 h-[2px] mb-4 rounded ${stepNum < currentStep ? 'bg-pm-taupe' : 'bg-pm-line'}`} />
               )}
             </div>
           )
@@ -608,14 +608,14 @@ function BereichCard({
       onClick={onToggle}
       className={`w-full text-left px-4 py-4 rounded-xl border-2 transition-all ${
         selected
-          ? 'border-[#8B7355] bg-[#FAF7F2]'
-          : 'border-[#E5E3DF] bg-white hover:border-[#C8B89A]'
+          ? 'border-pm-taupe bg-[#FAF7F2]'
+          : 'border-pm-line bg-white hover:border-[#C8B89A]'
       }`}
     >
       <div className="flex items-start gap-3">
         <div
           className={`w-5 h-5 rounded flex-shrink-0 mt-0.5 flex items-center justify-center border-2 transition-all ${
-            selected ? 'bg-[#8B7355] border-[#8B7355]' : 'bg-white border-[#C8B89A]'
+            selected ? 'bg-pm-taupe border-pm-taupe' : 'bg-white border-[#C8B89A]'
           }`}
         >
           {selected && (
@@ -649,12 +649,12 @@ function CheckboxItem({
       type="button"
       onClick={() => onChange(!checked)}
       className={`w-full text-left px-4 py-3.5 rounded-xl border transition-all flex items-start gap-3 ${
-        checked ? 'border-[#8B7355] bg-[#FAF7F2]' : 'border-[#E5E3DF] bg-white hover:border-[#C8B89A]'
+        checked ? 'border-pm-taupe bg-[#FAF7F2]' : 'border-pm-line bg-white hover:border-[#C8B89A]'
       }`}
     >
       <div
         className={`w-5 h-5 rounded flex-shrink-0 mt-0.5 flex items-center justify-center border-2 transition-all ${
-          checked ? 'bg-[#8B7355] border-[#8B7355]' : 'bg-white border-[#C8B89A]'
+          checked ? 'bg-pm-taupe border-pm-taupe' : 'bg-white border-[#C8B89A]'
         }`}
       >
         {checked && (
@@ -745,19 +745,19 @@ export default function VollmachtClient() {
     .map(([, v]) => v)
 
   return (
-    <div className="bg-[#F8F7F5] min-h-screen">
+    <div className="bg-pm-paper min-h-screen">
       <div className="max-w-[720px] mx-auto px-5 py-10">
 
         {/* Header */}
         <div className="mb-8">
-          <nav className="text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+            <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
             <span>›</span>
             <span className="text-[#3D3D3D]">Vorsorgevollmacht-Generator</span>
           </nav>
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#8B7355] mb-2">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe mb-2">
             Kostenlos · Kein Konto nötig
           </p>
           <h1 className="text-[28px] md:text-[36px] font-bold text-[#3D3D3D] leading-tight mb-3">
@@ -774,7 +774,7 @@ export default function VollmachtClient() {
         </div>
 
         {/* Wizard Card */}
-        <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 md:p-8 shadow-sm">
+        <div className="bg-white border border-pm-line rounded-2xl p-6 md:p-8 shadow-sm">
 
           <StepIndicator
             currentStep={getIndicatorStep()}
@@ -811,7 +811,7 @@ export default function VollmachtClient() {
               />
 
               {/* Ersatzbevollmächtigte toggle */}
-              <div className="mt-6 pt-5 border-t border-[#F0EDE8]">
+              <div className="mt-6 pt-5 border-t border-pm-line-soft">
                 <button
                   type="button"
                   onClick={() => setFormData((f) => ({ ...f, hasErsatz: !f.hasErsatz }))}
@@ -819,7 +819,7 @@ export default function VollmachtClient() {
                 >
                   <div
                     className={`w-10 h-6 rounded-full transition-colors flex-shrink-0 relative ${
-                      formData.hasErsatz ? 'bg-[#8B7355]' : 'bg-[#E5E3DF]'
+                      formData.hasErsatz ? 'bg-pm-taupe' : 'bg-pm-line'
                     }`}
                   >
                     <div
@@ -830,14 +830,14 @@ export default function VollmachtClient() {
                   </div>
                   <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">
                     Ersatzbevollmächtigte Person hinzufügen
-                    <span className="block text-[12px] font-normal text-[#8B8B8B]">
+                    <span className="block text-[12px] font-normal text-pm-mute">
                       Falls die erste Person nicht verfügbar ist
                     </span>
                   </span>
                 </button>
 
                 {formData.hasErsatz && (
-                  <div className="mt-5 pt-5 border-t border-[#F0EDE8]">
+                  <div className="mt-5 pt-5 border-t border-pm-line-soft">
                     <p className="text-[13px] font-semibold text-[#3D3D3D] mb-4">Ersatzbevollmächtigte/r</p>
                     <PersonForm
                       data={formData.ersatzbevollmaechtigter}
@@ -896,7 +896,7 @@ export default function VollmachtClient() {
                 />
               </div>
 
-              <div className="border-t border-[#F0EDE8] pt-5">
+              <div className="border-t border-pm-line-soft pt-5">
                 <p className="text-[13px] font-semibold text-[#3D3D3D] mb-3">Wann gilt die Vollmacht?</p>
                 <div className="flex flex-col gap-2.5">
                   {(
@@ -919,17 +919,17 @@ export default function VollmachtClient() {
                       onClick={() => setGeltung(value)}
                       className={`w-full text-left px-4 py-4 rounded-xl border-2 transition-all flex items-start gap-3 ${
                         formData.geltung === value
-                          ? 'border-[#8B7355] bg-[#FAF7F2]'
-                          : 'border-[#E5E3DF] bg-white hover:border-[#C8B89A]'
+                          ? 'border-pm-taupe bg-[#FAF7F2]'
+                          : 'border-pm-line bg-white hover:border-[#C8B89A]'
                       }`}
                     >
                       <div
                         className={`w-5 h-5 rounded-full flex-shrink-0 mt-0.5 border-2 flex items-center justify-center transition-all ${
-                          formData.geltung === value ? 'border-[#8B7355]' : 'border-[#C8B89A]'
+                          formData.geltung === value ? 'border-pm-taupe' : 'border-[#C8B89A]'
                         }`}
                       >
                         {formData.geltung === value && (
-                          <div className="w-2.5 h-2.5 bg-[#8B7355] rounded-full" />
+                          <div className="w-2.5 h-2.5 bg-pm-taupe rounded-full" />
                         )}
                       </div>
                       <div>
@@ -983,7 +983,7 @@ export default function VollmachtClient() {
                 <span className="text-[18px] flex-shrink-0">💡</span>
                 <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
                   <strong className="text-[#3D3D3D]">Tipp:</strong> Ergänzen Sie die Vollmacht um eine{' '}
-                  <a href="/patientenverfuegung-aufsetzen" className="text-[#8B7355] hover:underline font-medium">
+                  <a href="/patientenverfuegung-aufsetzen" className="text-pm-taupe hover:underline font-medium">
                     Patientenverfügung
                   </a>
                   , um Ihre konkreten Behandlungswünsche festzuhalten. Die Vollmacht regelt, <em>wer</em> entscheidet — die Patientenverfügung regelt, <em>was</em> entschieden wird.
@@ -1001,11 +1001,11 @@ export default function VollmachtClient() {
               </p>
 
               {/* Summary card */}
-              <div className="bg-[#F8F7F5] border border-[#E5E3DF] rounded-xl p-5 mb-5">
+              <div className="bg-pm-paper border border-pm-line rounded-xl p-5 mb-5">
                 <div className="flex flex-col gap-4">
 
                   <div>
-                    <p className="text-[11px] uppercase tracking-wider font-bold text-[#8B7355] mb-1">Vollmachtgeber</p>
+                    <p className="text-[11px] uppercase tracking-wider font-bold text-pm-taupe mb-1">Vollmachtgeber</p>
                     <p className="text-[14px] font-semibold text-[#3D3D3D]">
                       {formData.vollmachtgeber.vorname || '–'} {formData.vollmachtgeber.nachname}
                     </p>
@@ -1021,8 +1021,8 @@ export default function VollmachtClient() {
                     )}
                   </div>
 
-                  <div className="border-t border-[#E5E3DF] pt-4">
-                    <p className="text-[11px] uppercase tracking-wider font-bold text-[#8B7355] mb-1">Bevollmächtigte/r</p>
+                  <div className="border-t border-pm-line pt-4">
+                    <p className="text-[11px] uppercase tracking-wider font-bold text-pm-taupe mb-1">Bevollmächtigte/r</p>
                     <p className="text-[14px] font-semibold text-[#3D3D3D]">
                       {formData.bevollmaechtigter.vorname || '–'} {formData.bevollmaechtigter.nachname}
                     </p>
@@ -1034,32 +1034,32 @@ export default function VollmachtClient() {
                       <p className="text-[13px] text-[#5A5A5A]">{formData.bevollmaechtigter.beziehung}</p>
                     )}
                     {formData.hasErsatz && formData.ersatzbevollmaechtigter.vorname && (
-                      <p className="text-[12px] text-[#8B8B8B] mt-1">
+                      <p className="text-[12px] text-pm-mute mt-1">
                         + Ersatz: {formData.ersatzbevollmaechtigter.vorname} {formData.ersatzbevollmaechtigter.nachname}
                       </p>
                     )}
                   </div>
 
-                  <div className="border-t border-[#E5E3DF] pt-4">
-                    <p className="text-[11px] uppercase tracking-wider font-bold text-[#8B7355] mb-2">Bevollmächtigte Bereiche</p>
+                  <div className="border-t border-pm-line pt-4">
+                    <p className="text-[11px] uppercase tracking-wider font-bold text-pm-taupe mb-2">Bevollmächtigte Bereiche</p>
                     <div className="flex flex-wrap gap-1.5">
                       {selectedBereiche.length > 0 ? (
                         selectedBereiche.map((b) => (
                           <span
                             key={b}
-                            className="inline-block bg-[#8B7355] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full"
+                            className="inline-block bg-pm-taupe text-white text-[11px] font-semibold px-2.5 py-1 rounded-full"
                           >
                             {b}
                           </span>
                         ))
                       ) : (
-                        <span className="text-[13px] text-[#8B8B8B]">Keine Bereiche ausgewählt</span>
+                        <span className="text-[13px] text-pm-mute">Keine Bereiche ausgewählt</span>
                       )}
                     </div>
                   </div>
 
-                  <div className="border-t border-[#E5E3DF] pt-4">
-                    <p className="text-[11px] uppercase tracking-wider font-bold text-[#8B7355] mb-1">Geltung</p>
+                  <div className="border-t border-pm-line pt-4">
+                    <p className="text-[11px] uppercase tracking-wider font-bold text-pm-taupe mb-1">Geltung</p>
                     <p className="text-[14px] text-[#3D3D3D]">
                       {formData.geltung === 'sofort'
                         ? '✓ Sofort gültig (ab Unterzeichnung)'
@@ -1074,7 +1074,7 @@ export default function VollmachtClient() {
               <button
                 type="button"
                 onClick={() => generateAndPrint(formData)}
-                className="w-full bg-[#8B7355] hover:bg-[#7A6347] text-white font-bold text-[16px] py-4 rounded-xl transition-colors mb-4 flex items-center justify-center gap-2"
+                className="w-full bg-pm-taupe hover:bg-[#7A6347] text-white font-bold text-[16px] py-4 rounded-xl transition-colors mb-4 flex items-center justify-center gap-2"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="6 9 12 15 18 9" />
@@ -1096,7 +1096,7 @@ export default function VollmachtClient() {
                 href="https://www.vorsorgeregister.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 border border-[#C8B89A] text-[#8B7355] font-semibold text-[14px] py-3 rounded-xl hover:bg-[#FAF7F2] transition-colors"
+                className="w-full flex items-center justify-center gap-2 border border-[#C8B89A] text-pm-taupe font-semibold text-[14px] py-3 rounded-xl hover:bg-[#FAF7F2] transition-colors"
               >
                 Bundesnotarkammer — Vollmacht registrieren lassen ↗
               </a>
@@ -1104,11 +1104,11 @@ export default function VollmachtClient() {
           )}
 
           {/* Navigation */}
-          <div className="flex items-center justify-between mt-8 pt-6 border-t border-[#F0EDE8]">
+          <div className="flex items-center justify-between mt-8 pt-6 border-t border-pm-line-soft">
             <button
               type="button"
               onClick={goBack}
-              className={`px-5 py-2.5 rounded-xl border border-[#C8B89A] text-[#8B7355] font-semibold text-[14px] hover:bg-[#FAF7F2] transition-colors ${
+              className={`px-5 py-2.5 rounded-xl border border-[#C8B89A] text-pm-taupe font-semibold text-[14px] hover:bg-[#FAF7F2] transition-colors ${
                 visibleStep === 1 ? 'invisible' : ''
               }`}
             >
@@ -1119,7 +1119,7 @@ export default function VollmachtClient() {
               <button
                 type="button"
                 onClick={goNext}
-                className="bg-[#8B7355] hover:bg-[#7A6347] text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
+                className="bg-pm-taupe hover:bg-[#7A6347] text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
               >
                 Weiter →
               </button>
@@ -1127,7 +1127,7 @@ export default function VollmachtClient() {
               <button
                 type="button"
                 onClick={() => generateAndPrint(formData)}
-                className="bg-[#8B7355] hover:bg-[#7A6347] text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
+                className="bg-pm-taupe hover:bg-[#7A6347] text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
               >
                 Jetzt erstellen →
               </button>

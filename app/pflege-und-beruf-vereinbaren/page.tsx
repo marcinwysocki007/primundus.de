@@ -64,33 +64,33 @@ export default function PflegeUndBerufVereinbaren() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflege und Beruf vereinbaren</span>
+            <span className="text-pm-ink">Pflege und Beruf vereinbaren</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflege und Beruf vereinbaren — Rechte, Tipps & Lösungen
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Über 2 Millionen Berufstätige in Deutschland pflegen gleichzeitig einen Angehörigen — die meisten ohne zu wissen welche Rechte sie haben. Das Gesetz schützt pflegende Angehörige: Freistellungsansprüche, Kündigungsschutz, Pflegeunterstützungsgeld. Und eine 24h-Betreuungskraft löst die Doppelbelastung oft grundlegend.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Ihre Rechte als pflegender Angehöriger</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Ihre Rechte als pflegender Angehöriger</p>
             <ul className="space-y-2.5">
               {[
                 'Kurzzeitige Arbeitsverhinderung: 10 Tage, ca. 90 % Lohnersatz durch Pflegeunterstützungsgeld',
@@ -100,25 +100,25 @@ export default function PflegeUndBerufVereinbaren() {
                 'Unfallversicherung: Pflegende Angehörige sind gesetzlich unfallversichert',
                 'Gilt ab: Betriebe mit mindestens 15 Beschäftigten',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="herausforderung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="herausforderung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Die Herausforderung — Zahlen und Fakten
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             In Deutschland pflegen schätzungsweise 2,5 Millionen berufstätige Menschen gleichzeitig einen pflegebedürftigen Angehörigen. Über zwei Drittel davon sind Frauen. Viele reduzieren ihre Arbeitszeit deutlich oder geben den Beruf ganz auf — mit erheblichen Auswirkungen auf das eigene Einkommen und die spätere Rente.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-10">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
             Die gute Nachricht: Das Gesetz schützt pflegende Angehörige besser als viele wissen. Und eine professionelle 24h-Betreuungskraft ermöglicht es, den Beruf weiterzuführen ohne den Pflegebedarf zu vernachlässigen.
           </p>
 
-          <h2 id="rechte" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="rechte" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Ihre Rechte als pflegender Angehöriger
           </h2>
           <div className="space-y-4 mb-10">
@@ -144,14 +144,14 @@ export default function PflegeUndBerufVereinbaren() {
                 details: 'Pflegende Angehörige sind während der Pflegetätigkeit gesetzlich unfallversichert — ohne eigene Beitragszahlung. Der Schutz gilt auch auf dem Weg zum Pflegebedürftigen.',
               },
             ].map((item) => (
-              <div key={item.titel} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">{item.titel}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.details}</p>
+              <div key={item.titel} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-2">{item.titel}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.details}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="loesungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="loesungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Praktische Lösungen — was wirklich hilft
           </h2>
           <div className="space-y-3 mb-10">
@@ -177,26 +177,26 @@ export default function PflegeUndBerufVereinbaren() {
                 highlight: false,
               },
             ].map((item) => (
-              <div key={item.loesung} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-[#8B7355] border-2' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.loesung}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.loesung} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.loesung}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="finanziell" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="finanziell" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Finanzielle Absicherung beim Ausfall der Arbeit
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Wer vorübergehend weniger arbeitet oder ausfällt, hat mehrere finanzielle Absicherungen:
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Leistung', 'Höhe', 'Wer zahlt', 'Dauer'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -206,23 +206,23 @@ export default function PflegeUndBerufVereinbaren() {
                     ['Zinsloses Darlehen (Pflegezeit)', 'Bis 50 % Nettogehalt', 'BAFzA (Bundesbehörde)', 'Für Dauer der Pflegezeit'],
                     ['Rentenbeiträge', 'Abhängig von PG', 'Pflegekasse', 'Während Pflegetätigkeit'],
                   ].map(([leistung, hoehe, wer, dauer], i) => (
-                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{leistung}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#3D7A5C] font-medium border-b border-[#E5E3DF]">{hoehe}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#2E2E2E] border-b border-[#E5E3DF]">{wer}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{dauer}</td>
+                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{leistung}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-green font-medium border-b border-pm-line">{hoehe}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line">{wer}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{dauer}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Angehörigen-Burnout vermeiden:{' '}
-            <a href="/burnout-pflegende-angehoerige" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Burnout pflegender Angehöriger — Warnsignale & Hilfe</a>
+            <a href="/burnout-pflegende-angehoerige" className="text-pm-taupe underline hover:text-pm-taupe-deep">Burnout pflegender Angehöriger — Warnsignale & Hilfe</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Welche Freistellungsrechte haben pflegende Angehörige?', a: 'Kurzzeitige Arbeitsverhinderung (10 Tage, Pflegeunterstützungsgeld), Pflegezeit (bis 6 Monate, Kündigungsschutz, zinsloses Darlehen), Familienpflegezeit (bis 24 Monate Teilzeit). Gilt ab 15 bzw. 25 Beschäftigten.' },
@@ -230,13 +230,13 @@ export default function PflegeUndBerufVereinbaren() {
               { q: 'Kann man mit 24h-Pflege weiter Vollzeit arbeiten?', a: 'Ja — genau das ist der Zweck einer 24h-Betreuungskraft. Sie übernimmt die vollständige Versorgung rund um die Uhr. Angehörige können ihrem Beruf nachgehen ohne Sorgen um die Pflege.' },
               { q: 'Bekomme ich Rentenbeiträge wenn ich einen Angehörigen pflege?', a: 'Ja — die Pflegekasse zahlt Rentenbeiträge für pflegende Angehörige die nicht mehr als 30 Stunden/Woche berufstätig sind, ab PG 2 und mindestens 14 Stunden wöchentlicher Pflegetätigkeit.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

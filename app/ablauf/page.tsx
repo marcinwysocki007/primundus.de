@@ -72,20 +72,20 @@ export default function Ablauf() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Ablauf</span>
+            <span className="text-pm-ink">Ablauf</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             So funktioniert es · Aktualisiert April 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start
           </h1>
 
@@ -95,12 +95,12 @@ export default function Ablauf() {
             In der Regel startet die Betreuungskraft 4–7 Tage nach der Anfrage. Vorher sehen Sie Profile mit Foto, Erfahrung und Sprachkenntnissen und wählen selbst aus — ein Vertrag entsteht erst nach Ihrer Entscheidung. Bei dringendem Bedarf, etwa nach einer Krankenhausentlassung, geht es oft schneller.
           </KurzAntwort>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             In 2 Minuten sehen Sie Ihr persönliches Angebot und passende Pflegekräfte — sofort, ohne Wartezeit. Primundus übernimmt danach die gesamte Organisation: Kraftauswahl, A1-Bescheinigung, Vertragsabschluss, Anreise. Bis zur Betreuungskraft zuhause vergehen typischerweise 4–7 Tage.
           </p>
 
-          <div className="bg-white border-2 border-[#8B7355] rounded-2xl p-6 mb-10">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-4">Auf einen Blick</p>
+          <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <div className="grid md:grid-cols-4 gap-4">
               {[
                 { schritt: 'Sofort', titel: 'Angebot einholen', desc: 'Online-Formular, 2 Min — sofort Kosten & Pflegekräfte sehen' },
@@ -109,16 +109,16 @@ export default function Ablauf() {
                 { schritt: 'Tag 4–7', titel: 'Start', desc: 'Je nach Wunschtermin & Reaktion — Betreuungskraft reist an' },
               ].map((item) => (
                 <div key={item.schritt} className="text-center">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#A89279] mb-1">{item.schritt}</p>
-                  <p className="text-[16px] font-bold text-[#1C1C1C] mb-1">{item.titel}</p>
-                  <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.schritt}</p>
+                  <p className="text-[16px] font-bold text-pm-ink mb-1">{item.titel}</p>
+                  <p className="text-[13px] text-pm-mute">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* USP-Banner */}
-          <div className="bg-[#8B7355] rounded-2xl p-5 mb-10 text-white">
+          <div className="bg-pm-taupe rounded-2xl p-5 mb-10 text-white">
             <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-white/60 mb-2">Was Primundus anders macht</p>
             <p className="text-[17px] font-bold leading-snug mb-2">Keine Katze im Sack — Sie sehen alles sofort.</p>
             <p className="text-[14px] text-white/85 leading-relaxed">
@@ -126,7 +126,7 @@ export default function Ablauf() {
             </p>
           </div>
 
-          <h2 id="schritte" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="schritte" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schritt für Schritt — der vollständige Ablauf
           </h2>
           <ol className="space-y-4 mb-10">
@@ -134,7 +134,7 @@ export default function Ablauf() {
               {
                 n: '1',
                 badge: 'Sofort',
-                badgeColor: 'bg-[#E8F5EE] text-[#2E7D32]',
+                badgeColor: 'bg-pm-mint text-[#2E7D32]',
                 title: 'Angebot & Pflegekräfte sofort einsehen',
                 desc: 'Wenige kurze Fragen zur Pflegesituation beantworten — dauert unter 2 Minuten. Direkt danach: Ihr persönliches Angebot mit allen Kosten, Kassenzuschüssen und Steuervorteilen. Und sofort dazu: echte Pflegekräfte-Profile, die zu Ihrer Situation passen. Kein Warten, keine E-Mail, kein Rückruf nötig.',
                 detail: '',
@@ -165,20 +165,20 @@ export default function Ablauf() {
                 detail: '',
               },
             ].map((step) => (
-              <li key={step.n} className="bg-white rounded-xl border border-[#E5E3DF] overflow-hidden list-none">
+              <li key={step.n} className="bg-white rounded-xl border border-pm-line overflow-hidden list-none">
                 <div className="flex gap-4 p-5">
-                  <span className="w-10 h-10 rounded-full bg-[#8B7355] text-white font-bold text-[17px] flex items-center justify-center flex-shrink-0 mt-0.5">{step.n}</span>
+                  <span className="w-10 h-10 rounded-full bg-pm-taupe text-white font-bold text-[17px] flex items-center justify-center flex-shrink-0 mt-0.5">{step.n}</span>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <p className="text-[16px] font-bold text-[#1C1C1C]">{step.title}</p>
+                      <p className="text-[16px] font-bold text-pm-ink">{step.title}</p>
                       <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${step.badgeColor}`}>{step.badge}</span>
                     </div>
-                    <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-2">{step.desc}</p>
-                    {step.detail && <p className="text-[12px] text-[#8B7355] font-semibold">{step.detail}</p>}
+                    <p className="text-[14px] text-pm-body leading-relaxed mb-2">{step.desc}</p>
+                    {step.detail && <p className="text-[12px] text-pm-taupe font-semibold">{step.detail}</p>}
                     {'cta' in step && step.cta && (
                       <a
                         href={step.cta.href}
-                        className="inline-flex items-center gap-1.5 mt-3 px-4 py-2 bg-[#E76F63] hover:bg-[#D65E52] text-white text-[13px] font-bold rounded-lg transition-colors"
+                        className="inline-flex items-center gap-1.5 mt-3 px-4 py-2 bg-pm-coral hover:bg-pm-coral-deep text-white text-[13px] font-bold rounded-lg transition-colors"
                       >
                         {step.cta.label}
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,10 +192,10 @@ export default function Ablauf() {
             ))}
           </ol>
 
-          <h2 id="auswahl" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="auswahl" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kraft auswählen & Anreise — wie die Auswahl funktioniert
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Primundus wählt die passende Betreuungskraft aus einem geprüften EU-Pool aus. Kriterien:
           </p>
           <div className="space-y-3 mb-10">
@@ -206,17 +206,17 @@ export default function Ablauf() {
               'Persönlichkeit & Passung — auf Wunsch Telefonat vorab',
               'Führerschein wenn relevant (ländliche Gebiete, Arzttermine)',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-[#2E2E2E]">{item}</p>
+              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
+                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <p className="text-[14px] text-pm-body">{item}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="wechsel" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wechsel" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kraftwechsel & laufende Betreuung
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Eine 24h-Betreuungskraft bleibt in der Regel 6–8 Wochen, dann folgt ein Wechsel zur nächsten Kraft. Beim Wechsel läuft alles genauso ab wie beim ersten Mal: Sie sehen neue Pflegekräfte-Profile, können gezielt einladen, Bewerbungen kommen transparent rein — Sie entscheiden wieder selbst. Primundus koordiniert den Übergang nahtlos.
           </p>
           <div className="space-y-3 mb-10">
@@ -226,14 +226,14 @@ export default function Ablauf() {
               { frage: 'Kann man eine Kraft behalten die gut passt?', antwort: 'Auf Wunsch gerne — Primundus berücksichtigt Präferenzen bei der Kraftauswahl für Folgebesetzungen.' },
               { frage: 'Was wenn die Kraft nicht passt?', antwort: 'Täglich kündbar — und Primundus stellt sofort Ersatz. Kein Risiko, keine Mindestlaufzeit.' },
             ].map((item) => (
-              <div key={item.frage} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.frage}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.antwort}</p>
+              <div key={item.frage} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.frage}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.antwort}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie schnell kann eine 24h-Pflegekraft starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. In dringenden Fällen ist ein schnellerer Start möglich — direkt anrufen: 089 200 000 830.' },
@@ -241,13 +241,13 @@ export default function Ablauf() {
               { q: 'Muss ich einen Vertrag mit langer Laufzeit abschließen?', a: 'Nein — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen.' },
               { q: 'Was passiert wenn ich die Kraft wechseln möchte?', a: 'Täglich kündbar. Primundus stellt sofort Ersatz — nahtlos, ohne Lücke in der Versorgung.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

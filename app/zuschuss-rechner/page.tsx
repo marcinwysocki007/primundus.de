@@ -134,7 +134,7 @@ export default function ZuschussRechnerPage() {
       <ZuschussRechnerClient />
 
       {/* SEO Content Section */}
-      <div className="bg-[#F8F7F5]">
+      <div className="bg-pm-paper">
         <div className="max-w-[720px] mx-auto px-5 pb-16">
 
           {/* Leistungsübersicht */}
@@ -148,13 +148,13 @@ export default function ZuschussRechnerPage() {
             </p>
             <div className="flex flex-col gap-3">
               {leistungen.map((l) => (
-                <div key={l.name} className="bg-white border border-[#E5E3DF] rounded-xl px-5 py-4">
+                <div key={l.name} className="bg-white border border-pm-line rounded-xl px-5 py-4">
                   <div className="flex items-start justify-between gap-3 mb-1">
                     <p className="text-[14px] font-bold text-[#3D3D3D]">{l.name}</p>
-                    <span className="text-[13px] font-bold text-[#3D7A5C] whitespace-nowrap">{l.max}</span>
+                    <span className="text-[13px] font-bold text-pm-green whitespace-nowrap">{l.max}</span>
                   </div>
                   <p className="text-[13px] text-[#5A5A5A] leading-relaxed mb-1">{l.beschreibung}</p>
-                  <p className="text-[11px] text-[#A89279] font-semibold uppercase tracking-wide">Ab {l.ab}</p>
+                  <p className="text-[11px] text-pm-taupe-light font-semibold uppercase tracking-wide">Ab {l.ab}</p>
                 </div>
               ))}
             </div>
@@ -169,13 +169,13 @@ export default function ZuschussRechnerPage() {
               {zuschussFaqs.map((faq) => (
                 <details
                   key={faq.q}
-                  className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden group"
+                  className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
                     <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
-                    <span className="text-[#8B7355] text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
+                    <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
                   </summary>
-                  <div className="px-5 pb-4 pt-1 border-t border-[#F0EDE8]">
+                  <div className="px-5 pb-4 pt-1 border-t border-pm-line-soft">
                     <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
@@ -197,10 +197,10 @@ export default function ZuschussRechnerPage() {
                   key={item.href}
                   href={item.href}
                   {...('external' in item && item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="bg-white border border-[#E5E3DF] rounded-xl px-4 py-3.5 hover:border-[#8B7355] transition-colors"
+                  className="bg-white border border-pm-line rounded-xl px-4 py-3.5 hover:border-pm-taupe transition-colors"
                 >
                   <p className="text-[14px] font-semibold text-[#3D3D3D] mb-0.5">→ {item.label}</p>
-                  <p className="text-[12px] text-[#8B8B8B]">{item.desc}</p>
+                  <p className="text-[12px] text-pm-mute">{item.desc}</p>
                 </a>
               ))}
             </div>

@@ -65,32 +65,32 @@ export default function KommunikationMitDemenzkranken() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Kommunikation mit Demenzkranken</span>
+            <span className="text-pm-ink">Kommunikation mit Demenzkranken</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Kommunikation mit Demenzkranken — was hilft & was schadet
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Mit einem demenzkranken Menschen zu kommunizieren bedeutet: In seine Welt einsteigen statt ihn in unsere zu holen. Korrekturen, Konfrontationen mit der Realität und Ungeduld führen zu Distress ohne jeden Nutzen. Fünf Grundprinzipien verändern die tägliche Kommunikation grundlegend — und erleichtern den Alltag für alle Beteiligten.
           </p>
 
-          <h2 id="grundprinzipien" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="grundprinzipien" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Die 5 Grundprinzipien
           </h2>
           <div className="space-y-4 mb-10">
@@ -126,21 +126,21 @@ export default function KommunikationMitDemenzkranken() {
                 example: { falsch: '"Das habe ich dir doch gerade erst erklärt!"', richtig: 'Ruhig nochmals antworten — gern zum zehnten Mal.' },
               },
             ].map((item) => (
-              <div key={item.n} className="bg-white rounded-xl p-6 border border-[#E5E3DF]">
+              <div key={item.n} className="bg-white rounded-xl p-6 border border-pm-line">
                 <div className="flex gap-4 items-start">
-                  <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{item.n}</span>
+                  <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{item.n}</span>
                   <div className="flex-1">
-                    <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">{item.title}</p>
-                    <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-3">{item.desc}</p>
+                    <p className="text-[15px] font-bold text-pm-ink mb-2">{item.title}</p>
+                    <p className="text-[14px] text-pm-body leading-relaxed mb-3">{item.desc}</p>
                     {item.example && (
                       <div className="space-y-2">
-                        <div className="bg-[#FDF0EE] rounded-lg px-4 py-2.5">
-                          <p className="text-[12px] font-bold text-[#8B3E2F] mb-1">✗ Nicht:</p>
-                          <p className="text-[13px] text-[#8B3E2F] italic">{item.example.falsch}</p>
+                        <div className="bg-pm-coral-tint rounded-lg px-4 py-2.5">
+                          <p className="text-[12px] font-bold text-pm-coral-ink mb-1">✗ Nicht:</p>
+                          <p className="text-[13px] text-pm-coral-ink italic">{item.example.falsch}</p>
                         </div>
-                        <div className="bg-[#E8F5EE] rounded-lg px-4 py-2.5">
-                          <p className="text-[12px] font-bold text-[#2A5C3F] mb-1">✓ Besser:</p>
-                          <p className="text-[13px] text-[#2A5C3F] italic">{item.example.richtig}</p>
+                        <div className="bg-pm-mint rounded-lg px-4 py-2.5">
+                          <p className="text-[12px] font-bold text-pm-green-deep mb-1">✓ Besser:</p>
+                          <p className="text-[13px] text-pm-green-deep italic">{item.example.richtig}</p>
                         </div>
                       </div>
                     )}
@@ -150,7 +150,7 @@ export default function KommunikationMitDemenzkranken() {
             ))}
           </div>
 
-          <h2 id="konkret" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="konkret" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was konkret hilft — praktische Tipps
           </h2>
           <div className="space-y-3 mb-10">
@@ -161,14 +161,14 @@ export default function KommunikationMitDemenzkranken() {
               { tip: 'Berührung bewusst einsetzen', desc: 'Handhalten, Schulter berühren, Streicheln — Körperkontakt kommuniziert Sicherheit und Wärme wenn Sprache schwieriger wird. Immer ankündigen: "Ich nehme jetzt deine Hand."' },
               { tip: 'Gesicht und Ton wichtiger als Worte', desc: 'Im fortgeschrittenen Stadium versteht die Person vielleicht nicht mehr den Inhalt — aber Mimik, Tonfall und Körpersprache bleiben verständlich. Ruhig und warm sprechen.' },
             ].map((item) => (
-              <div key={item.tip} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.tip}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.tip} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tip}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="schwierig" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="schwierig" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schwierige Situationen meistern
           </h2>
           <div className="space-y-3 mb-10">
@@ -190,17 +190,17 @@ export default function KommunikationMitDemenzkranken() {
                 strategie: 'Nicht ablenken oder aufheitern — das Gefühl anerkennen. "Ich sehe dass du traurig bist. Das ist in Ordnung." Körperkontakt anbieten. Nicht nach dem Grund fragen — einfach da sein.',
               },
             ].map((item) => (
-              <div key={item.situation} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#A89279] mb-1">{item.situation}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.strategie}</p>
+              <div key={item.situation} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.situation}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.strategie}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="fuer-betreuungskraefte" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="fuer-betreuungskraefte" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Besondere Tipps für 24h-Betreuungskräfte
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Eine 24h-Betreuungskraft verbringt den ganzen Tag mit dem demenzkranken Menschen — das ist besonders intensiv. Einige Dinge helfen besonders:
           </p>
           <div className="space-y-3 mb-10">
@@ -210,22 +210,22 @@ export default function KommunikationMitDemenzkranken() {
               { title: 'Pausen einplanen', desc: '24h Betreuung ist emotional intensiv. Wer sich nicht erholt, verliert die Geduld. Strukturierte Ruhephasen und regelmäßiger Kraftwechsel schützt vor Burnout.' },
               { title: 'Sprachbarriere', desc: 'Bei Betreuungskräften aus dem Ausland: Einfache Sprache, viele Gesten, Mimik und Berührung sind internationale Kommunikation — funktionieren oft besser als kompliziertes Deutsch.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Mehr:{' '}
-            <a href="/demenz-pflege-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Demenzpflege zuhause</a>
+            <a href="/demenz-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Demenzpflege zuhause</a>
             {' · '}
-            <a href="/tagesstruktur-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Tagesstruktur bei Demenz</a>
+            <a href="/tagesstruktur-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Tagesstruktur bei Demenz</a>
             {' · '}
-            <a href="/alzheimer-betreuung-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alzheimer zuhause betreuen</a>
+            <a href="/alzheimer-betreuung-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alzheimer zuhause betreuen</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie kommuniziert man mit Demenzkranken?', a: 'Kurze einfache Sätze. Augenkontakt. Nicht korrigieren. In ihre Realität einsteigen. Emotionen ernst nehmen. Berührung nutzen. Nie streiten oder auf Korrektheit bestehen.' },
@@ -234,13 +234,13 @@ export default function KommunikationMitDemenzkranken() {
               { q: 'Wie reagiert man auf ständig wiederholte Fragen?', a: 'Geduldig dieselbe Antwort geben — auch zum zehnten Mal. Die Frage kommt aus Unsicherheit, nicht böser Absicht. Manchmal hilft eine schriftliche Notiz an sichtbarer Stelle.' },
               { q: 'Kann eine Betreuungskraft die Deutsch nicht fließend spricht mit Demenzkranken kommunizieren?', a: 'Ja — im fortgeschrittenen Stadium ist Mimik, Tonfall und Berührung oft wichtiger als der Wortinhalt. Einfache, ruhige Sprache plus viel Körperkontakt funktionieren sprachübergreifend sehr gut.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

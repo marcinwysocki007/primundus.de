@@ -74,7 +74,7 @@ const LEISTUNGEN_OPTIONS = [
 // ─── Shared UI helpers ────────────────────────────────────────────────────────
 
 const inputClass =
-  'w-full border border-[#E5E3DF] rounded-xl px-4 py-3 text-[14px] text-[#3D3D3D] bg-white focus:outline-none focus:border-[#8B7355] transition-colors'
+  'w-full border border-pm-line rounded-xl px-4 py-3 text-[14px] text-[#3D3D3D] bg-white focus:outline-none focus:border-pm-taupe transition-colors'
 
 const labelClass = 'block text-[13px] font-semibold text-[#3D3D3D] mb-1.5'
 
@@ -108,10 +108,10 @@ function StepIndicator({ step }: { step: number }) {
                 className={[
                   'w-8 h-8 rounded-full flex items-center justify-center text-[13px] font-bold transition-all',
                   isDone
-                    ? 'bg-[#8B7355] text-white'
+                    ? 'bg-pm-taupe text-white'
                     : isCurrent
-                    ? 'bg-[#8B7355] text-white ring-4 ring-[#8B7355]/20'
-                    : 'bg-[#F0EDE8] text-[#A89279]',
+                    ? 'bg-pm-taupe text-white ring-4 ring-pm-taupe/20'
+                    : 'bg-pm-line-soft text-pm-taupe-light',
                 ].join(' ')}
               >
                 {isDone ? (
@@ -126,7 +126,7 @@ function StepIndicator({ step }: { step: number }) {
                 <div
                   className={[
                     'w-8 h-0.5 mx-1',
-                    n < step ? 'bg-[#8B7355]' : 'bg-[#E5E3DF]',
+                    n < step ? 'bg-pm-taupe' : 'bg-pm-line',
                   ].join(' ')}
                 />
               )}
@@ -134,7 +134,7 @@ function StepIndicator({ step }: { step: number }) {
           )
         })}
       </div>
-      <p className="text-center text-[13px] text-[#8B8B8B]">Schritt {step} von 5</p>
+      <p className="text-center text-[13px] text-pm-mute">Schritt {step} von 5</p>
     </div>
   )
 }
@@ -153,11 +153,11 @@ function NavButtons({
   onPrint: () => void
 }) {
   return (
-    <div className="flex items-center justify-between mt-8 pt-6 border-t border-[#F0EDE8]">
+    <div className="flex items-center justify-between mt-8 pt-6 border-t border-pm-line-soft">
       {step > 1 ? (
         <button
           onClick={onBack}
-          className="px-5 py-2.5 rounded-xl border border-[#E5E3DF] text-[14px] font-semibold text-[#5A5A5A] hover:border-[#8B7355] hover:text-[#8B7355] transition-colors"
+          className="px-5 py-2.5 rounded-xl border border-pm-line text-[14px] font-semibold text-[#5A5A5A] hover:border-pm-taupe hover:text-pm-taupe transition-colors"
         >
           ← Zurück
         </button>
@@ -167,14 +167,14 @@ function NavButtons({
       {step < 5 ? (
         <button
           onClick={onNext}
-          className="px-6 py-2.5 rounded-xl bg-[#8B7355] hover:bg-[#7A6347] text-white text-[14px] font-bold transition-colors"
+          className="px-6 py-2.5 rounded-xl bg-pm-taupe hover:bg-[#7A6347] text-white text-[14px] font-bold transition-colors"
         >
           Weiter →
         </button>
       ) : (
         <button
           onClick={onPrint}
-          className="px-6 py-2.5 rounded-xl bg-[#8B7355] hover:bg-[#7A6347] text-white text-[14px] font-bold transition-colors"
+          className="px-6 py-2.5 rounded-xl bg-pm-taupe hover:bg-[#7A6347] text-white text-[14px] font-bold transition-colors"
         >
           Pflegevertrag drucken / als PDF speichern
         </button>
@@ -190,7 +190,7 @@ function Step1({ data, onChange }: { data: FormData; onChange: (key: keyof FormD
     <div className="flex flex-col gap-5">
       <div>
         <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Pflegebedürftige Person</h2>
-        <p className="text-[14px] text-[#8B8B8B]">Angaben zur Person, die gepflegt wird</p>
+        <p className="text-[14px] text-pm-mute">Angaben zur Person, die gepflegt wird</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -281,7 +281,7 @@ function Step2({ data, onChange }: { data: FormData; onChange: (key: keyof FormD
     <div className="flex flex-col gap-5">
       <div>
         <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Pflegeperson</h2>
-        <p className="text-[14px] text-[#8B8B8B]">Angaben zur pflegenden Person</p>
+        <p className="text-[14px] text-pm-mute">Angaben zur pflegenden Person</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -372,7 +372,7 @@ function Step3({
     <div className="flex flex-col gap-6">
       <div>
         <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Pflegeleistungen</h2>
-        <p className="text-[14px] text-[#8B8B8B]">Welche Leistungen werden erbracht?</p>
+        <p className="text-[14px] text-pm-mute">Welche Leistungen werden erbracht?</p>
       </div>
 
       <div>
@@ -388,14 +388,14 @@ function Step3({
                 className={[
                   'flex items-center gap-3 px-4 py-3 rounded-xl border text-left text-[14px] transition-all',
                   checked
-                    ? 'border-[#8B7355] bg-[#F8F5EF] text-[#3D3D3D] font-medium'
-                    : 'border-[#E5E3DF] bg-white text-[#5A5A5A] hover:border-[#C8B99A]',
+                    ? 'border-pm-taupe bg-[#F8F5EF] text-[#3D3D3D] font-medium'
+                    : 'border-pm-line bg-white text-[#5A5A5A] hover:border-[#C8B99A]',
                 ].join(' ')}
               >
                 <span
                   className={[
                     'flex-shrink-0 w-5 h-5 rounded-md border flex items-center justify-center transition-all',
-                    checked ? 'bg-[#8B7355] border-[#8B7355]' : 'border-[#D0CBC2] bg-white',
+                    checked ? 'bg-pm-taupe border-pm-taupe' : 'border-[#D0CBC2] bg-white',
                   ].join(' ')}
                 >
                   {checked && (
@@ -452,7 +452,7 @@ function Step4({
     <div className="flex flex-col gap-5">
       <div>
         <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Vergütung & Vertrag</h2>
-        <p className="text-[14px] text-[#8B8B8B]">Vereinbarte Konditionen und Vertragslaufzeit</p>
+        <p className="text-[14px] text-pm-mute">Vereinbarte Konditionen und Vertragslaufzeit</p>
       </div>
 
       <Field label="Monatliche Vergütung (€)">
@@ -464,7 +464,7 @@ function Step4({
           value={data.verguetung}
           onChange={(e) => onChange('verguetung', e.target.value)}
         />
-        <p className="text-[12px] text-[#A89279] mt-1.5">
+        <p className="text-[12px] text-pm-taupe-light mt-1.5">
           0 € für ehrenamtliche Pflege durch Angehörige möglich
         </p>
       </Field>
@@ -515,14 +515,14 @@ function Step4({
           className={[
             'flex items-center gap-3 px-4 py-3 rounded-xl border text-left text-[14px] w-full transition-all',
             data.aufwandsersatz
-              ? 'border-[#8B7355] bg-[#F8F5EF] text-[#3D3D3D] font-medium'
-              : 'border-[#E5E3DF] bg-white text-[#5A5A5A] hover:border-[#C8B99A]',
+              ? 'border-pm-taupe bg-[#F8F5EF] text-[#3D3D3D] font-medium'
+              : 'border-pm-line bg-white text-[#5A5A5A] hover:border-[#C8B99A]',
           ].join(' ')}
         >
           <span
             className={[
               'flex-shrink-0 w-5 h-5 rounded-md border flex items-center justify-center transition-all',
-              data.aufwandsersatz ? 'bg-[#8B7355] border-[#8B7355]' : 'border-[#D0CBC2] bg-white',
+              data.aufwandsersatz ? 'bg-pm-taupe border-pm-taupe' : 'border-[#D0CBC2] bg-white',
             ].join(' ')}
           >
             {data.aufwandsersatz && (
@@ -567,13 +567,13 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
     <div className="flex flex-col gap-6">
       <div>
         <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-1">Vorschau & Download</h2>
-        <p className="text-[14px] text-[#8B8B8B]">Bitte prüfen Sie die Angaben vor dem Drucken</p>
+        <p className="text-[14px] text-pm-mute">Bitte prüfen Sie die Angaben vor dem Drucken</p>
       </div>
 
       {/* Preview card */}
-      <div className="bg-[#FDFCFA] border border-[#E5E3DF] rounded-2xl p-6 flex flex-col gap-4">
-        <div className="flex items-center gap-3 pb-4 border-b border-[#F0EDE8]">
-          <div className="w-10 h-10 rounded-xl bg-[#8B7355]/10 flex items-center justify-center flex-shrink-0">
+      <div className="bg-[#FDFCFA] border border-pm-line rounded-2xl p-6 flex flex-col gap-4">
+        <div className="flex items-center gap-3 pb-4 border-b border-pm-line-soft">
+          <div className="w-10 h-10 rounded-xl bg-pm-taupe/10 flex items-center justify-center flex-shrink-0">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <rect x="3" y="2" width="14" height="16" rx="2" stroke="#8B7355" strokeWidth="1.5" />
               <path d="M7 7h6M7 10h6M7 13h4" stroke="#8B7355" strokeWidth="1.5" strokeLinecap="round" />
@@ -581,7 +581,7 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
           </div>
           <div>
             <p className="text-[13px] font-bold text-[#3D3D3D]">PFLEGEVERTRAG</p>
-            <p className="text-[12px] text-[#8B8B8B]">
+            <p className="text-[12px] text-pm-mute">
               {data.vertragsbeginn
                 ? `Vertragsbeginn: ${formatDate(data.vertragsbeginn)}`
                 : 'Kein Vertragsbeginn angegeben'}
@@ -598,30 +598,30 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
         )}
         {data.pfPflegegrad && <PreviewRow label="Pflegegrad" value={data.pfPflegegrad} />}
 
-        <div className="my-1 border-t border-[#F0EDE8]" />
+        <div className="my-1 border-t border-pm-line-soft" />
 
         <PreviewRow label="Pflegeperson" value={ppName} />
         {data.ppBeziehung && (
           <PreviewRow label="Beziehung" value={data.ppBeziehung} />
         )}
 
-        <div className="my-1 border-t border-[#F0EDE8]" />
+        <div className="my-1 border-t border-pm-line-soft" />
 
         {data.leistungen.length > 0 && (
           <div>
-            <p className="text-[12px] font-semibold text-[#8B7355] uppercase tracking-wide mb-2">
+            <p className="text-[12px] font-semibold text-pm-taupe uppercase tracking-wide mb-2">
               Vereinbarte Leistungen
             </p>
             <ul className="flex flex-col gap-1">
               {data.leistungen.map((l) => (
                 <li key={l} className="text-[13px] text-[#3D3D3D] flex items-start gap-2">
-                  <span className="text-[#8B7355] mt-0.5">✓</span>
+                  <span className="text-pm-taupe mt-0.5">✓</span>
                   {l}
                 </li>
               ))}
               {data.weitereLeistungen && (
                 <li className="text-[13px] text-[#3D3D3D] flex items-start gap-2">
-                  <span className="text-[#8B7355] mt-0.5">✓</span>
+                  <span className="text-pm-taupe mt-0.5">✓</span>
                   {data.weitereLeistungen}
                 </li>
               )}
@@ -631,7 +631,7 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
 
         {data.haeufigkeit && <PreviewRow label="Häufigkeit" value={data.haeufigkeit} />}
 
-        <div className="my-1 border-t border-[#F0EDE8]" />
+        <div className="my-1 border-t border-pm-line-soft" />
 
         <PreviewRow label="Vergütung" value={verguetungText} />
         {data.zahlungstag && (
@@ -648,7 +648,7 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
       {/* Print button */}
       <button
         onClick={onPrint}
-        className="w-full py-4 rounded-xl bg-[#8B7355] hover:bg-[#7A6347] text-white text-[15px] font-bold transition-colors shadow-sm"
+        className="w-full py-4 rounded-xl bg-pm-taupe hover:bg-[#7A6347] text-white text-[15px] font-bold transition-colors shadow-sm"
       >
         Pflegevertrag drucken / als PDF speichern
       </button>
@@ -667,7 +667,7 @@ function Step5({ data, onPrint }: { data: FormData; onPrint: () => void }) {
 function PreviewRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex justify-between gap-4">
-      <span className="text-[12px] text-[#8B8B8B] flex-shrink-0">{label}</span>
+      <span className="text-[12px] text-pm-mute flex-shrink-0">{label}</span>
       <span className="text-[13px] font-medium text-[#3D3D3D] text-right">{value}</span>
     </div>
   )
@@ -1019,19 +1019,19 @@ export default function PflegevertragClient() {
   }
 
   return (
-    <div className="bg-[#F8F7F5] min-h-screen">
+    <div className="bg-pm-paper min-h-screen">
       <div className="max-w-[680px] mx-auto px-5 py-10">
 
         {/* Page heading */}
         <div className="mb-8">
-          <nav className="text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+            <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
             <span>›</span>
             <span className="text-[#3D3D3D]">Pflegevertrag-Generator</span>
           </nav>
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#8B7355] mb-2">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe mb-2">
             Kostenlos · Kein Konto nötig
           </p>
           <h1 className="text-[28px] md:text-[36px] font-bold text-[#3D3D3D] leading-tight mb-3">
@@ -1047,7 +1047,7 @@ export default function PflegevertragClient() {
         </div>
 
         {/* Form card */}
-        <div className="bg-white border border-[#E5E3DF] rounded-2xl px-6 py-8 shadow-sm">
+        <div className="bg-white border border-pm-line rounded-2xl px-6 py-8 shadow-sm">
           <StepIndicator step={step} />
 
           {step === 1 && <Step1 data={form} onChange={handleChange} />}
@@ -1081,8 +1081,8 @@ export default function PflegevertragClient() {
         {/* Trust signals */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {['Kostenlos & ohne Anmeldung', 'Kein Datenspeicher — lokal im Browser', 'Sofort als PDF druckbar'].map((t) => (
-            <span key={t} className="flex items-center gap-1.5 text-[12px] text-[#8B8B8B]">
-              <span className="text-[#8B7355]">✓</span>
+            <span key={t} className="flex items-center gap-1.5 text-[12px] text-pm-mute">
+              <span className="text-pm-taupe">✓</span>
               {t}
             </span>
           ))}

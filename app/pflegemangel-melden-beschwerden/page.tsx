@@ -67,35 +67,35 @@ export default function PflegemangelMeldenBeschwerden() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/rechtliches" className="hover:text-[#8B7355] transition-colors">Rechtliches</a>
+            <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegemangel melden</span>
+            <span className="text-pm-ink">Pflegemangel melden</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegemangel melden — Beschwerden richtig einreichen
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Wer Pflegemängel erlebt — schlechte Versorgung, Vernachlässigung, unwürdige Behandlung — hat das Recht etwas dagegen zu tun. Dieser Ratgeber zeigt wann und wie man Beschwerden einreicht, an wen man sich wendet, und welche Stellen in Deutschland zuständig sind.
           </p>
 
-          <h2 id="wann-melden" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="wann-melden" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Wann eine Beschwerde sinnvoll ist
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Nicht jede Unzufriedenheit rechtfertigt sofort eine formelle Beschwerde — manchmal hilft ein direktes Gespräch. Aber in bestimmten Situationen ist schnelles Handeln nötig.
           </p>
           <div className="space-y-3 mb-10">
@@ -103,11 +103,11 @@ export default function PflegemangelMeldenBeschwerden() {
               { situation: 'Sofort handeln — akute Gefahr', items: ['Körperliche oder psychische Gewalt gegen Pflegebedürftigen', 'Grobe Vernachlässigung (kein Essen, keine Pflege)', 'Medikamentenfehler mit Auswirkungen', 'Freiheitsentzug ohne rechtliche Grundlage'], dringend: true },
               { situation: 'Eskalation wenn direktes Gespräch scheitert', items: ['Wiederholt schlechte Pflege trotz Hinweis', 'Nicht eingehaltene Leistungsvereinbarungen', 'Unzumutbare Wohnverhältnisse der Pflegekraft', 'Abrechnungsprobleme und Intransparenz'], dringend: false },
             ].map((block) => (
-              <div key={block.situation} className={`rounded-2xl p-5 border ${block.dringend ? 'bg-[#FDF0EE] border-[rgba(231,111,99,0.2)]' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className={`text-[12px] font-bold uppercase tracking-[0.08em] mb-3 ${block.dringend ? 'text-[#8B3E2F]' : 'text-[#A89279]'}`}>{block.situation}</p>
+              <div key={block.situation} className={`rounded-2xl p-5 border ${block.dringend ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.2)]' : 'bg-white border-pm-line'}`}>
+                <p className={`text-[12px] font-bold uppercase tracking-[0.08em] mb-3 ${block.dringend ? 'text-pm-coral-ink' : 'text-pm-taupe-light'}`}>{block.situation}</p>
                 <ul className="space-y-1.5">
                   {block.items.map(item => (
-                    <li key={item} className={`text-[14px] flex gap-2 ${block.dringend ? 'text-[#8B3E2F]' : 'text-[#2E2E2E]'}`}>
+                    <li key={item} className={`text-[14px] flex gap-2 ${block.dringend ? 'text-pm-coral-ink' : 'text-pm-body'}`}>
                       <span className="flex-shrink-0 mt-0.5">{block.dringend ? '!' : '→'}</span>{item}
                     </li>
                   ))}
@@ -116,7 +116,7 @@ export default function PflegemangelMeldenBeschwerden() {
             ))}
           </div>
 
-          <h2 id="an-wen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="an-wen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             An wen wendet man sich?
           </h2>
           <div className="space-y-3 mb-10">
@@ -152,18 +152,18 @@ export default function PflegemangelMeldenBeschwerden() {
                 primaer: false,
               },
             ].map((item) => (
-              <div key={item.stelle} className={`rounded-xl p-5 border ${item.primaer ? 'bg-white border-[#8B7355] border-2' : 'bg-white border-[#E5E3DF]'}`}>
+              <div key={item.stelle} className={`rounded-xl p-5 border ${item.primaer ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
                 <div className="flex items-start justify-between gap-3 mb-1">
-                  <p className="text-[15px] font-bold text-[#1C1C1C]">{item.stelle}</p>
-                  {item.primaer && <span className="bg-[#F2EDE6] text-[#8B7355] text-[11px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">Erste Anlaufstelle</span>}
+                  <p className="text-[15px] font-bold text-pm-ink">{item.stelle}</p>
+                  {item.primaer && <span className="bg-pm-shell text-pm-taupe text-[11px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">Erste Anlaufstelle</span>}
                 </div>
-                <p className="text-[12px] font-semibold text-[#8B7355] mb-1">{item.kontakt}</p>
-                <p className="text-[13px] text-[#2E2E2E] leading-relaxed">{item.wann}</p>
+                <p className="text-[12px] font-semibold text-pm-taupe mb-1">{item.kontakt}</p>
+                <p className="text-[13px] text-pm-body leading-relaxed">{item.wann}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="wie-melden" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wie-melden" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie eine Beschwerde einreichen — Schritt für Schritt
           </h2>
           <ol className="space-y-3 mb-10">
@@ -174,35 +174,35 @@ export default function PflegemangelMeldenBeschwerden() {
               { n: '4', title: 'Externe Stelle einschalten', desc: 'Bei schwerwiegenden Mängeln oder ausbleibendem Ergebnis: Pflegekasse, Pflegestützpunkt oder Heimaufsicht informieren.' },
               { n: '5', title: 'Bei akuter Gefahr: sofort', desc: 'Körperliche Gewalt oder akute Vernachlässigung sofort der Polizei melden (110) und Pflegekasse informieren.' },
             ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF] list-none">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
+              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{step.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{step.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
                 </div>
               </li>
             ))}
           </ol>
 
-          <h2 id="heimaufsicht" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="heimaufsicht" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Heimaufsicht & Medizinischer Dienst
           </h2>
           <div className="space-y-3 mb-10">
-            <div className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-              <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">Heimaufsicht — zuständig für stationäre Pflege</p>
-              <p className="text-[14px] text-[#2E2E2E] leading-relaxed">Jedes Bundesland hat eine Heimaufsichtsbehörde die Pflegeheime überwacht. Bei Beschwerden über ein Pflegeheim: Heimaufsicht des zuständigen Bundeslandes kontaktieren. Diese kann unangekündigte Kontrollen durchführen und Maßnahmen anordnen.</p>
+            <div className="bg-white rounded-xl p-5 border border-pm-line">
+              <p className="text-[15px] font-bold text-pm-ink mb-2">Heimaufsicht — zuständig für stationäre Pflege</p>
+              <p className="text-[14px] text-pm-body leading-relaxed">Jedes Bundesland hat eine Heimaufsichtsbehörde die Pflegeheime überwacht. Bei Beschwerden über ein Pflegeheim: Heimaufsicht des zuständigen Bundeslandes kontaktieren. Diese kann unangekündigte Kontrollen durchführen und Maßnahmen anordnen.</p>
             </div>
-            <div className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-              <p className="text-[15px] font-bold text-[#1C1C1C] mb-2">Medizinischer Dienst (MD) — prüft ambulante und stationäre Pflege</p>
-              <p className="text-[14px] text-[#2E2E2E] leading-relaxed">Der MD prüft regelmäßig Qualität von Pflegeeinrichtungen und ambulanten Diensten. Beschwerden können über md-bund.de eingereicht werden. Bei begründetem Verdacht: Sonderprüfung möglich.</p>
+            <div className="bg-white rounded-xl p-5 border border-pm-line">
+              <p className="text-[15px] font-bold text-pm-ink mb-2">Medizinischer Dienst (MD) — prüft ambulante und stationäre Pflege</p>
+              <p className="text-[14px] text-pm-body leading-relaxed">Der MD prüft regelmäßig Qualität von Pflegeeinrichtungen und ambulanten Diensten. Beschwerden können über md-bund.de eingereicht werden. Bei begründetem Verdacht: Sonderprüfung möglich.</p>
             </div>
-            <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-xl p-5">
-              <p className="text-[14px] font-bold text-[#2A5C3F] mb-1">Kostenlose Beratung: Pflegestützpunkt</p>
-              <p className="text-[14px] text-[#2A5C3F] leading-relaxed">Pflegestützpunkte in jedem Bundesland bieten kostenlose, unabhängige Beratung — auch bei Beschwerden und Konflikten. Lokalen Stützpunkt finden: pflegestuetzpunkte.de</p>
+            <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-xl p-5">
+              <p className="text-[14px] font-bold text-pm-green-deep mb-1">Kostenlose Beratung: Pflegestützpunkt</p>
+              <p className="text-[14px] text-pm-green-deep leading-relaxed">Pflegestützpunkte in jedem Bundesland bieten kostenlose, unabhängige Beratung — auch bei Beschwerden und Konflikten. Lokalen Stützpunkt finden: pflegestuetzpunkte.de</p>
             </div>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wo kann man Pflegemängel melden?', a: 'Bei häuslicher Pflege: zunächst direkt bei der Agentur (Primundus: 089 200 000 830), dann bei der Pflegekasse. Bei Pflegeheimen: Heimaufsicht des Bundeslandes und Medizinischer Dienst. Für Beratung: Pflegestützpunkt kostenlos und unabhängig.' },
@@ -210,13 +210,13 @@ export default function PflegemangelMeldenBeschwerden() {
               { q: 'Was tun wenn jemand in einem Pflegeheim vernachlässigt wird?', a: 'Vorfälle dokumentieren, mit Heimleitung sprechen. Wenn ohne Ergebnis: Heimaufsicht des Bundeslandes einschalten. Bei akuter Gefahr: Polizei (110) und Pflegekasse informieren.' },
               { q: 'Ist eine Beschwerde beim MD kostenlos?', a: 'Ja — der Medizinische Dienst nimmt Beschwerden kostenlos entgegen. Auch Pflegestützpunkte beraten kostenlos.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

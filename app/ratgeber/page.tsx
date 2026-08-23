@@ -209,18 +209,18 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Ratgeber</span>
           </nav>
 
           {/* Eyebrow + H1 + Intro */}
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-3">
             Ratgeber
           </p>
           <h1 className="text-[30px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-5">
@@ -235,14 +235,14 @@ export default function Page() {
             {categories.map((cat) => (
               <div
                 key={cat.href}
-                className="bg-white border border-[#E5E3DF] rounded-2xl shadow-sm hover:shadow-md hover:border-[#C9B89A] transition-all p-6 flex flex-col"
+                className="bg-white border border-pm-line rounded-2xl shadow-sm hover:shadow-md hover:border-[#C9B89A] transition-all p-6 flex flex-col"
               >
                 {/* Card header */}
                 <div className="flex items-start gap-3 mb-3">
                   <div className="mt-0.5 shrink-0">{cat.icon}</div>
                   <div>
                     <p className="text-[17px] font-bold text-[#3D3D3D] leading-snug">{cat.title}</p>
-                    <p className="text-[13px] text-[#8B8B8B] mt-0.5 leading-snug">{cat.description}</p>
+                    <p className="text-[13px] text-pm-mute mt-0.5 leading-snug">{cat.description}</p>
                   </div>
                 </div>
 
@@ -252,7 +252,7 @@ export default function Page() {
                     <li key={article.href}>
                       <a
                         href={article.href}
-                        className="text-[13px] text-[#5A5A5A] hover:text-[#8B7355] transition-colors"
+                        className="text-[13px] text-[#5A5A5A] hover:text-pm-taupe transition-colors"
                       >
                         › {article.label}
                       </a>
@@ -264,7 +264,7 @@ export default function Page() {
                 <div className="mt-auto flex justify-end">
                   <a
                     href={cat.href}
-                    className="text-[13px] font-medium text-[#8B7355] hover:text-[#7D6848] transition-colors"
+                    className="text-[13px] font-medium text-pm-taupe hover:text-[#7D6848] transition-colors"
                   >
                     Alle Artikel →
                   </a>
@@ -276,13 +276,13 @@ export default function Page() {
           {/* Tools Teaser */}
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-12">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-widest text-[#A89279] mb-1">Tools</p>
+              <p className="text-[11px] font-bold uppercase tracking-widest text-pm-taupe-light mb-1">Tools</p>
               <p className="text-[15px] font-semibold text-[#3D3D3D]">Kostenrechner, Pflegegrad-Rechner & mehr</p>
               <p className="text-[13px] text-[#5A5A5A] mt-0.5">Interaktive Rechner für Ihre Pflegesituation</p>
             </div>
             <a
               href="/tools"
-              className="shrink-0 inline-flex items-center gap-2 text-[14px] font-semibold text-[#8B7355] hover:text-[#7D6848] transition-colors whitespace-nowrap"
+              className="shrink-0 inline-flex items-center gap-2 text-[14px] font-semibold text-pm-taupe hover:text-[#7D6848] transition-colors whitespace-nowrap"
             >
               Zu den Tools →
             </a>

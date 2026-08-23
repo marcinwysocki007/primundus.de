@@ -73,24 +73,24 @@ export default function VierUndZwanzigStundenPflege() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">24-Stunden-Pflege</span>
+            <span className="text-pm-ink">24-Stunden-Pflege</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             Testsieger DIE WELT · 20 Jahre Erfahrung · 60.000+ Betreuungen
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             24-Stunden-Pflege — geprüft, rechtssicher & täglich kündbar
           </h1>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT.
           </p>
 
@@ -99,8 +99,8 @@ export default function VierUndZwanzigStundenPflege() {
           </KurzAntwort>
 
           {/* USP-Box */}
-          <div className="bg-white border-2 border-[#8B7355] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Warum Primundus?</p>
+          <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Warum Primundus?</p>
             <div className="grid md:grid-cols-2 gap-3">
               {[
                 { icon: '★', title: 'Testsieger DIE WELT', desc: 'Nr. 1 der Pflegekräfte-Vermittler — Service-Studie DIE WELT/ServiceValue 2021' },
@@ -111,10 +111,10 @@ export default function VierUndZwanzigStundenPflege() {
                 { icon: '♥', title: 'Persönliche Beratung', desc: 'Marta Kapcio & Team, Mo – So 8 – 20 Uhr, 7 Tage/Woche erreichbar' },
               ].map((usp) => (
                 <div key={usp.title} className="flex items-start gap-3">
-                  <span className="text-[#8B7355] text-[18px] flex-shrink-0 w-6 text-center">{usp.icon}</span>
+                  <span className="text-pm-taupe text-[18px] flex-shrink-0 w-6 text-center">{usp.icon}</span>
                   <div>
-                    <p className="text-[14px] font-bold text-[#1C1C1C]">{usp.title}</p>
-                    <p className="text-[13px] text-[#8B8B8B]">{usp.desc}</p>
+                    <p className="text-[14px] font-bold text-pm-ink">{usp.title}</p>
+                    <p className="text-[13px] text-pm-mute">{usp.desc}</p>
                   </div>
                 </div>
               ))}
@@ -122,25 +122,25 @@ export default function VierUndZwanzigStundenPflege() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="was-ist" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist 24-Stunden-Pflege?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht dauerhaft in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort. Sie übernimmt Grundpflege, Haushaltsführung und Gesellschaft — und ermöglicht es, im eigenen Zuhause zu bleiben statt ins Pflegeheim zu wechseln.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             In Deutschland nutzen schätzungsweise 300.000 bis 400.000 Haushalte eine 24h-Betreuung durch Kräfte aus EU-Ländern. Von den rund 6 Millionen Pflegebedürftigen werden 86 Prozent zu Hause versorgt — 24h-Pflege ist damit die intensivste Form der häuslichen Betreuung.
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Ausführliche Erklärung:{' '}
-            <a href="/was-ist-24-stunden-pflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was ist 24-Stunden-Pflege? — alle Fakten</a>
+            <a href="/was-ist-24-stunden-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was ist 24-Stunden-Pflege? — alle Fakten</a>
           </p>
 
           {/* SECTION 2 */}
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was leistet Primundus?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Bei Primundus gibt es keinen Vermittler dazwischen: Die Betreuungskräfte sind bei uns angestellt. Wir wählen die Kraft aus, die zu Ihrer Situation passt, und entsenden sie im rechtssicheren Entsendemodell mit A1-Bescheinigung zu Ihnen nach Hause. Ein Ansprechpartner, ein Vertrag, klare Verantwortung.
           </p>
           <div className="space-y-3 mb-6">
@@ -151,37 +151,37 @@ export default function VierUndZwanzigStundenPflege() {
               { title: 'Qualitätssicherung', desc: 'Regelmäßiger Kontakt mit Primundus, Qualitätschecks, nahtloser Kraftwechsel alle 6–8 Wochen.' },
               { title: 'Ersatzkraft bei Ausfall', desc: 'Wird die Betreuungskraft krank oder fällt aus — Primundus stellt sofort Ersatz. Kein Versorgungsausfall.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Vollständige Leistungsübersicht:{' '}
-            <a href="/leistungen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was Primundus leistet</a>
+            <a href="/leistungen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was Primundus leistet</a>
             {' · '}
-            <a href="/rechtssicher" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Rechtssicherheit & Entsendemodell</a>
+            <a href="/rechtssicher" className="text-pm-taupe underline hover:text-pm-taupe-deep">Rechtssicherheit & Entsendemodell</a>
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Kosten & Kassenzuschüsse 2026
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Die monatlichen Kosten liegen bei 2.200–3.500 Euro je nach Pflegebedarf. Mit Kassenzuschüssen sinkt der Eigenanteil deutlich — und ist oft günstiger als ein Pflegeheim.
           </p>
 
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Kassenzuschüsse 2026 — Pflegegeld je Pflegegrad</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Kassenzuschüsse 2026 — Pflegegeld je Pflegegrad</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Pflegegrad', 'Pflegegeld/Monat', '+ Entlastungsbetrag', 'Entlastungsbudget/Jahr'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -192,35 +192,35 @@ export default function VierUndZwanzigStundenPflege() {
                     ['PG 4', '800 €', '131 €', '3.539 €'],
                     ['PG 5', '990 €', '131 €', '3.539 €'],
                   ].map(([grad, pg, eb, budget], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{grad}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{eb}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{budget}</td>
+                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{eb}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{budget}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Stand 2026 · Entlastungsbudget: gemeinsames Budget für Verhinderungs- und Kurzzeitpflege seit Juli 2025</p>
+              <p className="text-[11px] text-pm-mute">Stand 2026 · Entlastungsbudget: gemeinsames Budget für Verhinderungs- und Kurzzeitpflege seit Juli 2025</p>
             </div>
           </div>
 
-          <p className="text-[15px] text-[#2E2E2E] mb-3">
+          <p className="text-[15px] text-pm-body mb-3">
             → Alle Kosten im Detail:{' '}
-            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Was kostet 24h-Pflege? — vollständige Übersicht</a>
+            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was kostet 24h-Pflege? — vollständige Übersicht</a>
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Alle Zuschüsse optimal nutzen:{' '}
-            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung — alle Kassenzuschüsse 2026</a>
+            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung — alle Kassenzuschüsse 2026</a>
           </p>
 
           {/* SECTION 4 */}
-          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Ablauf — in 4–7 Tagen zur Betreuungskraft
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Von der ersten Anfrage bis zur Anreise der Betreuungskraft vergehen bei Primundus typischerweise 4 bis 7 Tage.
           </p>
           <ol className="space-y-3 mb-6">
@@ -231,35 +231,35 @@ export default function VierUndZwanzigStundenPflege() {
               { n: '4', title: 'Anreise & Start', desc: 'Betreuungskraft trifft ein, Angehörige übergeben alle relevanten Informationen.' },
               { n: '5', title: 'Laufende Betreuung', desc: 'Qualitätssicherung durch Primundus, Kraftwechsel alle 6–8 Wochen, Ersatz bei Ausfall.' },
             ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF] list-none">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
+              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{step.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{step.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
                 </div>
               </li>
             ))}
           </ol>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Schritt für Schritt erklärt:{' '}
-            <a href="/ablauf" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Ablauf der 24h-Pflege bei Primundus</a>
+            <a href="/ablauf" className="text-pm-taupe underline hover:text-pm-taupe-deep">Ablauf der 24h-Pflege bei Primundus</a>
           </p>
 
           {/* SECTION 5 */}
-          <h2 id="vorteile" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="vorteile" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vorteile gegenüber dem Pflegeheim
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Der Eigenanteil im Pflegeheim liegt bundesweit bei durchschnittlich 3.364 Euro pro Monat (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — und steigt jährlich. 24h-Pflege zuhause ist damit oft nicht teurer, bietet aber deutlich mehr.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">Kriterium</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B7355] text-left border-b border-[#E5E3DF]">24h-Pflege zuhause</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">Pflegeheim</th>
+                  <tr className="bg-pm-paper">
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Kriterium</th>
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-taupe text-left border-b border-pm-line">24h-Pflege zuhause</th>
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Pflegeheim</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -271,23 +271,23 @@ export default function VierUndZwanzigStundenPflege() {
                     ['Angehörige einbinden', '✓ Jederzeit möglich', 'Besuchszeiten'],
                     ['Kündigung', 'Täglich möglich', 'Meist Kündigungsfristen'],
                   ].map(([kriterium, zuhause, heim], i) => (
-                    <tr key={kriterium} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{kriterium}</td>
-                      <td className="px-5 py-3 text-[14px] text-[#3D7A5C] font-medium border-b border-[#E5E3DF]">{zuhause}</td>
-                      <td className="px-5 py-3 text-[14px] text-[#8B8B8B] border-b border-[#E5E3DF]">{heim}</td>
+                    <tr key={kriterium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{kriterium}</td>
+                      <td className="px-5 py-3 text-[14px] text-pm-green font-medium border-b border-pm-line">{zuhause}</td>
+                      <td className="px-5 py-3 text-[14px] text-pm-mute border-b border-pm-line">{heim}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Detaillierter Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zur 24-Stunden-Pflege
           </h2>
           <div className="space-y-4 mb-12">
@@ -299,13 +299,13 @@ export default function VierUndZwanzigStundenPflege() {
               { q: 'Warum ist Primundus Testsieger?', a: 'Primundus wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Nr. 1 der Pflegekräfte-Vermittler ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
               { q: 'Was passiert wenn die Betreuungskraft krank wird?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke. Das ist einer der zentralen Vorteile der Agenturvermittlung.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}
@@ -313,44 +313,44 @@ export default function VierUndZwanzigStundenPflege() {
 
           {/* Weitere Artikel */}
           <div className="mt-12 mb-4">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-2">Alle Artikel zur 24h-Pflege</p>
-            <h2 className="text-[22px] font-bold text-[#1C1C1C] mb-6">Weitere Themen im Überblick</h2>
+            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Alle Artikel zur 24h-Pflege</p>
+            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Weitere Themen im Überblick</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Grundlagen */}
-              <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
+              <div className="bg-white border border-pm-line rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Grundlagen</p>
-                <a href="/was-ist-24-stunden-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Was ist 24h-Pflege?</a>
-                <a href="/wann-brauche-ich-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Wann brauche ich 24h-Pflege?</a>
-                <a href="/vorteile-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Vorteile der 24h-Pflege</a>
-                <a href="/nachteile-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Nachteile ehrlich betrachtet</a>
+                <a href="/was-ist-24-stunden-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Was ist 24h-Pflege?</a>
+                <a href="/wann-brauche-ich-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Wann brauche ich 24h-Pflege?</a>
+                <a href="/vorteile-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Vorteile der 24h-Pflege</a>
+                <a href="/nachteile-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Nachteile ehrlich betrachtet</a>
               </div>
 
               {/* Ablauf & Organisation */}
-              <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
+              <div className="bg-white border border-pm-line rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Ablauf & Organisation</p>
-                <a href="/ablauf" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› So läuft's ab</a>
-                <a href="/24h-pflege-organisieren" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege organisieren</a>
-                <a href="/pflegekraft-finden" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegekraft finden</a>
-                <a href="/checkliste-pflegekraft-einstellen" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Checkliste: Pflegekraft einstellen</a>
+                <a href="/ablauf" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› So läuft's ab</a>
+                <a href="/24h-pflege-organisieren" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› 24h-Pflege organisieren</a>
+                <a href="/pflegekraft-finden" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegekraft finden</a>
+                <a href="/checkliste-pflegekraft-einstellen" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Checkliste: Pflegekraft einstellen</a>
               </div>
 
               {/* Vergleiche */}
-              <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
+              <div className="bg-white border border-pm-line rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Vergleiche</p>
-                <a href="/24h-pflege-vs-pflegeheim" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim</a>
-                <a href="/24h-pflege-vs-ambulante-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› vs. ambulante Pflege</a>
-                <a href="/selbst-pflegen-oder-24h-pflege" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Selbst pflegen oder 24h-Pflege?</a>
-                <a href="/tagespflege-vs-24h-betreuung" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› vs. Tagespflege</a>
+                <a href="/24h-pflege-vs-pflegeheim" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim</a>
+                <a href="/24h-pflege-vs-ambulante-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› vs. ambulante Pflege</a>
+                <a href="/selbst-pflegen-oder-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Selbst pflegen oder 24h-Pflege?</a>
+                <a href="/tagespflege-vs-24h-betreuung" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› vs. Tagespflege</a>
               </div>
 
               {/* Pflegekräfte */}
-              <div className="bg-white border border-[#E5E3DF] rounded-xl p-4">
+              <div className="bg-white border border-pm-line rounded-xl p-4">
                 <p className="text-[14px] font-bold text-[#3D3D3D] mb-2">Pflegekräfte</p>
-                <a href="/pflegekraft-aus-rumaenien" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› Pflegekraft aus Rumänien</a>
-                <a href="/pflegekraft-aus-polen" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› aus Polen</a>
-                <a href="/pflegekraft-aus-bulgarien" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› aus Bulgarien</a>
-                <a href="/eu-pflegekraft-rechte-pflichten" className="text-[13px] text-[#8B7355] hover:underline block py-0.5">› EU-Pflegekraft: Rechte & Pflichten</a>
+                <a href="/pflegekraft-aus-rumaenien" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegekraft aus Rumänien</a>
+                <a href="/pflegekraft-aus-polen" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› aus Polen</a>
+                <a href="/pflegekraft-aus-bulgarien" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› aus Bulgarien</a>
+                <a href="/eu-pflegekraft-rechte-pflichten" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› EU-Pflegekraft: Rechte & Pflichten</a>
               </div>
             </div>
           </div>

@@ -130,7 +130,7 @@ export default function Page() {
       <VollmachtClient />
 
       {/* SEO Content Section */}
-      <div className="bg-[#F8F7F5]">
+      <div className="bg-pm-paper">
         <div className="max-w-[720px] mx-auto px-5 pb-16">
 
           {/* Was regelt eine Vorsorgevollmacht */}
@@ -145,7 +145,7 @@ export default function Page() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {vollmachtBereiche.map((item) => (
-                <div key={item.title} className="bg-white border border-[#E5E3DF] rounded-xl px-5 py-4">
+                <div key={item.title} className="bg-white border border-pm-line rounded-xl px-5 py-4">
                   <p className="text-[14px] font-bold text-[#3D3D3D] mb-1 flex items-center gap-2">
                     <span>{item.icon}</span>
                     <span>{item.title}</span>
@@ -165,13 +165,13 @@ export default function Page() {
               {vollmachtFaqs.map((faq) => (
                 <details
                   key={faq.q}
-                  className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden group"
+                  className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
                     <span className="text-[14px] font-semibold text-[#3D3D3D] leading-snug">{faq.q}</span>
-                    <span className="text-[#8B7355] text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
+                    <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">+</span>
                   </summary>
-                  <div className="px-5 pb-4 pt-1 border-t border-[#F0EDE8]">
+                  <div className="px-5 pb-4 pt-1 border-t border-pm-line-soft">
                     <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
@@ -193,10 +193,10 @@ export default function Page() {
                   key={item.href}
                   href={item.href}
                   {...('external' in item && item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="bg-white border border-[#E5E3DF] rounded-xl px-4 py-3.5 hover:border-[#8B7355] transition-colors"
+                  className="bg-white border border-pm-line rounded-xl px-4 py-3.5 hover:border-pm-taupe transition-colors"
                 >
                   <p className="text-[14px] font-semibold text-[#3D3D3D] mb-0.5">→ {item.label}</p>
-                  <p className="text-[12px] text-[#8B8B8B]">{item.desc}</p>
+                  <p className="text-[12px] text-pm-mute">{item.desc}</p>
                 </a>
               ))}
             </div>

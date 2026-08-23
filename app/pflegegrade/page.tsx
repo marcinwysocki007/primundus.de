@@ -54,20 +54,20 @@ export default function Pflegegrade() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Pflegegrade</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             RATGEBER
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -86,10 +86,10 @@ export default function Pflegegrade() {
               { grad: 'PG 4', href: '/pflegegrad-4', betrag: '800 €/Mo', label: 'Pflegegeld' },
               { grad: 'PG 5', href: '/pflegegrad-5', betrag: '990 €/Mo', label: 'Pflegegeld' },
             ].map((item) => (
-              <a key={item.grad} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-4 text-center hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[18px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors">{item.grad}</p>
-                <p className="text-[15px] font-bold text-[#3D7A5C] mt-1">{item.betrag}</p>
-                <p className="text-[11px] text-[#8B8B8B] mt-0.5">{item.label}</p>
+              <a key={item.grad} href={item.href} className="bg-white border border-pm-line rounded-xl p-4 text-center hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[18px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors">{item.grad}</p>
+                <p className="text-[15px] font-bold text-pm-green mt-1">{item.betrag}</p>
+                <p className="text-[11px] text-pm-mute mt-0.5">{item.label}</p>
               </a>
             ))}
           </div>
@@ -104,21 +104,21 @@ export default function Pflegegrade() {
               { grad: 'Pflegegrad 4', punkte: '70–89,9', titel: 'Schwerste Beeinträchtigung', desc: 'Vollständige oder nahezu vollständige Abhängigkeit bei Körperpflege, Mobilität und Haushalt. Intensive 24h-Betreuung notwendig.', href: '/pflegegrad-4', pg: '800 €/Mo', eb: '131 €/Mo' },
               { grad: 'Pflegegrad 5', punkte: '90–100', titel: 'Schwerste Beeinträchtigung + besondere Anforderungen', desc: 'Vollständige Abhängigkeit mit besonders hohem Pflegeaufwand — z.B. Beatmungspflege oder schwerste Demenz.', href: '/pflegegrad-5', pg: '990 €/Mo', eb: '131 €/Mo' },
             ].map((item) => (
-              <a key={item.grad} href={item.href} className="block bg-white border border-[#E5E3DF] rounded-2xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
+              <a key={item.grad} href={item.href} className="block bg-white border border-pm-line rounded-2xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-1">
-                      <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors">{item.grad}</p>
-                      <span className="text-[11px] text-[#8B8B8B] bg-[#F8F7F5] px-2 py-0.5 rounded-full">{item.punkte} Punkte</span>
+                      <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors">{item.grad}</p>
+                      <span className="text-[11px] text-pm-mute bg-pm-paper px-2 py-0.5 rounded-full">{item.punkte} Punkte</span>
                     </div>
-                    <p className="text-[12px] font-semibold text-[#A89279] mb-1.5">{item.titel}</p>
+                    <p className="text-[12px] font-semibold text-pm-taupe-light mb-1.5">{item.titel}</p>
                     <p className="text-[13px] text-[#5A5A5A] leading-relaxed">{item.desc}</p>
                   </div>
                   <div className="text-right flex-shrink-0">
-                    <p className="text-[15px] font-bold text-[#3D7A5C]">{item.pg}</p>
-                    <p className="text-[11px] text-[#8B8B8B]">Pflegegeld</p>
-                    <p className="text-[13px] font-semibold text-[#8B7355] mt-1">{item.eb}</p>
-                    <p className="text-[11px] text-[#8B8B8B]">Entlastung</p>
+                    <p className="text-[15px] font-bold text-pm-green">{item.pg}</p>
+                    <p className="text-[11px] text-pm-mute">Pflegegeld</p>
+                    <p className="text-[13px] font-semibold text-pm-taupe mt-1">{item.eb}</p>
+                    <p className="text-[11px] text-pm-mute">Entlastung</p>
                   </div>
                 </div>
               </a>
@@ -134,9 +134,9 @@ export default function Pflegegrade() {
               { titel: 'Pflegekasse Antrag stellen', href: '/pflegekasse-antrag-stellen', desc: 'Vollständige Anleitung: Antrag, Fristen, Formulare und was danach passiert.' },
               { titel: 'MDK-Begutachtung — Tipps', href: '/mdk-begutachtung-tipps', desc: 'Insider-Tipps vom Gutachtertermin — was Familien wissen müssen.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -150,9 +150,9 @@ export default function Pflegegrade() {
               { titel: 'Pflegegrad Änderung melden', href: '/pflegegrad-aenderung-melden', desc: 'Wann und wie Änderungen der Pflegesituation der Pflegekasse gemeldet werden.' },
               { titel: 'Pflegegrade 2025 — alle Änderungen', href: '/pflegegrade-2025', desc: 'Was sich 2025 bei Pflegegraden und Leistungsbeträgen verändert hat.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -166,25 +166,25 @@ export default function Pflegegrade() {
               { titel: 'Pflegegrad nach Schlaganfall', href: '/pflegegrad-nach-schlaganfall', desc: 'Welcher Pflegegrad nach dem Schlaganfall und wie man die Rehabilitationsphase nutzt.' },
               { titel: 'Pflegegrad ohne Diagnose', href: '/pflegegrad-ohne-diagnose', desc: 'Auch ohne feste Diagnose kann ein Pflegegrad beantragt werden — so geht es.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Leistungsbeträge Tabelle */}
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Alle Leistungen & Beträge 2026</h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-4 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Leistungen nach Pflegegrad 2026</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-4 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Leistungen nach Pflegegrad 2026</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Leistung', 'PG 1', 'PG 2', 'PG 3', 'PG 4', 'PG 5'].map(h => (
-                      <th key={h} className="px-3 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-3 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -196,10 +196,10 @@ export default function Pflegegrade() {
                     ['Entlastungsbudget/Jahr', '—', '3.539 €', '3.539 €', '3.539 €', '3.539 €'],
                     ['Pflegehilfsmittel/Monat', '42 €', '42 €', '42 €', '42 €', '42 €'],
                   ].map(([leistung, ...werte], i) => (
-                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-3 py-3 text-[13px] font-semibold text-[#3D3D3D] border-b border-[#E5E3DF]">{leistung}</td>
+                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-3 py-3 text-[13px] font-semibold text-[#3D3D3D] border-b border-pm-line">{leistung}</td>
                       {werte.map((w, j) => (
-                        <td key={j} className={`px-3 py-3 text-[13px] border-b border-[#E5E3DF] whitespace-nowrap tabular-nums text-right ${w === '—' ? 'text-[#C8C3BA]' : 'text-[#3D7A5C] font-bold'}`}>{w}</td>
+                        <td key={j} className={`px-3 py-3 text-[13px] border-b border-pm-line whitespace-nowrap tabular-nums text-right ${w === '—' ? 'text-[#C8C3BA]' : 'text-pm-green font-bold'}`}>{w}</td>
                       ))}
                     </tr>
                   ))}
@@ -207,12 +207,12 @@ export default function Pflegegrade() {
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Quelle: GKV-Spitzenverband, SGB XI · Stand 2026 · Identisch zu 2025</p>
+              <p className="text-[11px] text-pm-mute">Quelle: GKV-Spitzenverband, SGB XI · Stand 2026 · Identisch zu 2025</p>
             </div>
           </div>
           <p className="text-[14px] text-[#5A5A5A] mb-12">
             → Alle Zuschüsse optimal kombinieren:{' '}
-            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6848]">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
+            <a href="/finanzierung" className="text-pm-taupe underline hover:text-[#7D6848]">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
           </p>
 
           <ArticleCTA />

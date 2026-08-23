@@ -174,13 +174,13 @@ export default function PflegegradRechnerClient() {
 
   if (screen === 'intro') {
     return (
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[720px] mx-auto px-5 py-14">
           {/* Breadcrumb */}
-          <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2 flex-wrap">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+            <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
             <span>›</span>
             <span className="text-[#3D3D3D]">Pflegegrad-Rechner</span>
           </nav>
@@ -201,10 +201,10 @@ export default function PflegegradRechnerClient() {
               { icon: '🔒', label: 'Anonym', desc: 'Keine Daten' },
               { icon: '📋', label: 'Kostenlos', desc: 'Unverbindlich' },
             ].map((item) => (
-              <div key={item.label} className="bg-white border border-[#E5E3DF] rounded-xl shadow-sm p-3.5 text-center">
+              <div key={item.label} className="bg-white border border-pm-line rounded-xl shadow-sm p-3.5 text-center">
                 <div className="text-xl mb-1">{item.icon}</div>
                 <div className="font-bold text-[#3D3D3D] text-[13px]">{item.label}</div>
-                <div className="text-[11px] text-[#8B8B8B] mt-0.5">{item.desc}</div>
+                <div className="text-[11px] text-pm-mute mt-0.5">{item.desc}</div>
               </div>
             ))}
           </div>
@@ -212,12 +212,12 @@ export default function PflegegradRechnerClient() {
           {/* CTA */}
           <button
             onClick={() => setScreen('quiz')}
-            className="w-full sm:w-auto bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[17px] px-10 py-4 rounded-xl transition-all duration-200 shadow-sm"
+            className="w-full sm:w-auto bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[17px] px-10 py-4 rounded-xl transition-all duration-200 shadow-sm"
           >
             Rechner starten →
           </button>
 
-          <p className="text-[13px] text-[#8B8B8B] mt-4">
+          <p className="text-[13px] text-pm-mute mt-4">
             Dies ist kein offizielles Gutachten. Das Ergebnis ersetzt keine Begutachtung durch den MDK.
           </p>
         </div>
@@ -229,25 +229,25 @@ export default function PflegegradRechnerClient() {
 
   if (screen === 'quiz') {
     return (
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[720px] mx-auto px-5 py-14">
           {/* Progress bar */}
           <div className="mb-8">
-            <div className="flex items-center justify-between text-[13px] text-[#8B8B8B] mb-2">
-              <span className="font-medium text-[#8B7355]">Modul {currentQ.moduleIndex + 1}: {currentQ.moduleName}</span>
+            <div className="flex items-center justify-between text-[13px] text-pm-mute mb-2">
+              <span className="font-medium text-pm-taupe">Modul {currentQ.moduleIndex + 1}: {currentQ.moduleName}</span>
               <span>Frage {currentStep + 1} von {TOTAL_QUESTIONS}</span>
             </div>
-            <div className="h-2 bg-[#E5E3DF] rounded-full overflow-hidden">
+            <div className="h-2 bg-pm-line rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#8B7355] rounded-full transition-all duration-500 ease-out"
+                className="h-full bg-pm-taupe rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
           </div>
 
           {/* Question card */}
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl shadow-sm p-7 mb-6">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <div className="bg-white border border-pm-line rounded-2xl shadow-sm p-7 mb-6">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
               {currentQ.moduleName}
             </p>
             <h2 className="text-[20px] md:text-[22px] font-bold text-[#3D3D3D] leading-snug mb-8">
@@ -265,15 +265,15 @@ export default function PflegegradRechnerClient() {
                     className={[
                       'text-left px-5 py-4 rounded-xl border-2 font-medium text-[15px] transition-all duration-150',
                       isSelected
-                        ? 'border-[#8B7355] bg-[#8B7355] text-white shadow-sm'
-                        : 'border-[#E5E3DF] bg-white text-[#3D3D3D] hover:border-[#8B7355] hover:bg-[#FAF8F5]',
+                        ? 'border-pm-taupe bg-pm-taupe text-white shadow-sm'
+                        : 'border-pm-line bg-white text-[#3D3D3D] hover:border-pm-taupe hover:bg-[#FAF8F5]',
                     ].join(' ')}
                   >
                     <span className={[
                       'inline-flex items-center justify-center w-6 h-6 rounded-full border text-[12px] font-bold mr-3 flex-shrink-0',
                       isSelected
-                        ? 'border-white bg-white text-[#8B7355]'
-                        : 'border-[#C5C0B8] text-[#8B8B8B]',
+                        ? 'border-white bg-white text-pm-taupe'
+                        : 'border-[#C5C0B8] text-pm-mute',
                     ].join(' ')}>
                       {opt.value + 1}
                     </span>
@@ -288,7 +288,7 @@ export default function PflegegradRechnerClient() {
           <div className="flex items-center gap-4">
             <button
               onClick={handleBack}
-              className="text-[14px] text-[#8B8B8B] hover:text-[#3D3D3D] transition-colors px-4 py-3"
+              className="text-[14px] text-pm-mute hover:text-[#3D3D3D] transition-colors px-4 py-3"
             >
               ← Zurück
             </button>
@@ -298,8 +298,8 @@ export default function PflegegradRechnerClient() {
               className={[
                 'flex-1 sm:flex-none sm:px-10 py-3 rounded-xl font-bold text-[16px] transition-all duration-200',
                 currentAnswer !== null
-                  ? 'bg-[#E76F63] hover:bg-[#D45F53] text-white shadow-sm'
-                  : 'bg-[#E5E3DF] text-[#A0A0A0] cursor-not-allowed',
+                  ? 'bg-pm-coral hover:bg-pm-coral-deep text-white shadow-sm'
+                  : 'bg-pm-line text-[#A0A0A0] cursor-not-allowed',
               ].join(' ')}
             >
               {currentStep < TOTAL_QUESTIONS - 1 ? 'Weiter →' : 'Ergebnis anzeigen →'}
@@ -316,7 +316,7 @@ export default function PflegegradRechnerClient() {
                 <div key={mod.id} className="flex items-center gap-2">
                   <div className={[
                     'rounded-full text-[11px] font-bold px-3 py-1 transition-all',
-                    isActive ? 'bg-[#8B7355] text-white' : isDone ? 'bg-[#3D7A5C] text-white' : 'bg-[#E5E3DF] text-[#8B8B8B]',
+                    isActive ? 'bg-pm-taupe text-white' : isDone ? 'bg-pm-green text-white' : 'bg-pm-line text-pm-mute',
                   ].join(' ')}>
                     {mod.name}
                   </div>
@@ -337,13 +337,13 @@ export default function PflegegradRechnerClient() {
   const gradeDesc = PFLEGEGRAD_DESCRIPTION[pflegegrad]
 
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
+    <div className="min-h-screen bg-pm-paper">
       <div className="max-w-[720px] mx-auto px-5 py-14">
         {/* Breadcrumb */}
-        <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2 flex-wrap">
-          <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2 flex-wrap">
+          <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
-          <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+          <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
           <span className="text-[#3D3D3D]">Pflegegrad-Rechner</span>
         </nav>
@@ -351,7 +351,7 @@ export default function PflegegradRechnerClient() {
         <h1 className="text-[28px] md:text-[36px] font-bold text-[#3D3D3D] leading-tight mb-2">
           Ihr Ergebnis
         </h1>
-        <p className="text-[15px] text-[#8B8B8B] mb-8">
+        <p className="text-[15px] text-pm-mute mb-8">
           Basierend auf Ihren Antworten — unverbindliche Einschätzung
         </p>
 
@@ -360,7 +360,7 @@ export default function PflegegradRechnerClient() {
           className="bg-white border-2 rounded-2xl shadow-sm p-8 mb-6 text-center"
           style={{ borderColor: gradeColor }}
         >
-          <p className="text-[12px] font-bold uppercase tracking-widest text-[#8B8B8B] mb-3">
+          <p className="text-[12px] font-bold uppercase tracking-widest text-pm-mute mb-3">
             Hinweis-Pflegegrad
           </p>
           {pflegegrad === 0 ? (
@@ -379,15 +379,15 @@ export default function PflegegradRechnerClient() {
 
           {/* Pflegegeld */}
           {pflegegrad > 0 && (
-            <div className="mt-6 pt-6 border-t border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-wider text-[#8B8B8B] mb-1">
+            <div className="mt-6 pt-6 border-t border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-wider text-pm-mute mb-1">
                 Mögliches Pflegegeld (häusliche Pflege)
               </p>
               <p className="text-[22px] font-bold" style={{ color: pflegegrad >= 2 ? '#3D7A5C' : '#8B7355' }}>
                 {pflegegrad === 1 ? 'Entlastungsbetrag 131 €/Mo' : pflegegeldText}
               </p>
               {pflegegrad === 1 && (
-                <p className="text-[13px] text-[#8B8B8B] mt-1">Kein Pflegegeld — nur Entlastungsbetrag</p>
+                <p className="text-[13px] text-pm-mute mt-1">Kein Pflegegeld — nur Entlastungsbetrag</p>
               )}
             </div>
           )}
@@ -404,7 +404,7 @@ export default function PflegegradRechnerClient() {
         </div>
 
         {/* Module breakdown */}
-        <div className="bg-white border border-[#E5E3DF] rounded-2xl shadow-sm p-6 mb-6">
+        <div className="bg-white border border-pm-line rounded-2xl shadow-sm p-6 mb-6">
           <h2 className="text-[16px] font-bold text-[#3D3D3D] mb-5">Auswertung nach Modulen</h2>
           <div className="flex flex-col gap-4">
             {moduleScores.map((mod) => {
@@ -413,9 +413,9 @@ export default function PflegegradRechnerClient() {
                 <div key={mod.name}>
                   <div className="flex items-center justify-between text-[13px] mb-1">
                     <span className="font-medium text-[#3D3D3D]">{mod.name}</span>
-                    <span className="text-[#8B8B8B]">{mod.score} / {mod.max}</span>
+                    <span className="text-pm-mute">{mod.score} / {mod.max}</span>
                   </div>
-                  <div className="h-2 bg-[#F0EDE8] rounded-full overflow-hidden">
+                  <div className="h-2 bg-pm-line-soft rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full transition-all duration-700 ease-out"
                       style={{
@@ -431,8 +431,8 @@ export default function PflegegradRechnerClient() {
         </div>
 
         {/* CTAs */}
-        <div className="bg-white border border-[#E5E3DF] rounded-2xl shadow-sm p-7 mb-6">
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-2">
+        <div className="bg-white border border-pm-line rounded-2xl shadow-sm p-7 mb-6">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
             Kostenlose Beratung
           </p>
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-2">
@@ -444,25 +444,25 @@ export default function PflegegradRechnerClient() {
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="tel:+4989200000830"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[16px] px-8 py-4 rounded-xl transition-all duration-200 shadow-sm"
+              className="flex-1 flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[16px] px-8 py-4 rounded-xl transition-all duration-200 shadow-sm"
             >
               📞 Jetzt kostenlos beraten lassen
             </a>
             <a
               href="/pflegegrad-beantragen"
-              className="flex-1 flex items-center justify-center gap-2 bg-white border-2 border-[#8B7355] text-[#8B7355] font-bold text-[15px] px-6 py-4 rounded-xl hover:bg-[#FAF8F5] transition-all duration-200"
+              className="flex-1 flex items-center justify-center gap-2 bg-white border-2 border-pm-taupe text-pm-taupe font-bold text-[15px] px-6 py-4 rounded-xl hover:bg-[#FAF8F5] transition-all duration-200"
             >
               Pflegegrad beantragen →
             </a>
           </div>
-          <p className="text-[12px] text-[#8B8B8B] mt-3 text-center">Mo – So 8 – 20 Uhr · Marta Kapcio · 089 200 000 830</p>
+          <p className="text-[12px] text-pm-mute mt-3 text-center">Mo – So 8 – 20 Uhr · Marta Kapcio · 089 200 000 830</p>
         </div>
 
         {/* Restart */}
         <div className="text-center">
           <button
             onClick={handleRestart}
-            className="text-[14px] text-[#8B7355] hover:text-[#7D6E5D] font-medium underline underline-offset-2 transition-colors"
+            className="text-[14px] text-pm-taupe hover:text-pm-taupe-deep font-medium underline underline-offset-2 transition-colors"
           >
             ↺ Neu starten
           </button>
@@ -470,13 +470,13 @@ export default function PflegegradRechnerClient() {
 
         {/* Related links */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <a href="/pflegegrad-beantragen" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegrad-beantragen" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">
             → Pflegegrad beantragen
           </a>
-          <a href="/pflegegrade" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegrade" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">
             → Alle Pflegegrade
           </a>
-          <a href="/pflegegeld" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] transition-colors text-[14px] font-medium text-[#3D3D3D]">
+          <a href="/pflegegeld" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe transition-colors text-[14px] font-medium text-[#3D3D3D]">
             → Pflegegeld-Übersicht
           </a>
         </div>

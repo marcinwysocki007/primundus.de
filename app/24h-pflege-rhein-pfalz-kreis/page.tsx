@@ -81,22 +81,22 @@ export default function RheinPfalzKreisPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">24h-Pflege Rhein-Pfalz-Kreis</span>
+            <span className="text-pm-ink">24h-Pflege Rhein-Pfalz-Kreis</span>
           </nav>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#A89279] mb-4">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             24h-Pflege im Rhein-Pfalz-Kreis · Aktualisiert August 2026
           </p>
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             24h-Pflege im Rhein-Pfalz-Kreis — Betreuung im eigenen Zuhause
           </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Im Gemüsegarten Deutschlands wohnt man bodenständig: das Haus in Schifferstadt oder Mutterstadt,
             der Garten in Limburgerhof, die Felder vor der Tür. Viele haben ein Leben lang bei der BASF
             gearbeitet und möchten ihren Ruhestand genau hier verbringen — nicht im Heim. Eine
@@ -105,11 +105,11 @@ export default function RheinPfalzKreisPage() {
           </p>
 
           {/* ① SITUATION VOR ORT */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
             Pflege in der Vorderpfalz: Nah an allem — und trotzdem zuhause
           </h2>
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
               Der Rhein-Pfalz-Kreis liegt zwischen Ludwigshafen, Speyer und den Weindörfern — die Kinder
               arbeiten oft in Mannheim oder bei der BASF, die Eltern wohnen im Eigenheim ein paar Orte
               weiter. Wenn plötzlich mehr Hilfe nötig ist, scheitert der Alltag selten an der Entfernung,
@@ -121,37 +121,37 @@ export default function RheinPfalzKreisPage() {
                 { icon: '🥬', title: 'Vertraute Dörfer', desc: 'Bäcker, Verein, Nachbarschaft — alles bleibt' },
                 { icon: '🌙', title: 'Nachts abgesichert', desc: 'Jemand ist da, wenn etwas passiert' },
               ].map((item) => (
-                <div key={item.title} className="bg-[#F8F7F5] rounded-xl p-4 text-center">
+                <div key={item.title} className="bg-pm-paper rounded-xl p-4 text-center">
                   <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className="text-[13px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                  <p className="text-[12px] text-[#8B8B8B] leading-snug">{item.desc}</p>
+                  <p className="text-[13px] font-bold text-pm-ink mb-1">{item.title}</p>
+                  <p className="text-[12px] text-pm-mute leading-snug">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* ② EINSATZGEBIET */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
             Unser Einsatzgebiet im Rhein-Pfalz-Kreis
           </h2>
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+            <p className="text-[15px] leading-relaxed text-pm-body">
               Wir sind im gesamten Kreis im Einsatz: <strong>Schifferstadt</strong>, <strong>Limburgerhof</strong>,{' '}
               <strong>Mutterstadt</strong>, <strong>Maxdorf</strong>, <strong>Böhl-Iggelheim</strong>,{' '}
               <strong>Dudenhofen</strong>, <strong>Römerberg</strong>, <strong>Altrip</strong> und allen
               weiteren Gemeinden. Für die Nachbarstädte gibt es eigene Seiten:{' '}
-              <a href="/24h-pflege-ludwigshafen" className="text-[#8B7355] underline underline-offset-2">Ludwigshafen</a>,{' '}
-              <a href="/24h-pflege-speyer" className="text-[#8B7355] underline underline-offset-2">Speyer</a> und{' '}
-              <a href="/24h-pflege-mannheim" className="text-[#8B7355] underline underline-offset-2">Mannheim</a>.
+              <a href="/24h-pflege-ludwigshafen" className="text-pm-taupe underline underline-offset-2">Ludwigshafen</a>,{' '}
+              <a href="/24h-pflege-speyer" className="text-pm-taupe underline underline-offset-2">Speyer</a> und{' '}
+              <a href="/24h-pflege-mannheim" className="text-pm-taupe underline underline-offset-2">Mannheim</a>.
             </p>
           </div>
 
           {/* ③ KOSTEN */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
             Was kostet das — und was zahlt die Pflegekasse dazu?
           </h2>
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-4">
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
               Eine 24h-Betreuung kostet über Primundus meist <strong>2.200 bis 3.500 Euro im Monat</strong>.
               Die Pflegekasse zahlt kräftig mit: Mit Pflegegeld, Entlastungsbetrag und Verhinderungspflege
               bleiben bei Pflegegrad 3 oft <strong>rund 1.500 bis 2.400 Euro</strong> im Monat selbst zu
@@ -159,34 +159,34 @@ export default function RheinPfalzKreisPage() {
             </p>
             <a
               href="https://kostenrechner.primundus.de/"
-              className="inline-flex items-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-3 px-6 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-xl transition-colors"
             >
               Ihren Preis in 2 Minuten berechnen
             </a>
           </div>
 
           {/* ④ FAQ — identisch zum FAQPage-Schema */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug">
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
             Häufige Fragen aus der Region
           </h2>
           <div className="space-y-4 mb-8">
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-[#1C1C1C] mb-2">Was kostet eine 24h-Pflegekraft im Rhein-Pfalz-Kreis?</p>
-              <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
+            <div className="bg-white border border-pm-line rounded-2xl p-6">
+              <p className="text-[16px] font-bold text-pm-ink mb-2">Was kostet eine 24h-Pflegekraft im Rhein-Pfalz-Kreis?</p>
+              <p className="text-[15px] leading-relaxed text-pm-body">
                 Meist zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation. Mit den Zuschüssen
                 der Pflegekasse bleiben bei Pflegegrad 3 oft rund 1.500 bis 2.400 Euro selbst zu tragen.
               </p>
             </div>
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-[#1C1C1C] mb-2">Welche Orte im Rhein-Pfalz-Kreis deckt Primundus ab?</p>
-              <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
+            <div className="bg-white border border-pm-line rounded-2xl p-6">
+              <p className="text-[16px] font-bold text-pm-ink mb-2">Welche Orte im Rhein-Pfalz-Kreis deckt Primundus ab?</p>
+              <p className="text-[15px] leading-relaxed text-pm-body">
                 Den ganzen Kreis rund um Ludwigshafen: Schifferstadt, Limburgerhof, Mutterstadt, Maxdorf,
                 Böhl-Iggelheim, Dudenhofen, Römerberg, Altrip und alle weiteren Gemeinden der Vorderpfalz.
               </p>
             </div>
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-[#1C1C1C] mb-2">Wie schnell kann die Betreuung in der Vorderpfalz starten?</p>
-              <p className="text-[15px] leading-relaxed text-[#2E2E2E]">
+            <div className="bg-white border border-pm-line rounded-2xl p-6">
+              <p className="text-[16px] font-bold text-pm-ink mb-2">Wie schnell kann die Betreuung in der Vorderpfalz starten?</p>
+              <p className="text-[15px] leading-relaxed text-pm-body">
                 In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf
                 oft auch schneller.
               </p>

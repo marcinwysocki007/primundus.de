@@ -56,42 +56,42 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/vergleiche" className="hover:text-[#8B7355] transition-colors">Vergleiche</a>
+            <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Osteuropäische Pflegekraft oder Agentur</span>
+            <span className="text-pm-ink">Osteuropäische Pflegekraft oder Agentur</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Osteuropäische Pflegekraft direkt oder über Agentur?
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Viele Familien fragen sich: Warum nicht die Pflegekraft direkt in Polen oder Rumänien suchen statt über eine Agentur? Klingt günstiger. Die Realität ist komplexer — direktes Suchen bedeutet: selbst prüfen, selbst Rechtssicherheit herstellen, selbst Ersatz organisieren wenn die Kraft krank wird. Dieser Vergleich zeigt was wirklich anders ist.
           </p>
 
-          <h2 id="direkt-vs-agentur" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="direkt-vs-agentur" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Direkt vs. Agentur — vollständiger Vergleich
           </h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">Kriterium</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">Direktsuche</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-[#8B7355] text-left border-b border-[#E5E3DF]">Agentur (Primundus)</th>
+                  <tr className="bg-pm-paper">
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Kriterium</th>
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Direktsuche</th>
+                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-taupe text-left border-b border-pm-line">Agentur (Primundus)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -105,10 +105,10 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
                     ['Qualitätssicherung', 'Keine systematische', 'Laufend durch Primundus'],
                     ['Kosten', 'Evtl. niedriger', '2.200–3.500 €/Mo — transparent'],
                   ].map(([krit, direkt, agentur], i) => (
-                    <tr key={krit} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{krit}</td>
-                      <td className="px-5 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{direkt}</td>
-                      <td className="px-5 py-3 text-[13px] font-semibold text-[#3D7A5C] border-b border-[#E5E3DF]">{agentur}</td>
+                    <tr key={krit} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{krit}</td>
+                      <td className="px-5 py-3 text-[13px] text-pm-mute border-b border-pm-line">{direkt}</td>
+                      <td className="px-5 py-3 text-[13px] font-semibold text-pm-green border-b border-pm-line">{agentur}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -116,7 +116,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
             </div>
           </div>
 
-          <h2 id="vorteile-agentur" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="vorteile-agentur" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Warum die meisten Familien auf eine Agentur setzen
           </h2>
           <div className="space-y-3 mb-10">
@@ -127,17 +127,17 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               { vorteil: 'Kraftwechsel ohne Aufwand', desc: 'Alle 6–8 Wochen wechselt die Kraft. Primundus kündigt rechtzeitig an, stellt die neue Kraft vor, organisiert die Übergabe. Die Familie muss sich nicht darum kümmern.' },
               { vorteil: 'Schneller Start', desc: '4–7 Tage von der Anfrage bis zur Kraft zuhause. Wer selbst sucht braucht Wochen bis Monate.' },
             ].map((item) => (
-              <div key={item.vorteil} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.vorteil}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.vorteil} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.vorteil}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="worauf-achten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="worauf-achten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Worauf bei der Wahl einer Agentur achten?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Nicht jede Agentur ist gleich. Diese Kriterien helfen seriöse von unseriösen Angeboten zu unterscheiden.
           </p>
           <div className="space-y-3 mb-10">
@@ -148,14 +148,14 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               { kriterium: '✓ Aktive Qualitätsprüfung der Kräfte', detail: 'Nicht nur Selbstauskunft der Kraft — aktive Prüfung von Deutschkenntnissen, Referenzen, Erfahrung.' },
               { kriterium: '✓ Erfahrung und Referenzen der Agentur', detail: 'Wie lange am Markt? Wie viele Betreuungen? Gibt es unabhängige Bewertungen?' },
             ].map((item) => (
-              <div key={item.kriterium} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[14px] font-bold text-[#1C1C1C] mb-1">{item.kriterium}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.detail}</p>
+              <div key={item.kriterium} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[14px] font-bold text-pm-ink mb-1">{item.kriterium}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="primunus" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="primunus" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was Primundus anders macht
           </h2>
           <div className="space-y-3 mb-10">
@@ -169,14 +169,14 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               'Laufende Betreuung durch Primundus als Ansprechpartner',
               'Start in 4–7 Tagen nach Erstgespräch',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-[#2E2E2E]">{item}</p>
+              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
+                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <p className="text-[14px] text-pm-body">{item}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Ist Direktsuche einer Pflegekraft günstiger?', a: 'Evtl. auf dem Papier — aber dann muss die Familie selbst Rechtssicherheit herstellen, selbst prüfen, selbst Ersatz organisieren. Der versteckte Aufwand und das rechtliche Risiko werden selten einkalkuliert.' },
@@ -184,13 +184,13 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               { q: 'Wie erkenne ich eine seriöse Pflegeagentur?', a: 'Entsendemodell mit A1-Bescheinigung, transparente Preise, tägliche Kündbarkeit, aktive Qualitätsprüfung, langjährige Erfahrung, unabhängige Bewertungen.' },
               { q: 'Was passiert wenn die Kraft direkt kündigt?', a: 'Bei Direktsuche: Die Familie muss sofort neu suchen — Wochen bis Monate bis zur nächsten Kraft. Bei Primundus: Sofortiger Ersatz, keine Versorgungslücke.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

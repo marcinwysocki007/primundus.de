@@ -65,33 +65,33 @@ export default function EigenanteilSenken() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/finanzierung" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
+            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Eigenanteil senken</span>
+            <span className="text-pm-ink">Eigenanteil senken</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Eigenanteil der 24h-Pflege senken — alle Möglichkeiten 2026
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             24h-Pflege kostet 2.200–3.500 Euro brutto — aber wer alle verfügbaren Leistungen kennt und kombiniert, kann den tatsächlichen Eigenanteil auf unter 1.500 Euro pro Monat senken. Viele Familien verschenken hunderte Euro monatlich weil sie nicht alle Möglichkeiten nutzen.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Potenzielle Ersparnis pro Monat (Pflegegrad 3)</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Potenzielle Ersparnis pro Monat (Pflegegrad 3)</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegegeld: – 599 €/Monat',
@@ -101,24 +101,24 @@ export default function EigenanteilSenken() {
                 'Pflegehilfsmittel: – 42 €/Monat',
                 'Gesamt mögliche Einsparung: über 1.400 €/Monat',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="uebersicht" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="uebersicht" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alle Stellschrauben im Überblick
           </h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Maßnahme', 'Potenzielle Ersparnis', 'Aufwand'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -132,10 +132,10 @@ export default function EigenanteilSenken() {
                     ['Pflegehilfsmittel beantragen', '42 €/Monat', 'Sehr gering'],
                     ['Wohnraumanpassung fördern lassen', 'bis 4.180 € je Maßnahme', 'Mittel'],
                   ].map(([massnahme, ersparnis, aufwand], i) => (
-                    <tr key={massnahme} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{massnahme}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{ersparnis}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{aufwand}</td>
+                    <tr key={massnahme} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{massnahme}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{ersparnis}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{aufwand}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -143,19 +143,19 @@ export default function EigenanteilSenken() {
             </div>
           </div>
 
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             1. Pflegegrad korrekt beantragen
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Die größte Einzelmaßnahme: Jede Pflegegrad-Stufe bedeutet deutlich mehr Kassenzuschuss. Wer zu niedrig eingestuft ist, verschenkt monatlich hunderte Euro.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Stufe', 'Pflegegeld', 'Mehrwert pro Stufe'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -166,24 +166,24 @@ export default function EigenanteilSenken() {
                     ['PG 4', '800 €/Monat', '+201 €/Monat'],
                     ['PG 5', '990 €/Monat', '+190 €/Monat'],
                   ].map(([grad, pg, mehr], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{grad}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#8B7355] font-semibold border-b border-[#E5E3DF]">{mehr}</td>
+                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-taupe font-semibold border-b border-pm-line">{mehr}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Vollständige Anleitung:{' '}
-            <a href="/pflegegrad-beantragen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad beantragen</a>
+            <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad beantragen</a>
             {' · '}
-            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen</a>
+            <a href="/pflegegrad-erhoehen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad erhöhen</a>
           </p>
 
-          <h2 id="kassenzuschuesse" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="kassenzuschuesse" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             2. Alle Kassenzuschüsse voll ausschöpfen
           </h2>
           <div className="space-y-3 mb-6">
@@ -193,35 +193,35 @@ export default function EigenanteilSenken() {
               { title: 'Entlastungsbudget — 3.539 €/Jahr', desc: 'Für Verhinderungs- und Kurzzeitpflege. Verfällt am 31. Dezember — rechtzeitig nutzen und einreichen. Vorpflegezeit entfällt seit Juli 2025.', link: '/verhinderungspflege' },
               { title: 'Pflegehilfsmittel — 42 €/Monat', desc: 'Handschuhe, Desinfektionsmittel, Bettschutzeinlagen. Bei der Pflegekasse beantragen — werden direkt nach Hause geliefert. Kaum jemand nutzt das.', link: null },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-2">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed mb-2">{item.desc}</p>
                 {item.link && (
-                  <a href={item.link} className="text-[13px] text-[#8B7355] underline hover:text-[#7D6E5D]">→ Mehr Details</a>
+                  <a href={item.link} className="text-[13px] text-pm-taupe underline hover:text-pm-taupe-deep">→ Mehr Details</a>
                 )}
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Alle Zuschüsse in einer Übersicht:{' '}
-            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
+            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026</a>
           </p>
 
-          <h2 id="steuer" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="steuer" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             3. Steuerlich absetzen — bis 4.000 € pro Jahr
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             20 % der Pflegekosten können als haushaltsnahe Dienstleistungen von der Steuerschuld abgezogen werden — direkt, nicht nur vom zu versteuernden Einkommen. Maximum: 4.000 € Steuerersparnis pro Jahr.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Bei Primundus-Kosten von 2.700 €/Monat (32.400 €/Jahr) sind das 4.000 € Maximalersparnis — entspricht ca. 333 €/Monat. Voraussetzung: Zahlung per Überweisung, Rechnung aufbewahren, Anlage V der Steuererklärung.
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Ausführlich erklärt:{' '}
-            <a href="/pflege-steuerlich-absetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflege steuerlich absetzen 2026</a>
+            <a href="/pflege-steuerlich-absetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflege steuerlich absetzen 2026</a>
           </p>
 
-          <h2 id="foerderungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="foerderungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             4. Wohnraumanpassung & Hilfsmittel fördern lassen
           </h2>
           <div className="space-y-3 mb-6">
@@ -230,14 +230,14 @@ export default function EigenanteilSenken() {
               { title: 'KfW-Förderung Barrierefrei', desc: 'Zusätzlich zur Kassenleistung gibt es KfW-Förderdarlehen und -Zuschüsse für barrierefreien Umbau. KfW Programm 455-B: bis zu 4.000 € Zuschuss pro Wohneinheit.' },
               { title: 'Hilfsmittel auf Kassenrezept', desc: 'Rollstuhl, Pflegebett, Toilettenstuhl, Duschhocker — können auf Rezept vom Hausarzt von der Krankenkasse bezahlt werden. Eigenanteil oft nur 10 € pro Hilfsmittel.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen
           </h2>
           <div className="space-y-4 mb-12">
@@ -247,13 +247,13 @@ export default function EigenanteilSenken() {
               { q: 'Muss man den Entlastungsbetrag extra beantragen?', a: 'Der Anspruch entsteht automatisch mit dem Pflegegrad — aber er wird nicht automatisch ausgezahlt. Rechnungen anerkannter Anbieter einreichen und bis zu 131 €/Monat erstatten lassen. Kann bis 30. Juni des Folgejahres angespart werden.' },
               { q: 'Wann lohnt sich ein Antrag auf Höherstufung?', a: 'Wenn sich der Pflegebedarf verschlechtert hat. Bei Höherstufung von PG 2 auf PG 3 steigt das Pflegegeld um 252 €/Monat. Keine Sperrfrist — jederzeit beantragbar.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

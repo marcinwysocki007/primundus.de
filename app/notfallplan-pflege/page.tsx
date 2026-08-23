@@ -56,39 +56,39 @@ export default function NotfallplanPflege() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Notfallplan Pflege</span>
+            <span className="text-pm-ink">Notfallplan Pflege</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Notfallplan Pflege — was hineingehört & Vorlage
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Im Notfall zählen Sekunden. Wer dann erst suchen muss welche Medikamente jemand nimmt, welcher Arzt zuständig ist, oder wer bei einem Sturz als Erstes angerufen werden soll — verliert wertvolle Zeit. Ein Notfallplan kostet einmal 30 Minuten und gibt Jahre lang Sicherheit.
           </p>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Warum ein Notfallplan?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Ein Notfallplan ist für drei Situationen gedacht: Akuter Notfall (Sturz, Herzinfarkt, Bewusstlosigkeit), Ausfall der Hauptpflegeperson (Krankheit, Unfall), und Wissenstransfer wenn eine neue Betreuungskraft beginnt. Mit einem vollständigen Notfallplan kann jede Person die den Pflegebedürftigen vorfindet sofort richtig handeln — auch wenn sie die Details nicht kennt.
           </p>
 
-          <h2 id="inhalt" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="inhalt" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was in den Notfallplan gehört
           </h2>
           <div className="space-y-4 mb-10">
@@ -151,13 +151,13 @@ export default function NotfallplanPflege() {
                 ],
               },
             ].map((block) => (
-              <div key={block.kategorie} className="bg-white rounded-xl border border-[#E5E3DF] overflow-hidden">
-                <div className="bg-[#F8F7F5] px-5 py-3 border-b border-[#E5E3DF]">
-                  <p className="text-[13px] font-bold text-[#1C1C1C]">{block.kategorie}</p>
+              <div key={block.kategorie} className="bg-white rounded-xl border border-pm-line overflow-hidden">
+                <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
+                  <p className="text-[13px] font-bold text-pm-ink">{block.kategorie}</p>
                 </div>
-                <ul className="divide-y divide-[#F8F7F5]">
+                <ul className="divide-y divide-pm-paper">
                   {block.punkte.map(p => (
-                    <li key={p} className="flex items-start gap-3 px-5 py-3 text-[14px] text-[#2E2E2E]">
+                    <li key={p} className="flex items-start gap-3 px-5 py-3 text-[14px] text-pm-body">
                       <span className="w-4 h-4 rounded border border-[#C8C3BA] flex-shrink-0 mt-0.5" />
                       {p}
                     </li>
@@ -167,11 +167,11 @@ export default function NotfallplanPflege() {
             ))}
           </div>
 
-          <h2 id="vorlage" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="vorlage" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Vorlage: Notfallplan zum Ausfüllen
           </h2>
-          <div className="bg-[#F8F7F5] border border-[#E5E3DF] rounded-2xl p-6 mb-10 font-mono text-[13px] leading-loose text-[#2E2E2E]">
-            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-[#A89279] mb-4">NOTFALLPLAN — zum Ausdrucken und Aufhängen</p>
+          <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[13px] leading-loose text-pm-body">
+            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-4">NOTFALLPLAN — zum Ausdrucken und Aufhängen</p>
             <p className="font-bold">PERSONALIEN</p>
             <p>Name: _________________________ Geb.: _____________</p>
             <p>Adresse: _____________________________________________</p>
@@ -197,7 +197,7 @@ export default function NotfallplanPflege() {
             <p className="font-bold">Bevollmächtigte Person: ________ Tel: _______</p>
           </div>
 
-          <h2 id="aufbewahren" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="aufbewahren" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wo aufbewahren & wie aktuell halten
           </h2>
           <div className="space-y-3 mb-10">
@@ -207,20 +207,20 @@ export default function NotfallplanPflege() {
               { wo: 'Kopie bei der Betreuungskraft', warum: 'Kraft findet alle Informationen sofort — besonders wichtig in der Eingewöhnungsphase.' },
               { wo: 'Digital sichern', warum: 'Foto auf dem Smartphone aller Angehörigen — auch aus der Ferne sofort verfügbar.' },
             ].map((item) => (
-              <div key={item.wo} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.wo}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.warum}</p>
+              <div key={item.wo} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.wo}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.warum}</p>
               </div>
             ))}
           </div>
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-[#2A5C3F] mb-2">Aktuell halten — einmal im Quartal prüfen</p>
-            <p className="text-[14px] text-[#2A5C3F] leading-relaxed">
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
+            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Aktuell halten — einmal im Quartal prüfen</p>
+            <p className="text-[14px] text-pm-green-deep leading-relaxed">
               Medikamente, Ärzte und Kontakte ändern sich. Einmal pro Quartal 10 Minuten einplanen um den Notfallplan zu aktualisieren. Besonders nach Krankenhausaufenthalten, Medikamentenumstellungen oder Kraftwechseln.
             </p>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Was muss in einen Pflegenotfallplan?', a: 'Persönliche Daten, Notfallkontakte (112, Arzt, Familie, Primundus), Medikamentenliste mit Allergien, Diagnosen, Ort der Vorsorgevollmacht. Plus für die Kraft: was tun bei Sturz/Bewusstlosigkeit.' },
@@ -228,13 +228,13 @@ export default function NotfallplanPflege() {
               { q: 'Wie oft sollte der Notfallplan aktualisiert werden?', a: 'Einmal im Quartal prüfen. Immer aktualisieren nach: Medikamentenumstellungen, neuen Diagnosen, Ärztwechsel, Kraftwechsel, Umzug.' },
               { q: 'Was unterscheidet Notfallplan von Patientenverfügung?', a: 'Der Notfallplan ist für akute Notfälle — praktische Informationen für Rettungsdienst und Betreuungskraft. Die Patientenverfügung regelt medizinische Entscheidungen bei Bewusstlosigkeit (lebenserhaltende Maßnahmen).' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

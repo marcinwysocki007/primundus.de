@@ -5,7 +5,7 @@ export function ComparisonSection() {
     <section id="kostenvergleich" className="bg-white py-16 md:py-20 scroll-mt-20">
       <div className="w-full max-w-[520px] md:max-w-[720px] lg:max-w-[1080px] mx-auto px-5">
         <div className="text-center mb-12">
-          <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#A89279] mb-2">
+          <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
             Kostenvergleich
           </p>
           <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-[#3D3D3D] mb-4">
@@ -18,9 +18,9 @@ export function ComparisonSection() {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Pflegeheim */}
-          <div className="bg-[#F8F7F5] rounded-2xl p-8 border-2 border-[#E5E3DF]">
+          <div className="bg-pm-paper rounded-2xl p-8 border-2 border-pm-line">
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-[#E5E3DF] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-pm-line rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-[#5A5A5A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -55,7 +55,7 @@ export function ComparisonSection() {
               </div>
             </div>
 
-            <div className="border-t-2 border-[#E5E3DF] pt-6">
+            <div className="border-t-2 border-pm-line pt-6">
               <div className="text-center">
                 <p className="text-sm text-[#5A5A5A] mb-2">Durchschnittlicher Eigenanteil pro Monat:</p>
                 <p className="text-4xl font-bold text-[#C85A54]">3.364 €</p>
@@ -125,7 +125,7 @@ export function ComparisonSection() {
 
           <a
             href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-base md:text-lg rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-base md:text-lg rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Kosten & Pflegekräfte ansehen
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -56,35 +56,35 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegende Angehörige unterstützen</span>
+            <span className="text-pm-ink">Pflegende Angehörige unterstützen</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegende Angehörige unterstützen — echte Hilfe, keine Ratschläge
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Dieser Ratgeber richtet sich an zwei Gruppen: an Menschen die jemanden kennen der pflegt — und an die Pflegenden selbst. Gut gemeinte Ratschläge helfen selten. Konkrete Entlastung schon. Und das Schwerste für viele Pflegende: Hilfe annehmen zu lernen.
           </p>
 
-          <h2 id="situation" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="situation" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Die Situation pflegender Angehöriger
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Rund 4,5 Millionen Menschen in Deutschland pflegen einen Angehörigen — oft still, oft ohne dass die eigene Belastung nach außen sichtbar ist. Die häufigsten Erfahrungen:
           </p>
           <div className="space-y-3 mb-10">
@@ -95,19 +95,19 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
               '"Ich habe keine Zeit mehr für Freunde, meinen Partner, mich selbst."',
               '"Ich schlafe schlecht wegen der Sorgen und der nächtlichen Wachsamkeit."',
             ].map((zitat) => (
-              <div key={zitat} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] text-[#2E2E2E] italic">{zitat}</p>
+              <div key={zitat} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] text-pm-body italic">{zitat}</p>
               </div>
             ))}
           </div>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-10">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
             Diese Gefühle sind real und verbreitet. Sie anzuerkennen ist der erste Schritt — der wichtigste.
           </p>
 
-          <h2 id="entlastung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="entlastung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Konkrete Entlastungsangebote — was wirklich hilft
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             An Freunde und Familie: So helft ihr wirklich — ohne zu fragen "Kann ich irgendwie helfen?" (darauf kommt selten eine ehrliche Antwort).
           </p>
           <div className="space-y-3 mb-10">
@@ -119,14 +119,14 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
               { hilfe: 'Nachfragen — auch nach Wochen und Monaten', desc: 'Kurz nach dem Einzug der Betreuungskraft fragen alle. Monate später ist oft niemand mehr da. Regelmäßig nachfragen: "Wie geht es dir — wirklich?"' },
               { hilfe: 'Finanzielle Unterstützung konkret anbieten', desc: 'Wenn das möglich ist: "Ich möchte zu den Kosten der Betreuungskraft beitragen" ist eine der wirkungsvollsten Formen der Unterstützung.' },
             ].map((item) => (
-              <div key={item.hilfe} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.hilfe}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.hilfe} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.hilfe}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="selbstfuersorge" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="selbstfuersorge" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Selbstfürsorge — was wirklich hilft (für die Pflegenden selbst)
           </h2>
           <div className="space-y-3 mb-10">
@@ -137,17 +137,17 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
               { tipp: 'Soziale Kontakte aktiv aufrechterhalten', desc: 'Freunde, Hobbys, eigene Termine halten. Isolation ist der Beschleuniger von Burnout.' },
               { tipp: 'Professionelle Unterstützung suchen', desc: 'Psychologische Beratung, Selbsthilfegruppen für pflegende Angehörige — kein Zeichen von Schwäche, sondern von Weitsicht.' },
             ].map((item) => (
-              <div key={item.tipp} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.tipp}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.tipp} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tipp}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="hilfe-annehmen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="hilfe-annehmen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Hilfe annehmen lernen — warum es so schwer ist
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Viele pflegende Angehörige wissen dass sie Hilfe bräuchten — und nehmen sie trotzdem nicht an. Die häufigsten Gründe:
           </p>
           <div className="space-y-3 mb-6">
@@ -157,20 +157,20 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
               { grund: '"Ich möchte meinen Eltern keinen Fremden zumuten"', antwort: 'Betreuungskräfte werden in den meisten Fällen nach kurzer Zeit als vertraut empfunden — oft überraschend schnell. Das Fremd-Gefühl ist am Anfang am stärksten.' },
               { grund: '"Ich kann mir keine Hilfe leisten"', antwort: 'Mit Kassenzuschüssen (347–990 €/Monat Pflegegeld, Entlastungsbudget, Steuerabzug) ist 24h-Betreuung oft erschwinglicher als gedacht. Kostenlose Beratung bei Primundus.' },
             ].map((item) => (
-              <div key={item.grund} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[14px] font-bold text-[#1C1C1C] mb-1 italic">{item.grund}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.antwort}</p>
+              <div key={item.grund} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[14px] font-bold text-pm-ink mb-1 italic">{item.grund}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.antwort}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Burnout erkennen:{' '}
-            <a href="/burnout-pflegende-angehoerige" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Burnout pflegender Angehöriger</a>
+            <a href="/burnout-pflegende-angehoerige" className="text-pm-taupe underline hover:text-pm-taupe-deep">Burnout pflegender Angehöriger</a>
             {' · '}
-            <a href="/pflege-und-beruf-vereinbaren" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflege und Beruf vereinbaren</a>
+            <a href="/pflege-und-beruf-vereinbaren" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflege und Beruf vereinbaren</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie kann ich eine pflegende Schwester/Bruder unterstützen?', a: 'Konkrete Angebote machen (nicht fragen). Zeit übernehmen für klar begrenzte Zeitfenster. Zuhören ohne zu bewerten. Regelmäßig nachfragen auch nach Monaten. Finanzielle Beteiligung wenn möglich.' },
@@ -178,13 +178,13 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
               { q: 'Was sind die wichtigsten Selbstfürsorge-Maßnahmen für Pflegende?', a: 'Tägliche Mindestauszeit, Schlaf schützen, eigene Arzttermine halten, soziale Kontakte aktiv aufrechterhalten, professionelle Unterstützung in Anspruch nehmen.' },
               { q: 'Was hilft Pflegenden wirklich — außer gut gemeinten Ratschlägen?', a: 'Konkrete Übernahmen, aktives Zuhören, regelmäßige Nachfragen, finanzielle Beteiligung, und das Ermöglichen einer 24h-Betreuungskraft die die Hauptlast übernimmt.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

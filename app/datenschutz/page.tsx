@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
-      <div className="max-w-[860px] mx-auto px-5 py-16">
+    <div className="min-h-screen bg-pm-paper">
+      <div className="max-w-article mx-auto px-5 py-16">
 
-        <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2">
-          <Link href="/" className="hover:text-[#8B7355] transition-colors">Startseite</Link>
+        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+          <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
           <span className="text-[#3D3D3D]">Datenschutzerklärung</span>
         </nav>
@@ -25,12 +25,12 @@ export default function Page() {
 
         <div className="space-y-6">
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">1. Verantwortliche Stelle</h2>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-4">
               Verantwortlich für die Datenverarbeitung auf dieser Website ist:
             </p>
-            <div className="bg-[#F8F7F5] rounded-xl p-5 text-[15px] text-[#5A5A5A] space-y-1">
+            <div className="bg-pm-paper rounded-xl p-5 text-[15px] text-[#5A5A5A] space-y-1">
               <p className="font-semibold text-[#3D3D3D]">Primundus Deutschland</p>
               <p>Landsberger Str. 155</p>
               <p>80687 München</p>
@@ -39,16 +39,16 @@ export default function Page() {
               <p>NIP 7011172300 · REGON 526823071</p>
               <p className="pt-2">
                 Telefon:{' '}
-                <a href="tel:+4989200000830" className="text-[#8B7355] hover:underline">+49 89 200 000 830</a>
+                <a href="tel:+4989200000830" className="text-pm-taupe hover:underline">+49 89 200 000 830</a>
               </p>
               <p>
                 E-Mail:{' '}
-                <a href="mailto:info@primundus.de" className="text-[#8B7355] hover:underline">info@primundus.de</a>
+                <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a>
               </p>
             </div>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">2. Erhebung und Speicherung personenbezogener Daten</h2>
             <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">2.1 Besuch unserer Website</h3>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
@@ -63,7 +63,7 @@ export default function Page() {
             </ul>
             <h3 className="text-[15px] font-semibold text-[#3D3D3D] mb-2">2.2 Nutzung des Kostenrechners & Kontoerstellung</h3>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
-              Bei der Nutzung unseres Kostenrechners unter <a href="https://kostenrechner.primundus.de" className="text-[#8B7355] hover:underline">kostenrechner.primundus.de</a> erheben wir folgende Daten:
+              Bei der Nutzung unseres Kostenrechners unter <a href="https://kostenrechner.primundus.de" className="text-pm-taupe hover:underline">kostenrechner.primundus.de</a> erheben wir folgende Daten:
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-1 text-[15px] text-[#5A5A5A]">
               <li>Angaben zur Pflegesituation (Pflegegrad, Wohnsituation, benötigte Leistungen)</li>
@@ -75,7 +75,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">3. Zweck der Datenverarbeitung</h2>
             <ul className="list-disc pl-5 space-y-2 text-[15px] text-[#5A5A5A]">
               <li>Bereitstellung und technische Administration der Website</li>
@@ -88,7 +88,7 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">4. Rechtsgrundlage der Verarbeitung</h2>
             <ul className="list-disc pl-5 space-y-2 text-[15px] text-[#5A5A5A]">
               <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) — bei Angebotsanfragen</li>
@@ -97,21 +97,21 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">5. Weitergabe von Daten</h2>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
               Wir geben Ihre personenbezogenen Daten nur weiter, wenn Sie ausdrücklich eingewilligt haben, dies für die Erbringung unserer Dienstleistung erforderlich ist oder eine gesetzliche Verpflichtung besteht. Eine Übermittlung an Drittländer findet nicht statt.
             </p>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">6. Speicherdauer</h2>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
               Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies für die Erfüllung der genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Anfragedaten werden nach Abschluss der Bearbeitung oder auf Ihren Wunsch gelöscht.
             </p>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">7. Ihre Rechte</h2>
             <ul className="list-disc pl-5 space-y-2 text-[15px] text-[#5A5A5A]">
               <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
@@ -125,11 +125,11 @@ export default function Page() {
             </ul>
             <p className="text-[15px] text-[#5A5A5A] mt-4">
               Zur Ausübung Ihrer Rechte wenden Sie sich an:{' '}
-              <a href="mailto:info@primundus.de" className="text-[#8B7355] hover:underline">info@primundus.de</a>
+              <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a>
             </p>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">8. Cookies und Tracking</h2>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7] mb-3">
               Unsere Website verwendet Cookies und Tracking-Technologien:
@@ -144,14 +144,14 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">9. Datensicherheit</h2>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
               Wir verwenden geeignete technische und organisatorische Sicherheitsmaßnahmen, um Ihre Daten gegen Manipulationen, Verlust, Zerstörung oder unberechtigten Zugriff zu schützen. Unsere Maßnahmen werden entsprechend der technologischen Entwicklung fortlaufend verbessert.
             </p>
           </div>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-3">10. Aktualität dieser Datenschutzerklärung</h2>
             <p className="text-[15px] text-[#5A5A5A] leading-[1.7]">
               Diese Datenschutzerklärung hat den Stand Februar 2026. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher Vorgaben kann es notwendig werden, diese Erklärung zu ändern.

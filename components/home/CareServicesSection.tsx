@@ -70,7 +70,7 @@ export function CareServicesSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {services.map((service, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-[#A89279] to-[#8B7355] flex items-center justify-center shadow-sm">
+                      <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-pm-taupe-light to-pm-taupe flex items-center justify-center shadow-sm">
                         <Check className="w-4 h-4 text-white" strokeWidth={3} />
                       </div>
                       <span className="text-[15px] md:text-base text-[#3D3D3D] font-medium leading-tight">
@@ -82,8 +82,8 @@ export function CareServicesSection() {
               </div>
 
               <div className="mb-10 md:mb-12">
-                <div className="bg-gradient-to-br from-[#F8FAF8] to-white rounded-2xl p-6 md:p-8 border border-[#8B7355]/10">
-                  <h3 className="text-xl md:text-2xl font-bold text-[#8B7355] mb-6 text-center">
+                <div className="bg-gradient-to-br from-[#F8FAF8] to-white rounded-2xl p-6 md:p-8 border border-pm-taupe/10">
+                  <h3 className="text-xl md:text-2xl font-bold text-pm-taupe mb-6 text-center">
                     Warum Primundus
                   </h3>
                   <div className="grid grid-cols-2 gap-4 md:gap-6">
@@ -91,8 +91,8 @@ export function CareServicesSection() {
                       const IconComponent = benefit.icon;
                       return (
                         <div key={index} className="group text-center">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white border-2 border-[#8B7355]/20 group-hover:bg-[#8B7355] group-hover:border-[#8B7355] flex items-center justify-center mb-3 mx-auto transition-all duration-300 shadow-sm">
-                            <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-[#8B7355] group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white border-2 border-pm-taupe/20 group-hover:bg-pm-taupe group-hover:border-pm-taupe flex items-center justify-center mb-3 mx-auto transition-all duration-300 shadow-sm">
+                            <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-pm-taupe group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                           </div>
                           <h4 className="text-sm md:text-base font-bold text-[#3D3D3D] mb-1 leading-tight">
                             {benefit.text}
@@ -116,7 +116,7 @@ export function CareServicesSection() {
               <div className="flex justify-center">
                 <a
                   href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-base md:text-lg rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-base md:text-lg rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Kosten & Pflegekräfte ansehen
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

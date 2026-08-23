@@ -4,9 +4,9 @@ import { Clock, Mail, Check } from 'lucide-react';
 
 export function HowItWorks() {
   return (
-    <section id="ablauf" className="scroll-mt-20 py-14 md:py-16 lg:py-20 px-5 bg-[#F8F7F5]">
+    <section id="ablauf" className="scroll-mt-20 py-14 md:py-16 lg:py-20 px-5 bg-pm-paper">
       <div className="max-w-[560px] md:max-w-[900px] lg:max-w-[1100px] mx-auto">
-        <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#A89279] mb-2">
+        <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
           So funktioniert's
         </p>
         <h2 className="text-[26px] md:text-[32px] lg:text-[38px] leading-[1.25] font-bold text-[#3D3D3D] mb-8 md:mb-10 lg:mb-12">
@@ -81,14 +81,14 @@ export function HowItWorks() {
         <div className="mt-10 md:mt-12 lg:mt-14 text-center">
           <a
             href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-base md:text-lg rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-base md:text-lg rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Kosten & Pflegekräfte ansehen
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </a>
-          <p className="mt-3 text-[13px] text-[#8B8B8B]">100% kostenfrei & unverbindlich</p>
+          <p className="mt-3 text-[13px] text-pm-mute">100% kostenfrei & unverbindlich</p>
         </div>
 
       </div>

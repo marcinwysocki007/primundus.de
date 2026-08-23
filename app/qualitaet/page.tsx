@@ -66,26 +66,26 @@ export default function Qualitaet() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Qualität</span>
+            <span className="text-pm-ink">Qualität</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             Über Primundus · Aktualisiert April 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Qualität der 24h-Pflege — wie Primundus Kräfte prüft und sichert
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-10 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Über 20 Jahre, mehr als 60.000 Betreuungen, Testsieger DIE WELT — diese Zahlen entstehen nicht durch Zufall. Sie entstehen durch ein konsequentes Qualitätssystem: aktive Prüfung vor jedem Einsatz, laufende Betreuung während des Einsatzes, und die Bereitschaft sofort zu reagieren wenn etwas nicht stimmt.
           </p>
 
@@ -96,17 +96,17 @@ export default function Qualitaet() {
               { zahl: '60.000+', label: 'Betreuungen' },
               { zahl: 'Testsieger', label: 'DIE WELT' },
             ].map((item) => (
-              <div key={item.label} className="bg-white border border-[#E5E3DF] rounded-2xl p-5 text-center shadow-sm">
-                <p className="text-[24px] font-bold text-[#8B7355]">{item.zahl}</p>
-                <p className="text-[13px] text-[#8B8B8B] mt-1">{item.label}</p>
+              <div key={item.label} className="bg-white border border-pm-line rounded-2xl p-5 text-center shadow-sm">
+                <p className="text-[24px] font-bold text-pm-taupe">{item.zahl}</p>
+                <p className="text-[13px] text-pm-mute mt-1">{item.label}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="auswahl" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="auswahl" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie Primundus Betreuungskräfte auswählt
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Nicht jede Kraft die sich bewirbt wird vermittelt. Primundus trifft eine gezielte Auswahl — basierend auf Erfahrung, Qualifikation, Persönlichkeit und dem spezifischen Bedarf der Familie.
           </p>
           <div className="space-y-3 mb-10">
@@ -117,22 +117,22 @@ export default function Qualitaet() {
               { schritt: 'Spezialerfahrung abgleichen', desc: 'Bei Demenz, Parkinson, Schlaganfall oder anderen Diagnosen: Kraft mit entsprechender Vorerfahrung zuordnen.' },
               { schritt: 'Matching zur Familie', desc: 'Persönlichkeit, Interessen, Erfahrungsprofil — Primundus wählt die Kraft die zur spezifischen Situation passt. Telefonat vorab auf Wunsch möglich.' },
             ].map((item, i) => (
-              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
+              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.schritt}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.schritt}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <h2 id="pruefung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pruefung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was aktiv geprüft wird — und was nicht reicht
           </h2>
           <div className="grid md:grid-cols-2 gap-4 mb-10">
-            <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-5">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-3">Primundus prüft aktiv</p>
+            <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Primundus prüft aktiv</p>
               {[
                 'Deutschkenntnisse im Gespräch bewertet',
                 'Anzahl und Art früherer Einsätze dokumentiert',
@@ -141,13 +141,13 @@ export default function Qualitaet() {
                 'Führerschein verifiziert wenn relevant',
                 'Persönlichkeit und Kommunikationsstil eingeschätzt',
               ].map((item) => (
-                <div key={item} className="flex gap-2 text-[13px] text-[#2A5C3F] py-1.5 border-b border-[rgba(61,122,92,0.1)] last:border-0">
+                <div key={item} className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(61,122,92,0.1)] last:border-0">
                   <span className="flex-shrink-0">✓</span>{item}
                 </div>
               ))}
             </div>
-            <div className="bg-[#FDF0EE] border border-[rgba(231,111,99,0.15)] rounded-2xl p-5">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B3E2F] mb-3">Was nicht ausreicht</p>
+            <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.15)] rounded-2xl p-5">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-coral-ink mb-3">Was nicht ausreicht</p>
               {[
                 'Nur Selbstauskunft der Kraft ohne Prüfung',
                 'Zertifikate ohne Verifizierung der Praxiserfahrung',
@@ -155,17 +155,17 @@ export default function Qualitaet() {
                 'Profile aus Online-Marktplätzen ohne Hintergrundprüfung',
                 'Kräfte ohne nachweisbare 24h-Einsatzerfahrung',
               ].map((item) => (
-                <div key={item} className="flex gap-2 text-[13px] text-[#8B3E2F] py-1.5 border-b border-[rgba(231,111,99,0.1)] last:border-0">
+                <div key={item} className="flex gap-2 text-[13px] text-pm-coral-ink py-1.5 border-b border-[rgba(231,111,99,0.1)] last:border-0">
                   <span className="flex-shrink-0">✗</span>{item}
                 </div>
               ))}
             </div>
           </div>
 
-          <h2 id="laufend" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="laufend" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Laufende Qualitätssicherung während des Einsatzes
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Qualität endet nicht nach der Vermittlung. Primundus bleibt laufender Ansprechpartner — für Familien und für Kräfte.
           </p>
           <div className="space-y-3 mb-10">
@@ -175,18 +175,18 @@ export default function Qualitaet() {
               { aspekt: 'Sofortreaktion bei Problemen', desc: 'Wenn die Qualität nicht stimmt: Primundus handelt sofort — Gespräch mit der Kraft, und wenn nötig unmittelbarer Wechsel.' },
               { aspekt: 'Kraftwechsel ohne Lücke', desc: 'Alle 6–8 Wochen regulärer Wechsel — nahtlos organisiert. Primundus stellt sicher dass die neue Kraft das Profil der Familie kennt.' },
             ].map((item) => (
-              <div key={item.aspekt} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.aspekt}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.aspekt} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.aspekt}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="wechsel" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wechsel" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was wenn es nicht passt — täglich kündbar
           </h2>
-          <div className="bg-white border-2 border-[#8B7355] rounded-2xl p-6 mb-10">
-            <p className="text-[16px] font-bold text-[#1C1C1C] mb-3">Die Primundus-Garantie</p>
+          <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10">
+            <p className="text-[16px] font-bold text-pm-ink mb-3">Die Primundus-Garantie</p>
             <div className="space-y-3">
               {[
                 { punkt: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, keine Fristen. Wenn die Kraft nicht passt — ein Anruf genügt.' },
@@ -194,17 +194,17 @@ export default function Qualitaet() {
                 { punkt: 'Keine Zusatzkosten beim Wechsel', desc: 'Wechsel aus Qualitätsgründen kostet nichts zusätzlich. Primundus trägt das Vermittlungsrisiko.' },
               ].map((item) => (
                 <div key={item.punkt} className="flex gap-3">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   <div>
-                    <p className="text-[14px] font-bold text-[#1C1C1C]">{item.punkt}</p>
-                    <p className="text-[13px] text-[#2E2E2E]">{item.desc}</p>
+                    <p className="text-[14px] font-bold text-pm-ink">{item.punkt}</p>
+                    <p className="text-[13px] text-pm-body">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen zur Qualität</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen zur Qualität</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie stellt Primundus die Qualität der Betreuungskräfte sicher?', a: 'Aktive Prüfung vor jedem Einsatz: Deutschkenntnisse im Gespräch bewertet, Erfahrung und Referenzen geprüft, Spezialerfahrung abgeglichen. Laufende Betreuung durch Primundus als Ansprechpartner. Bei Qualitätsproblemen sofortiger Wechsel — täglich kündbar.' },
@@ -212,13 +212,13 @@ export default function Qualitaet() {
               { q: 'Was passiert wenn die Kraft nicht gut ist?', a: 'Sofort Primundus informieren. Primundus reagiert unverzüglich — Gespräch mit der Kraft und wenn nötig sofortiger Wechsel. Keine Zusatzkosten, keine langen Fristen. Täglich kündbar.' },
               { q: 'Woher weiß Primundus ob eine Kraft gut ist?', a: 'Aus 20+ Jahren Erfahrung und 60.000+ Einsätzen. Primundus kennt die Qualitätskriterien die in der Praxis entscheiden — Deutschkenntnisse, Belastbarkeit, Empathie, Strukturfähigkeit. Und holt aktiv Feedback von Familien ein.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

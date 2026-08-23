@@ -21,10 +21,10 @@ const data = [
 
 export function GrafikPflegestatistik() {
   return (
-    <div className="my-10 rounded-2xl overflow-hidden border border-[#E5E3DF] shadow-sm bg-white">
+    <div className="my-10 rounded-2xl overflow-hidden border border-pm-line shadow-sm bg-white">
 
       {/* Header */}
-      <div className="bg-[#8B7355] px-6 py-4 flex items-start justify-between gap-4">
+      <div className="bg-pm-taupe px-6 py-4 flex items-start justify-between gap-4">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/70 mb-1">
             Pflegestatistik Deutschland
@@ -50,11 +50,11 @@ export function GrafikPflegestatistik() {
             { value: '86 %', label: 'werden zu Hause\nversorgt', accent: false },
             { value: '+15 %', label: 'Wachstum\nseit 2021', accent: false },
           ].map((kpi) => (
-            <div key={kpi.label} className="bg-[#F8F7F5] rounded-xl p-4 text-center">
-              <p className={`text-[22px] font-bold leading-none mb-1.5 ${kpi.accent ? 'text-[#8B7355]' : 'text-[#1C1C1C]'}`}>
+            <div key={kpi.label} className="bg-pm-paper rounded-xl p-4 text-center">
+              <p className={`text-[22px] font-bold leading-none mb-1.5 ${kpi.accent ? 'text-pm-taupe' : 'text-pm-ink'}`}>
                 {kpi.value}
               </p>
-              <p className="text-[12px] text-[#8B8B8B] leading-snug whitespace-pre-line">
+              <p className="text-[12px] text-pm-mute leading-snug whitespace-pre-line">
                 {kpi.label}
               </p>
             </div>
@@ -62,7 +62,7 @@ export function GrafikPflegestatistik() {
         </div>
 
         {/* Donut + Legende */}
-        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B] mb-4">
+        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-mute mb-4">
           Versorgungsform 2024
         </p>
         <div className="flex items-center gap-6 mb-6">
@@ -80,8 +80,8 @@ export function GrafikPflegestatistik() {
               />
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-[18px] font-bold text-[#1C1C1C] leading-none">86 %</span>
-              <span className="text-[10px] text-[#8B8B8B]">zu Hause</span>
+              <span className="text-[18px] font-bold text-pm-ink leading-none">86 %</span>
+              <span className="text-[10px] text-pm-mute">zu Hause</span>
             </div>
           </div>
 
@@ -98,8 +98,8 @@ export function GrafikPflegestatistik() {
                   style={{ background: item.color }}
                 />
                 <div>
-                  <p className="text-[13px] font-semibold text-[#1C1C1C]">{item.label}</p>
-                  <p className="text-[12px] text-[#8B8B8B]">{item.sub}</p>
+                  <p className="text-[13px] font-semibold text-pm-ink">{item.label}</p>
+                  <p className="text-[12px] text-pm-mute">{item.sub}</p>
                 </div>
               </div>
             ))}
@@ -107,7 +107,7 @@ export function GrafikPflegestatistik() {
         </div>
 
         {/* Balkendiagramm */}
-        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B] mb-4">
+        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-mute mb-4">
           Entwicklung Pflegebedürftige (in Millionen)
         </p>
         <div className="h-[180px] w-full">
@@ -143,13 +143,13 @@ export function GrafikPflegestatistik() {
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <p className="text-[11px] text-[#8B8B8B] mt-1">* Prognose Statistisches Bundesamt</p>
+        <p className="text-[11px] text-pm-mute mt-1">* Prognose Statistisches Bundesamt</p>
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 border-t border-[#E5E3DF] flex justify-between items-center">
-        <p className="text-[11px] text-[#8B8B8B]">Quelle: Destatis · Pflegestatistik 2024</p>
-        <p className="text-[11px] font-semibold text-[#8B7355]">primundus.de/was-ist-24-stunden-pflege</p>
+      <div className="px-6 py-3 border-t border-pm-line flex justify-between items-center">
+        <p className="text-[11px] text-pm-mute">Quelle: Destatis · Pflegestatistik 2024</p>
+        <p className="text-[11px] font-semibold text-pm-taupe">primundus.de/was-ist-24-stunden-pflege</p>
       </div>
     </div>
   )

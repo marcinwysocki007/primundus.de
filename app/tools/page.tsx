@@ -209,18 +209,18 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2" aria-label="Breadcrumb">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span aria-hidden="true">›</span>
             <span className="text-[#3D3D3D]">Tools & Rechner</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             TOOLS & RECHNER
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -240,7 +240,7 @@ export default function Page() {
           >
             <div className="flex flex-col md:flex-row gap-5 md:items-center">
               <div className="flex-1 min-w-0">
-                <span className="inline-block bg-[#E76F63] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                <span className="inline-block bg-pm-coral text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
                   Meistgenutzt
                 </span>
                 <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-snug mb-2">
@@ -252,7 +252,7 @@ export default function Page() {
                 </p>
               </div>
               <div className="flex-shrink-0">
-                <span className="inline-flex items-center gap-2 bg-[#E76F63] group-hover:bg-[#D45F53] transition-colors text-white font-bold text-[15px] px-6 py-3.5 rounded-xl">
+                <span className="inline-flex items-center gap-2 bg-pm-coral group-hover:bg-pm-coral-deep transition-colors text-white font-bold text-[15px] px-6 py-3.5 rounded-xl">
                   Kosten berechnen →
                 </span>
               </div>
@@ -264,7 +264,7 @@ export default function Page() {
             {gridTools.map((tool) => (
               <div
                 key={tool.href}
-                className="bg-white border border-[#E5E3DF] rounded-2xl p-5 flex flex-col gap-4 hover:border-[#C5B89E] transition-colors"
+                className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-4 hover:border-[#C5B89E] transition-colors"
               >
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-[#F3EFE9] rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -282,7 +282,7 @@ export default function Page() {
                 <a
                   href={tool.href}
                   {...(tool.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="inline-flex items-center gap-1.5 self-start border border-[#C5B89E] hover:border-[#8B7355] hover:bg-[#F8F4EF] text-[#8B7355] text-[13px] font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
+                  className="inline-flex items-center gap-1.5 self-start border border-[#C5B89E] hover:border-pm-taupe hover:bg-[#F8F4EF] text-pm-taupe text-[13px] font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
                 >
                   Jetzt nutzen →
                 </a>
@@ -300,8 +300,8 @@ export default function Page() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {steps.map((step) => (
-                <div key={step.num} className="bg-white border border-[#E5E3DF] rounded-2xl p-5 flex gap-4">
-                  <div className="w-9 h-9 bg-[#F3EFE9] rounded-xl flex items-center justify-center flex-shrink-0 text-[16px] font-black text-[#8B7355]">
+                <div key={step.num} className="bg-white border border-pm-line rounded-2xl p-5 flex gap-4">
+                  <div className="w-9 h-9 bg-[#F3EFE9] rounded-xl flex items-center justify-center flex-shrink-0 text-[16px] font-black text-pm-taupe">
                     {step.num}
                   </div>
                   <div>
@@ -322,17 +322,17 @@ export default function Page() {
               {faqs.map((faq) => (
                 <details
                   key={faq.q}
-                  className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden group"
+                  className="bg-white border border-pm-line rounded-2xl overflow-hidden group"
                 >
                   <summary className="px-5 py-4 flex items-center justify-between gap-3 cursor-pointer list-none select-none hover:bg-[#FDFCFA] transition-colors">
                     <span className="text-[15px] font-semibold text-[#3D3D3D] leading-snug">
                       {faq.q}
                     </span>
-                    <span className="text-[#8B7355] text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">
+                    <span className="text-pm-taupe text-[20px] flex-shrink-0 leading-none transition-transform group-open:rotate-45">
                       +
                     </span>
                   </summary>
-                  <div className="px-5 pb-5 pt-1 border-t border-[#F0EDE8]">
+                  <div className="px-5 pb-5 pt-1 border-t border-pm-line-soft">
                     <p className="text-[14px] text-[#5A5A5A] leading-relaxed">{faq.a}</p>
                   </div>
                 </details>

@@ -64,42 +64,42 @@ export default function TagesstrukturDemenz() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Tagesstruktur bei Demenz</span>
+            <span className="text-pm-ink">Tagesstruktur bei Demenz</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Tagesstruktur bei Demenz — Tagesplan, Aktivitäten & Tipps
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Feste Tagesstrukturen sind das wirksamste nicht-medikamentöse Mittel bei Demenz. Sie reduzieren Angst, Unruhe und Verhaltensauffälligkeiten erheblich — weil sie Orientierung geben ohne Gedächtnis zu brauchen. Der Körper erinnert sich auch wenn der Kopf es nicht mehr kann.
           </p>
 
-          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-6 mb-4 leading-snug">
+          <h2 id="warum" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-6 mb-4 leading-snug">
             Warum Tagesstruktur bei Demenz so wichtig ist
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Das Kurzzeitgedächtnis ist bei Demenz früh beeinträchtigt — aber das prozedurale Gedächtnis bleibt lange intakt. Dieses Gedächtnissystem speichert Routinen und Abläufe: Wie man Kaffee kocht, wie der Tagesablauf war, was nach dem Frühstück kommt. Feste Strukturen nutzen genau dieses intakte System.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Wenn jeden Morgen um 8 Uhr das Frühstück auf dem Tisch steht, jeden Nachmittag um 15 Uhr Kaffeezeit ist und jeden Abend dieselbe Einschlafroutine folgt — dann weiß der Körper was kommt. Das reduziert die Desorientierung die Angst und Unruhe auslöst.
           </p>
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-[#2A5C3F] mb-2">Was Tagesstruktur konkret bewirkt</p>
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
+            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Was Tagesstruktur konkret bewirkt</p>
             <ul className="space-y-1.5">
               {[
                 'Reduziert Ängste und Verwirrung durch Vorhersehbarkeit',
@@ -108,7 +108,7 @@ export default function TagesstrukturDemenz() {
                 'Mehr positive Momente durch gezielte Aktivitäten',
                 'Entlastung der Pflegeperson durch klare Abläufe',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[14px] text-[#2A5C3F]">
+                <li key={item} className="flex items-start gap-2 text-[14px] text-pm-green-deep">
                   <span className="font-bold mt-0.5 flex-shrink-0">✓</span>
                   {item}
                 </li>
@@ -116,15 +116,15 @@ export default function TagesstrukturDemenz() {
             </ul>
           </div>
 
-          <h2 id="tagesplan" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="tagesplan" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Idealer Tagesplan bei Demenz — Beispiel
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Dieser Tagesplan ist ein Ausgangspunkt — er sollte an den früheren Lebensrhythmus des Betroffenen angepasst werden. Wer immer Frühaufsteher war, steht früh auf. Wer Nachtmensch war, startet langsamer.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-10 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Beispiel-Tagesplan bei mittlerem Demenzstadium</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Beispiel-Tagesplan bei mittlerem Demenzstadium</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -144,10 +144,10 @@ export default function TagesstrukturDemenz() {
                     ['18:30–20:00', 'Abendprogramm', 'Vertraute Sendungen, Musik, Gespräche'],
                     ['20:00–21:00', 'Einschlafroutine', 'Immer dieselbe Abfolge: Zähneputzen, Pyjama, Bett'],
                   ].map(([zeit, aktivität, hinweis], i) => (
-                    <tr key={zeit} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[13px] font-semibold text-[#8B7355] border-b border-[#E5E3DF] w-[100px]">{zeit}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{aktivität}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{hinweis}</td>
+                    <tr key={zeit} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[13px] font-semibold text-pm-taupe border-b border-pm-line w-[100px]">{zeit}</td>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{aktivität}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -155,7 +155,7 @@ export default function TagesstrukturDemenz() {
             </div>
           </div>
 
-          <h2 id="aktivitaeten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="aktivitaeten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Sinnvolle Aktivitäten je Stadium
           </h2>
           <div className="space-y-3 mb-10">
@@ -173,12 +173,12 @@ export default function TagesstrukturDemenz() {
                 items: ['Musik hören — auch non-verbal wirksam', 'Berührungen, Massagen, sensorische Reize', 'Vertraute Gerüche: Kaffeduft, Lieblingsparfum', 'Vorlesen bekannter Texte oder Gedichte'],
               },
             ].map((group) => (
-              <div key={group.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-3">{group.title}</p>
+              <div key={group.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-3">{group.title}</p>
                 <ul className="space-y-1.5">
                   {group.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[14px] text-[#2E2E2E]">
-                      <span className="text-[#8B7355] font-bold flex-shrink-0">·</span>
+                    <li key={item} className="flex items-start gap-2 text-[14px] text-pm-body">
+                      <span className="text-pm-taupe font-bold flex-shrink-0">·</span>
                       {item}
                     </li>
                   ))}
@@ -187,10 +187,10 @@ export default function TagesstrukturDemenz() {
             ))}
           </div>
 
-          <h2 id="schlafroutine" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="schlafroutine" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Schlaf & Nachtunruhe — die größte Herausforderung
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Schlafstörungen und Nachtunruhe sind bei Demenz häufig — und eine der größten Belastungen für Angehörige. Das Sundowning-Phänomen (zunehmende Unruhe am Nachmittag und Abend) ist typisch für Alzheimer.
           </p>
           <div className="space-y-3 mb-6">
@@ -200,20 +200,20 @@ export default function TagesstrukturDemenz() {
               { title: 'Licht und Aktivität tagsüber', desc: 'Tageslicht und Bewegung regulieren den Schlaf-Wach-Rhythmus. Tägliche Spaziergänge, helle Räume am Morgen.' },
               { title: 'Nächtliche Unterstützung', desc: 'Bei häufiger Nachtunruhe ist eine 24h-Kraft unverzichtbar — Angehörige die jede Nacht unterbrochen werden, erschöpfen schnell.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Demenz allgemein:{' '}
-            <a href="/demenz-pflege-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Demenz Pflege zuhause — vollständiger Ratgeber</a>
+            <a href="/demenz-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Demenz Pflege zuhause — vollständiger Ratgeber</a>
             {' · '}
-            <a href="/kommunikation-mit-demenzkranken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kommunikation mit Demenzkranken</a>
+            <a href="/kommunikation-mit-demenzkranken" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kommunikation mit Demenzkranken</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zur Tagesstruktur bei Demenz
           </h2>
           <div className="space-y-4 mb-12">
@@ -223,13 +223,13 @@ export default function TagesstrukturDemenz() {
               { q: 'Was ist Sundowning bei Demenz?', a: 'Sundowning bezeichnet die verstärkte Unruhe, Verwirrung und manchmal Aggressivität die bei vielen Demenzkranken am Nachmittag und frühen Abend auftritt. Ursache ist wahrscheinlich gestörter zirkadianer Rhythmus. Tipp: Nachmittags Reize reduzieren, ruhige Aktivitäten.' },
               { q: 'Wie geht man mit Nachtunruhe bei Demenz um?', a: 'Feste Schlafenszeit mit beruhigendem Ritual, Tagschlaf begrenzen, tagsüber Licht und Bewegung. Bei häufiger Nachtunruhe ist eine 24h-Betreuungskraft sinnvoll — Angehörige die jede Nacht unterbrochen werden, erschöpfen schnell.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

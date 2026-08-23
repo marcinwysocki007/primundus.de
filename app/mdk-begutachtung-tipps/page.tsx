@@ -67,42 +67,42 @@ export default function MdkBegutachtungTipps() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">MDK-Begutachtung Tipps</span>
+            <span className="text-pm-ink">MDK-Begutachtung Tipps</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             MDK-Begutachtung Tipps — so bereiten Sie sich richtig vor
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Die MDK-Begutachtung (seit 2023: MDS — Medizinischer Dienst) entscheidet über den Pflegegrad — und damit über hunderte Euro monatlich an Kassenzuschüssen. Viele Familien unterschätzen wie wichtig die Vorbereitung ist. Der Gutachter sieht den Pflegebedürftigen einmal, für etwa eine Stunde. Was in dieser Stunde gesagt und gezeigt wird, zählt.
           </p>
 
-          <div className="bg-[#FDF0EE] border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-[#8B3E2F] mb-2">Der häufigste Fehler</p>
-            <p className="text-[14px] text-[#8B3E2F] leading-relaxed">
+          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
+            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Der häufigste Fehler</p>
+            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
               Pflegebedürftige geben sich beim Besuch des Gutachters mehr Mühe als sonst — aus Stolz oder um niemanden zu belasten. Das Ergebnis: zu niedriger Pflegegrad, zu wenig Zuschüsse. Den Gutachter interessiert der schlechteste typische Tag — nicht der gute Tag.
             </p>
           </div>
 
-          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie die MDK-Begutachtung abläuft
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Nach dem Pflegekassen-Antrag beauftragt die Kasse den Medizinischen Dienst mit einer Begutachtung. Ein Gutachter (Arzt oder Pflegefachkraft) kommt zu einem angekündigten Termin nach Hause.
           </p>
           <ol className="space-y-3 mb-10">
@@ -112,17 +112,17 @@ export default function MdkBegutachtungTipps() {
               { n: '3', title: 'Die 6 Module des NBA', desc: 'Mobilität, kognitive Fähigkeiten, Verhaltensweisen, Selbstversorgung, Umgang mit Erkrankungen, Alltagsleben. Jedes Modul wird einzeln bewertet und gewichtet.' },
               { n: '4', title: 'Gutachten und Bescheid', desc: 'Gutachter erstellt Bericht, Pflegekasse erteilt Bescheid. Dauer: 4–6 Wochen. Bei Widerspruch: erneute Begutachtung möglich.' },
             ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF] list-none">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
+              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{step.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{step.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
                 </div>
               </li>
             ))}
           </ol>
 
-          <h2 id="vorbereitung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="vorbereitung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Konkrete Vorbereitung — Checkliste
           </h2>
           <div className="space-y-2 mb-10">
@@ -138,29 +138,29 @@ export default function MdkBegutachtungTipps() {
               ['Vorsorgevollmacht und Patientenverfügung griffbereit haben', false],
               ['Hausarzt informieren dass Begutachtung stattfindet', false],
             ].map(([item, pflicht]) => (
-              <div key={item as string} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <span className={`w-5 h-5 rounded flex-shrink-0 mt-0.5 flex items-center justify-center border-2 ${pflicht ? 'border-[#8B7355]' : 'border-[#C8C3BA]'}`}>
-                  {pflicht && <span className="text-[#8B7355] text-[10px] font-bold">✓</span>}
+              <div key={item as string} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
+                <span className={`w-5 h-5 rounded flex-shrink-0 mt-0.5 flex items-center justify-center border-2 ${pflicht ? 'border-pm-taupe' : 'border-[#C8C3BA]'}`}>
+                  {pflicht && <span className="text-pm-taupe text-[10px] font-bold">✓</span>}
                 </span>
                 <div>
-                  <p className="text-[14px] text-[#2E2E2E]">{item as string}</p>
-                  {pflicht && <p className="text-[11px] text-[#A89279] mt-0.5">Besonders wichtig</p>}
+                  <p className="text-[14px] text-pm-body">{item as string}</p>
+                  {pflicht && <p className="text-[11px] text-pm-taupe-light mt-0.5">Besonders wichtig</p>}
                 </div>
               </div>
             ))}
           </div>
 
-          <h2 id="pflegetagebuch" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pflegetagebuch" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Das Pflegetagebuch — das wichtigste Vorbereitungsinstrument
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Ein Pflegetagebuch dokumentiert täglich welche Hilfe geleistet wurde — mit Zeitangaben. Es ist das stärkste Argument wenn der Gutachter fragt wie viel Unterstützung wirklich nötig ist.
           </p>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6">
-            <div className="bg-[#F8F7F5] px-5 py-3 border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Was ins Pflegetagebuch gehört</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6">
+            <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Was ins Pflegetagebuch gehört</p>
             </div>
-            <div className="divide-y divide-[#E5E3DF]">
+            <div className="divide-y divide-pm-line">
               {[
                 { bereich: 'Morgens', inhalt: 'Aufstehen (alleine? mit Hilfe?), Waschen, Ankleiden, Frühstück — Zeit und Art der Hilfe' },
                 { bereich: 'Tagsüber', inhalt: 'Toilettengänge, Medikamente, Mahlzeiten, Mobilität, Stürze, Verwirrtheitsepisoden' },
@@ -169,14 +169,14 @@ export default function MdkBegutachtungTipps() {
                 { bereich: 'Besonderheiten', inhalt: 'Schlechte Tage dokumentieren — Aggressivität, Orientierungslosigkeit, Stürze, Schmerzen' },
               ].map((item) => (
                 <div key={item.bereich} className="px-5 py-3">
-                  <p className="text-[13px] font-bold text-[#1C1C1C] mb-0.5">{item.bereich}</p>
-                  <p className="text-[13px] text-[#2E2E2E] leading-relaxed">{item.inhalt}</p>
+                  <p className="text-[13px] font-bold text-pm-ink mb-0.5">{item.bereich}</p>
+                  <p className="text-[13px] text-pm-body leading-relaxed">{item.inhalt}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <h2 id="am-tag" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="am-tag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Am Begutachtungstag — was zu beachten ist
           </h2>
           <div className="space-y-3 mb-10">
@@ -188,22 +188,22 @@ export default function MdkBegutachtungTipps() {
               { tip: 'Hilfsmittel nicht verstecken', desc: 'Rollator, Haltegriffe, Inkontinenzmaterial — alles sichtbar lassen. Das zeigt den tatsächlichen Versorgungsbedarf.' },
               { tip: 'Nachfragen erlaubt', desc: 'Was wurde in welchem Modul wie bewertet? Gutachter müssen Auskunft geben.' },
             ].map((item) => (
-              <div key={item.tip} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.tip}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.tip} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tip}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-[#2A5C3F] mb-2">Ergebnis zu niedrig? Widerspruch einlegen!</p>
-            <p className="text-[14px] text-[#2A5C3F] leading-relaxed">
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
+            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Ergebnis zu niedrig? Widerspruch einlegen!</p>
+            <p className="text-[14px] text-pm-green-deep leading-relaxed">
               Wer den Bescheid für zu niedrig hält, kann innerhalb von 4 Wochen Widerspruch einlegen — kostenlos und ohne Risiko. Eine erneute Begutachtung wird angesetzt.{' '}
               <a href="/widerspruch-pflegekasse-einlegen" className="underline font-semibold">Widerspruch einlegen — wie es geht</a>
             </p>
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie bereitet man sich auf die MDK-Begutachtung vor?', a: 'Pflegetagebuch führen (2+ Wochen vorher), Medikamente und Diagnosen auflisten, Hilfsmittel sichtbar lassen, Angehörige dabei haben, schlechtesten typischen Tag beschreiben — nicht den guten.' },
@@ -212,13 +212,13 @@ export default function MdkBegutachtungTipps() {
               { q: 'Was wenn der Pflegegrad zu niedrig ist?', a: 'Innerhalb von 4 Wochen Widerspruch einlegen — kostenlos, ohne Risiko. Kasse muss erneut begutachten. Mit Pflegetagebuch und konkreten Beispielen ist der Widerspruch oft erfolgreich.' },
               { q: 'Was ist ein Pflegetagebuch und wie schreibt man es?', a: 'Tägliche Aufzeichnung welche Hilfe geleistet wurde — mit Zeitangaben. Morgens, tagsüber, abends, nachts. Besondere Ereignisse (Stürze, Verwirrtheit) dokumentieren. Mindestens 2 Wochen vor dem Termin beginnen.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

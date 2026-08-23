@@ -45,7 +45,7 @@ export function FAQSection() {
     <section className="py-16 md:py-18 lg:py-20 px-5 bg-gradient-to-b from-white to-[#FAFAF9]">
       <div className="max-w-[640px] md:max-w-[900px] lg:max-w-[1100px] mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             Häufige Fragen
           </p>
           <h2 className="text-[32px] md:text-[36px] lg:text-[42px] leading-[1.2] font-bold text-[#3D3D3D] mb-4">
@@ -60,7 +60,7 @@ export function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white border border-pm-line rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -70,11 +70,11 @@ export function FAQSection() {
                   {faq.question}
                 </span>
                 <div className={`w-8 h-8 rounded-full bg-[#F5F3F0] flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                  openIndex === index ? "bg-[#8B7355] rotate-180" : ""
+                  openIndex === index ? "bg-pm-taupe rotate-180" : ""
                 }`}>
                   <svg
                     className={`w-5 h-5 transition-colors duration-300 ${
-                      openIndex === index ? "text-white" : "text-[#8B7355]"
+                      openIndex === index ? "text-white" : "text-pm-taupe"
                     }`}
                     viewBox="0 0 24 24"
                     fill="none"
@@ -106,7 +106,7 @@ export function FAQSection() {
           </p>
           <a
             href="tel:+4989200000830"
-            className="inline-flex items-center gap-2 text-[#8B7355] font-semibold text-[15px] hover:text-[#6B5738] transition-colors"
+            className="inline-flex items-center gap-2 text-pm-taupe font-semibold text-[15px] hover:text-[#6B5738] transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

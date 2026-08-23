@@ -323,18 +323,18 @@ export default function RegionenHub() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">24h-Pflege in Ihrer Region</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             REGIONEN
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -356,14 +356,14 @@ export default function RegionenHub() {
               <a
                 key={land.slug}
                 href={`/24h-pflege-${land.slug}`}
-                className="bg-white border border-[#E5E3DF] rounded-xl p-4 flex items-start gap-4 hover:border-[#8B7355] hover:shadow-sm transition-all group"
+                className="bg-white border border-pm-line rounded-xl p-4 flex items-start gap-4 hover:border-pm-taupe hover:shadow-sm transition-all group"
               >
-                <div className="w-10 h-10 rounded-lg bg-[#F2EDE6] flex items-center justify-center flex-shrink-0 font-bold text-[11px] text-[#8B7355] group-hover:bg-[#8B7355] group-hover:text-white transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-pm-shell flex items-center justify-center flex-shrink-0 font-bold text-[11px] text-pm-taupe group-hover:bg-pm-taupe group-hover:text-white transition-colors">
                   {land.kuerzel}
                 </div>
                 <div>
                   <p className="text-[14px] font-bold text-[#3D3D3D] mb-0.5">{land.name}</p>
-                  <p className="text-[12px] text-[#8B8B8B] leading-snug">{land.staedte}</p>
+                  <p className="text-[12px] text-pm-mute leading-snug">{land.staedte}</p>
                 </div>
               </a>
             ))}
@@ -373,24 +373,24 @@ export default function RegionenHub() {
           <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-1">
             Nach Stadt
           </h2>
-          <p className="text-[13px] text-[#8B8B8B] mb-6">{staedteAlpha.length} Städte — alphabetisch</p>
+          <p className="text-[13px] text-pm-mute mb-6">{staedteAlpha.length} Städte — alphabetisch</p>
 
           {Array.from(new Set(staedteAlpha.map(s => s.name[0].toUpperCase()))).sort().map((buchstabe) => {
             const gruppe = staedteAlpha.filter(s => s.name[0].toUpperCase() === buchstabe)
             return (
               <div key={buchstabe} className="mb-5">
                 <div className="flex items-center gap-3 mb-2.5">
-                  <span className="text-[13px] font-bold text-[#8B7355] w-6">{buchstabe}</span>
-                  <div className="flex-1 h-px bg-[#E5E3DF]" />
+                  <span className="text-[13px] font-bold text-pm-taupe w-6">{buchstabe}</span>
+                  <div className="flex-1 h-px bg-pm-line" />
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
                   {gruppe.map((stadt) => (
                     <a
                       key={stadt.slug}
                       href={`/24h-pflege-${stadt.slug}`}
-                      className="text-[13px] text-[#5A5A5A] hover:text-[#8B7355] py-1.5 px-3 rounded-lg hover:bg-white transition-all flex items-center gap-2 group"
+                      className="text-[13px] text-[#5A5A5A] hover:text-pm-taupe py-1.5 px-3 rounded-lg hover:bg-white transition-all flex items-center gap-2 group"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#E5E3DF] group-hover:bg-[#8B7355] flex-shrink-0 transition-colors" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-pm-line group-hover:bg-pm-taupe flex-shrink-0 transition-colors" />
                       {stadt.name}
                     </a>
                   ))}
@@ -402,18 +402,18 @@ export default function RegionenHub() {
           {/* Vollständiger, crawlbarer Städte-Index — die Suchbox oben ist
               clientseitig und für Suchmaschinen unsichtbar; erst dieser Block
               macht die 187 Städteseiten intern erreichbar (SEO 14.08.2026). */}
-          <h2 className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mb-4 leading-snug mt-12">
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4 mt-12">
             Alle Einsatzorte im Überblick
           </h2>
-          <p className="text-[15px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[15px] leading-relaxed text-pm-body mb-6">
             Klicken Sie Ihre Stadt an — dort finden Sie Preise, Ablauf und alles Wichtige für Ihre Region:
           </p>
           <AllRegionsIndex />
 
           {/* Nicht dabei */}
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 mt-10 mb-12">
-            <p className="text-[15px] font-bold text-[#6B5A44] mb-2">Ihre Stadt nicht dabei?</p>
-            <p className="text-[14px] text-[#6B5A44] leading-relaxed mb-4">
+            <p className="text-[15px] font-bold text-pm-taupe-ink mb-2">Ihre Stadt nicht dabei?</p>
+            <p className="text-[14px] text-pm-taupe-ink leading-relaxed mb-4">
               Wir sind in ganz Deutschland im Einsatz — auch in Ihrer Region. Einfach anfragen.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -421,13 +421,13 @@ export default function RegionenHub() {
                 href="https://kostenrechner.primundus.de/?start=1&src=apex-regionen"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-3 px-6 rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-xl transition-colors"
               >
                 Angebot in 2 Minuten
               </a>
               <a
                 href="tel:+4989200000830"
-                className="inline-flex items-center justify-center gap-2 bg-white border border-[#8B7355] text-[#8B7355] font-bold text-[14px] py-3 px-6 rounded-xl hover:bg-[#F2EDE6] transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-white border border-pm-taupe text-pm-taupe font-bold text-[14px] py-3 px-6 rounded-xl hover:bg-pm-shell transition-colors"
               >
                 089 200 000 830
               </a>

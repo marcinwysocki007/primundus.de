@@ -19,7 +19,7 @@ const GrafikPflegestatistik = dynamic(
   () => import('@/components/charts/GrafikPflegestatistik').then(m => ({ default: m.GrafikPflegestatistik })),
   {
     loading: () => (
-      <div className="my-10 h-[480px] bg-[#F8F7F5] rounded-2xl border border-[#E5E3DF] animate-pulse" />
+      <div className="my-10 h-[480px] bg-pm-paper rounded-2xl border border-pm-line animate-pulse" />
     ),
     ssr: false,
   }
@@ -29,7 +29,7 @@ const GrafikKostenvergleich = dynamic(
   () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),
   {
     loading: () => (
-      <div className="my-10 h-[420px] bg-[#F8F7F5] rounded-2xl border border-[#E5E3DF] animate-pulse" />
+      <div className="my-10 h-[420px] bg-pm-paper rounded-2xl border border-pm-line animate-pulse" />
     ),
     ssr: false,
   }
@@ -140,25 +140,25 @@ export default function WasIst24StundenPflege() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
           {/* Breadcrumb */}
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Was ist 24-Stunden-Pflege?</span>
+            <span className="text-pm-ink">Was ist 24-Stunden-Pflege?</span>
           </nav>
 
           {/* Eyebrow */}
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Aug. 2026
           </p>
 
           {/* H1 */}
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Was ist 24-Stunden-Pflege?
           </h1>
 
@@ -169,13 +169,13 @@ export default function WasIst24StundenPflege() {
           </KurzAntwort>
 
           {/* Lead */}
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
           </p>
 
           {/* Quick Answer Box */}
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">
               Auf einen Blick
             </p>
             <ul className="space-y-2.5">
@@ -187,8 +187,8 @@ export default function WasIst24StundenPflege() {
                 'Rechtlich sicher über Entsendemodell mit A1-Bescheinigung',
                 'Betreuung startet in 4–7 Tagen — täglich kündbar',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
@@ -196,10 +196,10 @@ export default function WasIst24StundenPflege() {
           </div>
 
           {/* ── SECTION 1 ── */}
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was leistet eine 24-Stunden-Betreuungskraft?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushaltsführung und soziale Betreuung — alles was der pflegebedürftige Mensch nicht mehr alleine schafft. Sie ist keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe.
           </p>
           <div className="space-y-4 mb-4">
@@ -208,36 +208,36 @@ export default function WasIst24StundenPflege() {
               { title: 'Haushaltsführung', desc: 'Kochen, Einkaufen, Reinigen, Wäsche, Begleitung zu Arztterminen. Die Betreuungskraft führt den Haushalt selbständig und entlastet damit Angehörige vollständig.' },
               { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Tagesstruktur — besonders bei Demenz ist menschliche Nähe entscheidend für Wohlbefinden und Verlangsamung des Krankheitsfortschritts.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[15px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] leading-relaxed mb-2">
+          <p className="text-[15px] text-pm-body leading-relaxed mb-2">
             <strong>Nicht enthalten:</strong> Medizinische Behandlungspflege (z.B. Verbandswechsel, Injektionen) darf die Betreuungskraft nur mit nachgewiesener Qualifikation leisten. In diesen Fällen arbeitet sie mit einem ambulanten Pflegedienst zusammen.
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Alle Leistungen im Detail:{' '}
-            <a href="/leistungen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/leistungen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Was Primundus leistet — vollständige Übersicht
             </a>
           </p>
 
           {/* ── SECTION 2 ── */}
-          <h2 id="verbreitung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="verbreitung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wie viele Menschen nutzen 24h-Pflege in Deutschland?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Schätzungsweise 300.000 bis 400.000 Haushalte nutzen aktuell eine 24-Stunden-Betreuung durch Kräfte aus EU-Ländern — bei einem Marktpotenzial von über 5 Millionen häuslich versorgten Pflegebedürftigen ist das erst der Anfang.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Ende 2024 waren rund 6 Millionen Menschen in Deutschland pflegebedürftig. <strong>86 Prozent</strong> werden zu Hause versorgt — nur 14 Prozent in Pflegeheimen. Allein seit 2021 stieg die Zahl der Pflegebedürftigen um 15 Prozent.
           </p>
 
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-4 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-4 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">
                 Pflegestatistik Deutschland — Stand 2024
               </p>
             </div>
@@ -252,42 +252,42 @@ export default function WasIst24StundenPflege() {
                   ['Wachstum seit 2021', '+15 %'],
                   ['Prognose bis 2050', 'über 7 Millionen'],
                 ].map(([label, value], i) => (
-                  <tr key={label} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                    <td className="px-5 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{label}</td>
-                    <td className="px-5 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF] text-right">{value}</td>
+                  <tr key={label} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                    <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{label}</td>
+                    <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line text-right">{value}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2024</p>
+              <p className="text-[11px] text-pm-mute">Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2024</p>
             </div>
           </div>
 
           <GrafikPflegestatistik />
 
           {/* ── SECTION 3 ── */}
-          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="kosten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was kostet 24-Stunden-Pflege — und was zahlt die Kasse 2026?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             24-Stunden-Pflege kostet monatlich 2.500 bis 4.000 Euro — je nach Pflegebedarf, Qualifikation der Betreuungskraft und Anbieter. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.364 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-6">
+          <p className="text-[15px] text-pm-body mb-6">
             → Vollständiger Kostenvergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               24h-Pflege vs. Pflegeheim — was ist günstiger?
             </a>
           </p>
 
           <GrafikKostenvergleich />
 
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-4">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2A5C3F] mb-2">
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-4">
+            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-2">
               Neu 2026 — Entlastungsbudget
             </p>
-            <p className="text-[16px] font-bold text-[#1C1C1C] mb-3">
+            <p className="text-[16px] font-bold text-pm-ink mb-3">
               3.539 Euro pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege
             </p>
             <ul className="space-y-2">
@@ -297,31 +297,31 @@ export default function WasIst24StundenPflege() {
                 'Pflegegeld läuft weiter — während der Nutzung wird es zur Hälfte weitergezahlt',
                 'Verfallsfrist beachten — ungenutztes Budget verfällt am 31. Dezember',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[14px] text-[#2A5C3F]">
-                  <span className="text-[#3D7A5C] font-bold mt-0.5">✓</span>
+                <li key={item} className="flex items-start gap-2 text-[14px] text-pm-green-deep">
+                  <span className="text-pm-green font-bold mt-0.5">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-3">
+          <p className="text-[15px] text-pm-body mb-3">
             → Wie das Entlastungsbudget kombiniert wird:{' '}
-            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Finanzierung der 24h-Pflege — alle Zuschüsse 2026
             </a>
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Steuerlich absetzbar:{' '}
-            <a href="/pflege-steuerlich-absetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflege-steuerlich-absetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Pflege steuerlich absetzen — was geht 2026?
             </a>
           </p>
 
           {/* ── SECTION 4 ── */}
-          <h2 id="rechtliches" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="rechtliches" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Ist 24-Stunden-Pflege legal?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Ja — 24-Stunden-Pflege ist legal, wenn die Betreuungskraft über eine seriöse Agentur im Entsendemodell beschäftigt wird. Die <strong>A1-Bescheinigung</strong> weist nach, dass sie in ihrem Heimatland sozialversichert ist und EU-rechtlich in Deutschland tätig sein darf. Es gibt drei Beschäftigungsmodelle:
           </p>
           <div className="space-y-3 mb-6">
@@ -330,30 +330,30 @@ export default function WasIst24StundenPflege() {
               { title: 'Direktanstellung', desc: 'Die Familie stellt selbst als Arbeitgeberin an. Rechtlich eindeutig — aber mit erheblichem Aufwand (Lohnabrechnung, Sozialversicherung, Urlaubsvertretung).', highlight: false },
               { title: 'Scheinselbstständigkeit (unbedingt vermeiden)', desc: 'Wer eine Kraft "freiberuflich" beauftragt, die faktisch weisungsgebunden im Haushalt lebt, riskiert Nachzahlungen von Sozialabgaben und Bußgelder.', highlight: false },
             ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-[#8B7355] border-2' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-2">
+          <p className="text-[15px] text-pm-body mb-2">
             → Alle Modelle im Vergleich:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Pflegekraft legal beschäftigen — die 3 Wege
             </a>
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Was im Vertrag stehen muss:{' '}
-            <a href="/pflegevertrag-aufsetzen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/pflegevertrag-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               Pflegevertrag aufsetzen — worauf achten?
             </a>
           </p>
 
           {/* ── SECTION 5 ── */}
-          <h2 id="wann" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wann" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann ist 24h-Pflege die richtige Wahl?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             24h-Pflege ist die richtige Wahl, wenn der pflegebedürftige Mensch in seiner vertrauten Umgebung bleiben möchte — unabhängig vom Pflegegrad.
           </p>
           <div className="space-y-4 mb-6">
@@ -379,24 +379,24 @@ export default function WasIst24StundenPflege() {
                 link: { text: 'Sturzprävention bei Senioren', href: '/sturzpraevention-senioren' },
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed mb-2">{item.desc}</p>
-                <a href={item.link.href} className="text-[13px] text-[#8B7355] underline hover:text-[#7D6E5D]">
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed mb-2">{item.desc}</p>
+                <a href={item.link.href} className="text-[13px] text-pm-taupe underline hover:text-pm-taupe-deep">
                   → {item.link.text}
                 </a>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Direkter Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">
               24h-Pflege vs. Pflegeheim — was passt besser?
             </a>
           </p>
 
           {/* ── FAQ ── */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zur 24-Stunden-Pflege
           </h2>
           <div className="space-y-4 mb-12">
@@ -434,13 +434,13 @@ export default function WasIst24StundenPflege() {
                 a: 'Seit Juli 2025 gibt es kein getrenntes Budget mehr für Verhinderungspflege und Kurzzeitpflege — beide wurden im gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengeführt. Der monatliche Entlastungsbetrag von 131 Euro ist davon getrennt und kann zusätzlich für anerkannte Betreuungsleistungen eingesetzt werden.',
               },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

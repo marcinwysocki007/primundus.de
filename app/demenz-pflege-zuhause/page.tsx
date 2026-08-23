@@ -71,33 +71,33 @@ export default function DemenzPflegeZuhause() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/krankheiten" className="hover:text-[#8B7355] transition-colors">Krankheiten</a>
+            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Demenz Pflege zuhause</span>
+            <span className="text-pm-ink">Demenz Pflege zuhause</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Demenzbetreuung zu Hause: Was möglich ist — und wann 24h-Pflege hilft
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Demenzpflege zuhause ist in den meisten Stadien möglich — und oft die bessere Wahl. Die vertraute Umgebung gibt Orientierung, verlangsamt nachweislich den Krankheitsverlauf und bewahrt die Würde. Mit einer 24h-Betreuungskraft bleibt die eigene Wohnung erhalten, auch wenn der Pflegebedarf wächst.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Häusliche Pflege ist bei Demenz in den meisten Stadien möglich und empfehlenswert',
@@ -107,8 +107,8 @@ export default function DemenzPflegeZuhause() {
                 'Pflegegeld: 347–990 €/Monat · Entlastungsbudget: 3.539 €/Jahr',
                 'Pflegeheim erst wenn häusliche Pflege medizinisch nicht mehr ausreicht',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
@@ -116,13 +116,13 @@ export default function DemenzPflegeZuhause() {
           </div>
 
           {/* SECTION 1 */}
-          <h2 id="moeglich" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="moeglich" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Was ist bei der Demenzpflege zuhause möglich?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             In den meisten Demenzstadien ist die häusliche Pflege nicht nur möglich — sie ist die empfohlene Versorgungsform. Studien zeigen: Demenzkranke in ihrer vertrauten Umgebung sind ruhiger, orientierter und kognitiv länger stabiler als in Pflegeheimen.
           </p>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Was zuhause gut funktioniert: Tagesstruktur schaffen, bekannte Rituale beibehalten, menschliche Nähe geben. Was schwieriger wird: Sicherheit rund um die Uhr gewährleisten, mit Nachtunruhe umgehen, Weglaufen verhindern. Genau hier macht eine 24h-Betreuungskraft den Unterschied.
           </p>
           <div className="space-y-3 mb-6">
@@ -131,24 +131,24 @@ export default function DemenzPflegeZuhause() {
               { title: 'Mittleres Stadium', desc: 'Deutliche kognitive Einschränkungen, Alltagsaktivitäten nicht mehr selbstständig möglich, Weglaufen möglich. 24h-Präsenz wird wichtig — entweder durch Angehörige oder Betreuungskraft.' },
               { title: 'Schweres Stadium', desc: 'Weitgehender Verlust der Selbstständigkeit, kaum Kommunikation möglich, vollständige Pflege nötig. 24h-Betreuungskraft oder Pflegeheim — je nach körperlichem Zusatzbedarf.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Alzheimer im Speziellen:{' '}
-            <a href="/alzheimer-betreuung-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Alzheimer Betreuung zuhause</a>
+            <a href="/alzheimer-betreuung-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alzheimer Betreuung zuhause</a>
             {' · '}
-            <a href="/pflegegrad-bei-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz — Einstufung</a>
+            <a href="/pflegegrad-bei-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad bei Demenz — Einstufung</a>
           </p>
 
           {/* SECTION 2 */}
-          <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="alltag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Alltag mit Demenz zuhause gestalten
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Gute Demenzpflege zuhause folgt klaren Prinzipien — unabhängig davon ob Angehörige oder eine professionelle Betreuungskraft die Hauptpflege übernimmt.
           </p>
           <div className="space-y-3 mb-6">
@@ -159,24 +159,24 @@ export default function DemenzPflegeZuhause() {
               { title: 'Beschäftigung sinnvoll gestalten', desc: 'Aktivitäten die an frühere Interessen anknüpfen: Fotos sortieren, Musik hören, einfache Handarbeiten, Gartenarbeit. Überforderung durch zu viele Reize vermeiden.' },
               { title: 'Sicherheit im Haushalt', desc: 'Herd sichern, scharfe Gegenstände wegräumen, Türen sichern wenn Weglaufen ein Thema ist. Ein Hausnotruf gibt zusätzliche Sicherheit.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Tagesstruktur bei Demenz:{' '}
-            <a href="/tagesstruktur-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Tagesstruktur bei Demenz — praktische Tipps</a>
+            <a href="/tagesstruktur-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Tagesstruktur bei Demenz — praktische Tipps</a>
             {' · '}
-            <a href="/kommunikation-mit-demenzkranken" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kommunikation mit Demenzkranken</a>
+            <a href="/kommunikation-mit-demenzkranken" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kommunikation mit Demenzkranken</a>
           </p>
 
           {/* SECTION 3 */}
-          <h2 id="pflege-24h" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pflege-24h" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann braucht es 24h-Pflege bei Demenz?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Spätestens wenn eines dieser Zeichen auftritt, ist 24h-Präsenz notwendig — entweder durch Angehörige rund um die Uhr, oder professioneller durch eine Betreuungskraft.
           </p>
           <div className="space-y-3 mb-6">
@@ -186,15 +186,15 @@ export default function DemenzPflegeZuhause() {
               { title: 'Selbstgefährdung', desc: 'Vergessen den Herd abzustellen, falsche Medikamentendosierung, Stürze durch Orientierungslosigkeit. Ständige Aufsicht notwendig.' },
               { title: 'Angehörige erschöpft', desc: 'Burnout bei pflegenden Angehörigen ist häufig. Wenn die Belastung zu groß wird, ist eine professionelle 24h-Kraft die beste Lösung — auch für die Beziehung.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-6">
-            <p className="text-[14px] font-bold text-[#2A5C3F] mb-2">Was eine Primundus-Betreuungskraft bei Demenz konkret leistet</p>
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-6">
+            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Was eine Primundus-Betreuungskraft bei Demenz konkret leistet</p>
             <ul className="space-y-1.5">
               {[
                 'Tagesstruktur schaffen und Rituale konsequent einhalten',
@@ -204,7 +204,7 @@ export default function DemenzPflegeZuhause() {
                 'Emotionale Begleitung und Beschäftigung',
                 'Entlastung der Angehörigen — Familienleben wieder möglich',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[14px] text-[#2A5C3F]">
+                <li key={item} className="flex items-start gap-2 text-[14px] text-pm-green-deep">
                   <span className="font-bold mt-0.5 flex-shrink-0">✓</span>
                   {item}
                 </li>
@@ -212,18 +212,18 @@ export default function DemenzPflegeZuhause() {
             </ul>
           </div>
 
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Was 24h-Pflege kostet:{' '}
-            <a href="/kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Kosten der 24h-Pflege 2026</a>
+            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kosten der 24h-Pflege 2026</a>
             {' · '}
-            <a href="/burnout-pflegende-angehoerige" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Burnout pflegende Angehörige</a>
+            <a href="/burnout-pflegende-angehoerige" className="text-pm-taupe underline hover:text-pm-taupe-deep">Burnout pflegende Angehörige</a>
           </p>
 
           {/* SECTION 3b — Zuhause oder Heim */}
-          <h2 id="zuhause-oder-heim" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="zuhause-oder-heim" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Demenz: zu Hause pflegen oder ins Heim?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-4">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
             Die Frage stellt sich in fast jeder Familie — und sie hat keine pauschale Antwort. Was sich
             sagen lässt: Bei Demenz wiegt das Vertraute schwerer als bei jeder anderen Erkrankung. Wer die
             eigene Küche, den Blick aus dem Fenster und die gewohnten Wege verliert, verliert Orientierung —
@@ -232,37 +232,37 @@ export default function DemenzPflegeZuhause() {
             Bezugspersonen im Schichtdienst.
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5">
-              <p className="text-[13px] font-bold text-[#3D7A5C] mb-2">Was für das Zuhause spricht</p>
-              <p className="text-[14px] text-[#2E2E2E] leading-relaxed">Vertraute Umgebung gibt Orientierung und Ruhe · eine feste Bezugsperson statt wechselnder Schichten · Tagesablauf nach den eigenen Gewohnheiten · Angehörige bleiben nah — und mit Kassenzuschüssen ist der Eigenanteil oft niedriger als der Heim-Eigenanteil von bundesweit Ø 3.364 €/Monat (vdek, Stand Juli 2026).</p>
+            <div className="bg-white border border-pm-line rounded-2xl p-5">
+              <p className="text-[13px] font-bold text-pm-green mb-2">Was für das Zuhause spricht</p>
+              <p className="text-[14px] text-pm-body leading-relaxed">Vertraute Umgebung gibt Orientierung und Ruhe · eine feste Bezugsperson statt wechselnder Schichten · Tagesablauf nach den eigenen Gewohnheiten · Angehörige bleiben nah — und mit Kassenzuschüssen ist der Eigenanteil oft niedriger als der Heim-Eigenanteil von bundesweit Ø 3.364 €/Monat (vdek, Stand Juli 2026).</p>
             </div>
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5">
-              <p className="text-[13px] font-bold text-[#8B7355] mb-2">Wann das Heim die bessere Wahl sein kann</p>
-              <p className="text-[14px] text-[#2E2E2E] leading-relaxed">Bei ausgeprägter Weglauftendenz mit Selbstgefährdung, die auch eine anwesende Betreuungskraft nicht auffangen kann · bei schweren Verhaltensauffälligkeiten mit Fremdgefährdung · wenn zusätzlich intensive medizinische Versorgung nötig ist, die zuhause nicht sicherzustellen ist. Spezialisierte Demenz-Wohnbereiche sind dafür eingerichtet.</p>
+            <div className="bg-white border border-pm-line rounded-2xl p-5">
+              <p className="text-[13px] font-bold text-pm-taupe mb-2">Wann das Heim die bessere Wahl sein kann</p>
+              <p className="text-[14px] text-pm-body leading-relaxed">Bei ausgeprägter Weglauftendenz mit Selbstgefährdung, die auch eine anwesende Betreuungskraft nicht auffangen kann · bei schweren Verhaltensauffälligkeiten mit Fremdgefährdung · wenn zusätzlich intensive medizinische Versorgung nötig ist, die zuhause nicht sicherzustellen ist. Spezialisierte Demenz-Wohnbereiche sind dafür eingerichtet.</p>
             </div>
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
-            → Zahlen im Detail: <a href="/pflegeheim-kostenvergleich" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege und Pflegeheim im Kostenvergleich</a>
+          <p className="text-[15px] text-pm-body mb-10">
+            → Zahlen im Detail: <a href="/pflegeheim-kostenvergleich" className="text-pm-taupe underline hover:text-pm-taupe-deep">24h-Pflege und Pflegeheim im Kostenvergleich</a>
           </p>
 
           {/* SECTION 4 */}
-          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Pflegegrad bei Demenz & Kassenzuschüsse 2026
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Seit der Pflegereform 2017 werden kognitive Einschränkungen bei der Begutachtung deutlich stärker gewichtet. Demenzbetroffene bekommen heute in der Regel höhere Pflegegrade als unter dem alten Pflegestufensystem.
           </p>
 
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-[#F8F7F5] border-b border-[#E5E3DF]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">Typische Pflegegrade bei Demenz & Leistungen 2026</p>
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
+            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
+              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Typische Pflegegrade bei Demenz & Leistungen 2026</p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Demenzstadium', 'Typischer PG', 'Pflegegeld', 'Entlastungsbetrag'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -272,35 +272,35 @@ export default function DemenzPflegeZuhause() {
                     ['Mittel', 'PG 3–4', '599–800 €', '131 €'],
                     ['Schwer', 'PG 4–5', '800–990 €', '131 €'],
                   ].map(([stadium, pg, pflegegeld, entlastung], i) => (
-                    <tr key={stadium} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{stadium}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{pflegegeld}</td>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{entlastung}</td>
+                    <tr key={stadium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{stadium}</td>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{pg}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pflegegeld}</td>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{entlastung}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Richtwerte · Einstufung durch MD · Zusätzlich: Entlastungsbudget 3.539 €/Jahr (ab PG 2)</p>
+              <p className="text-[11px] text-pm-mute">Richtwerte · Einstufung durch MD · Zusätzlich: Entlastungsbudget 3.539 €/Jahr (ab PG 2)</p>
             </div>
           </div>
 
-          <p className="text-[15px] text-[#2E2E2E] mb-3">
+          <p className="text-[15px] text-pm-body mb-3">
             → Pflegegrad bei Demenz beantragen:{' '}
-            <a href="/pflegegrad-bei-demenz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad bei Demenz — Einstufung & Tipps</a>
+            <a href="/pflegegrad-bei-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad bei Demenz — Einstufung & Tipps</a>
           </p>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Alle Zuschüsse kombinieren:{' '}
-            <a href="/finanzierung" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
+            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
           </p>
 
           {/* SECTION 5 */}
-          <h2 id="grenzen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="grenzen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wann stößt häusliche Pflege an ihre Grenzen?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Häusliche Demenzpflege — auch mit professioneller Betreuungskraft — hat Grenzen. Ein Pflegeheim wird dann zur besseren Option wenn:
           </p>
           <div className="space-y-3 mb-6">
@@ -310,19 +310,19 @@ export default function DemenzPflegeZuhause() {
               'Kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist',
               'Der Betroffene ausdrücklich selbst ins Pflegeheim möchte (wenn noch entscheidungsfähig)',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <span className="w-5 h-5 rounded-full bg-[#FDF0EE] text-[#E76F63] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item}</p>
+              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
+                <span className="w-5 h-5 rounded-full bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Häusliche vs. stationäre Pflege:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">24h-Pflege vs. Pflegeheim — was ist besser?</a>
+            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">24h-Pflege vs. Pflegeheim — was ist besser?</a>
           </p>
 
           {/* FAQ */}
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen zur Demenzpflege zuhause
           </h2>
           <div className="space-y-4 mb-12">
@@ -335,13 +335,13 @@ export default function DemenzPflegeZuhause() {
               { q: 'Wie gestaltet man den Alltag mit Demenzkranken?', a: 'Feste Tagesstrukturen, bekannte Rituale beibehalten, kurze einfache Kommunikation, keine Korrektur des Vergessens. Sinnvolle Beschäftigung die an frühere Interessen anknüpft. Überreizung und Konfrontation mit dem Vergessen vermeiden.' },
               { q: 'Wann ist ein Pflegeheim besser als Demenzpflege zuhause?', a: 'Wenn intensivmedizinische Behandlungspflege rund um die Uhr nötig ist, wenn aggressive Verhaltensweisen die Sicherheit gefährden, oder wenn kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

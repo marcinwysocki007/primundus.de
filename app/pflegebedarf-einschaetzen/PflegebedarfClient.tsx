@@ -91,18 +91,18 @@ export function PflegebedarfClient() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
+    <div className="min-h-screen bg-pm-paper">
       <div className="max-w-[720px] mx-auto px-5 py-14">
 
-        <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-          <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+        <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
-          <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+          <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
           <span className="text-[#5A5A5A]">Pflegebedarf einschätzen</span>
         </nav>
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">TOOLS & RECHNER</p>
+        <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">TOOLS & RECHNER</p>
         <h1 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-4">
           Pflegebedarf einschätzen — Self-Check
         </h1>
@@ -111,7 +111,7 @@ export function PflegebedarfClient() {
         </p>
 
         {!gestartet ? (
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-7 shadow-sm">
+          <div className="bg-white border border-pm-line rounded-2xl p-7 shadow-sm">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">So funktioniert der Self-Check</h2>
             <div className="space-y-4 mb-6">
               {[
@@ -120,7 +120,7 @@ export function PflegebedarfClient() {
                 { n: 3, t: 'Nächste Schritte planen', d: 'Pflegegrad-Antrag stellen, Beratung anfordern oder direkt 24h-Pflege organisieren.' },
               ].map((s) => (
                 <div key={s.n} className="flex gap-4">
-                  <span className="w-7 h-7 rounded-full bg-[#F2EDE6] text-[#8B7355] font-bold text-[14px] flex items-center justify-center flex-shrink-0">
+                  <span className="w-7 h-7 rounded-full bg-pm-shell text-pm-taupe font-bold text-[14px] flex items-center justify-center flex-shrink-0">
                     {s.n}
                   </span>
                   <div>
@@ -130,12 +130,12 @@ export function PflegebedarfClient() {
                 </div>
               ))}
             </div>
-            <p className="text-[12px] text-[#8B8B8B] mb-5 leading-relaxed">
+            <p className="text-[12px] text-pm-mute mb-5 leading-relaxed">
               <strong>Hinweis:</strong> Dieser Self-Check ersetzt keine offizielle Begutachtung durch MDK oder MEDICPROOF. Er liefert eine erste Orientierung.
             </p>
             <button
               onClick={() => setGestartet(true)}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#8B7355] hover:bg-[#7D6848] text-white font-bold text-[15px] py-3.5 px-6 rounded-xl transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-pm-taupe hover:bg-[#7D6848] text-white font-bold text-[15px] py-3.5 px-6 rounded-xl transition-colors"
             >
               Self-Check starten →
             </button>
@@ -143,18 +143,18 @@ export function PflegebedarfClient() {
         ) : (
           <>
             {/* Fortschritt */}
-            <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5 mb-6 shadow-sm sticky top-4 z-10">
+            <div className="bg-white border border-pm-line rounded-2xl p-5 mb-6 shadow-sm sticky top-4 z-10">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[13px] font-semibold text-[#3D3D3D]">
                   Frage {beantwortet} von {FRAGEN.length}
                 </span>
-                <span className="text-[13px] font-bold text-[#8B7355]">
+                <span className="text-[13px] font-bold text-pm-taupe">
                   {Math.round((beantwortet / FRAGEN.length) * 100)} %
                 </span>
               </div>
-              <div className="h-2 bg-[#F0EDE8] rounded-full overflow-hidden">
+              <div className="h-2 bg-pm-line-soft rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-[#8B7355] transition-all duration-300"
+                  className="h-full bg-pm-taupe transition-all duration-300"
                   style={{ width: `${(beantwortet / FRAGEN.length) * 100}%` }}
                 />
               </div>
@@ -164,16 +164,16 @@ export function PflegebedarfClient() {
             {BEREICHE.map((bereich) => {
               const fragenImBereich = FRAGEN.filter(f => f.bereich === bereich)
               return (
-                <div key={bereich} className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden shadow-sm mb-5">
-                  <div className="bg-[#F8F7F5] border-b border-[#E5E3DF] px-5 py-3">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#8B8B8B]">{bereich}</p>
+                <div key={bereich} className="bg-white border border-pm-line rounded-2xl overflow-hidden shadow-sm mb-5">
+                  <div className="bg-pm-paper border-b border-pm-line px-5 py-3">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-mute">{bereich}</p>
                   </div>
-                  <div className="divide-y divide-[#F0EDE8]">
+                  <div className="divide-y divide-pm-line-soft">
                     {fragenImBereich.map((frage) => (
                       <div key={frage.id} className="px-5 py-4">
                         <p className="text-[14px] text-[#3D3D3D] mb-1 leading-snug">{frage.text}</p>
                         {frage.hilfe && (
-                          <p className="text-[12px] text-[#8B8B8B] mb-3">{frage.hilfe}</p>
+                          <p className="text-[12px] text-pm-mute mb-3">{frage.hilfe}</p>
                         )}
                         <div className="flex flex-wrap gap-2 mt-2">
                           {(['ja', 'teilweise', 'nein'] as const).map((wert) => (
@@ -183,11 +183,11 @@ export function PflegebedarfClient() {
                               className={`px-4 py-1.5 rounded-lg border-2 text-[13px] font-semibold transition-all ${
                                 antworten[frage.id] === wert
                                   ? wert === 'ja'
-                                    ? 'border-[#3D7A5C] bg-[#E8F5EE] text-[#3D7A5C]'
+                                    ? 'border-pm-green bg-pm-mint text-pm-green'
                                     : wert === 'teilweise'
-                                      ? 'border-[#A89279] bg-[#F2EDE6] text-[#6B5A44]'
-                                      : 'border-[#E76F63] bg-[#FDF0EE] text-[#8B3E2F]'
-                                  : 'border-[#E5E3DF] bg-white text-[#5A5A5A] hover:border-[#8B7355]'
+                                      ? 'border-pm-taupe-light bg-pm-shell text-pm-taupe-ink'
+                                      : 'border-pm-coral bg-pm-coral-tint text-pm-coral-ink'
+                                  : 'border-pm-line bg-white text-[#5A5A5A] hover:border-pm-taupe'
                               }`}
                             >
                               {wert === 'ja' ? 'Ja' : wert === 'teilweise' ? 'Teilweise' : 'Nein'}
@@ -203,8 +203,8 @@ export function PflegebedarfClient() {
 
             {/* Ergebnis */}
             {fertig && (
-              <div className="bg-white border-2 border-[#8B7355] rounded-2xl overflow-hidden shadow-md mb-6">
-                <div className="bg-[#8B7355] px-6 py-4">
+              <div className="bg-white border-2 border-pm-taupe rounded-2xl overflow-hidden shadow-md mb-6">
+                <div className="bg-pm-taupe px-6 py-4">
                   <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-white/80 mb-1">Ihr Ergebnis</p>
                   <p className="text-[20px] font-bold text-white">{schaetzung.label}</p>
                 </div>
@@ -214,7 +214,7 @@ export function PflegebedarfClient() {
                       <span className="text-[13px] font-semibold text-[#3D3D3D]">Pflegebedarf</span>
                       <span className="text-[15px] font-bold" style={{ color: schaetzung.farbe }}>{bedarfsProzent} %</span>
                     </div>
-                    <div className="h-3 bg-[#F0EDE8] rounded-full overflow-hidden">
+                    <div className="h-3 bg-pm-line-soft rounded-full overflow-hidden">
                       <div
                         className="h-full transition-all duration-500"
                         style={{ width: `${bedarfsProzent}%`, background: schaetzung.farbe }}
@@ -227,13 +227,13 @@ export function PflegebedarfClient() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
                       href="/beratungsgespraech"
-                      className="inline-flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
                     >
                       Kostenfreie Beratung →
                     </a>
                     <a
                       href="/pflegegrad-beantragen"
-                      className="inline-flex items-center justify-center gap-2 bg-white border border-[#8B7355] text-[#8B7355] font-semibold text-[14px] py-3 px-5 rounded-xl hover:bg-[#F2EDE6] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-white border border-pm-taupe text-pm-taupe font-semibold text-[14px] py-3 px-5 rounded-xl hover:bg-pm-shell transition-colors"
                     >
                       Pflegegrad beantragen
                     </a>
@@ -245,12 +245,12 @@ export function PflegebedarfClient() {
             <div className="flex items-center justify-between">
               <button
                 onClick={reset}
-                className="text-[13px] text-[#8B8B8B] hover:text-[#8B7355] underline transition-colors"
+                className="text-[13px] text-pm-mute hover:text-pm-taupe underline transition-colors"
               >
                 Self-Check zurücksetzen
               </button>
               {!fertig && (
-                <p className="text-[12px] text-[#8B8B8B]">
+                <p className="text-[12px] text-pm-mute">
                   Noch {FRAGEN.length - beantwortet} {FRAGEN.length - beantwortet === 1 ? 'Frage' : 'Fragen'} offen
                 </p>
               )}

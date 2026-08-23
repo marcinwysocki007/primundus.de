@@ -212,7 +212,7 @@ for (const hub of hubs) {
     childGrid = `
           {/* Tools */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
-            ${toolSlugs.map(s => `<a href="/${s}/" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] hover:shadow-sm transition-all text-[14px] font-medium text-[#3D3D3D]">→ ${toTitle(s)}</a>`).join('\n            ')}
+            ${toolSlugs.map(s => `<a href="/${s}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-[#3D3D3D]">→ ${toTitle(s)}</a>`).join('\n            ')}
           </div>`;
   } else if (isRegionen) {
     childGrid = `
@@ -224,7 +224,7 @@ for (const hub of hubs) {
     childGrid = `
           {/* Artikel dieser Kategorie */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
-            ${children.map(a => `<a href="/${a.slug}/" className="block p-4 bg-white border border-[#E5E3DF] rounded-xl hover:border-[#8B7355] hover:shadow-sm transition-all text-[14px] font-medium text-[#3D3D3D]">\n              → ${a.h1.replace(/\s*—.*/, '')}\n            </a>`).join('\n            ')}
+            ${children.map(a => `<a href="/${a.slug}/" className="block p-4 bg-white border border-pm-line rounded-xl hover:border-pm-taupe hover:shadow-sm transition-all text-[14px] font-medium text-[#3D3D3D]">\n              → ${a.h1.replace(/\s*—.*/, '')}\n            </a>`).join('\n            ')}
           </div>`;
   }
 
@@ -256,10 +256,10 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-16">
-          <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-16">
+          <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
             <span className="text-[#3D3D3D]">${title}</span>
           </nav>
@@ -272,8 +272,8 @@ export default function Page() {
             ${desc}
           </p>
 ${childGrid}
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-8 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-2">
+          <div className="bg-white border border-pm-line rounded-2xl p-8 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-2">
               Kostenlose Beratung
             </p>
             <h2 className="text-[22px] font-bold text-[#3D3D3D] mb-4">
@@ -281,11 +281,11 @@ ${childGrid}
             </h2>
             <a
               href="tel:+4989200000830"
-              className="inline-flex items-center gap-3 bg-[#8B7355] text-white px-8 py-4 rounded-xl font-bold text-[16px] hover:bg-[#7D6E5D] transition-all duration-200"
+              className="inline-flex items-center gap-3 bg-pm-taupe text-white px-8 py-4 rounded-xl font-bold text-[16px] hover:bg-pm-taupe-deep transition-all duration-200"
             >
               089 200 000 830
             </a>
-            <p className="text-[13px] text-[#8B8B8B] mt-3">Mo–Fr 9:00–18:00 Uhr · Ilka Wysocki</p>
+            <p className="text-[13px] text-pm-mute mt-3">Mo–Fr 9:00–18:00 Uhr · Ilka Wysocki</p>
           </div>
         </div>
       </div>

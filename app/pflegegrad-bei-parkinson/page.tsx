@@ -64,48 +64,48 @@ export default function PflegegradBeiParkinson() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/pflegegrade" className="hover:text-[#8B7355] transition-colors">Pflegegrade</a>
+            <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegegrad bei Parkinson</span>
+            <span className="text-pm-ink">Pflegegrad bei Parkinson</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegegrad bei Parkinson — welcher Grad & wie beantragen
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Parkinson ist eine progrediente Erkrankung — der Pflegebedarf nimmt über Zeit zu, der Pflegegrad auch. Was Menschen mit Parkinson bei der Begutachtung wissen müssen: Das On-Off-Phänomen führt häufig zu Untereinstufungen, weil der Gutachtertermin in einer guten Phase liegen kann. Dieses Risiko lässt sich durch gute Vorbereitung minimieren.
           </p>
 
-          <div className="bg-[#FDF0EE] border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-[#8B3E2F] mb-2">Das On-Off-Problem bei der Begutachtung</p>
-            <p className="text-[14px] text-[#8B3E2F] leading-relaxed">
+          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
+            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Das On-Off-Problem bei der Begutachtung</p>
+            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
               Parkinson-Patienten erleben "On-Phasen" (gute Mobilität) und "Off-Phasen" (schlechte Mobilität, Starre, Freezing). Fällt die Begutachtung in eine On-Phase — was häufig passiert, weil Stress kurzfristig mobilisiert — wird der tatsächliche Pflegebedarf unterschätzt. Lösung: Off-Phasen im Tagebuch dokumentieren und dem Gutachter erklären.
             </p>
           </div>
 
-          <h2 id="welcher-pflegegrad" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="welcher-pflegegrad" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Welcher Pflegegrad bei Parkinson?
           </h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Parkinson-Stadium / Einschränkungen', 'Typischer Pflegegrad', 'Pflegegeld/Monat'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -117,24 +117,24 @@ export default function PflegegradBeiParkinson() {
                     ['Schweres Parkinson, On-Off stark ausgeprägt, starke Einschränkungen', 'PG 3–4', '599–800 €'],
                     ['Schwerste Einschränkungen, vollständige Pflegeabhängigkeit', 'PG 4–5', '800–990 €'],
                   ].map(([stadium, pg, pgeld], i) => (
-                    <tr key={stadium} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[13px] text-[#2E2E2E] border-b border-[#E5E3DF]">{stadium}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{pgeld}</td>
+                    <tr key={stadium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line">{stadium}</td>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{pg}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pgeld}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Richtwerte · EB = Entlastungsbetrag · Individuelle Einstufung durch MD · Stand 2026</p>
+              <p className="text-[11px] text-pm-mute">Richtwerte · EB = Entlastungsbetrag · Individuelle Einstufung durch MD · Stand 2026</p>
             </div>
           </div>
 
-          <h2 id="besonderheiten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="besonderheiten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Besonderheiten der Begutachtung bei Parkinson
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Parkinson hat einige Besonderheiten die bei der Begutachtung besonders wichtig sind und systematisch kommuniziert werden müssen.
           </p>
           <div className="space-y-3 mb-6">
@@ -145,27 +145,27 @@ export default function PflegegradBeiParkinson() {
               { thema: 'Schluck- und Sprachprobleme nicht vergessen', desc: 'Dysphagie (Schluckstörungen) und leises, undeutliches Sprechen (Hypophonie) können erheblichen Pflegebedarf verursachen und werden bei der Begutachtung berücksichtigt.' },
               { thema: 'Psychische Begleiterscheinungen benennen', desc: 'Depressionen, Angststörungen, Demenz (bei fortgeschrittenem Parkinson häufig) erhöhen die Punktzahl in der NBA-Bewertung erheblich. Diese müssen aktiv angesprochen werden.' },
             ].map((item) => (
-              <div key={item.thema} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.thema}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.thema} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.thema}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Vollständige Vorbereitung:{' '}
-            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-[#8B7355] underline hover:text-[#7D6E5D]">MD-Begutachtung vorbereiten</a>
+            <a href="/pflegegrad-begutachtung-vorbereiten" className="text-pm-taupe underline hover:text-pm-taupe-deep">MD-Begutachtung vorbereiten</a>
           </p>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Leistungen & Kassenzuschüsse bei Parkinson
           </h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Leistung', 'PG 2', 'PG 3', 'PG 4'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -176,11 +176,11 @@ export default function PflegegradBeiParkinson() {
                     ['Entlastungsbetrag/Monat', '131 €', '131 €', '131 €'],
                     ['Wohnraumanpassung/Maßnahme', '4.180 €', '4.180 €', '4.180 €'],
                   ].map(([leistung, pg2, pg3, pg4], i) => (
-                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-[#1C1C1C] border-b border-[#E5E3DF]">{leistung}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{pg2}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{pg3}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#3D7A5C] border-b border-[#E5E3DF]">{pg4}</td>
+                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{leistung}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg2}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg3}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg4}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -188,10 +188,10 @@ export default function PflegegradBeiParkinson() {
             </div>
           </div>
 
-          <h2 id="hoehergruppierung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="hoehergruppierung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Höherstufung bei Parkinson — wann und wie
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Parkinson ist eine progrediente Erkrankung — der Pflegebedarf nimmt regelmäßig zu. Angehörige sollten proaktiv prüfen ob eine Höherstufung angezeigt ist. Typische Signale:
           </p>
           <div className="space-y-3 mb-10">
@@ -202,20 +202,20 @@ export default function PflegegradBeiParkinson() {
               'Die Morgenpflege dauert deutlich länger als früher',
               'Alleinbleiben ist nicht mehr sicher (Sturzrisiko)',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <span className="w-5 h-5 rounded-full bg-[#FDF0EE] text-[#E76F63] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
-                <p className="text-[14px] text-[#2E2E2E]">{item}</p>
+              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
+                <span className="w-5 h-5 rounded-full bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">!</span>
+                <p className="text-[14px] text-pm-body">{item}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Höherstufungsantrag:{' '}
-            <a href="/pflegegrad-erhoehen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Pflegegrad erhöhen — wann und wie</a>
+            <a href="/pflegegrad-erhoehen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad erhöhen — wann und wie</a>
             {' · '}
-            <a href="/parkinson-pflege-zuhause" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Parkinson Pflege zuhause</a>
+            <a href="/parkinson-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Parkinson Pflege zuhause</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Welchen Pflegegrad bekommt man bei Parkinson?', a: 'Je nach Stadium: PG 1 bei leichten Einschränkungen, PG 2–3 bei moderaten Gangstörungen und Hilfebedarf, PG 3–4 bei schwerem Parkinson mit On-Off-Phasen, PG 4–5 bei vollständiger Pflegeabhängigkeit.' },
@@ -223,13 +223,13 @@ export default function PflegegradBeiParkinson() {
               { q: 'Wie oft muss bei Parkinson der Pflegegrad angepasst werden?', a: 'Parkinson ist progressiv — der Pflegebedarf nimmt zu. Höherstufungsantrag stellen wenn neue oder verstärkte Einschränkungen auftreten. Kein fester Rhythmus, aber proaktiv beobachten.' },
               { q: 'Was zahlt die Krankenversicherung bei Parkinson?', a: 'Physiotherapie, Ergotherapie, Logopädie (Schlucktherapie), Medikamente. Hilfsmittel wie Rollator, Rollstuhl, Badehilfen. Das läuft parallel zu den Pflegekasse-Leistungen.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

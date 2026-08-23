@@ -42,20 +42,20 @@ export default function Finanzierung() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
+      <div className="min-h-screen bg-pm-paper">
         <div className="max-w-[900px] mx-auto px-5 py-14">
 
           {/* Breadcrumb */}
-          <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/ratgeber" className="hover:text-[#8B7355] transition-colors">Ratgeber</a>
+            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
             <span>›</span>
             <span className="text-[#5A5A5A]">Finanzierung & Zuschüsse</span>
           </nav>
 
           {/* Header */}
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">
             RATGEBER
           </p>
           <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-4">
@@ -66,8 +66,8 @@ export default function Finanzierung() {
           </p>
 
           {/* Auf einen Blick */}
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Alle Zuschüsse 2026 — auf einen Blick</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Alle Zuschüsse 2026 — auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Pflegegeld: 347–990 €/Monat je nach Pflegegrad (ab PG 2)',
@@ -78,7 +78,7 @@ export default function Finanzierung() {
                 'Wohnraumanpassung: bis 4.180 € je Maßnahme (PG 1–5)',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[14px] text-[#5A5A5A]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
@@ -95,9 +95,9 @@ export default function Finanzierung() {
               { titel: 'Kombinationsleistung Pflege', href: '/kombinationsleistung-pflege', desc: 'Pflegegeld und Sachleistungen gleichzeitig nutzen — wie das geht.' },
               { titel: 'Pflegeversicherung Leistungen Übersicht', href: '/pflegeversicherung-leistungen-uebersicht', desc: 'Vollständige Übersicht aller Leistungen der Pflegeversicherung 2026.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -112,9 +112,9 @@ export default function Finanzierung() {
               { titel: 'Pflegereform 2025 — alle Änderungen', href: '/pflegereform-2025', desc: 'Gemeinsamer Jahresbetrag, höhere Leistungen — was die Reform für Familien bedeutet.' },
               { titel: 'Entlastungsbetrag — 131 €/Monat nutzen', href: '/entlastungsbetrag', desc: 'Was der Entlastungsbetrag ist, für was er genutzt werden kann und wie man ihn beantragt.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -130,22 +130,22 @@ export default function Finanzierung() {
               { titel: 'Pflegehilfsmittel beantragen', href: '/pflegehilfsmittel-beantragen', desc: '42 €/Monat für Pflegehilfsmittel zum Verbrauch — was dazugehört und wie man es beantragt.' },
               { titel: 'Wohnraumanpassung — Förderung beantragen', href: '/wohnraumanpassung-foerderung', desc: 'Bis zu 4.180 € je Maßnahme — welche Umbaumaßnahmen gefördert werden und wie man den Zuschuss beantragt.' },
             ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-[#E5E3DF] rounded-xl p-5 hover:border-[#8B7355] hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-[#8B7355] transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
+                <p className="text-[15px] font-bold text-[#3D3D3D] group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </a>
             ))}
           </div>
 
           {/* Leistungsbeträge Tabelle */}
           <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">Alle Leistungen nach Pflegegrad 2026</h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-4 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-4 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Leistung', 'PG 1', 'PG 2', 'PG 3', 'PG 4', 'PG 5'].map(h => (
-                      <th key={h} className="px-3 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-3 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -157,10 +157,10 @@ export default function Finanzierung() {
                     ['Entlastungsbudget/Jahr', '—', '3.539 €', '3.539 €', '3.539 €', '3.539 €'],
                     ['Pflegehilfsmittel/Monat', '42 €', '42 €', '42 €', '42 €', '42 €'],
                   ].map(([leistung, ...werte], i) => (
-                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-3 py-3 text-[13px] font-semibold text-[#3D3D3D] border-b border-[#E5E3DF]">{leistung}</td>
+                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-3 py-3 text-[13px] font-semibold text-[#3D3D3D] border-b border-pm-line">{leistung}</td>
                       {werte.map((w, j) => (
-                        <td key={j} className={`px-3 py-3 text-[13px] border-b border-[#E5E3DF] whitespace-nowrap tabular-nums text-right ${w === '—' ? 'text-[#C8C3BA]' : 'text-[#3D7A5C] font-semibold'}`}>{w}</td>
+                        <td key={j} className={`px-3 py-3 text-[13px] border-b border-pm-line whitespace-nowrap tabular-nums text-right ${w === '—' ? 'text-[#C8C3BA]' : 'text-pm-green font-semibold'}`}>{w}</td>
                       ))}
                     </tr>
                   ))}
@@ -168,12 +168,12 @@ export default function Finanzierung() {
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-[#8B8B8B]">Quelle: GKV-Spitzenverband · SGB XI · Stand 2026 · Identisch zu 2025</p>
+              <p className="text-[11px] text-pm-mute">Quelle: GKV-Spitzenverband · SGB XI · Stand 2026 · Identisch zu 2025</p>
             </div>
           </div>
           <p className="text-[14px] text-[#5A5A5A] mb-12">
             → Welcher Pflegegrad gilt für Sie?{' '}
-            <a href="/pflegegrade" className="text-[#8B7355] underline hover:text-[#7D6848]">Alle Pflegegrade 2026 im Überblick</a>
+            <a href="/pflegegrade" className="text-pm-taupe underline hover:text-[#7D6848]">Alle Pflegegrade 2026 im Überblick</a>
           </p>
 
           <ArticleCTA />

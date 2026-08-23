@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
-      <div className="max-w-[860px] mx-auto px-5 py-16">
+    <div className="min-h-screen bg-pm-paper">
+      <div className="max-w-article mx-auto px-5 py-16">
 
-        <nav className="text-sm text-[#8B8B8B] mb-8 flex items-center gap-2">
-          <Link href="/" className="hover:text-[#8B7355] transition-colors">Startseite</Link>
+        <nav className="text-sm text-pm-mute mb-8 flex items-center gap-2">
+          <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
           <span>›</span>
           <span className="text-[#3D3D3D]">AGB</span>
         </nav>
@@ -22,13 +22,13 @@ export default function Page() {
         <h1 className="text-[32px] md:text-[42px] font-bold text-[#3D3D3D] leading-tight mb-3">
           Allgemeine Geschäftsbedingungen
         </h1>
-        <p className="text-[15px] text-[#8B8B8B] mb-10">
+        <p className="text-[15px] text-pm-mute mb-10">
           Stand: 1. Januar 2026 · Primundus — ein Angebot der PRIMUNDUS Sp. z o.o.
         </p>
 
         <div className="space-y-8 text-[15px] text-[#5A5A5A] leading-[1.75]">
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 1 Geltungsbereich</h2>
             <p className="mb-3">
               (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") gelten für sämtliche Verträge zwischen der
@@ -47,7 +47,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 2 Leistungen von Primundus</h2>
             <p className="mb-3">
               (1) Primundus beschäftigt selbständig tätige Betreuungskräfte oder Betreuungskräfte im Entsendemodell
@@ -66,7 +66,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 3 Vertragsabschluss</h2>
             <p className="mb-3">
               (1) Die Darstellung der Leistungen auf der Webseite primundus.de stellt kein rechtlich bindendes
@@ -82,7 +82,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 4 Widerrufsrecht für Verbraucher</h2>
             <p className="mb-3">
               (1) Verbraucher im Sinne von § 13 BGB haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen
@@ -90,7 +90,7 @@ export default function Page() {
             </p>
             <p className="mb-3">
               (2) Der Widerruf ist zu richten an: Primundus, Landsberger Str. 155, 80687 München,
-              E-Mail: <a href="mailto:info@primundus.de" className="text-[#8B7355] underline hover:text-[#7D6E5D]">info@primundus.de</a>.
+              E-Mail: <a href="mailto:info@primundus.de" className="text-pm-taupe underline hover:text-pm-taupe-deep">info@primundus.de</a>.
               Eine eindeutige Erklärung (z.B. per Brief oder E-Mail) genügt. Zur Wahrung der Widerrufsfrist reicht
               die rechtzeitige Absendung des Widerrufs.
             </p>
@@ -101,7 +101,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 5 Pflichten des Kunden</h2>
             <p className="mb-3">
               (1) Der Kunde stellt der Betreuungskraft kostenfrei ein eigenes, beheiztes und abschließbares Zimmer mit
@@ -122,7 +122,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 6 Vergütung und Zahlungsbedingungen</h2>
             <p className="mb-3">
               (1) Die Vergütung richtet sich nach dem individuellen Angebot. Der monatliche Pauschalpreis umfasst
@@ -138,7 +138,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 7 Laufzeit und Kündigung</h2>
             <p className="mb-3">
               (1) Der Vermittlungsvertrag wird auf unbestimmte Zeit geschlossen. Die Mindestlaufzeit beträgt
@@ -157,7 +157,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 8 Haftung</h2>
             <p className="mb-3">
               (1) Primundus haftet unbeschränkt für Schäden aus Verletzung des Lebens, des Körpers oder der
@@ -175,18 +175,18 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 9 Datenschutz</h2>
             <p>
               Die Verarbeitung personenbezogener Daten erfolgt gemäß der{' '}
-              <Link href="/datenschutz" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Datenschutzerklärung</Link>{' '}
+              <Link href="/datenschutz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Datenschutzerklärung</Link>{' '}
               von Primundus. Der Kunde willigt in die Verarbeitung der für die Vermittlung erforderlichen
               Gesundheits- und Pflegedaten ein. Diese Einwilligung kann jederzeit mit Wirkung für die Zukunft
               widerrufen werden.
             </p>
           </section>
 
-          <section className="bg-white border border-[#E5E3DF] rounded-2xl p-7">
+          <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-[#3D3D3D] mb-4">§ 10 Schlussbestimmungen</h2>
             <p className="mb-3">
               (1) Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Verbraucherschützende Vorschriften
@@ -204,21 +204,21 @@ export default function Page() {
             </p>
             <p>
               (4) Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:{' '}
-              <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-[#8B7355] underline hover:text-[#7D6E5D]">
+              <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-pm-taupe underline hover:text-pm-taupe-deep">
                 ec.europa.eu/consumers/odr
               </a>. Primundus ist nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
               Verbraucherschlichtungsstelle teilzunehmen.
             </p>
           </section>
 
-          <div className="bg-[#F2EDE6] border border-[#E5E3DF] rounded-2xl p-6">
-            <p className="text-[14px] text-[#6B5A44] leading-relaxed">
+          <div className="bg-pm-shell border border-pm-line rounded-2xl p-6">
+            <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
               <strong>Hinweis:</strong> Diese AGB sind eine allgemeine Vorlage. Für Ihren individuellen
               Betreuungsvertrag gelten ergänzend die im Vermittlungsvertrag konkret vereinbarten Bedingungen.
               Bei Fragen erreichen Sie uns unter{' '}
-              <a href="tel:+4989200000830" className="text-[#8B7355] font-semibold hover:underline">089 200 000 830</a>{' '}
+              <a href="tel:+4989200000830" className="text-pm-taupe font-semibold hover:underline">089 200 000 830</a>{' '}
               oder per E-Mail an{' '}
-              <a href="mailto:info@primundus.de" className="text-[#8B7355] font-semibold hover:underline">info@primundus.de</a>.
+              <a href="mailto:info@primundus.de" className="text-pm-taupe font-semibold hover:underline">info@primundus.de</a>.
             </p>
           </div>
 

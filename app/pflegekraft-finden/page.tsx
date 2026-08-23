@@ -65,33 +65,33 @@ export default function PflegekraftFinden() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/organisation" className="hover:text-[#8B7355] transition-colors">Organisation</a>
+            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegekraft finden</span>
+            <span className="text-pm-ink">Pflegekraft finden</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegekraft finden — worauf achten & wie vorgehen
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Eine zuverlässige Pflegekraft zu finden ist die wichtigste Entscheidung bei der Organisation der 24h-Pflege. Der sicherste Weg führt über eine seriöse Agentur — sie prüft Qualifikation und Erfahrung, stellt Ersatz bei Ausfall und regelt alles Rechtliche. Bei Primundus ist die passende Kraft in 4–7 Tagen vor Ort.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 'Agentur wie Primundus: sicherster Weg — Prüfung, Ersatz, Rechtssicherheit',
@@ -101,15 +101,15 @@ export default function PflegekraftFinden() {
                 'Persönlichkeit: Telefonat vorab möglich — Passung zur Pflegesituation zählt',
                 'Start: Mit Primundus in 4–7 Tagen nach Erstgespräch',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="wege" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="wege" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Wege zur Pflegekraft — was gibt es?
           </h2>
           <div className="space-y-3 mb-10">
@@ -130,17 +130,17 @@ export default function PflegekraftFinden() {
                 highlight: false,
               },
             ].map((item) => (
-              <div key={item.weg} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-[#8B7355] border-2' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.weg}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.beschreibung}</p>
+              <div key={item.weg} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.weg}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.beschreibung}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="agentur" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="agentur" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Über eine Agentur — was die Vorteile sind
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Eine seriöse Agentur wie Primundus übernimmt alles was bei der Direktsuche an der Familie hängenbleibt — und liefert zusätzliche Sicherheitsnetze.
           </p>
           <div className="space-y-3 mb-10">
@@ -151,17 +151,17 @@ export default function PflegekraftFinden() {
               { vorteil: 'Nahtlose Rotation', beschreibung: 'Wechsel der Kraft alle 6–8 Wochen ist organisiert und wird von Primundus koordiniert — Familie muss sich nicht selbst darum kümmern.' },
               { vorteil: 'Persönliche Beratung', beschreibung: 'Marta Kapcio und das Primundus-Team begleiten die Familie — von der ersten Anfrage bis zur laufenden Betreuung.' },
             ].map((item) => (
-              <div key={item.vorteil} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.vorteil}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.beschreibung}</p>
+              <div key={item.vorteil} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.vorteil}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.beschreibung}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="worauf-achten" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="worauf-achten" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Worauf bei der Auswahl zu achten ist
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Diese Kriterien sollten bei jeder Pflegekraft — ob über Agentur oder direkt — geprüft werden:
           </p>
           <div className="space-y-3 mb-6">
@@ -172,17 +172,17 @@ export default function PflegekraftFinden() {
               { kriterium: 'Führerschein', wichtigkeit: 'Je nach Situation', beschreibung: 'Wenn Arztbesuche oder Einkaufsfahrten in ländlichen Gebieten zu den Aufgaben gehören.' },
               { kriterium: 'Persönlichkeit & Passung', wichtigkeit: 'Sehr wichtig', beschreibung: 'Ein Telefonat vorab gibt einen ersten Eindruck. Schnuppertage in der ersten Woche helfen bei der endgültigen Entscheidung.' },
             ].map((item) => (
-              <div key={item.kriterium} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
+              <div key={item.kriterium} className="bg-white rounded-xl p-5 border border-pm-line">
                 <div className="flex items-center gap-3 mb-1">
-                  <p className="text-[15px] font-bold text-[#1C1C1C]">{item.kriterium}</p>
-                  <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${item.wichtigkeit === 'Pflicht' ? 'bg-[#FDF0EE] text-[#8B3E2F]' : item.wichtigkeit === 'Sehr wichtig' ? 'bg-[#F2EDE6] text-[#8B7355]' : 'bg-[#F8F7F5] text-[#8B8B8B]'}`}>{item.wichtigkeit}</span>
+                  <p className="text-[15px] font-bold text-pm-ink">{item.kriterium}</p>
+                  <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${item.wichtigkeit === 'Pflicht' ? 'bg-pm-coral-tint text-pm-coral-ink' : item.wichtigkeit === 'Sehr wichtig' ? 'bg-pm-shell text-pm-taupe' : 'bg-pm-paper text-pm-mute'}`}>{item.wichtigkeit}</span>
                 </div>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.beschreibung}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.beschreibung}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="ablauf" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Ablauf bei Primundus — von Anfrage bis Start
           </h2>
           <ol className="space-y-3 mb-10">
@@ -193,17 +193,17 @@ export default function PflegekraftFinden() {
               { n: '4', title: 'Anreise in 4–7 Tagen', desc: 'Betreuungskraft reist an. A1-Bescheinigung liegt vor. Übergabe durch Primundus-Team begleitet.' },
               { n: '5', title: 'Laufende Betreuung', desc: 'Primundus bleibt Ansprechpartner — Qualitätssicherung, Kraftwechsel, Ersatz bei Ausfall.' },
             ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF] list-none">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
+              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{step.title}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{step.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
                 </div>
               </li>
             ))}
           </ol>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen
           </h2>
           <div className="space-y-4 mb-12">
@@ -214,13 +214,13 @@ export default function PflegekraftFinden() {
               { q: 'Kann ich vor dem Einsatz mit der Pflegekraft sprechen?', a: 'Ja — Primundus ermöglicht ein Telefonat vorab. So kann die Familie einen ersten Eindruck gewinnen bevor die Kraft anreist.' },
               { q: 'Was passiert wenn die Pflegekraft nicht passt?', a: 'Bei Primundus ist der Vertrag täglich kündbar. Primundus findet unverzüglich eine Ersatzkraft — kein Versorgungsausfall.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

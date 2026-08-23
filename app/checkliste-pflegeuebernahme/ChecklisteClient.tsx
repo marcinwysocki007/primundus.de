@@ -110,18 +110,18 @@ export function ChecklisteClient() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F7F5]">
+    <div className="min-h-screen bg-pm-paper">
       <div className="max-w-[720px] mx-auto px-5 py-14">
 
-        <nav className="text-[13px] text-[#8B8B8B] mb-8 flex items-center gap-2">
-          <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+        <nav className="text-[13px] text-pm-mute mb-8 flex items-center gap-2">
+          <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
           <span>›</span>
-          <a href="/tools" className="hover:text-[#8B7355] transition-colors">Tools & Rechner</a>
+          <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
           <span>›</span>
           <span className="text-[#5A5A5A]">Checkliste Pflegeübernahme</span>
         </nav>
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-[#A89279] mb-3">TOOLS & RECHNER</p>
+        <p className="text-[11px] font-bold uppercase tracking-wider text-pm-taupe-light mb-3">TOOLS & RECHNER</p>
         <h1 className="text-[32px] md:text-[40px] font-bold text-[#3D3D3D] leading-tight mb-4">
           Checkliste Pflegeübernahme
         </h1>
@@ -131,23 +131,23 @@ export function ChecklisteClient() {
         </p>
 
         {/* Fortschritt */}
-        <div className="bg-white border border-[#E5E3DF] rounded-2xl p-5 mb-6 shadow-sm sticky top-4 z-10">
+        <div className="bg-white border border-pm-line rounded-2xl p-5 mb-6 shadow-sm sticky top-4 z-10">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[13px] font-semibold text-[#3D3D3D]">
               {completedItems} von {totalItems} Schritten erledigt
             </span>
-            <span className="text-[15px] font-bold text-[#8B7355]">{prozent} %</span>
+            <span className="text-[15px] font-bold text-pm-taupe">{prozent} %</span>
           </div>
-          <div className="h-2 bg-[#F0EDE8] rounded-full overflow-hidden">
+          <div className="h-2 bg-pm-line-soft rounded-full overflow-hidden">
             <div
-              className="h-full bg-[#8B7355] transition-all duration-500"
+              className="h-full bg-pm-taupe transition-all duration-500"
               style={{ width: `${prozent}%` }}
             />
           </div>
           {completedItems > 0 && (
             <button
               onClick={reset}
-              className="mt-3 text-[12px] text-[#8B8B8B] hover:text-[#8B7355] underline transition-colors"
+              className="mt-3 text-[12px] text-pm-mute hover:text-pm-taupe underline transition-colors"
             >
               Checkliste zurücksetzen
             </button>
@@ -159,26 +159,26 @@ export function ChecklisteClient() {
           const phasenDone = phase.items.filter(i => done[i.id]).length
           const phasenProzent = Math.round((phasenDone / phase.items.length) * 100)
           return (
-            <div key={phase.id} className="bg-white border border-[#E5E3DF] rounded-2xl overflow-hidden shadow-sm mb-5">
-              <div className="bg-[#F8F7F5] border-b border-[#E5E3DF] px-5 py-4">
+            <div key={phase.id} className="bg-white border border-pm-line rounded-2xl overflow-hidden shadow-sm mb-5">
+              <div className="bg-pm-paper border-b border-pm-line px-5 py-4">
                 <div className="flex items-center gap-3 mb-1">
-                  <span className="w-7 h-7 rounded-full bg-[#8B7355] text-white font-bold text-[13px] flex items-center justify-center flex-shrink-0">
+                  <span className="w-7 h-7 rounded-full bg-pm-taupe text-white font-bold text-[13px] flex items-center justify-center flex-shrink-0">
                     {idx + 1}
                   </span>
                   <p className="text-[15px] font-bold text-[#3D3D3D] flex-1">{phase.titel}</p>
-                  <span className="text-[12px] font-bold text-[#8B7355] whitespace-nowrap">
+                  <span className="text-[12px] font-bold text-pm-taupe whitespace-nowrap">
                     {phasenDone}/{phase.items.length}
                   </span>
                 </div>
-                <p className="text-[13px] text-[#8B8B8B] pl-10">{phase.untertitel}</p>
-                <div className="h-1 bg-[#F0EDE8] rounded-full overflow-hidden mt-3 ml-10">
+                <p className="text-[13px] text-pm-mute pl-10">{phase.untertitel}</p>
+                <div className="h-1 bg-pm-line-soft rounded-full overflow-hidden mt-3 ml-10">
                   <div
-                    className="h-full bg-[#8B7355] transition-all duration-300"
+                    className="h-full bg-pm-taupe transition-all duration-300"
                     style={{ width: `${phasenProzent}%` }}
                   />
                 </div>
               </div>
-              <div className="divide-y divide-[#F0EDE8]">
+              <div className="divide-y divide-pm-line-soft">
                 {phase.items.map(item => (
                   <label
                     key={item.id}
@@ -195,14 +195,14 @@ export function ChecklisteClient() {
                     <div className="flex-1 min-w-0">
                       <p className={`text-[14px] leading-snug ${
                         done[item.id]
-                          ? 'text-[#8B8B8B] line-through decoration-[#A89279]'
+                          ? 'text-pm-mute line-through decoration-pm-taupe-light'
                           : 'text-[#3D3D3D] font-medium'
                       }`}>
                         {item.label}
                       </p>
                       {item.desc && (
                         <p className={`text-[12px] mt-0.5 leading-relaxed ${
-                          done[item.id] ? 'text-[#A89279]' : 'text-[#8B8B8B]'
+                          done[item.id] ? 'text-pm-taupe-light' : 'text-pm-mute'
                         }`}>
                           {item.desc}
                         </p>
@@ -216,7 +216,7 @@ export function ChecklisteClient() {
         })}
 
         {/* CTA */}
-        <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 shadow-sm mt-8">
+        <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm mt-8">
           <p className="text-[15px] font-bold text-[#3D3D3D] mb-2">Brauchen Sie Unterstützung?</p>
           <p className="text-[14px] text-[#5A5A5A] mb-5 leading-relaxed">
             Wir begleiten Sie kostenlos durch alle Schritte — von der Antragstellung bis zur passenden Pflegekraft.
@@ -224,13 +224,13 @@ export function ChecklisteClient() {
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="/beratungsgespraech"
-              className="inline-flex items-center justify-center gap-2 bg-[#E76F63] hover:bg-[#D45F53] text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-5 rounded-xl transition-colors"
             >
               Kostenfreie Beratung →
             </a>
             <a
               href="tel:+4989200000830"
-              className="inline-flex items-center justify-center gap-2 bg-white border border-[#8B7355] text-[#8B7355] font-semibold text-[14px] py-3 px-5 rounded-xl hover:bg-[#F2EDE6] transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white border border-pm-taupe text-pm-taupe font-semibold text-[14px] py-3 px-5 rounded-xl hover:bg-pm-shell transition-colors"
             >
               089 200 000 830
             </a>

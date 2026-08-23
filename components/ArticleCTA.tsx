@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 export function ArticleCTA() {
   return (
-    <aside className="my-10 rounded-2xl overflow-hidden border border-[#E5E3DF] shadow-md bg-white">
+    <aside className="my-10 rounded-2xl overflow-hidden border border-pm-line shadow-md bg-white">
 
       {/* 1 — Hook */}
-      <div className="bg-[#8B7355] px-5 py-3.5">
+      <div className="bg-pm-taupe px-5 py-3.5">
         <p className="text-white/70 text-[11px] uppercase tracking-widest font-semibold mb-1">
           Tipp
         </p>
@@ -15,7 +15,7 @@ export function ArticleCTA() {
       </div>
 
       {/* 2 — Erklärung + Häkchen */}
-      <div className="bg-[#F8F7F5] px-5 py-4 space-y-3 border-b border-[#E5E3DF]">
+      <div className="bg-pm-paper px-5 py-4 space-y-3 border-b border-pm-line">
         <p className="text-[13px] text-[#5A5A5A] leading-relaxed">
           Die 24-Stunden-Pflege macht es möglich — eine Betreuungskraft zieht ein, rund um die Uhr anwesend, im vertrauten Zuhause.
         </p>
@@ -38,7 +38,7 @@ export function ArticleCTA() {
       <div className="p-5 space-y-4">
 
         {/* 3+4+5 — Beraterin / USPs / Testsieger (reordered mobile vs desktop) */}
-        <p className="text-[11px] font-semibold text-[#8B8B8B] uppercase tracking-wider text-center sm:text-left">
+        <p className="text-[11px] font-semibold text-pm-mute uppercase tracking-wider text-center sm:text-left">
           Kostenlose Beratung
         </p>
 
@@ -47,7 +47,7 @@ export function ArticleCTA() {
           {/* Beraterin — with inline phone + WA buttons */}
           <div className="order-1 flex items-center gap-3">
             <div className="relative flex-shrink-0">
-              <div className="w-11 h-11 rounded-xl overflow-hidden border border-[#E5E3DF]">
+              <div className="w-11 h-11 rounded-xl overflow-hidden border border-pm-line">
                 <Image
                   src="/images/marta-kapcio.jpg"
                   alt="Marta Kapcio – Pflegeberaterin Primundus"
@@ -60,16 +60,16 @@ export function ArticleCTA() {
             </div>
             <div className="flex-1 min-w-0">
               <p className="font-bold text-[#3D3D3D] text-[13px]">Marta Kapcio</p>
-              <p className="text-[11px] text-[#8B8B8B] leading-snug">Pflegeberaterin</p>
-              <p className="text-[11px] text-[#8B8B8B] leading-snug">Mo – So, 8 – 20 Uhr</p>
+              <p className="text-[11px] text-pm-mute leading-snug">Pflegeberaterin</p>
+              <p className="text-[11px] text-pm-mute leading-snug">Mo – So, 8 – 20 Uhr</p>
             </div>
             <div className="flex gap-1.5 flex-shrink-0">
               <a
                 href="tel:+4989200000830"
-                className="w-9 h-9 flex items-center justify-center rounded-lg bg-[#F8F7F5] hover:bg-[#E5E3DF] border border-[#E5E3DF] transition-colors"
+                className="w-9 h-9 flex items-center justify-center rounded-lg bg-pm-paper hover:bg-pm-line border border-pm-line transition-colors"
                 aria-label="Anrufen"
               >
-                <svg className="w-4 h-4 text-[#8B7355]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </a>
@@ -98,24 +98,24 @@ export function ArticleCTA() {
             />
             <div>
               <p className="text-[12px] font-bold text-[#3D3D3D]">
-                Testsieger <span className="text-[#8B7355]">DIE WELT</span>
+                Testsieger <span className="text-pm-taupe">DIE WELT</span>
               </p>
               <p className="text-[10px] text-[#6B5A45] leading-relaxed mt-0.5">
-                <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-[#8B7355]">Ausgezeichnet für Preis, Qualität &amp; Kundenservice — zum Beleg</a>
+                <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-pm-taupe">Ausgezeichnet für Preis, Qualität &amp; Kundenservice — zum Beleg</a>
               </p>
             </div>
           </div>
 
           {/* USPs — middle on mobile (order-2), full-width second row on desktop (order-3) */}
-          <div className="order-2 sm:order-3 sm:col-span-2 rounded-xl border border-[#E5E3DF] overflow-hidden">
-            <ul className="divide-y divide-[#F0EDE8] sm:divide-y-0 sm:grid sm:grid-cols-3 sm:divide-x">
+          <div className="order-2 sm:order-3 sm:col-span-2 rounded-xl border border-pm-line overflow-hidden">
+            <ul className="divide-y divide-pm-line-soft sm:divide-y-0 sm:grid sm:grid-cols-3 sm:divide-x">
               {[
                 { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', text: '20 Jahre Erfahrung' },
                 { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z', text: '60.000+ betreute Einsätze' },
                 { icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z', text: 'Persönlicher Ansprechpartner, 7 Tage/Woche' },
               ].map(({ icon, text }) => (
                 <li key={text} className="flex flex-col items-center justify-center gap-1.5 px-3 py-3 text-[12px] text-[#3D3D3D] text-center sm:py-3.5">
-                  <svg className="w-5 h-5 text-[#8B7355] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-pm-taupe flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icon} />
                   </svg>
                   <span className="leading-tight font-medium">{text}</span>
@@ -143,7 +143,7 @@ export function ArticleCTA() {
         {/* 7 — Aktion */}
         <a
           href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#E76F63] hover:bg-[#D65E52] text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
+          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-xl transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
         >
           Kosten & Pflegekräfte ansehen
           <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

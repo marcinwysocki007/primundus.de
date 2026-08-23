@@ -65,33 +65,33 @@ export default function BurnoutPflegendeAngehoerige() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/alltag" className="hover:text-[#8B7355] transition-colors">Alltag & Angehörige</a>
+            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Burnout pflegende Angehörige</span>
+            <span className="text-pm-ink">Burnout pflegende Angehörige</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Burnout pflegende Angehörige — Warnsignale erkennen & Hilfe finden
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Rund 30–50 % der pflegenden Angehörigen leiden unter chronischer Überlastung. Burnout entwickelt sich schleichend — und wer ihn nicht rechtzeitig erkennt, gefährdet am Ende die eigene Gesundheit und die Pflege des Angehörigen. Die wichtigste Botschaft: Entlastung zu suchen ist keine Schwäche, sondern Verantwortung.
           </p>
 
-          <div className="bg-white border border-[#E5E3DF] rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#A89279] mb-3">Auf einen Blick</p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-3">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
                 '30–50 % der pflegenden Angehörigen leiden unter Burnout-Symptomen',
@@ -101,18 +101,18 @@ export default function BurnoutPflegendeAngehoerige() {
                 'Pflegestützpunkte und Selbsthilfegruppen kostenlos nutzen',
                 'Eigene Gesundheit schützen = beste Pflege für den Angehörigen',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-[#2E2E2E]">
-                  <span className="w-5 h-5 rounded-full bg-[#E8F5EE] text-[#3D7A5C] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
+                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
+                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <h2 id="zeichen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="zeichen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Warnsignale erkennen — diese Zeichen ernst nehmen
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Burnout bei pflegenden Angehörigen entwickelt sich über Monate und Jahre. Die Zeichen werden oft als "normal" abgetan — dabei sind sie ein ernstes Signal des Körpers.
           </p>
           <div className="space-y-3 mb-10">
@@ -124,17 +124,17 @@ export default function BurnoutPflegendeAngehoerige() {
               { title: 'Körperliche Beschwerden', desc: 'Kopfschmerzen, Rückenprobleme, Schlafstörungen, häufige Infekte — ohne organische Ursache. Der Körper zeigt was die Seele nicht mehr schafft.' },
               { title: 'Gefühl der Hilflosigkeit', desc: '"Ich schaffe das nicht mehr, aber ich kann nicht aufhören." Dieses Gefühl — kombiniert mit Schuldgefühlen beim Gedanken an Entlastung — ist ein zentrales Burnout-Symptom.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="ursachen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="ursachen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Warum Burnout bei Pflegenden entsteht
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Pflege ist kein Teilzeitjob — sie ist oft 24 Stunden am Tag, 7 Tage/Woche, ohne Urlaubsanspruch. Hinzu kommen spezifische Belastungsfaktoren die Burnout besonders wahrscheinlich machen.
           </p>
           <div className="space-y-3 mb-10">
@@ -144,17 +144,17 @@ export default function BurnoutPflegendeAngehoerige() {
               { title: 'Gesellschaftliche Erwartungen', desc: '"Du müsstest das doch schaffen — das ist deine Mutter." Schuldgefühle bei jedem Gedanken an Entlastung.' },
               { title: 'Fehlende Unterstützung', desc: 'Viele Pflegende wissen nicht welche Leistungen ihnen zustehen — und zahlen damit mit ihrer Gesundheit.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="hilfe" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="hilfe" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Sofortige Entlastung — diese Möglichkeiten gibt es
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Entlastung ist kein Luxus — sie ist eine gesetzliche Leistung. Wer das Entlastungsbudget nicht nutzt, verschenkt Geld und Gesundheit.
           </p>
           <div className="space-y-3 mb-6">
@@ -180,18 +180,18 @@ export default function BurnoutPflegendeAngehoerige() {
                 highlight: false,
               },
             ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-[#8B7355] border-2' : 'bg-white border-[#E5E3DF]'}`}>
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Entlastungsbudget im Detail:{' '}
-            <a href="/verhinderungspflege" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Verhinderungspflege & Entlastungsbudget 2026</a>
+            <a href="/verhinderungspflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Verhinderungspflege & Entlastungsbudget 2026</a>
           </p>
 
-          <h2 id="praevention" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="praevention" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Langfristig schützen — was hilft wirklich
           </h2>
           <div className="space-y-3 mb-10">
@@ -201,14 +201,14 @@ export default function BurnoutPflegendeAngehoerige() {
               { title: 'Eigene Bedürfnisse ernst nehmen', desc: 'Sport, Schlaf, soziale Kontakte, eigene Arzttermine — das sind keine Extras, sondern Grundlage für gute Pflege.' },
               { title: 'Selbsthilfegruppen', desc: 'Der Austausch mit anderen pflegenden Angehörigen ist heilsam. Lokale Gruppen über die Pflegekasse oder die Alzheimer Gesellschaft finden.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.title}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">
             Häufige Fragen
           </h2>
           <div className="space-y-4 mb-12">
@@ -218,13 +218,13 @@ export default function BurnoutPflegendeAngehoerige() {
               { q: 'Darf man Pflege abgeben?', a: 'Ja — und es ist oft das Verantwortlichste was man tun kann. Eine professionelle 24h-Betreuungskraft bietet oft bessere Pflege als erschöpfte Angehörige. Pflege abgeben bedeutet nicht aufgeben — sondern klug organisieren.' },
               { q: 'Welche Leistungen stehen pflegenden Angehörigen zu?', a: 'Pflegegeld kann an pflegende Angehörige weitergegeben werden. Das Entlastungsbudget (3.539 €/Jahr) ermöglicht Urlaub. Pflegezeitgesetz: bis zu 6 Monate Auszeit vom Beruf möglich. Pflegekurs: Kostenlose Schulung durch die Pflegekasse.' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}

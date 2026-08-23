@@ -64,72 +64,72 @@ export default function PflegekasseAntragStellen() {
       <ArticleProgressBar />
       <ArticleTOC sections={SECTIONS} />
 
-      <div className="min-h-screen bg-[#F8F7F5]">
-        <div className="max-w-[860px] mx-auto px-5 py-10 md:py-16">
+      <div className="min-h-screen bg-pm-paper">
+        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
 
-          <nav className="h-[24px] text-sm text-[#8B8B8B] mb-6 flex items-center gap-2">
-            <a href="/" className="hover:text-[#8B7355] transition-colors">Startseite</a>
+          <nav className="h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2">
+            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
             <span>›</span>
-            <a href="/finanzierung" className="hover:text-[#8B7355] transition-colors">Finanzierung</a>
+            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
             <span>›</span>
-            <span className="text-[#1C1C1C]">Pflegekasse Antrag stellen</span>
+            <span className="text-pm-ink">Pflegekasse Antrag stellen</span>
           </nav>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-[#A89279] mb-4">
+          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
           </p>
 
-          <h1 className="text-[32px] md:text-[42px] font-bold text-[#1C1C1C] leading-tight mb-6">
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Pflegekasse Antrag stellen — Schritt für Schritt 2026
           </h1>
 
           <AuthorByline updated="25. April 2026" />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#2E2E2E] mb-8 font-medium">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-8 font-medium">
             Der Antrag bei der Pflegekasse ist der erste und wichtigste Schritt — denn alle Leistungen gelten rückwirkend ab Antragsdatum, nicht ab dem Datum der Begutachtung. Der Antrag selbst ist formlos: Ein kurzes Schreiben oder ein Telefonanruf genügt.
           </p>
 
-          <div className="bg-[#E8F5EE] border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-[#2A5C3F] mb-2">Der wichtigste Tipp: Antrag sofort stellen</p>
-            <p className="text-[14px] text-[#2A5C3F] leading-relaxed">
+          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
+            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Der wichtigste Tipp: Antrag sofort stellen</p>
+            <p className="text-[14px] text-pm-green-deep leading-relaxed">
               Leistungen der Pflegeversicherung gelten ab Antragsdatum — nicht ab Begutachtungsdatum oder Bescheiddatum. Wer 6 Wochen wartet verliert 6 Wochen Pflegegeld. Antrag formlos stellen, noch bevor alles organisiert ist.
             </p>
           </div>
 
-          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="antrag" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag stellen — so geht es
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Der Antrag auf Leistungen der Pflegeversicherung ist formlos — es gibt kein Pflichtformular. Ein kurzes Schreiben oder sogar ein Telefonanruf genügt.
           </p>
 
-          <div className="bg-[#F8F7F5] border border-[#E5E3DF] rounded-2xl p-6 mb-6 font-mono text-[14px] leading-relaxed text-[#2E2E2E]">
-            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-[#A89279] mb-3">Musterformulierung</p>
+          <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-6 font-mono text-[14px] leading-relaxed text-pm-body">
+            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-3">Musterformulierung</p>
             <p className="mb-3">Sehr geehrte Damen und Herren,</p>
             <p className="mb-3">hiermit beantrage ich für [Name, Geburtsdatum, Versichertennummer] Leistungen der sozialen Pflegeversicherung gemäß SGB XI.</p>
             <p className="mb-3">Mit freundlichen Grüßen,<br />[Unterschrift, Datum]</p>
           </div>
 
-          <p className="text-[15px] text-[#2E2E2E] mb-6">Dieser kurze Brief reicht vollständig aus. Die Pflegekasse veranlasst dann die Begutachtung durch den Medizinischen Dienst.</p>
+          <p className="text-[15px] text-pm-body mb-6">Dieser kurze Brief reicht vollständig aus. Die Pflegekasse veranlasst dann die Begutachtung durch den Medizinischen Dienst.</p>
 
-          <p className="text-[15px] font-semibold text-[#2E2E2E] mb-3">Antrag stellen per:</p>
+          <p className="text-[15px] font-semibold text-pm-body mb-3">Antrag stellen per:</p>
           <div className="grid md:grid-cols-3 gap-3 mb-10">
             {[
               { weg: 'Brief / Post', desc: 'Formlos, kein Pflichtformular. Einwurf-Einschreiben empfohlen (Datum gesichert).' },
               { weg: 'Telefon', desc: 'Anruf bei der Pflegekasse genügt. Datum notieren, Gesprächspartner notieren.' },
               { weg: 'E-Mail / Online', desc: 'Viele Pflegekassen bieten Online-Antrag — Datum des Absenders gilt.' },
             ].map((item) => (
-              <div key={item.weg} className="bg-white rounded-xl p-4 border border-[#E5E3DF]">
-                <p className="text-[14px] font-bold text-[#1C1C1C] mb-1">{item.weg}</p>
-                <p className="text-[13px] text-[#8B8B8B]">{item.desc}</p>
+              <div key={item.weg} className="bg-white rounded-xl p-4 border border-pm-line">
+                <p className="text-[14px] font-bold text-pm-ink mb-1">{item.weg}</p>
+                <p className="text-[13px] text-pm-mute">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="leistungen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Welche Leistungen beantragen?
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#2E2E2E] mb-6">
+          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Mit dem Pflegegrad-Antrag werden automatisch alle Grundleistungen freigeschaltet. Einige Leistungen müssen zusätzlich separat beantragt oder aktiviert werden.
           </p>
           <div className="space-y-3 mb-10">
@@ -141,23 +141,23 @@ export default function PflegekasseAntragStellen() {
               { leistung: 'Wohnraumanpassung (separat)', desc: 'Vor Beginn der Maßnahme separat bei der Pflegekasse beantragen — bis 4.180 €/Maßnahme.' },
               { leistung: 'Pflegehilfsmittel (separat)', desc: '42 €/Monat Pflegehilfsmittelpauschale — gesondert beantragen oder automatisch bei bestimmten Anbietern.' },
             ].map((item) => (
-              <div key={item.leistung} className="bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.leistung}</p>
-                <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+              <div key={item.leistung} className="bg-white rounded-xl p-5 border border-pm-line">
+                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.leistung}</p>
+                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 id="fristen" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="fristen" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Fristen & Bearbeitungszeiten
           </h2>
-          <div className="bg-white rounded-2xl border border-[#E5E3DF] overflow-hidden mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#F8F7F5]">
+                  <tr className="bg-pm-paper">
                     {['Situation', 'Frist für Pflegekasse', 'Besonderheit'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-[#8B8B8B] text-left border-b border-[#E5E3DF]">{h}</th>
+                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -168,10 +168,10 @@ export default function PflegekasseAntragStellen() {
                     ['Fristüberschreitung', 'Entschädigungspflicht', '70 €/Woche Verzögerung für Antragsteller'],
                     ['Widerspruch nach Bescheid', '1 Monat', 'Ab Datum des Bescheids'],
                   ].map(([situation, frist, besonderheit], i) => (
-                    <tr key={situation} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F5]'}>
-                      <td className="px-4 py-3 text-[14px] text-[#2E2E2E] border-b border-[#E5E3DF]">{situation}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-[#1C1C1C] border-b border-[#E5E3DF]">{frist}</td>
-                      <td className="px-4 py-3 text-[13px] text-[#8B8B8B] border-b border-[#E5E3DF]">{besonderheit}</td>
+                    <tr key={situation} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{situation}</td>
+                      <td className="px-4 py-3 text-[14px] font-bold text-pm-ink border-b border-pm-line">{frist}</td>
+                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{besonderheit}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -179,7 +179,7 @@ export default function PflegekasseAntragStellen() {
             </div>
           </div>
 
-          <h2 id="ablehnung" className="text-[24px] md:text-[30px] font-bold text-[#1C1C1C] mt-10 mb-4 leading-snug">
+          <h2 id="ablehnung" className="text-[24px] md:text-[30px] font-bold text-pm-ink mt-10 mb-4 leading-snug">
             Antrag abgelehnt oder zu niedrig eingestuft — was tun?
           </h2>
           <div className="space-y-3 mb-10">
@@ -189,21 +189,21 @@ export default function PflegekasseAntragStellen() {
               { schritt: 'Widerspruch innerhalb 1 Monat', desc: 'Formloser Widerspruch: "Ich lege Widerspruch gegen den Bescheid vom [Datum] ein." Keine Begründung nötig — die kommt nach Gutachteneinsicht.' },
               { schritt: 'Pflegetagebuch nachreichen', desc: 'Neues Tagebuch führen, mit aktuellen Arztberichten nachreichen. Das verbessert die Erfolgschancen erheblich.' },
             ].map((item, i) => (
-              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-[#E5E3DF]">
-                <span className="w-8 h-8 rounded-full bg-[#8B7355] text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
+              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
+                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
                 <div>
-                  <p className="text-[15px] font-bold text-[#1C1C1C] mb-1">{item.schritt}</p>
-                  <p className="text-[14px] text-[#2E2E2E] leading-relaxed">{item.desc}</p>
+                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.schritt}</p>
+                  <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-[#2E2E2E] mb-10">
+          <p className="text-[15px] text-pm-body mb-10">
             → Vollständige Anleitung:{' '}
-            <a href="/widerspruch-pflegekasse-einlegen" className="text-[#8B7355] underline hover:text-[#7D6E5D]">Widerspruch einlegen — Muster & Tipps</a>
+            <a href="/widerspruch-pflegekasse-einlegen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Widerspruch einlegen — Muster & Tipps</a>
           </p>
 
-          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-[#1C1C1C] mb-6">Häufige Fragen</h2>
+          <h2 id="faq" className="text-[24px] md:text-[28px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
               { q: 'Wie stelle ich einen Antrag bei der Pflegekasse?', a: 'Formlos — per Brief, Telefon oder E-Mail: "Ich beantrage Leistungen der Pflegeversicherung." Name, Versichertennummer, Datum. Die Pflegekasse veranlasst die Begutachtung.' },
@@ -211,13 +211,13 @@ export default function PflegekasseAntragStellen() {
               { q: 'Brauche ich ein bestimmtes Formular?', a: 'Nein — der Antrag ist formlos. Viele Pflegekassen bieten eigene Formulare an (erleichtert die Bearbeitung), aber es ist keine Pflicht.' },
               { q: 'Muss ich den Entlastungsbetrag separat beantragen?', a: 'Ja — der Entlastungsbetrag (131 €/Monat) läuft nicht automatisch. Gesondert bei der Pflegekasse beantragen: "Ich beantrage den Entlastungsbetrag nach §45b SGB XI."' },
             ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-[#E5E3DF] group">
+              <details key={i} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-[#1C1C1C] pr-4">{item.q}</h3>
-                  <span className="text-[#8B7355] font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
+                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <div className="px-5 pb-4">
-                  <p className="text-[15px] text-[#2E2E2E] leading-relaxed">{item.a}</p>
+                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
                 </div>
               </details>
             ))}
