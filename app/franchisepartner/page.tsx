@@ -124,28 +124,27 @@ export default function FranchisePage() {
           </div>
 
           {/* Testsieger strip */}
-          <div className="mt-14 pt-8 border-t border-pm-line flex flex-wrap items-center gap-8">
-            <Image
-              src="/images/primundus_testsieger-2021.webp"
-              alt="Primundus Testsieger DIE WELT"
-              width={72}
-              height={72}
-              className="object-contain"
-            />
-            <div className="h-8 w-px bg-pm-line hidden sm:block" />
-            <div>
-              <p className="text-[13px] font-semibold text-pm-ink">Testsieger DIE WELT</p>
-              <p className="text-[12px] text-pm-mute">Nr. 1 der Pflegekräfte-Vermittler — DIE WELT & ServiceValue</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+            <div className="bg-white border-2 border-pm-gold rounded-2xl p-6 flex flex-col items-center text-center">
+              <Image
+                src="/images/primundus_testsieger-2021.webp"
+                alt="Primundus Testsieger DIE WELT"
+                width={96}
+                height={96}
+                className="object-contain mb-3"
+              />
+              <p className="text-[15px] font-bold text-pm-ink">Testsieger DIE WELT</p>
+              <p className="text-small text-pm-mute mt-1">Nr. 1 der Pflegekräfte-Vermittler — DIE WELT & ServiceValue</p>
             </div>
-            <div className="h-8 w-px bg-pm-line hidden sm:block" />
-            <div>
-              <p className="text-[13px] font-semibold text-pm-ink">ab 5.500 € Einstieg</p>
-              <p className="text-[12px] text-pm-mute">Einer der niedrigsten im Pflege-Franchise</p>
+            <div className="bg-white border border-pm-line rounded-2xl p-6 flex flex-col items-center justify-center text-center">
+              <p className="text-h2 md:text-h2-lg font-bold text-pm-ink">ab 5.500 €</p>
+              <p className="text-[15px] font-semibold text-pm-ink mt-1">Einstiegsinvestition</p>
+              <p className="text-small text-pm-mute mt-1">Einer der niedrigsten im Pflege-Franchise</p>
             </div>
-            <div className="h-8 w-px bg-pm-line hidden sm:block" />
-            <div>
-              <p className="text-[13px] font-semibold text-pm-ink">∅ 300 € Netto/Kunde</p>
-              <p className="text-[12px] text-pm-mute">Break-Even ab 8–12 Betreuungen</p>
+            <div className="bg-white border border-pm-line rounded-2xl p-6 flex flex-col items-center justify-center text-center">
+              <p className="text-h2 md:text-h2-lg font-bold text-pm-ink">∅ 300 €</p>
+              <p className="text-[15px] font-semibold text-pm-ink mt-1">Netto pro Kunde & Monat</p>
+              <p className="text-small text-pm-mute mt-1">Break-even ab 8–12 laufenden Betreuungen</p>
             </div>
           </div>
         </div>
@@ -162,36 +161,27 @@ export default function FranchisePage() {
               href="https://pflegebund.eu"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-5 p-5 rounded-xl border border-pm-line hover:border-pm-taupe transition-colors bg-[#FDFCFA]"
+              className="group flex items-center gap-5 p-6 rounded-2xl border border-pm-line hover:border-pm-taupe transition-colors bg-white"
             >
-              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white border border-pm-line flex items-center justify-center">
-                <div className="text-center leading-none px-1">
-                  <span className="block text-[9px] font-black text-[#2D6A9F] tracking-tight uppercase">Pflege</span>
-                  <span className="block text-[9px] font-black text-[#1A3A5C] tracking-tight uppercase">Bund</span>
-                  <span className="block text-[8px] text-pm-mute font-medium">.eu</span>
-                </div>
+              <div className="flex-shrink-0 flex items-center gap-3">
+                <Image src="/images/partner-pflegebund.png" alt="Pflegebund" width={44} height={44} className="object-contain" />
+                <span className="text-[17px] font-bold text-[#1A3A5C]">pflegebund<span className="text-pm-mute font-medium">.eu</span></span>
               </div>
-              <div>
-                <p className="text-[14px] font-semibold text-pm-ink group-hover:text-pm-taupe transition-colors">pflegebund.eu</p>
-                <p className="text-[12px] text-pm-mute leading-snug mt-0.5">Europäisches Pflegenetzwerk · Qualitätsstandards & Fachkräfte-Pool</p>
+              <div className="border-l border-pm-line pl-5">
+                <p className="text-small text-pm-mute leading-snug">Europäisches Pflegenetzwerk<br />Qualitätsstandards & Fachkräfte-Pool</p>
               </div>
             </a>
             <a
               href="https://mamamia.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-5 p-5 rounded-xl border border-pm-line hover:border-pm-taupe transition-colors bg-[#FDFCFA]"
+              className="group flex items-center gap-5 p-6 rounded-2xl border border-pm-line hover:border-pm-taupe transition-colors bg-white"
             >
-              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white border border-pm-line flex items-center justify-center">
-                <div className="text-center leading-none">
-                  <span className="block text-[11px] font-black text-pm-coral tracking-tight">mama</span>
-                  <span className="block text-[11px] font-black text-pm-ink tracking-tight">mia</span>
-                  <span className="block text-[8px] text-pm-mute font-medium">.de</span>
-                </div>
+              <div className="flex-shrink-0">
+                <Image src="/images/partner-mamamia.png" alt="mamamia" width={140} height={41} className="object-contain" />
               </div>
-              <div>
-                <p className="text-[14px] font-semibold text-pm-ink group-hover:text-pm-taupe transition-colors">mamamia.de</p>
-                <p className="text-[12px] text-pm-mute leading-snug mt-0.5">Digitale Pflegeplattform · Gemeinsames Ökosystem für Familien & Partner</p>
+              <div className="border-l border-pm-line pl-5">
+                <p className="text-small text-pm-mute leading-snug">Digitale Pflegeplattform<br />Gemeinsames Ökosystem für Familien & Partner</p>
               </div>
             </a>
           </div>
