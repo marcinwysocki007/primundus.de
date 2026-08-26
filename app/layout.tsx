@@ -13,9 +13,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://primundus.de'),
-  title: 'Primundus — 24-Stunden-Pflege | Testsieger & 20 Jahre Erfahrung',
+  title: 'Primundus — 24-Stunden-Pflege | 6× Testsieger & 20 Jahre Erfahrung',
   description:
-    'Rechtssichere 24h-Pflege zu Hause mit angestellten Betreuungskräften. Testsieger DIE WELT. Täglich kündbar. Start in 4–7 Tagen. Beratung: 089 200 000 830.',
+    'Rechtssichere 24h-Pflege zu Hause mit angestellten Betreuungskräften. 6× Testsieger DIE WELT. Täglich kündbar. Start in 4–7 Tagen. Beratung: 089 200 000 830.',
   openGraph: {
     siteName: 'Primundus',
     locale: 'de_DE',

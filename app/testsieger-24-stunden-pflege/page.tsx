@@ -11,7 +11,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 export const metadata: Metadata = {
   title: 'Testsieger 24-Stunden-Pflege 2026: Primundus ist die Nr. 1',
   description:
-    'Primundus ist Testsieger: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel ansehen, Anbieter vergleichen — Preis in 2 Minuten.',
+    'Primundus ist 6× Testsieger: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel ansehen, Anbieter vergleichen — Preis in 2 Minuten.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
