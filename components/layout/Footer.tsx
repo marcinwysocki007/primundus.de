@@ -148,6 +148,31 @@ export function SiteFooter() {
           </div>
         </div>
 
+        {/* Google Bevorzugte Quellen — Leser können Primundus in der
+            Google-Suche als bevorzugte Quelle markieren (wirkt in Top Stories
+            und AI Overviews). Offizielles Badge, Doku:
+            developers.google.com/search/docs/appearance/preferred-sources */}
+        <div className="pb-6">
+          <a
+            href="https://www.google.com/preferences/source?q=primundus.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 group"
+          >
+            <img
+              src="/images/google-bevorzugte-quelle.png"
+              alt="Primundus bei Google als bevorzugte Quelle hinzufügen"
+              width={169}
+              height={53}
+              loading="lazy"
+              className="h-[44px] w-auto"
+            />
+            <span className="text-sm text-gray-400 group-hover:text-white transition-colors max-w-[240px] leading-snug">
+              Unsere Ratgeber öfter in Ihrer Google-Suche sehen
+            </span>
+          </a>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-gray-600 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
