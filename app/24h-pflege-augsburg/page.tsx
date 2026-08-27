@@ -69,6 +69,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft in eine Augsburger Wohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das muss man in Augsburg genauer prüfen als anderswo in Bayern. Im Freistaat kommen auf ein Gebäude 2,1 Wohnungen, in Augsburg 4,1; die durchschnittliche Wohnung misst hier 76,4 statt 100,5 Quadratmeter, und gut jede dritte liegt unter 60 — in Bayern jede fünfte. Im Eigentum wohnen 32,5 Prozent der Haushalte gegenüber 49,3 im Land. Augsburg ist eine Großstadt mit Großstadtgrundrissen. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft; ob Ihre Wohnung das hergibt, klären wir vorab am Telefon.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie ist die Pflegesituation in Augsburg?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Stärker professionalisiert als im übrigen Bayern. Von den 14.208 Pflegebedürftigen der Stadt werden nur 45,4 Prozent ausschließlich von Angehörigen versorgt, in Bayern sind es 48,5 Prozent. Ambulante Dienste (22,1 gegen 20,0 Prozent) und Heimpflege (18,2 gegen 17,6) liegen entsprechend darüber. Heimplätze sind reichlich vorhanden: 49 je 1.000 Einwohner über 65 gegenüber 44 in Bayern, bei durchschnittlich 71 Plätzen je Einrichtung statt 58. Eine Betreuung zu Hause tritt hier also nicht gegen einen Mangel an, sondern gegen ein gut ausgebautes stationäres Angebot.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ich habe Pflegegrad 1 — lohnt sich das Thema für mich schon?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Gerade dann lohnt sich das Nachdenken. In Augsburg haben 2.009 Menschen Pflegegrad 1, beziehen aber keine regulären Pflegeleistungen — 14,1 Prozent aller Pflegebedürftigen der Stadt und mehr als im bayerischen Durchschnitt (13,9 Prozent). Das sind über zweitausend Haushalte mit anerkanntem Unterstützungsbedarf, in denen bislang nichts organisiert ist. Bei Pflegegrad 1 stehen Entlastungsbetrag und Hilfsmittel zur Verfügung; wer früh plant, muss später nicht unter Zeitdruck entscheiden. Welche Leistungen Ihnen zustehen, rechnet der Pflegegrad-Rechner durch.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Augsburg bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Augsburg und Umland: Friedberg, Neusäß, Königsbrunn, Gersthofen, Stadtbergen und alle Gemeinden im Landkreis Augsburg' },
       },
@@ -312,6 +327,57 @@ export default function AugsburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Augsburg und Umland: Friedberg, Neusäß, Königsbrunn, Gersthofen, Stadtbergen und alle Gemeinden im Landkreis Augsburg</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Augsburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wer von Bayern auf Augsburg schließt, liegt beim Wohnen völlig daneben. Im Freistaat
+            kommen auf ein Gebäude 2,1 Wohnungen, in Augsburg 4,1. Die durchschnittliche bayerische
+            Wohnung misst 100,5 Quadratmeter, die Augsburger 76,4.{' '}
+            <strong className="text-pm-ink font-semibold">Gut jede dritte Wohnung in der Stadt liegt
+            unter 60 Quadratmetern — in Bayern ist es jede fünfte.</strong> Und im Eigentum wohnen
+            hier 32,5 Prozent der Haushalte gegenüber 49,3 Prozent im Land. Augsburg ist eine
+            Großstadt mit Großstadtgrundrissen, keine schwäbische Landstadt. Für die Frage, ob eine
+            Betreuungskraft ein eigenes Zimmer bekommt, ist das die entscheidende Auskunft.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Bei der Pflege selbst fällt ein Wert besonders auf.{' '}
+            <strong className="text-pm-ink font-semibold">Nur 45,4 Prozent der 14.208 Augsburger
+            Pflegebedürftigen werden ausschließlich von Angehörigen versorgt</strong> — in Bayern
+            sind es 48,5 Prozent. Dafür liegen beide professionellen Formen darüber: ambulante
+            Dienste bei 22,1 statt 20,0 Prozent, Heimpflege bei 18,2 statt 17,6. Augsburg ist eine
+            Stadt, in der Pflege früher aus der Hand gegeben wird als im übrigen Bayern. Das hat
+            nichts mit fehlender Zuwendung zu tun, sondern mit Wohnungsgrößen, Erwerbstätigkeit und
+            Wegen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Heimplätze sind in Augsburg reichlich vorhanden — 49 je 1.000 Einwohner über 65
+            gegenüber 44 in Bayern, und mit durchschnittlich 71 Plätzen je Haus sind die
+            Einrichtungen größer als im Land (58). Auch hier zeigen Anteil und Platzangebot in
+            dieselbe Richtung. Eine Betreuung zu Hause tritt in dieser Stadt also nicht gegen einen
+            Mangel an, sondern gegen ein gut ausgebautes stationäres Angebot. Der Unterschied liegt
+            woanders: darin, dass jemand in der eigenen Wohnung bleibt, in der vertrauten Umgebung,
+            mit einer festen Bezugsperson statt wechselnden Schichten.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Gruppe wird dabei regelmäßig übersehen. In Augsburg haben{' '}
+            <strong className="text-pm-ink font-semibold">2.009 Menschen Pflegegrad 1, beziehen aber
+            keine regulären Pflegeleistungen</strong> — 14,1 Prozent aller Pflegebedürftigen der
+            Stadt und damit mehr als in Bayern (13,9 Prozent). Das sind über zweitausend Haushalte
+            mit anerkanntem Unterstützungsbedarf, in denen bisher nichts organisiert ist. Wer hier
+            früh handelt, muss später nicht unter Zeitdruck entscheiden.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Zur medizinischen Lage gehören zwei Punkte. Mit der geriatrischen Rehaklinik der
+            Hessing Stiftung hat Augsburg eine der größten Einrichtungen ihrer Art in Deutschland,
+            rund zweitausend Patienten im Jahr, und das erklärte Ziel ist die Rückkehr nach Hause.
+            Eine akutgeriatrische Tagesklinik gibt es in ganz Schwaben dagegen nicht. Beides zusammen
+            heißt: Der Übergang von der Klinik zurück in die eigene Wohnung muss zu Hause aufgefangen
+            werden. Genau dafür zieht eine Betreuungskraft mit ein — auch in Bergheim, Inningen oder
+            der Firnhaberau, wo ein Dienst weite Wege für kurze Einsätze hätte. Lassen Sie sich
+            vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Augsburg</h2>
           <div className="space-y-3 mb-12">
@@ -321,6 +387,9 @@ export default function AugsburgPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Augsburg starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Augsburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft in eine Augsburger Wohnung?', a: 'Das muss man in Augsburg genauer prüfen als anderswo in Bayern. Im Freistaat kommen auf ein Gebäude 2,1 Wohnungen, in Augsburg 4,1; die durchschnittliche Wohnung misst hier 76,4 statt 100,5 Quadratmeter, und gut jede dritte liegt unter 60 — in Bayern jede fünfte. Im Eigentum wohnen 32,5 Prozent der Haushalte gegenüber 49,3 im Land. Augsburg ist eine Großstadt mit Großstadtgrundrissen. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft; ob Ihre Wohnung das hergibt, klären wir vorab am Telefon.' },
+              { q: 'Wie ist die Pflegesituation in Augsburg?', a: 'Stärker professionalisiert als im übrigen Bayern. Von den 14.208 Pflegebedürftigen der Stadt werden nur 45,4 Prozent ausschließlich von Angehörigen versorgt, in Bayern sind es 48,5 Prozent. Ambulante Dienste (22,1 gegen 20,0 Prozent) und Heimpflege (18,2 gegen 17,6) liegen entsprechend darüber. Heimplätze sind reichlich vorhanden: 49 je 1.000 Einwohner über 65 gegenüber 44 in Bayern, bei durchschnittlich 71 Plätzen je Einrichtung statt 58. Eine Betreuung zu Hause tritt hier also nicht gegen einen Mangel an, sondern gegen ein gut ausgebautes stationäres Angebot.' },
+              { q: 'Ich habe Pflegegrad 1 — lohnt sich das Thema für mich schon?', a: 'Gerade dann lohnt sich das Nachdenken. In Augsburg haben 2.009 Menschen Pflegegrad 1, beziehen aber keine regulären Pflegeleistungen — 14,1 Prozent aller Pflegebedürftigen der Stadt und mehr als im bayerischen Durchschnitt (13,9 Prozent). Das sind über zweitausend Haushalte mit anerkanntem Unterstützungsbedarf, in denen bislang nichts organisiert ist. Bei Pflegegrad 1 stehen Entlastungsbetrag und Hilfsmittel zur Verfügung; wer früh plant, muss später nicht unter Zeitdruck entscheiden. Welche Leistungen Ihnen zustehen, rechnet der Pflegegrad-Rechner durch.' },
               { q: 'Welches Einzugsgebiet wird in Augsburg bedient?', a: 'Augsburg und Umland: Friedberg, Neusäß, Königsbrunn, Gersthofen, Stadtbergen und alle Gemeinden im Landkreis Augsburg' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

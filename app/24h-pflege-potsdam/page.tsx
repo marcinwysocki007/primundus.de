@@ -64,6 +64,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Wie ist die Pflegesituation in Potsdam?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Institutioneller als im übrigen Brandenburg. Von den 10.087 Pflegebedürftigen der Stadt werden 5.091 allein von Angehörigen versorgt — 50,5 Prozent gegenüber 54,5 Prozent im Land. Dafür lebt mit 16,4 Prozent rund jeder sechste Pflegebedürftige im Heim, im Land nur jeder neunte (10,9 Prozent). Das ist kein Effekt der jüngeren Stadtbevölkerung: Auch gemessen an der Zahl der über 65-Jährigen stehen in Potsdam mehr Heimplätze bereit als im Landesdurchschnitt. In der Stadt leben 37.970 Menschen über 65, davon 13.706 über 80.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Warum ist Tagespflege in Potsdam so schwer zu bekommen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weil es sie kaum gibt. Nur 2,6 Prozent der Leistungsempfänger in Potsdam nutzen Tagespflege, im Land Brandenburg sind es 4,1 Prozent. Von 1.943 Pflegeplätzen der Stadt entfallen gerade einmal 134 auf Tages- und Nachtpflege. Für Angehörige, die tagsüber arbeiten und abends pflegen, fehlt damit die naheliegendste Entlastung. Eine Betreuungskraft, die im Haushalt lebt, deckt genau diese Lücke — sie ist auch dann da, wenn niemand sonst kann.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Passt eine Betreuungskraft in eine Potsdamer Wohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das ist die Frage, die vorab geklärt gehört. Auf ein Potsdamer Gebäude kommen im Schnitt 4,3 Wohnungen, die durchschnittliche Wohnung misst 75,8 Quadratmeter, und fast vier von zehn liegen unter 60. Nur 17,6 Prozent der Haushalte wohnen im Eigentum, in Brandenburg sind es 45,6. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Ob Ihre Wohnung das hergibt, klären wir am Telefon, bevor irgendetwas entschieden wird.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Potsdam bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Potsdam und Umland: Werder, Brandenburg an der Havel, Teltow, Kleinmachnow und alle Gemeinden im Landkreis Potsdam-Mittelmark und Havelland' },
       },
@@ -300,6 +315,55 @@ export default function PotsdamPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Potsdam und Umland: Werder, Brandenburg an der Havel, Teltow, Kleinmachnow und alle Gemeinden im Landkreis Potsdam-Mittelmark und Havelland</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Potsdam ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Potsdam organisiert Pflege anders als das übrige Brandenburg — deutlich
+            institutioneller. Von den 10.087 Pflegebedürftigen der Stadt werden 5.091 allein von
+            Angehörigen versorgt, also 50,5 Prozent. Im Land sind es 54,5. Umgekehrt lebt in Potsdam
+            mit 16,4 Prozent{' '}
+            <strong className="text-pm-ink font-semibold">rund jeder sechste Pflegebedürftige im
+            Heim, im Land nur jeder neunte (10,9 Prozent).</strong> Das ist kein Rechentrick der
+            jüngeren Stadtbevölkerung: Auch gemessen an der Zahl der über 65-Jährigen stehen in
+            Potsdam mehr Heimplätze bereit als anderswo im Land. Wer hier zu Hause bleiben möchte,
+            entscheidet sich also gegen einen gut ausgebauten Strom.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Lücke fällt dabei besonders auf: <strong className="text-pm-ink font-semibold">Nur
+            2,6 Prozent der Leistungsempfänger nutzen Tagespflege</strong> — im Land sind es 4,1
+            Prozent. Von 1.943 Pflegeplätzen in Potsdam entfallen gerade 134 auf Tages- und
+            Nachtpflege. Für Angehörige, die tagsüber arbeiten und abends pflegen, gibt es in dieser
+            Stadt also kaum die klassische Entlastung. Genau diese Konstellation — jemand muss
+            tagsüber da sein, aber der Alltag lässt es nicht zu — löst eine Betreuungskraft, die im
+            Haushalt wohnt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen wird es dafür eng. Auf ein Potsdamer Gebäude kommen im Schnitt 4,3
+            Wohnungen, die durchschnittliche Wohnung misst 75,8 Quadratmeter, und fast vier von zehn
+            liegen unter 60. Nur 17,6 Prozent der Haushalte wohnen im Eigentum — der niedrigste Wert
+            aller Städte, für die wir das geprüft haben, und weit unter Brandenburg mit 45,6 Prozent.
+            Der Bestand ist dabei jung: 30 Prozent der Wohnungen stammen aus den siebziger und
+            achtziger Jahren, also aus dem Plattenbau in Schlaatz, Waldstadt II, Stern und Drewitz,
+            weitere 16 Prozent wurden nach 2010 gebaut. Ein separates Zimmer für die Betreuungskraft
+            ist hier die entscheidende Frage — nicht das Baujahr.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Und Potsdam ist räumlich keine kompakte Stadt. Zwischen dem dichtesten und dem dünnsten
+            Ortsteil liegt der Faktor 700: In Waldstadt II leben gut 10.000 Menschen je
+            Quadratkilometer, in Sacrow 14. Havel und Seenkette zerschneiden das Stadtgebiet,
+            Uetz-Paaren, Satzkorn und Grube liegen weit draußen. Für einen ambulanten Dienst
+            bedeutet das lange Anfahrten für kurze Einsätze. Für jemanden, der im Haus wohnt, spielt
+            die Lage keine Rolle.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Medizinisch ist die Stadt gut versorgt: Das Klinikum Ernst von Bergmann führt eine eigene
+            Klinik für Geriatrie, und mit dem Evangelischen Zentrum für Altersmedizin gibt es ein
+            eigenes geriatrisches Fachkrankenhaus samt Tagesklinik. Die Frage stellt sich, wie fast
+            immer, erst danach — wenn es zurück in die eigenen vier Wände geht. Lassen Sie sich
+            vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos,
+            trägerunabhängig und kommt auf Wunsch zu Ihnen.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Potsdam</h2>
           <div className="space-y-3 mb-12">
@@ -308,6 +372,9 @@ export default function PotsdamPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Potsdam starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Potsdam rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Wie ist die Pflegesituation in Potsdam?', a: 'Institutioneller als im übrigen Brandenburg. Von den 10.087 Pflegebedürftigen der Stadt werden 5.091 allein von Angehörigen versorgt — 50,5 Prozent gegenüber 54,5 Prozent im Land. Dafür lebt mit 16,4 Prozent rund jeder sechste Pflegebedürftige im Heim, im Land nur jeder neunte (10,9 Prozent). Das ist kein Effekt der jüngeren Stadtbevölkerung: Auch gemessen an der Zahl der über 65-Jährigen stehen in Potsdam mehr Heimplätze bereit als im Landesdurchschnitt. In der Stadt leben 37.970 Menschen über 65, davon 13.706 über 80.' },
+              { q: 'Warum ist Tagespflege in Potsdam so schwer zu bekommen?', a: 'Weil es sie kaum gibt. Nur 2,6 Prozent der Leistungsempfänger in Potsdam nutzen Tagespflege, im Land Brandenburg sind es 4,1 Prozent. Von 1.943 Pflegeplätzen der Stadt entfallen gerade einmal 134 auf Tages- und Nachtpflege. Für Angehörige, die tagsüber arbeiten und abends pflegen, fehlt damit die naheliegendste Entlastung. Eine Betreuungskraft, die im Haushalt lebt, deckt genau diese Lücke — sie ist auch dann da, wenn niemand sonst kann.' },
+              { q: 'Passt eine Betreuungskraft in eine Potsdamer Wohnung?', a: 'Das ist die Frage, die vorab geklärt gehört. Auf ein Potsdamer Gebäude kommen im Schnitt 4,3 Wohnungen, die durchschnittliche Wohnung misst 75,8 Quadratmeter, und fast vier von zehn liegen unter 60. Nur 17,6 Prozent der Haushalte wohnen im Eigentum, in Brandenburg sind es 45,6. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Ob Ihre Wohnung das hergibt, klären wir am Telefon, bevor irgendetwas entschieden wird.' },
               { q: 'Welches Einzugsgebiet wird in Potsdam bedient?', a: 'Potsdam und Umland: Werder, Brandenburg an der Havel, Teltow, Kleinmachnow und alle Gemeinden im Landkreis Potsdam-Mittelmark und Havelland' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

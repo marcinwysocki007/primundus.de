@@ -64,6 +64,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Gibt es in Düsseldorf genug Heimplätze als Alternative?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weniger als im Landesdurchschnitt. Düsseldorf hat 40 vollstationäre Heimplätze je 1.000 Einwohner über 65, in Nordrhein-Westfalen sind es 46. Beide Kennzahlen zeigen dabei in dieselbe Richtung: Auch der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2 Prozent. Bei 40.248 Pflegebedürftigen in der Stadt bedeutet das eine spürbar längere Suche. Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich kurzfristig umsetzen lässt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Funktioniert 24-Stunden-Betreuung in einer Düsseldorfer Nachkriegswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Häufig ja — es ist hier sogar der Normalfall. 43,3 Prozent aller Düsseldorfer Wohnungen stammen aus den Jahren 1950 bis 1969, allein 87.521 aus den Fünfzigern; in NRW sind es 33,6 Prozent. Auf ein Gebäude kommen 4,7 Wohnungen. Die typische Ausgangslage ist also eine Mietwohnung im Obergeschoss eines Wiederaufbaus. Gerade wenn die Treppe zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Notwendig ist ein eigenes, abschließbares Zimmer — die durchschnittliche Wohnung misst 77,6 Quadratmeter, gut jede dritte liegt unter 60.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wird in Düsseldorf gepflegt — eher familiär oder professionell?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Deutlich professioneller als im Land. Nur 56,9 Prozent der Düsseldorfer Pflegebedürftigen beziehen ausschließlich Pflegegeld, versorgen sich also rein familiär; in Nordrhein-Westfalen sind es 59,0 Prozent. Dafür nehmen 21,0 Prozent einen ambulanten Dienst in Anspruch gegenüber 17,3 Prozent im Land. Eine Betreuungskraft im Haushalt setzt diesen Weg fort: nicht ein Besuch dreimal täglich, sondern durchgehend jemand vor Ort — auch nachts.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Düsseldorf bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Düsseldorf und Umland: Ratingen, Mettmann, Neuss, Krefeld, Meerbusch, Langenfeld, Hilden, Erkrath und alle Gemeinden im Rhein-Kreis Neuss und Kreis Mettmann' },
       },
@@ -300,6 +315,55 @@ export default function DuesseldorfPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Düsseldorf und Umland: Ratingen, Mettmann, Neuss, Krefeld, Meerbusch, Langenfeld, Hilden, Erkrath und alle Gemeinden im Rhein-Kreis Neuss und Kreis Mettmann</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Düsseldorf ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Düsseldorf wohnt zu einem erstaunlichen Teil in den fünfziger Jahren.{' '}
+            <strong className="text-pm-ink font-semibold">43,3 Prozent aller Wohnungen der Stadt
+            stammen aus den Jahren 1950 bis 1969</strong> — in Nordrhein-Westfalen sind es 33,6
+            Prozent. Allein aus den Fünfzigern kommen 87.521 Wohnungen. Das ist der Wiederaufbau,
+            und der baute in die Höhe: Auf ein Düsseldorfer Gebäude kommen 4,7 Wohnungen, in NRW
+            sind es 2,3. Wer in dieser Stadt alt wird, wird das mit hoher Wahrscheinlichkeit im
+            dritten oder vierten Obergeschoss eines Nachkriegsbaus. Was das für Treppen bedeutet,
+            weiß jede Familie, die schon einmal einen Rollator hochgetragen hat.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die zweite Zahl, die man kennen sollte, betrifft die Alternative.{' '}
+            <strong className="text-pm-ink font-semibold">Düsseldorf hat 40 vollstationäre
+            Heimplätze je 1.000 Einwohner über 65 — Nordrhein-Westfalen 46.</strong> Und das ist
+            keine Frage der Betrachtungsweise: Auch der Anteil der Pflegebedürftigen, die im Heim
+            leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2. Beide Kennzahlen zeigen in
+            dieselbe Richtung. Bei 40.248 Pflegebedürftigen in der Stadt heißt das schlicht: Der
+            Heimplatz ist hier knapper als anderswo in NRW. Für viele Familien ist die häusliche
+            Lösung nicht die zweitbeste, sondern die einzige, die kurzfristig verfügbar ist.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Auffällig ist auch, wie in Düsseldorf gepflegt wird. Nur 56,9 Prozent beziehen
+            ausschließlich Pflegegeld, versorgen sich also rein familiär — in NRW sind es 59,0
+            Prozent. Dafür nehmen 21,0 Prozent einen ambulanten Dienst in Anspruch, gegenüber 17,3
+            im Land. Düsseldorfer Familien kaufen professionelle Unterstützung eher ein, als alles
+            allein zu tragen. Eine Betreuungskraft im Haushalt ist die konsequente Fortsetzung
+            dieses Wegs: nicht dreimal täglich ein Besuch, sondern durchgehend jemand da.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Platz wird es allerdings eng. Die durchschnittliche Düsseldorfer Wohnung misst 77,6
+            Quadratmeter gegenüber 92,7 im Land, gut jede dritte liegt unter 60, und nur 22,1
+            Prozent der Haushalte wohnen im Eigentum. Bei 9,24 Euro Nettokaltmiete je Quadratmeter
+            ist der Umzug in etwas Größeres für die meisten keine Option. Ob ein eigenes Zimmer für
+            die Betreuungskraft frei wird, entscheidet sich deshalb sehr konkret — und diese Frage
+            klären wir vorher, nicht hinterher.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Dazu kommt, dass Düsseldorf zwei sehr verschiedene Städte ist. In Friedrichstadt leben
+            gut 20.000 Menschen je Quadratkilometer, in Hubbelrath 130. Innenstadtlagen wie
+            Pempelfort oder Unterbilk haben alles fußläufig; in Kalkum, Angermund oder Himmelgeist
+            geht ohne Auto wenig. Für eine Kraft, die im Haus wohnt, spielt das keine Rolle.
+            Medizinisch ist die Stadt gut aufgestellt — St. Martinus in Bilk und das Krankenhaus
+            Elbroich führen beide eine eigene geriatrische Klinik, St. Martinus zusätzlich eine
+            Tagesklinik. Bevor Sie entscheiden, lassen Sie sich unabhängig beraten: Die
+            Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt zu Ihnen.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Düsseldorf</h2>
           <div className="space-y-3 mb-12">
@@ -308,6 +372,9 @@ export default function DuesseldorfPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Düsseldorf starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Düsseldorf rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Gibt es in Düsseldorf genug Heimplätze als Alternative?', a: 'Weniger als im Landesdurchschnitt. Düsseldorf hat 40 vollstationäre Heimplätze je 1.000 Einwohner über 65, in Nordrhein-Westfalen sind es 46. Beide Kennzahlen zeigen dabei in dieselbe Richtung: Auch der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2 Prozent. Bei 40.248 Pflegebedürftigen in der Stadt bedeutet das eine spürbar längere Suche. Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich kurzfristig umsetzen lässt.' },
+              { q: 'Funktioniert 24-Stunden-Betreuung in einer Düsseldorfer Nachkriegswohnung?', a: 'Häufig ja — es ist hier sogar der Normalfall. 43,3 Prozent aller Düsseldorfer Wohnungen stammen aus den Jahren 1950 bis 1969, allein 87.521 aus den Fünfzigern; in NRW sind es 33,6 Prozent. Auf ein Gebäude kommen 4,7 Wohnungen. Die typische Ausgangslage ist also eine Mietwohnung im Obergeschoss eines Wiederaufbaus. Gerade wenn die Treppe zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Notwendig ist ein eigenes, abschließbares Zimmer — die durchschnittliche Wohnung misst 77,6 Quadratmeter, gut jede dritte liegt unter 60.' },
+              { q: 'Wie wird in Düsseldorf gepflegt — eher familiär oder professionell?', a: 'Deutlich professioneller als im Land. Nur 56,9 Prozent der Düsseldorfer Pflegebedürftigen beziehen ausschließlich Pflegegeld, versorgen sich also rein familiär; in Nordrhein-Westfalen sind es 59,0 Prozent. Dafür nehmen 21,0 Prozent einen ambulanten Dienst in Anspruch gegenüber 17,3 Prozent im Land. Eine Betreuungskraft im Haushalt setzt diesen Weg fort: nicht ein Besuch dreimal täglich, sondern durchgehend jemand vor Ort — auch nachts.' },
               { q: 'Welches Einzugsgebiet wird in Düsseldorf bedient?', a: 'Düsseldorf und Umland: Ratingen, Mettmann, Neuss, Krefeld, Meerbusch, Langenfeld, Hilden, Erkrath und alle Gemeinden im Rhein-Kreis Neuss und Kreis Mettmann' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
