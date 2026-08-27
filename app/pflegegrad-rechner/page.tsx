@@ -256,6 +256,12 @@ export default function Page() {
             <h2 className="text-[18px] font-bold text-pm-ink mb-4">Nächste Schritte</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
+                // 27.08.2026: Der Self-Check war von KEINER Seite außer /tools
+                // verlinkt und hatte null Impressionen. Er gehört genau hierhin —
+                // wer den Rechner durch hat, will als Nächstes die längere
+                // Einschätzung. Bewusst nicht in den Footer: zwei sitewide
+                // verlinkte Pflegegrad-Selbsttests würden einander Konkurrenz machen.
+                { href: '/pflegebedarf-einschaetzen', label: 'Pflegebedarf genauer einschätzen', desc: 'Ausführlicher Self-Check über alle sechs Bereiche' },
                 { href: '/zuschuss-rechner', label: 'Zuschüsse berechnen', desc: 'Alle Leistungen nach Pflegegrad im Überblick' },
                 { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
                 { href: '/pflegegrad-beantragen', label: 'Pflegegrad beantragen', desc: 'Schritt-für-Schritt Anleitung' },

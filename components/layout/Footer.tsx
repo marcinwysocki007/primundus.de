@@ -18,6 +18,14 @@ const serviceLinks = [
   { label: 'Pflegevertrag-Generator', href: '/pflegevertrag-generator' },
   { label: 'Vollmacht-Generator', href: '/vollmacht-generator' },
   { label: 'Anbieter-Vergleich', href: '/anbieter-vergleich' },
+  // 27.08.2026 ergänzt. Diese drei Werkzeuge funktionieren, waren aber nur
+  // über die Tools-Übersicht erreichbar — ein Klick tiefer — und hatten
+  // deshalb in 90 Tagen NULL Impressionen. Der Vergleich ist eindeutig: Was
+  // hier im Footer steht, rankt (Vollmacht-Generator Position 6,5,
+  // Anbieter-Vergleich 10,1); was nur unter /tools hängt, findet niemand.
+  { label: 'Zuschuss-Rechner', href: '/zuschuss-rechner' },
+  { label: 'Pflegeheim-Kostenvergleich', href: '/pflegeheim-kostenvergleich' },
+  { label: 'Checkliste Pflegeübernahme', href: '/checkliste-pflegeuebernahme' },
   { label: 'Beratungsgespräch', href: '/beratungsgespraech' },
   { label: 'Kontakt', href: '/kontakt' },
   { label: '24h-Pflege', href: '/24-stunden-pflege' },
