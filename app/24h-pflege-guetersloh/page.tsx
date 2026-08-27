@@ -237,6 +237,52 @@ export default function GueterslohPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Gütersloh und Kreis Gütersloh: Bielefeld-Südost, Rheda-Wiedenbrück, Herzebrock-Clarholz, Borgholzhausen und alle Gemeinden im Kreis Gütersloh</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Gütersloh ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Gütersloh gilt als junge Stadt, und die Zahlen geben das her: Der Anteil der über
+            65-Jährigen liegt leicht unter dem nordrhein-westfälischen Schnitt, die Stadt wächst,
+            während das Land schrumpft. Für die Pflege ist trotzdem eine andere Zahl entscheidend —
+            die absolute. <strong className="text-pm-ink font-semibold">Bis 2050 wird die Zahl der
+            Menschen über 65 in Gütersloh um rund 27 Prozent steigen</strong>, in Nordrhein-Westfalen
+            insgesamt nur um 12. Der niedrige Anteil entsteht durch Zuzug jüngerer Menschen, nicht
+            dadurch, dass es wenige Ältere gäbe.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dabei kommt die Welle nicht gleichmäßig. Die Gruppe der über 80-Jährigen wächst bis 2030
+            praktisch gar nicht — das sind die geburtenschwachen Kriegsjahrgänge. Danach steigt sie
+            bis 2040 um mehr als ein Drittel. Wer heute plant, sollte also nicht von der Gegenwart
+            auf die kommenden Jahre schließen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Bemerkenswert ist, wie im Kreis Gütersloh gepflegt wird. Nur
+            <strong className="text-pm-ink font-semibold"> 10,7 Prozent aller Pflegebedürftigen leben
+            im Heim</strong> — deutlich weniger als in Nordrhein-Westfalen und im Bund. Der Kreis hat
+            stattdessen eine Besonderheit entwickelt: rund 84 Haus- und Pflegewohngemeinschaften, in
+            denen ambulante Dienste rund um die Uhr betreuen. Über tausend Menschen leben dort. Die
+            klassischen Heime sind entsprechend nur zu gut 83 Prozent ausgelastet, während die
+            Wohngemeinschaften über 90 Prozent erreichen. Anders gesagt: Hier ist man offen für
+            Lösungen jenseits des Heims — und die Betreuung im eigenen Zuhause ist die
+            konsequenteste davon.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen kommt Gütersloh der häuslichen Pflege entgegen und stellt sie zugleich vor
+            eine Hürde. Die Stadt liegt in der Emssandebene, also flach — Steigungen sind hier kein
+            Thema. Dafür ist der Bestand ungewöhnlich großzügig: Nur 16,5 Prozent der Wohnungen
+            liegen in größeren Mehrfamilienhäusern, in Nordrhein-Westfalen sind es fast doppelt so
+            viele; gut vier von zehn Wohnungen haben über 100 Quadratmeter. Das heißt in der Praxis:
+            eigenes Haus, eigene Treppe, viel Fläche, die gepflegt werden will. Genau dafür ist eine
+            Betreuungskraft im Haus gemacht — sie führt den Haushalt mit und ist nachts da. Das gilt
+            in Isselhorst und Avenwedde ebenso wie in Verl, Rheda-Wiedenbrück oder Harsewinkel.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Ein praktischer Hinweis für den Ernstfall: Eine geriatrische Akutabteilung im
+            somatischen Krankenhaus gibt es in Gütersloh selbst nicht — die nächstgelegenen liegen
+            in Harsewinkel, Rheda-Wiedenbrück und Halle. Für die Beratung im Vorfeld gilt: Die
+            Pflegeberatung im Kreis Gütersloh ist kostenlos, trägerunabhängig und auf Wunsch bei
+            Ihnen zu Hause (§ 7a SGB XI).
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Gütersloh</h2>
           <div className="space-y-3 mb-12">
@@ -245,6 +291,9 @@ export default function GueterslohPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Gütersloh starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Gütersloh rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Gütersloh gilt als junge Stadt — ist Pflege hier überhaupt ein Thema?', a: 'Ja, und zwar zunehmend. Der Anteil der über 65-Jährigen liegt zwar leicht unter dem nordrhein-westfälischen Schnitt, aber das liegt am Zuzug jüngerer Menschen, nicht an wenigen Älteren. In absoluten Zahlen wächst die Gruppe der über 65-Jährigen bis 2050 um rund 27 Prozent, im Land nur um 12. Und die Gruppe der über 80-Jährigen bleibt bis 2030 fast konstant — das sind die geburtenschwachen Kriegsjahrgänge — und wächst danach bis 2040 um mehr als ein Drittel.' },
+              { q: 'Im Kreis Gütersloh gibt es viele Pflege-Wohngemeinschaften. Was ist der Unterschied zur Betreuung zu Hause?', a: 'In einer Pflege-Wohngemeinschaft ziehen mehrere Menschen zusammen, ein ambulanter Dienst betreut rund um die Uhr. Der Kreis Gütersloh hat davon rund 84 — eine bundesweite Besonderheit, und ein Grund, warum hier nur 10,7 Prozent der Pflegebedürftigen im Heim leben, deutlich weniger als in NRW und im Bund. Bei einer Betreuungskraft zu Hause bleibt dagegen alles, wie es ist: die eigene Wohnung, die eigenen Möbel, der eigene Tagesablauf — nur mit jemandem, der da ist.' },
+              { q: 'Gibt es in Gütersloh eine geriatrische Klinik?', a: 'Im somatischen Krankenhaus in Gütersloh selbst nicht. Nach dem Krankenhausplan des Landes hat weder das Klinikum Gütersloh noch das Sankt Elisabeth Hospital eine geriatrische Fachabteilung; geplant ist Geriatrie in der Stadt nur an der LWL-Klinik, einem psychiatrischen Haus. Die nächstgelegenen geriatrischen Abteilungen liegen in Harsewinkel, Rheda-Wiedenbrück und Halle. Für den Übergang nach einem Klinikaufenthalt ist es deshalb sinnvoll, die Versorgung zu Hause früh zu klären.' },
               { q: 'Welches Einzugsgebiet wird in Gütersloh bedient?', a: 'Gütersloh und Kreis Gütersloh: Bielefeld-Südost, Rheda-Wiedenbrück, Herzebrock-Clarholz, Borgholzhausen und alle Gemeinden im Kreis Gütersloh' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

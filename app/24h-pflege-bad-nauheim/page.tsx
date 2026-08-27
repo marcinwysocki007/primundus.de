@@ -234,6 +234,49 @@ export default function BadNauheimPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bad Nauheim und Wetteraukreis: Friedberg, Butzbach, Niddatal, Karben und alle Gemeinden im Wetteraukreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bad Nauheim ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Bad Nauheim ist eine ausgesprochen alte Stadt — und das liegt nicht an den Kurgästen.
+            <strong className="text-pm-ink font-semibold"> 14,5 Prozent der Einwohner sind über
+            75</strong>, im Bundesschnitt sind es 11,1. Kurgäste tauchen in dieser Statistik gar
+            nicht auf: Wer im Schnitt ein paar Wochen bleibt, ist hier nicht gemeldet. Der wahre
+            Grund lässt sich in den Wanderungszahlen ablesen — Bad Nauheim gewinnt jedes Jahr
+            deutlich mehr Menschen über 65 hinzu, als es verliert, während Hessen insgesamt in
+            dieser Altersgruppe leicht verliert. Menschen ziehen hierher, um älter zu werden.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Das hat eine Folge, die im Alltag wiegt: <strong className="text-pm-ink font-semibold">Fast
+            jeder fünfte Haushalt in Bad Nauheim ist ein Mensch über 65, der allein lebt.</strong> Wer
+            zugezogen ist, hat die Kinder oft nicht in der Nähe — und alte Freundschaften auch
+            nicht. Wenn dann etwas passiert, ein Sturz, ein Krankenhausaufenthalt, fehlt genau das,
+            was anderswo selbstverständlich ist: jemand, der nach dem Rechten sieht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Im Wetteraukreis zeigt die Pflegestatistik ein klares Muster. 60 Prozent aller
+            Pflegebedürftigen beziehen ausschließlich Pflegegeld, werden also von Angehörigen
+            versorgt — mehr als in Hessen. Zugleich nutzen nur 14 Prozent einen ambulanten Dienst,
+            der niedrigste Wert im weiten Umkreis. Dafür hält der Kreis
+            <strong className="text-pm-ink font-semibold"> 60 Heimplätze je 1.000 Einwohner über 65
+            bereit, fast ein Drittel mehr als Hessen im Schnitt</strong>. Viel Angehörigenpflege,
+            viel Heim — und dazwischen wenig. Die Betreuung im eigenen Zuhause ist genau dieser
+            fehlende Mittelweg.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Praktisch spricht vieles dafür, hier zu bleiben. Bad Nauheim ist kompakt gebaut, die
+            Stadt liegt im flachen Talgrund der Wetterau, und die Wege sind kurz: Bis zum Hausarzt
+            sind es im Schnitt gut 500 Meter, halb so weit wie im Bundesdurchschnitt. Was fehlt,
+            ist selten die Infrastruktur — es ist die Person im Haus. Genau die bringt eine
+            Betreuungskraft mit: morgens beim Aufstehen, nachts, und an den Nachmittagen, an denen
+            sonst niemand vorbeikommt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in
+            Hessen beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause.
+            Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI) und gilt unabhängig davon, für
+            welchen Weg Sie sich danach entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bad Nauheim</h2>
           <div className="space-y-3 mb-12">
@@ -242,6 +285,9 @@ export default function BadNauheimPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Nauheim starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bad Nauheim rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Liegt der hohe Altersschnitt in Bad Nauheim an den Kurgästen?', a: 'Nein. Kurgäste sind nicht mit Hauptwohnsitz gemeldet und tauchen in der Bevölkerungsstatistik gar nicht auf — die 14,5 Prozent Einwohner über 75 entstehen ohne sie. Der eigentliche Grund ist Zuzug: Bad Nauheim gewinnt jedes Jahr deutlich mehr Menschen über 65 hinzu, als es verliert, während Hessen in dieser Altersgruppe insgesamt leicht abgibt. Viele ziehen hierher, um älter zu werden — und haben ihre Familie dann nicht in der Nähe.' },
+              { q: 'Wir überlegen zwischen Heimplatz und Betreuung zu Hause — was ist im Wetteraukreis üblich?', a: 'Der Wetteraukreis hält rund 60 Heimplätze je 1.000 Einwohner über 65 vor, fast ein Drittel mehr als Hessen im Schnitt. Gleichzeitig beziehen 60 Prozent aller Pflegebedürftigen ausschließlich Pflegegeld, werden also allein von Angehörigen versorgt, und nur 14 Prozent nutzen einen ambulanten Dienst. Viel Heim, viel Angehörigenpflege — und wenig dazwischen. Eine Betreuungskraft im eigenen Zuhause ist genau dieser fehlende Mittelweg.' },
+              { q: 'Ist Bad Nauheim für ältere Menschen gut erschlossen?', a: 'Ungewöhnlich gut. Die Stadt ist kompakt gebaut und liegt im flachen Talgrund der Wetterau; bis zum Hausarzt sind es im Schnitt gut 500 Meter, etwa halb so weit wie im Bundesdurchschnitt, zur Apotheke und zum Supermarkt ebenfalls deutlich weniger als anderswo. Was in Bad Nauheim fehlt, ist selten die Infrastruktur — es ist jemand im Haus, der beim Aufstehen hilft und nachts da ist.' },
               { q: 'Welches Einzugsgebiet wird in Bad Nauheim bedient?', a: 'Bad Nauheim und Wetteraukreis: Friedberg, Butzbach, Niddatal, Karben und alle Gemeinden im Wetteraukreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

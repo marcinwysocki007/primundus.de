@@ -244,6 +244,50 @@ export default function NeumarktinderOberpfalzPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Neumarkt und Landkreis Neumarkt in der Oberpfalz: Parsberg, Velburg, Berching und alle Gemeinden im Landkreis Neumarkt</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Neumarkt ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Zahl beschreibt die Lage im Landkreis Neumarkt besser als jede andere: Auf die rund
+            138.000 Einwohner kommen <strong className="text-pm-ink font-semibold">gerade einmal elf
+            ambulante Pflegedienste</strong>. Jeder von ihnen versorgt im Schnitt rund 97
+            Pflegebedürftige — in Bayern sind es 58. Das ist einer der höchsten Werte der ganzen
+            Oberpfalz. Wer hier kurzfristig Unterstützung braucht, merkt das sofort: Die Dienste
+            sind ausgelastet, und die Termine richten sich nach der Tour.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Entsprechend häufig endet der Weg im Heim. Im Landkreis leben 20 Prozent aller
+            Pflegebedürftigen in stationärer Dauerpflege — in Bayern sind es 17, im Bund 14 Prozent.
+            Das ist keine Frage der Vorliebe, sondern eine Frage fehlender Alternativen. Eine
+            Betreuungskraft, die mit einzieht, ist genau diese Alternative: Sie hängt an keiner
+            Tourenplanung, weil sie im Haus wohnt, und sie ist auch nachts und am Wochenende da.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dazu kommen die Entfernungen. Im Landkreis liegt der nächste Hausarzt im Schnitt fast
+            1.900 Meter entfernt, die nächste Apotheke fast 2.500 — deutlich weiter als im
+            bayerischen Durchschnitt. Solange man Auto fährt, ist das kein Thema. Wenn der
+            Führerschein wegfällt, wird daraus schnell die Frage, wer denn nun fährt. In der Stadt
+            Neumarkt selbst ist die Lage besser, dafür ist die Stadt spürbar älter als ihr Umland:
+            Über elf Prozent der Neumarkter sind über 75, im Landkreis sind es gut neun.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen prägt bis heute der April 1945. Im historischen Stadtkern lagen damals
+            92 Prozent der Bausubstanz in Trümmern; in der Marktstraße blieben zwei Häuser stehen.
+            Was heute steht, ist deshalb fast durchweg Nachkriegsbau —
+            <strong className="text-pm-ink font-semibold"> nur gut ein Prozent der Neumarkter
+            Wohnungen stammt aus der Zeit vor 1919</strong>, im Bundesschnitt sind es dreizehn.
+            Diese Häuser sind solide, aber sie entstanden vor jedem Gedanken an Barrierefreiheit.
+            Und im Landkreis, wo mehr als sieben von zehn Wohnungen in Ein- oder Zweifamilienhäusern
+            liegen, ist es meist die eigene Treppe, die zum Problem wird — in Freystadt, Berching
+            oder Postbauer-Heng genauso wie in der Kernstadt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie etwas entscheiden, holen Sie sich eine neutrale Einschätzung: Die Fachstellen
+            für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von
+            Anbietern, auf Wunsch auch bei Ihnen zu Hause (§ 7a SGB XI). Dazu kommt das bayerische
+            Landespflegegeld: 1.000 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege
+            übernimmt.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Neumarkt in der Oberpfalz</h2>
           <div className="space-y-3 mb-12">
@@ -256,6 +300,9 @@ export default function NeumarktinderOberpfalzPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Neumarkt in der Oberpfalz starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Neumarkt in der Oberpfalz rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Wie ist die ambulante Versorgung im Landkreis Neumarkt?', a: 'Dünn. Für rund 138.000 Einwohner gibt es elf ambulante Pflegedienste; auf jeden kommen im Schnitt etwa 97 Pflegebedürftige, in Bayern sind es 58. Das ist einer der höchsten Werte der Oberpfalz. Wer kurzfristig Unterstützung braucht, merkt das sofort — die Dienste sind ausgelastet, und die Termine richten sich nach der Tour. Eine Betreuungskraft, die im Haus wohnt, hängt an keiner Tourenplanung.' },
+              { q: 'Warum leben in Neumarkt so viele Pflegebedürftige im Heim?', a: 'Weil die Alternativen fehlen. Im Landkreis Neumarkt leben 20 Prozent aller Pflegebedürftigen in stationärer Dauerpflege, in Bayern sind es 17 und im Bund 14 Prozent. Zusammen mit der dünnen ambulanten Versorgung ergibt das für viele Familien ein Entweder-oder: alles selbst stemmen oder ins Heim. Die Betreuung im eigenen Zuhause ist der Weg dazwischen, und sie lässt sich mit dem Pflegegeld kombinieren.' },
+              { q: 'Sind Neumarkter Wohnungen für Pflege zu Hause geeignet?', a: 'In aller Regel ja, barrierefrei sind sie aber selten. Im April 1945 lagen 92 Prozent der Bausubstanz im historischen Stadtkern in Trümmern — in der Marktstraße blieben zwei Häuser stehen. Was heute steht, ist deshalb fast durchweg Nachkriegsbau: Nur gut ein Prozent der Neumarkter Wohnungen stammt aus der Zeit vor 1919, im Bundesschnitt sind es dreizehn. Diese Häuser sind solide, entstanden aber vor jedem Gedanken an Barrierefreiheit. Für die Betreuungskraft genügt ein eigenes Zimmer.' },
               { q: 'Welches Einzugsgebiet wird in Neumarkt in der Oberpfalz bedient?', a: 'Neumarkt und Landkreis Neumarkt in der Oberpfalz: Parsberg, Velburg, Berching und alle Gemeinden im Landkreis Neumarkt' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
