@@ -237,6 +237,38 @@ export default function PforzheimPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Pforzheim und Enzkreis: Mühlacker, Neuenbürg, Birkenfeld und alle Gemeinden im Enzkreis und Landkreis Calw</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Pforzheim ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Zwischen dem tiefsten und dem höchsten Punkt Pforzheims liegen rund 370 Höhenmeter. Die
+            Innenstadt sitzt unten in den Talsohlen, wo Enz, Nagold und Würm zusammenkommen; Büchenbronn
+            und die Hochflächen liegen mehrere hundert Meter darüber. Deshalb erlebt jeder Pforzheimer
+            seine Stadt anders, sobald das Gehen schwerfällt — je nachdem, ob er unten im Tal wohnt
+            oder oben am Hang, wo schon der Weg zur Bushaltestelle eine Steigung ist.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen prägt bis heute der 23. Februar 1945 das Bild. In 22 Minuten wurden fast das
+            gesamte Zentrum und vier Fünftel des Stadtgebiets zerstört. Was danach entstand, stammt
+            überwiegend aus den Jahren 1949 bis 1978 — knapp die Hälfte aller Wohngebäude. Diese
+            Häuser sind stabil und solide, aber sie wurden lange vor jedem Gedanken an Barrierefreiheit
+            gebaut. Schmale Treppenhäuser ohne Aufzug und Bäder mit hoher Wannenkante gehören bei
+            diesem Baualter oft dazu.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Rund um die Stadt liegt der Enzkreis wie ein nach Süden geöffneter Ring — verwaltet von
+            Pforzheim aus, aber ein eigener Raum, und ein deutlich älterer: Das Medianalter liegt dort
+            bei 46 Jahren gegenüber 41 in der Stadt. Wer in Mühlacker, Neuenbürg oder Birkenfeld lebt,
+            hat zudem längere Wege zu allem. Eine Betreuungskraft, die mit einzieht, ist von diesen
+            Entfernungen unabhängig — und von den Höhenmetern zwischen Wohnung und Bushaltestelle
+            ebenso.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Verschaffen Sie sich zuerst einen neutralen Überblick: Die Pflegestützpunkte in
+            Baden-Württemberg beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei
+            Ihnen zu Hause. Dieser Anspruch ist gesetzlich geregelt (§ 7a SGB XI) und gilt
+            unabhängig davon, wofür Sie sich am Ende entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Pforzheim</h2>
           <div className="space-y-3 mb-12">

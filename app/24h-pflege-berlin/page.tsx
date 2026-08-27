@@ -232,6 +232,38 @@ export default function BerlinPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Alle Berliner Bezirke: Mitte, Charlottenburg-Wilmersdorf, Steglitz-Zehlendorf, Tempelhof-Schöneberg, Kreuzberg-Friedrichshain, Pankow, Treptow-Köpenick, Marzahn-Hellersdorf, Lichtenberg, Neukölln, Reinickendorf, Spandau</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Berlin ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Für die Pflege ist Berlin keine Stadt, sondern zwölf sehr verschiedene. Wer in Prenzlauer
+            Berg alt wird, wohnt mit hoher Wahrscheinlichkeit im Altbau: Zwei Drittel der Wohnungen
+            dort stammen aus der Zeit zwischen 1871 und 1914, meist fünfgeschossige Häuser mit
+            dreißig bis vierzig Parteien. Wer in Marzahn oder der Gropiusstadt wohnt, lebt in einer
+            Großsiedlung mit ganz anderen Wegen. Und in Kaulsdorf oder Mahlsdorf steht das
+            Einfamilienhaus mit Garten und Treppe ins Obergeschoss.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Was alle drei gemeinsam haben: Irgendwann entscheidet nicht mehr die Wohnung, sondern
+            die Frage, ob jemand da ist. Berlin gilt als junge Stadt — dabei leben hier rund
+            715.000 Menschen, die 65 oder älter sind. Viele von ihnen wohnen allein, oft seit
+            Jahrzehnten in derselben Wohnung, und die Kinder sind über die Stadt verteilt oder
+            längst weggezogen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ambulante Dienste gibt es in Berlin viele, und die Wege sind kurz — die Stadt liegt im
+            Urstromtal und ist überwiegend flach. Das Problem ist ein anderes: Ein Dienst kommt zu
+            festen Zeiten und bleibt zwanzig Minuten. Er ist nicht da, wenn nachts jemand aufsteht
+            und sich nicht mehr zurechtfindet, und er kocht nicht mit. Eine Betreuungskraft, die im
+            Haushalt lebt, deckt genau die Stunden ab, die dazwischenliegen — in Pankow so wie in
+            Spandau oder Köpenick.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie sich festlegen, nutzen Sie die kostenlose Beratung: Die Pflegestützpunkte in
+            Berlin beraten trägerunabhängig, in jedem Bezirk und auf Wunsch bei Ihnen zu Hause.
+            Der Anspruch darauf ist gesetzlich geregelt (§ 7a SGB XI) und unabhängig davon, für
+            welchen Anbieter Sie sich danach entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Berlin</h2>
           <div className="space-y-3 mb-12">

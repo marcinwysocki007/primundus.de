@@ -241,6 +241,38 @@ export default function PfaffenhofenanderIlmPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Pfaffenhofen und Landkreis Pfaffenhofen: Wolnzach, Schrobenhausen-Grenze, Geisenfeld und alle Gemeinden im Landkreis Pfaffenhofen an der Ilm</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Pfaffenhofen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Pfaffenhofen heißt Stadt, ist aber zu großen Teilen Land. Zum Stadtgebiet gehören
+            62 Gemeindeteile, verteilt über gut 92 Quadratkilometer — rechnerisch keine 300
+            Einwohner je Quadratkilometer. Wer nicht in der Kernstadt wohnt, sondern in Förnbach,
+            Tegernbach, Uttenhofen oder auf einem der Höfe dazwischen, lebt schön, aber weit
+            auseinander.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Für die Pflege ist das der entscheidende Punkt. Solange man selbst Auto fährt, ist die
+            Streulage kein Thema. Wenn der Führerschein wegfällt, wird sie zum täglichen Problem:
+            Einkaufen, Arzttermine, der Besuch bei der Nachbarin — alles hängt daran, dass jemand
+            fährt. Und ein ambulanter Dienst, der solche Strecken zurücklegt, kommt dann, wann die
+            Tour es hergibt, nicht wann es passt. Eine Betreuungskraft, die im Haus wohnt, löst
+            beides auf einmal: Sie ist da, und sie übernimmt die Wege.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Das Ilmtal liegt bei gut 400 Metern, die Höhenzüge ringsum reichen auf über 500 —
+            sanft geschwungenes Hügelland mit einzelnen steileren Hängen. Bemerkenswert ist die
+            Altersstruktur: Die Stadt Pfaffenhofen ist etwas älter als ihr Landkreis, gut jeder
+            Fünfte ist hier über 65. Für Familien in Wolnzach, Geisenfeld, Reichertshofen oder
+            Hohenwart stellt sich dieselbe Frage.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Wenn Sie zuerst wissen wollen, was Ihnen zusteht: Die Fachstellen für Pflege- und
+            Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf
+            Wunsch auch bei Ihnen zu Hause. Der Beratungsanspruch ist gesetzlich verankert
+            (§ 7a SGB XI). In Bayern kommt das Landespflegegeld dazu: 1.000 Euro im Jahr für
+            Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Pfaffenhofen an der Ilm</h2>
           <div className="space-y-3 mb-12">
