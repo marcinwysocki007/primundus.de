@@ -214,7 +214,7 @@ export default function RosenheimPage() {
                 </div>
               ))}
               <div className="flex justify-between items-center text-[15px] font-bold pt-3 mt-1 border-t border-pm-line">
-                <span className="text-pm-ink">Ihr Eigenanteil ca.</span>
+                <span className="text-pm-ink">Ihr Eigenanteil</span>
                 <span className="text-pm-taupe">ca. 1100–2200 €/Monat</span>
               </div>
             </div>
