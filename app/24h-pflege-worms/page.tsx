@@ -258,9 +258,16 @@ export default function WormsPage() {
             Abenheim, Rheindürkheim, Ibersheim. Dort wohnen viele Ältere im eigenen Haus, mit
             Garten und Treppe ins Obergeschoss. Der Landkreis Alzey-Worms ringsum ist ländlich
             geprägt, aber nicht menschenleer — die Wege sind länger als in der Stadt, doch nicht
-            so weit wie in Niederbayern. Ein ambulanter Dienst kommt trotzdem nur zweimal am Tag;
-            eine Betreuungskraft, die im Haus lebt, ist auch nachts da und übernimmt den Haushalt
-            gleich mit.
+            so weit wie in Niederbayern.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Zahl erklärt, warum viele Wormser Familien trotzdem nicht weiterkommen: Auf jeden
+            der elf ambulanten Pflegedienste in Worms kommen im Schnitt rund 110 Pflegebedürftige —
+            landesweit sind es 82. Die Dienste sind also spürbar stärker ausgelastet als anderswo
+            in Rheinland-Pfalz, und das merkt man, wenn man kurzfristig etwas braucht. Umgekehrt
+            wird in Worms deutlich häufiger ambulant gepflegt als im Landesschnitt. Der Bedarf ist
+            da, die Kapazität knapp. Eine Betreuungskraft, die im Haus lebt, hängt an keiner Tour
+            und übernimmt den Haushalt gleich mit.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Wenn Sie zuerst wissen möchten, was Ihnen zusteht: Die Pflegestützpunkte in

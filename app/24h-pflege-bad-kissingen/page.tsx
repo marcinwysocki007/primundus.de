@@ -241,6 +241,38 @@ export default function BadKissingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bad Kissingen und Landkreis Bad Kissingen: Hammelburg, Münnerstadt, Bad Brückenau und alle Gemeinden im Landkreis Bad Kissingen</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bad Kissingen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Bad Kissingen ist eine der ältesten Städte Bayerns — nach Zahlen des Landesamts für
+            Statistik die zweitälteste Gemeinde Unterfrankens. Das Durchschnittsalter liegt bei
+            gut 49 Jahren gegenüber 44 im Land, fast jeder Dritte ist über 65, und <strong className="text-pm-ink font-semibold">jeder
+            achte Einwohner ist über 80</strong> — in Bayern ist es nur jeder fünfzehnte.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Das liegt übrigens nicht an den Kurgästen, wie oft vermutet wird: Wer im Schnitt sechs
+            Tage bleibt, wird nirgends als Einwohner gezählt. Die gemeldete Bevölkerung ist
+            tatsächlich so alt. Und noch eine Zahl gehört dazu: <strong className="text-pm-ink font-semibold">Fast die
+            Hälfte aller Haushalte sind Einpersonenhaushalte</strong>. Viele hochbetagte Menschen in
+            Bad Kissingen leben also allein — und zwar überwiegend im flachen Talkern, der ältesten
+            Ecke der Stadt, nicht in den höher gelegenen Ortsteilen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Kaum irgendwo gibt es dabei so viel Gesundheitsversorgung auf engem Raum: über ein
+            Dutzend Reha-Kliniken, dazu das Krankenhaus mit eigener Akutgeriatrie. Im Landkreis
+            arbeitet mehr als jeder vierte Beschäftigte in der Gesundheitswirtschaft — der höchste
+            Anteil aller bayerischen Kreise. Nur endet all das an der eigenen Wohnungstür. Die
+            Kliniken decken die Wochen ab, in denen behandelt wird, nicht die Monate danach. Wer
+            allein lebt und nach einer Reha nach Hause kommt, steht genau vor dieser Lücke — und
+            sie ist es, die eine Betreuungskraft schließt, die mit einzieht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie sich entscheiden, lassen Sie sich neutral beraten: Die Fachstellen für Pflege-
+            und Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf
+            Wunsch auch bei Ihnen zu Hause (§ 7a SGB XI). Dazu kommt das bayerische Landespflegegeld
+            von 1.000 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bad Kissingen</h2>
           <div className="space-y-3 mb-12">
