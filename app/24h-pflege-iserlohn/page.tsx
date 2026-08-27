@@ -237,6 +237,47 @@ export default function IserlohnPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Iserlohn und Märkischer Kreis: Lüdenscheid, Hemer, Menden, Plettenberg und alle Gemeinden im Märkischen Kreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Iserlohn ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Iserlohn liegt im Sauerland, nicht im Ruhrgebiet — und das ist keine Wortklauberei,
+            sondern spürbar. Zwischen der Ruhr im Norden auf gut 100 Metern und dem Rüssenberg im
+            Süden auf fast 500 Metern liegen rund <strong className="text-pm-ink font-semibold">390
+            Höhenmeter</strong>. Das Stadtzentrum sitzt auf etwa 250 Metern, das südliche Stadtdrittel
+            ist waldbeherrscht. Wer hier wohnt, kennt Steigungen. Sobald das Gehen schwerfällt,
+            entscheidet die Adresse darüber, wie weit man noch kommt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen unterscheidet sich Iserlohn deutlich von den meisten Städten der Region: Die
+            Stadt blieb im Zweiten Weltkrieg weitgehend verschont — sie wurde Mitte April 1945
+            kampflos übergeben. Wo andernorts der Wiederaufbau der fünfziger Jahre das Straßenbild
+            prägt, steht in Iserlohn viel gewachsene alte Bausubstanz. Schön, aber eben auch: enge
+            Treppenhäuser, hohe Stufen, selten ein Aufzug. Genau diese Häuser wollen die Menschen
+            nicht verlassen, wenn sie älter werden.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dazu kommt die demografische Entwicklung. Iserlohn ist die größte Stadt des Märkischen
+            Kreises und des gesamten Sauerlandes, aber die Einwohnerzahl geht seit dem Höchststand
+            um die Jahrtausendwende zurück — von knapp 99.500 im Jahr 1999 auf rund 92.000 heute.
+            Wenn eine Stadt schrumpft, sind es meist die Jüngeren, die gehen. Zurück bleiben Eltern
+            und Großeltern, deren Kinder in Dortmund, Hagen oder weiter entfernt arbeiten. Hilfe am
+            Wochenende ist dann möglich; Hilfe am Dienstagmorgen um sieben nicht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Betreuungskraft, die mit einzieht, schließt genau diese Lücke. Sie ist morgens da,
+            nachts, und an den langen Nachmittagen, an denen sonst niemand vorbeikommt. Sie übernimmt
+            die Wege, die durch die Hanglage schwierig geworden sind, und führt den Haushalt mit.
+            Das gilt in Letmathe, dem mit Abstand größten Stadtteil, ebenso wie in Hennen, Kesbern
+            oder Sümmern — und ebenso in den Nachbarstädten Hemer, Menden und Altena. Anfahrtskosten
+            berechnen wir nicht, der Preis ist überall derselbe.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten: Die Pflegeberatung im
+            Märkischen Kreis ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause.
+            Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen
+            Weg Sie sich danach entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Iserlohn</h2>
           <div className="space-y-3 mb-12">
@@ -245,6 +286,9 @@ export default function IserlohnPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Iserlohn starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Iserlohn rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Funktioniert 24-Stunden-Pflege auch in einem Iserlohner Altbau?', a: 'Ja, und hier stellt sich die Frage häufiger als anderswo. Weil Iserlohn im Krieg weitgehend verschont blieb, steht viel alte Bausubstanz — mit engen Treppenhäusern und selten einem Aufzug. Für die Betreuungskraft braucht es lediglich ein eigenes Zimmer. Der eigentliche Gewinn liegt darin, dass jemand im Haus ist und die Wege nach draußen übernimmt, sobald die Treppe zur Hürde wird.' },
+              { q: 'Was bedeutet die Höhenlage für die Betreuung in Iserlohn?', a: 'Zwischen der Ruhr im Norden und dem Rüssenberg im Süden liegen rund 390 Höhenmeter — Iserlohn ist eine Sauerlandstadt, keine Stadt der Ebene. Wer am Hang wohnt, für den beginnt jeder Weg mit einer Steigung, auch der zur Bushaltestelle. Viele Ältere bleiben deshalb irgendwann einfach zu Hause. Eine Betreuungskraft übernimmt diese Wege: einkaufen, zum Arzt begleiten, Termine organisieren — und hält damit den Alltag offen.' },
+              { q: 'Kommt eine Betreuungskraft auch in die Stadtteile und Nachbarorte?', a: 'Ja. Letmathe ist mit rund 24.800 Einwohnern der mit Abstand größte Stadtteil, dazu kommen Hennen, Kesbern, Sümmern und die kleineren Ortslagen. Auch in Hemer, Menden, Altena und Lüdenscheid sind unsere Betreuungskräfte im Einsatz. Die Anreise dauert überall gleich lang, Anfahrtskosten berechnen wir nicht, und der Preis ist derselbe wie in der Kernstadt.' },
               { q: 'Welches Einzugsgebiet wird in Iserlohn bedient?', a: 'Iserlohn und Märkischer Kreis: Lüdenscheid, Hemer, Menden, Plettenberg und alle Gemeinden im Märkischen Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

@@ -241,6 +241,51 @@ export default function BayreuthPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bayreuth und Landkreis Bayreuth: Pegnitz, Creußen, Hollfeld und alle Gemeinden im Landkreis Bayreuth und Kulmbach</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bayreuth ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Bayreuth leben auffällig viele Menschen allein. Nach dem Zensus sind
+            <strong className="text-pm-ink font-semibold"> 55 Prozent aller Haushalte in der Stadt
+            Einpersonenhaushalte</strong> — im Landkreis sind es 35 Prozent. Das erklärt sich
+            teilweise durch die Universität, aber eben nicht nur: Auch ein großer Teil der über
+            16.000 Bayreutherinnen und Bayreuther über 65 wohnt für sich. Wenn dann etwas passiert,
+            ein Sturz, ein Krankenhausaufenthalt, eine Diagnose, ist niemand im Haus, der den Alltag
+            auffängt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Im Landkreis sieht das Bild ganz anders aus — und ist mindestens so bemerkenswert. Die
+            Pflegebedarfsplanung des Landkreises zeigt: <strong className="text-pm-ink font-semibold">60
+            Prozent der Pflegebedürftigen werden zu Hause versorgt, ohne dass ein ambulanter Dienst
+            beteiligt ist</strong>. Nur 18 Prozent nehmen einen Pflegedienst in Anspruch, 22 Prozent
+            leben im Heim. Noch deutlicher wird es bei den Schwerstpflegebedürftigen: Fast die Hälfte
+            der Menschen mit Pflegegrad 5 im Landkreis Bayreuth wird nicht stationär versorgt,
+            sondern zu Hause. Dahinter stehen Familien, die das über Jahre allein stemmen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dass das so ist, hat auch mit den Entfernungen zu tun. Die Stadt Bayreuth kommt auf gut
+            1.000 Einwohner je Quadratkilometer, der Landkreis auf 81 — er ist einer der am dünnsten
+            besiedelten Bayerns. Ein ambulanter Dienst, der Pegnitz, Bad Berneck und die Dörfer
+            dazwischen bedienen soll, fährt lange Touren, und die Termine richten sich nach der
+            Route. Dazu kommt: Die Wohnungen im Landkreis sind mit durchschnittlich 114 Quadratmetern
+            deutlich größer als in der Stadt mit 78 — meist Einfamilienhäuser mit Treppe, Garten und
+            allem, was gepflegt werden will.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einzieht. Sie ersetzt die
+            Angehörigen nicht, sondern nimmt ihnen die Dauerbelastung ab: nachts, an Wochenenden und
+            in den Stunden, in denen sonst niemand da wäre. Sie ist von keiner Tourenplanung
+            abhängig, weil sie im Haus wohnt. Und sie führt den Haushalt mit — was gerade in einem
+            großen Haus den Unterschied macht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten. In Bayreuth gibt es seit
+            Juli 2025 einen eigenen Pflegestützpunkt, getragen von Stadt, Bezirk und den Pflegekassen;
+            die Beratung ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause. Dieser
+            Anspruch ist gesetzlich verankert (§ 7a SGB XI). Für pflegende Angehörige gibt es
+            zusätzlich eine eigene Fachstelle. Und in Bayern kommt das Landespflegegeld hinzu:
+            1.000 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bayreuth</h2>
           <div className="space-y-3 mb-12">
@@ -250,6 +295,9 @@ export default function BayreuthPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bayreuth starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bayreuth rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Wir pflegen im Landkreis bisher selbst — ist eine Betreuungskraft trotzdem sinnvoll?', a: 'Gerade dann. Im Landkreis Bayreuth werden 60 Prozent aller Pflegebedürftigen zu Hause versorgt, ohne dass ein ambulanter Dienst beteiligt ist — und fast die Hälfte der Menschen mit Pflegegrad 5 lebt nicht im Heim, sondern daheim. Diese Last tragen Angehörige. Eine Betreuungskraft ersetzt Sie nicht, sie übernimmt die Dauerbelastung: Nächte, Wochenenden, die Stunden dazwischen. Pflegegeld und Betreuung lassen sich dabei kombinieren.' },
+              { q: 'Kommt eine Betreuungskraft auch in die Orte im Landkreis Bayreuth?', a: 'Ja, und dort ist der Unterschied besonders groß. Der Landkreis Bayreuth zählt nur rund 81 Einwohner je Quadratkilometer und gehört damit zu den am dünnsten besiedelten Bayerns. Ambulante Dienste fahren entsprechend lange Touren, und die Termine richten sich nach der Route statt nach Ihrem Tagesablauf. Eine Betreuungskraft, die im Haus wohnt, braucht keine Anfahrt. Der Preis ist im Landkreis derselbe wie in der Stadt, Anfahrtskosten berechnen wir nicht.' },
+              { q: 'Wo bekomme ich in Bayreuth unabhängige Beratung?', a: 'Seit Juli 2025 gibt es in Bayreuth einen eigenen Pflegestützpunkt, getragen von Stadt, Bezirk Oberfranken und den Pflegekassen. Die Beratung ist kostenlos, unabhängig von Anbietern und auf Wunsch bei Ihnen zu Hause — dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI). Für pflegende Angehörige besteht zusätzlich eine eigene Fachstelle. Wir empfehlen ausdrücklich, dieses Angebot zu nutzen, bevor Sie sich für einen Weg entscheiden.' },
               { q: 'Welches Einzugsgebiet wird in Bayreuth bedient?', a: 'Bayreuth und Landkreis Bayreuth: Pegnitz, Creußen, Hollfeld und alle Gemeinden im Landkreis Bayreuth und Kulmbach' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
