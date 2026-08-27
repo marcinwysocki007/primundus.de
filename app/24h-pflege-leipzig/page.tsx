@@ -231,6 +231,53 @@ export default function LeipzigPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Leipzig und Umland: Markkleeberg, Schkeuditz, Taucha, Wurzen, Grimma und alle Gemeinden im Landkreis Leipzig und Nordsachsen</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Leipzig ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Leipzig ist der jüngste Kreis Sachsens — Durchschnittsalter 42 Jahre, während das Land
+            bei 47 liegt. Das führt leicht in die Irre. Denn hinter dem niedrigen Anteil steht eine
+            große absolute Zahl: <strong className="text-pm-ink font-semibold">rund 120.000
+            Leipzigerinnen und Leipziger sind über 65, gut 45.000 davon über 80.</strong> Das sind
+            mehr Hochbetagte, als der ganze Landkreis Nordsachsen zählt. Der Prozentwert ist niedrig,
+            weil die Stadt seit 2000 um rund ein Drittel gewachsen ist — nicht, weil es wenige alte
+            Menschen gäbe.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dazu kommt, wie in Leipzig gewohnt wird.
+            <strong className="text-pm-ink font-semibold"> Mehr als die Hälfte aller Haushalte sind
+            Einpersonenhaushalte</strong>, und knapp 90 Prozent der Wohnungen liegen in
+            Mehrfamilienhäusern. Nur gut 13 Prozent der Leipziger wohnen im Eigentum, der niedrigste
+            Wert in ganz Sachsen. Das heißt in der Praxis: sehr viele ältere Menschen leben allein
+            in einer Mietwohnung im Geschossbau — oft in einem Gründerzeithaus, denn rund ein Drittel
+            aller Wohnungen stammt aus der Zeit vor 1919. Schöne Altbauten, aber mit Treppenhäusern,
+            die für einen Rollator nie gedacht waren.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die Pflegestatistik zeigt, wohin sich das entwickelt hat. Die Zahl der Pflegebedürftigen
+            in Leipzig hat sich seit 2013 mehr als verdoppelt, die stationäre Kapazität ist im
+            selben Zeitraum aber nur um gut ein Zehntel gewachsen. Der gesamte Zuwachs ist also in
+            die eigene Wohnung gegangen. Entsprechend belastet sind die Dienste: Kamen 2013 auf
+            einen ambulanten Pflegedienst noch rund 43 Pflegebedürftige, sind es heute 81. Und die
+            Kosten laufen mit — die Zuzahlungen für ambulante Pflege stiegen in Sachsen seit 2015 um
+            gut die Hälfte, ein Heimplatz verteuerte sich um mehr als das Doppelte.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Für die Pflege ist Leipzig zudem nicht eine Stadt, sondern viele. Zwischen dem ältesten
+            und dem jüngsten Ortsteil liegen mehr als zwanzig Jahre Durchschnittsalter: In der
+            Grünauer Siedlung und in Heiterblick sind die Menschen im Schnitt über 54, in Volkmarsdorf
+            und Lindenau Mitte dreißig. Wer in Grünau, Lößnig oder Großzschocher alt wird, lebt in
+            einer Umgebung, die selbst gealtert ist — Grünau hat seit den achtziger Jahren fast die
+            Hälfte seiner Bewohner verloren. Geografisch ist die Stadt dagegen unproblematisch: Sie
+            ist flach, die einzigen nennenswerten Erhebungen sind aufgeschüttete Trümmer- und
+            Deponieberge und damit Ausflugsziele, keine Alltagswege.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Eine Betreuungskraft, die mit einzieht, löst genau die Kombination, die in Leipzig so
+            häufig ist: allein lebend, im Obergeschoss, ohne Angehörige um die Ecke. Bevor Sie
+            entscheiden, lassen Sie sich unabhängig beraten — die Pflegeberatung in Leipzig ist
+            kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Leipzig</h2>
           <div className="space-y-3 mb-12">
@@ -239,6 +286,9 @@ export default function LeipzigPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Leipzig starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Leipzig rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Leipzig ist eine junge Stadt — ist Pflege hier überhaupt ein großes Thema?', a: 'Der Anteil täuscht. Leipzig ist mit einem Durchschnittsalter von 42 Jahren tatsächlich der jüngste Kreis Sachsens, aber in absoluten Zahlen leben hier rund 120.000 Menschen über 65 und gut 45.000 über 80 — mehr Hochbetagte, als der Landkreis Nordsachsen insgesamt zählt. Der niedrige Prozentwert kommt daher, dass die Stadt seit 2000 um etwa ein Drittel gewachsen ist, nicht daher, dass es wenige Ältere gäbe.' },
+              { q: 'Funktioniert 24-Stunden-Pflege in einer Leipziger Altbauwohnung?', a: 'Ja — und in Leipzig ist das der Normalfall. Rund ein Drittel aller Wohnungen stammt aus der Zeit vor 1919, knapp 90 Prozent liegen in Mehrfamilienhäusern, und nur gut 13 Prozent der Leipziger wohnen im Eigentum. Die typische Ausgangslage ist also: Mietwohnung im Gründerzeithaus, oft im zweiten oder dritten Stock. Für die Betreuungskraft braucht es ein eigenes Zimmer; alles Weitere richtet sich nach dem Alltag. Gerade wenn die Treppe zur Hürde wird, ist jemand im Haus oft die einzige Alternative zum Umzug.' },
+              { q: 'Wie ist die ambulante Versorgung in Leipzig?', a: 'Angespannt, und zwar zunehmend. Die Zahl der Pflegebedürftigen in Leipzig hat sich seit 2013 mehr als verdoppelt, die stationären Plätze wuchsen im selben Zeitraum nur um gut ein Zehntel — der gesamte Zuwachs ist in die eigene Wohnung gegangen. Auf einen ambulanten Dienst kamen 2013 rund 43 Pflegebedürftige, heute sind es 81. Dazu kommen die Kosten: Die Zuzahlungen für ambulante Pflege stiegen in Sachsen seit 2015 um gut die Hälfte, ein Heimplatz verteuerte sich um mehr als das Doppelte.' },
               { q: 'Welches Einzugsgebiet wird in Leipzig bedient?', a: 'Leipzig und Umland: Markkleeberg, Schkeuditz, Taucha, Wurzen, Grimma und alle Gemeinden im Landkreis Leipzig und Nordsachsen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
