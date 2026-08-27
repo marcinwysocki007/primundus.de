@@ -9,13 +9,13 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 // Beleg (PDF + Siegel) liegt lokal unter /downloads bzw. /images.
 
 export const metadata: Metadata = {
-  title: 'Testsieger 24-Stunden-Pflege 2026: Primundus ist die Nr. 1',
+  title: '24-Stunden-Pflege Testsieger: Primundus 6× in Folge Nr. 1',
   description:
-    'Primundus ist 6× Testsieger: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel ansehen, Anbieter vergleichen — Preis in 2 Minuten.',
+    'Primundus ist 6× Testsieger in Folge: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel als PDF ansehen.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Testsieger 24-Stunden-Pflege 2026: Primundus ist die Nr. 1',
+    title: '24-Stunden-Pflege Testsieger: Primundus 6× in Folge Nr. 1',
     description:
       'Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet von DIE WELT und ServiceValue. Mit Original-Beleg als PDF.',
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
@@ -85,7 +85,7 @@ export default function TestsiegerPage() {
             Auszeichnung · Aktualisiert August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Testsieger in der 24-Stunden-Pflege: Primundus ist die Nr. 1
+            Testsieger in der 24-Stunden-Pflege: Primundus ist 6× in Folge die Nr. 1
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Primundus wurde von DIE WELT und der ServiceValue GmbH als <strong>Nr. 1 der Pflegekräfte-Vermittler</strong> ausgezeichnet
