@@ -315,6 +315,54 @@ export default function RegensburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Regensburg und Landkreis Regensburg: Neutraubling, Regenstauf, Hemau, Wörth und alle Gemeinden im Landkreis Regensburg</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Regensburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Zahl entscheidet in Regensburg fast alles:{' '}
+            <strong className="text-pm-ink font-semibold">40,1 Prozent aller Wohnungen sind kleiner
+            als 60 Quadratmeter</strong> — in Bayern ist es halb so viel (20,7 Prozent). Die
+            durchschnittliche Regensburger Wohnung misst 76,4 Quadratmeter gegenüber 100,5 im
+            Freistaat, auf ein Gebäude kommen 4,0 Wohnungen statt 2,1, und nur 23,1 Prozent der
+            Haushalte wohnen im Eigentum gegenüber 49,3 Prozent im Land. In vier von zehn Wohnungen
+            ist schlicht kein Zimmer für eine Betreuungskraft frei. Wir sagen das vorher, weil es
+            hinterher niemandem hilft.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine zweite Zahl wird dagegen regelmäßig falsch gelesen. In Regensburg bestehen 58,6
+            Prozent aller Haushalte aus einer einzigen Person — der höchste Wert weit und breit.
+            Das ist <em>kein</em> Signal für viele alleinlebende Ältere, sondern für Studierende.
+            Die Kennzahl, auf die es ankommt, sind Haushalte, in denen ausschließlich Menschen ab
+            65 leben: Die liegen mit 17,7 Prozent deutlich <em>unter</em> dem bayerischen Wert von
+            23,0 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Regensburg ist tatsächlich jung. 17,4 Prozent der Einwohner sind über 65, in Bayern
+            21,6 Prozent; über 80 sind es 5,6 gegen 6,7 Prozent. Entsprechend niedrig ist die
+            Pflegequote mit 42 Pflegebedürftigen je 1.000 Einwohner (Bayern 47). Was daraus folgt,
+            ist trotzdem nicht weniger Bedarf, sondern ein anderer: Nur 43,8 Prozent der 6.622
+            Pflegebedürftigen werden rein familiär versorgt, in Bayern 48,5 Prozent. In einer
+            Stadt, in der viele Kinder zum Studium kommen und die Eltern anderswo wohnen, ist die
+            Familie oft schlicht nicht um die Ecke.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Heimplätze gibt es dafür reichlich — und zwar nach beiden Maßstäben. Der Anteil der
+            Pflegebedürftigen im Heim liegt mit 21,6 Prozent über dem Landeswert von 17,6, und
+            gemessen an der Zahl der über 65-Jährigen stehen{' '}
+            <strong className="text-pm-ink font-semibold">61 Plätze je 1.000 bereit, in Bayern
+            44</strong>. Das sind knapp 40 Prozent mehr. Eine Betreuung zu Hause tritt hier also
+            nicht gegen einen Mangel an, sondern gegen ein sehr gut ausgebautes Angebot. Der
+            Unterschied liegt woanders: in der vertrauten Wohnung, mit einer festen Bezugsperson
+            statt wechselnder Schichten.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Medizinisch ist Regensburg außergewöhnlich gut versorgt: drei anerkannte Akutgeriatrien,
+            eine geriatrische Tagesklinik mit 20 Plätzen und eine geriatrische Rehabilitation — die
+            vollständige Kette an einem Ort, was in Bayern selten ist. Der Übergang vom Krankenhaus
+            nach Hause ist damit gut abgefedert; die häusliche Betreuung setzt meist erst nach der
+            Reha ein. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a
+            SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Regensburg</h2>
           <div className="space-y-3 mb-12">

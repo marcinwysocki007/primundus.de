@@ -205,6 +205,28 @@ export default function WittmundPage() {
             schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.
           </p>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Wittmund ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Wittmund die Möglichkeiten. 62,2 Prozent der Haushalte wohnen im Eigentum, in Niedersachsen sind es 51,1 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden. In 28,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Niedersachsen sind es 25,0 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Reihenhäuser sind in Wittmund mit 4,4 Prozent seltener als in Niedersachsen (12,9 Prozent). 5,2 Prozent der Wohnungen stehen leer, in Niedersachsen 4,0 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 6.648 Menschen in Wittmund sind 75 Jahre oder älter, und der Ort zählt 31.761 Wohnungen in 23.407 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ④ FAQ — identisch zum FAQPage-Schema */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
             Häufige Fragen aus dem Harlingerland

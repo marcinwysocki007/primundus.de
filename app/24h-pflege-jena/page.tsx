@@ -64,6 +64,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Jena?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Jena ist bekannt: Die durchschnittliche Wohnung misst 73,0 Quadratmeter, 40,5 Prozent liegen unter 60 Quadratmetern (Thüringen: 27,8 Prozent), und 21,4 Prozent der Haushalte wohnen im Eigentum (Thüringen: 46,2 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Jena?',
+        acceptedAnswer: { '@type': 'Answer', text: '13.581 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,3 Prozent — in Thüringen 13,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Thüringen: 28,3 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Jena — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Jena im Schnitt 3,9 Wohnungen, in Thüringen 2,1. 46,1 Prozent der Gebäude stehen frei, 29,7 Prozent sind Reihenhäuser. 47,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Jena ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Jena bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Jena und Saale-Holzland-Kreis: Kahla, Stadtroda, Hermsdorf und alle Gemeinden im Saale-Holzland-Kreis' },
       },
@@ -303,6 +318,31 @@ export default function JenaPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Jena und Saale-Holzland-Kreis: Kahla, Stadtroda, Hermsdorf und alle Gemeinden im Saale-Holzland-Kreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Jena ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Jena die Möglichkeiten. Nur 21,4 Prozent der Haushalte wohnen im Eigentum — in Thüringen sind es 46,2 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Der Wohnungsmarkt ist eng: 2,9 Prozent Leerstand gegenüber 7,8 Prozent in Thüringen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Auf ein Gebäude kommen in Jena im Schnitt 3,9 Wohnungen, in Thüringen sind es 2,1. Jena ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten. 40,5 Prozent der Wohnungen in Jena haben weniger als 60 Quadratmeter, in Thüringen sind es 27,8 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die durchschnittliche Wohnung misst 73,0 Quadratmeter gegenüber 86,6 in Thüringen — rund 14 Quadratmeter weniger. In 23,5 Prozent der Haushalte leben ausschließlich Menschen ab 65, etwas seltener als in Thüringen mit 28,3 Prozent. Nur 46,1 Prozent der Gebäude stehen frei, in Thüringen sind es 65,2 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 13.581 Menschen in Jena sind 75 Jahre oder älter, und der Ort zählt 62.510 Wohnungen in 15.904 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Jena</h2>
           <div className="space-y-3 mb-12">
@@ -311,6 +351,9 @@ export default function JenaPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Jena starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Jena rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Jena?', a: 'Das hängt am Grundriss, und die Ausgangslage in Jena ist bekannt: Die durchschnittliche Wohnung misst 73,0 Quadratmeter, 40,5 Prozent liegen unter 60 Quadratmetern (Thüringen: 27,8 Prozent), und 21,4 Prozent der Haushalte wohnen im Eigentum (Thüringen: 46,2 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Jena?', a: '13.581 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,3 Prozent — in Thüringen 13,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Thüringen: 28,3 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Jena — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Jena im Schnitt 3,9 Wohnungen, in Thüringen 2,1. 46,1 Prozent der Gebäude stehen frei, 29,7 Prozent sind Reihenhäuser. 47,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Jena ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Welches Einzugsgebiet wird in Jena bedient?', a: 'Jena und Saale-Holzland-Kreis: Kahla, Stadtroda, Hermsdorf und alle Gemeinden im Saale-Holzland-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

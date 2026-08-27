@@ -300,6 +300,52 @@ export default function DuisburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Duisburg und Umland: Krefeld, Mülheim an der Ruhr, Moers, Oberhausen und alle Gemeinden im Kreis Wesel</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Duisburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In keiner anderen Stadt, die wir uns bisher angesehen haben, tragen Familien so viel
+            allein wie hier.{' '}
+            <strong className="text-pm-ink font-semibold">27.900 Duisburgerinnen und Duisburger mit
+            Pflegebedarf beziehen ausschließlich Pflegegeld</strong> — sie werden also ohne jeden
+            Pflegedienst von Angehörigen versorgt. Das sind 62,1 Prozent aller Pflegebedürftigen,
+            in Nordrhein-Westfalen 59,0 Prozent. Umgekehrt nutzen nur 14,4 Prozent einen ambulanten
+            Dienst, im Land sind es 17,3. Insgesamt sind 44.910 Menschen in Duisburg pflegebedürftig.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Das Bemerkenswerte daran: Es liegt nicht am Alter. Duisburg ist <em>jünger</em> als
+            Nordrhein-Westfalen — 20,7 Prozent der Einwohner sind über 65, im Land 22,5 Prozent;
+            bei den über 80-Jährigen 6,3 gegen 6,7 Prozent. Trotzdem liegt die Pflegequote mit
+            8,9 Prozent deutlich über dem Landeswert von 7,6. Die Stadt hat also nicht mehr alte
+            Menschen, sondern mehr pflegebedürftige — und die werden überwiegend zu Hause versorgt,
+            von Töchtern, Söhnen und Ehepartnern.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wie in Duisburg gewohnt wird, macht das nicht leichter.{' '}
+            <strong className="text-pm-ink font-semibold">52,5 Prozent aller Gebäude sind
+            Reihenhäuser</strong> — in Nordrhein-Westfalen 27,2 Prozent. Das sind die Zechen- und
+            Werkssiedlungen: schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im
+            Obergeschoss. Freistehend ist nur jedes fünfte Gebäude, im Land jedes zweite. Dazu
+            kommt das Alter des Bestands: 70,3 Prozent aller Wohnungen stammen von vor 1970, gerade
+            2,3 Prozent von 2010 oder später. Wenn die Treppe zur täglichen Hürde wird, ist jemand
+            im Haus oft die Alternative zum Umzug.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ein Punkt spricht dabei für Duisburg: Die durchschnittliche Wohnung misst 77,6
+            Quadratmeter und knapp ein Drittel liegt unter 60 — aber mit 5,84 Euro Nettokaltmiete
+            je Quadratmeter ist Wohnraum hier so günstig wie in kaum einer anderen Großstadt. Wo
+            ein Zimmer fehlt, ist etwas Größeres eher erreichbar als anderswo. Und Heimplätze sind
+            trotz des niedrigen Heimanteils vorhanden: 51 je 1.000 Einwohner über 65 gegenüber 46
+            im Land. Duisburg ist also nicht heimarm — hier wird bewusst zu Hause gepflegt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Medizinisch ist die Stadt gut aufgestellt: vier Krankenhäuser mit eigener geriatrischer
+            Abteilung, zusammen 225 Betten, dazu eine geriatrische Tagesklinik und eine
+            Reha-Klinik am Ort. Die klinische Versorgung ist da. Was sie nicht abnimmt, ist der
+            Alltag danach — und genau dort setzt eine Betreuungskraft an, die mit einzieht und die
+            Dauerverantwortung von den Angehörigen nimmt. Lassen Sie sich vorher unabhängig
+            beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Duisburg</h2>
           <div className="space-y-3 mb-12">

@@ -310,6 +310,50 @@ export default function MemmingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Memmingen und Unterallgäu: Bad Wörishofen, Ottobeuren, Mindelheim und alle Gemeinden im Landkreis Unterallgäu</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Memmingen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Memmingen ist deutlich älter als der Freistaat, und zwar dort, wo es zählt.{' '}
+            <strong className="text-pm-ink font-semibold">7,5 Prozent der Einwohner sind über 80 —
+            3.315 Menschen —, in Bayern sind es 6,7 Prozent.</strong> Bei den über 65-Jährigen sind
+            es 9.911 oder 22,4 Prozent gegenüber 21,6 im Land. Entsprechend liegt die Pflegequote
+            mit 51 Pflegebedürftigen je 1.000 Einwohner über dem bayerischen Wert von 47. Für eine
+            Stadt mit gut 44.000 Einwohnern sind das 2.366 Menschen mit Pflegebedarf.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Versorgt werden sie ganz überwiegend zu Hause: 50,8 Prozent allein durch Angehörige
+            (Bayern 48,5), weitere 22,3 Prozent mit einem ambulanten Dienst (Bayern 20,0). Nur 13,9
+            Prozent leben im Heim, im Freistaat 17,6. Das heißt aber nicht, dass Memmingen
+            heimarm wäre — gemessen an der Zahl der über 65-Jährigen stehen hier 47 Plätze je 1.000
+            bereit, in Bayern 44. Die Plätze gäbe es also; sie werden nur seltener gebraucht, weil
+            mehr Menschen zu Hause bleiben.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Auffällig ist, wer in Memmingen mit wem zusammenlebt.{' '}
+            <strong className="text-pm-ink font-semibold">In 26,1 Prozent aller Haushalte leben
+            ausschließlich Menschen ab 65</strong> — in Bayern sind es 23,0 Prozent. In gut jedem
+            vierten Haushalt der Stadt ist also niemand da, der nachts einspringen könnte, wenn
+            etwas passiert. Genau für diese Konstellation ist eine Betreuungskraft gedacht, die im
+            Haushalt wohnt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Räumlich steht Memmingen besser da als die großen Städte: 79,6 Prozent der Gebäude sind
+            Ein- oder Zweifamilienhäuser, die durchschnittliche Wohnung misst 90 Quadratmeter, und
+            mit 6,51 Euro Nettokaltmiete je Quadratmeter ist Wohnen hier vergleichsweise günstig
+            (Bayern 8,74). Ein Zimmer für die Betreuungskraft ist also oft schon vorhanden. Eine
+            Einschränkung bleibt: Ein Drittel der Wohnungen stammt aus den Jahren 1950 bis 1969, und
+            knapp jede vierte hat weniger als 60 Quadratmeter. Dort wird es eng.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Ein Punkt, den man kennen sollte: Das Klinikum Memmingen führt seit 2016 eine anerkannte
+            Akutgeriatrie. Eine geriatrische Tagesklinik oder eine geriatrische Rehabilitation gibt
+            es in der Stadt dagegen nicht — in ganz Schwaben findet sich keine akutgeriatrische
+            Tagesklinik. Nach einem Krankenhausaufenthalt geht es hier also meist direkt nach Hause,
+            ohne den Zwischenschritt einer Reha. Umso wichtiger ist, dass zu Hause jemand da ist.
+            Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist
+            kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Memmingen</h2>
           <div className="space-y-3 mb-12">

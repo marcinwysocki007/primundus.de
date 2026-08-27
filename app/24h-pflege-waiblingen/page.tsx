@@ -64,6 +64,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Waiblingen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Waiblingen ist bekannt: Die durchschnittliche Wohnung misst 89,6 Quadratmeter, 19,1 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 52,5 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Waiblingen?',
+        acceptedAnswer: { '@type': 'Answer', text: '6.201 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Waiblingen — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Waiblingen im Schnitt 2,6 Wohnungen, in Baden-Württemberg 2,1. 50,8 Prozent der Gebäude stehen frei, 26,2 Prozent sind Reihenhäuser. 42,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Waiblingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Waiblingen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Waiblingen und Rems-Murr-Kreis: Winnenden, Backnang, Schorndorf, Fellbach, Kernen, Weinstadt und alle Gemeinden im Rems-Murr-Kreis' },
       },
@@ -303,6 +318,28 @@ export default function WaiblingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Waiblingen und Rems-Murr-Kreis: Winnenden, Backnang, Schorndorf, Fellbach, Kernen, Weinstadt und alle Gemeinden im Rems-Murr-Kreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Waiblingen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wie viel Platz eine Wohnung in Waiblingen hat, ist keine Nebenfrage. Die durchschnittliche Wohnung misst 89,6 Quadratmeter gegenüber 99,1 in Baden-Württemberg — rund 10 Quadratmeter weniger. Nur 50,8 Prozent der Gebäude stehen frei, in Baden-Württemberg sind es 65,9 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            26,2 Prozent der Gebäude in Waiblingen sind Reihenhäuser, in Baden-Württemberg 15,4 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Altbau vor 1950 macht in Waiblingen 11,2 Prozent des Bestands aus, in Baden-Württemberg 17,4 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 6.201 Menschen in Waiblingen sind 75 Jahre oder älter, und der Ort zählt 27.099 Wohnungen in 10.357 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Waiblingen</h2>
           <div className="space-y-3 mb-12">
@@ -311,6 +348,9 @@ export default function WaiblingenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Waiblingen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Waiblingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Waiblingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Waiblingen ist bekannt: Die durchschnittliche Wohnung misst 89,6 Quadratmeter, 19,1 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 52,5 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Waiblingen?', a: '6.201 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Waiblingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Waiblingen im Schnitt 2,6 Wohnungen, in Baden-Württemberg 2,1. 50,8 Prozent der Gebäude stehen frei, 26,2 Prozent sind Reihenhäuser. 42,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Waiblingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Welches Einzugsgebiet wird in Waiblingen bedient?', a: 'Waiblingen und Rems-Murr-Kreis: Winnenden, Backnang, Schorndorf, Fellbach, Kernen, Weinstadt und alle Gemeinden im Rems-Murr-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

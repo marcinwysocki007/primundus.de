@@ -205,6 +205,31 @@ export default function RheinPfalzKreisPage() {
             schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.
           </p>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Rhein-Pfalz-Kreis ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Rhein-Pfalz-Kreis die Möglichkeiten. 65,0 Prozent der Haushalte wohnen im Eigentum, in Rheinland-Pfalz sind es 54,4 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden. Nur 8,6 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Rheinland-Pfalz sind es 15,4 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die durchschnittliche Wohnung misst 115,1 Quadratmeter und damit rund 7 Quadratmeter mehr als im Schnitt von Rheinland-Pfalz (107,7). 34,3 Prozent der Haushalte bestehen aus einer Person, in Rheinland-Pfalz 40,4 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Altbau vor 1950 macht in Rhein-Pfalz-Kreis 15,6 Prozent des Bestands aus, in Rheinland-Pfalz 21,5 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 17.908 Menschen in Rhein-Pfalz-Kreis sind 75 Jahre oder älter, und der Ort zählt 74.069 Wohnungen in 48.337 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ④ FAQ — identisch zum FAQPage-Schema */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
             Häufige Fragen aus der Region

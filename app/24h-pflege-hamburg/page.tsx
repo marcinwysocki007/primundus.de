@@ -298,6 +298,25 @@ export default function HamburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Alle Hamburger Bezirke: Altona, Eimsbüttel, Hamburg-Mitte, Hamburg-Nord, Harburg, Bergedorf, Wandsbek sowie angrenzende Landkreise Pinneberg, Stormarn, Harburg und Lüneburg</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Hamburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Hamburg liegt beim Wohnen dicht am Schnitt von Hamburg — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders abgelegen zugeht. Die durchschnittliche Wohnung misst 76,6 Quadratmeter, auf ein Gebäude kommen 3,8 Wohnungen, und 21,6 Prozent der Haushalte wohnen im Eigentum.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            9,7 Prozent der Einwohner sind 75 Jahre oder älter, das sind 174.919 Menschen. In 20,9 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Hamburg</h2>
           <div className="space-y-3 mb-12">

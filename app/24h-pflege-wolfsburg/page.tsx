@@ -64,6 +64,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Wolfsburg?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Wolfsburg ist bekannt: Die durchschnittliche Wohnung misst 91,1 Quadratmeter, 23,4 Prozent liegen unter 60 Quadratmetern (Niedersachsen: 17,1 Prozent), und 41,9 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Wolfsburg?',
+        acceptedAnswer: { '@type': 'Answer', text: '15.156 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,9 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Wolfsburg — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Wolfsburg im Schnitt 2,4 Wohnungen, in Niedersachsen 1,7. 59,2 Prozent der Gebäude stehen frei, 25,7 Prozent sind Reihenhäuser. 54,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Wolfsburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Wolfsburg bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Wolfsburg und Umland: Gifhorn, Helmstedt, Königslutter und alle Gemeinden im Landkreis Gifhorn und Helmstedt' },
       },
@@ -300,6 +315,31 @@ export default function WolfsburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Wolfsburg und Umland: Gifhorn, Helmstedt, Königslutter und alle Gemeinden im Landkreis Gifhorn und Helmstedt</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Wolfsburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Der Wohnungsbestand von Wolfsburg erzählt etwas über den Pflegealltag. 45,4 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Niedersachsen sind es 28,2 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat. Altbau vor 1950 macht in Wolfsburg 9,1 Prozent des Bestands aus, in Niedersachsen 20,7 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die durchschnittliche Wohnung misst 91,1 Quadratmeter gegenüber 104,4 in Niedersachsen — rund 13 Quadratmeter weniger. 25,7 Prozent der Gebäude in Wolfsburg sind Reihenhäuser, in Niedersachsen 12,9 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Nur 41,9 Prozent der Haushalte wohnen im Eigentum — in Niedersachsen sind es 51,1 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. 5,6 Prozent der Wohnungen stehen leer, in Niedersachsen 4,0 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Auf ein Gebäude kommen in Wolfsburg im Schnitt 2,4 Wohnungen, in Niedersachsen sind es 1,7. Wolfsburg ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 15.156 Menschen in Wolfsburg sind 75 Jahre oder älter, und der Ort zählt 68.329 Wohnungen in 28.462 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Wolfsburg</h2>
           <div className="space-y-3 mb-12">
@@ -308,6 +348,9 @@ export default function WolfsburgPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Wolfsburg starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Wolfsburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Wolfsburg?', a: 'Das hängt am Grundriss, und die Ausgangslage in Wolfsburg ist bekannt: Die durchschnittliche Wohnung misst 91,1 Quadratmeter, 23,4 Prozent liegen unter 60 Quadratmetern (Niedersachsen: 17,1 Prozent), und 41,9 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Wolfsburg?', a: '15.156 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,9 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Wolfsburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Wolfsburg im Schnitt 2,4 Wohnungen, in Niedersachsen 1,7. 59,2 Prozent der Gebäude stehen frei, 25,7 Prozent sind Reihenhäuser. 54,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Wolfsburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Welches Einzugsgebiet wird in Wolfsburg bedient?', a: 'Wolfsburg und Umland: Gifhorn, Helmstedt, Königslutter und alle Gemeinden im Landkreis Gifhorn und Helmstedt' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

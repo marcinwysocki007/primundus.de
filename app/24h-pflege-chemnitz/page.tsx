@@ -64,6 +64,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Chemnitz?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Chemnitz ist bekannt: Die durchschnittliche Wohnung misst 71,3 Quadratmeter, 43,1 Prozent liegen unter 60 Quadratmetern (Sachsen: 34,1 Prozent), und 18,5 Prozent der Haushalte wohnen im Eigentum (Sachsen: 34,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Chemnitz?',
+        acceptedAnswer: { '@type': 'Answer', text: '36.485 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,2 Prozent — in Sachsen 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen: 29,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Chemnitz — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Chemnitz im Schnitt 4,5 Wohnungen, in Sachsen 2,7. 50,8 Prozent der Gebäude stehen frei, 32,1 Prozent sind Reihenhäuser. 57,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Chemnitz ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Chemnitz bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Chemnitz und Erzgebirgskreis: Stollberg, Annaberg-Buchholz, Aue-Bad Schlema und alle Gemeinden im Erzgebirgskreis und Landkreis Mittelsachsen' },
       },
@@ -303,6 +318,31 @@ export default function ChemnitzPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Chemnitz und Erzgebirgskreis: Stollberg, Annaberg-Buchholz, Aue-Bad Schlema und alle Gemeinden im Erzgebirgskreis und Landkreis Mittelsachsen</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Chemnitz ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wie in Chemnitz gewohnt wird, entscheidet mit darüber, ob Pflege zu Hause funktioniert. Auf ein Gebäude kommen in Chemnitz im Schnitt 4,5 Wohnungen, in Sachsen sind es 2,7. Chemnitz ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten. Nur 18,5 Prozent der Haushalte wohnen im Eigentum — in Sachsen sind es 34,3 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            10,9 Prozent der Wohnungen stehen leer, in Sachsen 8,5 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. 43,1 Prozent der Wohnungen in Chemnitz haben weniger als 60 Quadratmeter, in Sachsen sind es 34,1 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            32,1 Prozent der Gebäude in Chemnitz sind Reihenhäuser, in Sachsen 18,6 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 50,8 Prozent der Gebäude stehen frei, in Sachsen sind es 64,3 Prozent. Die durchschnittliche Wohnung misst 71,3 Quadratmeter gegenüber 79,1 in Sachsen — rund 8 Quadratmeter weniger.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 36.485 Menschen in Chemnitz sind 75 Jahre oder älter, und der Ort zählt 151.859 Wohnungen in 33.925 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Chemnitz</h2>
           <div className="space-y-3 mb-12">
@@ -311,6 +351,9 @@ export default function ChemnitzPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Chemnitz starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Chemnitz rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Chemnitz?', a: 'Das hängt am Grundriss, und die Ausgangslage in Chemnitz ist bekannt: Die durchschnittliche Wohnung misst 71,3 Quadratmeter, 43,1 Prozent liegen unter 60 Quadratmetern (Sachsen: 34,1 Prozent), und 18,5 Prozent der Haushalte wohnen im Eigentum (Sachsen: 34,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Chemnitz?', a: '36.485 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,2 Prozent — in Sachsen 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen: 29,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Chemnitz — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Chemnitz im Schnitt 4,5 Wohnungen, in Sachsen 2,7. 50,8 Prozent der Gebäude stehen frei, 32,1 Prozent sind Reihenhäuser. 57,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Chemnitz ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Welches Einzugsgebiet wird in Chemnitz bedient?', a: 'Chemnitz und Erzgebirgskreis: Stollberg, Annaberg-Buchholz, Aue-Bad Schlema und alle Gemeinden im Erzgebirgskreis und Landkreis Mittelsachsen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
