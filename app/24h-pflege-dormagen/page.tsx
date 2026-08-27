@@ -237,6 +237,40 @@ export default function DormagenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Dormagen und Rhein-Kreis Neuss Mitte: Neuss-Nord, Grevenbroich-Ost und alle Gemeinden im mittleren Rhein-Kreis Neuss</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Dormagen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Dormagen pflegen die Familien besonders oft selbst. Im Rhein-Kreis Neuss beziehen
+            rund <strong className="text-pm-ink font-semibold">63 Prozent aller Pflegebedürftigen
+            Pflegegeld</strong> — bundesweit sind es gut 51 Prozent. Pflegegeld bekommt, wer zu Hause
+            von Angehörigen versorgt wird. Hinter dieser Zahl stehen also sehr viele Töchter, Söhne
+            und Ehepartner, die das seit Jahren stemmen. Genau bei ihnen melden sich irgendwann die
+            Grenzen: wenn der eigene Rücken nicht mehr mitmacht, wenn Nächte durchwacht werden, wenn
+            der Urlaub seit Jahren ausfällt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Betreuungskraft, die mit einzieht, ersetzt die Familie nicht — sie entlastet sie.
+            Die Angehörigen bleiben Tochter oder Sohn, statt rund um die Uhr Pflegekraft zu sein.
+            Und weil Pflegegeld und Betreuung sich kombinieren lassen, muss dafür niemand den
+            bisherigen Weg komplett aufgeben.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen ist Dormagen anders, als man es einer Industriestadt zutrauen würde:
+            Gründerzeit-Altbau gibt es hier kaum, nur etwa sieben Prozent der Wohnungen stammen aus
+            der Zeit vor 1950. Gut zwei Drittel der Gebäude sind Einfamilienhäuser — die Barriere
+            ist dort meist die eigene Treppe ins Obergeschoss. In Horrem, das zu großen Teilen als
+            Werkssiedlung für das Chemiewerk entstand, kommt eine andere hinzu: Bei den Zeilenbauten
+            der sechziger und siebziger Jahre liegt schon das Erdgeschoss zwei bis sechs Stufen über
+            dem Außengelände, und einen Aufzug haben nur wenige Häuser. Ebenerdig ist die Stadt
+            zwar — sie liegt flach am Rhein —, aber bis zur Wohnungstür hilft das nicht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte
+            im Rhein-Kreis Neuss beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen
+            zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — und er gilt
+            unabhängig davon, für welchen Weg Sie sich danach entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Dormagen</h2>
           <div className="space-y-3 mb-12">

@@ -237,6 +237,42 @@ export default function HeilbronnPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Heilbronn und Landkreis Heilbronn: Bad Rappenau, Brackenheim, Neckarsulm, Öhringen und alle Gemeinden im Landkreis Heilbronn</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Heilbronn ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Heilbronn gilt als junge Stadt, und das stimmt auch: Mit einem Durchschnittsalter von
+            42 Jahren liegt sie unter dem Bundesschnitt, und sie wächst kräftig. Die Zahl, auf die
+            es für die Pflege ankommt, ist trotzdem eine andere. Zwischen 2014 und 2023 ist die
+            Gruppe der über 80-Jährigen in Heilbronn um <strong className="text-pm-ink font-semibold">31 Prozent
+            gewachsen</strong> — während die Gruppe der 65- bis 79-Jährigen sogar kleiner wurde.
+            Es sind also nicht mehr Ältere insgesamt, sondern deutlich mehr Hochbetagte. Und
+            hochbetagt heißt: der Punkt, an dem es allein nicht mehr geht, rückt näher.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dazu kommt, wie in Heilbronn gewohnt wird. Am 4. Dezember 1944 wurde die Stadt in
+            37 Minuten zu fast zwei Dritteln zerstört; von den historischen Gebäuden blieben kaum
+            zwei Dutzend. Heute stammen nur rund zwei Prozent der Wohnungen aus der Zeit vor 1900 —
+            dafür etwa die Hälfte aus den Jahren 1946 bis 1977. Das sind solide Wohnungen, gebaut
+            in einer Zeit, in der Barrierefreiheit kein Thema war. Die Stadt selbst nennt den
+            Mangel an barrierearmem Wohnraum ausdrücklich als eine der großen Herausforderungen
+            auf dem hiesigen Wohnungsmarkt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wer im Osten wohnt, kennt zusätzlich die Steigungen: Zwischen dem Neckartal und den
+            Heilbronner Bergen mit ihren Weinlagen liegen über 200 Höhenmeter, während es im Westen
+            Richtung Gartacher Feld eben bleibt. Und im Landkreis, der die Stadt vollständig
+            umschließt, ist es dünner besiedelt — rund 320 Einwohner je Quadratkilometer gegen etwa
+            1.300 in der Stadt. In Neckarsulm, Bad Rappenau oder Eppingen sind die Wege zum
+            nächsten Dienst länger. Eine Betreuungskraft, die mit einzieht, ist von beidem
+            unabhängig: von der Entfernung und von der Treppe.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Verschaffen Sie sich zuerst einen neutralen Überblick: Die Pflegestützpunkte in
+            Baden-Württemberg beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei
+            Ihnen zu Hause. Dieser Anspruch ist gesetzlich geregelt (§ 7a SGB XI) und gilt
+            unabhängig davon, wofür Sie sich am Ende entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Heilbronn</h2>
           <div className="space-y-3 mb-12">
