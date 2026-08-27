@@ -225,6 +225,23 @@ export default function DortmundPage() {
           </div>
           
 
+          {/* ④c RECHNER */}
+          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-6 mb-10">
+            <p className="text-[15px] font-bold text-pm-ink mb-2">Ihren eigenen Fall durchrechnen</p>
+            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+              Welcher Pflegegrad realistisch ist und was am Ende tatsächlich übrig bleibt, hängt von
+              der konkreten Situation ab. Zwei Rechner helfen weiter — beide kostenlos und ohne Anmeldung:
+            </p>
+            <div className="flex flex-col gap-2">
+              <a href="/pflegegrad-rechner" className="text-[15px] text-pm-taupe font-semibold hover:underline">
+                → Pflegegrad berechnen — dieselben sechs Module wie bei der Begutachtung
+              </a>
+              <a href="https://kostenrechner.primundus.de/?start=1&amp;src=ort-dortmund" target="_blank" rel="noopener" className="text-[15px] text-pm-taupe font-semibold hover:underline">
+                → Preis und Betreuungskräfte für Dortmund ansehen — in 2 Minuten
+              </a>
+            </div>
+          </div>
+
           {/* ④b POLEN */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Polnische Betreuungskräfte in Dortmund</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
@@ -248,7 +265,7 @@ export default function DortmundPage() {
             <strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft
             kostet:</strong> zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation und
             Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbetrag und
-            Entlastungsbudget in Nordrhein-Westfalen meist rund 1.300 bis 2.400 Euro Eigenanteil —
+            Entlastungsbudget in Nordrhein-Westfalen meist rund 1300 bis 2400 Euro Eigenanteil —
             deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.580 Euro im Monat kostet.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">

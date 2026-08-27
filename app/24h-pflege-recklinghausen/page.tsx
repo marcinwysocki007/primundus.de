@@ -225,6 +225,60 @@ export default function RecklinghausenPage() {
           </div>
           
 
+          {/* ④c RECHNER */}
+          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-6 mb-10">
+            <p className="text-[15px] font-bold text-pm-ink mb-2">Ihren eigenen Fall durchrechnen</p>
+            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+              Welcher Pflegegrad realistisch ist und was am Ende tatsächlich übrig bleibt, hängt von
+              der konkreten Situation ab. Zwei Rechner helfen weiter — beide kostenlos und ohne Anmeldung:
+            </p>
+            <div className="flex flex-col gap-2">
+              <a href="/pflegegrad-rechner" className="text-[15px] text-pm-taupe font-semibold hover:underline">
+                → Pflegegrad berechnen — dieselben sechs Module wie bei der Begutachtung
+              </a>
+              <a href="https://kostenrechner.primundus.de/?start=1&amp;src=ort-recklinghausen" target="_blank" rel="noopener" className="text-[15px] text-pm-taupe font-semibold hover:underline">
+                → Preis und Betreuungskräfte für Recklinghausen ansehen — in 2 Minuten
+              </a>
+            </div>
+          </div>
+
+          {/* ④b POLEN */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Polnische Betreuungskräfte in Recklinghausen</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wer in Recklinghausen nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe:
+            jemanden, der im Haushalt lebt und rund um die Uhr da ist. Genau das leisten unsere
+            Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien —
+            und sie sind in Recklinghausen und im gesamten Umland im Einsatz.
+          </p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-4">
+            <p className="text-[15px] font-bold text-pm-ink mb-2">Angestellt statt vermittelt</p>
+            <p className="text-[15px] leading-relaxed text-pm-body">
+              Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte
+              fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum
+              Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland,
+              Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine
+              Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren
+              wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.
+            </p>
+          </div>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            <strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft
+            kostet:</strong> zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation und
+            Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbetrag und
+            Entlastungsbudget in Nordrhein-Westfalen meist rund 1300 bis 2400 Euro Eigenanteil —
+            deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.580 Euro im Monat kostet.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            <strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte
+            Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der
+            Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen
+            mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei
+            vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-8">
+            Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie
+            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.
+          </p>
           {/* ⑤ EINZUGSGEBIET */}
           {/* ⑤ KREIS-H2 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">24-Stunden-Pflege im Kreis Recklinghausen</h2>
