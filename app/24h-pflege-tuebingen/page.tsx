@@ -237,6 +237,36 @@ export default function TuebingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Tübingen und Landkreis Tübingen: Rottenburg am Neckar, Mössingen, Ammerbuch und alle Gemeinden im Landkreis Tübingen</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Tübingen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Tübingen gilt als eine der jüngsten Städte Deutschlands — Durchschnittsalter knapp 40,
+            über 26.000 Studierende. Das verdeckt leicht, dass hier rund 15.000 Menschen leben, die
+            65 oder älter sind. Sie werden in einer Stadt alt, die auf junge Beine ausgelegt ist.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Am deutlichsten wird das in der Altstadt. Das historische Kopfsteinpflaster und die
+            Gassen am Hang sind schön, aber für einen Rollator eine ernste Hürde; allein zum Schloss
+            hinauf sind rund 40 Höhenmeter zu überwinden. Selbst die offizielle Stadtführung für
+            Rollstuhlfahrer braucht eine eigens ausgesuchte Route. Wer hier seit vierzig Jahren
+            wohnt, gibt die Wohnung deshalb nicht auf — aber der Weg zum Bäcker wird irgendwann zur
+            Entscheidung, die man sich morgens gut überlegt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In den Teilorten stellt sich die Frage anders. Hagelloch, Bebenhausen, Unterjesingen und
+            Kilchberg sind klein, und im Landkreis sind neun von fünfzehn Gemeinden kleiner als
+            10.000 Einwohner. Dort ist der ambulante Dienst nicht um die Ecke, und die Termine
+            richten sich nach der Tour. Eine Betreuungskraft, die mit einzieht, ist von Fahrplänen
+            unabhängig: Sie ist da, wenn sie gebraucht wird — in Tübingen genauso wie in Rottenburg,
+            Mössingen oder Ammerbuch.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie entscheiden, holen Sie sich eine neutrale Einschätzung: Die Pflegestützpunkte
+            in Baden-Württemberg beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei
+            Ihnen zu Hause. Dieser Beratungsanspruch ist gesetzlich geregelt (§ 7a SGB XI) und gilt
+            unabhängig davon, wofür Sie sich am Ende entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Tübingen</h2>
           <div className="space-y-3 mb-12">

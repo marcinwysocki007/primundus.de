@@ -234,6 +234,37 @@ export default function SaarbrueckenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Saarbrücken und Umland: Neunkirchen, Homburg, Völklingen, Saarlouis und alle Gemeinden im Saarpfalz-Kreis und Landkreis Saarlouis</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Saarbrücken ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Saarbrücken liegt im Tal, aber gewohnt wird auch weit darüber. Die Stadtmitte liegt auf
+            rund 230 Metern, der Eschberg auf 340 — gut zwei Kilometer Luftlinie, gut hundert Meter
+            Höhenunterschied. Wer dort oben wohnt oder in einer der Hanglagen über der Saar, merkt
+            das jeden Tag ein bisschen deutlicher, sobald die Puste nachlässt. Selbst das Klinikum
+            steht auf dem Winterberg.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dazu kommt der Wohnungsbestand. Im Nauwieser Viertel und in den gewachsenen Straßen von
+            St. Johann stehen viele Häuser aus der Zeit zwischen 1860 und 1920 — schöne Altbauten
+            mit hohen Decken, aber eben auch mit Treppenhäusern, die für einen Rollator nie gedacht
+            waren. Eine Wohnung im dritten Stock ohne Aufzug ist jahrzehntelang kein Thema und dann
+            plötzlich das größte.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Anders als in vielen ländlichen Kreisen liegt es hier nicht an weiten Wegen: Der
+            Regionalverband Saarbrücken ist dicht besiedelt, ambulante Dienste sind erreichbar.
+            Was sie nicht leisten können, ist Anwesenheit. Zweimal zwanzig Minuten am Tag helfen
+            beim Waschen — aber nicht nachts um drei, und nicht an dem langen Nachmittag, an dem
+            sonst niemand kommt. Genau diese Lücke schließt eine Betreuungskraft, die mit einzieht.
+            Das gilt in Saarbrücken ebenso wie in Völklingen, Sulzbach oder Riegelsberg.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte im
+            Saarland beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause.
+            Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — ganz gleich, für welchen
+            Anbieter Sie sich danach entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Saarbrücken</h2>
           <div className="space-y-3 mb-12">

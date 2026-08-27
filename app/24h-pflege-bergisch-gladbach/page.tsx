@@ -234,6 +234,36 @@ export default function BergischGladbachPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bergisch Gladbach und Rheinisch-Bergischer Kreis: Overath, Rösrath, Kürten, Odenthal und alle Gemeinden im Rheinisch-Bergischen Kreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bergisch Gladbach ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Bergisch Gladbach ist eine ältere Stadt, als viele denken. Das Medianalter liegt bei
+            49 Jahren, jeder Vierte ist über 65, und fast jeder Zehnte ist über 80 — deutlich mehr
+            als im Bundesschnitt. Gleichzeitig ziehen junge Erwachsene zum Studium weg. Für viele
+            Familien heißt das: Die Eltern werden hier alt, die Kinder wohnen in Köln, Düsseldorf
+            oder noch weiter weg.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Genau diese Konstellation führt zu den Anrufen, die wir am häufigsten bekommen. Nicht,
+            weil sich niemand kümmern will, sondern weil Kümmern über Entfernung nicht funktioniert.
+            Wer eine Stunde entfernt arbeitet, kann nicht morgens beim Anziehen helfen und abends
+            nachsehen, ob der Herd aus ist. Eine Betreuungskraft, die im Haus wohnt, übernimmt genau
+            das — und die Angehörigen bleiben Angehörige, statt zum Pflegedienst auf Abruf zu werden.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Dazu kommt die Lage am ansteigenden Westrand der Bergischen Höhen: Zwischen dem tiefsten
+            und dem höchsten Punkt des Stadtgebiets liegen über 200 Höhenmeter. Was in Refrath eben
+            ist, ist in Herkenrath oder Sand eine Steigung. Und im Kreis wird es dünner: Bergisch
+            Gladbach ist rund viermal so dicht besiedelt wie Kürten oder Overath. Wer dort lebt,
+            wartet auf einen ambulanten Dienst, der lange Touren fährt — eine Betreuungskraft im
+            Haus ist davon unabhängig. Das gilt ebenso in Odenthal, Rösrath oder Burscheid.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Wenn Sie erst einmal sortieren möchten, was Ihnen zusteht: Die Pflegestützpunkte im
+            Rheinisch-Bergischen Kreis beraten kostenlos und unabhängig von Anbietern, auf Wunsch
+            auch bei Ihnen zu Hause. Der Anspruch darauf ist gesetzlich verankert (§ 7a SGB XI).
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bergisch Gladbach</h2>
           <div className="space-y-3 mb-12">
