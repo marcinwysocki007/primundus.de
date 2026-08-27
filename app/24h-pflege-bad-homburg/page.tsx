@@ -234,6 +234,51 @@ export default function BadHomburgvorderHoehePage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bad Homburg und Hochtaunuskreis: Friedrichsdorf, Oberursel, Kronberg im Taunus, Königstein im Taunus und alle Gemeinden im Hochtaunuskreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bad Homburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Bad Homburg ist eine Altersgruppe besonders stark vertreten: die der Hochbetagten.
+            <strong className="text-pm-ink font-semibold"> Fast neun Prozent der Einwohner sind über
+            80</strong> — mehr als im Bundesschnitt und deutlich mehr als noch vor zehn Jahren.
+            Bemerkenswert ist dabei, dass die Gruppe der 65- bis 79-Jährigen im gleichen Zeitraum
+            kleiner geworden ist. Es sind also nicht mehr Ältere insgesamt, sondern mehr sehr alte
+            Menschen — genau die Gruppe, bei der Alleinleben irgendwann nicht mehr trägt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Im Hochtaunuskreis zeigt die Pflegestatistik ein klares Muster:
+            <strong className="text-pm-ink font-semibold"> 61,7 Prozent aller Pflegebedürftigen
+            beziehen ausschließlich Pflegegeld</strong>, werden also von Angehörigen versorgt — in
+            Hessen sind es 58,6 Prozent. Gleichzeitig nehmen nur 15,2 Prozent einen ambulanten
+            Dienst in Anspruch, weniger als im Land. Die mittlere Lösung, bei der regelmäßig
+            jemand ins Haus kommt, ist hier also schwächer ausgeprägt als anderswo. Viele Familien
+            stehen damit vor einem Entweder-oder: alles selbst machen oder ins Heim.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen räumt ein Blick in die Zahlen mit einem Klischee auf. Bad Homburg gilt als
+            wohlhabend, und der Kaufkraftindex bestätigt das. Trotzdem wohnen sechs von zehn
+            Haushalten zur Miete, die Eigentümerquote liegt mit 41 Prozent unter dem hessischen
+            Schnitt. Und: Zwar sind drei Viertel der Gebäude Ein- oder Zweifamilienhäuser, aber
+            <strong className="text-pm-ink font-semibold"> zwei Drittel aller Wohnungen liegen in
+            Mehrfamilienhäusern</strong>. Knapp die Hälfte des Bestands stammt aus den Jahren 1949
+            bis 1978 — solide gebaut, aber lange vor jedem Gedanken an Barrierefreiheit.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Zur Lage noch ein weit verbreiteter Irrtum: Bad Homburg heißt „vor der Höhe", weil es am
+            Fuß des Taunus liegt — die Höhen darüber gehören zwar zur Gemarkung, sind aber Wald.
+            Gewohnt wird zwischen 137 und 250 Metern. Die Wege in der Stadt sind also meist
+            machbar; anders sieht es in den Ortsteilen aus, die ihren dörflichen Charakter behalten
+            haben, etwa in Ober-Erlenbach oder Dornholzhausen. Und im Kreis wird es schnell
+            ländlich: Während Bad Homburg auf über 1.100 Einwohner je Quadratkilometer kommt, sind
+            es rund um Usingen keine 300.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Eine Betreuungskraft, die mit einzieht, füllt genau die Lücke zwischen „allein
+            zurechtkommen" und „ins Heim ziehen". Sie ist nachts da, führt den Haushalt und
+            begleitet zu Terminen. Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten:
+            Die Pflegestützpunkte in Hessen beraten kostenlos und trägerunabhängig, auf Wunsch auch
+            bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI).
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bad Homburg vor der Höhe</h2>
           <div className="space-y-3 mb-12">
@@ -242,6 +287,9 @@ export default function BadHomburgvorderHoehePage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Homburg vor der Höhe starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bad Homburg vor der Höhe rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Wir pflegen bisher selbst — wann wird eine Betreuungskraft sinnvoll?', a: 'Im Hochtaunuskreis beziehen 61,7 Prozent aller Pflegebedürftigen ausschließlich Pflegegeld, werden also allein von Angehörigen versorgt; in Hessen sind es 58,6 Prozent. Gleichzeitig nutzen nur 15,2 Prozent einen ambulanten Dienst. Viele Familien hier stehen deshalb vor einem Entweder-oder. Eine Betreuungskraft, die mit einzieht, ist der Weg dazwischen: Sie übernimmt die Dauerbelastung, während Sie Angehörige bleiben. Pflegegeld und Betreuung lassen sich kombinieren.' },
+              { q: 'Ist eine Bad Homburger Wohnung für Pflege zu Hause geeignet?', a: 'In aller Regel ja, barrierefrei ist sie aber meist nicht. Zwar sind drei Viertel der Gebäude in Bad Homburg Ein- oder Zweifamilienhäuser, doch zwei Drittel aller Wohnungen liegen in Mehrfamilienhäusern — und knapp die Hälfte des Bestands stammt aus den Jahren 1949 bis 1978, also aus einer Zeit vor jeder Barrierefreiheitsanforderung. Für die Betreuungskraft genügt ein eigenes Zimmer; entscheidend ist, dass jemand da ist und die Wege übernimmt.' },
+              { q: 'Kommt eine Betreuungskraft auch in die Ortsteile und in den Hochtaunuskreis?', a: 'Ja. Das ist außerhalb der Kernstadt besonders wichtig, denn der Kreis ist zweigeteilt: Bad Homburg kommt auf über 1.100 Einwohner je Quadratkilometer, das Usinger Land auf keine 300. Dort fahren ambulante Dienste lange Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft im Haus ist davon unabhängig — in Ober-Erlenbach und Dornholzhausen ebenso wie in Oberursel, Friedrichsdorf oder Königstein. Anfahrtskosten berechnen wir nicht.' },
               { q: 'Welches Einzugsgebiet wird in Bad Homburg vor der Höhe bedient?', a: 'Bad Homburg und Hochtaunuskreis: Friedrichsdorf, Oberursel, Kronberg im Taunus, Königstein im Taunus und alle Gemeinden im Hochtaunuskreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
