@@ -244,6 +244,37 @@ export default function LandshutPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Landshut und Landkreis Landshut: Rottenburg, Geisenhausen, Ergoldsbach und alle Gemeinden im Landkreis Landshut und Dingolfing-Landau</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Landshut ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Landshut selbst sind die Wege kurz. Der bebaute Teil der Stadt liegt auf den flachen
+            Terrassen im Isartal, und wer in der Altstadt oder in Achdorf wohnt, hat Arzt, Apotheke
+            und Bäcker in erreichbarer Nähe. Steil wird es erst am Rand, wo die Hügelketten
+            ansteigen und die Burg Trausnitz über dem Hofberg liegt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ganz anders sieht es im Landkreis aus. Auf über 1.300 Quadratkilometern verteilen sich
+            35 Gemeinden, im Schnitt gerade einmal gut 120 Einwohner je Quadratkilometer — deutlich
+            dünner besiedelt als Bayern insgesamt. Wer in einem der Dörfer wohnt, für den bedeutet
+            Pflege zu Hause vor allem eines: Jemand muss die Strecke fahren. Der ambulante Dienst
+            legt lange Touren zurück und kommt, wann es der Plan hergibt. Und wenn der eigene
+            Führerschein wegfällt, wird aus jedem Arzttermin ein organisatorisches Projekt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Genau dort liegt die Stärke einer Betreuungskraft, die mit einzieht: Sie ist keine
+            Anfahrt, sie ist schon da — morgens, nachts und an dem Nachmittag, an dem sonst niemand
+            vorbeikommt. Das gilt in Landshut ebenso wie in Ergolding, Essenbach, Altdorf oder
+            Vilsbiburg. Landshut wächst seit Jahren kräftig, aber die Menschen, die hier alt werden,
+            bleiben meist genau dort wohnen, wo sie ihr Leben verbracht haben.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie sich entscheiden, holen Sie sich eine neutrale Einschätzung: Die Fachstellen
+            für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von
+            Anbietern, auf Wunsch auch bei Ihnen zu Hause (§ 7a SGB XI). Dazu kommt in Bayern das
+            Landespflegegeld: 1.000 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege
+            übernimmt.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Landshut</h2>
           <div className="space-y-3 mb-12">

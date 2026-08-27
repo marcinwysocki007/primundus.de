@@ -234,6 +234,39 @@ export default function DortmundPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Dortmund und Umland: Bochum, Herne, Castrop-Rauxel, Lünen, Unna, Schwerte, Witten und alle Gemeinden im Kreis Unna</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Dortmund ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Dortmund wird gerade die Generation pflegebedürftig, die den Strukturwandel selbst
+            erlebt hat. Auf Minister Stein in Eving wurde 1987 die letzte Kohle gefördert, auf
+            Gneisenau 1985; die Stahlproduktion in Hörde endete 2001. Wer damals als junger Mann
+            unter Tage oder am Hochofen stand, ist heute Ende siebzig. Viele von ihnen wohnen noch
+            genau dort, wo sie damals eingezogen sind.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Das prägt die Wohnsituation bis heute. In den alten Zechensiedlungen — Oberdorstfeld,
+            der Alten Kolonie in Eving, der Müsersiedlung in Derne — stehen kleine Häuser mit
+            Garten, gebaut um die vorletzte Jahrhundertwende. Sie sind eng, sie haben Treppen, und
+            sie waren nie für einen Rollstuhl gedacht. Trotzdem will kaum jemand dort
+            weg, und das ist verständlich: Es ist nicht nur eine Wohnung, es ist die eigene
+            Geschichte. In den Gründerzeitvierteln wie dem Kreuzviertel oder rund um die Kaiserstraße
+            stellt sich dieselbe Frage in vier bis fünf Obergeschossen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Zwei Dinge überraschen viele: Dortmund ist nicht flach — zwischen Derne im Norden und
+            dem Klusenberg bei Syburg liegen gut 200 Höhenmeter. Und die Stadt ist jünger als ihr
+            Umland: In Dortmund ist gut jeder Fünfte über 65, in den Kreisen Unna, Recklinghausen
+            und im Ennepe-Ruhr-Kreis ist es jeweils rund ein Viertel. Wer dort lebt, in Lünen,
+            Kamen oder Castrop-Rauxel, findet zwar dichte Versorgung vor — aber ein ambulanter
+            Dienst kommt zu festen Zeiten, nicht dann, wenn nachts jemand aufsteht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Wenn Sie erst einmal Klarheit über Ihre Ansprüche wollen: Die Pflegestützpunkte und
+            Pflegeberatungsstellen in Dortmund beraten kostenlos und unabhängig von Anbietern, auf
+            Wunsch auch bei Ihnen zu Hause. Der Anspruch darauf ist gesetzlich geregelt
+            (§ 7a SGB XI) — unabhängig davon, für welchen Weg Sie sich danach entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Dortmund</h2>
           <div className="space-y-3 mb-12">

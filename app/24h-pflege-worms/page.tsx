@@ -237,6 +237,38 @@ export default function WormsPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Worms und Landkreis Alzey-Worms: Alzey, Osthofen, Monsheim und alle Gemeinden im Landkreis Alzey-Worms</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Worms ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Worms liegt flach. Zwischen dem tiefsten Punkt bei Ibersheim und der westlichen
+            Stadtgrenze zum Wonnegau liegen keine achtzig Höhenmeter — für jemanden mit Rollator
+            oder Gehstock ist das eine gute Nachricht. Die Schwierigkeiten liegen hier woanders.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Im Februar und März 1945 wurde gut ein Drittel des Wormser Gebäudebestands vollständig
+            zerstört, ein weiteres knappes Drittel beschädigt; rund 15.000 Menschen verloren ihr
+            Zuhause. Was in den Jahren danach entstand, folgte den Plänen für eine aufgelockerte,
+            autogerechte Stadt: breitere Straßen, weniger Enge. Für die Pflege heißt das, dass ein
+            großer Teil der Innenstadtwohnungen aus den fünfziger Jahren stammt — solide gebaut,
+            aber zu einer Zeit, als niemand an Barrierefreiheit dachte. Ein Treppenhaus ohne Aufzug
+            ist dort keine Seltenheit.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Rund um die Kernstadt liegen die gewachsenen Ortsteile: Pfeddersheim, Herrnsheim,
+            Abenheim, Rheindürkheim, Ibersheim. Dort wohnen viele Ältere im eigenen Haus, mit
+            Garten und Treppe ins Obergeschoss. Der Landkreis Alzey-Worms ringsum ist ländlich
+            geprägt, aber nicht menschenleer — die Wege sind länger als in der Stadt, doch nicht
+            so weit wie in Niederbayern. Ein ambulanter Dienst kommt trotzdem nur zweimal am Tag;
+            eine Betreuungskraft, die im Haus lebt, ist auch nachts da und übernimmt den Haushalt
+            gleich mit.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Wenn Sie zuerst wissen möchten, was Ihnen zusteht: Die Pflegestützpunkte in
+            Rheinland-Pfalz beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei
+            Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI) und gilt
+            unabhängig davon, für welchen Anbieter Sie sich danach entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Worms</h2>
           <div className="space-y-3 mb-12">
