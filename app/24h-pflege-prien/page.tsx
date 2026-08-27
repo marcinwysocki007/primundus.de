@@ -72,7 +72,7 @@ export default function PrienamChiemseePage() {
           </nav>
 
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            24h-Pflege in Prien am Chiemsee · Aktualisiert April 2026
+            24h-Pflege in Prien am Chiemsee · Aktualisiert August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             24-Stunden-Pflege und Betreuung in Prien am Chiemsee

@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "verify": "next build && npm run verify:nobuild",
-    "verify:nobuild": "node scripts/check-links.mjs && node scripts/check-jsonld.mjs && node scripts/check-sitemap.mjs && node scripts/check-fakten.mjs && node scripts/check-tsc.mjs"
+    "verify": "npm run build && npm run verify:nobuild",
+    "verify:nobuild": "node scripts/check-links.mjs && node scripts/check-jsonld.mjs && node scripts/check-sitemap.mjs && node scripts/check-fakten.mjs && node scripts/check-tsc.mjs",
+    "prebuild": "node scripts/build-lastmod.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

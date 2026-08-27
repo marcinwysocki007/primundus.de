@@ -67,7 +67,7 @@ export default function Page() {
             <span>›</span>
             <span className="text-pm-ink">24h-Pflege für Angehörige</span>
           </nav>
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 7 Min Lesezeit · Aktualisiert April 2026</p>
+          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 7 Min Lesezeit · Aktualisiert August 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege für Angehörige — wie Familien die Betreuung organisieren</h1>
 
           <AuthorByline updated="30. April 2026" />

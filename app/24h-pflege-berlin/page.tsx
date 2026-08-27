@@ -67,7 +67,7 @@ export default function BerlinPage() {
           </nav>
 
           <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            24h-Pflege in Berlin · Aktualisiert April 2026
+            24h-Pflege in Berlin · Aktualisiert August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             24-Stunden-Pflege und Betreuung in Berlin
