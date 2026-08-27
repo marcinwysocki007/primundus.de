@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Bergisch Gladbach starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Bergisch Gladbach rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was tun, wenn die Kinder nicht in Bergisch Gladbach wohnen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das ist hier die häufigste Ausgangslage. Bergisch Gladbach hat einen überdurchschnittlich hohen Anteil Hochbetagter, und zugleich ziehen junge Erwachsene zum Studium weg — die Eltern werden also hier alt, während die Kinder in Köln, Düsseldorf oder weiter entfernt wohnen. Kümmern über Entfernung funktioniert im Alltag nicht: Niemand kann morgens beim Anziehen helfen und abends nachsehen, ob der Herd aus ist. Eine Betreuungskraft, die im Haus wohnt, übernimmt genau das — und die Angehörigen bleiben Angehörige.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Gilt das Angebot auch in Kürten, Overath oder Odenthal?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, im gesamten Rheinisch-Bergischen Kreis. Dort ist es sogar besonders relevant: Bergisch Gladbach ist rund viermal so dicht besiedelt wie Kürten oder Overath. Wer in den dünner besiedelten Gemeinden lebt, wartet auf einen ambulanten Dienst, der lange Touren fährt. Eine Betreuungskraft im Haus ist davon unabhängig — der Preis ist derselbe wie in der Kreisstadt, Anfahrtskosten berechnen wir nicht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Bergisch Gladbach bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Bergisch Gladbach und Rheinisch-Bergischer Kreis: Overath, Rösrath, Kürten, Odenthal und alle Gemeinden im Rheinisch-Bergischen Kreis' },
+      },
     ],
   },
 ]

@@ -58,10 +58,31 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was kostet ein Pflegeheim 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit 3.364 Euro pro Monat im ersten Jahr. Er steigt mit der Aufenthaltsdauer (Zuschläge der Pflegekasse nach 12, 24 und 36 Monaten). Darin sind Pflegekosten, Unterkunft, Verpflegung und Investitionsumlage enthalten.' } },
-      { '@type': 'Question', name: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 €/Monat brutto. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3), Entlastungsbetrag (131 €/Monat) und Entlastungsbudget (ca. 295 €/Monat) sinkt der Eigenanteil auf ca. 1.700–2.000 €/Monat — oft deutlich weniger als ein Pflegeheim.' } },
-      { '@type': 'Question', name: 'Wann ist ein Pflegeheim günstiger als 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Ab dem zweiten oder dritten Jahr können die Pflegekasse-Zuschläge im Pflegeheim den Eigenanteil deutlich senken — nach 24 Monaten übernimmt die Kasse 30 % mehr. Bei Pflegegrad 5 mit sehr hohem Pflege- und Behandlungsbedarf kann das Pflegeheim unter bestimmten Umständen günstiger werden.' } },
-      { '@type': 'Question', name: 'Ist 24h-Pflege zuhause besser als ein Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Pflegesituationen ja — die vertraute Umgebung verlangsamt Demenzverläufe, individuelle 1:1-Betreuung ist möglich und der Eigenanteil ist oft geringer. Ein Pflegeheim ist besser wenn intensivmedizinische Behandlung rund um die Uhr nötig ist oder kein geeigneter Wohnraum vorhanden ist.' } },
+      {
+        '@type': 'Question',
+        name: 'Was kostet ein Pflegeheim 2026?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus 2.200–3.500 €/Monat brutto. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.700–2.000 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege zuhause besser als ein Pflegeheim?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Pflegesituationen ja — günstigerer Eigenanteil, eigenes Zuhause, individuelle 1:1-Betreuung, kein Umzugsstress. Ein Pflegeheim ist besser bei intensivmedizinischem Dauerbedarf oder fehlendem Wohnraum.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wann kann das Pflegeheim günstiger werden?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ab dem dritten Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % des pflegebedingten Eigenanteils. Bei sehr hohem Pflegegrad (PG 4–5) kann das langfristig die Rechnung zugunsten des Heims ändern.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was zahlt die Pflegekasse im Pflegeheim?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
+      },
     ],
   },
 ]

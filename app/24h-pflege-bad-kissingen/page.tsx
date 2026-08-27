@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Bad Kissingen starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Bad Kissingen rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Warum ist 24-Stunden-Pflege in Bad Kissingen so häufig ein Thema?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weil hier besonders viele hochbetagte Menschen allein leben. Bad Kissingen ist nach dem Landesamt für Statistik die zweitälteste Gemeinde Unterfrankens: Jeder achte Einwohner ist über 80, in Bayern nur jeder fünfzehnte. Dazu kommt, dass fast die Hälfte aller Haushalte Einpersonenhaushalte sind. Wenn dann jemand nach einem Klinikaufenthalt nach Hause kommt, ist niemand da — genau diese Lücke schließt eine Betreuungskraft, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Es gibt doch so viele Kliniken in Bad Kissingen — reicht das nicht?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Für die Behandlung ja, für den Alltag danach nicht. Über ein Dutzend Reha-Kliniken und ein Krankenhaus mit eigener Akutgeriatrie sorgen dafür, dass im Landkreis mehr als jeder vierte Beschäftigte in der Gesundheitswirtschaft arbeitet — der höchste Anteil aller bayerischen Kreise. Nur endet all das an der eigenen Wohnungstür. Die Kliniken decken die Wochen ab, in denen behandelt wird, nicht die Monate danach.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Bad Kissingen bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Bad Kissingen und Landkreis Bad Kissingen: Hammelburg, Münnerstadt, Bad Brückenau und alle Gemeinden im Landkreis Bad Kissingen' },
+      },
     ],
   },
 ]

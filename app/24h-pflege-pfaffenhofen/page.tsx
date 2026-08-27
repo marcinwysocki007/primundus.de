@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Pfaffenhofen an der Ilm starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Pfaffenhofen an der Ilm rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommt eine Betreuungskraft auch in die Gemeindeteile rund um Pfaffenhofen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und dort ist der Unterschied besonders groß. Zum Stadtgebiet gehören 62 Gemeindeteile auf gut 92 Quadratkilometern — rechnerisch keine 300 Einwohner je Quadratkilometer. Wer in Förnbach, Tegernbach oder Uttenhofen wohnt, hängt bei jedem Termin daran, dass jemand fährt. Eine Betreuungskraft, die im Haus wohnt, übernimmt diese Wege und ist von keiner Tourenplanung abhängig. Anfahrtskosten berechnen wir nicht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was passiert, wenn der Führerschein wegfällt?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In einer so gestreuten Siedlungsstruktur ist das oft der Moment, in dem der Alltag kippt — nicht die Pflegebedürftigkeit selbst. Einkaufen, Arzttermine, Besuche: alles hängt plötzlich an anderen. Eine Betreuungskraft im Haushalt löst beides auf einmal, weil sie da ist und die Wege übernimmt. In Bayern kommt das Landespflegegeld von 1.000 Euro im Jahr ab Pflegegrad 2 hinzu, unabhängig davon, wer die Pflege leistet.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Pfaffenhofen an der Ilm bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Pfaffenhofen und Landkreis Pfaffenhofen: Wolnzach, Schrobenhausen-Grenze, Geisenfeld und alle Gemeinden im Landkreis Pfaffenhofen an der Ilm' },
+      },
     ],
   },
 ]

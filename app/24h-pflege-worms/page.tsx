@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Worms starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Worms rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie ist die Pflege-Versorgung in Worms im Vergleich?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Angespannt. Auf jeden der elf ambulanten Pflegedienste in Worms kommen im Schnitt rund 110 Pflegebedürftige, landesweit sind es 82. Gleichzeitig wird in Worms deutlich häufiger ambulant gepflegt als im Landesschnitt. Der Bedarf ist also hoch und die Kapazität knapp — das merken Familien vor allem dann, wenn sie kurzfristig etwas brauchen. Eine Betreuungskraft, die im Haus lebt, hängt an keiner Tourenplanung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Sind Wormser Innenstadtwohnungen für Pflege zu Hause geeignet?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Meist ja, barrierefrei sind sie aber selten. Im Februar und März 1945 wurde gut ein Drittel des Wormser Gebäudebestands vollständig zerstört; die Innenstadt entstand danach neu, ein großer Teil der Wohnungen stammt aus den fünfziger Jahren. Solide gebaut, aber zu einer Zeit, als niemand an Aufzüge oder bodengleiche Duschen dachte. Für eine Betreuungskraft genügt ein eigenes Zimmer.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Worms bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Worms und Landkreis Alzey-Worms: Alzey, Osthofen, Monsheim und alle Gemeinden im Landkreis Alzey-Worms' },
+      },
     ],
   },
 ]

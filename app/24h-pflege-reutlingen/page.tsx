@@ -52,6 +52,36 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Reutlingen starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Reutlingen rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommt eine Betreuungskraft auch nach Gönningen oder Bronnweiler?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und gerade dort lohnt es sich besonders. Zwischen den bewohnten Ortskernen Reutlingens liegen rund 215 Höhenmeter — Mittelstadt am Neckar auf 320, Gönningen am Fuß des Albtraufs auf 521 Metern. Gönningen ist flächenmäßig gut halb so groß wie die gesamte Kernstadt, hat aber nur 3.902 Einwohner. Für ambulante Dienste bedeutet das lange Fahrwege zwischen wenigen Terminen; für eine Betreuungskraft, die im Haus lebt, spielt die Entfernung schlicht keine Rolle. Anreise und Preis sind in allen zwölf Stadtbezirken gleich.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie ist die Pflegesituation in Reutlingen und Umgebung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auffällig familiär. Von den 16.341 Pflegebedürftigen im Landkreis Reutlingen werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent gegenüber 55,9 Prozent in Baden-Württemberg. Ambulante Dienste (13,6 statt 16,4 Prozent) und Heimplätze (12,9 statt 14,9 Prozent) liegen entsprechend unter dem Landeswert. Seit 2021 ist die Zahl der Pflegebedürftigen um 16,7 Prozent gestiegen. Die Statistik wird nur auf Kreisebene erhoben, für die Stadt allein gibt es keine eigenen Zahlen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Passt eine Betreuungskraft in eine Reutlinger Wohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In den Stadtbezirken meist ohne Weiteres: Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), überwiegend in Ein- und Zweifamilienhäusern, das Zimmer ist oft schon da. In der Kernstadt kommt es auf den Grundriss an — ein Drittel der Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter, im Schnitt sind es 92. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Alles andere klären wir vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Reutlingen bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen' },
+      },
     ],
   },
 ]
@@ -288,6 +318,53 @@ export default function ReutlingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Reutlingen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Reutlingen ist zwei Städte in einer, und das fällt erst auf, wenn jemand pflegebedürftig
+            wird. In der Kernstadt leben rund 70.700 Menschen auf 2.780 Hektar. Gönningen, der
+            südlichste Stadtbezirk, ist mit 1.568 Hektar flächenmäßig gut halb so groß wie die
+            gesamte Kernstadt — und hat 3.902 Einwohner. Zwischen den bewohnten Ortskernen liegen
+            rund 215 Höhenmeter: Mittelstadt am Neckar auf 320 Metern, Gönningen am Fuß des
+            Albtraufs auf 521. Wer dort oben alt wird, hat für jeden Weg — Arzt, Apotheke, Einkauf —
+            eine andere Rechnung aufzumachen als jemand in der Innenstadt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die Pflegestatistik gibt es nur für den Landkreis, nicht für die Stadt allein. Sie zeigt
+            aber etwas, das kaum jemand erwartet: <strong className="text-pm-ink font-semibold">Von
+            den 16.341 Pflegebedürftigen im Kreis werden 9.895 ausschließlich von Angehörigen
+            versorgt — 60,6 Prozent, ganz ohne Pflegedienst.</strong> In Baden-Württemberg sind es
+            55,9 Prozent. Beide professionellen Formen liegen entsprechend darunter: ambulant 13,6
+            statt 16,4 Prozent, vollstationär 12,9 statt 14,9. Hier wird also häufiger als sonst im
+            Land allein gepflegt — von Töchtern, Söhnen und Ehepartnern, die das über Jahre neben
+            Beruf und eigenem Haushalt stemmen. Dass die Zahl der Pflegebedürftigen seit 2021 um
+            16,7 Prozent gestiegen ist, macht die Sache nicht leichter.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen spielt Reutlingen der 24-Stunden-Betreuung in die Hände — allerdings nicht
+            überall. Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), und in den
+            zwölf Stadtbezirken stehen überwiegend Ein- und Zweifamilienhäuser. Da ist das
+            Gästezimmer meist schon vorhanden. In der Kernstadt sieht es anders aus: Ein Drittel
+            aller Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat
+            unter 60 Quadratmeter. Die durchschnittliche Reutlinger Wohnung misst 92 Quadratmeter
+            und damit sieben weniger als der Landesschnitt. Ob eine Betreuungskraft einziehen kann,
+            entscheidet sich also nicht an der Stadt, sondern am Stadtbezirk.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine gute Nachricht gibt es seit Kurzem: Die akutgeriatrischen Betten liegen erst seit
+            Mai 2023 im Klinikum am Steinenberg in der Stadt selbst — vorher musste man dafür in die
+            Ermstalklinik nach Bad Urach. Wer nach einem Sturz oder Schlaganfall aus der
+            Altersmedizin entlassen wird, steht damit zwar näher an zu Hause, aber vor derselben
+            Frage: Wie geht es in der eigenen Wohnung weiter, wenn die Familie schon am Limit ist?
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einziehen kann: Sie ist
+            nachts da, führt den Haushalt und nimmt den Angehörigen die Dauerverantwortung ab — ohne
+            dass jemand aus Gönningen oder Bronnweiler wegziehen muss. Bevor Sie sich festlegen,
+            lassen Sie sich unabhängig beraten. Die Pflegeberatung ist kostenlos, trägerunabhängig
+            und kommt auf Wunsch zu Ihnen nach Hause (§ 7a SGB XI).
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Reutlingen</h2>
           <div className="space-y-3 mb-12">
@@ -296,6 +373,9 @@ export default function ReutlingenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Reutlingen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Reutlingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Kommt eine Betreuungskraft auch nach Gönningen oder Bronnweiler?', a: 'Ja, und gerade dort lohnt es sich besonders. Zwischen den bewohnten Ortskernen Reutlingens liegen rund 215 Höhenmeter — Mittelstadt am Neckar auf 320, Gönningen am Fuß des Albtraufs auf 521 Metern. Gönningen ist flächenmäßig gut halb so groß wie die gesamte Kernstadt, hat aber nur 3.902 Einwohner. Für ambulante Dienste bedeutet das lange Fahrwege zwischen wenigen Terminen; für eine Betreuungskraft, die im Haus lebt, spielt die Entfernung schlicht keine Rolle. Anreise und Preis sind in allen zwölf Stadtbezirken gleich.' },
+              { q: 'Wie ist die Pflegesituation in Reutlingen und Umgebung?', a: 'Auffällig familiär. Von den 16.341 Pflegebedürftigen im Landkreis Reutlingen werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent gegenüber 55,9 Prozent in Baden-Württemberg. Ambulante Dienste (13,6 statt 16,4 Prozent) und Heimplätze (12,9 statt 14,9 Prozent) liegen entsprechend unter dem Landeswert. Seit 2021 ist die Zahl der Pflegebedürftigen um 16,7 Prozent gestiegen. Die Statistik wird nur auf Kreisebene erhoben, für die Stadt allein gibt es keine eigenen Zahlen.' },
+              { q: 'Passt eine Betreuungskraft in eine Reutlinger Wohnung?', a: 'In den Stadtbezirken meist ohne Weiteres: Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), überwiegend in Ein- und Zweifamilienhäusern, das Zimmer ist oft schon da. In der Kernstadt kommt es auf den Grundriss an — ein Drittel der Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter, im Schnitt sind es 92. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Alles andere klären wir vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Welches Einzugsgebiet wird in Reutlingen bedient?', a: 'Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

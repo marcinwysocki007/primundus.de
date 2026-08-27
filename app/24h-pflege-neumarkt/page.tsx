@@ -52,6 +52,36 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Neumarkt in der Oberpfalz starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Neumarkt in der Oberpfalz rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie ist die ambulante Versorgung im Landkreis Neumarkt?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Dünn. Für rund 138.000 Einwohner gibt es elf ambulante Pflegedienste; auf jeden kommen im Schnitt etwa 97 Pflegebedürftige, in Bayern sind es 58. Das ist einer der höchsten Werte der Oberpfalz. Wer kurzfristig Unterstützung braucht, merkt das sofort — die Dienste sind ausgelastet, und die Termine richten sich nach der Tour. Eine Betreuungskraft, die im Haus wohnt, hängt an keiner Tourenplanung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Warum leben in Neumarkt so viele Pflegebedürftige im Heim?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weil die Alternativen fehlen. Im Landkreis Neumarkt leben 20 Prozent aller Pflegebedürftigen in stationärer Dauerpflege, in Bayern sind es 17 und im Bund 14 Prozent. Zusammen mit der dünnen ambulanten Versorgung ergibt das für viele Familien ein Entweder-oder: alles selbst stemmen oder ins Heim. Die Betreuung im eigenen Zuhause ist der Weg dazwischen, und sie lässt sich mit dem Pflegegeld kombinieren.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Sind Neumarkter Wohnungen für Pflege zu Hause geeignet?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In aller Regel ja, barrierefrei sind sie aber selten. Im April 1945 lagen 92 Prozent der Bausubstanz im historischen Stadtkern in Trümmern — in der Marktstraße blieben zwei Häuser stehen. Was heute steht, ist deshalb fast durchweg Nachkriegsbau: Nur gut ein Prozent der Neumarkter Wohnungen stammt aus der Zeit vor 1919, im Bundesschnitt sind es dreizehn. Diese Häuser sind solide, entstanden aber vor jedem Gedanken an Barrierefreiheit. Für die Betreuungskraft genügt ein eigenes Zimmer.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Neumarkt in der Oberpfalz bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Neumarkt und Landkreis Neumarkt in der Oberpfalz: Parsberg, Velburg, Berching und alle Gemeinden im Landkreis Neumarkt' },
+      },
     ],
   },
 ]

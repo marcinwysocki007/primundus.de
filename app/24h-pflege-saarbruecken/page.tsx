@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Saarbrücken starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Saarbrücken rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Lohnt sich 24-Stunden-Pflege, wenn es in Saarbrücken genug ambulante Dienste gibt?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Die Frage ist berechtigt — der Regionalverband ist dicht besiedelt, ambulante Dienste sind erreichbar. Der Unterschied liegt nicht in der Entfernung, sondern in der Anwesenheit. Ein Dienst kommt zu festen Zeiten und bleibt zwanzig Minuten. Er ist nicht da, wenn nachts jemand aufsteht, er kocht nicht mit und er merkt nicht, wenn tagsüber etwas nicht stimmt. Wo es um Begleitung über den ganzen Tag geht, ersetzt kein Einsatzplan jemanden, der im Haus wohnt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was bedeutet die Hanglage für die Betreuung in Saarbrücken?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Zwischen der Stadtmitte auf rund 230 Metern und Wohnlagen wie dem Eschberg auf 340 Metern liegen gut hundert Höhenmeter — auf kurzer Strecke. Wer dort oben oder in einer der Hanglagen über der Saar wohnt, merkt jede Steigung, sobald das Gehen schwerer fällt. Eine Betreuungskraft übernimmt die Wege nach draußen: einkaufen, Arzttermine, Begleitung. Damit bleibt der Alltag möglich, ohne dass jemand die vertraute Wohnung aufgeben muss.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Saarbrücken bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Saarbrücken und Umland: Neunkirchen, Homburg, Völklingen, Saarlouis und alle Gemeinden im Saarpfalz-Kreis und Landkreis Saarlouis' },
+      },
     ],
   },
 ]

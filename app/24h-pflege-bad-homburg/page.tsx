@@ -52,6 +52,36 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Bad Homburg vor der Höhe starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Bad Homburg vor der Höhe rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wir pflegen bisher selbst — wann wird eine Betreuungskraft sinnvoll?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Im Hochtaunuskreis beziehen 61,7 Prozent aller Pflegebedürftigen ausschließlich Pflegegeld, werden also allein von Angehörigen versorgt; in Hessen sind es 58,6 Prozent. Gleichzeitig nutzen nur 15,2 Prozent einen ambulanten Dienst. Viele Familien hier stehen deshalb vor einem Entweder-oder. Eine Betreuungskraft, die mit einzieht, ist der Weg dazwischen: Sie übernimmt die Dauerbelastung, während Sie Angehörige bleiben. Pflegegeld und Betreuung lassen sich kombinieren.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist eine Bad Homburger Wohnung für Pflege zu Hause geeignet?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In aller Regel ja, barrierefrei ist sie aber meist nicht. Zwar sind drei Viertel der Gebäude in Bad Homburg Ein- oder Zweifamilienhäuser, doch zwei Drittel aller Wohnungen liegen in Mehrfamilienhäusern — und knapp die Hälfte des Bestands stammt aus den Jahren 1949 bis 1978, also aus einer Zeit vor jeder Barrierefreiheitsanforderung. Für die Betreuungskraft genügt ein eigenes Zimmer; entscheidend ist, dass jemand da ist und die Wege übernimmt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommt eine Betreuungskraft auch in die Ortsteile und in den Hochtaunuskreis?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja. Das ist außerhalb der Kernstadt besonders wichtig, denn der Kreis ist zweigeteilt: Bad Homburg kommt auf über 1.100 Einwohner je Quadratkilometer, das Usinger Land auf keine 300. Dort fahren ambulante Dienste lange Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft im Haus ist davon unabhängig — in Ober-Erlenbach und Dornholzhausen ebenso wie in Oberursel, Friedrichsdorf oder Königstein. Anfahrtskosten berechnen wir nicht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Bad Homburg vor der Höhe bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Bad Homburg und Hochtaunuskreis: Friedrichsdorf, Oberursel, Kronberg im Taunus, Königstein im Taunus und alle Gemeinden im Hochtaunuskreis' },
+      },
     ],
   },
 ]

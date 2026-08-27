@@ -52,6 +52,36 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Bad Nauheim starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Bad Nauheim rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Liegt der hohe Altersschnitt in Bad Nauheim an den Kurgästen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Nein. Kurgäste sind nicht mit Hauptwohnsitz gemeldet und tauchen in der Bevölkerungsstatistik gar nicht auf — die 14,5 Prozent Einwohner über 75 entstehen ohne sie. Der eigentliche Grund ist Zuzug: Bad Nauheim gewinnt jedes Jahr deutlich mehr Menschen über 65 hinzu, als es verliert, während Hessen in dieser Altersgruppe insgesamt leicht abgibt. Viele ziehen hierher, um älter zu werden — und haben ihre Familie dann nicht in der Nähe.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wir überlegen zwischen Heimplatz und Betreuung zu Hause — was ist im Wetteraukreis üblich?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Der Wetteraukreis hält rund 60 Heimplätze je 1.000 Einwohner über 65 vor, fast ein Drittel mehr als Hessen im Schnitt. Gleichzeitig beziehen 60 Prozent aller Pflegebedürftigen ausschließlich Pflegegeld, werden also allein von Angehörigen versorgt, und nur 14 Prozent nutzen einen ambulanten Dienst. Viel Heim, viel Angehörigenpflege — und wenig dazwischen. Eine Betreuungskraft im eigenen Zuhause ist genau dieser fehlende Mittelweg.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist Bad Nauheim für ältere Menschen gut erschlossen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ungewöhnlich gut. Die Stadt ist kompakt gebaut und liegt im flachen Talgrund der Wetterau; bis zum Hausarzt sind es im Schnitt gut 500 Meter, etwa halb so weit wie im Bundesdurchschnitt, zur Apotheke und zum Supermarkt ebenfalls deutlich weniger als anderswo. Was in Bad Nauheim fehlt, ist selten die Infrastruktur — es ist jemand im Haus, der beim Aufstehen hilft und nachts da ist.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Bad Nauheim bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Bad Nauheim und Wetteraukreis: Friedberg, Butzbach, Niddatal, Karben und alle Gemeinden im Wetteraukreis' },
+      },
     ],
   },
 ]

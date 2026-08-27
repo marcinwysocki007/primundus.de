@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Pforzheim starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Pforzheim rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was bedeuten die Pforzheimer Höhenunterschiede für die Betreuung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Zwischen dem tiefsten und dem höchsten Punkt der Stadt liegen rund 370 Höhenmeter. Die Innenstadt sitzt unten in den Talsohlen am Zusammenfluss von Enz, Nagold und Würm, große Teile des Stadtgebiets liegen mehrere hundert Meter darüber. Wer am Hang wohnt, für den beginnt jeder Weg mit einer Steigung — auch der zur Bushaltestelle. Eine Betreuungskraft übernimmt genau diese Wege und macht das Wohnenbleiben damit erst praktikabel.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Sind Pforzheimer Wohnungen aus der Nachkriegszeit für Pflege geeignet?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Meist ja, aber selten barrierefrei. Nach der Zerstörung von 1945 stammt knapp die Hälfte des Wohnungsbestands aus den Jahren 1949 bis 1978. Diese Häuser sind solide gebaut, entstanden aber lange vor jedem Gedanken an Barrierefreiheit — schmale Treppenhäuser ohne Aufzug gehören dazu. Für eine Betreuungskraft reicht ein eigenes Zimmer; die eigentliche Erleichterung liegt darin, dass jemand da ist und die Wege nach draußen übernimmt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Pforzheim bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Pforzheim und Enzkreis: Mühlacker, Neuenbürg, Birkenfeld und alle Gemeinden im Enzkreis und Landkreis Calw' },
+      },
     ],
   },
 ]

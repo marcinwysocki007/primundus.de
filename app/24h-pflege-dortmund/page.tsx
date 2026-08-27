@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Dortmund starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Dortmund rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Funktioniert 24-Stunden-Pflege auch in einer alten Zechensiedlung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja. In Oberdorstfeld, der Alten Kolonie in Eving oder der Müsersiedlung in Derne stehen kleine Häuser mit Garten aus der Zeit um die vorletzte Jahrhundertwende. Sie sind eng und haben Treppen, waren also nie für einen Rollstuhl gedacht — trotzdem will kaum jemand dort weg. Für die Betreuungskraft braucht es ein eigenes Zimmer; alles Weitere richtet sich nach dem Alltag vor Ort. Genau in solchen Häusern ist eine Betreuung im Haus oft die einzige Alternative zum Umzug.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Gilt das Angebot auch im Umland von Dortmund?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, im gesamten Einzugsgebiet. Bemerkenswert ist dabei: Dortmund ist jünger als sein Umland. In der Stadt ist gut jeder Fünfte über 65, in den Kreisen Unna, Recklinghausen und im Ennepe-Ruhr-Kreis jeweils rund ein Viertel. Wer in Lünen, Kamen oder Castrop-Rauxel lebt, findet dichte Versorgung vor — aber ein ambulanter Dienst kommt zu festen Zeiten, nicht dann, wenn nachts jemand aufsteht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Dortmund bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Dortmund und Umland: Bochum, Herne, Castrop-Rauxel, Lünen, Unna, Schwerte, Witten und alle Gemeinden im Kreis Unna' },
+      },
     ],
   },
 ]

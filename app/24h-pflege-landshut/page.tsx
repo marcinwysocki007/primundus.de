@@ -49,8 +49,38 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Gibt es in Bayern besondere Pflegeförderungen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Pflegekraft in Landshut starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Landshut rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommt eine Betreuungskraft auch in die Dörfer im Landkreis Landshut?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und dort wiegt der Unterschied am schwersten. Auf über 1.300 Quadratkilometern verteilen sich 35 Gemeinden mit im Schnitt gut 120 Einwohnern je Quadratkilometer — deutlich dünner besiedelt als Bayern insgesamt. Ambulante Dienste fahren entsprechend lange Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft, die im Haus wohnt, braucht keine Anfahrt. Der Preis ist im Landkreis derselbe wie in der Stadt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Gibt es in Bayern zusätzliche Leistungen zum Pflegegeld?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, das Landespflegegeld: 1.000 Euro im Jahr für Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt und ob zusätzlich Pflegegeld oder Sachleistungen fließen. Der Antrag läuft über das Landesamt für Pflege. Zusammen mit Pflegegeld und Entlastungsbetrag senkt das den Eigenanteil einer 24-Stunden-Betreuung spürbar.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Landshut bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Landshut und Landkreis Landshut: Rottenburg, Geisenhausen, Ergoldsbach und alle Gemeinden im Landkreis Landshut und Dingolfing-Landau' },
       },
     ],
   },

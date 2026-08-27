@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Tübingen starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Tübingen rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist eine Betreuung in der Tübinger Altstadt überhaupt praktikabel?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und sie ist dort oft besonders sinnvoll. Kopfsteinpflaster, enge Gassen und die Hanglage machen jeden Weg nach draußen anstrengend — selbst die offizielle Stadtführung für Rollstuhlfahrer braucht eine eigens ausgesuchte Route. Wer hier seit Jahrzehnten wohnt, will deshalb nicht wegziehen. Eine Betreuungskraft, die mit einzieht, übernimmt genau die Wege, die schwierig geworden sind, und macht das Wohnenbleiben damit erst möglich.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommt eine Betreuungskraft auch in die Tübinger Teilorte und in den Landkreis?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja. Hagelloch, Bebenhausen, Unterjesingen und Kilchberg sind klein, und im Landkreis Tübingen haben neun von fünfzehn Gemeinden weniger als 10.000 Einwohner. Dort fahren ambulante Dienste längere Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft im Haus ist davon unabhängig — in Rottenburg, Mössingen oder Ammerbuch genauso wie in der Stadt, zum selben Preis und ohne Anfahrtskosten.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Tübingen bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Tübingen und Landkreis Tübingen: Rottenburg am Neckar, Mössingen, Ammerbuch und alle Gemeinden im Landkreis Tübingen' },
+      },
     ],
   },
 ]

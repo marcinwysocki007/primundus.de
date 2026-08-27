@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Heilbronn starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Heilbronn rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Warum wird 24-Stunden-Pflege in Heilbronn zunehmend nachgefragt?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Wegen der Dynamik, nicht wegen des Bestands. Heilbronn ist mit einem Durchschnittsalter von 42 Jahren jünger als der Bundesschnitt — aber die Gruppe der über 80-Jährigen ist zwischen 2014 und 2023 um 31 Prozent gewachsen, während die 65- bis 79-Jährigen sogar weniger wurden. Es gibt also deutlich mehr Hochbetagte, und damit mehr Familien, bei denen es zu Hause allein nicht mehr geht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist eine Heilbronner Nachkriegswohnung für Pflege geeignet?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In aller Regel ja, barrierefrei ist sie meist nicht. Die Altstadt wurde am 4. Dezember 1944 in 37 Minuten zu großen Teilen zerstört; heute stammen nur rund zwei Prozent der Wohnungen aus der Zeit vor 1900, dafür etwa die Hälfte aus den Jahren 1946 bis 1977. Die Stadt selbst nennt den Mangel an barrierearmem Wohnraum als eine ihrer größten Herausforderungen. Für eine Betreuungskraft genügt ein eigenes Zimmer.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Heilbronn bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Heilbronn und Landkreis Heilbronn: Bad Rappenau, Brackenheim, Neckarsulm, Öhringen und alle Gemeinden im Landkreis Heilbronn' },
+      },
     ],
   },
 ]

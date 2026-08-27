@@ -52,6 +52,36 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Bocholt starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Bocholt rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Bocholt ist flach und fahrradfreundlich — reicht das nicht?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Die flache Lage hilft tatsächlich, und die Stadt selbst nennt sie in ihrem Mobilitätskonzept als guten Ausgangspunkt für Barrierefreiheit. In Bocholt werden über 40 Prozent aller Wege mit dem Rad zurückgelegt. Nur ist genau das Verkehrsmittel, das bei Gangunsicherheit, nachlassendem Sehvermögen oder Demenz als Erstes wegfällt — und danach bleibt ein Busangebot, das noch längst nicht durchgehend niederflurig ist. Die Flachheit verschiebt den Zeitpunkt, an dem es allein nicht mehr geht. Aufheben kann sie ihn nicht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Sind Bocholter Wohnungen für Pflege zu Hause geeignet?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In aller Regel ja, barrierefrei sind sie aber selten. Am 22. März 1945 wurde Bocholt in fünfundzwanzig Minuten zu rund 85 Prozent zerstört — in der Altstadt blieben drei Häuser unversehrt. Was heute steht, ist deshalb fast vollständig Wiederaufbau- und Nachkriegsbestand: solide gebaut, aber zu einer Zeit, als niemand an Aufzüge oder bodengleiche Duschen dachte. Für die Betreuungskraft genügt ein eigenes Zimmer.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommt eine Betreuungskraft auch in die Bauerschaften und in den Kreis Borken?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und dort ist der Unterschied am deutlichsten. Bocholt ist die größte Stadt im Kreis Borken, aber nicht die Kreisstadt — das ist Borken selbst. Wer in Barlo, Stenern, Biemenhorst oder Richtung Isselburg und Rhede wohnt, kennt die längeren Wege: Ambulante Dienste fahren dort Touren, und die Termine richten sich nach der Route statt nach Ihrem Tagesablauf. Eine Betreuungskraft im Haus ist davon unabhängig, und Anfahrtskosten berechnen wir nicht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Bocholt bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Bocholt und Westmünsterland: Rhede, Borken, Isselburg, Raesfeld und alle Gemeinden im Kreis Borken' },
+      },
     ],
   },
 ]

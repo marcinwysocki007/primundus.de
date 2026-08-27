@@ -52,6 +52,36 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Oldenburg starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Oldenburg rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist in einer Oldenburger Wohnung Platz für eine Betreuungskraft?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Häufiger als in vielen anderen Städten. 81 Prozent der Gebäude in Oldenburg sind Ein- oder Zweifamilienhäuser, 69 Prozent stehen frei — der Bestand ist zudem jung, fast jede fünfte Wohnung wurde nach 2000 gebaut. Das Gästezimmer ist also oft schon vorhanden. Es gilt aber nicht überall: Rund 27 Prozent der Wohnungen haben unter 60 Quadratmeter, und nur 36,3 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1). Notwendig ist ein eigenes, abschließbares Zimmer. Was Ihre Wohnung hergibt, klären wir vorab.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie ist die Pflegesituation in Oldenburg?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In Oldenburg leben 10.606 Menschen mit Pflegebedarf, 35.882 Einwohner sind über 65. Bemerkenswert ist der Heimanteil: Mit 13,3 Prozent liegt er unter dem niedersächsischen Wert von 14,5 Prozent und deutlich unter dem Landkreis Oldenburg (16,6 Prozent) — die Stadt trägt die Heimversorgung fürs Umland also nicht mit. Die häusliche Pflege entspricht mit 56,0 Prozent reinem Pflegegeld dem Landesschnitt. Die auf den ersten Blick niedrige Pflegequote (61 je 1.000 Einwohner gegenüber 76 im Land) liegt an der jungen Universitätsstadt, nicht an geringerem Bedarf.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommen die Betreuungskräfte auch in die äußeren Stadtbezirke?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und dort zahlt es sich besonders aus. Oldenburg ist zwar insgesamt dicht besiedelt, doch zwischen den Stadtbezirken liegt der Faktor 23: In Ziegelhof/Ehnern leben 44,8 Menschen je Hektar, in Neuenwege/Kloster Blankenburg 2,0 — knapp 2.000 Einwohner auf fast zehn Quadratkilometern, mitten im Stadtgebiet. Für einen ambulanten Dienst bedeuten Bornhorst, Etzhorn oder Neuenwege lange Fahrten für kurze Einsätze. Eine Betreuungskraft, die im Haus lebt, hat diese Wege nicht. Anreise und Preis sind überall gleich.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Oldenburg bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Oldenburg und Umland: Delmenhorst, Westerstede, Cloppenburg, Wildeshausen und alle Gemeinden im Landkreis Oldenburg und Ammerland' },
+      },
     ],
   },
 ]
@@ -285,6 +315,52 @@ export default function OldenburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Oldenburg und Umland: Delmenhorst, Westerstede, Cloppenburg, Wildeshausen und alle Gemeinden im Landkreis Oldenburg und Ammerland</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Oldenburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Oldenburg kam durch den Krieg nahezu unbeschadet — 1,4 Prozent der Stadt wurden zerstört,
+            130 Wohnhäuser, die Innenstadt blieb stehen. Trotzdem hat Oldenburg heute weniger alte
+            Wohnungen als Städte, die in Trümmern lagen: 16,0 Prozent stammen aus der Zeit vor 1950.
+            Der Grund ist ein anderer. 1946 überschritt die Stadt durch den Zuzug von Flüchtlingen
+            und Vertriebenen erstmals die 100.000-Einwohner-Marke, und was danach gebaut wurde,
+            überwiegt den alten Bestand bei Weitem. Für die Pflege zu Hause ist das eine gute
+            Nachricht: <strong className="text-pm-ink font-semibold">81 Prozent der Gebäude sind Ein-
+            oder Zweifamilienhäuser, 69 Prozent stehen frei.</strong> Ein Zimmer für eine
+            Betreuungskraft ist hier häufiger vorhanden als anderswo.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Das gilt allerdings nicht für die ganze Stadt. Oldenburg ist mit rund 1.714 Einwohnern je
+            Quadratkilometer dichter besiedelt, als das Bild der Einfamilienhäuser vermuten lässt,
+            und zwischen den neun Stadtbezirken liegen Welten: Im Bezirk Ziegelhof/Ehnern leben
+            44,8 Menschen je Hektar, im Bezirk Neuenwege/Kloster Blankenburg 2,0 — knapp 2.000
+            Einwohner auf fast zehn Quadratkilometern, also Landkreis-Verhältnisse innerhalb der
+            Stadtgrenze. Rund 27 Prozent der Wohnungen haben unter 60 Quadratmeter, und nur 36,3
+            Prozent der Haushalte wohnen im Eigentum, deutlich weniger als in Niedersachsen mit 51,1.
+            Ob eine Betreuungskraft einziehen kann, hängt also auch hier am konkreten Grundriss.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die Pflegezahlen halten eine Überraschung bereit. In Oldenburg leben 10.606 Menschen mit
+            Pflegebedarf. Der Anteil derer, die vollstationär im Heim versorgt werden, liegt mit
+            13,3 Prozent <em>unter</em> dem niedersächsischen Wert von 14,5 — und deutlich unter dem
+            Landkreis Oldenburg mit 16,6 Prozent. Der sonst übliche Effekt, dass eine Stadt die
+            Heimversorgung fürs Umland mitträgt, zeigt sich hier also nicht. Die häusliche Pflege
+            entspricht mit 56,0 Prozent reinem Pflegegeld ziemlich genau dem Landesschnitt (55,4).
+            Ein Hinweis zur Einordnung: Die niedrige Pflegequote der Stadt (61 je 1.000 Einwohner
+            gegenüber 76 im Land) bedeutet keinen geringeren Bedarf — Oldenburg ist Universitätsstadt
+            mit jüngerer Bevölkerung. 35.882 Menschen hier sind über 65.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Medizinisch ist Oldenburg gut aufgestellt: Die Universitätsklinik für Geriatrie am
+            Klinikum Oldenburg deckt die Akutversorgung ab, und mit der geriatrischen Rehabilitation
+            im Reha-Zentrum gibt es die Anschlussbehandlung am selben Ort. Was nach der Entlassung
+            kommt, ist trotzdem die Frage, an der es meistens hängt. Eine Betreuungskraft, die mit
+            einzieht, ist nachts da, führt den Haushalt und macht es möglich, dass jemand in seinem
+            eigenen Haus bleibt — auch draußen in Bornhorst oder Neuenwege, wo ein ambulanter Dienst
+            weite Wege für wenige Termine fahren müsste. Lassen Sie sich vorher unabhängig beraten:
+            Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch
+            zu Ihnen nach Hause.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Oldenburg</h2>
           <div className="space-y-3 mb-12">
@@ -293,6 +369,9 @@ export default function OldenburgPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Oldenburg starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Oldenburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Ist in einer Oldenburger Wohnung Platz für eine Betreuungskraft?', a: 'Häufiger als in vielen anderen Städten. 81 Prozent der Gebäude in Oldenburg sind Ein- oder Zweifamilienhäuser, 69 Prozent stehen frei — der Bestand ist zudem jung, fast jede fünfte Wohnung wurde nach 2000 gebaut. Das Gästezimmer ist also oft schon vorhanden. Es gilt aber nicht überall: Rund 27 Prozent der Wohnungen haben unter 60 Quadratmeter, und nur 36,3 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1). Notwendig ist ein eigenes, abschließbares Zimmer. Was Ihre Wohnung hergibt, klären wir vorab.' },
+              { q: 'Wie ist die Pflegesituation in Oldenburg?', a: 'In Oldenburg leben 10.606 Menschen mit Pflegebedarf, 35.882 Einwohner sind über 65. Bemerkenswert ist der Heimanteil: Mit 13,3 Prozent liegt er unter dem niedersächsischen Wert von 14,5 Prozent und deutlich unter dem Landkreis Oldenburg (16,6 Prozent) — die Stadt trägt die Heimversorgung fürs Umland also nicht mit. Die häusliche Pflege entspricht mit 56,0 Prozent reinem Pflegegeld dem Landesschnitt. Die auf den ersten Blick niedrige Pflegequote (61 je 1.000 Einwohner gegenüber 76 im Land) liegt an der jungen Universitätsstadt, nicht an geringerem Bedarf.' },
+              { q: 'Kommen die Betreuungskräfte auch in die äußeren Stadtbezirke?', a: 'Ja, und dort zahlt es sich besonders aus. Oldenburg ist zwar insgesamt dicht besiedelt, doch zwischen den Stadtbezirken liegt der Faktor 23: In Ziegelhof/Ehnern leben 44,8 Menschen je Hektar, in Neuenwege/Kloster Blankenburg 2,0 — knapp 2.000 Einwohner auf fast zehn Quadratkilometern, mitten im Stadtgebiet. Für einen ambulanten Dienst bedeuten Bornhorst, Etzhorn oder Neuenwege lange Fahrten für kurze Einsätze. Eine Betreuungskraft, die im Haus lebt, hat diese Wege nicht. Anreise und Preis sind überall gleich.' },
               { q: 'Welches Einzugsgebiet wird in Oldenburg bedient?', a: 'Oldenburg und Umland: Delmenhorst, Westerstede, Cloppenburg, Wildeshausen und alle Gemeinden im Landkreis Oldenburg und Ammerland' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

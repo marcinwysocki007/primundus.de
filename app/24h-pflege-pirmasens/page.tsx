@@ -52,6 +52,31 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine 24h-Pflegekraft in Pirmasens starten?',
         acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist 24h-Pflege über Primundus in Pirmasens rechtssicher?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Kommt eine Betreuungskraft auch in die Orte im Pfälzerwald?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und genau dort ist der Unterschied am größten. In Rodalben, Hauenstein, Dahn und den kleineren Gemeinden des Landkreises Südwestpfalz fahren ambulante Dienste lange Touren — die Termine richten sich dann nach der Route, nicht nach Ihrem Tagesablauf. Eine Betreuungskraft, die im Haus wohnt, ist von Fahrplänen unabhängig. Anfahrtskosten berechnen wir nicht, der Preis ist derselbe wie in der Stadt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was bedeuten die Pirmasenser Steigungen für die Betreuung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Sie sind oft der eigentliche Auslöser. Wer in einer der Hanglagen wohnt, schafft irgendwann den Weg zur Haltestelle oder zum Arzt nicht mehr allein — und bleibt dann zu Hause, obwohl gesundheitlich noch mehr möglich wäre. Eine Betreuungskraft übernimmt genau diese Wege: einkaufen, begleiten, Termine organisieren. Das hält Menschen im Alltag, statt sie in der Wohnung zu isolieren.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welches Einzugsgebiet wird in Pirmasens bedient?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Pirmasens und Zweibrücken sowie Landkreis Südwestpfalz: Rodalben, Hauenstein, Dahn und alle Gemeinden im Landkreis Südwestpfalz' },
+      },
     ],
   },
 ]
