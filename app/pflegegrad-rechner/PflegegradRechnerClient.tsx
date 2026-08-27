@@ -187,11 +187,12 @@ export default function PflegegradRechnerClient() {
 
           {/* Hero */}
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Kostenloser Pflegegrad-Rechner 2026
+            Pflegegrad berechnen — kostenlos und in 3 Minuten
           </h1>
           <p className="text-[17px] text-pm-body leading-relaxed mb-8">
-            Schätzen Sie den Pflegebedarf in nur 3 Minuten ein — anonym, kostenlos und unverbindlich.
-            Der Rechner gibt Ihnen einen ersten Hinweis auf den möglichen Pflegegrad vor der offiziellen Begutachtung.
+            Der Rechner geht dieselben sechs Bereiche durch wie der Gutachter und rechnet mit
+            derselben Gewichtung. Sie bekommen dadurch eine realistische Einschätzung, welcher
+            Pflegegrad möglich ist — anonym, ohne Anmeldung und ohne dass wir Ihre Antworten speichern.
           </p>
 
           {/* Info cards */}
