@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Cottbus?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Cottbus ist bekannt: Die durchschnittliche Wohnung misst 75,1 Quadratmeter, 44,9 Prozent liegen unter 60 Quadratmetern (Brandenburg: 27,4 Prozent), und 23,7 Prozent der Haushalte wohnen im Eigentum (Brandenburg: 45,5 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Cottbus?',
+        acceptedAnswer: { '@type': 'Answer', text: '13.186 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 14,0 Prozent — in Brandenburg 12,6 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 28,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Brandenburg: 27,7 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Cottbus — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Cottbus im Schnitt 3,6 Wohnungen, in Brandenburg 1,9. 60,4 Prozent der Gebäude stehen frei, 28,2 Prozent sind Reihenhäuser. 39,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Cottbus ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Cottbus bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Cottbus und Landkreis Spree-Neiße: Spremberg, Guben, Forst und alle Gemeinden im Landkreis Spree-Neiße' },
       },
@@ -324,13 +339,13 @@ export default function CottbusPage() {
             Ob jemand zur Miete oder im Eigentum wohnt, ändert in Cottbus die Möglichkeiten. Nur 23,7 Prozent der Haushalte wohnen im Eigentum — in Brandenburg sind es 45,5 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. 44,9 Prozent der Wohnungen in Cottbus haben weniger als 60 Quadratmeter, in Brandenburg sind es 27,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Auf ein Gebäude kommen in Cottbus im Schnitt 3,6 Wohnungen, in Brandenburg sind es 1,9. Cottbus ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten. 39,0 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Brandenburg 20,0 Prozent.
+            Auf ein Gebäude kommen in Cottbus im Schnitt 3,6 Wohnungen, in Brandenburg sind es 1,9. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. 39,0 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Brandenburg 20,0 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Altbau vor 1950 macht in Cottbus 21,9 Prozent des Bestands aus, in Brandenburg 33,8 Prozent. 53,5 Prozent aller Haushalte in Cottbus bestehen aus einer einzigen Person, in Brandenburg sind es 41,8 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Die durchschnittliche Wohnung misst 75,1 Quadratmeter gegenüber 88,5 in Brandenburg — rund 13 Quadratmeter weniger.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 13.186 Menschen in Cottbus sind 75 Jahre oder älter, und der Ort zählt 57.895 Wohnungen in 16.074 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 13.186 Menschen in Cottbus sind 75 Jahre oder älter, und es gibt 57.895 Wohnungen in 16.074 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -351,6 +366,9 @@ export default function CottbusPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Cottbus starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Cottbus rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Cottbus?', a: 'Das hängt am Grundriss, und die Ausgangslage in Cottbus ist bekannt: Die durchschnittliche Wohnung misst 75,1 Quadratmeter, 44,9 Prozent liegen unter 60 Quadratmetern (Brandenburg: 27,4 Prozent), und 23,7 Prozent der Haushalte wohnen im Eigentum (Brandenburg: 45,5 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Cottbus?', a: '13.186 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 14,0 Prozent — in Brandenburg 12,6 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 28,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Brandenburg: 27,7 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Cottbus — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Cottbus im Schnitt 3,6 Wohnungen, in Brandenburg 1,9. 60,4 Prozent der Gebäude stehen frei, 28,2 Prozent sind Reihenhäuser. 39,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Cottbus ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Cottbus?', a: 'Das hängt am Grundriss, und die Ausgangslage in Cottbus ist bekannt: Die durchschnittliche Wohnung misst 75,1 Quadratmeter, 44,9 Prozent liegen unter 60 Quadratmetern (Brandenburg: 27,4 Prozent), und 23,7 Prozent der Haushalte wohnen im Eigentum (Brandenburg: 45,5 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Cottbus?', a: '13.186 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 14,0 Prozent — in Brandenburg 12,6 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 28,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Brandenburg: 27,7 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Cottbus — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Cottbus im Schnitt 3,6 Wohnungen, in Brandenburg 1,9. 60,4 Prozent der Gebäude stehen frei, 28,2 Prozent sind Reihenhäuser. 39,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Cottbus ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Aachen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Aachen ist bekannt: Die durchschnittliche Wohnung misst 77,5 Quadratmeter, 40,1 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 23,6 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Aachen?',
+        acceptedAnswer: { '@type': 'Answer', text: '24.661 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,4 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Aachen — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Aachen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. 25,2 Prozent der Gebäude stehen frei, 51,3 Prozent sind Reihenhäuser. 56,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Aachen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Aachen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Aachen und StädteRegion: Alsdorf, Baesweiler, Eschweiler, Herzogenrath, Würselen und alle Gemeinden in der StädteRegion Aachen' },
       },
@@ -327,10 +342,10 @@ export default function AachenPage() {
             Nur 23,6 Prozent der Haushalte wohnen im Eigentum — in Nordrhein-Westfalen sind es 40,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Die durchschnittliche Wohnung misst 77,5 Quadratmeter gegenüber 92,7 in Nordrhein-Westfalen — rund 15 Quadratmeter weniger.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 25,2 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. Auf ein Gebäude kommen in Aachen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen sind es 2,3. Aachen ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten. 53,4 Prozent aller Haushalte in Aachen bestehen aus einer einzigen Person, in Nordrhein-Westfalen sind es 43,7 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
+            Nur 25,2 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. Auf ein Gebäude kommen in Aachen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen sind es 2,3. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. 53,4 Prozent aller Haushalte in Aachen bestehen aus einer einzigen Person, in Nordrhein-Westfalen sind es 43,7 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 24.661 Menschen in Aachen sind 75 Jahre oder älter, und der Ort zählt 145.070 Wohnungen in 41.368 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 24.661 Menschen in Aachen sind 75 Jahre oder älter, und es gibt 145.070 Wohnungen in 41.368 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -351,6 +366,9 @@ export default function AachenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Aachen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Aachen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Aachen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Aachen ist bekannt: Die durchschnittliche Wohnung misst 77,5 Quadratmeter, 40,1 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 23,6 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Aachen?', a: '24.661 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,4 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Aachen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Aachen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. 25,2 Prozent der Gebäude stehen frei, 51,3 Prozent sind Reihenhäuser. 56,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Aachen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Aachen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Aachen ist bekannt: Die durchschnittliche Wohnung misst 77,5 Quadratmeter, 40,1 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 23,6 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Aachen?', a: '24.661 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,4 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Aachen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Aachen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. 25,2 Prozent der Gebäude stehen frei, 51,3 Prozent sind Reihenhäuser. 56,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Aachen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

@@ -219,7 +219,7 @@ export default function HochtaunuskreisPage() {
             Altbau vor 1950 macht in Hochtaunuskreis 13,9 Prozent des Bestands aus, in Hessen 20,4 Prozent. Mit 9,23 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Hochtaunuskreis teurer als im Schnitt von Hessen (8,21 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 30.010 Menschen in Hochtaunuskreis sind 75 Jahre oder älter, und der Ort zählt 116.461 Wohnungen in 55.882 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 30.010 Menschen in Hochtaunuskreis sind 75 Jahre oder älter, und es gibt 116.461 Wohnungen in 55.882 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —

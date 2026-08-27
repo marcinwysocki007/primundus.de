@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Essen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Essen ist bekannt: Die durchschnittliche Wohnung misst 78,6 Quadratmeter, 33,0 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 26,1 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Essen?',
+        acceptedAnswer: { '@type': 'Answer', text: '63.398 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Essen — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Essen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. 22,2 Prozent der Gebäude stehen frei, 48,9 Prozent sind Reihenhäuser. 70,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Essen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Essen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Essen und Umland: Mülheim an der Ruhr, Oberhausen, Bottrop, Gelsenkirchen, Bochum und alle Gemeinden im Ruhrgebiet südlich der Emscher' },
       },
@@ -321,13 +336,13 @@ export default function EssenPage() {
             Wie in Essen gebaut wurde, merkt man spätestens auf der Treppe. Nur 22,2 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. 48,9 Prozent der Gebäude in Essen sind Reihenhäuser, in Nordrhein-Westfalen 27,2 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 26,1 Prozent der Haushalte wohnen im Eigentum — in Nordrhein-Westfalen sind es 40,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Auf ein Gebäude kommen in Essen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen sind es 2,3. Essen ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten.
+            Nur 26,1 Prozent der Haushalte wohnen im Eigentum — in Nordrhein-Westfalen sind es 40,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Auf ein Gebäude kommen in Essen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen sind es 2,3. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Die durchschnittliche Wohnung misst 78,6 Quadratmeter gegenüber 92,7 in Nordrhein-Westfalen — rund 14 Quadratmeter weniger. 33,0 Prozent der Wohnungen in Essen haben weniger als 60 Quadratmeter, in Nordrhein-Westfalen sind es 22,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. 45,1 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Nordrhein-Westfalen sind es 33,6 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 63.398 Menschen in Essen sind 75 Jahre oder älter, und der Ort zählt 316.150 Wohnungen in 91.289 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 63.398 Menschen in Essen sind 75 Jahre oder älter, und es gibt 316.150 Wohnungen in 91.289 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -348,6 +363,9 @@ export default function EssenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Essen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Essen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Essen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Essen ist bekannt: Die durchschnittliche Wohnung misst 78,6 Quadratmeter, 33,0 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 26,1 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Essen?', a: '63.398 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Essen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Essen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. 22,2 Prozent der Gebäude stehen frei, 48,9 Prozent sind Reihenhäuser. 70,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Essen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Essen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Essen ist bekannt: Die durchschnittliche Wohnung misst 78,6 Quadratmeter, 33,0 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 26,1 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Essen?', a: '63.398 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Essen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Essen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. 22,2 Prozent der Gebäude stehen frei, 48,9 Prozent sind Reihenhäuser. 70,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Essen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

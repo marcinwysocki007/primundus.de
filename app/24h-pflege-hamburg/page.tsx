@@ -301,7 +301,7 @@ export default function HamburgPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Hamburg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Hamburg liegt beim Wohnen dicht am Schnitt von Hamburg — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders abgelegen zugeht. Die durchschnittliche Wohnung misst 76,6 Quadratmeter, auf ein Gebäude kommen 3,8 Wohnungen, und 21,6 Prozent der Haushalte wohnen im Eigentum.
+            Hamburg liegt beim Wohnen dicht am Schnitt von Hamburg — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 76,6 Quadratmeter, auf ein Gebäude kommen 3,8 Wohnungen, und 21,6 Prozent der Haushalte wohnen im Eigentum.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             9,7 Prozent der Einwohner sind 75 Jahre oder älter, das sind 174.919 Menschen. In 20,9 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.

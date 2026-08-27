@@ -219,7 +219,7 @@ export default function RheinischBergischerKreisPage() {
             Reihenhäuser sind in Rheinisch-Bergischer Kreis mit 17,1 Prozent seltener als in Nordrhein-Westfalen (27,2 Prozent). Rheinisch-Bergischer Kreis ist älter als das Land: 12,5 Prozent der Einwohner sind 75 Jahre oder älter — das sind 35.199 Menschen, in Nordrhein-Westfalen sind es 10,7 Prozent. In 27,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Nordrhein-Westfalen sind es 24,2 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 35.199 Menschen in Rheinisch-Bergischer Kreis sind 75 Jahre oder älter, und der Ort zählt 140.815 Wohnungen in 75.548 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 35.199 Menschen in Rheinisch-Bergischer Kreis sind 75 Jahre oder älter, und es gibt 140.815 Wohnungen in 75.548 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —

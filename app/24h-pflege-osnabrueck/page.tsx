@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Osnabrück?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Osnabrück ist bekannt: Die durchschnittliche Wohnung misst 86,1 Quadratmeter, 28,3 Prozent liegen unter 60 Quadratmetern (Niedersachsen: 17,1 Prozent), und 31,1 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Osnabrück?',
+        acceptedAnswer: { '@type': 'Answer', text: '16.260 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Osnabrück — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Osnabrück im Schnitt 2,7 Wohnungen, in Niedersachsen 1,7. 47,6 Prozent der Gebäude stehen frei, 32,7 Prozent sind Reihenhäuser. 59,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Osnabrück ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Osnabrück bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Osnabrück und Landkreis Osnabrück: Bad Iburg, Georgsmarienhütte, Bramsche, Melle und alle Gemeinden im Landkreis Osnabrück' },
       },
@@ -327,10 +342,10 @@ export default function OsnabrueckPage() {
             32,7 Prozent der Gebäude in Osnabrück sind Reihenhäuser, in Niedersachsen 12,9 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 47,6 Prozent der Gebäude stehen frei, in Niedersachsen sind es 72,2 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            28,3 Prozent der Wohnungen in Osnabrück haben weniger als 60 Quadratmeter, in Niedersachsen sind es 17,1 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Auf ein Gebäude kommen in Osnabrück im Schnitt 2,7 Wohnungen, in Niedersachsen sind es 1,7. Osnabrück ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten. 50,3 Prozent aller Haushalte in Osnabrück bestehen aus einer einzigen Person, in Niedersachsen sind es 41,2 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
+            28,3 Prozent der Wohnungen in Osnabrück haben weniger als 60 Quadratmeter, in Niedersachsen sind es 17,1 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Auf ein Gebäude kommen in Osnabrück im Schnitt 2,7 Wohnungen, in Niedersachsen sind es 1,7. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. 50,3 Prozent aller Haushalte in Osnabrück bestehen aus einer einzigen Person, in Niedersachsen sind es 41,2 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 16.260 Menschen in Osnabrück sind 75 Jahre oder älter, und der Ort zählt 91.260 Wohnungen in 33.366 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 16.260 Menschen in Osnabrück sind 75 Jahre oder älter, und es gibt 91.260 Wohnungen in 33.366 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -351,6 +366,9 @@ export default function OsnabrueckPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Osnabrück starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Osnabrück rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Osnabrück?', a: 'Das hängt am Grundriss, und die Ausgangslage in Osnabrück ist bekannt: Die durchschnittliche Wohnung misst 86,1 Quadratmeter, 28,3 Prozent liegen unter 60 Quadratmetern (Niedersachsen: 17,1 Prozent), und 31,1 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Osnabrück?', a: '16.260 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Osnabrück — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Osnabrück im Schnitt 2,7 Wohnungen, in Niedersachsen 1,7. 47,6 Prozent der Gebäude stehen frei, 32,7 Prozent sind Reihenhäuser. 59,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Osnabrück ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Osnabrück?', a: 'Das hängt am Grundriss, und die Ausgangslage in Osnabrück ist bekannt: Die durchschnittliche Wohnung misst 86,1 Quadratmeter, 28,3 Prozent liegen unter 60 Quadratmetern (Niedersachsen: 17,1 Prozent), und 31,1 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Osnabrück?', a: '16.260 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Osnabrück — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Osnabrück im Schnitt 2,7 Wohnungen, in Niedersachsen 1,7. 47,6 Prozent der Gebäude stehen frei, 32,7 Prozent sind Reihenhäuser. 59,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Osnabrück ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

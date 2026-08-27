@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Dachau?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Dachau ist bekannt: Die durchschnittliche Wohnung misst 85,0 Quadratmeter, 28,0 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 37,2 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Dachau?',
+        acceptedAnswer: { '@type': 'Answer', text: '4.731 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Dachau — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Dachau im Schnitt 2,8 Wohnungen, in Bayern 2,1. 45,7 Prozent der Gebäude stehen frei, 26,9 Prozent sind Reihenhäuser. 36,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Dachau ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Dachau bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Dachau und Landkreis Dachau: Karlsfeld, Markt Indersdorf, Petershausen, Schwabhausen und alle Gemeinden im Landkreis Dachau' },
       },
@@ -337,7 +352,7 @@ export default function DachauPage() {
             Mit 10,34 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Dachau teurer als im Schnitt von Bayern (8,74 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option. Altbau vor 1950 macht in Dachau 7,3 Prozent des Bestands aus, in Bayern 15,1 Prozent. 26,9 Prozent der Gebäude in Dachau sind Reihenhäuser, in Bayern 14,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 4.731 Menschen in Dachau sind 75 Jahre oder älter, und der Ort zählt 23.117 Wohnungen in 8.364 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 4.731 Menschen in Dachau sind 75 Jahre oder älter, und es gibt 23.117 Wohnungen in 8.364 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -362,6 +377,9 @@ export default function DachauPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Dachau starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Dachau rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Dachau?', a: 'Das hängt am Grundriss, und die Ausgangslage in Dachau ist bekannt: Die durchschnittliche Wohnung misst 85,0 Quadratmeter, 28,0 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 37,2 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Dachau?', a: '4.731 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Dachau — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Dachau im Schnitt 2,8 Wohnungen, in Bayern 2,1. 45,7 Prozent der Gebäude stehen frei, 26,9 Prozent sind Reihenhäuser. 36,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Dachau ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Dachau?', a: 'Das hängt am Grundriss, und die Ausgangslage in Dachau ist bekannt: Die durchschnittliche Wohnung misst 85,0 Quadratmeter, 28,0 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 37,2 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Dachau?', a: '4.731 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Dachau — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Dachau im Schnitt 2,8 Wohnungen, in Bayern 2,1. 45,7 Prozent der Gebäude stehen frei, 26,9 Prozent sind Reihenhäuser. 36,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Dachau ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

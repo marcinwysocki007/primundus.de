@@ -308,6 +308,28 @@ export default function BayernPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">München, Nürnberg, Augsburg, Regensburg, Ingolstadt, Würzburg, Fürth, Erlangen, Bayreuth, Landshut, Rosenheim, Kempten und alle weiteren Städte und Gemeinden in Bayern</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bayern ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Der Wohnungsbestand von Bayern erzählt etwas über den Pflegealltag. Altbau vor 1950 macht in Bayern 15,1 Prozent des Bestands aus, in Deutschland insgesamt 23,5 Prozent. Mit 8,74 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Bayern teurer als im Schnitt von Deutschland insgesamt (7,28 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die durchschnittliche Wohnung misst 100,5 Quadratmeter und damit rund 6 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4).
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 1.362.499 Menschen in Bayern sind 75 Jahre oder älter, und es gibt 6.642.728 Wohnungen in 3.227.324 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bayern</h2>
           <div className="space-y-3 mb-12">

@@ -296,6 +296,31 @@ export default function BrandenburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Potsdam, Cottbus, Brandenburg an der Havel, Frankfurt (Oder), Eberswalde, Oranienburg, Neuruppin und alle weiteren Städte und Gemeinden in Brandenburg</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Brandenburg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Der Wohnungsbestand von Brandenburg erzählt etwas über den Pflegealltag. 33,8 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Deutschland insgesamt 23,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Nur 14,4 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In 27,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Deutschland insgesamt sind es 24,6 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte. Die Nettokaltmiete liegt bei 6,21 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Brandenburg ist älter als das Land: 12,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 318.819 Menschen, in Deutschland insgesamt sind es 11,1 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 318.819 Menschen in Brandenburg sind 75 Jahre oder älter, und es gibt 1.369.017 Wohnungen in 712.675 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Brandenburg</h2>
           <div className="space-y-3 mb-12">

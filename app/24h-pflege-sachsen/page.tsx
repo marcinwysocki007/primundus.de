@@ -296,6 +296,31 @@ export default function SachsenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Dresden, Leipzig, Chemnitz, Zwickau, Plauen, Görlitz, Bautzen, Freital, Pirna, Meißen und alle weiteren Städte und Gemeinden in Sachsen</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Sachsen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Der Wohnungsbestand von Sachsen erzählt etwas über den Pflegealltag. 46,5 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Deutschland insgesamt 23,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. 8,5 Prozent der Wohnungen stehen leer, in Deutschland insgesamt 4,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die durchschnittliche Wohnung misst 79,1 Quadratmeter gegenüber 94,4 in Deutschland insgesamt — rund 15 Quadratmeter weniger. Nur 12,8 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            34,1 Prozent der Wohnungen in Sachsen haben weniger als 60 Quadratmeter, in Deutschland insgesamt sind es 23,2 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Sachsen ist älter als das Land: 13,8 Prozent der Einwohner sind 75 Jahre oder älter — das sind 557.189 Menschen, in Deutschland insgesamt sind es 11,1 Prozent. In 29,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Deutschland insgesamt sind es 24,6 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 557.189 Menschen in Sachsen sind 75 Jahre oder älter, und es gibt 2.336.743 Wohnungen in 861.100 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Sachsen</h2>
           <div className="space-y-3 mb-12">

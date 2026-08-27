@@ -217,7 +217,7 @@ export default function RheinPfalzKreisPage() {
             Altbau vor 1950 macht in Rhein-Pfalz-Kreis 15,6 Prozent des Bestands aus, in Rheinland-Pfalz 21,5 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 17.908 Menschen in Rhein-Pfalz-Kreis sind 75 Jahre oder älter, und der Ort zählt 74.069 Wohnungen in 48.337 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 17.908 Menschen in Rhein-Pfalz-Kreis sind 75 Jahre oder älter, und es gibt 74.069 Wohnungen in 48.337 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —

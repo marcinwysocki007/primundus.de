@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Kreuznach?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Bad Kreuznach ist bekannt: Die durchschnittliche Wohnung misst 90,1 Quadratmeter, 25,4 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 35,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Bad Kreuznach?',
+        acceptedAnswer: { '@type': 'Answer', text: '6.512 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,3 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 27,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Bad Kreuznach — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Bad Kreuznach im Schnitt 2,6 Wohnungen, in Rheinland-Pfalz 1,7. 57,7 Prozent der Gebäude stehen frei, 24,9 Prozent sind Reihenhäuser. 50,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Kreuznach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bad Kreuznach bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bad Kreuznach und Landkreis Bad Kreuznach: Idar-Oberstein, Kirn, Sobernheim und alle Gemeinden im Landkreis Bad Kreuznach' },
       },
@@ -324,13 +339,13 @@ export default function BadKreuznachPage() {
             Ob jemand zur Miete oder im Eigentum wohnt, ändert in Bad Kreuznach die Möglichkeiten. Nur 35,3 Prozent der Haushalte wohnen im Eigentum — in Rheinland-Pfalz sind es 54,4 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Die durchschnittliche Wohnung misst 90,1 Quadratmeter gegenüber 107,7 in Rheinland-Pfalz — rund 18 Quadratmeter weniger.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            25,4 Prozent der Wohnungen in Bad Kreuznach haben weniger als 60 Quadratmeter, in Rheinland-Pfalz sind es 15,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Auf ein Gebäude kommen in Bad Kreuznach im Schnitt 2,6 Wohnungen, in Rheinland-Pfalz sind es 1,7. Bad Kreuznach ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten.
+            25,4 Prozent der Wohnungen in Bad Kreuznach haben weniger als 60 Quadratmeter, in Rheinland-Pfalz sind es 15,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Auf ein Gebäude kommen in Bad Kreuznach im Schnitt 2,6 Wohnungen, in Rheinland-Pfalz sind es 1,7. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             46,6 Prozent aller Haushalte in Bad Kreuznach bestehen aus einer einzigen Person, in Rheinland-Pfalz sind es 40,4 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Nur 57,7 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent. 24,9 Prozent der Gebäude in Bad Kreuznach sind Reihenhäuser, in Rheinland-Pfalz 15,5 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 6.512 Menschen in Bad Kreuznach sind 75 Jahre oder älter, und der Ort zählt 28.496 Wohnungen in 10.918 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 6.512 Menschen in Bad Kreuznach sind 75 Jahre oder älter, und es gibt 28.496 Wohnungen in 10.918 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -351,6 +366,9 @@ export default function BadKreuznachPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Kreuznach starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bad Kreuznach rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Kreuznach?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bad Kreuznach ist bekannt: Die durchschnittliche Wohnung misst 90,1 Quadratmeter, 25,4 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 35,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Bad Kreuznach?', a: '6.512 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,3 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 27,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Bad Kreuznach — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Kreuznach im Schnitt 2,6 Wohnungen, in Rheinland-Pfalz 1,7. 57,7 Prozent der Gebäude stehen frei, 24,9 Prozent sind Reihenhäuser. 50,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Kreuznach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Kreuznach?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bad Kreuznach ist bekannt: Die durchschnittliche Wohnung misst 90,1 Quadratmeter, 25,4 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 35,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Bad Kreuznach?', a: '6.512 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,3 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 27,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bad Kreuznach — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Kreuznach im Schnitt 2,6 Wohnungen, in Rheinland-Pfalz 1,7. 57,7 Prozent der Gebäude stehen frei, 24,9 Prozent sind Reihenhäuser. 50,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Kreuznach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

@@ -296,6 +296,31 @@ export default function MecklenburgVorpommernPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Rostock, Schwerin, Neubrandenburg, Greifswald, Stralsund, Wismar, Güstrow und alle weiteren Städte und Gemeinden in Mecklenburg-Vorpommern</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Mecklenburg-Vorpommern ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wie viel Platz eine Wohnung in Mecklenburg-Vorpommern hat, ist keine Nebenfrage. 33,3 Prozent der Wohnungen in Mecklenburg-Vorpommern haben weniger als 60 Quadratmeter, in Deutschland insgesamt sind es 23,2 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Die durchschnittliche Wohnung misst 82,5 Quadratmeter gegenüber 94,4 in Deutschland insgesamt — rund 12 Quadratmeter weniger.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Nur 16,8 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. In 28,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Deutschland insgesamt sind es 24,6 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die Nettokaltmiete liegt bei 5,91 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo. 5,5 Prozent der Wohnungen stehen leer, in Deutschland insgesamt 4,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Mecklenburg-Vorpommern ist älter als das Land: 12,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 198.085 Menschen, in Deutschland insgesamt sind es 11,1 Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 198.085 Menschen in Mecklenburg-Vorpommern sind 75 Jahre oder älter, und es gibt 925.387 Wohnungen in 419.400 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Mecklenburg-Vorpommern</h2>
           <div className="space-y-3 mb-12">

@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Stuttgart?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Stuttgart ist bekannt: Die durchschnittliche Wohnung misst 79,8 Quadratmeter, 31,3 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 31,1 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Stuttgart?',
+        acceptedAnswer: { '@type': 'Answer', text: '59.982 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 20,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Stuttgart — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Stuttgart im Schnitt 4,0 Wohnungen, in Baden-Württemberg 2,1. 49,3 Prozent der Gebäude stehen frei, 25,9 Prozent sind Reihenhäuser. 62,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Stuttgart ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Stuttgart bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Stuttgart und Großraum: Ludwigsburg, Esslingen, Böblingen, Sindelfingen, Waiblingen, Fellbach, Kornwestheim, Leinfelden-Echterdingen und alle Gemeinden im Landkreis Böblingen und Esslingen' },
       },
@@ -318,7 +333,7 @@ export default function StuttgartPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Stuttgart ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Stuttgart gewohnt wird, entscheidet mit darüber, ob Pflege zu Hause funktioniert. Auf ein Gebäude kommen in Stuttgart im Schnitt 4,0 Wohnungen, in Baden-Württemberg sind es 2,1. Stuttgart ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten. Nur 31,1 Prozent der Haushalte wohnen im Eigentum — in Baden-Württemberg sind es 51,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+            Wie in Stuttgart gewohnt wird, entscheidet mit darüber, ob Pflege zu Hause funktioniert. Auf ein Gebäude kommen in Stuttgart im Schnitt 4,0 Wohnungen, in Baden-Württemberg sind es 2,1. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. Nur 31,1 Prozent der Haushalte wohnen im Eigentum — in Baden-Württemberg sind es 51,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Die durchschnittliche Wohnung misst 79,8 Quadratmeter gegenüber 99,1 in Baden-Württemberg — rund 19 Quadratmeter weniger. 31,3 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Baden-Württemberg 17,4 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.
@@ -327,7 +342,7 @@ export default function StuttgartPage() {
             31,3 Prozent der Wohnungen in Stuttgart haben weniger als 60 Quadratmeter, in Baden-Württemberg sind es 18,1 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Mit 10,39 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Stuttgart teurer als im Schnitt von Baden-Württemberg (8,13 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option. 47,9 Prozent aller Haushalte in Stuttgart bestehen aus einer einzigen Person, in Baden-Württemberg sind es 39,5 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 59.982 Menschen in Stuttgart sind 75 Jahre oder älter, und der Ort zählt 314.432 Wohnungen in 77.857 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 59.982 Menschen in Stuttgart sind 75 Jahre oder älter, und es gibt 314.432 Wohnungen in 77.857 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -348,6 +363,9 @@ export default function StuttgartPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Stuttgart starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Stuttgart rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Stuttgart?', a: 'Das hängt am Grundriss, und die Ausgangslage in Stuttgart ist bekannt: Die durchschnittliche Wohnung misst 79,8 Quadratmeter, 31,3 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 31,1 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Stuttgart?', a: '59.982 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 20,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Stuttgart — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Stuttgart im Schnitt 4,0 Wohnungen, in Baden-Württemberg 2,1. 49,3 Prozent der Gebäude stehen frei, 25,9 Prozent sind Reihenhäuser. 62,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Stuttgart ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Stuttgart?', a: 'Das hängt am Grundriss, und die Ausgangslage in Stuttgart ist bekannt: Die durchschnittliche Wohnung misst 79,8 Quadratmeter, 31,3 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 31,1 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Stuttgart?', a: '59.982 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 20,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Stuttgart — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Stuttgart im Schnitt 4,0 Wohnungen, in Baden-Württemberg 2,1. 49,3 Prozent der Gebäude stehen frei, 25,9 Prozent sind Reihenhäuser. 62,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Stuttgart ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

@@ -296,6 +296,25 @@ export default function SchleswigHolsteinPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Kiel, Lübeck, Flensburg, Neumünster, Norderstedt, Elmshorn, Pinneberg, Rendsburg und alle weiteren Städte und Gemeinden in Schleswig-Holstein</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Schleswig-Holstein ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Schleswig-Holstein liegt beim Wohnen dicht am Schnitt von Deutschland insgesamt — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 95,1 Quadratmeter, auf ein Gebäude kommen 1,8 Wohnungen, und 47,6 Prozent der Haushalte wohnen im Eigentum.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            12,2 Prozent der Einwohner sind 75 Jahre oder älter, das sind 356.457 Menschen. In 26,6 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Schleswig-Holstein</h2>
           <div className="space-y-3 mb-12">

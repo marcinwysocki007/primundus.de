@@ -300,7 +300,7 @@ export default function BerlinCharlottenburgPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Berlin-Charlottenburg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Berlin-Charlottenburg liegt beim Wohnen dicht am Schnitt von Berlin — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders abgelegen zugeht. Die durchschnittliche Wohnung misst 73,2 Quadratmeter, auf ein Gebäude kommen 6,0 Wohnungen, und 16,4 Prozent der Haushalte wohnen im Eigentum.
+            Berlin-Charlottenburg liegt beim Wohnen dicht am Schnitt von Berlin — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 73,2 Quadratmeter, auf ein Gebäude kommen 6,0 Wohnungen, und 16,4 Prozent der Haushalte wohnen im Eigentum.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             10,1 Prozent der Einwohner sind 75 Jahre oder älter, das sind 362.829 Menschen. In 21,9 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.

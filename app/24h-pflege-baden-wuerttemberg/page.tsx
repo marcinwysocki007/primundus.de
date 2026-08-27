@@ -296,6 +296,28 @@ export default function BadenWuerttembergPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Stuttgart, Mannheim, Karlsruhe, Freiburg, Heidelberg, Ulm, Heilbronn, Pforzheim, Reutlingen, Konstanz und alle weiteren Städte und Gemeinden in Baden-Württemberg</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Baden-Württemberg ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Der Wohnungsbestand von Baden-Württemberg erzählt etwas über den Pflegealltag. Altbau vor 1950 macht in Baden-Württemberg 17,4 Prozent des Bestands aus, in Deutschland insgesamt 23,5 Prozent. 51,6 Prozent der Haushalte wohnen im Eigentum, in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Nur 18,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 1.160.911 Menschen in Baden-Württemberg sind 75 Jahre oder älter, und es gibt 5.461.921 Wohnungen in 2.566.980 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Baden-Württemberg</h2>
           <div className="space-y-3 mb-12">

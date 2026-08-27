@@ -296,6 +296,25 @@ export default function HessenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Frankfurt am Main, Wiesbaden, Kassel, Darmstadt, Offenbach, Hanau, Marburg, Gießen, Fulda, Wetzlar und alle weiteren Städte und Gemeinden in Hessen</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Hessen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Hessen liegt beim Wohnen dicht am Schnitt von Deutschland insgesamt — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 98,3 Quadratmeter, auf ein Gebäude kommen 2,2 Wohnungen, und 46,6 Prozent der Haushalte wohnen im Eigentum.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            10,5 Prozent der Einwohner sind 75 Jahre oder älter, das sind 650.768 Menschen. In 23,1 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Hessen</h2>
           <div className="space-y-3 mb-12">

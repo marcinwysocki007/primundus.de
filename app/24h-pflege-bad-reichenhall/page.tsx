@@ -79,6 +79,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Reichenhall?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Bad Reichenhall ist bekannt: Die durchschnittliche Wohnung misst 78,4 Quadratmeter, 33,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 33,9 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Bad Reichenhall?',
+        acceptedAnswer: { '@type': 'Answer', text: '3.170 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 17,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Bad Reichenhall — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Bad Reichenhall im Schnitt 3,6 Wohnungen, in Bayern 2,1. 52,7 Prozent der Gebäude stehen frei, 28,1 Prozent sind Reihenhäuser. 45,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Reichenhall ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bad Reichenhall bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bad Reichenhall und Berchtesgadener Land Nord: Piding, Bayerisch Gmain, Ainring und alle Gemeinden im nördlichen Landkreis Berchtesgadener Land' },
       },
@@ -328,16 +343,16 @@ export default function BadReichenhallPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bad Reichenhall ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wer in Bad Reichenhall älter wird, tut das in einer Stadt mit eigener Altersstruktur. Bad Reichenhall ist älter als das Land: 17,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 3.170 Menschen, in Bayern sind es 10,4 Prozent. In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Bayern sind es 23,0 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
+            Wer in Bad Reichenhall älter wird, tut das unter eigenen Vorzeichen. Bad Reichenhall ist älter als das Land: 17,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 3.170 Menschen, in Bayern sind es 10,4 Prozent. In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Bayern sind es 23,0 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 78,4 Quadratmeter gegenüber 100,5 in Bayern — rund 22 Quadratmeter weniger. Auf ein Gebäude kommen in Bad Reichenhall im Schnitt 3,6 Wohnungen, in Bayern sind es 2,1. Bad Reichenhall ist also deutlich städtischer gebaut, als der Landesdurchschnitt vermuten lässt — mehr Geschosswohnungen, weniger Haus mit Garten.
+            Die durchschnittliche Wohnung misst 78,4 Quadratmeter gegenüber 100,5 in Bayern — rund 22 Quadratmeter weniger. Auf ein Gebäude kommen in Bad Reichenhall im Schnitt 3,6 Wohnungen, in Bayern sind es 2,1. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             33,7 Prozent der Wohnungen in Bad Reichenhall haben weniger als 60 Quadratmeter, in Bayern sind es 20,7 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Nur 33,9 Prozent der Haushalte wohnen im Eigentum — in Bayern sind es 49,3 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. 53,4 Prozent aller Haushalte in Bad Reichenhall bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 3.170 Menschen in Bad Reichenhall sind 75 Jahre oder älter, und der Ort zählt 11.198 Wohnungen in 3.091 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Zahlen: 3.170 Menschen in Bad Reichenhall sind 75 Jahre oder älter, und es gibt 11.198 Wohnungen in 3.091 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
             Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
@@ -362,6 +377,9 @@ export default function BadReichenhallPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Reichenhall starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bad Reichenhall rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Reichenhall?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bad Reichenhall ist bekannt: Die durchschnittliche Wohnung misst 78,4 Quadratmeter, 33,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 33,9 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Bad Reichenhall?', a: '3.170 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 17,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Bad Reichenhall — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Reichenhall im Schnitt 3,6 Wohnungen, in Bayern 2,1. 52,7 Prozent der Gebäude stehen frei, 28,1 Prozent sind Reihenhäuser. 45,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Reichenhall ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Reichenhall?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bad Reichenhall ist bekannt: Die durchschnittliche Wohnung misst 78,4 Quadratmeter, 33,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 33,9 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Bad Reichenhall?', a: '3.170 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 17,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bad Reichenhall — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Reichenhall im Schnitt 3,6 Wohnungen, in Bayern 2,1. 52,7 Prozent der Gebäude stehen frei, 28,1 Prozent sind Reihenhäuser. 45,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Reichenhall ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

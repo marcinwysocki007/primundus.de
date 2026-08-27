@@ -296,6 +296,28 @@ export default function NiedersachsenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Hannover, Braunschweig, Osnabrück, Oldenburg, Göttingen, Wolfsburg, Salzgitter, Hildesheim, Lüneburg, Celle und alle weiteren Städte und Gemeinden in Niedersachsen</p>
           </div>
 
+          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Niedersachsen ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wie viel Platz eine Wohnung in Niedersachsen hat, ist keine Nebenfrage. Die durchschnittliche Wohnung misst 104,4 Quadratmeter und damit rund 10 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4). Nur 17,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            51,1 Prozent der Haushalte wohnen im Eigentum, in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Zahlen: 899.327 Menschen in Niedersachsen sind 75 Jahre oder älter, und es gibt 4.115.887 Wohnungen in 2.366.185 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
+            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
+            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          </p>
+          <p className="text-[13px] text-pm-mute mb-10">
+            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
+            und der Länder, Stichtag 15. Mai 2022.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Niedersachsen</h2>
           <div className="space-y-3 mb-12">
