@@ -44,7 +44,7 @@ export function TestimonialCard() {
           className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
         >
           <div className="flex items-center gap-2">
-            <img src="/images/primundus_testsieger-2021.webp" alt="Testsieger-Siegel DIE WELT/ServiceValue 2021" width={28} height={28} className="w-7 h-7 object-contain" />
+            <img src="/images/primundus_testsieger-2021.webp" alt="Testsieger-Siegel DIE WELT/ServiceValue" width={28} height={28} className="w-7 h-7 object-contain" />
             <span className="text-sm font-semibold text-pm-ink">Testsieger-Auszeichnung</span>
           </div>
           <p className="text-[13px] text-pm-body leading-snug">
