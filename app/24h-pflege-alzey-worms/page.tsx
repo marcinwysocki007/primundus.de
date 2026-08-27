@@ -161,12 +161,52 @@ export default function AlzeyWormsPage() {
               rund 3.364 Euro Eigenanteil — ohne dass jemand rund um die Uhr nur für Ihre Mutter da wäre.
             </p>
             <a
-              href="https://kostenrechner.primundus.de/"
+              href="https://kostenrechner.primundus.de/?start=1&amp;src=ort-alzey-worms"
               className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-full transition-colors"
             >
               Ihren Preis in 2 Minuten berechnen
             </a>
+            <a href="/pflegegrad-rechner" className="block mt-4 text-[15px] text-pm-taupe font-semibold hover:underline">
+              → Unsicher beim Pflegegrad? Hier mit denselben sechs Modulen rechnen wie bei der Begutachtung
+            </a>
           </div>
+
+          {/* ③b POLEN */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Polnische Betreuungskräfte im Kreis Alzey-Worms</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wer im Kreis Alzey-Worms nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe:
+            jemanden, der im Haushalt lebt und rund um die Uhr da ist. Genau das leisten unsere
+            Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien —
+            und sie sind im gesamten Kreisgebiet im Einsatz.
+          </p>
+          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-4">
+            <p className="text-[15px] font-bold text-pm-ink mb-2">Angestellt statt vermittelt</p>
+            <p className="text-[15px] leading-relaxed text-pm-body">
+              Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte
+              fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum
+              Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland,
+              Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine
+              Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren
+              wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.
+            </p>
+          </div>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            <strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte
+            Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der
+            Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen
+            mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei
+            vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Der Kostenvergleich fällt im Kreis Alzey-Worms deutlich aus: Bei Pflegegrad 3 bleiben nach Pflegegeld,
+            Entlastungsbetrag und Entlastungsbudget meist rund 1.500 bis 2.400 Euro Eigenanteil.
+            Ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.220 Euro
+            im Monat — und die vertraute Wohnung bleibt dabei auf der Strecke.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-8">
+            Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie
+            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.
+          </p>
 
           {/* ④ FAQ — Texte identisch zum FAQPage-Schema */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
