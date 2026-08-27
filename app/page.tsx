@@ -428,7 +428,7 @@ export default function Page() {
                   <div className="flex items-center gap-4 mb-3">
                     <img
                       src="/images/primundus_testsieger-2021.webp"
-                      alt="Testsieger DIE WELT 2021"
+                      alt="Testsieger DIE WELT"
                       className="h-[80px] w-[80px] object-contain flex-shrink-0"
                     />
                     <div>

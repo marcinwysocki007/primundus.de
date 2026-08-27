@@ -123,7 +123,7 @@ export default function Page() {
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <img
               src="/images/primundus_testsieger-2021.webp"
-              alt="Testsieger DIE WELT 2021"
+              alt="Testsieger DIE WELT"
               className="h-[100px] w-[100px] object-contain flex-shrink-0"
             />
             <div>

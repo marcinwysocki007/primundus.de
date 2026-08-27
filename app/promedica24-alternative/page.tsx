@@ -195,7 +195,7 @@ export default function Page() {
                 { t: 'Erst auswählen, dann Vertrag', d: 'Sie entscheiden, wer zu Ihnen kommt. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag.' },
                 { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt — ein Ansprechpartner für alles, 7 Tage die Woche.' },
                 { t: 'Keine Gebühren, keine Bindung', d: 'Keine Vermittlungs- oder Aufnahmegebühr, keine Mindestlaufzeit — täglich kündbar, taggenau abgerechnet.' },
-                { t: 'Testsieger 2021', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.200 €/Monat.' },
+                { t: '6× Testsieger', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.200 €/Monat.' },
               ].map((x) => (
                 <div key={x.t} className="bg-white border border-pm-line rounded-2xl p-4">
                   <p className="text-[14px] font-bold text-pm-ink mb-1">{x.t}</p>
