@@ -4,8 +4,8 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Bergisch Gladbach',
-  description: '24-Stunden-Pflege in Bergisch Gladbach: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege Bergisch Gladbach & Rheinisch-Bergischer Kreis',
+  description: '24h-Pflege in Bergisch Gladbach und im Rheinisch-Bergischen Kreis: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, ohne Gebühr.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bergisch-gladbach' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

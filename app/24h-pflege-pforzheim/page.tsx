@@ -4,8 +4,8 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Pforzheim | Primundus',
-  description: '24-Stunden-Pflege in Pforzheim: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege Pforzheim & Enzkreis',
+  description: '24-Stunden-Pflege in Pforzheim und im Enzkreis: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-pforzheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -4,8 +4,8 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Villingen-Schwenningen',
-  description: '24-Stunden-Pflege in Villingen-Schwenningen: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege Schwarzwald-Baar-Kreis & Villingen-Schwenningen',
+  description: '24h-Pflege in Villingen-Schwenningen und im Schwarzwald-Baar-Kreis: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, ohne Gebühr.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-villingen-schwenningen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

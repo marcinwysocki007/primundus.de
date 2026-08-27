@@ -4,8 +4,8 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Speyer | Primundus',
-  description: '24-Stunden-Pflege in Speyer: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege Speyer & Rhein-Pfalz-Kreis',
+  description: '24-Stunden-Pflege in Speyer und im Rhein-Pfalz-Kreis: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-speyer' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
