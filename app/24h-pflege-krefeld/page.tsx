@@ -69,11 +69,6 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
-        name: 'Wie viele ältere Menschen leben in Krefeld?',
-        acceptedAnswer: { '@type': 'Answer', text: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-      },
-      {
-        '@type': 'Question',
         name: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?',
         acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
       },
@@ -91,6 +86,11 @@ const schemaMarkup = [
         '@type': 'Question',
         name: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?',
         acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Warum ist die Pflegequote in Krefeld so hoch?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Am Alter liegt es nicht — das ist das Bemerkenswerte. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent der Einwohner sind über 65 (NRW 22,0), 7,2 Prozent über 80 (NRW 6,9). Trotzdem ist mit 10,1 Prozent die zweithöchste Pflegequote Nordrhein-Westfalens erreicht, 23.169 Menschen. Auffällig ist vor allem, wie sie versorgt werden: 15.936 Menschen — 68,8 Prozent — werden ausschließlich von Angehörigen gepflegt, gegenüber 59,0 Prozent im Land. Ambulante Dienste kommen seltener ins Haus (14,6 gegen 17,3 Prozent), und der Anteil von Pflegegrad 1 ist mit 6,9 Prozent auffällig niedrig (Land 11,5) — es geht hier also überwiegend nicht um leichte Fälle.' },
       },
       {
         '@type': 'Question',
@@ -330,31 +330,55 @@ export default function KrefeldPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Krefeld ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Krefeld gebaut wurde, merkt man spätestens auf der Treppe. 50,1 Prozent der Gebäude in Krefeld sind Reihenhäuser, in Nordrhein-Westfalen 27,2 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 24,0 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent.
+            In keiner Stadt, die wir bisher angesehen haben, tragen Familien so viel wie hier.{' '}
+            <strong className="text-pm-ink font-semibold">15.936 Krefelderinnen und Krefelder werden
+            ausschließlich von Angehörigen gepflegt</strong> — das sind 68,8 Prozent aller
+            Pflegebedürftigen gegenüber 59,0 Prozent in Nordrhein-Westfalen und der sechsthöchste
+            Wert unter allen 53 Kreisen und kreisfreien Städten des Landes. Rechnerisch wird damit
+            fast jeder fünfzehnte Einwohner der Stadt zu Hause von der eigenen Familie versorgt.
+            Ambulante Dienste kommen dabei seltener ins Haus als anderswo: 14,6 Prozent gegenüber
+            17,3 im Land.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 85,2 Quadratmeter gegenüber 92,7 in Nordrhein-Westfalen — rund 8 Quadratmeter weniger. 28,3 Prozent der Wohnungen in Krefeld haben weniger als 60 Quadratmeter, in Nordrhein-Westfalen sind es 22,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+            Mit 10,1 Prozent hat Krefeld zugleich die zweithöchste Pflegequote in ganz
+            Nordrhein-Westfalen — 23.169 Menschen. Und das Bemerkenswerte daran:{' '}
+            <strong className="text-pm-ink font-semibold">Am Alter liegt es nicht.</strong> Die
+            Altersstruktur entspricht fast exakt dem Landesdurchschnitt (22,3 Prozent über 65
+            gegenüber 22,0; 7,2 Prozent über 80 gegenüber 6,9). Krefeld hat also nicht mehr alte
+            Menschen als andere Städte, sondern mehr pflegebedürftige — und fängt sie überwiegend
+            zu Hause auf. Dass der Anteil von Pflegegrad 1 mit 6,9 Prozent auffällig niedrig liegt
+            (Land: 11,5), deutet darauf hin, dass es dabei nicht um leichte Fälle geht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            24,7 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Nordrhein-Westfalen 19,7 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.
+            Ein Fehlschluss sei ausdrücklich ausgeräumt. Nur 9,7 Prozent der Pflegebedürftigen
+            leben im Heim, im Land 12,2 Prozent — daraus liest sich leicht ein Platzmangel heraus.
+            Das Gegenteil trifft zu: Gemessen an der Zahl der über 65-Jährigen stehen in Krefeld{' '}
+            <strong className="text-pm-ink font-semibold">47 vollstationäre Plätze je 1.000 bereit,
+            in Nordrhein-Westfalen 46</strong>. Die Plätze sind da, sie werden nur seltener genutzt.
+            Der niedrige Anteil entsteht allein daraus, dass die Zahl der Pflegebedürftigen so groß
+            ist.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 25.957 Menschen in Krefeld sind 75 Jahre oder älter, und es gibt 122.546 Wohnungen in 47.132 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Wege sind in Krefeld selten das Problem — der bewohnte Teil der Stadt bewegt sich
+            zwischen etwa 31 und 40 Metern über dem Meer, die drei „Berge" im Stadtgebiet sind
+            Wald- und Naherholungsflächen. Das Alter verteilt sich dafür sehr ungleich: In
+            Traar-Ost ist fast jeder dritte Einwohner über 65 (31,4 Prozent), am Stephanplatz jeder
+            siebte (13,2 Prozent). Die äußeren Villen- und Dorflagen sind alt, die innenstadtnahen
+            Viertel jung.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Krefeld gut ausgestattet — mit einer Falle für Angehörige. Drei
+            Kliniken führen eine geriatrische Fachabteilung, die größte am Krankenhaus Maria-Hilf
+            der Alexianer mit 917 Fällen. Bei Helios sitzt die eigentliche Geriatrie im{' '}
+            <strong className="text-pm-ink font-semibold">Cäcilien-Hospital in Hüls</strong> (726
+            Fälle), nicht am Hauptstandort Lutherplatz (85 Fälle) — dazwischen liegen rund zehn
+            Kilometer. Wer „Helios Geriatrie Krefeld" sucht, sollte den Standort mitlesen. Und
+            lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos
+            und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Krefeld</h2>
           <div className="space-y-3 mb-12">
@@ -364,11 +388,11 @@ export default function KrefeldPage() {
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Krefeld rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Krefeld?', a: 'Das hängt am Grundriss, und die Ausgangslage in Krefeld ist bekannt: Die durchschnittliche Wohnung misst 85,2 Quadratmeter, 28,3 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 36,0 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-              { q: 'Wie viele ältere Menschen leben in Krefeld?', a: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Krefeld?', a: 'Das hängt am Grundriss, und die Ausgangslage in Krefeld ist bekannt: Die durchschnittliche Wohnung misst 85,2 Quadratmeter, 28,3 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 36,0 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Krefeld?', a: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Warum ist die Pflegequote in Krefeld so hoch?', a: 'Am Alter liegt es nicht — das ist das Bemerkenswerte. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent der Einwohner sind über 65 (NRW 22,0), 7,2 Prozent über 80 (NRW 6,9). Trotzdem ist mit 10,1 Prozent die zweithöchste Pflegequote Nordrhein-Westfalens erreicht, 23.169 Menschen. Auffällig ist vor allem, wie sie versorgt werden: 15.936 Menschen — 68,8 Prozent — werden ausschließlich von Angehörigen gepflegt, gegenüber 59,0 Prozent im Land. Ambulante Dienste kommen seltener ins Haus (14,6 gegen 17,3 Prozent), und der Anteil von Pflegegrad 1 ist mit 6,9 Prozent auffällig niedrig (Land 11,5) — es geht hier also überwiegend nicht um leichte Fälle.' },
               { q: 'Welches Einzugsgebiet wird in Krefeld bedient?', a: 'Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

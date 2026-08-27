@@ -69,11 +69,6 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
-        name: 'Wie viele ältere Menschen leben in Speyer?',
-        acceptedAnswer: { '@type': 'Answer', text: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-      },
-      {
-        '@type': 'Question',
         name: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?',
         acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent sind Reihenhäuser. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
       },
@@ -91,6 +86,11 @@ const schemaMarkup = [
         '@type': 'Question',
         name: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?',
         acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent sind Reihenhäuser. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie gut ist die ambulante Versorgung in Speyer?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Dünner als im Landesdurchschnitt. Nur 16,3 Prozent der Speyerer Pflegebedürftigen werden von einem ambulanten Dienst betreut, in Rheinland-Pfalz sind es 18,3 Prozent — und in der ganzen Stadt gibt es nur 15 solcher Dienste. Umgekehrt ist das Heimangebot außergewöhnlich dicht: 96,8 vollstationäre Plätze je 1.000 Einwohner über 70 gegenüber 63,1 im Land, schon 2021 der Spitzenwert aller 36 Verwaltungsbezirke in Rheinland-Pfalz. Speyer ist also stark auf stationäre Versorgung ausgerichtet. Wer zu Hause bleiben möchte, findet weniger Unterstützung von außen als in vergleichbaren Städten — eine Betreuungskraft, die im Haushalt lebt, ist hier oft die einzige durchgehende Lösung.' },
       },
       {
         '@type': 'Question',
@@ -333,31 +333,49 @@ export default function SpeyerPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Speyer und Rhein-Pfalz-Kreis: Schifferstadt, Römerberg, Dudenhofen und alle Gemeinden im Rhein-Pfalz-Kreis nördlich von Landau</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Speyer ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Speyer gebaut wurde, merkt man spätestens auf der Treppe. Nur 35,8 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent. 42,5 Prozent der Gebäude in Speyer sind Reihenhäuser, in Rheinland-Pfalz 15,5 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
+            Speyer ist die älteste der rheinland-pfälzischen Städte — das Medianalter liegt bei 47
+            Jahren, höher als in jeder anderen kreisfreien Stadt des Landes. 24,8 Prozent der
+            Einwohner sind über 65, 7,8 Prozent über 80; im Land sind es 23,3 und 6,9 Prozent.
+            Entsprechend hoch ist die Pflegequote: 3.653 Menschen sind pflegebedürftig, das sind
+            rund sieben Prozent der Bevölkerung gegenüber 6,5 Prozent in Rheinland-Pfalz.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 92,9 Quadratmeter gegenüber 107,7 in Rheinland-Pfalz — rund 15 Quadratmeter weniger. Nur 41,3 Prozent der Haushalte wohnen im Eigentum — in Rheinland-Pfalz sind es 54,4 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+            Was Speyer wirklich von anderen Städten unterscheidet, ist das Heimangebot.{' '}
+            <strong className="text-pm-ink font-semibold">Auf 1.000 Einwohner über 70 kommen hier
+            96,8 vollstationäre Plätze, im Land 63,1</strong> — mehr als die Hälfte über dem
+            Durchschnitt. Schon 2021 war Speyer damit Spitzenreiter unter allen 36 Verwaltungs&shy;bezirken
+            des Landes. Und anders als anderswo deckt sich das mit der Nutzung: 20,8 Prozent der
+            Pflegebedürftigen leben im Heim gegenüber 13,7 Prozent im Land. Hier zeigen Anteil und
+            Platzangebot in dieselbe Richtung — die Stadt ist tatsächlich auf das Heim hin gebaut.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz sind es 1,7. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. 46,2 Prozent aller Haushalte in Speyer bestehen aus einer einzigen Person, in Rheinland-Pfalz sind es 40,4 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Der Wohnungsmarkt ist eng: 3,5 Prozent Leerstand gegenüber 4,8 Prozent in Rheinland-Pfalz.
+            Die Kehrseite betrifft genau das, worum es auf dieser Seite geht:{' '}
+            <strong className="text-pm-ink font-semibold">Das ambulante Netz ist dünner als im
+            Land.</strong> Nur 16,3 Prozent der Pflegebedürftigen werden von einem Pflegedienst
+            betreut, in Rheinland-Pfalz 18,3 Prozent — und es gibt in ganz Speyer nur 15 solcher
+            Dienste. Wer zu Hause bleiben möchte, findet hier weniger Unterstützung von außen als
+            in vergleichbaren Städten. Eine Betreuungskraft, die im Haushalt lebt, ist deshalb
+            nicht nur eine Alternative zum Heim, sondern oft die einzige durchgehende Lösung.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 5.707 Menschen in Speyer sind 75 Jahre oder älter, und es gibt 26.309 Wohnungen in 10.404 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Topografisch ist Speyer unkompliziert, und das sagen wir ausdrücklich, weil andere
+            Städte hier ganz andere Probleme haben: Die Stadt liegt in der Oberrheinebene, zwischen
+            der Rheinniederung und der Hochterrasse liegen über das gesamte Stadtgebiet rund 20
+            Höhenmeter. Die lokalen „Buckel" sind kurze Rampen an den Terrassenkanten, keine
+            Hanglagen. Der Rhein bildet die Ostgrenze und zerschneidet die Stadt nicht. Wege sind
+            in Speyer also selten das Hindernis.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist die Stadt stark: Das Diakonissen-Stiftungs-Krankenhaus führt eine
+            geriatrische Klinik mit 1.297 stationären Fällen — die größte geriatrische Abteilung
+            aller Städte, die wir bisher betrachtet haben — dazu eine Tagesklinik mit 16 Plätzen.
+            Ein Hinweis: Der Träger betreibt auch ein Haus in Bad Dürkheim; die Geriatrie sitzt in
+            Speyer in der Paul-Egell-Straße. Lassen Sie sich vor jeder Entscheidung unabhängig
+            beraten — die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Speyer</h2>
           <div className="space-y-3 mb-12">
@@ -367,11 +385,11 @@ export default function SpeyerPage() {
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Speyer rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Speyer?', a: 'Das hängt am Grundriss, und die Ausgangslage in Speyer ist bekannt: Die durchschnittliche Wohnung misst 92,9 Quadratmeter, 20,2 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 41,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-              { q: 'Wie viele ältere Menschen leben in Speyer?', a: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent sind Reihenhäuser. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Speyer?', a: 'Das hängt am Grundriss, und die Ausgangslage in Speyer ist bekannt: Die durchschnittliche Wohnung misst 92,9 Quadratmeter, 20,2 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 41,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Speyer?', a: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent sind Reihenhäuser. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Wie gut ist die ambulante Versorgung in Speyer?', a: 'Dünner als im Landesdurchschnitt. Nur 16,3 Prozent der Speyerer Pflegebedürftigen werden von einem ambulanten Dienst betreut, in Rheinland-Pfalz sind es 18,3 Prozent — und in der ganzen Stadt gibt es nur 15 solcher Dienste. Umgekehrt ist das Heimangebot außergewöhnlich dicht: 96,8 vollstationäre Plätze je 1.000 Einwohner über 70 gegenüber 63,1 im Land, schon 2021 der Spitzenwert aller 36 Verwaltungsbezirke in Rheinland-Pfalz. Speyer ist also stark auf stationäre Versorgung ausgerichtet. Wer zu Hause bleiben möchte, findet weniger Unterstützung von außen als in vergleichbaren Städten — eine Betreuungskraft, die im Haushalt lebt, ist hier oft die einzige durchgehende Lösung.' },
               { q: 'Welches Einzugsgebiet wird in Speyer bedient?', a: 'Speyer und Rhein-Pfalz-Kreis: Schifferstadt, Römerberg, Dudenhofen und alle Gemeinden im Rhein-Pfalz-Kreis nördlich von Landau' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
