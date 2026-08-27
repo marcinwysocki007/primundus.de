@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Warum leben in Trier so viele Pflegebedürftige im Heim?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weil in Trier deutlich seltener zu Hause gepflegt wird als im übrigen Rheinland-Pfalz: Nur 46,6 Prozent der 4.782 Pflegebedürftigen werden allein von Angehörigen versorgt, im Land sind es 55,4 Prozent. Entsprechend leben 20,3 Prozent vollstationär gegenüber 13,7 Prozent im Land — es gibt hier sogar mehr Heimbewohner (969) als ambulant versorgte Menschen (832), landesweit ist das umgekehrt. Ein Teil erklärt sich daraus, dass Trier Oberzentrum für den Landkreis Trier-Saarburg ist und die Statistik Heimbewohner dem Standort der Einrichtung zuordnet, nicht dem Wohnort. Wer zu Hause bleiben möchte, ist in Trier also eher die Ausnahme — möglich ist es trotzdem.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Trier bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Trier und Region Trier: Konz, Saarburg, Bitburg, Prüm und alle Gemeinden in der Region Trier' },
       },
@@ -330,31 +335,50 @@ export default function TrierPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Trier und Region Trier: Konz, Saarburg, Bitburg, Prüm und alle Gemeinden in der Region Trier</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Trier ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Trier gebaut wurde, merkt man spätestens auf der Treppe. 51,3 Prozent der Gebäude in Trier sind Reihenhäuser, in Rheinland-Pfalz 15,5 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 30,4 Prozent der Haushalte wohnen im Eigentum — in Rheinland-Pfalz sind es 54,4 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+            Trier fällt in der rheinland-pfälzischen Pflegestatistik doppelt auf. Zum einen ist die
+            Stadt jung: Das Medianalter liegt bei 40 Jahren gegenüber 45 im Land, 19,6 Prozent der
+            Einwohner sind über 65 statt 23,3 Prozent — Universität und Hochschule prägen das. Die
+            Pflegequote ist entsprechend niedrig, 4,2 gegen 6,5 Prozent, die zweitniedrigste aller
+            24 kreisfreien Städte des Landes. Zum anderen wird hier ungewöhnlich selten zu Hause
+            gepflegt:{' '}
+            <strong className="text-pm-ink font-semibold">Nur 46,6 Prozent der 4.782
+            Pflegebedürftigen werden allein von Angehörigen versorgt, in Rheinland-Pfalz sind es
+            55,4 Prozent</strong> — fast neun Punkte Unterschied.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 85,3 Quadratmeter gegenüber 107,7 in Rheinland-Pfalz — rund 22 Quadratmeter weniger. Nur 32,5 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent.
+            Das Gegenstück dazu ist das Heim. In Trier leben 20,3 Prozent der Pflegebedürftigen
+            vollstationär, im Land 13,7 Prozent — und anders als in manchen Städten ist das kein
+            Rechenartefakt: Auch gemessen an der Zahl der über 70-Jährigen stehen hier 74 Plätze je
+            1.000 bereit gegenüber 63 im Land. Beide Kennzahlen zeigen in dieselbe Richtung.
+            Bemerkenswert ist die Folge:{' '}
+            <strong className="text-pm-ink font-semibold">In Trier leben mehr Menschen im Heim
+            (969) als von ambulanten Diensten versorgt werden (832)</strong> — landesweit ist das
+            Verhältnis umgekehrt. Ein Teil davon geht auf das Umland zurück, denn Trier ist
+            Oberzentrum für den Landkreis Trier-Saarburg und die Statistik ordnet Heimbewohner dem
+            Standort der Einrichtung zu.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            31,2 Prozent der Wohnungen in Trier haben weniger als 60 Quadratmeter, in Rheinland-Pfalz sind es 15,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. 55,7 Prozent aller Haushalte in Trier bestehen aus einer einzigen Person, in Rheinland-Pfalz sind es 40,4 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Auf ein Gebäude kommen in Trier im Schnitt 3,0 Wohnungen, in Rheinland-Pfalz sind es 1,7. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 9.646 Menschen in Trier sind 75 Jahre oder älter, und es gibt 62.985 Wohnungen in 21.286 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Wer in Trier alt wird, merkt außerdem die Lage. Zwischen der Talstadt am Hauptmarkt auf
+            137 Metern und dem Höhenstadtteil Tarforst auf 293 Metern liegen rund 150 Höhenmeter —
+            und beide sind bewohnt, Tarforst mit 6.487 Menschen. Dazu kommen Filsch, Kernscheid,
+            Irsch und Mariahof auf den Höhen sowie die Mosel, die die Stadt teilt: Euren und
+            West/Pallien liegen auf der linken Seite. Der älteste Ortsbezirk ist ausgerechnet
+            Kernscheid — 9,7 Prozent über 80, 28,1 Prozent über 65 — und zugleich der kleinste,
+            oben am Stadtrand gelegen. Kurze Wege gibt es dort nicht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Medizinisch ist Trier gut ausgestattet: eine eigene geriatrische Fachabteilung am
+            Klinikum Mutterhaus mit 750 stationären Fällen, eine geriatrische Rehabilitationsklinik
+            mit 80 Betten (St. Irminen) samt Tagesklinik und ein zertifiziertes AltersTraumaZentrum.
+            Die Frage bleibt trotzdem dieselbe wie überall: Was passiert nach der Entlassung? Eine
+            Betreuungskraft, die mit einzieht, ist nachts da und macht den Weg zurück in die eigene
+            Wohnung möglich — auch in Tarforst oder Kernscheid, wo ein Dienst weite Anfahrten hätte.
+            Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist
+            kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Trier</h2>
           <div className="space-y-3 mb-12">
@@ -369,6 +393,7 @@ export default function TrierPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Trier?', a: 'Das hängt am Grundriss, und die Ausgangslage in Trier ist bekannt: Die durchschnittliche Wohnung misst 85,3 Quadratmeter, 31,2 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 30,4 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Trier?', a: '9.646 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,4 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Trier — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Trier im Schnitt 3,0 Wohnungen, in Rheinland-Pfalz 1,7. 32,5 Prozent der Gebäude stehen frei, 51,3 Prozent sind Reihenhäuser. 53,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Trier ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Warum leben in Trier so viele Pflegebedürftige im Heim?', a: 'Weil in Trier deutlich seltener zu Hause gepflegt wird als im übrigen Rheinland-Pfalz: Nur 46,6 Prozent der 4.782 Pflegebedürftigen werden allein von Angehörigen versorgt, im Land sind es 55,4 Prozent. Entsprechend leben 20,3 Prozent vollstationär gegenüber 13,7 Prozent im Land — es gibt hier sogar mehr Heimbewohner (969) als ambulant versorgte Menschen (832), landesweit ist das umgekehrt. Ein Teil erklärt sich daraus, dass Trier Oberzentrum für den Landkreis Trier-Saarburg ist und die Statistik Heimbewohner dem Standort der Einrichtung zuordnet, nicht dem Wohnort. Wer zu Hause bleiben möchte, ist in Trier also eher die Ausnahme — möglich ist es trotzdem.' },
               { q: 'Welches Einzugsgebiet wird in Trier bedient?', a: 'Trier und Region Trier: Konz, Saarburg, Bitburg, Prüm und alle Gemeinden in der Region Trier' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

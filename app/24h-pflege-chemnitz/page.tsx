@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'In welchen Chemnitzer Stadtteilen wird Pflege am häufigsten gebraucht?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In den Plattenbausiedlungen der siebziger und achtziger Jahre. Sie wurden damals von jungen Familien bezogen, die geblieben und gemeinsam alt geworden sind. Im Yorckgebiet leben heute mehr Menschen über 65 als im erwerbsfähigen Alter; Markersdorf, Helbersdorf, Kapellenberg, Morgenleite und Hutholz liegen kaum darunter. Im Lutherviertel und im Zentrum ist der Anteil rund ein Fünftel davon. Chemnitz insgesamt ist mit 27,7 Prozent über 65 und 10,2 Prozent über 80 eine der ältesten Großstädte Deutschlands. Unsere Betreuungskräfte kommen in jeden Stadtteil, auch in die eingemeindeten Dörfer am Rand — Anreise und Preis sind überall gleich.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Chemnitz bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Chemnitz und Erzgebirgskreis: Stollberg, Annaberg-Buchholz, Aue-Bad Schlema und alle Gemeinden im Erzgebirgskreis und Landkreis Mittelsachsen' },
       },
@@ -333,31 +338,54 @@ export default function ChemnitzPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Chemnitz und Erzgebirgskreis: Stollberg, Annaberg-Buchholz, Aue-Bad Schlema und alle Gemeinden im Erzgebirgskreis und Landkreis Mittelsachsen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Chemnitz ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Chemnitz gewohnt wird, entscheidet mit darüber, ob Pflege zu Hause funktioniert. Auf ein Gebäude kommen in Chemnitz im Schnitt 4,5 Wohnungen, in Sachsen sind es 2,7. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. Nur 18,5 Prozent der Haushalte wohnen im Eigentum — in Sachsen sind es 34,3 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+            Chemnitz gehört zu den ältesten Großstädten Deutschlands, und die Zahlen lassen daran
+            keinen Zweifel: 27,7 Prozent der Einwohner sind über 65, 10,2 Prozent über 80. In
+            Sachsen sind es 27,2 und 9,5 Prozent — und Sachsen liegt bundesweit schon weit vorn.{' '}
+            <strong className="text-pm-ink font-semibold">23.939 Chemnitzerinnen und Chemnitzer
+            sind pflegebedürftig</strong>, das entspricht 9,6 Prozent der Bevölkerung gegenüber 8,9
+            Prozent im Land. Zum Vergleich: In Trier sind 6,1 Prozent über 80, hier ist es fast das
+            Doppelte.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            10,9 Prozent der Wohnungen stehen leer, in Sachsen 8,5 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. 43,1 Prozent der Wohnungen in Chemnitz haben weniger als 60 Quadratmeter, in Sachsen sind es 34,1 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+            Das Bemerkenswerte an Chemnitz ist aber nicht der Durchschnitt, sondern wie ungleich
+            das Alter verteilt ist — und zwar auf eine sehr spezifische Weise. Die
+            Plattenbausiedlungen der siebziger und achtziger Jahre wurden damals von jungen
+            Familien bezogen, die dort geblieben und gemeinsam alt geworden sind. Im{' '}
+            <strong className="text-pm-ink font-semibold">Yorckgebiet leben heute mehr Menschen
+            über 65 als im erwerbsfähigen Alter</strong>; Markersdorf, Helbersdorf, Kapellenberg,
+            Morgenleite und Hutholz liegen kaum darunter. Im Lutherviertel und im Zentrum ist der
+            Anteil ein Fünftel davon. Für die häusliche Pflege heißt das: sehr hohe Fallzahlen in
+            wenigen, baulich einheitlichen Quartieren — und Stadtteile fast ohne Bedarf.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            32,1 Prozent der Gebäude in Chemnitz sind Reihenhäuser, in Sachsen 18,6 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 50,8 Prozent der Gebäude stehen frei, in Sachsen sind es 64,3 Prozent. Die durchschnittliche Wohnung misst 71,3 Quadratmeter gegenüber 79,1 in Sachsen — rund 8 Quadratmeter weniger.
+            Bei der Versorgung fällt auf, dass in Chemnitz häufiger allein durch Angehörige gepflegt
+            wird als im Land: 51,1 gegen 48,5 Prozent. Ambulante Dienste kommen dagegen seltener zum
+            Einsatz, 21,1 gegen 24,4 Prozent. Heimplätze sind reichlich vorhanden — 17,2 je 1.000
+            Einwohner gegenüber 15,7 in Sachsen. Der Anteil der Pflegebedürftigen, die tatsächlich
+            im Heim leben, ist mit 13,8 Prozent dagegen völlig unauffällig. Das ist kein
+            Widerspruch, sondern eine Frage des Nenners: Die Zahl der Pflegebedürftigen ist hier so
+            groß, dass hinter einem durchschnittlichen Anteil eine sehr große absolute Zahl steckt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 36.485 Menschen in Chemnitz sind 75 Jahre oder älter, und es gibt 151.859 Wohnungen in 33.925 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Topografisch ist Chemnitz unkompliziert — die Stadt liegt in einer breiten Beckenlage
+            am Nordrand des Erzgebirges, das bebaute Gebiet ist weitgehend flach. Räumlich zieht
+            sich die Stadt dafür weit: Zwischen dem dichtesten Stadtteil Kaßberg mit 9.262
+            Einwohnern je Quadratkilometer und dem dünnsten, Euba mit 159, liegt der Faktor 58. In
+            den eingemeindeten Dörfern am Rand hat ein ambulanter Dienst lange Wege für kurze
+            Einsätze; für jemanden, der im Haus wohnt, spielt die Entfernung keine Rolle.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist die Stadt gut versorgt: zwei Krankenhäuser mit eigener geriatrischer
+            Fachabteilung — das Geriatriezentrum am Klinikum Chemnitz und die Klinik für Geriatrie
+            am DRK-Krankenhaus Rabenstein — dazu eine geriatrische Rehabilitationsklinik mit 80
+            Betten. Eine Lücke gibt es allerdings: Die geriatrische Tagesklinik ist derzeit außer
+            Betrieb. Umso mehr zählt, wer nach der Entlassung zu Hause da ist. Lassen Sie sich
+            vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Chemnitz</h2>
           <div className="space-y-3 mb-12">
@@ -372,6 +400,7 @@ export default function ChemnitzPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Chemnitz?', a: 'Das hängt am Grundriss, und die Ausgangslage in Chemnitz ist bekannt: Die durchschnittliche Wohnung misst 71,3 Quadratmeter, 43,1 Prozent liegen unter 60 Quadratmetern (Sachsen: 34,1 Prozent), und 18,5 Prozent der Haushalte wohnen im Eigentum (Sachsen: 34,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Chemnitz?', a: '36.485 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,2 Prozent — in Sachsen 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen: 29,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Chemnitz — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Chemnitz im Schnitt 4,5 Wohnungen, in Sachsen 2,7. 50,8 Prozent der Gebäude stehen frei, 32,1 Prozent sind Reihenhäuser. 57,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Chemnitz ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'In welchen Chemnitzer Stadtteilen wird Pflege am häufigsten gebraucht?', a: 'In den Plattenbausiedlungen der siebziger und achtziger Jahre. Sie wurden damals von jungen Familien bezogen, die geblieben und gemeinsam alt geworden sind. Im Yorckgebiet leben heute mehr Menschen über 65 als im erwerbsfähigen Alter; Markersdorf, Helbersdorf, Kapellenberg, Morgenleite und Hutholz liegen kaum darunter. Im Lutherviertel und im Zentrum ist der Anteil rund ein Fünftel davon. Chemnitz insgesamt ist mit 27,7 Prozent über 65 und 10,2 Prozent über 80 eine der ältesten Großstädte Deutschlands. Unsere Betreuungskräfte kommen in jeden Stadtteil, auch in die eingemeindeten Dörfer am Rand — Anreise und Preis sind überall gleich.' },
               { q: 'Welches Einzugsgebiet wird in Chemnitz bedient?', a: 'Chemnitz und Erzgebirgskreis: Stollberg, Annaberg-Buchholz, Aue-Bad Schlema und alle Gemeinden im Erzgebirgskreis und Landkreis Mittelsachsen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Bekommt man in Remscheid schwer einen Heimplatz?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Nein, und das wird oft falsch gelesen. Zwar leben nur 11,4 Prozent der Remscheider Pflegebedürftigen im Heim gegenüber 12,2 Prozent in Nordrhein-Westfalen — gemessen an der Zahl der über 65-Jährigen stehen hier aber 47 vollstationäre Plätze je 1.000 bereit, im Land 46. Es gibt also eher etwas mehr Plätze als anderswo, sie werden nur seltener genutzt. Die Stadt selbst begründet das in ihrer Pflegeplanung mit dem sehr großen privaten und ambulanten Pflegepotential und rechnet deshalb sogar einen Abschlag beim künftigen Platzbedarf ein. Nach eigenen Angaben werden 85,5 Prozent aller Remscheider Pflegebedürftigen ambulant versorgt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Remscheid bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Remscheid und Bergisches Land: Wuppertal-Süd, Solingen, Radevormwald, Hückeswagen und alle Gemeinden im Oberbergischen Kreis' },
       },
@@ -333,31 +338,58 @@ export default function RemscheidPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Remscheid und Bergisches Land: Wuppertal-Süd, Solingen, Radevormwald, Hückeswagen und alle Gemeinden im Oberbergischen Kreis</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Remscheid ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Auf dem Wohnungsmarkt von Remscheid ist die Lage anders als im Land. 4,8 Prozent der Wohnungen stehen leer, in Nordrhein-Westfalen 3,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Nur 2,1 Prozent der Wohnungen sind nach 2010 entstanden, in Nordrhein-Westfalen 5,8 Prozent. Der Bestand ist älter als im Land.
+            Remscheid verbindet zwei Dinge, die selten zusammen auftreten: einen überdurchschnittlich
+            hohen Pflegebedarf und eine überdurchschnittlich starke häusliche Versorgung.{' '}
+            <strong className="text-pm-ink font-semibold">10.011 Menschen sind hier pflegebedürftig,
+            das sind 8,8 Prozent der Einwohner gegenüber 7,6 Prozent in Nordrhein-Westfalen.</strong>{' '}
+            Und die Zahl wächst rasant: 2019 waren es 6.783, 2021 schon 7.770 — ein Zuwachs von
+            fast 29 Prozent in nur zwei Jahren. Versorgt wird trotzdem überwiegend zu Hause: 59,6
+            Prozent allein durch Angehörige (Land 59,0), 18,3 Prozent mit ambulantem Dienst (Land
+            17,3). Nach Angaben der Stadt werden 85,5 Prozent aller Remscheider Pflegebedürftigen
+            ambulant versorgt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 85,5 Quadratmeter gegenüber 92,7 in Nordrhein-Westfalen — rund 7 Quadratmeter weniger. 39,9 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Nordrhein-Westfalen sind es 33,6 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
+            Ein verbreiteter Fehlschluss sei hier ausdrücklich ausgeräumt. Nur 11,4 Prozent der
+            Pflegebedürftigen leben im Heim, im Land 12,2 Prozent — daraus liest sich leicht ein
+            Platzmangel heraus. Das Gegenteil stimmt:{' '}
+            <strong className="text-pm-ink font-semibold">Gemessen an der Zahl der über
+            65-Jährigen stehen in Remscheid 47 vollstationäre Plätze je 1.000 bereit, in
+            Nordrhein-Westfalen 46.</strong> Die Stadt selbst begründet das in ihrer Pflegeplanung
+            mit dem „sehr großen privaten und ambulanten Pflegepotential" und rechnet deshalb sogar
+            einen Abschlag beim künftigen Platzbedarf ein. Wer in Remscheid zu Hause bleibt, tut
+            das nicht mangels Alternative, sondern weil die Familien es tragen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die Nettokaltmiete liegt bei 5,78 Euro je Quadratmeter, in Nordrhein-Westfalen bei 6,82 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo. Auf ein Gebäude kommen in Remscheid im Schnitt 2,8 Wohnungen, in Nordrhein-Westfalen sind es 2,3. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
+            Beim Alter geht die Stadt weit auseinander. Der Stadtbezirk Lennep ist durchgängig der
+            älteste — 24,4 Prozent über 65, 8,5 Prozent über 80 —, und im Stadtteil Stadtgarten
+            sind es sogar 16,1 Prozent über 80. Am anderen Ende steht der Honsberg mit 3,3 Prozent.
+            Zur oft zitierten Höhenlage eine ehrliche Einordnung: Zwischen dem tiefsten Punkt an der
+            Wupper (96 Meter) und dem Brodtberg (379 Meter) liegen fast 283 Meter, aber die tief
+            eingeschnittenen Täler sind überwiegend Wald und Talsperre. Die Wohnquartiere liegen
+            fast durchweg auf den Hochflächen. Was im Alltag zählt, sind die Hanglagen innerhalb
+            der Viertel — etwa vom Honsberg, aus Vieringhausen oder Kremenholl hinunter zum
+            Morsbachtal.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 12.814 Menschen in Remscheid sind 75 Jahre oder älter, und es gibt 58.291 Wohnungen in 21.065 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Zur Stadt gehört noch etwas: 21,2 Prozent der Einwohner haben eine ausländische
+            Staatsangehörigkeit — Remscheid gibt seinen „Ratgeber Pflege" deshalb in sieben Sprachen
+            heraus. Wenn Sprache in Ihrer Familie ein Thema ist, sprechen Sie es an. Das
+            Deutschniveau jeder Betreuungskraft wird eingestuft und steht vorab im Profil, zusammen
+            mit Erfahrung und Foto.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Remscheid versorgt, aber die Adresse ist wichtig: Die geriatrische
+            Fachabteilung mit 558 stationären Fällen und die Tagesklinik mit zwölf Plätzen sitzen in
+            der <strong className="text-pm-ink font-semibold">Sana Fabricius-Klinik in der
+            Brüderstraße</strong> — nicht im Sana-Klinikum an der Burger Straße. Das sind zwei
+            verschiedene Häuser desselben Trägers, die regelmäßig verwechselt werden. Die Geriatrie
+            bietet dort auch kostenlose Kurse für pflegende Angehörige an. Und lassen Sie sich
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Remscheid</h2>
           <div className="space-y-3 mb-12">
@@ -372,6 +404,7 @@ export default function RemscheidPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Remscheid?', a: 'Das hängt am Grundriss, und die Ausgangslage in Remscheid ist bekannt: Die durchschnittliche Wohnung misst 85,5 Quadratmeter, 26,7 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 36,2 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Remscheid?', a: '12.814 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Remscheid — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Remscheid im Schnitt 2,8 Wohnungen, in Nordrhein-Westfalen 2,3. 46,0 Prozent der Gebäude stehen frei, 32,9 Prozent sind Reihenhäuser. 64,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Remscheid ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Bekommt man in Remscheid schwer einen Heimplatz?', a: 'Nein, und das wird oft falsch gelesen. Zwar leben nur 11,4 Prozent der Remscheider Pflegebedürftigen im Heim gegenüber 12,2 Prozent in Nordrhein-Westfalen — gemessen an der Zahl der über 65-Jährigen stehen hier aber 47 vollstationäre Plätze je 1.000 bereit, im Land 46. Es gibt also eher etwas mehr Plätze als anderswo, sie werden nur seltener genutzt. Die Stadt selbst begründet das in ihrer Pflegeplanung mit dem sehr großen privaten und ambulanten Pflegepotential und rechnet deshalb sogar einen Abschlag beim künftigen Platzbedarf ein. Nach eigenen Angaben werden 85,5 Prozent aller Remscheider Pflegebedürftigen ambulant versorgt.' },
               { q: 'Welches Einzugsgebiet wird in Remscheid bedient?', a: 'Remscheid und Bergisches Land: Wuppertal-Süd, Solingen, Radevormwald, Hückeswagen und alle Gemeinden im Oberbergischen Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
