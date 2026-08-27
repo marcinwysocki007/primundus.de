@@ -22,6 +22,11 @@ const serviceLinks = [
   { label: 'Kontakt', href: '/kontakt' },
   { label: '24h-Pflege', href: '/24-stunden-pflege' },
   { label: 'Kosten', href: '/kosten' },
+  // 27.08.2026 ergänzt: /leistungen und /ablauf waren weder im Header noch im
+  // Footer verlinkt — die einzigen beiden Kernseiten ganz ohne sitewide Link.
+  // Beide stehen bei Google als „Duplikat" und wurden seit Juli nicht gecrawlt.
+  { label: 'Leistungen', href: '/leistungen' },
+  { label: 'Ablauf', href: '/ablauf' },
   { label: 'Franchisepartner werden', href: '/franchisepartner' },
 ]
 
