@@ -15,11 +15,11 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-  description: '24h-Pflege von Primundus: Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. 6× Testsieger DIE WELT. Ab 2.200 €/Monat.',
+  description: '24h-Pflege von Primundus: Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. Testsieger DIE WELT, 6× in Folge. Ab 2.200 €/Monat.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege' },
   openGraph: {
     title: '24-Stunden-Pflege | Primundus — Testsieger & 20 Jahre Erfahrung',
-    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. 6× Testsieger DIE WELT.',
+    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. Testsieger DIE WELT, 6× in Folge.',
     url: 'https://primundus.de/24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -91,7 +91,7 @@ export default function VierUndZwanzigStundenPflege() {
           </h1>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. 6× Testsieger DIE WELT.
+            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT, 6× in Folge.
           </p>
 
           <KurzAntwort frage="Was unterscheidet Primundus von Vermittlungsagenturen?">

@@ -11,7 +11,7 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege Testsieger: Primundus 6× in Folge Nr. 1',
   description:
-    'Primundus ist 6× Testsieger in Folge: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel als PDF ansehen.',
+    'Primundus ist Testsieger, 6× in Folge: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel als PDF ansehen.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

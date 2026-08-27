@@ -7,13 +7,13 @@ import { TestimonialCard } from '@/components/home/TestimonialCard'
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege — Preis & Pflegekräfte in 2 Minuten sehen',
-  description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. 6× Testsieger.',
+  description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. Testsieger, 6× in Folge.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
     title: '24-Stunden-Pflege — Preis & Pflegekräfte in 2 Minuten sehen',
-    description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. 6× Testsieger.',
+    description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. Testsieger, 6× in Folge.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -139,7 +139,7 @@ export default function Page() {
                       { label: 'Keine Vermittlungsgebühr', icon: 'M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' },
                       { label: 'Täglich kündbar & taggenaue Abrechnung', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' },
                       { label: 'Fester Ansprechpartner, 7 Tage die Woche', icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' },
-                      { label: '20 Jahre Erfahrung & 6× Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
+                      { label: '20 Jahre Erfahrung & Testsieger 6× in Folge', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
                     ].map((usp, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <div className="flex-shrink-0 w-9 h-9 rounded-full bg-pm-taupe/10 flex items-center justify-center">
@@ -202,7 +202,7 @@ export default function Page() {
                     { label: 'Keine Vermittlungsgebühr', icon: 'M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' },
                     { label: 'Täglich kündbar & taggenaue Abrechnung', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' },
                     { label: 'Fester Ansprechpartner, 7 Tage die Woche', icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' },
-                    { label: '20 Jahre Erfahrung & 6× Testsieger', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
+                    { label: '20 Jahre Erfahrung & Testsieger 6× in Folge', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
                   ].map((usp, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-pm-taupe/10 flex items-center justify-center">
@@ -294,7 +294,7 @@ export default function Page() {
                 },
                 {
                   title: 'Bei uns angestellt — nicht vermittelt',
-                  text: 'Unsere Betreuungskräfte sind bei uns fest angestellt und werden mit A1-Bescheinigung nach Deutschland entsandt. Für Sie heißt das klare Verhältnisse — getragen von 20 Jahren Erfahrung und der Auszeichnung als 6× Testsieger.',
+                  text: 'Unsere Betreuungskräfte sind bei uns fest angestellt und werden mit A1-Bescheinigung nach Deutschland entsandt. Für Sie heißt das klare Verhältnisse — getragen von 20 Jahren Erfahrung und der Auszeichnung als Testsieger, 6× in Folge.',
                   icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z',
                 },
               ].map((item, i) => (
@@ -432,7 +432,7 @@ export default function Page() {
                       className="h-[80px] w-[80px] object-contain flex-shrink-0"
                     />
                     <div>
-                      <p className="text-[11px] font-bold text-pm-gold uppercase tracking-wider mb-0.5">6× Testsieger · DIE WELT</p>
+                      <p className="text-[11px] font-bold text-pm-gold uppercase tracking-wider mb-0.5">Testsieger · DIE WELT · 6× in Folge</p>
                       <p className="text-[17px] font-bold text-pm-ink leading-tight">Nr. 1 der Pflegekräfte-Vermittler</p>
                       <p className="text-[12px] text-pm-mute mt-0.5">Ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue</p>
                     </div>

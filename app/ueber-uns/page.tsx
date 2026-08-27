@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
-  description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
+  description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT, 6× in Folge. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
-    description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen.',
+    description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. Testsieger DIE WELT, 6× in Folge. 60.000+ erfolgreiche Betreuungen.',
     url: 'https://primundus.de/ueber-uns',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -60,7 +60,7 @@ export default function Page() {
           {[
             { zahl: '20+', label: 'Jahre Erfahrung' },
             { zahl: '60.000+', label: 'Betreuungen' },
-            { zahl: 'Nr. 1', label: '6× Testsieger DIE WELT' },
+            { zahl: 'Nr. 1', label: 'Testsieger DIE WELT · 6× in Folge' },
             { zahl: 'Mo–So', label: '8 – 20 Uhr erreichbar' },
           ].map((item) => (
             <div key={item.label} className="bg-white border border-pm-line rounded-2xl p-5 text-center">
@@ -127,7 +127,7 @@ export default function Page() {
               className="h-[100px] w-[100px] object-contain flex-shrink-0"
             />
             <div>
-              <p className="text-[12px] font-bold text-pm-gold uppercase tracking-wider mb-1">6× Testsieger · DIE WELT</p>
+              <p className="text-[12px] font-bold text-pm-gold uppercase tracking-wider mb-1">Testsieger · DIE WELT · 6× in Folge</p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-pm-ink leading-tight mb-2">
                 Nr. 1 der Pflegekräfte-Vermittler
               </h2>

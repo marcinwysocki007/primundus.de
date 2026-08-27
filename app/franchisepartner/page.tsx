@@ -94,7 +94,7 @@ export default function FranchisePage() {
 
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink leading-[1.1] mb-6 max-w-[680px]">
             Partner werden bei Primundus —<br className="hidden md:block" />
-            dem 6× Testsieger der 24h-Pflege
+            dem Testsieger der 24h-Pflege – 6× in Folge
           </h1>
 
           <p className="text-[17px] text-pm-body leading-relaxed max-w-[580px] mb-4">
@@ -133,7 +133,7 @@ export default function FranchisePage() {
                 height={96}
                 className="object-contain mb-3"
               />
-              <p className="text-[15px] font-bold text-pm-ink">6× Testsieger DIE WELT</p>
+              <p className="text-[15px] font-bold text-pm-ink">Testsieger DIE WELT – 6× in Folge</p>
               <p className="text-small text-pm-mute mt-1">Nr. 1 der Pflegekräfte-Vermittler — DIE WELT & ServiceValue</p>
             </div>
             <div className="bg-white border border-pm-line rounded-2xl p-6 flex flex-col items-center justify-center text-center">
@@ -297,7 +297,7 @@ export default function FranchisePage() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                {['Branchen-Erfahrung seit 2006', '6× Testsieger DIE WELT', 'Eigene Software', 'Eigenes Personal'].map((tag) => (
+                {['Branchen-Erfahrung seit 2006', 'Testsieger DIE WELT · 6× in Folge', 'Eigene Software', 'Eigenes Personal'].map((tag) => (
                   <span key={tag} className="text-[12px] text-pm-taupe border border-[#D4C5B0] rounded-full px-3 py-1 bg-[#FDFCFA]">
                     {tag}
                   </span>
