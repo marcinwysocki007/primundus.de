@@ -237,6 +237,54 @@ export default function BocholtPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bocholt und Westmünsterland: Rhede, Borken, Isselburg, Raesfeld und alle Gemeinden im Kreis Borken</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bocholt ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Der Kreis Borken gilt als jung — Bocholt ist es nicht.
+            <strong className="text-pm-ink font-semibold"> Sieben Prozent der Bocholter sind über
+            80, der höchste Anteil aller siebzehn Kommunen des Kreises</strong> und über dem Wert
+            für Nordrhein-Westfalen. Der Kreisdurchschnitt liegt bei knapp sechs Prozent. Wer aus
+            dem Kreis auf die Stadt schließt, unterschätzt also, wie viele Hochbetagte hier leben.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Und die Versorgung ist knapp. Im Kreis Borken kommen auf jeden ambulanten Pflegedienst
+            im Schnitt <strong className="text-pm-ink font-semibold">rund 108 Pflegebedürftige</strong> —
+            in Nordrhein-Westfalen sind es 75, im Bund 71. Das ist der höchste Wert, der uns in
+            unseren Regionen begegnet ist. Beim Tagespflegeangebot steht der Raum Bocholt kreisweit
+            sogar am Ende, und der Kreis schreibt in seiner eigenen Pflegebedarfsplanung, dass es
+            schwer sei, hier einen Kurzzeitpflegeplatz zu finden. Wer kurzfristig etwas braucht,
+            merkt das sofort.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen prägt bis heute der 22. März 1945. In fünfundzwanzig Minuten wurde Bocholt
+            zu rund 85 Prozent zerstört; in der Altstadt blieben drei Häuser unversehrt, und die
+            Einwohnerzahl fiel von 35.000 auf etwa 8.000. Was heute steht, entstand fast vollständig
+            danach — solide Wiederaufbau- und Nachkriegsbauten, errichtet in einer Zeit, als
+            Barrierefreiheit noch kein Thema war. Schmale Treppenhäuser und hohe Wannenkanten
+            gehören bei diesem Baualter oft dazu. Für eine Betreuungskraft genügt trotzdem ein
+            eigenes Zimmer.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Rundherum wird es schnell ländlich. Bocholt ist zwar die größte Stadt im Kreis Borken,
+            aber nicht die Kreisstadt — das ist Borken selbst. Wer in einer der Bauerschaften wohnt,
+            in Barlo, Stenern, Biemenhorst oder Richtung Isselburg und Rhede, kennt die längeren
+            Wege: Ein ambulanter Dienst fährt hier Touren, und die Termine richten sich nach der
+            Route. Eine Betreuungskraft, die im Haus wohnt, ist davon unabhängig. Anfahrtskosten
+            berechnen wir nicht, der Preis ist überall derselbe.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ein Punkt, der im Ernstfall zählt: Eine geriatrische Fachabteilung gibt es am Bocholter
+            Krankenhaus nicht. Wer nach einem Sturz oder Schlaganfall Altersmedizin braucht, wird
+            nach Borken, Ahaus oder Gronau verlegt. Für die Zeit danach heißt das: Die Versorgung zu
+            Hause sollte früh geklärt sein, nicht erst am Entlassungstag.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung im Kreis Borken ist
+            kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch steht
+            Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Weg Sie sich danach
+            entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bocholt</h2>
           <div className="space-y-3 mb-12">
@@ -245,6 +293,9 @@ export default function BocholtPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bocholt starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bocholt rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Bocholt ist flach und fahrradfreundlich — reicht das nicht?', a: 'Die flache Lage hilft tatsächlich, und die Stadt selbst nennt sie in ihrem Mobilitätskonzept als guten Ausgangspunkt für Barrierefreiheit. In Bocholt werden über 40 Prozent aller Wege mit dem Rad zurückgelegt. Nur ist genau das Verkehrsmittel, das bei Gangunsicherheit, nachlassendem Sehvermögen oder Demenz als Erstes wegfällt — und danach bleibt ein Busangebot, das noch längst nicht durchgehend niederflurig ist. Die Flachheit verschiebt den Zeitpunkt, an dem es allein nicht mehr geht. Aufheben kann sie ihn nicht.' },
+              { q: 'Sind Bocholter Wohnungen für Pflege zu Hause geeignet?', a: 'In aller Regel ja, barrierefrei sind sie aber selten. Am 22. März 1945 wurde Bocholt in fünfundzwanzig Minuten zu rund 85 Prozent zerstört — in der Altstadt blieben drei Häuser unversehrt. Was heute steht, ist deshalb fast vollständig Wiederaufbau- und Nachkriegsbestand: solide gebaut, aber zu einer Zeit, als niemand an Aufzüge oder bodengleiche Duschen dachte. Für die Betreuungskraft genügt ein eigenes Zimmer.' },
+              { q: 'Kommt eine Betreuungskraft auch in die Bauerschaften und in den Kreis Borken?', a: 'Ja, und dort ist der Unterschied am deutlichsten. Bocholt ist die größte Stadt im Kreis Borken, aber nicht die Kreisstadt — das ist Borken selbst. Wer in Barlo, Stenern, Biemenhorst oder Richtung Isselburg und Rhede wohnt, kennt die längeren Wege: Ambulante Dienste fahren dort Touren, und die Termine richten sich nach der Route statt nach Ihrem Tagesablauf. Eine Betreuungskraft im Haus ist davon unabhängig, und Anfahrtskosten berechnen wir nicht.' },
               { q: 'Welches Einzugsgebiet wird in Bocholt bedient?', a: 'Bocholt und Westmünsterland: Rhede, Borken, Isselburg, Raesfeld und alle Gemeinden im Kreis Borken' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
