@@ -237,6 +237,48 @@ export default function BreisachamRheinPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Breisach und westlicher Breisgau-Hochschwarzwald: Freiburg-Umland, Vogtsburg, Ihringen, Kaiserstuhl und alle Gemeinden im westlichen Landkreis Breisgau-Hochschwarzwald</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Freiburg und im Umland ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Freiburg entscheidet die Wohnung. Die Stadt hat mit rund 81 Quadratmetern die
+            kleinsten Wohnungen weit und breit — im Land sind es 99 —, und
+            <strong className="text-pm-ink font-semibold"> gut ein Drittel aller Freiburger
+            Wohnungen misst weniger als 60 Quadratmeter</strong>. Fast 60 Prozent liegen in Häusern
+            mit sieben und mehr Parteien, und knapp drei Viertel der Freiburger wohnen zur Miete.
+            Für Pflege zu Hause heißt das: Der Platz für ein Pflegebett, für Hilfsmittel und für
+            ein eigenes Zimmer der Betreuungskraft ist hier die erste Frage, nicht die letzte.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Umziehen ist dabei keine echte Option. Freiburg hat mit gut zwei Prozent die
+            <strong className="text-pm-ink font-semibold"> niedrigste Leerstandsquote aller 44
+            Stadt- und Landkreise Baden-Württembergs</strong> und gehört zu den vier teuersten
+            Großstädten Deutschlands. Wer hier eine bezahlbare, altersgerechte Wohnung sucht,
+            sucht lange. Deshalb ist die Frage meist nicht, wohin jemand zieht, sondern wie das
+            Leben in der vorhandenen Wohnung weitergehen kann.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Das Umland ist in fast jedem Punkt das Gegenteil. In Breisgau-Hochschwarzwald und
+            Emmendingen sind die Wohnungen mit gut 103 Quadratmetern deutlich größer, mehr als die
+            Hälfte der Menschen wohnt im Eigentum, und in beiden Kreisen liegt knapp die Hälfte
+            aller Wohnungen in Ein- oder Zweifamilienhäusern. Dort ist selten der Platz das
+            Problem, sondern die Treppe ins Obergeschoss — und die Entfernung. Zwischen der
+            Rheinebene und dem Hochschwarzwald liegen über 1.300 Höhenmeter; ein ambulanter Dienst,
+            der Gemeinden am Berg anfährt, plant im Winter anders als im Sommer.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Zahl sollten Familien kennen, bevor es eilt: In Freiburg gibt es nur rund zwei
+            Dutzend Kurzzeitpflegeplätze — für eine Stadt mit über 230.000 Einwohnern. Wer nach
+            einem Krankenhausaufenthalt kurzfristig eine Überbrückung braucht, findet sie also
+            selten. Eine Betreuungskraft, die mit einzieht, lässt sich dagegen in wenigen Tagen
+            organisieren und ist von Anfang an eine dauerhafte Lösung, keine Überbrückung.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in
+            Baden-Württemberg beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu
+            Hause. Dieser Anspruch ist gesetzlich geregelt (§ 7a SGB XI) und gilt unabhängig davon,
+            wofür Sie sich am Ende entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Breisach am Rhein</h2>
           <div className="space-y-3 mb-12">
@@ -245,6 +287,9 @@ export default function BreisachamRheinPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Breisach am Rhein starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Breisach am Rhein rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Ist unsere Wohnung in Freiburg überhaupt groß genug für eine Betreuungskraft?', a: 'Das ist in Freiburg tatsächlich die erste Frage. Die Stadt hat mit rund 81 Quadratmetern die kleinsten Wohnungen der Region — im Land sind es 99 —, und gut ein Drittel misst weniger als 60 Quadratmeter. Eine Betreuungskraft braucht ein eigenes Zimmer, das ist die Voraussetzung. In vielen Freiburger Wohnungen lässt sich das einrichten, in einer kleinen Zwei-Zimmer-Wohnung nicht. Wir klären das vorab mit Ihnen, bevor irgendetwas entschieden wird — und sagen es offen, wenn es nicht passt.' },
+              { q: 'Wäre ein Umzug in eine altersgerechte Wohnung nicht einfacher?', a: 'In Freiburg leider selten. Die Stadt hat mit gut zwei Prozent die niedrigste Leerstandsquote aller 44 Stadt- und Landkreise Baden-Württembergs und gehört zu den vier teuersten Großstädten Deutschlands. Wer hier eine bezahlbare, barrierearme Wohnung sucht, sucht lange — und muss meist das gewohnte Viertel verlassen. Deshalb ist die praktikablere Frage in der Regel, wie das Leben in der vorhandenen Wohnung weitergehen kann.' },
+              { q: 'Kommt eine Betreuungskraft auch in die Gemeinden im Schwarzwald?', a: 'Ja, und dort ist der Unterschied besonders groß. Zwischen der Rheinebene und dem Hochschwarzwald liegen über 1.300 Höhenmeter. Ein ambulanter Dienst, der Gemeinden am Berg anfährt, plant im Winter anders als im Sommer, und die Termine richten sich nach der Tour. Eine Betreuungskraft, die im Haus wohnt, ist davon unabhängig. Anfahrtskosten berechnen wir nicht, der Preis ist im Umland derselbe wie in der Stadt.' },
               { q: 'Welches Einzugsgebiet wird in Breisach am Rhein bedient?', a: 'Breisach und westlicher Breisgau-Hochschwarzwald: Freiburg-Umland, Vogtsburg, Ihringen, Kaiserstuhl und alle Gemeinden im westlichen Landkreis Breisgau-Hochschwarzwald' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
