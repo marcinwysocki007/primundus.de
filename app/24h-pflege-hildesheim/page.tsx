@@ -237,6 +237,36 @@ export default function HildesheimPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Hildesheim und Landkreis Hildesheim: Bad Salzdetfurth, Alfeld, Elze, Sarstedt und alle Gemeinden im Landkreis Hildesheim</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Hildesheim ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Hildesheim ist eine Stadt mit vielen Treppen. Rund um den Dom, am Moritzberg und in den
+            gewachsenen Vierteln liegen die Wohnungen oft im zweiten oder dritten Stock, und ein Aufzug
+            ist die Ausnahme. Solange jemand die Stufen schafft, denkt niemand darüber nach. Wenn es
+            nicht mehr geht, ändert sich der Alltag schlagartig: Der Arzttermin wird zur Tagesaufgabe,
+            der Einkauf um die Ecke ist unerreichbar, und Besuch kommt seltener.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            An diesem Punkt melden sich die meisten Familien bei uns. Meistens geht es gar nicht um
+            medizinische Pflege im engeren Sinn, sondern um den Alltag: aufstehen, waschen, anziehen,
+            kochen — und jemanden im Haus haben, der zuhört. Ein ambulanter Dienst kommt dafür zweimal
+            am Tag für zwanzig Minuten. Eine Betreuungskraft, die mit einzieht, ist auch da, wenn
+            nachts jemand aufsteht oder nachmittags die Unruhe kommt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Im Landkreis stellt sich die Frage anders. Wer in Bad Salzdetfurth, Alfeld oder Elze wohnt,
+            hat den nächsten ambulanten Dienst selten um die Ecke, und in den Dörfern der Börde wird
+            jede Fahrt zur Rechnung. Gerade dort, wo die Versorgung dünn ist, spielt die
+            24-Stunden-Betreuung ihre Stärke aus: Sie ist auf keine Anfahrt angewiesen, weil sie
+            schon da ist.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Wenn Sie sich unabhängig beraten lassen möchten, bevor Sie sich entscheiden: Der Senioren-
+            und Pflegestützpunkt des Landkreises Hildesheim berät kostenlos und trägerunabhängig, auf
+            Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) —
+            unabhängig davon, für welchen Anbieter Sie sich am Ende entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Hildesheim</h2>
           <div className="space-y-3 mb-12">

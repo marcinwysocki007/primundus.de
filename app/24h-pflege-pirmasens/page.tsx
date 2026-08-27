@@ -237,6 +237,34 @@ export default function PirmasensPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Pirmasens und Zweibrücken sowie Landkreis Südwestpfalz: Rodalben, Hauenstein, Dahn und alle Gemeinden im Landkreis Südwestpfalz</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Pirmasens ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Pirmasens ist auf sieben Hügeln gebaut, und das merkt man an jedem Tag, an dem das Gehen
+            schwerer fällt. Was mit gesunden Knien ein Spaziergang ist, wird mit Rollator zur Grenze:
+            die steilen Straßen, die Treppen zwischen den Ebenen, der Weg zur Haltestelle bergauf.
+            Viele ältere Pirmasenser bleiben deshalb irgendwann einfach zu Hause — nicht, weil sie
+            krank wären, sondern weil der Weg nach draußen zu anstrengend geworden ist.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Genau dort beginnt die Vereinsamung, und genau dort setzt eine Betreuung im eigenen Haus
+            an. Eine Betreuungskraft, die mit einzieht, übernimmt die Wege: einkaufen, zum Arzt
+            begleiten, den Haushalt führen. Vor allem aber ist jemand da — morgens, nachts und an dem
+            Nachmittag, an dem sonst niemand vorbeikommt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Rund um Pirmasens kommt der Pfälzerwald dazu. Wer in Rodalben, Hauenstein oder Dahn lebt,
+            kennt die Entfernungen: Der ambulante Dienst fährt lange Strecken, und die Termine liegen
+            dann, wann sie eben liegen. Eine Betreuungskraft im Haus ist von Touren und Fahrplänen
+            unabhängig — sie ist da, wenn sie gebraucht wird.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Bevor Sie sich entscheiden, lassen Sie sich neutral beraten: Die Pflegestützpunkte in
+            Rheinland-Pfalz beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen
+            zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI) und gilt unabhängig
+            davon, wofür Sie sich am Ende entscheiden.
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Pirmasens</h2>
           <div className="space-y-3 mb-12">
