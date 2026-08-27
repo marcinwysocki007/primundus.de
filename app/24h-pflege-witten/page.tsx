@@ -234,6 +234,54 @@ export default function WittenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Witten und Ennepe-Ruhr-Kreis: Hattingen, Sprockhövel, Herdecke, Schwelm und alle Gemeinden im Ennepe-Ruhr-Kreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Witten ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            In Witten fällt eine Zahl aus dem Rahmen:
+            <strong className="text-pm-ink font-semibold"> Fast die Hälfte aller Haushalte sind
+            Einpersonenhaushalte</strong> — damit gehört die Stadt zu den knapp zehn Kommunen mit
+            den meisten Alleinlebenden in ganz Nordrhein-Westfalen. Gleichzeitig ist Witten älter
+            als das Land: Knapp 24 Prozent der Einwohner sind über 65, fast acht Prozent über 80,
+            beides über dem Landeswert. Viele ältere Wittener leben also allein — und genau daraus
+            entsteht der Moment, in dem es zu Hause nicht mehr allein geht.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Anders als in vielen Ruhrgebietsstädten ist hier auch das Gelände ein Faktor. Zwischen
+            der Ruhr und den Höhen des Ardeygebirges liegen rund 190 Höhenmeter, und diese Höhen
+            sind bewohnt: Gut ein Viertel aller Wittener Adressen liegt oberhalb von 150 Metern.
+            Bemerkenswert ist, wie das mit dem Alter zusammenfällt.
+            <strong className="text-pm-ink font-semibold"> In Bommern ist fast jeder Zehnte über
+            80, in Witten-Mitte nur gut jeder Fünfzehnte</strong> — und Bommern gehört zu den
+            Stadtteilen mit der größten Höhenspanne. Wer dort wohnt, hat den Berg jeden Tag vor der
+            Haustür, auch auf dem Weg zur Bushaltestelle.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Beim Wohnen ist Witten keine Einfamilienhausstadt: Nur gut ein Viertel aller Wohnungen
+            liegt in Ein- oder Zweifamilienhäusern, deutlich weniger als im Land, und nur knapp ein
+            Drittel der Wohnungen wird von den Eigentümern selbst bewohnt. Der Bestand ist
+            entsprechend alt — <strong className="text-pm-ink font-semibold">gut drei Viertel aller
+            Wittener Wohnungen stammen aus der Zeit vor 1980</strong>. Am 19. März 1945 wurde die
+            Innenstadt in etwa zwanzig Minuten zu rund 80 Prozent zerstört, rund 18.000 Menschen
+            wurden obdachlos; die Außenstadtteile blieben dagegen weitgehend stehen. Deshalb steht
+            in Bommern, Herbede oder Heven bis heute mehr Vorkriegsbausubstanz als im
+            Landesdurchschnitt — schön, aber mit Treppen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Für die Versorgung ist der Ennepe-Ruhr-Kreis vergleichsweise gut aufgestellt: Auf einen
+            ambulanten Pflegedienst kommen hier rund 68 Pflegebedürftige, weniger als im Land. Was
+            ein Dienst trotzdem nicht leisten kann, ist Anwesenheit. Er kommt zu festen Zeiten und
+            geht wieder. Eine Betreuungskraft, die mit einzieht, ist auch nachts da, übernimmt die
+            Wege den Berg hinunter und führt den Haushalt mit — in Bommern und Herbede ebenso wie in
+            Annen, Heven oder Stockum.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Ein Vorteil vor Ort: Das Evangelische Krankenhaus Witten hat eine eigene Klinik für
+            Geriatrie samt geriatrischer Tagesklinik — das ist keineswegs selbstverständlich, viele
+            vergleichbare Städte haben keine. Für die Beratung im Vorfeld gilt: Die Pflegeberatung
+            im Ennepe-Ruhr-Kreis ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause
+            (§ 7a SGB XI).
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Witten</h2>
           <div className="space-y-3 mb-12">
@@ -242,6 +290,9 @@ export default function WittenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Witten starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Witten rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Warum ist 24-Stunden-Betreuung in Witten so oft ein Thema?', a: 'Weil hier ungewöhnlich viele Menschen allein leben. Fast die Hälfte aller Wittener Haushalte sind Einpersonenhaushalte — damit gehört die Stadt zu den knapp zehn Kommunen mit den meisten Alleinlebenden in ganz Nordrhein-Westfalen. Gleichzeitig ist Witten älter als das Land: knapp 24 Prozent über 65, fast acht Prozent über 80. Wer allein lebt und in einem Haus mit Treppen wohnt, steht früher vor der Frage, wie es weitergeht.' },
+              { q: 'Was bedeutet die Hanglage in Bommern oder Herbede für die Betreuung?', a: 'Sie ist in Witten ein echter Faktor, anders als in vielen Nachbarstädten. Zwischen der Ruhr und den Höhen des Ardeygebirges liegen rund 190 Höhenmeter, und diese Höhen sind bewohnt: Gut ein Viertel aller Wittener Adressen liegt über 150 Metern. Auffällig dabei: Gerade die hügeligen Stadtteile sind die ältesten — in Bommern ist fast jeder Zehnte über 80, in Witten-Mitte nur gut jeder Fünfzehnte. Eine Betreuungskraft übernimmt genau die Wege, die dort schwer geworden sind.' },
+              { q: 'Gibt es in Witten eine geriatrische Klinik?', a: 'Ja, und das ist keineswegs selbstverständlich — viele vergleichbare Städte haben keine. Das Evangelische Krankenhaus Witten führt eine eigene Klinik für Geriatrie und Frührehabilitation, dazu eine geriatrische Tagesklinik. Für die Zeit nach einem Klinikaufenthalt ist trotzdem entscheidend, wer zu Hause da ist: Die Frührehabilitation endet, der Alltag geht weiter. Genau dort setzt eine Betreuungskraft an, die mit einzieht.' },
               { q: 'Welches Einzugsgebiet wird in Witten bedient?', a: 'Witten und Ennepe-Ruhr-Kreis: Hattingen, Sprockhövel, Herdecke, Schwelm und alle Gemeinden im Ennepe-Ruhr-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

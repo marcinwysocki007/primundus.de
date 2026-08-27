@@ -241,28 +241,32 @@ export default function BocholtPage() {
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bocholt ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Der Kreis Borken gilt als jung — Bocholt ist es nicht.
-            <strong className="text-pm-ink font-semibold"> Sieben Prozent der Bocholter sind über
-            80, der höchste Anteil aller siebzehn Kommunen des Kreises</strong> und über dem Wert
-            für Nordrhein-Westfalen. Der Kreisdurchschnitt liegt bei knapp sechs Prozent. Wer aus
-            dem Kreis auf die Stadt schließt, unterschätzt also, wie viele Hochbetagte hier leben.
+            <strong className="text-pm-ink font-semibold"> Gut sieben Prozent der Bocholter sind
+            über 80</strong>, das ist der höchste Anteil aller siebzehn Kommunen des Kreises und
+            liegt auf dem Niveau von Nordrhein-Westfalen insgesamt. Der Kreisdurchschnitt liegt
+            darunter. Wer also vom „jungen Münsterland" auf die Stadt schließt, unterschätzt, wie
+            viele Hochbetagte hier leben.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Und die Versorgung ist knapp. Im Kreis Borken kommen auf jeden ambulanten Pflegedienst
             im Schnitt <strong className="text-pm-ink font-semibold">rund 108 Pflegebedürftige</strong> —
-            in Nordrhein-Westfalen sind es 75, im Bund 71. Das ist der höchste Wert, der uns in
-            unseren Regionen begegnet ist. Beim Tagespflegeangebot steht der Raum Bocholt kreisweit
-            sogar am Ende, und der Kreis schreibt in seiner eigenen Pflegebedarfsplanung, dass es
-            schwer sei, hier einen Kurzzeitpflegeplatz zu finden. Wer kurzfristig etwas braucht,
-            merkt das sofort.
+            in Nordrhein-Westfalen sind es 75, im Bund 71. Der Kreis Borken setzt stark auf ambulante
+            Versorgung: Gut ein Viertel aller Pflegebedürftigen wird von einem Dienst betreut,
+            im Land nur knapp ein Sechstel. Entsprechend ausgelastet sind die Dienste. Und der
+            Kreis schreibt in seiner eigenen Pflegebedarfsplanung, dass es schwer sei, hier einen
+            Kurzzeitpflegeplatz zu finden. Wer kurzfristig etwas braucht, merkt das sofort.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Beim Wohnen prägt bis heute der 22. März 1945. In fünfundzwanzig Minuten wurde Bocholt
             zu rund 85 Prozent zerstört; in der Altstadt blieben drei Häuser unversehrt, und die
-            Einwohnerzahl fiel von 35.000 auf etwa 8.000. Was heute steht, entstand fast vollständig
-            danach — solide Wiederaufbau- und Nachkriegsbauten, errichtet in einer Zeit, als
-            Barrierefreiheit noch kein Thema war. Schmale Treppenhäuser und hohe Wannenkanten
-            gehören bei diesem Baualter oft dazu. Für eine Betreuungskraft genügt trotzdem ein
-            eigenes Zimmer.
+            Einwohnerzahl fiel von 35.000 auf etwa 8.000. In der Statistik zeigt sich das weniger
+            an einem Übergewicht der fünfziger Jahre als am fehlenden Vorkriegsbestand: Nur knapp
+            fünf Prozent der Bocholter Wohnungen stammen aus der Zeit vor 1919, in
+            Nordrhein-Westfalen sind es gut zehn. Dafür ist der Bestand ungewöhnlich großzügig —
+            fast 60 Prozent der Wohnungen liegen in Ein- oder Zweifamilienhäusern, die
+            Eigentümerquote liegt bei über 50 Prozent, und eine Wohnung misst im Schnitt 103
+            Quadratmeter. Das heißt in der Praxis meist: eigenes Haus, eigene Treppe ins
+            Obergeschoss, viel Fläche, die gepflegt werden will.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Rundherum wird es schnell ländlich. Bocholt ist zwar die größte Stadt im Kreis Borken,

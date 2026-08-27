@@ -231,6 +231,53 @@ export default function ErfurtPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Erfurt und Umland: Gotha, Weimar, Arnstadt, Ilmenau und alle Gemeinden im Landkreis Gotha und Ilm-Kreis</p>
           </div>
 
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Erfurt ausmacht</h2>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Erfurt ist deutlich jünger als sein Bundesland: Knapp 24 Prozent der Erfurter sind über
+            65, in Thüringen sind es fast 29. Das ist der Grund, warum die Pflegequote hier
+            spürbar niedriger liegt als im Landesschnitt. In absoluten Zahlen sind es trotzdem rund
+            52.000 Menschen über 65 und über 16.000 über 80 — und
+            <strong className="text-pm-ink font-semibold"> knapp die Hälfte aller Erfurter Haushalte
+            sind Einpersonenhaushalte</strong>, deutlich mehr als im Land.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Die eigentliche Besonderheit steckt aber im Wohnen. Nur
+            <strong className="text-pm-ink font-semibold"> gut ein Fünftel der Erfurter wohnt im
+            Eigentum</strong> — in Thüringen ist es knapp die Hälfte. Zwei Drittel aller Wohnungen
+            liegen in Häusern mit sieben und mehr Parteien. Und der Wohnraum ist knapp: Mit gut
+            40 Quadratmetern je Einwohner hat Erfurt den niedrigsten Wert aller zweiundzwanzig
+            Thüringer Kreise. Für Pflege zu Hause ist das der entscheidende Punkt, denn ein
+            Pflegebett, Hilfsmittel und ein eigenes Zimmer für die Betreuungskraft brauchen Platz.
+            Wer eine 74-Quadratmeter-Wohnung im vierten Stock hat, muss anders planen als jemand
+            mit einem Haus.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ein verbreiteter Reflex trifft in Erfurt übrigens nicht zu. Man erwartet, dass die
+            großen Plattenbausiedlungen mit ihren Erstbeziehern besonders schnell altern — am
+            Berliner Platz, im Rieth, am Roten Berg, in Melchendorf oder am Wiesenhügel. Die
+            Vorausberechnung der Stadt sagt das Gegenteil: In der Großwohnsiedlung Nord geht die
+            Zahl der über 65-Jährigen bis 2045 zurück, während sie in der östlichen Innenstadt und
+            in den Dörfern am Stadtrand kräftig zunimmt. Der Pflegebedarf wandert also eher in die
+            Altbauviertel und in die eingemeindeten Dörfer.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Geografisch ist Erfurt für ältere Menschen günstig. Die Stadt reicht zwar von etwa 160
+            bis 430 Metern, aber die Höhen sind Wald: Der Steigerwald ist seit Jahrzehnten
+            Erholungsgebiet, der Petersberg ist Festung und Park. Gewohnt wird überwiegend im
+            flachen Teil; nur die Bergdörfer im Süden wie Egstedt liegen wirklich hoch. Auch beim
+            Nahverkehr steht Erfurt gut da — nahezu alle Stadtbahnhaltestellen sind barrierefrei
+            ausgebaut, bei den Bushaltestellen knapp sechzig Prozent.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
+            Wenn es ernst wird, gibt es in Erfurt echte Altersmedizin: Das Helios Klinikum führt ein
+            eigenes Zentrum für Geriatrie mit ausgeprägt alterstraumatologischem Schwerpunkt — die
+            häufigsten Diagnosen sind Oberschenkel- und Schenkelhalsbrüche, also genau die Stürze,
+            nach denen zu Hause nichts mehr wie vorher ist. Für die Zeit danach lohnt sich frühe
+            Beratung: Die Pflegeberatung in Erfurt ist kostenlos, trägerunabhängig und auf Wunsch
+            bei Ihnen zu Hause (§ 7a SGB XI).
+          </p>
+
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Erfurt</h2>
           <div className="space-y-3 mb-12">
@@ -239,6 +286,9 @@ export default function ErfurtPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Erfurt starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Erfurt rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Erfurt gilt als jung — ist Pflege hier überhaupt ein großes Thema?', a: 'Der Anteil täuscht. Erfurt ist mit knapp 24 Prozent über 65 tatsächlich rund fünf Punkte jünger als Thüringen insgesamt, und die Pflegequote liegt entsprechend niedriger. In absoluten Zahlen leben hier aber rund 52.000 Menschen über 65 und über 16.000 über 80. Dazu kommt: Knapp die Hälfte aller Erfurter Haushalte sind Einpersonenhaushalte, deutlich mehr als im Land. Viele Ältere sind also auf sich gestellt.' },
+              { q: 'Ist eine Erfurter Wohnung groß genug für eine Betreuungskraft?', a: 'Das ist in Erfurt tatsächlich die zentrale Frage. Mit gut 40 Quadratmetern Wohnfläche je Einwohner hat die Stadt den niedrigsten Wert aller zweiundzwanzig Thüringer Kreise, zwei Drittel aller Wohnungen liegen in Häusern mit sieben und mehr Parteien, und nur gut ein Fünftel der Erfurter wohnt im Eigentum. Eine Betreuungskraft braucht ein eigenes Zimmer — das ist die Voraussetzung. In vielen Erfurter Wohnungen lässt sich das einrichten, in kleinen Zwei-Zimmer-Wohnungen nicht. Wir klären das vorab mit Ihnen, bevor irgendetwas entschieden wird.' },
+              { q: 'Altern die Erfurter Plattenbaugebiete besonders stark?', a: 'Erstaunlicherweise nicht. Der Reflex liegt nahe — die Erstbezieher vom Berliner Platz, aus dem Rieth oder vom Wiesenhügel sind heute alt. Die Vorausberechnung der Stadt zeigt aber das Gegenteil: In der Großwohnsiedlung Nord geht die Zahl der über 65-Jährigen bis 2045 zurück, während sie in der östlichen Innenstadt und in den eingemeindeten Dörfern kräftig steigt. Der Pflegebedarf wandert also eher in die Altbauviertel und an den Stadtrand.' },
               { q: 'Welches Einzugsgebiet wird in Erfurt bedient?', a: 'Erfurt und Umland: Gotha, Weimar, Arnstadt, Ilmenau und alle Gemeinden im Landkreis Gotha und Ilm-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
