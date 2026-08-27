@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'In welchen Flensburger Stadtteilen wird Pflege am häufigsten gebraucht?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das Alter verteilt sich in Flensburg extrem ungleich. In Mürwik sind 10,9 Prozent der Einwohner über 80, in der Neustadt nur 1,6 Prozent — fast das Siebenfache Unterschied. Mürwik ist mit 15.324 Menschen zugleich der größte Stadtteil. Hohe Anteile Hochbetagter haben außerdem die Westliche Höhe (8,7 Prozent), Fruerlund (8,4) und Engelsby (7,6). Insgesamt wirkt Flensburg jung — 20,1 Prozent über 65 gegenüber 23,6 Prozent in Schleswig-Holstein —, was an den rund 9.000 Studierenden liegt, nicht an wenigen alten Menschen. Unsere Betreuungskräfte kommen in jeden Stadtteil; Anreise und Preis sind überall gleich.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Flensburg bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Flensburg und Kreis Schleswig-Flensburg: Schleswig, Kappeln, Eckernförde und alle Gemeinden im Kreis Schleswig-Flensburg' },
       },
@@ -333,31 +338,46 @@ export default function FlensburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Flensburg und Kreis Schleswig-Flensburg: Schleswig, Kappeln, Eckernförde und alle Gemeinden im Kreis Schleswig-Flensburg</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Flensburg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Flensburg die Möglichkeiten. Nur 24,9 Prozent der Haushalte wohnen im Eigentum — in Schleswig-Holstein sind es 47,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. 40,0 Prozent der Gebäude in Flensburg sind Reihenhäuser, in Schleswig-Holstein 17,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
+            Flensburg ist eine junge Stadt — und trotzdem gibt es hier Viertel, in denen jeder
+            neunte Mensch über 80 ist. Insgesamt sind 20,1 Prozent der Flensburger über 65 und
+            6,6 Prozent über 80; in Schleswig-Holstein sind es 23,6 und 8,0 Prozent. Zwei
+            Hochschulen mit rund 9.000 Studierenden drücken den Schnitt. Aber das Alter verteilt
+            sich in dieser Stadt extrem ungleich:{' '}
+            <strong className="text-pm-ink font-semibold">In Mürwik sind 10,9 Prozent der
+            Einwohner über 80, in der Neustadt 1,6 Prozent</strong> — fast das Siebenfache. Und
+            Mürwik ist mit 15.324 Einwohnern zugleich der größte Stadtteil. Wer in Flensburg
+            Betreuung plant, plant faktisch für Mürwik, die Westliche Höhe, Fruerlund und Engelsby.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 78,7 Quadratmeter gegenüber 95,1 in Schleswig-Holstein — rund 16 Quadratmeter weniger. 36,2 Prozent der Wohnungen in Flensburg haben weniger als 60 Quadratmeter, in Schleswig-Holstein sind es 23,2 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+            Dazu kommt die Lage am Wasser, und die ist hier nicht nur schön. Die Innenstadt liegt
+            am Hafen auf drei Metern über dem Meer, die bewohnten Höhen — Westliche Höhe,
+            Friesischer Berg, Marienberg, Duburg — deutlich darüber. Die Fördehänge sind steil.
+            Wer oben wohnt und unten einkauft, merkt das lange bevor ein Pflegegrad im Spiel ist.
+            Mit einem Rollator wird aus dem Weg zum Bäcker eine Entscheidung.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Auf ein Gebäude kommen in Flensburg im Schnitt 3,0 Wohnungen, in Schleswig-Holstein sind es 1,8. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. 53,7 Prozent aller Haushalte in Flensburg bestehen aus einer einzigen Person, in Schleswig-Holstein sind es 42,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Nur 44,7 Prozent der Gebäude stehen frei, in Schleswig-Holstein sind es 64,5 Prozent.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 9.855 Menschen in Flensburg sind 75 Jahre oder älter, und es gibt 53.561 Wohnungen in 17.984 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Bei der Pflege selbst liegt Flensburg dicht am Land: Von 5.298 Pflegebedürftigen
+            werden 46,6 Prozent allein von Angehörigen versorgt (Schleswig-Holstein 46,3), 21,2
+            Prozent nutzen einen ambulanten Dienst. Interessant ist der Heimplatz — und hier
+            widersprechen sich zwei Kennzahlen scheinbar. Der Anteil der Pflegebedürftigen im Heim
+            liegt mit 18,6 Prozent unter dem Landeswert von 19,4. Gemessen an der Zahl der über
+            65-Jährigen stehen aber{' '}
+            <strong className="text-pm-ink font-semibold">56 Plätze je 1.000 bereit, im Land
+            54</strong>. Flensburg hat also mehr Kapazität, aber weniger Menschen, die sie nutzen.
+            Wer nur den Anteil liest, unterschätzt das Platzangebot.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Medizinisch ist die Stadt gut versorgt: Das Malteser Fördeklinikum St. Katharina führt
+            eine eigene Geriatrie mit rund 1.900 stationären Patienten im Jahr und eine
+            geriatrische Tagesklinik mit knapp 600. Ein Hinweis zur Vorsicht: Die „Tagesklinik für
+            Ältere" der DIAKO ist eine gerontopsychiatrische Einrichtung, keine somatische
+            Altersmedizin — das wird oft verwechselt. Was nach der Entlassung kommt, entscheidet
+            sich ohnehin zu Hause. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung
+            nach § 7a SGB XI ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Flensburg</h2>
           <div className="space-y-3 mb-12">
@@ -372,6 +392,7 @@ export default function FlensburgPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Flensburg?', a: 'Das hängt am Grundriss, und die Ausgangslage in Flensburg ist bekannt: Die durchschnittliche Wohnung misst 78,7 Quadratmeter, 36,2 Prozent liegen unter 60 Quadratmetern (Schleswig-Holstein: 23,2 Prozent), und 24,9 Prozent der Haushalte wohnen im Eigentum (Schleswig-Holstein: 47,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Flensburg?', a: '9.855 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,4 Prozent — in Schleswig-Holstein 12,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Schleswig-Holstein: 26,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Flensburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Flensburg im Schnitt 3,0 Wohnungen, in Schleswig-Holstein 1,8. 44,7 Prozent der Gebäude stehen frei, 40,0 Prozent sind Reihenhäuser. 60,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Flensburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'In welchen Flensburger Stadtteilen wird Pflege am häufigsten gebraucht?', a: 'Das Alter verteilt sich in Flensburg extrem ungleich. In Mürwik sind 10,9 Prozent der Einwohner über 80, in der Neustadt nur 1,6 Prozent — fast das Siebenfache Unterschied. Mürwik ist mit 15.324 Menschen zugleich der größte Stadtteil. Hohe Anteile Hochbetagter haben außerdem die Westliche Höhe (8,7 Prozent), Fruerlund (8,4) und Engelsby (7,6). Insgesamt wirkt Flensburg jung — 20,1 Prozent über 65 gegenüber 23,6 Prozent in Schleswig-Holstein —, was an den rund 9.000 Studierenden liegt, nicht an wenigen alten Menschen. Unsere Betreuungskräfte kommen in jeden Stadtteil; Anreise und Preis sind überall gleich.' },
               { q: 'Welches Einzugsgebiet wird in Flensburg bedient?', a: 'Flensburg und Kreis Schleswig-Flensburg: Schleswig, Kappeln, Eckernförde und alle Gemeinden im Kreis Schleswig-Flensburg' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

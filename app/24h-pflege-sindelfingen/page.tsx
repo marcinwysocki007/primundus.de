@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Spricht die Betreuungskraft die Sprache meiner Eltern?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In Sindelfingen ist das eine der häufigsten Fragen, und das aus gutem Grund: Laut städtischem Sozialbericht haben 52 Prozent der Einwohner einen Migrationshintergrund, die Stadt zählt Menschen aus 118 Nationen — viele davon kamen für das Mercedes-Werk und sind heute hochbetagt. Unsere Betreuungskräfte kommen überwiegend aus Polen, einige aus Rumänien oder Bulgarien. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto. Bei anderen Herkunftssprachen sagen wir Ihnen ehrlich, was wir leisten können und was nicht — lieber vorher als hinterher.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Sindelfingen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Sindelfingen und Landkreis Böblingen: Böblingen, Leonberg, Herrenberg, Holzgerlingen, Weil der Stadt und alle Gemeinden im Landkreis Böblingen' },
       },
@@ -333,31 +338,51 @@ export default function SindelfingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Sindelfingen und Landkreis Böblingen: Böblingen, Leonberg, Herrenberg, Holzgerlingen, Weil der Stadt und alle Gemeinden im Landkreis Böblingen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Sindelfingen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Sindelfingen erzählt etwas über den Pflegealltag. Altbau vor 1950 macht in Sindelfingen 5,0 Prozent des Bestands aus, in Baden-Württemberg 17,4 Prozent. Auf ein Gebäude kommen in Sindelfingen im Schnitt 3,2 Wohnungen, in Baden-Württemberg sind es 2,1. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
+            Sindelfingen altert anders als sein Umland, und der Grund liegt im Werk. Rund 25.000
+            Menschen arbeiten im Mercedes-Benz-Werk, eine der zehn größten Fabriken der Welt. Die
+            Generation, die dafür in den sechziger und siebziger Jahren hergekommen ist, ist heute
+            hochbetagt. Man sieht es in den Zahlen:{' '}
+            <strong className="text-pm-ink font-semibold">7,5 Prozent der Sindelfinger sind über
+            80 — mehr als im Landkreis Böblingen (7,1) und mehr als in Baden-Württemberg
+            (6,9)</strong> —, während der Anteil der 65- bis 79-Jährigen unter beiden Werten liegt.
+            Die Stadt hat also nicht mehr Ältere, sondern mehr sehr Alte. Von allen über
+            75-Jährigen im Landkreis leben 17 Prozent in Sindelfingen, der größte Einzelanteil
+            aller 26 Kommunen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            31,1 Prozent der Gebäude in Sindelfingen sind Reihenhäuser, in Baden-Württemberg 15,4 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 46,7 Prozent der Gebäude stehen frei, in Baden-Württemberg sind es 65,9 Prozent.
+            Dazu gehört ein zweiter Befund. Laut städtischem Sozialbericht haben 52 Prozent der
+            Einwohner einen Migrationshintergrund, die Stadt zählt Menschen aus 118 Nationen.
+            Sprache und Gewohnheiten sind bei einer Betreuungskraft, die im Haushalt lebt, deshalb
+            kein Nebenthema — es ist die Frage, an der es steht und fällt. Das Sprachniveau jeder
+            Kraft steht bei uns vorab im Profil, zusammen mit Erfahrung und Foto. Sie sehen, wen
+            Sie bekommen, bevor Sie sich festlegen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            36,8 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Baden-Württemberg sind es 26,3 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat. Die durchschnittliche Wohnung misst 89,3 Quadratmeter gegenüber 99,1 in Baden-Württemberg — rund 10 Quadratmeter weniger.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 6.794 Menschen in Sindelfingen sind 75 Jahre oder älter, und es gibt 29.983 Wohnungen in 9.490 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Heimplätze sind in Sindelfingen rechnerisch ausreichend vorhanden: 535 Plätze in der
+            stationären Dauerpflege, womit der Kreispflegeplan den Bedarf für 2035 als exakt
+            gedeckt ausweist — anders als für den Landkreis insgesamt, wo eine Lücke prognostiziert
+            wird. Bemerkenswert dabei:{' '}
+            <strong className="text-pm-ink font-semibold">70,4 Prozent der Heimbewohner in
+            Sindelfingen stammen aus der Stadt selbst</strong>, im Kreisschnitt sind es 59,4
+            Prozent. Wer hier ins Heim geht, bleibt meist am Ort. Im Landkreis Böblingen werden
+            53,9 Prozent aller Pflegebedürftigen allein von Angehörigen versorgt, etwas weniger als
+            in Baden-Württemberg mit 55,9 Prozent; ambulante Dienste sind mit 19,1 Prozent
+            dagegen stärker vertreten als im Land (16,4).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Einen Punkt sagen wir offen, weil er Wege kostet: Eine eigenständige, bettenführende
+            geriatrische Abteilung ist am Klinikum Sindelfingen nicht nachweisbar — der
+            Klinikverbund führt hier eine Altersmedizin ohne eigene Betten und eine geriatrische
+            Institutsambulanz. Die ambulante geriatrische Reha des Verbunds sitzt inzwischen in
+            <strong className="text-pm-ink font-semibold"> Böblingen</strong>, nicht mehr in
+            Sindelfingen; ältere Adressangaben führen in die Irre. Nach einem Krankenhausaufenthalt
+            heißt das: Der Weg zur Anschlussbehandlung führt aus der Stadt heraus — und umso mehr
+            zählt, dass zu Hause jemand da ist. Lassen Sie sich vorher unabhängig beraten: Die
+            Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Sindelfingen</h2>
           <div className="space-y-3 mb-12">
@@ -372,6 +397,7 @@ export default function SindelfingenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Sindelfingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Sindelfingen ist bekannt: Die durchschnittliche Wohnung misst 89,3 Quadratmeter, 20,2 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 48,1 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Sindelfingen?', a: '6.794 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,2 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Sindelfingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Sindelfingen im Schnitt 3,2 Wohnungen, in Baden-Württemberg 2,1. 46,7 Prozent der Gebäude stehen frei, 31,1 Prozent sind Reihenhäuser. 41,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Sindelfingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Spricht die Betreuungskraft die Sprache meiner Eltern?', a: 'In Sindelfingen ist das eine der häufigsten Fragen, und das aus gutem Grund: Laut städtischem Sozialbericht haben 52 Prozent der Einwohner einen Migrationshintergrund, die Stadt zählt Menschen aus 118 Nationen — viele davon kamen für das Mercedes-Werk und sind heute hochbetagt. Unsere Betreuungskräfte kommen überwiegend aus Polen, einige aus Rumänien oder Bulgarien. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto. Bei anderen Herkunftssprachen sagen wir Ihnen ehrlich, was wir leisten können und was nicht — lieber vorher als hinterher.' },
               { q: 'Welches Einzugsgebiet wird in Sindelfingen bedient?', a: 'Sindelfingen und Landkreis Böblingen: Böblingen, Leonberg, Herrenberg, Holzgerlingen, Weil der Stadt und alle Gemeinden im Landkreis Böblingen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

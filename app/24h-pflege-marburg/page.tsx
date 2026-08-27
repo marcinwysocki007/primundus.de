@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Gelten die Marburger Pflegezahlen für die Stadt oder für den Landkreis?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Für den Landkreis — in Hessen wird die Pflegestatistik nicht auf Gemeindeebene veröffentlicht. Das ist wichtig, weil Stadt und Kreis hier weit auseinanderliegen: Die Stadt Marburg ist mit einem Durchschnittsalter von 40,5 Jahren und 17,1 Prozent Einwohnern über 65 sehr jung, der Landkreis Marburg-Biedenkopf hat dagegen mit 88 Pflegebedürftigen je 1.000 Einwohner eine der höchsten Pflegequoten Hessens (Land: 67). Im Kreis werden 14.777 von 21.538 Pflegebedürftigen ausschließlich von Angehörigen versorgt — 68,6 Prozent gegenüber 58,6 Prozent im Land. Wer für die Stadt mit Kreiszahlen rechnet, überschätzt das Alter der Stadtbevölkerung deutlich.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Marburg bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Marburg und Landkreis Marburg-Biedenkopf: Biedenkopf, Stadtallendorf, Kirchhain und alle Gemeinden im Landkreis Marburg-Biedenkopf' },
       },
@@ -333,31 +338,56 @@ export default function MarburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Marburg und Landkreis Marburg-Biedenkopf: Biedenkopf, Stadtallendorf, Kirchhain und alle Gemeinden im Landkreis Marburg-Biedenkopf</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Marburg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie viel Platz eine Wohnung in Marburg hat, ist keine Nebenfrage. 37,3 Prozent der Wohnungen in Marburg haben weniger als 60 Quadratmeter, in Hessen sind es 20,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Nur 29,4 Prozent der Haushalte wohnen im Eigentum — in Hessen sind es 46,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+            Bei Marburg führt fast jede Statistik in die Irre, wenn man nicht genau hinsieht. Die
+            Stadt selbst ist mit einem Durchschnittsalter von 40,5 Jahren sehr jung — rund 21.000
+            Studierende an der Philipps-Universität sorgen dafür, nur 17,1 Prozent der Einwohner
+            sind über 65. Der umgebende Landkreis Marburg-Biedenkopf dagegen hat mit{' '}
+            <strong className="text-pm-ink font-semibold">88 Pflegebedürftigen je 1.000 Einwohner
+            eine der höchsten Pflegequoten Hessens</strong> (Land: 67). Wer für die Stadt mit
+            Kreiszahlen rechnet, überschätzt das Alter der Stadtbevölkerung erheblich. Pflegedaten
+            gibt es in Hessen nur auf Kreisebene — deshalb steht hier, was für den Kreis gilt, und
+            zwar ausdrücklich als Kreiswert.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            55,7 Prozent aller Haushalte in Marburg bestehen aus einer einzigen Person, in Hessen sind es 42,5 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Die durchschnittliche Wohnung misst 84,8 Quadratmeter gegenüber 98,3 in Hessen — rund 14 Quadratmeter weniger.
+            Und dieser Kreiswert ist bemerkenswert.{' '}
+            <strong className="text-pm-ink font-semibold">68,6 Prozent aller Pflegebedürftigen im
+            Landkreis werden ausschließlich von Angehörigen versorgt</strong> — 14.777 von 21.538
+            Menschen, ganz ohne Pflegedienst. In Hessen sind es 58,6 Prozent. Das ist die höchste
+            Angehörigenlast, die uns in dieser Region begegnet ist. Umgekehrt leben nur 9,7 Prozent
+            in vollstationärer Dauerpflege, im Land 13,0. Dabei fehlt es nicht an Plätzen: Gemessen
+            an der Zahl der über 65-Jährigen stehen 48 je 1.000 bereit, in Hessen 47. Die
+            Kapazität ist also völlig normal — sie wird nur seltener genutzt. Familien tragen hier
+            mehr als anderswo.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In 17,5 Prozent der Haushalte leben ausschließlich Menschen ab 65, etwas seltener als in Hessen mit 23,1 Prozent. Auf ein Gebäude kommen in Marburg im Schnitt 3,1 Wohnungen, in Hessen sind es 2,2. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. Gemessen am Landesschnitt ist Marburg jünger — 8,4 Prozent der Einwohner sind 75 oder älter — das sind 6.145 Menschen, in Hessen 10,5 Prozent. Das heißt nicht, dass weniger Pflege gebraucht wird: Der Anteil ist niedrig, die absolute Zahl bleibt.
+            Wie Marburg gebaut ist, macht das nicht leichter. Die Lahn teilt die Stadt, und die
+            Oberstadt liegt am Steilhang unter dem Schloss.{' '}
+            <strong className="text-pm-ink font-semibold">Der Oberstadtaufzug überwindet 28
+            Höhenmeter</strong> zwischen Pilgrimstein und Oberstadt — er existiert, weil der Weg
+            zu Fuß für viele nicht geht. In der Altstadt leben 4.262 Menschen, am Richtsberg,
+            einer Großwohnsiedlung auf einer Anhöhe, 8.551. Das sind reale Wohnlagen, keine
+            Postkartenmotive. Der Stadtteil Lahnberge mit Uniklinik und Campus hat übrigens zehn
+            Einwohner — er taucht in Statistiken auf, sagt über Pflege aber nichts.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 6.145 Menschen in Marburg sind 75 Jahre oder älter, und es gibt 42.090 Wohnungen in 13.610 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Eine Marburger Besonderheit gehört dazu: Die Deutsche Blindenstudienanstalt ist seit
+            1916 hier ansässig, mit dem bundesweit einzigen Gymnasium für blinde und sehbehinderte
+            Schülerinnen und Schüler, einer Blindenbibliothek und Wohngruppen über das ganze
+            Stadtgebiet. Marburg ist baulich und infrastrukturell ungewöhnlich stark auf Menschen
+            mit Sehbehinderung eingestellt. In einer Stadt mit 28 Höhenmetern zwischen Ober- und
+            Unterstadt ist das keine Randnotiz.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Marburg versorgt: Das DGD Diakonie-Krankenhaus Wehrda führt eine eigene
+            geriatrische Hauptabteilung mit 748 stationären Fällen und bietet mobile ambulante
+            geriatrische Rehabilitation an — die Reha kommt also zu Ihnen. Am Universitätsklinikum
+            selbst gibt es keine eigenständige Geriatrie. Bevor Sie entscheiden, lassen Sie sich
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos,
+            trägerunabhängig und kommt auf Wunsch nach Hause.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Marburg</h2>
           <div className="space-y-3 mb-12">
@@ -372,6 +402,7 @@ export default function MarburgPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Marburg?', a: 'Das hängt am Grundriss, und die Ausgangslage in Marburg ist bekannt: Die durchschnittliche Wohnung misst 84,8 Quadratmeter, 37,3 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 29,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Marburg?', a: '6.145 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,4 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 17,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Marburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Marburg im Schnitt 3,1 Wohnungen, in Hessen 2,2. 71,5 Prozent der Gebäude stehen frei, 13,2 Prozent sind Reihenhäuser. 53,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Marburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Gelten die Marburger Pflegezahlen für die Stadt oder für den Landkreis?', a: 'Für den Landkreis — in Hessen wird die Pflegestatistik nicht auf Gemeindeebene veröffentlicht. Das ist wichtig, weil Stadt und Kreis hier weit auseinanderliegen: Die Stadt Marburg ist mit einem Durchschnittsalter von 40,5 Jahren und 17,1 Prozent Einwohnern über 65 sehr jung, der Landkreis Marburg-Biedenkopf hat dagegen mit 88 Pflegebedürftigen je 1.000 Einwohner eine der höchsten Pflegequoten Hessens (Land: 67). Im Kreis werden 14.777 von 21.538 Pflegebedürftigen ausschließlich von Angehörigen versorgt — 68,6 Prozent gegenüber 58,6 Prozent im Land. Wer für die Stadt mit Kreiszahlen rechnet, überschätzt das Alter der Stadtbevölkerung deutlich.' },
               { q: 'Welches Einzugsgebiet wird in Marburg bedient?', a: 'Marburg und Landkreis Marburg-Biedenkopf: Biedenkopf, Stadtallendorf, Kirchhain und alle Gemeinden im Landkreis Marburg-Biedenkopf' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
