@@ -17,7 +17,6 @@ const serviceLinks = [
   { label: 'Pflegegrad-Rechner', href: '/pflegegrad-rechner' },
   { label: 'Pflegevertrag-Generator', href: '/pflegevertrag-generator' },
   { label: 'Vollmacht-Generator', href: '/vollmacht-generator' },
-  { label: 'Anbieter-Vergleich', href: '/anbieter-vergleich' },
   // 27.08.2026 ergänzt. Diese drei Werkzeuge funktionieren, waren aber nur
   // über die Tools-Übersicht erreichbar — ein Klick tiefer — und hatten
   // deshalb in 90 Tagen NULL Impressionen. Der Vergleich ist eindeutig: Was
@@ -36,6 +35,23 @@ const serviceLinks = [
   { label: 'Leistungen', href: '/leistungen' },
   { label: 'Ablauf', href: '/ablauf' },
   { label: 'Franchisepartner werden', href: '/franchisepartner' },
+]
+
+const vergleichLinks = [
+  // 28.08.2026 ergaenzt. Befund aus der internen Link-Pruefung: /qualitaet,
+  // /rechtssicher und die drei Wettbewerbsvergleiche hatten je EINEN
+  // eingehenden internen Link — und in 90 Tagen keine einzige Auslieferung.
+  // Die URL-Pruefung sagt fuer /qualitaet und /rechtssicher woertlich
+  // „URL ist Google nicht bekannt": nie gecrawlt, als verweisende Seite
+  // kennt Google nur die Sitemap. Zum Vergleich: /anbieter-vergleich hat
+  // 362 interne Links und steht auf Position 12,4 bei 400 Impressionen.
+  // Der Unterschied ist nicht der Inhalt, sondern die Erreichbarkeit.
+  { label: 'Anbieter-Vergleich', href: '/anbieter-vergleich' },
+  { label: 'Qualität & Standards', href: '/qualitaet' },
+  { label: 'Rechtssicherheit', href: '/rechtssicher' },
+  { label: 'Pflegehelden-Alternative', href: '/pflegehelden-alternative' },
+  { label: 'Promedica24-Alternative', href: '/promedica24-alternative' },
+  { label: 'Hausengel-Alternative', href: '/hausengel-alternative' },
 ]
 
 const rechtlichLinks = [
@@ -94,7 +110,7 @@ export function SiteFooter() {
         </div>
 
         {/* Link columns */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h4 className="text-[13px] font-bold uppercase tracking-wider text-gray-400 mb-4">
               Ratgeber
@@ -137,6 +153,24 @@ export function SiteFooter() {
                       {l.label}
                     </Link>
                   )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-[13px] font-bold uppercase tracking-wider text-gray-400 mb-4">
+              Vergleich & Qualität
+            </h4>
+            <ul className="space-y-2">
+              {vergleichLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-[14px] text-gray-300 hover:text-white transition-colors"
+                  >
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>
