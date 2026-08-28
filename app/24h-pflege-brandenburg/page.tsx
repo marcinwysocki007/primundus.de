@@ -44,6 +44,11 @@ const schemaMarkup = [
     mainEntity: [
       {
         '@type': 'Question',
+        name: 'Warum sind Heimplätze in Brandenburg so knapp?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weil das Angebot nicht mitgewachsen ist. Zwischen 2013 und 2023 hat sich die Zahl der Pflegebedürftigen in Brandenburg verdoppelt — rund 111.100 Menschen mehr —, während die Zahl der Dauerpflegeplätze um knapp sechs Prozent zunahm; 2023 ist sie erstmals gesunken. Brandenburg hat dadurch den niedrigsten Heimanteil aller Bundesländer (11,1 Prozent) und zugleich die wenigsten Plätze je Ältere (39 je 1.000 ab 65, Bund 47). Das Land nennt in seinem Pflegebericht zwei Gründe: stark gestiegene Eigenanteile und ein Angebot, das wegen fehlenden Personals zurückgeht. Besonders eng ist es in der Uckermark, in Elbe-Elster und in Ostprignitz-Ruppin.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Brandenburg?',
         acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (rund 3.020 €/Monat) oder Berlin (rund 3.100 €/Monat, vdek 07/2026).' },
       },
@@ -296,32 +301,72 @@ export default function BrandenburgPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Potsdam, Cottbus, Brandenburg an der Havel, Frankfurt (Oder), Eberswalde, Oranienburg, Neuruppin und alle weiteren Städte und Gemeinden in Brandenburg</p>
           </div>
 
-          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
+          {/* ⑤c VOR ORT — von Hand, Landesebene */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Brandenburg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Brandenburg sind 214.072 Menschen pflegebedürftig, das entspricht 8,29 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt Brandenburg auf Platz 5 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
+            Brandenburg ist bei der Heimpflege das Schlusslicht Deutschlands — und zwar nach beiden
+            Maßstäben, die man anlegen kann.{' '}
+            <strong className="text-pm-ink font-semibold">11,1 Prozent der Pflegebedürftigen leben
+            im Heim, der niedrigste Anteil aller sechzehn Länder. Und es gibt hier auch tatsächlich
+            am wenigsten Plätze: 39 je 1.000 Einwohner über 65 gegen 47 im Bund.</strong> Das ist
+            wichtig, weil ein niedriger Anteil sonst oft nur ein Rechenergebnis ist. Hier nicht:
+            Beide Zahlen sagen dasselbe.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            54,5 Prozent der Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also praktisch genauso viele. 116.652 Menschen sind das in Brandenburg, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 23,3 Prozent (Bund 19,3), im Heim leben 11,1 Prozent (Bund 14,1).
+            Wie es dazu kam, lässt sich an einem Jahrzehnt ablesen.{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen 2013 und 2023 hat sich die Zahl
+            der Pflegebedürftigen in Brandenburg verdoppelt — ein Plus von rund 111.100 Menschen —,
+            während die Zahl der Dauerpflegeplätze um knapp sechs Prozent wuchs.</strong> Der Anteil
+            der stationär Versorgten fiel von 22,4 auf 10,9 Prozent, er hat sich also halbiert. 2023
+            ist die Platzzahl erstmals sogar gesunken. Das Land nennt die Gründe in seinem eigenen
+            Pflegebericht beim Namen: stark gestiegene Eigenanteile und ein Angebot, das wegen
+            fehlenden Personals zurückgeht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ein Wert sticht dabei heraus: Das ist der niedrigste Heimanteil aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
+            Brandenburg hat darauf geantwortet, statt es geschehen zu lassen: Bei den ambulanten
+            Diensten je 1.000 Ältere liegt das Land bundesweit auf Platz eins, und{' '}
+            <strong className="text-pm-ink font-semibold">17,1 Prozent aller Pflegeplätze sind
+            Tagespflegeplätze — der höchste Wert Deutschlands</strong> (Bund 10,7 Prozent), eine
+            Verdopplung seit 2013. Wer hier zu Hause bleibt, ist damit nicht automatisch allein.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Bemerkenswert ist der hohe Anteil ambulanter Versorgung. Familien in Brandenburg kaufen professionelle Hilfe eher ein, als alles allein zu tragen. Eine Betreuungskraft im Haushalt ist die konsequente Fortsetzung dieses Wegs: nicht ein Besuch zwei- oder dreimal am Tag, sondern jemand, der auch nachts da ist.
+            Ein Landesdurchschnitt hilft in Brandenburg allerdings wenig, weil das Land in zwei
+            Hälften zerfällt. In der Prignitz sind 129 von 1.000 Einwohnern pflegebedürftig, in
+            Potsdam 54 — mehr als das Doppelte.{' '}
+            <strong className="text-pm-ink font-semibold">Am schärfsten trifft es die Uckermark: Sie
+            hat die zweithöchste Pflegequote des Landes und zugleich die wenigsten Heimplätze — 30
+            je 1.000 Ältere, gegen 51 in Brandenburg an der Havel.</strong> Der Landesbericht
+            spricht offen von „weißen Flecken auf der Landkarte", wo eine wohnortnahe stationäre
+            Versorgung nicht immer sicherzustellen sei.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. 86,7 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 88,5 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
+            Wie ernst die Lage ist, zeigt am besten die Landesplanung selbst.{' '}
+            <strong className="text-pm-ink font-semibold">Der Landespflegeplan Brandenburgs
+            stammt vom 1. Dezember 1995 und ist bis heute die geltende Fassung.</strong> Er beziffert
+            den Bedarf in „Pflegestufen III und IV" — einem System, das seit dem 1. Januar 2017
+            nicht mehr existiert — und rechnet mit einem Land, das damals etwa ein Fünftel der
+            heutigen Pflegebedürftigen hatte. Gesteuert wird faktisch über den Pakt für Pflege und
+            den jährlichen Pflegebericht. Das Land schreibt dazu selbst, weder es noch die Kommunen
+            noch die Pflegekassen könnten eine Planung rechtlich durchsetzen.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Und die Personalfrage ist nicht kleiner geworden: Pflege ist inzwischen das größte
+            Berufsfeld des Brandenburger Arbeitsmarktes, und das Land erwartet bis 2040 dennoch eine
+            Lücke von über 6.000 Fachkräften. Für Familien heißt das nüchtern: Auf ein wachsendes
+            Angebot zu warten, ist kein Plan.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
-            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
-            der Länder.
+            Pflegezahlen: Statistisches Bundesamt und Amt für Statistik Berlin-Brandenburg,
+            Pflegestatistik 2023 (Stichtag 15. Dezember 2023). Entwicklung, Kreiswerte,
+            Personalprognose: Ministerium für Gesundheit und Soziales, „Daten und Fakten zur
+            Pflege im Land Brandenburg", 6. Ausgabe, Dezember 2025. Landespflegeplan vom
+            1. Dezember 1995, Brandenburgisches Vorschriftensystem.
           </p>
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Brandenburg</h2>
           <div className="space-y-3 mb-12">
             {[
+              { q: 'Warum sind Heimplätze in Brandenburg so knapp?', a: 'Weil das Angebot nicht mitgewachsen ist. Zwischen 2013 und 2023 hat sich die Zahl der Pflegebedürftigen in Brandenburg verdoppelt — rund 111.100 Menschen mehr —, während die Zahl der Dauerpflegeplätze um knapp sechs Prozent zunahm; 2023 ist sie erstmals gesunken. Brandenburg hat dadurch den niedrigsten Heimanteil aller Bundesländer (11,1 Prozent) und zugleich die wenigsten Plätze je Ältere (39 je 1.000 ab 65, Bund 47). Das Land nennt in seinem Pflegebericht zwei Gründe: stark gestiegene Eigenanteile und ein Angebot, das wegen fehlenden Personals zurückgeht. Besonders eng ist es in der Uckermark, in Elbe-Elster und in Ostprignitz-Ruppin.' },
               { q: 'Was kostet eine 24h-Pflegekraft in Brandenburg?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (rund 3.020 €/Monat) oder Berlin (rund 3.100 €/Monat, vdek 07/2026).' },
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Brandenburg starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Brandenburg — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },

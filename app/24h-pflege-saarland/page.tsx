@@ -44,6 +44,11 @@ const schemaMarkup = [
     mainEntity: [
       {
         '@type': 'Question',
+        name: 'Bekomme ich im Saarland überhaupt einen ambulanten Pflegedienst?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das ist im Saarland schwerer als in jedem anderen Bundesland. Nur 14,8 Prozent der Pflegebedürftigen werden ambulant versorgt — der niedrigste Wert aller sechzehn Länder —, und auf einen Dienst kommen rund 90 Pflegebedürftige gegenüber 71 im Bund, ebenfalls der Höchstwert. Zwischen 2021 und 2023 ist die Zahl der ambulant versorgten Menschen sogar gesunken, bei gleichzeitig 9.800 zusätzlichen Pflegebedürftigen. Am ausgeprägtesten ist das im Saarpfalz-Kreis, wo nur 10,1 Prozent einen Dienst in Anspruch nehmen. Eine Betreuungskraft im Haushalt ist deshalb im Saarland oft nicht die Ergänzung zum Pflegedienst, sondern die realistischere Alternative.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Saarland?',
         acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz im Saarland (Eigenanteil rund 3.690 €/Monat, vdek 07/2026).' },
       },
@@ -296,32 +301,65 @@ export default function SaarlandPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Saarbrücken, Neunkirchen, Homburg, Völklingen, Saarlouis, Merzig, St. Ingbert und alle weiteren Städte und Gemeinden im Saarland</p>
           </div>
 
-          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
+          {/* ⑤c VOR ORT — von Hand, Landesebene */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause im Saarland ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Im Saarland sind 80.351 Menschen pflegebedürftig, das entspricht 8,08 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt das Saarland auf Platz 6 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
+            Das Saarland ist ein Lehrstück dafür, dass ein gutes Heimangebot Familien nicht
+            entlastet.{' '}
+            <strong className="text-pm-ink font-semibold">Gemessen an der älteren Bevölkerung gibt
+            es hier überdurchschnittlich viele Heimplätze — 171 je 1.000 Einwohner über 80, Platz
+            zwei von sechzehn Ländern. Und trotzdem pflegen 57,9 Prozent der Familien ganz
+            allein</strong>, ohne jeden Pflegedienst, der dritthöchste Wert Deutschlands. Der Grund
+            liegt im Nenner: Die Pflegequote ist so hoch, dass selbst ein reichliches Angebot nur
+            einen normalen Anteil deckt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Knapp drei von fünf Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also mehr. 46.528 Menschen sind das im Saarland, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 14,8 Prozent (Bund 19,3), im Heim leben 14,5 Prozent (Bund 14,1).
+            Der eigentliche Engpass liegt woanders, und er ist eindeutig.{' '}
+            <strong className="text-pm-ink font-semibold">Das Saarland hat den schwächsten
+            ambulanten Sektor Deutschlands: 14,8 Prozent ambulanter Anteil — letzter Platz. Die
+            wenigsten Dienste je Ältere — letzter Platz. Und mit rund 90 Pflegebedürftigen je Dienst
+            den höchsten Andrang aller Länder</strong> (Bund: 71). Zwischen 2021 und 2023 ist die
+            Zahl der ambulant versorgten Menschen sogar gesunken, von 12.568 auf 11.921 — bei
+            gleichzeitig 9.800 zusätzlichen Pflegebedürftigen. Wer hier zu Hause professionelle
+            Hilfe sucht, konkurriert mit mehr Menschen um weniger Dienste als irgendwo sonst.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ein Wert sticht dabei heraus: Das ist die schwächste ambulante Versorgung aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
+            Dazu passt eine zweite Lücke, die genau die Falschen trifft: Nur 8,4 Prozent aller
+            Pflegeplätze im Saarland sind Tages- oder Nachtpflegeplätze, bundesweit sind es 10,7,
+            in Brandenburg 17,1. Ausgerechnet das Entlastungsangebot für pflegende Angehörige ist
+            hier am dünnsten — in dem Land, in dem der Anteil pflegender Angehöriger am höchsten
+            ist.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Für Familien heißt das: Die Hauptlast liegt im Saarland stärker bei den Angehörigen als anderswo. Das geht oft jahrelang gut und dann plötzlich nicht mehr — meist nach einem Krankenhausaufenthalt, einem Sturz oder wenn die eigene Kraft nachlässt. Eine Betreuungskraft, die mit einzieht, nimmt genau diese Dauerverantwortung ab, ohne dass jemand umziehen muss.
+            Innerhalb des Landes ist die Pflegequote bemerkenswert gleichmäßig — zwischen 76 und 87
+            je 1.000 Einwohner, für ein Flächenland ungewöhnlich homogen. Die Versorgung ist es
+            nicht.{' '}
+            <strong className="text-pm-ink font-semibold">Im Saarpfalz-Kreis pflegen 63,5 Prozent
+            der Familien allein, und nur 10,1 Prozent nehmen einen ambulanten Dienst in
+            Anspruch</strong> — beides Extremwerte des Landes. In Saarlouis stehen 42 Heimplätze je
+            1.000 Ältere zur Verfügung, in Merzig-Wadern 67.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. 88,3 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 107,1 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
+            Das Saarland ist außerdem das älteste westdeutsche Land: 24,9 Prozent der Einwohner sind
+            über 65, im Bund 22,4. Eine Landespflegeplanung gab es dazu lange nicht —{' '}
+            <strong className="text-pm-ink font-semibold">der Landespflegeplan wurde zuletzt für die
+            Jahre 2013 bis 2017 fortgeschrieben und dann eingestellt</strong>, mit der Begründung, er
+            habe faktisch keine steuernde Wirkung entfaltet. Erst 2026 legte das Land wieder einen
+            Pflegeinfrastrukturbericht vor. Dessen Befund: Drei von vier Einrichtungen melden
+            Personalmangel, rund 1.300 Stellen sind unbesetzt, und bis 2030 werden etwa 4.000
+            zusätzliche Pflegekräfte gebraucht.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
-            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
-            der Länder.
+            Pflegezahlen: Statistisches Amt des Saarlandes, „Pflegestatistik im Saarland 2023"
+            (Stichtag 15. Dezember 2023), und Statistisches Bundesamt, Länderergebnisse 2023.
+            Ländervergleiche und Platzquoten eigene Berechnung auf dieser Grundlage.
+            Personalzahlen: saarländischer Pflegeinfrastrukturbericht, Juni 2026.
           </p>
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Saarland</h2>
           <div className="space-y-3 mb-12">
             {[
+              { q: 'Bekomme ich im Saarland überhaupt einen ambulanten Pflegedienst?', a: 'Das ist im Saarland schwerer als in jedem anderen Bundesland. Nur 14,8 Prozent der Pflegebedürftigen werden ambulant versorgt — der niedrigste Wert aller sechzehn Länder —, und auf einen Dienst kommen rund 90 Pflegebedürftige gegenüber 71 im Bund, ebenfalls der Höchstwert. Zwischen 2021 und 2023 ist die Zahl der ambulant versorgten Menschen sogar gesunken, bei gleichzeitig 9.800 zusätzlichen Pflegebedürftigen. Am ausgeprägtesten ist das im Saarpfalz-Kreis, wo nur 10,1 Prozent einen Dienst in Anspruch nehmen. Eine Betreuungskraft im Haushalt ist deshalb im Saarland oft nicht die Ergänzung zum Pflegedienst, sondern die realistischere Alternative.' },
               { q: 'Was kostet eine 24h-Pflegekraft in Saarland?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz im Saarland (Eigenanteil rund 3.690 €/Monat, vdek 07/2026).' },
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Saarland starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Saarland — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },

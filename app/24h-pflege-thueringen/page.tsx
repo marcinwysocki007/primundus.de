@@ -44,6 +44,11 @@ const schemaMarkup = [
     mainEntity: [
       {
         '@type': 'Question',
+        name: 'Warum wird in Thüringen so viel zu Hause gepflegt?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weil kaum etwas anderes übrig bleibt. Zwischen 2017 und 2023 stieg die Zahl der Pflegebedürftigen in Thüringen um 67,7 Prozent, während die Zahl der Menschen im Heim um vier Prozent sank. Der gesamte Zuwachs — rund 78.300 Menschen — landete bei den Familien. Das Land schreibt in seinem Pflegeentwicklungsplan von 2025 selbst: „In mehr als der Hälfte der Fälle betreuen die An- und Zugehörigen die Pflegebedürftigen ohne Unterstützung durch ambulante Pflege- und Betreuungsdienste.“ Erschwerend kommt hinzu, dass die Zahl der 20- bis 65-Jährigen bis 2042 um 14 Prozent sinkt — die Generation, die diese Pflege leisten soll, wird kleiner.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Thüringen?',
         acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Thüringen (Eigenanteil rund 3.000 €/Monat, vdek 07/2026).' },
       },
@@ -296,29 +301,70 @@ export default function ThueringenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Erfurt, Jena, Gera, Weimar, Gotha, Nordhausen, Eisenach, Suhl, Mühlhausen und alle weiteren Städte und Gemeinden in Thüringen</p>
           </div>
 
-          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
+          {/* ⑤c VOR ORT — von Hand, Landesebene */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Thüringen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Thüringen sind 193.937 Menschen pflegebedürftig, das entspricht 9,14 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Das ist die zweithöchste Pflegequote aller 16 Bundesländer. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
+            Thüringen hat die schärfste Entwicklung aller Bundesländer, die uns bisher begegnet
+            ist.{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen 2017 und 2023 stieg die Zahl der
+            Pflegebedürftigen um 67,7 Prozent — von 115.620 auf 193.937. Im selben Zeitraum sank die
+            Zahl der Menschen, die vollstationär im Heim versorgt werden, um vier Prozent.</strong>{' '}
+            Der Zuwachs von rund 78.300 Menschen ging fast vollständig an die Familien: Die Zahl
+            derer, die ausschließlich Pflegegeld beziehen, also allein von Angehörigen gepflegt
+            werden, wuchs um 71,5 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            54,2 Prozent der Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also praktisch genauso viele. 105.128 Menschen sind das in Thüringen, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 21,8 Prozent (Bund 19,3), im Heim leben 12,6 Prozent (Bund 14,1).
+            Thüringen hat damit{' '}
+            <strong className="text-pm-ink font-semibold">die zweithöchste Pflegequote Deutschlands
+            — 9,14 Prozent der Bevölkerung, gut ein Drittel über dem Bundeswert.</strong> Beim
+            Heimangebot liegt das Land dagegen exakt im Bundesschnitt: 46 Dauerpflegeplätze je 1.000
+            Einwohner über 65, bundesweit 47. Nicht das Angebot ist hier also besonders knapp,
+            sondern der Bedarf besonders groß. Die Differenz zwischen beidem tragen die Angehörigen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Bemerkenswert ist der hohe Anteil ambulanter Versorgung. Familien in Thüringen kaufen professionelle Hilfe eher ein, als alles allein zu tragen. Eine Betreuungskraft im Haushalt ist die konsequente Fortsetzung dieses Wegs: nicht ein Besuch zwei- oder dreimal am Tag, sondern jemand, der auch nachts da ist.
+            Wie weit das inzwischen geht, sagt das Land selbst.{' '}
+            <strong className="text-pm-ink font-semibold">Im ersten Thüringer
+            Pflegeentwicklungsplan von 2025 steht: „In mehr als der Hälfte der Fälle betreuen die
+            An- und Zugehörigen die Pflegebedürftigen ohne Unterstützung durch ambulante Pflege- und
+            Betreuungsdienste."</strong> Und der Plan spricht von einem bereits bestehenden akuten
+            Versorgungsmangel, der sich ohne Gegenmaßnahmen zu einem humanitären Problem zuspitzen
+            werde. Das ist die Einschätzung des Landes, nicht unsere.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. 84,1 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 86,6 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
+            Dazu kommt etwas, das für die Pflege zu Hause entscheidend ist und das man in keiner
+            Pflegestatistik findet: In Thüringen wohnen die Kinder oft nicht mehr am Ort. Bis 2042
+            sinkt die Zahl der Menschen zwischen 20 und 65 um 14 Prozent, während die Zahl der über
+            65-Jährigen weiter steigt. Der Altenquotient klettert von 48 auf 60. Familienpflege
+            setzt aber voraus, dass jemand da ist, der sie leisten kann — und genau diese Generation
+            wird kleiner.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Innerhalb des Landes ist der Unterschied groß: Im Unstrut-Hainich-Kreis sind 127 von
+            1.000 Einwohnern pflegebedürftig, in Jena 64.{' '}
+            <strong className="text-pm-ink font-semibold">Bemerkenswert ist dabei, dass der älteste
+            Kreis Thüringens nicht die höchste Pflegequote hat</strong> — im Altenburger Land sind
+            31,9 Prozent der Einwohner über 65, die Pflegequote liegt aber deutlich unter der des
+            Unstrut-Hainich-Kreises. Alter allein erklärt den Pflegebedarf also nicht; Angebot und
+            Inanspruchnahme wirken mit.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine letzte Zahl zur Einordnung: Die eigene Vorausberechnung des Landes hatte für 2023
+            rund 179.500 Pflegebedürftige erwartet. Tatsächlich waren es 193.937 —{' '}
+            <strong className="text-pm-ink font-semibold">der Wert, der erst für 2029 vorhergesagt
+            war.</strong> Thüringen liegt also rund sechs Jahre vor seiner eigenen Prognose.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
-            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
-            der Länder.
+            Pflegezahlen und Zeitreihe: Thüringer Landesamt für Statistik, Pflegestatistik zum
+            15. Dezember 2017 bis 2023, sowie Statistisches Bundesamt, Länderergebnisse 2023.
+            Vorausberechnung: 3. regionalisierte Bevölkerungs- und Pflegevorausberechnung des
+            Landesamts. Zitat und Einschätzung: Thüringer Ministerium für Soziales, Gesundheit,
+            Arbeit und Familie, „1. Thüringer Pflegeentwicklungsplan", Juli 2025.
           </p>
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Thüringen</h2>
           <div className="space-y-3 mb-12">
             {[
+              { q: 'Warum wird in Thüringen so viel zu Hause gepflegt?', a: 'Weil kaum etwas anderes übrig bleibt. Zwischen 2017 und 2023 stieg die Zahl der Pflegebedürftigen in Thüringen um 67,7 Prozent, während die Zahl der Menschen im Heim um vier Prozent sank. Der gesamte Zuwachs — rund 78.300 Menschen — landete bei den Familien. Das Land schreibt in seinem Pflegeentwicklungsplan von 2025 selbst: „In mehr als der Hälfte der Fälle betreuen die An- und Zugehörigen die Pflegebedürftigen ohne Unterstützung durch ambulante Pflege- und Betreuungsdienste.“ Erschwerend kommt hinzu, dass die Zahl der 20- bis 65-Jährigen bis 2042 um 14 Prozent sinkt — die Generation, die diese Pflege leisten soll, wird kleiner.' },
               { q: 'Was kostet eine 24h-Pflegekraft in Thüringen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Thüringen (Eigenanteil rund 3.000 €/Monat, vdek 07/2026).' },
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Thüringen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Thüringen — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
