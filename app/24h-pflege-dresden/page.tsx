@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'In welchen Dresdner Stadtteilen leben die meisten älteren Menschen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Der Unterschied ist größer als in jeder anderen Stadt, die wir uns angesehen haben — Faktor sieben. In Johannstadt-Süd sind 36,3 Prozent der Einwohner über 65, in der Äußeren Neustadt 5,4 Prozent. Ebenfalls weit oben: Kleinpestitz/Mockritz mit 35,1 Prozent, Räcknitz/Zschertnitz und Hosterwitz/Pillnitz mit je 31,2 Prozent. Überraschend ist, dass die Plattenbausiedlungen nicht dazugehören: In Gorbitz und Prohlis leben weiterhin mehr Menschen im Erwerbsalter als über 65 — dort hat sich der Wandel als Wegzug ausgewirkt, nicht als Alterung. Unsere Betreuungskräfte kommen in jeden Stadtteil, Anreise und Preis sind überall gleich.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Dresden bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Dresden und Umland: Pirna, Freital, Radebeul, Meißen, Heidenau und alle Gemeinden im Landkreis Sächsische Schweiz-Osterzgebirge und Meißen' },
       },
@@ -345,31 +350,55 @@ export default function DresdenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Dresden und Umland: Pirna, Freital, Radebeul, Meißen, Heidenau und alle Gemeinden im Landkreis Sächsische Schweiz-Osterzgebirge und Meißen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Dresden ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Dresden ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 5,1 Wohnungen, in Sachsen 2,7. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. Der Wohnungsmarkt ist eng: 4,0 Prozent Leerstand gegenüber 8,5 Prozent in Sachsen.
+            Eine Zahl beschreibt die Dresdner Entwicklung besser als jede andere:{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen 2019 und 2023 stieg die Zahl der
+            Pflegebedürftigen um 49 Prozent — von 29.536 auf 44.141. Die Zahl der Heimplätze sank
+            im selben Zeitraum leicht.</strong> Der gesamte Zuwachs ist in die eigene Wohnung
+            gegangen: Die ambulante Versorgung wuchs um 42 Prozent, die Zahl der allein von
+            Angehörigen versorgten Menschen um 55 Prozent auf 22.850.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Dresden wohnen nur 16,8 Prozent der Haushalte im Eigentum, in Sachsen 34,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. In 24,5 Prozent der Haushalte leben ausschließlich Menschen ab 65, etwas seltener als in Sachsen mit 29,1 Prozent.
+            Beim Heimangebot selbst ist Dresden unauffällig: 13,1 Prozent der Pflegebedürftigen
+            leben stationär gegenüber 13,7 Prozent in Sachsen, und auch bei den Plätzen je 1.000
+            Senioren liegt die Stadt nur vier Prozent unter dem Landeswert. Anteil und Angebot
+            zeigen hier ausnahmsweise dasselbe. Der eigentliche Unterschied zu Sachsen liegt
+            woanders: Die Pflegequote beträgt 7,8 Prozent gegenüber 8,9 im Land — Dresden ist
+            schlicht jünger.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Altbau vor 1950 macht in Dresden 39,6 Prozent des Bestands aus, in Sachsen 46,5 Prozent. Die durchschnittliche Wohnung misst 71,2 Quadratmeter gegenüber 79,1 in Sachsen — rund 8 Quadratmeter weniger. 29,0 Prozent der Gebäude in Dresden sind Reihenhäuser — in Sachsen 18,6 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.
+            Der Stadtdurchschnitt taugt allerdings zu gar nichts.{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen dem ältesten und dem jüngsten
+            Stadtteil liegt der Faktor sieben:</strong> In Johannstadt-Süd sind 36,3 Prozent der
+            Einwohner über 65, in der Äußeren Neustadt 5,4 Prozent. Auch Kleinpestitz/Mockritz
+            (35,1 Prozent), Räcknitz/Zschertnitz und Hosterwitz/Pillnitz (je 31,2) liegen weit
+            oben. Bemerkenswert: Die Plattenbausiedlungen sind es <em>nicht</em>. In Gorbitz und
+            Prohlis leben nach wie vor mehr Menschen im Erwerbsalter als über 65 — dort hat sich
+            der demografische Wandel nicht als Alterung ausgewirkt, sondern als Wegzug. Gorbitz-Nord
+            hat seit 1990 fast die Hälfte seiner Einwohner verloren.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 69.125 Menschen in Dresden sind 75 Jahre oder älter, und es gibt 319.553 Wohnungen in 62.188 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Ein Wort zur Lage: Der Elbhang zwischen Loschwitz und Weißem Hirsch ist bewohntes
+            Villengebiet, und die Standseilbahn, die beide verbindet, überwindet 95 Höhenmeter bei
+            bis zu 29 Prozent Steigung — sie gehört zum regulären Nahverkehr, nicht zum
+            Ausflugsprogramm. Hosterwitz und Pillnitz am selben Hang gehören zu den ältesten
+            Stadtteilen. Dass daraus konkrete Probleme im Pflegealltag folgen, ist plausibel, aber
+            wir haben dafür keinen Beleg gefunden — deshalb steht es hier als Beobachtung, nicht
+            als Befund.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Dresden gut versorgt. Das Krankenhaus St. Joseph-Stift führt die größte
+            Akutgeriatrie der Stadt mit 54 Betten und einer Tagesklinik mit 13 Plätzen. Beim
+            Städtischen Klinikum lohnt der genaue Blick:{' '}
+            <strong className="text-pm-ink font-semibold">Akutgeriatrie und geriatrische Reha sitzen
+            an zwei Standorten rund zehn Kilometer auseinander</strong> — die Akutstation in
+            Neustadt/Trachau, die Reha in Löbtau. Das Sekretariat der Akutgeriatrie sitzt wiederum
+            in Löbtau. Wer der Sekretariatsadresse folgt, landet am falschen Haus. Lassen Sie sich
+            vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Dresden</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +416,7 @@ export default function DresdenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Dresden?', a: 'Das hängt am Grundriss, und die Ausgangslage in Dresden ist bekannt: Die durchschnittliche Wohnung misst 71,2 Quadratmeter, 39,9 Prozent liegen unter 60 Quadratmetern (Sachsen: 34,1 Prozent), und 16,8 Prozent der Haushalte wohnen im Eigentum (Sachsen: 34,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Dresden?', a: '69.125 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,4 Prozent — in Sachsen 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen: 29,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Dresden — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Dresden im Schnitt 5,1 Wohnungen, in Sachsen 2,7. 52,6 Prozent der Gebäude stehen frei, 29,0 Prozent sind Reihenhäuser. 52,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Dresden ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'In welchen Dresdner Stadtteilen leben die meisten älteren Menschen?', a: 'Der Unterschied ist größer als in jeder anderen Stadt, die wir uns angesehen haben — Faktor sieben. In Johannstadt-Süd sind 36,3 Prozent der Einwohner über 65, in der Äußeren Neustadt 5,4 Prozent. Ebenfalls weit oben: Kleinpestitz/Mockritz mit 35,1 Prozent, Räcknitz/Zschertnitz und Hosterwitz/Pillnitz mit je 31,2 Prozent. Überraschend ist, dass die Plattenbausiedlungen nicht dazugehören: In Gorbitz und Prohlis leben weiterhin mehr Menschen im Erwerbsalter als über 65 — dort hat sich der Wandel als Wegzug ausgewirkt, nicht als Alterung. Unsere Betreuungskräfte kommen in jeden Stadtteil, Anreise und Preis sind überall gleich.' },
               { q: 'Welches Einzugsgebiet wird in Dresden bedient?', a: 'Dresden und Umland: Pirna, Freital, Radebeul, Meißen, Heidenau und alle Gemeinden im Landkreis Sächsische Schweiz-Osterzgebirge und Meißen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

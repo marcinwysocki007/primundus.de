@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Warum leben in Hannover immer weniger Pflegebedürftige im Heim?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Nicht, weil es weniger Bedarf gäbe. Der Anteil fiel von 26,4 Prozent im Jahr 2017 auf 16,6 Prozent 2023, während der Anteil der allein von Angehörigen versorgten Menschen von 43,3 auf 58,6 Prozent stieg. Die Stadt nennt in ihrer eigenen Auswertung die Gründe: Die Zahl der stationären Plätze ist gesunken — fehlende Arbeitskräfte, gesunkene Investitionsbereitschaft — und es gibt wochenlange Wartezeiten bei Kurzzeit-, Verhinderungs- und Dauerpflege. Die Last hat sich also zu den Familien verschoben. Von den über 85-jährigen Hannoveranern sind 69,0 Prozent pflegebedürftig.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Hannover bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Hannover und Region: Garbsen, Langenhagen, Burgdorf, Lehrte, Sehnde, Pattensen und alle Gemeinden in der Region Hannover' },
       },
@@ -345,31 +350,48 @@ export default function HannoverPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Hannover und Region: Garbsen, Langenhagen, Burgdorf, Lehrte, Sehnde, Pattensen und alle Gemeinden in der Region Hannover</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Hannover ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            53,9 Prozent der Gebäude in Hannover sind Reihenhäuser — in Niedersachsen 12,9 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Hannover ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 4,3 Wohnungen, in Niedersachsen 1,7. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
+            In Hannover hat sich in sechs Jahren verschoben, wer die Pflege trägt — und zwar
+            dramatisch.{' '}
+            <strong className="text-pm-ink font-semibold">2017 lebten noch 26,4 Prozent der
+            Pflegebedürftigen im Heim, 2023 waren es 16,6 Prozent.</strong> Im selben Zeitraum
+            stieg der Anteil derer, die zu Hause allein von Angehörigen versorgt werden, von 43,3
+            auf 58,6 Prozent. Das ist keine Verlagerung aus Überzeugung: Die Stadt schreibt in ihrer
+            eigenen Auswertung, die Zahl der stationären Plätze sei gesunken — wegen fehlender
+            Arbeitskräfte und gesunkener Investitionsbereitschaft — und es gebe wochenlange
+            Wartezeiten bei Kurzzeit-, Verhinderungs- und Dauerpflege.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Hannover wohnen nur 23,4 Prozent der Haushalte im Eigentum, in Niedersachsen 51,1 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Die durchschnittliche Wohnung misst 78,1 Quadratmeter gegenüber 104,4 in Niedersachsen — rund 26 Quadratmeter weniger.
+            Von den 38.149 Pflegebedürftigen der Stadt nutzen 24,8 Prozent zusätzlich einen
+            ambulanten Dienst. Wie steil der Bedarf mit dem Alter steigt, zeigt eine Zahlenreihe,
+            die man kennen sollte: Von den 60- bis 74-Jährigen sind 9,2 Prozent pflegebedürftig,
+            von den 75- bis 84-Jährigen 28,6 Prozent —{' '}
+            <strong className="text-pm-ink font-semibold">und von den über 85-Jährigen 69,0
+            Prozent.</strong>
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 28,9 Prozent der Gebäude stehen frei, in Niedersachsen sind es 72,2 Prozent. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Hannover häufiger als anderswo. Jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Niedersachsen sind es 17,1 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. 55,5 Prozent aller Haushalte in Hannover bestehen aus einer einzigen Person, in Niedersachsen sind es 41,2 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 51.876 Menschen in Hannover sind 75 Jahre oder älter, und es gibt 302.018 Wohnungen in 70.271 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Innerhalb der Stadt verteilt sich das Alter sehr ungleich. Im Heideviertel sind 20,3
+            Prozent der Einwohner über 75, in der Nordstadt 5,3 Prozent — der Faktor 3,8. Bei den
+            über 65-Jährigen liegt zwischen Heideviertel (31,4 Prozent) und Nordstadt (11,8) noch
+            immer der Faktor 2,7. Eine Einschränkung, die wir dazusagen: Pflegedaten gibt es in
+            Hannover nur für die Gesamtstadt, nicht je Stadtteil — die Stadt weist ausdrücklich
+            darauf hin. Alterskarte und Pflegekarte lassen sich also nicht übereinanderlegen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Hannover gut ausgestattet, aber die Adressen sind heikel. Das größte
+            Angebot führt das DIAKOVERE Henriettenstift mit 92 Reha-Betten und 24
+            Tagesklinikplätzen —{' '}
+            <strong className="text-pm-ink font-semibold">allerdings nicht am Haupthaus, sondern
+            rund sieben Kilometer entfernt in Kirchrode.</strong> Dazu kommen die Klinik für
+            Altersmedizin am KRH Klinikum Nordstadt und eine Akutgeriatrie am Klinikum Siloah. Nicht
+            in Hannover, aber unter demselben Verbundnamen geführt: die geriatrischen Abteilungen in
+            Langenhagen, Gehrden und Neustadt am Rübenberge. Und die geriatrische Reha wird gerade
+            zwischen den Trägern neu verteilt — wer heute recherchiert, trifft womöglich auf ein
+            auslaufendes Angebot. Fragen Sie vorher nach. Die Pflegeberatung nach § 7a SGB XI ist
+            kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Hannover</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +409,7 @@ export default function HannoverPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Hannover?', a: 'Das hängt am Grundriss, und die Ausgangslage in Hannover ist bekannt: Die durchschnittliche Wohnung misst 78,1 Quadratmeter, 33,4 Prozent liegen unter 60 Quadratmetern (Niedersachsen: 17,1 Prozent), und 23,4 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Hannover?', a: '51.876 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,1 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Hannover — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Hannover im Schnitt 4,3 Wohnungen, in Niedersachsen 1,7. 28,9 Prozent der Gebäude stehen frei, 53,9 Prozent sind Reihenhäuser. 67,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Hannover ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Warum leben in Hannover immer weniger Pflegebedürftige im Heim?', a: 'Nicht, weil es weniger Bedarf gäbe. Der Anteil fiel von 26,4 Prozent im Jahr 2017 auf 16,6 Prozent 2023, während der Anteil der allein von Angehörigen versorgten Menschen von 43,3 auf 58,6 Prozent stieg. Die Stadt nennt in ihrer eigenen Auswertung die Gründe: Die Zahl der stationären Plätze ist gesunken — fehlende Arbeitskräfte, gesunkene Investitionsbereitschaft — und es gibt wochenlange Wartezeiten bei Kurzzeit-, Verhinderungs- und Dauerpflege. Die Last hat sich also zu den Familien verschoben. Von den über 85-jährigen Hannoveranern sind 69,0 Prozent pflegebedürftig.' },
               { q: 'Welches Einzugsgebiet wird in Hannover bedient?', a: 'Hannover und Region: Garbsen, Langenhagen, Burgdorf, Lehrte, Sehnde, Pattensen und alle Gemeinden in der Region Hannover' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Wie ist die Heimplatz-Lage rund um Eschborn?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Sehr knapp. Der Main-Taunus-Kreis hat mit 31 vollstationären Plätzen je 1.000 Einwohner über 65 die dünnste Heimplatzdecke aller 26 hessischen Kreise — im Land sind es 47. In Eschborn selbst gibt es zwei Pflegeheime mit zusammen 97 Plätzen. Entsprechend leben im Kreis nur 10,9 Prozent der Pflegebedürftigen im Heim (Hessen: 13,5 Prozent), während 20,6 Prozent einen ambulanten Dienst nutzen (Hessen: 17,6). Die stärkere ambulante Versorgung ist hier keine Vorliebe, sondern eine Folge der Knappheit. Ein Krankenhaus und damit eine Geriatrie hat Eschborn nicht.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Eschborn bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Eschborn und Main-Taunus-Kreis: Sulzbach, Kelkheim, Hattersheim, Hofheim am Taunus und alle Gemeinden im Main-Taunus-Kreis' },
       },
@@ -348,31 +353,43 @@ export default function EschbornPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Eschborn und Main-Taunus-Kreis: Sulzbach, Kelkheim, Hattersheim, Hofheim am Taunus und alle Gemeinden im Main-Taunus-Kreis</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Eschborn ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Altbau vor 1950 macht in Eschborn 4,8 Prozent des Bestands aus, in Hessen 20,4 Prozent. Nur 40,0 Prozent der Gebäude stehen frei, in Hessen sind es 69,9 Prozent.
+            Der Main-Taunus-Kreis hat{' '}
+            <strong className="text-pm-ink font-semibold">die dünnste Heimplatzdecke aller 26
+            hessischen Kreise: 31 Plätze je 1.000 Einwohner über 65, im Land sind es 47.</strong>{' '}
+            Das ist kein Randbefund, sondern der Kern der Lage. Entsprechend leben hier nur 10,9
+            Prozent der Pflegebedürftigen im Heim gegenüber 13,5 Prozent in Hessen — aber der
+            Rückstand beim Angebot ist fast doppelt so groß wie der beim Anteil. Wer hier einen
+            Heimplatz sucht, sucht in dem knappsten Markt des Landes.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Gut jedes dritte Gebäude in Eschborn ist ein Reihenhaus — in Hessen 15,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Mit 10,14 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Eschborn teurer als im Schnitt von Hessen (8,21 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
+            Die ambulante Versorgung fängt das teilweise auf: 20,6 Prozent der 13.683
+            Pflegebedürftigen im Kreis nutzen einen Pflegedienst, in Hessen sind es 17,6 Prozent.
+            Das ist allerdings keine Präferenz, sondern eine Folge der Knappheit. In Eschborn selbst
+            gibt es zwei Pflegeheime mit zusammen 97 Plätzen, sieben ambulante Dienste und zwei
+            Tagespflegen — für gut 22.000 Einwohner.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 88,9 Quadratmeter gegenüber 98,3 in Hessen — rund 9 Quadratmeter weniger. 38,0 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Hessen sind es 30,4 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat. Eschborn ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 2,8 Wohnungen, in Hessen 2,2. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 2.122 Menschen in Eschborn sind 75 Jahre oder älter, und es gibt 11.060 Wohnungen in 3.977 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Eschborn ist dabei jünger als sein Umfeld: 42,9 Jahre Durchschnittsalter gegenüber 44,7
+            im Kreis und 44,3 in Hessen. Das hat mit dem Arbeitsmarkt zu tun — in der Stadt gibt es{' '}
+            <strong className="text-pm-ink font-semibold">rund 43.600 sozialversicherungspflichtige
+            Arbeitsplätze bei gut 22.000 Einwohnern</strong>, fast doppelt so viele Stellen wie
+            Bewohner. Ein niedriger Altersdurchschnitt heißt aber nicht weniger Bedarf, sondern nur:
+            Er verteilt sich auf weniger Menschen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Ein Krankenhaus hat Eschborn nicht, und damit auch keine Geriatrie. Die drei nächsten
+            geriatrischen Kliniken gehören alle demselben Träger — in Bad Soden, Hofheim und
+            Frankfurt-Höchst. Hier ist Vorsicht geboten: Bad Soden und Hofheim werden von derselben
+            Chefärztin geführt und sind unter derselben Rufnummer erreichbar, und ein
+            Umstrukturierungskonzept sieht vor, die Geriatrie ganz nach Hofheim zu verlagern.
+            Welcher Standort heute welchen Betrieb führt, ließ sich aus den öffentlichen Quellen
+            nicht eindeutig klären — rufen Sie vorher an, bevor Sie fahren. Und lassen Sie sich
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Eschborn</h2>
           <div className="space-y-3 mb-12">
@@ -390,6 +407,7 @@ export default function EschbornPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Eschborn?', a: 'Das hängt am Grundriss, und die Ausgangslage in Eschborn ist bekannt: Die durchschnittliche Wohnung misst 88,9 Quadratmeter, 25,5 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 42,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Eschborn?', a: '2.122 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Eschborn — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Eschborn im Schnitt 2,8 Wohnungen, in Hessen 2,2. 40,0 Prozent der Gebäude stehen frei, 34,7 Prozent sind Reihenhäuser. 42,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Eschborn ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Wie ist die Heimplatz-Lage rund um Eschborn?', a: 'Sehr knapp. Der Main-Taunus-Kreis hat mit 31 vollstationären Plätzen je 1.000 Einwohner über 65 die dünnste Heimplatzdecke aller 26 hessischen Kreise — im Land sind es 47. In Eschborn selbst gibt es zwei Pflegeheime mit zusammen 97 Plätzen. Entsprechend leben im Kreis nur 10,9 Prozent der Pflegebedürftigen im Heim (Hessen: 13,5 Prozent), während 20,6 Prozent einen ambulanten Dienst nutzen (Hessen: 17,6). Die stärkere ambulante Versorgung ist hier keine Vorliebe, sondern eine Folge der Knappheit. Ein Krankenhaus und damit eine Geriatrie hat Eschborn nicht.' },
               { q: 'Welches Einzugsgebiet wird in Eschborn bedient?', a: 'Eschborn und Main-Taunus-Kreis: Sulzbach, Kelkheim, Hattersheim, Hofheim am Taunus und alle Gemeinden im Main-Taunus-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
