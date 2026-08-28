@@ -114,6 +114,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Gibt es in Rosenheim eine geriatrische Klinik?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In der Stadt Rosenheim nicht. Das RoMed Klinikum führt 19 Fachabteilungen, Altersmedizin ist nicht darunter. Das „Zentrum für Akutgeriatrie und Alterstraumatologie der RoMed Kliniken" nennt keinen Ort im Namen und sitzt in Bad Aibling, also im Landkreis; die geriatrische Rehabilitation ebenfalls. Eine Klinik in Bad Aibling bezeichnet sich sogar selbst als „Spezialklinik bei Rosenheim" — verständlich als Werbung, aber irreführend, wenn man einen Weg planen muss. Für eine geriatrische Behandlung geht es also aus der Stadt hinaus. Für die Betreuung zu Hause spielt das keine Rolle, für die Zeit davor schon.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Rosenheim bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Rosenheim und Landkreis Rosenheim: Bad Aibling, Wasserburg, Prien am Chiemsee und alle Gemeinden im Landkreis Rosenheim und Miesbach' },
       },
@@ -360,31 +365,43 @@ export default function RosenheimPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Rosenheim und Landkreis Rosenheim: Bad Aibling, Wasserburg, Prien am Chiemsee und alle Gemeinden im Landkreis Rosenheim und Miesbach</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Rosenheim ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Rosenheim wohnen nur 30,3 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Die durchschnittliche Wohnung misst 83,1 Quadratmeter gegenüber 100,5 in Bayern — rund 17 Quadratmeter weniger.
+            Die Stadt Rosenheim ist kreisfrei — ihre Zahlen haben mit denen des gleichnamigen
+            Landkreises nichts zu tun, und der Unterschied ist gewaltig.{' '}
+            <strong className="text-pm-ink font-semibold">In der Stadt leben 15,1 Prozent der
+            Pflegebedürftigen im Heim, im Landkreis 26,5 Prozent — fast doppelt so viele.</strong>{' '}
+            Bei den Plätzen dasselbe Bild: 32 je 1.000 Einwohner über 65 in der Stadt gegen 57 im
+            Landkreis und 44 in ganz Bayern. Wer über „Rosenheim" liest, sollte deshalb immer
+            prüfen, welches Rosenheim gemeint ist.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 47,2 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Rosenheim ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,1 Wohnungen, in Bayern 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
+            Die Entwicklung der letzten Jahre ist in der Stadt besonders scharf.{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen 2019 und 2023 stieg die Zahl der
+            Pflegebedürftigen um 31,6 Prozent — von 1.818 auf 2.393. Im selben Zeitraum sank die
+            Zahl der Heimplätze von 463 auf 421, und die Zahl der ambulanten Dienste ging von 13 auf
+            11 zurück.</strong> Die ambulanten Dienste versorgten 2023 exakt so viele Menschen wie
+            2019: 461 gegen 458. Bei 575 zusätzlichen Pflegebedürftigen. Aufgefangen haben das die
+            Familien — das reine Pflegegeld stieg um 40,4 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Rosenheim häufiger als anderswo. Knapp jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. Der Wohnungsmarkt ist eng: 2,0 Prozent Leerstand gegenüber 4,2 Prozent in Bayern. Jedes vierte Gebäude in Rosenheim ist ein Reihenhaus — in Bayern 14,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 6.751 Menschen in Rosenheim sind 75 Jahre oder älter, und es gibt 33.254 Wohnungen in 10.877 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Eine Bewegung geht in die Gegenrichtung: Die Tagespflegeplätze wuchsen von 19 auf 47.
+            Das ist mehr als eine Verdoppelung, bleibt aber eine kleine Zahl gegen 2.393
+            Pflegebedürftige — und Tagespflege ersetzt keine Nacht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Zur Altersmedizin ein Hinweis, der überrascht:{' '}
+            <strong className="text-pm-ink font-semibold">In der Stadt Rosenheim gibt es keine
+            geriatrische Fachabteilung.</strong> Das RoMed Klinikum in der Pettenkoferstraße führt
+            19 Fachabteilungen, Altersmedizin ist nicht darunter. Das „Zentrum für Akutgeriatrie und
+            Alterstraumatologie der RoMed Kliniken" trägt keinen Ortsnamen im Titel und sitzt in Bad
+            Aibling, also im Landkreis; die geriatrische Rehabilitation ebenfalls. Besonders
+            irreführend ist eine Klinik in Bad Aibling, die sich selbst als „Spezialklinik bei
+            Rosenheim" bezeichnet. Für Angehörige heißt das schlicht: Für eine geriatrische
+            Behandlung geht es aus der Stadt hinaus. Lassen Sie sich vorher unabhängig beraten —
+            die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Rosenheim</h2>
           <div className="space-y-3 mb-12">
@@ -403,6 +420,7 @@ export default function RosenheimPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Rosenheim?', a: 'Das hängt am Grundriss, und die Ausgangslage in Rosenheim ist bekannt: Die durchschnittliche Wohnung misst 83,1 Quadratmeter, 30,4 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 30,3 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Rosenheim?', a: '6.751 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,7 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Rosenheim — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Rosenheim im Schnitt 3,1 Wohnungen, in Bayern 2,1. 47,2 Prozent der Gebäude stehen frei, 25,9 Prozent sind Reihenhäuser. 38,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Rosenheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Gibt es in Rosenheim eine geriatrische Klinik?', a: 'In der Stadt Rosenheim nicht. Das RoMed Klinikum führt 19 Fachabteilungen, Altersmedizin ist nicht darunter. Das „Zentrum für Akutgeriatrie und Alterstraumatologie der RoMed Kliniken" nennt keinen Ort im Namen und sitzt in Bad Aibling, also im Landkreis; die geriatrische Rehabilitation ebenfalls. Eine Klinik in Bad Aibling bezeichnet sich sogar selbst als „Spezialklinik bei Rosenheim" — verständlich als Werbung, aber irreführend, wenn man einen Weg planen muss. Für eine geriatrische Behandlung geht es also aus der Stadt hinaus. Für die Betreuung zu Hause spielt das keine Rolle, für die Zeit davor schon.' },
               { q: 'Welches Einzugsgebiet wird in Rosenheim bedient?', a: 'Rosenheim und Landkreis Rosenheim: Bad Aibling, Wasserburg, Prien am Chiemsee und alle Gemeinden im Landkreis Rosenheim und Miesbach' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Was ist mit Kurzzeitpflege in Aalen, wenn ich selbst ausfalle?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das ist in Aalen der wundeste Punkt. Die Zahl der Kurzzeitpflegeplätze in der Stadt ist von 40 im Jahr 2022 auf 22 im Jahr 2024 gefallen, also fast halbiert. Genau diese Plätze braucht man aber, wenn die pflegende Tochter selbst operiert wird oder zwei Wochen wegmuss. Bei einer Betreuung im Haushalt stellt sich die Frage anders: Fällt Ihre Betreuungskraft aus, stellen wir Ersatz, ohne dass für den Wechsel selbst etwas berechnet wird — es fallen lediglich die An- und Abreisekosten der neuen Kraft an. Ein Heimplatz muss dafür nicht gesucht werden.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Aalen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Aalen und Ostalbkreis: Schwäbisch Gmünd, Ellwangen, Bopfingen, Heidenheim und alle Gemeinden im Ostalbkreis' },
       },
@@ -348,25 +353,55 @@ export default function AalenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Aalen und Ostalbkreis: Schwäbisch Gmünd, Ellwangen, Bopfingen, Heidenheim und alle Gemeinden im Ostalbkreis</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Aalen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Aalen liegt beim Wohnen dicht am Schnitt von Baden-Württemberg — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 97,6 Quadratmeter, auf ein Gebäude kommen 2,0 Wohnungen, und 55,3 Prozent der Haushalte wohnen im Eigentum.
+            Der Ostalbkreis ist ein gutes Beispiel dafür, dass ein hoher Heim-Anteil nicht viele
+            Heimplätze bedeutet.{' '}
+            <strong className="text-pm-ink font-semibold">16,6 Prozent der Pflegebedürftigen leben
+            hier im Heim, in Baden-Württemberg sind es 14,9 Prozent — bei den Plätzen je 1.000
+            Einwohner über 65 liegt der Kreis mit 43,8 aber nur im Landesschnitt (42,9).</strong>{' '}
+            Der hohe Anteil kommt also nicht von einem großzügigen Angebot. Dazu passt die auffällig
+            niedrige ambulante Quote: 13,1 Prozent gegen 16,4 Prozent im Land.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            11,1 Prozent der Einwohner sind 75 Jahre oder älter, das sind 7.427 Menschen. In 23,1 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.
+            Für die Stadt Aalen rechnet der Kreis in seiner Pflegebedarfsplanung selbst vor, wohin
+            das führt.{' '}
+            <strong className="text-pm-ink font-semibold">Bis 2035 sinkt der Platzbestand im
+            Ostalbkreis von 2.938 auf 2.841 — vor allem, weil Doppelzimmer wegfallen müssen —
+            während der Bedarf auf 3.340 steigt. 499 Plätze Lücke, in 31 von 42 Kommunen.</strong>{' '}
+            Für Aalen selbst sind es 19 Plätze, für den Planungsraum Aalen 90. Die Zahl der
+            Pflegebedürftigen im Kreis hat sich zwischen 2001 und 2021 mehr als verdoppelt und ist
+            seither noch einmal um 12,8 Prozent gestiegen — der Wert von 2023 liegt bereits über
+            dem, was für 2030 vorhergesagt war.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Am härtesten trifft Angehörige eine andere Entwicklung:{' '}
+            <strong className="text-pm-ink font-semibold">Die Kurzzeitpflegeplätze in Aalen sind von
+            40 im Jahr 2022 auf 22 im Jahr 2024 gefallen — fast halbiert.</strong> Kurzzeitpflege
+            ist genau das, was häusliche Pflege überhaupt tragfähig macht: der Platz für die zwei
+            Wochen, in denen die pflegende Tochter selbst im Krankenhaus liegt. Auch bei der
+            Tagespflege liegt Aalen mit 2,9 Plätzen je 1.000 Ältere unter dem Kreiswert von 5,5,
+            obwohl die Stadt das Zentrum ist.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Aalen erstreckt sich über 18 mal 25 Kilometer, und die Teilorte liegen auf sehr
+            verschiedenen Höhen: Die Rathäuser von Ebnat und Waldhausen stehen auf 613 und 611
+            Metern, rund 180 Meter über dem Marktplatz der Kernstadt auf 430 Metern — sie sitzen
+            oben auf dem Albuch, während Aalen selbst im Kochertal liegt. Auf die Alterung wirkt
+            sich das interessanterweise nicht aus: Waldhausen ist mit 20,8 Prozent über 65 einer der
+            jüngsten Stadtbezirke. Überhaupt ist Aalen kleinräumig sehr ausgeglichen — zwischen
+            Dewangen (24,5 Prozent) und Unterkochen (20,8) liegen nur 3,7 Prozentpunkte.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Bei der Altersmedizin steht Aalen ungewöhnlich gut da:{' '}
+            <strong className="text-pm-ink font-semibold">Das Ostalb-Klinikum deckt Akutgeriatrie
+            (12 Betten), stationäre geriatrische Rehabilitation (45 Betten) und eine geriatrische
+            Tagesklinik am selben Standort ab.</strong> Diese vollständige Kette an einem Ort ist
+            selten — in vielen Städten liegen Akutstation und Reha zehn oder zwanzig Kilometer
+            auseinander. Ein Hinweis dennoch: Die Reha wird von einer rechtlich eigenständigen
+            Gesellschaft betrieben, weshalb manche Verzeichnisse sie als separates Haus führen.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Aalen</h2>
           <div className="space-y-3 mb-12">
@@ -384,6 +419,7 @@ export default function AalenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Aalen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Aalen ist bekannt: Die durchschnittliche Wohnung misst 97,6 Quadratmeter, 17,9 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 55,3 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Aalen?', a: '7.427 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Aalen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Aalen im Schnitt 2,0 Wohnungen, in Baden-Württemberg 2,1. 72,7 Prozent der Gebäude stehen frei, 10,8 Prozent sind Reihenhäuser. 44,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Aalen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Was ist mit Kurzzeitpflege in Aalen, wenn ich selbst ausfalle?', a: 'Das ist in Aalen der wundeste Punkt. Die Zahl der Kurzzeitpflegeplätze in der Stadt ist von 40 im Jahr 2022 auf 22 im Jahr 2024 gefallen, also fast halbiert. Genau diese Plätze braucht man aber, wenn die pflegende Tochter selbst operiert wird oder zwei Wochen wegmuss. Bei einer Betreuung im Haushalt stellt sich die Frage anders: Fällt Ihre Betreuungskraft aus, stellen wir Ersatz, ohne dass für den Wechsel selbst etwas berechnet wird — es fallen lediglich die An- und Abreisekosten der neuen Kraft an. Ein Heimplatz muss dafür nicht gesucht werden.' },
               { q: 'Welches Einzugsgebiet wird in Aalen bedient?', a: 'Aalen und Ostalbkreis: Schwäbisch Gmünd, Ellwangen, Bopfingen, Heidenheim und alle Gemeinden im Ostalbkreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

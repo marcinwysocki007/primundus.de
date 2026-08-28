@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Wie viele Heimplätze sind in Marl frei?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Fast keine. Von den 1.014 Pflegeplätzen in Marl waren im Frühjahr 2023 sieben frei — 0,7 Prozent. Kreisweit standen nominell 483 Plätze leer, tatsächlich belegbar waren davon 47; der Rest hing an Umbauten, Doppelzimmerabbau und Belegungsstopps. Der Kreis Recklinghausen hat mit 85,5 Pflegebedürftigen je 1.000 Einwohner die höchste Pflegequote aller achtzehn Kreise in Westfalen-Lippe, und die Kreisplanung erwartet für Marl bis 2040 eine Lücke von rund 111 Plätzen. Wer heute plant, sollte nicht mit einem kurzfristig verfügbaren Heimplatz rechnen.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Marl bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Marl und Umland: Recklinghausen, Haltern am See, Oer-Erkenschwick, Datteln, Dorsten und alle Gemeinden im Kreis Recklinghausen' },
       },
@@ -344,25 +349,52 @@ export default function MarlPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Marl und Umland: Recklinghausen, Haltern am See, Oer-Erkenschwick, Datteln, Dorsten und alle Gemeinden im Kreis Recklinghausen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Marl ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Marl liegt beim Wohnen dicht am Schnitt von Nordrhein-Westfalen — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 87,7 Quadratmeter, auf ein Gebäude kommen 2,2 Wohnungen, und 41,7 Prozent der Haushalte wohnen im Eigentum.
+            Eine Zahl beschreibt die Lage in Marl besser als jede Prozentangabe:{' '}
+            <strong className="text-pm-ink font-semibold">Von den 1.014 Pflegeplätzen in der Stadt
+            waren im Frühjahr 2023 genau sieben frei.</strong> Das sind 0,7 Prozent. Kreisweit
+            standen nominell 483 Plätze leer — tatsächlich belegbar waren davon 47, der Rest hing an
+            Umbauten, Doppelzimmerabbau und Belegungsstopps. Bei 97 Prozent Auslegung gilt ein Heim
+            als voll.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            11,1 Prozent der Einwohner sind 75 Jahre oder älter, das sind 9.493 Menschen. In 25,1 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.
+            Der Kreis Recklinghausen hat dabei{' '}
+            <strong className="text-pm-ink font-semibold">mit 85,5 Pflegebedürftigen je 1.000
+            Einwohner die höchste Pflegequote aller achtzehn Kreise in Westfalen-Lippe</strong>{' '}
+            (Nordrhein-Westfalen: 76,3). Und die stationäre Versorgung schrumpft: Zwischen 2019 und
+            2023 stieg die Zahl der ambulant versorgten Menschen um 19,6 Prozent, die der stationär
+            versorgten sank um 1,8 Prozent. Die Kreisplanung rechnet für Marl vor, dass 2040 rund
+            111 Plätze fehlen werden und 2050 rund 253 — und sie rechnet dabei noch mit der
+            Bevölkerung vor dem Zensus 2022, ist also eher vorsichtig.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Marl veröffentlicht als eine der wenigen Städte Einwohnerzahlen je Statistikbezirk, und
+            das Bild innerhalb der Stadt ist sehr uneinheitlich:{' '}
+            <strong className="text-pm-ink font-semibold">In Polsum sind 32,1 Prozent der Einwohner
+            über 65, in Drewer-Nord 16,6 Prozent</strong> — 15,5 Prozentpunkte Unterschied, Alt-Marl
+            liegt mit 29,9 Prozent knapp hinter Polsum.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Naheliegend wäre die Vermutung, dass die alten Zechensiedlungen die ältesten Quartiere
+            sind. Das stimmt nur zum Teil, und wir sagen es lieber genau: Der Bezirk der Siedlung
+            Auguste Victoria in Hüls-Nord — benannt nach der Zeche, die am 18. Dezember 2015 als
+            drittletzte Steinkohlezeche Deutschlands schloss — liegt mit 35,3 Prozent über 65 auf
+            dem dritten Platz der Stadt. Die Zollvereinsiedlung in Marl-Hamm dagegen kommt auf 17,9
+            Prozent und liegt damit unter dem Stadtdurchschnitt. Ein durchgängiges Muster ist es
+            also nicht.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Marl gut versorgt, auch wenn der Name in die Irre führt:{' '}
+            <strong className="text-pm-ink font-semibold">Die Klinik für Geriatrie und geriatrische
+            Frührehabilitation liegt am Lipper Weg in Marl</strong> und behandelt rund 1.150
+            Menschen stationär im Jahr, dazu kommt ein Zentrum für Alterstraumatologie am selben
+            Standort. Der Träger heißt allerdings nach dem Vest Recklinghausen, und das größere Haus
+            des Verbunds steht in Recklinghausen — wer nach dem Verbundnamen sucht, landet leicht in
+            der falschen Stadt. Hinzu kommt, dass das Haus in Marl zweimal umbenannt wurde und in
+            älteren Verzeichnissen noch unter dem früheren Namen steht.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Marl</h2>
           <div className="space-y-3 mb-12">
@@ -380,6 +412,7 @@ export default function MarlPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Marl?', a: 'Das hängt am Grundriss, und die Ausgangslage in Marl ist bekannt: Die durchschnittliche Wohnung misst 87,7 Quadratmeter, 22,1 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 41,7 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Marl?', a: '9.493 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Marl — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Marl im Schnitt 2,2 Wohnungen, in Nordrhein-Westfalen 2,3. 31,8 Prozent der Gebäude stehen frei, 35,1 Prozent sind Reihenhäuser. 57,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Marl ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Wie viele Heimplätze sind in Marl frei?', a: 'Fast keine. Von den 1.014 Pflegeplätzen in Marl waren im Frühjahr 2023 sieben frei — 0,7 Prozent. Kreisweit standen nominell 483 Plätze leer, tatsächlich belegbar waren davon 47; der Rest hing an Umbauten, Doppelzimmerabbau und Belegungsstopps. Der Kreis Recklinghausen hat mit 85,5 Pflegebedürftigen je 1.000 Einwohner die höchste Pflegequote aller achtzehn Kreise in Westfalen-Lippe, und die Kreisplanung erwartet für Marl bis 2040 eine Lücke von rund 111 Plätzen. Wer heute plant, sollte nicht mit einem kurzfristig verfügbaren Heimplatz rechnen.' },
               { q: 'Welches Einzugsgebiet wird in Marl bedient?', a: 'Marl und Umland: Recklinghausen, Haltern am See, Oer-Erkenschwick, Datteln, Dorsten und alle Gemeinden im Kreis Recklinghausen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
