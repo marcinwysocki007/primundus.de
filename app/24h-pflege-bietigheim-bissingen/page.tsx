@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Wie ist die Heimplatz-Lage in Bietigheim-Bissingen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Besser als im Umland. Die Kreispflegeplanung rechnet je Kommune und kommt für Bietigheim-Bissingen auf 457 vorhandene Plätze bei einem Bedarf von 461 — praktisch ausgeglichen, während im gesamten Landkreis Ludwigsburg 920 Plätze fehlen. Zum Vergleich: Freiberg am Neckar fehlen 125, Gerlingen 99, Ditzingen 96. Knapp ist dagegen die Kurzzeitpflege: Im ganzen Landkreis gibt es nur 53 solitäre Plätze bei einem Bedarf von 162 — also genau das Angebot, das Angehörige brauchen, wenn sie selbst ausfallen. In der Stadt gibt es fünf Pflegeheime, vier Tagespflegen und drei ambulante Dienste.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bietigheim-Bissingen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bietigheim-Bissingen und nördlicher Landkreis Ludwigsburg: Tamm, Sachsenheim, Besigheim, Bönnigheim und alle Gemeinden im nördlichen Landkreis Ludwigsburg' },
       },
@@ -348,28 +353,58 @@ export default function BietigheimBissingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bietigheim-Bissingen und nördlicher Landkreis Ludwigsburg: Tamm, Sachsenheim, Besigheim, Bönnigheim und alle Gemeinden im nördlichen Landkreis Ludwigsburg</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bietigheim-Bissingen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Jedes vierte Gebäude in Bietigheim-Bissingen ist ein Reihenhaus — in Baden-Württemberg 15,4 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 53,5 Prozent der Gebäude stehen frei, in Baden-Württemberg sind es 65,9 Prozent.
+            Der Landkreis Ludwigsburg zeigt eine Entwicklung, die man einmal in Zahlen gesehen haben
+            sollte:{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen 2017 und 2023 stieg die Zahl der
+            Pflegebedürftigen um fast 60 Prozent — von 17.575 auf 28.077. Die Zahl der Menschen im
+            Pflegeheim blieb dabei praktisch unverändert bei rund 4.000.</strong> Der Anteil der
+            stationär Versorgten fiel dadurch von 22,8 auf 14,3 Prozent. Es sind nicht weniger
+            Menschen ins Heim gezogen — es sind nur sehr viel mehr pflegebedürftig geworden, und die
+            alle bleiben zu Hause.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Altbau vor 1950 macht in Bietigheim-Bissingen 11,9 Prozent des Bestands aus, in Baden-Württemberg 17,4 Prozent.
+            Bietigheim-Bissingen steht dabei besser da als das Umland. Die Kreispflegeplanung
+            rechnet je Kommune, und für die Stadt kommt sie auf 457 vorhandene Plätze bei einem
+            Bedarf von 461 — praktisch ausgeglichen, während{' '}
+            <strong className="text-pm-ink font-semibold">im gesamten Landkreis 920 Plätze
+            fehlen.</strong> In Freiberg am Neckar sind es minus 125, in Gerlingen minus 99, in
+            Ditzingen minus 96. Wer hier wohnt, hat also vergleichsweise gute Karten.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 4.876 Menschen in Bietigheim-Bissingen sind 75 Jahre oder älter, und es gibt 20.813 Wohnungen in 8.606 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Eine Lücke gibt es trotzdem, und sie trifft genau die Familien, die zu Hause pflegen:{' '}
+            <strong className="text-pm-ink font-semibold">Im ganzen Landkreis gibt es nur 53
+            solitäre Kurzzeitpflegeplätze</strong>, dem Bedarf von 162 steht also ein Defizit von
+            109 gegenüber. Kurzzeitpflege ist das, was Angehörige brauchen, wenn sie selbst krank
+            werden oder in Urlaub fahren. Der Landkreis vermittelt 19 dieser Plätze inzwischen
+            selbst. In der Stadt selbst gibt es fünf Pflegeheime, vier Tagespflegen mit 56 Plätzen
+            und drei ambulante Dienste.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Bemerkenswert ist, wohin der Landkreis sein Geld lenkt. Statt allein neue Heimplätze zu
+            fördern, stellt er{' '}
+            <strong className="text-pm-ink font-semibold">jährlich 150.000 Euro für dezentrale
+            Quartiersmanager bereit — ausdrücklich, um die häusliche Pflege zu stärken und
+            Angehörige zu entlasten.</strong> Das ist eine Antwort auf genau die Entwicklung oben:
+            Wenn der Zuwachs ohnehin zu Hause bleibt, muss die Unterstützung dorthin. In
+            Bietigheim-Bissingen gibt es außerdem 193 Wohnungen im Betreuten Wohnen — eine
+            Zwischenstufe, die oft übersehen wird, wenn die Entscheidung zwischen „allein zu Hause"
+            und „Heim" aufgemacht wird. Innerhalb des Kreises schwankt der Anteil der über
+            65-Jährigen übrigens zwischen 16,8 und 24,6 Prozent; die Ausgangslage ist von Gemeinde
+            zu Gemeinde sehr verschieden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Zur Altersmedizin ein Hinweis, weil ältere Quellen in die Irre führen:{' '}
+            <strong className="text-pm-ink font-semibold">Die Geriatrie zog im April 2020 von
+            Marbach am Neckar nach Bietigheim.</strong> Sie ist heute Teil der Klinik für Innere
+            Medizin am RKH Krankenhaus in der Riedstraße. Verwirrend ist außerdem der Name des
+            Zentrums — es heißt „Geriatrisches Zentrum Ludwigsburg-Bietigheim" und wird auf den
+            Seiten des Ludwigsburger Klinikums geführt, die Akutstation liegt aber in
+            Bietigheim-Bissingen. Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die
+            Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bietigheim-Bissingen</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +422,7 @@ export default function BietigheimBissingenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bietigheim-Bissingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bietigheim-Bissingen ist bekannt: Die durchschnittliche Wohnung misst 94,9 Quadratmeter, 17,7 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 57,5 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Bietigheim-Bissingen?', a: '4.876 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bietigheim-Bissingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bietigheim-Bissingen im Schnitt 2,4 Wohnungen, in Baden-Württemberg 2,1. 53,5 Prozent der Gebäude stehen frei, 25,9 Prozent sind Reihenhäuser. 40,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bietigheim-Bissingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Wie ist die Heimplatz-Lage in Bietigheim-Bissingen?', a: 'Besser als im Umland. Die Kreispflegeplanung rechnet je Kommune und kommt für Bietigheim-Bissingen auf 457 vorhandene Plätze bei einem Bedarf von 461 — praktisch ausgeglichen, während im gesamten Landkreis Ludwigsburg 920 Plätze fehlen. Zum Vergleich: Freiberg am Neckar fehlen 125, Gerlingen 99, Ditzingen 96. Knapp ist dagegen die Kurzzeitpflege: Im ganzen Landkreis gibt es nur 53 solitäre Plätze bei einem Bedarf von 162 — also genau das Angebot, das Angehörige brauchen, wenn sie selbst ausfallen. In der Stadt gibt es fünf Pflegeheime, vier Tagespflegen und drei ambulante Dienste.' },
               { q: 'Welches Einzugsgebiet wird in Bietigheim-Bissingen bedient?', a: 'Bietigheim-Bissingen und nördlicher Landkreis Ludwigsburg: Tamm, Sachsenheim, Besigheim, Bönnigheim und alle Gemeinden im nördlichen Landkreis Ludwigsburg' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

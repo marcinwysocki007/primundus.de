@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Spricht die Betreuungskraft die Sprache meiner Eltern?',
+        acceptedAnswer: { '@type': 'Answer', text: 'In Ludwigshafen ist das eine der häufigsten Fragen, und die Zahlen erklären warum: 15,1 Prozent der Einwohner über 65 haben keine deutsche Staatsangehörigkeit — in Rheinland-Pfalz sind es 5,1 Prozent. Beides sind Höchstwerte im Land. In Nord-Hemshof sind sogar 41,8 Prozent der über 75-Jährigen Ausländer. Unsere Betreuungskräfte kommen überwiegend aus Polen, einige aus Rumänien oder Bulgarien. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto. Bei anderen Herkunftssprachen sagen wir Ihnen ehrlich, was wir leisten können und was nicht.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Ludwigshafen am Rhein bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Ludwigshafen und Rhein-Pfalz-Kreis: Frankenthal, Speyer, Neustadt an der Weinstraße, Landau und alle Gemeinden im Rhein-Pfalz-Kreis' },
       },
@@ -348,31 +353,49 @@ export default function LudwigshafenamRheinPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Ludwigshafen und Rhein-Pfalz-Kreis: Frankenthal, Speyer, Neustadt an der Weinstraße, Landau und alle Gemeinden im Rhein-Pfalz-Kreis</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Ludwigshafen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 31,0 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent. Die durchschnittliche Wohnung misst 84,8 Quadratmeter gegenüber 107,7 in Rheinland-Pfalz — rund 23 Quadratmeter weniger.
+            Ludwigshafen ist die kreisfreie Stadt in Rheinland-Pfalz, in der am wenigsten stationär
+            gepflegt wird — und am wenigsten ambulant.{' '}
+            <strong className="text-pm-ink font-semibold">13,2 Prozent im Heim und 16,1 Prozent mit
+            Pflegedienst sind jeweils der niedrigste Wert aller zwölf kreisfreien Städte des
+            Landes.</strong> Was übrig bleibt, tragen die Familien: 58,7 Prozent der
+            Pflegebedürftigen werden ausschließlich von Angehörigen versorgt. Und das ist kein
+            Rechenartefakt — auch die Zahl der Heimplätze je 1.000 Einwohner über 70 liegt mit 69
+            unter dem Landeswert von 71 und deutlich unter dem Schnitt der Städte von 78.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            45,6 Prozent der Gebäude in Ludwigshafen sind Reihenhäuser — in Rheinland-Pfalz 15,5 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. In Ludwigshafen wohnen nur 34,3 Prozent der Haushalte im Eigentum, in Rheinland-Pfalz 54,4 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.
+            Der Blick auf zwanzig Jahre macht deutlich, wie es dazu kam:{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen 2001 und 2021 stieg die Zahl der
+            Pflegebedürftigen um 238 Prozent, die Zahl der Heimplätze nur um 52 Prozent.</strong>{' '}
+            Der stationäre Anteil brach von 30,7 auf 13,2 Prozent ein. Praktisch der gesamte Zuwachs
+            landete bei den Angehörigen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ludwigshafen ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,1 Wohnungen, in Rheinland-Pfalz 1,7. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Ludwigshafen häufiger als anderswo. Gut jede vierte Wohnung ist kleiner als 60 Quadratmeter — in Rheinland-Pfalz sind es 15,4 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. 38,1 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Rheinland-Pfalz sind es 25,9 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
+            Ein zweiter Befund ist für Ludwigshafen besonders wichtig.{' '}
+            <strong className="text-pm-ink font-semibold">15,1 Prozent der Einwohner über 65 haben
+            keine deutsche Staatsangehörigkeit — in Rheinland-Pfalz sind es 5,1 Prozent, also ein
+            Drittel davon.</strong> Beides sind Höchstwerte im Land. Kleinräumig ist das extrem
+            konzentriert: In Nord-Hemshof sind 41,8 Prozent der über 75-Jährigen Ausländer, in
+            Edigheim 4,5. Sprache und Gewohnheiten sind bei einer Betreuungskraft, die im Haushalt
+            lebt, deshalb keine Nebenfrage. Das Deutschniveau jeder Kraft wird eingestuft und steht
+            vorab im Profil, zusammen mit Erfahrung und Foto.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 16.798 Menschen in Ludwigshafen sind 75 Jahre oder älter, und es gibt 86.264 Wohnungen in 28.228 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Auch beim Alter zerfällt die Stadt. Insgesamt ist Ludwigshafen jung — 18,8 Prozent über
+            65 gegenüber 22,8 Prozent im Land. Zwischen den Stadtteilen liegt beim Anteil der über
+            75-Jährigen aber der Faktor drei: In West sind es 4,0 Prozent, in der Gartenstadt 13,0.
+            Das Durchschnittsalter reicht von 36,3 Jahren in West bis 46,5 in Edigheim.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist die Stadt versorgt: Das St. Marien- und St. Annastiftskrankenhaus führt
+            eine Klinik für Geriatrie mit Alterstraumatologischem Zentrum und war nach eigenen
+            Angaben die erste geriatrische Klinik in Rheinland-Pfalz mit dem Qualitätssiegel
+            Geriatrie; dazu kommt das Krankenhaus zum Guten Hirten in Oggersheim. Für Beratung gibt
+            es in Ludwigshafen fünf Pflegestützpunkte, jeweils für bestimmte Stadtteile zuständig —
+            die Beratung dort ist kostenlos und trägerunabhängig (§ 7a SGB XI).
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Ludwigshafen am Rhein</h2>
           <div className="space-y-3 mb-12">
@@ -390,6 +413,7 @@ export default function LudwigshafenamRheinPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Ludwigshafen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Ludwigshafen ist bekannt: Die durchschnittliche Wohnung misst 84,8 Quadratmeter, 26,7 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 34,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Ludwigshafen?', a: '16.798 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,7 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Ludwigshafen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Ludwigshafen im Schnitt 3,1 Wohnungen, in Rheinland-Pfalz 1,7. 31,0 Prozent der Gebäude stehen frei, 45,6 Prozent sind Reihenhäuser. 60,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Ludwigshafen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Spricht die Betreuungskraft die Sprache meiner Eltern?', a: 'In Ludwigshafen ist das eine der häufigsten Fragen, und die Zahlen erklären warum: 15,1 Prozent der Einwohner über 65 haben keine deutsche Staatsangehörigkeit — in Rheinland-Pfalz sind es 5,1 Prozent. Beides sind Höchstwerte im Land. In Nord-Hemshof sind sogar 41,8 Prozent der über 75-Jährigen Ausländer. Unsere Betreuungskräfte kommen überwiegend aus Polen, einige aus Rumänien oder Bulgarien. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto. Bei anderen Herkunftssprachen sagen wir Ihnen ehrlich, was wir leisten können und was nicht.' },
               { q: 'Welches Einzugsgebiet wird in Ludwigshafen am Rhein bedient?', a: 'Ludwigshafen und Rhein-Pfalz-Kreis: Frankenthal, Speyer, Neustadt an der Weinstraße, Landau und alle Gemeinden im Rhein-Pfalz-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

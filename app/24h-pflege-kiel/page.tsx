@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Warum gibt es in Kiel so viele ambulante Pflegedienste?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Weil Heimplätze knapp sind. Kiel hat 54 ambulante Dienste bei nur 34 Pflegeheimen, und auf 1.000 Einwohner kommen 8,3 vollstationäre Plätze — im Land sind es 12,8, die dünnste Decke aller vier kreisfreien Städte Schleswig-Holsteins. Entsprechend werden hier 28,6 Prozent der Pflegebedürftigen ambulant betreut (Land: 21,3 Prozent). Kiel ist zudem der einzige Kreis in Schleswig-Holstein, in dem die ambulanten Dienste mehr Personal beschäftigen als die Heime. Zwischen 2021 und 2023 stieg die Zahl der Pflegebedürftigen um 11,9 Prozent, während 86 Heimplätze wegfielen.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Kiel bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Kiel und Umland: Neumünster, Rendsburg, Plön, Preetz und alle Gemeinden im Kreis Rendsburg-Eckernförde und Plön' },
       },
@@ -345,31 +350,53 @@ export default function KielPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Kiel und Umland: Neumünster, Rendsburg, Plön, Preetz und alle Gemeinden im Kreis Rendsburg-Eckernförde und Plön</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Kiel ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Kiel häufiger als anderswo. Gut zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Schleswig-Holstein sind es 23,2 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. In Kiel wohnen nur 25,1 Prozent der Haushalte im Eigentum, in Schleswig-Holstein 47,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.
+            Kiel geht einen anderen Weg als der Rest von Schleswig-Holstein. Während anderswo die
+            Last überwiegend bei den Familien liegt, setzt diese Stadt auf ambulante Dienste:{' '}
+            <strong className="text-pm-ink font-semibold">28,6 Prozent der Pflegebedürftigen werden
+            von einem Pflegedienst betreut, im Land sind es 21,3 Prozent.</strong> Der Anteil derer,
+            die allein von Angehörigen versorgt werden, liegt mit 43,4 Prozent dagegen unter dem
+            Landeswert. Kiel hat 54 ambulante Dienste bei nur 34 Pflegeheimen — und ist der einzige
+            Kreis in Schleswig-Holstein, in dem die ambulanten Dienste mehr Personal beschäftigen
+            als die Heime.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 73,0 Quadratmeter gegenüber 95,1 in Schleswig-Holstein — rund 22 Quadratmeter weniger. Kiel ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,6 Wohnungen, in Schleswig-Holstein 1,8. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
+            Das hat einen handfesten Hintergrund: Heimplätze sind hier knapp. Auf 1.000 Einwohner
+            kommen in Kiel 8,3 vollstationäre Plätze, im Land 12,8 — die dünnste Decke aller vier
+            kreisfreien Städte Schleswig-Holsteins. Und sie wird dünner.{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen 2021 und 2023 stieg die Zahl der
+            Pflegebedürftigen um 11,9 Prozent, die Zahl der Heimplätze sank um 86.</strong> Der
+            Zuwachs von rund 1.360 Menschen verteilte sich fast vollständig auf Pflegegeld und
+            ambulante Dienste.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            46,0 Prozent der Gebäude in Kiel sind Reihenhäuser — in Schleswig-Holstein 17,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 32,5 Prozent der Gebäude stehen frei, in Schleswig-Holstein sind es 64,5 Prozent. 34,2 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Schleswig-Holstein 20,9 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.
+            Innerhalb der Stadt ist der Unterschied dramatisch.{' '}
+            <strong className="text-pm-ink font-semibold">In Schilksee sind 44,4 Prozent der
+            Einwohner über 65 und 18,7 Prozent über 80 — in Ravensberg 11,7 beziehungsweise 3,2
+            Prozent.</strong> Schilksee hat mehr über 64-Jährige als Menschen im Erwerbsalter und
+            ein Durchschnittsalter von 55,8 Jahren; in Ravensberg sind es 37,2. Zwischen diesen
+            beiden Kieler Stadtteilen liegen 18,6 Lebensjahre.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 24.749 Menschen in Kiel sind 75 Jahre oder älter, und es gibt 138.600 Wohnungen in 38.247 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Die Förde teilt die Stadt tatsächlich, und die Fähren gehören zum Nahverkehr — die
+            Schwentinelinie fährt ganzjährig im Halbstundentakt zwischen West- und Ostufer. Für
+            einen ambulanten Dienst, der von Westufer nach Wellingdorf oder Dietrichsdorf muss,
+            bedeutet das entweder Fähre oder den Weg um den Fördekopf. Für eine Betreuungskraft, die
+            im Haushalt lebt, spielt das keine Rolle. Steillagen sind in Kiel dagegen kein Thema —
+            der höchste Punkt des Stadtgebiets liegt bei 74 Metern.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Kiel gut aufgestellt: Das Städtische Krankenhaus führt eine eigene
+            Klinik für Geriatrie mit 2.135 stationären Fällen und eine Tagesklinik mit über 20
+            Plätzen, dazu ein Zentrum für Alterstraumatologie. Ein Hinweis, weil Portale es falsch
+            einsortieren: Das ist eine{' '}
+            <strong className="text-pm-ink font-semibold">Akutklinik, keine Reha-Einrichtung</strong>{' '}
+            — eine eigenständige geriatrische Rehaklinik gibt es in Kiel nach unserer Recherche
+            nicht. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Kiel</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +414,7 @@ export default function KielPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Kiel?', a: 'Das hängt am Grundriss, und die Ausgangslage in Kiel ist bekannt: Die durchschnittliche Wohnung misst 73,0 Quadratmeter, 42,1 Prozent liegen unter 60 Quadratmetern (Schleswig-Holstein: 23,2 Prozent), und 25,1 Prozent der Haushalte wohnen im Eigentum (Schleswig-Holstein: 47,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Kiel?', a: '24.749 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Schleswig-Holstein 12,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Schleswig-Holstein: 26,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Kiel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Kiel im Schnitt 3,6 Wohnungen, in Schleswig-Holstein 1,8. 32,5 Prozent der Gebäude stehen frei, 46,0 Prozent sind Reihenhäuser. 70,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Kiel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Warum gibt es in Kiel so viele ambulante Pflegedienste?', a: 'Weil Heimplätze knapp sind. Kiel hat 54 ambulante Dienste bei nur 34 Pflegeheimen, und auf 1.000 Einwohner kommen 8,3 vollstationäre Plätze — im Land sind es 12,8, die dünnste Decke aller vier kreisfreien Städte Schleswig-Holsteins. Entsprechend werden hier 28,6 Prozent der Pflegebedürftigen ambulant betreut (Land: 21,3 Prozent). Kiel ist zudem der einzige Kreis in Schleswig-Holstein, in dem die ambulanten Dienste mehr Personal beschäftigen als die Heime. Zwischen 2021 und 2023 stieg die Zahl der Pflegebedürftigen um 11,9 Prozent, während 86 Heimplätze wegfielen.' },
               { q: 'Welches Einzugsgebiet wird in Kiel bedient?', a: 'Kiel und Umland: Neumünster, Rendsburg, Plön, Preetz und alle Gemeinden im Kreis Rendsburg-Eckernförde und Plön' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
