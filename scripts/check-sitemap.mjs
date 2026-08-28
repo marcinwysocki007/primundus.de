@@ -76,6 +76,35 @@ for (const lm of lastmods) {
 if (lastmods.length > 10 && new Set(lastmods).size === 1)
   warnings.push(`Alle ${lastmods.length} lastmod-Werte identisch (${lastmods[0]}) — Build-Zeitstempel, kein echtes Änderungsdatum (Fix = B4)`)
 
+// Von Hand geschriebene Vor-Ort-Abschnitte brauchen ein TAGGENAUES Datum.
+//
+// Der Hintergrund ist ein Fehler, der lange unbemerkt lief: Alle Ortsseiten
+// trugen "Aktualisiert August 2026", also nur monatsgenau, und lib/lastmod.ts
+// macht daraus den Monatsersten. In der Sitemap stand damit fuer 208 URLs der
+// 1. August — auch fuer die 67 Seiten, deren Text Ende August komplett neu
+// geschrieben wurde. Google bekam ausgerechnet fuer die verbesserten Seiten
+// das Signal "unveraendert" und hatte keinen Grund, sie neu zu holen.
+// Diese Pruefung faengt den Rueckfall ab.
+const handseiten = []
+for (const dir of fs.readdirSync('app', { withFileTypes: true })) {
+  if (!dir.isDirectory() || !dir.name.startsWith('24h-pflege-')) continue
+  const datei = path.join('app', dir.name, 'page.tsx')
+  if (!fs.existsSync(datei)) continue
+  const src = fs.readFileSync(datei, 'utf8')
+  const i = src.indexOf('\u2464c VOR ORT')
+  if (i < 0) continue
+  const kopf = src.slice(i, i + 120)
+  if (!kopf.includes('kein Baustein') && !kopf.includes('von Hand')) continue
+  const datum = src.match(
+    /Aktualisiert(?:\s+am)?\s+(\d{1,2}\.\s*)?(Januar|Februar|M\u00e4rz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+\d{4}/)
+  if (!datum) handseiten.push(`${dir.name}: von Hand geschrieben, aber ohne sichtbares Datum`)
+  else if (!datum[1]) handseiten.push(`${dir.name}: nur monatsgenaues Datum — Sitemap meldet dadurch den Monatsersten`)
+}
+if (handseiten.length) {
+  warnings.push(`${handseiten.length} handgeschriebene Ortsseiten ohne taggenaues Datum:`)
+  handseiten.slice(0, 8).forEach((h) => warnings.push('   ' + h))
+}
+
 if (!urls.some((u) => u === `${HOST}/pflegegeld`))
   warnings.push('/pflegegeld fehlt in der Sitemap (Fix = B4)')
 

@@ -28,10 +28,20 @@ export function lastmodFuerSlug(slug: string): Date | undefined {
     if (dm) {
       result = new Date(dm[1] + 'T00:00:00.000Z')
     } else {
+      // Der Tag wurde bisher zwar gelesen, aber weggeworfen — jede Seite mit
+      // sichtbarem Datum meldete den Monatsersten. Fuer die 208 Ortsseiten mit
+      // "Aktualisiert August 2026" stand deshalb der 1. August in der Sitemap,
+      // auch fuer die, die Ende August komplett neu geschrieben wurden. Google
+      // bekam damit ausgerechnet fuer die verbesserten Seiten das Signal
+      // "unveraendert". Steht ein Tag da, zaehlt er jetzt; steht keiner da,
+      // bleibt es beim Monatsersten — das ist dann die ehrliche Genauigkeit.
       const akt = src.match(
-        /Aktualisiert(?:\s+am)?\s+(?:\d{1,2}\.\s*)?(Januar|Februar|März|Maerz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})/
+        /Aktualisiert(?:\s+am)?\s+(?:(\d{1,2})\.\s*)?(Januar|Februar|März|Maerz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})/
       )
-      if (akt) result = new Date(Date.UTC(parseInt(akt[2], 10), MONATE[akt[1]], 1))
+      if (akt) {
+        const tag = akt[1] ? parseInt(akt[1], 10) : 1
+        result = new Date(Date.UTC(parseInt(akt[3], 10), MONATE[akt[2]], tag))
+      }
     }
     // Rueckfallebene: echtes Commit-Datum aus Git — aber NUR, wenn die Seite
     // selbst gar kein Datum ausweist. Ein sichtbares Datum behaelt Vorrang.
