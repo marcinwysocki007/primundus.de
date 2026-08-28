@@ -221,3 +221,46 @@ export const STAEDTE: Stadt[] = [
   { slug: 'zwickau', name: 'Zwickau', region: 'sachsen' },
 ]
 
+
+/**
+ * Nachbarn ueber die Bundeslandgrenze.
+ *
+ * Der NearbyCities-Block zieht seine Vorschlaege bisher nur aus dem eigenen
+ * Bundesland. Wo ein Land wenige Stadtseiten hat, verhungert das: Saarbruecken
+ * bekam ueberhaupt keinen Nachbarn angezeigt, die Seiten in Sachsen-Anhalt,
+ * Thueringen, Sachsen, Brandenburg und Schleswig-Holstein je zwei bis drei —
+ * gegen acht in Bayern und NRW. Genau diese Seiten liefert Google seit 90
+ * Tagen kein einziges Mal aus.
+ *
+ * Bewusst von Hand gepflegt statt aus Koordinaten gerechnet: Der Block sagt
+ * dem Leser „vielleicht ist einer dieser Orte naeher dran". Das muss stimmen.
+ * Aufgenommen ist nur, was ich als tatsaechlich nah einordne (Richtwert bis
+ * rund 130 km Fahrstrecke) — Halle/Leipzig sind 35 km, Luebeck/Schwerin 70,
+ * Saarbruecken/Trier 95. Berlin–Magdeburg (150 km) steht bewusst NICHT drin,
+ * ebenso wenig Kiel–Schwerin (135). Lieber ein Nachbar weniger als eine
+ * Behauptung, die vor Ort niemand nachvollziehen kann.
+ *
+ * Die Richtung ist egal: Der Block wertet die Tabelle in BEIDE Richtungen aus.
+ * Sonst haetten die kleinen Laender nur ausgehende Links bekommen — und genau
+ * die eingehenden fehlen ihnen.
+ */
+export const GRENZNACHBARN: Record<string, string[]> = {
+  saarbruecken: ['pirmasens', 'kaiserslautern', 'trier'],
+  'halle-saale': ['leipzig', 'jena'],
+  dessau: ['leipzig', 'potsdam', 'berlin'],
+  magdeburg: ['braunschweig', 'wolfsburg'],
+  gera: ['zwickau', 'chemnitz', 'leipzig'],
+  jena: ['leipzig', 'zwickau'],
+  erfurt: ['halle-saale', 'leipzig'],
+  dresden: ['cottbus'],
+  hamburg: ['bremen', 'schwerin'],
+  luebeck: ['schwerin'],
+  rostock: ['luebeck'],
+}
+
+/** Nachbarn eines Ortes ueber die Landesgrenze — in beide Richtungen. */
+export function grenznachbarn(slug: string): string[] {
+  const hin = GRENZNACHBARN[slug] ?? []
+  const zurueck = Object.keys(GRENZNACHBARN).filter((k) => GRENZNACHBARN[k].includes(slug))
+  return Array.from(new Set([...hin, ...zurueck]))
+}
