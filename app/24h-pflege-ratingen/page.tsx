@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Ratingen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Ratingen ist bekannt: Die durchschnittliche Wohnung misst 95,1 Quadratmeter, 17,6 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 45,1 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Ratingen?',
+        acceptedAnswer: { '@type': 'Answer', text: '12.316 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 13,9 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 29,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Ratingen — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Ratingen im Schnitt 2,4 Wohnungen, in Nordrhein-Westfalen 2,3. 32,3 Prozent der Gebäude stehen frei, 40,1 Prozent sind Reihenhäuser. 39,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Ratingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Ratingen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Ratingen und nördlicher Kreis Mettmann: Erkrath, Mettmann, Heiligenhaus und alle Gemeinden im nördlichen Kreis Mettmann' },
       },
@@ -336,13 +351,13 @@ export default function RatingenPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Ratingen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Ratingen erzählt etwas über den Pflegealltag. 42,5 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Nordrhein-Westfalen 24,1 Prozent. Ratingen ist älter als das Land: 13,9 Prozent der Einwohner sind 75 Jahre oder älter — das sind 12.316 Menschen, in Nordrhein-Westfalen sind es 10,7 Prozent.
+            42,5 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Nordrhein-Westfalen 24,1 Prozent. Ratingen ist älter als das Land: 13,9 Prozent der Einwohner sind 75 Jahre oder älter — das sind 12.316 Menschen, in Nordrhein-Westfalen sind es 10,7 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In 29,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Nordrhein-Westfalen sind es 24,2 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte. Altbau vor 1950 macht in Ratingen 10,0 Prozent des Bestands aus, in Nordrhein-Westfalen 19,7 Prozent.
+            29,5 Prozent der Haushalte in Ratingen bestehen nur aus Menschen ab 65 — in Nordrhein-Westfalen 24,2 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Altbau vor 1950 macht in Ratingen 10,0 Prozent des Bestands aus, in Nordrhein-Westfalen 19,7 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 32,3 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. 40,1 Prozent der Gebäude in Ratingen sind Reihenhäuser, in Nordrhein-Westfalen 27,2 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 2,6 Prozent der Wohnungen sind nach 2010 entstanden, in Nordrhein-Westfalen 5,8 Prozent. Der Bestand ist älter als im Land.
+            Nur 32,3 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. Zwei von fünf Gebäuden in Ratingen ist ein Reihenhaus — in Nordrhein-Westfalen 27,2 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 2,6 Prozent der Wohnungen sind nach 2010 entstanden, in Nordrhein-Westfalen 5,8 Prozent. Der Bestand ist älter als im Land.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 12.316 Menschen in Ratingen sind 75 Jahre oder älter, und es gibt 45.192 Wohnungen in 18.547 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
@@ -366,6 +381,9 @@ export default function RatingenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Ratingen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Ratingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Ratingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Ratingen ist bekannt: Die durchschnittliche Wohnung misst 95,1 Quadratmeter, 17,6 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 45,1 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+              { q: 'Wie viele ältere Menschen leben in Ratingen?', a: '12.316 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 13,9 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 29,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Ratingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Ratingen im Schnitt 2,4 Wohnungen, in Nordrhein-Westfalen 2,3. 32,3 Prozent der Gebäude stehen frei, 40,1 Prozent sind Reihenhäuser. 39,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Ratingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Ratingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Ratingen ist bekannt: Die durchschnittliche Wohnung misst 95,1 Quadratmeter, 17,6 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 45,1 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Ratingen?', a: '12.316 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 13,9 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 29,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Ratingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Ratingen im Schnitt 2,4 Wohnungen, in Nordrhein-Westfalen 2,3. 32,3 Prozent der Gebäude stehen frei, 40,1 Prozent sind Reihenhäuser. 39,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Ratingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

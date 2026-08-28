@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Göppingen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Göppingen ist bekannt: Die durchschnittliche Wohnung misst 91,4 Quadratmeter, 19,8 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 47,0 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Göppingen?',
+        acceptedAnswer: { '@type': 'Answer', text: '6.436 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Göppingen — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Göppingen im Schnitt 2,5 Wohnungen, in Baden-Württemberg 2,1. 62,5 Prozent der Gebäude stehen frei, 16,7 Prozent sind Reihenhäuser. 55,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Göppingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Göppingen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Göppingen und Landkreis Göppingen: Eislingen, Süßen, Geislingen an der Steige, Uhingen und alle Gemeinden im Landkreis Göppingen' },
       },
@@ -336,7 +351,7 @@ export default function GoeppingenPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Göppingen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie viel Platz eine Wohnung in Göppingen hat, ist keine Nebenfrage. Die durchschnittliche Wohnung misst 91,4 Quadratmeter gegenüber 99,1 in Baden-Württemberg — rund 8 Quadratmeter weniger. 23,2 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Baden-Württemberg 17,4 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.
+            Die durchschnittliche Wohnung misst 91,4 Quadratmeter gegenüber 99,1 in Baden-Württemberg — rund 8 Quadratmeter weniger. 23,2 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Baden-Württemberg 17,4 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             32,6 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Baden-Württemberg sind es 26,3 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
@@ -363,6 +378,9 @@ export default function GoeppingenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Göppingen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Göppingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Göppingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Göppingen ist bekannt: Die durchschnittliche Wohnung misst 91,4 Quadratmeter, 19,8 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 47,0 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Göppingen?', a: '6.436 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Göppingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Göppingen im Schnitt 2,5 Wohnungen, in Baden-Württemberg 2,1. 62,5 Prozent der Gebäude stehen frei, 16,7 Prozent sind Reihenhäuser. 55,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Göppingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Göppingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Göppingen ist bekannt: Die durchschnittliche Wohnung misst 91,4 Quadratmeter, 19,8 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 47,0 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Göppingen?', a: '6.436 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Göppingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Göppingen im Schnitt 2,5 Wohnungen, in Baden-Württemberg 2,1. 62,5 Prozent der Gebäude stehen frei, 16,7 Prozent sind Reihenhäuser. 55,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Göppingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

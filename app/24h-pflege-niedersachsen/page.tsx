@@ -299,10 +299,10 @@ export default function NiedersachsenPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Niedersachsen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie viel Platz eine Wohnung in Niedersachsen hat, ist keine Nebenfrage. Die durchschnittliche Wohnung misst 104,4 Quadratmeter und damit rund 10 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4). Nur 17,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+            Die durchschnittliche Wohnung misst 104,4 Quadratmeter und damit rund 10 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4). Beim Platz steht Niedersachsen besser da als das Land: Nur 17,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            51,1 Prozent der Haushalte wohnen im Eigentum, in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden.
+            Jeder zweite Haushalt in Niedersachsen wohnt im Eigentum — in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 899.327 Menschen in Niedersachsen sind 75 Jahre oder älter, und es gibt 4.115.887 Wohnungen in 2.366.185 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.

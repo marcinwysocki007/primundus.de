@@ -299,10 +299,10 @@ export default function BadenWuerttembergPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Baden-Württemberg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Baden-Württemberg erzählt etwas über den Pflegealltag. Altbau vor 1950 macht in Baden-Württemberg 17,4 Prozent des Bestands aus, in Deutschland insgesamt 23,5 Prozent. 51,6 Prozent der Haushalte wohnen im Eigentum, in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden.
+            Altbau vor 1950 macht in Baden-Württemberg 17,4 Prozent des Bestands aus, in Deutschland insgesamt 23,5 Prozent. Gut jeder zweite Haushalt in Baden-Württemberg wohnt im Eigentum — in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 18,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+            Beim Platz steht Baden-Württemberg besser da als das Land: Nur 18,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 1.160.911 Menschen in Baden-Württemberg sind 75 Jahre oder älter, und es gibt 5.461.921 Wohnungen in 2.566.980 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.

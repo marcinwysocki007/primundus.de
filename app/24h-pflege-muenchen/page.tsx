@@ -99,6 +99,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in München?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in München ist bekannt: Die durchschnittliche Wohnung misst 73,5 Quadratmeter, 40,8 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 23,9 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in München?',
+        acceptedAnswer: { '@type': 'Answer', text: '137.429 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in München — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in München im Schnitt 5,6 Wohnungen, in Bayern 2,1. 33,9 Prozent der Gebäude stehen frei, 44,4 Prozent sind Reihenhäuser. 51,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in München ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in München bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Schwabing, Bogenhausen, Solln, Pullach, Grünwald, Unterhaching, Ottobrunn, Haar, Dachau, Freising, Starnberg, Germering, Gauting, Weilheim, Landsberg am Lech und alle Gemeinden im Landkreis München' },
       },
@@ -345,13 +360,13 @@ export default function MuenchenPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in München ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in München gewohnt wird, entscheidet mit darüber, ob Pflege zu Hause funktioniert. Auf ein Gebäude kommen in München im Schnitt 5,6 Wohnungen, in Bayern sind es 2,1. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. Die durchschnittliche Wohnung misst 73,5 Quadratmeter gegenüber 100,5 in Bayern — rund 27 Quadratmeter weniger.
+            München ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 5,6 Wohnungen, in Bayern 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. Die durchschnittliche Wohnung misst 73,5 Quadratmeter gegenüber 100,5 in Bayern — rund 27 Quadratmeter weniger.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 23,9 Prozent der Haushalte wohnen im Eigentum — in Bayern sind es 49,3 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Mit 12,89 Euro Nettokaltmiete je Quadratmeter wohnt es sich in München teurer als im Schnitt von Bayern (8,74 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
+            In München wohnen nur 23,9 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Mit 12,89 Euro Nettokaltmiete je Quadratmeter wohnt es sich in München teurer als im Schnitt von Bayern (8,74 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            40,8 Prozent der Wohnungen in München haben weniger als 60 Quadratmeter, in Bayern sind es 20,7 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. 44,4 Prozent der Gebäude in München sind Reihenhäuser, in Bayern 14,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 33,9 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent.
+            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in München häufiger als anderswo. Zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. 44,4 Prozent der Gebäude in München sind Reihenhäuser — in Bayern 14,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 33,9 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 137.429 Menschen in München sind 75 Jahre oder älter, und es gibt 824.103 Wohnungen in 147.196 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
@@ -376,6 +391,9 @@ export default function MuenchenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in München starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in München rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in München?', a: 'Das hängt am Grundriss, und die Ausgangslage in München ist bekannt: Die durchschnittliche Wohnung misst 73,5 Quadratmeter, 40,8 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 23,9 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in München?', a: '137.429 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in München — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in München im Schnitt 5,6 Wohnungen, in Bayern 2,1. 33,9 Prozent der Gebäude stehen frei, 44,4 Prozent sind Reihenhäuser. 51,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in München ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in München?', a: 'Das hängt am Grundriss, und die Ausgangslage in München ist bekannt: Die durchschnittliche Wohnung misst 73,5 Quadratmeter, 40,8 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 23,9 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in München?', a: '137.429 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in München — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in München im Schnitt 5,6 Wohnungen, in Bayern 2,1. 33,9 Prozent der Gebäude stehen frei, 44,4 Prozent sind Reihenhäuser. 51,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in München ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

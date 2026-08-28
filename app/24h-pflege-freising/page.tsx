@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Freising?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Freising ist bekannt: Die durchschnittliche Wohnung misst 86,4 Quadratmeter, 32,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 33,2 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Freising?',
+        acceptedAnswer: { '@type': 'Answer', text: '4.045 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,5 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 17,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Freising — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Freising im Schnitt 3,0 Wohnungen, in Bayern 2,1. 48,7 Prozent der Gebäude stehen frei, 28,6 Prozent sind Reihenhäuser. 31,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Freising ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Freising bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Freising und Landkreis Freising: Moosburg, Neufahrn, Hallbergmoos, Eching und alle Gemeinden im Landkreis Freising' },
       },
@@ -343,13 +358,13 @@ export default function FreisingPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Freising ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Freising die Möglichkeiten. Nur 33,2 Prozent der Haushalte wohnen im Eigentum — in Bayern sind es 49,3 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. 32,7 Prozent der Wohnungen in Freising haben weniger als 60 Quadratmeter, in Bayern sind es 20,7 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+            In Freising wohnen nur 33,2 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Freising häufiger als anderswo. Jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In 17,0 Prozent der Haushalte leben ausschließlich Menschen ab 65, etwas seltener als in Bayern mit 23,0 Prozent. Die durchschnittliche Wohnung misst 86,4 Quadratmeter gegenüber 100,5 in Bayern — rund 14 Quadratmeter weniger.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Mit 10,72 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Freising teurer als im Schnitt von Bayern (8,74 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option. Nur 48,7 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Auf ein Gebäude kommen in Freising im Schnitt 3,0 Wohnungen, in Bayern sind es 2,1. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
+            Mit 10,72 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Freising teurer als im Schnitt von Bayern (8,74 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option. Nur 48,7 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Freising ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,0 Wohnungen, in Bayern 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 4.045 Menschen in Freising sind 75 Jahre oder älter, und es gibt 25.744 Wohnungen in 8.733 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
@@ -377,6 +392,9 @@ export default function FreisingPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Freising starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Freising rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Freising?', a: 'Das hängt am Grundriss, und die Ausgangslage in Freising ist bekannt: Die durchschnittliche Wohnung misst 86,4 Quadratmeter, 32,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 33,2 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Freising?', a: '4.045 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,5 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 17,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Freising — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Freising im Schnitt 3,0 Wohnungen, in Bayern 2,1. 48,7 Prozent der Gebäude stehen frei, 28,6 Prozent sind Reihenhäuser. 31,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Freising ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Freising?', a: 'Das hängt am Grundriss, und die Ausgangslage in Freising ist bekannt: Die durchschnittliche Wohnung misst 86,4 Quadratmeter, 32,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 33,2 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Freising?', a: '4.045 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,5 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 17,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Freising — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Freising im Schnitt 3,0 Wohnungen, in Bayern 2,1. 48,7 Prozent der Gebäude stehen frei, 28,6 Prozent sind Reihenhäuser. 31,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Freising ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

@@ -299,10 +299,10 @@ export default function SachsenAnhaltPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Sachsen-Anhalt ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Sachsen-Anhalt erzählt etwas über den Pflegealltag. 43,7 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Deutschland insgesamt 23,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. 8,9 Prozent der Wohnungen stehen leer, in Deutschland insgesamt 4,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.
+            43,7 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Deutschland insgesamt 23,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. 8,9 Prozent der Wohnungen stehen leer, in Deutschland insgesamt 4,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In 29,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Deutschland insgesamt sind es 24,6 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte. Die Nettokaltmiete liegt bei 5,38 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
+            29,4 Prozent der Haushalte in Sachsen-Anhalt bestehen nur aus Menschen ab 65 — in Deutschland insgesamt 24,6 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Die Nettokaltmiete liegt bei 5,38 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Nur 15,4 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. Sachsen-Anhalt ist älter als das Land: 13,8 Prozent der Einwohner sind 75 Jahre oder älter — das sind 296.354 Menschen, in Deutschland insgesamt sind es 11,1 Prozent. Die durchschnittliche Wohnung misst 84,0 Quadratmeter gegenüber 94,4 in Deutschland insgesamt — rund 10 Quadratmeter weniger.

@@ -208,7 +208,7 @@ export default function RheinPfalzKreisPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Rhein-Pfalz-Kreis ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Rhein-Pfalz-Kreis die Möglichkeiten. 65,0 Prozent der Haushalte wohnen im Eigentum, in Rheinland-Pfalz sind es 54,4 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden. Nur 8,6 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Rheinland-Pfalz sind es 15,4 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+            Knapp zwei von drei Haushalten in Rhein-Pfalz-Kreis wohnen im Eigentum — in Rheinland-Pfalz sind es 54,4 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. Beim Platz steht Rhein-Pfalz-Kreis besser da als das Land: Nur 8,6 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Rheinland-Pfalz sind es 15,4 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Die durchschnittliche Wohnung misst 115,1 Quadratmeter und damit rund 7 Quadratmeter mehr als im Schnitt von Rheinland-Pfalz (107,7). 34,3 Prozent der Haushalte bestehen aus einer Person, in Rheinland-Pfalz 40,4 Prozent.

@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Kassel?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Kassel ist bekannt: Die durchschnittliche Wohnung misst 80,0 Quadratmeter, 32,7 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 25,9 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Kassel?',
+        acceptedAnswer: { '@type': 'Answer', text: '20.103 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,3 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Kassel — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Kassel im Schnitt 3,4 Wohnungen, in Hessen 2,2. 46,3 Prozent der Gebäude stehen frei, 29,9 Prozent sind Reihenhäuser. 67,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Kassel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Kassel bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Kassel und Umland: Bad Hersfeld, Fulda, Korbach und alle Gemeinden im Landkreis Kassel und Waldeck-Frankenberg' },
       },
@@ -333,10 +348,10 @@ export default function KasselPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Kassel ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Kassel die Möglichkeiten. Nur 25,9 Prozent der Haushalte wohnen im Eigentum — in Hessen sind es 46,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Die durchschnittliche Wohnung misst 80,0 Quadratmeter gegenüber 98,3 in Hessen — rund 18 Quadratmeter weniger.
+            In Kassel wohnen nur 25,9 Prozent der Haushalte im Eigentum, in Hessen 46,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Die durchschnittliche Wohnung misst 80,0 Quadratmeter gegenüber 98,3 in Hessen — rund 18 Quadratmeter weniger.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            32,7 Prozent der Wohnungen in Kassel haben weniger als 60 Quadratmeter, in Hessen sind es 20,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. Auf ein Gebäude kommen in Kassel im Schnitt 3,4 Wohnungen, in Hessen sind es 2,2. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
+            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Kassel häufiger als anderswo. Jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Hessen sind es 20,4 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. Kassel ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,4 Wohnungen, in Hessen 2,2. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Nur 46,3 Prozent der Gebäude stehen frei, in Hessen sind es 69,9 Prozent. 52,9 Prozent aller Haushalte in Kassel bestehen aus einer einzigen Person, in Hessen sind es 42,5 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. 42,2 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Hessen sind es 30,4 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
@@ -363,6 +378,9 @@ export default function KasselPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Kassel starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Kassel rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Kassel?', a: 'Das hängt am Grundriss, und die Ausgangslage in Kassel ist bekannt: Die durchschnittliche Wohnung misst 80,0 Quadratmeter, 32,7 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 25,9 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Kassel?', a: '20.103 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,3 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Kassel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Kassel im Schnitt 3,4 Wohnungen, in Hessen 2,2. 46,3 Prozent der Gebäude stehen frei, 29,9 Prozent sind Reihenhäuser. 67,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Kassel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Kassel?', a: 'Das hängt am Grundriss, und die Ausgangslage in Kassel ist bekannt: Die durchschnittliche Wohnung misst 80,0 Quadratmeter, 32,7 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 25,9 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Kassel?', a: '20.103 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,3 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Kassel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Kassel im Schnitt 3,4 Wohnungen, in Hessen 2,2. 46,3 Prozent der Gebäude stehen frei, 29,9 Prozent sind Reihenhäuser. 67,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Kassel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

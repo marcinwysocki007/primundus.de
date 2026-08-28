@@ -211,13 +211,13 @@ export default function AlzeyWormsPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Kreis Alzey-Worms ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Kreis Alzey-Worms die Möglichkeiten. 64,4 Prozent der Haushalte wohnen im Eigentum, in Rheinland-Pfalz sind es 54,4 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden. Die durchschnittliche Wohnung misst 117,4 Quadratmeter und damit rund 10 Quadratmeter mehr als im Schnitt von Rheinland-Pfalz (107,7).
+            Knapp zwei von drei Haushalten in Kreis Alzey-Worms wohnen im Eigentum — in Rheinland-Pfalz sind es 54,4 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. Die durchschnittliche Wohnung misst 117,4 Quadratmeter und damit rund 10 Quadratmeter mehr als im Schnitt von Rheinland-Pfalz (107,7).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Nur 16,9 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Rheinland-Pfalz sind es 25,9 Prozent. 33,8 Prozent der Haushalte bestehen aus einer Person, in Rheinland-Pfalz 40,4 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 9,2 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Rheinland-Pfalz sind es 15,4 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land. Gemessen am Landesschnitt ist Kreis Alzey-Worms jünger — 9,2 Prozent der Einwohner sind 75 oder älter — das sind 11.945 Menschen, in Rheinland-Pfalz 10,7 Prozent. Das heißt nicht, dass weniger Pflege gebraucht wird: Der Anteil ist niedrig, die absolute Zahl bleibt.
+            Beim Platz steht Kreis Alzey-Worms besser da als das Land: Nur 9,2 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Rheinland-Pfalz sind es 15,4 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden. Gemessen am Landesschnitt ist Kreis Alzey-Worms jünger — 9,2 Prozent der Einwohner sind 75 oder älter — das sind 11.945 Menschen, in Rheinland-Pfalz 10,7 Prozent. Das heißt nicht, dass weniger Pflege gebraucht wird: Der Anteil ist niedrig, die absolute Zahl bleibt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 11.945 Menschen in Kreis Alzey-Worms sind 75 Jahre oder älter, und es gibt 61.870 Wohnungen in 43.077 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.

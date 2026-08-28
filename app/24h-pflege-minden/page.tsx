@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Minden?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Minden ist bekannt: Die durchschnittliche Wohnung misst 98,9 Quadratmeter, 16,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 45,5 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Minden?',
+        acceptedAnswer: { '@type': 'Answer', text: '9.423 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Minden — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Minden im Schnitt 2,0 Wohnungen, in Nordrhein-Westfalen 2,3. 74,6 Prozent der Gebäude stehen frei, 12,4 Prozent sind Reihenhäuser. 57,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Minden ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Minden bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Minden und Kreis Minden-Lübbecke: Porta Westfalica, Lübbecke, Bad Oeynhausen, Petershagen und alle Gemeinden im Kreis Minden-Lübbecke' },
       },
@@ -336,10 +351,10 @@ export default function MindenPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Minden ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Minden gebaut wurde, merkt man spätestens auf der Treppe. 74,6 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen 50,2 Prozent — mehr Haus, mehr Platz, mehr Möglichkeiten. Reihenhäuser sind in Minden mit 12,4 Prozent seltener als in Nordrhein-Westfalen (27,2 Prozent).
+            74,6 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen 50,2 Prozent — mehr Haus, mehr Platz, mehr Möglichkeiten. Reihenhäuser sind in Minden mit 12,4 Prozent seltener als in Nordrhein-Westfalen (27,2 Prozent).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            27,0 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Nordrhein-Westfalen 19,7 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Nur 16,4 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Nordrhein-Westfalen sind es 22,4 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+            27,0 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Nordrhein-Westfalen 19,7 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Beim Platz steht Minden besser da als das Land: Nur 16,4 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Nordrhein-Westfalen sind es 22,4 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Die durchschnittliche Wohnung misst 98,9 Quadratmeter und damit rund 6 Quadratmeter mehr als im Schnitt von Nordrhein-Westfalen (92,7).
@@ -366,6 +381,9 @@ export default function MindenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Minden starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Minden rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Minden?', a: 'Das hängt am Grundriss, und die Ausgangslage in Minden ist bekannt: Die durchschnittliche Wohnung misst 98,9 Quadratmeter, 16,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 45,5 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+              { q: 'Wie viele ältere Menschen leben in Minden?', a: '9.423 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Minden — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Minden im Schnitt 2,0 Wohnungen, in Nordrhein-Westfalen 2,3. 74,6 Prozent der Gebäude stehen frei, 12,4 Prozent sind Reihenhäuser. 57,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Minden ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Minden?', a: 'Das hängt am Grundriss, und die Ausgangslage in Minden ist bekannt: Die durchschnittliche Wohnung misst 98,9 Quadratmeter, 16,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 45,5 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Minden?', a: '9.423 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Minden — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Minden im Schnitt 2,0 Wohnungen, in Nordrhein-Westfalen 2,3. 74,6 Prozent der Gebäude stehen frei, 12,4 Prozent sind Reihenhäuser. 57,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Minden ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

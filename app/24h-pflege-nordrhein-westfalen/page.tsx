@@ -299,10 +299,10 @@ export default function NordrheinWestfalenPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Nordrhein-Westfalen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Nordrhein-Westfalen gebaut wurde, merkt man spätestens auf der Treppe. Nur 50,2 Prozent der Gebäude stehen frei, in Deutschland insgesamt sind es 63,0 Prozent. 33,6 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
+            Nur 50,2 Prozent der Gebäude stehen frei, in Deutschland insgesamt sind es 63,0 Prozent. 33,6 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            27,2 Prozent der Gebäude in Nordrhein-Westfalen sind Reihenhäuser, in Deutschland insgesamt 19,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
+            Gut jedes vierte Gebäude in Nordrhein-Westfalen ist ein Reihenhaus — in Deutschland insgesamt 19,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 1.918.660 Menschen in Nordrhein-Westfalen sind 75 Jahre oder älter, und es gibt 9.132.252 Wohnungen in 4.042.229 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.

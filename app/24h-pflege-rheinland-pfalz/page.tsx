@@ -299,10 +299,10 @@ export default function RheinlandPfalzPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Rheinland-Pfalz ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie viel Platz eine Wohnung in Rheinland-Pfalz hat, ist keine Nebenfrage. Die durchschnittliche Wohnung misst 107,7 Quadratmeter und damit rund 13 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4). 54,4 Prozent der Haushalte wohnen im Eigentum, in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden.
+            Die durchschnittliche Wohnung misst 107,7 Quadratmeter und damit rund 13 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4). 54,4 Prozent der Haushalte in Rheinland-Pfalz wohnen im Eigentum — in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 15,4 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+            Beim Platz steht Rheinland-Pfalz besser da als das Land: Nur 15,4 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 438.868 Menschen in Rheinland-Pfalz sind 75 Jahre oder älter, und es gibt 2.125.493 Wohnungen in 1.232.101 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.

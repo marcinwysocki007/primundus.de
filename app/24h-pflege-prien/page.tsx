@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Prien am Chiemsee?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Prien am Chiemsee ist bekannt: Die durchschnittliche Wohnung misst 97,3 Quadratmeter, 23,5 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 43,0 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Prien am Chiemsee?',
+        acceptedAnswer: { '@type': 'Answer', text: '1.714 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 16,0 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 33,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Prien am Chiemsee — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Prien am Chiemsee im Schnitt 2,2 Wohnungen, in Bayern 2,1. 67,1 Prozent der Gebäude stehen frei, 12,3 Prozent sind Reihenhäuser. 33,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Prien am Chiemsee ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Prien am Chiemsee bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Prien am Chiemsee und Landkreis Rosenheim West: Bernau, Brannenburg, Aschau, Wasserburg am Inn und alle Gemeinden im westlichen Landkreis Rosenheim' },
       },
@@ -343,13 +358,13 @@ export default function PrienamChiemseePage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Prien am Chiemsee ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die Frage, wer nachts da ist, stellt sich in Prien am Chiemsee häufiger als anderswo. In 33,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Bayern sind es 23,0 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte. Prien am Chiemsee ist älter als das Land: 16,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.714 Menschen, in Bayern sind es 10,4 Prozent.
+            Jeder dritte Haushalt in Prien am Chiemsee besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Prien am Chiemsee ist älter als das Land: 16,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.714 Menschen, in Bayern sind es 10,4 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             49,7 Prozent aller Haushalte in Prien am Chiemsee bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. 34,9 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Bayern 27,8 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 43,0 Prozent der Haushalte wohnen im Eigentum — in Bayern sind es 49,3 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+            In Prien am Chiemsee wohnen nur 43,0 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 1.714 Menschen in Prien am Chiemsee sind 75 Jahre oder älter, und es gibt 6.213 Wohnungen in 2.769 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
@@ -377,6 +392,9 @@ export default function PrienamChiemseePage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Prien am Chiemsee starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Prien am Chiemsee rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Prien am Chiemsee?', a: 'Das hängt am Grundriss, und die Ausgangslage in Prien am Chiemsee ist bekannt: Die durchschnittliche Wohnung misst 97,3 Quadratmeter, 23,5 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 43,0 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Prien am Chiemsee?', a: '1.714 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 16,0 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 33,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Prien am Chiemsee — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Prien am Chiemsee im Schnitt 2,2 Wohnungen, in Bayern 2,1. 67,1 Prozent der Gebäude stehen frei, 12,3 Prozent sind Reihenhäuser. 33,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Prien am Chiemsee ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Prien am Chiemsee?', a: 'Das hängt am Grundriss, und die Ausgangslage in Prien am Chiemsee ist bekannt: Die durchschnittliche Wohnung misst 97,3 Quadratmeter, 23,5 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 43,0 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Prien am Chiemsee?', a: '1.714 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 16,0 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 33,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Prien am Chiemsee — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Prien am Chiemsee im Schnitt 2,2 Wohnungen, in Bayern 2,1. 67,1 Prozent der Gebäude stehen frei, 12,3 Prozent sind Reihenhäuser. 33,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Prien am Chiemsee ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

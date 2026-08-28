@@ -208,7 +208,7 @@ export default function WittmundPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Wittmund ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Wittmund die Möglichkeiten. 62,2 Prozent der Haushalte wohnen im Eigentum, in Niedersachsen sind es 51,1 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden. In 28,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Niedersachsen sind es 25,0 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
+            Gut drei von fünf Haushalten in Wittmund wohnen im Eigentum — in Niedersachsen sind es 51,1 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. 28,7 Prozent der Haushalte in Wittmund bestehen nur aus Menschen ab 65 — in Niedersachsen 25,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Reihenhäuser sind in Wittmund mit 4,4 Prozent seltener als in Niedersachsen (12,9 Prozent). 5,2 Prozent der Wohnungen stehen leer, in Niedersachsen 4,0 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.

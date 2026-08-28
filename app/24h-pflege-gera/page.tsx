@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Gera?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Gera ist bekannt: Die durchschnittliche Wohnung misst 72,5 Quadratmeter, 37,3 Prozent liegen unter 60 Quadratmetern (Thüringen: 27,8 Prozent), und 23,1 Prozent der Haushalte wohnen im Eigentum (Thüringen: 46,2 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Gera?',
+        acceptedAnswer: { '@type': 'Answer', text: '14.087 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,1 Prozent — in Thüringen 13,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Thüringen: 28,3 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Gera — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Gera im Schnitt 3,8 Wohnungen, in Thüringen 2,1. 44,3 Prozent der Gebäude stehen frei, 38,5 Prozent sind Reihenhäuser. 48,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Gera ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Gera bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Gera und Landkreis Greiz: Zeitz, Altenburg, Schmölln und alle Gemeinden im Landkreis Greiz und Altenburger Land' },
       },
@@ -336,13 +351,13 @@ export default function GeraPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Gera ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ob jemand zur Miete oder im Eigentum wohnt, ändert in Gera die Möglichkeiten. Nur 23,1 Prozent der Haushalte wohnen im Eigentum — in Thüringen sind es 46,2 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. Auf ein Gebäude kommen in Gera im Schnitt 3,8 Wohnungen, in Thüringen sind es 2,1. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten.
+            In Gera wohnen nur 23,1 Prozent der Haushalte im Eigentum, in Thüringen 46,2 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Gera ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,8 Wohnungen, in Thüringen 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            11,3 Prozent der Wohnungen stehen leer, in Thüringen 7,8 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. 38,5 Prozent der Gebäude in Gera sind Reihenhäuser, in Thüringen 19,1 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
+            11,3 Prozent der Wohnungen stehen leer, in Thüringen 7,8 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Knapp zwei von fünf Gebäuden in Gera ist ein Reihenhaus — in Thüringen 19,1 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 72,5 Quadratmeter gegenüber 86,6 in Thüringen — rund 14 Quadratmeter weniger. Nur 44,3 Prozent der Gebäude stehen frei, in Thüringen sind es 65,2 Prozent. 37,3 Prozent der Wohnungen in Gera haben weniger als 60 Quadratmeter, in Thüringen sind es 27,8 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+            Die durchschnittliche Wohnung misst 72,5 Quadratmeter gegenüber 86,6 in Thüringen — rund 14 Quadratmeter weniger. Nur 44,3 Prozent der Gebäude stehen frei, in Thüringen sind es 65,2 Prozent. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Gera häufiger als anderswo. Knapp zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Thüringen sind es 27,8 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 14.087 Menschen in Gera sind 75 Jahre oder älter, und es gibt 59.423 Wohnungen in 15.618 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
@@ -366,6 +381,9 @@ export default function GeraPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Gera starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Gera rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Gera?', a: 'Das hängt am Grundriss, und die Ausgangslage in Gera ist bekannt: Die durchschnittliche Wohnung misst 72,5 Quadratmeter, 37,3 Prozent liegen unter 60 Quadratmetern (Thüringen: 27,8 Prozent), und 23,1 Prozent der Haushalte wohnen im Eigentum (Thüringen: 46,2 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Gera?', a: '14.087 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,1 Prozent — in Thüringen 13,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Thüringen: 28,3 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Gera — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Gera im Schnitt 3,8 Wohnungen, in Thüringen 2,1. 44,3 Prozent der Gebäude stehen frei, 38,5 Prozent sind Reihenhäuser. 48,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Gera ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Gera?', a: 'Das hängt am Grundriss, und die Ausgangslage in Gera ist bekannt: Die durchschnittliche Wohnung misst 72,5 Quadratmeter, 37,3 Prozent liegen unter 60 Quadratmetern (Thüringen: 27,8 Prozent), und 23,1 Prozent der Haushalte wohnen im Eigentum (Thüringen: 46,2 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Gera?', a: '14.087 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,1 Prozent — in Thüringen 13,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Thüringen: 28,3 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Gera — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Gera im Schnitt 3,8 Wohnungen, in Thüringen 2,1. 44,3 Prozent der Gebäude stehen frei, 38,5 Prozent sind Reihenhäuser. 48,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Gera ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

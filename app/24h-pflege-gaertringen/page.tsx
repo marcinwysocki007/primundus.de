@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Gärtringen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Gärtringen ist bekannt: Die durchschnittliche Wohnung misst 104,7 Quadratmeter, 12,2 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 63,5 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Gärtringen?',
+        acceptedAnswer: { '@type': 'Answer', text: '1.317 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,2 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Gärtringen — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Gärtringen im Schnitt 1,9 Wohnungen, in Baden-Württemberg 2,1. 58,5 Prozent der Gebäude stehen frei, 17,6 Prozent sind Reihenhäuser. 24,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Gärtringen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Gärtringen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Gärtringen und südlicher Landkreis Böblingen: Herrenberg, Jettingen, Nufringen, Aidlingen und alle Gemeinden im südlichen Landkreis Böblingen' },
       },
@@ -336,10 +351,10 @@ export default function GaertringenPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Gärtringen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Gärtringen erzählt etwas über den Pflegealltag. Altbau vor 1950 macht in Gärtringen 3,9 Prozent des Bestands aus, in Baden-Württemberg 17,4 Prozent. 42,1 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Baden-Württemberg 27,0 Prozent.
+            Altbau vor 1950 macht in Gärtringen 3,9 Prozent des Bestands aus, in Baden-Württemberg 17,4 Prozent. 42,1 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Baden-Württemberg 27,0 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            63,5 Prozent der Haushalte wohnen im Eigentum, in Baden-Württemberg sind es 51,6 Prozent. Wer im eigenen Haus lebt, kann über ein freies Zimmer meist selbst entscheiden. Nur 12,2 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Baden-Württemberg sind es 18,1 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land.
+            Knapp zwei von drei Haushalten in Gärtringen wohnen im Eigentum — in Baden-Württemberg sind es 51,6 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. Beim Platz steht Gärtringen besser da als das Land: Nur 12,2 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Baden-Württemberg sind es 18,1 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             33,9 Prozent der Haushalte bestehen aus einer Person, in Baden-Württemberg 39,5 Prozent. Mit 9,15 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Gärtringen teurer als im Schnitt von Baden-Württemberg (8,13 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
@@ -366,6 +381,9 @@ export default function GaertringenPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Gärtringen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Gärtringen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Gärtringen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Gärtringen ist bekannt: Die durchschnittliche Wohnung misst 104,7 Quadratmeter, 12,2 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 63,5 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+              { q: 'Wie viele ältere Menschen leben in Gärtringen?', a: '1.317 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,2 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Gärtringen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Gärtringen im Schnitt 1,9 Wohnungen, in Baden-Württemberg 2,1. 58,5 Prozent der Gebäude stehen frei, 17,6 Prozent sind Reihenhäuser. 24,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Gärtringen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Gärtringen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Gärtringen ist bekannt: Die durchschnittliche Wohnung misst 104,7 Quadratmeter, 12,2 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 63,5 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Gärtringen?', a: '1.317 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,2 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Gärtringen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Gärtringen im Schnitt 1,9 Wohnungen, in Baden-Württemberg 2,1. 58,5 Prozent der Gebäude stehen frei, 17,6 Prozent sind Reihenhäuser. 24,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Gärtringen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

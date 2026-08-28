@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Offenbach?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Offenbach ist bekannt: Die durchschnittliche Wohnung misst 75,1 Quadratmeter, 35,3 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 22,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Offenbach?',
+        acceptedAnswer: { '@type': 'Answer', text: '10.327 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,0 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 18,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Offenbach — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Offenbach im Schnitt 4,6 Wohnungen, in Hessen 2,2. 41,3 Prozent der Gebäude stehen frei, 35,6 Prozent sind Reihenhäuser. 60,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Offenbach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Offenbach am Main bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Offenbach und Landkreis Offenbach: Dreieich, Neu-Isenburg, Mühlheim, Seligenstadt, Langen und alle Gemeinden im Landkreis Offenbach' },
       },
@@ -336,13 +351,13 @@ export default function OffenbachamMainPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Offenbach ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Offenbach gewohnt wird, entscheidet mit darüber, ob Pflege zu Hause funktioniert. Auf ein Gebäude kommen in Offenbach im Schnitt 4,6 Wohnungen, in Hessen sind es 2,2. Hier wird also dichter gebaut — mehr Geschosswohnungen, weniger Haus mit Garten. Nur 22,4 Prozent der Haushalte wohnen im Eigentum — in Hessen sind es 46,6 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option.
+            Offenbach ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 4,6 Wohnungen, in Hessen 2,2. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. In Offenbach wohnen nur 22,4 Prozent der Haushalte im Eigentum, in Hessen 46,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 75,1 Quadratmeter gegenüber 98,3 in Hessen — rund 23 Quadratmeter weniger. 35,3 Prozent der Wohnungen in Offenbach haben weniger als 60 Quadratmeter, in Hessen sind es 20,4 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört.
+            Die durchschnittliche Wohnung misst 75,1 Quadratmeter gegenüber 98,3 in Hessen — rund 23 Quadratmeter weniger. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Offenbach häufiger als anderswo. Gut jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Hessen sind es 20,4 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 41,3 Prozent der Gebäude stehen frei, in Hessen sind es 69,9 Prozent. 35,6 Prozent der Gebäude in Offenbach sind Reihenhäuser, in Hessen 15,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. In 18,7 Prozent der Haushalte leben ausschließlich Menschen ab 65, etwas seltener als in Hessen mit 23,1 Prozent.
+            Nur 41,3 Prozent der Gebäude stehen frei, in Hessen sind es 69,9 Prozent. Gut jedes dritte Gebäude in Offenbach ist ein Reihenhaus — in Hessen 15,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. In 18,7 Prozent der Haushalte leben ausschließlich Menschen ab 65, etwas seltener als in Hessen mit 23,1 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 10.327 Menschen in Offenbach sind 75 Jahre oder älter, und es gibt 66.935 Wohnungen in 14.538 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
@@ -366,6 +381,9 @@ export default function OffenbachamMainPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Offenbach am Main starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Offenbach am Main rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Offenbach?', a: 'Das hängt am Grundriss, und die Ausgangslage in Offenbach ist bekannt: Die durchschnittliche Wohnung misst 75,1 Quadratmeter, 35,3 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 22,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Offenbach?', a: '10.327 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,0 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 18,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Offenbach — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Offenbach im Schnitt 4,6 Wohnungen, in Hessen 2,2. 41,3 Prozent der Gebäude stehen frei, 35,6 Prozent sind Reihenhäuser. 60,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Offenbach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Offenbach?', a: 'Das hängt am Grundriss, und die Ausgangslage in Offenbach ist bekannt: Die durchschnittliche Wohnung misst 75,1 Quadratmeter, 35,3 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 22,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Offenbach?', a: '10.327 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,0 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 18,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Offenbach — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Offenbach im Schnitt 4,6 Wohnungen, in Hessen 2,2. 41,3 Prozent der Gebäude stehen frei, 35,6 Prozent sind Reihenhäuser. 60,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Offenbach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

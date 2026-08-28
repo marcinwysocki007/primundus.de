@@ -299,10 +299,10 @@ export default function BrandenburgPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Brandenburg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Brandenburg erzählt etwas über den Pflegealltag. 33,8 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Deutschland insgesamt 23,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Nur 14,4 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent.
+            33,8 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Deutschland insgesamt 23,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Nur 14,4 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In 27,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Deutschland insgesamt sind es 24,6 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte. Die Nettokaltmiete liegt bei 6,21 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
+            Gut jeder vierte Haushalt in Brandenburg besteht nur aus Menschen ab 65 — in Deutschland insgesamt 24,6 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Die Nettokaltmiete liegt bei 6,21 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Brandenburg ist älter als das Land: 12,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 318.819 Menschen, in Deutschland insgesamt sind es 11,1 Prozent.

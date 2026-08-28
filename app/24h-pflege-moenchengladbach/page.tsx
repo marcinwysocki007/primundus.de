@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Mönchengladbach?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Mönchengladbach ist bekannt: Die durchschnittliche Wohnung misst 86,7 Quadratmeter, 26,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 37,3 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Mönchengladbach?',
+        acceptedAnswer: { '@type': 'Answer', text: '27.595 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,4 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Mönchengladbach — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Mönchengladbach im Schnitt 2,4 Wohnungen, in Nordrhein-Westfalen 2,3. 21,9 Prozent der Gebäude stehen frei, 53,1 Prozent sind Reihenhäuser. 54,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Mönchengladbach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Mönchengladbach bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Mönchengladbach und Umland: Krefeld, Viersen, Erkelenz, Neuss und alle Gemeinden im Kreis Viersen und Rhein-Kreis Neuss' },
       },
@@ -333,7 +348,7 @@ export default function MoenchengladbachPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Mönchengladbach ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Mönchengladbach gebaut wurde, merkt man spätestens auf der Treppe. 53,1 Prozent der Gebäude in Mönchengladbach sind Reihenhäuser, in Nordrhein-Westfalen 27,2 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 21,9 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent.
+            Gut jedes zweite Gebäude in Mönchengladbach ist ein Reihenhaus — in Nordrhein-Westfalen 27,2 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 21,9 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Die durchschnittliche Wohnung misst 86,7 Quadratmeter gegenüber 92,7 in Nordrhein-Westfalen — rund 6 Quadratmeter weniger.
@@ -360,6 +375,9 @@ export default function MoenchengladbachPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Mönchengladbach starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Mönchengladbach rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Mönchengladbach?', a: 'Das hängt am Grundriss, und die Ausgangslage in Mönchengladbach ist bekannt: Die durchschnittliche Wohnung misst 86,7 Quadratmeter, 26,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 37,3 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Mönchengladbach?', a: '27.595 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,4 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Mönchengladbach — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Mönchengladbach im Schnitt 2,4 Wohnungen, in Nordrhein-Westfalen 2,3. 21,9 Prozent der Gebäude stehen frei, 53,1 Prozent sind Reihenhäuser. 54,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Mönchengladbach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Mönchengladbach?', a: 'Das hängt am Grundriss, und die Ausgangslage in Mönchengladbach ist bekannt: Die durchschnittliche Wohnung misst 86,7 Quadratmeter, 26,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 37,3 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Mönchengladbach?', a: '27.595 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,4 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Mönchengladbach — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Mönchengladbach im Schnitt 2,4 Wohnungen, in Nordrhein-Westfalen 2,3. 21,9 Prozent der Gebäude stehen frei, 53,1 Prozent sind Reihenhäuser. 54,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Mönchengladbach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

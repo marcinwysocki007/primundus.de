@@ -311,7 +311,7 @@ export default function BayernPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bayern ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Bayern erzählt etwas über den Pflegealltag. Altbau vor 1950 macht in Bayern 15,1 Prozent des Bestands aus, in Deutschland insgesamt 23,5 Prozent. Mit 8,74 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Bayern teurer als im Schnitt von Deutschland insgesamt (7,28 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
+            Altbau vor 1950 macht in Bayern 15,1 Prozent des Bestands aus, in Deutschland insgesamt 23,5 Prozent. Mit 8,74 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Bayern teurer als im Schnitt von Deutschland insgesamt (7,28 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Die durchschnittliche Wohnung misst 100,5 Quadratmeter und damit rund 6 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4).

@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bensheim?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Bensheim ist bekannt: Die durchschnittliche Wohnung misst 107,0 Quadratmeter, 13,1 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 52,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Bensheim?',
+        acceptedAnswer: { '@type': 'Answer', text: '4.514 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,0 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Bensheim — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Bensheim im Schnitt 2,0 Wohnungen, in Hessen 2,2. 64,9 Prozent der Gebäude stehen frei, 14,6 Prozent sind Reihenhäuser. 40,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bensheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bensheim bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bensheim und Kreis Bergstraße: Heppenheim, Viernheim, Lampertheim, Lorsch und alle Gemeinden im Kreis Bergstraße' },
       },
@@ -336,7 +351,7 @@ export default function BensheimPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bensheim ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie viel Platz eine Wohnung in Bensheim hat, ist keine Nebenfrage. Nur 13,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Hessen sind es 20,4 Prozent. Platz ist hier häufiger vorhanden als anderswo im Land. Die durchschnittliche Wohnung misst 107,0 Quadratmeter und damit rund 9 Quadratmeter mehr als im Schnitt von Hessen (98,3).
+            Beim Platz steht Bensheim besser da als das Land: Nur 13,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Hessen sind es 20,4 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden. Die durchschnittliche Wohnung misst 107,0 Quadratmeter und damit rund 9 Quadratmeter mehr als im Schnitt von Hessen (98,3).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Altbau vor 1950 macht in Bensheim 15,3 Prozent des Bestands aus, in Hessen 20,4 Prozent.
@@ -363,6 +378,9 @@ export default function BensheimPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bensheim starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bensheim rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bensheim?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bensheim ist bekannt: Die durchschnittliche Wohnung misst 107,0 Quadratmeter, 13,1 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 52,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
+              { q: 'Wie viele ältere Menschen leben in Bensheim?', a: '4.514 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,0 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Bensheim — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bensheim im Schnitt 2,0 Wohnungen, in Hessen 2,2. 64,9 Prozent der Gebäude stehen frei, 14,6 Prozent sind Reihenhäuser. 40,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bensheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bensheim?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bensheim ist bekannt: Die durchschnittliche Wohnung misst 107,0 Quadratmeter, 13,1 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 52,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Bensheim?', a: '4.514 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,0 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bensheim — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bensheim im Schnitt 2,0 Wohnungen, in Hessen 2,2. 64,9 Prozent der Gebäude stehen frei, 14,6 Prozent sind Reihenhäuser. 40,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bensheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

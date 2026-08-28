@@ -94,6 +94,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Vilbel?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Bad Vilbel ist bekannt: Die durchschnittliche Wohnung misst 98,3 Quadratmeter, 20,6 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 47,0 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Bad Vilbel?',
+        acceptedAnswer: { '@type': 'Answer', text: '3.688 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Bad Vilbel — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Bad Vilbel im Schnitt 2,2 Wohnungen, in Hessen 2,2. 44,1 Prozent der Gebäude stehen frei, 34,1 Prozent sind Reihenhäuser. 38,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Vilbel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bad Vilbel bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bad Vilbel und nördlicher Main-Kinzig-Kreis: Nidderau, Schöneck, Maintal, Hanau und alle Gemeinden im Main-Kinzig-Kreis westlich' },
       },
@@ -336,7 +351,7 @@ export default function BadVilbelPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bad Vilbel ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Bad Vilbel gebaut wurde, merkt man spätestens auf der Treppe. Nur 44,1 Prozent der Gebäude stehen frei, in Hessen sind es 69,9 Prozent. 34,1 Prozent der Gebäude in Bad Vilbel sind Reihenhäuser, in Hessen 15,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht.
+            Nur 44,1 Prozent der Gebäude stehen frei, in Hessen sind es 69,9 Prozent. Jedes dritte Gebäude in Bad Vilbel ist ein Reihenhaus — in Hessen 15,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Altbau vor 1950 macht in Bad Vilbel 8,5 Prozent des Bestands aus, in Hessen 20,4 Prozent. Mit 9,77 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Bad Vilbel teurer als im Schnitt von Hessen (8,21 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
@@ -366,6 +381,9 @@ export default function BadVilbelPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Vilbel starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bad Vilbel rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Vilbel?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bad Vilbel ist bekannt: Die durchschnittliche Wohnung misst 98,3 Quadratmeter, 20,6 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 47,0 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Bad Vilbel?', a: '3.688 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Bad Vilbel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Vilbel im Schnitt 2,2 Wohnungen, in Hessen 2,2. 44,1 Prozent der Gebäude stehen frei, 34,1 Prozent sind Reihenhäuser. 38,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Vilbel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Vilbel?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bad Vilbel ist bekannt: Die durchschnittliche Wohnung misst 98,3 Quadratmeter, 20,6 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 47,0 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Bad Vilbel?', a: '3.688 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bad Vilbel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Vilbel im Schnitt 2,2 Wohnungen, in Hessen 2,2. 44,1 Prozent der Gebäude stehen frei, 34,1 Prozent sind Reihenhäuser. 38,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Vilbel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

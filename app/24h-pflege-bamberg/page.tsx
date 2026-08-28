@@ -99,6 +99,21 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bamberg?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Bamberg ist bekannt: Die durchschnittliche Wohnung misst 82,0 Quadratmeter, 33,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 28,7 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie viele ältere Menschen leben in Bamberg?',
+        acceptedAnswer: { '@type': 'Answer', text: '7.716 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie wohnt man in Bamberg — Haus oder Geschosswohnung?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Bamberg im Schnitt 3,3 Wohnungen, in Bayern 2,1. 28,5 Prozent der Gebäude stehen frei, 55,0 Prozent sind Reihenhäuser. 55,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bamberg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bamberg bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bamberg und Landkreis Bamberg: Hirschaid, Hallstadt, Burgebrach und alle Gemeinden im Landkreis Bamberg und Forchheim' },
       },
@@ -348,13 +363,13 @@ export default function BambergPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bamberg ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie in Bamberg gebaut wurde, merkt man spätestens auf der Treppe. 55,0 Prozent der Gebäude in Bamberg sind Reihenhäuser, in Bayern 14,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad oben — das ist der Alltag, um den es geht. Nur 28,5 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent.
+            55,0 Prozent der Gebäude in Bamberg sind Reihenhäuser — in Bayern 14,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 28,5 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 28,7 Prozent der Haushalte wohnen im Eigentum — in Bayern sind es 49,3 Prozent. Der Umzug in etwas Größeres ist damit für die meisten keine realistische Option. 31,1 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Bayern 15,1 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.
+            In Bamberg wohnen nur 28,7 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. 31,1 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Bayern 15,1 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 82,0 Quadratmeter gegenüber 100,5 in Bayern — rund 18 Quadratmeter weniger. 33,7 Prozent der Wohnungen in Bamberg haben weniger als 60 Quadratmeter, in Bayern sind es 20,7 Prozent. Ein eigenes Zimmer für die Betreuungskraft ist hier also die Frage, die vorab geklärt gehört. 54,7 Prozent aller Haushalte in Bamberg bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
+            Die durchschnittliche Wohnung misst 82,0 Quadratmeter gegenüber 100,5 in Bayern — rund 18 Quadratmeter weniger. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Bamberg häufiger als anderswo. Jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. 54,7 Prozent aller Haushalte in Bamberg bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             In Zahlen: 7.716 Menschen in Bamberg sind 75 Jahre oder älter, und es gibt 44.491 Wohnungen in 13.583 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
@@ -379,6 +394,9 @@ export default function BambergPage() {
               { q: 'Wie schnell kann eine 24h-Pflegekraft in Bamberg starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Bamberg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+              { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bamberg?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bamberg ist bekannt: Die durchschnittliche Wohnung misst 82,0 Quadratmeter, 33,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 28,7 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+              { q: 'Wie viele ältere Menschen leben in Bamberg?', a: '7.716 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+              { q: 'Wie wohnt man in Bamberg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bamberg im Schnitt 3,3 Wohnungen, in Bayern 2,1. 28,5 Prozent der Gebäude stehen frei, 55,0 Prozent sind Reihenhäuser. 55,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bamberg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bamberg?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bamberg ist bekannt: Die durchschnittliche Wohnung misst 82,0 Quadratmeter, 33,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 28,7 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Bamberg?', a: '7.716 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,7 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bamberg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bamberg im Schnitt 3,3 Wohnungen, in Bayern 2,1. 28,5 Prozent der Gebäude stehen frei, 55,0 Prozent sind Reihenhäuser. 55,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bamberg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },

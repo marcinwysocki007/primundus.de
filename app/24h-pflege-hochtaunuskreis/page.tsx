@@ -210,7 +210,7 @@ export default function HochtaunuskreisPage() {
           {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Hochtaunuskreis ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsbestand von Hochtaunuskreis erzählt etwas über den Pflegealltag. 34,0 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Hessen 25,5 Prozent. In 26,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 — in Hessen sind es 23,1 Prozent. Dort ist niemand im Haus, der nachts einspringen könnte.
+            34,0 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Hessen 25,5 Prozent. Gut jeder vierte Haushalt in Hochtaunuskreis besteht nur aus Menschen ab 65 — in Hessen 23,1 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
             Hochtaunuskreis ist älter als das Land: 12,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 30.010 Menschen, in Hessen sind es 10,5 Prozent. Die durchschnittliche Wohnung misst 106,2 Quadratmeter und damit rund 8 Quadratmeter mehr als im Schnitt von Hessen (98,3).
