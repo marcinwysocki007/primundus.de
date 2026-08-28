@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Wie schwer ist es, in Aachen einen Heimplatz zu bekommen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Schwer, und das ist belegt. Aachen hat mit 12,3 Prozent den höchsten Anteil vollstationär versorgter Pflegebedürftiger der Städteregion, aber nur 137 Heimplätze je 1.000 Einwohner über 80 — in der Städteregion sind es 153. Die Auslastung liegt bei 93 Prozent, im Heimfinder NRW ist weniger als ein Prozent der Plätze frei; die Pflegeplanung der Städteregion spricht von faktischer Vollbelegung, bei der die Wahlmöglichkeit entfällt. Aachen ist zudem die einzige Kommune der Region, in der das Angebot geschrumpft ist: 64 Plätze weniger als 2021. Für viele Familien ist die Betreuung zu Hause deshalb die einzige Lösung, die sich planen lässt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Aachen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Aachen und StädteRegion: Alsdorf, Baesweiler, Eschweiler, Herzogenrath, Würselen und alle Gemeinden in der StädteRegion Aachen' },
       },
@@ -348,31 +353,56 @@ export default function AachenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Aachen und StädteRegion: Alsdorf, Baesweiler, Eschweiler, Herzogenrath, Würselen und alle Gemeinden in der StädteRegion Aachen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Aachen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Aachen häufiger als anderswo. Zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Nordrhein-Westfalen sind es 22,4 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. Gut jedes zweite Gebäude in Aachen ist ein Reihenhaus — in Nordrhein-Westfalen 27,2 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.
+            In Aachen ist der Heimplatz knapp, und das lässt sich beziffern. Die Stadt hat mit 12,3
+            Prozent den höchsten Anteil vollstationär versorgter Pflegebedürftiger der ganzen
+            Städteregion — gleichzeitig stehen hier{' '}
+            <strong className="text-pm-ink font-semibold">nur 137 Heimplätze je 1.000 Einwohner
+            über 80 zur Verfügung, in der Städteregion sind es 153.</strong> Mehr Menschen im Heim
+            bei weniger Plätzen: Das geht nur mit Vollbelegung. Die Auslastung liegt bei 93 Prozent,
+            im Heimfinder NRW sind unter ein Prozent der Plätze frei. Die Pflegeplanung der
+            Städteregion nennt das eine faktische Vollbelegung, bei der die Wahlmöglichkeit der
+            Betroffenen entfällt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Aachen wohnen nur 23,6 Prozent der Haushalte im Eigentum, in Nordrhein-Westfalen 40,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Die durchschnittliche Wohnung misst 77,5 Quadratmeter gegenüber 92,7 in Nordrhein-Westfalen — rund 15 Quadratmeter weniger.
+            Und es wird enger, nicht weiter.{' '}
+            <strong className="text-pm-ink font-semibold">Aachen ist die einzige Kommune der
+            Region, in der das Heimplatzangebot geschrumpft ist</strong> — 64 Plätze weniger als
+            2021. Über 300 Plätze unerfüllter Bedarf finden, wie die Planung nüchtern festhält,
+            investorenseitig keine Resonanz. Wer in Aachen für die Eltern einen Heimplatz sucht,
+            sucht also nicht wochenlang, sondern länger. Die häusliche Lösung ist hier für viele
+            Familien nicht die zweitbeste, sondern die einzige, die sich planen lässt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 25,2 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. Aachen ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. 53,4 Prozent aller Haushalte in Aachen bestehen aus einer einzigen Person, in Nordrhein-Westfalen sind es 43,7 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
+            Versorgt wird in Aachen dabei professioneller als im Umland: 14,6 Prozent der
+            Pflegebedürftigen nutzen einen ambulanten Dienst, 65,9 Prozent beziehen ausschließlich
+            Pflegegeld. In den Altkreiskommunen liegt der professionelle Anteil bei 22 Prozent, in
+            der Stadt bei fast 27. Das passt zum Angebot: 47 ambulante Dienste sind in Aachen
+            ansässig — 43 Prozent des regionalen Angebots bei 40 Prozent der über 70-Jährigen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 24.661 Menschen in Aachen sind 75 Jahre oder älter, und es gibt 145.070 Wohnungen in 41.368 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Beim Alter zerfällt Aachen in zwei Städte, und der Abstand wächst. Zwischen dem
+            jüngsten und dem ältesten Stadtbezirk liegen{' '}
+            <strong className="text-pm-ink font-semibold">15,8 Jahre Durchschnittsalter</strong> —
+            am Ponttor 32,7 Jahre, in Steinebrück 48,5. Bemerkenswert ist die Richtung: Seit 2010
+            verjüngt sich die Innenstadt weiter, während die Außenbezirke altern. In Walheim stieg
+            das Durchschnittsalter um fast vier Jahre, im Bezirk Theater sank es um ebenso viel.
+            Wer in Aachen Pflege plant, plant für Kornelimünster, Walheim, Richterich und die
+            Beverau — nicht für das Hochschulviertel.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Zur Geriatrie zwei Hinweise, die Wege sparen. Die eigenständige geriatrische Klinik der
+            Stadt sitzt im <strong className="text-pm-ink font-semibold">Luisenhospital am
+            Boxgraben</strong> — mit Akutgeriatrie, geriatrischer Rehabilitation und Tagesklinik
+            unter einem Dach. Die Altersmedizin der Uniklinik liegt dagegen nicht auf dem
+            Hauptcampus an der Pauwelsstraße, sondern am Morillenhang im früheren
+            Franziskushospital. Und das „Rhein-Maas Klinikum", das bei der Suche nach Geriatrie in
+            Aachen weit oben auftaucht, steht in Würselen. Lassen Sie sich vor einer Entscheidung
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Aachen</h2>
           <div className="space-y-3 mb-12">
@@ -390,6 +420,7 @@ export default function AachenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Aachen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Aachen ist bekannt: Die durchschnittliche Wohnung misst 77,5 Quadratmeter, 40,1 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 23,6 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Aachen?', a: '24.661 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,4 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Aachen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Aachen im Schnitt 3,5 Wohnungen, in Nordrhein-Westfalen 2,3. 25,2 Prozent der Gebäude stehen frei, 51,3 Prozent sind Reihenhäuser. 56,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Aachen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Wie schwer ist es, in Aachen einen Heimplatz zu bekommen?', a: 'Schwer, und das ist belegt. Aachen hat mit 12,3 Prozent den höchsten Anteil vollstationär versorgter Pflegebedürftiger der Städteregion, aber nur 137 Heimplätze je 1.000 Einwohner über 80 — in der Städteregion sind es 153. Die Auslastung liegt bei 93 Prozent, im Heimfinder NRW ist weniger als ein Prozent der Plätze frei; die Pflegeplanung der Städteregion spricht von faktischer Vollbelegung, bei der die Wahlmöglichkeit entfällt. Aachen ist zudem die einzige Kommune der Region, in der das Angebot geschrumpft ist: 64 Plätze weniger als 2021. Für viele Familien ist die Betreuung zu Hause deshalb die einzige Lösung, die sich planen lässt.' },
               { q: 'Welches Einzugsgebiet wird in Aachen bedient?', a: 'Aachen und StädteRegion: Alsdorf, Baesweiler, Eschweiler, Herzogenrath, Würselen und alle Gemeinden in der StädteRegion Aachen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

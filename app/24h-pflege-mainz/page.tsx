@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'In welchen Mainzer Stadtteilen leben die meisten älteren Menschen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Der Unterschied ist groß: In Drais sind 16,3 Prozent der Einwohner über 75, in der Neustadt 5,1 Prozent — der Faktor drei. Dahinter folgen Lerchenberg (13,4 Prozent), Finthen und Laubenheim (je 11,9). Besonders auffällig ist der Lerchenberg: Dort überwiegen die Hochaltrigen deutlich gegenüber den 65- bis 75-Jährigen — das Muster einer Großwohnsiedlung, deren Erstbezieher gemeinsam alt geworden sind. Unsere Betreuungskräfte kommen in jeden Stadtteil; Anreise und Preis sind überall gleich.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Mainz bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Mainz und Umland: Wiesbaden, Bingen, Bad Kreuznach, Ingelheim und alle Gemeinden im Landkreis Mainz-Bingen' },
       },
@@ -345,31 +350,49 @@ export default function MainzPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Mainz und Umland: Wiesbaden, Bingen, Bad Kreuznach, Ingelheim und alle Gemeinden im Landkreis Mainz-Bingen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Mainz ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 81,0 Quadratmeter gegenüber 107,7 in Rheinland-Pfalz — rund 27 Quadratmeter weniger. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Mainz häufiger als anderswo. Knapp zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Rheinland-Pfalz sind es 15,4 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.
+            Mainz hat die niedrigste Pflegeprävalenz in ganz Rheinland-Pfalz — 209 Pflegebedürftige
+            je 1.000 Einwohner über 70 gegenüber 269 im Land. Das ist kein Versorgungserfolg,
+            sondern eine Frage der Altersstruktur: Die Stadt ist jung, 17,9 Prozent der Einwohner
+            sind über 65. Wichtiger als der Durchschnitt ist ohnehin, wo in Mainz alt gewohnt wird —
+            und da{' '}
+            <strong className="text-pm-ink font-semibold">liegt zwischen Drais und der Neustadt der
+            Faktor drei</strong>: In Drais sind 16,3 Prozent der Einwohner über 75, in der Neustadt
+            5,1 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Mainz wohnen nur 30,7 Prozent der Haushalte im Eigentum, in Rheinland-Pfalz 54,4 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Mainz ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,6 Wohnungen, in Rheinland-Pfalz 1,7. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
+            Ein Stadtteil fällt dabei besonders auf. Am Lerchenberg sind 13,4 Prozent über 75, aber
+            nur 9,4 Prozent zwischen 65 und 75 — die Hochaltrigen überwiegen deutlich. Das ist das
+            Muster einer Großwohnsiedlung, deren Erstbezieher gemeinsam alt geworden sind. Dort
+            konzentriert sich Pflegebedarf auf engem Raum, während er in der Neustadt kaum
+            vorkommt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Zwei von fünf Gebäuden in Mainz ist ein Reihenhaus — in Rheinland-Pfalz 15,5 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Mit 9,73 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Mainz teurer als im Schnitt von Rheinland-Pfalz (6,75 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option. Nur 41,6 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent.
+            Was Familien in Mainz zu schaffen macht, ist eine andere Entwicklung: Das Angebot
+            schrumpft.{' '}
+            <strong className="text-pm-ink font-semibold">Von 27 ambulanten Pflegediensten sind
+            noch 23 übrig, von 21 Pflegeheimen noch 19</strong>, und bei der Tagespflege fielen 29
+            Plätze weg. Gleichzeitig ist der Anteil der Heimversorgung leicht gestiegen. Beides
+            zusammen heißt: Es konkurrieren mehr Menschen um weniger Angebot. Wer sich auf einen
+            ambulanten Dienst verlassen will, sollte das früh klären.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 20.287 Menschen in Mainz sind 75 Jahre oder älter, und es gibt 121.260 Wohnungen in 33.359 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Ein Hinweis zu Zahlen, die kursieren: Die häufig genannten 7.871 Pflegebedürftigen für
+            Mainz enthalten die Gruppe mit Pflegegrad 1 ohne reguläre Leistungen nicht — 2021 waren
+            das allein rund 1.180 Menschen. Wer mit 7.871 rechnet, unterschätzt die tatsächliche
+            Zahl also. Von diesen 7.871 werden 60,5 Prozent allein von Angehörigen versorgt, 19,1
+            Prozent von einem ambulanten Dienst, 20,4 Prozent leben im Heim.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Medizinisch ist Mainz gut versorgt: Das Marienhaus Klinikum An der Goldgrube führt eine
+            Akutgeriatrie mit 59 Betten und seit August 2023 zusätzlich eine geriatrische
+            Rehabilitation mit 50 Betten im selben Haus. Ein praktischer Hinweis, weil ältere
+            Verweise noch kursieren: Die Akutgeriatrie saß bis 2017 am St. Hildegardis-Krankenhaus
+            und ist seither An der Goldgrube. Lassen Sie sich vorher unabhängig beraten — die
+            Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Mainz</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +410,7 @@ export default function MainzPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Mainz?', a: 'Das hängt am Grundriss, und die Ausgangslage in Mainz ist bekannt: Die durchschnittliche Wohnung misst 81,0 Quadratmeter, 36,9 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 30,7 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Mainz?', a: '20.287 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,2 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 18,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Mainz — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Mainz im Schnitt 3,6 Wohnungen, in Rheinland-Pfalz 1,7. 41,6 Prozent der Gebäude stehen frei, 39,4 Prozent sind Reihenhäuser. 47,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Mainz ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'In welchen Mainzer Stadtteilen leben die meisten älteren Menschen?', a: 'Der Unterschied ist groß: In Drais sind 16,3 Prozent der Einwohner über 75, in der Neustadt 5,1 Prozent — der Faktor drei. Dahinter folgen Lerchenberg (13,4 Prozent), Finthen und Laubenheim (je 11,9). Besonders auffällig ist der Lerchenberg: Dort überwiegen die Hochaltrigen deutlich gegenüber den 65- bis 75-Jährigen — das Muster einer Großwohnsiedlung, deren Erstbezieher gemeinsam alt geworden sind. Unsere Betreuungskräfte kommen in jeden Stadtteil; Anreise und Preis sind überall gleich.' },
               { q: 'Welches Einzugsgebiet wird in Mainz bedient?', a: 'Mainz und Umland: Wiesbaden, Bingen, Bad Kreuznach, Ingelheim und alle Gemeinden im Landkreis Mainz-Bingen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

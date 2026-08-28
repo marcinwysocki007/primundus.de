@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Ab welchem Alter wird Pflege in Göttingen typischerweise gebraucht?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Die Zahlen sind eindeutig: Von den Göttingern zwischen 70 und 80 sind 11,7 Prozent pflegebedürftig, zwischen 80 und 90 bereits 33,2 Prozent — und von den über 90-Jährigen 80,9 Prozent. Der Sprung liegt also im achten Lebensjahrzehnt. Auffällig ist außerdem, wohin sich die Versorgung verlagert hat: Zwischen 2017 und 2021 stieg die Zahl der allein von Angehörigen versorgten Menschen von 2.091 auf 2.976, während die Zahl der Heimbewohner absolut sank. Familien tragen in Göttingen also deutlich mehr als noch vor wenigen Jahren.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Göttingen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Göttingen und Landkreis Göttingen: Hann. Münden, Duderstadt, Herzberg, Northeim und alle Gemeinden im Landkreis Göttingen' },
       },
@@ -348,31 +353,52 @@ export default function GoettingenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Göttingen und Landkreis Göttingen: Hann. Münden, Duderstadt, Herzberg, Northeim und alle Gemeinden im Landkreis Göttingen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Göttingen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Göttingen häufiger als anderswo. Gut zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Niedersachsen sind es 17,1 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. Die durchschnittliche Wohnung misst 76,6 Quadratmeter gegenüber 104,4 in Niedersachsen — rund 28 Quadratmeter weniger.
+            In Göttingen hat sich in wenigen Jahren verschoben, wer die Pflege trägt — und zwar
+            nicht so, wie man es erwarten würde. Der Anteil der Pflegebedürftigen im Heim fiel
+            zwischen 2017 und 2021 von 30,0 auf 22,9 Prozent. Das klingt nach mehr ambulanter
+            Versorgung, ist es aber nicht: Die Zahl der ambulant Betreuten blieb nahezu konstant.{' '}
+            <strong className="text-pm-ink font-semibold">Der gesamte Zuwachs ging zu den
+            Angehörigen — von 2.091 auf 2.976 Menschen, deren Anteil von 41,8 auf 50,9 Prozent
+            sprang.</strong> Gleichzeitig sank die Zahl der Heimbewohner absolut, und 53 Heimplätze
+            fielen weg.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Göttingen wohnen nur 24,1 Prozent der Haushalte im Eigentum, in Niedersachsen 51,1 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Göttingen ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,8 Wohnungen, in Niedersachsen 1,7. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
+            Anders gesagt: In Göttingen wurden binnen vier Jahren 885 Menschen zusätzlich zu Hause
+            von ihren Familien versorgt, ohne dass professionelle Hilfe im gleichen Maß mitwuchs.
+            Und das bei ordentlichem Platzangebot — rechnerisch stehen hier deutlich mehr Heimplätze
+            je hochaltrigem Einwohner bereit als etwa in Aachen. Die Last verlagert sich also nicht
+            aus Mangel, sondern weil die Zahl der Pflegebedürftigen schneller wächst als alles
+            andere.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Knapp zwei von fünf Gebäuden in Göttingen ist ein Reihenhaus — in Niedersachsen 12,9 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. 55,1 Prozent aller Haushalte in Göttingen bestehen aus einer einzigen Person, in Niedersachsen sind es 41,2 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Nur 45,2 Prozent der Gebäude stehen frei, in Niedersachsen sind es 72,2 Prozent.
+            Wie stark der Bedarf mit dem Alter steigt, zeigt eine Zahl, die man sich merken sollte:{' '}
+            <strong className="text-pm-ink font-semibold">Von den Göttingern zwischen 80 und 90
+            sind 33,2 Prozent pflegebedürftig, von den über 90-Jährigen 80,9 Prozent.</strong> Bei
+            den 70- bis 80-Jährigen sind es 11,7 Prozent. Wer heute mit Ende siebzig noch gut
+            zurechtkommt, sollte trotzdem wissen, wie schnell sich das ändern kann — und lieber
+            planen, bevor es eilig wird.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 12.795 Menschen in Göttingen sind 75 Jahre oder älter, und es gibt 76.085 Wohnungen in 20.132 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Räumlich ist Göttingen für die meisten unproblematisch: Die Kernstadt liegt im Leinetal
+            weitgehend eben. Drei bewohnte Ortsteile liegen allerdings deutlich höher —
+            Nikolausberg und Roringen auf 280 bis 350 Metern, also bis zu 200 Meter über der
+            Innenstadt, und Herberhausen mit einem Ortskern in ausgesprochener Hanglage. Für einen
+            ambulanten Dienst bedeutet das lange Wege für kurze Einsätze; für jemanden, der im Haus
+            wohnt, gar nichts.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist Göttingen stark: Das Geriatrische Zentrum am Evangelischen Krankenhaus
+            Weende führt eine Akutklinik mit Frührehabilitation und eine geriatrische Reha —
+            zusammen 96 Betten, eines der größten Zentren Niedersachsens. Wichtig ist die Adresse:{' '}
+            <strong className="text-pm-ink font-semibold">Die Geriatrie sitzt ausschließlich in
+            Weende, An der Lutter</strong>, nicht im ebenfalls zum Haus gehörenden Krankenhaus
+            Neu-Mariahilf an der Humboldtallee. Zwischen beiden liegen rund vier Kilometer. Lassen
+            Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Göttingen</h2>
           <div className="space-y-3 mb-12">
@@ -390,6 +416,7 @@ export default function GoettingenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Göttingen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Göttingen ist bekannt: Die durchschnittliche Wohnung misst 76,6 Quadratmeter, 41,7 Prozent liegen unter 60 Quadratmetern (Niedersachsen: 17,1 Prozent), und 24,1 Prozent der Haushalte wohnen im Eigentum (Niedersachsen: 51,1 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Göttingen?', a: '12.795 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,3 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 18,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Göttingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Göttingen im Schnitt 3,8 Wohnungen, in Niedersachsen 1,7. 45,2 Prozent der Gebäude stehen frei, 36,9 Prozent sind Reihenhäuser. 54,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Göttingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Ab welchem Alter wird Pflege in Göttingen typischerweise gebraucht?', a: 'Die Zahlen sind eindeutig: Von den Göttingern zwischen 70 und 80 sind 11,7 Prozent pflegebedürftig, zwischen 80 und 90 bereits 33,2 Prozent — und von den über 90-Jährigen 80,9 Prozent. Der Sprung liegt also im achten Lebensjahrzehnt. Auffällig ist außerdem, wohin sich die Versorgung verlagert hat: Zwischen 2017 und 2021 stieg die Zahl der allein von Angehörigen versorgten Menschen von 2.091 auf 2.976, während die Zahl der Heimbewohner absolut sank. Familien tragen in Göttingen also deutlich mehr als noch vor wenigen Jahren.' },
               { q: 'Welches Einzugsgebiet wird in Göttingen bedient?', a: 'Göttingen und Landkreis Göttingen: Hann. Münden, Duderstadt, Herzberg, Northeim und alle Gemeinden im Landkreis Göttingen' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
