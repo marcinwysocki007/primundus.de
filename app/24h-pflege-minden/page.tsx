@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Gibt es in Minden eine Klinik für Altersmedizin?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und eine ungewöhnlich gute: Das Johannes Wesling Klinikum führt eine Universitätsklinik für Geriatrie — Altersmedizin auf Universitätsniveau findet man sonst in Großstädten. Träger sind die Mühlenkreiskliniken. Ein Hinweis, weil derselbe Träger mehrere Häuser betreibt: Geriatrie gibt es auch in Lübbecke und Bad Oeynhausen; die Universitätsklinik steht in Minden. Für die Zeit nach der Entlassung ändert das allerdings nichts an der eigentlichen Frage — wer zu Hause da ist, wenn es allein nicht mehr geht.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Minden bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Minden und Kreis Minden-Lübbecke: Porta Westfalica, Lübbecke, Bad Oeynhausen, Petershagen und alle Gemeinden im Kreis Minden-Lübbecke' },
       },
@@ -348,31 +353,43 @@ export default function MindenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Minden und Kreis Minden-Lübbecke: Porta Westfalica, Lübbecke, Bad Oeynhausen, Petershagen und alle Gemeinden im Kreis Minden-Lübbecke</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Minden ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            74,6 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen 50,2 Prozent — mehr Haus, mehr Platz, mehr Möglichkeiten. Reihenhäuser sind in Minden mit 12,4 Prozent seltener als in Nordrhein-Westfalen (27,2 Prozent).
+            Für eine Stadt dieser Größe hat Minden etwas Ungewöhnliches:{' '}
+            <strong className="text-pm-ink font-semibold">eine Universitätsklinik für
+            Geriatrie</strong> am Johannes Wesling Klinikum. Altersmedizin auf
+            Universitätsniveau findet man sonst in Großstädten. Ein Hinweis, weil der Träger
+            mehrere Häuser betreibt: Geriatrie gibt es auch in Lübbecke und Bad Oeynhausen — die
+            Universitätsklinik steht in Minden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            27,0 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Nordrhein-Westfalen 19,7 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Beim Platz steht Minden besser da als das Land: Nur 16,4 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Nordrhein-Westfalen sind es 22,4 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
+            Die Pflegezahlen gibt es in Nordrhein-Westfalen nur für den Kreis, nicht für die Stadt.
+            Sie zeichnen ein klares Bild: Im Kreis Minden-Lübbecke sind 21.351 Menschen
+            pflegebedürftig, das sind 6,8 Prozent der Einwohner gegenüber 7,6 Prozent im Land —
+            deutlich weniger. Innerhalb dieser kleineren Gruppe wird aber häufiger professionell
+            versorgt.{' '}
+            <strong className="text-pm-ink font-semibold">Nur 52,6 Prozent beziehen ausschließlich
+            Pflegegeld, werden also allein von Angehörigen versorgt; in Nordrhein-Westfalen sind es
+            59,0 Prozent.</strong> Ambulante Dienste kommen häufiger zum Einsatz (19,1 gegen 17,3
+            Prozent), und auch der Heimanteil liegt höher (15,3 gegen 12,2). Familien tragen hier
+            also seltener alles allein — was gut ist, solange die Hilfe verfügbar bleibt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 98,9 Quadratmeter und damit rund 6 Quadratmeter mehr als im Schnitt von Nordrhein-Westfalen (92,7).
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 9.423 Menschen in Minden sind 75 Jahre oder älter, und es gibt 41.956 Wohnungen in 20.938 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Im Alltag spielt die Weser eine Rolle, und zwar die entscheidende: Sie durchschneidet
+            die Stadt, Minden liegt auf beiden Ufern. Wer einen ambulanten Dienst braucht, hängt an
+            den Brücken — für eine Betreuungskraft, die im Haushalt wohnt, ist das kein Thema. Zur
+            oft genannten Höhenspanne von über 230 Metern eine ehrliche Einordnung: Der höchste
+            Punkt liegt auf dem bewaldeten Kamm des Wiehengebirges und ist nicht bewohnt. Die
+            Wohnbebauung von Häverstädt, Dützen und Haddenhausen liegt am Fuß des Gebirges.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
+            In Minden selbst leben 19.107 Menschen über 65, das sind 22,7 Prozent der Einwohner
+            (Nordrhein-Westfalen: 22,0). Ob eine Betreuungskraft bei Ihnen einziehen kann, hängt
+            am Grundriss — notwendig ist ein eigenes, abschließbares Zimmer. Das klären wir vorab
+            am Telefon. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
             ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Minden</h2>
           <div className="space-y-3 mb-12">
@@ -390,6 +407,7 @@ export default function MindenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Minden?', a: 'Das hängt am Grundriss, und die Ausgangslage in Minden ist bekannt: Die durchschnittliche Wohnung misst 98,9 Quadratmeter, 16,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 45,5 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Minden?', a: '9.423 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Minden — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Minden im Schnitt 2,0 Wohnungen, in Nordrhein-Westfalen 2,3. 74,6 Prozent der Gebäude stehen frei, 12,4 Prozent sind Reihenhäuser. 57,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Minden ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Gibt es in Minden eine Klinik für Altersmedizin?', a: 'Ja, und eine ungewöhnlich gute: Das Johannes Wesling Klinikum führt eine Universitätsklinik für Geriatrie — Altersmedizin auf Universitätsniveau findet man sonst in Großstädten. Träger sind die Mühlenkreiskliniken. Ein Hinweis, weil derselbe Träger mehrere Häuser betreibt: Geriatrie gibt es auch in Lübbecke und Bad Oeynhausen; die Universitätsklinik steht in Minden. Für die Zeit nach der Entlassung ändert das allerdings nichts an der eigentlichen Frage — wer zu Hause da ist, wenn es allein nicht mehr geht.' },
               { q: 'Welches Einzugsgebiet wird in Minden bedient?', a: 'Minden und Kreis Minden-Lübbecke: Porta Westfalica, Lübbecke, Bad Oeynhausen, Petershagen und alle Gemeinden im Kreis Minden-Lübbecke' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

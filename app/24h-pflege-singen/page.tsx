@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Hat das Klinikum Singen eine Altersmedizin?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Nein — und das wird häufig verwechselt. Die Klinik für Altersmedizin des Gesundheitsverbunds Landkreis Konstanz sitzt am Klinikum Konstanz, nicht am Hegau-Bodensee-Klinikum in Singen. Weil der Verbund den Fachbereich zentral führt und dabei teilweise die Singener Verbandsadresse angibt, ordnen Verzeichnisse die Geriatrie fälschlich Singen zu. Das Singener Haus führt 16 Fachabteilungen, Altersmedizin ist keine davon. Für eine geriatrische Behandlung geht es nach Konstanz.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Singen am Hohentwiel bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Singen und westlicher Landkreis Konstanz: Radolfzell, Stockach, Engen und alle Gemeinden im westlichen Landkreis Konstanz' },
       },
@@ -348,31 +353,44 @@ export default function SingenamHohentwielPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Singen und westlicher Landkreis Konstanz: Radolfzell, Stockach, Engen und alle Gemeinden im westlichen Landkreis Konstanz</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Singen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            37,6 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Baden-Württemberg sind es 26,3 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat. Die durchschnittliche Wohnung misst 88,6 Quadratmeter gegenüber 99,1 in Baden-Württemberg — rund 10 Quadratmeter weniger.
+            Eine Verwechslung vorweg, die Angehörige regelmäßig in die falsche Stadt schickt:{' '}
+            <strong className="text-pm-ink font-semibold">Die Klinik für Altersmedizin des
+            Gesundheitsverbunds sitzt in Konstanz, nicht in Singen.</strong> Weil der Verbund den
+            Fachbereich zentral führt und dabei teilweise die Singener Verbandsadresse angibt, ordnen
+            Verzeichnisse die Geriatrie fälschlich dem Hegau-Bodensee-Klinikum zu. Das Haus in
+            Singen hat 16 Fachabteilungen — Altersmedizin ist keine davon. Wer nach einer
+            geriatrischen Behandlung sucht, muss nach Konstanz.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Singen ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 2,9 Wohnungen, in Baden-Württemberg 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. In Singen wohnen nur 42,9 Prozent der Haushalte im Eigentum, in Baden-Württemberg 51,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.
+            Beim Blick auf den Landkreis Konstanz fällt ein Muster auf, das für die häusliche Pflege
+            zählt.{' '}
+            <strong className="text-pm-ink font-semibold">Nur 13,1 Prozent der 16.193
+            Pflegebedürftigen werden von einem ambulanten Dienst versorgt — in Baden-Württemberg
+            sind es 16,4 Prozent.</strong> Gleichzeitig liegt der Heimanteil mit 16,9 Prozent über
+            dem Landeswert von 14,9. Und hier zeigen Anteil und Dichte ausnahmsweise in dieselbe
+            Richtung: Der Kreis ist tatsächlich heimlastig und tatsächlich ambulant dünn versorgt,
+            nicht nur rechnerisch. Dazu kommt, dass die Zahl der Beschäftigten in der Pflege im
+            Kreis gesunken ist, während sie landesweit gewachsen ist.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 55,0 Prozent der Gebäude stehen frei, in Baden-Württemberg sind es 65,9 Prozent.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 5.226 Menschen in Singen sind 75 Jahre oder älter, und es gibt 23.370 Wohnungen in 8.016 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            In Singen selbst stehen sieben stationäre Pflegeeinrichtungen bei rund 48.000
+            Einwohnern — passend zum heimlastigen Muster des Kreises. Für Familien, die zu Hause
+            bleiben wollen, heißt die Kombination aus dünnem ambulantem Netz und schrumpfendem
+            Personal vor allem eines: früh planen. Eine Betreuungskraft, die im Haushalt lebt, ist
+            von Tourenplänen und Personalengpässen nicht betroffen — sie ist durchgehend da.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Topografisch ist Singen unkompliziert, auch wenn der Hohentwiel etwas anderes vermuten
+            lässt. Der Berg ragt 267 Meter über die Stadt, ist aber Naturschutzgebiet mit einer
+            Festungsruine und unbewohnt — für den Pflegealltag ohne Bedeutung. Rund 85 Prozent der
+            Singener leben in der flachen Kernstadt im Hegau-Becken. 21,7 Prozent der Einwohner sind
+            über 65, 7,6 Prozent über 80. Lassen Sie sich vor einer Entscheidung unabhängig beraten:
+            Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig; der
+            Pflegestützpunkt des Landkreises unterhält eine Nebenstelle in Singen.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Singen am Hohentwiel</h2>
           <div className="space-y-3 mb-12">
@@ -390,6 +408,7 @@ export default function SingenamHohentwielPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Singen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Singen ist bekannt: Die durchschnittliche Wohnung misst 88,6 Quadratmeter, 21,2 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 42,9 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Singen?', a: '5.226 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,2 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Singen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Singen im Schnitt 2,9 Wohnungen, in Baden-Württemberg 2,1. 55,0 Prozent der Gebäude stehen frei, 22,1 Prozent sind Reihenhäuser. 53,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Singen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Hat das Klinikum Singen eine Altersmedizin?', a: 'Nein — und das wird häufig verwechselt. Die Klinik für Altersmedizin des Gesundheitsverbunds Landkreis Konstanz sitzt am Klinikum Konstanz, nicht am Hegau-Bodensee-Klinikum in Singen. Weil der Verbund den Fachbereich zentral führt und dabei teilweise die Singener Verbandsadresse angibt, ordnen Verzeichnisse die Geriatrie fälschlich Singen zu. Das Singener Haus führt 16 Fachabteilungen, Altersmedizin ist keine davon. Für eine geriatrische Behandlung geht es nach Konstanz.' },
               { q: 'Welches Einzugsgebiet wird in Singen am Hohentwiel bedient?', a: 'Singen und westlicher Landkreis Konstanz: Radolfzell, Stockach, Engen und alle Gemeinden im westlichen Landkreis Konstanz' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

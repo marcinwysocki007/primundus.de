@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Gibt es in Bruchsal eine geriatrische Klinik?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Nein. Die Fürst-Stirum-Klinik hat rund 400 Betten, aber keine geriatrische Fachabteilung — auch wenn einzelne Klinikverzeichnisse eine listen; das ist falsch. Die nächsten geriatrischen Angebote liegen außerhalb: die ViDia Kliniken in Karlsruhe und die Sankt Rochus Kliniken in Bad Schönborn. Nach einem Krankenhausaufenthalt führt der Weg zur Anschlussbehandlung also aus der Stadt heraus. Beratung gibt es dagegen vor Ort: Der Pflegestützpunkt des Landkreises Karlsruhe hat eine Anlaufstelle in Bruchsal, kostenlos und trägerunabhängig.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bruchsal bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bruchsal und Landkreis Karlsruhe Nord: Philippsburg, Kraichtal, Bretten und alle Gemeinden im nördlichen Landkreis Karlsruhe' },
       },
@@ -348,28 +353,42 @@ export default function BruchsalPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bruchsal und Landkreis Karlsruhe Nord: Philippsburg, Kraichtal, Bretten und alle Gemeinden im nördlichen Landkreis Karlsruhe</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bruchsal ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            29,3 Prozent der Gebäude in Bruchsal sind Reihenhäuser — in Baden-Württemberg 15,4 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 50,4 Prozent der Gebäude stehen frei, in Baden-Württemberg sind es 65,9 Prozent.
+            Eines vorweg, weil es Wege spart:{' '}
+            <strong className="text-pm-ink font-semibold">In Bruchsal gibt es keine geriatrische
+            Fachabteilung.</strong> Die Fürst-Stirum-Klinik hat rund 400 Betten, aber keine
+            Altersmedizin — auch wenn manche Klinikverzeichnisse eine listen. Die nächsten
+            geriatrischen Angebote liegen außerhalb: die ViDia Kliniken in Karlsruhe und die Sankt
+            Rochus Kliniken in Bad Schönborn. Nach einem Krankenhausaufenthalt führt der Weg zur
+            Anschlussbehandlung also aus der Stadt heraus. Umso wichtiger ist, was danach zu Hause
+            passiert.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            33,2 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Baden-Württemberg sind es 26,3 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat. 20,3 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Baden-Württemberg 27,0 Prozent.
+            Die Pflegestatistik gibt es in Baden-Württemberg nur für den Landkreis. Im Landkreis
+            Karlsruhe sind 27.562 Menschen pflegebedürftig — eine Pflegequote von 6,1 Prozent
+            gegenüber 5,6 Prozent im Land, und ein Zuwachs von 20 Prozent gegenüber 2021. 58,4
+            Prozent werden allein von Angehörigen versorgt (Land: 55,9), ambulante Dienste kommen
+            mit 15,4 Prozent seltener zum Einsatz als landesweit (16,4).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 4.599 Menschen in Bruchsal sind 75 Jahre oder älter, und es gibt 22.262 Wohnungen in 10.336 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Ein Zahlenfallstrick sei dabei ausgeräumt. Der Anteil der Pflegebedürftigen, die im Heim
+            leben, liegt mit 14,5 Prozent leicht unter dem Landeswert von 14,9 — daraus liest sich
+            leicht ein knappes Angebot heraus.{' '}
+            <strong className="text-pm-ink font-semibold">Gemessen an der Einwohnerzahl ist die
+            Heimversorgung im Kreis aber dichter als im Land</strong>, weil hier insgesamt mehr
+            Menschen pflegebedürftig sind. Anteil und Dichte zeigen in entgegengesetzte Richtungen —
+            wer nur den Anteil liest, unterschätzt das Angebot.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Räumlich ist Bruchsal für die meisten unkompliziert: Rund 28.400 der 47.382 Einwohner
+            leben in der Kernstadt, und die liegt flach in der Oberrheinebene auf 114 Metern. Der
+            Michaelsberg bei Untergrombach ragt zwar 155 Meter darüber auf, ist aber Kapelle,
+            Weinberg und Streuobstwiese — kein Wohngebiet. In der Stadt leben 9.968 Menschen über
+            65, das sind 21,0 Prozent. Der Pflegestützpunkt des Landkreises hat eine Anlaufstelle in
+            Bruchsal; die Beratung dort ist kostenlos und trägerunabhängig (§ 7a SGB XI).
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bruchsal</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +406,7 @@ export default function BruchsalPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bruchsal?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bruchsal ist bekannt: Die durchschnittliche Wohnung misst 100,0 Quadratmeter, 16,7 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 47,4 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Bruchsal?', a: '4.599 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bruchsal — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bruchsal im Schnitt 2,1 Wohnungen, in Baden-Württemberg 2,1. 50,4 Prozent der Gebäude stehen frei, 29,3 Prozent sind Reihenhäuser. 48,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bruchsal ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Gibt es in Bruchsal eine geriatrische Klinik?', a: 'Nein. Die Fürst-Stirum-Klinik hat rund 400 Betten, aber keine geriatrische Fachabteilung — auch wenn einzelne Klinikverzeichnisse eine listen; das ist falsch. Die nächsten geriatrischen Angebote liegen außerhalb: die ViDia Kliniken in Karlsruhe und die Sankt Rochus Kliniken in Bad Schönborn. Nach einem Krankenhausaufenthalt führt der Weg zur Anschlussbehandlung also aus der Stadt heraus. Beratung gibt es dagegen vor Ort: Der Pflegestützpunkt des Landkreises Karlsruhe hat eine Anlaufstelle in Bruchsal, kostenlos und trägerunabhängig.' },
               { q: 'Welches Einzugsgebiet wird in Bruchsal bedient?', a: 'Bruchsal und Landkreis Karlsruhe Nord: Philippsburg, Kraichtal, Bretten und alle Gemeinden im nördlichen Landkreis Karlsruhe' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
