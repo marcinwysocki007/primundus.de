@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Wo ist die Geriatrie in Troisdorf?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Seit März 2024 im St. Johannes Krankenhaus in Sieglar, Wilhelm-Busch-Straße — vorher war sie im St. Josef Hospital. Beide Häuser gehören demselben Träger und stehen in derselben Stadt, weshalb ältere Flyer und Wegbeschreibungen Angehörige regelmäßig zum falschen führen. Die Abteilung hat 40 Betten und ist vom Bundesverband Geriatrie zertifiziert; im gesamten Rhein-Sieg-Kreis gibt es nur zwei Häuser mit geriatrischer Leistungsgruppe. Eine geriatrische Tagesklinik oder Reha in Troisdorf ist uns nicht bekannt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Troisdorf bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Troisdorf und Rhein-Sieg-Kreis Norden: Sankt Augustin, Niederkassel, Lohmar und alle Gemeinden im nördlichen Rhein-Sieg-Kreis' },
       },
@@ -345,31 +350,53 @@ export default function TroisdorfPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Troisdorf und Rhein-Sieg-Kreis Norden: Sankt Augustin, Niederkassel, Lohmar und alle Gemeinden im nördlichen Rhein-Sieg-Kreis</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Troisdorf ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            33,8 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Nordrhein-Westfalen 24,1 Prozent. Altbau vor 1950 macht in Troisdorf 13,2 Prozent des Bestands aus, in Nordrhein-Westfalen 19,7 Prozent.
+            Troisdorf führt die Rangliste der Heimplätze im Rhein-Sieg-Kreis an — und das ist eine
+            Statistik, die in die Irre führt. Mit 624 Plätzen hat die Stadt die meisten aller 19
+            Kommunen, aber sie ist auch die größte.{' '}
+            <strong className="text-pm-ink font-semibold">Je 1.000 Einwohner über 65 sind es 38
+            Plätze, im Kreisschnitt 41.</strong> Die Stadt selbst widerspricht der Rangliste
+            ausdrücklich: Sie schätzt ihr Angebot an Dauer-, Kurzzeit- und Tagespflege als nicht
+            ausreichend ein, weil sich die Einrichtungen auf den Stadtkern und wenige Ortsteile
+            konzentrieren — Pflegebedürftige müssten deshalb ihren bisherigen Lebensmittelpunkt
+            verlassen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Wohnungsmarkt ist eng: 1,9 Prozent Leerstand gegenüber 3,3 Prozent in Nordrhein-Westfalen. Nur 39,3 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent.
+            Noch deutlicher wird die Stadt bei der ambulanten Versorgung: Die 13 Pflegedienste mit
+            Sitz in Troisdorf seien{' '}
+            <strong className="text-pm-ink font-semibold">nicht mehr in der Lage, die Nachfrage im
+            Stadtgebiet zu decken.</strong> Das ist keine Prognose, sondern eine Feststellung aus
+            der laufenden Pflegeplanung. Für Familien heißt das: Wer sich auf einen ambulanten
+            Dienst verlassen möchte, sollte früh anfragen und einen Plan B haben.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 27,1 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Nordrhein-Westfalen sind es 33,6 Prozent.
+            Der Rhein-Sieg-Kreis pflegt dabei ohnehin ungewöhnlich häuslich:{' '}
+            <strong className="text-pm-ink font-semibold">66 Prozent aller Pflegebedürftigen
+            beziehen ausschließlich Pflegegeld</strong>, werden also allein von Angehörigen
+            versorgt — in Nordrhein-Westfalen sind es 59 Prozent, bundesweit 54. Ambulante Dienste
+            kommen mit 14 Prozent seltener zum Einsatz als im Land (17 Prozent). Troisdorf liegt
+            laut Kreis nahe an diesen Durchschnittswerten.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 7.546 Menschen in Troisdorf sind 75 Jahre oder älter, und es gibt 36.942 Wohnungen in 17.071 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Und der Druck wächst schneller als anderswo im Kreis: Die Zahl der über 80-Jährigen in
+            Troisdorf steigt bis 2040 um fast 35 Prozent, im Kreisschnitt um 27. Auf 100 Menschen
+            zwischen 65 und 79 kommen dann 48 Hochbetagte. Topografisch ist die Stadt dabei
+            unproblematisch — der höchste Punkt liegt in der Wahner Heide und ist unbewohnt, die
+            Wohngebiete liegen in der Rheinebene.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Ein Hinweis, der Angehörigen eine vergebliche Fahrt erspart:{' '}
+            <strong className="text-pm-ink font-semibold">Die Geriatrie ist im März 2024 innerhalb
+            Troisdorfs umgezogen</strong> — vom St. Josef Hospital ins St. Johannes Krankenhaus in
+            Sieglar, Wilhelm-Busch-Straße. Beide Häuser gehören demselben Träger und stehen in
+            derselben Stadt; jeder Flyer und jede Wegbeschreibung von vor 2024 führt zum falschen.
+            Die Abteilung hat 40 Betten und ist vom Bundesverband Geriatrie zertifiziert. Im
+            gesamten Rhein-Sieg-Kreis gibt es nur zwei Häuser mit geriatrischer Leistungsgruppe.
+            Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a
+            SGB XI ist kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Troisdorf</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +414,7 @@ export default function TroisdorfPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Troisdorf?', a: 'Das hängt am Grundriss, und die Ausgangslage in Troisdorf ist bekannt: Die durchschnittliche Wohnung misst 92,7 Quadratmeter, 18,4 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 41,2 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Troisdorf?', a: '7.546 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,0 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Troisdorf — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Troisdorf im Schnitt 2,2 Wohnungen, in Nordrhein-Westfalen 2,3. 39,3 Prozent der Gebäude stehen frei, 34,3 Prozent sind Reihenhäuser. 40,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Troisdorf ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Wo ist die Geriatrie in Troisdorf?', a: 'Seit März 2024 im St. Johannes Krankenhaus in Sieglar, Wilhelm-Busch-Straße — vorher war sie im St. Josef Hospital. Beide Häuser gehören demselben Träger und stehen in derselben Stadt, weshalb ältere Flyer und Wegbeschreibungen Angehörige regelmäßig zum falschen führen. Die Abteilung hat 40 Betten und ist vom Bundesverband Geriatrie zertifiziert; im gesamten Rhein-Sieg-Kreis gibt es nur zwei Häuser mit geriatrischer Leistungsgruppe. Eine geriatrische Tagesklinik oder Reha in Troisdorf ist uns nicht bekannt.' },
               { q: 'Welches Einzugsgebiet wird in Troisdorf bedient?', a: 'Troisdorf und Rhein-Sieg-Kreis Norden: Sankt Augustin, Niederkassel, Lohmar und alle Gemeinden im nördlichen Rhein-Sieg-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

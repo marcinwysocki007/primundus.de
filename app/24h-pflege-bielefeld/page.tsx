@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'In welchen Bielefelder Stadtbezirken fehlen Heimplätze?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Die Stadt benennt es in ihrer Bedarfsplanung selbst: Unterversorgt sind Jöllenbeck, Heepen, Dornberg und Senne; ein Überangebot gibt es in Schildesche, Sennestadt und Gadderbaum. Bemerkenswert ist die Richtung — Jöllenbeck ist mit 8,2 Prozent Einwohnern über 80 der älteste Stadtbezirk und hat mit rund 51 Plätzen je 1.000 Hochbetagten zugleich das dünnste Angebot; in Sennestadt sind es 234. Über die ganze Stadt gerechnet reichen die 2.622 Plätze dagegen aus. Bielefeld hat also kein Mengen-, sondern ein Verteilungsproblem. Eine Betreuungskraft, die zu Ihnen kommt, löst genau das — sie ist dort, wo Sie wohnen.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bielefeld bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bielefeld und Umland: Gütersloh, Herford, Detmold, Paderborn, Minden und alle Gemeinden im Kreis Gütersloh und Herford' },
       },
@@ -345,25 +350,51 @@ export default function BielefeldPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bielefeld und Umland: Gütersloh, Herford, Detmold, Paderborn, Minden und alle Gemeinden im Kreis Gütersloh und Herford</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bielefeld ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Bielefeld wohnen nur 33,3 Prozent der Haushalte im Eigentum, in Nordrhein-Westfalen 40,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Die durchschnittliche Wohnung misst 85,8 Quadratmeter gegenüber 92,7 in Nordrhein-Westfalen — rund 7 Quadratmeter weniger.
+            Bielefeld hat ein Verteilungsproblem, kein Mengenproblem — und das lässt sich genau
+            beziffern. Über die ganze Stadt gerechnet reichen die 2.622 Heimplätze aus; die
+            städtische Bedarfsplanung errechnet bis 2027 sogar einen Überschuss. Zwischen den
+            Stadtbezirken sieht es anders aus:{' '}
+            <strong className="text-pm-ink font-semibold">Der Altersaufbau streut nur um den Faktor
+            1,7, das Platzangebot aber um den Faktor 4,6</strong> — und beide zeigen in
+            entgegengesetzte Richtungen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 34.515 Menschen in Bielefeld sind 75 Jahre oder älter, und es gibt 172.479 Wohnungen in 63.859 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Konkret heißt das: Jöllenbeck ist mit 8,2 Prozent Einwohnern über 80 der älteste
+            Stadtbezirk und hat mit 51 Plätzen je 1.000 Hochbetagten zugleich das dünnste Angebot.
+            In Sennestadt, altersmäßig unauffällig, sind es 234. Die Stadt benennt das selbst:
+            Unterversorgung in Jöllenbeck, Heepen, Dornberg und Senne, Überangebot in Schildesche,
+            Sennestadt und Gadderbaum. Wer in Jöllenbeck einen Heimplatz sucht, sucht ihn also
+            außerhalb des eigenen Viertels — oder bleibt zu Hause.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Zahl macht die Dringlichkeit deutlich:{' '}
+            <strong className="text-pm-ink font-semibold">Von den Bielefeldern über 80 sind 49,7
+            Prozent pflegebedürftig</strong> — fast jeder zweite. Bei den 65- bis 79-Jährigen sind
+            es 11,3 Prozent. Insgesamt zählt die Stadt 22.590 Pflegebedürftige, von denen 66,1
+            Prozent zu Hause ohne Pflegedienst versorgt werden und 22,1 Prozent mit einem Dienst.
+            Nur 11,8 Prozent leben stationär, deutlich weniger als im Bund.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Eine Entwicklung sollte man dabei kennen: Die Zahl der über 80-Jährigen{' '}
+            <em>sinkt</em> in Bielefeld bis 2027 um rund 2.000 — die geburtenschwachen Jahrgänge
+            der Kriegsjahre erreichen jetzt dieses Alter. Ab 2034 steigt sie dann deutlich an. Die
+            heutige Entspannung ist also eine Atempause, keine Trendwende.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Zur Geriatrie der wichtigste praktische Hinweis dieser Seite:{' '}
+            <strong className="text-pm-ink font-semibold">Die Geriatrie des Evangelischen Klinikums
+            Bethel liegt nicht in Bethel.</strong> Sie sitzt im Johannesstift an der Schildescher
+            Straße in Bielefeld-Schildesche — rund fünf Kilometer und einen Stadtbezirk vom
+            Bethel-Campus in Gadderbaum entfernt. Wer zu Bethel fährt, ist am falschen Ort. Vier
+            Bielefelder Häuser haben eine geriatrische Leistungsgruppe; die Klinik an der Rosenhöhe
+            heißt inzwischen Universitätsklinik für Geriatrie und hat seit Juli 2025 eine neue
+            Leitung — viele Verzeichnisse führen noch den alten Namen. Lassen Sie sich vorher
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bielefeld</h2>
           <div className="space-y-3 mb-12">
@@ -381,6 +412,7 @@ export default function BielefeldPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bielefeld?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bielefeld ist bekannt: Die durchschnittliche Wohnung misst 85,8 Quadratmeter, 27,0 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 33,3 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Bielefeld?', a: '34.515 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,5 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bielefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bielefeld im Schnitt 2,7 Wohnungen, in Nordrhein-Westfalen 2,3. 54,6 Prozent der Gebäude stehen frei, 27,5 Prozent sind Reihenhäuser. 55,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bielefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'In welchen Bielefelder Stadtbezirken fehlen Heimplätze?', a: 'Die Stadt benennt es in ihrer Bedarfsplanung selbst: Unterversorgt sind Jöllenbeck, Heepen, Dornberg und Senne; ein Überangebot gibt es in Schildesche, Sennestadt und Gadderbaum. Bemerkenswert ist die Richtung — Jöllenbeck ist mit 8,2 Prozent Einwohnern über 80 der älteste Stadtbezirk und hat mit rund 51 Plätzen je 1.000 Hochbetagten zugleich das dünnste Angebot; in Sennestadt sind es 234. Über die ganze Stadt gerechnet reichen die 2.622 Plätze dagegen aus. Bielefeld hat also kein Mengen-, sondern ein Verteilungsproblem. Eine Betreuungskraft, die zu Ihnen kommt, löst genau das — sie ist dort, wo Sie wohnen.' },
               { q: 'Welches Einzugsgebiet wird in Bielefeld bedient?', a: 'Bielefeld und Umland: Gütersloh, Herford, Detmold, Paderborn, Minden und alle Gemeinden im Kreis Gütersloh und Herford' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

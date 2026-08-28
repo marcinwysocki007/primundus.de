@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Bekommt man in Moers einen Heimplatz in der eigenen Stadt?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Häufig nicht. Von den 758 Moerserinnen und Moersern, die stationär gepflegt werden, leben nur 492 in Moers selbst — 266, also gut jeder Dritte, mussten die Stadt verlassen. Moers hat die dünnste Heimplatz-Ausstattung im gesamten Kreis Wesel: Auf einen Platz kommen hier 8,8 Einwohner über 80, im Kreisschnitt 6,8. Die 873 Plätze der Stadt sind zwar die zweithöchste absolute Zahl im Kreis, Moers ist aber auch die mit Abstand größte Kommune. Die Auslastung lag zuletzt bei 97 Prozent. Für viele Familien ist die Betreuung zu Hause deshalb die Lösung, die den Lebensmittelpunkt erhält.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Moers bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Moers und Umland: Duisburg, Krefeld, Kamp-Lintfort, Rheinberg, Xanten und alle Gemeinden im Kreis Wesel am Niederrhein' },
       },
@@ -344,25 +349,55 @@ export default function MoersPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Moers und Umland: Duisburg, Krefeld, Kamp-Lintfort, Rheinberg, Xanten und alle Gemeinden im Kreis Wesel am Niederrhein</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Moers ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 33,6 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. Gut jeder vierte Haushalt in Moers besteht nur aus Menschen ab 65 — in Nordrhein-Westfalen 24,2 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.
+            Eine Zahl aus dem Pflegeplan des Kreises Wesel beschreibt die Moerser Lage genauer als
+            jede andere:{' '}
+            <strong className="text-pm-ink font-semibold">Von den 758 Moerserinnen und Moersern, die
+            stationär gepflegt werden, leben nur 492 in der eigenen Stadt. 266 mussten Moers
+            verlassen</strong> — gut jeder Dritte. Der Grund ist kein Zufall: Moers ist die
+            Kommune mit der dünnsten Heimplatz-Ausstattung im ganzen Kreis. Auf einen Platz kommen
+            hier 8,8 Einwohner über 80, im Kreisschnitt 6,8. Die 873 Plätze der Stadt klingen nach
+            viel — Moers ist aber auch die mit Abstand größte Kommune des Kreises.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 11.863 Menschen in Moers sind 75 Jahre oder älter, und es gibt 52.191 Wohnungen in 24.242 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Dass es eng ist, zeigt auch die Auslastung: 97 Prozent der Moerser Plätze waren zuletzt
+            belegt. Und die Nachfrage kommt zusätzlich von außen — auf einen auswärtigen Bewohner
+            kommen in Moerser Heimen 2,5 aus dem Kreis, im Kreisschnitt sind es 3,1. Kurzzeitpflege
+            gibt es in der ganzen Stadt in nur einer solitären Einrichtung mit 15 Plätzen.
+            Kreisweit waren zuletzt von 201 als frei gemeldeten Plätzen tatsächlich nur 125
+            unmittelbar verfügbar.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Wie stark der Bedarf mit dem Alter steigt, zeigt der Kreis in einer Zahlenreihe, die man
+            sich merken sollte: Von den 70- bis 80-Jährigen sind 20,5 Prozent pflegebedürftig, von
+            den 80- bis 85-Jährigen 48,7 Prozent, von den 85- bis 90-Jährigen 74,4 Prozent —{' '}
+            <strong className="text-pm-ink font-semibold">und von den über 90-Jährigen praktisch
+            alle.</strong> Im Kreis Wesel werden 59,6 Prozent aller Pflegebedürftigen allein von
+            Angehörigen versorgt.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Innerhalb von Moers verteilt sich das Alter sehr ungleich, und zwar anders als man
+            denkt. Am ältesten ist Schwafheim: 16,6 Prozent der Einwohner sind über 75,
+            Durchschnittsalter 50,0 Jahre. Am jüngsten ist{' '}
+            <strong className="text-pm-ink font-semibold">Meerbeck mit 8,1 Prozent und einem
+            Durchschnittsalter von 41,5 Jahren — ausgerechnet die alte Bergarbeitersiedlung der
+            Zeche Rheinpreußen.</strong> Wer erwartet, dass Zechensiedlungen überaltert sind, liegt
+            hier falsch; Meerbeck hat sich über Zuwanderung verjüngt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Zur Geriatrie ein Hinweis, der Angehörigen eine Fahrt erspart. Im Krankenhausplan
+            Nordrhein-Westfalen ist keinem der beiden Moerser Krankenhäuser die Leistungsgruppe
+            Geriatrie zugewiesen; das St. Josef Krankenhaus Moers führt geriatrische Leistungen
+            innerhalb der Inneren Medizin. Besonders leicht zu verwechseln:{' '}
+            <strong className="text-pm-ink font-semibold">Das St. Josef-Hospital in Xanten hat die
+            Geriatrie — das St. Josef Krankenhaus in Moers nicht.</strong> Beide gehören demselben
+            Träger, die Namen sind fast gleich, die Häuser liegen rund 30 Kilometer auseinander.
+            Und das Reha-Zentrum Niederrhein steht in Wesel, nicht in Moers. Lassen Sie sich vorher
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Moers</h2>
           <div className="space-y-3 mb-12">
@@ -380,6 +415,7 @@ export default function MoersPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Moers?', a: 'Das hängt am Grundriss, und die Ausgangslage in Moers ist bekannt: Die durchschnittliche Wohnung misst 90,0 Quadratmeter, 19,0 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 41,0 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
               { q: 'Wie viele ältere Menschen leben in Moers?', a: '11.863 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,8 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 27,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Moers — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Moers im Schnitt 2,1 Wohnungen, in Nordrhein-Westfalen 2,3. 33,6 Prozent der Gebäude stehen frei, 33,4 Prozent sind Reihenhäuser. 54,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Moers ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Bekommt man in Moers einen Heimplatz in der eigenen Stadt?', a: 'Häufig nicht. Von den 758 Moerserinnen und Moersern, die stationär gepflegt werden, leben nur 492 in Moers selbst — 266, also gut jeder Dritte, mussten die Stadt verlassen. Moers hat die dünnste Heimplatz-Ausstattung im gesamten Kreis Wesel: Auf einen Platz kommen hier 8,8 Einwohner über 80, im Kreisschnitt 6,8. Die 873 Plätze der Stadt sind zwar die zweithöchste absolute Zahl im Kreis, Moers ist aber auch die mit Abstand größte Kommune. Die Auslastung lag zuletzt bei 97 Prozent. Für viele Familien ist die Betreuung zu Hause deshalb die Lösung, die den Lebensmittelpunkt erhält.' },
               { q: 'Welches Einzugsgebiet wird in Moers bedient?', a: 'Moers und Umland: Duisburg, Krefeld, Kamp-Lintfort, Rheinberg, Xanten und alle Gemeinden im Kreis Wesel am Niederrhein' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
