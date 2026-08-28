@@ -296,28 +296,28 @@ export default function NordrheinWestfalenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Köln, Düsseldorf, Dortmund, Essen, Duisburg, Bochum, Wuppertal, Bielefeld, Bonn, Münster, Aachen, Gelsenkirchen, Mönchengladbach, Hagen, Oberhausen und alle weiteren Städte in NRW</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Nordrhein-Westfalen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 50,2 Prozent der Gebäude stehen frei, in Deutschland insgesamt sind es 63,0 Prozent. 33,6 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
+            In Nordrhein-Westfalen sind 1.387.134 Menschen pflegebedürftig, das entspricht 7,62 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt Nordrhein-Westfalen auf Platz 8 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Gut jedes vierte Gebäude in Nordrhein-Westfalen ist ein Reihenhaus — in Deutschland insgesamt 19,0 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.
+            Drei von fünf Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also mehr. 818.023 Menschen sind das in Nordrhein-Westfalen, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 17,3 Prozent (Bund 19,3), im Heim leben 12,2 Prozent (Bund 14,1).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 1.918.660 Menschen in Nordrhein-Westfalen sind 75 Jahre oder älter, und es gibt 9.132.252 Wohnungen in 4.042.229 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Ein Wert sticht dabei heraus: Das ist der höchste Anteil rein familiärer Pflege aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
           </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Für Familien heißt das: Die Hauptlast liegt in Nordrhein-Westfalen stärker bei den Angehörigen als anderswo. Das geht oft jahrelang gut und dann plötzlich nicht mehr — meist nach einem Krankenhausaufenthalt, einem Sturz oder wenn die eigene Kraft nachlässt. Eine Betreuungskraft, die mit einzieht, nimmt genau diese Dauerverantwortung ab, ohne dass jemand umziehen muss.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. Knapp vier von fünf Gebäuden sind ein Ein- oder Zweifamilienhaus (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 92,7 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Nordrhein-Westfalen</h2>
           <div className="space-y-3 mb-12">

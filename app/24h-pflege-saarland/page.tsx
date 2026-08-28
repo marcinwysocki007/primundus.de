@@ -296,31 +296,28 @@ export default function SaarlandPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Saarbrücken, Neunkirchen, Homburg, Völklingen, Saarlouis, Merzig, St. Ingbert und alle weiteren Städte und Gemeinden im Saarland</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Saarland ausmacht</h2>
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
+          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause im Saarland ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Drei von fünf Haushalten in Saarland wohnen im Eigentum — in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. Die durchschnittliche Wohnung misst 107,1 Quadratmeter und damit rund 13 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4).
+            Im Saarland sind 80.351 Menschen pflegebedürftig, das entspricht 8,08 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt das Saarland auf Platz 6 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Beim Platz steht Saarland besser da als das Land: Nur 13,7 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden. Die Nettokaltmiete liegt bei 6,12 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
+            Knapp drei von fünf Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also mehr. 46.528 Menschen sind das im Saarland, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 14,8 Prozent (Bund 19,3), im Heim leben 14,5 Prozent (Bund 14,1).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            33,3 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat. 5,5 Prozent der Wohnungen stehen leer, in Deutschland insgesamt 4,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Nur 4,1 Prozent der Wohnungen sind nach 2010 entstanden, in Deutschland insgesamt 7,1 Prozent. Der Bestand ist älter als im Land.
+            Ein Wert sticht dabei heraus: Das ist die schwächste ambulante Versorgung aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 116.184 Menschen in Saarland sind 75 Jahre oder älter, und es gibt 525.384 Wohnungen in 314.613 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Für Familien heißt das: Die Hauptlast liegt im Saarland stärker bei den Angehörigen als anderswo. Das geht oft jahrelang gut und dann plötzlich nicht mehr — meist nach einem Krankenhausaufenthalt, einem Sturz oder wenn die eigene Kraft nachlässt. Eine Betreuungskraft, die mit einzieht, nimmt genau diese Dauerverantwortung ab, ohne dass jemand umziehen muss.
           </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. 88,3 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 107,1 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Saarland</h2>
           <div className="space-y-3 mb-12">

@@ -296,28 +296,25 @@ export default function NiedersachsenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Hannover, Braunschweig, Osnabrück, Oldenburg, Göttingen, Wolfsburg, Salzgitter, Hildesheim, Lüneburg, Celle und alle weiteren Städte und Gemeinden in Niedersachsen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Niedersachsen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 104,4 Quadratmeter und damit rund 10 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4). Beim Platz steht Niedersachsen besser da als das Land: Nur 17,1 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Deutschland insgesamt sind es 23,2 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden.
+            In Niedersachsen sind 623.071 Menschen pflegebedürftig, das entspricht 7,63 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt Niedersachsen auf Platz 7 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Jeder zweite Haushalt in Niedersachsen wohnt im Eigentum — in Deutschland insgesamt sind es 44,3 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen.
+            55,4 Prozent der Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also mehr. 344.914 Menschen sind das in Niedersachsen, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 18,6 Prozent (Bund 19,3), im Heim leben 15,0 Prozent (Bund 14,1).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 899.327 Menschen in Niedersachsen sind 75 Jahre oder älter, und es gibt 4.115.887 Wohnungen in 2.366.185 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Für Familien ist die entscheidende Frage meist nicht, ob Hilfe nötig ist, sondern welche Form. Ein ambulanter Dienst kommt und geht wieder; ein Heimplatz bedeutet Umzug. Eine Betreuungskraft, die im Haushalt lebt, ist der dritte Weg — rund um die Uhr da, im vertrauten Zuhause.
           </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. 87,3 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 104,4 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Niedersachsen</h2>
           <div className="space-y-3 mb-12">

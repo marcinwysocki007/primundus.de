@@ -296,31 +296,25 @@ export default function SachsenAnhaltPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Halle, Magdeburg, Dessau-Roßlau, Wittenberg, Merseburg, Halberstadt, Stendal, Bernburg und alle weiteren Städte und Gemeinden in Sachsen-Anhalt</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Sachsen-Anhalt ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            43,7 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Deutschland insgesamt 23,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. 8,9 Prozent der Wohnungen stehen leer, in Deutschland insgesamt 4,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.
+            In Sachsen-Anhalt sind 204.236 Menschen pflegebedürftig, das entspricht 9,37 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Das ist die höchste Pflegequote aller 16 Bundesländer. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            29,4 Prozent der Haushalte in Sachsen-Anhalt bestehen nur aus Menschen ab 65 — in Deutschland insgesamt 24,6 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Die Nettokaltmiete liegt bei 5,38 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
+            Gut jeder zweite Pflegebedürftige wird allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also weniger. 104.853 Menschen sind das in Sachsen-Anhalt, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 23,0 Prozent (Bund 19,3), im Heim leben 13,8 Prozent (Bund 14,1).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 15,4 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. Sachsen-Anhalt ist älter als das Land: 13,8 Prozent der Einwohner sind 75 Jahre oder älter — das sind 296.354 Menschen, in Deutschland insgesamt sind es 11,1 Prozent. Die durchschnittliche Wohnung misst 84,0 Quadratmeter gegenüber 94,4 in Deutschland insgesamt — rund 10 Quadratmeter weniger.
+            Bemerkenswert ist der hohe Anteil ambulanter Versorgung. Familien in Sachsen-Anhalt kaufen professionelle Hilfe eher ein, als alles allein zu tragen. Eine Betreuungskraft im Haushalt ist die konsequente Fortsetzung dieses Wegs: nicht ein Besuch zwei- oder dreimal am Tag, sondern jemand, der auch nachts da ist.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 296.354 Menschen in Sachsen-Anhalt sind 75 Jahre oder älter, und es gibt 1.263.371 Wohnungen in 593.737 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. Gut vier von fünf Gebäuden sind ein Ein- oder Zweifamilienhaus (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 84,0 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Sachsen-Anhalt</h2>
           <div className="space-y-3 mb-12">

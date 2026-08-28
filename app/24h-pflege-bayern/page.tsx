@@ -308,28 +308,28 @@ export default function BayernPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">München, Nürnberg, Augsburg, Regensburg, Ingolstadt, Würzburg, Fürth, Erlangen, Bayreuth, Landshut, Rosenheim, Kempten und alle weiteren Städte und Gemeinden in Bayern</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bayern ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Altbau vor 1950 macht in Bayern 15,1 Prozent des Bestands aus, in Deutschland insgesamt 23,5 Prozent. Mit 8,74 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Bayern teurer als im Schnitt von Deutschland insgesamt (7,28 Euro) — ein Umzug in eine größere Wohnung ist für die meisten keine Option.
+            In Bayern sind 631.273 Menschen pflegebedürftig, das entspricht 4,70 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Das ist die niedrigste Pflegequote aller 16 Bundesländer. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 100,5 Quadratmeter und damit rund 6 Quadratmeter mehr als im Schnitt von Deutschland insgesamt (94,4).
+            Knapp jeder zweite Pflegebedürftige wird allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also weniger. 306.045 Menschen sind das in Bayern, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 20,0 Prozent (Bund 19,3), im Heim leben 17,6 Prozent (Bund 14,1).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 1.362.499 Menschen in Bayern sind 75 Jahre oder älter, und es gibt 6.642.728 Wohnungen in 3.227.324 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Ein Wert sticht dabei heraus: Das ist der zweithöchste Wert Heimanteil aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
           </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Für Familien ist die entscheidende Frage meist nicht, ob Hilfe nötig ist, sondern welche Form. Ein ambulanter Dienst kommt und geht wieder; ein Heimplatz bedeutet Umzug. Eine Betreuungskraft, die im Haushalt lebt, ist der dritte Weg — rund um die Uhr da, im vertrauten Zuhause.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. 84,2 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 100,5 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bayern</h2>
           <div className="space-y-3 mb-12">

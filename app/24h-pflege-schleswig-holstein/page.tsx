@@ -296,25 +296,28 @@ export default function SchleswigHolsteinPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Kiel, Lübeck, Flensburg, Neumünster, Norderstedt, Elmshorn, Pinneberg, Rendsburg und alle weiteren Städte und Gemeinden in Schleswig-Holstein</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Schleswig-Holstein ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Schleswig-Holstein liegt beim Wohnen dicht am Schnitt von Deutschland insgesamt — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 95,1 Quadratmeter, auf ein Gebäude kommen 1,8 Wohnungen, und 47,6 Prozent der Haushalte wohnen im Eigentum.
+            In Schleswig-Holstein sind 175.323 Menschen pflegebedürftig, das entspricht 5,91 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt Schleswig-Holstein auf Platz 12 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            12,2 Prozent der Einwohner sind 75 Jahre oder älter, das sind 356.457 Menschen. In 26,6 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.
+            46,3 Prozent der Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also weniger. 81.148 Menschen sind das in Schleswig-Holstein, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 21,3 Prozent (Bund 19,3), im Heim leben 19,4 Prozent (Bund 14,1).
           </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ein Wert sticht dabei heraus: Das ist der höchste Heimanteil aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Bemerkenswert ist der hohe Anteil ambulanter Versorgung. Familien in Schleswig-Holstein kaufen professionelle Hilfe eher ein, als alles allein zu tragen. Eine Betreuungskraft im Haushalt ist die konsequente Fortsetzung dieses Wegs: nicht ein Besuch zwei- oder dreimal am Tag, sondern jemand, der auch nachts da ist.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. 87,6 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 95,1 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Schleswig-Holstein</h2>
           <div className="space-y-3 mb-12">

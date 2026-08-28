@@ -296,25 +296,28 @@ export default function HessenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Frankfurt am Main, Wiesbaden, Kassel, Darmstadt, Offenbach, Hanau, Marburg, Gießen, Fulda, Wetzlar und alle weiteren Städte und Gemeinden in Hessen</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Hessen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Hessen liegt beim Wohnen dicht am Schnitt von Deutschland insgesamt — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 98,3 Quadratmeter, auf ein Gebäude kommen 2,2 Wohnungen, und 46,6 Prozent der Haushalte wohnen im Eigentum.
+            In Hessen sind 423.378 Menschen pflegebedürftig, das entspricht 6,59 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt Hessen auf Platz 10 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            10,5 Prozent der Einwohner sind 75 Jahre oder älter, das sind 650.768 Menschen. In 23,1 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.
+            Knapp drei von fünf Pflegebedürftigen werden allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also mehr. 248.237 Menschen sind das in Hessen, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 17,6 Prozent (Bund 19,3), im Heim leben 13,5 Prozent (Bund 14,1).
           </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ein Wert sticht dabei heraus: Das ist der zweithöchste Wert Anteil rein familiärer Pflege aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Für Familien heißt das: Die Hauptlast liegt in Hessen stärker bei den Angehörigen als anderswo. Das geht oft jahrelang gut und dann plötzlich nicht mehr — meist nach einem Krankenhausaufenthalt, einem Sturz oder wenn die eigene Kraft nachlässt. Eine Betreuungskraft, die mit einzieht, nimmt genau diese Dauerverantwortung ab, ohne dass jemand umziehen muss.
+          </p>
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. Vier von fünf Gebäuden sind ein Ein- oder Zweifamilienhaus (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 98,3 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Hessen</h2>
           <div className="space-y-3 mb-12">

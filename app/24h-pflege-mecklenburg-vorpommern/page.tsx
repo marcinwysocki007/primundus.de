@@ -296,31 +296,28 @@ export default function MecklenburgVorpommernPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Rostock, Schwerin, Neubrandenburg, Greifswald, Stralsund, Wismar, Güstrow und alle weiteren Städte und Gemeinden in Mecklenburg-Vorpommern</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — Bundesland, aus Pflegestatistik 2023 und Zensus 2022 */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Mecklenburg-Vorpommern ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Mecklenburg-Vorpommern häufiger als anderswo. Jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Deutschland insgesamt sind es 23,2 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. Die durchschnittliche Wohnung misst 82,5 Quadratmeter gegenüber 94,4 in Deutschland insgesamt — rund 12 Quadratmeter weniger.
+            In Mecklenburg-Vorpommern sind 139.872 Menschen pflegebedürftig, das entspricht 8,58 Prozent der Bevölkerung. Bundesweit sind es 6,72 Prozent. Damit liegt Mecklenburg-Vorpommern auf Platz 4 von 16. Diese Unterschiede sind groß — zwischen dem niedrigsten und dem höchsten Landeswert liegt fast das Doppelte —, weshalb ein Vergleich mit dem Bundesschnitt allein wenig aussagt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 16,8 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Deutschland insgesamt sind es 26,7 Prozent. Gut jeder vierte Haushalt in Mecklenburg-Vorpommern besteht nur aus Menschen ab 65 — in Deutschland insgesamt 24,6 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.
+            Knapp jeder zweite Pflegebedürftige wird allein von Angehörigen versorgt — bundesweit sind es 54,5 Prozent, hier also weniger. 67.242 Menschen sind das in Mecklenburg-Vorpommern, ohne jeden Pflegedienst. Ambulante Dienste übernehmen 25,2 Prozent (Bund 19,3), im Heim leben 13,6 Prozent (Bund 14,1).
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die Nettokaltmiete liegt bei 5,91 Euro je Quadratmeter, in Deutschland insgesamt bei 7,28 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo. 5,5 Prozent der Wohnungen stehen leer, in Deutschland insgesamt 4,3 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Mecklenburg-Vorpommern ist älter als das Land: 12,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 198.085 Menschen, in Deutschland insgesamt sind es 11,1 Prozent.
+            Ein Wert sticht dabei heraus: Das ist der zweithöchste Wert ambulante Versorgung aller Bundesländer. Solche Unterschiede haben mit gewachsenen Strukturen zu tun — mit dem Angebot vor Ort, mit der Siedlungsdichte, mit dem, was Familien in einer Region üblicherweise selbst übernehmen. Für die eigene Entscheidung sagen sie vor allem eines: Was anderswo der Normalfall ist, muss hier nicht der beste Weg sein.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 198.085 Menschen in Mecklenburg-Vorpommern sind 75 Jahre oder älter, und es gibt 925.387 Wohnungen in 419.400 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Bemerkenswert ist der hohe Anteil ambulanter Versorgung. Familien in Mecklenburg-Vorpommern kaufen professionelle Hilfe eher ein, als alles allein zu tragen. Eine Betreuungskraft im Haushalt ist die konsequente Fortsetzung dieses Wegs: nicht ein Besuch zwei- oder dreimal am Tag, sondern jemand, der auch nachts da ist.
           </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            Ob eine Betreuungskraft einziehen kann, entscheidet am Ende der Grundriss. Gut vier von fünf Gebäuden sind ein Ein- oder Zweifamilienhaus (bundesweit 81,8 Prozent), die durchschnittliche Wohnung misst 82,5 Quadratmeter gegenüber 94,4 im Bund. Notwendig ist ein eigenes, abschließbares Zimmer — was Ihre Wohnung hergibt, klären wir vorab am Telefon, nicht hinterher.
           </p>
           <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
+            Pflegezahlen: Statistisches Bundesamt, Pflegestatistik 2023 (Stichtag
+            15. Dezember 2023). Wohnen: Zensus 2022, Statistische Ämter des Bundes und
+            der Länder.
           </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Mecklenburg-Vorpommern</h2>
           <div className="space-y-3 mb-12">
