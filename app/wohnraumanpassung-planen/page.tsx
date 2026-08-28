@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -95,6 +96,7 @@ export default function Page() {
               <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Haltegriffe im Bad (günstig, sofort wirksam), bodengleiche Dusche, Türverbreiterung für Rollstuhl, Treppenlifte, Entrümpelung von Stolperfallen.</p></div>
             </details>
           </div>
+          <Weiterlesen aktuell="wohnraumanpassung-planen" />
           <ArticleCTA />
         </div>
       </div>

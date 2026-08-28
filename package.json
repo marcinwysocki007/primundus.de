@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "verify": "npm run build && npm run verify:nobuild",
     "verify:nobuild": "node scripts/check-links.mjs && node scripts/check-jsonld.mjs && node scripts/check-sitemap.mjs && node scripts/check-fakten.mjs && node scripts/check-tsc.mjs",
-    "prebuild": "node scripts/build-lastmod.mjs"
+    "prebuild": "node scripts/build-lastmod.mjs && node scripts/build-artikel.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

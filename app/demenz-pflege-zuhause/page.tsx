@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -347,6 +348,7 @@ export default function DemenzPflegeZuhause() {
             ))}
           </div>
 
+          <Weiterlesen aktuell="demenz-pflege-zuhause" />
           <ArticleCTA />
         </div>
       </div>

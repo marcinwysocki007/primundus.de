@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -124,6 +125,7 @@ export default function Page() {
               <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Bei sehr hohem medizinischem Bedarf der dauerhafte Fachpflege erfordert, oder wenn kein Zimmer für die Kraft vorhanden ist.</p></div>
             </details>
           </div>
+          <Weiterlesen aktuell="24h-pflege-vs-pflegeheim" />
           <ArticleCTA />
         </div>
       </div>

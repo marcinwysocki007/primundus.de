@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { AuthorByline } from '@/components/AuthorByline'
 
@@ -64,6 +65,15 @@ const schemaMarkup = [
           text: 'Beispielrechnung: 2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche Steuerersparnis — es bleiben rund 1.450 Euro effektiv selbst zu tragen (Stand August 2026).',
         },
       },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Die ehrliche Gesamtrechnung', item: 'https://primundus.de/24-stunden-pflege-wirkliche-kosten' },
     ],
   },
 ]
@@ -269,6 +279,7 @@ export default function WirklicheKostenPage() {
             </div>
           </div>
 
+          <Weiterlesen aktuell="24-stunden-pflege-wirkliche-kosten" />
           <ArticleCTA
             headline="Ihre ehrliche Gesamtrechnung — in 2 Minuten"
             subline="Alle Posten, alle Zuschüsse, Ihr effektiver Eigenanteil. Kostenlos und unverbindlich."

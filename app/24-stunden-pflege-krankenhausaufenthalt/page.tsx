@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { AuthorByline } from '@/components/AuthorByline'
 
@@ -73,6 +74,15 @@ const schemaMarkup = [
           text: 'Bei Primundus gilt an gesetzlichen Feiertagen der doppelte Tagessatz. Beispiel: Bei 2.800 Euro Monatspreis beträgt der Tagessatz rund 93 Euro — ein Feiertag kostet also etwa 93 Euro Aufschlag. Je nach Bundesland sind das 9 bis 13 Feiertage im Jahr.',
         },
       },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
+      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 3, name: 'Krankenhaus, Ausfall, Wechsel', item: 'https://primundus.de/24-stunden-pflege-krankenhausaufenthalt' },
     ],
   },
 ]
@@ -239,6 +249,7 @@ export default function KrankenhausPage() {
             </div>
           </div>
 
+          <Weiterlesen aktuell="24-stunden-pflege-krankenhausaufenthalt" />
           <ArticleCTA
             headline="Noch eine Frage, die Ihnen niemand beantwortet?"
             subline="Rufen Sie uns an — wir antworten konkret und mit Zahlen. Kostenlos und unverbindlich."

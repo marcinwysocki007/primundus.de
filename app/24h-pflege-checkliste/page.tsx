@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -127,6 +128,7 @@ export default function Page() {
               <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Kein Problem — Primundus begleitet den Start aktiv und steht Mo–Fr 9–18 Uhr telefonisch zur Verfügung.</p></div>
             </details>
           </div>
+          <Weiterlesen aktuell="24h-pflege-checkliste" />
           <ArticleCTA />
         </div>
       </div>

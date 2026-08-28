@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -95,6 +96,7 @@ export default function Page() {
               <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Blindheit allein ergibt noch keinen Pflegegrad — der MD bewertet Alltagseinschränkungen insgesamt. Mit Begleiterkrankungen oft PG 2–3 erreichbar.</p></div>
             </details>
           </div>
+          <Weiterlesen aktuell="sehbehinderung-blindheit-pflege" />
           <ArticleCTA />
         </div>
       </div>

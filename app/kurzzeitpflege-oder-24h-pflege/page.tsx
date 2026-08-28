@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -103,6 +104,7 @@ export default function Page() {
               <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann in 4–7 Tagen starten.</p></div>
             </details>
           </div>
+          <Weiterlesen aktuell="kurzzeitpflege-oder-24h-pflege" />
           <ArticleCTA />
         </div>
       </div>

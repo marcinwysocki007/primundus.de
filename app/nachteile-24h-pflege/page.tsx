@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -130,6 +131,7 @@ export default function Page() {
               <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Primundus prüft Deutschkenntnisse aktiv im Gespräch. Auf Wunsch Telefonat mit der Kraft vor Beginn möglich.</p></div>
             </details>
           </div>
+          <Weiterlesen aktuell="nachteile-24h-pflege" />
           <ArticleCTA />
         </div>
       </div>

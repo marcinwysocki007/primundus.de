@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
@@ -447,6 +448,7 @@ export default function WasIst24StundenPflege() {
           </div>
 
           {/* ── ARTICLE CTA — einmal, ganz unten ── */}
+          <Weiterlesen aktuell="was-ist-24-stunden-pflege" />
           <ArticleCTA />
 
         </div>

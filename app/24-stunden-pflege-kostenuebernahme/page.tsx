@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
+import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { AuthorByline } from '@/components/AuthorByline'
 import { KurzAntwort } from '@/components/KurzAntwort'
@@ -72,6 +73,15 @@ const schemaMarkup = [
           text: 'Ja. Für haushaltsnahe Dienstleistungen erkennt das Finanzamt bis zu 4.000 Euro Steuerermäßigung pro Jahr an — das entspricht gut 330 Euro im Monat zusätzlicher Entlastung.',
         },
       },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
+      { '@type': 'ListItem', position: 2, name: 'Finanzierung', item: 'https://primundus.de/finanzierung' },
+      { '@type': 'ListItem', position: 3, name: 'Kostenübernahme 24-Stunden-Pflege', item: 'https://primundus.de/24-stunden-pflege-kostenuebernahme' },
     ],
   },
 ]
@@ -262,6 +272,7 @@ export default function KostenuebernahmePage() {
             </div>
           </div>
 
+          <Weiterlesen aktuell="24-stunden-pflege-kostenuebernahme" />
           <ArticleCTA
             headline="Wie viel Zuschuss steht Ihrer Familie zu?"
             subline="Der Kostenrechner zeigt es in 2 Minuten — kostenlos und unverbindlich."
