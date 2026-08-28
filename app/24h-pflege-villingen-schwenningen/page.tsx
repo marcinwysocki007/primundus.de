@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Macht es einen Unterschied, ob ich in Villingen oder in Schwenningen wohne?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Für unsere Betreuung nicht — Anreise und Preis sind in beiden Stadtteilen und in allen zehn Ortschaften gleich. Statistisch gibt es den Unterschied aber: Villingen liegt beim Durchschnittsalter bei 44,1 Jahren, Schwenningen bei 42,1, die Ortschaften bei 45,1. Die beiden fast gleich großen Zentren (Villingen 41.136, Schwenningen 36.915 Einwohner) liegen rund fünf Kilometer auseinander und altern unterschiedlich schnell. In der Gesamtstadt leben 19.752 Menschen über 65, das sind 22,1 Prozent.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Villingen-Schwenningen bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Villingen-Schwenningen und Schwarzwald-Baar-Kreis: Donaueschingen, Blumberg, Triberg und alle Gemeinden im Schwarzwald-Baar-Kreis' },
       },
@@ -348,28 +353,42 @@ export default function VillingenSchwenningenPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Villingen-Schwenningen und Schwarzwald-Baar-Kreis: Donaueschingen, Blumberg, Triberg und alle Gemeinden im Schwarzwald-Baar-Kreis</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Villingen-Schwenningen ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Nur 53,8 Prozent der Gebäude stehen frei, in Baden-Württemberg sind es 65,9 Prozent. Die durchschnittliche Wohnung misst 91,9 Quadratmeter gegenüber 99,1 in Baden-Württemberg — rund 7 Quadratmeter weniger.
+            Villingen-Schwenningen ist pflegerisch nicht eine Stadt, sondern zwei Einzugsgebiete.
+            Die beiden historischen Zentren liegen rund fünf Kilometer auseinander und sind fast
+            gleich groß — Villingen mit 41.136, Schwenningen mit 36.915 Einwohnern —, und sie
+            altern unterschiedlich:{' '}
+            <strong className="text-pm-ink font-semibold">Villingen liegt beim Durchschnittsalter
+            bei 44,1 Jahren, Schwenningen bei 42,1, die zehn Ortschaften bei 45,1.</strong> Wer für
+            Marbach oder Herzogenweiler plant, plant unter anderen Vorzeichen als für die
+            Schwenninger Innenstadt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die Nettokaltmiete liegt bei 7,12 Euro je Quadratmeter, in Baden-Württemberg bei 8,13 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo.
+            In der Stadt leben 19.752 Menschen über 65, das sind 22,1 Prozent. Die Pflegezahlen
+            selbst gibt es in Baden-Württemberg nur für den Kreis: Im Schwarzwald-Baar-Kreis sind
+            13.617 Menschen pflegebedürftig — eine Pflegequote von 6,4 Prozent gegenüber 5,6 im
+            Land, und ein Zuwachs von 16 Prozent gegenüber 2021. 55,2 Prozent werden allein von
+            Angehörigen versorgt, 16,8 Prozent von einem ambulanten Dienst, 16,1 Prozent leben im
+            Heim — letzteres etwas mehr als im Land mit 14,9 Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 9.923 Menschen in Villingen-Schwenningen sind 75 Jahre oder älter, und es gibt 44.186 Wohnungen in 16.983 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Eine Einschränkung sagen wir dazu, statt sie zu überspielen: Ob hinter dem höheren
+            Heimanteil auch mehr Heimplätze stehen, lässt sich für diesen Kreis nicht belegen —
+            Baden-Württemberg veröffentlicht die Platzzahlen nicht kreisscharf. In anderen Regionen
+            zeigen diese beiden Kennzahlen oft in entgegengesetzte Richtungen. Wir rechnen das
+            nicht hoch, sondern lassen die Frage offen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Geriatrisch ist die Lage gemischt. Das Schwarzwald-Baar Klinikum führt keine
+            eigenständige geriatrische Fachabteilung, sondern einen geriatrischen Schwerpunkt —
+            einen konsiliarischen Dienst, der die geriatrische Frührehabilitation in der Inneren
+            Medizin und der Unfallchirurgie leitet. Eine geriatrische Rehaklinik gibt es dagegen
+            am Ort, Am Klosterwald; sie firmiert unter zwei Namen, ist aber eine Adresse. Lassen Sie
+            sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist
+            kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Villingen-Schwenningen</h2>
           <div className="space-y-3 mb-12">
@@ -387,6 +406,7 @@ export default function VillingenSchwenningenPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Villingen-Schwenningen?', a: 'Das hängt am Grundriss, und die Ausgangslage in Villingen-Schwenningen ist bekannt: Die durchschnittliche Wohnung misst 91,9 Quadratmeter, 20,4 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 46,9 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Villingen-Schwenningen?', a: '9.923 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Villingen-Schwenningen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Villingen-Schwenningen im Schnitt 2,6 Wohnungen, in Baden-Württemberg 2,1. 53,8 Prozent der Gebäude stehen frei, 21,3 Prozent sind Reihenhäuser. 51,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Villingen-Schwenningen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Macht es einen Unterschied, ob ich in Villingen oder in Schwenningen wohne?', a: 'Für unsere Betreuung nicht — Anreise und Preis sind in beiden Stadtteilen und in allen zehn Ortschaften gleich. Statistisch gibt es den Unterschied aber: Villingen liegt beim Durchschnittsalter bei 44,1 Jahren, Schwenningen bei 42,1, die Ortschaften bei 45,1. Die beiden fast gleich großen Zentren (Villingen 41.136, Schwenningen 36.915 Einwohner) liegen rund fünf Kilometer auseinander und altern unterschiedlich schnell. In der Gesamtstadt leben 19.752 Menschen über 65, das sind 22,1 Prozent.' },
               { q: 'Welches Einzugsgebiet wird in Villingen-Schwenningen bedient?', a: 'Villingen-Schwenningen und Schwarzwald-Baar-Kreis: Donaueschingen, Blumberg, Triberg und alle Gemeinden im Schwarzwald-Baar-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

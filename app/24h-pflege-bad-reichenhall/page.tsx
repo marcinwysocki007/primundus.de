@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Gibt es in Bad Reichenhall eine Akutgeriatrie?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Nein — und das zu wissen erspart Angehörigen Fahrerei. Die Kreisklinik Bad Reichenhall hat 16 Fachabteilungen, aber keine Akutgeriatrie. Die Akutgeriatrie desselben Trägers sitzt an der Kreisklinik Trostberg, einem anderen Landkreis rund 55 Kilometer entfernt. Am Ort gibt es dafür eine geriatrische Rehaklinik, die Rehaklinik Prinzregent Luitpold. Von den übrigen Kurkliniken der Stadt arbeitet keine geriatrisch — sie behandeln Atemwege, Orthopädie und Onkologie. Bad Reichenhall ist mit 29,2 Prozent Einwohnern über 65 zugleich eine der ältesten Städte Bayerns (Freistaat: 21,6 Prozent).' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Bad Reichenhall bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Bad Reichenhall und Berchtesgadener Land Nord: Piding, Bayerisch Gmain, Ainring und alle Gemeinden im nördlichen Landkreis Berchtesgadener Land' },
       },
@@ -355,31 +360,54 @@ export default function BadReichenhallPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Bad Reichenhall und Berchtesgadener Land Nord: Piding, Bayerisch Gmain, Ainring und alle Gemeinden im nördlichen Landkreis Berchtesgadener Land</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Bad Reichenhall ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Bad Reichenhall ist älter als das Land: 17,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 3.170 Menschen, in Bayern sind es 10,4 Prozent. Jeder dritte Haushalt in Bad Reichenhall besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.
+            Bad Reichenhall ist eine der ältesten Städte Bayerns.{' '}
+            <strong className="text-pm-ink font-semibold">29,2 Prozent der Einwohner sind über 65 —
+            5.349 Menschen —, im Freistaat sind es 21,6 Prozent.</strong> Das sind fast acht
+            Prozentpunkte Unterschied, und selbst gegenüber dem eigenen Landkreis liegt die Stadt
+            um knapp fünf Punkte darüber. Das Durchschnittsalter beträgt 48,3 Jahre. Auf 100
+            Menschen im Erwerbsalter kommen hier 54 im Rentenalter.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 78,4 Quadratmeter gegenüber 100,5 in Bayern — rund 22 Quadratmeter weniger. Bad Reichenhall ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,6 Wohnungen, in Bayern 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe.
+            Umso überraschender ist eine zweite Zahl: Die Pflegequote im Landkreis
+            Berchtesgadener Land liegt mit 44 Pflegebedürftigen je 1.000 Einwohner{' '}
+            <em>unter</em> dem bayerischen Wert von 47 — obwohl der Kreis deutlich älter ist als
+            das Land. Was dagegen auffällt, ist die Versorgungsform:{' '}
+            <strong className="text-pm-ink font-semibold">Nur 43,0 Prozent der Pflegebedürftigen
+            werden allein von Angehörigen versorgt, in Bayern sind es 48,5 Prozent</strong> — und
+            21,6 Prozent leben im Heim gegenüber 17,6 im Freistaat. Hier wird Pflege früher aus der
+            Hand gegeben als anderswo in Bayern.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Bad Reichenhall häufiger als anderswo. Jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. In Bad Reichenhall wohnen nur 33,9 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. 53,4 Prozent aller Haushalte in Bad Reichenhall bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.
+            Dass mehr Menschen im Heim leben, heißt allerdings nicht, dass es besonders viele
+            Plätze gäbe. Gemessen an der Zahl der über 65-Jährigen stehen 46 Plätze je 1.000 bereit,
+            in Bayern 44 — ein Vorsprung von rund vier Prozent, während der Heimanteil um 23 Prozent
+            über dem Landeswert liegt. Der Unterschied erklärt sich aus dem Nenner: Der Kreis ist
+            eben alt. Für Familien heißt das, dass ein Heimplatz hier keineswegs leichter zu
+            bekommen ist, als die Anteilszahl vermuten lässt.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 3.170 Menschen in Bad Reichenhall sind 75 Jahre oder älter, und es gibt 11.198 Wohnungen in 3.091 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Die Alpenlage wird beim Thema Pflege gern bemüht, meist mit den falschen Zahlen. Die
+            oft zitierte Spanne von 470 bis 1.750 Metern ist für den Alltag bedeutungslos: Der
+            Predigtstuhl trägt eine Bergstation, das Reichenhaller Haus eine Alpenvereinshütte —
+            dort wohnt niemand. Alltagsrelevant ist etwas anderes:{' '}
+            <strong className="text-pm-ink font-semibold">Der bewohnte Ortsteil Nonn erstreckt sich
+            über rund 170 Höhenmeter</strong>, vom Unterland auf 474 Metern bis zum Oberland auf
+            über 600. Wer dort oben wohnt, kennt die Anfahrt im Winter.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Ein Punkt, der Angehörigen viel Fahrerei erspart: Die Kreisklinik Bad Reichenhall hat
+            16 Fachabteilungen, aber{' '}
+            <strong className="text-pm-ink font-semibold">keine Akutgeriatrie</strong>. Die
+            Akutgeriatrie desselben Trägers sitzt an der Kreisklinik Trostberg — anderer Landkreis,
+            rund 55 Kilometer entfernt. Am Ort gibt es dafür eine geriatrische Rehaklinik, die
+            Rehaklinik Prinzregent Luitpold. Von den übrigen Kurkliniken der Stadt arbeitet keine
+            geriatrisch; sie behandeln Atemwege, Orthopädie und Onkologie. Lassen Sie sich vorher
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Bad Reichenhall</h2>
           <div className="space-y-3 mb-12">
@@ -401,6 +429,7 @@ export default function BadReichenhallPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Bad Reichenhall?', a: 'Das hängt am Grundriss, und die Ausgangslage in Bad Reichenhall ist bekannt: Die durchschnittliche Wohnung misst 78,4 Quadratmeter, 33,7 Prozent liegen unter 60 Quadratmetern (Bayern: 20,7 Prozent), und 33,9 Prozent der Haushalte wohnen im Eigentum (Bayern: 49,3 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Bad Reichenhall?', a: '3.170 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 17,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Bad Reichenhall — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Reichenhall im Schnitt 3,6 Wohnungen, in Bayern 2,1. 52,7 Prozent der Gebäude stehen frei, 28,1 Prozent sind Reihenhäuser. 45,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Reichenhall ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Gibt es in Bad Reichenhall eine Akutgeriatrie?', a: 'Nein — und das zu wissen erspart Angehörigen Fahrerei. Die Kreisklinik Bad Reichenhall hat 16 Fachabteilungen, aber keine Akutgeriatrie. Die Akutgeriatrie desselben Trägers sitzt an der Kreisklinik Trostberg, einem anderen Landkreis rund 55 Kilometer entfernt. Am Ort gibt es dafür eine geriatrische Rehaklinik, die Rehaklinik Prinzregent Luitpold. Von den übrigen Kurkliniken der Stadt arbeitet keine geriatrisch — sie behandeln Atemwege, Orthopädie und Onkologie. Bad Reichenhall ist mit 29,2 Prozent Einwohnern über 65 zugleich eine der ältesten Städte Bayerns (Freistaat: 21,6 Prozent).' },
               { q: 'Welches Einzugsgebiet wird in Bad Reichenhall bedient?', a: 'Bad Reichenhall und Berchtesgadener Land Nord: Piding, Bayerisch Gmain, Ainring und alle Gemeinden im nördlichen Landkreis Berchtesgadener Land' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

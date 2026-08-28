@@ -109,6 +109,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Wie schwer ist es, in Rüsselsheim einen Heimplatz zu bekommen?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Schwerer als fast überall sonst in Hessen. Der Kreis Groß-Gerau hat 36 vollstationäre Heimplätze je 1.000 Einwohner über 65 — in Hessen sind es 47, also fast ein Viertel mehr. Nur zwei Kreise im Regierungsbezirk Darmstadt liegen darunter. Dazu passt, dass hier 63,9 Prozent aller Pflegebedürftigen ausschließlich von Angehörigen versorgt werden (Hessen: 58,6 Prozent) und ambulante Dienste mit 12,9 Prozent deutlich seltener zum Einsatz kommen als landesweit (17,6 Prozent). Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich planen lässt.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Rüsselsheim am Main bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Rüsselsheim und Groß-Gerau: Groß-Gerau, Mörfelden-Walldorf, Gernsheim und alle Gemeinden im Kreis Groß-Gerau' },
       },
@@ -348,31 +353,50 @@ export default function RuesselsheimamMainPage() {
             <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Rüsselsheim und Groß-Gerau: Groß-Gerau, Mörfelden-Walldorf, Gernsheim und alle Gemeinden im Kreis Groß-Gerau</p>
           </div>
 
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
+          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Rüsselsheim ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die durchschnittliche Wohnung misst 84,6 Quadratmeter gegenüber 98,3 in Hessen — rund 14 Quadratmeter weniger. 40,7 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Hessen sind es 30,4 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.
+            Im Kreis Groß-Gerau ruht die Pflege stärker auf den Familien als in jedem anderen
+            hessischen Kreis, den wir uns angesehen haben.{' '}
+            <strong className="text-pm-ink font-semibold">63,9 Prozent der 16.707 Pflegebedürftigen
+            beziehen ausschließlich Pflegegeld</strong>, werden also allein von Angehörigen
+            versorgt — in Hessen sind es 58,6 Prozent. Ambulante Dienste kommen dagegen selten zum
+            Einsatz: 12,9 Prozent gegenüber 17,6 im Land.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Rüsselsheim wohnen nur 37,5 Prozent der Haushalte im Eigentum, in Hessen 46,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Altbau vor 1950 macht in Rüsselsheim 13,5 Prozent des Bestands aus, in Hessen 20,4 Prozent.
+            Das ist keine freie Entscheidung, sondern hat auch mit dem Angebot zu tun. Der Kreis hat{' '}
+            <strong className="text-pm-ink font-semibold">36 Heimplätze je 1.000 Einwohner über 65,
+            in Hessen sind es 47</strong> — fast ein Viertel weniger. Nur zwei Kreise im
+            Regierungsbezirk Darmstadt liegen darunter. Anteil und Platzdichte zeigen hier in
+            dieselbe Richtung, aber die Dichte ist der härtere Engpass. Wer in Rüsselsheim einen
+            Heimplatz sucht, sucht in einem der knappsten Märkte Hessens.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Rüsselsheim ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 2,8 Wohnungen, in Hessen 2,2. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Rüsselsheim häufiger als anderswo. Jede vierte Wohnung ist kleiner als 60 Quadratmeter — in Hessen sind es 20,4 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.
+            Rüsselsheim selbst ist dabei jung: 12.865 Einwohner sind über 65, das sind 18,4 Prozent
+            gegenüber 21,3 Prozent in Hessen; das Durchschnittsalter liegt bei 42,1 Jahren. Aber der
+            Durchschnitt verdeckt hier besonders viel.{' '}
+            <strong className="text-pm-ink font-semibold">Zwischen den Stadtbezirken liegt beim
+            Anteil der über 60-Jährigen der Faktor drei</strong> — in Alt-Bauschheim sind es 35,8
+            Prozent, im Wohngebiet Blauer See II 11,4. Das Muster ist deutlich: Die eingemeindeten
+            Dörfer Bauschheim, Königstädten und Haßloch sind alt, die Großsiedlungen der Kernstadt
+            und die Neubaugebiete sind jung.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 6.362 Menschen in Rüsselsheim sind 75 Jahre oder älter, und es gibt 30.991 Wohnungen in 10.977 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
+            Ein zweiter Punkt gehört dazu: 32,5 Prozent der Rüsselsheimer haben keine deutsche
+            Staatsangehörigkeit — in einem Kreis, dessen Pflege zu fast zwei Dritteln über
+            Angehörige läuft. Sprache und Gewohnheiten sind bei einer Betreuungskraft, die im
+            Haushalt lebt, deshalb kein Nebenthema. Das Deutschniveau jeder Kraft wird eingestuft
+            und steht vorab im Profil, zusammen mit Erfahrung und Foto.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
+            Topografisch ist Rüsselsheim ohne Bedeutung für den Pflegealltag — zwischen dem
+            höchsten und dem tiefsten Punkt des Stadtgebiets liegen 22 Meter. Geriatrisch ist die
+            Stadt versorgt: Das GPR Klinikum führt eine eigenständige Geriatrische Klinik mit 40
+            Betten. Ein Hinweis, weil Verzeichnisse dem Haus hinterherhinken: Es hieß früher
+            Stadtkrankenhaus Rüsselsheim — dieselbe Einrichtung, nicht ein zweites Haus. Lassen Sie
+            sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist
+            kostenlos und trägerunabhängig.
           </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Rüsselsheim am Main</h2>
           <div className="space-y-3 mb-12">
@@ -390,6 +414,7 @@ export default function RuesselsheimamMainPage() {
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Rüsselsheim?', a: 'Das hängt am Grundriss, und die Ausgangslage in Rüsselsheim ist bekannt: Die durchschnittliche Wohnung misst 84,6 Quadratmeter, 25,5 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 37,5 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
               { q: 'Wie viele ältere Menschen leben in Rüsselsheim?', a: '6.362 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Rüsselsheim — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Rüsselsheim im Schnitt 2,8 Wohnungen, in Hessen 2,2. 65,7 Prozent der Gebäude stehen frei, 16,9 Prozent sind Reihenhäuser. 54,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Rüsselsheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+              { q: 'Wie schwer ist es, in Rüsselsheim einen Heimplatz zu bekommen?', a: 'Schwerer als fast überall sonst in Hessen. Der Kreis Groß-Gerau hat 36 vollstationäre Heimplätze je 1.000 Einwohner über 65 — in Hessen sind es 47, also fast ein Viertel mehr. Nur zwei Kreise im Regierungsbezirk Darmstadt liegen darunter. Dazu passt, dass hier 63,9 Prozent aller Pflegebedürftigen ausschließlich von Angehörigen versorgt werden (Hessen: 58,6 Prozent) und ambulante Dienste mit 12,9 Prozent deutlich seltener zum Einsatz kommen als landesweit (17,6 Prozent). Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich planen lässt.' },
               { q: 'Welches Einzugsgebiet wird in Rüsselsheim am Main bedient?', a: 'Rüsselsheim und Groß-Gerau: Groß-Gerau, Mörfelden-Walldorf, Gernsheim und alle Gemeinden im Kreis Groß-Gerau' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
