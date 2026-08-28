@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'In welchen Jenaer Stadtteilen wird Pflege am häufigsten gebraucht?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Der Stadtdurchschnitt hilft in Jena kaum weiter — zwischen den Stadtteilen liegt beim Seniorenanteil der Faktor vier. In Lichtenhain sind 9,5 Prozent der Einwohner über 65, im Jenaer Zentrum 10,1 Prozent; in Wogau dagegen 37,0 Prozent, in Drackendorf/Lobeda-Ost 32,3 und in Winzerla 28,5 Prozent bei gut 10.000 Einwohnern. Die Stadt selbst erwartet, dass Winzerla und die Ortschaften bis 2030 die ältesten Planungsräume werden. Insgesamt hat Jena mit 64 Pflegebedürftigen je 1.000 Einwohner die niedrigste Pflegequote aller 22 thüringischen Kreise (Land: 92) — das liegt an der Universität, nicht an wenigen alten Menschen.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Jena bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Jena und Saale-Holzland-Kreis: Kahla, Stadtroda, Hermsdorf und alle Gemeinden im Saale-Holzland-Kreis' },
       },
@@ -336,47 +341,46 @@ export default function JenaPage() {
           {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Jena ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Jena hat die{' '}
-            <strong className="text-pm-ink font-semibold">niedrigste Pflegequote aller 22
-            thüringischen Kreise</strong> — 64 Pflegebedürftige je 1.000 Einwohner gegenüber 92 im
-            Land. Das liegt an der Universität: 22,9 Prozent der Jenaer sind über 65, in Thüringen
-            28,7 Prozent. Man sollte daraus aber nicht schließen, dass Pflege hier ein kleines
-            Thema wäre. 7.056 Menschen sind pflegebedürftig, und die verteilen sich extrem ungleich
-            über die Stadt.
+            Jena hat die niedrigste Pflegequote aller 22 thüringischen Kreise — 64 Pflegebedürftige
+            je 1.000 Einwohner gegenüber 92 im Land. Das liegt an der Universität: 22,9 Prozent der
+            Jenaer sind über 65, in Thüringen 28,7 Prozent. Mit dem Stadtdurchschnitt zu planen wäre
+            trotzdem ein Fehler, denn{' '}
+            <strong className="text-pm-ink font-semibold">zwischen den Stadtteilen liegt beim
+            Seniorenanteil der Faktor vier</strong>: In Lichtenhain sind 9,5 Prozent der Einwohner
+            über 65, in Wogau 37,0 Prozent. Winzerla mit seinen gut 10.000 Bewohnern liegt bei
+            28,5 Prozent, Lobeda-Ost bei 32,3. Die Stadt selbst rechnet damit, dass Winzerla und die
+            Ortschaften bis 2030 die ältesten Planungsräume werden.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wie ungleich, zeigt der Blick in die Stadtbezirke:{' '}
-            <strong className="text-pm-ink font-semibold">In Wogau ist mehr als jeder dritte
-            Einwohner über 65 (37,0 Prozent), im Jenaer Zentrum jeder zehnte (10,1 Prozent), in
-            Lichtenhain Ort noch weniger.</strong> Zwischen dem ältesten und dem jüngsten Bezirk
-            liegt der Faktor vier. Alt wird man in Jena in den Plattenbaulagen von Lobeda und
-            Winzerla und in den eingemeindeten Dörfern — nicht dort, wo die Studierenden wohnen.
+            Dazu kommt die Lage im Saaletal, und die ist hier alltagsrelevant. Das Zentrum liegt auf
+            143 Metern,{' '}
+            <strong className="text-pm-ink font-semibold">der Ortsteil Cospeda mit seinen 1.387
+            Einwohnern auf 335</strong> — rund 190 Höhenmeter zwischen zwei bewohnten Stadtteilen
+            derselben Stadt. Die Stadt beschreibt ihre Planungsräume selbst über die Topografie: die
+            Ortschaften „in den Seitentälern der Saale sowie auf den Hochflächen", Jena-Ost geprägt
+            von den „Steilhängen der Kernberge". Und die Saale teilt die Stadt; die Übergänge nennt
+            die Verwaltung als Engpass. Für einen ambulanten Dienst heißt das lange Wege für kurze
+            Einsätze — für jemanden, der im Haus wohnt, gar nichts.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Dazu kommt die Lage im Tal, und die ist hier kein Postkartenmotiv, sondern Alltag. Das
-            Stadtzentrum liegt auf 143 Metern, der bewohnte Ortsteil Cospeda mit seinen 1.387
-            Einwohnern auf 335 — <strong className="text-pm-ink font-semibold">rund 190 Höhenmeter
-            zwischen zwei Stadtteilen derselben Stadt</strong>. Die Saale teilt Jena, und die Stadt
-            nennt ihre Übergänge selbst als Engpass. Im Osten prägen die Steilhänge der Kernberge
-            die Wohnlagen, im Norden gibt es ausgewiesene Hanglagen. Wer oben wohnt, merkt das
-            lange vor dem ersten Pflegegrad.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Beim Heim ist ein Missverständnis naheliegend. Der Anteil der Pflegebedürftigen in
-            vollstationärer Pflege liegt mit 15,9 Prozent klar über dem Landeswert von 12,6 — das
-            klingt nach einem besonders dichten Heimangebot. Gemessen an der Zahl der über
-            65-Jährigen stehen aber nur rund sechs Prozent mehr Plätze bereit als im Land. Der
-            hohe Anteil entsteht also vor allem daraus, dass es in Jena insgesamt wenige
-            Pflegebedürftige gibt — nicht daraus, dass es viele Heimplätze gäbe.
+            Bei der Versorgung fällt auf, dass in Jena seltener rein familiär gepflegt wird als im
+            Land: 51,0 gegen 54,2 Prozent. Der Heimanteil liegt mit 15,9 Prozent über dem
+            thüringischen Wert von 12,6. Daraus auf ein besonders dichtes Heimangebot zu schließen,
+            wäre allerdings falsch. Gemessen an der Zahl der über 65-Jährigen stehen in Jena rund 41
+            Dauerpflegeplätze je 1.000 bereit, im Land 38 — ein Vorsprung von sechs Prozent, während
+            der Anteil um 26 Prozent höher liegt. Der Grund ist der Nenner:{' '}
+            <strong className="text-pm-ink font-semibold">Jena hat nicht auffällig viele Heimplätze,
+            sondern auffällig wenige Pflegebedürftige insgesamt.</strong>
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Geriatrisch ist Jena versorgt: Das Universitätsklinikum führt eine eigene Klinik für
-            Geriatrie mit 440 stationären Fällen und einer Tagesklinik. Ein praktischer Hinweis,
-            weil Verzeichnisse hier oft falsch liegen:{' '}
-            <strong className="text-pm-ink font-semibold">Die Geriatrie sitzt am Klinikums-Standort
-            Lobeda, nicht in der Bachstraße</strong> — das sind rund fünf Kilometer und eine ganz
-            andere Anbindung. Lassen Sie sich vor jeder Entscheidung unabhängig beraten: Die
-            Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.
+            Geriatrisch versorgt das Universitätsklinikum die Stadt mit einer eigenen Klinik für
+            Geriatrie samt Tagesklinik. Ein praktischer Hinweis, der Angehörigen Wege spart: Mehrere
+            Verzeichnisse führen die Klinik unter der zentralen UKJ-Adresse in der Bachstraße — sie
+            sitzt aber am Klinikumsstandort in Lobeda, rund fünf Kilometer entfernt und mit anderer
+            Anbindung. Eine eigenständige geriatrische Reha-Klinik gibt es in Jena nicht; die
+            Anschlussbehandlung findet in der Region statt. Umso mehr zählt, wer danach zu Hause da
+            ist. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist
+            kostenlos und trägerunabhängig.
           </p>
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Jena</h2>
@@ -392,6 +396,7 @@ export default function JenaPage() {
               { q: 'Wie viele ältere Menschen leben in Jena?', a: '13.581 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,3 Prozent — in Thüringen 13,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Thüringen: 28,3 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Jena — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Jena im Schnitt 3,9 Wohnungen, in Thüringen 2,1. 46,1 Prozent der Gebäude stehen frei, 29,7 Prozent sind Reihenhäuser. 47,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Jena ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'In welchen Jenaer Stadtteilen wird Pflege am häufigsten gebraucht?', a: 'Das Alter verteilt sich in Jena extrem ungleich. In Wogau ist mehr als jeder dritte Einwohner über 65 (37,0 Prozent), in Drackendorf/Lobeda-Ost fast ein Drittel (32,3), in Winzerla 28,5 Prozent — im Jenaer Zentrum dagegen nur 10,1 Prozent und in Lichtenhain Ort 9,5. Zwischen dem ältesten und dem jüngsten Bezirk liegt der Faktor vier. Alt wird man in Jena in den Plattenbaulagen von Lobeda und Winzerla und in den eingemeindeten Dörfern auf den Hochflächen. Unsere Betreuungskräfte kommen in jeden Stadtteil — auch nach Cospeda auf 335 Metern, wo ein ambulanter Dienst weite Wege hätte. Anreise und Preis sind überall gleich.' },
+              { q: 'In welchen Jenaer Stadtteilen wird Pflege am häufigsten gebraucht?', a: 'Der Stadtdurchschnitt hilft in Jena kaum weiter — zwischen den Stadtteilen liegt beim Seniorenanteil der Faktor vier. In Lichtenhain sind 9,5 Prozent der Einwohner über 65, im Jenaer Zentrum 10,1 Prozent; in Wogau dagegen 37,0 Prozent, in Drackendorf/Lobeda-Ost 32,3 und in Winzerla 28,5 Prozent bei gut 10.000 Einwohnern. Die Stadt selbst erwartet, dass Winzerla und die Ortschaften bis 2030 die ältesten Planungsräume werden. Insgesamt hat Jena mit 64 Pflegebedürftigen je 1.000 Einwohner die niedrigste Pflegequote aller 22 thüringischen Kreise (Land: 92) — das liegt an der Universität, nicht an wenigen alten Menschen.' },
               { q: 'Welches Einzugsgebiet wird in Jena bedient?', a: 'Jena und Saale-Holzland-Kreis: Kahla, Stadtroda, Hermsdorf und alle Gemeinden im Saale-Holzland-Kreis' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

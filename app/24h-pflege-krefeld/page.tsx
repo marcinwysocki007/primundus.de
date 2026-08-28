@@ -94,6 +94,11 @@ const schemaMarkup = [
       },
       {
         '@type': 'Question',
+        name: 'Warum ist die Pflegequote in Krefeld so hoch?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Am Alter liegt es nicht — das ist der überraschende Teil. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent über 65 gegenüber 22,0 Prozent in Nordrhein-Westfalen, 7,2 gegenüber 6,9 Prozent über 80. Trotzdem liegt die Pflegequote bei 10,1 Prozent statt 7,6 und ist damit die zweithöchste in ganz NRW. Auffällig ist zugleich, dass Pflegegrad 1 hier viel seltener vorkommt (6,9 gegen 11,5 Prozent): In Krefeld werden nicht mehr leichte Fälle gezählt, sondern mehr schwere zu Hause aufgefangen — 15.936 Menschen ausschließlich von Angehörigen, 68,8 Prozent aller Pflegebedürftigen gegenüber 59,0 Prozent im Land.' },
+      },
+      {
+        '@type': 'Question',
         name: 'Welches Einzugsgebiet wird in Krefeld bedient?',
         acceptedAnswer: { '@type': 'Answer', text: 'Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach' },
       },
@@ -333,51 +338,53 @@ export default function KrefeldPage() {
           {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Krefeld ausmacht</h2>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In keiner Stadt, die wir bisher angesehen haben, tragen Familien so viel wie hier.{' '}
-            <strong className="text-pm-ink font-semibold">15.936 Krefelderinnen und Krefelder werden
-            ausschließlich von Angehörigen gepflegt</strong> — das sind 68,8 Prozent aller
-            Pflegebedürftigen gegenüber 59,0 Prozent in Nordrhein-Westfalen und der sechsthöchste
-            Wert unter allen 53 Kreisen und kreisfreien Städten des Landes. Rechnerisch wird damit
-            fast jeder fünfzehnte Einwohner der Stadt zu Hause von der eigenen Familie versorgt.
-            Ambulante Dienste kommen dabei seltener ins Haus als anderswo: 14,6 Prozent gegenüber
-            17,3 im Land.
+            In Krefeld pflegen Familien in einem Ausmaß, das die Statistik sonst kaum kennt.{' '}
+            <strong className="text-pm-ink font-semibold">15.936 Menschen — 68,8 Prozent aller
+            Pflegebedürftigen — beziehen ausschließlich Pflegegeld</strong>, werden also allein von
+            Angehörigen versorgt. In Nordrhein-Westfalen sind es 59,0 Prozent; unter allen 53
+            Kreisen und kreisfreien Städten des Landes liegt Krefeld damit auf Rang sechs.
+            Rechnerisch wird hier fast jeder fünfzehnte Einwohner zu Hause von der Familie gepflegt.
+            Ambulante Dienste kommen dagegen unterdurchschnittlich zum Einsatz: 14,6 gegen 17,3
+            Prozent.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Mit 10,1 Prozent hat Krefeld zugleich die zweithöchste Pflegequote in ganz
-            Nordrhein-Westfalen — 23.169 Menschen. Und das Bemerkenswerte daran:{' '}
-            <strong className="text-pm-ink font-semibold">Am Alter liegt es nicht.</strong> Die
-            Altersstruktur entspricht fast exakt dem Landesdurchschnitt (22,3 Prozent über 65
-            gegenüber 22,0; 7,2 Prozent über 80 gegenüber 6,9). Krefeld hat also nicht mehr alte
-            Menschen als andere Städte, sondern mehr pflegebedürftige — und fängt sie überwiegend
-            zu Hause auf. Dass der Anteil von Pflegegrad 1 mit 6,9 Prozent auffällig niedrig liegt
-            (Land: 11,5), deutet darauf hin, dass es dabei nicht um leichte Fälle geht.
+            Dahinter steht eine Pflegequote von 10,1 Prozent — der zweithöchste Wert in ganz
+            Nordrhein-Westfalen, wo der Landesschnitt bei 7,6 Prozent liegt. Und das Bemerkenswerte
+            daran:{' '}
+            <strong className="text-pm-ink font-semibold">Am Alter liegt es nicht.</strong> Krefelds
+            Altersstruktur entspricht fast exakt dem Landesdurchschnitt — 22,3 Prozent über 65
+            gegenüber 22,0 Prozent, 7,2 Prozent über 80 gegenüber 6,9. Die um ein Drittel höhere
+            Pflegequote lässt sich demografisch also nicht erklären. Auffällig ist auch, dass
+            Pflegegrad 1 hier mit 6,9 Prozent viel seltener vorkommt als im Land (11,5 Prozent) —
+            in Krefeld werden nicht mehr leichte Fälle gezählt, sondern mehr schwere zu Hause
+            aufgefangen.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Ein Fehlschluss sei ausdrücklich ausgeräumt. Nur 9,7 Prozent der Pflegebedürftigen
-            leben im Heim, im Land 12,2 Prozent — daraus liest sich leicht ein Platzmangel heraus.
-            Das Gegenteil trifft zu: Gemessen an der Zahl der über 65-Jährigen stehen in Krefeld{' '}
-            <strong className="text-pm-ink font-semibold">47 vollstationäre Plätze je 1.000 bereit,
-            in Nordrhein-Westfalen 46</strong>. Die Plätze sind da, sie werden nur seltener genutzt.
-            Der niedrige Anteil entsteht allein daraus, dass die Zahl der Pflegebedürftigen so groß
-            ist.
+            Ein naheliegender Fehlschluss sei ausgeräumt. Nur 9,7 Prozent der Krefelder
+            Pflegebedürftigen leben im Heim, im Land 12,2 Prozent — daraus liest sich leicht ein
+            Platzmangel heraus. Das Gegenteil trifft zu: Gemessen an der Zahl der über 65-Jährigen
+            stehen 47 vollstationäre Plätze je 1.000 bereit, in Nordrhein-Westfalen 46. Der niedrige
+            Anteil entsteht allein daraus, dass die Zahl der Pflegebedürftigen so groß ist. Wer sich
+            für die Betreuung zu Hause entscheidet, tut das in Krefeld nicht mangels Alternative.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wege sind in Krefeld selten das Problem — der bewohnte Teil der Stadt bewegt sich
-            zwischen etwa 31 und 40 Metern über dem Meer, die drei „Berge" im Stadtgebiet sind
-            Wald- und Naherholungsflächen. Das Alter verteilt sich dafür sehr ungleich: In
-            Traar-Ost ist fast jeder dritte Einwohner über 65 (31,4 Prozent), am Stephanplatz jeder
-            siebte (13,2 Prozent). Die äußeren Villen- und Dorflagen sind alt, die innenstadtnahen
+            Räumlich ist Krefeld unkompliziert: Das bewohnte Stadtgebiet bewegt sich zwischen etwa
+            31 und 40 Metern über dem Meer — rund zehn Höhenmeter über die gesamte Kernstadt. Die
+            drei „Berge" der Stadt sind Wald- und Naherholungsflächen, der Rhein bildet nur die
+            Ostgrenze. Ungleich verteilt ist dagegen das Alter: In Traar-Ost sind 31,4 Prozent der
+            Einwohner über 65, am Stephanplatz 13,2 Prozent. Die äußeren Villen- und Dorflagen —
+            Traar, Verberg, Stadtwald, Gellep-Stratum, Königshof — sind alt, die innenstadtnahen
             Viertel jung.
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Geriatrisch ist Krefeld gut ausgestattet — mit einer Falle für Angehörige. Drei
-            Kliniken führen eine geriatrische Fachabteilung, die größte am Krankenhaus Maria-Hilf
-            der Alexianer mit 917 Fällen. Bei Helios sitzt die eigentliche Geriatrie im{' '}
-            <strong className="text-pm-ink font-semibold">Cäcilien-Hospital in Hüls</strong> (726
-            Fälle), nicht am Hauptstandort Lutherplatz (85 Fälle) — dazwischen liegen rund zehn
-            Kilometer. Wer „Helios Geriatrie Krefeld" sucht, sollte den Standort mitlesen. Und
-            lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos
-            und trägerunabhängig.
+            Geriatrisch ist Krefeld gut ausgestattet: drei Kliniken mit eigener geriatrischer
+            Fachabteilung, die größte am Alexianer-Krankenhaus Maria-Hilf mit 917 stationären
+            Fällen. Bei Helios lohnt der Blick auf die Adresse — der Träger führt an zwei
+            Standorten eine Geriatrie, die eigentliche Versorgung sitzt im Cäcilien-Hospital in Hüls
+            (726 Fälle), rund zehn Kilometer vom Hauptstandort am Lutherplatz entfernt. Wer „Helios
+            Geriatrie Krefeld" sucht, sollte den Standort mitlesen. Lassen Sie sich vorher
+            unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und
+            trägerunabhängig.
           </p>
           {/* ⑥ FAQ */}
           <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Krefeld</h2>
@@ -393,6 +400,7 @@ export default function KrefeldPage() {
               { q: 'Wie viele ältere Menschen leben in Krefeld?', a: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
               { q: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
               { q: 'Warum ist die Pflegequote in Krefeld so hoch?', a: 'Am Alter liegt es nicht — das ist das Bemerkenswerte. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent der Einwohner sind über 65 (NRW 22,0), 7,2 Prozent über 80 (NRW 6,9). Trotzdem ist mit 10,1 Prozent die zweithöchste Pflegequote Nordrhein-Westfalens erreicht, 23.169 Menschen. Auffällig ist vor allem, wie sie versorgt werden: 15.936 Menschen — 68,8 Prozent — werden ausschließlich von Angehörigen gepflegt, gegenüber 59,0 Prozent im Land. Ambulante Dienste kommen seltener ins Haus (14,6 gegen 17,3 Prozent), und der Anteil von Pflegegrad 1 ist mit 6,9 Prozent auffällig niedrig (Land 11,5) — es geht hier also überwiegend nicht um leichte Fälle.' },
+              { q: 'Warum ist die Pflegequote in Krefeld so hoch?', a: 'Am Alter liegt es nicht — das ist der überraschende Teil. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent über 65 gegenüber 22,0 Prozent in Nordrhein-Westfalen, 7,2 gegenüber 6,9 Prozent über 80. Trotzdem liegt die Pflegequote bei 10,1 Prozent statt 7,6 und ist damit die zweithöchste in ganz NRW. Auffällig ist zugleich, dass Pflegegrad 1 hier viel seltener vorkommt (6,9 gegen 11,5 Prozent): In Krefeld werden nicht mehr leichte Fälle gezählt, sondern mehr schwere zu Hause aufgefangen — 15.936 Menschen ausschließlich von Angehörigen, 68,8 Prozent aller Pflegebedürftigen gegenüber 59,0 Prozent im Land.' },
               { q: 'Welches Einzugsgebiet wird in Krefeld bedient?', a: 'Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">
