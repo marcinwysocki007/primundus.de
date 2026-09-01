@@ -336,7 +336,7 @@ export default function LuenenPage() {
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-8">
             Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie
-            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.
+            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — Kosten, Recht und Ablauf</a>.
           </p>
           {/* ⑤ EINZUGSGEBIET */}
           <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">

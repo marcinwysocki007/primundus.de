@@ -344,7 +344,7 @@ export default function TraunsteinPage() {
           </p>
           <p className="text-[15px] leading-relaxed text-pm-body mb-8">
             Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie
-            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.
+            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — was sie kosten und wie es rechtlich läuft</a>.
           </p>
           {/* ⑤ EINZUGSGEBIET */}
           {/* ⑤ KREIS-H2 */}
