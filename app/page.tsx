@@ -5,15 +5,34 @@ import { ComparisonSection } from '@/components/home/ComparisonSection'
 import { FinalCTA } from '@/components/home/FinalCTA'
 import { TestimonialCard } from '@/components/home/TestimonialCard'
 
+// Titel und Beschreibung geaendert am 01.09.2026, Freigabe Martin.
+//
+// Grund aus der Search Console: "24 stunden pflege testsieger" und die
+// Schreibvariante bringen zusammen 1.011 Impressionen auf Position 9 -- und
+// VIER Klicks. Es rankt die Startseite, weil die eigentlich zustaendige Seite
+// /testsieger-24-stunden-pflege nicht im Index ist. Im alten Titel kam das
+// Wort "Testsieger" nicht vor, in der Beschreibung stand es ganz am Ende.
+//
+// Insgesamt zieht die Startseite 185 Anfragen und 2.349 Impressionen, liefert
+// aber nur 68 Klicks -- und 64 davon kommen von der Markensuche "primundus".
+// Fuer alles andere also 2.205 Impressionen und vier Klicks.
+//
+// Martins Vorgabe war "Sofortpreis und Pflegekraefte sofort ansehen beim
+// 6-fachen Testsieger". Uebernommen ist die Substanz, aber "24-Stunden-Pflege"
+// bleibt vorn: Ohne den Kopfbegriff passt der Titel nicht mehr auf die
+// Anfrage, um die es geht. 65 Zeichen, rund 485 px -- unter Googles Schnitt.
+//
+// Beobachtung laeuft: Basiswerte in seo-reports/startseite-basis.json,
+// Nachkontrolle fruehestens drei Wochen nach dem Neu-Crawl.
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege — Preis & Pflegekräfte in 2 Minuten sehen',
-  description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. Testsieger, 6× in Folge.',
+  title: '24-Stunden-Pflege vom 6× Testsieger — Preis & Kräfte sofort sehen',
+  description: '6× Testsieger in Folge. Preis und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Kein Vertrag, bevor Sie gewählt haben.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
-    title: '24-Stunden-Pflege — Preis & Pflegekräfte in 2 Minuten sehen',
-    description: 'Preis und passende Betreuungskräfte sehen, bevor Sie sich entscheiden — mit Erfahrung und Sprachkenntnissen. Kein Vertrag vor Ihrer Wahl. Testsieger, 6× in Folge.',
+    title: '24-Stunden-Pflege vom 6× Testsieger — Preis & Kräfte sofort sehen',
+    description: '6× Testsieger in Folge. Preis und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Kein Vertrag, bevor Sie gewählt haben.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',
