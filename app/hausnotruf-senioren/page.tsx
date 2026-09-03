@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('hausnotruf-senioren', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist ein Hausnotruf?' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Hausnotruf für Senioren — Kosten, Kassenzuschuss und Auswahl 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/hausnotruf-senioren',
   },
   {
@@ -84,7 +88,7 @@ export default function HausnotrufSenioren() {
             Hausnotruf für Senioren — Kosten, Zuschuss & Auswahl
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse kann über den Entlastungsbetrag die Kosten übernehmen. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall sowieso immer vor Ort.

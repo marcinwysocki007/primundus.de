@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('diabetes-pflege-senioren', '25. April 2026')
 
 const SECTIONS = [
   { id: 'besonderheiten', title: 'Besonderheiten bei Diabetes im Alter' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Diabetes Pflege Senioren — Blutzucker, Hypoglykämie und 24h-Betreuung',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/diabetes-pflege-senioren',
   },
   {
@@ -84,7 +88,7 @@ export default function DiabetesPflegeSenioren() {
             Diabetes Pflege Senioren — was bei der Betreuung zuhause wichtig ist
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Diabetes Typ 2 ist bei Senioren über 70 eine der häufigsten Erkrankungen — und bei pflegebedürftigen Menschen oft eines von mehreren gleichzeitigen Problemen. Die häusliche Pflege von Menschen mit Diabetes erfordert strukturiertes Management: regelmäßige Mahlzeiten, Blutzuckerkontrolle, Medikamentensicherheit und das sichere Erkennen einer Unterzuckerung.

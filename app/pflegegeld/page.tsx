@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegegeld', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist Pflegegeld?' },
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegegeld 2026 — Beträge, Anspruch & Kombinationen',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegegeld',
   },
   {
@@ -113,7 +117,7 @@ export default function Pflegegeld() {
             Pflegegeld 2026 — Beträge, Anspruch & Kombinationen
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegeld 2026 beträgt 347 € (Pflegegrad 2) bis 990 € (Pflegegrad 5) pro Monat — identisch zu 2025. Die letzte Erhöhung um 4,5 % galt ab Januar 2025, die nächste Dynamisierung kommt frühestens Januar 2028. Neu seit Juli 2025: Das Entlastungsbudget von 3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege — 2026 erstmals vollständig nutzbar.

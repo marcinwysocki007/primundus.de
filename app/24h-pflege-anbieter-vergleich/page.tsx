@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24h-pflege-anbieter-vergleich', '30. April 2026')
 
 const SECTIONS = [{ id: 'kriterien', title: 'Die wichtigsten Kriterien' }, { id: 'rechtssicherheit', title: 'Rechtssicherheit zuerst' }, { id: 'qualitaet', title: 'Qualitätsprüfung' }, { id: 'transparenz', title: 'Kosten & Transparenz' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -28,10 +32,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: '24h-Pflege Anbieter vergleichen — worauf es wirklich ankommt',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24h-pflege-anbieter-vergleich',
   },
   {
@@ -72,7 +76,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 6 Min Lesezeit · Aktualisiert August 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege Anbieter vergleichen — worauf es wirklich ankommt</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Nicht jeder 24h-Pflege-Anbieter ist gleich. Manche vermitteln über Marktplätze ohne Qualitätskontrolle, andere arbeiten im rechtlichen Graubereich. Diese Seite zeigt die entscheidenden Kriterien beim Anbietervergleich.</p>
           <h2 id="kriterien" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Die wichtigsten Kriterien beim Anbietervergleich</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Der Markt für 24h-Pflege ist unübersichtlich — von seriösen Agenturen bis zu fragwürdigen Vermittlungsportalen. Drei Kriterien sind entscheidend: Rechtssicherheit des Modells, aktive Qualitätsprüfung der Kräfte, und Transparenz bei Kosten und Vertrag.</p>

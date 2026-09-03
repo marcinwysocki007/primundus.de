@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-ambulante-pflege', '25. April 2026')
 
 const SECTIONS = [
   { id: 'unterschied', title: 'Der grundlegende Unterschied' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: '24h-Pflege vs. ambulante Pflege — Vergleich 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-ambulante-pflege',
   },
   {
@@ -102,7 +106,7 @@ export default function VsAmbulantePflege() {
             24h-Pflege vs. ambulante Pflege — Vergleich 2026
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ambulante Pflege oder 24h-Betreuung — das ist oft die erste Entscheidung wenn Pflege notwendig wird. Ambulante Dienste kommen mehrmals täglich für definierte Einsätze. Eine 24h-Kraft lebt im Haushalt und ist immer da. Wann was sinnvoll ist, hängt nicht nur von den Kosten ab — sondern vom tatsächlichen Pflegebedarf.

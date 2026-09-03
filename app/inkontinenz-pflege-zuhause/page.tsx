@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('inkontinenz-pflege-zuhause', '25. April 2026')
 
 const SECTIONS = [
   { id: 'formen', title: 'Formen der Inkontinenz' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Inkontinenz Pflege zuhause — Hilfsmittel, Alltag und Würde',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/inkontinenz-pflege-zuhause',
   },
   {
@@ -83,7 +87,7 @@ export default function InkontinenzPflegeZuhause() {
             Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Inkontinenz ist eines der häufigsten und gleichzeitig schamhaftesten Pflegethemen. Rund 80 % der pflegebedürftigen Senioren sind davon betroffen — in unterschiedlichem Ausmaß. Der richtige Umgang schützt die Würde, verhindert Infektionen und Wundliegen, und macht den Alltag für alle leichter.

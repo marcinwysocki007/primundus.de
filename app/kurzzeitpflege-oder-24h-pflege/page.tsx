@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('kurzzeitpflege-oder-24h-pflege', '30. April 2026')
 
 const SECTIONS = [{ id: 'unterschied', title: 'Der grundlegende Unterschied' }, { id: 'wann-kurz', title: 'Wann Kurzzeitpflege' }, { id: 'wann-24h', title: 'Wann 24h-Pflege' }, { id: 'kosten', title: 'Kostenvergleich' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -27,10 +31,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Kurzzeitpflege oder 24h-Pflege — was passt zu Ihrer Situation?',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege',
   },
   {
@@ -70,7 +74,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 5 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Kurzzeitpflege oder 24h-Pflege — was passt zu Ihrer Situation?</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Nach dem Krankenhausaufenthalt, beim Ausfall des pflegenden Angehörigen, in einer Übergangssituation — welche Lösung ist die richtige? Kurzzeitpflege oder direkt 24h-Pflege zuhause? Dieser Ratgeber hilft bei der Entscheidung.</p>
           <h2 id="unterschied" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Der grundlegende Unterschied</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Kurzzeitpflege ist stationär und zeitlich begrenzt — die Person zieht vorübergehend in eine Einrichtung. 24h-Pflege ist dauerhaft häuslich — eine Kraft zieht ein und bleibt so lange wie nötig.</p>

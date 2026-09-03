@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('beratungsgespraech', '30. April 2026')
 
 const SECTIONS = [{ id: 'ablauf', title: 'Ablauf' }, { id: 'fragen', title: 'Was gefragt wird' }, { id: 'danach', title: 'Was danach passiert' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -27,10 +31,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Beratungsgespräch bei Primundus — so läuft es ab',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/beratungsgespraech',
   },
   {
@@ -70,7 +74,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Über Primundus · 4 Min</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Beratungsgespräch bei Primundus — so läuft es ab</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Das kostenlose Beratungsgespräch mit Primundus dauert 15–20 Minuten. Keine versteckten Kosten, kein Druck, keine Verpflichtung. Am Ende kennen Sie Ihren individuellen Eigenanteil und alle Möglichkeiten.</p>
           <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Ablauf</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Dieser Ratgeber gibt Ihnen einen kompakten Überblick über das Thema — praxisnah und auf die Situation pflegender Familien zugeschnitten.</p>

@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { AuthorByline } from '@/components/AuthorByline'
 import { KurzAntwort } from '@/components/KurzAntwort'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-kostenuebernahme', '21. August 2026')
 
 // Nachfrage-Lücke (GSC 08/2026): "24 stunden pflege kostenübernahme"
 // 38 Impr. auf Pos. 66 — keine fokussierte Seite. Kaufnahe Query; die
@@ -31,10 +35,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Kostenübernahme bei der 24-Stunden-Pflege: Wer zahlt was?',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-08-14',
-    dateModified: '2026-08-21',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24-stunden-pflege-kostenuebernahme',
   },
   {
@@ -110,7 +114,7 @@ export default function KostenuebernahmePage() {
             Kostenübernahme bei der 24-Stunden-Pflege: Wer zahlt was?
           </h1>
 
-          <AuthorByline updated="21. August 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <KurzAntwort frage="Wer zahlt bei einer 24-Stunden-Betreuung dazu?" stand="August 2026">
             Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.

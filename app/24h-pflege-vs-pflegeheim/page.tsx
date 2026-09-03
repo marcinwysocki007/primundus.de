@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim', '30. April 2026')
 
 const SECTIONS = [{ id: 'kosten', title: 'Kostenvergleich 2026' }, { id: 'qualitaet', title: 'Betreuungsqualität' }, { id: 'alltag', title: 'Alltag & Lebensqualität' }, { id: 'wann-was', title: 'Wann was sinnvoll ist' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -27,10 +31,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: '24h-Pflege vs. Pflegeheim — der vollständige Vergleich 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-pflegeheim',
   },
   {
@@ -71,7 +75,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 8 Min Lesezeit · Aktualisiert August 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege vs. Pflegeheim — der vollständige Vergleich 2026</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Pflegeheim oder 24h-Pflege zuhause — das ist die wichtigste Entscheidung wenn Pflege nötig wird. Dieser Vergleich zeigt alle relevanten Unterschiede: Kosten, Betreuungsqualität, Alltag und emotionale Aspekte.</p>
           <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Kostenvergleich 2026</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat bundesweit (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — in Bayern und Baden-Württemberg deutlich höher. 24h-Pflege über Primundus kostet 2.200–3.500 €/Monat, mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 typisch auf 1.500–2.000 €/Monat.</p>

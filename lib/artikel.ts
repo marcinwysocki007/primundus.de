@@ -79,7 +79,6 @@ export const ARTIKEL: Artikel[] = [
   { slug: 'pflegegrad-nach-schlaganfall', titel: "Pflegegrad nach Schlaganfall", rubrik: 'pflegegrade' },
   { slug: 'pflegegrad-ohne-diagnose', titel: "Pflegegrad ohne Diagnose", rubrik: 'ratgeber' },
   { slug: 'pflegegrad-widerspruch-einlegen', titel: "Pflegegrad Widerspruch einlegen", rubrik: 'ratgeber' },
-  { slug: 'pflegegrade-2025', titel: "Pflegegrade 2025/2026", rubrik: 'ratgeber' },
   { slug: 'pflegeheim-kosten-deutschland', titel: "Pflegeheim Kosten", rubrik: 'vergleiche' },
   { slug: 'pflegehilfsmittel-beantragen', titel: "Pflegehilfsmittel beantragen", rubrik: 'ratgeber' },
   { slug: 'pflegehilfsmittel-organisieren', titel: "Pflegehilfsmittel organisieren", rubrik: 'ratgeber' },

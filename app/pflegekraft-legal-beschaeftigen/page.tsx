@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegekraft-legal-beschaeftigen', '25. April 2026')
 
 const SECTIONS = [
   { id: 'modelle', title: 'Die 3 Beschäftigungsmodelle' },
@@ -16,7 +20,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Pflegekraft legal beschäftigen — die 3 Modelle 2026',
-  description: 'Pflegekraft legal beschäftigen: Entsendemodell, Direktanstellung oder Selbstständigkeit? Was legal ist,',
+  description: 'Pflegekraft legal beschäftigen: Entsendung, Anstellung oder selbstständig? Was erlaubt ist, welche Risiken drohen und woran Sie ein sauberes Modell erkennen.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-legal-beschaeftigen' },
   openGraph: {
     title: 'Pflegekraft legal beschäftigen — 3 Modelle | Primundus',
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegekraft legal beschäftigen — die 3 Modelle 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegekraft-legal-beschaeftigen',
   },
   {
@@ -87,7 +91,7 @@ export default function PflegekraftLegalBeschaeftigen() {
             Pflegekraft legal beschäftigen — die 3 Wege
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Es gibt drei Wege eine Pflegekraft zu beschäftigen — nur zwei davon sind legal, einer ist eindeutig empfehlenswert. Das Entsendemodell über eine Agentur ist der rechtssicherste, unkomplizierteste und meistgenutzte Weg. Scheinselbstständigkeit dagegen ist strafbar und kostet im Ernstfall tausende Euro.

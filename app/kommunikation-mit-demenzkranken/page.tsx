@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('kommunikation-mit-demenzkranken', '25. April 2026')
 
 const SECTIONS = [
   { id: 'grundprinzipien', title: 'Die 5 Grundprinzipien' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Kommunikation mit Demenzkranken — was hilft und was schadet',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/kommunikation-mit-demenzkranken',
   },
   {
@@ -85,7 +89,7 @@ export default function KommunikationMitDemenzkranken() {
             Kommunikation mit Demenzkranken — was hilft & was schadet
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Mit einem demenzkranken Menschen zu kommunizieren bedeutet: In seine Welt einsteigen statt ihn in unsere zu holen. Korrekturen, Konfrontationen mit der Realität und Ungeduld führen zu Distress ohne jeden Nutzen. Fünf Grundprinzipien verändern die tägliche Kommunikation grundlegend — und erleichtern den Alltag für alle Beteiligten.

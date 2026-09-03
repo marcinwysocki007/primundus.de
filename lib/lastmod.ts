@@ -35,7 +35,12 @@ export function lastmodFuerSlug(slug: string): Date | undefined {
       // bekam damit ausgerechnet fuer die verbesserten Seiten das Signal
       // "unveraendert". Steht ein Tag da, zaehlt er jetzt; steht keiner da,
       // bleibt es beim Monatsersten — das ist dann die ehrliche Genauigkeit.
-      const akt = src.match(
+      // Seit 03.09.2026 steht das sichtbare Datum oft als aktualisiertAm('slug', '25. April 2026')
+      const deklariert = src.match(/aktualisiertAm\('[^']*',\s*'(\d{1,2})\. (\S+) (\d{4})'\)/)
+      if (deklariert && MONATE[deklariert[2]] !== undefined) {
+        result = new Date(Date.UTC(parseInt(deklariert[3], 10), MONATE[deklariert[2]], parseInt(deklariert[1], 10)))
+      }
+      const akt = result ? null : src.match(
         /Aktualisiert(?:\s+am)?\s+(?:(\d{1,2})\.\s*)?(Januar|Februar|März|Maerz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})/
       )
       if (akt) {
@@ -67,4 +72,39 @@ export function lastmodFuerSlug(slug: string): Date | undefined {
   }
   cache.set(slug, result)
   return result
+}
+
+const MONATSNAMEN = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August',
+  'September', 'Oktober', 'November', 'Dezember']
+
+/**
+ * EINE Datumsquelle je Artikel (03.09.2026, nach dem externen Audit).
+ *
+ * Vorher standen auf jeder Artikelseite drei voneinander unabhaengige Daten:
+ * dateModified im JSON-LD (bei 112 von 122 Seiten eingefroren gleich
+ * datePublished), die sichtbare Byline ("Aktualisiert am ...") und daraus
+ * abgeleitet das lastmod der Sitemap. Sie konnten auseinanderlaufen -- und
+ * taten es: Seiten, die im August umgeschrieben wurden, meldeten April.
+ *
+ * Jetzt deklariert die Seite genau einmal, was sie weiss: das sichtbar
+ * genannte Datum, falls die Redaktion eines gesetzt hat. Fehlt es, gilt der
+ * letzte Commit, der die Seite angefasst hat (lib/lastmod-git.json). Beides
+ * ist ueberpruefbar; nichts wird geschaetzt. Ein Reviewer wird NICHT
+ * ausgewiesen, weil es keinen Pruefprozess gibt -- den vorzutaeuschen waere
+ * genau das, was der Audit anprangert.
+ */
+export function aktualisiertAm(slug: string, sichtbar?: string): { iso: string; sichtbar: string } {
+  if (sichtbar) {
+    const m = sichtbar.match(/^(\d{1,2})\. (\S+) (\d{4})$/)
+    if (m && MONATE[m[2]] !== undefined) {
+      const d = new Date(Date.UTC(parseInt(m[3], 10), MONATE[m[2]], parseInt(m[1], 10)))
+      return { iso: d.toISOString().slice(0, 10), sichtbar }
+    }
+  }
+  const git = (gitDaten as Record<string, string>)[slug]
+  if (git) {
+    const d = new Date(git + 'T00:00:00.000Z')
+    return { iso: git, sichtbar: `${d.getUTCDate()}. ${MONATSNAMEN[d.getUTCMonth()]} ${d.getUTCFullYear()}` }
+  }
+  return { iso: '', sichtbar: '' }
 }

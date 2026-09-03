@@ -52,7 +52,6 @@ const artikel = [
   'pflegegrad-bei-demenz',
   'pflegegrad-nach-schlaganfall',
   'pflegegrad-bei-parkinson',
-  'pflegegrade-2025',
   'pflegesachleistungen',
   'verhinderungspflege',
   'kurzzeitpflege',

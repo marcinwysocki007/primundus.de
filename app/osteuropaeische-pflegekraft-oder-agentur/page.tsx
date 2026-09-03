@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('osteuropaeische-pflegekraft-oder-agentur', '25. April 2026')
 
 const SECTIONS = [
   { id: 'direkt-vs-agentur', title: 'Direkt vs. Agentur' },
@@ -15,7 +19,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Osteuropäische Pflegekraft direkt oder über Agentur?',
-  description: 'Osteuropäische Pflegekraft direkt suchen oder über eine Agentur? Vollständiger Vergleich: Kosten, Rechtssicherheit,',
+  description: 'Osteuropäische Pflegekraft privat oder über einen Anbieter? Der Vergleich nach Kosten, Rechtssicherheit, Ersatz bei Ausfall und Aufwand für die Familie.',
   alternates: { canonical: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Osteuropäische Pflegekraft direkt oder über Agentur',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/osteuropaeische-pflegekraft-oder-agentur',
   },
   {
@@ -76,7 +80,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
             Osteuropäische Pflegekraft direkt oder über Agentur?
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Viele Familien fragen sich: Warum nicht die Pflegekraft direkt in Polen oder Rumänien suchen statt über eine Agentur? Klingt günstiger. Die Realität ist komplexer — direktes Suchen bedeutet: selbst prüfen, selbst Rechtssicherheit herstellen, selbst Ersatz organisieren wenn die Kraft krank wird. Dieser Vergleich zeigt was wirklich anders ist.

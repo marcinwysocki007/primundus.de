@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegegrad-3', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was bedeutet Pflegegrad 3?' },
@@ -17,7 +21,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Pflegegrad 3 — Leistungen & 599 € Pflegegeld 2026',
-  description: 'Pflegegrad 3: 599 € Pflegegeld + 1.497 € Sachleistungen + 3.539 € Entlastungsbudget pro Jahr. Alle Leistungen,',
+  description: 'Pflegegrad 3 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget pro Jahr und was das für die Betreuung zu Hause bedeutet — mit Beträgen 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-3' },
   openGraph: {
     title: 'Pflegegrad 3 — Leistungen & 599 € Pflegegeld 2026 | Primundus',
@@ -35,10 +39,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegegrad 3 — Leistungen, Beträge & Voraussetzungen 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegegrad-3',
   },
   {
@@ -90,7 +94,7 @@ export default function Pflegegrad3() {
             Pflegegrad 3 — Leistungen & Beträge 2026
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegrad 3 bedeutet schwere Beeinträchtigung der Selbstständigkeit. Betroffene erhalten 599 € Pflegegeld pro Monat, 1.497 € Sachleistungen und 3.539 € Entlastungsbudget pro Jahr. PG 3 ist der häufigste Pflegegrad bei der 24h-Pflege zu Hause — mit einer Betreuungskraft bleibt ein sicheres Leben im eigenen Zuhause in fast allen Fällen möglich.

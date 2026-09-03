@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegende-angehoerige-unterstuetzen', '25. April 2026')
 
 const SECTIONS = [
   { id: 'situation', title: 'Die Situation pflegender Angehöriger' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegende Angehörige unterstützen — Entlastung und Hilfe',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegende-angehoerige-unterstuetzen',
   },
   {
@@ -76,7 +80,7 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
             Pflegende Angehörige unterstützen — echte Hilfe, keine Ratschläge
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Dieser Ratgeber richtet sich an zwei Gruppen: an Menschen die jemanden kennen der pflegt — und an die Pflegenden selbst. Gut gemeinte Ratschläge helfen selten. Konkrete Entlastung schon. Und das Schwerste für viele Pflegende: Hilfe annehmen zu lernen.

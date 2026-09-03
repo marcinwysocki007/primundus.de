@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegesachleistungen', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-sind', title: 'Was sind Pflegesachleistungen?' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegesachleistungen 2026 — Beträge, Anspruch und Nutzung',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegesachleistungen',
   },
   {
@@ -84,7 +88,7 @@ export default function Pflegesachleistungen() {
             Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegesachleistungen sind Kassengelder die direkt an ambulante Pflegedienste fließen — nicht an die Familie. Sie betragen 796 Euro (PG 2) bis 2.299 Euro (PG 5) pro Monat. Wer Sachleistungen nicht vollständig nutzt, bekommt anteiliges Pflegegeld — die Kombinationsleistung.

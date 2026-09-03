@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('entlastungsbetrag', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist der Entlastungsbetrag?' },
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Entlastungsbetrag 2026 — 131 Euro pro Monat richtig nutzen',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/entlastungsbetrag',
   },
   {
@@ -86,7 +90,7 @@ export default function Entlastungsbetrag() {
             Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Der Entlastungsbetrag beträgt 131 Euro pro Monat — für alle Pflegegrade 1 bis 5, zusätzlich zum Pflegegeld. Er ist zweckgebunden, wird von vielen Familien nicht vollständig genutzt, und kann bis zu 1.572 Euro angespart werden. Wer die Regeln kennt, holt das Maximum heraus.

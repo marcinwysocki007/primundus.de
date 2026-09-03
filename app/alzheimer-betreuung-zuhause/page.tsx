@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('alzheimer-betreuung-zuhause', '25. April 2026')
 
 const SECTIONS = [
   { id: 'verlauf', title: 'Alzheimer verstehen — Stadien & Verlauf' },
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Alzheimer Betreuung zuhause — Stadien, Alltag & 24h-Pflege',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/alzheimer-betreuung-zuhause',
   },
   {
@@ -86,7 +90,7 @@ export default function AlzheimerBetreuungZuhause() {
             Alzheimer Betreuung zuhause — was möglich ist & wie 24h-Pflege hilft
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Alzheimer ist die häufigste Demenzform — und häusliche Betreuung ist in allen Stadien grundsätzlich möglich. Die vertraute Umgebung mit den bekannten Geräuschen, Gerüchen und Gesichtern gibt Orientierung, die kein Pflegeheim ersetzen kann. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei fortgeschrittenem Alzheimer erhalten.

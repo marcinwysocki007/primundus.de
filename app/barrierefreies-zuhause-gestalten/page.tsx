@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('barrierefreies-zuhause-gestalten', '25. April 2026')
 
 const SECTIONS = [
   { id: 'massnahmen', title: 'Die wichtigsten Maßnahmen' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Barrierefreies Zuhause gestalten — Tipps und Förderung 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/barrierefreies-zuhause-gestalten',
   },
   {
@@ -84,7 +88,7 @@ export default function BarrierefreiesZuhause() {
             Barrierefreies Zuhause gestalten — Tipps & Förderung 2026
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Ein sicheres, barrierefreies Zuhause ist die Grundlage für häusliche Pflege. Die Pflegekasse fördert Wohnraumanpassungen mit bis zu 4.180 Euro je Maßnahme — und viele der wirksamsten Maßnahmen kosten nur wenige hundert Euro. Wichtig: Antrag vor Beginn der Maßnahme stellen.

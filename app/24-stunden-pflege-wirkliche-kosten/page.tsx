@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-wirkliche-kosten', '14. August 2026')
 
 // Aus der Wettbewerbsanalyse 14.08.: Kein Anbieter zeigt eine ehrliche
 // Gesamtrechnung — stattdessen Tagespreis-Anker, "ab"-Lockpreise und
@@ -31,10 +35,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Was kostet 24-Stunden-Pflege wirklich? Die ehrliche Gesamtrechnung',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-08-14',
-    dateModified: '2026-08-14',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24-stunden-pflege-wirkliche-kosten',
   },
   {
@@ -112,7 +116,7 @@ export default function WirklicheKostenPage() {
             Was kostet 24-Stunden-Pflege wirklich? Die ehrliche Gesamtrechnung
           </h1>
 
-          <AuthorByline updated="14. August 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wer Angebote für 24-Stunden-Pflege vergleicht, stößt auf erstaunlich unterschiedliche Zahlen:

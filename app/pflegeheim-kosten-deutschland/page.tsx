@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegeheim-kosten-deutschland', '25. April 2026')
 
 const SECTIONS = [
   { id: 'kosten', title: 'Was kostet ein Pflegeheim 2026?' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegeheim Kosten Deutschland 2026 — Eigenanteil und Vergleich',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegeheim-kosten-deutschland',
   },
   {
@@ -84,7 +88,7 @@ export default function PflegeheimKosten() {
             Pflegeheim Kosten Deutschland 2026 — Eigenanteil & Vergleich
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit ca. 3.364 Euro pro Monat — und steigt seit Jahren. Gleichzeitig wissen viele Familien nicht dass 24h-Pflege zuhause bei vergleichbarem Pflegebedarf oft deutlich günstiger ist — und das Leben im eigenen Zuhause erhält.

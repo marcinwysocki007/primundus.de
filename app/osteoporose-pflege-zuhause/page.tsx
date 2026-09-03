@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('osteoporose-pflege-zuhause', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Osteoporose — was das bedeutet' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Osteoporose Pflege zuhause — Sturzschutz, Alltag und Ernährung',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/osteoporose-pflege-zuhause',
   },
   {
@@ -76,7 +80,7 @@ export default function OsteoporosePflegeZuhause() {
             Osteoporose Pflege zuhause — Sturzschutz & Alltag
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Bei Osteoporose sind die Knochen so porös dass ein Sturz zu einem schweren Bruch führen kann — der Hüftbruch ist die gefürchtetste Folge und bedeutet für viele ältere Menschen den Einstieg in intensive Pflege. Sturzprävention ist deshalb das wichtigste Ziel. Mit einer 24h-Betreuungskraft die immer anwesend ist, sinkt das Sturzrisiko erheblich.

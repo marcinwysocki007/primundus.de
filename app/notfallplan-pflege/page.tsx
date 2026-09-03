@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('notfallplan-pflege', '25. April 2026')
 
 const SECTIONS = [
   { id: 'warum', title: 'Warum ein Notfallplan?' },
@@ -15,7 +19,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Notfallplan Pflege — was hineingehört & Vorlage | Primundus',
-  description: 'Notfallplan Pflege: Was in jeden Pflegenotfallplan gehört, eine kostenlose Vorlage und wie man den Plan aktuell hält. Für zuhause,',
+  description: 'Notfallplan für die Pflege zu Hause: was hineingehört, wer informiert werden muss und wie Sie den Plan aktuell halten — als Vorlage zum Ausfüllen.',
   alternates: { canonical: 'https://primundus.de/notfallplan-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Notfallplan Pflege — was hineingehört und Vorlage',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/notfallplan-pflege',
   },
   {
@@ -76,7 +80,7 @@ export default function NotfallplanPflege() {
             Notfallplan Pflege — was hineingehört & Vorlage
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Im Notfall zählen Sekunden. Wer dann erst suchen muss welche Medikamente jemand nimmt, welcher Arzt zuständig ist, oder wer bei einem Sturz als Erstes angerufen werden soll — verliert wertvolle Zeit. Ein Notfallplan kostet einmal 30 Minuten und gibt Jahre lang Sicherheit.

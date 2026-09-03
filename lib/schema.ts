@@ -16,6 +16,7 @@ import { TELEFON_E164, AWARD } from '@/lib/fakten'
 export const ORG_ID = 'https://primundus.de/#organization'
 export const WEBSITE_ID = 'https://primundus.de/#website'
 export const PERSON_KAROLINA_ID = 'https://primundus.de/#karolina-jakubowska'
+export const PERSON_MARTA_ID = 'https://primundus.de/#marta-kapcio'
 
 export function siteGraph() {
   return {
@@ -82,6 +83,16 @@ export function siteGraph() {
         url: 'https://primundus.de',
         publisher: { '@id': ORG_ID },
         inLanguage: 'de-DE',
+      },
+      {
+        '@type': 'Person',
+        '@id': PERSON_MARTA_ID,
+        name: 'Marta Kapcio',
+        jobTitle: 'Persönliche Ansprechpartnerin & Pflegeberaterin',
+        worksFor: { '@id': ORG_ID },
+        url: 'https://primundus.de/ueber-uns#team',
+        image: 'https://primundus.de/images/marta-kapcio.jpg',
+        knowsAbout: ['24-Stunden-Pflege', 'Pflegeberatung', 'Pflegegrade', 'Pflegefinanzierung'],
       },
       {
         '@type': 'Person',

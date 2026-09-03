@@ -9,6 +9,10 @@ const nextConfig = {
   images: { unoptimized: true },
   async redirects() {
     return [
+      // 03.09.2026: Jahres-URL in die Evergreen-Seite (3 gegen 49 Impressionen,
+      // kein eigener Inhalt; Jahreszahl gehoert in den Titel, nicht in den Slug)
+      { source: '/pflegegrade-2025', destination: '/pflegegrade', permanent: true },
+      { source: '/pflegegrade-2025/', destination: '/pflegegrade/', permanent: true },
       {
         source: '/pflegegeld-2025',
         destination: '/pflegegeld',

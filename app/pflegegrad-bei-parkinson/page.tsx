@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegegrad-bei-parkinson', '25. April 2026')
 
 const SECTIONS = [
   { id: 'welcher-pflegegrad', title: 'Welcher Pflegegrad bei Parkinson?' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegegrad bei Parkinson — welcher Grad und wie beantragen 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegegrad-bei-parkinson',
   },
   {
@@ -84,7 +88,7 @@ export default function PflegegradBeiParkinson() {
             Pflegegrad bei Parkinson — welcher Grad & wie beantragen
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Parkinson ist eine progrediente Erkrankung — der Pflegebedarf nimmt über Zeit zu, der Pflegegrad auch. Was Menschen mit Parkinson bei der Begutachtung wissen müssen: Das On-Off-Phänomen führt häufig zu Untereinstufungen, weil der Gutachtertermin in einer guten Phase liegen kann. Dieses Risiko lässt sich durch gute Vorbereitung minimieren.

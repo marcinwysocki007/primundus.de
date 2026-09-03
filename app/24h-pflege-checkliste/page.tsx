@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24h-pflege-checkliste', '30. April 2026')
 
 const SECTIONS = [{ id: 'wohnung', title: 'Wohnung vorbereiten' }, { id: 'dokumente', title: 'Dokumente & Informationen' }, { id: 'erster-tag', title: 'Erster Tag' }, { id: 'laufend', title: 'Laufende Betreuung' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -27,10 +31,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: '24h-Pflege Checkliste — alles was Familien vor dem Start vorbereiten sollten',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24h-pflege-checkliste',
   },
   {
@@ -71,7 +75,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 5 Min Lesezeit · Aktualisiert August 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege Checkliste — alles was Familien vor dem Start vorbereiten sollten</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Eine Betreuungskraft zieht ein — und die Familie möchte, dass alles reibungslos läuft. Diese Checkliste zeigt was vorzubereiten ist: von der Wohnung bis zu den Dokumenten, vom ersten Tag bis zur laufenden Betreuung.</p>
           <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
             <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Wohnung vorbereiten</p>

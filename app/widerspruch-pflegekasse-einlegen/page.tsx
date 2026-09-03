@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('widerspruch-pflegekasse-einlegen', '25. April 2026')
 
 const SECTIONS = [
   { id: 'wann', title: 'Wann Widerspruch einlegen?' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Widerspruch Pflegekasse einlegen — Muster & Tipps 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/widerspruch-pflegekasse-einlegen',
   },
   {
@@ -85,7 +89,7 @@ export default function WiderspruchPflegekasseEinlegen() {
             Widerspruch Pflegekasse einlegen — Muster & Tipps
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Rund ein Drittel aller Widersprüche gegen Pflegegrad-Bescheide sind erfolgreich. Das Zeitfenster ist eng: genau ein Monat nach dem Bescheiddatum. Der Widerspruch selbst ist formlos — was danach kommt, entscheidet über den Erfolg: Pflegetagebuch, Arztberichte, konkretes Gutachten.

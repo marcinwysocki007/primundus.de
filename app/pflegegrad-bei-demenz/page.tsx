@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegegrad-bei-demenz', '25. April 2026')
 
 const SECTIONS = [
   { id: 'wie-hoch', title: 'Welcher Pflegegrad bei Demenz?' },
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegegrad bei Demenz — welcher Grad und wie beantragen 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegegrad-bei-demenz',
   },
   {
@@ -86,7 +90,7 @@ export default function PflegegradBeiDemenz() {
             Pflegegrad bei Demenz — welcher Grad & wie beantragen?
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Seit der Pflegereform 2017 werden kognitive Einschränkungen bei der Begutachtung deutlich stärker bewertet. Demenzkranke erhalten heute erheblich höhere Pflegegrade als früher. Leichte Demenz führt meist zu PG 2–3, mittlere zu PG 3–4, schwere zu PG 4–5. Die Begutachtung muss gut vorbereitet sein — weil Betroffene ihre eigenen Einschränkungen oft minimieren.

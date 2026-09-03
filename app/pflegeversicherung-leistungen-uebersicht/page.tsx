@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegeversicherung-leistungen-uebersicht', '30. April 2026')
 
 const SECTIONS = [{ id: 'geldleistungen', title: 'Geldleistungen' }, { id: 'sachleistungen', title: 'Sachleistungen' }, { id: 'entlastung', title: 'Entlastungsleistungen' }, { id: 'weitere', title: 'Weitere Leistungen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -26,10 +30,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht aller Zuschüsse',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht',
   },
   {
@@ -70,7 +74,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 7 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Pflegeversicherung Leistungen 2026 — vollständige Übersicht aller Zuschüsse</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Die Pflegeversicherung zahlt mehr als viele wissen. Pflegegeld, Sachleistungen, Entlastungsbetrag, Entlastungsbudget, Pflegehilfsmittel, Wohnraumanpassung — hier alle Leistungen 2026 mit aktuellen Beträgen.</p>
           <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
             <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Pflegegeld 2026 — für häusliche Pflege durch Angehörige</p>

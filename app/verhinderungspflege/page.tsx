@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('verhinderungspflege', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist das Entlastungsbudget?' },
@@ -15,7 +19,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Verhinderungspflege 2026 — neues Entlastungsbudget erklärt',
-  description: 'Verhinderungspflege 2026: Seit Juli 2025 gemeinsames Entlastungsbudget von 3.539 €/Jahr. Was sich geändert hat,',
+  description: 'Verhinderungspflege 2026: gemeinsames Jahresbudget von 3.539 €, was sich geändert hat, wer Anspruch hat und wie Angehörige es beantragen.',
   alternates: { canonical: 'https://primundus.de/verhinderungspflege' },
   openGraph: {
     title: 'Verhinderungspflege 2026 — neues Entlastungsbudget | Primundus',
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Verhinderungspflege 2026 — das neue Entlastungsbudget erklärt',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/verhinderungspflege',
   },
   {
@@ -86,7 +90,7 @@ export default function Verhinderungspflege() {
             Verhinderungspflege 2026 — das neue Entlastungsbudget
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Seit 1. Juli 2025 gibt es keine eigenständige Verhinderungspflege mehr. Sie wurde mit der Kurzzeitpflege zum gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengefasst. 2026 ist das erste volle Jahr ohne Übergangsregelungen — wer das Budget nicht kennt, verschenkt bares Geld.

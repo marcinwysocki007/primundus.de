@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('eigenanteil-24h-pflege-senken', '25. April 2026')
 
 const SECTIONS = [
   { id: 'uebersicht', title: 'Alle Stellschrauben' },
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/eigenanteil-24h-pflege-senken',
   },
   {
@@ -85,7 +89,7 @@ export default function EigenanteilSenken() {
             Eigenanteil der 24h-Pflege senken — alle Möglichkeiten 2026
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             24h-Pflege kostet 2.200–3.500 Euro brutto — aber wer alle verfügbaren Leistungen kennt und kombiniert, kann den tatsächlichen Eigenanteil auf unter 1.500 Euro pro Monat senken. Viele Familien verschenken hunderte Euro monatlich weil sie nicht alle Möglichkeiten nutzen.

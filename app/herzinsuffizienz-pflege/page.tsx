@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('herzinsuffizienz-pflege', '25. April 2026')
 
 const SECTIONS = [
   { id: 'zuhause', title: 'Herzinsuffizienz zuhause pflegen' },
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Herzinsuffizienz Pflege zuhause 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/herzinsuffizienz-pflege',
   },
   {
@@ -84,7 +88,7 @@ export default function HerzinsuffizienzPflege() {
             Herzinsuffizienz Pflege zuhause — was möglich ist
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Herzinsuffizienz ist eine der häufigsten Ursachen für Pflegebedürftigkeit im Alter — und in den meisten Fällen ist die Pflege zuhause gut möglich. Entscheidend ist die konsequente Medikamentengabe, tägliche Gewichtskontrolle und Belastungsanpassung. Eine 24h-Betreuungskraft überwacht diese Punkte rund um die Uhr und erkennt Verschlechterungen frühzeitig.

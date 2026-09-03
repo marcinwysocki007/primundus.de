@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('hilfsmittel-rollstuhl-beantragen', '20. August 2026')
 
 const SECTIONS = [
   { id: 'was-zahlt', title: 'Welche Kasse zahlt?' },
@@ -54,10 +58,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Rollator & Rollstuhl beantragen: Rezept, Kasse, Ablauf',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-08-20',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen',
   },
   {
@@ -96,7 +100,7 @@ export default function Page() {
             Rollator & Rollstuhl beantragen: auf Rezept, ohne Pflegegrad
           </h1>
 
-          <AuthorByline updated="20. August 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Das Wichtigste zuerst: Für einen Rollator oder Rollstuhl brauchen Sie <strong>keinen
             Pflegegrad</strong> — nur ein Rezept vom Arzt. Zuständig ist die Krankenkasse, die Zuzahlung

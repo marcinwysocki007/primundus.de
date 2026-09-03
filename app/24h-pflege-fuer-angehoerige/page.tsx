@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24h-pflege-fuer-angehoerige', '30. April 2026')
 
 const SECTIONS = [{ id: 'einstieg', title: 'Wann ist der richtige Zeitpunkt?' }, { id: 'ablauf', title: 'Wie läuft die Organisation ab?' }, { id: 'kosten', title: 'Was kostet es die Familie?' }, { id: 'entlastung', title: 'Entlastung für pflegende Angehörige' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -27,10 +31,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: '24h-Pflege für Angehörige — wie Familien die Betreuung organisieren',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24h-pflege-fuer-angehoerige',
   },
   {
@@ -71,7 +75,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 7 Min Lesezeit · Aktualisiert August 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege für Angehörige — wie Familien die Betreuung organisieren</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Die Eltern brauchen Pflege — aber das Pflegeheim kommt nicht in Frage. Und selbst rund um die Uhr da sein ist nicht möglich. 24h-Pflege ist die Lösung: eine Betreuungskraft zieht ein, übernimmt alles, und die Familie kann wieder aufatmen.</p>
           <h2 id="einstieg" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Wann ist der richtige Zeitpunkt?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Viele Familien warten zu lange. Die Zeichen sind oft schleichend: der Herd bleibt an, Medikamente werden vergessen, die Wohnung vernachlässigt. Der richtige Zeitpunkt ist nicht wenn nichts mehr geht — sondern wenn man merkt, dass die aktuelle Situation nicht mehr sicher ist.</p>

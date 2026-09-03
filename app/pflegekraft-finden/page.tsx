@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegekraft-finden', '25. April 2026')
 
 const SECTIONS = [
   { id: 'wege', title: 'Wege zur Pflegekraft' },
@@ -15,7 +19,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Pflegekraft finden — worauf achten & wie vorgehen 2026',
-  description: 'Pflegekraft finden: Agentur, Direktsuche oder Selbstständige? Worauf bei der Auswahl zu achten ist,',
+  description: 'Pflegekraft finden: Agentur, Anbieter mit eigenen Kräften oder Selbstständige? Worauf Sie bei Auswahl, Sprache und Rechtssicherheit achten sollten.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-finden' },
   openGraph: {
     title: 'Pflegekraft finden 2026 | Primundus',
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegekraft finden — worauf achten und wie vorgehen 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegekraft-finden',
   },
   {
@@ -85,7 +89,7 @@ export default function PflegekraftFinden() {
             Pflegekraft finden — worauf achten & wie vorgehen
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Eine zuverlässige Pflegekraft zu finden ist die wichtigste Entscheidung bei der Organisation der 24h-Pflege. Der sicherste Weg führt über eine seriöse Agentur — sie prüft Qualifikation und Erfahrung, stellt Ersatz bei Ausfall und regelt alles Rechtliche. Bei Primundus ist die passende Kraft in 4–7 Tagen vor Ort.

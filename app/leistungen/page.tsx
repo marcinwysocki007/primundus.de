@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('leistungen', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-inbegriffen', title: 'Was ist inbegriffen?' },
@@ -32,10 +36,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/leistungen',
   },
   {
@@ -80,7 +84,7 @@ export default function Leistungen() {
             Leistungen der 24h-Pflege — was eine Betreuungskraft macht
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Eine 24h-Betreuungskraft von Primundus ist weit mehr als eine Pflegehilfe — sie ist Begleiterin, Haushälterin, Gesellschafterin und Ansprechpartnerin in einem. Rund um die Uhr, dauerhaft im Haushalt, vertraut mit dem Pflegebedürftigen. Hier ist der vollständige Überblick was inbegriffen ist.

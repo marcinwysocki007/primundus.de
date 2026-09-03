@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('selbst-pflegen-oder-24h-pflege', '25. April 2026')
 
 const SECTIONS = [
   { id: 'ehrliche-fragen', title: 'Die ehrlichen Fragen' },
@@ -15,7 +19,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Selbst pflegen oder 24h-Pflege? — Ehrlicher Vergleich',
-  description: 'Selbst pflegen oder eine 24h-Betreuungskraft? Ein ehrlicher Vergleich: wann Angehörigenpflege funktioniert,',
+  description: 'Selbst pflegen oder 24-Stunden-Betreuung? Wann Angehörigenpflege funktioniert, wo ihre Grenzen liegen und was die Alternative kostet.',
   alternates: { canonical: 'https://primundus.de/selbst-pflegen-oder-24h-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Selbst pflegen oder 24h-Pflege — ehrlicher Vergleich',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/selbst-pflegen-oder-24h-pflege',
   },
   {
@@ -76,7 +80,7 @@ export default function SelbstPflegenOder24h() {
             Selbst pflegen oder 24h-Pflege? — Ehrlicher Vergleich
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die Entscheidung zwischen Selbstpflege und professioneller 24h-Betreuung ist eine der schwierigsten die pflegende Familien treffen. Sie ist emotional aufgeladen — und wird oft zu lange hinausgezögert. Dieser Ratgeber gibt keine schnelle Antwort. Aber er stellt die Fragen die gestellt werden müssen.

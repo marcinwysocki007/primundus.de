@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('wann-brauche-ich-24h-pflege', '25. April 2026')
 
 const SECTIONS = [
   { id: 'zeichen', title: 'Klare Zeichen für 24h-Pflege' },
@@ -32,10 +36,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/wann-brauche-ich-24h-pflege',
   },
   {
@@ -83,7 +87,7 @@ export default function WannBraucheIch24hPflege() {
             Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Viele Familien warten zu lang mit der Entscheidung für 24h-Pflege — aus Kostengründen, aus Gewohnheit, oder weil sie die Zeichen nicht deuten. Dabei gibt es klare Situationen in denen 24h-Präsenz nicht mehr optional ist. Wer zu lange wartet, riskiert einen Sturz, einen Krankenhausaufenthalt oder den Zusammenbruch pflegender Angehöriger.

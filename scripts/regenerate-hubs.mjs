@@ -53,7 +53,6 @@ const artikel = [
   { slug: 'pflegegrad-bei-demenz', h1: 'Pflegegrad bei Demenz — Einstufung & Leistungen', parent: 'pflegegrade' },
   { slug: 'pflegegrad-nach-schlaganfall', h1: 'Pflegegrad nach Schlaganfall — was steht Ihnen zu?', parent: 'pflegegrade' },
   { slug: 'pflegegrad-bei-parkinson', h1: 'Pflegegrad bei Parkinson — Einstufung & Unterstützung', parent: 'pflegegrade' },
-  { slug: 'pflegegrade-2025', h1: 'Pflegegrade 2025 — alle Änderungen im Überblick', parent: 'pflegegrade' },
   { slug: 'pflegegeld-2025', h1: 'Pflegegeld 2025 — aktuelle Beträge & Voraussetzungen', parent: 'finanzierung' },
   { slug: 'pflegesachleistungen', h1: 'Pflegesachleistungen — was wird erstattet?', parent: 'finanzierung' },
   { slug: 'verhinderungspflege', h1: 'Verhinderungspflege 2025 — Anspruch & Abrechnung', parent: 'finanzierung' },

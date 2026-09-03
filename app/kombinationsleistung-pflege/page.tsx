@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('kombinationsleistung-pflege', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist die Kombinationsleistung?' },
@@ -15,7 +19,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Kombinationsleistung Pflege — Pflegegeld + Sachleistung kombinieren | Primundus',
-  description: 'Kombinationsleistung Pflege: Pflegesachleistungen und Pflegegeld gleichzeitig nutzen. Berechnung,',
+  description: 'Kombinationsleistung: Pflegegeld und Sachleistung gleichzeitig nutzen. Wie die Berechnung funktioniert, was übrig bleibt und für wen sich das lohnt.',
   alternates: { canonical: 'https://primundus.de/kombinationsleistung-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -33,10 +37,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Kombinationsleistung Pflege — Pflegegeld und Sachleistungen kombinieren',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/kombinationsleistung-pflege',
   },
   {
@@ -84,7 +88,7 @@ export default function Kombinationsleistung() {
             Kombinationsleistung Pflege — Pflegegeld & Sachleistungen kombinieren
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Wer nicht alle Sachleistungen durch einen ambulanten Pflegedienst nutzt, bekommt anteiliges Pflegegeld für den Rest — das ist die Kombinationsleistung nach § 38 SGB XI. Damit lassen sich ambulanter Pflegedienst und private Betreuung durch Angehörige oder eine 24h-Kraft optimal kombinieren.

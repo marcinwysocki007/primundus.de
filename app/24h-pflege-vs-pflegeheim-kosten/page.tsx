@@ -5,6 +5,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim-kosten', '25. April 2026')
 
 const GrafikKostenvergleich = dynamic(
   () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),
@@ -40,10 +44,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten',
   },
   {
@@ -114,7 +118,7 @@ export default function VsKosten() {
             24h-Pflege vs. Pflegeheim — Kostenvergleich 2026
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung.

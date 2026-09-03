@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegegrad-1', '25. April 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was bedeutet Pflegegrad 1?' },
@@ -16,7 +20,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Pflegegrad 1 — Leistungen, Entlastungsbetrag & Beantragen 2026 | Primundus',
-  description: 'Pflegegrad 1: 131 € Entlastungsbetrag/Monat, kein Pflegegeld. Voraussetzungen (12,5–26,9 NBA-Punkte),',
+  description: 'Pflegegrad 1 einfach erklärt: Voraussetzungen ab 12,5 NBA-Punkten, Leistungen wie Entlastungsbetrag und Pflegehilfsmittel, und wann sich ein Antrag lohnt.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-1' },
   openGraph: {
     title: 'Pflegegrad 1 — Leistungen & Entlastungsbetrag 2026 | Primundus',
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegegrad 1 — Leistungen, Entlastungsbetrag & Beantragen 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegegrad-1',
   },
   {
@@ -86,7 +90,7 @@ export default function Pflegegrad1() {
             Pflegegrad 1 — Leistungen & was möglich ist
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Pflegegrad 1 ist die niedrigste Einstufung und bedeutet geringe Beeinträchtigung der Selbstständigkeit. Es gibt keinen Pflegegeld-Anspruch — aber den Entlastungsbetrag von 131 Euro pro Monat, Wohnraumanpassungsförderung und Pflegehilfsmittel. Wer zwischen PG 1 und 2 liegt, sollte die Begutachtung gut vorbereiten — die Unterschiede bei den Leistungen sind erheblich.

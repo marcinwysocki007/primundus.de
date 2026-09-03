@@ -148,7 +148,6 @@ export default function Pflegegrade() {
               { titel: 'Pflegegrad erhöhen — wann und wie', href: '/pflegegrad-erhoehen', desc: 'Wann ein Höherstufungsantrag sinnvoll ist und wie man ihn erfolgreich stellt.' },
               { titel: 'Widerspruch einlegen', href: '/widerspruch-pflegekasse-einlegen', desc: 'Widerspruch gegen den Bescheid — Fristen, Formulierungen und Erfolgschancen.' },
               { titel: 'Pflegegrad Änderung melden', href: '/pflegegrad-aenderung-melden', desc: 'Wann und wie Änderungen der Pflegesituation der Pflegekasse gemeldet werden.' },
-              { titel: 'Pflegegrade 2025 — alle Änderungen', href: '/pflegegrade-2025', desc: 'Was sich 2025 bei Pflegegraden und Leistungsbeträgen verändert hat.' },
             ].map((item) => (
               <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
                 <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>

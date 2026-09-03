@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('vorteile-24h-pflege', '30. April 2026')
 
 const SECTIONS = [{ id: 'zuhause', title: 'Im eigenen Zuhause bleiben' }, { id: 'eins-zu-eins', title: '1:1-Betreuung' }, { id: 'kosten', title: 'Kosten oft günstiger' }, { id: 'rechtssicher', title: 'Rechtssicher & flexibel' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -27,10 +31,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Vorteile der 24h-Pflege zuhause — was sie von anderen Lösungen unterscheidet',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/vorteile-24h-pflege',
   },
   {
@@ -71,7 +75,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 6 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Vorteile der 24h-Pflege zuhause — was sie von anderen Lösungen unterscheidet</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">24h-Pflege zuhause ist keine Notlösung — sie ist für viele Menschen die bessere Lösung. Warum? Weil das eigene Zuhause bleibt, weil eine vertraute Person immer da ist, und weil die Kosten oft günstiger sind als ein Pflegeheim. Hier alle Vorteile im Überblick.</p>
           <h2 id="zuhause" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Im eigenen Zuhause bleiben</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Das eigene Zuhause ist mehr als vier Wände — es ist Identität, Erinnerung, Sicherheit. Jeder gewohnte Handgriff, jedes vertraute Gesicht in der Nachbarschaft, der eigene Garten. Ein Pflegeheim kann das nicht ersetzen.</p>

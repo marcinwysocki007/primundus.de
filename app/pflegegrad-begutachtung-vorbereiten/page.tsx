@@ -4,6 +4,10 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegegrad-begutachtung-vorbereiten', '25. April 2026')
 
 const SECTIONS = [
   { id: 'vorbereitung', title: 'Die wichtigste Vorbereitung' },
@@ -34,10 +38,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'MD-Begutachtung vorbereiten — Checkliste & 7 Tipps für höhere Einstufung',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten',
   },
   {
@@ -98,7 +102,7 @@ export default function BegutachtungVorbereiten() {
             MD-Begutachtung vorbereiten — Checkliste & 7 Tipps
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Die MD-Begutachtung entscheidet über den Pflegegrad — und damit über hunderte Euro Kassenzuschuss pro Monat. Wer gut vorbereitet ist, bekommt eine faire Einstufung. Wer aus Scham minimiert, verschenkt Geld. Die wichtigste Vorbereitung: Das Pflegetagebuch. Es dauert 5 Minuten täglich und macht den größten Unterschied.

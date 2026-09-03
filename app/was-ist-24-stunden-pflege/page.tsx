@@ -6,6 +6,10 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
 import { KurzAntwort } from '@/components/KurzAntwort'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('was-ist-24-stunden-pflege', '21. August 2026')
 
 const SECTIONS = [
   { id: 'leistungen',  title: 'Was leistet eine Betreuungskraft?' },
@@ -59,18 +63,14 @@ const schemaMarkup = [
     '@type': 'Article',
     headline: 'Was ist 24-Stunden-Pflege?',
     description: 'Definition, Leistungen, Kosten und aktuelle Kassenzuschüsse 2026 der 24h-Pflege in Deutschland.',
-    author: {
-      '@type': 'Person',
-      name: 'Marta Kapcio',
-      worksFor: { '@type': 'Organization', name: 'Primundus' },
-    },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: {
       '@type': 'Organization',
       name: 'Primundus',
       logo: 'https://primundus.de/images/primundus_logo_header.webp',
     },
     datePublished: '2026-04-24',
-    dateModified: '2026-08-21',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   {
@@ -163,7 +163,7 @@ export default function WasIst24StundenPflege() {
             Was ist 24-Stunden-Pflege?
           </h1>
 
-          <AuthorByline updated="21. August 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <KurzAntwort frage="Andere Namen für dasselbe Modell">
             24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.

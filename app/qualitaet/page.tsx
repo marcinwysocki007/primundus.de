@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('qualitaet', '25. April 2026')
 
 const SECTIONS = [
   { id: 'auswahl', title: 'Wie Primundus Kräfte auswählt' },
@@ -14,7 +18,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Qualität der 24h-Pflege bei Primundus — wie wir Kräfte prüfen | Primundus',
-  description: 'Wie Primundus die Qualität der Betreuungskräfte sicherstellt: aktive Prüfung von Deutschkenntnissen, Erfahrung und Referenzen. Laufende Qualitätssicherung,',
+  description: 'Wie Primundus Betreuungskräfte auswählt und prüft: Sprachniveau, Erfahrung, Referenzen und laufende Qualitätssicherung — nachvollziehbar für Angehörige.',
   alternates: { canonical: 'https://primundus.de/qualitaet' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -32,10 +36,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Qualität der 24h-Pflege bei Primundus — wie wir Kräfte prüfen',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
-    dateModified: '2026-04-25',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/qualitaet',
   },
   {
@@ -83,7 +87,7 @@ export default function Qualitaet() {
             Qualität der 24h-Pflege — wie Primundus Kräfte prüft und sichert
           </h1>
 
-          <AuthorByline updated="25. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Über 20 Jahre, mehr als 60.000 Betreuungen, Testsieger DIE WELT — diese Zahlen entstehen nicht durch Zufall. Sie entstehen durch ein konsequentes Qualitätssystem: aktive Prüfung vor jedem Einsatz, laufende Betreuung während des Einsatzes, und die Bereitschaft sofort zu reagieren wenn etwas nicht stimmt.

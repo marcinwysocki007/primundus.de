@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('pflegegeld-und-24h-pflege-kombinieren', '30. April 2026')
 
 const SECTIONS = [{ id: 'pflegegeld', title: 'Pflegegeld bei 24h-Pflege' }, { id: 'kombinationen', title: 'Alle Kombinationsmöglichkeiten' }, { id: 'rechnung', title: 'Rechenbeispiel PG 3' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -26,10 +30,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pflegegeld und 24h-Pflege kombinieren — alle Optionen 2026',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren',
   },
   {
@@ -70,7 +74,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 6 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Pflegegeld und 24h-Pflege kombinieren — alle Optionen 2026</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Pflegegeld und 24h-Pflege schließen sich nicht aus — im Gegenteil. Mit der richtigen Kombination aller Kassenleistungen kann der Eigenanteil erheblich gesenkt werden. Dieser Ratgeber zeigt alle Optionen.</p>
           <h2 id="pflegegeld" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Pflegegeld bei 24h-Pflege — was geht?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bei professioneller 24h-Pflege über eine Agentur wird das Pflegegeld nicht direkt gezahlt — stattdessen gibt es Sachleistungen. Aber: Das Pflegegeld kann trotzdem fließen wenn ein Angehöriger offiziell als Pflegeperson eingetragen ist und die Pflege (anteilig) selbst übernimmt.</p>

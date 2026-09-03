@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-krankenhausaufenthalt', '14. August 2026')
 
 // Wettbewerbs-Lücke (Analyse 14.08.): KEIN Anbieter beantwortet öffentlich,
 // was bei Krankenhausaufenthalt, Ausfall der Kraft oder Wechsel gilt.
@@ -32,10 +36,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24-Stunden-Pflege?',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-08-14',
-    dateModified: '2026-08-14',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/24-stunden-pflege-krankenhausaufenthalt',
   },
   {
@@ -111,7 +115,7 @@ export default function KrankenhausPage() {
             Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24-Stunden-Pflege wirklich?
           </h1>
 
-          <AuthorByline updated="14. August 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Es sind die Fragen, die Familien nachts wachhalten — und auf die man bei den meisten

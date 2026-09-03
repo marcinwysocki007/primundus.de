@@ -21,17 +21,6 @@ export const metadata: Metadata = {
 const schemaMarkup = JSON.stringify({
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Person',
-      '@id': 'https://primundus.de/#marta-kapcio',
-      name: 'Marta Kapcio',
-      jobTitle: 'Persönliche Ansprechpartnerin & Pflegeberaterin',
-      worksFor: { '@id': 'https://primundus.de/#organization' },
-      description: 'Persönliche Ansprechpartnerin bei Primundus. Berät Familien zu 24-Stunden-Pflege, Kosten und der Auswahl passender Betreuungskräfte — Mo–So von 8 bis 20 Uhr.',
-      telephone: '+4989200000830',
-      knowsAbout: ['24-Stunden-Pflege', 'Pflegeberatung', 'Pflegegrade', 'Pflegefinanzierung'],
-      image: 'https://primundus.de/images/marta-kapcio.jpg',
-    },
   ],
 })
 

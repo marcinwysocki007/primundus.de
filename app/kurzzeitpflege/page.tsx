@@ -3,6 +3,10 @@ import { ArticleCTA } from '@/components/ArticleCTA'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { AuthorByline } from '@/components/AuthorByline'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { PERSON_MARTA_ID } from '@/lib/schema'
+
+const AKTUALISIERT = aktualisiertAm('kurzzeitpflege', '30. April 2026')
 
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist Kurzzeitpflege?' }, { id: 'leistungen', title: 'Leistungen 2026' }, { id: 'beantragen', title: 'Wie beantragen' }, { id: 'alternative', title: 'Wann 24h-Pflege besser ist' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -26,10 +30,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Kurzzeitpflege 2026 — Anspruch, Kosten und wann 24h-Pflege besser ist',
-    author: { '@type': 'Person', name: 'Marta Kapcio', worksFor: { '@type': 'Organization', name: 'Primundus' } },
+    author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: AKTUALISIERT.iso,
     mainEntityOfPage: 'https://primundus.de/kurzzeitpflege',
   },
   {
@@ -70,7 +74,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 5 Min Lesezeit · Aktualisiert April 2026</p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Kurzzeitpflege 2026 — Anspruch, Kosten und wann 24h-Pflege besser ist</h1>
 
-          <AuthorByline updated="30. April 2026" />
+          <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Kurzzeitpflege überbrückt Phasen wenn die häusliche Pflege vorübergehend nicht sichergestellt werden kann — nach Krankenhausaufenthalt, bei Urlaub des pflegenden Angehörigen, in Krisensituationen. Seit Juli 2025 ist sie ins Entlastungsbudget integriert.</p>
           <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Was ist Kurzzeitpflege?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Kurzzeitpflege ist vorübergehende vollstationäre Pflege in einer anerkannten Einrichtung — typisch nach Krankenhaus-Aufenthalten, bei Ausfall der Pflegeperson oder in Übergangssituationen. Seit Juli 2025 ist sie Teil des neuen Entlastungsbudgets.</p>
