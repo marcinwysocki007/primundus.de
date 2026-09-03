@@ -22,17 +22,26 @@ import { TestimonialCard } from '@/components/home/TestimonialCard'
 // bleibt vorn: Ohne den Kopfbegriff passt der Titel nicht mehr auf die
 // Anfrage, um die es geht. 65 Zeichen, rund 485 px -- unter Googles Schnitt.
 //
+// Nachtrag 03.09.2026, Martin: "Preis" bleibt im Titel, "Kosten" nur in der
+// Beschreibung. Die Daten sagen zwar 1.361 Impressionen fuer Anfragen mit
+// "kosten" gegen 10 mit "preis" -- aber die Aufteilung ist schluessig: "Preis
+// sofort sehen" ist ein Versprechen, "Kosten sehen" klingt nach schlechter
+// Nachricht. Der Suchbegriff sitzt in der Beschreibung, das Versprechen im
+// Titel. Ausserdem raus: das doppelte "6x Testsieger" (steht schon im Titel).
+// Neu drin: "Polnische Pflegekraefte" -- 1.174 Impressionen, Position 3,5 bis
+// 10,2, NULL Klicks, und das Wort kam auf der Startseite bisher nicht vor.
+//
 // Beobachtung laeuft: Basiswerte in seo-reports/startseite-basis.json,
 // Nachkontrolle fruehestens drei Wochen nach dem Neu-Crawl.
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege vom 6× Testsieger — Preis & Kräfte sofort sehen',
-  description: '6× Testsieger in Folge. Preis und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Kein Vertrag, bevor Sie gewählt haben.',
+  description: 'Kosten und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Polnische Pflegekräfte, legal und ohne Vertrag vor Ihrer Wahl.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
     title: '24-Stunden-Pflege vom 6× Testsieger — Preis & Kräfte sofort sehen',
-    description: '6× Testsieger in Folge. Preis und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Kein Vertrag, bevor Sie gewählt haben.',
+    description: 'Kosten und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Polnische Pflegekräfte, legal und ohne Vertrag vor Ihrer Wahl.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',
