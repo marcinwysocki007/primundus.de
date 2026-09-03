@@ -21,15 +21,15 @@ export const metadata: Metadata = {
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
+    '@id': 'https://primundus.de/24h-pflege-bietigheim-bissingen#service',
     name: 'Primundus — 24h-Pflege Bietigheim-Bissingen',
+    serviceType: '24-Stunden-Betreuung zu Hause',
     description: '24h-Betreuungskräfte in Bietigheim-Bissingen. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-bietigheim-bissingen',
-    telephone: '+4989200000830',
-    email: 'info@primundus.de',
+    provider: { '@id': 'https://primundus.de/#organization' },
     areaServed: { '@type': 'City', name: 'Bietigheim-Bissingen' },
-    priceRange: '2.200–3.500 €/Monat',
-  },
+    },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

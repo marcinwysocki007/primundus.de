@@ -21,15 +21,15 @@ export const metadata: Metadata = {
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
+    '@id': 'https://primundus.de/24h-pflege-offenburg#service',
     name: 'Primundus — 24h-Pflege Offenburg',
+    serviceType: '24-Stunden-Betreuung zu Hause',
     description: '24h-Betreuungskräfte in Offenburg. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-offenburg',
-    telephone: '+4989200000830',
-    email: 'info@primundus.de',
+    provider: { '@id': 'https://primundus.de/#organization' },
     areaServed: { '@type': 'City', name: 'Offenburg' },
-    priceRange: '2.200–3.500 €/Monat',
-  },
+    },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

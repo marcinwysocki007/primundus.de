@@ -21,15 +21,15 @@ export const metadata: Metadata = {
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
+    '@id': 'https://primundus.de/24h-pflege-cottbus#service',
     name: 'Primundus — 24h-Pflege Cottbus',
+    serviceType: '24-Stunden-Betreuung zu Hause',
     description: '24h-Betreuungskräfte in Cottbus. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-cottbus',
-    telephone: '+4989200000830',
-    email: 'info@primundus.de',
+    provider: { '@id': 'https://primundus.de/#organization' },
     areaServed: { '@type': 'City', name: 'Cottbus' },
-    priceRange: '2.200–3.500 €/Monat',
-  },
+    },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

@@ -26,15 +26,15 @@ export const metadata: Metadata = {
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
+    '@id': 'https://primundus.de/24h-pflege-wittmund#service',
     name: 'Primundus — 24h-Pflege Wittmund',
+    serviceType: '24-Stunden-Betreuung zu Hause',
     description: '24h-Betreuungskräfte im Landkreis Wittmund. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-wittmund',
-    telephone: '+4989200000830',
-    email: 'info@primundus.de',
+    provider: { '@id': 'https://primundus.de/#organization' },
     areaServed: { '@type': 'AdministrativeArea', name: 'Landkreis Wittmund' },
-    priceRange: '2.200–3.500 €/Monat',
-  },
+    },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

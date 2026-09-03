@@ -106,6 +106,9 @@ export default function Page() {
             <div className="w-full overflow-hidden bg-pm-paper">
               <img
                 src="/images/PM-Betreuung_frontal_desktop.webp"
+                srcSet="/images/hero/PM-Betreuung_frontal-360.jpg 360w, /images/hero/PM-Betreuung_frontal-768.jpg 768w, /images/hero/PM-Betreuung_frontal-1280.jpg 1280w, /images/PM-Betreuung_frontal_desktop.webp 2048w"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                width={2048} height={1143}
                 alt="Professionelle 24-Stunden-Betreuung durch Primundus"
                 className="w-full object-contain"
                 fetchPriority="high"
@@ -130,7 +133,7 @@ export default function Page() {
                   href="tel:+4989200000830"
                   className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-white border border-pm-line hover:border-pm-taupe text-pm-ink font-bold text-[16px] rounded-xl transition-all duration-200"
                 >
-                  <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
+                  <img width={44} height={44} src="/images/marta-kapcio.jpg" loading="lazy" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
                   089 200 000 830
                 </a>
               </div>
@@ -142,20 +145,20 @@ export default function Page() {
                     <div className="relative overflow-hidden">
                       <div className="flex animate-scroll">
                         <div className="flex items-center gap-8 shrink-0">
-                          <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ard.webp" loading="lazy" alt="ARD" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ndr.webp" loading="lazy" alt="NDR" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" loading="lazy" />
+                          <img width={40} height={16} src="/images/media/die-welt.webp" loading="lazy" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/bild-der-frau.webp" loading="lazy" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" loading="lazy" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
                         </div>
                         <div className="flex items-center gap-8 shrink-0 ml-8">
-                          <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
-                          <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ard.webp" loading="lazy" alt="ARD" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/ndr.webp" loading="lazy" alt="NDR" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-70" loading="lazy" />
+                          <img width={40} height={16} src="/images/media/die-welt.webp" loading="lazy" alt="Die Welt" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/bild-der-frau.webp" loading="lazy" alt="Bild der Frau" className="h-[18px] object-contain opacity-70" />
+                          <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" loading="lazy" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-70" />
                         </div>
                       </div>
                     </div>
@@ -189,9 +192,12 @@ export default function Page() {
 
             {/* Links: H1 + USP-Box */}
             <div>
-              <h1 className="text-h1 lg:text-h1-lg font-bold text-pm-ink mb-4 tracking-tight">
+              {/* Kein zweites <h1>: Google sieht sonst zwei konkurrierende Hauptueberschriften
+                  (externer Audit 03.09.2026, TECH-01). Die mobile H1 oben ist die echte;
+                  hier nur Optik + Zugaenglichkeit per role/aria-level. Text unveraendert. */}
+              <p role="heading" aria-level={1} className="text-h1 lg:text-h1-lg font-bold text-pm-ink mb-4 tracking-tight">
                 24-Stunden-Pflege im eigenen Zuhause
-              </h1>
+              </p>
               <p className="text-[18px] leading-[1.6] text-pm-body mb-8">
                 Betreut von unseren eigenen, geprüften Betreuungskräften — bezahlbare Alternative zum Pflegeheim, einsatzbereit in 4–7 Tagen.
               </p>
@@ -204,20 +210,20 @@ export default function Page() {
                   <div className="relative overflow-hidden">
                     <div className="flex animate-scroll">
                       <div className="flex items-center gap-7 shrink-0">
-                        <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                        <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/ard.webp" loading="lazy" alt="ARD" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/ndr.webp" loading="lazy" alt="NDR" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" loading="lazy" />
+                        <img width={40} height={16} src="/images/media/die-welt.webp" loading="lazy" alt="Die Welt" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/bild-der-frau.webp" loading="lazy" alt="Bild der Frau" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+                        <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" loading="lazy" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
                       </div>
                       <div className="flex items-center gap-7 shrink-0 ml-7">
-                        <img width={40} height={16} src="/images/media/ard.webp" alt="ARD" className="h-[18px] object-contain opacity-60" />
-                        <img width={40} height={16} src="/images/media/ndr.webp" alt="NDR" className="h-[18px] object-contain opacity-60" />
-                        <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60" />
-                        <img width={40} height={16} src="/images/media/die-welt.webp" alt="Die Welt" className="h-[18px] object-contain opacity-60" />
-                        <img width={40} height={16} src="/images/media/bild-der-frau.webp" alt="Bild der Frau" className="h-[18px] object-contain opacity-60" />
-                        <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/ard.webp" loading="lazy" alt="ARD" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/ndr.webp" loading="lazy" alt="NDR" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/sat1.webp" alt="SAT.1" className="h-[18px] object-contain opacity-60" loading="lazy" />
+                        <img width={40} height={16} src="/images/media/die-welt.webp" loading="lazy" alt="Die Welt" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/bild-der-frau.webp" loading="lazy" alt="Bild der Frau" className="h-[18px] object-contain opacity-60" />
+                        <img width={40} height={16} src="/images/media/frankfurter-allgemeine.webp" loading="lazy" alt="Frankfurter Allgemeine" className="h-[18px] object-contain opacity-60" />
                       </div>
                     </div>
                   </div>
@@ -252,6 +258,9 @@ export default function Page() {
                 <div className="relative w-full rounded-xl overflow-hidden mb-5 bg-pm-paper">
                   <img
                     src="/images/PM-Betreuung_frontal_desktop.webp"
+                srcSet="/images/hero/PM-Betreuung_frontal-360.jpg 360w, /images/hero/PM-Betreuung_frontal-768.jpg 768w, /images/hero/PM-Betreuung_frontal-1280.jpg 1280w, /images/PM-Betreuung_frontal_desktop.webp 2048w"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                width={2048} height={1143}
                     alt="Professionelle 24-Stunden-Betreuung durch Primundus"
                     className="w-full object-contain"
                     fetchPriority="high"
@@ -272,7 +281,7 @@ export default function Page() {
                     href="tel:+4989200000830"
                     className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-pm-paper hover:bg-[#F0EBE3] border border-pm-line hover:border-pm-taupe text-pm-ink font-bold text-[15px] rounded-xl transition-all duration-200"
                   >
-                    <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
+                    <img width={44} height={44} src="/images/marta-kapcio.jpg" loading="lazy" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
                     089 200 000 830
                   </a>
                 </div>
@@ -341,7 +350,7 @@ export default function Page() {
             {/* 7. USP — bewusst als breiter Abschluss: der Mensch hinter dem Angebot */}
             <div className="mt-5 bg-pm-paper border border-pm-line rounded-2xl p-6 md:p-8">
               <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-7">
-                <img
+                <img loading="lazy"
                   width={72}
                   height={72}
                   src="/images/marta-kapcio.jpg"
@@ -454,7 +463,7 @@ export default function Page() {
                 {/* Testsieger — volle Breite */}
                 <div className="bg-white border-2 border-pm-gold rounded-xl px-5 py-4 mb-8">
                   <div className="flex items-center gap-4 mb-3">
-                    <img
+                    <img loading="lazy"
                       src="/images/primundus_testsieger-2021.webp"
                       alt="Testsieger DIE WELT"
                       className="h-[80px] w-[80px] object-contain flex-shrink-0"
@@ -482,7 +491,7 @@ export default function Page() {
               {/* Foto */}
               <div className="relative order-first lg:order-last">
                 <div className="rounded-2xl overflow-hidden aspect-[3/4] bg-[#F0EBE3]">
-                  <img
+                  <img loading="lazy"
                     src="/images/team-primundus-deutschland.webp"
                     alt="Das Team von Primundus"
                     className="w-full h-full object-cover"

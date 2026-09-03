@@ -21,15 +21,15 @@ export const metadata: Metadata = {
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
+    '@id': 'https://primundus.de/24h-pflege-freiburg-umland#service',
     name: 'Primundus — 24h-Pflege Breisach am Rhein',
+    serviceType: '24-Stunden-Betreuung zu Hause',
     description: '24h-Betreuungskräfte in Breisach am Rhein. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-freiburg-umland',
-    telephone: '+4989200000830',
-    email: 'info@primundus.de',
+    provider: { '@id': 'https://primundus.de/#organization' },
     areaServed: { '@type': 'City', name: 'Breisach am Rhein' },
-    priceRange: '2.200–3.500 €/Monat',
-  },
+    },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

@@ -21,15 +21,15 @@ export const metadata: Metadata = {
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
+    '@id': 'https://primundus.de/24h-pflege-neumarkt#service',
     name: 'Primundus — 24h-Pflege Neumarkt in der Oberpfalz',
+    serviceType: '24-Stunden-Betreuung zu Hause',
     description: '24h-Betreuungskräfte in Neumarkt in der Oberpfalz. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-neumarkt',
-    telephone: '+4989200000830',
-    email: 'info@primundus.de',
+    provider: { '@id': 'https://primundus.de/#organization' },
     areaServed: { '@type': 'City', name: 'Neumarkt in der Oberpfalz' },
-    priceRange: '2.200–3.500 €/Monat',
-  },
+    },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

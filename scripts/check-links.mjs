@@ -39,6 +39,13 @@ for (const f of htmlFiles) {
   if (rel === 'index.html') continue
   builtRoutes.add('/' + rel.replace(/\.html$/, ''))
 }
+// Metadata-Routen von Next.js (app/icon.png, app/apple-icon.png, opengraph-image …)
+// erzeugen keine .html, sondern <name>.body + <name>.meta -- sie sind trotzdem
+// echte, ausgelieferte URLs. Ohne diese Zeile meldete der Checker /icon.png als
+// kaputt, obwohl Next es aus app/icon.png selbst bedient (03.09.2026).
+for (const f of htmlFiles.length ? fs.readdirSync(APP_OUT) : []) {
+  if (f.endsWith('.body')) builtRoutes.add('/' + f.replace(/\.body$/, ''))
+}
 
 const errors = []
 const slashLinks = new Map() // href -> [files]

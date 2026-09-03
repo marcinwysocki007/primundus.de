@@ -37,12 +37,27 @@ export function siteGraph() {
         description:
           'Anbieter für 24-Stunden-Pflege und Betreuung zu Hause mit eigenen, bei der Unternehmensgruppe angestellten Betreuungskräften (Entsendemodell mit A1-Bescheinigung). Die Firmengruppe bringt Erfahrung in der häuslichen Betreuung seit 2006 mit — über 60.000 Betreuungen.',
         founder: { '@id': PERSON_KAROLINA_ID },
+        // 03.09.2026: Der rechtliche Sitz ist Warschau (Impressum), die deutsche
+        // Adresse ist die Niederlassung/Kontaktstelle. Bisher stand hier nur
+        // Muenchen -- der externe Audit hat die Abweichung zum Impressum
+        // moniert. `address` = juristischer Sitz, `location` = Niederlassung.
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Landsberger Str. 155',
-          postalCode: '80687',
-          addressLocality: 'München',
-          addressCountry: 'DE',
+          streetAddress: 'Poznańska 21/48',
+          postalCode: '00-685',
+          addressLocality: 'Warszawa',
+          addressCountry: 'PL',
+        },
+        location: {
+          '@type': 'Place',
+          name: 'Primundus Deutschland — Niederlassung München',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Landsberger Str. 155',
+            postalCode: '80687',
+            addressLocality: 'München',
+            addressCountry: 'DE',
+          },
         },
         contactPoint: {
           '@type': 'ContactPoint',
@@ -56,7 +71,8 @@ export function siteGraph() {
           'https://kostenrechner.primundus.de',
           'https://share.google/u2axb21OVWp838DPl',
           'https://www.trustpilot.com/review/primundus.de',
-          'https://www.goyellow.de/home/altenpflegeheim-primundus-muenchen--4nvssd.html',
+          // GoYellow entfernt (03.09.2026): Domain leitet nur noch auf Gelbe
+          // Seiten um, und der Eintrag fuehrte uns als "Altenpflegeheim".
         ],
       },
       {
