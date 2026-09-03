@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Allgemeine Geschäftsbedingungen (AGB) | Primundus',
-  description: 'Allgemeine Geschäftsbedingungen der Primundus für die Vermittlung von 24-Stunden-Betreuungskräften nach Deutschland.',
+  description: 'Allgemeine Geschäftsbedingungen der Primundus für die 24-Stunden-Betreuung zu Hause durch eigene, angestellte Betreuungskräfte.',
   alternates: { canonical: 'https://primundus.de/agb' },
   robots: { index: true, follow: true },
 }
@@ -23,7 +23,7 @@ export default function Page() {
           Allgemeine Geschäftsbedingungen
         </h1>
         <p className="text-[15px] text-pm-mute mb-10">
-          Stand: 1. Januar 2026 · Primundus — ein Angebot der PRIMUNDUS Sp. z o.o.
+          Stand: 3. September 2026 · Primundus — ein Angebot der PRIMUNDUS Sp. z o.o.
         </p>
 
         <div className="space-y-8 text-[15px] text-pm-body leading-[1.75]">
@@ -33,13 +33,15 @@ export default function Page() {
             <p className="mb-3">
               (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") gelten für sämtliche Verträge zwischen der
               PRIMUNDUS Sp. z o.o., Poznańska 21/48, 00-685 Warszawa, Polen (nachfolgend „Primundus") und
-              ihren Kundinnen und Kunden (nachfolgend „Kunde") über die Vermittlung von 24-Stunden-Betreuungskräften
+              ihren Kundinnen und Kunden (nachfolgend „Kunde") über die 24-Stunden-Betreuung durch Betreuungskräfte
               aus der Europäischen Union zur häuslichen Betreuung pflegebedürftiger Personen in Deutschland.
             </p>
             <p className="mb-3">
-              (2) Primundus erbringt selbst keine pflegerischen oder medizinischen Leistungen. Vertragsgegenstand
-              ist ausschließlich die Vermittlung qualifizierter Betreuungskräfte sowie organisatorische
-              Begleitleistungen (Auswahl, Anreise, Wechselorganisation, Kommunikation).
+              (2) Primundus erbringt die häusliche Betreuung durch eigene, bei der Unternehmensgruppe angestellte
+              Betreuungskräfte (Entsendung mit A1-Bescheinigung). Vertragsgegenstand sind Betreuung, Grundpflege
+              und hauswirtschaftliche Versorgung im Haushalt des Kunden sowie Auswahl, Anreise und Wechsel der
+              Betreuungskraft. Behandlungspflege und medizinische Leistungen sind nicht Vertragsgegenstand; sie
+              bleiben einem zugelassenen Pflegedienst vorbehalten.
             </p>
             <p>
               (3) Abweichende, entgegenstehende oder ergänzende Bedingungen des Kunden werden nur dann Vertragsbestandteil,
@@ -95,7 +97,7 @@ export default function Page() {
               die rechtzeitige Absendung des Widerrufs.
             </p>
             <p>
-              (3) Wünscht der Kunde, dass die Vermittlungsleistung vor Ablauf der Widerrufsfrist beginnt, hat er
+              (3) Wünscht der Kunde, dass die Betreuungsleistung vor Ablauf der Widerrufsfrist beginnt, hat er
               dies ausdrücklich zu erklären. In diesem Fall schuldet er bei Widerruf einen anteiligen Betrag für
               bereits erbrachte Leistungen.
             </p>
@@ -126,11 +128,12 @@ export default function Page() {
             <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 6 Vergütung und Zahlungsbedingungen</h2>
             <p className="mb-3">
               (1) Die Vergütung richtet sich nach dem individuellen Angebot. Der monatliche Pauschalpreis umfasst
-              Vermittlung, Organisation, Wechsel- und Anreisekosten sowie die Vergütung der Betreuungskraft.
+              Betreuung, Organisation und Wechselorganisation sowie die Vergütung der Betreuungskraft.
+              An- und Abreisekosten der Betreuungskraft richten sich nach dem Angebot.
             </p>
             <p className="mb-3">
-              (2) Die Rechnung wird monatlich im Voraus gestellt und ist innerhalb von 10 Tagen nach Rechnungsdatum
-              ohne Abzug zur Zahlung fällig. Zahlung erfolgt per SEPA-Lastschrift oder Überweisung.
+              (2) Die Vergütung wird taggenau nach tatsächlichen Betreuungstagen abgerechnet. Die Rechnung wird
+              monatlich gestellt und ist innerhalb von 10 Tagen nach Rechnungsdatum ohne Abzug zur Zahlung fällig. Zahlung erfolgt per SEPA-Lastschrift oder Überweisung.
             </p>
             <p>
               (3) Bei Zahlungsverzug ist Primundus berechtigt, Verzugszinsen in gesetzlicher Höhe sowie
@@ -141,13 +144,12 @@ export default function Page() {
           <section className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-pm-ink mb-4">§ 7 Laufzeit und Kündigung</h2>
             <p className="mb-3">
-              (1) Der Vermittlungsvertrag wird auf unbestimmte Zeit geschlossen. Die Mindestlaufzeit beträgt
-              — sofern im Einzelangebot nicht abweichend geregelt — drei Monate ab Anreise der ersten
-              Betreuungskraft.
+              (1) Der Vertrag wird auf unbestimmte Zeit geschlossen. Es gibt keine Mindestlaufzeit.
             </p>
             <p className="mb-3">
-              (2) Nach Ablauf der Mindestlaufzeit kann der Vertrag von beiden Seiten mit einer Frist von
-              vier Wochen zum Monatsende ordentlich gekündigt werden.
+              (2) Beide Seiten können täglich kündigen; abgerechnet wird bis zum letzten Betreuungstag. Ersatz bei
+              Ausfall einer Betreuungskraft ist ohne zusätzliche Vergütung geschuldet; An- und Abreisekosten der
+              Ersatzkraft trägt der Kunde.
             </p>
             <p>
               (3) Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger
@@ -180,7 +182,7 @@ export default function Page() {
             <p>
               Die Verarbeitung personenbezogener Daten erfolgt gemäß der{' '}
               <Link href="/datenschutz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Datenschutzerklärung</Link>{' '}
-              von Primundus. Der Kunde willigt in die Verarbeitung der für die Vermittlung erforderlichen
+              von Primundus. Der Kunde willigt in die Verarbeitung der für die Betreuung erforderlichen
               Gesundheits- und Pflegedaten ein. Diese Einwilligung kann jederzeit mit Wirkung für die Zukunft
               widerrufen werden.
             </p>
@@ -214,7 +216,7 @@ export default function Page() {
           <div className="bg-pm-shell border border-pm-line rounded-2xl p-6">
             <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
               <strong>Hinweis:</strong> Diese AGB sind eine allgemeine Vorlage. Für Ihren individuellen
-              Betreuungsvertrag gelten ergänzend die im Vermittlungsvertrag konkret vereinbarten Bedingungen.
+              Betreuungsvertrag gelten ergänzend die im Betreuungsvertrag konkret vereinbarten Bedingungen.
               Bei Fragen erreichen Sie uns unter{' '}
               <a href="tel:+4989200000830" className="text-pm-taupe font-semibold hover:underline">089 200 000 830</a>{' '}
               oder per E-Mail an{' '}
