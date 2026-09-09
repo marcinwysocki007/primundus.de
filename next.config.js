@@ -23,6 +23,16 @@ const nextConfig = {
         destination: '/pflegegeld/',
         permanent: true,
       },
+      // 09.09.2026: Die ChatGPT-Anzeige (OpenAI Ads) zeigt auf die Startseite und
+      // laesst sich bis zur Unternehmensverifizierung nicht umstellen. Besucher aus
+      // ChatGPT gehen deshalb direkt in den Kostenrechner; die UTM-Parameter bleiben
+      // erhalten (Next reicht die Query durch), Pixel und Analytik sehen die Herkunft.
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'utm_source', value: 'chatgpt' }],
+        destination: 'https://kostenrechner.primundus.de/',
+        permanent: false,
+      },
       {
         source: '/kostenrechner',
         destination: 'https://kostenrechner.primundus.de',
