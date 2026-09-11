@@ -82,7 +82,7 @@ export default function TestsiegerPage() {
           </nav>
 
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            Auszeichnung · Aktualisiert August 2026
+            Auszeichnung · Aktualisiert am 27. August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             Testsieger in der 24-Stunden-Pflege: Primundus ist 6× in Folge die Nr. 1

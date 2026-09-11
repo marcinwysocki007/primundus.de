@@ -10,6 +10,18 @@ const ratgeberLinks = [
   { label: 'Krankheiten', href: '/krankheiten' },
   { label: 'Alltag & Betreuung', href: '/alltag' },
   { label: 'Ratgeber Übersicht', href: '/ratgeber' },
+  // 11.09.2026 ergänzt (Onpage-Befund D): Die Ratgeberseiten mit der meisten
+  // Nachfrage hingen an 5 bis 13 internen Links, die Rechtstexte an 360.
+  // Demenz 1.106 Impressionen/28 T auf Position 26, Rumänien Position 8,4,
+  // Bulgarien 9,9, Herzschwäche 9,0 — ein Platzgewinn bringt dort die ersten
+  // Klicks. Die Polen-Seite (1.679 Impressionen/90 T) stand nirgends sitewide.
+  { label: 'Pflegekräfte aus Polen', href: '/pflegekraft-aus-polen' },
+  { label: 'Pflegekräfte aus Rumänien', href: '/pflegekraft-aus-rumaenien' },
+  { label: 'Pflegekräfte aus Bulgarien', href: '/pflegekraft-aus-bulgarien' },
+  { label: 'Demenz: Pflege zu Hause', href: '/demenz-pflege-zuhause' },
+  { label: 'Pflege nach Schlaganfall', href: '/schlaganfall-pflege-zuhause' },
+  { label: 'COPD: Pflege zu Hause', href: '/copd-pflege-zuhause' },
+  { label: 'Pflege bei Herzschwäche', href: '/herzinsuffizienz-pflege' },
 ]
 
 const serviceLinks = [

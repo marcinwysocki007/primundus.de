@@ -91,7 +91,7 @@ export default function HochtaunuskreisPage() {
           </nav>
 
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            24h-Pflege im Hochtaunuskreis · Aktualisiert August 2026
+            24h-Pflege im Hochtaunuskreis · Aktualisiert am 28. August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
             24h-Pflege im Hochtaunuskreis — Betreuung im eigenen Zuhause
