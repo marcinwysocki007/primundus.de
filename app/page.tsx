@@ -389,10 +389,10 @@ export default function Page() {
           <div className="max-w-wide mx-auto">
             <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Bestpreisgarantie</p>
             <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-pm-ink mb-3">
-              Liegt ein vergleichbares Angebot unter unserem Preis, gehen wir 100&nbsp;€ im Monat darunter.
+              Wir unterbieten jedes vergleichbare Angebot um 100&nbsp;€ im Monat.
             </h2>
             <p className="text-[16px] md:text-[17px] text-pm-body leading-[1.6] mb-8 max-w-2xl">
-              Das können wir, weil unsere Pflegekräfte bei uns angestellt sind und keine Vermittlungsgebühr anfällt. Der Preis kommt bei der Pflegekraft an.
+              Das können wir, weil unsere Pflegekräfte bei uns angestellt sind und keine Vermittlungsgebühr anfällt.
             </p>
 
             <div className="bg-white border border-pm-line rounded-2xl p-6 md:p-8">
