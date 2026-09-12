@@ -387,7 +387,7 @@ export default function Page() {
         {/* ── BESTPREISGARANTIE (Martin 12.09.2026: eigener Bereich; Ton verbindlich, ruhig) ── */}
         <section className="py-14 md:py-16 lg:py-20 px-5 bg-pm-paper">
           <div className="max-w-wide mx-auto">
-            <img loading="lazy" width={900} height={296} src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" className="h-[72px] md:h-[84px] w-auto mb-5" />
+            <img loading="lazy" width={900} height={256} src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" className="h-[72px] md:h-[84px] w-auto mb-5" />
             <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-pm-ink mb-3">
               Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
             </h2>
