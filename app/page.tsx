@@ -389,7 +389,7 @@ export default function Page() {
           <div className="max-w-wide mx-auto">
             <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Bestpreisgarantie</p>
             <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-pm-ink mb-3">
-              Wir unterbieten jedes vergleichbare Angebot um 100&nbsp;€ im Monat.
+              Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
             </h2>
             <p className="text-[16px] md:text-[17px] text-pm-body leading-[1.6] mb-8 max-w-2xl">
               Das können wir, weil unsere Pflegekräfte bei uns angestellt sind und keine Vermittlungsgebühr anfällt.
@@ -425,7 +425,7 @@ export default function Page() {
                     ))}
                   </ul>
                   <p className="text-[14px] text-pm-body leading-[1.6] mt-4">
-                    Legen Sie Marta Kapcio das Angebot vor, sie antwortet innerhalb eines Werktags.
+                    Legen Sie uns das Angebot vor, wir passen unseren Preis an. Marta Kapcio antwortet innerhalb eines Werktags.
                   </p>
                 </div>
               </div>
