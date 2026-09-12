@@ -384,6 +384,69 @@ export default function Page() {
           </div>
         </section>
 
+        {/* ── BESTPREISGARANTIE (Martin 12.09.2026: eigener Bereich; Ton verbindlich, ruhig) ── */}
+        <section className="py-14 md:py-16 lg:py-20 px-5 bg-pm-paper">
+          <div className="max-w-wide mx-auto">
+            <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Bestpreisgarantie</p>
+            <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-pm-ink mb-3">
+              Liegt ein vergleichbares Angebot unter unserem Preis, gehen wir 100&nbsp;€ im Monat darunter.
+            </h2>
+            <p className="text-[16px] md:text-[17px] text-pm-body leading-[1.6] mb-8 max-w-2xl">
+              Das können wir, weil unsere Pflegekräfte bei uns angestellt sind und keine Vermittlungsgebühr anfällt. Der Preis kommt bei der Pflegekraft an.
+            </p>
+
+            <div className="bg-white border border-pm-line rounded-2xl p-6 md:p-8">
+              <div className="flex flex-col md:flex-row md:items-start gap-5 md:gap-7">
+                <img loading="lazy"
+                  width={72}
+                  height={72}
+                  src="/images/marta-kapcio.jpg"
+                  alt="Marta Kapcio, Primundus"
+                  className="w-[72px] h-[72px] rounded-full object-cover object-top flex-shrink-0"
+                />
+                <div className="flex-1">
+                  <h3 className="text-[17px] md:text-[19px] font-bold text-pm-ink mb-2 leading-snug">
+                    Was heißt vergleichbar?
+                  </h3>
+                  <ul className="space-y-2">
+                    {[
+                      'Die gleiche Betreuungssituation und der gleiche Umfang',
+                      'Legal angestelltes Personal mit A1-Bescheinigung',
+                      'Vergleichbare Qualifikation: Sprache, Führerschein, Erfahrung',
+                      'Gesamtpreis pro Monat, nicht der Eigenanteil nach Zuschüssen',
+                      'Schriftliches Angebot, nicht älter als 14 Tage',
+                    ].map((b) => (
+                      <li key={b} className="flex items-start gap-2.5 text-[14px] md:text-[15px] text-pm-body leading-[1.5]">
+                        <svg className="w-4 h-4 mt-[3px] flex-shrink-0 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-[14px] text-pm-body leading-[1.6] mt-4">
+                    Legen Sie Marta Kapcio das Angebot vor, sie antwortet innerhalb eines Werktags.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://kostenrechner.primundus.de/?start=1&src=apex-garantie"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-full transition-colors"
+                >
+                  Preis in 2 Minuten sehen
+                </a>
+                <a
+                  href="tel:+4989200000830"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-pm-line hover:border-pm-taupe text-pm-ink font-semibold text-[15px] rounded-full transition-colors"
+                >
+                  Lieber sprechen? 089 200 000 830
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── 3. FÜR WEN IST PRIMUNDUS? ───────────────────────────────────── */}
         <section className="py-14 md:py-16 lg:py-20 px-5 bg-pm-paper">
           <div className="max-w-wide mx-auto">
