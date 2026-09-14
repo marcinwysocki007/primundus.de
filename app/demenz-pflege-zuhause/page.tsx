@@ -10,7 +10,7 @@ import {
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('demenz-pflege-zuhause', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('demenz-pflege-zuhause', '14. September 2026')
 
 const SECTIONS = [
   { id: 'moeglich', title: 'Was ist zuhause möglich?' },
@@ -20,6 +20,20 @@ const SECTIONS = [
   { id: 'pflegegrad', title: 'Pflegegrad & Leistungen' },
   { id: 'grenzen', title: 'Grenzen der häuslichen Pflege' },
   { id: 'faq', title: 'Häufige Fragen' },
+]
+
+// Häufige Fragen: EINE Liste für die sichtbaren Antworten und das FAQPage-JSON-LD,
+// damit beide nie auseinanderlaufen. Korrekturen 14.09.2026 nach Martins Freigabe
+// (kein „nachweislich", keine „rund um die Uhr präsente" Kraft, Kosten ohne
+// Entlastungsbetrag, Kommas).
+const FRAGEN = [
+  { q: 'Kann man Demenzkranke zuhause pflegen?', a: 'Ja — in den meisten Stadien ist Demenzpflege zuhause möglich und empfehlenswert. Die vertraute Umgebung gibt Orientierung und Halt. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei zunehmendem Pflegebedarf erhalten.' },
+  { q: 'Ab wann braucht man 24h-Pflege bei Demenz?', a: 'Spätestens wenn der Demenzkranke nicht mehr allein gelassen werden kann — bei Weglaufen, gefährlichem Vergessen (Herd), Nachtunruhe oder wenn Angehörige erschöpft sind. Dann ist eine Betreuungskraft, die mit im Haus lebt, die richtige Lösung.' },
+  { q: 'Welchen Pflegegrad bekommt man bei Demenz?', a: 'Je nach Stadium PG 2–5. Leichte Demenz: oft PG 2–3. Mittlere Demenz: PG 3–4. Schwere Demenz: PG 4–5. Seit 2017 werden kognitive Einschränkungen im Begutachtungsverfahren stärker gewichtet — Demenzbetroffene werden besser eingestuft als früher.' },
+  { q: 'Wie viel kostet Demenzpflege zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (599 € bei Pflegegrad 3) bleiben rund 1.600–2.900 € im Monat. Den Entlastungsbetrag von 131 € zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
+  { q: 'Ist bei Demenz das Zuhause oder das Pflegeheim besser?', a: 'Solange die Sicherheit gewährleistet ist, spricht bei Demenz vieles für das Zuhause: Die vertraute Umgebung gibt Orientierung, eine feste Betreuungskraft ist eine verlässliche Bezugsperson. Das Heim ist die bessere Wahl bei ausgeprägter Selbst- oder Fremdgefährdung oder wenn intensive medizinische Versorgung zuhause nicht sicherzustellen ist.' },
+  { q: 'Wie gestaltet man den Alltag mit Demenzkranken?', a: 'Feste Tagesstrukturen, bekannte Rituale beibehalten, kurze einfache Kommunikation, keine Korrektur des Vergessens. Sinnvolle Beschäftigung, die an frühere Interessen anknüpft. Überreizung und Konfrontation mit dem Vergessen vermeiden.' },
+  { q: 'Wann ist ein Pflegeheim besser als Demenzpflege zuhause?', a: 'Wenn intensivmedizinische Behandlungspflege rund um die Uhr nötig ist, wenn aggressive Verhaltensweisen die Sicherheit gefährden, oder wenn kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist.' },
 ]
 
 export const metadata: Metadata = {
@@ -60,15 +74,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Kann man Demenzkranke zuhause pflegen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — in den meisten Stadien ist Demenzpflege zuhause möglich und empfehlenswert. Die vertraute Umgebung gibt Orientierung und verlangsamt nachweislich den Krankheitsverlauf. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei zunehmendem Pflegebedarf erhalten.' } },
-      { '@type': 'Question', name: 'Ab wann braucht man 24h-Pflege bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Spätestens wenn der Demenzkranke nicht mehr allein gelassen werden kann — bei Weglaufen, gefährlichem Vergessen (Herd), Nachtunruhe oder wenn Angehörige erschöpft sind. Dann ist eine rund um die Uhr präsente Betreuungskraft die richtige Lösung.' } },
-      { '@type': 'Question', name: 'Welchen Pflegegrad bekommt man bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Je nach Stadium PG 2–5. Leichte Demenz: oft PG 2–3. Mittlere Demenz: PG 3–4. Schwere Demenz: PG 4–5. Seit 2017 werden kognitive Einschränkungen im Begutachtungsverfahren stärker gewichtet — Demenzbetroffene werden besser eingestuft als früher.' } },
-      { '@type': 'Question', name: 'Wie viel kostet Demenzpflege zuhause?', acceptedAnswer: { '@type': 'Answer', text: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.800 €/Monat.' } },
-      { '@type': 'Question', name: 'Ist bei Demenz das Zuhause oder das Pflegeheim besser?', acceptedAnswer: { '@type': 'Answer', text: 'Solange die Sicherheit gewährleistet ist, spricht bei Demenz vieles für das Zuhause: Die vertraute Umgebung gibt Orientierung, eine feste Betreuungskraft ist eine verlässliche Bezugsperson. Das Heim ist die bessere Wahl bei ausgeprägter Selbst- oder Fremdgefährdung oder wenn intensive medizinische Versorgung zuhause nicht sicherzustellen ist.' } },
-      { '@type': 'Question', name: 'Wie gestaltet man den Alltag mit Demenzkranken?', acceptedAnswer: { '@type': 'Answer', text: 'Feste Tagesstrukturen, bekannte Rituale beibehalten, kurze einfache Kommunikation, keine Korrektur des Vergessens. Sinnvolle Beschäftigung die an frühere Interessen anknüpft. Überreizung und Konfrontation mit dem Vergessen vermeiden.' } },
-      { '@type': 'Question', name: 'Wann ist ein Pflegeheim besser als Demenzpflege zuhause?', acceptedAnswer: { '@type': 'Answer', text: 'Wenn intensivmedizinische Behandlungspflege rund um die Uhr nötig ist, wenn aggressive Verhaltensweisen die Sicherheit gefährden, oder wenn kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist.' } }
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
 ]
 
@@ -93,12 +99,12 @@ export default function DemenzPflegeZuhause() {
           ]}
           augenbraue="Ratgeber Demenz"
           titel="Demenzbetreuung zu Hause: Was möglich ist — und wann 24h-Pflege hilft"
-          einleitung="Demenzpflege zuhause ist in den meisten Stadien möglich — und oft die bessere Wahl. Die vertraute Umgebung gibt Orientierung, verlangsamt nachweislich den Krankheitsverlauf und bewahrt die Würde. Mit einer 24h-Betreuungskraft bleibt die eigene Wohnung erhalten, auch wenn der Pflegebedarf wächst."
+          einleitung="Demenzpflege zuhause ist in den meisten Stadien möglich — und oft die bessere Wahl. Die vertraute Umgebung gibt Orientierung und Halt und bewahrt die Würde. Mit einer 24h-Betreuungskraft bleibt die eigene Wohnung erhalten, auch wenn der Pflegebedarf wächst."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="8 Min."
           blick={[
             'Häusliche Pflege ist bei Demenz in den meisten Stadien möglich und empfehlenswert',
-            'Vertraute Umgebung verlangsamt den Krankheitsverlauf nachweislich',
+            'Vertraute Umgebung gibt Orientierung und Halt',
             '24h-Pflege spätestens wenn der Betroffene nicht mehr allein gelassen werden kann',
             'Pflegegrad 2–5 je nach Stadium — kognitive Einschränkungen werden seit 2017 stärker gewichtet',
             'Pflegegeld: 347–990 €/Monat · Entlastungsbudget: 3.539 €/Jahr',
@@ -109,7 +115,7 @@ export default function DemenzPflegeZuhause() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="moeglich" titel="Was ist bei der Demenzpflege zuhause möglich?">
             <Text>
-              In den meisten Demenzstadien ist die häusliche Pflege nicht nur möglich — sie ist die empfohlene Versorgungsform. Studien zeigen: Demenzkranke in ihrer vertrauten Umgebung sind ruhiger, orientierter und kognitiv länger stabiler als in Pflegeheimen.
+              In den meisten Demenzstadien ist die häusliche Pflege nicht nur möglich — sie ist die empfohlene Versorgungsform. Ein Umzug ist für viele Menschen mit Demenz ein Einschnitt, nach dem sie sich erst wieder zurechtfinden müssen. Zuhause bleibt ihnen das erspart.
             </Text>
             <Text>
               Was zuhause gut funktioniert: Tagesstruktur schaffen, bekannte Rituale beibehalten, menschliche Nähe geben. Was schwieriger wird: Sicherheit rund um die Uhr gewährleisten, mit Nachtunruhe umgehen, Weglaufen verhindern. Genau hier macht eine 24h-Betreuungskraft den Unterschied.
@@ -132,14 +138,14 @@ export default function DemenzPflegeZuhause() {
 
           <Abschnitt id="alltag" titel="Alltag mit Demenz zuhause gestalten">
             <Text>
-              Gute Demenzpflege zuhause folgt klaren Prinzipien — unabhängig davon ob Angehörige oder eine professionelle Betreuungskraft die Hauptpflege übernimmt.
+              Gute Demenzpflege zuhause folgt klaren Prinzipien — unabhängig davon, ob Angehörige oder eine professionelle Betreuungskraft die Hauptpflege übernimmt.
             </Text>
             <Punkte
               punkte={[
                 { title: 'Feste Tagesstruktur', desc: 'Aufstehen, Mahlzeiten, Spaziergang, Schlafenszeit — immer zur gleichen Zeit. Vorhersehbarkeit gibt Sicherheit und reduziert Angst und Unruhe erheblich.' },
                 { title: 'Bekannte Rituale bewahren', desc: 'Lieblingsmusik, täglicher Kaffee mit Gebäck, der vertraute Stammplatz im Wohnzimmer. Was früher selbstverständlich war, ist heute wertvolles therapeutisches Mittel.' },
-                { title: 'Kommunikation anpassen', desc: 'Kurze, einfache Sätze. Nicht korrigieren wenn etwas Vergessenes falsch erinnert wird. In die Welt des Demenzkranken einsteigen statt ihn in die Realität zu zerren.' },
-                { title: 'Beschäftigung sinnvoll gestalten', desc: 'Aktivitäten die an frühere Interessen anknüpfen: Fotos sortieren, Musik hören, einfache Handarbeiten, Gartenarbeit. Überforderung durch zu viele Reize vermeiden.' },
+                { title: 'Kommunikation anpassen', desc: 'Kurze, einfache Sätze. Nicht korrigieren, wenn etwas Vergessenes falsch erinnert wird. In die Welt des Demenzkranken einsteigen, statt ihn in die Realität zu zerren.' },
+                { title: 'Beschäftigung sinnvoll gestalten', desc: 'Aktivitäten, die an frühere Interessen anknüpfen: Fotos sortieren, Musik hören, einfache Handarbeiten, Gartenarbeit. Überforderung durch zu viele Reize vermeiden.' },
                 { title: 'Sicherheit im Haushalt', desc: 'Herd sichern, scharfe Gegenstände wegräumen, Türen sichern wenn Weglaufen ein Thema ist. Ein Hausnotruf gibt zusätzliche Sicherheit.' },
               ]}
             />
@@ -155,11 +161,11 @@ export default function DemenzPflegeZuhause() {
           <DunklerAbschnitt
             id="pflege-24h"
             titel="Wann braucht es 24h-Pflege bei Demenz?"
-            einleitung="Spätestens wenn eines dieser Zeichen auftritt, ist 24h-Präsenz notwendig — entweder durch Angehörige rund um die Uhr, oder professioneller durch eine Betreuungskraft."
+            einleitung="Spätestens wenn eines dieser Zeichen auftritt, ist 24h-Präsenz notwendig — entweder durch Angehörige rund um die Uhr oder professioneller durch eine Betreuungskraft."
             punkte={[
-              { title: 'Weglaufen (Hinlaufen)', desc: 'Der Demenzkranke verlässt die Wohnung ohne es zu merken — besonders nachts eine ernsthafte Gefahr. Ständige Präsenz und Türsicherung notwendig.' },
-              { title: 'Nachtunruhe', desc: 'Schlafen am Tag, wach in der Nacht — ein häufiges Demenz-Symptom das Angehörige schnell an ihre Grenzen bringt. Eine Betreuungskraft übernimmt die Nachtwache.' },
-              { title: 'Selbstgefährdung', desc: 'Vergessen den Herd abzustellen, falsche Medikamentendosierung, Stürze durch Orientierungslosigkeit. Ständige Aufsicht notwendig.' },
+              { title: 'Weglaufen (Hinlaufen)', desc: 'Der Demenzkranke verlässt die Wohnung, ohne es zu merken — besonders nachts eine ernsthafte Gefahr. Ständige Präsenz und Türsicherung notwendig.' },
+              { title: 'Nachtunruhe', desc: 'Schlafen am Tag, wach in der Nacht — ein häufiges Demenz-Symptom, das Angehörige schnell an ihre Grenzen bringt. Weil die Betreuungskraft mit im Haus wohnt, ist bei Bedarf auch nachts jemand da. Sind nächtliche Einsätze die Regel, müssen sie ausgeglichen werden.' },
+              { title: 'Selbstgefährdung', desc: 'Vergessen, den Herd abzustellen, falsche Medikamentendosierung, Stürze durch Orientierungslosigkeit. Ständige Aufsicht notwendig.' },
               { title: 'Angehörige erschöpft', desc: 'Burnout bei pflegenden Angehörigen ist häufig. Wenn die Belastung zu groß wird, ist eine professionelle 24h-Kraft die beste Lösung — auch für die Beziehung.' },
             ]}
           >
@@ -168,7 +174,7 @@ export default function DemenzPflegeZuhause() {
                 zweispaltig
                 punkte={[
                   'Tagesstruktur schaffen und Rituale konsequent einhalten',
-                  'Rund um die Uhr präsent — auch nachts ansprechbar',
+                  'Wohnt mit im Haus: tagsüber im Einsatz, bei Bedarf auch nachts vor Ort',
                   'Sicherheit im Haushalt gewährleisten — Weglaufen verhindern',
                   'Körperpflege, Mahlzeiten, Medikamentengabe',
                   'Emotionale Begleitung und Beschäftigung',
@@ -233,12 +239,12 @@ export default function DemenzPflegeZuhause() {
 
           <Abschnitt id="grenzen" titel="Wann stößt häusliche Pflege an ihre Grenzen?">
             <Text>
-              Häusliche Demenzpflege — auch mit professioneller Betreuungskraft — hat Grenzen. Ein Pflegeheim wird dann zur besseren Option wenn:
+              Häusliche Demenzpflege — auch mit professioneller Betreuungskraft — hat Grenzen. Ein Pflegeheim wird dann zur besseren Option, wenn:
             </Text>
             <Liste
               punkte={[
                 'Intensivmedizinische Behandlungspflege rund um die Uhr nötig ist (z.B. Beatmung, Dauerkatheter-Management)',
-                'Der Demenzkranke so aggressiv wird dass die Sicherheit der Betreuungsperson gefährdet ist',
+                'Der Demenzkranke so aggressiv wird, dass die Sicherheit der Betreuungsperson gefährdet ist',
                 'Kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist',
                 'Der Betroffene ausdrücklich selbst ins Pflegeheim möchte (wenn noch entscheidungsfähig)',
               ]}
@@ -250,17 +256,7 @@ export default function DemenzPflegeZuhause() {
           </Abschnitt>
 
           <Abschnitt id="faq" titel="Häufige Fragen zur Demenzpflege zuhause">
-            <Fragen
-              fragen={[
-                { q: 'Kann man Demenzkranke zuhause pflegen?', a: 'Ja — in den meisten Stadien ist Demenzpflege zuhause möglich und empfehlenswert. Die vertraute Umgebung gibt Orientierung und verlangsamt nachweislich den Krankheitsverlauf. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei zunehmendem Pflegebedarf erhalten.' },
-                { q: 'Ab wann braucht man 24h-Pflege bei Demenz?', a: 'Spätestens wenn der Demenzkranke nicht mehr allein gelassen werden kann — bei Weglaufen, gefährlichem Vergessen (Herd), Nachtunruhe oder wenn Angehörige erschöpft sind. Dann ist eine rund um die Uhr präsente Betreuungskraft die richtige Lösung.' },
-                { q: 'Welchen Pflegegrad bekommt man bei Demenz?', a: 'Je nach Stadium PG 2–5. Leichte Demenz: oft PG 2–3. Mittlere Demenz: PG 3–4. Schwere Demenz: PG 4–5. Seit 2017 werden kognitive Einschränkungen im Begutachtungsverfahren stärker gewichtet — Demenzbetroffene werden besser eingestuft als früher.' },
-                { q: 'Wie viel kostet Demenzpflege zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.800 €/Monat.' },
-                { q: 'Ist bei Demenz das Zuhause oder das Pflegeheim besser?', a: 'Solange die Sicherheit gewährleistet ist, spricht bei Demenz vieles für das Zuhause: Die vertraute Umgebung gibt Orientierung, eine feste Betreuungskraft ist eine verlässliche Bezugsperson. Das Heim ist die bessere Wahl bei ausgeprägter Selbst- oder Fremdgefährdung oder wenn intensive medizinische Versorgung zuhause nicht sicherzustellen ist.' },
-                { q: 'Wie gestaltet man den Alltag mit Demenzkranken?', a: 'Feste Tagesstrukturen, bekannte Rituale beibehalten, kurze einfache Kommunikation, keine Korrektur des Vergessens. Sinnvolle Beschäftigung die an frühere Interessen anknüpft. Überreizung und Konfrontation mit dem Vergessen vermeiden.' },
-                { q: 'Wann ist ein Pflegeheim besser als Demenzpflege zuhause?', a: 'Wenn intensivmedizinische Behandlungspflege rund um die Uhr nötig ist, wenn aggressive Verhaltensweisen die Sicherheit gefährden, oder wenn kein geeigneter Wohnraum für eine Betreuungskraft vorhanden ist.' },
-              ]}
-            />
+            <Fragen fragen={FRAGEN} />
           </Abschnitt>
 
           <Weiterlesen aktuell="demenz-pflege-zuhause" variante="vorlage" />
