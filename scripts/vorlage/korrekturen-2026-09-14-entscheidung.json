@@ -46,6 +46,144 @@
    "art": "tempo",
    "alt": "Primundus findet unverzüglich eine Ersatzkraft — kein Versorgungsausfall.",
    "neu": "Primundus findet eine Ersatzkraft, in der Regel innerhalb weniger Tage."
+  },
+  {
+   "seite": "24h-pflege-vs-pflegeheim-kosten",
+   "art": "kosten",
+   "alt": "['– Pflegegeld PG 3', '– 599 €/Monat'], ['– Entlastungsbetrag', '– 131 €/Monat'],",
+   "neu": "['– Pflegegeld PG 3', '– 599 €/Monat'],"
+  },
+  {
+   "seite": "24h-pflege-vs-pflegeheim-kosten",
+   "art": "kosten",
+   "alt": "['Eigenanteil', 'ca. 1.925 €/Monat']",
+   "neu": "['Eigenanteil', 'ca. 2.055 €/Monat']",
+   "warum": "2.700 + 250 − 599 − 295 = 2.056"
+  },
+  {
+   "seite": "24h-pflege-vs-pflegeheim-kosten",
+   "art": "kosten",
+   "alt": "Nach Kassenzuschüssen (PG 3): Eigenanteil ca. 1.700–2.000 €/Monat",
+   "neu": "Nach Kassenzuschüssen (PG 3): Eigenanteil ca. 1.850–2.150 €/Monat"
+  },
+  {
+   "seite": "pflegekraft-aus-rumaenien",
+   "art": "kosten",
+   "alt": "['Pflegegeld PG 3', '– 599 €/Monat', 'Kassenzuschuss'], ['Entlastungsbetrag', '– 131 €/Monat', 'Kassenzuschuss'],",
+   "neu": "['Pflegegeld PG 3', '– 599 €/Monat', 'Kassenzuschuss'],"
+  },
+  {
+   "seite": "pflegekraft-aus-rumaenien",
+   "art": "kosten",
+   "alt": "'ca. 1.700–2.500 €/Monat'",
+   "neu": "'ca. 1.850–2.650 €/Monat'"
+  },
+  {
+   "seite": "pflegedienst-oder-24h-kraft",
+   "art": "kosten",
+   "alt": "Mit Pflegegeld (347–990 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget und Steuerabzug sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft, Nacht — alles in einem.",
+   "neu": "Mit Pflegegeld (347–990 €/Mo), Entlastungsbudget und Steuerabzug sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.150 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft — alles in einem."
+  },
+  {
+   "seite": "pflegedienst-oder-24h-kraft",
+   "art": "kosten",
+   "alt": "[<>− Pflegegeld PG 3</>, <>− 599 €/Mo</>], [<>− Sachleistungen (für Pflegedienst)</>, <>− bis 1.497 €/Mo</>], [<>− Entlastungsbetrag + Budget</>, <>− ca. 420 €/Mo</>], [<>Eigenanteil ca.</>, <>ca. 1.000–1.800 €/Mo</>]",
+   "neu": "[<>− Sachleistungen (für den Pflegedienst)</>, <>− ca. 300–600 €/Mo</>], [<>− anteiliges Pflegegeld PG 3 (Kombinationsleistung)</>, <>− ca. 360–480 €/Mo</>], [<>− Entlastungsbudget (anteilig)</>, <>− ca. 295 €/Mo</>], [<>Eigenanteil ca.</>, <>ca. 1.450–2.850 €/Mo</>]",
+   "warum": "Pflegegeld und Sachleistungen gibt es nebeneinander nur anteilig (Kombinationsleistung); Entlastungsbetrag nicht für die Kraft"
+  },
+  {
+   "seite": "pflegegrad-3",
+   "art": "kosten",
+   "alt": "<><strong>Pflegegeld:</strong> 599 €/Monat</>, <><strong>Entlastungsbetrag:</strong> 131 €/Monat</>,",
+   "neu": "<><strong>Pflegegeld:</strong> 599 €/Monat</>,"
+  },
+  {
+   "seite": "24-stunden-pflege-kostenuebernahme",
+   "art": "kosten",
+   "alt": "Pflegegeld (347 bis 990 Euro je nach Pflegegrad), Entlastungsbetrag (131 Euro monatlich) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 700 bis 1.200 Euro im Monat, den Rest tragen die Familien selbst.",
+   "neu": "Pflegegeld (347 bis 990 Euro je nach Pflegegrad) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 600 bis 1.100 Euro im Monat, den Rest tragen die Familien selbst. Den Entlastungsbetrag (131 Euro) zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.",
+   "mehrfach": true
+  },
+  {
+   "seite": "24-stunden-pflege-kostenuebernahme",
+   "art": "kosten",
+   "alt": "mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag",
+   "neu": "mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad) und dem gemeinsamen Jahresbetrag"
+  },
+  {
+   "seite": "24-stunden-pflege-kostenuebernahme",
+   "art": "kosten",
+   "alt": "131 € monatlich (ab PG 1)",
+   "neu": "131 € monatlich (ab PG 1), nur für anerkannte Alltagshilfen"
+  },
+  {
+   "seite": "24-stunden-pflege-kostenuebernahme",
+   "art": "kosten",
+   "alt": "gehen ab: 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.450 Euro",
+   "neu": "gehen ab: 599 Euro Pflegegeld, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.570 Euro",
+   "warum": "2.800 − 599 − 295 − 333 = 1.573"
+  },
+  {
+   "seite": "24-stunden-pflege-wirkliche-kosten",
+   "art": "kosten",
+   "alt": "[<>− 131 €</>, <>Entlastungsbetrag</>],",
+   "neu": ""
+  },
+  {
+   "seite": "24-stunden-pflege-wirkliche-kosten",
+   "art": "kosten",
+   "alt": "[<>≈ 1.450–1.700 €</>, <strong>Effektiv selbst zu tragen</strong>]",
+   "neu": "[<>≈ 1.570–1.820 €</>, <strong>Effektiv selbst zu tragen</strong>]"
+  },
+  {
+   "seite": "eigenanteil-24h-pflege-senken",
+   "art": "kosten",
+   "alt": "'Pflegegeld: – 599 €/Monat', 'Entlastungsbetrag: – 131 €/Monat',",
+   "neu": "'Pflegegeld: – 599 €/Monat',"
+  },
+  {
+   "seite": "eigenanteil-24h-pflege-senken",
+   "art": "kosten",
+   "alt": "Gesamt mögliche Einsparung: über 1.400 €/Monat",
+   "neu": "Gesamt mögliche Einsparung: über 1.250 €/Monat",
+   "warum": "599 + 295 + 333 + 42 = 1.269"
+  },
+  {
+   "seite": "eigenanteil-24h-pflege-senken",
+   "art": "kosten",
+   "alt": "['Entlastungsbetrag einreichen', '131 €/Monat', 'Gering']",
+   "neu": "['Entlastungsbetrag für Alltagshilfen einreichen', '131 €/Monat (nicht für die Betreuungskraft)', 'Gering']"
+  },
+  {
+   "seite": "eigenanteil-24h-pflege-senken",
+   "art": "kosten",
+   "alt": "Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen.",
+   "neu": "Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen; für die Betreuungskraft selbst zahlt die Kasse ihn in der Regel nicht."
+  },
+  {
+   "seite": "eigenanteil-24h-pflege-senken",
+   "art": "kosten",
+   "alt": "(Pflegegeld, Entlastungsbetrag, Entlastungsbudget)",
+   "neu": "(Pflegegeld, Entlastungsbudget)"
+  },
+  {
+   "seite": "eigenanteil-24h-pflege-senken",
+   "art": "kosten",
+   "alt": "Pflegegeld (599 €) + Entlastungsbetrag (131 €) + Entlastungsbudget (ca. 295 €/Monat) + Steuerabzug (ca. 333 €) = über 1.350 €/Monat Einsparung",
+   "neu": "Pflegegeld (599 €) + Entlastungsbudget (ca. 295 €/Monat) + Steuerabzug (ca. 333 €) = über 1.200 €/Monat Einsparung"
+  },
+  {
+   "seite": "eigenanteil-24h-pflege-senken",
+   "art": "kosten",
+   "alt": "durch Pflegegeld (599 €/Monat), Entlastungsbetrag (131 €/Monat), Entlastungsbudget (ca. 295 €/Monat anteilig) und Steuerabzug (ca. 333 €/Monat) zusammen über 1.350 € monatlich eingespart werden — aus Bruttokosten von 2.700 € werden ca. 1.350 € Eigenanteil.",
+   "neu": "durch Pflegegeld (599 €/Monat), Entlastungsbudget (ca. 295 €/Monat anteilig) und Steuerabzug (ca. 333 €/Monat) zusammen über 1.200 € monatlich eingespart werden — aus Bruttokosten von 2.700 € werden ca. 1.470 € Eigenanteil.",
+   "warum": "2.700 − 1.227 = 1.473"
+  },
+  {
+   "seite": "tagespflege-vs-24h-betreuung",
+   "art": "kosten",
+   "alt": "Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat.",
+   "neu": "Mit Pflegegeld (statt Sachleistungen) und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.050 €/Monat."
   }
  ]
 }

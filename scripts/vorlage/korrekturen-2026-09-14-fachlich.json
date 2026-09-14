@@ -1,0 +1,113 @@
+{
+ "_hinweis": "Fachliche Korrekturen (Martin entscheidet): Hausnotruf-Finanzierung (Pflegehilfsmittel, 25,50 €; Quellen pflege.de, senioren-focus.de), Vertragspartner statt Vermittlungsagentur (Martin 12.09.: Vertragspartner PRIMUNDUS Sp. z o.o.), Minijob 2026 (603 €, Privathaushalt 5 %/5 %; Quellen finanztip, Minijob-Zentrale). Erst nach Freigabe anwenden.",
+ "korrekturen": [
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "Die Pflegekasse kann über den Entlastungsbetrag (131 €/Monat) einen Teil der Kosten erstatten.",
+   "neu": "Die Pflegekasse zahlt als Pflegehilfsmittel ab Pflegegrad 1 bis zu 25,50 € im Monat dazu."
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "Der Hausnotruf kann aus dem monatlichen Entlastungsbetrag (131 €) der Pflegekasse finanziert werden — wenn er über einen anerkannten Anbieter bezogen wird.",
+   "neu": "Der Hausnotruf ist ein Pflegehilfsmittel: Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 25,50 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat."
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "Die Pflegekasse kann über den Entlastungsbetrag die Kosten übernehmen.",
+   "neu": "Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 25,50 € im Monat."
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "Finanzierung: Entlastungsbetrag (131 €/Monat) der Pflegekasse kann genutzt werden",
+   "neu": "Finanzierung: Pflegekasse zahlt ab Pflegegrad 1 bis zu 25,50 €/Monat (Pflegehilfsmittel)"
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "titel=\"Kassenzuschuss: Entlastungsbetrag nutzen\"",
+   "neu": "titel=\"Kassenzuschuss: Hausnotruf als Pflegehilfsmittel\""
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "Der Hausnotruf kann aus dem monatlichen Entlastungsbetrag (131 €/Monat, für alle Pflegegrade 1–5) der Pflegekasse bezahlt werden — wenn der Anbieter als anerkanntes Betreuungs- und Entlastungsangebot zugelassen ist. Viele Wohlfahrtsverbände (DRK, Malteser, Johanniter) sind automatisch anerkannt. Pflegekasse anfragen.",
+   "neu": "Der Hausnotruf ist ein Pflegehilfsmittel: Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 25,50 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat. Welche Anbieter das sind, sagt die Pflegekasse."
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "Entlastungsbetrag (131 €/Monat) der Pflegekasse kann die Kosten decken.",
+   "neu": "Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 25,50 € im Monat."
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "hausnotruf",
+   "alt": "Indirekt — über den Entlastungsbetrag (131 €/Monat, alle Pflegegrade 1–5). Voraussetzung: Anbieter muss als anerkanntes Betreuungsangebot zugelassen sein. Viele Wohlfahrtsverbände (DRK, Malteser, Johanniter) sind anerkannt.",
+   "neu": "Ja — der Hausnotruf ist ein Pflegehilfsmittel. Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 25,50 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat."
+  },
+  {
+   "seite": "sturzpraevention-senioren",
+   "art": "hausnotruf",
+   "alt": "zusatz: 'Entlastungsbetrag (131 €/Mo)'",
+   "neu": "zusatz: 'Pflegekasse: bis 25,50 €/Mo'"
+  },
+  {
+   "seite": "sturzpraevention-senioren",
+   "art": "hausnotruf",
+   "alt": "Hausnotruf: über Entlastungsbetrag (131 €/Monat) der Pflegekasse.",
+   "neu": "Hausnotruf: als Pflegehilfsmittel über die Pflegekasse (bis 25,50 €/Monat)."
+  },
+  {
+   "seite": "pflegekraft-legal-beschaeftigen",
+   "art": "vertragspartner",
+   "alt": "Die Familie schließt einen Vertrag mit der deutschen Vermittlungsagentur.",
+   "neu": "Die Familie schließt den Vertrag mit dem entsendenden Unternehmen oder einer Agentur — bei Primundus direkt mit der PRIMUNDUS Sp. z o.o."
+  },
+  {
+   "seite": "pflegekraft-legal-beschaeftigen",
+   "art": "vertragspartner",
+   "alt": "Die Familie schließt einen Vertrag mit der deutschen Agentur — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.",
+   "neu": "Die Familie schließt den Vertrag mit dem entsendenden Unternehmen oder einer Agentur — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben."
+  },
+  {
+   "seite": "pflegekraft-legal-beschaeftigen",
+   "art": "vertragspartner",
+   "alt": "Die Familie hat Vertrag mit der Agentur — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.",
+   "neu": "Die Familie hat einen Vertrag mit dem Unternehmen oder einer Agentur — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben."
+  },
+  {
+   "seite": "pflegekraft-sozialversicherung-anmelden",
+   "art": "minijob",
+   "alt": "Minijob (bis 556 €/Mo)",
+   "neu": "Minijob (bis 603 €/Mo)"
+  },
+  {
+   "seite": "pflegekraft-sozialversicherung-anmelden",
+   "art": "minijob",
+   "alt": "regulär (über 556 €/Mo)",
+   "neu": "regulär (über 603 €/Mo)"
+  },
+  {
+   "seite": "pflegekraft-sozialversicherung-anmelden",
+   "art": "minijob",
+   "alt": "der tatsächliche Lohn übersteigt 556 €/Monat fast immer erheblich.",
+   "neu": "der tatsächliche Lohn übersteigt 603 €/Monat fast immer erheblich."
+  },
+  {
+   "seite": "pflegekraft-sozialversicherung-anmelden",
+   "art": "minijob",
+   "alt": "15 % Kranken-, 15 % Rentenversicherung, 2 % pauschale Lohnsteuer.",
+   "neu": "5 % Kranken-, 5 % Rentenversicherung, 2 % pauschale Lohnsteuer."
+  },
+  {
+   "seite": "pflegekraft-sozialversicherung-anmelden",
+   "art": "minijob",
+   "alt": "['Rentenversicherung', '15 %', 'Arbeitgeber (Familie)']",
+   "neu": "['Rentenversicherung', '5 %', 'Arbeitgeber (Familie)']"
+  }
+ ]
+}
