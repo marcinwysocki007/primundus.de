@@ -77,7 +77,7 @@ const schemaMarkup = [
         name: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv im Monat?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Beispielrechnung: 2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche Steuerersparnis — es bleiben rund 1.450 Euro effektiv selbst zu tragen (Stand August 2026).',
+          text: 'Beispielrechnung: 2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche Steuerersparnis — es bleiben rund 1.570 Euro effektiv selbst zu tragen (Stand August 2026).',
         },
       },
     ],
@@ -152,10 +152,10 @@ export default function WirklicheKostenPage() {
                   [<>+ 200–300 €</>, <>Kost &amp; Logis für die Betreuungskraft (bei Primundus beziffert)</>],
                   [<>≈ 3.050 €</>, <strong>Ehrliche Gesamtkosten</strong>],
                   [<>− 599 €</>, <>Pflegegeld (Pflegegrad 3)</>],
-                  [<>− 131 €</>, <>Entlastungsbetrag</>],
+                  
                   [<>− 295 €</>, <>Verhinderungspflege (3.539 €/Jahr, monatlich verteilt)</>],
                   [<>− 333 €</>, <>Steuerermäßigung § 35a EStG (bis 4.000 €/Jahr)</>],
-                  [<>≈ 1.450–1.700 €</>, <strong>Effektiv selbst zu tragen</strong>],
+                  [<>≈ 1.570–1.820 €</>, <strong>Effektiv selbst zu tragen</strong>],
                 ]}
               />
               <Text>
@@ -188,9 +188,7 @@ export default function WirklicheKostenPage() {
               punkte={[
                 { title: "Warum wirken manche 24h-Pflege-Angebote so günstig?", desc: "Drei verbreitete Mechanismen: Tagespreise statt Monatssummen (105 Euro am Tag klingt klein, sind aber über 3.100 Euro im Monat), „ab\"-Preise, die nur für die einfachste Konstellation gelten, und unbezifferte Nebenkosten wie Kost und Logis, Fahrtkosten oder Feiertagszuschläge, die erst im Vertrag auftauchen." },
                 { title: "Welche Nebenkosten kommen üblicherweise dazu?", desc: "Typisch sind: Kost und Logis für die Betreuungskraft (bei Primundus mit 200 bis 300 Euro monatlich beziffert), An- und Abreisekosten bei Kraftwechseln sowie Zuschläge an Feiertagen. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie unterschreiben." },
-                { title: "Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv?", desc: <>Beispielrechnung: 2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, 131 Euro
-                Entlastungsbetrag, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche
-                Steuerersparnis — es bleiben rund 1.450 Euro effektiv selbst zu tragen. Alle Details:{' '}
+                { title: "Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv?", desc: <>Beispielrechnung: 2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche Steuerersparnis — es bleiben rund 1.570 Euro effektiv selbst zu tragen. Alle Details:{' '}
                 <a href="/24-stunden-pflege-kostenuebernahme" className="text-pm-taupe underline underline-offset-2">Wer übernimmt die Kosten?</a></> },
               ]}
             />

@@ -144,9 +144,8 @@ export default function PflegekraftAusBulgarien() {
               zeilen={[
                 ['Kosten Primundus', '2.200–3.500 €/Monat', 'Je nach Pflegebedarf'],
                 ['Pflegegeld PG 3', '– 599 €/Monat', 'Kassenzuschuss'],
-                ['Entlastungsbetrag', '– 131 €/Monat', 'Kassenzuschuss'],
                 ['Entlastungsbudget (anteilig)', '– ca. 295 €/Monat', 'Kassenzuschuss'],
-                ['Eigenanteil (ca.)', 'ca. 1.700–2.500 €/Monat', 'Je nach PG und Kosten'],
+                ['Eigenanteil (ca.)', 'ca. 1.850–2.650 €/Monat', 'Je nach PG und Kosten'],
               ]}
             />
             <MehrDazu

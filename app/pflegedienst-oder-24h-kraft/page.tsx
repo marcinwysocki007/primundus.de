@@ -124,7 +124,7 @@ export default function PflegedienstOder24hKraft() {
                 {
                   titel: '24h-Betreuungskraft (Primundus)',
                   ton: 'taupe',
-                  text: '2.200–3.500 €/Monat. Mit Pflegegeld (347–990 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget und Steuerabzug sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft, Nacht — alles in einem.',
+                  text: '2.200–3.500 €/Monat. Mit Pflegegeld (347–990 €/Mo), Entlastungsbudget und Steuerabzug sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.150 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft — alles in einem.',
                   punkte: ['Kombination mit Pflegedienst für Behandlungspflege möglich — Kosten dann kumuliert aber Kassenzuschüsse laufen parallel.'],
                 },
               ]}
@@ -153,7 +153,7 @@ export default function PflegedienstOder24hKraft() {
               Die häufigste und meist beste Lösung ist die Kombination: Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushalt, Gesellschaft und Nacht. Der ambulante Pflegedienst kommt täglich für Behandlungspflege (Injektionen, Verbandswechsel). Beide Kassenzuschüsse laufen parallel.
             </Text>
             <Kasten augenbraue="Rechenbeispiel Kombination — PG 3" ton="gruen">
-              <Werte zeilen={[[<>24h-Kraft (Primundus)</>, <>2.200–3.500 €/Mo</>], [<>Ambulanter Dienst (Behandlungspflege)</>, <>ca. 300–600 €/Mo</>], [<>Gesamtkosten brutto</>, <>ca. 2.500–4.100 €/Mo</>], [<>− Pflegegeld PG 3</>, <>− 599 €/Mo</>], [<>− Sachleistungen (für Pflegedienst)</>, <>− bis 1.497 €/Mo</>], [<>− Entlastungsbetrag + Budget</>, <>− ca. 420 €/Mo</>], [<>Eigenanteil ca.</>, <>ca. 1.000–1.800 €/Mo</>]]} />
+              <Werte zeilen={[[<>24h-Kraft (Primundus)</>, <>2.200–3.500 €/Mo</>], [<>Ambulanter Dienst (Behandlungspflege)</>, <>ca. 300–600 €/Mo</>], [<>Gesamtkosten brutto</>, <>ca. 2.500–4.100 €/Mo</>], [<>− Sachleistungen (für den Pflegedienst)</>, <>− ca. 300–600 €/Mo</>], [<>− anteiliges Pflegegeld PG 3 (Kombinationsleistung)</>, <>− ca. 360–480 €/Mo</>], [<>− Entlastungsbudget (anteilig)</>, <>− ca. 295 €/Mo</>], [<>Eigenanteil ca.</>, <>ca. 1.450–2.850 €/Mo</>]]} />
             </Kasten>
             <MehrDazu
               label="Alle Kombinationsmöglichkeiten:"

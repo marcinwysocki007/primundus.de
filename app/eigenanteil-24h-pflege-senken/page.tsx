@@ -60,7 +60,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie kann ich den Eigenanteil der 24h-Pflege senken?', acceptedAnswer: { '@type': 'Answer', text: 'Die wichtigsten Stellschrauben: 1. Pflegegrad korrekt beantragen — jede Stufe bedeutet hunderte Euro mehr. 2. Entlastungsbudget (3.539 €/Jahr) voll ausschöpfen. 3. Steuerlich absetzen (max. 4.000 €/Jahr). 4. Pflegehilfsmittel (42 €/Monat) beantragen. 5. Wohnraumanpassungsförderung nutzen.' } },
-      { '@type': 'Question', name: 'Wie viel kann man beim Eigenanteil sparen?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 3 können durch Pflegegeld (599 €/Monat), Entlastungsbetrag (131 €/Monat), Entlastungsbudget (ca. 295 €/Monat anteilig) und Steuerabzug (ca. 333 €/Monat) zusammen über 1.350 € monatlich eingespart werden — aus Bruttokosten von 2.700 € werden ca. 1.350 € Eigenanteil.' } },
+      { '@type': 'Question', name: 'Wie viel kann man beim Eigenanteil sparen?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 3 können durch Pflegegeld (599 €/Monat), Entlastungsbudget (ca. 295 €/Monat anteilig) und Steuerabzug (ca. 333 €/Monat) zusammen über 1.200 € monatlich eingespart werden — aus Bruttokosten von 2.700 € werden ca. 1.470 € Eigenanteil.' } },
     ],
   },
 ]
@@ -93,11 +93,10 @@ export default function EigenanteilSenken() {
             <Kasten augenbraue="Potenzielle Ersparnis pro Monat (Pflegegrad 3)">
               <HakenListe punkte={[
                 'Pflegegeld: – 599 €/Monat',
-                'Entlastungsbetrag: – 131 €/Monat',
                 'Entlastungsbudget (anteilig): – ca. 295 €/Monat',
                 'Steuerabzug: – ca. 333 €/Monat (max. 4.000 €/Jahr)',
                 'Pflegehilfsmittel: – 42 €/Monat',
-                'Gesamt mögliche Einsparung: über 1.400 €/Monat',
+                'Gesamt mögliche Einsparung: über 1.250 €/Monat',
               ]} />
             </Kasten>
           </Vorspann>
@@ -109,7 +108,7 @@ export default function EigenanteilSenken() {
               zeilen={[
                 ['Pflegegrad korrekt beantragen', 'bis 252 €/Monat mehr (PG 2→3)', 'Mittel'],
                 ['Pflegegeld nutzen', '347–990 €/Monat', 'Gering'],
-                ['Entlastungsbetrag einreichen', '131 €/Monat', 'Gering'],
+                ['Entlastungsbetrag für Alltagshilfen einreichen', '131 €/Monat (nicht für die Betreuungskraft)', 'Gering'],
                 ['Entlastungsbudget ausschöpfen', '3.539 €/Jahr = ca. 295 €/Monat', 'Mittel'],
                 ['Steuerlich absetzen', 'max. 4.000 €/Jahr = 333 €/Monat', 'Gering'],
                 ['Pflegehilfsmittel beantragen', '42 €/Monat', 'Sehr gering'],
@@ -144,7 +143,7 @@ export default function EigenanteilSenken() {
             <Punkte
               punkte={[
                 { title: 'Pflegegeld — monatlich', desc: <>347–990 €/Monat je nach Pflegegrad. Wird automatisch ausgezahlt — aber nur wenn Beratungseinsätze wahrgenommen werden (PG 2–3: halbjährlich, PG 4–5: vierteljährlich).<br /><a href="/pflegegeld" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
-                { title: 'Entlastungsbetrag — 131 €/Monat', desc: <>Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen. Kann bis 30. Juni des Folgejahres angespart werden (max. 1.572 €).<br /><a href="/entlastungsbetrag" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
+                { title: 'Entlastungsbetrag — 131 €/Monat', desc: <>Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen; für die Betreuungskraft selbst zahlt die Kasse ihn in der Regel nicht. Kann bis 30. Juni des Folgejahres angespart werden (max. 1.572 €).<br /><a href="/entlastungsbetrag" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
                 { title: 'Entlastungsbudget — 3.539 €/Jahr', desc: <>Für Verhinderungs- und Kurzzeitpflege. Verfällt am 31. Dezember — rechtzeitig nutzen und einreichen. Vorpflegezeit entfällt seit Juli 2025.<br /><a href="/verhinderungspflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
                 { title: 'Pflegehilfsmittel — 42 €/Monat', desc: 'Handschuhe, Desinfektionsmittel, Bettschutzeinlagen. Bei der Pflegekasse beantragen — werden direkt nach Hause geliefert. Kaum jemand nutzt das.' },
               ]}
@@ -181,8 +180,8 @@ export default function EigenanteilSenken() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Wie kann ich den Eigenanteil der 24h-Pflege senken?', a: 'Die 5 wichtigsten Hebel: Pflegegrad korrekt beantragen, alle Kassenzuschüsse ausschöpfen (Pflegegeld, Entlastungsbetrag, Entlastungsbudget), steuerlich absetzen (max. 4.000 €/Jahr), Pflegehilfsmittel (42 €/Monat) beantragen, Wohnraumanpassung fördern lassen.' },
-                { q: 'Wie viel kann man beim Eigenanteil sparen?', a: 'Bei PG 3 und optimaler Kombination: Pflegegeld (599 €) + Entlastungsbetrag (131 €) + Entlastungsbudget (ca. 295 €/Monat) + Steuerabzug (ca. 333 €) = über 1.350 €/Monat Einsparung gegenüber den Bruttokosten.' },
+                { q: 'Wie kann ich den Eigenanteil der 24h-Pflege senken?', a: 'Die 5 wichtigsten Hebel: Pflegegrad korrekt beantragen, alle Kassenzuschüsse ausschöpfen (Pflegegeld, Entlastungsbudget), steuerlich absetzen (max. 4.000 €/Jahr), Pflegehilfsmittel (42 €/Monat) beantragen, Wohnraumanpassung fördern lassen.' },
+                { q: 'Wie viel kann man beim Eigenanteil sparen?', a: 'Bei PG 3 und optimaler Kombination: Pflegegeld (599 €) + Entlastungsbudget (ca. 295 €/Monat) + Steuerabzug (ca. 333 €) = über 1.200 €/Monat Einsparung gegenüber den Bruttokosten.' },
                 { q: 'Muss man den Entlastungsbetrag extra beantragen?', a: 'Der Anspruch entsteht automatisch mit dem Pflegegrad — aber er wird nicht automatisch ausgezahlt. Rechnungen anerkannter Anbieter einreichen und bis zu 131 €/Monat erstatten lassen. Kann bis 30. Juni des Folgejahres angespart werden.' },
                 { q: 'Wann lohnt sich ein Antrag auf Höherstufung?', a: 'Wenn sich der Pflegebedarf verschlechtert hat. Bei Höherstufung von PG 2 auf PG 3 steigt das Pflegegeld um 252 €/Monat. Keine Sperrfrist — jederzeit beantragbar.' },
               ]}

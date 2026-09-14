@@ -94,11 +94,11 @@ export default function PflegekraftSozialversicherungAnmelden() {
                   desc: <><strong>Keine Anmeldung</strong><br />{'Kraft ist im EU-Heimatland angestellt und sozialversichert. A1-Bescheinigung belegt das. Familie hat keine Arbeitgeberpflichten.'}</>,
                 },
                 {
-                  title: 'Direktanstellung — Minijob (bis 556 €/Mo)',
-                  desc: <><strong>Anmeldung bei der Minijob-Zentrale</strong><br />{'Pauschalabgaben: ca. 15 % Kranken-, 15 % Rentenversicherung, 2 % pauschale Lohnsteuer. Über minijob-zentrale.de.'}</>,
+                  title: 'Direktanstellung — Minijob (bis 603 €/Mo)',
+                  desc: <><strong>Anmeldung bei der Minijob-Zentrale</strong><br />{'Pauschalabgaben: ca. 5 % Kranken-, 5 % Rentenversicherung, 2 % pauschale Lohnsteuer. Über minijob-zentrale.de.'}</>,
                 },
                 {
-                  title: 'Direktanstellung — regulär (über 556 €/Mo)',
+                  title: 'Direktanstellung — regulär (über 603 €/Mo)',
                   desc: <><strong>Anmeldung bei Krankenkasse + Betriebsnummer</strong><br />{'Volle Sozialversicherungsbeiträge (ca. 40 % geteilt zwischen Arbeitgeber und Arbeitnehmer). Lohnabrechnung erforderlich.'}</>,
                 },
               ]}
@@ -107,14 +107,14 @@ export default function PflegekraftSozialversicherungAnmelden() {
 
           <Abschnitt id="minijob" titel="Minijob — Haushaltshilfe über die Minijob-Zentrale">
             <Text>
-              Für einfache Haushaltshilfen (nicht 24h-Pflege) kann der Minijob-Weg sinnvoll sein. Bei vollständiger 24h-Betreuung ist der Minijob-Rahmen jedoch zu eng — der tatsächliche Lohn übersteigt 556 €/Monat fast immer erheblich.
+              Für einfache Haushaltshilfen (nicht 24h-Pflege) kann der Minijob-Weg sinnvoll sein. Bei vollständiger 24h-Betreuung ist der Minijob-Rahmen jedoch zu eng — der tatsächliche Lohn übersteigt 603 €/Monat fast immer erheblich.
             </Text>
             <Tabelle
               titel=""
               kopf={['Abgabe', 'Satz', 'Zahlt']}
               zeilen={[
                 ['Krankenversicherung', '5 %', 'Arbeitgeber (Familie)'],
-                ['Rentenversicherung', '15 %', 'Arbeitgeber (Familie)'],
+                ['Rentenversicherung', '5 %', 'Arbeitgeber (Familie)'],
                 ['Rentenversicherung (AN-Anteil)', '3,6 %', 'Arbeitnehmer (kann entbinden)'],
                 ['Pauschale Lohnsteuer', '2 %', 'Arbeitgeber'],
                 ['Gesamt Arbeitgeber', 'ca. 22 %', 'Familie zahlt auf den Lohn oben drauf'],

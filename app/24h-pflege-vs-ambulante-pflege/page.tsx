@@ -141,7 +141,7 @@ export default function VsAmbulantePflege() {
             <Gegenueber
               seiten={[
                 { titel: 'Ambulante Pflege — Kosten und Kassenzuschüsse', ton: 'gruen', punkte: ['Die Pflegekasse zahlt bei ambulanter Pflege die Sachleistungen direkt an den Pflegedienst: PG 2 = 796 €/Monat, PG 3 = 1.497 €/Monat, PG 4 = 1.859 €/Monat, PG 5 = 2.299 €/Monat. Viele ambulante Pflegeeinsätze werden damit vollständig gedeckt — Eigenanteil kann gegen null gehen wenn der Gesamtbedarf im Sachleistungsrahmen liegt.', 'Bei hohem Pflegebedarf (viele Einsätze täglich) übersteigen die Kosten schnell den Sachleistungsrahmen.'] },
-                { titel: '24h-Pflege — Kosten und Kassenzuschüsse', ton: 'taupe', punkte: ['Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. Bei PG 4: ca. 1.700–2.100 €/Monat.', 'Inklusive: Anwesenheit im Haushalt, Haushaltsführung, Betreuung, Gesellschaft — alles in einem Preis.'] },
+                { titel: '24h-Pflege — Kosten und Kassenzuschüsse', ton: 'taupe', punkte: ['Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen) und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.050 €/Monat. Bei PG 4: ca. 1.850–2.250 €/Monat.', 'Inklusive: Anwesenheit im Haushalt, Haushaltsführung, Betreuung, Gesellschaft — alles in einem Preis.'] },
               ]}
             />
           </Abschnitt>

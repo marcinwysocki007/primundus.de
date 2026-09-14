@@ -158,8 +158,8 @@ export default function Pflegegrad4() {
                 zeilen={[
                   ['24h-Pflege Primundus (brutto)', 'ca. 3.000 €/Monat'],
                   ['Abzüglich Pflegegeld PG 4', '– 800 €/Monat'],
-                  ['Abzüglich Entlastungsbetrag', '– 131 €/Monat'],
-                  ['Eigenanteil ca.', 'ca. 2.070 €/Monat'],
+                  
+                  ['Eigenanteil ca.', 'ca. 2.200 €/Monat'],
                   ['Pflegeheim Eigenanteil Ø', '3.364 €/Monat (steigend)'],
                 ]}
               />

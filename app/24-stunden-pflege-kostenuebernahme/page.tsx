@@ -61,7 +61,7 @@ const schemaMarkup = [
         name: 'Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad), Entlastungsbetrag (131 Euro monatlich) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 700 bis 1.200 Euro im Monat, den Rest tragen die Familien selbst.',
+          text: 'Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 600 bis 1.100 Euro im Monat, den Rest tragen die Familien selbst. Den Entlastungsbetrag (131 Euro) zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.',
         },
       },
       {
@@ -127,7 +127,7 @@ export default function KostenuebernahmePage() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
             <KurzAntwort frage="Wer zahlt bei einer 24-Stunden-Betreuung dazu?" stand="August 2026">
-              Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.
+              Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.
             </KurzAntwort>
             <Text>
               Die kurze, ehrliche Antwort: <strong>Komplett übernimmt die Kosten niemand</strong> — aber es
@@ -146,7 +146,7 @@ export default function KostenuebernahmePage() {
               kopf={['Wer zahlt?', 'Was genau?', 'Wie viel?']}
               zeilen={[
                 ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Pflegegeld (bei Pflege zuhause)</span>, <span className="whitespace-normal max-sm:hyphens-auto">347 € (PG 2) · 599 € (PG 3) · 800 € (PG 4) · 990 € (PG 5) monatlich</span>],
-                ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Entlastungsbetrag</span>, <span className="whitespace-normal max-sm:hyphens-auto">131 € monatlich (ab PG 1)</span>],
+                ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Entlastungsbetrag</span>, <span className="whitespace-normal max-sm:hyphens-auto">131 € monatlich (ab PG 1), nur für anerkannte Alltagshilfen</span>],
                 ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Verhinderungspflege (gemeinsamer Jahresbetrag mit Kurzzeitpflege)</span>, <span className="whitespace-normal max-sm:hyphens-auto">bis 3.539 € im Jahr (≈ 295 € monatlich)</span>],
                 ['Finanzamt', <span className="whitespace-normal max-sm:hyphens-auto">Steuerermäßigung für haushaltsnahe Dienstleistungen (§ 35a EStG)</span>, <span className="whitespace-normal max-sm:hyphens-auto">bis 4.000 € im Jahr (≈ 333 € monatlich)</span>],
                 ['Sozialamt', <span className="whitespace-normal max-sm:hyphens-auto">„Hilfe zur Pflege", wenn Einkommen und Vermögen nicht reichen</span>, <span className="whitespace-normal max-sm:hyphens-auto">einzelfallabhängig; 10.000 € Schonvermögen bleiben geschützt</span>],
@@ -159,8 +159,7 @@ export default function KostenuebernahmePage() {
             <Kasten>
               <Text>
                 Ein typisches Beispiel mit Pflegegrad 3: Die Betreuung kostet 2.800 Euro im Monat. Davon
-                gehen ab: 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige
-                Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.450 Euro
+                gehen ab: 599 Euro Pflegegeld, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.570 Euro
                 im Monat</strong> — für eine Kraft, die rund um die Uhr im Haus ist. Zum Vergleich: Ein
                 Heimplatz kostet im Bundesdurchschnitt rund 3.364 Euro Eigenanteil, und das Haus
                 steht leer.
@@ -195,7 +194,7 @@ export default function KostenuebernahmePage() {
           <Abschnitt id="haeufige-fragen-zur-kostenuebernahme" titel="Häufige Fragen zur Kostenübernahme">
             <Punkte
               punkte={[
-                { title: "Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?", desc: "Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad), Entlastungsbetrag (131 Euro monatlich) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 700 bis 1.200 Euro im Monat, den Rest tragen die Familien selbst." },
+                { title: "Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?", desc: "Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 600 bis 1.100 Euro im Monat, den Rest tragen die Familien selbst. Den Entlastungsbetrag (131 Euro) zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft." },
                 { title: "Zahlt das Sozialamt die 24-Stunden-Pflege, wenn das Geld nicht reicht?", desc: "Reichen Rente, Pflegegeld und Erspartes nicht, kann beim Sozialamt „Hilfe zur Pflege\" beantragt werden. Ein Schonvermögen von 10.000 Euro pro Person bleibt dabei geschützt. Das Sozialamt prüft den Einzelfall und übernimmt anerkannte, angemessene Pflegekosten." },
                 { title: "Müssen Kinder für die Pflege ihrer Eltern zahlen?", desc: "Nur bei sehr hohem Einkommen: Seit dem Angehörigen-Entlastungsgesetz müssen Kinder erst ab 100.000 Euro Bruttojahreseinkommen zum Elternunterhalt beitragen. Wer darunter liegt, wird vom Sozialamt nicht herangezogen — das Vermögen der Kinder spielt keine Rolle." },
                 { title: "Kann man die 24-Stunden-Pflege von der Steuer absetzen?", desc: <>Ja. Für haushaltsnahe Dienstleistungen erkennt das Finanzamt bis zu 4.000 Euro

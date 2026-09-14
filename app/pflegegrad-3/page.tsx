@@ -161,7 +161,6 @@ export default function Pflegegrad3() {
             <Liste
               punkte={[
                 <><strong>Pflegegeld:</strong> 599 €/Monat</>,
-                <><strong>Entlastungsbetrag:</strong> 131 €/Monat</>,
                 <><strong>Entlastungsbudget:</strong> 3.539 €/Jahr (Verhinderungs- & Kurzzeitpflege, seit Juli 2025 flexibel einsetzbar)</>,
                 <><strong>Steuervorteil:</strong> 20 % der Kosten, bis zu 4.000 €/Jahr Steuerersparnis</>,
               ]}

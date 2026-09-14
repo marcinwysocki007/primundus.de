@@ -146,7 +146,7 @@ export default function SturzpraventionSenioren() {
               gruppen={[
                 { title: 'Gehstock / Rollator', zusatz: 'Krankenkasse', punkte: ['Arztrezept nötig. Rollator hat mehr Stabilität als Gehstock — bei höherem Sturzrisiko bevorzugen.'] },
                 { title: 'Hüftprotektor', zusatz: 'Hilfsmittelliste', punkte: ['Polstereinlage in der Unterwäsche die bei Sturz Hüfte schützt. Besonders bei erhöhtem Sturzrisiko und Osteoporose sinnvoll.'] },
-                { title: 'Hausnotruf', zusatz: 'Entlastungsbetrag (131 €/Mo)', punkte: ['Wenn Sturz passiert und niemand da ist: Hausnotruf ermöglicht schnelle Hilfe.'] },
+                { title: 'Hausnotruf', zusatz: 'Pflegekasse: bis 25,50 €/Mo', punkte: ['Wenn Sturz passiert und niemand da ist: Hausnotruf ermöglicht schnelle Hilfe.'] },
                 { title: 'Orthopädische Schuhe', zusatz: 'Krankenkasse (ärztl. Verordnung)', punkte: ['Bei Gangstörungen oder Fehlstellungen die Sturzrisiko erhöhen.'] },
               ]}
             />
@@ -157,7 +157,7 @@ export default function SturzpraventionSenioren() {
               fragen={[
                 { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (rund ein Viertel weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },
                 { q: 'Welche Übungen helfen gegen Sturzgefahr?', a: 'Einbeinstand, Aufstehen vom Stuhl ohne Hände, Tandemgang, Zehenspitzenstand. Tai Chi senkt die Zahl der Stürze laut Cochrane-Übersicht 2019 um rund ein Fünftel. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag.' },
-                { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: über Entlastungsbetrag (131 €/Monat) der Pflegekasse. Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
+                { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: als Pflegehilfsmittel über die Pflegekasse (bis 25,50 €/Monat). Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
                 { q: 'Was tun wenn jemand gestürzt ist?', a: 'Nicht sofort aufrichten wenn Verletzung möglich. Notarzt rufen bei Verdacht auf Knochenbruch, Kopfverletzung oder Bewusstlosigkeit. Danach Arzt aufsuchen, Ursache des Sturzes analysieren, Präventionsmaßnahmen anpassen.' },
               ]}
             />

@@ -118,7 +118,7 @@ export default function TagespflegeVs24h() {
                 {
                   titel: '24h-Pflege zuhause — Kosten und Kassenzuschüsse',
                   ton: 'taupe',
-                  text: 'Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft inklusive.',
+                  text: 'Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen) und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.050 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft inklusive.',
                 },
               ]}
             />

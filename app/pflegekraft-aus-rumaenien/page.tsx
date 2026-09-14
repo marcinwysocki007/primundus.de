@@ -136,8 +136,7 @@ export default function PflegekraftAusRumaenien() {
               zeilen={[
                 ['Kosten Primundus', '2.200–3.500 €/Monat', 'Je nach Pflegebedarf'],
                 ['Pflegegeld PG 3', '– 599 €/Monat', 'Kassenzuschuss'],
-                ['Entlastungsbetrag', '– 131 €/Monat', 'Kassenzuschuss'],
-                ['Eigenanteil ca. PG 3', 'ca. 1.700–2.500 €/Monat', 'Nach Zuschüssen'],
+                ['Eigenanteil ca. PG 3', 'ca. 1.850–2.650 €/Monat', 'Nach Zuschüssen'],
               ]}
               betont={1}
             />
