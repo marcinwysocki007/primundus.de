@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, Liste, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -62,64 +64,66 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-ink">24h-Pflege für Angehörige</span>
-          </nav>
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 7 Min Lesezeit · Aktualisiert August 2026</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege für Angehörige — wie Familien die Betreuung organisieren</h1>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Ratgeber", href: "/ratgeber" },
+            { label: "24h-Pflege für Angehörige" },
+          ]}
+          augenbraue="Ratgeber Angehörige"
+          titel="24h-Pflege für Angehörige — wie Familien die Betreuung organisieren"
+          einleitung="Die Eltern brauchen Pflege — aber das Pflegeheim kommt nicht in Frage. Und selbst rund um die Uhr da sein ist nicht möglich. 24h-Pflege ist die Lösung: eine Betreuungskraft zieht ein, übernimmt alles, und die Familie kann wieder aufatmen."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Die Eltern brauchen Pflege — aber das Pflegeheim kommt nicht in Frage. Und selbst rund um die Uhr da sein ist nicht möglich. 24h-Pflege ist die Lösung: eine Betreuungskraft zieht ein, übernimmt alles, und die Familie kann wieder aufatmen.</p>
-          <h2 id="einstieg" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Wann ist der richtige Zeitpunkt?</h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Viele Familien warten zu lange. Die Zeichen sind oft schleichend: der Herd bleibt an, Medikamente werden vergessen, die Wohnung vernachlässigt. Der richtige Zeitpunkt ist nicht wenn nichts mehr geht — sondern wenn man merkt, dass die aktuelle Situation nicht mehr sicher ist.</p>
-          <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Typische Auslöser für den Entschluss</p>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Elternteil lebt allein und hatte einen Sturz</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Demenz-Symptome nehmen zu — Orientierung lässt nach</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Pflegender Ehepartner ist selbst krank oder erschöpft</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Familie lebt weit weg und kann nicht täglich helfen</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Krankenhausaufenthalt — was danach?</div>
-          </div>          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Wie läuft die Organisation ab?</h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Primundus übernimmt die gesamte Organisation: Beratungsgespräch, Auswahl der Kraft, Koordination des Starts, laufende Betreuung. Familien müssen nicht selbst suchen, prüfen oder verwalten.</p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Vom ersten Anruf bis zum Start der Betreuung vergehen typisch 4–7 Tage. In dringenden Situationen auch schneller.</p>
-          <h2 id="entlastung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Entlastung für pflegende Angehörige</h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Wer Eltern oder Partner pflegt, gibt oft die eigene Gesundheit dafür her. Die 24h-Kraft übernimmt nicht nur die Pflege — sie gibt Angehörigen ihr Leben zurück. Beruf, eigene Kinder, Erholung, Schlaf.</p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Dazu kommt: Pflegende Angehörige haben Anspruch auf Pflegegeld wenn sie die Pflege selbst übernehmen. Mit einer 24h-Kraft geht das Pflegegeld direkt an die Familie.</p>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="einstieg" titel="Wann ist der richtige Zeitpunkt?">
+            <Text>
+              Viele Familien warten zu lange. Die Zeichen sind oft schleichend: der Herd bleibt an, Medikamente werden vergessen, die Wohnung vernachlässigt. Der richtige Zeitpunkt ist nicht wenn nichts mehr geht — sondern wenn man merkt, dass die aktuelle Situation nicht mehr sicher ist.
+            </Text>
+            <Kasten augenbraue="Typische Auslöser für den Entschluss" ton="gruen">
+              <Liste punkte={["Elternteil lebt allein und hatte einen Sturz", "Demenz-Symptome nehmen zu — Orientierung lässt nach", "Pflegender Ehepartner ist selbst krank oder erschöpft", "Familie lebt weit weg und kann nicht täglich helfen", "Krankenhausaufenthalt — was danach?"]} />
+            </Kasten>
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Wie organisiere ich 24h-Pflege für meine Eltern?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — in 4–7 Tagen.</p></div>
-            </details>
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Was kostet 24h-Pflege für meine Mutter / meinen Vater?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat.</p></div>
-            </details>
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Kann ich täglich kündbar sein?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Ja — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen.</p></div>
-            </details>
-          </div>
-          <Weiterlesen aktuell="24h-pflege-fuer-angehoerige" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="ablauf" titel="Wie läuft die Organisation ab?">
+            <Text>
+              Primundus übernimmt die gesamte Organisation: Beratungsgespräch, Auswahl der Kraft, Koordination des Starts, laufende Betreuung. Familien müssen nicht selbst suchen, prüfen oder verwalten.
+            </Text>
+            <Text>
+              Vom ersten Anruf bis zum Start der Betreuung vergehen typisch 4–7 Tage. In dringenden Situationen auch schneller.
+            </Text>
+          </Abschnitt>
+
+          <Abschnitt id="entlastung" titel="Entlastung für pflegende Angehörige">
+            <Text>
+              Wer Eltern oder Partner pflegt, gibt oft die eigene Gesundheit dafür her. Die 24h-Kraft übernimmt nicht nur die Pflege — sie gibt Angehörigen ihr Leben zurück. Beruf, eigene Kinder, Erholung, Schlaf.
+            </Text>
+            <Text>
+              Dazu kommt: Pflegende Angehörige haben Anspruch auf Pflegegeld wenn sie die Pflege selbst übernehmen. Mit einer 24h-Kraft geht das Pflegegeld direkt an die Familie.
+            </Text>
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: "Wie organisiere ich 24h-Pflege für meine Eltern?", a: "Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — in 4–7 Tagen." },
+                { q: "Was kostet 24h-Pflege für meine Mutter / meinen Vater?", a: "2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat." },
+                { q: "Kann ich täglich kündbar sein?", a: "Ja — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen." },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="24h-pflege-fuer-angehoerige" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

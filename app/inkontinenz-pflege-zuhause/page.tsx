@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Punkte, RatgeberKopf, RatgeberRumpf,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -66,91 +68,59 @@ export default function InkontinenzPflegeZuhause() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Inkontinenz Pflege</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Inkontinenz ist eines der häufigsten und gleichzeitig schamhaftesten Pflegethemen. Rund 80 % der pflegebedürftigen Senioren sind davon betroffen — in unterschiedlichem Ausmaß. Der richtige Umgang schützt die Würde, verhindert Infektionen und Wundliegen, und macht den Alltag für alle leichter.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Krankheiten", href: "/krankheiten" },
+            { label: "Inkontinenz Pflege" },
+          ]}
+          augenbraue="Ratgeber Inkontinenz"
+          titel="Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde"
+          einleitung="Inkontinenz ist eines der häufigsten und gleichzeitig schamhaftesten Pflegethemen. Rund 80 % der pflegebedürftigen Senioren sind davon betroffen — in unterschiedlichem Ausmaß. Der richtige Umgang schützt die Würde, verhindert Infektionen und Wundliegen, und macht den Alltag für alle leichter."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+          blick={[
                 'Inkontinenzmaterial: Rezept beim Arzt → Krankenkasse übernimmt',
                 'Pflegehilfsmittel-Pauschale: 42 €/Monat (Pflegekasse) für saugende Einlagen',
                 'Regelmäßige Toilettengänge verhindern viele Inkontinenz-Episoden',
                 'Hautpflege nach jeder Versorgung ist Pflicht — Wundliegen vermeiden',
                 'Würde: niemals kommentieren, immer diskret, sachlich und ruhig bleiben',
                 '24h-Kraft: kennt Toilettenrhythmus, erkennt Anzeichen, handelt sofort',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="formen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Formen der Inkontinenz
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { form: 'Dranginkontinenz', beschreibung: 'Plötzlicher, starker Harndrang der nicht lange hinausgezögert werden kann. Häufige Ursache: überaktive Blase, neurologische Erkrankungen (Schlaganfall, Parkinson, Demenz). Hilft: regelmäßige Toilettengänge alle 2 Stunden.' },
-              { form: 'Belastungsinkontinenz', beschreibung: 'Unwillkürlicher Harnverlust bei Husten, Niesen, Lachen oder körperlicher Belastung. Ursache: geschwächter Beckenboden. Häufiger bei Frauen. Hilfe: Beckenbodenkräftigung, Einlagen.' },
-              { form: 'Überlaufinkontinenz', beschreibung: 'Blase leert sich nie vollständig, läuft über. Ursache: geschwächter Blasenmuskel, Prostataprobleme. Kann auf Katheterversorgung durch Pflegedienst hinauslaufen.' },
-              { form: 'Stuhlinkontinenz', beschreibung: 'Besonders belastend für Betroffene und Pflegende. Ursache: geschwächter Schließmuskel, Nervenerkrankungen, Demenz. Klarer Toilettenrhythmus (nach Mahlzeiten) hilft.' },
-            ].map((item) => (
-              <div key={item.form} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.form}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.beschreibung}</p>
-              </div>
-            ))}
-          </div>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="formen" titel="Formen der Inkontinenz">
+            <Punkte
+              punkte={[
+                { title: 'Dranginkontinenz', desc: 'Plötzlicher, starker Harndrang der nicht lange hinausgezögert werden kann. Häufige Ursache: überaktive Blase, neurologische Erkrankungen (Schlaganfall, Parkinson, Demenz). Hilft: regelmäßige Toilettengänge alle 2 Stunden.' },
+                { title: 'Belastungsinkontinenz', desc: 'Unwillkürlicher Harnverlust bei Husten, Niesen, Lachen oder körperlicher Belastung. Ursache: geschwächter Beckenboden. Häufiger bei Frauen. Hilfe: Beckenbodenkräftigung, Einlagen.' },
+                { title: 'Überlaufinkontinenz', desc: 'Blase leert sich nie vollständig, läuft über. Ursache: geschwächter Blasenmuskel, Prostataprobleme. Kann auf Katheterversorgung durch Pflegedienst hinauslaufen.' },
+                { title: 'Stuhlinkontinenz', desc: 'Besonders belastend für Betroffene und Pflegende. Ursache: geschwächter Schließmuskel, Nervenerkrankungen, Demenz. Klarer Toilettenrhythmus (nach Mahlzeiten) hilft.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Inkontinenz im Pflegealltag — konkrete Maßnahmen
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { massnahme: 'Toilettenrhythmus einführen', desc: 'Regelmäßige Toilettengänge alle 2 Stunden — unabhängig ob Drang vorhanden. Besonders nach Mahlzeiten und Aufstehen wichtig. Verhindert viele Inkontinenz-Episoden.' },
-              { massnahme: 'Flüssigkeit nicht reduzieren', desc: 'Viele Senioren trinken zu wenig weil sie Inkontinenz fürchten — das verschlechtert alles (Blasenentzündungen, Verstopfung, Verwirrtheit). Ausreichend trinken (1,5 L), Flüssigkeit gut über den Tag verteilen.' },
-              { massnahme: 'Wege zur Toilette sichern', desc: 'Nachts Beleuchtung an, kein Kabel auf dem Weg, Toilette gut erreichbar. Nachtstühle können die Wege kürzen. Schneller Zugang zur Toilette ist oft alles was nötig ist.' },
-              { massnahme: 'Hautpflege nach jeder Versorgung', desc: 'Haut gründlich reinigen und trocknen, dann mit Pflegecreme schützen. Feuchtigkeit ist der Hauptauslöser von Wundliegen und Pilzinfektionen.' },
-              { massnahme: 'Richtiges Inkontinenzmaterial wählen', desc: 'Nicht zu groß, nicht zu klein — Arzt oder Stomatherapeut empfiehlt das passende Produkt. Einlagen, Windelhosen, aufsaugende Unterlagen je nach Bedarf.' },
-            ].map((item) => (
-              <div key={item.massnahme} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.massnahme}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="alltag" titel="Inkontinenz im Pflegealltag — konkrete Maßnahmen">
+            <Punkte
+              punkte={[
+                { title: 'Toilettenrhythmus einführen', desc: 'Regelmäßige Toilettengänge alle 2 Stunden — unabhängig ob Drang vorhanden. Besonders nach Mahlzeiten und Aufstehen wichtig. Verhindert viele Inkontinenz-Episoden.' },
+                { title: 'Flüssigkeit nicht reduzieren', desc: 'Viele Senioren trinken zu wenig weil sie Inkontinenz fürchten — das verschlechtert alles (Blasenentzündungen, Verstopfung, Verwirrtheit). Ausreichend trinken (1,5 L), Flüssigkeit gut über den Tag verteilen.' },
+                { title: 'Wege zur Toilette sichern', desc: 'Nachts Beleuchtung an, kein Kabel auf dem Weg, Toilette gut erreichbar. Nachtstühle können die Wege kürzen. Schneller Zugang zur Toilette ist oft alles was nötig ist.' },
+                { title: 'Hautpflege nach jeder Versorgung', desc: 'Haut gründlich reinigen und trocknen, dann mit Pflegecreme schützen. Feuchtigkeit ist der Hauptauslöser von Wundliegen und Pilzinfektionen.' },
+                { title: 'Richtiges Inkontinenzmaterial wählen', desc: 'Nicht zu groß, nicht zu klein — Arzt oder Stomatherapeut empfiehlt das passende Produkt. Einlagen, Windelhosen, aufsaugende Unterlagen je nach Bedarf.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="hilfsmittel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Hilfsmittel & Kassenzuschuss
-          </h2>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="hilfsmittel" titel="Hilfsmittel & Kassenzuschuss">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             <div className="bg-white rounded-xl p-5 border border-pm-line">
               <p className="text-[15px] font-bold text-pm-ink mb-2">Inkontinenzmaterial — Krankenversicherung</p>
               <p className="text-[14px] text-pm-body leading-relaxed mb-2">Inkontinenzmaterial ist ein Hilfsmittel nach SGB V. Mit Rezept vom Hausarzt wird es von der Krankenversicherung übernommen — kein Eigenanteil (außer Kassenrezept-Zuzahlung 10 %). Lieferung nach Hause über Vertragspartner möglich.</p>
@@ -165,49 +135,36 @@ export default function InkontinenzPflegeZuhause() {
               <p className="text-[14px] text-pm-body leading-relaxed">Mit Rezept von Arzt von der Krankenkasse als Hilfsmittel übernommen. Für Menschen die nachts oder bei eingeschränkter Mobilität die Toilette nicht mehr sicher erreichen.</p>
             </div>
           </div>
+          </Abschnitt>
 
-          <h2 id="wuerde" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Würde bewahren — wie Gespräche und Versorgung gelingen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Inkontinenz ist für Betroffene zutiefst beschämend — besonders für Menschen die ihr Leben lang selbstständig und würdevoll waren. Der Umgang der Pflegekraft entscheidet ob Inkontinenz zur Qual wird oder zur Normalität des Alltags.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { regel: 'Niemals kommentieren oder werten', desc: 'Kein Seufzen, keine Kommentare, keine Blicke. Inkontinenz ist nicht das Versagen der Person — es ist eine medizinische Situation.' },
-              { regel: 'Sachlich und ruhig bleiben', desc: '"Ich helfe dir jetzt kurz" — fertig. Keine langen Ankündigungen, kein Mitleid, kein Theater. Je normaler der Umgang, desto würdevoller für den Betroffenen.' },
-              { regel: 'Privatsphäre wahren', desc: 'Türe schließen, Vorhang ziehen. Die Versorgung findet zwischen zwei Menschen statt — nicht vor anderen.' },
-              { regel: 'Selbstbestimmung ermöglichen', desc: 'So viel wie möglich selbst machen lassen — auch wenn es länger dauert. Das Ziel ist nicht Effizienz, sondern Würde.' },
-            ].map((item) => (
-              <div key={item.regel} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.regel}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <DunklerAbschnitt
+            id="wuerde"
+            titel="Würde bewahren — wie Gespräche und Versorgung gelingen"
+            einleitung="Inkontinenz ist für Betroffene zutiefst beschämend — besonders für Menschen die ihr Leben lang selbstständig und würdevoll waren. Der Umgang der Pflegekraft entscheidet ob Inkontinenz zur Qual wird oder zur Normalität des Alltags."
+            punkte={[
+              { title: 'Niemals kommentieren oder werten', desc: 'Kein Seufzen, keine Kommentare, keine Blicke. Inkontinenz ist nicht das Versagen der Person — es ist eine medizinische Situation.' },
+              { title: 'Sachlich und ruhig bleiben', desc: '"Ich helfe dir jetzt kurz" — fertig. Keine langen Ankündigungen, kein Mitleid, kein Theater. Je normaler der Umgang, desto würdevoller für den Betroffenen.' },
+              { title: 'Privatsphäre wahren', desc: 'Türe schließen, Vorhang ziehen. Die Versorgung findet zwischen zwei Menschen statt — nicht vor anderen.' },
+              { title: 'Selbstbestimmung ermöglichen', desc: 'So viel wie möglich selbst machen lassen — auch wenn es länger dauert. Das Ziel ist nicht Effizienz, sondern Würde.' },
+            ]}
+          />
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wer zahlt Inkontinenzmaterial?', a: 'Mit Rezept vom Hausarzt übernimmt die Krankenversicherung Inkontinenzmaterial. Zusätzlich: Pflegehilfsmittel-Pauschale (42 €/Monat) der Pflegekasse für Verbrauchsmaterialien.' },
-              { q: 'Wie oft muss Inkontinenzmaterial gewechselt werden?', a: 'Bei Bedarf — regelmäßig, aber nicht nach festen Zeiten. Feuchtigkeit sofort entfernen (Hautschutz). Nachts 1–2 Mal wechseln je nach Ausmaß.' },
-              { q: 'Kann Inkontinenz behandelt werden?', a: 'Oft teilweise: Beckenbodenkräftigung bei Belastungsinkontinenz, Blasentraining bei Dranginkontinenz, Medikamente. Arzt oder Kontinenzberatung aufsuchen.' },
-              { q: 'Wie redet man mit einem pflegebedürftigen Menschen über Inkontinenz?', a: 'Sachlich, ruhig, ohne Wertung: "Ich helfe dir dabei." Thema nicht vermeiden aber auch nicht dramatisieren. Das Signal: Das ist normal, das lösen wir gemeinsam.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="inkontinenz-pflege-zuhause" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wer zahlt Inkontinenzmaterial?', a: 'Mit Rezept vom Hausarzt übernimmt die Krankenversicherung Inkontinenzmaterial. Zusätzlich: Pflegehilfsmittel-Pauschale (42 €/Monat) der Pflegekasse für Verbrauchsmaterialien.' },
+                { q: 'Wie oft muss Inkontinenzmaterial gewechselt werden?', a: 'Bei Bedarf — regelmäßig, aber nicht nach festen Zeiten. Feuchtigkeit sofort entfernen (Hautschutz). Nachts 1–2 Mal wechseln je nach Ausmaß.' },
+                { q: 'Kann Inkontinenz behandelt werden?', a: 'Oft teilweise: Beckenbodenkräftigung bei Belastungsinkontinenz, Blasentraining bei Dranginkontinenz, Medikamente. Arzt oder Kontinenzberatung aufsuchen.' },
+                { q: 'Wie redet man mit einem pflegebedürftigen Menschen über Inkontinenz?', a: 'Sachlich, ruhig, ohne Wertung: "Ich helfe dir dabei." Thema nicht vermeiden aber auch nicht dramatisieren. Das Signal: Das ist normal, das lösen wir gemeinsam.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="inkontinenz-pflege-zuhause" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

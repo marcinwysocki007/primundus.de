@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -96,318 +98,155 @@ export default function Pflegegeld() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegegeld 2026</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegegeld 2026 — Beträge, Anspruch & Kombinationen
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Pflegegeld 2026 beträgt 347 € (Pflegegrad 2) bis 990 € (Pflegegrad 5) pro Monat — identisch zu 2025. Die letzte Erhöhung um 4,5 % galt ab Januar 2025, die nächste Dynamisierung kommt frühestens Januar 2028. Neu seit Juli 2025: Das Entlastungsbudget von 3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege — 2026 erstmals vollständig nutzbar.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Finanzierung", href: "/finanzierung" },
+            { label: "Pflegegeld 2026" },
+          ]}
+          augenbraue="Ratgeber Pflegegeld"
+          titel="Pflegegeld 2026 — Beträge, Anspruch & Kombinationen"
+          einleitung="Pflegegeld 2026 beträgt 347 € (Pflegegrad 2) bis 990 € (Pflegegrad 5) pro Monat — identisch zu 2025. Die letzte Erhöhung um 4,5 % galt ab Januar 2025, die nächste Dynamisierung kommt frühestens Januar 2028. Neu seit Juli 2025: Das Entlastungsbudget von 3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege — 2026 erstmals vollständig nutzbar."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+          blick={[
                 'Pflegegeld 2026: 347 € (PG 2) · 599 € (PG 3) · 800 € (PG 4) · 990 € (PG 5)',
                 'Keine Erhöhung 2026 — nächste Dynamisierung frühestens Januar 2028',
                 'Anspruch ab Pflegegrad 2 bei häuslicher Pflege durch Angehörige',
                 'Steuerfrei — weder beim Pflegebedürftigen noch bei Angehörigen',
                 'Kombinierbar mit Sachleistungen, Entlastungsbetrag und 24h-Pflege',
                 'Beratungspflicht: PG 2–3 halbjährlich · PG 4–5 vierteljährlich',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist Pflegegeld?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Pflegegeld ist eine monatliche Geldleistung der Pflegeversicherung für Pflegebedürftige, die zu Hause von Angehörigen oder anderen privaten Personen gepflegt werden. Es dient als finanzielle Anerkennung für die Pflegeperson — der Pflegebedürftige erhält das Geld und gibt es in der Regel weiter.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Im Gegensatz zu Pflegesachleistungen (die direkt an den Pflegedienst gezahlt werden) kann Pflegegeld frei verwendet werden. Es gibt keine Zweckbindung — die Pflegeperson entscheidet selbst wie sie das Geld einsetzt.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { title: 'Pflegegeld vs. Pflegesachleistungen', desc: 'Pflegegeld bekommt die pflegebedürftige Person ausgezahlt und gibt es an Angehörige weiter. Pflegesachleistungen gehen direkt an den ambulanten Pflegedienst. Beides lässt sich anteilig kombinieren.' },
-              { title: 'Pflegegeld vs. Entlastungsbetrag', desc: 'Der Entlastungsbetrag (131 €/Monat) ist zusätzlich zum Pflegegeld — er ist zweckgebunden für anerkannte Betreuungs- und Entlastungsangebote. Beide laufen parallel.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-ist" titel="Was ist Pflegegeld?">
+            <Text>
+              Pflegegeld ist eine monatliche Geldleistung der Pflegeversicherung für Pflegebedürftige, die zu Hause von Angehörigen oder anderen privaten Personen gepflegt werden. Es dient als finanzielle Anerkennung für die Pflegeperson — der Pflegebedürftige erhält das Geld und gibt es in der Regel weiter.
+            </Text>
+            <Text>
+              Im Gegensatz zu Pflegesachleistungen (die direkt an den Pflegedienst gezahlt werden) kann Pflegegeld frei verwendet werden. Es gibt keine Zweckbindung — die Pflegeperson entscheidet selbst wie sie das Geld einsetzt.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Pflegegeld vs. Pflegesachleistungen', desc: 'Pflegegeld bekommt die pflegebedürftige Person ausgezahlt und gibt es an Angehörige weiter. Pflegesachleistungen gehen direkt an den ambulanten Pflegedienst. Beides lässt sich anteilig kombinieren.' },
+                { title: 'Pflegegeld vs. Entlastungsbetrag', desc: 'Der Entlastungsbetrag (131 €/Monat) ist zusätzlich zum Pflegegeld — er ist zweckgebunden für anerkannte Betreuungs- und Entlastungsangebote. Beide laufen parallel.' },
+              ]}
+            />
+          </Abschnitt>
 
-          {/* SECTION 2 */}
-          <h2 id="betraege" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegeld Beträge 2026 — alle Pflegegrade
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die Beträge 2026 sind identisch zu 2025. Die letzte Erhöhung (+4,5 %) galt ab 1. Januar 2025. Eine weitere Anpassung ist gesetzlich frühestens für den 1. Januar 2028 vorgesehen.
-          </p>
+          <Abschnitt id="betraege" titel="Pflegegeld Beträge 2026 — alle Pflegegrade">
+            <Text>
+              Die Beträge 2026 sind identisch zu 2025. Die letzte Erhöhung (+4,5 %) galt ab 1. Januar 2025. Eine weitere Anpassung ist gesetzlich frühestens für den 1. Januar 2028 vorgesehen.
+            </Text>
+            <Tabelle
+              titel="Pflegegeld & Leistungen 2026 — vollständige Tabelle"
+              kopf={['Pflegegrad', 'Pflegegeld/Monat', 'Sachleistungen/Monat', '+ Entlastungsbetrag', 'Gesamt möglich']}
+              zeilen={[
+                ['PG 1', '—', '—', '131 €', '131 €'],
+                ['PG 2', '347 €', '796 €', '131 €', '478 €'],
+                ['PG 3', '599 €', '1.497 €', '131 €', '730 €'],
+                ['PG 4', '800 €', '1.859 €', '131 €', '931 €'],
+                ['PG 5', '990 €', '2.299 €', '131 €', '1.121 €'],
+              ]}
+              betont={1}
+              fuss="Quelle: GKV-Spitzenverband, SGB XI · Stand 2026 · Identisch zu 2025 · Nächste Dynamisierung frühestens Jan. 2028"
+            />
+            <Kasten augenbraue="Zusätzlich — Entlastungsbudget 2026" titel="3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege" ton="gruen">
+              <Text>Seit Juli 2025 gibt es ein gemeinsames Jahresbudget für Verhinderungs- und Kurzzeitpflege. 2026 ist das erste volle Jahr ohne Übergangsregelungen. Gilt für PG 2–5, flexibel aufteilbar. Wichtig: verfällt am 31. Dezember — nicht genutztes Budget geht verloren.</Text>
+            </Kasten>
+            <MehrDazu
+              label="Entlastungsbudget im Detail:"
+              links={[{ href: "/verhinderungspflege", text: "Verhinderungspflege & Entlastungsbudget 2026" }]}
+            />
+          </Abschnitt>
 
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">
-                Pflegegeld & Leistungen 2026 — vollständige Tabelle
-              </p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Pflegegrad', 'Pflegegeld/Monat', 'Sachleistungen/Monat', '+ Entlastungsbetrag', 'Gesamt möglich'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['PG 1', '—', '—', '131 €', '131 €'],
-                    ['PG 2', '347 €', '796 €', '131 €', '478 €'],
-                    ['PG 3', '599 €', '1.497 €', '131 €', '730 €'],
-                    ['PG 4', '800 €', '1.859 €', '131 €', '931 €'],
-                    ['PG 5', '990 €', '2.299 €', '131 €', '1.121 €'],
-                  ].map(([grad, pg, sach, eb, gesamt], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{sach}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{eb}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-taupe border-b border-pm-line">{gesamt}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Quelle: GKV-Spitzenverband, SGB XI · Stand 2026 · Identisch zu 2025 · Nächste Dynamisierung frühestens Jan. 2028</p>
-            </div>
-          </div>
+          <Abschnitt id="anspruch" titel="Wer hat Anspruch auf Pflegegeld?">
+            <Text>
+              Pflegegeld erhalten Pflegebedürftige, die alle drei dieser Voraussetzungen erfüllen:
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'Pflegegrad 2 oder höher', desc: 'Bei Pflegegrad 1 gibt es kein Pflegegeld — nur den Entlastungsbetrag (131 €/Monat). Ab PG 2 besteht Anspruch.' },
+                { title: 'Häusliche Pflege', desc: 'Der Pflegebedürftige lebt zu Hause — nicht in einem Pflegeheim. Bei vollstationärer Heimunterbringung entfällt das Pflegegeld.' },
+                { title: 'Pflege durch private Personen', desc: 'Die Pflege wird überwiegend durch Angehörige, Freunde oder andere nicht-professionelle Pflegepersonen sichergestellt — nicht ausschließlich durch einen Pflegedienst.' },
+              ]}
+            />
+            <Tabelle
+              titel="Wichtige Regeln beim Pflegegeld"
+              zeilen={[
+                ['Beratungseinsatz PG 2–3', 'Alle 6 Monate Pflicht — sonst Kürzung'],
+                ['Beratungseinsatz PG 4–5', 'Alle 3 Monate Pflicht — sonst Kürzung'],
+                ['Krankenhausaufenthalt', '4 Wochen weitergezahlt, danach entfällt es'],
+                ['Steuerpflicht', 'Nein — Pflegegeld ist steuerfrei'],
+                ['Anrechnung auf Bürgergeld', 'Nein — wird nicht als Einkommen angerechnet'],
+                ['Auszahlung', 'Monatlich im Voraus direkt an den Pflegebedürftigen'],
+              ]}
+            />
+            <MehrDazu
+              label="Pflegegrad beantragen:"
+              links={[{ href: "/pflegegrad-beantragen", text: "Pflegegrad beantragen — Schritt für Schritt" }]}
+            />
+          </Abschnitt>
 
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-2">Zusätzlich — Entlastungsbudget 2026</p>
-            <p className="text-[15px] font-bold text-pm-ink mb-2">3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Seit Juli 2025 gibt es ein gemeinsames Jahresbudget für Verhinderungs- und Kurzzeitpflege. 2026 ist das erste volle Jahr ohne Übergangsregelungen. Gilt für PG 2–5, flexibel aufteilbar. Wichtig: verfällt am 31. Dezember — nicht genutztes Budget geht verloren.
-            </p>
-          </div>
+          <DunklerAbschnitt
+            id="kombinieren"
+            titel="Pflegegeld kombinieren — alle Möglichkeiten"
+            einleitung="Pflegegeld lässt sich mit mehreren anderen Leistungen kombinieren — das maximiert die Gesamtentlastung deutlich."
+            punkte={[
+              { title: 'Pflegegeld + Entlastungsbetrag', desc: 'Der Entlastungsbetrag (131 €/Monat) läuft vollständig parallel zum Pflegegeld — keine Anrechnung, keine Kürzung. Bei PG 3 zusammen: 730 €/Monat.' },
+              { title: 'Pflegegeld + Pflegesachleistungen (Kombinationsleistung)', desc: 'Wer teilweise einen Pflegedienst nutzt, bekommt das Pflegegeld anteilig. Beispiel PG 3: 50 % Sachleistungen genutzt → noch 50 % Pflegegeld (ca. 299 €) erhalten. Zusammen oft mehr als nur Pflegegeld.' },
+              { title: 'Pflegegeld + 24h-Betreuungskraft', desc: 'Auch bei einer 24h-Kraft aus einer Agentur wird Pflegegeld ausgezahlt — solange Angehörige als Hauptpflegeperson anerkannt sind und die Beratungseinsätze wahrgenommen werden.' },
+              { title: 'Pflegegeld + Entlastungsbudget', desc: '3.539 €/Jahr (Entlastungsbudget) läuft zusätzlich zum Pflegegeld — für Verhinderungs- und Kurzzeitpflege wenn Angehörige Urlaub brauchen oder ausfallen.' },
+            ]}
+          >
+            <MehrDazu
+              label="Alle Zuschüsse optimal nutzen:"
+              links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege — vollständige Übersicht" }, { href: "/eigenanteil-24h-pflege-senken", text: "Eigenanteil senken — alle Möglichkeiten" }]}
+            />
+          </DunklerAbschnitt>
 
-          <p className="text-[15px] text-pm-body mb-10">
-            → Entlastungsbudget im Detail:{' '}
-            <a href="/verhinderungspflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Verhinderungspflege & Entlastungsbudget 2026
-            </a>
-          </p>
+          <Abschnitt id="beantragen" titel="Pflegegeld beantragen — so geht es">
+            <Text>
+              Pflegegeld wird nicht separat beantragt — es ist automatisch Teil des Pflegegradantrags. Wer einen Pflegegrad bekommt und zu Hause gepflegt wird, wählt zwischen Pflegegeld, Sachleistungen oder der Kombination.
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'Pflegegrad beantragen', desc: 'Bei der Pflegekasse (Krankenkasse) formlos schriftlich oder telefonisch. Leistungen gelten rückwirkend ab Antragsdatum.' },
+                { title: 'MD-Begutachtung', desc: 'Der Medizinische Dienst kommt nach Hause und stellt den Pflegegrad fest.' },
+                { title: 'Leistungsart wählen', desc: 'Nach dem Bescheid: Pflegegeld, Sachleistungen oder Kombination wählen. Die Pflegekasse berät — Beratung nach § 7a SGB XI ist kostenlos und Pflicht.' },
+                { title: 'Beratungseinsätze wahrnehmen', desc: 'PG 2–3: halbjährlich · PG 4–5: vierteljährlich. Wird ein Termin versäumt, kann die Pflegekasse das Pflegegeld kürzen oder aussetzen.' },
+              ]}
+            />
+            <MehrDazu
+              label="Schritt für Schritt:"
+              links={[{ href: "/pflegegrad-beantragen", text: "Pflegegrad beantragen — vollständige Anleitung" }]}
+            />
+          </Abschnitt>
 
-          {/* SECTION 3 */}
-          <h2 id="anspruch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wer hat Anspruch auf Pflegegeld?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Pflegegeld erhalten Pflegebedürftige, die alle drei dieser Voraussetzungen erfüllen:
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { n: '1', title: 'Pflegegrad 2 oder höher', desc: 'Bei Pflegegrad 1 gibt es kein Pflegegeld — nur den Entlastungsbetrag (131 €/Monat). Ab PG 2 besteht Anspruch.' },
-              { n: '2', title: 'Häusliche Pflege', desc: 'Der Pflegebedürftige lebt zu Hause — nicht in einem Pflegeheim. Bei vollstationärer Heimunterbringung entfällt das Pflegegeld.' },
-              { n: '3', title: 'Pflege durch private Personen', desc: 'Die Pflege wird überwiegend durch Angehörige, Freunde oder andere nicht-professionelle Pflegepersonen sichergestellt — nicht ausschließlich durch einen Pflegedienst.' },
-            ].map((item) => (
-              <div key={item.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">
-                  {item.n}
-                </span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen zum Pflegegeld 2026">
+            <Fragen
+              fragen={[
+                { q: 'Wie hoch ist das Pflegegeld 2026?', a: 'PG 2: 347 €/Monat · PG 3: 599 €/Monat · PG 4: 800 €/Monat · PG 5: 990 €/Monat. Identisch zu 2025 — keine Erhöhung für 2026. Nächste Dynamisierung frühestens Januar 2028.' },
+                { q: 'Wer hat Anspruch auf Pflegegeld?', a: 'Pflegebedürftige ab Pflegegrad 2, die zu Hause von Angehörigen oder privaten Pflegepersonen gepflegt werden. Bei Pflegeheimaufenthalt entfällt der Anspruch.' },
+                { q: 'Was hat sich beim Pflegegeld 2026 geändert?', a: 'Das Pflegegeld selbst hat sich nicht geändert. Neu ist das Entlastungsbudget (3.539 €/Jahr seit Juli 2025), das Verhinderungs- und Kurzzeitpflege in einem flexiblen Topf zusammenfasst — 2026 erstmals vollständig ohne Übergangsregelungen nutzbar.' },
+                { q: 'Kann man Pflegegeld und 24h-Pflege kombinieren?', a: 'Ja — Pflegegeld wird auch bei einer 24h-Betreuungskraft ausgezahlt, wenn Angehörige als Hauptpflegepersonen anerkannt sind und die Beratungseinsätze wahrgenommen werden.' },
+                { q: 'Was passiert mit dem Pflegegeld bei Krankenhausaufenthalt?', a: 'Die ersten 4 Wochen wird Pflegegeld weitergezahlt. Ab der 5. Woche entfällt es, weil die Pflege vom Krankenhaus übernommen wird.' },
+                { q: 'Muss Pflegegeld versteuert werden?', a: 'Nein — Pflegegeld ist vollständig steuerfrei, weder beim Pflegebedürftigen noch bei Angehörigen die es erhalten.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Wichtige Regeln beim Pflegegeld</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <tbody>
-                  {[
-                    ['Beratungseinsatz PG 2–3', 'Alle 6 Monate Pflicht — sonst Kürzung'],
-                    ['Beratungseinsatz PG 4–5', 'Alle 3 Monate Pflicht — sonst Kürzung'],
-                    ['Krankenhausaufenthalt', '4 Wochen weitergezahlt, danach entfällt es'],
-                    ['Steuerpflicht', 'Nein — Pflegegeld ist steuerfrei'],
-                    ['Anrechnung auf Bürgergeld', 'Nein — wird nicht als Einkommen angerechnet'],
-                    ['Auszahlung', 'Monatlich im Voraus direkt an den Pflegebedürftigen'],
-                  ].map(([regel, info], i) => (
-                    <tr key={regel} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{regel}</td>
-                      <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{info}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
 
-          <p className="text-[15px] text-pm-body mb-10">
-            → Pflegegrad beantragen:{' '}
-            <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Pflegegrad beantragen — Schritt für Schritt
-            </a>
-          </p>
+          <Weiterlesen aktuell="pflegegeld" variante="vorlage" />
+        </RatgeberRumpf>
 
-          {/* SECTION 4 */}
-          <h2 id="kombinieren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegeld kombinieren — alle Möglichkeiten
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Pflegegeld lässt sich mit mehreren anderen Leistungen kombinieren — das maximiert die Gesamtentlastung deutlich.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              {
-                title: 'Pflegegeld + Entlastungsbetrag',
-                desc: 'Der Entlastungsbetrag (131 €/Monat) läuft vollständig parallel zum Pflegegeld — keine Anrechnung, keine Kürzung. Bei PG 3 zusammen: 730 €/Monat.',
-                highlight: true,
-              },
-              {
-                title: 'Pflegegeld + Pflegesachleistungen (Kombinationsleistung)',
-                desc: 'Wer teilweise einen Pflegedienst nutzt, bekommt das Pflegegeld anteilig. Beispiel PG 3: 50 % Sachleistungen genutzt → noch 50 % Pflegegeld (ca. 299 €) erhalten. Zusammen oft mehr als nur Pflegegeld.',
-                highlight: false,
-              },
-              {
-                title: 'Pflegegeld + 24h-Betreuungskraft',
-                desc: 'Auch bei einer 24h-Kraft aus einer Agentur wird Pflegegeld ausgezahlt — solange Angehörige als Hauptpflegeperson anerkannt sind und die Beratungseinsätze wahrgenommen werden.',
-                highlight: false,
-              },
-              {
-                title: 'Pflegegeld + Entlastungsbudget',
-                desc: '3.539 €/Jahr (Entlastungsbudget) läuft zusätzlich zum Pflegegeld — für Verhinderungs- und Kurzzeitpflege wenn Angehörige Urlaub brauchen oder ausfallen.',
-                highlight: false,
-              },
-            ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Zuschüsse optimal nutzen:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Finanzierung der 24h-Pflege — vollständige Übersicht
-            </a>
-            {' · '}
-            <a href="/eigenanteil-24h-pflege-senken" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Eigenanteil senken — alle Möglichkeiten
-            </a>
-          </p>
-
-          {/* SECTION 5 */}
-          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegeld beantragen — so geht es
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Pflegegeld wird nicht separat beantragt — es ist automatisch Teil des Pflegegradantrags. Wer einen Pflegegrad bekommt und zu Hause gepflegt wird, wählt zwischen Pflegegeld, Sachleistungen oder der Kombination.
-          </p>
-          <ol className="space-y-3 mb-6">
-            {[
-              { n: '1', title: 'Pflegegrad beantragen', desc: 'Bei der Pflegekasse (Krankenkasse) formlos schriftlich oder telefonisch. Leistungen gelten rückwirkend ab Antragsdatum.' },
-              { n: '2', title: 'MD-Begutachtung', desc: 'Der Medizinische Dienst kommt nach Hause und stellt den Pflegegrad fest.' },
-              { n: '3', title: 'Leistungsart wählen', desc: 'Nach dem Bescheid: Pflegegeld, Sachleistungen oder Kombination wählen. Die Pflegekasse berät — Beratung nach § 7a SGB XI ist kostenlos und Pflicht.' },
-              { n: '4', title: 'Beratungseinsätze wahrnehmen', desc: 'PG 2–3: halbjährlich · PG 4–5: vierteljährlich. Wird ein Termin versäumt, kann die Pflegekasse das Pflegegeld kürzen oder aussetzen.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">
-                  {step.n}
-                </span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Schritt für Schritt:{' '}
-            <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Pflegegrad beantragen — vollständige Anleitung
-            </a>
-          </p>
-
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zum Pflegegeld 2026
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              {
-                q: 'Wie hoch ist das Pflegegeld 2026?',
-                a: 'PG 2: 347 €/Monat · PG 3: 599 €/Monat · PG 4: 800 €/Monat · PG 5: 990 €/Monat. Identisch zu 2025 — keine Erhöhung für 2026. Nächste Dynamisierung frühestens Januar 2028.',
-              },
-              {
-                q: 'Wer hat Anspruch auf Pflegegeld?',
-                a: 'Pflegebedürftige ab Pflegegrad 2, die zu Hause von Angehörigen oder privaten Pflegepersonen gepflegt werden. Bei Pflegeheimaufenthalt entfällt der Anspruch.',
-              },
-              {
-                q: 'Was hat sich beim Pflegegeld 2026 geändert?',
-                a: 'Das Pflegegeld selbst hat sich nicht geändert. Neu ist das Entlastungsbudget (3.539 €/Jahr seit Juli 2025), das Verhinderungs- und Kurzzeitpflege in einem flexiblen Topf zusammenfasst — 2026 erstmals vollständig ohne Übergangsregelungen nutzbar.',
-              },
-              {
-                q: 'Kann man Pflegegeld und 24h-Pflege kombinieren?',
-                a: 'Ja — Pflegegeld wird auch bei einer 24h-Betreuungskraft ausgezahlt, wenn Angehörige als Hauptpflegepersonen anerkannt sind und die Beratungseinsätze wahrgenommen werden.',
-              },
-              {
-                q: 'Was passiert mit dem Pflegegeld bei Krankenhausaufenthalt?',
-                a: 'Die ersten 4 Wochen wird Pflegegeld weitergezahlt. Ab der 5. Woche entfällt es, weil die Pflege vom Krankenhaus übernommen wird.',
-              },
-              {
-                q: 'Muss Pflegegeld versteuert werden?',
-                a: 'Nein — Pflegegeld ist vollständig steuerfrei, weder beim Pflegebedürftigen noch bei Angehörigen die es erhalten.',
-              },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-
-          <Weiterlesen aktuell="pflegegeld" />
-          <ArticleCTA />
-        </div>
+        <KontaktBand />
       </div>
     </>
   )

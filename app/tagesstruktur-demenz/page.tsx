@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, HakenListe, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,67 +69,49 @@ export default function TagesstrukturDemenz() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Tagesstruktur bei Demenz" },
+          ]}
+          augenbraue="Ratgeber Demenz"
+          titel="Tagesstruktur bei Demenz — Tagesplan, Aktivitäten & Tipps"
+          einleitung="Feste Tagesstrukturen sind das wirksamste nicht-medikamentöse Mittel bei Demenz. Sie reduzieren Angst, Unruhe und Verhaltensauffälligkeiten erheblich — weil sie Orientierung geben ohne Gedächtnis zu brauchen. Der Körper erinnert sich auch wenn der Kopf es nicht mehr kann."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Tagesstruktur bei Demenz</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Tagesstruktur bei Demenz — Tagesplan, Aktivitäten & Tipps
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Feste Tagesstrukturen sind das wirksamste nicht-medikamentöse Mittel bei Demenz. Sie reduzieren Angst, Unruhe und Verhaltensauffälligkeiten erheblich — weil sie Orientierung geben ohne Gedächtnis zu brauchen. Der Körper erinnert sich auch wenn der Kopf es nicht mehr kann.
-          </p>
-
-          <h2 id="warum" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Warum Tagesstruktur bei Demenz so wichtig ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Das Kurzzeitgedächtnis ist bei Demenz früh beeinträchtigt — aber das prozedurale Gedächtnis bleibt lange intakt. Dieses Gedächtnissystem speichert Routinen und Abläufe: Wie man Kaffee kocht, wie der Tagesablauf war, was nach dem Frühstück kommt. Feste Strukturen nutzen genau dieses intakte System.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Wenn jeden Morgen um 8 Uhr das Frühstück auf dem Tisch steht, jeden Nachmittag um 15 Uhr Kaffeezeit ist und jeden Abend dieselbe Einschlafroutine folgt — dann weiß der Körper was kommt. Das reduziert die Desorientierung die Angst und Unruhe auslöst.
-          </p>
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Was Tagesstruktur konkret bewirkt</p>
-            <ul className="space-y-1.5">
-              {[
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="warum" titel="Warum Tagesstruktur bei Demenz so wichtig ist">
+            <Text>
+              Das Kurzzeitgedächtnis ist bei Demenz früh beeinträchtigt — aber das prozedurale Gedächtnis bleibt lange intakt. Dieses Gedächtnissystem speichert Routinen und Abläufe: Wie man Kaffee kocht, wie der Tagesablauf war, was nach dem Frühstück kommt. Feste Strukturen nutzen genau dieses intakte System.
+            </Text>
+            <Text>
+              Wenn jeden Morgen um 8 Uhr das Frühstück auf dem Tisch steht, jeden Nachmittag um 15 Uhr Kaffeezeit ist und jeden Abend dieselbe Einschlafroutine folgt — dann weiß der Körper was kommt. Das reduziert die Desorientierung die Angst und Unruhe auslöst.
+            </Text>
+            <Kasten titel="Was Tagesstruktur konkret bewirkt" ton="gruen">
+              <HakenListe punkte={[
                 'Reduziert Ängste und Verwirrung durch Vorhersehbarkeit',
                 'Weniger Verhaltensauffälligkeiten wie Aggressionen oder Wandern',
                 'Besserer Schlaf durch feste Schlaf-Wach-Zeiten',
                 'Mehr positive Momente durch gezielte Aktivitäten',
                 'Entlastung der Pflegeperson durch klare Abläufe',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[14px] text-pm-green-deep">
-                  <span className="font-bold mt-0.5 flex-shrink-0">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]} />
+            </Kasten>
+          </Abschnitt>
 
-          <h2 id="tagesplan" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Idealer Tagesplan bei Demenz — Beispiel
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Dieser Tagesplan ist ein Ausgangspunkt — er sollte an den früheren Lebensrhythmus des Betroffenen angepasst werden. Wer immer Frühaufsteher war, steht früh auf. Wer Nachtmensch war, startet langsamer.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
+          <Abschnitt id="tagesplan" titel="Idealer Tagesplan bei Demenz — Beispiel">
+            <Text>
+              Dieser Tagesplan ist ein Ausgangspunkt — er sollte an den früheren Lebensrhythmus des Betroffenen angepasst werden. Wer immer Frühaufsteher war, steht früh auf. Wer Nachtmensch war, startet langsamer.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
               <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Beispiel-Tagesplan bei mittlerem Demenzstadium</p>
             </div>
@@ -159,11 +143,11 @@ export default function TagesstrukturDemenz() {
               </table>
             </div>
           </div>
+          </Abschnitt>
 
-          <h2 id="aktivitaeten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Sinnvolle Aktivitäten je Stadium
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="aktivitaeten" titel="Sinnvolle Aktivitäten je Stadium">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               {
                 title: 'Frühes Stadium',
@@ -191,57 +175,41 @@ export default function TagesstrukturDemenz() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="schlafroutine" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Schlaf & Nachtunruhe — die größte Herausforderung
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Schlafstörungen und Nachtunruhe sind bei Demenz häufig — und eine der größten Belastungen für Angehörige. Das Sundowning-Phänomen (zunehmende Unruhe am Nachmittag und Abend) ist typisch für Alzheimer.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <DunklerAbschnitt
+            id="schlafroutine"
+            titel="Schlaf & Nachtunruhe — die größte Herausforderung"
+            einleitung="Schlafstörungen und Nachtunruhe sind bei Demenz häufig — und eine der größten Belastungen für Angehörige. Das Sundowning-Phänomen (zunehmende Unruhe am Nachmittag und Abend) ist typisch für Alzheimer."
+            punkte={[
               { title: 'Feste Schlafenszeit', desc: 'Jeden Abend zur gleichen Zeit das gleiche Ritual. Keine Aufregung, kein Fernsehen kurz vor dem Schlafen. Beruhigende Musik oder Vorlesen als Übergang.' },
               { title: 'Tagschlaf begrenzen', desc: 'Wenn tagsüber viel geschlafen wird, verschiebt sich der Nacht-Schlaf. Mittagsschlaf auf max. 30 Minuten begrenzen.' },
               { title: 'Licht und Aktivität tagsüber', desc: 'Tageslicht und Bewegung regulieren den Schlaf-Wach-Rhythmus. Tägliche Spaziergänge, helle Räume am Morgen.' },
               { title: 'Nächtliche Unterstützung', desc: 'Bei häufiger Nachtunruhe ist eine 24h-Kraft unverzichtbar — Angehörige die jede Nacht unterbrochen werden, erschöpfen schnell.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Demenz allgemein:{' '}
-            <a href="/demenz-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Demenz Pflege zuhause — vollständiger Ratgeber</a>
-            {' · '}
-            <a href="/kommunikation-mit-demenzkranken" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kommunikation mit Demenzkranken</a>
-          </p>
+            ]}
+          >
+            <MehrDazu
+              label="Demenz allgemein:"
+              links={[{ href: "/demenz-pflege-zuhause", text: "Demenz Pflege zuhause — vollständiger Ratgeber" }, { href: "/kommunikation-mit-demenzkranken", text: "Kommunikation mit Demenzkranken" }]}
+            />
+          </DunklerAbschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur Tagesstruktur bei Demenz
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Warum ist Tagesstruktur bei Demenz so wichtig?', a: 'Das prozedurale Gedächtnis (Routinen, Abläufe) bleibt bei Demenz lange intakt. Feste Strukturen geben Orientierung ohne Kurzzeitgedächtnis — das reduziert Angst, Unruhe und Verhaltensauffälligkeiten erheblich.' },
-              { q: 'Wie viel Stimulation ist bei Demenz gut?', a: 'Weniger ist mehr — Überstimulation durch Lärm, viele Menschen oder zu viele Aufgaben führt zu Angst. Ruhige Atmosphäre, eine Aktivität nach der anderen, ausreichend Ruhezeiten. Nachmittags besonders ruhig halten (Sundowning-Zeit).' },
-              { q: 'Was ist Sundowning bei Demenz?', a: 'Sundowning bezeichnet die verstärkte Unruhe, Verwirrung und manchmal Aggressivität die bei vielen Demenzkranken am Nachmittag und frühen Abend auftritt. Ursache ist wahrscheinlich gestörter zirkadianer Rhythmus. Tipp: Nachmittags Reize reduzieren, ruhige Aktivitäten.' },
-              { q: 'Wie geht man mit Nachtunruhe bei Demenz um?', a: 'Feste Schlafenszeit mit beruhigendem Ritual, Tagschlaf begrenzen, tagsüber Licht und Bewegung. Bei häufiger Nachtunruhe ist eine 24h-Betreuungskraft sinnvoll — Angehörige die jede Nacht unterbrochen werden, erschöpfen schnell.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="tagesstruktur-demenz" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen zur Tagesstruktur bei Demenz">
+            <Fragen
+              fragen={[
+                { q: 'Warum ist Tagesstruktur bei Demenz so wichtig?', a: 'Das prozedurale Gedächtnis (Routinen, Abläufe) bleibt bei Demenz lange intakt. Feste Strukturen geben Orientierung ohne Kurzzeitgedächtnis — das reduziert Angst, Unruhe und Verhaltensauffälligkeiten erheblich.' },
+                { q: 'Wie viel Stimulation ist bei Demenz gut?', a: 'Weniger ist mehr — Überstimulation durch Lärm, viele Menschen oder zu viele Aufgaben führt zu Angst. Ruhige Atmosphäre, eine Aktivität nach der anderen, ausreichend Ruhezeiten. Nachmittags besonders ruhig halten (Sundowning-Zeit).' },
+                { q: 'Was ist Sundowning bei Demenz?', a: 'Sundowning bezeichnet die verstärkte Unruhe, Verwirrung und manchmal Aggressivität die bei vielen Demenzkranken am Nachmittag und frühen Abend auftritt. Ursache ist wahrscheinlich gestörter zirkadianer Rhythmus. Tipp: Nachmittags Reize reduzieren, ruhige Aktivitäten.' },
+                { q: 'Wie geht man mit Nachtunruhe bei Demenz um?', a: 'Feste Schlafenszeit mit beruhigendem Ritual, Tagschlaf begrenzen, tagsüber Licht und Bewegung. Bei häufiger Nachtunruhe ist eine 24h-Betreuungskraft sinnvoll — Angehörige die jede Nacht unterbrochen werden, erschöpfen schnell.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="tagesstruktur-demenz" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

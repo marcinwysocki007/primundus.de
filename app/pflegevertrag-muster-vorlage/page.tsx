@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -66,163 +68,115 @@ export default function PflegevertragMusterVorlage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Rechtliches", href: "/rechtliches" },
+            { label: "Pflegevertrag Muster & Vorlage" },
+          ]}
+          augenbraue="Ratgeber Vertrag"
+          titel="Pflegevertrag Muster & Vorlage 2026 — vollständig & kostenlos"
+          einleitung="Ein Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt was geleistet wird, was es kostet, wie Kost und Logis angerechnet werden und wie gekündigt werden kann. Wer mit Primundus im Entsendemodell arbeitet, bekommt einen fertigen Vertrag — wer direkt anstellt, braucht dieses Muster."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegevertrag Muster & Vorlage</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Wichtiger Hinweis" ton="koralle">
+              <Text>Diese Vorlage gilt für die Direktanstellung einer Pflegekraft durch die Familie (deutsches Arbeitsverhältnis). Beim Entsendemodell über Primundus schließt die Familie nur einen Vertrag mit Primundus als Agentur — kein eigener Arbeitsvertrag mit der Kraft notwendig. Die Vorlage hier dient als Orientierung und ersetzt keine Rechtsberatung.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
+          <Abschnitt id="was-muss-rein" titel="Was muss in den Pflegevertrag?">
+            <Punkte
+              punkte={[
+                { title: 'Vertragsparteien', desc: 'Vollständiger Name, Adresse und ggf. Geburtsdatum beider Parteien. Bei minderjährigen oder geschäftsunfähigen Pflegebedürftigen: Name und Adresse der bevollmächtigten Person.' },
+                { title: 'Beginn und Laufzeit', desc: 'Datum des Beginns. Befristet oder unbefristet? Bei befristeten Verträgen: Enddatum und Verlängerungsregelung.' },
+                { title: 'Leistungsumfang', desc: 'Was genau übernimmt die Kraft? Körperpflege, Haushalt, Kochen, Mobilisierung, Gesellschaft — möglichst konkret. Was wird ausdrücklich nicht erwartet (z.B. schwere medizinische Behandlungspflege)?' },
+                { title: 'Arbeitszeit', desc: 'Grundsätzliche Bereitschaft (z.B. Wochenstunden, Rufbereitschaft). Wichtig: Unterschied zwischen Bereitschaft und aktiver Arbeitszeit.' },
+                { title: 'Vergütung', desc: 'Bruttolohn pro Monat. Zahlungsmodalitäten (Datum, Konto). Überstundenregelung.' },
+                { title: 'Kost & Logis', desc: 'Freie Unterkunft und Verpflegung werden als Sachbezug auf den Lohn angerechnet. Gesetzliche Sachbezugswerte (2026): Unterkunft ca. 278 €/Monat, Verpflegung ca. 313 €/Monat.' },
+                { title: 'Urlaub', desc: 'Mindestens gesetzlicher Mindesturlaub (20 Tage bei 5-Tage-Woche). Urlaubsplanung und -vertretung.' },
+                { title: 'Krankheit', desc: 'Lohnfortzahlung im Krankheitsfall (gesetzlich: 6 Wochen). Meldepflicht.' },
+                { title: 'Kündigung', desc: 'Kündigungsfristen (gesetzlich in der Probezeit: 2 Wochen; danach: 4 Wochen). Außerordentliche Kündigung bei wichtigem Grund.' },
+                { title: 'Verschwiegenheit', desc: 'Verpflichtung zur Verschwiegenheit über alle persönlichen und gesundheitlichen Informationen des Pflegebedürftigen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegevertrag Muster & Vorlage 2026 — vollständig & kostenlos
-          </h1>
+          <Abschnitt id="vorlage" titel="Vorlage — vollständiges Pflegevertrag-Muster">
+            <Kasten augenbraue="ARBEITSVERTRAG — Häusliche Betreuung und Pflege" titel="§ 1 Vertragsparteien">
+              <Text>zwischen</Text>
+              <Text>Name, Adresse der Familie / bevollmächtigten Person (nachfolgend „Arbeitgeber")</Text>
+              <Text>und</Text>
+              <Text>Name, Adresse der Betreuungskraft (nachfolgend „Arbeitnehmer")</Text>
+              <Text>§ 2 Beginn und Dauer</Text>
+              <Text>Das Arbeitsverhältnis beginnt am ____________ und wird auf unbestimmte Zeit / bis zum ____________ geschlossen.</Text>
+              <Text>Die ersten __ Wochen gelten als Probezeit.</Text>
+              <Text>§ 3 Tätigkeitsbeschreibung</Text>
+              <Text>Der Arbeitnehmer übernimmt die häusliche Betreuung und Pflege von:</Text>
+              <Text>Name des Pflegebedürftigen: ________________________</Text>
+              <Text>Die Tätigkeit umfasst insbesondere:</Text>
+              <Text>□ Körperpflege (Waschen, Ankleiden, Zahnpflege)</Text>
+              <Text>□ Mobilisierung und Begleitung</Text>
+              <Text>□ Haushaltsführung (Kochen, Reinigung, Wäsche)</Text>
+              <Text>□ Gesellschaft und Betreuung</Text>
+              <Text>□ Medikamentenerinnerung</Text>
+              <Text>□ Begleitung zu Terminen</Text>
+              <Text>□ Weitere: _______________________________________</Text>
+              <Text>§ 4 Arbeitszeit</Text>
+              <Text>Regelmäßige wöchentliche Arbeitszeit: __ Stunden.</Text>
+              <Text>Davon: aktive Arbeitszeit __ Std. / Bereitschaftszeit __ Std.</Text>
+              <Text>Einteilung der Arbeitszeit nach betrieblichen Erfordernissen.</Text>
+              <Text>§ 5 Vergütung</Text>
+              <Text>Bruttomonatslohn: ____________ Euro.</Text>
+              <Text>Zahlung bis zum __ des Folgemonats auf das Konto: ____________.</Text>
+              <Text>Kost und Logis werden als Sachbezug nach gesetzlichen Werten angerechnet (2026: Unterkunft ca. 278 €, Verpflegung ca. 313 €/Monat).</Text>
+              <Text>§ 6 Urlaub</Text>
+              <Text>Dem Arbeitnehmer stehen __ Werktage Urlaub pro Jahr zu (mind. 20 Tage bei 5-Tage-Woche).</Text>
+              <Text>Urlaubsplanung in Abstimmung mit dem Arbeitgeber. Ersatzpflege während des Urlaubs organisiert der Arbeitgeber.</Text>
+              <Text>§ 7 Krankheit</Text>
+              <Text>Im Krankheitsfall besteht Anspruch auf Lohnfortzahlung für 6 Wochen (§ 3 EntgFG).</Text>
+              <Text>Erkrankung ist unverzüglich zu melden. Ab dem 3. Krankheitstag ist eine ärztliche Bescheinigung vorzulegen.</Text>
+              <Text>§ 8 Kündigung</Text>
+              <Text>Während der Probezeit: Kündigungsfrist 2 Wochen.</Text>
+              <Text>Nach der Probezeit: Kündigungsfrist 4 Wochen zum 15. oder zum Ende des Kalendermonats (§ 622 BGB).</Text>
+              <Text>Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.</Text>
+              <Text>§ 9 Verschwiegenheit</Text>
+              <Text>Der Arbeitnehmer ist zur Verschwiegenheit über alle ihm bekannt gewordenen persönlichen und gesundheitlichen Informationen des Pflegebedürftigen verpflichtet. Diese Verpflichtung gilt auch nach Beendigung des Arbeitsverhältnisses.</Text>
+              <Text>§ 10 Schlussbestimmungen</Text>
+              <Text>Änderungen und Ergänzungen dieses Vertrages bedürfen der Schriftform.</Text>
+              <Text>Es gilt deutsches Recht.</Text>
+              <Text>Ort, Datum: _________________________</Text>
+              <Text>_________________________ &nbsp;&nbsp;&nbsp; _________________________</Text>
+              <Text>Unterschrift Arbeitgeber &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift Arbeitnehmer</Text>
+            </Kasten>
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
+          <Abschnitt id="kost-logis" titel="Kost & Logis richtig regeln">
+            <Text>
+              Freie Unterkunft und Verpflegung sind kein Lohnzuschlag — sie werden als Sachbezugswert auf die Vergütung angerechnet. Das reduziert den auszuzahlenden Bruttolohn entsprechend.
+            </Text>
+            <Tabelle
+              titel=""
+              kopf={['Sachbezug', 'Wert 2026/Monat', 'Hinweis']}
+              zeilen={[
+                ['Unterkunft (eigenes Zimmer)', 'ca. 278 €', 'Amtlicher Sachbezugswert — kann je nach Bundesland leicht abweichen'],
+                ['Verpflegung (3 Mahlzeiten)', 'ca. 313 €', 'Sachbezugswert Sozialversicherung'],
+                ['Gesamt Sachbezug', 'ca. 591 €/Monat', 'Wird vom Bruttolohn abgezogen'],
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Ein Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt was geleistet wird, was es kostet, wie Kost und Logis angerechnet werden und wie gekündigt werden kann. Wer mit Primundus im Entsendemodell arbeitet, bekommt einen fertigen Vertrag — wer direkt anstellt, braucht dieses Muster.
-          </p>
-
-          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Wichtiger Hinweis</p>
-            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
-              Diese Vorlage gilt für die Direktanstellung einer Pflegekraft durch die Familie (deutsches Arbeitsverhältnis). Beim Entsendemodell über Primundus schließt die Familie nur einen Vertrag mit Primundus als Agentur — kein eigener Arbeitsvertrag mit der Kraft notwendig. Die Vorlage hier dient als Orientierung und ersetzt keine Rechtsberatung.
-            </p>
-          </div>
-
-          <h2 id="was-muss-rein" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was muss in den Pflegevertrag?
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { punkt: 'Vertragsparteien', detail: 'Vollständiger Name, Adresse und ggf. Geburtsdatum beider Parteien. Bei minderjährigen oder geschäftsunfähigen Pflegebedürftigen: Name und Adresse der bevollmächtigten Person.' },
-              { punkt: 'Beginn und Laufzeit', detail: 'Datum des Beginns. Befristet oder unbefristet? Bei befristeten Verträgen: Enddatum und Verlängerungsregelung.' },
-              { punkt: 'Leistungsumfang', detail: 'Was genau übernimmt die Kraft? Körperpflege, Haushalt, Kochen, Mobilisierung, Gesellschaft — möglichst konkret. Was wird ausdrücklich nicht erwartet (z.B. schwere medizinische Behandlungspflege)?' },
-              { punkt: 'Arbeitszeit', detail: 'Grundsätzliche Bereitschaft (z.B. Wochenstunden, Rufbereitschaft). Wichtig: Unterschied zwischen Bereitschaft und aktiver Arbeitszeit.' },
-              { punkt: 'Vergütung', detail: 'Bruttolohn pro Monat. Zahlungsmodalitäten (Datum, Konto). Überstundenregelung.' },
-              { punkt: 'Kost & Logis', detail: 'Freie Unterkunft und Verpflegung werden als Sachbezug auf den Lohn angerechnet. Gesetzliche Sachbezugswerte (2026): Unterkunft ca. 278 €/Monat, Verpflegung ca. 313 €/Monat.' },
-              { punkt: 'Urlaub', detail: 'Mindestens gesetzlicher Mindesturlaub (20 Tage bei 5-Tage-Woche). Urlaubsplanung und -vertretung.' },
-              { punkt: 'Krankheit', detail: 'Lohnfortzahlung im Krankheitsfall (gesetzlich: 6 Wochen). Meldepflicht.' },
-              { punkt: 'Kündigung', detail: 'Kündigungsfristen (gesetzlich in der Probezeit: 2 Wochen; danach: 4 Wochen). Außerordentliche Kündigung bei wichtigem Grund.' },
-              { punkt: 'Verschwiegenheit', detail: 'Verpflichtung zur Verschwiegenheit über alle persönlichen und gesundheitlichen Informationen des Pflegebedürftigen.' },
-            ].map((item) => (
-              <div key={item.punkt} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.punkt}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="vorlage" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Vorlage — vollständiges Pflegevertrag-Muster
-          </h2>
-          <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[13px] leading-[1.8] text-pm-body overflow-x-auto">
-            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-4">ARBEITSVERTRAG — Häusliche Betreuung und Pflege</p>
-
-            <p className="font-bold mt-4">§ 1 Vertragsparteien</p>
-            <p>zwischen</p>
-            <p>Name, Adresse der Familie / bevollmächtigten Person (nachfolgend „Arbeitgeber")</p>
-            <p>und</p>
-            <p>Name, Adresse der Betreuungskraft (nachfolgend „Arbeitnehmer")</p>
-
-            <p className="font-bold mt-4">§ 2 Beginn und Dauer</p>
-            <p>Das Arbeitsverhältnis beginnt am ____________ und wird auf unbestimmte Zeit / bis zum ____________ geschlossen.</p>
-            <p>Die ersten __ Wochen gelten als Probezeit.</p>
-
-            <p className="font-bold mt-4">§ 3 Tätigkeitsbeschreibung</p>
-            <p>Der Arbeitnehmer übernimmt die häusliche Betreuung und Pflege von:</p>
-            <p>Name des Pflegebedürftigen: ________________________</p>
-            <p>Die Tätigkeit umfasst insbesondere:</p>
-            <p>□ Körperpflege (Waschen, Ankleiden, Zahnpflege)</p>
-            <p>□ Mobilisierung und Begleitung</p>
-            <p>□ Haushaltsführung (Kochen, Reinigung, Wäsche)</p>
-            <p>□ Gesellschaft und Betreuung</p>
-            <p>□ Medikamentenerinnerung</p>
-            <p>□ Begleitung zu Terminen</p>
-            <p>□ Weitere: _______________________________________</p>
-
-            <p className="font-bold mt-4">§ 4 Arbeitszeit</p>
-            <p>Regelmäßige wöchentliche Arbeitszeit: __ Stunden.</p>
-            <p>Davon: aktive Arbeitszeit __ Std. / Bereitschaftszeit __ Std.</p>
-            <p>Einteilung der Arbeitszeit nach betrieblichen Erfordernissen.</p>
-
-            <p className="font-bold mt-4">§ 5 Vergütung</p>
-            <p>Bruttomonatslohn: ____________ Euro.</p>
-            <p>Zahlung bis zum __ des Folgemonats auf das Konto: ____________.</p>
-            <p>Kost und Logis werden als Sachbezug nach gesetzlichen Werten angerechnet (2026: Unterkunft ca. 278 €, Verpflegung ca. 313 €/Monat).</p>
-
-            <p className="font-bold mt-4">§ 6 Urlaub</p>
-            <p>Dem Arbeitnehmer stehen __ Werktage Urlaub pro Jahr zu (mind. 20 Tage bei 5-Tage-Woche).</p>
-            <p>Urlaubsplanung in Abstimmung mit dem Arbeitgeber. Ersatzpflege während des Urlaubs organisiert der Arbeitgeber.</p>
-
-            <p className="font-bold mt-4">§ 7 Krankheit</p>
-            <p>Im Krankheitsfall besteht Anspruch auf Lohnfortzahlung für 6 Wochen (§ 3 EntgFG).</p>
-            <p>Erkrankung ist unverzüglich zu melden. Ab dem 3. Krankheitstag ist eine ärztliche Bescheinigung vorzulegen.</p>
-
-            <p className="font-bold mt-4">§ 8 Kündigung</p>
-            <p>Während der Probezeit: Kündigungsfrist 2 Wochen.</p>
-            <p>Nach der Probezeit: Kündigungsfrist 4 Wochen zum 15. oder zum Ende des Kalendermonats (§ 622 BGB).</p>
-            <p>Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.</p>
-
-            <p className="font-bold mt-4">§ 9 Verschwiegenheit</p>
-            <p>Der Arbeitnehmer ist zur Verschwiegenheit über alle ihm bekannt gewordenen persönlichen und gesundheitlichen Informationen des Pflegebedürftigen verpflichtet. Diese Verpflichtung gilt auch nach Beendigung des Arbeitsverhältnisses.</p>
-
-            <p className="font-bold mt-4">§ 10 Schlussbestimmungen</p>
-            <p>Änderungen und Ergänzungen dieses Vertrages bedürfen der Schriftform.</p>
-            <p>Es gilt deutsches Recht.</p>
-
-            <p className="mt-6">Ort, Datum: _________________________</p>
-            <p className="mt-4">_________________________ &nbsp;&nbsp;&nbsp; _________________________</p>
-            <p>Unterschrift Arbeitgeber &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift Arbeitnehmer</p>
-          </div>
-
-          <h2 id="kost-logis" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kost & Logis richtig regeln
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Freie Unterkunft und Verpflegung sind kein Lohnzuschlag — sie werden als Sachbezugswert auf die Vergütung angerechnet. Das reduziert den auszuzahlenden Bruttolohn entsprechend.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Sachbezug', 'Wert 2026/Monat', 'Hinweis'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Unterkunft (eigenes Zimmer)', 'ca. 278 €', 'Amtlicher Sachbezugswert — kann je nach Bundesland leicht abweichen'],
-                    ['Verpflegung (3 Mahlzeiten)', 'ca. 313 €', 'Sachbezugswert Sozialversicherung'],
-                    ['Gesamt Sachbezug', 'ca. 591 €/Monat', 'Wird vom Bruttolohn abgezogen'],
-                  ].map(([sachb, wert, hinweis], i) => (
-                    <tr key={sachb} className={i === 2 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className={`px-4 py-3 text-[14px] border-b border-pm-line ${i === 2 ? 'font-bold text-pm-taupe' : 'text-pm-body'}`}>{sachb}</td>
-                      <td className={`px-4 py-3 text-[14px] font-bold border-b border-pm-line ${i === 2 ? 'text-pm-taupe' : 'text-pm-ink'}`}>{wert}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <h2 id="kuendigung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kündigung — was gesetzlich gilt
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="kuendigung" titel="Kündigung — was gesetzlich gilt">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               { phase: 'Während der Probezeit', frist: '2 Wochen', hinweis: 'Probezeit max. 6 Monate. In dieser Zeit 2 Wochen Kündigungsfrist für beide Seiten.' },
               { phase: 'Nach der Probezeit (bis 2 Jahre)', frist: '4 Wochen zum 15. oder Monatsende', hinweis: 'Gesetzliche Grundkündigung nach § 622 Abs. 1 BGB.' },
@@ -238,35 +192,28 @@ export default function PflegevertragMusterVorlage() {
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Beschäftigungsmodelle im Überblick:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft legal beschäftigen</a>
-            {' · '}
-            <a href="/pflegevertrag-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegevertrag aufsetzen — alle Pflichtangaben</a>
-          </p>
+            <MehrDazu
+              label="Beschäftigungsmodelle im Überblick:"
+              links={[{ href: "/pflegekraft-legal-beschaeftigen", text: "Pflegekraft legal beschäftigen" }, { href: "/pflegevertrag-aufsetzen", text: "Pflegevertrag aufsetzen — alle Pflichtangaben" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was muss in einen Pflegevertrag?', a: 'Vertragsparteien, Beginn/Laufzeit, Leistungsumfang, Arbeitszeit, Vergütung, Kost & Logis (Sachbezugswert), Urlaub, Krankheit, Kündigung, Verschwiegenheit.' },
-              { q: 'Brauche ich beim Entsendemodell einen eigenen Arbeitsvertrag?', a: 'Nein — beim Entsendemodell über Primundus schließt die Familie nur einen Vertrag mit Primundus. Kein eigenes Arbeitsverhältnis mit der Kraft, keine deutschen Sozialabgaben.' },
-              { q: 'Wie werden Kost und Logis verrechnet?', a: 'Als amtlicher Sachbezugswert: ca. 278 €/Monat Unterkunft + ca. 313 €/Monat Verpflegung = ca. 591 €/Monat Gesamtabzug vom Bruttolohn.' },
-              { q: 'Wie lange ist die Kündigungsfrist bei einer Pflegekraft?', a: 'In der Probezeit: 2 Wochen. Nach der Probezeit: 4 Wochen zum 15. oder Monatsende. Bei sozialer Kündigung aus wichtigem Grund: sofort.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflegevertrag-muster-vorlage" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was muss in einen Pflegevertrag?', a: 'Vertragsparteien, Beginn/Laufzeit, Leistungsumfang, Arbeitszeit, Vergütung, Kost & Logis (Sachbezugswert), Urlaub, Krankheit, Kündigung, Verschwiegenheit.' },
+                { q: 'Brauche ich beim Entsendemodell einen eigenen Arbeitsvertrag?', a: 'Nein — beim Entsendemodell über Primundus schließt die Familie nur einen Vertrag mit Primundus. Kein eigenes Arbeitsverhältnis mit der Kraft, keine deutschen Sozialabgaben.' },
+                { q: 'Wie werden Kost und Logis verrechnet?', a: 'Als amtlicher Sachbezugswert: ca. 278 €/Monat Unterkunft + ca. 313 €/Monat Verpflegung = ca. 591 €/Monat Gesamtabzug vom Bruttolohn.' },
+                { q: 'Wie lange ist die Kündigungsfrist bei einer Pflegekraft?', a: 'In der Probezeit: 2 Wochen. Nach der Probezeit: 4 Wochen zum 15. oder Monatsende. Bei sozialer Kündigung aus wichtigem Grund: sofort.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="pflegevertrag-muster-vorlage" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

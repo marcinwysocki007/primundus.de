@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,66 +69,45 @@ export default function MultipleSklerosePflege() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Multiple Sklerose Pflege</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Multiple Sklerose Pflege zuhause — was möglich ist
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Multiple Sklerose (MS) ist eine chronisch-entzündliche Erkrankung des Nervensystems — mit sehr unterschiedlichem Verlauf. Während manche Menschen mit MS jahrzehntelang nahezu symptomfrei leben, brauchen andere bereits im mittleren Lebensalter intensive Pflege. Die häusliche Pflege ist in den meisten Stadien nicht nur möglich, sondern oft die bessere Wahl.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Krankheiten", href: "/krankheiten" },
+            { label: "Multiple Sklerose Pflege" },
+          ]}
+          augenbraue="Ratgeber Multiple Sklerose"
+          titel="Multiple Sklerose Pflege zuhause — was möglich ist"
+          einleitung="Multiple Sklerose (MS) ist eine chronisch-entzündliche Erkrankung des Nervensystems — mit sehr unterschiedlichem Verlauf. Während manche Menschen mit MS jahrzehntelang nahezu symptomfrei leben, brauchen andere bereits im mittleren Lebensalter intensive Pflege. Die häusliche Pflege ist in den meisten Stadien nicht nur möglich, sondern oft die bessere Wahl."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+          blick={[
                 'MS-Pflege zuhause ist in den meisten Verläufen gut möglich',
                 'Pflegebedarf variiert stark — von zeitweiser Unterstützung bis zu 24h-Betreuung',
                 'Besonderheit: Fatigue (Erschöpfung) ist bei MS oft das führende Pflegeproblem',
                 'Wärme verschlechtert Symptome — kühle Umgebung und Hilfsmittel wichtig',
                 'Pflegegrad 1–5 je nach Einschränkungsgrad und Verlauf',
                 'Kassenzuschüsse: bis 990 €/Monat Pflegegeld + 3.539 €/Jahr Entlastungsbudget',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="ms-pflege" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Multiple Sklerose zuhause pflegen — was möglich ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            MS verläuft sehr individuell. Der Pflegebedarf hängt vom Verlaufstyp, der bisherigen Krankheitsdauer und den betroffenen neurologischen Funktionen ab. Was bei einem Menschen mit MS vollständig erhalten ist, kann beim anderen stark beeinträchtigt sein.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Die häusliche Pflege hat bei MS besondere Vorteile: Die vertraute Umgebung ermöglicht Selbstständigkeit durch eingeprägte Routinen, Hilfsmittel können passgenau eingerichtet werden, und die emotionale Belastung eines Heimumzugs entfällt.
-          </p>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="ms-pflege" titel="Multiple Sklerose zuhause pflegen — was möglich ist">
+            <Text>
+              MS verläuft sehr individuell. Der Pflegebedarf hängt vom Verlaufstyp, der bisherigen Krankheitsdauer und den betroffenen neurologischen Funktionen ab. Was bei einem Menschen mit MS vollständig erhalten ist, kann beim anderen stark beeinträchtigt sein.
+            </Text>
+            <Text>
+              Die häusliche Pflege hat bei MS besondere Vorteile: Die vertraute Umgebung ermöglicht Selbstständigkeit durch eingeprägte Routinen, Hilfsmittel können passgenau eingerichtet werden, und die emotionale Belastung eines Heimumzugs entfällt.
+            </Text>
+          </Abschnitt>
 
-          <h2 id="verlauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflege je nach MS-Verlaufstyp
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="verlauf" titel="Pflege je nach MS-Verlaufstyp">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               {
                 verlauf: 'Schubförmig-remittierend (RRMS)',
@@ -151,105 +132,58 @@ export default function MultipleSklerosePflege() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Alltagsherausforderungen & Lösungen bei MS
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              {
-                challenge: 'Fatigue (extreme Erschöpfung)',
-                loesung: 'Die MS-typische Erschöpfung ist anders als normale Müdigkeit — sie kommt plötzlich und ist lähmend. Energiemanagement ist entscheidend: wichtige Aktivitäten auf die Zeiten legen wenn Energie vorhanden ist. Pausen einplanen. Betreuungskraft übernimmt körperlich anstrengende Aufgaben damit Energie für Wichtiges bleibt.',
-              },
-              {
-                challenge: 'Wärmeempfindlichkeit (Uhthoff-Phänomen)',
-                loesung: 'Wärme verschlechtert bei vielen MS-Betroffenen die Symptome vorübergehend stark. Kühle Raumtemperatur, keine heißen Bäder, Klimaanlage oder Ventilatoren im Sommer, Kühlwesten. Betreuungskraft kennt diese Reaktionen und handelt entsprechend.',
-              },
-              {
-                challenge: 'Blasen- und Darmprobleme',
-                loesung: 'Blasenschwäche, Harninkontinenz und Darmprobleme sind bei MS häufig. Regelmäßige Toilettengänge einplanen, Inkontinenzmaterial, ggf. Katheterversorgung durch Pflegedienst. Betreuungskraft begleitet diskret und würdevoll.',
-              },
-              {
-                challenge: 'Spastiken und Gleichgewichtsprobleme',
-                loesung: 'Sturzsicherheit hat höchste Priorität. Haltegriffe, Rollator oder Rollstuhl, rutschfeste Matten. Lagerungstechniken bei Spastiken erlernen. Physiotherapie unterstützen und begleiten.',
-              },
-              {
-                challenge: 'Kognitive Einschränkungen',
-                loesung: 'Gedächtnis- und Konzentrationsprobleme bei MS sind häufig unterschätzt. Klare Strukturen, schriftliche Erinnerungen, ruhige Umgebung ohne Ablenkung. Betreuungskraft gibt Orientierung ohne zu überfordern.',
-              },
-            ].map((item) => (
-              <div key={item.challenge} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-2">{item.challenge}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.loesung}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="alltag" titel="Alltagsherausforderungen & Lösungen bei MS">
+            <Punkte
+              punkte={[
+                { title: 'Fatigue (extreme Erschöpfung)', desc: 'Die MS-typische Erschöpfung ist anders als normale Müdigkeit — sie kommt plötzlich und ist lähmend. Energiemanagement ist entscheidend: wichtige Aktivitäten auf die Zeiten legen wenn Energie vorhanden ist. Pausen einplanen. Betreuungskraft übernimmt körperlich anstrengende Aufgaben damit Energie für Wichtiges bleibt.' },
+                { title: 'Wärmeempfindlichkeit (Uhthoff-Phänomen)', desc: 'Wärme verschlechtert bei vielen MS-Betroffenen die Symptome vorübergehend stark. Kühle Raumtemperatur, keine heißen Bäder, Klimaanlage oder Ventilatoren im Sommer, Kühlwesten. Betreuungskraft kennt diese Reaktionen und handelt entsprechend.' },
+                { title: 'Blasen- und Darmprobleme', desc: 'Blasenschwäche, Harninkontinenz und Darmprobleme sind bei MS häufig. Regelmäßige Toilettengänge einplanen, Inkontinenzmaterial, ggf. Katheterversorgung durch Pflegedienst. Betreuungskraft begleitet diskret und würdevoll.' },
+                { title: 'Spastiken und Gleichgewichtsprobleme', desc: 'Sturzsicherheit hat höchste Priorität. Haltegriffe, Rollator oder Rollstuhl, rutschfeste Matten. Lagerungstechniken bei Spastiken erlernen. Physiotherapie unterstützen und begleiten.' },
+                { title: 'Kognitive Einschränkungen', desc: 'Gedächtnis- und Konzentrationsprobleme bei MS sind häufig unterschätzt. Klare Strukturen, schriftliche Erinnerungen, ruhige Umgebung ohne Ablenkung. Betreuungskraft gibt Orientierung ohne zu überfordern.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegrad & Kassenzuschüsse bei MS
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Pflegegrad richtet sich nach dem tatsächlichen Alltagsbeeinträchtigungen — nicht nach der Diagnose. Bei MS können die Einschränkungen stark schwanken (in Schüben) oder kontinuierlich zunehmen.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['MS-Einschränkung', 'Typischer Pflegegrad', 'Pflegegeld/Monat'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Leichte Einschränkungen, weitgehend selbstständig', 'PG 1–2', '— bis 347 €'],
-                    ['Moderate Einschränkungen, Hilfe bei mehreren Bereichen', 'PG 2–3', '347–599 €'],
-                    ['Schwere Einschränkungen, erheblicher Hilfebedarf', 'PG 3–4', '599–800 €'],
-                    ['Rollstuhl, vollständige Pflegeabhängigkeit', 'PG 4–5', '800–990 €'],
-                  ].map(([ms, pg, pflegegeld], i) => (
-                    <tr key={ms} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line">{ms}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pflegegeld}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Richtwerte — individuelle Einstufung durch MD · Stand 2026</p>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Pflegegrad beantragen:{' '}
-            <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Schritt-für-Schritt Anleitung</a>
-            {' · '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Kassenzuschüsse 2026</a>
-          </p>
+          <Abschnitt id="pflegegrad" titel="Pflegegrad & Kassenzuschüsse bei MS">
+            <Text>
+              Der Pflegegrad richtet sich nach dem tatsächlichen Alltagsbeeinträchtigungen — nicht nach der Diagnose. Bei MS können die Einschränkungen stark schwanken (in Schüben) oder kontinuierlich zunehmen.
+            </Text>
+            <Tabelle
+              titel=""
+              kopf={['MS-Einschränkung', 'Typischer Pflegegrad', 'Pflegegeld/Monat']}
+              zeilen={[
+                ['Leichte Einschränkungen, weitgehend selbstständig', 'PG 1–2', '— bis 347 €'],
+                ['Moderate Einschränkungen, Hilfe bei mehreren Bereichen', 'PG 2–3', '347–599 €'],
+                ['Schwere Einschränkungen, erheblicher Hilfebedarf', 'PG 3–4', '599–800 €'],
+                ['Rollstuhl, vollständige Pflegeabhängigkeit', 'PG 4–5', '800–990 €'],
+              ]}
+              betont={2}
+              fuss="Richtwerte — individuelle Einstufung durch MD · Stand 2026"
+            />
+            <MehrDazu
+              label="Pflegegrad beantragen:"
+              links={[{ href: "/pflegegrad-beantragen", text: "Schritt-für-Schritt Anleitung" }, { href: "/finanzierung", text: "Alle Kassenzuschüsse 2026" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Kann man bei Multipler Sklerose zuhause gepflegt werden?', a: 'Ja — in den meisten MS-Verläufen ist häusliche Pflege gut möglich. Die vertraute Umgebung und eingeprägte Routinen fördern die Selbstständigkeit. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei zunehmendem Pflegebedarf möglich.' },
-              { q: 'Welchen Pflegegrad bekommt man bei MS?', a: 'Je nach Einschränkungen: PG 1–2 bei leichter MS, PG 2–3 bei moderaten Einschränkungen, PG 3–4 bei schwerer MS, PG 4–5 bei Rollstuhl und vollständiger Pflegeabhängigkeit.' },
-              { q: 'Was ist Fatigue bei MS und wie geht man damit um?', a: 'MS-Fatigue ist eine extreme Erschöpfung die anders ist als normale Müdigkeit — sie kommt plötzlich und kann lähmend sein. Energiemanagement ist entscheidend: wichtige Aktivitäten in Zeiten mit Energie legen, Pausen einplanen, körperlich anstrengende Aufgaben delegieren.' },
-              { q: 'Warum sollte man bei MS auf Wärme achten?', a: 'Das Uhthoff-Phänomen: Wärme verschlechtert bei vielen MS-Betroffenen die Symptome vorübergehend stark. Kühle Raumtemperatur halten, keine heißen Bäder, im Sommer Ventilatoren oder Klimaanlage nutzen.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="multiple-sklerose-pflege" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Kann man bei Multipler Sklerose zuhause gepflegt werden?', a: 'Ja — in den meisten MS-Verläufen ist häusliche Pflege gut möglich. Die vertraute Umgebung und eingeprägte Routinen fördern die Selbstständigkeit. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei zunehmendem Pflegebedarf möglich.' },
+                { q: 'Welchen Pflegegrad bekommt man bei MS?', a: 'Je nach Einschränkungen: PG 1–2 bei leichter MS, PG 2–3 bei moderaten Einschränkungen, PG 3–4 bei schwerer MS, PG 4–5 bei Rollstuhl und vollständiger Pflegeabhängigkeit.' },
+                { q: 'Was ist Fatigue bei MS und wie geht man damit um?', a: 'MS-Fatigue ist eine extreme Erschöpfung die anders ist als normale Müdigkeit — sie kommt plötzlich und kann lähmend sein. Energiemanagement ist entscheidend: wichtige Aktivitäten in Zeiten mit Energie legen, Pausen einplanen, körperlich anstrengende Aufgaben delegieren.' },
+                { q: 'Warum sollte man bei MS auf Wärme achten?', a: 'Das Uhthoff-Phänomen: Wärme verschlechtert bei vielen MS-Betroffenen die Symptome vorübergehend stark. Kühle Raumtemperatur halten, keine heißen Bäder, im Sommer Ventilatoren oder Klimaanlage nutzen.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="multiple-sklerose-pflege" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

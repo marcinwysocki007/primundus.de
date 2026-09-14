@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
+import {
+  RatgeberKopf, RatgeberRumpf, Abschnitt, DunklerAbschnitt, Text, Punkte, Tabelle, MehrDazu, Fragen,
+} from '@/components/vorlage/Ratgeber'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -69,212 +71,138 @@ export default function AlzheimerBetreuungZuhause() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Krankheiten', href: '/krankheiten' },
+            { label: 'Alzheimer Betreuung zuhause' },
+          ]}
+          augenbraue="Ratgeber Alzheimer"
+          titel="Alzheimer Betreuung zuhause — was möglich ist & wie 24h-Pflege hilft"
+          einleitung="Alzheimer ist die häufigste Demenzform — und häusliche Betreuung ist in allen Stadien grundsätzlich möglich. Die vertraute Umgebung mit den bekannten Geräuschen, Gerüchen und Gesichtern gibt Orientierung, die kein Pflegeheim ersetzen kann. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei fortgeschrittenem Alzheimer erhalten."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="8 Min."
+          blick={[
+            'Häusliche Betreuung ist in allen Alzheimer-Stadien grundsätzlich möglich',
+            'Vertraute Umgebung verlangsamt nachweislich den kognitiven Abbau',
+            'Ab mittlerem Stadium: 24h-Präsenz für Sicherheit und Tagesstruktur notwendig',
+            'Pflegegrad 2–5 je nach Stadium — frühzeitig beantragen',
+            'Pflegegeld: 347–990 €/Monat · Entlastungsbudget: 3.539 €/Jahr',
+            'Primundus setzt eigene Kräfte mit Alzheimer/Demenz-Erfahrung ein — Start in 4–7 Tagen',
+          ]}
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Alzheimer Betreuung zuhause</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="verlauf" titel="Alzheimer verstehen — Stadien & Verlauf">
+            <Text>
+              Alzheimer ist eine progressive neurodegenerative Erkrankung — sie schreitet unaufhaltsam fort, aber die Geschwindigkeit variiert stark. Manche Betroffene leben 5 Jahre mit der Diagnose, andere 15 oder mehr. Der Verlauf bestimmt was häusliche Betreuung leisten muss.
+            </Text>
+            <Text>
+              <strong>Wichtig:</strong> Alzheimer ist die häufigste Demenzform (60–70 % aller Demenzkranken). Der Unterschied zu anderen Demenzformen: Beim Alzheimer ist das Kurzzeitgedächtnis zuerst betroffen, das Langzeitgedächtnis bleibt oft lange intakt. Betroffene erinnern sich an ihre Hochzeit vor 50 Jahren — aber nicht was sie heute gefrühstückt haben.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Frühes Stadium', desc: 'Vergesslichkeit beim Kurzzeitspeicher, Wortfindungsstörungen, Schwierigkeiten bei komplexen Aufgaben (Finanzen, Reisen). Weitgehend selbstständig, aber zunehmend überfordert. Häusliche Pflege durch Angehörige meist gut möglich.' },
+                { title: 'Mittleres Stadium', desc: 'Deutliche Orientierungslosigkeit, Verwechslung von Personen und Zeiten, Verlaufen auch in vertrauter Umgebung, Nachtunruhe, erste Körperpflegedefizite. 24h-Präsenz wird notwendig.' },
+                { title: 'Schweres Stadium', desc: 'Kaum Kommunikation möglich, vollständige Fremdversorgung, Immobilität, Schluckstörungen, Bettlägerigkeit. Intensive Pflege durch Betreuungskraft oder Pflegeheim.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Apr. 2026
-          </p>
+          <Abschnitt id="zuhause" titel="Was zuhause möglich ist">
+            <Text>
+              Das eigene Zuhause ist für Alzheimer-Betroffene kein Luxus — es ist therapeutisch wirksam. Bekannte Bilder an der Wand, der vertraute Geruch der Küche, der gewohnte Blick aus dem Fenster: Das alles gibt Orientierung wenn das Kurzzeitgedächtnis versagt.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Frühes Stadium — Angehörige mit Unterstützung', desc: 'Stundenweise Betreuung, Erinnerungshilfen (Kalender, Beschriftungen), Routinen etablieren, soziale Kontakte aufrechterhalten. Angehörige können die Hauptrolle spielen.' },
+                { title: 'Mittleres Stadium — 24h-Kraft empfohlen', desc: 'Wann 24h-Präsenz nötig wird: wenn der Betroffene nicht mehr allein gelassen werden kann, wenn Weglaufen droht, wenn nachts Hilfe nötig ist. Eine feste Bezugsperson gibt Sicherheit.' },
+                { title: 'Schweres Stadium — intensive Betreuung', desc: 'Vollständige Körperpflege, Lagerung, Ernährung, Dekubitusprophylaxe. In den meisten Fällen noch zuhause möglich — außer bei intensivmedizinischem Dauerbedarf.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Alzheimer Betreuung zuhause — was möglich ist & wie 24h-Pflege hilft
-          </h1>
+          <Abschnitt id="alltag" titel="Alltagsgestaltung bei Alzheimer — was wirklich hilft">
+            <Punkte
+              punkte={[
+                { title: 'Feste Tagesstruktur', desc: 'Aufstehen, Mahlzeiten, Aktivitäten, Schlafenszeit — immer zur gleichen Uhrzeit. Vorhersehbarkeit gibt Sicherheit wenn das Kurzzeitgedächtnis fehlt.' },
+                { title: 'Validierung statt Korrektur', desc: 'Nicht korrigieren wenn etwas falsch erinnert wird. Stattdessen in die emotionale Realität des Betroffenen einsteigen. "Erzähl mir von deinem Mann" — nicht "Dein Mann ist schon lange gestorben."' },
+                { title: 'Biographiearbeit', desc: 'Alte Fotos, Musik aus der Jugend, Erinnerungsgegenstände aktivieren das intakte Langzeitgedächtnis. Das schafft positive Momente auch im fortgeschrittenen Stadium.' },
+                { title: 'Bewegung täglich', desc: 'Spaziergänge in gewohnter Umgebung. Tanzen oder Schunkeln zu vertrauter Musik. Gartenarbeit wenn möglich. Bewegung verbessert Stimmung und Schlaf.' },
+                { title: 'Reizarme Umgebung', desc: 'Kein Nachrichtenlärm, keine überfordernden Gespräche, ruhige Atmosphäre. Zu viele Stimuli führen zu Unruhe und Angst.' },
+                { title: 'Sicherheit im Haushalt', desc: 'Herd sichern, Türen sichern (Weglaufschutz), scharfe Gegenstände wegräumen, Teppiche fixieren. Die Wohnung sturzfrei und sicher machen.' },
+              ]}
+            />
+            <MehrDazu
+              label="Kommunikation bei Demenz:"
+              links={[
+                { href: '/kommunikation-mit-demenzkranken', text: 'Kommunikation mit Demenzkranken — was hilft' },
+                { href: '/tagesstruktur-demenz', text: 'Tagesstruktur bei Demenz' },
+              ]}
+            />
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Alzheimer ist die häufigste Demenzform — und häusliche Betreuung ist in allen Stadien grundsätzlich möglich. Die vertraute Umgebung mit den bekannten Geräuschen, Gerüchen und Gesichtern gibt Orientierung, die kein Pflegeheim ersetzen kann. Mit einer 24h-Betreuungskraft bleibt das eigene Zuhause auch bei fortgeschrittenem Alzheimer erhalten.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
-                'Häusliche Betreuung ist in allen Alzheimer-Stadien grundsätzlich möglich',
-                'Vertraute Umgebung verlangsamt nachweislich den kognitiven Abbau',
-                'Ab mittlerem Stadium: 24h-Präsenz für Sicherheit und Tagesstruktur notwendig',
-                'Pflegegrad 2–5 je nach Stadium — frühzeitig beantragen',
-                'Pflegegeld: 347–990 €/Monat · Entlastungsbudget: 3.539 €/Jahr',
-                'Primundus setzt eigene Kräfte mit Alzheimer/Demenz-Erfahrung ein — Start in 4–7 Tagen',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <h2 id="verlauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Alzheimer verstehen — Stadien & Verlauf
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Alzheimer ist eine progressive neurodegenerative Erkrankung — sie schreitet unaufhaltsam fort, aber die Geschwindigkeit variiert stark. Manche Betroffene leben 5 Jahre mit der Diagnose, andere 15 oder mehr. Der Verlauf bestimmt was häusliche Betreuung leisten muss.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            <strong>Wichtig:</strong> Alzheimer ist die häufigste Demenzform (60–70 % aller Demenzkranken). Der Unterschied zu anderen Demenzformen: Beim Alzheimer ist das Kurzzeitgedächtnis zuerst betroffen, das Langzeitgedächtnis bleibt oft lange intakt. Betroffene erinnern sich an ihre Hochzeit vor 50 Jahren — aber nicht was sie heute gefrühstückt haben.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { title: 'Frühes Stadium', desc: 'Vergesslichkeit beim Kurzzeitspeicher, Wortfindungsstörungen, Schwierigkeiten bei komplexen Aufgaben (Finanzen, Reisen). Weitgehend selbstständig, aber zunehmend überfordert. Häusliche Pflege durch Angehörige meist gut möglich.' },
-              { title: 'Mittleres Stadium', desc: 'Deutliche Orientierungslosigkeit, Verwechslung von Personen und Zeiten, Verlaufen auch in vertrauter Umgebung, Nachtunruhe, erste Körperpflegedefizite. 24h-Präsenz wird notwendig.' },
-              { title: 'Schweres Stadium', desc: 'Kaum Kommunikation möglich, vollständige Fremdversorgung, Immobilität, Schluckstörungen, Bettlägerigkeit. Intensive Pflege durch Betreuungskraft oder Pflegeheim.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="zuhause" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was zuhause möglich ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Das eigene Zuhause ist für Alzheimer-Betroffene kein Luxus — es ist therapeutisch wirksam. Bekannte Bilder an der Wand, der vertraute Geruch der Küche, der gewohnte Blick aus dem Fenster: Das alles gibt Orientierung wenn das Kurzzeitgedächtnis versagt.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { title: 'Frühes Stadium — Angehörige mit Unterstützung', desc: 'Stundenweise Betreuung, Erinnerungshilfen (Kalender, Beschriftungen), Routinen etablieren, soziale Kontakte aufrechterhalten. Angehörige können die Hauptrolle spielen.' },
-              { title: 'Mittleres Stadium — 24h-Kraft empfohlen', desc: 'Wann 24h-Präsenz nötig wird: wenn der Betroffene nicht mehr allein gelassen werden kann, wenn Weglaufen droht, wenn nachts Hilfe nötig ist. Eine feste Bezugsperson gibt Sicherheit.' },
-              { title: 'Schweres Stadium — intensive Betreuung', desc: 'Vollständige Körperpflege, Lagerung, Ernährung, Dekubitusprophylaxe. In den meisten Fällen noch zuhause möglich — außer bei intensivmedizinischem Dauerbedarf.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Alltagsgestaltung bei Alzheimer — was wirklich hilft
-          </h2>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Feste Tagesstruktur', desc: 'Aufstehen, Mahlzeiten, Aktivitäten, Schlafenszeit — immer zur gleichen Uhrzeit. Vorhersehbarkeit gibt Sicherheit wenn das Kurzzeitgedächtnis fehlt.' },
-              { title: 'Validierung statt Korrektur', desc: 'Nicht korrigieren wenn etwas falsch erinnert wird. Stattdessen in die emotionale Realität des Betroffenen einsteigen. "Erzähl mir von deinem Mann" — nicht "Dein Mann ist schon lange gestorben."' },
-              { title: 'Biographiearbeit', desc: 'Alte Fotos, Musik aus der Jugend, Erinnerungsgegenstände aktivieren das intakte Langzeitgedächtnis. Das schafft positive Momente auch im fortgeschrittenen Stadium.' },
-              { title: 'Bewegung täglich', desc: 'Spaziergänge in gewohnter Umgebung. Tanzen oder Schunkeln zu vertrauter Musik. Gartenarbeit wenn möglich. Bewegung verbessert Stimmung und Schlaf.' },
-              { title: 'Reizarme Umgebung', desc: 'Kein Nachrichtenlärm, keine überfordernden Gespräche, ruhige Atmosphäre. Zu viele Stimuli führen zu Unruhe und Angst.' },
-              { title: 'Sicherheit im Haushalt', desc: 'Herd sichern, Türen sichern (Weglaufschutz), scharfe Gegenstände wegräumen, Teppiche fixieren. Die Wohnung sturzfrei und sicher machen.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Kommunikation bei Demenz:{' '}
-            <a href="/kommunikation-mit-demenzkranken" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kommunikation mit Demenzkranken — was hilft</a>
-            {' · '}
-            <a href="/tagesstruktur-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Tagesstruktur bei Demenz</a>
-          </p>
-
-          <h2 id="pflege24h" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann 24h-Pflege bei Alzheimer die richtige Lösung ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ab dem mittleren Stadium ist eine feste Bezugsperson rund um die Uhr in den meisten Fällen die beste Lösung — sowohl für Sicherheit als auch für Lebensqualität.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <DunklerAbschnitt
+            id="pflege24h"
+            titel="Wann 24h-Pflege bei Alzheimer die richtige Lösung ist"
+            einleitung="Ab dem mittleren Stadium ist eine feste Bezugsperson rund um die Uhr in den meisten Fällen die beste Lösung — sowohl für Sicherheit als auch für Lebensqualität."
+            punkte={[
               { title: 'Was eine Primundus-Kraft bei Alzheimer leistet', desc: 'Tagesstruktur und Rituale konsequent einhalten. Rund um die Uhr ansprechbar. Weglaufen und Sicherheitsrisiken verhindern. Körperpflege und Mahlzeiten. Biographiearbeit und emotionale Begleitung. Entlastung der Familie.' },
               { title: 'Erfahrung mit Alzheimer wichtig', desc: 'Eine Kraft die Alzheimer kennt weiß: nicht korrigieren, in die Welt des Betroffenen einsteigen, mit Validierung und nicht mit Realitätsorientierung arbeiten. Primundus wählt gezielt Kräfte mit Demenz-Erfahrung.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-3">
-            → Allgemeine Demenzpflege:{' '}
-            <a href="/demenz-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Demenz Pflege zuhause — vollständiger Ratgeber</a>
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Kosten & Zuschüsse:{' '}
-            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was kostet 24h-Pflege 2026?</a>
-          </p>
+            ]}
+          >
+            <MehrDazu
+              label="Allgemeine Demenzpflege:"
+              links={[{ href: '/demenz-pflege-zuhause', text: 'Demenz Pflege zuhause — vollständiger Ratgeber' }]}
+            />
+            <MehrDazu
+              label="Kosten & Zuschüsse:"
+              links={[{ href: '/kosten', text: 'Was kostet 24h-Pflege 2026?' }]}
+            />
+          </DunklerAbschnitt>
 
-          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegrad bei Alzheimer & Kassenzuschüsse 2026
-          </h2>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Pflegegrade bei Alzheimer & Leistungen 2026</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Stadium', 'Typischer PG', 'Pflegegeld', 'Entlastungsbetrag'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Leichtes Stadium', 'PG 2–3', '347–599 €', '131 €'],
-                    ['Mittleres Stadium', 'PG 3–4', '599–800 €', '131 €'],
-                    ['Schweres Stadium', 'PG 4–5', '800–990 €', '131 €'],
-                  ].map(([stadium, pg, pflegegeld, eb], i) => (
-                    <tr key={stadium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{stadium}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pflegegeld}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{eb}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Richtwerte · Einstufung durch MD · Zusätzlich: Entlastungsbudget 3.539 €/Jahr (ab PG 2) · Stand 2026</p>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Pflegegrad beantragen:{' '}
-            <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Schritt für Schritt Anleitung</a>
-            {' · '}
-            <a href="/pflegegrad-bei-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad bei Demenz</a>
-          </p>
+          <Abschnitt id="pflegegrad" titel="Pflegegrad bei Alzheimer & Kassenzuschüsse 2026">
+            <Tabelle
+              titel="Pflegegrade bei Alzheimer & Leistungen 2026"
+              kopf={['Stadium', 'Typischer PG', 'Pflegegeld', 'Entlastungsbetrag']}
+              zeilen={[
+                ['Leichtes Stadium', 'PG 2–3', '347–599 €', '131 €'],
+                ['Mittleres Stadium', 'PG 3–4', '599–800 €', '131 €'],
+                ['Schweres Stadium', 'PG 4–5', '800–990 €', '131 €'],
+              ]}
+              betont={2}
+              fuss="Richtwerte · Einstufung durch MD · Zusätzlich: Entlastungsbudget 3.539 €/Jahr (ab PG 2) · Stand 2026"
+            />
+            <MehrDazu
+              label="Pflegegrad beantragen:"
+              links={[
+                { href: '/pflegegrad-beantragen', text: 'Schritt für Schritt Anleitung' },
+                { href: '/pflegegrad-bei-demenz', text: 'Pflegegrad bei Demenz' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur Alzheimer-Betreuung
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Kann man Alzheimer-Patienten zuhause betreuen?', a: 'Ja — in allen Stadien ist häusliche Betreuung grundsätzlich möglich. Die vertraute Umgebung verlangsamt den kognitiven Abbau, gibt Orientierung und erhält Würde. Ab dem mittleren Stadium ist eine 24h-Betreuungskraft empfehlenswert.' },
-              { q: 'Welchen Pflegegrad hat man bei Alzheimer?', a: 'Je nach Stadium PG 2–5. Seit 2017 werden kognitive Einschränkungen im NBA-Begutachtungsverfahren deutlich stärker gewichtet — Alzheimer-Betroffene werden besser eingestuft als früher.' },
-              { q: 'Wie unterscheidet sich Alzheimer von Demenz?', a: 'Alzheimer ist die häufigste Demenzform (60–70 % aller Fälle). Typisch: Kurzzeitspeicher zuerst betroffen, Langzeitgedächtnis lange intakt. Demenz ist der Oberbegriff — Alzheimer eine spezifische Ursache.' },
-              { q: 'Was sind die häufigsten Herausforderungen bei der Alzheimer-Betreuung?', a: 'Weglaufen (Hinlaufen), Nachtunruhe, Verweigerung von Körperpflege und Mahlzeiten, Verhaltensveränderungen wie Aggressionen oder Ängste, Kommunikation wenn Sprache abnimmt.' },
-              { q: 'Was kostet Alzheimer-Betreuung zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.800 €/Monat.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="alzheimer-betreuung-zuhause" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen zur Alzheimer-Betreuung">
+            <Fragen
+              fragen={[
+                { q: 'Kann man Alzheimer-Patienten zuhause betreuen?', a: 'Ja — in allen Stadien ist häusliche Betreuung grundsätzlich möglich. Die vertraute Umgebung verlangsamt den kognitiven Abbau, gibt Orientierung und erhält Würde. Ab dem mittleren Stadium ist eine 24h-Betreuungskraft empfehlenswert.' },
+                { q: 'Welchen Pflegegrad hat man bei Alzheimer?', a: 'Je nach Stadium PG 2–5. Seit 2017 werden kognitive Einschränkungen im NBA-Begutachtungsverfahren deutlich stärker gewichtet — Alzheimer-Betroffene werden besser eingestuft als früher.' },
+                { q: 'Wie unterscheidet sich Alzheimer von Demenz?', a: 'Alzheimer ist die häufigste Demenzform (60–70 % aller Fälle). Typisch: Kurzzeitspeicher zuerst betroffen, Langzeitgedächtnis lange intakt. Demenz ist der Oberbegriff — Alzheimer eine spezifische Ursache.' },
+                { q: 'Was sind die häufigsten Herausforderungen bei der Alzheimer-Betreuung?', a: 'Weglaufen (Hinlaufen), Nachtunruhe, Verweigerung von Körperpflege und Mahlzeiten, Verhaltensveränderungen wie Aggressionen oder Ängste, Kommunikation wenn Sprache abnimmt.' },
+                { q: 'Was kostet Alzheimer-Betreuung zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.800 €/Monat.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Weiterlesen aktuell="alzheimer-betreuung-zuhause" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,34 +69,28 @@ export default function Kombinationsleistung() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Finanzierung", href: "/finanzierung" },
+            { label: "Kombinationsleistung" },
+          ]}
+          augenbraue="Ratgeber Finanzierung"
+          titel="Kombinationsleistung Pflege — Pflegegeld & Sachleistungen kombinieren"
+          einleitung="Wer nicht alle Sachleistungen durch einen ambulanten Pflegedienst nutzt, bekommt anteiliges Pflegegeld für den Rest — das ist die Kombinationsleistung nach § 38 SGB XI. Damit lassen sich ambulanter Pflegedienst und private Betreuung durch Angehörige oder eine 24h-Kraft optimal kombinieren."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
-            <span>›</span>
-            <span className="text-pm-ink">Kombinationsleistung</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Kombinationsleistung Pflege — Pflegegeld & Sachleistungen kombinieren
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Wer nicht alle Sachleistungen durch einen ambulanten Pflegedienst nutzt, bekommt anteiliges Pflegegeld für den Rest — das ist die Kombinationsleistung nach § 38 SGB XI. Damit lassen sich ambulanter Pflegedienst und private Betreuung durch Angehörige oder eine 24h-Kraft optimal kombinieren.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
             <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Die Grundformel</p>
             <div className="bg-pm-paper rounded-xl p-4 text-center mb-3">
               <p className="text-[16px] font-bold text-pm-ink">Nicht genutzte Sachleistungen × Pflegegeld = Anteiliges Pflegegeld</p>
@@ -103,21 +99,20 @@ export default function Kombinationsleistung() {
               Wenn 60 % der Sachleistungen durch den Pflegedienst genutzt werden → verbleiben 40 % ungenutzt → 40 % des Pflegegeldes werden ausgezahlt.
             </p>
           </div>
+          </Vorspann>
 
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist die Kombinationsleistung?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Normalerweise schließen sich Pflegegeld und Pflegesachleistungen gegenseitig aus: Entweder man wählt Pflegegeld (für private Pflege durch Angehörige) oder Sachleistungen (für ambulante Pflegedienste). Die Kombinationsleistung erlaubt beides — anteilig.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Voraussetzung: Der ambulante Pflegedienst rechnet direkt mit der Pflegekasse ab und gibt an welcher Anteil der Sachleistungen genutzt wurde. Den Rest bekommt die pflegebedürftige Person als Pflegegeld.
-          </p>
+          <Abschnitt id="was-ist" titel="Was ist die Kombinationsleistung?">
+            <Text>
+              Normalerweise schließen sich Pflegegeld und Pflegesachleistungen gegenseitig aus: Entweder man wählt Pflegegeld (für private Pflege durch Angehörige) oder Sachleistungen (für ambulante Pflegedienste). Die Kombinationsleistung erlaubt beides — anteilig.
+            </Text>
+            <Text>
+              Voraussetzung: Der ambulante Pflegedienst rechnet direkt mit der Pflegekasse ab und gibt an welcher Anteil der Sachleistungen genutzt wurde. Den Rest bekommt die pflegebedürftige Person als Pflegegeld.
+            </Text>
+          </Abschnitt>
 
-          <h2 id="berechnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Berechnung & Rechenbeispiele
-          </h2>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="berechnung" titel="Berechnung & Rechenbeispiele">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             {[
               {
                 beispiel: 'Rechenbeispiel 1 — Pflegegrad 3, 50 % Sachleistungen',
@@ -157,75 +152,51 @@ export default function Kombinationsleistung() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="wann-sinnvoll" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann ist die Kombinationsleistung besonders sinnvoll?
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { situation: 'Ambulanter Pflegedienst + Angehörigenpflege', desc: 'Pflegedienst übernimmt z.B. Medikamentengabe und Grundpflege morgens — Angehörige pflegen den Rest. Die Sachleistungen für den Dienst + anteiliges Pflegegeld für die Angehörigen optimiert die Gesamtentlastung.' },
-              { situation: 'Ambulanter Pflegedienst + 24h-Betreuungskraft', desc: 'Spezialisierter Pflegedienst für Behandlungspflege (Verbände, Injektionen) — 24h-Kraft für Grundpflege und Betreuung. Sachleistungen für den Dienst + Pflegegeld für die 24h-Kraft.' },
-              { situation: 'Sachleistungsrahmen wird nicht voll ausgeschöpft', desc: 'Wenn der Pflegedienst günstiger als der Sachleistungsrahmen ist — Kombination holt das Maximum an Kassenzuschüssen heraus.' },
-            ].map((item) => (
-              <div key={item.situation} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.situation}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="wann-sinnvoll" titel="Wann ist die Kombinationsleistung besonders sinnvoll?">
+            <Punkte
+              punkte={[
+                { title: 'Ambulanter Pflegedienst + Angehörigenpflege', desc: 'Pflegedienst übernimmt z.B. Medikamentengabe und Grundpflege morgens — Angehörige pflegen den Rest. Die Sachleistungen für den Dienst + anteiliges Pflegegeld für die Angehörigen optimiert die Gesamtentlastung.' },
+                { title: 'Ambulanter Pflegedienst + 24h-Betreuungskraft', desc: 'Spezialisierter Pflegedienst für Behandlungspflege (Verbände, Injektionen) — 24h-Kraft für Grundpflege und Betreuung. Sachleistungen für den Dienst + Pflegegeld für die 24h-Kraft.' },
+                { title: 'Sachleistungsrahmen wird nicht voll ausgeschöpft', desc: 'Wenn der Pflegedienst günstiger als der Sachleistungsrahmen ist — Kombination holt das Maximum an Kassenzuschüssen heraus.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wie man die Kombinationsleistung beantragt
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die Kombinationsleistung wird nicht separat beantragt — sie ergibt sich automatisch wenn ein ambulanter Pflegedienst die Sachleistungen nur teilweise ausschöpft.
-          </p>
-          <ol className="space-y-3 mb-10">
-            {[
-              { n: '1', title: 'Pflegekasse über Modell informieren', desc: 'Mitteilen dass Sachleistungen und Pflegegeld kombiniert werden sollen. Pflegekasse nimmt das zur Kenntnis.' },
-              { n: '2', title: 'Pflegedienst rechnet mit Pflegekasse ab', desc: 'Der ambulante Pflegedienst reicht Rechnungen direkt bei der Pflegekasse ein und gibt den genutzten Sachleistungsanteil an.' },
-              { n: '3', title: 'Anteiliges Pflegegeld wird automatisch ausgezahlt', desc: 'Die Pflegekasse berechnet den verbleibenden Anteil und zahlt das anteilige Pflegegeld aus.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Kassenzuschüsse:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege</a>
-            {' · '}
-            <a href="/pflegesachleistungen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegesachleistungen erklärt</a>
-            {' · '}
-            <a href="/pflegegeld" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegeld 2026</a>
-          </p>
+          <Abschnitt id="beantragen" titel="Wie man die Kombinationsleistung beantragt">
+            <Text>
+              Die Kombinationsleistung wird nicht separat beantragt — sie ergibt sich automatisch wenn ein ambulanter Pflegedienst die Sachleistungen nur teilweise ausschöpft.
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'Pflegekasse über Modell informieren', desc: 'Mitteilen dass Sachleistungen und Pflegegeld kombiniert werden sollen. Pflegekasse nimmt das zur Kenntnis.' },
+                { title: 'Pflegedienst rechnet mit Pflegekasse ab', desc: 'Der ambulante Pflegedienst reicht Rechnungen direkt bei der Pflegekasse ein und gibt den genutzten Sachleistungsanteil an.' },
+                { title: 'Anteiliges Pflegegeld wird automatisch ausgezahlt', desc: 'Die Pflegekasse berechnet den verbleibenden Anteil und zahlt das anteilige Pflegegeld aus.' },
+              ]}
+            />
+            <MehrDazu
+              label="Alle Kassenzuschüsse:"
+              links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege" }, { href: "/pflegesachleistungen", text: "Pflegesachleistungen erklärt" }, { href: "/pflegegeld", text: "Pflegegeld 2026" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was ist die Kombinationsleistung in der Pflege?', a: '§38 SGB XI: Wenn nicht alle Sachleistungen durch einen Pflegedienst genutzt werden, bekommt man für den ungenutzten Anteil anteiliges Pflegegeld. Pflegedienst + private Pflege lassen sich so kombinieren.' },
-              { q: 'Wie berechnet sich die Kombinationsleistung?', a: 'Genutzter Sachleistungsanteil (%) → verbleibender Anteil in % × Pflegegeld = anteiliges Pflegegeld. Beispiel: 50 % Sachleistungen genutzt → 50 % Pflegegeld. Bei PG 3: 299,50 €/Monat.' },
-              { q: 'Muss man die Kombinationsleistung separat beantragen?', a: 'Nein — sie ergibt sich automatisch wenn ein Pflegedienst nur Teile der Sachleistungen nutzt und der Pflegekasse den Anteil mitteilt.' },
-              { q: 'Kann man Kombinationsleistung mit Entlastungsbetrag kombinieren?', a: 'Ja — Entlastungsbetrag (131 €/Monat) läuft immer zusätzlich, unabhängig von Pflegegeld und Sachleistungen.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="kombinationsleistung-pflege" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was ist die Kombinationsleistung in der Pflege?', a: '§38 SGB XI: Wenn nicht alle Sachleistungen durch einen Pflegedienst genutzt werden, bekommt man für den ungenutzten Anteil anteiliges Pflegegeld. Pflegedienst + private Pflege lassen sich so kombinieren.' },
+                { q: 'Wie berechnet sich die Kombinationsleistung?', a: 'Genutzter Sachleistungsanteil (%) → verbleibender Anteil in % × Pflegegeld = anteiliges Pflegegeld. Beispiel: 50 % Sachleistungen genutzt → 50 % Pflegegeld. Bei PG 3: 299,50 €/Monat.' },
+                { q: 'Muss man die Kombinationsleistung separat beantragen?', a: 'Nein — sie ergibt sich automatisch wenn ein Pflegedienst nur Teile der Sachleistungen nutzt und der Pflegekasse den Anteil mitteilt.' },
+                { q: 'Kann man Kombinationsleistung mit Entlastungsbetrag kombinieren?', a: 'Ja — Entlastungsbetrag (131 €/Monat) läuft immer zusätzlich, unabhängig von Pflegegeld und Sachleistungen.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="kombinationsleistung-pflege" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

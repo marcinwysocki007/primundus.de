@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, HakenListe, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { KurzAntwort } from '@/components/KurzAntwort'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
@@ -139,225 +141,142 @@ export default function WasIst24StundenPflege() {
       />
 
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Ratgeber", href: "/ratgeber" },
+            { label: "Was ist 24-Stunden-Pflege?" },
+          ]}
+          augenbraue="Ratgeber 24-Stunden-Pflege"
+          titel="Was ist 24-Stunden-Pflege?"
+          einleitung=""
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="8 Min."
+        />
 
-          {/* Breadcrumb */}
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-ink">Was ist 24-Stunden-Pflege?</span>
-          </nav>
-
-          {/* Eyebrow */}
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Aug. 2026
-          </p>
-
-          {/* H1 */}
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Was ist 24-Stunden-Pflege?
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <KurzAntwort frage="Andere Namen für dasselbe Modell">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            {/* VORLAGE: unverändert übernommen */}
+            <KurzAntwort frage="Andere Namen für dasselbe Modell">
             24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.
           </KurzAntwort>
-
-          {/* Lead */}
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
-          </p>
-
-          {/* Quick Answer Box */}
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-              Auf einen Blick
-            </p>
-            <ul className="space-y-2.5">
-              {[
+            <Text>
+              24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
+            </Text>
+            <Kasten augenbraue="Auf einen Blick">
+              <HakenListe punkte={[
                 'Betreuungskraft lebt dauerhaft im Haushalt — rund um die Uhr erreichbar',
                 'Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf und Anbieter',
                 'Pflegekasse zahlt: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr (seit Juli 2025)',
                 'Geeignet bei Demenz, nach Schlaganfall, bei Parkinson und vielen weiteren Situationen',
                 'Rechtlich sicher über Entsendemodell mit A1-Bescheinigung',
                 'Betreuung startet in 4–7 Tagen — täglich kündbar',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]} />
+            </Kasten>
+          </Vorspann>
 
-          {/* ── SECTION 1 ── */}
-          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was leistet eine 24-Stunden-Betreuungskraft?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushaltsführung und soziale Betreuung — alles was der pflegebedürftige Mensch nicht mehr alleine schafft. Sie ist keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe.
-          </p>
-          <div className="space-y-4 mb-4">
-            {[
+          <DunklerAbschnitt
+            id="leistungen"
+            titel="Was leistet eine 24-Stunden-Betreuungskraft?"
+            einleitung="Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushaltsführung und soziale Betreuung — alles was der pflegebedürftige Mensch nicht mehr alleine schafft. Sie ist keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe."
+            punkte={[
               { title: 'Grundpflege', desc: 'Körperhygiene, Ankleiden, Nahrungsaufnahme, Lagerung und Mobilisierung. Bei Menschen mit Demenz, nach Schlaganfall oder mit eingeschränkter Beweglichkeit bildet das den Kern des Alltags.' },
               { title: 'Haushaltsführung', desc: 'Kochen, Einkaufen, Reinigen, Wäsche, Begleitung zu Arztterminen. Die Betreuungskraft führt den Haushalt selbständig und entlastet damit Angehörige vollständig.' },
               { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Tagesstruktur — besonders bei Demenz ist menschliche Nähe entscheidend für Wohlbefinden und Verlangsamung des Krankheitsfortschritts.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[15px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body leading-relaxed mb-2">
-            <strong>Nicht enthalten:</strong> Medizinische Behandlungspflege (z.B. Verbandswechsel, Injektionen) darf die Betreuungskraft nur mit nachgewiesener Qualifikation leisten. In diesen Fällen arbeitet sie mit einem ambulanten Pflegedienst zusammen.
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Leistungen im Detail:{' '}
-            <a href="/leistungen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Was Primundus leistet — vollständige Übersicht
-            </a>
-          </p>
+            ]}
+          >
+            <Text>
+              <strong>Nicht enthalten:</strong> Medizinische Behandlungspflege (z.B. Verbandswechsel, Injektionen) darf die Betreuungskraft nur mit nachgewiesener Qualifikation leisten. In diesen Fällen arbeitet sie mit einem ambulanten Pflegedienst zusammen.
+            </Text>
+            <MehrDazu
+              label="Alle Leistungen im Detail:"
+              links={[{ href: "/leistungen", text: "Was Primundus leistet — vollständige Übersicht" }]}
+            />
+          </DunklerAbschnitt>
 
-          {/* ── SECTION 2 ── */}
-          <h2 id="verbreitung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wie viele Menschen nutzen 24h-Pflege in Deutschland?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Schätzungsweise 300.000 bis 400.000 Haushalte nutzen aktuell eine 24-Stunden-Betreuung durch Kräfte aus EU-Ländern — bei einem Marktpotenzial von über 5 Millionen häuslich versorgten Pflegebedürftigen ist das erst der Anfang.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ende 2024 waren rund 6 Millionen Menschen in Deutschland pflegebedürftig. <strong>86 Prozent</strong> werden zu Hause versorgt — nur 14 Prozent in Pflegeheimen. Allein seit 2021 stieg die Zahl der Pflegebedürftigen um 15 Prozent.
-          </p>
+          <Abschnitt id="verbreitung" titel="Wie viele Menschen nutzen 24h-Pflege in Deutschland?">
+            <Text>
+              Schätzungsweise 300.000 bis 400.000 Haushalte nutzen aktuell eine 24-Stunden-Betreuung durch Kräfte aus EU-Ländern — bei einem Marktpotenzial von über 5 Millionen häuslich versorgten Pflegebedürftigen ist das erst der Anfang.
+            </Text>
+            <Text>
+              Ende 2024 waren rund 6 Millionen Menschen in Deutschland pflegebedürftig. <strong>86 Prozent</strong> werden zu Hause versorgt — nur 14 Prozent in Pflegeheimen. Allein seit 2021 stieg die Zahl der Pflegebedürftigen um 15 Prozent.
+            </Text>
+            <Tabelle
+              titel="Pflegestatistik Deutschland — Stand 2024"
+              zeilen={[
+                ['Pflegebedürftige gesamt', '~6,0 Millionen'],
+                ['Davon zu Hause versorgt', '86 % — ca. 5,1 Mio.'],
+                ['Davon im Pflegeheim', '14 % — ca. 0,9 Mio.'],
+                ['Haushalte mit 24h-Betreuungskraft', '300.000–400.000 (Schätzung)'],
+                ['Wachstum seit 2021', '+15 %'],
+                ['Prognose bis 2050', 'über 7 Millionen'],
+              ]}
+              fuss="Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2024"
+            />
+            {/* VORLAGE: unverändert übernommen */}
+            <GrafikPflegestatistik />
+          </Abschnitt>
 
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-4 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">
-                Pflegestatistik Deutschland — Stand 2024
-              </p>
-            </div>
-            <div className="overflow-x-auto">
-            <table className="w-full">
-              <tbody>
-                {[
-                  ['Pflegebedürftige gesamt', '~6,0 Millionen'],
-                  ['Davon zu Hause versorgt', '86 % — ca. 5,1 Mio.'],
-                  ['Davon im Pflegeheim', '14 % — ca. 0,9 Mio.'],
-                  ['Haushalte mit 24h-Betreuungskraft', '300.000–400.000 (Schätzung)'],
-                  ['Wachstum seit 2021', '+15 %'],
-                  ['Prognose bis 2050', 'über 7 Millionen'],
-                ].map(([label, value], i) => (
-                  <tr key={label} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                    <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{label}</td>
-                    <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line text-right">{value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2024</p>
-            </div>
-          </div>
-
-          <GrafikPflegestatistik />
-
-          {/* ── SECTION 3 ── */}
-          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was kostet 24-Stunden-Pflege — und was zahlt die Kasse 2026?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            24-Stunden-Pflege kostet monatlich 2.500 bis 4.000 Euro — je nach Pflegebedarf, Qualifikation der Betreuungskraft und Anbieter. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.364 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
-          </p>
-          <p className="text-[15px] text-pm-body mb-6">
-            → Vollständiger Kostenvergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              24h-Pflege vs. Pflegeheim — was ist günstiger?
-            </a>
-          </p>
-
-          <GrafikKostenvergleich />
-
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-4">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-2">
-              Neu 2026 — Entlastungsbudget
-            </p>
-            <p className="text-[16px] font-bold text-pm-ink mb-3">
-              3.539 Euro pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege
-            </p>
-            <ul className="space-y-2">
-              {[
+          <Abschnitt id="kosten" titel="Was kostet 24-Stunden-Pflege — und was zahlt die Kasse 2026?">
+            <Text>
+              24-Stunden-Pflege kostet monatlich 2.500 bis 4.000 Euro — je nach Pflegebedarf, Qualifikation der Betreuungskraft und Anbieter. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.364 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
+            </Text>
+            <MehrDazu
+              label="Vollständiger Kostenvergleich:"
+              links={[{ href: "/24h-pflege-vs-pflegeheim-kosten", text: "24h-Pflege vs. Pflegeheim — was ist günstiger?" }]}
+            />
+            {/* VORLAGE: unverändert übernommen */}
+            <GrafikKostenvergleich />
+            <Kasten augenbraue="Neu 2026 — Entlastungsbudget" titel="3.539 Euro pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
+              <HakenListe punkte={[
                 'Ein Budget statt zwei — flexibel für Verhinderungs- und Kurzzeitpflege nutzbar',
                 'Vorpflegezeit entfällt — die frühere 6-Monats-Voraussetzung ist abgeschafft',
                 'Pflegegeld läuft weiter — während der Nutzung wird es zur Hälfte weitergezahlt',
                 'Verfallsfrist beachten — ungenutztes Budget verfällt am 31. Dezember',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[14px] text-pm-green-deep">
-                  <span className="text-pm-green font-bold mt-0.5">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <p className="text-[15px] text-pm-body mb-3">
-            → Wie das Entlastungsbudget kombiniert wird:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Finanzierung der 24h-Pflege — alle Zuschüsse 2026
-            </a>
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Steuerlich absetzbar:{' '}
-            <a href="/pflege-steuerlich-absetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Pflege steuerlich absetzen — was geht 2026?
-            </a>
-          </p>
+              ]} />
+            </Kasten>
+            <MehrDazu
+              label="Wie das Entlastungsbudget kombiniert wird:"
+              links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege — alle Zuschüsse 2026" }]}
+            />
+            <MehrDazu
+              label="Steuerlich absetzbar:"
+              links={[{ href: "/pflege-steuerlich-absetzen", text: "Pflege steuerlich absetzen — was geht 2026?" }]}
+            />
+          </Abschnitt>
 
-          {/* ── SECTION 4 ── */}
-          <h2 id="rechtliches" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Ist 24-Stunden-Pflege legal?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ja — 24-Stunden-Pflege ist legal, wenn die Betreuungskraft über eine seriöse Agentur im Entsendemodell beschäftigt wird. Die <strong>A1-Bescheinigung</strong> weist nach, dass sie in ihrem Heimatland sozialversichert ist und EU-rechtlich in Deutschland tätig sein darf. Es gibt drei Beschäftigungsmodelle:
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Entsendemodell (empfohlen)', desc: 'Die Kraft ist bei einer Agentur im Heimatland angestellt und wird für 6–8 Wochen entsandt. Für die Familie: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben, klare Vertragslage.', highlight: true },
-              { title: 'Direktanstellung', desc: 'Die Familie stellt selbst als Arbeitgeberin an. Rechtlich eindeutig — aber mit erheblichem Aufwand (Lohnabrechnung, Sozialversicherung, Urlaubsvertretung).', highlight: false },
-              { title: 'Scheinselbstständigkeit (unbedingt vermeiden)', desc: 'Wer eine Kraft "freiberuflich" beauftragt, die faktisch weisungsgebunden im Haushalt lebt, riskiert Nachzahlungen von Sozialabgaben und Bußgelder.', highlight: false },
-            ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-2">
-            → Alle Modelle im Vergleich:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Pflegekraft legal beschäftigen — die 3 Wege
-            </a>
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Was im Vertrag stehen muss:{' '}
-            <a href="/pflegevertrag-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              Pflegevertrag aufsetzen — worauf achten?
-            </a>
-          </p>
+          <Abschnitt id="rechtliches" titel="Ist 24-Stunden-Pflege legal?">
+            <Text>
+              Ja — 24-Stunden-Pflege ist legal, wenn die Betreuungskraft über eine seriöse Agentur im Entsendemodell beschäftigt wird. Die <strong>A1-Bescheinigung</strong> weist nach, dass sie in ihrem Heimatland sozialversichert ist und EU-rechtlich in Deutschland tätig sein darf. Es gibt drei Beschäftigungsmodelle:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Entsendemodell (empfohlen)', desc: 'Die Kraft ist bei einer Agentur im Heimatland angestellt und wird für 6–8 Wochen entsandt. Für die Familie: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben, klare Vertragslage.' },
+                { title: 'Direktanstellung', desc: 'Die Familie stellt selbst als Arbeitgeberin an. Rechtlich eindeutig — aber mit erheblichem Aufwand (Lohnabrechnung, Sozialversicherung, Urlaubsvertretung).' },
+                { title: 'Scheinselbstständigkeit (unbedingt vermeiden)', desc: 'Wer eine Kraft "freiberuflich" beauftragt, die faktisch weisungsgebunden im Haushalt lebt, riskiert Nachzahlungen von Sozialabgaben und Bußgelder.' },
+              ]}
+            />
+            <MehrDazu
+              label="Alle Modelle im Vergleich:"
+              links={[{ href: "/pflegekraft-legal-beschaeftigen", text: "Pflegekraft legal beschäftigen — die 3 Wege" }]}
+            />
+            <MehrDazu
+              label="Was im Vertrag stehen muss:"
+              links={[{ href: "/pflegevertrag-aufsetzen", text: "Pflegevertrag aufsetzen — worauf achten?" }]}
+            />
+          </Abschnitt>
 
-          {/* ── SECTION 5 ── */}
-          <h2 id="wann" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann ist 24h-Pflege die richtige Wahl?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            24h-Pflege ist die richtige Wahl, wenn der pflegebedürftige Mensch in seiner vertrauten Umgebung bleiben möchte — unabhängig vom Pflegegrad.
-          </p>
-          <div className="space-y-4 mb-6">
+          <Abschnitt id="wann" titel="Wann ist 24h-Pflege die richtige Wahl?">
+            <Text>
+              24h-Pflege ist die richtige Wahl, wenn der pflegebedürftige Mensch in seiner vertrauten Umgebung bleiben möchte — unabhängig vom Pflegegrad.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-6">
             {[
               {
                 title: 'Demenz und Alzheimer',
@@ -389,69 +308,32 @@ export default function WasIst24StundenPflege() {
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Direkter Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">
-              24h-Pflege vs. Pflegeheim — was passt besser?
-            </a>
-          </p>
+            <MehrDazu
+              label="Direkter Vergleich:"
+              links={[{ href: "/24h-pflege-vs-pflegeheim-kosten", text: "24h-Pflege vs. Pflegeheim — was passt besser?" }]}
+            />
+          </Abschnitt>
 
-          {/* ── FAQ ── */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur 24-Stunden-Pflege
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              {
-                q: 'Was versteht man unter 24-Stunden-Pflege?',
-                a: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und rund um die Uhr erreichbar ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und die beliebteste Alternative zum Pflegeheim in Deutschland.',
-              },
-              {
-                q: 'Was kostet 24-Stunden-Pflege 2026?',
-                a: 'Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.',
-              },
-              {
-                q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?',
-                a: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die frühere Verhinderungspflege und Kurzzeitpflege zusammen. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.',
-              },
-              {
-                q: 'Ist 24-Stunden-Pflege legal?',
-                a: 'Ja — über eine seriöse Agentur im Entsendemodell ist 24h-Pflege absolut legal. Die A1-Bescheinigung belegt die Sozialversicherung im Heimatland. Scheinselbstständigkeit ist dagegen strafbar und kann zu hohen Nachzahlungen von Sozialabgaben führen.',
-              },
-              {
-                q: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?',
-                a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Betreuung rund um die Uhr und zahlt oft vergleichbare oder geringere Gesamtkosten.',
-              },
-              {
-                q: 'Wie schnell kann eine 24h-Betreuung beginnen?',
-                a: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.',
-              },
-              {
-                q: 'Für welche Pflegesituationen ist 24h-Pflege geeignet?',
-                a: '24h-Pflege ist geeignet ab Pflegegrad 2 — für Demenz, Alzheimer, nach Schlaganfall oder Operation, bei Parkinson, MS, Herzinsuffizienz, eingeschränkter Mobilität und Sturzrisiko. Sie funktioniert überall dort, wo kontinuierliche Präsenz wichtiger ist als stationäre medizinische Versorgung.',
-              },
-              {
-                q: 'Was ist der Unterschied zwischen Verhinderungspflege und Entlastungsbudget?',
-                a: 'Seit Juli 2025 gibt es kein getrenntes Budget mehr für Verhinderungspflege und Kurzzeitpflege — beide wurden im gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengeführt. Der monatliche Entlastungsbetrag von 131 Euro ist davon getrennt und kann zusätzlich für anerkannte Betreuungsleistungen eingesetzt werden.',
-              },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen zur 24-Stunden-Pflege">
+            <Fragen
+              fragen={[
+                { q: 'Was versteht man unter 24-Stunden-Pflege?', a: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und rund um die Uhr erreichbar ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und die beliebteste Alternative zum Pflegeheim in Deutschland.' },
+                { q: 'Was kostet 24-Stunden-Pflege 2026?', a: 'Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.' },
+                { q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?', a: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die frühere Verhinderungspflege und Kurzzeitpflege zusammen. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
+                { q: 'Ist 24-Stunden-Pflege legal?', a: 'Ja — über eine seriöse Agentur im Entsendemodell ist 24h-Pflege absolut legal. Die A1-Bescheinigung belegt die Sozialversicherung im Heimatland. Scheinselbstständigkeit ist dagegen strafbar und kann zu hohen Nachzahlungen von Sozialabgaben führen.' },
+                { q: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?', a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Betreuung rund um die Uhr und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
+                { q: 'Wie schnell kann eine 24h-Betreuung beginnen?', a: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.' },
+                { q: 'Für welche Pflegesituationen ist 24h-Pflege geeignet?', a: '24h-Pflege ist geeignet ab Pflegegrad 2 — für Demenz, Alzheimer, nach Schlaganfall oder Operation, bei Parkinson, MS, Herzinsuffizienz, eingeschränkter Mobilität und Sturzrisiko. Sie funktioniert überall dort, wo kontinuierliche Präsenz wichtiger ist als stationäre medizinische Versorgung.' },
+                { q: 'Was ist der Unterschied zwischen Verhinderungspflege und Entlastungsbudget?', a: 'Seit Juli 2025 gibt es kein getrenntes Budget mehr für Verhinderungspflege und Kurzzeitpflege — beide wurden im gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengeführt. Der monatliche Entlastungsbetrag von 131 Euro ist davon getrennt und kann zusätzlich für anerkannte Betreuungsleistungen eingesetzt werden.' },
+              ]}
+            />
+          </Abschnitt>
 
-          {/* ── ARTICLE CTA — einmal, ganz unten ── */}
-          <Weiterlesen aktuell="was-ist-24-stunden-pflege" />
-          <ArticleCTA />
 
-        </div>
+          <Weiterlesen aktuell="was-ist-24-stunden-pflege" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

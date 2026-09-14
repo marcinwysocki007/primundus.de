@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,137 +69,96 @@ export default function WennElternPflegeVerweigern() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Wenn Eltern Pflege verweigern" },
+          ]}
+          augenbraue="Ratgeber Angehörige"
+          titel="Wenn Eltern Pflege verweigern — was jetzt hilft"
+          einleitung={"\"Ich brauche keine Hilfe\" — drei Wörter die pflegende Kinder verzweifeln lassen. Gleichzeitig sehen sie wie der Vater immer schwächer wird, die Mutter Medikamente vergisst, die Wohnung verwahrlost. Die Ablehnung von Pflege ist häufig — und fast immer versteht man sie erst wenn man den wahren Grund dahinter kennt."}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Wenn Eltern Pflege verweigern</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="warum" titel="Warum lehnen Eltern Pflege ab?">
+            <Text>
+              Hinter der Ablehnung steckt fast nie Sturheit — sondern Angst, Scham oder Verleugnung. Wer den wahren Grund kennt, kann gezielt ansetzen.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Angst vor Kontrollverlust', desc: '"Wenn ich jemanden ins Haus lasse, verliere ich meine Selbstständigkeit." Die Wohnung ist das letzte Terrain das noch vollständig kontrolliert wird. Eine fremde Person darin zu haben fühlt sich wie Kapitulation an.' },
+                { title: 'Scham', desc: 'Hilfe bei der Körperpflege bedeutet: Jemand sieht meine Schwäche, meine Einschränkungen, meinen alternden Körper. Das ist zutiefst beschämend — besonders für Menschen die ihr Leben lang selbstständig und stark waren.' },
+                { title: 'Verleugnung', desc: '"Mir geht es gut, ich komme zurecht." Manchmal ist das ehrlich — manchmal ist es Verleugnung. Der eigene Hilfebedarf nicht akzeptieren können ist psychologisch verständlich, kann aber gefährlich werden.' },
+                { title: 'Angst vor dem Pflegeheim', desc: 'Viele Menschen verbinden Pflege automatisch mit Pflegeheim — und lehnen deshalb jede Unterstützung ab, aus Angst dass Pflegeheim als nächstes kommt. Eine 24h-Betreuungskraft zuhause ist das Gegenteil davon.' },
+                { title: 'Schlechte frühere Erfahrungen', desc: 'Eine unpassende Haushaltshilfe, ein überfordernder Pflegedienst — wer einmal schlechte Erfahrungen gemacht hat, sperrt sich gegen alle weitere Hilfe.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
+          <Abschnitt id="strategien" titel="Strategien die wirklich helfen">
+            <Punkte
+              punkte={[
+                { title: 'Den richtigen Zeitpunkt wählen', desc: 'Nicht nach einem Sturz oder in der Akutphase das Thema aufbringen — dann ist die Abwehr am höchsten. Besser in einem ruhigen Moment, bei gutem Befinden. Als Gespräch unter Gleichen, nicht als Anordnung.' },
+                { title: 'Mit dem Hausarzt sprechen', desc: 'Ein Arzt hat eine andere Autorität als die eigenen Kinder. "Der Arzt meint es wäre jetzt Zeit für etwas Unterstützung" wirkt oft anders als dasselbe aus dem Mund der Tochter. Hausarzt vorab informieren und um Unterstützung bitten.' },
+                { title: 'Klein anfangen', desc: 'Nicht mit "Wir brauchen jetzt eine 24h-Pflege" starten — das überfordert. Mit einem kleinen Schritt beginnen: "Könntest du dir vorstellen dass jemand einmal pro Woche hilft?" Schrittweise ausbauen wenn das Vertrauen wächst.' },
+                { title: 'Autonomie betonen', desc: 'Den Kontrollwunsch ernst nehmen: "Du entscheidest wann und wie viel Hilfe du möchtest." "Du kannst die Person jederzeit schicken." Eine 24h-Kraft ist kein Kontrollverlust — sie ermöglicht ein selbstbestimmteres Leben.' },
+                { title: 'Probezeit vorschlagen', desc: '"Können wir das mal 4 Wochen ausprobieren?" Eine zeitlich begrenzte Probezeit fühlt sich weniger endgültig an als eine dauerhafte Entscheidung. Viele die skeptisch starten, möchten nach 4 Wochen nicht mehr ohne.' },
+                { title: 'Vertrauensperson einbeziehen', desc: 'Geschwister, gute Freunde, Pfarrer — manchmal hört man auf jemanden der nicht der eigene Sohn oder die eigene Tochter ist. Nicht allein kämpfen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Wenn Eltern Pflege verweigern — was jetzt hilft
-          </h1>
+          <Abschnitt id="grenzen" titel="Grenzen der Selbstbestimmung — wann muss gehandelt werden?">
+            <Text>
+              Erwachsene haben das Recht auf Selbstbestimmung — auch das Recht schlechte Entscheidungen zu treffen. Solange keine akute Selbstgefährdung vorliegt, muss die Entscheidung respektiert werden.
+            </Text>
+            <Text>
+              Es gibt aber Situationen wo gehandelt werden muss:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Akute Selbstgefährdung', desc: 'Wenn jemand durch Verwahrlosung, Mangelernährung, vergessene Medikamente oder häufige Stürze akut gefährdet ist — ärztliche Einschätzung einholen. Der Arzt kann eine Krankenhauseinweisung oder Betreuungsverfahren einleiten.' },
+                { title: 'Demenz und fehlende Einsichtsfähigkeit', desc: 'Bei fortgeschrittener Demenz kann die Fähigkeit zur Einwilligung fehlen. Dann kann eine gesetzliche Betreuung beim Amtsgericht beantragt werden — die bevollmächtigte Person (oder ein gerichtlich bestellter Betreuer) trifft Entscheidungen.' },
+                { title: 'Gefährdung anderer', desc: 'Wenn das Verhalten des Pflegebedürftigen andere Menschen gefährdet (z.B. vergessener Herd, Weglaufen bei Demenz), kann unabhängig vom eigenen Willen gehandelt werden.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
+          <Abschnitt id="praktisch" titel="Erste praktische Schritte">
+            <Schritte
+              schritte={[
+                { title: 'Ursache der Ablehnung verstehen', desc: 'Mit dem Elternteil sprechen — nicht über Pflege, sondern über seine Ängste. Was genau stört? Fremde im Haus? Angst vor Pflegeheim? Scham?' },
+                { title: 'Hausarzt einweihen', desc: 'Arzt vorab anrufen und Situation schildern. Bitten beim nächsten Termin das Thema anzusprechen.' },
+                { title: 'Probezeit als Einstieg', desc: '"4 Wochen Probezeit — wenn es nicht passt, hören wir auf." Fast immer der beste Einstieg.' },
+                { title: 'Passende Persönlichkeit der Betreuungskraft wählen', desc: 'Bei Primundus Telefonat vorab möglich — Kraft mit Charakter wählen der zur Persönlichkeit passt. Manchmal stimmt die Chemie von Anfang an.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            "Ich brauche keine Hilfe" — drei Wörter die pflegende Kinder verzweifeln lassen. Gleichzeitig sehen sie wie der Vater immer schwächer wird, die Mutter Medikamente vergisst, die Wohnung verwahrlost. Die Ablehnung von Pflege ist häufig — und fast immer versteht man sie erst wenn man den wahren Grund dahinter kennt.
-          </p>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was kann ich tun wenn meine Eltern Pflege verweigern?', a: 'Ursache verstehen (Angst, Scham, Verleugnung). Nicht konfrontativ vorgehen. Hausarzt einbeziehen. Klein anfangen — Probezeit vorschlagen. Autonomie betonen. Vertrauensperson einbeziehen.' },
+                { q: 'Darf ich meinen Eltern Pflege aufzwingen?', a: 'Nein — Erwachsene haben das Recht auf Selbstbestimmung. Ausnahme: Bei Demenz oder fehlender Einsichtsfähigkeit kann eine gesetzliche Betreuung beantragt werden. Bei akuter Selbstgefährdung Arzt einschalten.' },
+                { q: 'Wie spreche ich das Thema Pflege mit meinen Eltern an?', a: 'Im ruhigen Moment, nicht nach einem Sturz. Als Gespräch unter Gleichen: "Ich mache mir Sorgen um dich." Nicht über Pflegeheim reden — sondern über Unterstützung zuhause. Probezeit vorschlagen.' },
+                { q: 'Was wenn ein Elternteil sagt "Ich will nicht in ein Heim"?', a: 'Dann genau das versichern: Eine 24h-Betreuungskraft zuhause ist das Gegenteil eines Pflegeheims. Sie ermöglicht das Leben in der eigenen Wohnung zu erhalten. Das Framing als "Alternative zum Pflegeheim" hilft oft.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="warum" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Warum lehnen Eltern Pflege ab?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Hinter der Ablehnung steckt fast nie Sturheit — sondern Angst, Scham oder Verleugnung. Wer den wahren Grund kennt, kann gezielt ansetzen.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { grund: 'Angst vor Kontrollverlust', erklaerung: '"Wenn ich jemanden ins Haus lasse, verliere ich meine Selbstständigkeit." Die Wohnung ist das letzte Terrain das noch vollständig kontrolliert wird. Eine fremde Person darin zu haben fühlt sich wie Kapitulation an.' },
-              { grund: 'Scham', erklaerung: 'Hilfe bei der Körperpflege bedeutet: Jemand sieht meine Schwäche, meine Einschränkungen, meinen alternden Körper. Das ist zutiefst beschämend — besonders für Menschen die ihr Leben lang selbstständig und stark waren.' },
-              { grund: 'Verleugnung', erklaerung: '"Mir geht es gut, ich komme zurecht." Manchmal ist das ehrlich — manchmal ist es Verleugnung. Der eigene Hilfebedarf nicht akzeptieren können ist psychologisch verständlich, kann aber gefährlich werden.' },
-              { grund: 'Angst vor dem Pflegeheim', erklaerung: 'Viele Menschen verbinden Pflege automatisch mit Pflegeheim — und lehnen deshalb jede Unterstützung ab, aus Angst dass Pflegeheim als nächstes kommt. Eine 24h-Betreuungskraft zuhause ist das Gegenteil davon.' },
-              { grund: 'Schlechte frühere Erfahrungen', erklaerung: 'Eine unpassende Haushaltshilfe, ein überfordernder Pflegedienst — wer einmal schlechte Erfahrungen gemacht hat, sperrt sich gegen alle weitere Hilfe.' },
-            ].map((item) => (
-              <div key={item.grund} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.grund}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.erklaerung}</p>
-              </div>
-            ))}
-          </div>
 
-          <h2 id="strategien" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Strategien die wirklich helfen
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { strategie: 'Den richtigen Zeitpunkt wählen', desc: 'Nicht nach einem Sturz oder in der Akutphase das Thema aufbringen — dann ist die Abwehr am höchsten. Besser in einem ruhigen Moment, bei gutem Befinden. Als Gespräch unter Gleichen, nicht als Anordnung.' },
-              { strategie: 'Mit dem Hausarzt sprechen', desc: 'Ein Arzt hat eine andere Autorität als die eigenen Kinder. "Der Arzt meint es wäre jetzt Zeit für etwas Unterstützung" wirkt oft anders als dasselbe aus dem Mund der Tochter. Hausarzt vorab informieren und um Unterstützung bitten.' },
-              { strategie: 'Klein anfangen', desc: 'Nicht mit "Wir brauchen jetzt eine 24h-Pflege" starten — das überfordert. Mit einem kleinen Schritt beginnen: "Könntest du dir vorstellen dass jemand einmal pro Woche hilft?" Schrittweise ausbauen wenn das Vertrauen wächst.' },
-              { strategie: 'Autonomie betonen', desc: 'Den Kontrollwunsch ernst nehmen: "Du entscheidest wann und wie viel Hilfe du möchtest." "Du kannst die Person jederzeit schicken." Eine 24h-Kraft ist kein Kontrollverlust — sie ermöglicht ein selbstbestimmteres Leben.' },
-              { strategie: 'Probezeit vorschlagen', desc: '"Können wir das mal 4 Wochen ausprobieren?" Eine zeitlich begrenzte Probezeit fühlt sich weniger endgültig an als eine dauerhafte Entscheidung. Viele die skeptisch starten, möchten nach 4 Wochen nicht mehr ohne.' },
-              { strategie: 'Vertrauensperson einbeziehen', desc: 'Geschwister, gute Freunde, Pfarrer — manchmal hört man auf jemanden der nicht der eigene Sohn oder die eigene Tochter ist. Nicht allein kämpfen.' },
-            ].map((item) => (
-              <div key={item.strategie} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.strategie}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Weiterlesen aktuell="wenn-eltern-pflege-verweigern" variante="vorlage" />
+        </RatgeberRumpf>
 
-          <h2 id="grenzen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Grenzen der Selbstbestimmung — wann muss gehandelt werden?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Erwachsene haben das Recht auf Selbstbestimmung — auch das Recht schlechte Entscheidungen zu treffen. Solange keine akute Selbstgefährdung vorliegt, muss die Entscheidung respektiert werden.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Es gibt aber Situationen wo gehandelt werden muss:
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { situation: 'Akute Selbstgefährdung', handlung: 'Wenn jemand durch Verwahrlosung, Mangelernährung, vergessene Medikamente oder häufige Stürze akut gefährdet ist — ärztliche Einschätzung einholen. Der Arzt kann eine Krankenhauseinweisung oder Betreuungsverfahren einleiten.' },
-              { situation: 'Demenz und fehlende Einsichtsfähigkeit', handlung: 'Bei fortgeschrittener Demenz kann die Fähigkeit zur Einwilligung fehlen. Dann kann eine gesetzliche Betreuung beim Amtsgericht beantragt werden — die bevollmächtigte Person (oder ein gerichtlich bestellter Betreuer) trifft Entscheidungen.' },
-              { situation: 'Gefährdung anderer', handlung: 'Wenn das Verhalten des Pflegebedürftigen andere Menschen gefährdet (z.B. vergessener Herd, Weglaufen bei Demenz), kann unabhängig vom eigenen Willen gehandelt werden.' },
-            ].map((item) => (
-              <div key={item.situation} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.situation}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.handlung}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="praktisch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Erste praktische Schritte
-          </h2>
-          <ol className="space-y-3 mb-10">
-            {[
-              { n: '1', title: 'Ursache der Ablehnung verstehen', desc: 'Mit dem Elternteil sprechen — nicht über Pflege, sondern über seine Ängste. Was genau stört? Fremde im Haus? Angst vor Pflegeheim? Scham?' },
-              { n: '2', title: 'Hausarzt einweihen', desc: 'Arzt vorab anrufen und Situation schildern. Bitten beim nächsten Termin das Thema anzusprechen.' },
-              { n: '3', title: 'Probezeit als Einstieg', desc: '"4 Wochen Probezeit — wenn es nicht passt, hören wir auf." Fast immer der beste Einstieg.' },
-              { n: '4', title: 'Passende Persönlichkeit der Betreuungskraft wählen', desc: 'Bei Primundus Telefonat vorab möglich — Kraft mit Charakter wählen der zur Persönlichkeit passt. Manchmal stimmt die Chemie von Anfang an.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was kann ich tun wenn meine Eltern Pflege verweigern?', a: 'Ursache verstehen (Angst, Scham, Verleugnung). Nicht konfrontativ vorgehen. Hausarzt einbeziehen. Klein anfangen — Probezeit vorschlagen. Autonomie betonen. Vertrauensperson einbeziehen.' },
-              { q: 'Darf ich meinen Eltern Pflege aufzwingen?', a: 'Nein — Erwachsene haben das Recht auf Selbstbestimmung. Ausnahme: Bei Demenz oder fehlender Einsichtsfähigkeit kann eine gesetzliche Betreuung beantragt werden. Bei akuter Selbstgefährdung Arzt einschalten.' },
-              { q: 'Wie spreche ich das Thema Pflege mit meinen Eltern an?', a: 'Im ruhigen Moment, nicht nach einem Sturz. Als Gespräch unter Gleichen: "Ich mache mir Sorgen um dich." Nicht über Pflegeheim reden — sondern über Unterstützung zuhause. Probezeit vorschlagen.' },
-              { q: 'Was wenn ein Elternteil sagt "Ich will nicht in ein Heim"?', a: 'Dann genau das versichern: Eine 24h-Betreuungskraft zuhause ist das Gegenteil eines Pflegeheims. Sie ermöglicht das Leben in der eigenen Wohnung zu erhalten. Das Framing als "Alternative zum Pflegeheim" hilft oft.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="wenn-eltern-pflege-verweigern" />
-          <ArticleCTA />
-        </div>
+        <KontaktBand />
       </div>
     </>
   )

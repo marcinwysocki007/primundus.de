@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -68,108 +70,62 @@ export default function PflegekraftFinden() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegekraft finden</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegekraft finden — worauf achten & wie vorgehen
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Eine zuverlässige Pflegekraft zu finden ist die wichtigste Entscheidung bei der Organisation der 24h-Pflege. Der sicherste Weg führt über eine seriöse Agentur — sie prüft Qualifikation und Erfahrung, stellt Ersatz bei Ausfall und regelt alles Rechtliche. Bei Primundus ist die passende Kraft in 4–7 Tagen vor Ort.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Organisation", href: "/organisation" },
+            { label: "Pflegekraft finden" },
+          ]}
+          augenbraue="Ratgeber Pflegekräfte"
+          titel="Pflegekraft finden — worauf achten & wie vorgehen"
+          einleitung="Eine zuverlässige Pflegekraft zu finden ist die wichtigste Entscheidung bei der Organisation der 24h-Pflege. Der sicherste Weg führt über eine seriöse Agentur — sie prüft Qualifikation und Erfahrung, stellt Ersatz bei Ausfall und regelt alles Rechtliche. Bei Primundus ist die passende Kraft in 4–7 Tagen vor Ort."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+          blick={[
                 'Agentur wie Primundus: sicherster Weg — Prüfung, Ersatz, Rechtssicherheit',
                 'Direktsuche: möglich, aber mehr Aufwand und rechtliches Risiko',
                 'Deutschkenntnisse: Grundkommunikation ist Mindestanforderung',
                 'Pflegeerfahrung: Anzahl und Art früherer Einsätze prüfen',
                 'Persönlichkeit: Telefonat vorab möglich — Passung zur Pflegesituation zählt',
                 'Start: Mit Primundus in 4–7 Tagen nach Erstgespräch',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="wege" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wege zur Pflegekraft — was gibt es?
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              {
-                weg: 'Über eine Agentur (empfohlen)',
-                beschreibung: 'Die Agentur übernimmt Suche, Prüfung und Vermittlung. Bei Primundus: Rechtssicheres Entsendemodell mit A1-Bescheinigung, Ersatz bei Ausfall, persönliche Beratung.',
-                highlight: true,
-              },
-              {
-                weg: 'Direktsuche über Portale',
-                beschreibung: 'Plattformen wie Pflegemarkt.de, care.de oder Kleinanzeigen. Mehr Eigenaufwand bei Prüfung und Rechtlichem — aber potenziell günstigere Preise.',
-                highlight: false,
-              },
-              {
-                weg: 'Weiterempfehlung im Bekanntenkreis',
-                beschreibung: 'Oft der persönlichste Weg — aber Rechtliches (Arbeitsvertrag, Sozialversicherung) muss trotzdem sorgfältig geregelt werden.',
-                highlight: false,
-              },
-            ].map((item) => (
-              <div key={item.weg} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.weg}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.beschreibung}</p>
-              </div>
-            ))}
-          </div>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="wege" titel="Wege zur Pflegekraft — was gibt es?">
+            <Punkte
+              punkte={[
+                { title: 'Über eine Agentur (empfohlen)', desc: 'Die Agentur übernimmt Suche, Prüfung und Vermittlung. Bei Primundus: Rechtssicheres Entsendemodell mit A1-Bescheinigung, Ersatz bei Ausfall, persönliche Beratung.' },
+                { title: 'Direktsuche über Portale', desc: 'Plattformen wie Pflegemarkt.de, care.de oder Kleinanzeigen. Mehr Eigenaufwand bei Prüfung und Rechtlichem — aber potenziell günstigere Preise.' },
+                { title: 'Weiterempfehlung im Bekanntenkreis', desc: 'Oft der persönlichste Weg — aber Rechtliches (Arbeitsvertrag, Sozialversicherung) muss trotzdem sorgfältig geregelt werden.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="agentur" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Über eine Agentur — was die Vorteile sind
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Eine seriöse Agentur wie Primundus übernimmt alles was bei der Direktsuche an der Familie hängenbleibt — und liefert zusätzliche Sicherheitsnetze.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { vorteil: 'Geprüfte Qualifikation', beschreibung: 'Pflegeerfahrung, Deutschkenntnisse, Referenzen — alles wird vor der Vermittlung geprüft. Kein Risiko mit ungeprüften Personen.' },
-              { vorteil: 'Rechtliche Absicherung', beschreibung: 'Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher. Die Familie hat kein eigenes Arbeitsverhältnis.' },
-              { vorteil: 'Ersatz bei Ausfall', beschreibung: 'Wird die Betreuungskraft krank oder muss wechseln — Primundus stellt sofort eine Ersatzkraft. Kein Versorgungsausfall.' },
-              { vorteil: 'Nahtlose Rotation', beschreibung: 'Wechsel der Kraft alle 6–8 Wochen ist organisiert und wird von Primundus koordiniert — Familie muss sich nicht selbst darum kümmern.' },
-              { vorteil: 'Persönliche Beratung', beschreibung: 'Marta Kapcio und das Primundus-Team begleiten die Familie — von der ersten Anfrage bis zur laufenden Betreuung.' },
-            ].map((item) => (
-              <div key={item.vorteil} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.vorteil}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.beschreibung}</p>
-              </div>
-            ))}
-          </div>
+          <DunklerAbschnitt
+            id="agentur"
+            titel="Über eine Agentur — was die Vorteile sind"
+            einleitung="Eine seriöse Agentur wie Primundus übernimmt alles was bei der Direktsuche an der Familie hängenbleibt — und liefert zusätzliche Sicherheitsnetze."
+            punkte={[
+              { title: 'Geprüfte Qualifikation', desc: 'Pflegeerfahrung, Deutschkenntnisse, Referenzen — alles wird vor der Vermittlung geprüft. Kein Risiko mit ungeprüften Personen.' },
+              { title: 'Rechtliche Absicherung', desc: 'Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher. Die Familie hat kein eigenes Arbeitsverhältnis.' },
+              { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank oder muss wechseln — Primundus stellt sofort eine Ersatzkraft. Kein Versorgungsausfall.' },
+              { title: 'Nahtlose Rotation', desc: 'Wechsel der Kraft alle 6–8 Wochen ist organisiert und wird von Primundus koordiniert — Familie muss sich nicht selbst darum kümmern.' },
+              { title: 'Persönliche Beratung', desc: 'Marta Kapcio und das Primundus-Team begleiten die Familie — von der ersten Anfrage bis zur laufenden Betreuung.' },
+            ]}
+          />
 
-          <h2 id="worauf-achten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Worauf bei der Auswahl zu achten ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Diese Kriterien sollten bei jeder Pflegekraft — ob über Agentur oder direkt — geprüft werden:
-          </p>
-          <div className="space-y-3 mb-6">
+          <Abschnitt id="worauf-achten" titel="Worauf bei der Auswahl zu achten ist">
+            <Text>
+              Diese Kriterien sollten bei jeder Pflegekraft — ob über Agentur oder direkt — geprüft werden:
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-6">
             {[
               { kriterium: 'Deutschkenntnisse', wichtigkeit: 'Pflicht', beschreibung: 'Grundlegende Kommunikation auf Deutsch ist Mindestanforderung. Bei Demenzbetroffenen kann emotionale Verbindung wichtiger sein als perfektes Deutsch.' },
               { kriterium: 'Pflegeerfahrung', wichtigkeit: 'Pflicht', beschreibung: 'Wie viele Einsätze? Welche Pflegesituationen? Erfahrung mit spezifischen Erkrankungen (Demenz, Parkinson, Schlaganfall) bei Bedarf prüfen.' },
@@ -186,54 +142,37 @@ export default function PflegekraftFinden() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Ablauf bei Primundus — von Anfrage bis Start
-          </h2>
-          <ol className="space-y-3 mb-10">
-            {[
-              { n: '1', title: 'Kostenloses Beratungsgespräch', desc: 'Pflegesituation, Diagnosen, besondere Anforderungen erfassen. Kein Auftrag, kein Risiko.' },
-              { n: '2', title: 'Passende Kraft vorschlagen', desc: 'Primundus schlägt eine geprüfte Kraft vor — Profil mit Erfahrung, Qualifikation und Foto. Telefonat vorab möglich.' },
-              { n: '3', title: 'Angebot & Vertrag', desc: 'Transparentes Angebot mit allen Kosten. Vertrag mit Primundus — kein direktes Arbeitsverhältnis mit der Kraft.' },
-              { n: '4', title: 'Anreise in 4–7 Tagen', desc: 'Betreuungskraft reist an. A1-Bescheinigung liegt vor. Übergabe durch Primundus-Team begleitet.' },
-              { n: '5', title: 'Laufende Betreuung', desc: 'Primundus bleibt Ansprechpartner — Qualitätssicherung, Kraftwechsel, Ersatz bei Ausfall.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <Abschnitt id="ablauf" titel="Ablauf bei Primundus — von Anfrage bis Start">
+            <Schritte
+              schritte={[
+                { title: 'Kostenloses Beratungsgespräch', desc: 'Pflegesituation, Diagnosen, besondere Anforderungen erfassen. Kein Auftrag, kein Risiko.' },
+                { title: 'Passende Kraft vorschlagen', desc: 'Primundus schlägt eine geprüfte Kraft vor — Profil mit Erfahrung, Qualifikation und Foto. Telefonat vorab möglich.' },
+                { title: 'Angebot & Vertrag', desc: 'Transparentes Angebot mit allen Kosten. Vertrag mit Primundus — kein direktes Arbeitsverhältnis mit der Kraft.' },
+                { title: 'Anreise in 4–7 Tagen', desc: 'Betreuungskraft reist an. A1-Bescheinigung liegt vor. Übergabe durch Primundus-Team begleitet.' },
+                { title: 'Laufende Betreuung', desc: 'Primundus bleibt Ansprechpartner — Qualitätssicherung, Kraftwechsel, Ersatz bei Ausfall.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie findet man eine gute Pflegekraft?', a: 'Der sicherste Weg ist eine seriöse Agentur wie Primundus — sie prüft Qualifikation, stellt Ersatz bei Ausfall und regelt das Rechtliche. Direktsuche ist möglich, erfordert aber mehr Eigenaufwand.' },
-              { q: 'Worauf sollte man bei der Auswahl achten?', a: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung und Referenzen prüfen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen auf Spezialerfahrung achten.' },
-              { q: 'Wie schnell findet Primundus eine Pflegekraft?', a: 'Typischerweise 4–7 Tage nach dem ersten Beratungsgespräch. In dringenden Situationen ist oft ein schnellerer Start möglich.' },
-              { q: 'Kann ich vor dem Einsatz mit der Pflegekraft sprechen?', a: 'Ja — Primundus ermöglicht ein Telefonat vorab. So kann die Familie einen ersten Eindruck gewinnen bevor die Kraft anreist.' },
-              { q: 'Was passiert wenn die Pflegekraft nicht passt?', a: 'Bei Primundus ist der Vertrag täglich kündbar. Primundus findet unverzüglich eine Ersatzkraft — kein Versorgungsausfall.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie findet man eine gute Pflegekraft?', a: 'Der sicherste Weg ist eine seriöse Agentur wie Primundus — sie prüft Qualifikation, stellt Ersatz bei Ausfall und regelt das Rechtliche. Direktsuche ist möglich, erfordert aber mehr Eigenaufwand.' },
+                { q: 'Worauf sollte man bei der Auswahl achten?', a: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung und Referenzen prüfen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen auf Spezialerfahrung achten.' },
+                { q: 'Wie schnell findet Primundus eine Pflegekraft?', a: 'Typischerweise 4–7 Tage nach dem ersten Beratungsgespräch. In dringenden Situationen ist oft ein schnellerer Start möglich.' },
+                { q: 'Kann ich vor dem Einsatz mit der Pflegekraft sprechen?', a: 'Ja — Primundus ermöglicht ein Telefonat vorab. So kann die Familie einen ersten Eindruck gewinnen bevor die Kraft anreist.' },
+                { q: 'Was passiert wenn die Pflegekraft nicht passt?', a: 'Bei Primundus ist der Vertrag täglich kündbar. Primundus findet unverzüglich eine Ersatzkraft — kein Versorgungsausfall.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <Weiterlesen aktuell="pflegekraft-finden" />
-          <ArticleCTA />
-        </div>
+
+          <Weiterlesen aktuell="pflegekraft-finden" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -68,175 +70,106 @@ export default function BurnoutPflegendeAngehoerige() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Burnout pflegende Angehörige</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Burnout pflegende Angehörige — Warnsignale erkennen & Hilfe finden
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Rund 30–50 % der pflegenden Angehörigen leiden unter chronischer Überlastung. Burnout entwickelt sich schleichend — und wer ihn nicht rechtzeitig erkennt, gefährdet am Ende die eigene Gesundheit und die Pflege des Angehörigen. Die wichtigste Botschaft: Entlastung zu suchen ist keine Schwäche, sondern Verantwortung.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Burnout pflegende Angehörige" },
+          ]}
+          augenbraue="Ratgeber Angehörige"
+          titel="Burnout pflegende Angehörige — Warnsignale erkennen & Hilfe finden"
+          einleitung="Rund 30–50 % der pflegenden Angehörigen leiden unter chronischer Überlastung. Burnout entwickelt sich schleichend — und wer ihn nicht rechtzeitig erkennt, gefährdet am Ende die eigene Gesundheit und die Pflege des Angehörigen. Die wichtigste Botschaft: Entlastung zu suchen ist keine Schwäche, sondern Verantwortung."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+          blick={[
                 '30–50 % der pflegenden Angehörigen leiden unter Burnout-Symptomen',
                 'Burnout entwickelt sich schleichend — frühe Zeichen oft ignoriert',
                 'Sofortige Entlastung: Entlastungsbudget (3.539 €/Jahr) für Auszeit nutzen',
                 '24h-Betreuungskraft: dauerhafteste Entlastung — übernimmt Hauptlast',
                 'Pflegestützpunkte und Selbsthilfegruppen kostenlos nutzen',
                 'Eigene Gesundheit schützen = beste Pflege für den Angehörigen',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="zeichen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Warnsignale erkennen — diese Zeichen ernst nehmen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Burnout bei pflegenden Angehörigen entwickelt sich über Monate und Jahre. Die Zeichen werden oft als "normal" abgetan — dabei sind sie ein ernstes Signal des Körpers.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <DunklerAbschnitt
+            id="zeichen"
+            titel="Warnsignale erkennen — diese Zeichen ernst nehmen"
+            einleitung={"Burnout bei pflegenden Angehörigen entwickelt sich über Monate und Jahre. Die Zeichen werden oft als \"normal\" abgetan — dabei sind sie ein ernstes Signal des Körpers."}
+            punkte={[
               { title: 'Chronische Erschöpfung', desc: 'Müdigkeit die auch nach Schlaf nicht besser wird. Das Gefühl nie wirklich erholt zu sein — selbst nach freien Stunden.' },
               { title: 'Zunehmende Reizbarkeit', desc: 'Ungeduld und Gereiztheit gegenüber dem Pflegebedürftigen, aber auch gegenüber Familienmitgliedern und Kollegen. Gefolgt von Schuldgefühlen.' },
               { title: 'Sozialer Rückzug', desc: 'Freundschaften einschlafen lassen, Einladungen absagen, Hobbys aufgeben. "Ich habe keine Zeit und keine Kraft mehr."' },
               { title: 'Vernachlässigung der eigenen Gesundheit', desc: 'Eigene Arzttermine vergessen oder verschieben. Schmerzen ignorieren. Keine Zeit mehr für Sport oder Erholung.' },
               { title: 'Körperliche Beschwerden', desc: 'Kopfschmerzen, Rückenprobleme, Schlafstörungen, häufige Infekte — ohne organische Ursache. Der Körper zeigt was die Seele nicht mehr schafft.' },
               { title: 'Gefühl der Hilflosigkeit', desc: '"Ich schaffe das nicht mehr, aber ich kann nicht aufhören." Dieses Gefühl — kombiniert mit Schuldgefühlen beim Gedanken an Entlastung — ist ein zentrales Burnout-Symptom.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
 
-          <h2 id="ursachen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Warum Burnout bei Pflegenden entsteht
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Pflege ist kein Teilzeitjob — sie ist oft 24 Stunden am Tag, 7 Tage/Woche, ohne Urlaubsanspruch. Hinzu kommen spezifische Belastungsfaktoren die Burnout besonders wahrscheinlich machen.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { title: 'Doppelbelastung Beruf + Pflege', desc: 'Viele pflegende Angehörige sind berufstätig und versuchen beides zu stemmen. Der Feierabend beginnt mit der nächsten Schicht — zuhause.' },
-              { title: 'Kein Ende in Sicht', desc: 'Anders als bei anderen Belastungen gibt es bei chronischer Pflege kein Ablaufdatum. Die Belastung steigt oft sogar mit der Zeit.' },
-              { title: 'Gesellschaftliche Erwartungen', desc: '"Du müsstest das doch schaffen — das ist deine Mutter." Schuldgefühle bei jedem Gedanken an Entlastung.' },
-              { title: 'Fehlende Unterstützung', desc: 'Viele Pflegende wissen nicht welche Leistungen ihnen zustehen — und zahlen damit mit ihrer Gesundheit.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="ursachen" titel="Warum Burnout bei Pflegenden entsteht">
+            <Text>
+              Pflege ist kein Teilzeitjob — sie ist oft 24 Stunden am Tag, 7 Tage/Woche, ohne Urlaubsanspruch. Hinzu kommen spezifische Belastungsfaktoren die Burnout besonders wahrscheinlich machen.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Doppelbelastung Beruf + Pflege', desc: 'Viele pflegende Angehörige sind berufstätig und versuchen beides zu stemmen. Der Feierabend beginnt mit der nächsten Schicht — zuhause.' },
+                { title: 'Kein Ende in Sicht', desc: 'Anders als bei anderen Belastungen gibt es bei chronischer Pflege kein Ablaufdatum. Die Belastung steigt oft sogar mit der Zeit.' },
+                { title: 'Gesellschaftliche Erwartungen', desc: '"Du müsstest das doch schaffen — das ist deine Mutter." Schuldgefühle bei jedem Gedanken an Entlastung.' },
+                { title: 'Fehlende Unterstützung', desc: 'Viele Pflegende wissen nicht welche Leistungen ihnen zustehen — und zahlen damit mit ihrer Gesundheit.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="hilfe" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Sofortige Entlastung — diese Möglichkeiten gibt es
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Entlastung ist kein Luxus — sie ist eine gesetzliche Leistung. Wer das Entlastungsbudget nicht nutzt, verschenkt Geld und Gesundheit.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              {
-                title: 'Entlastungsbudget nutzen — 3.539 €/Jahr',
-                desc: 'Seit Juli 2025 gibt es ein gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Es ermöglicht Auszeiten von mehreren Wochen — während die Pflege durch eine Vertretung sichergestellt wird. Kein Antrag nötig — einfach bei der Pflegekasse anmelden.',
-                highlight: true,
-              },
-              {
-                title: '24h-Betreuungskraft — dauerhafte Entlastung',
-                desc: 'Die wirkungsvollste Lösung: Eine Betreuungskraft übernimmt die tägliche Pflege. Angehörige sind wieder Angehörige — nicht rund um die Uhr Pflegepersonal. Primundus startet in 4–7 Tagen.',
-                highlight: false,
-              },
-              {
-                title: 'Tagespflege — stundenweise Entlastung',
-                desc: 'Der pflegebedürftige Mensch verbringt einige Tage pro Woche in einer Tagespflegeeinrichtung. Angehörige haben Freizeit — der Pflegebedürftige hat Struktur und Gesellschaft.',
-                highlight: false,
-              },
-              {
-                title: 'Pflegestützpunkte — kostenlose Beratung',
-                desc: 'In jedem Bundesland gibt es kostenlose Pflegestützpunkte. Beratung zu Leistungsansprüchen, Unterstützungsangeboten und Entlastungsmöglichkeiten — ohne Voranmeldung.',
-                highlight: false,
-              },
-            ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Entlastungsbudget im Detail:{' '}
-            <a href="/verhinderungspflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Verhinderungspflege & Entlastungsbudget 2026</a>
-          </p>
+          <Abschnitt id="hilfe" titel="Sofortige Entlastung — diese Möglichkeiten gibt es">
+            <Text>
+              Entlastung ist kein Luxus — sie ist eine gesetzliche Leistung. Wer das Entlastungsbudget nicht nutzt, verschenkt Geld und Gesundheit.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Entlastungsbudget nutzen — 3.539 €/Jahr', desc: 'Seit Juli 2025 gibt es ein gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Es ermöglicht Auszeiten von mehreren Wochen — während die Pflege durch eine Vertretung sichergestellt wird. Kein Antrag nötig — einfach bei der Pflegekasse anmelden.' },
+                { title: '24h-Betreuungskraft — dauerhafte Entlastung', desc: 'Die wirkungsvollste Lösung: Eine Betreuungskraft übernimmt die tägliche Pflege. Angehörige sind wieder Angehörige — nicht rund um die Uhr Pflegepersonal. Primundus startet in 4–7 Tagen.' },
+                { title: 'Tagespflege — stundenweise Entlastung', desc: 'Der pflegebedürftige Mensch verbringt einige Tage pro Woche in einer Tagespflegeeinrichtung. Angehörige haben Freizeit — der Pflegebedürftige hat Struktur und Gesellschaft.' },
+                { title: 'Pflegestützpunkte — kostenlose Beratung', desc: 'In jedem Bundesland gibt es kostenlose Pflegestützpunkte. Beratung zu Leistungsansprüchen, Unterstützungsangeboten und Entlastungsmöglichkeiten — ohne Voranmeldung.' },
+              ]}
+            />
+            <MehrDazu
+              label="Entlastungsbudget im Detail:"
+              links={[{ href: "/verhinderungspflege", text: "Verhinderungspflege & Entlastungsbudget 2026" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="praevention" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Langfristig schützen — was hilft wirklich
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { title: 'Grenzen setzen lernen', desc: '"Ich kann nicht alles" ist keine Niederlage — es ist Realismus. Wer klare Grenzen setzt, pflegt länger und besser als wer sich bis zum Zusammenbruch verausgabt.' },
-              { title: 'Hilfe annehmen', desc: 'Freunde und Familie in die Pflege einbinden. Professionelle Unterstützung organisieren. "Ich schaffe das allein" ist oft keine Tugend — sondern ein Risiko.' },
-              { title: 'Eigene Bedürfnisse ernst nehmen', desc: 'Sport, Schlaf, soziale Kontakte, eigene Arzttermine — das sind keine Extras, sondern Grundlage für gute Pflege.' },
-              { title: 'Selbsthilfegruppen', desc: 'Der Austausch mit anderen pflegenden Angehörigen ist heilsam. Lokale Gruppen über die Pflegekasse oder die Alzheimer Gesellschaft finden.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="praevention" titel="Langfristig schützen — was hilft wirklich">
+            <Punkte
+              punkte={[
+                { title: 'Grenzen setzen lernen', desc: '"Ich kann nicht alles" ist keine Niederlage — es ist Realismus. Wer klare Grenzen setzt, pflegt länger und besser als wer sich bis zum Zusammenbruch verausgabt.' },
+                { title: 'Hilfe annehmen', desc: 'Freunde und Familie in die Pflege einbinden. Professionelle Unterstützung organisieren. "Ich schaffe das allein" ist oft keine Tugend — sondern ein Risiko.' },
+                { title: 'Eigene Bedürfnisse ernst nehmen', desc: 'Sport, Schlaf, soziale Kontakte, eigene Arzttermine — das sind keine Extras, sondern Grundlage für gute Pflege.' },
+                { title: 'Selbsthilfegruppen', desc: 'Der Austausch mit anderen pflegenden Angehörigen ist heilsam. Lokale Gruppen über die Pflegekasse oder die Alzheimer Gesellschaft finden.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Woran erkennt man Burnout bei pflegenden Angehörigen?', a: 'Chronische Erschöpfung die Schlaf nicht behebt, Reizbarkeit, sozialer Rückzug, Vernachlässigung der eigenen Gesundheit, körperliche Beschwerden ohne organische Ursache, Gefühl der Hilflosigkeit kombiniert mit Schuldgefühlen.' },
-              { q: 'Was hilft sofort bei Burnout durch Pflege?', a: 'Das Entlastungsbudget (3.539 €/Jahr) für Verhinderungs- oder Kurzzeitpflege nutzen — das ermöglicht mehrwöchige Auszeiten. Kostenlose Beratung bei Pflegestützpunkten. Mittelfristig: 24h-Betreuungskraft die die tägliche Hauptlast übernimmt.' },
-              { q: 'Darf man Pflege abgeben?', a: 'Ja — und es ist oft das Verantwortlichste was man tun kann. Eine professionelle 24h-Betreuungskraft bietet oft bessere Pflege als erschöpfte Angehörige. Pflege abgeben bedeutet nicht aufgeben — sondern klug organisieren.' },
-              { q: 'Welche Leistungen stehen pflegenden Angehörigen zu?', a: 'Pflegegeld kann an pflegende Angehörige weitergegeben werden. Das Entlastungsbudget (3.539 €/Jahr) ermöglicht Urlaub. Pflegezeitgesetz: bis zu 6 Monate Auszeit vom Beruf möglich. Pflegekurs: Kostenlose Schulung durch die Pflegekasse.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="burnout-pflegende-angehoerige" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Woran erkennt man Burnout bei pflegenden Angehörigen?', a: 'Chronische Erschöpfung die Schlaf nicht behebt, Reizbarkeit, sozialer Rückzug, Vernachlässigung der eigenen Gesundheit, körperliche Beschwerden ohne organische Ursache, Gefühl der Hilflosigkeit kombiniert mit Schuldgefühlen.' },
+                { q: 'Was hilft sofort bei Burnout durch Pflege?', a: 'Das Entlastungsbudget (3.539 €/Jahr) für Verhinderungs- oder Kurzzeitpflege nutzen — das ermöglicht mehrwöchige Auszeiten. Kostenlose Beratung bei Pflegestützpunkten. Mittelfristig: 24h-Betreuungskraft die die tägliche Hauptlast übernimmt.' },
+                { q: 'Darf man Pflege abgeben?', a: 'Ja — und es ist oft das Verantwortlichste was man tun kann. Eine professionelle 24h-Betreuungskraft bietet oft bessere Pflege als erschöpfte Angehörige. Pflege abgeben bedeutet nicht aufgeben — sondern klug organisieren.' },
+                { q: 'Welche Leistungen stehen pflegenden Angehörigen zu?', a: 'Pflegegeld kann an pflegende Angehörige weitergegeben werden. Das Entlastungsbudget (3.539 €/Jahr) ermöglicht Urlaub. Pflegezeitgesetz: bis zu 6 Monate Auszeit vom Beruf möglich. Pflegekurs: Kostenlose Schulung durch die Pflegekasse.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="burnout-pflegende-angehoerige" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,37 +61,28 @@ export default function PflegeOrganisieren() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Organisation", href: "/organisation" },
+            { label: "24h-Pflege organisieren" },
+          ]}
+          augenbraue="Ratgeber Organisation"
+          titel="24h-Pflege organisieren — Checkliste & Schritt-für-Schritt"
+          einleitung="Die Organisation der 24h-Pflege wirkt am Anfang überwältigend — ist es aber nicht wenn man es systematisch angeht. Wer mit Primundus arbeitet, hat einen festen Ansprechpartner der die meiste Arbeit übernimmt. Trotzdem gibt es Dinge die die Familie selbst regeln muss. Hier ist die vollständige Übersicht."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
-            <span>›</span>
-            <span className="text-pm-ink">24h-Pflege organisieren</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            24h-Pflege organisieren — Checkliste & Schritt-für-Schritt
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Die Organisation der 24h-Pflege wirkt am Anfang überwältigend — ist es aber nicht wenn man es systematisch angeht. Wer mit Primundus arbeitet, hat einen festen Ansprechpartner der die meiste Arbeit übernimmt. Trotzdem gibt es Dinge die die Familie selbst regeln muss. Hier ist die vollständige Übersicht.
-          </p>
-
-          <h2 id="schritt-fuer-schritt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Schritt-für-Schritt-Planung
-          </h2>
-          <ol className="space-y-4 mb-10">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="schritt-fuer-schritt" titel="Schritt-für-Schritt-Planung">
+            {/* VORLAGE: unverändert übernommen */}
+            <ol className="space-y-4 mb-10">
             {[
               { n: '1', phase: 'Sofort (wenn Pflege nötig wird)', aufgaben: ['Pflegekasse-Antrag stellen (formlos, per Telefon — Datum sichern)', 'Primundus anrufen: 089 200 000 830 — kostenlose Beratung', 'Pflegetagebuch beginnen für spätere Begutachtung'] },
               { n: '2', phase: 'Innerhalb 1–2 Wochen', aufgaben: ['Beschäftigungsmodell wählen (Empfehlung: Entsendemodell via Primundus)', 'Passende Kraft auswählen (Profil prüfen, Telefonat vorab)', 'Zimmer für die Betreuungskraft vorbereiten', 'Familienmitglieder informieren und einbeziehen'] },
@@ -112,31 +105,25 @@ export default function PflegeOrganisieren() {
               </li>
             ))}
           </ol>
+          </Abschnitt>
 
-          <h2 id="was-regeln" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was vor dem Start geregelt sein muss
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { punkt: 'Pflegekasse informieren', desc: 'Pflegekasse-Antrag gestellt? Pflegegrad bekannt oder in Beantragung? Entlastungsbetrag aktiviert? Wenn noch kein Pflegegrad: Antrag sofort stellen — rückwirkend ab Antragsdatum.' },
-              { punkt: 'Vorsorgevollmacht & Patientenverfügung', desc: 'Sind diese Dokumente vorhanden? Wer trifft Entscheidungen wenn der Pflegebedürftige das nicht mehr kann? Ohne Vollmacht entscheidet das Gericht — das kostet Zeit und Geld.' },
-              { punkt: 'Hausarzt informieren', desc: 'Hausarzt über den Start der 24h-Pflege informieren. Medikamentenliste aktualisieren. Hausbesuche vereinbaren wenn nötig. Arztdaten der Betreuungskraft zugänglich machen.' },
-              { punkt: 'Schlüssel & Zugänge', desc: 'Reserveschlüssel für Betreuungskraft. Codes für Alarmanlage, Briefkasten, Keller. Notfallkontakte aufschreiben und gut sichtbar aufhängen.' },
-            ].map((item) => (
-              <div key={item.punkt} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.punkt}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="was-regeln" titel="Was vor dem Start geregelt sein muss">
+            <Punkte
+              punkte={[
+                { title: 'Pflegekasse informieren', desc: 'Pflegekasse-Antrag gestellt? Pflegegrad bekannt oder in Beantragung? Entlastungsbetrag aktiviert? Wenn noch kein Pflegegrad: Antrag sofort stellen — rückwirkend ab Antragsdatum.' },
+                { title: 'Vorsorgevollmacht & Patientenverfügung', desc: 'Sind diese Dokumente vorhanden? Wer trifft Entscheidungen wenn der Pflegebedürftige das nicht mehr kann? Ohne Vollmacht entscheidet das Gericht — das kostet Zeit und Geld.' },
+                { title: 'Hausarzt informieren', desc: 'Hausarzt über den Start der 24h-Pflege informieren. Medikamentenliste aktualisieren. Hausbesuche vereinbaren wenn nötig. Arztdaten der Betreuungskraft zugänglich machen.' },
+                { title: 'Schlüssel & Zugänge', desc: 'Reserveschlüssel für Betreuungskraft. Codes für Alarmanlage, Briefkasten, Keller. Notfallkontakte aufschreiben und gut sichtbar aufhängen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="wohnen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wohnen, Zimmer & Alltag vorbereiten
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die Betreuungskraft lebt dauerhaft im Haushalt. Ein eigenes Zimmer mit Privatsphäre ist Pflicht — kein Luxus, sondern Voraussetzung für eine gute Zusammenarbeit.
-          </p>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="wohnen" titel="Wohnen, Zimmer & Alltag vorbereiten">
+            <Text>
+              Die Betreuungskraft lebt dauerhaft im Haushalt. Ein eigenes Zimmer mit Privatsphäre ist Pflicht — kein Luxus, sondern Voraussetzung für eine gute Zusammenarbeit.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               { thema: 'Zimmer der Betreuungskraft', anforderungen: ['Eigenes Zimmer mit Tür (Privatsphäre)', 'Bett oder Einzelbett, Schrank, Tisch', 'WLAN-Zugang', 'Kost und Logis werden auf die Vergütung angerechnet (ca. 300–400 €/Mo)'] },
               { thema: 'Küche & Lebensmittel', anforderungen: ['Kühlschrank zugänglich für Betreuungskraft', 'Vorräte für erste Woche auffüllen', 'Diät- und Allergiehinweise kommunizieren', 'Budget für Lebensmitteleinkäufe klären'] },
@@ -154,46 +141,35 @@ export default function PflegeOrganisieren() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="laufend" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Laufende Organisation — was regelmäßig anfällt
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { turnus: 'Wöchentlich', aufgaben: 'Einkaufsliste abgleichen, Arzttermine koordinieren, kurzes Gespräch mit Kraft über die Woche.' },
-              { turnus: 'Monatlich', aufgaben: 'Kassenzuschüsse prüfen (Entlastungsbetrag ausgegeben?), Abrechnung mit Primundus, Medikamente auffüllen.' },
-              { turnus: 'Alle 6–8 Wochen', aufgaben: 'Kraftwechsel: Primundus organisiert nahtlos. Übergabegespräch mit alter und neuer Kraft.' },
-              { turnus: 'Jährlich', aufgaben: 'Steuerliche Absetzbarkeit prüfen (bis 4.000 €), Pflegegrad auf Höherstufungsbedarf prüfen, Entlastungsbudget-Saldo prüfen.' },
-            ].map((item) => (
-              <div key={item.turnus} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.turnus}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.aufgaben}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="laufend" titel="Laufende Organisation — was regelmäßig anfällt">
+            <Punkte
+              punkte={[
+                { title: 'Wöchentlich', desc: 'Einkaufsliste abgleichen, Arzttermine koordinieren, kurzes Gespräch mit Kraft über die Woche.' },
+                { title: 'Monatlich', desc: 'Kassenzuschüsse prüfen (Entlastungsbetrag ausgegeben?), Abrechnung mit Primundus, Medikamente auffüllen.' },
+                { title: 'Alle 6–8 Wochen', desc: 'Kraftwechsel: Primundus organisiert nahtlos. Übergabegespräch mit alter und neuer Kraft.' },
+                { title: 'Jährlich', desc: 'Steuerliche Absetzbarkeit prüfen (bis 4.000 €), Pflegegrad auf Höherstufungsbedarf prüfen, Entlastungsbudget-Saldo prüfen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was muss ich vor dem Start der 24h-Pflege organisieren?', a: 'Pflegekasse-Antrag stellen, Beschäftigungsmodell wählen, Kraft auswählen, Zimmer vorbereiten, Schlüssel bereitstellen, Hausarzt informieren, Medikamentenliste bereithalten, Vorsorgevollmacht prüfen.' },
-              { q: 'Muss die Betreuungskraft ein eigenes Zimmer haben?', a: 'Ja — eigenes Zimmer mit Privatsphäre ist Pflichtvoraussetzung. Kost und Logis werden auf die Vergütung angerechnet (ca. 300–400 €/Monat).' },
-              { q: 'Wie oft wechselt die Betreuungskraft?', a: 'In der Regel alle 6–8 Wochen. Primundus organisiert jeden Wechsel nahtlos — die Familie muss sich darum nicht kümmern.' },
-              { q: 'Was passiert wenn die Kraft krank wird?', a: 'Primundus stellt unverzüglich eine Ersatzkraft. Die Familie bleibt nie ohne Versorgung.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="24h-pflege-organisieren" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was muss ich vor dem Start der 24h-Pflege organisieren?', a: 'Pflegekasse-Antrag stellen, Beschäftigungsmodell wählen, Kraft auswählen, Zimmer vorbereiten, Schlüssel bereitstellen, Hausarzt informieren, Medikamentenliste bereithalten, Vorsorgevollmacht prüfen.' },
+                { q: 'Muss die Betreuungskraft ein eigenes Zimmer haben?', a: 'Ja — eigenes Zimmer mit Privatsphäre ist Pflichtvoraussetzung. Kost und Logis werden auf die Vergütung angerechnet (ca. 300–400 €/Monat).' },
+                { q: 'Wie oft wechselt die Betreuungskraft?', a: 'In der Regel alle 6–8 Wochen. Primundus organisiert jeden Wechsel nahtlos — die Familie muss sich darum nicht kümmern.' },
+                { q: 'Was passiert wenn die Kraft krank wird?', a: 'Primundus stellt unverzüglich eine Ersatzkraft. Die Familie bleibt nie ohne Versorgung.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="24h-pflege-organisieren" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

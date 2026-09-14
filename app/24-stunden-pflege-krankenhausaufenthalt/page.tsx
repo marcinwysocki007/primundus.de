@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
-import { AuthorByline } from '@/components/AuthorByline'
+import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -14,6 +17,15 @@ const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-krankenhausaufenthalt', '
 // Krankenhaus = weiter zahlen wenn Kraft bleibt, sonst bis Abreise (2-3 Tage);
 // Ersatz/Wechsel ohne Zusatzkosten (nur An-/Abreise); Feiertag = doppelter
 // Tagessatz (Tagessatz = Monatspreis/30).
+
+// Inhaltsverzeichnis (neu mit der Vorlage: Zwischenüberschriften hatten keine Anker)
+const SECTIONS = [
+  { id: 'fall-1-ihre-mutter', title: "Fall 1: Ihre Mutter muss ins Krankenhaus — zahlen Sie weiter?" },
+  { id: 'fall-2-die-betreuungskraft', title: "Fall 2: Die Betreuungskraft wird krank oder fällt aus" },
+  { id: 'fall-3-die-chemie', title: "Fall 3: Die Chemie stimmt nicht — was kostet ein Wechsel?" },
+  { id: 'fall-4-weihnachten-ostern', title: "Fall 4: Weihnachten, Ostern &amp; Co. — was kosten Feiertage?" },
+  { id: 'die-antworten-auf-einen', title: "Die Antworten auf einen Blick" },
+]
 
 export const metadata: Metadata = {
   title: 'Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24h-Pflege?',
@@ -96,40 +108,28 @@ export default function KrankenhausPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Ratgeber", href: "/ratgeber" },
+            { label: "Krankenhaus, Ausfall &amp; Wechsel" },
+          ]}
+          augenbraue="Ratgeber Krankenhaus"
+          titel="Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24-Stunden-Pflege wirklich?"
+          einleitung="Es sind die Fragen, die Familien nachts wachhalten — und auf die man bei den meisten Anbietern keine öffentliche Antwort findet: Was passiert, wenn Mutter plötzlich ins Krankenhaus muss? Was, wenn die Betreuungskraft selbst krank wird? Und was kostet es, wenn die Chemie einfach nicht stimmt? Hier sind unsere Antworten — schriftlich, konkret und mit Zahlen. Genau so, wie Sie es von jedem Anbieter verlangen sollten."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-ink">Krankenhaus, Ausfall &amp; Wechsel</span>
-          </nav>
-
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            Organisation · Aktualisiert August 2026
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24-Stunden-Pflege wirklich?
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Es sind die Fragen, die Familien nachts wachhalten — und auf die man bei den meisten
-            Anbietern keine öffentliche Antwort findet: Was passiert, wenn Mutter plötzlich ins
-            Krankenhaus muss? Was, wenn die Betreuungskraft selbst krank wird? Und was kostet es,
-            wenn die Chemie einfach nicht stimmt? Hier sind unsere Antworten — schriftlich, konkret
-            und mit Zahlen. Genau so, wie Sie es von jedem Anbieter verlangen sollten.
-          </p>
-
-          {/* ① KRANKENHAUS */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Fall 1: Ihre Mutter muss ins Krankenhaus — zahlen Sie weiter?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="fall-1-ihre-mutter" titel="Fall 1: Ihre Mutter muss ins Krankenhaus — zahlen Sie weiter?">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-pm-body mb-5">
               Bei Primundus entscheiden Sie selbst — es gibt zwei ehrliche Wege, beide mit klaren Kosten:
             </p>
@@ -160,90 +160,51 @@ export default function KrankenhausPage() {
               </p>
             </div>
           </div>
+          </Abschnitt>
 
-          {/* ② KRAFT FÄLLT AUS */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Fall 2: Die Betreuungskraft wird krank oder fällt aus
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body">
-              Dann ist es unsere Aufgabe, nicht Ihre: Primundus stellt eine Ersatzkraft — <strong>ohne
+          <Abschnitt id="fall-2-die-betreuungskraft" titel="Fall 2: Die Betreuungskraft wird krank oder fällt aus">
+            <Kasten>
+              <Text>Dann ist es unsere Aufgabe, nicht Ihre: Primundus stellt eine Ersatzkraft — <strong>ohne
               Zusatzkosten für die Vermittlung</strong>. Berechnet werden ausschließlich die An- und
               Abreisekosten, wie bei jedem regulären Wechsel auch. Durch unser Netzwerk aus tausenden
               geprüften Kräften ist der Ersatz in der Regel innerhalb weniger Tage im Haus. Sie müssen
-              nichts organisieren, niemanden suchen, nichts verhandeln — ein Anruf genügt.
-            </p>
-          </div>
+              nichts organisieren, niemanden suchen, nichts verhandeln — ein Anruf genügt.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          {/* ③ WECHSEL */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Fall 3: Die Chemie stimmt nicht — was kostet ein Wechsel?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body">
-              Nichts — der Wechsel selbst ist bei Primundus <strong>kostenlos</strong>, ob turnusmäßig
+          <Abschnitt id="fall-3-die-chemie" titel="Fall 3: Die Chemie stimmt nicht — was kostet ein Wechsel?">
+            <Kasten>
+              <Text>Nichts — der Wechsel selbst ist bei Primundus <strong>kostenlos</strong>, ob turnusmäßig
               nach einigen Wochen oder weil es menschlich einfach nicht passt. Es fallen immer nur die
               An- und Abreisekosten der Kräfte an. Das nimmt den Druck aus der Entscheidung: Sie müssen
-              mit niemandem „auskommen", der nicht zu Ihrer Familie passt.
-            </p>
-          </div>
+              mit niemandem „auskommen", der nicht zu Ihrer Familie passt.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          {/* ④ FEIERTAGE */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Fall 4: Weihnachten, Ostern &amp; Co. — was kosten Feiertage?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body">
-              An gesetzlichen Feiertagen gilt der <strong>doppelte Tagessatz</strong> — und weil wir
+          <Abschnitt id="fall-4-weihnachten-ostern" titel="Fall 4: Weihnachten, Ostern &amp; Co. — was kosten Feiertage?">
+            <Kasten>
+              <Text>An gesetzlichen Feiertagen gilt der <strong>doppelte Tagessatz</strong> — und weil wir
               Preise ehrlich nennen, hier die Rechnung: Bei 2.800 Euro Monatspreis beträgt der Tagessatz
               rund 93 Euro (Monatspreis geteilt durch 30). Ein Feiertag kostet also etwa <strong>93 Euro
               Aufschlag</strong>. Je nach Bundesland sind das 9 bis 13 Feiertage im Jahr — zusammen rund
               850 bis 1.200 Euro jährlich. Das steht so in unserer Kalkulation, bevor Sie unterschreiben,
-              nicht danach auf der Rechnung.
-            </p>
-          </div>
+              nicht danach auf der Rechnung.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          {/* ④ FAQ — identisch zum FAQPage-Schema */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Die Antworten auf einen Blick
-          </h2>
-          <div className="space-y-4 mb-8">
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Muss ich die 24-Stunden-Pflege weiterzahlen, wenn meine Mutter ins Krankenhaus kommt?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt
-                weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter. Soll sie abreisen,
-                zahlen Sie nur noch bis zur Abreise — in der Regel 2 bis 3 Tage. Zusätzlich zahlt die
-                Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu vier Wochen weiter.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Primundus stellt eine Ersatzkraft — ohne Zusatzkosten für die Vermittlung. Es fallen wie
-                bei jedem Kraftwechsel nur die An- und Abreisekosten an. Durch das große Netzwerk ist
-                Ersatz in der Regel innerhalb weniger Tage vor Ort.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Kostet ein Wechsel der Betreuungskraft etwas?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Nein — der Wechsel selbst kostet bei Primundus nichts, egal ob turnusmäßig oder weil die
-                Chemie nicht stimmt. Berechnet werden ausschließlich die An- und Abreisekosten der Kräfte.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Wie hoch sind die Feiertagszuschläge?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                An gesetzlichen Feiertagen gilt der doppelte Tagessatz — bei 2.800 Euro Monatspreis rund
+          <Abschnitt id="die-antworten-auf-einen" titel="Die Antworten auf einen Blick">
+            <Punkte
+              punkte={[
+                { title: "Muss ich die 24-Stunden-Pflege weiterzahlen, wenn meine Mutter ins Krankenhaus kommt?", desc: "Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter. Soll sie abreisen, zahlen Sie nur noch bis zur Abreise — in der Regel 2 bis 3 Tage. Zusätzlich zahlt die Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu vier Wochen weiter." },
+                { title: "Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?", desc: "Primundus stellt eine Ersatzkraft — ohne Zusatzkosten für die Vermittlung. Es fallen wie bei jedem Kraftwechsel nur die An- und Abreisekosten an. Durch das große Netzwerk ist Ersatz in der Regel innerhalb weniger Tage vor Ort." },
+                { title: "Kostet ein Wechsel der Betreuungskraft etwas?", desc: "Nein — der Wechsel selbst kostet bei Primundus nichts, egal ob turnusmäßig oder weil die Chemie nicht stimmt. Berechnet werden ausschließlich die An- und Abreisekosten der Kräfte." },
+                { title: "Wie hoch sind die Feiertagszuschläge?", desc: <>An gesetzlichen Feiertagen gilt der doppelte Tagessatz — bei 2.800 Euro Monatspreis rund
                 93 Euro Aufschlag pro Feiertag. Mehr zu ehrlichen Gesamtkosten:{' '}
-                <a href="/24-stunden-pflege-wirkliche-kosten" className="text-pm-taupe underline underline-offset-2">Die ehrliche Gesamtrechnung</a>.
-              </p>
-            </div>
-          </div>
-
-          {/* WEITERLESEN */}
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+                <a href="/24-stunden-pflege-wirkliche-kosten" className="text-pm-taupe underline underline-offset-2">Die ehrliche Gesamtrechnung</a>.</> },
+              ]}
+            />
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
             <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-3">Weiterlesen</p>
             <div className="flex flex-wrap gap-2">
               <a href="/24-stunden-pflege-wirkliche-kosten" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Die ehrliche Gesamtrechnung</a>
@@ -252,13 +213,13 @@ export default function KrankenhausPage() {
               <a href="/erste-hilfe-bei-pflegenotfall" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Erste Hilfe im Pflegenotfall</a>
             </div>
           </div>
+          </Abschnitt>
 
-          <Weiterlesen aktuell="24-stunden-pflege-krankenhausaufenthalt" />
-          <ArticleCTA
-            headline="Noch eine Frage, die Ihnen niemand beantwortet?"
-            subline="Rufen Sie uns an — wir antworten konkret und mit Zahlen. Kostenlos und unverbindlich."
-          />
-        </div>
+
+          <Weiterlesen aktuell="24-stunden-pflege-krankenhausaufenthalt" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

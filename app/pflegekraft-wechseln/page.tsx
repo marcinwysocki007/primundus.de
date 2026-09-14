@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, HakenListe, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,105 +61,70 @@ export default function PflegekraftWechseln() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Organisation", href: "/organisation" },
+            { label: "Pflegekraft wechseln" },
+          ]}
+          augenbraue="Ratgeber Pflegekräfte"
+          titel="Pflegekraft wechseln — wann & wie es richtig funktioniert"
+          einleitung="Jede 24h-Betreuungskraft arbeitet typischerweise 6–8 Wochen am Stück, dann fährt sie nach Hause und eine neue Kraft kommt. Das ist normal, geplant und bei Primundus vollständig organisiert. Daneben gibt es Situationen die einen kurzfristigen Wechsel erfordern — auch das ist kein Problem."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegekraft wechseln</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Bei Primundus: Täglich kündbar — sofort Ersatz" ton="gruen">
+              <Text>Wer mit Primundus arbeitet kann täglich kündigen. Primundus stellt sofort Ersatz — ohne Versorgungslücke. Kein Risiko, keine Wartezeit, kein Aufwand für die Familie.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
-          </p>
+          <Abschnitt id="wann-wechseln" titel="Wann einen Wechsel anstoßen?">
+            <Punkte
+              punkte={[
+                { title: 'Regulärer Rhythmuswechsel (alle 6–8 Wochen)', desc: 'Der Normalfall. Die Kraft fährt nach Hause zu ihrer eigenen Familie, eine neue Kraft kommt. Primundus kündigt den Wechsel rechtzeitig an und organisiert alles.' },
+                { title: 'Kraft passt nicht', desc: 'Persönlichkeit, Arbeitsweise oder Deutschkenntnisse entsprechen nicht den Erwartungen. Kein Augenrollen, keine Auseinandersetzungen — einfach Primundus anrufen. Täglich kündbar.' },
+                { title: 'Pflegebedarf hat sich verändert', desc: 'Neuer Pflegegrad, neue Diagnose, gestiegener Aufwand — die bisherige Kraft hat nicht die nötige Spezialerfahrung. Neue Kraft mit besserer Qualifikation wählen.' },
+                { title: 'Ausfall durch Krankheit oder Kündigung der Kraft', desc: 'Passiert — und dann ist sofortiger Ersatz entscheidend. Primundus organisiert das ohne Vorlaufzeit.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegekraft wechseln — wann & wie es richtig funktioniert
-          </h1>
+          <Abschnitt id="regulaer" titel="Der reguläre Kraftwechsel — Ablauf">
+            <Schritte
+              schritte={[
+                { title: '2–3 Wochen vorher: Ankündigung', desc: 'Primundus informiert die Familie über den geplanten Wechseltermin und stellt die neue Kraft vor (Profil, Erfahrung).' },
+                { title: '1 Woche vorher: Bestätigung', desc: 'Neue Kraft bestätigt, Anreisedatum festgelegt. Familie hat alle Informationen.' },
+                { title: 'Am Wechseltag: Übergabe', desc: 'Alte Kraft gibt der neuen Kraft alle wichtigen Informationen — Routinen, Gewohnheiten, Medikamente, Besonderheiten. Wenn möglich: kurze Überlappung.' },
+                { title: 'Erste Woche der neuen Kraft', desc: 'Eingewöhnungszeit. Familie bleibt erreichbar für Rückfragen. Primundus ist Ansprechpartner wenn Probleme auftauchen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
+          <DunklerAbschnitt
+            id="kurzfristig"
+            titel="Kurzfristiger Wechsel bei Problemen"
+            einleitung="Manchmal stimmt die Chemie einfach nicht — oder es gibt ein konkretes Problem. Das zu erkennen und anzusprechen ist wichtig. Nicht zu lange warten."
+            punkte={[
+              { title: 'Pflegebedürftiger mag die Kraft nicht', desc: 'Ernst nehmen — auch wenn keine objektiven Gründe benannt werden können. Primundus anrufen, Wechsel veranlassen.' },
+              { title: 'Qualität der Pflege ist unzureichend', desc: 'Konkrete Beispiele sammeln, mit Primundus besprechen. Primundus geht der Sache nach und organisiert Ersatz.' },
+              { title: 'Vertrauensbruch (Diebstahl, Lügen)', desc: 'Sofort Primundus informieren. Je nach Schwere: sofortige Kündigung aus wichtigem Grund möglich.' },
+              { title: 'Kraft krank oder möchte vorzeitig abbrechen', desc: 'Primundus übernimmt — sofortige Ersatzorganisation.' },
+            ]}
+          />
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Jede 24h-Betreuungskraft arbeitet typischerweise 6–8 Wochen am Stück, dann fährt sie nach Hause und eine neue Kraft kommt. Das ist normal, geplant und bei Primundus vollständig organisiert. Daneben gibt es Situationen die einen kurzfristigen Wechsel erfordern — auch das ist kein Problem.
-          </p>
-
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Bei Primundus: Täglich kündbar — sofort Ersatz</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Wer mit Primundus arbeitet kann täglich kündigen. Primundus stellt sofort Ersatz — ohne Versorgungslücke. Kein Risiko, keine Wartezeit, kein Aufwand für die Familie.
-            </p>
-          </div>
-
-          <h2 id="wann-wechseln" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann einen Wechsel anstoßen?
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { grund: 'Regulärer Rhythmuswechsel (alle 6–8 Wochen)', desc: 'Der Normalfall. Die Kraft fährt nach Hause zu ihrer eigenen Familie, eine neue Kraft kommt. Primundus kündigt den Wechsel rechtzeitig an und organisiert alles.' },
-              { grund: 'Kraft passt nicht', desc: 'Persönlichkeit, Arbeitsweise oder Deutschkenntnisse entsprechen nicht den Erwartungen. Kein Augenrollen, keine Auseinandersetzungen — einfach Primundus anrufen. Täglich kündbar.' },
-              { grund: 'Pflegebedarf hat sich verändert', desc: 'Neuer Pflegegrad, neue Diagnose, gestiegener Aufwand — die bisherige Kraft hat nicht die nötige Spezialerfahrung. Neue Kraft mit besserer Qualifikation wählen.' },
-              { grund: 'Ausfall durch Krankheit oder Kündigung der Kraft', desc: 'Passiert — und dann ist sofortiger Ersatz entscheidend. Primundus organisiert das ohne Vorlaufzeit.' },
-            ].map((item) => (
-              <div key={item.grund} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.grund}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="regulaer" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Der reguläre Kraftwechsel — Ablauf
-          </h2>
-          <ol className="space-y-3 mb-10">
-            {[
-              { n: '1', title: '2–3 Wochen vorher: Ankündigung', desc: 'Primundus informiert die Familie über den geplanten Wechseltermin und stellt die neue Kraft vor (Profil, Erfahrung).' },
-              { n: '2', title: '1 Woche vorher: Bestätigung', desc: 'Neue Kraft bestätigt, Anreisedatum festgelegt. Familie hat alle Informationen.' },
-              { n: '3', title: 'Am Wechseltag: Übergabe', desc: 'Alte Kraft gibt der neuen Kraft alle wichtigen Informationen — Routinen, Gewohnheiten, Medikamente, Besonderheiten. Wenn möglich: kurze Überlappung.' },
-              { n: '4', title: 'Erste Woche der neuen Kraft', desc: 'Eingewöhnungszeit. Familie bleibt erreichbar für Rückfragen. Primundus ist Ansprechpartner wenn Probleme auftauchen.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <h2 id="kurzfristig" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kurzfristiger Wechsel bei Problemen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Manchmal stimmt die Chemie einfach nicht — oder es gibt ein konkretes Problem. Das zu erkennen und anzusprechen ist wichtig. Nicht zu lange warten.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { signal: 'Pflegebedürftiger mag die Kraft nicht', loesung: 'Ernst nehmen — auch wenn keine objektiven Gründe benannt werden können. Primundus anrufen, Wechsel veranlassen.' },
-              { signal: 'Qualität der Pflege ist unzureichend', loesung: 'Konkrete Beispiele sammeln, mit Primundus besprechen. Primundus geht der Sache nach und organisiert Ersatz.' },
-              { signal: 'Vertrauensbruch (Diebstahl, Lügen)', loesung: 'Sofort Primundus informieren. Je nach Schwere: sofortige Kündigung aus wichtigem Grund möglich.' },
-              { signal: 'Kraft krank oder möchte vorzeitig abbrechen', loesung: 'Primundus übernimmt — sofortige Ersatzorganisation.' },
-            ].map((item) => (
-              <div key={item.signal} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.signal}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.loesung}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="uebergabe" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Übergabe — was eine gute Übergabe ausmacht
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Eine gute Übergabe entscheidet über den Start der neuen Kraft. Idealerweise gibt es eine kurze Überlappungsphase von 1–2 Stunden. Falls nicht möglich: ein schriftliches Übergabeprotokoll.
-          </p>
-          <div className="space-y-2 mb-10">
-            {[
+          <Abschnitt id="uebergabe" titel="Übergabe — was eine gute Übergabe ausmacht">
+            <Text>
+              Eine gute Übergabe entscheidet über den Start der neuen Kraft. Idealerweise gibt es eine kurze Überlappungsphase von 1–2 Stunden. Falls nicht möglich: ein schriftliches Übergabeprotokoll.
+            </Text>
+            <HakenListe punkte={[
               'Tagesroutine: Wann steht die Person auf, wann schläft sie, Mahlzeitenzeiten',
               'Lieblingsspeisen, Abneigungen, Diät, Allergien',
               'Medikamente: vollständige Liste mit Zeiten und Einnahmehinweisen',
@@ -166,36 +133,25 @@ export default function PflegekraftWechseln() {
               'Wichtige Kontakte: Arzt, Physiotherapeut, Angehörige',
               'Was geht gerade gut? Was ist gerade schwierig?',
               'Standorte wichtiger Dinge: Medikamente, Rollator, Notfallplan',
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-pm-body">{item}</p>
-              </div>
-            ))}
-          </div>
+            ]} />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie oft wechselt die Pflegekraft?', a: 'In der Regel alle 6–8 Wochen — regulärer Rhythmuswechsel. Bei Problemen jederzeit. Bei Primundus täglich kündbar.' },
-              { q: 'Was wenn der Pflegebedürftige sich an die neue Kraft gewöhnen muss?', a: 'Eingewöhnung dauert meist 1–2 Wochen. Vertraute Routinen helfen beim Übergang. Bei Demenz: neue Kraft braucht etwas mehr Geduld und Zeit.' },
-              { q: 'Kann man eine Kraft die gut war wiederholen?', a: 'Auf Wunsch gerne — Primundus berücksichtigt Präferenzen bei der Planung. Eine Kraft die schon bekannt ist stärkt das Vertrauen.' },
-              { q: 'Was wenn ich keine Kraft mehr haben möchte?', a: 'Täglich kündbar bei Primundus. Keine Mindestlaufzeit, keine Fristen. Kündigung einfach mitteilen.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflegekraft-wechseln" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie oft wechselt die Pflegekraft?', a: 'In der Regel alle 6–8 Wochen — regulärer Rhythmuswechsel. Bei Problemen jederzeit. Bei Primundus täglich kündbar.' },
+                { q: 'Was wenn der Pflegebedürftige sich an die neue Kraft gewöhnen muss?', a: 'Eingewöhnung dauert meist 1–2 Wochen. Vertraute Routinen helfen beim Übergang. Bei Demenz: neue Kraft braucht etwas mehr Geduld und Zeit.' },
+                { q: 'Kann man eine Kraft die gut war wiederholen?', a: 'Auf Wunsch gerne — Primundus berücksichtigt Präferenzen bei der Planung. Eine Kraft die schon bekannt ist stärkt das Vertrauen.' },
+                { q: 'Was wenn ich keine Kraft mehr haben möchte?', a: 'Täglich kündbar bei Primundus. Keine Mindestlaufzeit, keine Fristen. Kündigung einfach mitteilen.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="pflegekraft-wechseln" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

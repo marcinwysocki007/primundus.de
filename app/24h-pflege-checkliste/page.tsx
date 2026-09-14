@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, Liste, RatgeberKopf, RatgeberRumpf, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -62,79 +64,54 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-ink">24h-Pflege Checkliste</span>
-          </nav>
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 5 Min Lesezeit · Aktualisiert August 2026</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege Checkliste — alles was Familien vor dem Start vorbereiten sollten</h1>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Ratgeber", href: "/ratgeber" },
+            { label: "24h-Pflege Checkliste" },
+          ]}
+          augenbraue="Ratgeber Checkliste"
+          titel="24h-Pflege Checkliste — alles was Familien vor dem Start vorbereiten sollten"
+          einleitung="Eine Betreuungskraft zieht ein — und die Familie möchte, dass alles reibungslos läuft. Diese Checkliste zeigt was vorzubereiten ist: von der Wohnung bis zu den Dokumenten, vom ersten Tag bis zur laufenden Betreuung."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Eine Betreuungskraft zieht ein — und die Familie möchte, dass alles reibungslos läuft. Diese Checkliste zeigt was vorzubereiten ist: von der Wohnung bis zu den Dokumenten, vom ersten Tag bis zur laufenden Betreuung.</p>
-          <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Wohnung vorbereiten</p>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Zimmer für die Kraft einrichten — mit Bett, Schrank, Internetzugang</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Schlüssel und Zugangscodes bereitstellen</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Einkauf für die erste Woche erledigen</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Wichtige Gegenstände beschriften (Medikamente, Hilfsmittel)</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Notfallnummern sichtbar aufhängen</div>
-          </div>          <div className="bg-pm-shell border-[rgba(139,115,85,0.2)] border rounded-2xl p-5 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-ink mb-3">Dokumente & Informationen zusammenstellen</p>
-              <div className="flex gap-2 text-[13px] text-pm-taupe-ink py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Medikamentenliste aktuell und vollständig</div>
-              <div className="flex gap-2 text-[13px] text-pm-taupe-ink py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Arzt- und Therapietermine der nächsten Wochen</div>
-              <div className="flex gap-2 text-[13px] text-pm-taupe-ink py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Pflegeversicherungskarte und Pflegegeld-Bescheid</div>
-              <div className="flex gap-2 text-[13px] text-pm-taupe-ink py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Hausarzt-Kontaktdaten für die Kraft</div>
-              <div className="flex gap-2 text-[13px] text-pm-taupe-ink py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Vorsorgevollmacht und Patientenverfügung griffbereit</div>
-              <div className="flex gap-2 text-[13px] text-pm-taupe-ink py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Allergien und Unverträglichkeiten notiert</div>
-              <div className="flex gap-2 text-[13px] text-pm-taupe-ink py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Gewohnheiten und Tagesstruktur aufgeschrieben</div>
-          </div>          <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Erster Tag — das ist wichtig</p>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Zeit nehmen für ausführliche Einführung</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Wohnung gemeinsam abgehen — wo ist was</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Tagesablauf und Vorlieben erklären</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Primundus-Kontakt der Kraft mitgeben</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Erste Tage: Familie erreichbar bleiben</div>
-          </div>          <div className="bg-pm-mint border-[rgba(61,122,92,0.2)] border rounded-2xl p-5 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Laufende Betreuung — regelmäßig prüfen</p>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Wöchentlich kurz nachfragen wie es läuft</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Medikamentenliste aktuell halten</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Arzttermine koordinieren</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Bei Problemen: sofort Primundus anrufen (089 200 000 830)</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Kraftwechsel ca. alle 6–8 Wochen planen</div>
-          </div>
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Was muss ich vor dem Start der 24h-Pflege vorbereiten?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Zimmer für die Kraft einrichten, Medikamentenliste aktualisieren, Dokumente (Pflegekarte, Vollmachten) bereitstellen, Tagesablauf aufschreiben.</p></div>
-            </details>
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Wie viel Platz braucht die Betreuungskraft?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Ein eigenes Zimmer ist notwendig — Mindestgröße ca. 10 m². Mit eigenem Bett, Schrank und idealerweise Internetzugang.</p></div>
-            </details>
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Was wenn ich etwas vergessen habe?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Kein Problem — Primundus begleitet den Start aktiv und steht Mo–Fr 9–18 Uhr telefonisch zur Verfügung.</p></div>
-            </details>
-          </div>
-          <Weiterlesen aktuell="24h-pflege-checkliste" />
-          <ArticleCTA />
-        </div>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten augenbraue="Wohnung vorbereiten" ton="gruen">
+              <Liste punkte={["Zimmer für die Kraft einrichten — mit Bett, Schrank, Internetzugang", "Schlüssel und Zugangscodes bereitstellen", "Einkauf für die erste Woche erledigen", "Wichtige Gegenstände beschriften (Medikamente, Hilfsmittel)", "Notfallnummern sichtbar aufhängen"]} />
+            </Kasten>
+            <Kasten augenbraue="Dokumente & Informationen zusammenstellen">
+              <Liste punkte={["Medikamentenliste aktuell und vollständig", "Arzt- und Therapietermine der nächsten Wochen", "Pflegeversicherungskarte und Pflegegeld-Bescheid", "Hausarzt-Kontaktdaten für die Kraft", "Vorsorgevollmacht und Patientenverfügung griffbereit", "Allergien und Unverträglichkeiten notiert", "Gewohnheiten und Tagesstruktur aufgeschrieben"]} />
+            </Kasten>
+            <Kasten augenbraue="Erster Tag — das ist wichtig" ton="gruen">
+              <Liste punkte={["Zeit nehmen für ausführliche Einführung", "Wohnung gemeinsam abgehen — wo ist was", "Tagesablauf und Vorlieben erklären", "Primundus-Kontakt der Kraft mitgeben", "Erste Tage: Familie erreichbar bleiben"]} />
+            </Kasten>
+            <Kasten augenbraue="Laufende Betreuung — regelmäßig prüfen" ton="gruen">
+              <Liste punkte={["Wöchentlich kurz nachfragen wie es läuft", "Medikamentenliste aktuell halten", "Arzttermine koordinieren", "Bei Problemen: sofort Primundus anrufen (089 200 000 830)", "Kraftwechsel ca. alle 6–8 Wochen planen"]} />
+            </Kasten>
+          </Vorspann>
+
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: "Was muss ich vor dem Start der 24h-Pflege vorbereiten?", a: "Zimmer für die Kraft einrichten, Medikamentenliste aktualisieren, Dokumente (Pflegekarte, Vollmachten) bereitstellen, Tagesablauf aufschreiben." },
+                { q: "Wie viel Platz braucht die Betreuungskraft?", a: "Ein eigenes Zimmer ist notwendig — Mindestgröße ca. 10 m². Mit eigenem Bett, Schrank und idealerweise Internetzugang." },
+                { q: "Was wenn ich etwas vergessen habe?", a: "Kein Problem — Primundus begleitet den Start aktiv und steht Mo–Fr 9–18 Uhr telefonisch zur Verfügung." },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="24h-pflege-checkliste" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

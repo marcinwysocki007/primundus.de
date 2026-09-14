@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Liste, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,37 +61,28 @@ export default function ChecklistePflegekraftEinstellen() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Organisation", href: "/organisation" },
+            { label: "Checkliste Pflegekraft einstellen" },
+          ]}
+          augenbraue="Ratgeber Checkliste"
+          titel="Checkliste Pflegekraft einstellen — vollständige Anleitung"
+          einleitung="Die Entscheidung für eine 24h-Betreuungskraft ist richtig — aber worauf kommt es bei der Auswahl an? Was muss vor der Anreise vorbereitet sein? Und wie gelingt der Start in der ersten Woche? Diese Checkliste führt durch jeden Schritt — mit konkreten Fragen für das Auswahlgespräch."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
-            <span>›</span>
-            <span className="text-pm-ink">Checkliste Pflegekraft einstellen</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Checkliste Pflegekraft einstellen — vollständige Anleitung
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Die Entscheidung für eine 24h-Betreuungskraft ist richtig — aber worauf kommt es bei der Auswahl an? Was muss vor der Anreise vorbereitet sein? Und wie gelingt der Start in der ersten Woche? Diese Checkliste führt durch jeden Schritt — mit konkreten Fragen für das Auswahlgespräch.
-          </p>
-
-          <h2 id="vor-der-auswahl" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Vor der Auswahl — was klar sein muss
-          </h2>
-          <div className="space-y-2 mb-10">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="vor-der-auswahl" titel="Vor der Auswahl — was klar sein muss">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-2 mb-10">
             {[
               ['Pflegebedarf definiert', 'Welche Hilfe ist nötig (Körperpflege, Haushalt, Mobilisierung, Demenz)?'],
               ['Spezialanforderungen notiert', 'Welche Erkrankungen, Medikamente, Allergien, Ernährungsbesonderheiten?'],
@@ -108,14 +101,14 @@ export default function ChecklistePflegekraftEinstellen() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="auswahlgespräch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Auswahlgespräch — diese Fragen stellen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ein Telefonat vorab ist möglich — nutzen Sie es. Diese Fragen helfen einzuschätzen ob die Kraft wirklich passt.
-          </p>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="auswahlgespräch" titel="Auswahlgespräch — diese Fragen stellen">
+            <Text>
+              Ein Telefonat vorab ist möglich — nutzen Sie es. Diese Fragen helfen einzuschätzen ob die Kraft wirklich passt.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             {[
               {
                 kategorie: 'Erfahrung',
@@ -159,12 +152,10 @@ export default function ChecklistePflegekraftEinstellen() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="vor-anreise" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Vor der Anreise — Checkliste
-          </h2>
-          <div className="space-y-2 mb-10">
-            {[
+          <Abschnitt id="vor-anreise" titel="Vor der Anreise — Checkliste">
+            <Liste punkte={[
               'Zimmer der Betreuungskraft sauber und möbliert (Bett, Schrank, Tisch)',
               'WLAN-Passwort notiert und zugänglich',
               'Schlüssel bereit (Haustür, Briefkasten, Keller)',
@@ -175,54 +166,37 @@ export default function ChecklistePflegekraftEinstellen() {
               'A1-Bescheinigung der Kraft liegt vor (bei Entsendemodell)',
               'Pflegevertrag unterzeichnet',
               'Pflegekasse über neue Versorgungsform informiert',
-            ].map((punkt) => (
-              <div key={punkt} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded border-2 border-pm-taupe flex-shrink-0 mt-0.5" />
-                <p className="text-[14px] text-pm-body">{punkt}</p>
-              </div>
-            ))}
-          </div>
+            ]} />
+          </Abschnitt>
 
-          <h2 id="erste-woche" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Erste Woche — so gelingt die Eingewöhnung
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { tag: 'Tag 1', aufgabe: 'Kraft im Haushalt vorstellen: Wo ist was? Wie funktionieren Herd, Waschmaschine, Heizung? Hausapotheke zeigen.' },
-              { tag: 'Tag 1–2', aufgabe: 'Routinen und Tagesablauf erklären: Wann steht die Person auf, wann isst sie, wann schläft sie? Lieblingsgerichte, Gewohnheiten, No-Gos.' },
-              { tag: 'Tag 2–3', aufgabe: 'Arzt vorstellen (Hausarzt anrufen), Physiotherapeut- und Ergotherapeut-Termine mitteilen. Apotheke zeigen.' },
-              { tag: 'Ganze erste Woche', aufgabe: 'Erreichbar bleiben für Rückfragen. Nicht zu viele Anweisungen auf einmal. Der Kraft Raum geben eigene Beziehung mit dem Pflegebedürftigen aufzubauen.' },
-              { tag: 'Ende erste Woche', aufgabe: 'Kurzes Feedbackgespräch: Was läuft gut? Was braucht die Kraft noch? Gibt es Probleme? Primundus informieren wenn nötig.' },
-            ].map((item) => (
-              <div key={item.tag} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.tag}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.aufgabe}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="erste-woche" titel="Erste Woche — so gelingt die Eingewöhnung">
+            <Punkte
+              punkte={[
+                { title: 'Tag 1', desc: 'Kraft im Haushalt vorstellen: Wo ist was? Wie funktionieren Herd, Waschmaschine, Heizung? Hausapotheke zeigen.' },
+                { title: 'Tag 1–2', desc: 'Routinen und Tagesablauf erklären: Wann steht die Person auf, wann isst sie, wann schläft sie? Lieblingsgerichte, Gewohnheiten, No-Gos.' },
+                { title: 'Tag 2–3', desc: 'Arzt vorstellen (Hausarzt anrufen), Physiotherapeut- und Ergotherapeut-Termine mitteilen. Apotheke zeigen.' },
+                { title: 'Ganze erste Woche', desc: 'Erreichbar bleiben für Rückfragen. Nicht zu viele Anweisungen auf einmal. Der Kraft Raum geben eigene Beziehung mit dem Pflegebedürftigen aufzubauen.' },
+                { title: 'Ende erste Woche', desc: 'Kurzes Feedbackgespräch: Was läuft gut? Was braucht die Kraft noch? Gibt es Probleme? Primundus informieren wenn nötig.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie wähle ich die richtige Betreuungskraft aus?', a: 'Erfahrung mit der spezifischen Diagnose, aktive Deutschkenntnisse, Persönlichkeit die passt. Telefonat vorab nutzen. Bei Primundus Profil anfordern, Referenzen prüfen.' },
-              { q: 'Was sind die wichtigsten Fragen im Auswahlgespräch?', a: 'Erfahrung mit der Diagnose, Kochkenntnisse, Umgang mit schwierigen Situationen (Verweigerung, Aggression), Deutschkenntnisse selbst beurteilen durch das Gespräch.' },
-              { q: 'Was wenn die Kraft in der ersten Woche nicht passt?', a: 'Täglich kündbar bei Primundus. Einfach mitteilen — Primundus stellt sofort Ersatz. Keine langen Kündigungsfristen, kein Risiko.' },
-              { q: 'Muss ich bei Primundus selbst die Kraft auswählen?', a: 'Nein — Primundus wählt die passende Kraft aus und schlägt sie vor. Auf Wunsch ist ein Telefonat vorab möglich. Die Auswahl kann aber auch komplett Primundus überlassen werden.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="checkliste-pflegekraft-einstellen" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie wähle ich die richtige Betreuungskraft aus?', a: 'Erfahrung mit der spezifischen Diagnose, aktive Deutschkenntnisse, Persönlichkeit die passt. Telefonat vorab nutzen. Bei Primundus Profil anfordern, Referenzen prüfen.' },
+                { q: 'Was sind die wichtigsten Fragen im Auswahlgespräch?', a: 'Erfahrung mit der Diagnose, Kochkenntnisse, Umgang mit schwierigen Situationen (Verweigerung, Aggression), Deutschkenntnisse selbst beurteilen durch das Gespräch.' },
+                { q: 'Was wenn die Kraft in der ersten Woche nicht passt?', a: 'Täglich kündbar bei Primundus. Einfach mitteilen — Primundus stellt sofort Ersatz. Keine langen Kündigungsfristen, kein Risiko.' },
+                { q: 'Muss ich bei Primundus selbst die Kraft auswählen?', a: 'Nein — Primundus wählt die passende Kraft aus und schlägt sie vor. Auf Wunsch ist ein Telefonat vorab möglich. Die Auswahl kann aber auch komplett Primundus überlassen werden.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="checkliste-pflegekraft-einstellen" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

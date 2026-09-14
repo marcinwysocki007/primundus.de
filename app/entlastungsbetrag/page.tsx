@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -69,203 +71,127 @@ export default function Entlastungsbetrag() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
-            <span>›</span>
-            <span className="text-pm-ink">Entlastungsbetrag</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Der Entlastungsbetrag beträgt 131 Euro pro Monat — für alle Pflegegrade 1 bis 5, zusätzlich zum Pflegegeld. Er ist zweckgebunden, wird von vielen Familien nicht vollständig genutzt, und kann bis zu 1.572 Euro angespart werden. Wer die Regeln kennt, holt das Maximum heraus.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Finanzierung", href: "/finanzierung" },
+            { label: "Entlastungsbetrag" },
+          ]}
+          augenbraue="Ratgeber Finanzierung"
+          titel="Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen"
+          einleitung="Der Entlastungsbetrag beträgt 131 Euro pro Monat — für alle Pflegegrade 1 bis 5, zusätzlich zum Pflegegeld. Er ist zweckgebunden, wird von vielen Familien nicht vollständig genutzt, und kann bis zu 1.572 Euro angespart werden. Wer die Regeln kennt, holt das Maximum heraus."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+          blick={[
                 'Betrag: 131 €/Monat — für alle Pflegegrade 1 bis 5',
                 'Zusätzlich zum Pflegegeld — keine gegenseitige Anrechnung',
                 'Zweckgebunden: nur für anerkannte Betreuungs- und Entlastungsangebote',
                 'Ansparung möglich: bis zu 1.572 €, nutzbar bis 30. Juni des Folgejahres',
                 '2026 identisch zu 2025 — nächste Anpassung frühestens 2028',
                 'Viele Anbieter unbekannt — Pflegekasse nach anerkannten Diensten fragen',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist der Entlastungsbetrag?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Der Entlastungsbetrag (§ 45b SGB XI) ist eine monatliche Leistung der Pflegekasse, die pflegende Angehörige und Pflegebedürftige bei der Organisation von Betreuung und Unterstützung finanziell entlastet. Er beträgt 131 Euro pro Monat und gilt für alle Pflegegrade 1 bis 5.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Im Gegensatz zum Pflegegeld wird der Entlastungsbetrag nicht bar ausgezahlt — er wird als Erstattung gezahlt. Die Familie bezahlt zunächst selbst, reicht dann die Rechnung bei der Pflegekasse ein und bekommt bis zu 131 Euro erstattet.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            <strong>Wichtiger Unterschied zum Entlastungsbudget:</strong> Der Entlastungsbetrag (131 €/Monat) ist eine eigenständige Leistung und läuft vollständig parallel zum Entlastungsbudget (3.539 €/Jahr) — sie schließen sich nicht aus und werden nicht gegeneinander aufgerechnet.
-          </p>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-ist" titel="Was ist der Entlastungsbetrag?">
+            <Text>
+              Der Entlastungsbetrag (§ 45b SGB XI) ist eine monatliche Leistung der Pflegekasse, die pflegende Angehörige und Pflegebedürftige bei der Organisation von Betreuung und Unterstützung finanziell entlastet. Er beträgt 131 Euro pro Monat und gilt für alle Pflegegrade 1 bis 5.
+            </Text>
+            <Text>
+              Im Gegensatz zum Pflegegeld wird der Entlastungsbetrag nicht bar ausgezahlt — er wird als Erstattung gezahlt. Die Familie bezahlt zunächst selbst, reicht dann die Rechnung bei der Pflegekasse ein und bekommt bis zu 131 Euro erstattet.
+            </Text>
+            <Text>
+              <strong>Wichtiger Unterschied zum Entlastungsbudget:</strong> Der Entlastungsbetrag (131 €/Monat) ist eine eigenständige Leistung und läuft vollständig parallel zum Entlastungsbudget (3.539 €/Jahr) — sie schließen sich nicht aus und werden nicht gegeneinander aufgerechnet.
+            </Text>
+          </Abschnitt>
 
-          {/* SECTION 2 */}
-          <h2 id="wofuer" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wofür kann man den Entlastungsbetrag nutzen?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Entlastungsbetrag ist zweckgebunden — nur für anerkannte Angebote. Was genau anerkannt ist, variiert je nach Bundesland leicht. Die Pflegekasse gibt auf Anfrage eine Liste anerkannter Anbieter.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <DunklerAbschnitt
+            id="wofuer"
+            titel="Wofür kann man den Entlastungsbetrag nutzen?"
+            einleitung="Der Entlastungsbetrag ist zweckgebunden — nur für anerkannte Angebote. Was genau anerkannt ist, variiert je nach Bundesland leicht. Die Pflegekasse gibt auf Anfrage eine Liste anerkannter Anbieter."
+            punkte={[
               { title: '✓ Tages- und Nachtpflege', desc: 'Tagesaufenthalte in einer Tagespflegeeinrichtung — der Eigenanteil kann aus dem Entlastungsbetrag bezahlt werden.' },
               { title: '✓ Ambulante Pflegedienste', desc: 'Bei Pflegegrad 1 auch für körperbezogene Pflege nutzbar. Bei PG 2–5 für ergänzende Leistungen die über die Sachleistungen hinausgehen.' },
               { title: '✓ Hauswirtschaftliche Versorgung', desc: 'Durch anerkannte Anbieter — Putzen, Kochen, Einkaufen. Nicht durch private Personen ohne Anerkennung.' },
               { title: '✓ Betreuungsgruppen', desc: 'Für Menschen mit Demenz oder geistiger Behinderung — Gruppenangebote die Struktur und Gesellschaft bieten.' },
               { title: '✓ Angebote zur Unterstützung im Alltag', desc: 'Vorlesedienste, Begleitdienste, ehrenamtliche Helfer über anerkannte Organisationen.' },
               { title: '✗ Private Pflegepersonen ohne Anerkennung', desc: 'Angehörige oder Bekannte die nicht über einen anerkannten Anbieter tätig sind, können nicht abgerechnet werden.' },
-            ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-4 border ${item.title.startsWith('✗') ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.15)]' : 'bg-white border-pm-line'}`}>
-                <p className={`text-[14px] font-bold mb-1 ${item.title.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-ink'}`}>{item.title}</p>
-                <p className={`text-[14px] leading-relaxed ${item.title.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-body'}`}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
 
-          {/* SECTION 3 */}
-          <h2 id="anspruch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wer hat Anspruch?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Entlastungsbetrag steht allen pflegebedürftigen Personen mit Pflegegrad 1 bis 5 zu — unabhängig davon ob sie zu Hause oder in einer Pflegeeinrichtung leben. Er ist damit die einzige Kassenleistung, die auch bei Pflegegrad 1 ohne Pflegegeld-Anspruch gilt.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Entlastungsbetrag nach Pflegegrad</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <tbody>
-                  {[
-                    ['Pflegegrad 1', '131 €/Monat', 'Kein Pflegegeld — Entlastungsbetrag ist einzige Kassenleistung'],
-                    ['Pflegegrad 2', '131 €/Monat', 'Zusätzlich zu 347 € Pflegegeld'],
-                    ['Pflegegrad 3', '131 €/Monat', 'Zusätzlich zu 599 € Pflegegeld'],
-                    ['Pflegegrad 4', '131 €/Monat', 'Zusätzlich zu 800 € Pflegegeld'],
-                    ['Pflegegrad 5', '131 €/Monat', 'Zusätzlich zu 990 € Pflegegeld'],
-                  ].map(([grad, betrag, hinweis], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
-                      <td className="px-5 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{betrag}</td>
-                      <td className="px-5 py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <Abschnitt id="anspruch" titel="Wer hat Anspruch?">
+            <Text>
+              Der Entlastungsbetrag steht allen pflegebedürftigen Personen mit Pflegegrad 1 bis 5 zu — unabhängig davon ob sie zu Hause oder in einer Pflegeeinrichtung leben. Er ist damit die einzige Kassenleistung, die auch bei Pflegegrad 1 ohne Pflegegeld-Anspruch gilt.
+            </Text>
+            <Tabelle
+              titel="Entlastungsbetrag nach Pflegegrad"
+              zeilen={[
+                ['Pflegegrad 1', '131 €/Monat', 'Kein Pflegegeld — Entlastungsbetrag ist einzige Kassenleistung'],
+                ['Pflegegrad 2', '131 €/Monat', 'Zusätzlich zu 347 € Pflegegeld'],
+                ['Pflegegrad 3', '131 €/Monat', 'Zusätzlich zu 599 € Pflegegeld'],
+                ['Pflegegrad 4', '131 €/Monat', 'Zusätzlich zu 800 € Pflegegeld'],
+                ['Pflegegrad 5', '131 €/Monat', 'Zusätzlich zu 990 € Pflegegeld'],
+              ]}
+              betont={1}
+            />
+          </Abschnitt>
 
-          {/* SECTION 4 */}
-          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Beantragen & abrechnen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Entlastungsbetrag ist automatisch Teil des Pflegegradantrags — er muss nicht separat beantragt werden. Die Abrechnung läuft über Rechnungserstattung.
-          </p>
-          <ol className="space-y-3 mb-6">
-            {[
-              { n: '1', title: 'Anerkannten Anbieter finden', desc: 'Pflegekasse nach einer Liste anerkannter Angebote zur Unterstützung im Alltag fragen. Nicht alle Anbieter sind automatisch anerkannt.' },
-              { n: '2', title: 'Leistung in Anspruch nehmen', desc: 'Den Dienst nutzen — Rechnung stellen lassen. Wichtig: Die Rechnung muss auf den Pflegebedürftigen lauten.' },
-              { n: '3', title: 'Rechnung einreichen', desc: 'Rechnungsoriginal mit Überweisungsbeleg bei der Pflegekasse einreichen — per Post oder digitaler Pflegekassen-App.' },
-              { n: '4', title: 'Erstattung erhalten', desc: 'Die Pflegekasse erstattet bis zu 131 €/Monat — innerhalb weniger Wochen auf das angegebene Konto.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <Abschnitt id="beantragen" titel="Beantragen & abrechnen">
+            <Text>
+              Der Entlastungsbetrag ist automatisch Teil des Pflegegradantrags — er muss nicht separat beantragt werden. Die Abrechnung läuft über Rechnungserstattung.
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'Anerkannten Anbieter finden', desc: 'Pflegekasse nach einer Liste anerkannter Angebote zur Unterstützung im Alltag fragen. Nicht alle Anbieter sind automatisch anerkannt.' },
+                { title: 'Leistung in Anspruch nehmen', desc: 'Den Dienst nutzen — Rechnung stellen lassen. Wichtig: Die Rechnung muss auf den Pflegebedürftigen lauten.' },
+                { title: 'Rechnung einreichen', desc: 'Rechnungsoriginal mit Überweisungsbeleg bei der Pflegekasse einreichen — per Post oder digitaler Pflegekassen-App.' },
+                { title: 'Erstattung erhalten', desc: 'Die Pflegekasse erstattet bis zu 131 €/Monat — innerhalb weniger Wochen auf das angegebene Konto.' },
+              ]}
+            />
+            <Kasten titel="Ansparung: bis zu 1.572 € nutzbar" ton="gruen">
+              <Text>Nicht genutzter Entlastungsbetrag verfällt nicht sofort — er kann bis zum 30. Juni des Folgejahres angespart werden. Maximal 12 Monatsbeiträge × 131 € = 1.572 €. Das ermöglicht eine größere Ausgabe zu finanzieren, z.B. mehrere Wochen Tagespflege am Stück.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Ansparung: bis zu 1.572 € nutzbar</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Nicht genutzter Entlastungsbetrag verfällt nicht sofort — er kann bis zum 30. Juni des Folgejahres angespart werden. Maximal 12 Monatsbeiträge × 131 € = 1.572 €. Das ermöglicht eine größere Ausgabe zu finanzieren, z.B. mehrere Wochen Tagespflege am Stück.
-            </p>
-          </div>
+          <Abschnitt id="kombination" titel="Mit anderen Leistungen kombinieren">
+            <Text>
+              Der Entlastungsbetrag läuft vollständig parallel zu allen anderen Pflegekassenleistungen — kein Abzug, keine Anrechnung.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Entlastungsbetrag + Pflegegeld', desc: '131 €/Monat zusätzlich zum Pflegegeld — bei PG 3 macht das 730 €/Monat Gesamtentlastung durch die Kasse.' },
+                { title: 'Entlastungsbetrag + Entlastungsbudget', desc: 'Beide laufen parallel — Entlastungsbudget (3.539 €/Jahr) für Verhinderungs-/Kurzzeitpflege, Entlastungsbetrag (131 €/Monat) für Alltagsentlastung.' },
+                { title: 'Entlastungsbetrag + 24h-Pflege', desc: 'Wenn die 24h-Betreuungskraft über einen anerkannten Anbieter kommt, können Teile der Kosten über den Entlastungsbetrag abgerechnet werden. Primundus berät individuell.' },
+              ]}
+            />
+            <MehrDazu
+              label="Alle Zuschüsse zusammen:"
+              links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege — alle Zuschüsse 2026" }]}
+            />
+          </Abschnitt>
 
-          {/* SECTION 5 */}
-          <h2 id="kombination" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Mit anderen Leistungen kombinieren
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Entlastungsbetrag läuft vollständig parallel zu allen anderen Pflegekassenleistungen — kein Abzug, keine Anrechnung.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Entlastungsbetrag + Pflegegeld', desc: '131 €/Monat zusätzlich zum Pflegegeld — bei PG 3 macht das 730 €/Monat Gesamtentlastung durch die Kasse.' },
-              { title: 'Entlastungsbetrag + Entlastungsbudget', desc: 'Beide laufen parallel — Entlastungsbudget (3.539 €/Jahr) für Verhinderungs-/Kurzzeitpflege, Entlastungsbetrag (131 €/Monat) für Alltagsentlastung.' },
-              { title: 'Entlastungsbetrag + 24h-Pflege', desc: 'Wenn die 24h-Betreuungskraft über einen anerkannten Anbieter kommt, können Teile der Kosten über den Entlastungsbetrag abgerechnet werden. Primundus berät individuell.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Zuschüsse zusammen:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
-          </p>
+          <Abschnitt id="faq" titel="Häufige Fragen zum Entlastungsbetrag">
+            <Fragen
+              fragen={[
+                { q: 'Wie hoch ist der Entlastungsbetrag 2026?', a: '131 Euro pro Monat — identisch zu 2025. Gilt für alle Pflegegrade 1 bis 5, zusätzlich zum Pflegegeld.' },
+                { q: 'Wofür kann ich den Entlastungsbetrag nutzen?', a: 'Für anerkannte Betreuungs- und Entlastungsangebote: Tages-/Nachtpflege, ambulante Pflegedienste, hauswirtschaftliche Hilfe durch anerkannte Anbieter, Betreuungsgruppen. Nicht für private Pflegepersonen ohne Anerkennung.' },
+                { q: 'Verfällt der Entlastungsbetrag am Jahresende?', a: 'Nein — nicht genutzter Entlastungsbetrag kann bis zum 30. Juni des Folgejahres angespart werden, maximal 1.572 €. Das ist anders als beim Entlastungsbudget (Verhinderungs-/Kurzzeitpflege), das am 31. Dezember verfällt.' },
+                { q: 'Wie unterscheidet sich Entlastungsbetrag vom Entlastungsbudget?', a: 'Der Entlastungsbetrag (131 €/Monat, alle PG) ist für Alltagsentlastung. Das Entlastungsbudget (3.539 €/Jahr, PG 2–5) ist für Verhinderungs- und Kurzzeitpflege. Beide laufen parallel, keine gegenseitige Anrechnung.' },
+                { q: 'Bekommt man den Entlastungsbetrag automatisch?', a: 'Er steht automatisch zu wenn ein Pflegegrad vorliegt — aber er wird nicht automatisch ausgezahlt. Man muss Rechnungen anerkannter Anbieter einreichen und bekommt bis zu 131 €/Monat erstattet.' },
+              ]}
+            />
+          </Abschnitt>
 
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zum Entlastungsbetrag
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie hoch ist der Entlastungsbetrag 2026?', a: '131 Euro pro Monat — identisch zu 2025. Gilt für alle Pflegegrade 1 bis 5, zusätzlich zum Pflegegeld.' },
-              { q: 'Wofür kann ich den Entlastungsbetrag nutzen?', a: 'Für anerkannte Betreuungs- und Entlastungsangebote: Tages-/Nachtpflege, ambulante Pflegedienste, hauswirtschaftliche Hilfe durch anerkannte Anbieter, Betreuungsgruppen. Nicht für private Pflegepersonen ohne Anerkennung.' },
-              { q: 'Verfällt der Entlastungsbetrag am Jahresende?', a: 'Nein — nicht genutzter Entlastungsbetrag kann bis zum 30. Juni des Folgejahres angespart werden, maximal 1.572 €. Das ist anders als beim Entlastungsbudget (Verhinderungs-/Kurzzeitpflege), das am 31. Dezember verfällt.' },
-              { q: 'Wie unterscheidet sich Entlastungsbetrag vom Entlastungsbudget?', a: 'Der Entlastungsbetrag (131 €/Monat, alle PG) ist für Alltagsentlastung. Das Entlastungsbudget (3.539 €/Jahr, PG 2–5) ist für Verhinderungs- und Kurzzeitpflege. Beide laufen parallel, keine gegenseitige Anrechnung.' },
-              { q: 'Bekommt man den Entlastungsbetrag automatisch?', a: 'Er steht automatisch zu wenn ein Pflegegrad vorliegt — aber er wird nicht automatisch ausgezahlt. Man muss Rechnungen anerkannter Anbieter einreichen und bekommt bis zu 131 €/Monat erstattet.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
 
-          <Weiterlesen aktuell="entlastungsbetrag" />
-          <ArticleCTA />
-        </div>
+          <Weiterlesen aktuell="entlastungsbetrag" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

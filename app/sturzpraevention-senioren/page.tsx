@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,59 +69,40 @@ export default function SturzpraventionSenioren() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Sturzprävention Senioren</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Sturzprävention Senioren — wie man Stürze wirklich verhindert
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein reduziert das Sturzrisiko nachweislich um 30–40 Prozent. Die Wohnungssicherung tut ihr Übriges.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick — die wirksamsten Maßnahmen</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Sturzprävention Senioren" },
+          ]}
+          augenbraue="Ratgeber Sicherheit"
+          titel="Sturzprävention Senioren — wie man Stürze wirklich verhindert"
+          einleitung="Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein reduziert das Sturzrisiko nachweislich um 30–40 Prozent. Die Wohnungssicherung tut ihr Übriges."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+          blick={[
                 'Gleichgewichtstraining: reduziert Sturzrisiko um 30–40 % (täglich 10–15 Min reichen)',
                 'Haltegriffe im Bad und an der Toilette: günstiger Einbau, sofort wirksam',
                 'Medikamente überprüfen: Schwindel als Nebenwirkung ist häufig unterschätzt',
                 'Gutes Schuhwerk: feste Sohle, kein offenes Fersenteil, keine Hausschuhe ohne Halt',
                 'Beleuchtung: Nachtlicht auf Toilettenweg, Bewegungsmelder im Flur',
                 'Sehvermögen: regelmäßige Augencheck — schlechtes Sehen = hohes Sturzrisiko',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+          blickTitel="Auf einen Blick — die wirksamsten Maßnahmen"
+        />
 
-          <h2 id="risikofaktoren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Risikofaktoren erkennen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Wer die Risikofaktoren kennt, kann gezielt ansetzen. Viele sind modifizierbar — das heißt: behandelbar oder ausschaltbar.
-          </p>
-          <div className="grid md:grid-cols-2 gap-3 mb-10">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="risikofaktoren" titel="Risikofaktoren erkennen">
+            <Text>
+              Wer die Risikofaktoren kennt, kann gezielt ansetzen. Viele sind modifizierbar — das heißt: behandelbar oder ausschaltbar.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="grid md:grid-cols-2 gap-3 mb-10">
             {[
               { kategorie: 'Körperliche Faktoren', items: ['Muskelschwäche in Beinen und Rumpf', 'Eingeschränktes Gleichgewicht', 'Gangstörungen, Parkinson-Tremor', 'Schwindel, Kreislaufprobleme', 'Eingeschränktes Sehvermögen'] },
               { kategorie: 'Medikamente', items: ['Beruhigungsmittel, Schlaftabletten', 'Blutdruckmittel (Schwindel)', 'Diuretika (schnelles Aufstehen nötig)', 'Mehr als 4 Medikamente gleichzeitig', 'Neue Medikamente → Arzt fragen'] },
@@ -138,35 +121,29 @@ export default function SturzpraventionSenioren() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="wohnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wohnung sichern — die wichtigsten Maßnahmen
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { ort: 'Bad & WC', massnahmen: 'Haltegriffe neben Dusche, Badewanne und WC (wichtigste Einzelmaßnahme). Rutschfeste Matten. Erhöhter WC-Sitz. Badewannenlifter oder begehbare Dusche.' },
-              { ort: 'Flur & Treppenhaus', massnahmen: 'Handläufe beidseitig an Treppen. Gut befestigte Teppichläufer oder entfernen. Nachtlicht mit Bewegungsmelder auf dem Weg zur Toilette.' },
-              { ort: 'Schlafzimmer', massnahmen: 'Bett auf optimale Höhe einstellen (Fußsohlen vollständig auf dem Boden beim Sitzen). Nachtlampe griffbereit. Rutschfeste Schuhe neben dem Bett.' },
-              { ort: 'Wohnzimmer', massnahmen: 'Lose Teppiche entfernen oder befestigen. Kabel wegräumen. Freie Wege ohne Hindernisse. Sessel und Sofa auf optimale Aufstehehöhe prüfen.' },
-            ].map((item) => (
-              <div key={item.ort} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.ort}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.massnahmen}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Förderung bis 4.180 €/Maßnahme:{' '}
-            <a href="/barrierefreies-zuhause-gestalten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Barrierefreies Zuhause gestalten</a>
-          </p>
+          <Abschnitt id="wohnung" titel="Wohnung sichern — die wichtigsten Maßnahmen">
+            <Punkte
+              punkte={[
+                { title: 'Bad & WC', desc: 'Haltegriffe neben Dusche, Badewanne und WC (wichtigste Einzelmaßnahme). Rutschfeste Matten. Erhöhter WC-Sitz. Badewannenlifter oder begehbare Dusche.' },
+                { title: 'Flur & Treppenhaus', desc: 'Handläufe beidseitig an Treppen. Gut befestigte Teppichläufer oder entfernen. Nachtlicht mit Bewegungsmelder auf dem Weg zur Toilette.' },
+                { title: 'Schlafzimmer', desc: 'Bett auf optimale Höhe einstellen (Fußsohlen vollständig auf dem Boden beim Sitzen). Nachtlampe griffbereit. Rutschfeste Schuhe neben dem Bett.' },
+                { title: 'Wohnzimmer', desc: 'Lose Teppiche entfernen oder befestigen. Kabel wegräumen. Freie Wege ohne Hindernisse. Sessel und Sofa auf optimale Aufstehehöhe prüfen.' },
+              ]}
+            />
+            <MehrDazu
+              label="Förderung bis 4.180 €/Maßnahme:"
+              links={[{ href: "/barrierefreies-zuhause-gestalten", text: "Barrierefreies Zuhause gestalten" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="uebungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Übungen & Training — was wirklich hilft
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Gleichgewichts- und Krafttraining sind die wirksamsten Maßnahmen gegen Sturzrisiko. Studien zeigen: Regelmäßiges Training reduziert das Sturzrisiko um 30–40 %. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag pro Woche.
-          </p>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="uebungen" titel="Übungen & Training — was wirklich hilft">
+            <Text>
+              Gleichgewichts- und Krafttraining sind die wirksamsten Maßnahmen gegen Sturzrisiko. Studien zeigen: Regelmäßiges Training reduziert das Sturzrisiko um 30–40 %. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag pro Woche.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               { uebung: 'Einbeinstand', ablauf: 'An Küchentisch oder Stuhl festhalten, ein Bein heben, 10–30 Sekunden halten. Täglich 3×, jedes Bein. Wenn sicher: Festhalten loslassen.', schwerpunkt: 'Gleichgewicht' },
               { uebung: 'Aufstehen vom Stuhl ohne Hände', ablauf: 'Langsam ohne Zuhilfenahme der Hände aufstehen und hinsetzen. 10 Wiederholungen. Stärkt Beinmuskulatur und verbessert Gleichgewicht.', schwerpunkt: 'Kraft & Balance' },
@@ -183,11 +160,11 @@ export default function SturzpraventionSenioren() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="hilfsmittel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Hilfsmittel & Versorgung
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="hilfsmittel" titel="Hilfsmittel & Versorgung">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               { hilfsmittel: 'Gehstock / Rollator', erstattung: 'Krankenkasse', hinweis: 'Arztrezept nötig. Rollator hat mehr Stabilität als Gehstock — bei höherem Sturzrisiko bevorzugen.' },
               { hilfsmittel: 'Hüftprotektor', erstattung: 'Hilfsmittelliste', hinweis: 'Polstereinlage in der Unterwäsche die bei Sturz Hüfte schützt. Besonders bei erhöhtem Sturzrisiko und Osteoporose sinnvoll.' },
@@ -203,29 +180,24 @@ export default function SturzpraventionSenioren() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (30–40 % weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },
-              { q: 'Welche Übungen helfen gegen Sturzgefahr?', a: 'Einbeinstand, Aufstehen vom Stuhl ohne Hände, Tandemgang, Zehenspitzenstand. Tai Chi und Yoga für Senioren sind in Studien besonders wirksam. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag.' },
-              { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: über Entlastungsbetrag (131 €/Monat) der Pflegekasse. Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
-              { q: 'Was tun wenn jemand gestürzt ist?', a: 'Nicht sofort aufrichten wenn Verletzung möglich. Notarzt rufen bei Verdacht auf Knochenbruch, Kopfverletzung oder Bewusstlosigkeit. Danach Arzt aufsuchen, Ursache des Sturzes analysieren, Präventionsmaßnahmen anpassen.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="sturzpraevention-senioren" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (30–40 % weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },
+                { q: 'Welche Übungen helfen gegen Sturzgefahr?', a: 'Einbeinstand, Aufstehen vom Stuhl ohne Hände, Tandemgang, Zehenspitzenstand. Tai Chi und Yoga für Senioren sind in Studien besonders wirksam. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag.' },
+                { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: über Entlastungsbetrag (131 €/Monat) der Pflegekasse. Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
+                { q: 'Was tun wenn jemand gestürzt ist?', a: 'Nicht sofort aufrichten wenn Verletzung möglich. Notarzt rufen bei Verdacht auf Knochenbruch, Kopfverletzung oder Bewusstlosigkeit. Danach Arzt aufsuchen, Ursache des Sturzes analysieren, Präventionsmaßnahmen anpassen.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="sturzpraevention-senioren" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

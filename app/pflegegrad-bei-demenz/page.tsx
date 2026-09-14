@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -69,205 +71,117 @@ export default function PflegegradBeiDemenz() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegegrad bei Demenz</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegegrad bei Demenz — welcher Grad & wie beantragen?
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Seit der Pflegereform 2017 werden kognitive Einschränkungen bei der Begutachtung deutlich stärker bewertet. Demenzkranke erhalten heute erheblich höhere Pflegegrade als früher. Leichte Demenz führt meist zu PG 2–3, mittlere zu PG 3–4, schwere zu PG 4–5. Die Begutachtung muss gut vorbereitet sein — weil Betroffene ihre eigenen Einschränkungen oft minimieren.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Pflegegrade", href: "/pflegegrade" },
+            { label: "Pflegegrad bei Demenz" },
+          ]}
+          augenbraue="Ratgeber Pflegegrad"
+          titel="Pflegegrad bei Demenz — welcher Grad & wie beantragen?"
+          einleitung="Seit der Pflegereform 2017 werden kognitive Einschränkungen bei der Begutachtung deutlich stärker bewertet. Demenzkranke erhalten heute erheblich höhere Pflegegrade als früher. Leichte Demenz führt meist zu PG 2–3, mittlere zu PG 3–4, schwere zu PG 4–5. Die Begutachtung muss gut vorbereitet sein — weil Betroffene ihre eigenen Einschränkungen oft minimieren."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+          blick={[
                 'Leichte Demenz: meist Pflegegrad 2–3 (347–599 €/Monat)',
                 'Mittlere Demenz: meist Pflegegrad 3–4 (599–800 €/Monat)',
                 'Schwere Demenz: meist Pflegegrad 4–5 (800–990 €/Monat)',
                 'Seit 2017: kognitive Einschränkungen stark gewichtet im NBA-Verfahren',
                 'Begutachtung: Vertrauensperson muss kognitive Defizite explizit schildern',
                 'Demenzdiagnose allein reicht nicht — Auswirkung auf Alltag entscheidet',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="wie-hoch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Welcher Pflegegrad bei welchem Demenzstadium?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die Einstufung hängt nicht von der Demenzdiagnose allein ab — sondern davon wie stark die Selbstständigkeit im Alltag eingeschränkt ist. Zwei Menschen mit derselben Diagnose können unterschiedliche Pflegegrade bekommen.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Pflegegrad nach Demenzstadium — Richtwerte 2026</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Stadium', 'Typische Merkmale', 'Pflegegrad', 'Pflegegeld'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Leicht', 'Gedächtnisprobleme, Wortfindungsstörungen, leichte Orientierungsdefizite', 'PG 2–3', '347–599 €'],
-                    ['Mittel', 'Deutliche Orientierungslosigkeit, Hilfe bei Alltagsaktivitäten, Weglaufen möglich', 'PG 3–4', '599–800 €'],
-                    ['Schwer', 'Kaum Kommunikation, vollständige Pflege, ständige Beaufsichtigung nötig', 'PG 4–5', '800–990 €'],
-                  ].map(([stadium, merkmale, pg, pflegegeld], i) => (
-                    <tr key={stadium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{stadium}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line">{merkmale}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-taupe border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pflegegeld}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Richtwerte — individuelle Einstufung durch MD · Stand 2026</p>
-            </div>
-          </div>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="wie-hoch" titel="Welcher Pflegegrad bei welchem Demenzstadium?">
+            <Text>
+              Die Einstufung hängt nicht von der Demenzdiagnose allein ab — sondern davon wie stark die Selbstständigkeit im Alltag eingeschränkt ist. Zwei Menschen mit derselben Diagnose können unterschiedliche Pflegegrade bekommen.
+            </Text>
+            <Tabelle
+              titel="Pflegegrad nach Demenzstadium — Richtwerte 2026"
+              kopf={['Stadium', 'Typische Merkmale', 'Pflegegrad', 'Pflegegeld']}
+              zeilen={[
+                ['Leicht', 'Gedächtnisprobleme, Wortfindungsstörungen, leichte Orientierungsdefizite', 'PG 2–3', '347–599 €'],
+                ['Mittel', 'Deutliche Orientierungslosigkeit, Hilfe bei Alltagsaktivitäten, Weglaufen möglich', 'PG 3–4', '599–800 €'],
+                ['Schwer', 'Kaum Kommunikation, vollständige Pflege, ständige Beaufsichtigung nötig', 'PG 4–5', '800–990 €'],
+              ]}
+              betont={3}
+              fuss="Richtwerte — individuelle Einstufung durch MD · Stand 2026"
+            />
+          </Abschnitt>
 
-          <h2 id="begutachtung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Die Begutachtung bei Demenz — was besonders zählt
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Bei Demenz liegt die größte Gefahr in der Begutachtung selbst: Betroffene geben sich oft Mühe "normal" zu wirken und unterschätzen ihre eigenen Einschränkungen. Eine Vertrauensperson die die tatsächlichen Defizite schildert ist bei Demenz besonders wichtig.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <DunklerAbschnitt
+            id="begutachtung"
+            titel="Die Begutachtung bei Demenz — was besonders zählt"
+            einleitung={"Bei Demenz liegt die größte Gefahr in der Begutachtung selbst: Betroffene geben sich oft Mühe \"normal\" zu wirken und unterschätzen ihre eigenen Einschränkungen. Eine Vertrauensperson die die tatsächlichen Defizite schildert ist bei Demenz besonders wichtig."}
+            punkte={[
               { title: 'Was der Gutachter bei Demenz bewertet', desc: 'Örtliche und zeitliche Orientierung, Kurzzeitgedächtnis, Entscheidungsfähigkeit, Kommunikation, Verhaltensauffälligkeiten (Aggressionen, Weglaufen, Schlafstörungen), Selbstversorgung im Alltag.' },
               { title: 'Was im Pflegetagebuch stehen muss', desc: 'Täglich dokumentieren: Weglaufen oder Hinlaufen, vergessene Medikamente, nächtliche Unruhe, Orientierungslosigkeit, Aggressionen, Situationen in denen Hilfe nötig war und warum.' },
               { title: 'Was die Vertrauensperson schildern sollte', desc: 'Konkrete Vorfälle der letzten Wochen: "Am Dienstag wollte er um 3 Uhr nachts das Haus verlassen." "Sie erkennt mich manchmal nicht mehr." Diese Beispiele sind für den Gutachter wertvoller als allgemeine Aussagen.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
 
-          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Leistungen 2026 nach Pflegegrad
-          </h2>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Pflegegrad', 'Pflegegeld', 'Sachleistungen', 'Entlastungsbetrag'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['PG 2', '347 €/Monat', '796 €/Monat', '131 €/Monat'],
-                    ['PG 3', '599 €/Monat', '1.497 €/Monat', '131 €/Monat'],
-                    ['PG 4', '800 €/Monat', '1.859 €/Monat', '131 €/Monat'],
-                    ['PG 5', '990 €/Monat', '2.299 €/Monat', '131 €/Monat'],
-                  ].map(([grad, pg, sach, eb], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{sach}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{eb}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Stand 2026 · Alle PG 2–5 erhalten zusätzlich 3.539 €/Jahr Entlastungsbudget</p>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Zuschüsse:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege</a>
-            {' · '}
-            <a href="/demenz-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Demenz Pflege zuhause</a>
-          </p>
+          <Abschnitt id="leistungen" titel="Leistungen 2026 nach Pflegegrad">
+            <Tabelle
+              titel=""
+              kopf={['Pflegegrad', 'Pflegegeld', 'Sachleistungen', 'Entlastungsbetrag']}
+              zeilen={[
+                ['PG 2', '347 €/Monat', '796 €/Monat', '131 €/Monat'],
+                ['PG 3', '599 €/Monat', '1.497 €/Monat', '131 €/Monat'],
+                ['PG 4', '800 €/Monat', '1.859 €/Monat', '131 €/Monat'],
+                ['PG 5', '990 €/Monat', '2.299 €/Monat', '131 €/Monat'],
+              ]}
+              betont={1}
+              fuss="Stand 2026 · Alle PG 2–5 erhalten zusätzlich 3.539 €/Jahr Entlastungsbudget"
+            />
+            <MehrDazu
+              label="Alle Zuschüsse:"
+              links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege" }, { href: "/demenz-pflege-zuhause", text: "Demenz Pflege zuhause" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="tipps" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Tipps für höhere Einstufung bei Demenz
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { tip: 'Kognitive Defizite explizit dokumentieren', desc: 'Im Pflegetagebuch nicht nur körperliche Hilfe notieren — Orientierungslosigkeit, Vergessen, Verhaltensänderungen, Nachtunruhe täglich mit Beispielen dokumentieren.' },
-              { tip: 'Demenzkranker soll nicht allein beim Termin antworten', desc: 'Betroffene geben sich beim Gutachtertermin Mühe — und wirken dann kompetenter als sie im Alltag sind. Vertrauensperson muss aktiv die tatsächlichen Einschränkungen schildern.' },
-              { tip: 'Schlechtesten Tag schildern', desc: 'Nicht den guten Sonntag schildern — den Mittwoch wenn Vater um 3 Uhr nachts das Haus verlassen wollte. Genau dieser Tag ist die Grundlage für die Einstufung.' },
-              { tip: 'Verhaltensauffälligkeiten dokumentieren', desc: 'Aggressionen, Schlafstörungen, Selbstgefährdung — dieser NBA-Bereich (15 % Gewicht) wird bei Demenz oft unterschätzt aber kann die Einstufung erheblich beeinflussen.' },
-            ].map((item) => (
-              <div key={item.tip} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tip}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="tipps" titel="Tipps für höhere Einstufung bei Demenz">
+            <Punkte
+              punkte={[
+                { title: 'Kognitive Defizite explizit dokumentieren', desc: 'Im Pflegetagebuch nicht nur körperliche Hilfe notieren — Orientierungslosigkeit, Vergessen, Verhaltensänderungen, Nachtunruhe täglich mit Beispielen dokumentieren.' },
+                { title: 'Demenzkranker soll nicht allein beim Termin antworten', desc: 'Betroffene geben sich beim Gutachtertermin Mühe — und wirken dann kompetenter als sie im Alltag sind. Vertrauensperson muss aktiv die tatsächlichen Einschränkungen schildern.' },
+                { title: 'Schlechtesten Tag schildern', desc: 'Nicht den guten Sonntag schildern — den Mittwoch wenn Vater um 3 Uhr nachts das Haus verlassen wollte. Genau dieser Tag ist die Grundlage für die Einstufung.' },
+                { title: 'Verhaltensauffälligkeiten dokumentieren', desc: 'Aggressionen, Schlafstörungen, Selbstgefährdung — dieser NBA-Bereich (15 % Gewicht) wird bei Demenz oft unterschätzt aber kann die Einstufung erheblich beeinflussen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="verlauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegrad bei Demenzfortschritt anpassen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Demenz schreitet fort — der Pflegegrad muss angepasst werden. Wer heute PG 2 hat und sich verschlechtert, sollte einen Antrag auf Höherstufung stellen. Es gibt keine Sperrfrist.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Anzeichen für Höherstufung: Neue Verhaltensauffälligkeiten, Weglaufen beginnt, Körperpflege nicht mehr möglich, Nahrungsaufnahme braucht Hilfe, nächtliche Unruhe intensiver. Dann: Antrag auf Höherstufung plus neue Pflegetagebücher.
-          </p>
+          <Abschnitt id="verlauf" titel="Pflegegrad bei Demenzfortschritt anpassen">
+            <Text>
+              Demenz schreitet fort — der Pflegegrad muss angepasst werden. Wer heute PG 2 hat und sich verschlechtert, sollte einen Antrag auf Höherstufung stellen. Es gibt keine Sperrfrist.
+            </Text>
+            <Text>
+              Anzeichen für Höherstufung: Neue Verhaltensauffälligkeiten, Weglaufen beginnt, Körperpflege nicht mehr möglich, Nahrungsaufnahme braucht Hilfe, nächtliche Unruhe intensiver. Dann: Antrag auf Höherstufung plus neue Pflegetagebücher.
+            </Text>
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen — Pflegegrad bei Demenz
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Welchen Pflegegrad bekommt man bei Demenz?', a: 'Leichte Demenz: meist PG 2–3. Mittlere Demenz: PG 3–4. Schwere Demenz: PG 4–5. Entscheidend ist nicht die Diagnose sondern wie stark die Selbstständigkeit im Alltag eingeschränkt ist.' },
-              { q: 'Wie wird Demenz beim Pflegegrad bewertet?', a: 'Im NBA werden kognitive Fähigkeiten (15 %), Verhaltensweisen (15 %) und Selbstversorgung (36 %) bewertet — alle bei Demenz stark betroffenen Bereiche. Seit 2017 werden kognitive Einschränkungen deutlich stärker gewichtet.' },
-              { q: 'Wie bereite ich die Begutachtung bei Demenz vor?', a: 'Pflegetagebuch mit konkreten Beispielen kognitiver Defizite: Weglaufen, Vergessen, Nachtunruhe, Orientierungslosigkeit. Vertrauensperson muss beim Termin die tatsächlichen Einschränkungen schildern — Betroffene minimieren oft selbst.' },
-              { q: 'Was passiert wenn der Pflegegrad bei Demenz zu niedrig ist?', a: 'Innerhalb eines Monats Widerspruch einlegen, neues Pflegetagebuch mit explizit kognitiven Beispielen nachreichen. Bei Demenz sind Widersprüche besonders häufig erfolgreich wenn kognitive Defizite besser dokumentiert werden.' },
-              { q: 'Kann man bei Demenz zuhause bleiben?', a: 'In den meisten Stadien ja — mit einer 24h-Betreuungskraft die dauerhaft im Haushalt lebt. Die vertraute Umgebung verlangsamt nachweislich den Krankheitsverlauf.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen — Pflegegrad bei Demenz">
+            <Fragen
+              fragen={[
+                { q: 'Welchen Pflegegrad bekommt man bei Demenz?', a: 'Leichte Demenz: meist PG 2–3. Mittlere Demenz: PG 3–4. Schwere Demenz: PG 4–5. Entscheidend ist nicht die Diagnose sondern wie stark die Selbstständigkeit im Alltag eingeschränkt ist.' },
+                { q: 'Wie wird Demenz beim Pflegegrad bewertet?', a: 'Im NBA werden kognitive Fähigkeiten (15 %), Verhaltensweisen (15 %) und Selbstversorgung (36 %) bewertet — alle bei Demenz stark betroffenen Bereiche. Seit 2017 werden kognitive Einschränkungen deutlich stärker gewichtet.' },
+                { q: 'Wie bereite ich die Begutachtung bei Demenz vor?', a: 'Pflegetagebuch mit konkreten Beispielen kognitiver Defizite: Weglaufen, Vergessen, Nachtunruhe, Orientierungslosigkeit. Vertrauensperson muss beim Termin die tatsächlichen Einschränkungen schildern — Betroffene minimieren oft selbst.' },
+                { q: 'Was passiert wenn der Pflegegrad bei Demenz zu niedrig ist?', a: 'Innerhalb eines Monats Widerspruch einlegen, neues Pflegetagebuch mit explizit kognitiven Beispielen nachreichen. Bei Demenz sind Widersprüche besonders häufig erfolgreich wenn kognitive Defizite besser dokumentiert werden.' },
+                { q: 'Kann man bei Demenz zuhause bleiben?', a: 'In den meisten Stadien ja — mit einer 24h-Betreuungskraft die dauerhaft im Haushalt lebt. Die vertraute Umgebung verlangsamt nachweislich den Krankheitsverlauf.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <Weiterlesen aktuell="pflegegrad-bei-demenz" />
-          <ArticleCTA />
-        </div>
+
+          <Weiterlesen aktuell="pflegegrad-bei-demenz" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

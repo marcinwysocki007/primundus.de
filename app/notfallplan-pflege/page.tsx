@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,44 +61,34 @@ export default function NotfallplanPflege() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Notfallplan Pflege" },
+          ]}
+          augenbraue="Ratgeber Notfall"
+          titel="Notfallplan Pflege — was hineingehört & Vorlage"
+          einleitung="Im Notfall zählen Sekunden. Wer dann erst suchen muss welche Medikamente jemand nimmt, welcher Arzt zuständig ist, oder wer bei einem Sturz als Erstes angerufen werden soll — verliert wertvolle Zeit. Ein Notfallplan kostet einmal 30 Minuten und gibt Jahre lang Sicherheit."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Notfallplan Pflege</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="warum" titel="Warum ein Notfallplan?">
+            <Text>
+              Ein Notfallplan ist für drei Situationen gedacht: Akuter Notfall (Sturz, Herzinfarkt, Bewusstlosigkeit), Ausfall der Hauptpflegeperson (Krankheit, Unfall), und Wissenstransfer wenn eine neue Betreuungskraft beginnt. Mit einem vollständigen Notfallplan kann jede Person die den Pflegebedürftigen vorfindet sofort richtig handeln — auch wenn sie die Details nicht kennt.
+            </Text>
+          </Abschnitt>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Notfallplan Pflege — was hineingehört & Vorlage
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Im Notfall zählen Sekunden. Wer dann erst suchen muss welche Medikamente jemand nimmt, welcher Arzt zuständig ist, oder wer bei einem Sturz als Erstes angerufen werden soll — verliert wertvolle Zeit. Ein Notfallplan kostet einmal 30 Minuten und gibt Jahre lang Sicherheit.
-          </p>
-
-          <h2 id="warum" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Warum ein Notfallplan?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ein Notfallplan ist für drei Situationen gedacht: Akuter Notfall (Sturz, Herzinfarkt, Bewusstlosigkeit), Ausfall der Hauptpflegeperson (Krankheit, Unfall), und Wissenstransfer wenn eine neue Betreuungskraft beginnt. Mit einem vollständigen Notfallplan kann jede Person die den Pflegebedürftigen vorfindet sofort richtig handeln — auch wenn sie die Details nicht kennt.
-          </p>
-
-          <h2 id="inhalt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was in den Notfallplan gehört
-          </h2>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="inhalt" titel="Was in den Notfallplan gehört">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             {[
               {
                 kategorie: 'Persönliche Daten',
@@ -171,11 +163,11 @@ export default function NotfallplanPflege() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="vorlage" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Vorlage: Notfallplan zum Ausfüllen
-          </h2>
-          <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[13px] leading-loose text-pm-body">
+          <Abschnitt id="vorlage" titel="Vorlage: Notfallplan zum Ausfüllen">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[13px] leading-loose text-pm-body">
             <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-4">NOTFALLPLAN — zum Ausdrucken und Aufhängen</p>
             <p className="font-bold">PERSONALIEN</p>
             <p>Name: _________________________ Geb.: _____________</p>
@@ -201,52 +193,38 @@ export default function NotfallplanPflege() {
             <p className="font-bold">VORSORGEVOLLMACHT liegt: _______________</p>
             <p className="font-bold">Bevollmächtigte Person: ________ Tel: _______</p>
           </div>
+          </Abschnitt>
 
-          <h2 id="aufbewahren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wo aufbewahren & wie aktuell halten
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { wo: 'An der Kühlschranktür aufhängen', warum: 'Rettungsdienst schaut standardmäßig an den Kühlschrank — das ist die bekannteste Ablage für Notfallpläne.' },
-              { wo: 'Kopie beim Hausarzt', warum: 'Der Arzt hat alle Informationen bei einem Notfall-Hausbesuch.' },
-              { wo: 'Kopie bei der Betreuungskraft', warum: 'Kraft findet alle Informationen sofort — besonders wichtig in der Eingewöhnungsphase.' },
-              { wo: 'Digital sichern', warum: 'Foto auf dem Smartphone aller Angehörigen — auch aus der Ferne sofort verfügbar.' },
-            ].map((item) => (
-              <div key={item.wo} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.wo}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.warum}</p>
-              </div>
-            ))}
-          </div>
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Aktuell halten — einmal im Quartal prüfen</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Medikamente, Ärzte und Kontakte ändern sich. Einmal pro Quartal 10 Minuten einplanen um den Notfallplan zu aktualisieren. Besonders nach Krankenhausaufenthalten, Medikamentenumstellungen oder Kraftwechseln.
-            </p>
-          </div>
+          <Abschnitt id="aufbewahren" titel="Wo aufbewahren & wie aktuell halten">
+            <Punkte
+              punkte={[
+                { title: 'An der Kühlschranktür aufhängen', desc: 'Rettungsdienst schaut standardmäßig an den Kühlschrank — das ist die bekannteste Ablage für Notfallpläne.' },
+                { title: 'Kopie beim Hausarzt', desc: 'Der Arzt hat alle Informationen bei einem Notfall-Hausbesuch.' },
+                { title: 'Kopie bei der Betreuungskraft', desc: 'Kraft findet alle Informationen sofort — besonders wichtig in der Eingewöhnungsphase.' },
+                { title: 'Digital sichern', desc: 'Foto auf dem Smartphone aller Angehörigen — auch aus der Ferne sofort verfügbar.' },
+              ]}
+            />
+            <Kasten titel="Aktuell halten — einmal im Quartal prüfen" ton="gruen">
+              <Text>Medikamente, Ärzte und Kontakte ändern sich. Einmal pro Quartal 10 Minuten einplanen um den Notfallplan zu aktualisieren. Besonders nach Krankenhausaufenthalten, Medikamentenumstellungen oder Kraftwechseln.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was muss in einen Pflegenotfallplan?', a: 'Persönliche Daten, Notfallkontakte (112, Arzt, Familie, Primundus), Medikamentenliste mit Allergien, Diagnosen, Ort der Vorsorgevollmacht. Plus für die Kraft: was tun bei Sturz/Bewusstlosigkeit.' },
-              { q: 'Wo sollte der Notfallplan aufbewahrt werden?', a: 'An der Kühlschranktür (Rettungsdienst-Standard), Kopie beim Arzt, Kopie bei der Betreuungskraft, digital gesichert auf dem Smartphone aller Angehörigen.' },
-              { q: 'Wie oft sollte der Notfallplan aktualisiert werden?', a: 'Einmal im Quartal prüfen. Immer aktualisieren nach: Medikamentenumstellungen, neuen Diagnosen, Ärztwechsel, Kraftwechsel, Umzug.' },
-              { q: 'Was unterscheidet Notfallplan von Patientenverfügung?', a: 'Der Notfallplan ist für akute Notfälle — praktische Informationen für Rettungsdienst und Betreuungskraft. Die Patientenverfügung regelt medizinische Entscheidungen bei Bewusstlosigkeit (lebenserhaltende Maßnahmen).' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="notfallplan-pflege" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was muss in einen Pflegenotfallplan?', a: 'Persönliche Daten, Notfallkontakte (112, Arzt, Familie, Primundus), Medikamentenliste mit Allergien, Diagnosen, Ort der Vorsorgevollmacht. Plus für die Kraft: was tun bei Sturz/Bewusstlosigkeit.' },
+                { q: 'Wo sollte der Notfallplan aufbewahrt werden?', a: 'An der Kühlschranktür (Rettungsdienst-Standard), Kopie beim Arzt, Kopie bei der Betreuungskraft, digital gesichert auf dem Smartphone aller Angehörigen.' },
+                { q: 'Wie oft sollte der Notfallplan aktualisiert werden?', a: 'Einmal im Quartal prüfen. Immer aktualisieren nach: Medikamentenumstellungen, neuen Diagnosen, Ärztwechsel, Kraftwechsel, Umzug.' },
+                { q: 'Was unterscheidet Notfallplan von Patientenverfügung?', a: 'Der Notfallplan ist für akute Notfälle — praktische Informationen für Rettungsdienst und Betreuungskraft. Die Patientenverfügung regelt medizinische Entscheidungen bei Bewusstlosigkeit (lebenserhaltende Maßnahmen).' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="notfallplan-pflege" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

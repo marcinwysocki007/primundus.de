@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,139 +61,99 @@ export default function PflegeAusDerFerneKoordinieren() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Organisation", href: "/organisation" },
+            { label: "Pflege aus der Ferne" },
+          ]}
+          augenbraue="Ratgeber Organisation"
+          titel="Pflege aus der Ferne koordinieren — so geht es"
+          einleitung="Viele Kinder leben hunderte Kilometer von ihren Eltern entfernt — und tragen trotzdem Verantwortung für die Pflege. Fernbetreuung ist anspruchsvoll: die ständige Sorge, die Hilflosigkeit bei Problemen, die Schuldgefühle wenn man nicht vor Ort ist. Eine 24h-Betreuungskraft mit Primundus als Ansprechpartner verändert diese Situation grundlegend."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflege aus der Ferne</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Die beste Antwort auf Fernbetreuung: 24h-Kraft + Primundus als Ansprechpartner" ton="gruen">
+              <Text>Mit einer 24h-Betreuungskraft ist die Versorgung durchgehend gesichert — ohne Lücken, ohne Koordinationsaufwand für die Familie. Primundus bleibt laufender Ansprechpartner für alle organisatorischen Fragen. Angehörige können aus der Ferne loslassen ohne sich um die Versorgung sorgen zu müssen.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
+          <Abschnitt id="herausforderung" titel="Die Herausforderung der Fernbetreuung">
+            <Punkte
+              punkte={[
+                { title: 'Keine direkte Kontrolle', desc: 'Man sieht nicht wie es wirklich geht. Regelmäßige Videotelefonate und kurze tägliche Check-ins mit der Betreuungskraft schaffen Sichtbarkeit.' },
+                { title: 'Koordinationsaufwand', desc: 'Arzttermine, Pflegedienst, Apotheke, Hausnotruf — alles muss aus der Ferne koordiniert werden. Mit Primundus als Ansprechpartner fällt ein Großteil dieses Aufwands weg.' },
+                { title: 'Notfallmanagement', desc: 'Was wenn etwas passiert und man nicht sofort vor Ort sein kann? Klarer Notfallplan mit lokalen Kontakten ist essenziell.' },
+                { title: 'Vertrauen in die Pflegekraft', desc: 'Man kann die Kraft nicht täglich sehen. Regelmäßige Kommunikation und Vertrauen in die Agentur (Primundus prüft und vermittelt) sind die Antwort.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflege aus der Ferne koordinieren — so geht es
-          </h1>
+          <Abschnitt id="struktur" titel="Struktur & Kommunikation aufbauen">
+            <Punkte
+              punkte={[
+                { title: 'Täglicher Kurzkontakt mit der Kraft', desc: 'Kurze tägliche Nachricht oder 5-Minuten-Telefonat: "Wie war heute?" reicht. Sofortige Problemmeldung vereinbaren.' },
+                { title: 'Wöchentliches Videotelefon-Ritual', desc: 'Fester Wochentermin für Videoanruf mit dem Pflegebedürftigen — das gibt Sicherheit und zeigt Präsenz auch aus der Ferne.' },
+                { title: 'Klares Eskalationsprotokoll', desc: 'Die Kraft weiß: Bei X ruft sie Primundus an, bei Y den Arzt, bei Z sofort den Rettungsdienst. Alles schriftlich festhalten.' },
+                { title: 'Familien-WhatsApp-Gruppe', desc: 'Alle Familienmitglieder in einer Gruppe — Informationen müssen nur einmal geteilt werden, jeder ist auf dem gleichen Stand.' },
+                { title: 'Digitales Pflegetagebuch', desc: 'Kurze tägliche Notizen der Kraft (Stimmung, Auffälligkeiten, Mahlzeiten, Medikamente) — einsehbar für alle Angehörigen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
+          <Abschnitt id="digital" titel="Digitale Hilfsmittel für die Fernbetreuung">
+            <Punkte
+              punkte={[
+                { title: 'Videotelefonie (FaceTime, WhatsApp, Zoom)', desc: 'Wöchentliche Gesichts-zu-Gesicht-Verbindung mit dem Pflegebedürftigen und der Betreuungskraft. Tablet mit großem Display für Senioren empfohlen.' },
+                { title: 'Hausnotruf mit GPS', desc: 'Sicherheitsnetz: Im Notfall direkte Verbindung zu Leitstelle oder Angehörigen — auch wenn die Kraft kurz abwesend ist.' },
+                { title: 'Smarte Türklingel mit Kamera', desc: 'Zeigt wer kommt und geht (Pflegedienst, Besucher). Aus der Ferne einsehbar. Erhöht das Sicherheitsgefühl der Angehörigen.' },
+                { title: 'Geteilter Familienkalender (Google/Apple)', desc: 'Arzttermine, Kraftwechsel, Besuche — alle Familienmitglieder sehen dieselbe Planung. Kein Koordinationschaos.' },
+                { title: 'Digitale Medikamentenerinnerung', desc: 'App oder Pillendose mit Alarm — schafft Struktur auch wenn die Kraft kurz beschäftigt ist.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Viele Kinder leben hunderte Kilometer von ihren Eltern entfernt — und tragen trotzdem Verantwortung für die Pflege. Fernbetreuung ist anspruchsvoll: die ständige Sorge, die Hilflosigkeit bei Problemen, die Schuldgefühle wenn man nicht vor Ort ist. Eine 24h-Betreuungskraft mit Primundus als Ansprechpartner verändert diese Situation grundlegend.
-          </p>
+          <DunklerAbschnitt
+            id="notfall"
+            titel="Notfallplan & lokale Unterstützung"
+            einleitung="Für alle Situationen die nicht warten können bis die Angehörigen ankommen, braucht es lokale Unterstützung."
+            punkte={[
+              { title: 'Nachbar mit Schlüssel', desc: 'Kann kurzfristig nach dem Rechten sehen, Pakete entgegennehmen, im Notfall vor Ort sein.' },
+              { title: 'Lokaler Freund / Bekannter der Familie', desc: 'Besucht regelmäßig, gibt ehrliches Feedback wie es wirklich geht.' },
+              { title: 'Hausarzt', desc: 'Gut erreichbarer Hausarzt mit Hausbesuchsbereitschaft. Direktnummer der Praxis hinterlegt.' },
+              { title: 'Primundus', desc: 'Ansprechpartner für alle Organisationsfragen, Kraftwechsel, Probleme mit der Betreuungskraft. 089 200 000 830.' },
+            ]}
+          >
+            <MehrDazu
+              label="Notfallplan erstellen:"
+              links={[{ href: "/notfallplan-pflege", text: "Notfallplan Pflege — was reingehört" }]}
+            />
+          </DunklerAbschnitt>
 
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Die beste Antwort auf Fernbetreuung: 24h-Kraft + Primundus als Ansprechpartner</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Mit einer 24h-Betreuungskraft ist die Versorgung durchgehend gesichert — ohne Lücken, ohne Koordinationsaufwand für die Familie. Primundus bleibt laufender Ansprechpartner für alle organisatorischen Fragen. Angehörige können aus der Ferne loslassen ohne sich um die Versorgung sorgen zu müssen.
-            </p>
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie koordiniert man Pflege aus der Ferne?', a: 'Täglicher Kurzkontakt mit der Kraft, wöchentliches Videotelefon, klares Eskalationsprotokoll, Familien-Gruppe für Kommunikation, lokale Vertrauensperson als Backup. Primundus als laufender Ansprechpartner.' },
+                { q: 'Welche digitalen Hilfsmittel helfen bei der Fernbetreuung?', a: 'Videotelefonie (Tablet), Hausnotruf mit GPS, smarte Türklingel, geteilter Familienkalender, digitale Medikamentenerinnerung.' },
+                { q: 'Was tun wenn man aus der Ferne nicht sicher ist ob alles gut läuft?', a: 'Lokale Vertrauensperson (Nachbar, Freund) bitten vorbeizuschauen. Primundus ansprechen. Video-Hausbesuch vereinbaren. Im Zweifel selbst hinfahren.' },
+                { q: 'Erleichtert eine 24h-Betreuungskraft die Fernbetreuung?', a: 'Enorm — weil die Versorgung durchgehend gesichert ist, ohne Lücken. Statt ständiger Koordination (ambulanter Dienst, Angehörige, Nachbarn) hat man eine Ansprechpartnerin die alles kennt und immer da ist.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="herausforderung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Die Herausforderung der Fernbetreuung
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { problem: 'Keine direkte Kontrolle', loesung: 'Man sieht nicht wie es wirklich geht. Regelmäßige Videotelefonate und kurze tägliche Check-ins mit der Betreuungskraft schaffen Sichtbarkeit.' },
-              { problem: 'Koordinationsaufwand', loesung: 'Arzttermine, Pflegedienst, Apotheke, Hausnotruf — alles muss aus der Ferne koordiniert werden. Mit Primundus als Ansprechpartner fällt ein Großteil dieses Aufwands weg.' },
-              { problem: 'Notfallmanagement', loesung: 'Was wenn etwas passiert und man nicht sofort vor Ort sein kann? Klarer Notfallplan mit lokalen Kontakten ist essenziell.' },
-              { problem: 'Vertrauen in die Pflegekraft', loesung: 'Man kann die Kraft nicht täglich sehen. Regelmäßige Kommunikation und Vertrauen in die Agentur (Primundus prüft und vermittelt) sind die Antwort.' },
-            ].map((item) => (
-              <div key={item.problem} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.problem}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.loesung}</p>
-              </div>
-            ))}
-          </div>
 
-          <h2 id="struktur" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Struktur & Kommunikation aufbauen
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { tip: 'Täglicher Kurzkontakt mit der Kraft', desc: 'Kurze tägliche Nachricht oder 5-Minuten-Telefonat: "Wie war heute?" reicht. Sofortige Problemmeldung vereinbaren.' },
-              { tip: 'Wöchentliches Videotelefon-Ritual', desc: 'Fester Wochentermin für Videoanruf mit dem Pflegebedürftigen — das gibt Sicherheit und zeigt Präsenz auch aus der Ferne.' },
-              { tip: 'Klares Eskalationsprotokoll', desc: 'Die Kraft weiß: Bei X ruft sie Primundus an, bei Y den Arzt, bei Z sofort den Rettungsdienst. Alles schriftlich festhalten.' },
-              { tip: 'Familien-WhatsApp-Gruppe', desc: 'Alle Familienmitglieder in einer Gruppe — Informationen müssen nur einmal geteilt werden, jeder ist auf dem gleichen Stand.' },
-              { tip: 'Digitales Pflegetagebuch', desc: 'Kurze tägliche Notizen der Kraft (Stimmung, Auffälligkeiten, Mahlzeiten, Medikamente) — einsehbar für alle Angehörigen.' },
-            ].map((item) => (
-              <div key={item.tip} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tip}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Weiterlesen aktuell="pflege-aus-der-ferne-koordinieren" variante="vorlage" />
+        </RatgeberRumpf>
 
-          <h2 id="digital" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Digitale Hilfsmittel für die Fernbetreuung
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { tool: 'Videotelefonie (FaceTime, WhatsApp, Zoom)', nutzen: 'Wöchentliche Gesichts-zu-Gesicht-Verbindung mit dem Pflegebedürftigen und der Betreuungskraft. Tablet mit großem Display für Senioren empfohlen.' },
-              { tool: 'Hausnotruf mit GPS', nutzen: 'Sicherheitsnetz: Im Notfall direkte Verbindung zu Leitstelle oder Angehörigen — auch wenn die Kraft kurz abwesend ist.' },
-              { tool: 'Smarte Türklingel mit Kamera', nutzen: 'Zeigt wer kommt und geht (Pflegedienst, Besucher). Aus der Ferne einsehbar. Erhöht das Sicherheitsgefühl der Angehörigen.' },
-              { tool: 'Geteilter Familienkalender (Google/Apple)', nutzen: 'Arzttermine, Kraftwechsel, Besuche — alle Familienmitglieder sehen dieselbe Planung. Kein Koordinationschaos.' },
-              { tool: 'Digitale Medikamentenerinnerung', nutzen: 'App oder Pillendose mit Alarm — schafft Struktur auch wenn die Kraft kurz beschäftigt ist.' },
-            ].map((item) => (
-              <div key={item.tool} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tool}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.nutzen}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="notfall" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Notfallplan & lokale Unterstützung
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Für alle Situationen die nicht warten können bis die Angehörigen ankommen, braucht es lokale Unterstützung.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { kontakt: 'Nachbar mit Schlüssel', rolle: 'Kann kurzfristig nach dem Rechten sehen, Pakete entgegennehmen, im Notfall vor Ort sein.' },
-              { kontakt: 'Lokaler Freund / Bekannter der Familie', rolle: 'Besucht regelmäßig, gibt ehrliches Feedback wie es wirklich geht.' },
-              { kontakt: 'Hausarzt', rolle: 'Gut erreichbarer Hausarzt mit Hausbesuchsbereitschaft. Direktnummer der Praxis hinterlegt.' },
-              { kontakt: 'Primundus', rolle: 'Ansprechpartner für alle Organisationsfragen, Kraftwechsel, Probleme mit der Betreuungskraft. 089 200 000 830.' },
-            ].map((item) => (
-              <div key={item.kontakt} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.kontakt}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.rolle}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Notfallplan erstellen:{' '}
-            <a href="/notfallplan-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Notfallplan Pflege — was reingehört</a>
-          </p>
-
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie koordiniert man Pflege aus der Ferne?', a: 'Täglicher Kurzkontakt mit der Kraft, wöchentliches Videotelefon, klares Eskalationsprotokoll, Familien-Gruppe für Kommunikation, lokale Vertrauensperson als Backup. Primundus als laufender Ansprechpartner.' },
-              { q: 'Welche digitalen Hilfsmittel helfen bei der Fernbetreuung?', a: 'Videotelefonie (Tablet), Hausnotruf mit GPS, smarte Türklingel, geteilter Familienkalender, digitale Medikamentenerinnerung.' },
-              { q: 'Was tun wenn man aus der Ferne nicht sicher ist ob alles gut läuft?', a: 'Lokale Vertrauensperson (Nachbar, Freund) bitten vorbeizuschauen. Primundus ansprechen. Video-Hausbesuch vereinbaren. Im Zweifel selbst hinfahren.' },
-              { q: 'Erleichtert eine 24h-Betreuungskraft die Fernbetreuung?', a: 'Enorm — weil die Versorgung durchgehend gesichert ist, ohne Lücken. Statt ständiger Koordination (ambulanter Dienst, Angehörige, Nachbarn) hat man eine Ansprechpartnerin die alles kennt und immer da ist.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflege-aus-der-ferne-koordinieren" />
-          <ArticleCTA />
-        </div>
+        <KontaktBand />
       </div>
     </>
   )

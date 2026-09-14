@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann, Werte,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -69,197 +71,111 @@ export default function Verhinderungspflege() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Finanzierung", href: "/finanzierung" },
+            { label: "Verhinderungspflege 2026" },
+          ]}
+          augenbraue="Ratgeber Finanzierung"
+          titel="Verhinderungspflege 2026 — das neue Entlastungsbudget"
+          einleitung="Seit 1. Juli 2025 gibt es keine eigenständige Verhinderungspflege mehr. Sie wurde mit der Kurzzeitpflege zum gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengefasst. 2026 ist das erste volle Jahr ohne Übergangsregelungen — wer das Budget nicht kennt, verschenkt bares Geld."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
-            <span>›</span>
-            <span className="text-pm-ink">Verhinderungspflege 2026</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten augenbraue="Das Entlastungsbudget 2026 auf einen Blick" ton="gruen">
+              <Werte ton="gruen" zeilen={[['Betrag', '3.539 €/Jahr'], ['Für wen', 'Pflegegrad 2 bis 5, häusliche Pflege'], ['Wofür', 'Verhinderungs- und Kurzzeitpflege flexibel kombinierbar'], ['Vorpflegezeit', 'Entfällt — frühere 6-Monats-Pflicht abgeschafft'], ['Max. pro Leistungsart', '8 Wochen Verhinderungspflege · 8 Wochen Kurzzeitpflege'], ['Pflegegeld während Nutzung', 'Wird zur Hälfte weitergezahlt'], ['Verfallsfrist', '31. Dezember — kein Übertrag ins Folgejahr möglich']]} />
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Verhinderungspflege 2026 — das neue Entlastungsbudget
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Seit 1. Juli 2025 gibt es keine eigenständige Verhinderungspflege mehr. Sie wurde mit der Kurzzeitpflege zum gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengefasst. 2026 ist das erste volle Jahr ohne Übergangsregelungen — wer das Budget nicht kennt, verschenkt bares Geld.
-          </p>
-
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-10">
-            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Das Entlastungsbudget 2026 auf einen Blick</p>
-            <div className="space-y-2">
-              {[
-                { key: 'Betrag', val: '3.539 €/Jahr' },
-                { key: 'Für wen', val: 'Pflegegrad 2 bis 5, häusliche Pflege' },
-                { key: 'Wofür', val: 'Verhinderungs- und Kurzzeitpflege flexibel kombinierbar' },
-                { key: 'Vorpflegezeit', val: 'Entfällt — frühere 6-Monats-Pflicht abgeschafft' },
-                { key: 'Max. pro Leistungsart', val: '8 Wochen Verhinderungspflege · 8 Wochen Kurzzeitpflege' },
-                { key: 'Pflegegeld während Nutzung', val: 'Wird zur Hälfte weitergezahlt' },
-                { key: 'Verfallsfrist', val: '31. Dezember — kein Übertrag ins Folgejahr möglich' },
-              ].map((item) => (
-                <div key={item.key} className="flex gap-3">
-                  <span className="text-[14px] font-bold text-pm-green-deep flex-shrink-0 w-[140px]">{item.key}:</span>
-                  <span className="text-[14px] text-pm-green-deep">{item.val}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist das Entlastungsbudget? (früher: Verhinderungspflege)
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Das Entlastungsbudget ist eine Jahresleistung der Pflegekasse die es Angehörigen ermöglicht, sich eine Auszeit zu nehmen — ohne dass die Pflege unterbrochen wird. Es greift immer dann wenn die pflegende Person vorübergehend ausfällt oder Urlaub braucht.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <DunklerAbschnitt
+            id="was-ist"
+            titel="Was ist das Entlastungsbudget? (früher: Verhinderungspflege)"
+            einleitung="Das Entlastungsbudget ist eine Jahresleistung der Pflegekasse die es Angehörigen ermöglicht, sich eine Auszeit zu nehmen — ohne dass die Pflege unterbrochen wird. Es greift immer dann wenn die pflegende Person vorübergehend ausfällt oder Urlaub braucht."
+            punkte={[
               { title: 'Verhinderungspflege (Teil des Entlastungsbudgets)', desc: 'Wenn die pflegende Person krank wird, Urlaub macht oder vorübergehend ausfällt. Eine andere Person — professionell oder privat — übernimmt die Pflege. Bezahlt wird aus dem gemeinsamen Entlastungsbudget.' },
               { title: 'Kurzzeitpflege (Teil des Entlastungsbudgets)', desc: 'Wenn der Pflegebedürftige vorübergehend in einer Pflegeeinrichtung betreut wird — z.B. nach einem Krankenhausaufenthalt oder in der Überbrückungszeit bis zur Betreuungskraft.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
 
-          {/* SECTION 2 */}
-          <h2 id="neu-2026" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was sich 2026 geändert hat
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die Reform zum 1. Juli 2025 hat die Verhinderungspflege und Kurzzeitpflege grundlegend vereinfacht. 2026 gilt erstmals für ein volles Kalenderjahr ohne Übergangsregelungen.
-          </p>
+          <Abschnitt id="neu-2026" titel="Was sich 2026 geändert hat">
+            <Text>
+              Die Reform zum 1. Juli 2025 hat die Verhinderungspflege und Kurzzeitpflege grundlegend vereinfacht. 2026 gilt erstmals für ein volles Kalenderjahr ohne Übergangsregelungen.
+            </Text>
+            <Tabelle
+              titel="Alt vs. Neu — was sich geändert hat"
+              kopf={['Regelung', 'Bis Juni 2025', 'Ab Juli 2025 (gilt 2026)']}
+              zeilen={[
+                ['Budget', 'Verhinderungspflege 1.685 € + Kurzzeitpflege 1.854 € getrennt', 'Gemeinsames Entlastungsbudget 3.539 €/Jahr'],
+                ['Vorpflegezeit', '6 Monate Pflege durch Angehörige Voraussetzung', 'Entfällt vollständig'],
+                ['Flexibilität', 'Budget nicht oder nur begrenzt übertragbar', 'Frei zwischen beiden Leistungsarten aufteilbar'],
+                ['Pflegegeld', 'Wurde während Verhinderungspflege halbiert', 'Wird zur Hälfte weitergezahlt (unverändert)'],
+                ['Verfallsfrist', '30. Juni des Folgejahres', '31. Dezember des gleichen Jahres'],
+              ]}
+              betont={2}
+            />
+            <Kasten titel="Wichtig: Neue Verfallsfrist beachten" ton="koralle">
+              <Text>Früher konnte nicht genutztes Budget bis zum 30. Juni des Folgejahres übertragen werden. Jetzt verfällt es am 31. Dezember. Wer das Budget nicht rechtzeitig einreicht, verliert es. Belege und Rechnungen also zeitnah bei der Pflegekasse einreichen.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Alt vs. Neu — was sich geändert hat</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Regelung', 'Bis Juni 2025', 'Ab Juli 2025 (gilt 2026)'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Budget', 'Verhinderungspflege 1.685 € + Kurzzeitpflege 1.854 € getrennt', 'Gemeinsames Entlastungsbudget 3.539 €/Jahr'],
-                    ['Vorpflegezeit', '6 Monate Pflege durch Angehörige Voraussetzung', 'Entfällt vollständig'],
-                    ['Flexibilität', 'Budget nicht oder nur begrenzt übertragbar', 'Frei zwischen beiden Leistungsarten aufteilbar'],
-                    ['Pflegegeld', 'Wurde während Verhinderungspflege halbiert', 'Wird zur Hälfte weitergezahlt (unverändert)'],
-                    ['Verfallsfrist', '30. Juni des Folgejahres', '31. Dezember des gleichen Jahres'],
-                  ].map(([regelung, alt, neu], i) => (
-                    <tr key={regelung} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{regelung}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{alt}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-green font-medium border-b border-pm-line">{neu}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <Abschnitt id="beantragen" titel="Entlastungsbudget beantragen & nutzen">
+            <Text>
+              Das Entlastungsbudget muss nicht separat beantragt werden — es steht automatisch zur Verfügung wenn ein Pflegegrad 2–5 vorliegt. Man muss es nur abrufen.
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'Pflegekasse informieren', desc: 'Mitteilen dass Verhinderungspflege oder Kurzzeitpflege genutzt werden soll. Die Pflegekasse bestätigt das verfügbare Budget.' },
+                { title: 'Vertretungspflege organisieren', desc: 'Professionellen Ersatz (z.B. ambulanten Pflegedienst) oder private Person (Angehörige, Nachbarn) für die Überbrückungszeit organisieren. Angehörige haben Anspruch auf eine Aufwandsentschädigung.' },
+                { title: 'Rechnungen sammeln', desc: 'Alle Belege für Vertretungspflege aufbewahren. Bei Kurzzeitpflege: Heimrechnung. Bei Verhinderungspflege: Nachweis über die Vertretungskosten.' },
+                { title: 'Rechtzeitig einreichen', desc: 'Belege vor dem 31. Dezember bei der Pflegekasse einreichen. Kein Übertrag möglich — nicht genutztes Budget verfällt.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.15)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Wichtig: Neue Verfallsfrist beachten</p>
-            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
-              Früher konnte nicht genutztes Budget bis zum 30. Juni des Folgejahres übertragen werden. Jetzt verfällt es am 31. Dezember. Wer das Budget nicht rechtzeitig einreicht, verliert es. Belege und Rechnungen also zeitnah bei der Pflegekasse einreichen.
-            </p>
-          </div>
+          <Abschnitt id="kombinieren" titel="Mit 24h-Pflege kombinieren">
+            <Text>
+              Das Entlastungsbudget lässt sich mit einer 24h-Betreuungskraft von Primundus sinnvoll kombinieren — besonders in der Übergangsphase oder bei Wechseln.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Überbrückung bis zur Betreuungskraft', desc: 'Wenn die erste Kraft noch nicht da ist oder ein Wechsel stattfindet — Kurzzeitpflege überbrückt aus dem Entlastungsbudget.' },
+                { title: 'Urlaub für Angehörige', desc: 'Auch wenn eine 24h-Kraft da ist: Wenn Angehörige als Hauptpflegeperson anerkannt sind und Urlaub brauchen, greift Verhinderungspflege aus dem Budget.' },
+                { title: 'Kraftwechsel-Überbrückung', desc: 'Beim Wechsel zwischen zwei Betreuungskräften (alle 6–8 Wochen) gibt es manchmal kurze Lücken — Kurzzeitpflege überbrückt diese nahtlos.' },
+              ]}
+            />
+            <MehrDazu
+              label="Alle Zuschüsse kombinieren:"
+              links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege — alle Zuschüsse 2026" }, { href: "/pflegegeld", text: "Pflegegeld 2026 — Beträge & Kombinationen" }]}
+            />
+          </Abschnitt>
 
-          {/* SECTION 3 */}
-          <h2 id="beantragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Entlastungsbudget beantragen & nutzen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Das Entlastungsbudget muss nicht separat beantragt werden — es steht automatisch zur Verfügung wenn ein Pflegegrad 2–5 vorliegt. Man muss es nur abrufen.
-          </p>
-          <ol className="space-y-3 mb-6">
-            {[
-              { n: '1', title: 'Pflegekasse informieren', desc: 'Mitteilen dass Verhinderungspflege oder Kurzzeitpflege genutzt werden soll. Die Pflegekasse bestätigt das verfügbare Budget.' },
-              { n: '2', title: 'Vertretungspflege organisieren', desc: 'Professionellen Ersatz (z.B. ambulanten Pflegedienst) oder private Person (Angehörige, Nachbarn) für die Überbrückungszeit organisieren. Angehörige haben Anspruch auf eine Aufwandsentschädigung.' },
-              { n: '3', title: 'Rechnungen sammeln', desc: 'Alle Belege für Vertretungspflege aufbewahren. Bei Kurzzeitpflege: Heimrechnung. Bei Verhinderungspflege: Nachweis über die Vertretungskosten.' },
-              { n: '4', title: 'Rechtzeitig einreichen', desc: 'Belege vor dem 31. Dezember bei der Pflegekasse einreichen. Kein Übertrag möglich — nicht genutztes Budget verfällt.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <Abschnitt id="faq" titel="Häufige Fragen zur Verhinderungspflege 2026">
+            <Fragen
+              fragen={[
+                { q: 'Was ist Verhinderungspflege 2026?', a: 'Seit Juli 2025 gibt es keine eigenständige Verhinderungspflege mehr. Sie wurde mit der Kurzzeitpflege zum gemeinsamen Entlastungsbudget von 3.539 €/Jahr zusammengefasst. Das Budget gilt für PG 2–5 und ist flexibel für beide Leistungsarten nutzbar.' },
+                { q: 'Wie hoch ist das Entlastungsbudget 2026?', a: '3.539 Euro pro Jahr für Pflegegrad 2–5. Es fasst frühere Verhinderungspflege (bis 1.685 €) und Kurzzeitpflege (bis 1.854 €) zusammen. Vorpflegezeit entfällt. Verfällt am 31. Dezember.' },
+                { q: 'Wer hat Anspruch auf das Entlastungsbudget?', a: 'Pflegebedürftige mit Pflegegrad 2 bis 5, die zu Hause gepflegt werden. Die frühere Voraussetzung von 6 Monaten häuslicher Pflege entfällt seit Juli 2025.' },
+                { q: 'Verfällt das Entlastungsbudget am Jahresende?', a: 'Ja — nicht genutztes Budget verfällt am 31. Dezember. Eine Übertragung ins Folgejahr ist nicht mehr möglich (früher bis 30. Juni). Belege rechtzeitig einreichen.' },
+                { q: 'Wie wird Pflegegeld während des Entlastungsbudgets behandelt?', a: 'Das Pflegegeld wird während der Nutzung des Entlastungsbudgets zur Hälfte weitergezahlt — bei PG 3 also 299,50 €/Monat statt 599 €.' },
+                { q: 'Kann ich Verhinderungspflege und Kurzzeitpflege gleichzeitig nutzen?', a: 'Aus demselben Budget — ja, aber max. 8 Wochen je Leistungsart innerhalb eines Jahres. Das Budget kann also nicht gleichzeitig für Verhinderungs- und Kurzzeitpflege des gleichen Zeitraums genutzt werden.' },
+              ]}
+            />
+          </Abschnitt>
 
-          {/* SECTION 4 */}
-          <h2 id="kombinieren" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Mit 24h-Pflege kombinieren
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Das Entlastungsbudget lässt sich mit einer 24h-Betreuungskraft von Primundus sinnvoll kombinieren — besonders in der Übergangsphase oder bei Wechseln.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Überbrückung bis zur Betreuungskraft', desc: 'Wenn die erste Kraft noch nicht da ist oder ein Wechsel stattfindet — Kurzzeitpflege überbrückt aus dem Entlastungsbudget.' },
-              { title: 'Urlaub für Angehörige', desc: 'Auch wenn eine 24h-Kraft da ist: Wenn Angehörige als Hauptpflegeperson anerkannt sind und Urlaub brauchen, greift Verhinderungspflege aus dem Budget.' },
-              { title: 'Kraftwechsel-Überbrückung', desc: 'Beim Wechsel zwischen zwei Betreuungskräften (alle 6–8 Wochen) gibt es manchmal kurze Lücken — Kurzzeitpflege überbrückt diese nahtlos.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Zuschüsse kombinieren:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege — alle Zuschüsse 2026</a>
-            {' · '}
-            <a href="/pflegegeld" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegeld 2026 — Beträge & Kombinationen</a>
-          </p>
 
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur Verhinderungspflege 2026
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was ist Verhinderungspflege 2026?', a: 'Seit Juli 2025 gibt es keine eigenständige Verhinderungspflege mehr. Sie wurde mit der Kurzzeitpflege zum gemeinsamen Entlastungsbudget von 3.539 €/Jahr zusammengefasst. Das Budget gilt für PG 2–5 und ist flexibel für beide Leistungsarten nutzbar.' },
-              { q: 'Wie hoch ist das Entlastungsbudget 2026?', a: '3.539 Euro pro Jahr für Pflegegrad 2–5. Es fasst frühere Verhinderungspflege (bis 1.685 €) und Kurzzeitpflege (bis 1.854 €) zusammen. Vorpflegezeit entfällt. Verfällt am 31. Dezember.' },
-              { q: 'Wer hat Anspruch auf das Entlastungsbudget?', a: 'Pflegebedürftige mit Pflegegrad 2 bis 5, die zu Hause gepflegt werden. Die frühere Voraussetzung von 6 Monaten häuslicher Pflege entfällt seit Juli 2025.' },
-              { q: 'Verfällt das Entlastungsbudget am Jahresende?', a: 'Ja — nicht genutztes Budget verfällt am 31. Dezember. Eine Übertragung ins Folgejahr ist nicht mehr möglich (früher bis 30. Juni). Belege rechtzeitig einreichen.' },
-              { q: 'Wie wird Pflegegeld während des Entlastungsbudgets behandelt?', a: 'Das Pflegegeld wird während der Nutzung des Entlastungsbudgets zur Hälfte weitergezahlt — bei PG 3 also 299,50 €/Monat statt 599 €.' },
-              { q: 'Kann ich Verhinderungspflege und Kurzzeitpflege gleichzeitig nutzen?', a: 'Aus demselben Budget — ja, aber max. 8 Wochen je Leistungsart innerhalb eines Jahres. Das Budget kann also nicht gleichzeitig für Verhinderungs- und Kurzzeitpflege des gleichen Zeitraums genutzt werden.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <Weiterlesen aktuell="verhinderungspflege" variante="vorlage" />
+        </RatgeberRumpf>
 
-          <Weiterlesen aktuell="verhinderungspflege" />
-          <ArticleCTA />
-        </div>
+        <KontaktBand />
       </div>
     </>
   )

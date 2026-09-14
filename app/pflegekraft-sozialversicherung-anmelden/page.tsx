@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,44 +61,34 @@ export default function PflegekraftSozialversicherungAnmelden() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Rechtliches", href: "/rechtliches" },
+            { label: "Sozialversicherung anmelden" },
+          ]}
+          augenbraue="Ratgeber Recht"
+          titel="Pflegekraft Sozialversicherung anmelden — Anleitung 2026"
+          einleitung="Wer eine Pflegekraft direkt anstellt, wird zum Arbeitgeber — mit allen Pflichten: Sozialversicherungsanmeldung, Lohnabrechnung, Beitragsabführung. Beim Entsendemodell über Primundus entfällt das vollständig. Dieser Ratgeber erklärt beide Wege."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
-            <span>›</span>
-            <span className="text-pm-ink">Sozialversicherung anmelden</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Entsendemodell: Keine Anmeldung durch die Familie nötig" ton="gruen">
+              <Text>Beim Entsendemodell über Primundus ist die Kraft im EU-Heimatland sozialversichert und angestellt. Die Familie hat kein eigenes Arbeitsverhältnis — keine Anmeldung, keine Abgaben, kein Aufwand. A1-Bescheinigung liegt vor.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegekraft Sozialversicherung anmelden — Anleitung 2026
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Wer eine Pflegekraft direkt anstellt, wird zum Arbeitgeber — mit allen Pflichten: Sozialversicherungsanmeldung, Lohnabrechnung, Beitragsabführung. Beim Entsendemodell über Primundus entfällt das vollständig. Dieser Ratgeber erklärt beide Wege.
-          </p>
-
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Entsendemodell: Keine Anmeldung durch die Familie nötig</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Beim Entsendemodell über Primundus ist die Kraft im EU-Heimatland sozialversichert und angestellt. Die Familie hat kein eigenes Arbeitsverhältnis — keine Anmeldung, keine Abgaben, kein Aufwand. A1-Bescheinigung liegt vor.
-            </p>
-          </div>
-
-          <h2 id="wann-nötig" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann ist eine Sozialversicherungsanmeldung nötig?
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="wann-nötig" titel="Wann ist eine Sozialversicherungsanmeldung nötig?">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               { modell: 'Entsendemodell (Primundus)', pflicht: 'Keine Anmeldung', detail: 'Kraft ist im EU-Heimatland angestellt und sozialversichert. A1-Bescheinigung belegt das. Familie hat keine Arbeitgeberpflichten.' },
               { modell: 'Direktanstellung — Minijob (bis 556 €/Mo)', pflicht: 'Anmeldung bei der Minijob-Zentrale', detail: 'Pauschalabgaben: ca. 15 % Kranken-, 15 % Rentenversicherung, 2 % pauschale Lohnsteuer. Über minijob-zentrale.de.' },
@@ -111,114 +103,69 @@ export default function PflegekraftSozialversicherungAnmelden() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="minijob" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Minijob — Haushaltshilfe über die Minijob-Zentrale
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Für einfache Haushaltshilfen (nicht 24h-Pflege) kann der Minijob-Weg sinnvoll sein. Bei vollständiger 24h-Betreuung ist der Minijob-Rahmen jedoch zu eng — der tatsächliche Lohn übersteigt 556 €/Monat fast immer erheblich.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Abgabe', 'Satz', 'Zahlt'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Krankenversicherung', '5 %', 'Arbeitgeber (Familie)'],
-                    ['Rentenversicherung', '15 %', 'Arbeitgeber (Familie)'],
-                    ['Rentenversicherung (AN-Anteil)', '3,6 %', 'Arbeitnehmer (kann entbinden)'],
-                    ['Pauschale Lohnsteuer', '2 %', 'Arbeitgeber'],
-                    ['Gesamt Arbeitgeber', 'ca. 22 %', 'Familie zahlt auf den Lohn oben drauf'],
-                  ].map(([abgabe, satz, zahlt], i) => (
-                    <tr key={abgabe} className={i === 4 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className={`px-4 py-3 text-[14px] border-b border-pm-line ${i === 4 ? 'font-bold text-pm-taupe' : 'text-pm-body'}`}>{abgabe}</td>
-                      <td className={`px-4 py-3 text-[14px] font-bold border-b border-pm-line ${i === 4 ? 'text-pm-taupe' : 'text-pm-ink'}`}>{satz}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{zahlt}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Anmeldung über minijob-zentrale.de · Stand 2026</p>
-            </div>
-          </div>
+          <Abschnitt id="minijob" titel="Minijob — Haushaltshilfe über die Minijob-Zentrale">
+            <Text>
+              Für einfache Haushaltshilfen (nicht 24h-Pflege) kann der Minijob-Weg sinnvoll sein. Bei vollständiger 24h-Betreuung ist der Minijob-Rahmen jedoch zu eng — der tatsächliche Lohn übersteigt 556 €/Monat fast immer erheblich.
+            </Text>
+            <Tabelle
+              titel=""
+              kopf={['Abgabe', 'Satz', 'Zahlt']}
+              zeilen={[
+                ['Krankenversicherung', '5 %', 'Arbeitgeber (Familie)'],
+                ['Rentenversicherung', '15 %', 'Arbeitgeber (Familie)'],
+                ['Rentenversicherung (AN-Anteil)', '3,6 %', 'Arbeitnehmer (kann entbinden)'],
+                ['Pauschale Lohnsteuer', '2 %', 'Arbeitgeber'],
+                ['Gesamt Arbeitgeber', 'ca. 22 %', 'Familie zahlt auf den Lohn oben drauf'],
+              ]}
+              fuss="Anmeldung über minijob-zentrale.de · Stand 2026"
+            />
+          </Abschnitt>
 
-          <h2 id="regulaer" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Reguläre Beschäftigung — Anmeldung und Kosten
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Bei einer Direktanstellung mit vollem Lohn (für 24h-Betreuung typisch: 1.800–2.800 € brutto/Monat) wird die Familie zum regulären Arbeitgeber.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { was: 'Betriebsnummer beim Betriebsnummern-Service beantragen', detail: 'Kostenlos über die Bundesagentur für Arbeit (ba.de). Dauert wenige Tage.' },
-              { was: 'Krankenversicherung der Kraft wählen', detail: 'Kraft wählt ihre Krankenkasse. Arbeitgeber meldet dort an.' },
-              { was: 'Meldung zur Sozialversicherung an die Krankenkasse', detail: 'Bei Arbeitsbeginn (spätestens am 1. Arbeitstag) Anmeldung über DEÜV-Verfahren (digital). Steuerberater empfohlen.' },
-              { was: 'Lohnabrechnung monatlich', detail: 'Gehaltsabrechnung, Beitragsabführung an Krankenkasse (für alle Zweige). Lohnsteuer ans Finanzamt.' },
-            ].map((item) => (
-              <div key={item.was} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.was}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
+          <DunklerAbschnitt
+            id="regulaer"
+            titel="Reguläre Beschäftigung — Anmeldung und Kosten"
+            einleitung="Bei einer Direktanstellung mit vollem Lohn (für 24h-Betreuung typisch: 1.800–2.800 € brutto/Monat) wird die Familie zum regulären Arbeitgeber."
+            punkte={[
+              { title: 'Betriebsnummer beim Betriebsnummern-Service beantragen', desc: 'Kostenlos über die Bundesagentur für Arbeit (ba.de). Dauert wenige Tage.' },
+              { title: 'Krankenversicherung der Kraft wählen', desc: 'Kraft wählt ihre Krankenkasse. Arbeitgeber meldet dort an.' },
+              { title: 'Meldung zur Sozialversicherung an die Krankenkasse', desc: 'Bei Arbeitsbeginn (spätestens am 1. Arbeitstag) Anmeldung über DEÜV-Verfahren (digital). Steuerberater empfohlen.' },
+              { title: 'Lohnabrechnung monatlich', desc: 'Gehaltsabrechnung, Beitragsabführung an Krankenkasse (für alle Zweige). Lohnsteuer ans Finanzamt.' },
+            ]}
+          >
+            <Kasten titel="Hinweis: Direktanstellung bei 24h-Pflege ist aufwändig" ton="koralle">
+              <Text>Die reguläre Direktanstellung einer 24h-Pflegekraft bedeutet erheblichen Verwaltungsaufwand: Lohnabrechnung, Urlaubsplanung, Krankenersatz, arbeitsrechtliche Verpflichtungen. Die meisten Familien wählen deshalb das Entsendemodell über Primundus.</Text>
+            </Kasten>
+          </DunklerAbschnitt>
 
-          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Hinweis: Direktanstellung bei 24h-Pflege ist aufwändig</p>
-            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
-              Die reguläre Direktanstellung einer 24h-Pflegekraft bedeutet erheblichen Verwaltungsaufwand: Lohnabrechnung, Urlaubsplanung, Krankenersatz, arbeitsrechtliche Verpflichtungen. Die meisten Familien wählen deshalb das Entsendemodell über Primundus.
-            </p>
-          </div>
+          <Abschnitt id="ablauf" titel="Anmeldung Schritt für Schritt (Direktanstellung)">
+            <Schritte
+              schritte={[
+                { title: 'Betriebsnummer beantragen', desc: 'bundesagentur.de → Betriebsnummern-Service. Kostenlos, dauert 2–3 Werktage.' },
+                { title: 'Krankenversicherung der Kraft klären', desc: 'Welche Krankenkasse hat die Kraft gewählt? Diese ist Anmeldestelle für alle Sozialversicherungszweige.' },
+                { title: 'DEÜV-Meldung senden', desc: 'Elektronische Meldung an die Krankenkasse spätestens am ersten Arbeitstag. Steuerberater oder Lohnbuchhaltung einschalten.' },
+                { title: 'Monatliche Beiträge abführen', desc: 'Gesamtsozialversicherungsbeitrag (AN + AG-Anteil) an die Krankenkasse. Lohnsteuer ans Finanzamt.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Anmeldung Schritt für Schritt (Direktanstellung)
-          </h2>
-          <ol className="space-y-3 mb-10">
-            {[
-              { n: '1', title: 'Betriebsnummer beantragen', desc: 'bundesagentur.de → Betriebsnummern-Service. Kostenlos, dauert 2–3 Werktage.' },
-              { n: '2', title: 'Krankenversicherung der Kraft klären', desc: 'Welche Krankenkasse hat die Kraft gewählt? Diese ist Anmeldestelle für alle Sozialversicherungszweige.' },
-              { n: '3', title: 'DEÜV-Meldung senden', desc: 'Elektronische Meldung an die Krankenkasse spätestens am ersten Arbeitstag. Steuerberater oder Lohnbuchhaltung einschalten.' },
-              { n: '4', title: 'Monatliche Beiträge abführen', desc: 'Gesamtsozialversicherungsbeitrag (AN + AG-Anteil) an die Krankenkasse. Lohnsteuer ans Finanzamt.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Muss ich eine Pflegekraft aus Polen bei der Sozialversicherung anmelden?', a: 'Nicht beim Entsendemodell über Primundus — die Kraft ist im polnischen Heimatland sozialversichert (A1-Bescheinigung). Nur bei Direktanstellung (deutsches Arbeitsverhältnis) ist eine Anmeldung bei der deutschen Sozialversicherung nötig.' },
+                { q: 'Was kostet die Sozialversicherung für eine Pflegekraft?', a: 'Bei regulärer Direktanstellung: ca. 20–21 % des Bruttolohns als Arbeitgeberbeitrag (Kranken-, Pflege-, Renten-, Arbeitslosenversicherung). Bei Minijob: ca. 22 % pauschal.' },
+                { q: 'Wo melde ich eine Pflegekraft als Minijob an?', a: 'Über die Minijob-Zentrale (minijob-zentrale.de). Für Haushaltsbeschäftigungen gibt es ein vereinfachtes Verfahren (Haushaltsscheck).' },
+                { q: 'Was wenn ich vergessen habe die Pflegekraft anzumelden?', a: 'Rückwirkende Anmeldung möglich. Alle rückständigen Beiträge werden fällig. Bei sehr langen Unterlassungen: Strafverfolgung wegen Beitragsvorenthaltung. Besser sofort nachholen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Muss ich eine Pflegekraft aus Polen bei der Sozialversicherung anmelden?', a: 'Nicht beim Entsendemodell über Primundus — die Kraft ist im polnischen Heimatland sozialversichert (A1-Bescheinigung). Nur bei Direktanstellung (deutsches Arbeitsverhältnis) ist eine Anmeldung bei der deutschen Sozialversicherung nötig.' },
-              { q: 'Was kostet die Sozialversicherung für eine Pflegekraft?', a: 'Bei regulärer Direktanstellung: ca. 20–21 % des Bruttolohns als Arbeitgeberbeitrag (Kranken-, Pflege-, Renten-, Arbeitslosenversicherung). Bei Minijob: ca. 22 % pauschal.' },
-              { q: 'Wo melde ich eine Pflegekraft als Minijob an?', a: 'Über die Minijob-Zentrale (minijob-zentrale.de). Für Haushaltsbeschäftigungen gibt es ein vereinfachtes Verfahren (Haushaltsscheck).' },
-              { q: 'Was wenn ich vergessen habe die Pflegekraft anzumelden?', a: 'Rückwirkende Anmeldung möglich. Alle rückständigen Beiträge werden fällig. Bei sehr langen Unterlassungen: Strafverfolgung wegen Beitragsvorenthaltung. Besser sofort nachholen.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflegekraft-sozialversicherung-anmelden" />
-          <ArticleCTA />
-        </div>
+
+          <Weiterlesen aktuell="pflegekraft-sozialversicherung-anmelden" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

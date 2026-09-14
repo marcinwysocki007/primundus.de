@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -68,184 +70,116 @@ export default function SchlaganfallPflegeZuhause() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Schlaganfall Pflege zuhause</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflege nach Schlaganfall zuhause — was möglich ist
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Nach einem Schlaganfall stellen sich Familien sofort die Frage: Pflegeheim oder zuhause? In den meisten Fällen ist häusliche Pflege mit einer 24h-Betreuungskraft möglich — und ermöglicht eine frühzeitige Entlassung aus Krankenhaus oder Reha. Die vertraute Umgebung fördert die Erholung nachweislich.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Krankheiten", href: "/krankheiten" },
+            { label: "Schlaganfall Pflege zuhause" },
+          ]}
+          augenbraue="Ratgeber Schlaganfall"
+          titel="Pflege nach Schlaganfall zuhause — was möglich ist"
+          einleitung="Nach einem Schlaganfall stellen sich Familien sofort die Frage: Pflegeheim oder zuhause? In den meisten Fällen ist häusliche Pflege mit einer 24h-Betreuungskraft möglich — und ermöglicht eine frühzeitige Entlassung aus Krankenhaus oder Reha. Die vertraute Umgebung fördert die Erholung nachweislich."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+          blick={[
                 'Häusliche Pflege nach Schlaganfall in den meisten Fällen möglich',
                 'Frühzeitige Entlassung aus Klinik durch 24h-Betreuungskraft möglich',
                 'Vertraute Umgebung fördert Reha-Erfolg nachweislich',
                 'Pflegegrad 2–5 je nach Schwere — sofort nach Entlassung beantragen',
                 'Primundus startet in 4–7 Tagen — auch als Überbrückung nach Klinik',
                 'Physiotherapie und Logopädie können zuhause fortgesetzt werden',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="was-kann" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was nach einem Schlaganfall möglich ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Schlaganfall ist nicht gleich Schlaganfall — Art, Schwere und Ort der Hirnschädigung bestimmen die Folgen. Viele Betroffene erholen sich durch intensive Reha teilweise oder sogar vollständig. Was bleibt, hängt davon ab wie schnell die Akutbehandlung begann und wie konsequent die Reha ist.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Lähmungen (Hemiparese/Hemiplegie)', desc: 'Halbseitige Lähmung ist die häufigste Schlaganfall-Folge. Schwere variiert von leichter Kraftminderung bis vollständiger Lähmung. Physiotherapie kann Funktion teilweise zurückbringen.' },
-              { title: 'Sprachstörungen (Aphasie)', desc: 'Sprachverständnis oder Sprachproduktion eingeschränkt. Logopädie ist entscheidend — am effektivsten in vertrauter Umgebung mit bekannten Gesprächspartnern.' },
-              { title: 'Schluckstörungen (Dysphagie)', desc: 'Häufig nach schwerem Schlaganfall — erhöhtes Aspirationsrisiko. Besondere Sorgfalt bei der Ernährung, angepasste Konsistenz der Speisen.' },
-              { title: 'Kognitive Einschränkungen', desc: 'Gedächtnis, Aufmerksamkeit, Orientierung können betroffen sein. Oft nur vorübergehend — gezielte Förderung zuhause ist wirksamer als in einer Einrichtung.' },
-              { title: 'Depressionen', desc: 'Post-Stroke-Depression bei 30–40 % der Betroffenen. Regelmäßige menschliche Nähe und Aktivität — was eine 24h-Kraft besser bieten kann als ein Heim — reduziert das Risiko.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-kann" titel="Was nach einem Schlaganfall möglich ist">
+            <Text>
+              Schlaganfall ist nicht gleich Schlaganfall — Art, Schwere und Ort der Hirnschädigung bestimmen die Folgen. Viele Betroffene erholen sich durch intensive Reha teilweise oder sogar vollständig. Was bleibt, hängt davon ab wie schnell die Akutbehandlung begann und wie konsequent die Reha ist.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Lähmungen (Hemiparese/Hemiplegie)', desc: 'Halbseitige Lähmung ist die häufigste Schlaganfall-Folge. Schwere variiert von leichter Kraftminderung bis vollständiger Lähmung. Physiotherapie kann Funktion teilweise zurückbringen.' },
+                { title: 'Sprachstörungen (Aphasie)', desc: 'Sprachverständnis oder Sprachproduktion eingeschränkt. Logopädie ist entscheidend — am effektivsten in vertrauter Umgebung mit bekannten Gesprächspartnern.' },
+                { title: 'Schluckstörungen (Dysphagie)', desc: 'Häufig nach schwerem Schlaganfall — erhöhtes Aspirationsrisiko. Besondere Sorgfalt bei der Ernährung, angepasste Konsistenz der Speisen.' },
+                { title: 'Kognitive Einschränkungen', desc: 'Gedächtnis, Aufmerksamkeit, Orientierung können betroffen sein. Oft nur vorübergehend — gezielte Förderung zuhause ist wirksamer als in einer Einrichtung.' },
+                { title: 'Depressionen', desc: 'Post-Stroke-Depression bei 30–40 % der Betroffenen. Regelmäßige menschliche Nähe und Aktivität — was eine 24h-Kraft besser bieten kann als ein Heim — reduziert das Risiko.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="reha" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Reha und häusliche Pflege — wie das zusammenpasst
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Nach der Akutbehandlung folgt in der Regel eine stationäre oder ambulante Rehabilitation. Das Ziel: so viel Selbstständigkeit zurückgewinnen wie möglich. Eine 24h-Betreuungskraft ermöglicht die frühzeitige Entlassung nach Hause — und setzt die Reha-Maßnahmen kontinuierlich im Alltag fort.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Frühzeitige Entlassung möglich', desc: 'Das Krankenhaus kann den Patienten früher entlassen wenn die häusliche Versorgung sichergestellt ist. Primundus kann eine Betreuungskraft in 4–7 Tagen bereitstellen — oft schneller als ein Pflegeheimplatz gefunden ist.' },
-              { title: 'Reha-Therapien zuhause fortsetzen', desc: 'Physiotherapeuten und Logopäden kommen nach Hause. Die Betreuungskraft begleitet die Übungen im Alltag — konsequenter als eine Einrichtung es könnte.' },
-              { title: 'Kurzzeitpflege als Überbrückung', desc: 'Wenn die Wohnungssituation erst angepasst werden muss (Badumbau, Rollstuhlzugang) kann das Entlastungsbudget für Kurzzeitpflege genutzt werden.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="reha" titel="Reha und häusliche Pflege — wie das zusammenpasst">
+            <Text>
+              Nach der Akutbehandlung folgt in der Regel eine stationäre oder ambulante Rehabilitation. Das Ziel: so viel Selbstständigkeit zurückgewinnen wie möglich. Eine 24h-Betreuungskraft ermöglicht die frühzeitige Entlassung nach Hause — und setzt die Reha-Maßnahmen kontinuierlich im Alltag fort.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Frühzeitige Entlassung möglich', desc: 'Das Krankenhaus kann den Patienten früher entlassen wenn die häusliche Versorgung sichergestellt ist. Primundus kann eine Betreuungskraft in 4–7 Tagen bereitstellen — oft schneller als ein Pflegeheimplatz gefunden ist.' },
+                { title: 'Reha-Therapien zuhause fortsetzen', desc: 'Physiotherapeuten und Logopäden kommen nach Hause. Die Betreuungskraft begleitet die Übungen im Alltag — konsequenter als eine Einrichtung es könnte.' },
+                { title: 'Kurzzeitpflege als Überbrückung', desc: 'Wenn die Wohnungssituation erst angepasst werden muss (Badumbau, Rollstuhlzugang) kann das Entlastungsbudget für Kurzzeitpflege genutzt werden.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegrad nach Schlaganfall & Kassenzuschüsse
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Den Pflegegrad sofort nach der Entlassung beantragen — die Leistungen gelten rückwirkend ab Antragsdatum. Bei einem Krankenhausaufenthalt verkürzt sich die Entscheidungsfrist der Pflegekasse auf eine Woche.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Typische Pflegegrade nach Schlaganfall</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Schwere', 'Typischer PG', 'Pflegegeld/Monat'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Leichte Folgeschäden', 'PG 2–3', '347–599 €'],
-                    ['Hemiplegie mit Hilfebedarf', 'PG 3–4', '599–800 €'],
-                    ['Schwere Hemiplegie + Aphasie', 'PG 4–5', '800–990 €'],
-                  ].map(([schwere, pg, pflegegeld], i) => (
-                    <tr key={schwere} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{schwere}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pflegegeld}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-3">
-            → Pflegegrad schnell beantragen:{' '}
-            <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad beantragen — Schritt für Schritt</a>
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Pflegegrad nach Schlaganfall:{' '}
-            <a href="/pflegegrad-nach-schlaganfall" className="text-pm-taupe underline hover:text-pm-taupe-deep">Welcher Pflegegrad nach Schlaganfall?</a>
-          </p>
+          <Abschnitt id="pflegegrad" titel="Pflegegrad nach Schlaganfall & Kassenzuschüsse">
+            <Text>
+              Den Pflegegrad sofort nach der Entlassung beantragen — die Leistungen gelten rückwirkend ab Antragsdatum. Bei einem Krankenhausaufenthalt verkürzt sich die Entscheidungsfrist der Pflegekasse auf eine Woche.
+            </Text>
+            <Tabelle
+              titel="Typische Pflegegrade nach Schlaganfall"
+              kopf={['Schwere', 'Typischer PG', 'Pflegegeld/Monat']}
+              zeilen={[
+                ['Leichte Folgeschäden', 'PG 2–3', '347–599 €'],
+                ['Hemiplegie mit Hilfebedarf', 'PG 3–4', '599–800 €'],
+                ['Schwere Hemiplegie + Aphasie', 'PG 4–5', '800–990 €'],
+              ]}
+              betont={2}
+            />
+            <MehrDazu
+              label="Pflegegrad schnell beantragen:"
+              links={[{ href: "/pflegegrad-beantragen", text: "Pflegegrad beantragen — Schritt für Schritt" }]}
+            />
+            <MehrDazu
+              label="Pflegegrad nach Schlaganfall:"
+              links={[{ href: "/pflegegrad-nach-schlaganfall", text: "Welcher Pflegegrad nach Schlaganfall?" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="24h" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            24h-Pflege nach Schlaganfall — wann und wie
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Eine 24h-Betreuungskraft ist nach Schlaganfall die häufigste Lösung für Familien die den Angehörigen zuhause versorgen wollen. Primundus kann in 4–7 Tagen eine Kraft bereitstellen — auch als Überbrückung direkt nach Krankenhausentlassung.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <DunklerAbschnitt
+            id="24h"
+            titel="24h-Pflege nach Schlaganfall — wann und wie"
+            einleitung="Eine 24h-Betreuungskraft ist nach Schlaganfall die häufigste Lösung für Familien die den Angehörigen zuhause versorgen wollen. Primundus kann in 4–7 Tagen eine Kraft bereitstellen — auch als Überbrückung direkt nach Krankenhausentlassung."
+            punkte={[
               { title: 'Was die Betreuungskraft nach Schlaganfall macht', desc: 'Körperpflege und Transfer aus dem Bett, Unterstützung bei Essen (ggf. angepasste Konsistenz), Begleitung bei Physiotherapie-Übungen im Alltag, Sprache fördern durch Gespräche, Sturzsicherheit gewährleisten, emotionale Begleitung.' },
               { title: 'Qualifikation beachten', desc: 'Bei Schluckstörungen oder intensivpflegerischen Anforderungen sollte die Kraft nachgewiesene Pflegeerfahrung haben. Primundus berücksichtigt das bei der Auswahl.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Mehr zu 24h-Pflege allgemein:{' '}
-            <a href="/was-ist-24-stunden-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was ist 24-Stunden-Pflege?</a>
-            {' · '}
-            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kosten & Kassenzuschüsse 2026</a>
-          </p>
+            ]}
+          >
+            <MehrDazu
+              label="Mehr zu 24h-Pflege allgemein:"
+              links={[{ href: "/was-ist-24-stunden-pflege", text: "Was ist 24-Stunden-Pflege?" }, { href: "/kosten", text: "Kosten & Kassenzuschüsse 2026" }]}
+            />
+          </DunklerAbschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur Pflege nach Schlaganfall
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wann kann man nach einem Schlaganfall nach Hause?', a: 'Nach Akutbehandlung und Reha — typischerweise 2–8 Wochen nach dem Schlaganfall. Eine 24h-Betreuungskraft ermöglicht frühere Entlassung weil die häusliche Versorgung damit sichergestellt ist.' },
-              { q: 'Welchen Pflegegrad bekommt man nach einem Schlaganfall?', a: 'Je nach Schwere PG 2–5. Leichte Folgeschäden: PG 2–3. Schwere Hemiplegie: PG 4. Vollständige Abhängigkeit mit Kommunikationsverlust: PG 5. Antrag sofort nach Entlassung stellen — gilt rückwirkend.' },
-              { q: 'Kann man nach schwerem Schlaganfall zuhause bleiben?', a: 'In den meisten Fällen ja — mit einer 24h-Betreuungskraft. Nicht möglich bei intensivmedizinischem Dauerbedarf (Beatmung etc.) oder wenn Wohnraum nicht angepasst werden kann.' },
-              { q: 'Wie fördert man Erholung nach Schlaganfall zuhause?', a: 'Regelmäßige Physiotherapie und Logopädie — idealerweise täglich. Alltägliche Bewegung und Beschäftigung. Vertraute Umgebung, bekannte Menschen. Kognitive Förderung durch Gespräche, Vorlesen, einfache Aktivitäten.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="schlaganfall-pflege-zuhause" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen zur Pflege nach Schlaganfall">
+            <Fragen
+              fragen={[
+                { q: 'Wann kann man nach einem Schlaganfall nach Hause?', a: 'Nach Akutbehandlung und Reha — typischerweise 2–8 Wochen nach dem Schlaganfall. Eine 24h-Betreuungskraft ermöglicht frühere Entlassung weil die häusliche Versorgung damit sichergestellt ist.' },
+                { q: 'Welchen Pflegegrad bekommt man nach einem Schlaganfall?', a: 'Je nach Schwere PG 2–5. Leichte Folgeschäden: PG 2–3. Schwere Hemiplegie: PG 4. Vollständige Abhängigkeit mit Kommunikationsverlust: PG 5. Antrag sofort nach Entlassung stellen — gilt rückwirkend.' },
+                { q: 'Kann man nach schwerem Schlaganfall zuhause bleiben?', a: 'In den meisten Fällen ja — mit einer 24h-Betreuungskraft. Nicht möglich bei intensivmedizinischem Dauerbedarf (Beatmung etc.) oder wenn Wohnraum nicht angepasst werden kann.' },
+                { q: 'Wie fördert man Erholung nach Schlaganfall zuhause?', a: 'Regelmäßige Physiotherapie und Logopädie — idealerweise täglich. Alltägliche Bewegung und Beschäftigung. Vertraute Umgebung, bekannte Menschen. Kognitive Förderung durch Gespräche, Vorlesen, einfache Aktivitäten.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="schlaganfall-pflege-zuhause" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

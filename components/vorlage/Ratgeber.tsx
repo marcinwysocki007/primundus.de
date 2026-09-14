@@ -50,6 +50,7 @@ export function RatgeberKopf({
   aktualisiert,
   lesezeit,
   blick,
+  blickTitel = 'Auf einen Blick',
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -57,7 +58,10 @@ export function RatgeberKopf({
   einleitung: ReactNode
   aktualisiert: string
   lesezeit: string
-  blick: string[]
+  /** Nur wenn die Seite schon eine „Auf einen Blick"-Liste hat — nie neu erfinden. */
+  blick?: string[]
+  /** Überschrift des Kastens, falls die Seite eine eigene hatte („Auf einen Blick — Pflegegrad 3") */
+  blickTitel?: string
 }) {
   return (
     <div className="bg-pm-shell">
@@ -75,7 +79,7 @@ export function RatgeberKopf({
           ))}
         </nav>
 
-        <div className="mt-8 md:mt-12 grid gap-10 lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-center">
+        <div className={`mt-8 md:mt-12 grid gap-10 ${blick?.length ? 'lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-center' : 'max-w-[52rem]'}`}>
           <div className="min-w-0">
             <p className={AUGENBRAUE}>{augenbraue}</p>
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">
@@ -102,8 +106,9 @@ export function RatgeberKopf({
             </div>
           </div>
 
+          {blick?.length ? (
           <aside aria-label="Auf einen Blick" className="bg-white rounded-[20px] shadow-lift p-6 md:p-7">
-            <p className={AUGENBRAUE}>Auf einen Blick</p>
+            <p className={AUGENBRAUE}>{blickTitel}</p>
             <ul className="mt-4 grid gap-3.5">
               {blick.map((b) => (
                 <li key={b} className="flex gap-3 text-[16px] leading-[1.5] font-medium text-pm-ink">
@@ -113,6 +118,7 @@ export function RatgeberKopf({
               ))}
             </ul>
           </aside>
+          ) : null}
         </div>
       </div>
     </div>
@@ -144,6 +150,11 @@ export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: stri
       </aside>
     </div>
   )
+}
+
+// Text vor dem ersten Abschnitt (Seiten, deren Rumpf ohne Zwischenüberschrift beginnt)
+export function Vorspann({ children }: { children: ReactNode }) {
+  return <div className="flex flex-col gap-6 pb-4">{children}</div>
 }
 
 export function Abschnitt({ id, titel, children }: { id: string; titel: ReactNode; children: ReactNode }) {
@@ -208,6 +219,53 @@ export function Punkte({ punkte }: { punkte: { title: string; desc: ReactNode }[
   )
 }
 
+// Nummerierte Schritte — nur für echte Reihenfolgen (Antrag, Ablauf). Linien statt
+// Kästen, Nummer im Kreis wie der Ablauf der Partnerseite.
+const ETIKETT = { gruen: 'bg-pm-mint text-pm-green-deep', neutral: 'bg-pm-paper text-pm-body', koralle: 'bg-pm-coral-tint text-pm-coral-ink' } as const
+
+export function Schritte({
+  schritte,
+}: {
+  schritte: { title: string; desc?: ReactNode; tag?: string; tagTon?: keyof typeof ETIKETT }[]
+}) {
+  return (
+    <ol className="border-t border-pm-line">
+      {schritte.map((s, i) => (
+        <li key={s.title} className="flex gap-4 md:gap-5 py-5 border-b border-pm-line">
+          <span aria-hidden="true" className="w-9 h-9 rounded-full border-2 border-pm-line bg-white text-pm-ink font-bold text-[15px] flex items-center justify-center flex-none [font-variant-numeric:tabular-nums]">
+            {i + 1}
+          </span>
+          <div className="min-w-0 pt-1">
+            <h3 className="text-[18px] font-bold leading-[1.35] tracking-[-0.015em] text-pm-ink">{s.title}</h3>
+            {s.desc && <p className="mt-1.5 text-[17px] leading-[1.65] text-pm-body">{s.desc}</p>}
+            {s.tag && (
+              <span className={`mt-3 inline-block text-[13px] font-semibold px-3 py-1 rounded-full ${ETIKETT[s.tagTon ?? 'neutral']}`}>{s.tag}</span>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
+export function Zwischentitel({ children }: { children: ReactNode }) {
+  return <h3 className="pt-4 text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-pm-ink [text-wrap:balance]">{children}</h3>
+}
+
+// Zwei Spalten ohne Kopf: links der Wert (Frist, Betrag, Bereich), rechts die Erklärung.
+export function Werte({ zeilen, ton = 'neutral' }: { zeilen: [ReactNode, ReactNode][]; ton?: 'neutral' | 'gruen' }) {
+  return (
+    <dl className="border-t border-pm-line-soft">
+      {zeilen.map(([wert, text], i) => (
+        <div key={i} className="py-3 border-b border-pm-line-soft last:border-0 sm:grid sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6">
+          <dt className={`text-[16.5px] font-bold leading-[1.45] [font-variant-numeric:tabular-nums] ${ton === 'gruen' ? 'text-pm-green' : 'text-pm-ink'}`}>{wert}</dt>
+          <dd className="mt-0.5 sm:mt-0 text-[16.5px] leading-[1.55] text-pm-body">{text}</dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
 export function Liste({ punkte }: { punkte: ReactNode[] }) {
   return (
     <ul className="border-t border-pm-line">
@@ -218,11 +276,26 @@ export function Liste({ punkte }: { punkte: ReactNode[] }) {
   )
 }
 
-export function Kasten({ titel, children }: { titel?: ReactNode; children: ReactNode }) {
+const TITELFARBE = { neutral: 'text-pm-ink', gruen: 'text-pm-green', koralle: 'text-pm-coral-ink' } as const
+
+// Hinweis-, Tipp- und Warnkästen. ton färbt nur den Titel; der Kasten bleibt weiß
+// (Partnerseite), statt grüner/roter Flächen mit Rahmen.
+export function Kasten({
+  augenbraue,
+  titel,
+  ton = 'neutral',
+  children,
+}: {
+  augenbraue?: string
+  titel?: ReactNode
+  ton?: keyof typeof TITELFARBE
+  children?: ReactNode
+}) {
   return (
     <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
-      {titel && <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">{titel}</p>}
-      <div className={titel ? 'mt-5' : ''}>{children}</div>
+      {augenbraue && <p className={`${AUGENBRAUE} ${ton === 'gruen' ? '!text-pm-green' : ton === 'koralle' ? '!text-pm-coral-ink' : ''}`}>{augenbraue}</p>}
+      {titel && <p className={`${augenbraue ? 'mt-2 ' : ''}text-[19px] font-bold leading-[1.3] tracking-[-0.015em] ${TITELFARBE[ton]} [text-wrap:balance]`}>{titel}</p>}
+      {children && <div className={titel || augenbraue ? 'mt-5 flex flex-col gap-4' : 'flex flex-col gap-4'}>{children}</div>}
     </div>
   )
 }
@@ -240,15 +313,22 @@ export function HakenListe({ punkte, zweispaltig = false }: { punkte: string[]; 
   )
 }
 
-export function Gegenueber({ seiten }: { seiten: { titel: string; ton: 'gruen' | 'taupe'; text: ReactNode }[] }) {
+export function Gegenueber({ seiten }: { seiten: { titel: string; ton: 'gruen' | 'taupe' | 'koralle'; text?: ReactNode; punkte?: ReactNode[] }[] }) {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {seiten.map((s) => (
         <div key={s.titel} className="bg-white rounded-[20px] shadow-lift p-6">
-          <p className={`text-[17px] font-bold leading-[1.3] tracking-[-0.015em] ${s.ton === 'gruen' ? 'text-pm-green' : 'text-pm-taupe-ink'}`}>
+          <p className={`text-[17px] font-bold leading-[1.3] tracking-[-0.015em] ${s.ton === 'gruen' ? 'text-pm-green' : s.ton === 'koralle' ? 'text-pm-coral-ink' : 'text-pm-taupe-ink'}`}>
             {s.titel}
           </p>
-          <p className="mt-3 text-[16.5px] leading-[1.6] text-pm-body">{s.text}</p>
+          {s.text && <p className="mt-3 text-[16.5px] leading-[1.6] text-pm-body">{s.text}</p>}
+          {s.punkte && (
+            <ul className="mt-3 border-t border-pm-line-soft">
+              {s.punkte.map((p, i) => (
+                <li key={i} className="py-2.5 border-b border-pm-line-soft last:border-0 text-[16px] leading-[1.5] text-pm-body">{p}</li>
+              ))}
+            </ul>
+          )}
         </div>
       ))}
     </div>
@@ -265,8 +345,8 @@ export function Tabelle({
   fuss,
 }: {
   titel: string
-  kopf: string[]
-  zeilen: string[][]
+  kopf?: string[]
+  zeilen: ReactNode[][]
   betont?: number
   fuss?: ReactNode
 }) {
@@ -275,6 +355,7 @@ export function Tabelle({
       <p className={`${AUGENBRAUE} px-5 md:px-6 pt-5 pb-4`}>{titel}</p>
       <div className="sm:overflow-x-auto">
         <table className="w-full text-left [font-variant-numeric:tabular-nums]">
+          {kopf && (
           <thead className="max-sm:sr-only">
             <tr>
               {kopf.map((h) => (
@@ -284,14 +365,15 @@ export function Tabelle({
               ))}
             </tr>
           </thead>
+          )}
           <tbody className="max-sm:border-t max-sm:border-pm-line">
-            {zeilen.map((z) => (
-              <tr key={z[0]} className="border-b border-pm-line-soft last:border-0 max-sm:block max-sm:px-5 max-sm:py-4">
+            {zeilen.map((z, zi) => (
+              <tr key={zi} className="border-b border-pm-line-soft last:border-0 max-sm:block max-sm:px-5 max-sm:py-4">
                 {z.map((c, j) => (
                   <td
                     key={j}
-                    data-label={kopf[j]}
-                    className={`px-5 md:px-6 py-4 text-[16px] whitespace-nowrap max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:p-0 max-sm:py-0.5 max-sm:before:content-[attr(data-label)] max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px] ${
+                    data-label={kopf?.[j] ?? ''}
+                    className={`px-5 md:px-6 py-4 text-[16px] ${kopf ? 'whitespace-nowrap max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:before:content-[attr(data-label)] max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px]' : 'align-top max-sm:block'} max-sm:p-0 max-sm:py-0.5 ${
                       j === 0
                         ? 'text-pm-body max-sm:before:content-none max-sm:pb-1.5 max-sm:text-[17px] max-sm:font-bold max-sm:text-pm-ink'
                         : j === betont

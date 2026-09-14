@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -85,139 +87,102 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-ink">Rollator & Rollstuhl beantragen</span>
-          </nav>
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Hilfsmittel · 7 Min</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Rollator & Rollstuhl beantragen: auf Rezept, ohne Pflegegrad
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Das Wichtigste zuerst: Für einen Rollator oder Rollstuhl brauchen Sie <strong>keinen
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Ratgeber", href: "/ratgeber" },
+            { label: "Rollator & Rollstuhl beantragen" },
+          ]}
+          augenbraue="Ratgeber Hilfsmittel"
+          titel="Rollator & Rollstuhl beantragen: auf Rezept, ohne Pflegegrad"
+          einleitung={<>Das Wichtigste zuerst: Für einen Rollator oder Rollstuhl brauchen Sie <strong>keinen
             Pflegegrad</strong> — nur ein Rezept vom Arzt. Zuständig ist die Krankenkasse, die Zuzahlung
             beträgt 5 bis 10 Euro. Hier steht, wie der Antrag Schritt für Schritt läuft, was der
-            Pflegegrad zusätzlich bringt und was Sie tun können, wenn die Kasse ablehnt.
-          </p>
+            Pflegegrad zusätzlich bringt und was Sie tun können, wenn die Kasse ablehnt.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          {/* ① WELCHE KASSE */}
-          <h2 id="was-zahlt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Krankenkasse oder Pflegekasse — wer zahlt was?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Die häufigste Verwirrung zuerst: <strong>Hilfsmittel</strong> wie Rollator, Rollstuhl oder
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-zahlt" titel="Krankenkasse oder Pflegekasse — wer zahlt was?">
+            <Text>
+              Die häufigste Verwirrung zuerst: <strong>Hilfsmittel</strong> wie Rollator, Rollstuhl oder
             Duschhocker gleichen eine körperliche Einschränkung aus — sie zahlt die
             <strong> Krankenkasse</strong> auf ärztliche Verordnung, völlig unabhängig davon, ob ein
             Pflegegrad besteht. <strong>Pflegehilfsmittel</strong> dagegen erleichtern die Pflege zuhause —
             dafür ist die <strong>Pflegekasse</strong> zuständig, und hier braucht es einen Pflegegrad.
             Manche Produkte wie das Pflegebett können je nach Begründung über beide Wege laufen — das
             Sanitätshaus ordnet den richtigen Weg mit zu.
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* ② REZEPT */}
-          <h2 id="rezept" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Rollator oder Rollstuhl auf Rezept: so läuft der Antrag
-          </h2>
-          <div className="space-y-3 mb-4">
-            {[
-              { n: '1', t: 'Zum Arzt gehen', d: 'Hausarzt oder Facharzt stellt bei medizinischer Notwendigkeit eine Hilfsmittel-Verordnung aus — das „Rezept". Schildern Sie den Alltag konkret: Stürze, unsichere Wege, Schmerzen beim Gehen.' },
-              { n: '2', t: 'Zum Sanitätshaus mit Kassenvertrag', d: 'Das Sanitätshaus prüft die Verordnung, berät zum passenden Modell und reicht den Antrag direkt bei Ihrer Krankenkasse ein — Sie müssen meist nichts selbst einsenden. Wichtig: ein Vertragspartner Ihrer Kasse sein (kurz nachfragen).' },
-              { n: '3', t: 'Genehmigung abwarten', d: 'Die Kasse muss grundsätzlich binnen drei Wochen entscheiden, mit Medizinischem Dienst binnen fünf. Verstreicht die Frist ohne Rückmeldung und ohne mitgeteilten Grund, gilt der Antrag als genehmigt (§ 13 Abs. 3a SGB V).' },
-              { n: '4', t: 'Hilfsmittel erhalten', d: 'Oft kommt ein Leihgerät aus dem Bestand der Kasse — geprüft und aufbereitet. Die gesetzliche Zuzahlung für Erwachsene: 10 Prozent des Preises, mindestens 5, höchstens 10 Euro. Wer ein Wunschmodell über dem Standard möchte, zahlt die Differenz privat dazu.' },
-            ].map((x) => (
-              <div key={x.n} className="bg-white border border-pm-line rounded-2xl p-5 flex gap-4">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white text-[14px] font-bold flex items-center justify-center flex-shrink-0">{x.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{x.t}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{x.d}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            Tipp: Notieren Sie sich das Antragsdatum. Die Fristen laufen ab Eingang bei der Kasse —
+          <Abschnitt id="rezept" titel="Rollator oder Rollstuhl auf Rezept: so läuft der Antrag">
+            <Schritte
+              schritte={[
+                { title: 'Zum Arzt gehen', desc: 'Hausarzt oder Facharzt stellt bei medizinischer Notwendigkeit eine Hilfsmittel-Verordnung aus — das „Rezept". Schildern Sie den Alltag konkret: Stürze, unsichere Wege, Schmerzen beim Gehen.' },
+                { title: 'Zum Sanitätshaus mit Kassenvertrag', desc: 'Das Sanitätshaus prüft die Verordnung, berät zum passenden Modell und reicht den Antrag direkt bei Ihrer Krankenkasse ein — Sie müssen meist nichts selbst einsenden. Wichtig: ein Vertragspartner Ihrer Kasse sein (kurz nachfragen).' },
+                { title: 'Genehmigung abwarten', desc: 'Die Kasse muss grundsätzlich binnen drei Wochen entscheiden, mit Medizinischem Dienst binnen fünf. Verstreicht die Frist ohne Rückmeldung und ohne mitgeteilten Grund, gilt der Antrag als genehmigt (§ 13 Abs. 3a SGB V).' },
+                { title: 'Hilfsmittel erhalten', desc: 'Oft kommt ein Leihgerät aus dem Bestand der Kasse — geprüft und aufbereitet. Die gesetzliche Zuzahlung für Erwachsene: 10 Prozent des Preises, mindestens 5, höchstens 10 Euro. Wer ein Wunschmodell über dem Standard möchte, zahlt die Differenz privat dazu.' },
+              ]}
+            />
+            <Text>
+              Tipp: Notieren Sie sich das Antragsdatum. Die Fristen laufen ab Eingang bei der Kasse —
             und sie sind Ihr stärkstes Druckmittel.
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* ③ PFLEGEGRAD */}
-          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was der Pflegegrad zusätzlich bringt
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Für Rollator und Rollstuhl ist der Pflegegrad also nicht nötig — aber wer einen hat, bekommt
+          <Abschnitt id="pflegegrad" titel="Was der Pflegegrad zusätzlich bringt">
+            <Text>
+              Für Rollator und Rollstuhl ist der Pflegegrad also nicht nötig — aber wer einen hat, bekommt
             mehr: <strong>Pflegehilfsmittel zum Verbrauch</strong> (Handschuhe, Betteinlagen,
             Desinfektion) bis 42 €/Monat ohne Zuzahlung, <strong>technische Pflegehilfsmittel</strong> wie
             Pflegebett oder Hausnotruf über die Pflegekasse — und Zuschüsse für
             <strong> Wohnumfeldverbesserung</strong> bis 4.180 € je Maßnahme, etwa für den Badumbau oder
             Türverbreiterungen, damit der Rollstuhl überhaupt durchpasst.
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Noch kein Pflegegrad? <a href="/pflegegrad-rechner" className="text-pm-taupe underline hover:text-pm-taupe-deep">Erste Einschätzung im Pflegegrad-Rechner</a>
+            </Text>
+            <Text>
+              → Noch kein Pflegegrad? <a href="/pflegegrad-rechner" className="text-pm-taupe underline hover:text-pm-taupe-deep">Erste Einschätzung im Pflegegrad-Rechner</a>
             {' · '}
             <a href="/pflegehilfsmittel-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegehilfsmittel beantragen</a>
             {' · '}
             <a href="/wohnraumanpassung-foerderung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Wohnumbau-Förderung</a>
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* ④ ABLEHNUNG */}
-          <h2 id="ablehnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wenn die Kasse ablehnt: Widerspruch lohnt sich
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Gegen eine Ablehnung können Sie innerhalb <strong>eines Monats</strong> schriftlich
+          <Abschnitt id="ablehnung" titel="Wenn die Kasse ablehnt: Widerspruch lohnt sich">
+            <Text>
+              Gegen eine Ablehnung können Sie innerhalb <strong>eines Monats</strong> schriftlich
             Widerspruch einlegen — formlos, mit Aktenzeichen und kurzer Begründung. Stärken Sie den
             Widerspruch mit einer ergänzenden Stellungnahme des Arztes, warum genau dieses Hilfsmittel
             im Alltag notwendig ist. Viele Ablehnungen werden im Widerspruchsverfahren korrigiert;
             hilft das nicht, bleibt die kostenfreie Klage vor dem Sozialgericht.
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* ⑤ ÜBERBLICK */}
-          <h2 id="hilfsmittel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wichtige Hilfsmittel im Überblick
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-10">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[520px]">
-                <thead><tr className="bg-pm-paper">
-                  {['Hilfsmittel', 'Zuständig', 'Voraussetzung'].map((h) => (
-                    <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                  ))}
-                </tr></thead>
-                <tbody>
-                  {[
-                    ['Rollator', 'Krankenkasse', 'Rezept vom Arzt'],
-                    ['Rollstuhl', 'Krankenkasse', 'Rezept vom Arzt'],
-                    ['Duschhocker, Badewannenlifter', 'Krankenkasse', 'Rezept vom Arzt'],
-                    ['Pflegebett', 'Kranken- oder Pflegekasse', 'Rezept bzw. Pflegegrad'],
-                    ['Hausnotruf', 'Pflegekasse', 'Pflegegrad 1–5'],
-                    ['Verbrauchs-Pflegehilfsmittel (42 €/Monat)', 'Pflegekasse', 'Pflegegrad 1–5'],
-                    ['Wohnumfeldverbesserung (bis 4.180 €)', 'Pflegekasse', 'Pflegegrad 1–5'],
-                  ].map(([h, k, v], i) => (
-                    <tr key={h} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line">{h}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line">{k}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line">{v}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="bg-pm-paper border-t border-pm-line px-4 py-3">
-              <p className="text-[11px] text-pm-mute">Stand August 2026 · gesetzliche Kranken- und Pflegeversicherung; bei privaten Kassen gelten die Tarifbedingungen</p>
-            </div>
-          </div>
+          <Abschnitt id="hilfsmittel" titel="Wichtige Hilfsmittel im Überblick">
+            <Tabelle
+              titel=""
+              kopf={['Hilfsmittel', 'Zuständig', 'Voraussetzung']}
+              zeilen={[
+                ['Rollator', 'Krankenkasse', 'Rezept vom Arzt'],
+                ['Rollstuhl', 'Krankenkasse', 'Rezept vom Arzt'],
+                ['Duschhocker, Badewannenlifter', 'Krankenkasse', 'Rezept vom Arzt'],
+                ['Pflegebett', 'Kranken- oder Pflegekasse', 'Rezept bzw. Pflegegrad'],
+                ['Hausnotruf', 'Pflegekasse', 'Pflegegrad 1–5'],
+                ['Verbrauchs-Pflegehilfsmittel (42 €/Monat)', 'Pflegekasse', 'Pflegegrad 1–5'],
+                ['Wohnumfeldverbesserung (bis 4.180 €)', 'Pflegekasse', 'Pflegegrad 1–5'],
+              ]}
+              fuss="Stand August 2026 · gesetzliche Kranken- und Pflegeversicherung; bei privaten Kassen gelten die Tarifbedingungen"
+            />
+          </Abschnitt>
 
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-12">
             {faqs.map((f) => (
               <details key={f.q} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
@@ -228,9 +193,13 @@ export default function Page() {
               </details>
             ))}
           </div>
-          <Weiterlesen aktuell="hilfsmittel-rollstuhl-beantragen" />
-          <ArticleCTA />
-        </div>
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="hilfsmittel-rollstuhl-beantragen" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

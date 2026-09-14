@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,83 +69,61 @@ export default function DiabetesPflegeSenioren() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Krankheiten", href: "/krankheiten" },
+            { label: "Diabetes Pflege Senioren" },
+          ]}
+          augenbraue="Ratgeber Diabetes"
+          titel="Diabetes Pflege Senioren — was bei der Betreuung zuhause wichtig ist"
+          einleitung="Diabetes Typ 2 ist bei Senioren über 70 eine der häufigsten Erkrankungen — und bei pflegebedürftigen Menschen oft eines von mehreren gleichzeitigen Problemen. Die häusliche Pflege von Menschen mit Diabetes erfordert strukturiertes Management: regelmäßige Mahlzeiten, Blutzuckerkontrolle, Medikamentensicherheit und das sichere Erkennen einer Unterzuckerung."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Diabetes Pflege Senioren</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Achtung: Hypoglykämie bei Demenz oft schwer erkennbar" ton="koralle">
+              <Text>Wenn Demenz und Diabetes zusammentreffen, ist die Hypoglykämie-Erkennung besonders schwierig — Verwirrung und Aggression können sowohl Demenz-Symptom als auch Unterzuckerung sein. Im Zweifel immer Blutzucker messen.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
+          <Abschnitt id="besonderheiten" titel="Besonderheiten bei Diabetes im Alter">
+            <Punkte
+              punkte={[
+                { title: 'Hypoglykämie-Risiko ist höher', desc: 'Bei älteren Menschen treten Unterzuckerungen häufiger auf — durch unregelmäßiges Essen, nachlassendes Nierenfilterung (langsamerer Medikamentenabbau) und veränderte Gegenregulation. Hypoglykämien werden oft erst spät bemerkt.' },
+                { title: 'Zielblutzucker ist anders', desc: 'Ältere Pflegebedürftige brauchen oft höhere Zielblutzucker-Werte als jüngere Diabetiker — weil Hypoglykämien für sie gefährlicher sind als leicht erhöhte Werte. Arzt bestimmt individuellen Zielbereich.' },
+                { title: 'Medikamente wechselwirken', desc: 'Viele Senioren nehmen 5+ Medikamente gleichzeitig. Wechselwirkungen mit Diabetesmedikamenten sind häufig. Regelmäßige Medikamentengabe zur selben Zeit nach den Mahlzeiten ist entscheidend.' },
+                { title: 'Dehydration verschlechtert Blutzucker', desc: 'Zu wenig Trinken erhöht den Blutzucker erheblich. Aktives Flüssigkeitsanbieten ist bei Diabetikern besonders wichtig.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Diabetes Pflege Senioren — was bei der Betreuung zuhause wichtig ist
-          </h1>
+          <Abschnitt id="alltag" titel="Diabetesmanagement im Alltag — was die Betreuungskraft übernimmt">
+            <Punkte
+              punkte={[
+                { title: '✓ Blutzucker messen', desc: 'Betreuungskraft lernt das Blutzuckermessen und führt es zu festgelegten Zeiten durch. Werte werden dokumentiert und bei Auffälligkeiten Angehörige und Arzt informiert.' },
+                { title: '✓ Medikamentenerinnerung', desc: 'Orale Diabetesmedikamente werden zur richtigen Zeit und nach den Mahlzeiten erinnert. Keine Medikamentengabe gegen den Willen des Betroffenen.' },
+                { title: '✓ Diabetesgerechte Mahlzeiten kochen', desc: 'Kohlenhydratreduzierte, ausgewogene Mahlzeiten zu festen Zeiten. Keine süßen Getränke. Frisches Obst in Maßen. Vollkornprodukte. Betreuungskraft lernt die Grundlagen der Diabeteskost.' },
+                { title: '✓ Flüssigkeit aktiv anbieten', desc: 'Regelmäßig Wasser, ungesüßten Tee, Mineralwasser anbieten. Keine zuckerhaltigen Getränke. Trinkprotokoll bei Bedarf.' },
+                { title: '✓ Hypoglykämie-Zeichen beobachten', desc: 'Betreuungskraft ist geschult auf frühe und späte Zeichen einer Unterzuckerung — und weiß wie zu handeln.' },
+                { title: '✗ Insulin spritzen — Pflegedienst', desc: 'Insulininjektionen sind Behandlungspflege — übernimmt der ambulante Pflegedienst. Primundus koordiniert auf Wunsch die Zusammenarbeit.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Diabetes Typ 2 ist bei Senioren über 70 eine der häufigsten Erkrankungen — und bei pflegebedürftigen Menschen oft eines von mehreren gleichzeitigen Problemen. Die häusliche Pflege von Menschen mit Diabetes erfordert strukturiertes Management: regelmäßige Mahlzeiten, Blutzuckerkontrolle, Medikamentensicherheit und das sichere Erkennen einer Unterzuckerung.
-          </p>
-
-          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Achtung: Hypoglykämie bei Demenz oft schwer erkennbar</p>
-            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
-              Wenn Demenz und Diabetes zusammentreffen, ist die Hypoglykämie-Erkennung besonders schwierig — Verwirrung und Aggression können sowohl Demenz-Symptom als auch Unterzuckerung sein. Im Zweifel immer Blutzucker messen.
-            </p>
-          </div>
-
-          <h2 id="besonderheiten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Besonderheiten bei Diabetes im Alter
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { thema: 'Hypoglykämie-Risiko ist höher', desc: 'Bei älteren Menschen treten Unterzuckerungen häufiger auf — durch unregelmäßiges Essen, nachlassendes Nierenfilterung (langsamerer Medikamentenabbau) und veränderte Gegenregulation. Hypoglykämien werden oft erst spät bemerkt.' },
-              { thema: 'Zielblutzucker ist anders', desc: 'Ältere Pflegebedürftige brauchen oft höhere Zielblutzucker-Werte als jüngere Diabetiker — weil Hypoglykämien für sie gefährlicher sind als leicht erhöhte Werte. Arzt bestimmt individuellen Zielbereich.' },
-              { thema: 'Medikamente wechselwirken', desc: 'Viele Senioren nehmen 5+ Medikamente gleichzeitig. Wechselwirkungen mit Diabetesmedikamenten sind häufig. Regelmäßige Medikamentengabe zur selben Zeit nach den Mahlzeiten ist entscheidend.' },
-              { thema: 'Dehydration verschlechtert Blutzucker', desc: 'Zu wenig Trinken erhöht den Blutzucker erheblich. Aktives Flüssigkeitsanbieten ist bei Diabetikern besonders wichtig.' },
-            ].map((item) => (
-              <div key={item.thema} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.thema}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="alltag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Diabetesmanagement im Alltag — was die Betreuungskraft übernimmt
-          </h2>
-          <div className="space-y-3 mb-6">
-            {[
-              { aufgabe: '✓ Blutzucker messen', detail: 'Betreuungskraft lernt das Blutzuckermessen und führt es zu festgelegten Zeiten durch. Werte werden dokumentiert und bei Auffälligkeiten Angehörige und Arzt informiert.' },
-              { aufgabe: '✓ Medikamentenerinnerung', detail: 'Orale Diabetesmedikamente werden zur richtigen Zeit und nach den Mahlzeiten erinnert. Keine Medikamentengabe gegen den Willen des Betroffenen.' },
-              { aufgabe: '✓ Diabetesgerechte Mahlzeiten kochen', detail: 'Kohlenhydratreduzierte, ausgewogene Mahlzeiten zu festen Zeiten. Keine süßen Getränke. Frisches Obst in Maßen. Vollkornprodukte. Betreuungskraft lernt die Grundlagen der Diabeteskost.' },
-              { aufgabe: '✓ Flüssigkeit aktiv anbieten', detail: 'Regelmäßig Wasser, ungesüßten Tee, Mineralwasser anbieten. Keine zuckerhaltigen Getränke. Trinkprotokoll bei Bedarf.' },
-              { aufgabe: '✓ Hypoglykämie-Zeichen beobachten', detail: 'Betreuungskraft ist geschult auf frühe und späte Zeichen einer Unterzuckerung — und weiß wie zu handeln.' },
-              { aufgabe: '✗ Insulin spritzen — Pflegedienst', detail: 'Insulininjektionen sind Behandlungspflege — übernimmt der ambulante Pflegedienst. Primundus koordiniert auf Wunsch die Zusammenarbeit.' },
-            ].map((item) => (
-              <div key={item.aufgabe} className={`rounded-xl p-5 border ${item.aufgabe.startsWith('✗') ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.15)]' : 'bg-white border-pm-line'}`}>
-                <p className={`text-[14px] font-bold mb-1 ${item.aufgabe.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-ink'}`}>{item.aufgabe}</p>
-                <p className={`text-[14px] leading-relaxed ${item.aufgabe.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-body'}`}>{item.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="hypo" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Hypoglykämie erkennen & richtig handeln
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Eine Hypoglykämie (Unterzuckerung) ist ein Notfall — besonders bei älteren Menschen. Jede Betreuungskraft muss die Zeichen kennen und sofort handeln.
-          </p>
-          <div className="space-y-3 mb-6">
+          <Abschnitt id="hypo" titel="Hypoglykämie erkennen & richtig handeln">
+            <Text>
+              Eine Hypoglykämie (Unterzuckerung) ist ein Notfall — besonders bei älteren Menschen. Jede Betreuungskraft muss die Zeichen kennen und sofort handeln.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-6">
             {[
               { phase: 'Frühe Zeichen', zeichen: 'Zittern, Schwitzen, Blässe, Herzrasen, Hunger, Unruhe', handlung: 'Sofort Traubenzucker (15–20 g), Fruchtsaft oder Orangensaft geben. Blutzucker nach 15 Minuten nochmals messen.' },
               { phase: 'Fortgeschrittene Zeichen', zeichen: 'Verwirrtheit, undeutliche Sprache, Aggression, Koordinationsstörungen', handlung: 'Sofortige Glukosegabe wenn noch schlucken möglich. Arzt oder Rettungsdienst anrufen. Nicht alleine lassen.' },
@@ -156,14 +136,14 @@ export default function DiabetesPflegeSenioren() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegrad & Kassenzuschüsse bei Diabetes
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Diabetes allein führt oft zu PG 2–3. Wenn zusätzlich Einschränkungen durch Folgekomplikationen (Neuropathie, Niereninsuffizienz, eingeschränkte Mobilität) bestehen, sind höhere Pflegegrade möglich.
-          </p>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="pflegegrad" titel="Pflegegrad & Kassenzuschüsse bei Diabetes">
+            <Text>
+              Diabetes allein führt oft zu PG 2–3. Wenn zusätzlich Einschränkungen durch Folgekomplikationen (Neuropathie, Niereninsuffizienz, eingeschränkte Mobilität) bestehen, sind höhere Pflegegrade möglich.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               ['Kein weiterer Hilfebedarf durch Diabetes', 'Ggf. kein PG', '—'],
               ['Leichter Hilfebedarf, Blutzuckerkontrolle nötig', 'PG 1–2', '— bis 347 €/Mo'],
@@ -177,33 +157,28 @@ export default function DiabetesPflegeSenioren() {
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Pflegegrad beantragen:{' '}
-            <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Schritt-für-Schritt Anleitung</a>
-          </p>
+            <MehrDazu
+              label="Pflegegrad beantragen:"
+              links={[{ href: "/pflegegrad-beantragen", text: "Schritt-für-Schritt Anleitung" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was macht eine 24h-Betreuungskraft bei Diabetes?', a: 'Blutzucker messen, Medikamentenerinnerung, diabetesgerechte Mahlzeiten kochen, Flüssigkeit anbieten, Hypoglykämie-Zeichen beobachten. Insulin spritzen ist Behandlungspflege — übernimmt ambulanter Pflegedienst.' },
-              { q: 'Was sind Zeichen einer Unterzuckerung?', a: 'Früh: Zittern, Schwitzen, Herzrasen. Fortgeschritten: Verwirrtheit, Aggression, undeutliche Sprache. Schwer: Bewusstlosigkeit. Bei Bewusstlosigkeit: sofort 112 rufen.' },
-              { q: 'Was darf eine Betreuungskraft bei Diabetes NICHT tun?', a: 'Insulin spritzen — das ist Behandlungspflege und darf nur von examinierten Pflegekräften oder Ärzten durchgeführt werden. Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem Pflegedienst.' },
-              { q: 'Wie hoch ist der Pflegegrad bei Diabetes?', a: 'Diabetes allein führt oft zu PG 1–2. Mit Folgekomplikationen (Neuropathie, Sehverlust, Niereninsuffizienz, Mobilitätseinschränkungen) sind PG 2–4 möglich.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="diabetes-pflege-senioren" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was macht eine 24h-Betreuungskraft bei Diabetes?', a: 'Blutzucker messen, Medikamentenerinnerung, diabetesgerechte Mahlzeiten kochen, Flüssigkeit anbieten, Hypoglykämie-Zeichen beobachten. Insulin spritzen ist Behandlungspflege — übernimmt ambulanter Pflegedienst.' },
+                { q: 'Was sind Zeichen einer Unterzuckerung?', a: 'Früh: Zittern, Schwitzen, Herzrasen. Fortgeschritten: Verwirrtheit, Aggression, undeutliche Sprache. Schwer: Bewusstlosigkeit. Bei Bewusstlosigkeit: sofort 112 rufen.' },
+                { q: 'Was darf eine Betreuungskraft bei Diabetes NICHT tun?', a: 'Insulin spritzen — das ist Behandlungspflege und darf nur von examinierten Pflegekräften oder Ärzten durchgeführt werden. Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem Pflegedienst.' },
+                { q: 'Wie hoch ist der Pflegegrad bei Diabetes?', a: 'Diabetes allein führt oft zu PG 1–2. Mit Folgekomplikationen (Neuropathie, Sehverlust, Niereninsuffizienz, Mobilitätseinschränkungen) sind PG 2–4 möglich.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="diabetes-pflege-senioren" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

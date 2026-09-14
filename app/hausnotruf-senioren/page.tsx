@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, HakenListe, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,66 +69,45 @@ export default function HausnotrufSenioren() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Hausnotruf Senioren</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Hausnotruf für Senioren — Kosten, Zuschuss & Auswahl
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse kann über den Entlastungsbetrag die Kosten übernehmen. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall sowieso immer vor Ort.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Hausnotruf Senioren" },
+          ]}
+          augenbraue="Ratgeber Sicherheit"
+          titel="Hausnotruf für Senioren — Kosten, Zuschuss & Auswahl"
+          einleitung="Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse kann über den Entlastungsbetrag die Kosten übernehmen. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall sowieso immer vor Ort."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+          blick={[
                 'Klassischer Hausnotruf: 20–50 €/Monat — Knopf am Handgelenk oder als Anhänger',
                 'Mobilfunk-Notruf: 30–80 €/Monat — auch außerhalb der Wohnung nutzbar',
                 'GPS-Tracker: 30–80 €/Monat — besonders bei Demenz und Weglaufen wichtig',
                 'Finanzierung: Entlastungsbetrag (131 €/Monat) der Pflegekasse kann genutzt werden',
                 'Mit 24h-Betreuungskraft: Kraft ist immer da — Notruf als zusätzliche Absicherung',
                 'Anbieter: DRK, Malteser, Johanniter, DUSSMANN, viele weitere',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist ein Hausnotruf?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Ein Hausnotruf ist ein elektronisches System das es Senioren ermöglicht, im Notfall mit einem Knopfdruck Hilfe zu rufen. Der klassische Hausnotruf besteht aus einer Basisstation (am Festnetz oder per Mobilfunk) und einem Funksender als Armband oder Anhänger. Beim Drücken des Knopfes wird automatisch eine Notrufleitstelle kontaktiert.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Die Leitstelle klärt zunächst per Mikrofon die Situation — und alarmiert dann je nach Bedarf Angehörige, den Rettungsdienst oder einen lokalen Ersthelfer. Das System funktioniert 24 Stunden am Tag, 7 Tage/Woche, auch wenn der Nutzer bewusstlos ist (automatische Sturzerkennung bei modernen Systemen).
-          </p>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-ist" titel="Was ist ein Hausnotruf?">
+            <Text>
+              Ein Hausnotruf ist ein elektronisches System das es Senioren ermöglicht, im Notfall mit einem Knopfdruck Hilfe zu rufen. Der klassische Hausnotruf besteht aus einer Basisstation (am Festnetz oder per Mobilfunk) und einem Funksender als Armband oder Anhänger. Beim Drücken des Knopfes wird automatisch eine Notrufleitstelle kontaktiert.
+            </Text>
+            <Text>
+              Die Leitstelle klärt zunächst per Mikrofon die Situation — und alarmiert dann je nach Bedarf Angehörige, den Rettungsdienst oder einen lokalen Ersthelfer. Das System funktioniert 24 Stunden am Tag, 7 Tage/Woche, auch wenn der Nutzer bewusstlos ist (automatische Sturzerkennung bei modernen Systemen).
+            </Text>
+          </Abschnitt>
 
-          <h2 id="arten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Arten von Hausnotruf-Systemen
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="arten" titel="Arten von Hausnotruf-Systemen">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               {
                 art: 'Klassischer Hausnotruf (Festnetz/Mobilfunk)',
@@ -163,73 +144,53 @@ export default function HausnotrufSenioren() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kosten & Kassenzuschuss
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ein Hausnotruf kostet typischerweise eine einmalige Anschlussgebühr (20–80 €) plus eine monatliche Grundgebühr (15–50 €). Viele Anbieter ohne Anschlussgebühr möglich.
-          </p>
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-6">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Kassenzuschuss: Entlastungsbetrag nutzen</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Der Hausnotruf kann aus dem monatlichen Entlastungsbetrag (131 €/Monat, für alle Pflegegrade 1–5) der Pflegekasse bezahlt werden — wenn der Anbieter als anerkanntes Betreuungs- und Entlastungsangebot zugelassen ist. Viele Wohlfahrtsverbände (DRK, Malteser, Johanniter) sind automatisch anerkannt. Pflegekasse anfragen.
-            </p>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Entlastungsbetrag richtig nutzen:{' '}
-            <a href="/entlastungsbetrag" className="text-pm-taupe underline hover:text-pm-taupe-deep">Entlastungsbetrag 2026 — 131 €/Monat</a>
-          </p>
+          <Abschnitt id="kosten" titel="Kosten & Kassenzuschuss">
+            <Text>
+              Ein Hausnotruf kostet typischerweise eine einmalige Anschlussgebühr (20–80 €) plus eine monatliche Grundgebühr (15–50 €). Viele Anbieter ohne Anschlussgebühr möglich.
+            </Text>
+            <Kasten titel="Kassenzuschuss: Entlastungsbetrag nutzen" ton="gruen">
+              <Text>Der Hausnotruf kann aus dem monatlichen Entlastungsbetrag (131 €/Monat, für alle Pflegegrade 1–5) der Pflegekasse bezahlt werden — wenn der Anbieter als anerkanntes Betreuungs- und Entlastungsangebot zugelassen ist. Viele Wohlfahrtsverbände (DRK, Malteser, Johanniter) sind automatisch anerkannt. Pflegekasse anfragen.</Text>
+            </Kasten>
+            <MehrDazu
+              label="Entlastungsbetrag richtig nutzen:"
+              links={[{ href: "/entlastungsbetrag", text: "Entlastungsbetrag 2026 — 131 €/Monat" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="wann-sinnvoll" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann ist ein Hausnotruf sinnvoll?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ein Hausnotruf ist besonders empfehlenswert wenn:
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <Abschnitt id="wann-sinnvoll" titel="Wann ist ein Hausnotruf sinnvoll?">
+            <Text>
+              Ein Hausnotruf ist besonders empfehlenswert wenn:
+            </Text>
+            <HakenListe punkte={[
               'Erhöhtes Sturzrisiko durch eingeschränkte Mobilität oder Gleichgewichtsprobleme',
               'Herzerkrankungen oder andere akute Erkrankungen bei denen schnelle Hilfe entscheidend ist',
               'Der Senior zeitweise allein ist und Angehörige nicht sofort erreichbar sind',
               'Demenz ohne GPS-Tracking: GPS-Variante für Sicherheit beim Weglaufen',
               'Überbrückung bis zur Betreuungskraft — oder als ergänzende Sicherheit bei 24h-Pflege',
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-pm-body">{item}</p>
-              </div>
-            ))}
-          </div>
-          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-taupe-ink mb-2">Mit 24h-Betreuungskraft — Hausnotruf als zusätzliche Absicherung</p>
-            <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
-              Wenn eine 24h-Betreuungskraft dauerhaft im Haushalt lebt, ist menschliche Hilfe immer direkt vor Ort. Ein zusätzlicher Hausnotruf kann trotzdem sinnvoll sein — als Absicherung für Momente wenn die Kraft kurz abwesend ist oder als Notfallweg direkt zum Rettungsdienst.
-            </p>
-          </div>
+            ]} />
+            <Kasten titel="Mit 24h-Betreuungskraft — Hausnotruf als zusätzliche Absicherung">
+              <Text>Wenn eine 24h-Betreuungskraft dauerhaft im Haushalt lebt, ist menschliche Hilfe immer direkt vor Ort. Ein zusätzlicher Hausnotruf kann trotzdem sinnvoll sein — als Absicherung für Momente wenn die Kraft kurz abwesend ist oder als Notfallweg direkt zum Rettungsdienst.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was kostet ein Hausnotruf?', a: 'Klassischer Hausnotruf: 20–50 €/Monat. Mobilfunk-Notruf mit GPS: 30–80 €/Monat. Einmalige Anschlussgebühr 20–80 € (viele Anbieter ohne). Entlastungsbetrag (131 €/Monat) der Pflegekasse kann die Kosten decken.' },
-              { q: 'Zahlt die Pflegekasse den Hausnotruf?', a: 'Indirekt — über den Entlastungsbetrag (131 €/Monat, alle Pflegegrade 1–5). Voraussetzung: Anbieter muss als anerkanntes Betreuungsangebot zugelassen sein. Viele Wohlfahrtsverbände (DRK, Malteser, Johanniter) sind anerkannt.' },
-              { q: 'Was ist der Unterschied zwischen Hausnotruf und GPS-Tracker?', a: 'Hausnotruf: Knopfdruck löst Notruf aus, funktioniert klassisch nur in der Wohnung. GPS-Tracker: Echtzeit-Ortung jederzeit, besonders für Demenzkranke mit Weglauftendenz.' },
-              { q: 'Ist ein Hausnotruf bei 24h-Pflege noch nötig?', a: 'Nicht zwingend — aber als zusätzliche Absicherung sinnvoll. Die 24h-Betreuungskraft ist immer direkt vor Ort. Ein Notruf-System gibt zusätzliche Sicherheit für Momente wenn die Kraft kurz abwesend ist.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="hausnotruf-senioren" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was kostet ein Hausnotruf?', a: 'Klassischer Hausnotruf: 20–50 €/Monat. Mobilfunk-Notruf mit GPS: 30–80 €/Monat. Einmalige Anschlussgebühr 20–80 € (viele Anbieter ohne). Entlastungsbetrag (131 €/Monat) der Pflegekasse kann die Kosten decken.' },
+                { q: 'Zahlt die Pflegekasse den Hausnotruf?', a: 'Indirekt — über den Entlastungsbetrag (131 €/Monat, alle Pflegegrade 1–5). Voraussetzung: Anbieter muss als anerkanntes Betreuungsangebot zugelassen sein. Viele Wohlfahrtsverbände (DRK, Malteser, Johanniter) sind anerkannt.' },
+                { q: 'Was ist der Unterschied zwischen Hausnotruf und GPS-Tracker?', a: 'Hausnotruf: Knopfdruck löst Notruf aus, funktioniert klassisch nur in der Wohnung. GPS-Tracker: Echtzeit-Ortung jederzeit, besonders für Demenzkranke mit Weglauftendenz.' },
+                { q: 'Ist ein Hausnotruf bei 24h-Pflege noch nötig?', a: 'Nicht zwingend — aber als zusätzliche Absicherung sinnvoll. Die 24h-Betreuungskraft ist immer direkt vor Ort. Ein Notruf-System gibt zusätzliche Sicherheit für Momente wenn die Kraft kurz abwesend ist.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="hausnotruf-senioren" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

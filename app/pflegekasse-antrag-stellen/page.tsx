@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,58 +69,48 @@ export default function PflegekasseAntragStellen() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Finanzierung", href: "/finanzierung" },
+            { label: "Pflegekasse Antrag stellen" },
+          ]}
+          augenbraue="Ratgeber Pflegekasse"
+          titel="Pflegekasse Antrag stellen — Schritt für Schritt 2026"
+          einleitung="Der Antrag bei der Pflegekasse ist der erste und wichtigste Schritt — denn alle Leistungen gelten rückwirkend ab Antragsdatum, nicht ab dem Datum der Begutachtung. Der Antrag selbst ist formlos: Ein kurzes Schreiben oder ein Telefonanruf genügt."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegekasse Antrag stellen</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Der wichtigste Tipp: Antrag sofort stellen" ton="gruen">
+              <Text>Leistungen der Pflegeversicherung gelten ab Antragsdatum — nicht ab Begutachtungsdatum oder Bescheiddatum. Wer 6 Wochen wartet verliert 6 Wochen Pflegegeld. Antrag formlos stellen, noch bevor alles organisiert ist.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegekasse Antrag stellen — Schritt für Schritt 2026
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Der Antrag bei der Pflegekasse ist der erste und wichtigste Schritt — denn alle Leistungen gelten rückwirkend ab Antragsdatum, nicht ab dem Datum der Begutachtung. Der Antrag selbst ist formlos: Ein kurzes Schreiben oder ein Telefonanruf genügt.
-          </p>
-
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Der wichtigste Tipp: Antrag sofort stellen</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Leistungen der Pflegeversicherung gelten ab Antragsdatum — nicht ab Begutachtungsdatum oder Bescheiddatum. Wer 6 Wochen wartet verliert 6 Wochen Pflegegeld. Antrag formlos stellen, noch bevor alles organisiert ist.
-            </p>
-          </div>
-
-          <h2 id="antrag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Antrag stellen — so geht es
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Antrag auf Leistungen der Pflegeversicherung ist formlos — es gibt kein Pflichtformular. Ein kurzes Schreiben oder sogar ein Telefonanruf genügt.
-          </p>
-
-          <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-6 font-mono text-[14px] leading-relaxed text-pm-body">
-            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-3">Musterformulierung</p>
-            <p className="mb-3">Sehr geehrte Damen und Herren,</p>
-            <p className="mb-3">hiermit beantrage ich für [Name, Geburtsdatum, Versichertennummer] Leistungen der sozialen Pflegeversicherung gemäß SGB XI.</p>
-            <p className="mb-3">Mit freundlichen Grüßen,<br />[Unterschrift, Datum]</p>
-          </div>
-
-          <p className="text-[15px] text-pm-body mb-6">Dieser kurze Brief reicht vollständig aus. Die Pflegekasse veranlasst dann die Begutachtung durch den Medizinischen Dienst.</p>
-
-          <p className="text-[15px] font-semibold text-pm-body mb-3">Antrag stellen per:</p>
-          <div className="grid md:grid-cols-3 gap-3 mb-10">
+          <Abschnitt id="antrag" titel="Antrag stellen — so geht es">
+            <Text>
+              Der Antrag auf Leistungen der Pflegeversicherung ist formlos — es gibt kein Pflichtformular. Ein kurzes Schreiben oder sogar ein Telefonanruf genügt.
+            </Text>
+            <Kasten augenbraue="Musterformulierung">
+              <Text>Sehr geehrte Damen und Herren,</Text>
+              <Text>hiermit beantrage ich für [Name, Geburtsdatum, Versichertennummer] Leistungen der sozialen Pflegeversicherung gemäß SGB XI.</Text>
+              <Text>Mit freundlichen Grüßen,<br />[Unterschrift, Datum]</Text>
+            </Kasten>
+            <Text>
+              Dieser kurze Brief reicht vollständig aus. Die Pflegekasse veranlasst dann die Begutachtung durch den Medizinischen Dienst.
+            </Text>
+            <Text>
+              Antrag stellen per:
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="grid md:grid-cols-3 gap-3 mb-10">
             {[
               { weg: 'Brief / Post', desc: 'Formlos, kein Pflichtformular. Einwurf-Einschreiben empfohlen (Datum gesichert).' },
               { weg: 'Telefon', desc: 'Anruf bei der Pflegekasse genügt. Datum notieren, Gesprächspartner notieren.' },
@@ -130,106 +122,66 @@ export default function PflegekasseAntragStellen() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Welche Leistungen beantragen?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Mit dem Pflegegrad-Antrag werden automatisch alle Grundleistungen freigeschaltet. Einige Leistungen müssen zusätzlich separat beantragt oder aktiviert werden.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { leistung: 'Pflegegrad (automatisch)', desc: 'Mit dem Antrag wird die Begutachtung durch den MD ausgelöst. Der Pflegegrad und alle dazugehörigen Leistungen (Pflegegeld, Entlastungsbetrag) werden automatisch festgestellt.' },
-              { leistung: 'Pflegegeld (automatisch bei PG 2–5)', desc: 'Wird automatisch monatlich ausgezahlt wenn Pflegegeld gewählt wird (statt Sachleistungen).' },
-              { leistung: 'Entlastungsbetrag (auf Antrag)', desc: '131 €/Monat für alle PG 1–5 — muss aktiviert werden und läuft nicht automatisch. Pflegekasse anschreiben: "Ich beantrage den Entlastungsbetrag nach §45b SGB XI."' },
-              { leistung: 'Entlastungsbudget', desc: 'Nicht genutztes Entlastungsgeld läuft als Puffer — muss durch Nachweise über anerkannte Ausgaben abgerechnet werden.' },
-              { leistung: 'Wohnraumanpassung (separat)', desc: 'Vor Beginn der Maßnahme separat bei der Pflegekasse beantragen — bis 4.180 €/Maßnahme.' },
-              { leistung: 'Pflegehilfsmittel (separat)', desc: '42 €/Monat Pflegehilfsmittelpauschale — gesondert beantragen oder automatisch bei bestimmten Anbietern.' },
-            ].map((item) => (
-              <div key={item.leistung} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.leistung}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <DunklerAbschnitt
+            id="leistungen"
+            titel="Welche Leistungen beantragen?"
+            einleitung="Mit dem Pflegegrad-Antrag werden automatisch alle Grundleistungen freigeschaltet. Einige Leistungen müssen zusätzlich separat beantragt oder aktiviert werden."
+            punkte={[
+              { title: 'Pflegegrad (automatisch)', desc: 'Mit dem Antrag wird die Begutachtung durch den MD ausgelöst. Der Pflegegrad und alle dazugehörigen Leistungen (Pflegegeld, Entlastungsbetrag) werden automatisch festgestellt.' },
+              { title: 'Pflegegeld (automatisch bei PG 2–5)', desc: 'Wird automatisch monatlich ausgezahlt wenn Pflegegeld gewählt wird (statt Sachleistungen).' },
+              { title: 'Entlastungsbetrag (auf Antrag)', desc: '131 €/Monat für alle PG 1–5 — muss aktiviert werden und läuft nicht automatisch. Pflegekasse anschreiben: "Ich beantrage den Entlastungsbetrag nach §45b SGB XI."' },
+              { title: 'Entlastungsbudget', desc: 'Nicht genutztes Entlastungsgeld läuft als Puffer — muss durch Nachweise über anerkannte Ausgaben abgerechnet werden.' },
+              { title: 'Wohnraumanpassung (separat)', desc: 'Vor Beginn der Maßnahme separat bei der Pflegekasse beantragen — bis 4.180 €/Maßnahme.' },
+              { title: 'Pflegehilfsmittel (separat)', desc: '42 €/Monat Pflegehilfsmittelpauschale — gesondert beantragen oder automatisch bei bestimmten Anbietern.' },
+            ]}
+          />
 
-          <h2 id="fristen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Fristen & Bearbeitungszeiten
-          </h2>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Situation', 'Frist für Pflegekasse', 'Besonderheit'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Normaler Antrag', '25 Arbeitstage', 'Ab Antragsdatum bis Bescheid'],
-                    ['Entlassung aus Krankenhaus', '1 Woche', 'Verkürzte Frist bei Krankenhausentlassung'],
-                    ['Fristüberschreitung', 'Entschädigungspflicht', '70 €/Woche Verzögerung für Antragsteller'],
-                    ['Widerspruch nach Bescheid', '1 Monat', 'Ab Datum des Bescheids'],
-                  ].map(([situation, frist, besonderheit], i) => (
-                    <tr key={situation} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{situation}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-ink border-b border-pm-line">{frist}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{besonderheit}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <Abschnitt id="fristen" titel="Fristen & Bearbeitungszeiten">
+            <Tabelle
+              titel=""
+              kopf={['Situation', 'Frist für Pflegekasse', 'Besonderheit']}
+              zeilen={[
+                ['Normaler Antrag', '25 Arbeitstage', 'Ab Antragsdatum bis Bescheid'],
+                ['Entlassung aus Krankenhaus', '1 Woche', 'Verkürzte Frist bei Krankenhausentlassung'],
+                ['Fristüberschreitung', 'Entschädigungspflicht', '70 €/Woche Verzögerung für Antragsteller'],
+                ['Widerspruch nach Bescheid', '1 Monat', 'Ab Datum des Bescheids'],
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="ablehnung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Antrag abgelehnt oder zu niedrig eingestuft — was tun?
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { schritt: 'Bescheid genau lesen', desc: 'Welcher Pflegegrad wurde festgestellt? Wenn kein Pflegegrad oder ein zu niedriger: Widerspruch ist das Mittel.' },
-              { schritt: 'MD-Gutachten anfordern', desc: 'Das vollständige Gutachten anfordern — kostenlos. Es zeigt wie jeder Lebensbereich bewertet wurde.' },
-              { schritt: 'Widerspruch innerhalb 1 Monat', desc: 'Formloser Widerspruch: "Ich lege Widerspruch gegen den Bescheid vom [Datum] ein." Keine Begründung nötig — die kommt nach Gutachteneinsicht.' },
-              { schritt: 'Pflegetagebuch nachreichen', desc: 'Neues Tagebuch führen, mit aktuellen Arztberichten nachreichen. Das verbessert die Erfolgschancen erheblich.' },
-            ].map((item, i) => (
-              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.schritt}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Vollständige Anleitung:{' '}
-            <a href="/widerspruch-pflegekasse-einlegen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Widerspruch einlegen — Muster & Tipps</a>
-          </p>
+          <Abschnitt id="ablehnung" titel="Antrag abgelehnt oder zu niedrig eingestuft — was tun?">
+            <Schritte
+              schritte={[
+                { title: 'Bescheid genau lesen', desc: 'Welcher Pflegegrad wurde festgestellt? Wenn kein Pflegegrad oder ein zu niedriger: Widerspruch ist das Mittel.' },
+                { title: 'MD-Gutachten anfordern', desc: 'Das vollständige Gutachten anfordern — kostenlos. Es zeigt wie jeder Lebensbereich bewertet wurde.' },
+                { title: 'Widerspruch innerhalb 1 Monat', desc: 'Formloser Widerspruch: "Ich lege Widerspruch gegen den Bescheid vom [Datum] ein." Keine Begründung nötig — die kommt nach Gutachteneinsicht.' },
+                { title: 'Pflegetagebuch nachreichen', desc: 'Neues Tagebuch führen, mit aktuellen Arztberichten nachreichen. Das verbessert die Erfolgschancen erheblich.' },
+              ]}
+            />
+            <MehrDazu
+              label="Vollständige Anleitung:"
+              links={[{ href: "/widerspruch-pflegekasse-einlegen", text: "Widerspruch einlegen — Muster & Tipps" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie stelle ich einen Antrag bei der Pflegekasse?', a: 'Formlos — per Brief, Telefon oder E-Mail: "Ich beantrage Leistungen der Pflegeversicherung." Name, Versichertennummer, Datum. Die Pflegekasse veranlasst die Begutachtung.' },
-              { q: 'Wie lange dauert die Bearbeitung?', a: '25 Arbeitstage ab Antragsdatum. Bei Krankenhausentlassung 1 Woche. Bei Fristüberschreitung Anspruch auf 70 €/Woche Entschädigung.' },
-              { q: 'Brauche ich ein bestimmtes Formular?', a: 'Nein — der Antrag ist formlos. Viele Pflegekassen bieten eigene Formulare an (erleichtert die Bearbeitung), aber es ist keine Pflicht.' },
-              { q: 'Muss ich den Entlastungsbetrag separat beantragen?', a: 'Ja — der Entlastungsbetrag (131 €/Monat) läuft nicht automatisch. Gesondert bei der Pflegekasse beantragen: "Ich beantrage den Entlastungsbetrag nach §45b SGB XI."' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflegekasse-antrag-stellen" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie stelle ich einen Antrag bei der Pflegekasse?', a: 'Formlos — per Brief, Telefon oder E-Mail: "Ich beantrage Leistungen der Pflegeversicherung." Name, Versichertennummer, Datum. Die Pflegekasse veranlasst die Begutachtung.' },
+                { q: 'Wie lange dauert die Bearbeitung?', a: '25 Arbeitstage ab Antragsdatum. Bei Krankenhausentlassung 1 Woche. Bei Fristüberschreitung Anspruch auf 70 €/Woche Entschädigung.' },
+                { q: 'Brauche ich ein bestimmtes Formular?', a: 'Nein — der Antrag ist formlos. Viele Pflegekassen bieten eigene Formulare an (erleichtert die Bearbeitung), aber es ist keine Pflicht.' },
+                { q: 'Muss ich den Entlastungsbetrag separat beantragen?', a: 'Ja — der Entlastungsbetrag (131 €/Monat) läuft nicht automatisch. Gesondert bei der Pflegekasse beantragen: "Ich beantrage den Entlastungsbetrag nach §45b SGB XI."' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="pflegekasse-antrag-stellen" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

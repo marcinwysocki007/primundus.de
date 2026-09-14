@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, MehrDazu, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -68,72 +70,51 @@ export default function PatientenverfuegungAufsetzen() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Patientenverfügung aufsetzen</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Patientenverfügung aufsetzen — Anleitung & Pflichtinhalte
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Eine Patientenverfügung legt verbindlich fest welche medizinischen Maßnahmen man im Fall der Entscheidungsunfähigkeit wünscht oder ablehnt. Sie muss schriftlich sein und eigenhändig unterschrieben werden — ein Notar ist nicht nötig. Je konkreter die Formulierungen, desto wirksamer das Dokument.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Patientenverfügung aufsetzen" },
+          ]}
+          augenbraue="Ratgeber Vorsorge"
+          titel="Patientenverfügung aufsetzen — Anleitung & Pflichtinhalte"
+          einleitung="Eine Patientenverfügung legt verbindlich fest welche medizinischen Maßnahmen man im Fall der Entscheidungsunfähigkeit wünscht oder ablehnt. Sie muss schriftlich sein und eigenhändig unterschrieben werden — ein Notar ist nicht nötig. Je konkreter die Formulierungen, desto wirksamer das Dokument."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+          blick={[
                 'Rechtlich verbindlich — Ärzte und Pflegepersonen müssen sie beachten',
                 'Schriftform + eigenhändige Unterschrift + Datum — Notar nicht nötig',
                 'Regelmäßig aktualisieren — mit Datum und Unterschrift bestätigen',
                 'Gut verwahren: Original beim Arzt hinterlegen, Kopie bei Angehörigen',
                 'Ergänzung durch Vorsorgevollmacht empfohlen — für Entscheidungen die die PV nicht regelt',
                 'Bundesgesundheitsministerium bietet kostenloses Muster-Dokument an',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist eine Patientenverfügung?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Eine Patientenverfügung (§ 1827 BGB) ist ein schriftliches Dokument in dem man vorausschauend festlegt welche medizinischen Behandlungen man im Fall der eigenen Entscheidungsunfähigkeit wünscht und welche man ausdrücklich ablehnt. Sie greift wenn man selbst — zum Beispiel durch Bewusstlosigkeit, Demenz oder schwere Erkrankung — keine Entscheidungen mehr treffen kann.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die Patientenverfügung ist rechtlich verbindlich: Ärzte, Pflegepersonen und Krankenhäuser sind gesetzlich verpflichtet sie zu beachten. Das unterscheidet sie von einer bloßen Wunschliste.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Typische Situationen in denen sie greift: Wachkoma, schwere Demenz im Endstadium, fortgeschrittener Krebs, schwerster Schlaganfall. Sie kann sowohl lebenserhaltende Maßnahmen ausdrücklich wünschen als auch ablehnen.
-          </p>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-ist" titel="Was ist eine Patientenverfügung?">
+            <Text>
+              Eine Patientenverfügung (§ 1827 BGB) ist ein schriftliches Dokument in dem man vorausschauend festlegt welche medizinischen Behandlungen man im Fall der eigenen Entscheidungsunfähigkeit wünscht und welche man ausdrücklich ablehnt. Sie greift wenn man selbst — zum Beispiel durch Bewusstlosigkeit, Demenz oder schwere Erkrankung — keine Entscheidungen mehr treffen kann.
+            </Text>
+            <Text>
+              Die Patientenverfügung ist rechtlich verbindlich: Ärzte, Pflegepersonen und Krankenhäuser sind gesetzlich verpflichtet sie zu beachten. Das unterscheidet sie von einer bloßen Wunschliste.
+            </Text>
+            <Text>
+              Typische Situationen in denen sie greift: Wachkoma, schwere Demenz im Endstadium, fortgeschrittener Krebs, schwerster Schlaganfall. Sie kann sowohl lebenserhaltende Maßnahmen ausdrücklich wünschen als auch ablehnen.
+            </Text>
+          </Abschnitt>
 
-          <h2 id="inhalte" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was muss in die Patientenverfügung?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Je konkreter die Formulierungen, desto wirksamer. Allgemeine Aussagen wie "keine lebensverlängernden Maßnahmen" reichen oft nicht aus — Situationen und Maßnahmen müssen spezifiziert werden.
-          </p>
-          <div className="space-y-3 mb-6">
+          <Abschnitt id="inhalte" titel="Was muss in die Patientenverfügung?">
+            <Text>
+              Je konkreter die Formulierungen, desto wirksamer. Allgemeine Aussagen wie "keine lebensverlängernden Maßnahmen" reichen oft nicht aus — Situationen und Maßnahmen müssen spezifiziert werden.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-6">
             {[
               { pflicht: true, titel: 'Persönliche Angaben', inhalt: 'Vollständiger Name, Geburtsdatum, Adresse — damit zweifelsfrei klar ist wer das Dokument verfasst hat.' },
               { pflicht: true, titel: 'Konkrete Situationsbeschreibungen', inhalt: 'Für welche Situationen soll die Verfügung gelten? Z.B.: "Wenn ich mich im Endstadium einer unheilbaren Erkrankung befinde..." oder "Wenn ich dauerhaft bewusstlos bin..."' },
@@ -152,94 +133,59 @@ export default function PatientenverfuegungAufsetzen() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="aufsetzen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Schritt für Schritt aufsetzen
-          </h2>
-          <ol className="space-y-3 mb-6">
-            {[
-              { n: '1', title: 'Muster-Vorlage besorgen', desc: 'Das Bundesgesundheitsministerium bietet eine kostenlose Muster-Patientenverfügung an — abrufbar unter bundesgesundheitsministerium.de. Als Ausgangspunkt gut geeignet.' },
-              { n: '2', title: 'Situationen und Wünsche durchdenken', desc: 'Welche Situationen sollen abgedeckt sein? Welche Behandlungen werden ausdrücklich gewünscht, welche abgelehnt? Mit dem Hausarzt besprechen — er kann über die medizinische Realität der einzelnen Maßnahmen informieren.' },
-              { n: '3', title: 'Konkret formulieren', desc: 'Keine allgemeinen Phrasen — konkrete Situationen und Maßnahmen benennen. Z.B. "keine künstliche Beatmung wenn..." statt "keine lebensverlängernden Maßnahmen".' },
-              { n: '4', title: 'Eigenhändig unterschreiben und datieren', desc: 'Handschriftlich unterschreiben und Datum eintragen. Damit ist die PV rechtsgültig — kein Notar nötig.' },
-              { n: '5', title: 'Gut verwahren und bekannt machen', desc: 'Original beim Hausarzt hinterlegen, Kopie bei Angehörigen und im Portemonnaie (Hinweiskarte). Wer eine Vorsorgevollmacht hat: Bevollmächtigte Person informieren.' },
-              { n: '6', title: 'Regelmäßig aktualisieren', desc: 'Empfehlung: alle 2–3 Jahre erneut unterschreiben und datieren — das belegt den aktuellen Willen und stärkt die Rechtsgültigkeit.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <Abschnitt id="aufsetzen" titel="Schritt für Schritt aufsetzen">
+            <Schritte
+              schritte={[
+                { title: 'Muster-Vorlage besorgen', desc: 'Das Bundesgesundheitsministerium bietet eine kostenlose Muster-Patientenverfügung an — abrufbar unter bundesgesundheitsministerium.de. Als Ausgangspunkt gut geeignet.' },
+                { title: 'Situationen und Wünsche durchdenken', desc: 'Welche Situationen sollen abgedeckt sein? Welche Behandlungen werden ausdrücklich gewünscht, welche abgelehnt? Mit dem Hausarzt besprechen — er kann über die medizinische Realität der einzelnen Maßnahmen informieren.' },
+                { title: 'Konkret formulieren', desc: 'Keine allgemeinen Phrasen — konkrete Situationen und Maßnahmen benennen. Z.B. "keine künstliche Beatmung wenn..." statt "keine lebensverlängernden Maßnahmen".' },
+                { title: 'Eigenhändig unterschreiben und datieren', desc: 'Handschriftlich unterschreiben und Datum eintragen. Damit ist die PV rechtsgültig — kein Notar nötig.' },
+                { title: 'Gut verwahren und bekannt machen', desc: 'Original beim Hausarzt hinterlegen, Kopie bei Angehörigen und im Portemonnaie (Hinweiskarte). Wer eine Vorsorgevollmacht hat: Bevollmächtigte Person informieren.' },
+                { title: 'Regelmäßig aktualisieren', desc: 'Empfehlung: alle 2–3 Jahre erneut unterschreiben und datieren — das belegt den aktuellen Willen und stärkt die Rechtsgültigkeit.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="unterschied" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Unterschied zur Vorsorgevollmacht
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Patientenverfügung und Vorsorgevollmacht ergänzen sich — sie decken unterschiedliche Aspekte ab.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['', 'Patientenverfügung', 'Vorsorgevollmacht'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Was sie regelt', 'Konkrete medizinische Maßnahmen (Ja/Nein)', 'Wer Entscheidungen trifft wenn man selbst nicht kann'],
-                    ['Wann sie greift', 'Bei Entscheidungsunfähigkeit', 'Bei Entscheidungsunfähigkeit'],
-                    ['Notar nötig?', 'Nein — Schriftform + Unterschrift reicht', 'Empfohlen für Immobilien; sonst nein'],
-                    ['Grenzen', 'Kann nicht alle Situationen vorhersehen', 'Bevollmächtigte Person muss vertrauenswürdig sein'],
-                    ['Empfehlung', 'Immer aufsetzen', 'Immer zusätzlich aufsetzen'],
-                  ].map(([aspekt, pv, vv], i) => (
-                    <tr key={aspekt} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{aspekt}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{pv}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{vv}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Vorsorgevollmacht erstellen:{' '}
-            <a href="/vorsorgevollmacht-erstellen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Vorsorgevollmacht erstellen — Anleitung & Muster</a>
-          </p>
+          <Abschnitt id="unterschied" titel="Unterschied zur Vorsorgevollmacht">
+            <Text>
+              Patientenverfügung und Vorsorgevollmacht ergänzen sich — sie decken unterschiedliche Aspekte ab.
+            </Text>
+            <Tabelle
+              titel=""
+              kopf={['', 'Patientenverfügung', 'Vorsorgevollmacht']}
+              zeilen={[
+                ['Was sie regelt', 'Konkrete medizinische Maßnahmen (Ja/Nein)', 'Wer Entscheidungen trifft wenn man selbst nicht kann'],
+                ['Wann sie greift', 'Bei Entscheidungsunfähigkeit', 'Bei Entscheidungsunfähigkeit'],
+                ['Notar nötig?', 'Nein — Schriftform + Unterschrift reicht', 'Empfohlen für Immobilien; sonst nein'],
+                ['Grenzen', 'Kann nicht alle Situationen vorhersehen', 'Bevollmächtigte Person muss vertrauenswürdig sein'],
+                ['Empfehlung', 'Immer aufsetzen', 'Immer zusätzlich aufsetzen'],
+              ]}
+            />
+            <MehrDazu
+              label="Vorsorgevollmacht erstellen:"
+              links={[{ href: "/vorsorgevollmacht-erstellen", text: "Vorsorgevollmacht erstellen — Anleitung & Muster" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur Patientenverfügung
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was ist eine Patientenverfügung?', a: 'Ein schriftliches Dokument in dem man vorausschauend festlegt welche medizinischen Behandlungen man bei Entscheidungsunfähigkeit wünscht oder ablehnt. Rechtlich verbindlich — Ärzte und Kliniken müssen sie beachten.' },
-              { q: 'Muss eine Patientenverfügung notariell beglaubigt werden?', a: 'Nein — Schriftform und eigenhändige Unterschrift mit Datum reichen. Ein Notar ist nicht nötig, erhöht aber die Beweissicherheit.' },
-              { q: 'Was passiert ohne Patientenverfügung?', a: 'Ohne PV entscheiden im Notfall zunächst Angehörige (wenn vorhanden und einig) oder ein gerichtlich bestellter Betreuer. Das kann zu Entscheidungen führen die nicht dem eigenen Wunsch entsprechen.' },
-              { q: 'Kann man eine Patientenverfügung widerrufen?', a: 'Ja — jederzeit und ohne besondere Form. Es reicht die schriftliche Erklärung des Widerrufs oder die körperliche Vernichtung aller Exemplare.' },
-              { q: 'Was ist der Unterschied zur Vorsorgevollmacht?', a: 'Die Patientenverfügung regelt direkt welche Behandlungen gewünscht/abgelehnt werden. Die Vorsorgevollmacht bestimmt eine Person die stellvertretend Entscheidungen trifft. Beide zusammen geben den umfassendsten Schutz.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen zur Patientenverfügung">
+            <Fragen
+              fragen={[
+                { q: 'Was ist eine Patientenverfügung?', a: 'Ein schriftliches Dokument in dem man vorausschauend festlegt welche medizinischen Behandlungen man bei Entscheidungsunfähigkeit wünscht oder ablehnt. Rechtlich verbindlich — Ärzte und Kliniken müssen sie beachten.' },
+                { q: 'Muss eine Patientenverfügung notariell beglaubigt werden?', a: 'Nein — Schriftform und eigenhändige Unterschrift mit Datum reichen. Ein Notar ist nicht nötig, erhöht aber die Beweissicherheit.' },
+                { q: 'Was passiert ohne Patientenverfügung?', a: 'Ohne PV entscheiden im Notfall zunächst Angehörige (wenn vorhanden und einig) oder ein gerichtlich bestellter Betreuer. Das kann zu Entscheidungen führen die nicht dem eigenen Wunsch entsprechen.' },
+                { q: 'Kann man eine Patientenverfügung widerrufen?', a: 'Ja — jederzeit und ohne besondere Form. Es reicht die schriftliche Erklärung des Widerrufs oder die körperliche Vernichtung aller Exemplare.' },
+                { q: 'Was ist der Unterschied zur Vorsorgevollmacht?', a: 'Die Patientenverfügung regelt direkt welche Behandlungen gewünscht/abgelehnt werden. Die Vorsorgevollmacht bestimmt eine Person die stellvertretend Entscheidungen trifft. Beide zusammen geben den umfassendsten Schutz.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <Weiterlesen aktuell="patientenverfuegung-aufsetzen" />
-          <ArticleCTA />
-        </div>
+
+          <Weiterlesen aktuell="patientenverfuegung-aufsetzen" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

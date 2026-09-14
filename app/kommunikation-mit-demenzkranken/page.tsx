@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -68,37 +70,28 @@ export default function KommunikationMitDemenzkranken() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Alltag & Angehörige", href: "/alltag" },
+            { label: "Kommunikation mit Demenzkranken" },
+          ]}
+          augenbraue="Ratgeber Demenz"
+          titel="Kommunikation mit Demenzkranken — was hilft & was schadet"
+          einleitung="Mit einem demenzkranken Menschen zu kommunizieren bedeutet: In seine Welt einsteigen statt ihn in unsere zu holen. Korrekturen, Konfrontationen mit der Realität und Ungeduld führen zu Distress ohne jeden Nutzen. Fünf Grundprinzipien verändern die tägliche Kommunikation grundlegend — und erleichtern den Alltag für alle Beteiligten."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/alltag" className="hover:text-pm-taupe transition-colors">Alltag & Angehörige</a>
-            <span>›</span>
-            <span className="text-pm-ink">Kommunikation mit Demenzkranken</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Kommunikation mit Demenzkranken — was hilft & was schadet
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Mit einem demenzkranken Menschen zu kommunizieren bedeutet: In seine Welt einsteigen statt ihn in unsere zu holen. Korrekturen, Konfrontationen mit der Realität und Ungeduld führen zu Distress ohne jeden Nutzen. Fünf Grundprinzipien verändern die tägliche Kommunikation grundlegend — und erleichtern den Alltag für alle Beteiligten.
-          </p>
-
-          <h2 id="grundprinzipien" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Die 5 Grundprinzipien
-          </h2>
-          <div className="space-y-4 mb-10">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="grundprinzipien" titel="Die 5 Grundprinzipien">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             {[
               {
                 n: '1',
@@ -154,105 +147,65 @@ export default function KommunikationMitDemenzkranken() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="konkret" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was konkret hilft — praktische Tipps
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { tip: 'Namen verwenden', desc: 'Den Vornamen der Person am Anfang des Gesprächs nennen: "Maria, magst du jetzt frühstücken?" Das holt die Person ab und gibt Orientierung.' },
-              { tip: 'Fragen statt Befehle', desc: '"Magst du jetzt..." wirkt besser als "Du musst jetzt..." Wahlmöglichkeiten geben: "Möchtest du das rote oder das blaue Hemd?" — nie mehr als zwei Optionen.' },
-              { tip: 'Musik als Brücke', desc: 'Musik aus der Jugend (1950er–70er) ist oft noch tief verankert und ermöglicht Kommunikation wenn Worte nicht mehr funktionieren. Gemeinsames Summen oder Mitsingen schafft Verbindung.' },
-              { tip: 'Berührung bewusst einsetzen', desc: 'Handhalten, Schulter berühren, Streicheln — Körperkontakt kommuniziert Sicherheit und Wärme wenn Sprache schwieriger wird. Immer ankündigen: "Ich nehme jetzt deine Hand."' },
-              { tip: 'Gesicht und Ton wichtiger als Worte', desc: 'Im fortgeschrittenen Stadium versteht die Person vielleicht nicht mehr den Inhalt — aber Mimik, Tonfall und Körpersprache bleiben verständlich. Ruhig und warm sprechen.' },
-            ].map((item) => (
-              <div key={item.tip} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tip}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="konkret" titel="Was konkret hilft — praktische Tipps">
+            <Punkte
+              punkte={[
+                { title: 'Namen verwenden', desc: 'Den Vornamen der Person am Anfang des Gesprächs nennen: "Maria, magst du jetzt frühstücken?" Das holt die Person ab und gibt Orientierung.' },
+                { title: 'Fragen statt Befehle', desc: '"Magst du jetzt..." wirkt besser als "Du musst jetzt..." Wahlmöglichkeiten geben: "Möchtest du das rote oder das blaue Hemd?" — nie mehr als zwei Optionen.' },
+                { title: 'Musik als Brücke', desc: 'Musik aus der Jugend (1950er–70er) ist oft noch tief verankert und ermöglicht Kommunikation wenn Worte nicht mehr funktionieren. Gemeinsames Summen oder Mitsingen schafft Verbindung.' },
+                { title: 'Berührung bewusst einsetzen', desc: 'Handhalten, Schulter berühren, Streicheln — Körperkontakt kommuniziert Sicherheit und Wärme wenn Sprache schwieriger wird. Immer ankündigen: "Ich nehme jetzt deine Hand."' },
+                { title: 'Gesicht und Ton wichtiger als Worte', desc: 'Im fortgeschrittenen Stadium versteht die Person vielleicht nicht mehr den Inhalt — aber Mimik, Tonfall und Körpersprache bleiben verständlich. Ruhig und warm sprechen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="schwierig" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Schwierige Situationen meistern
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              {
-                situation: 'Aggression und Wutausbrüche',
-                strategie: 'Nicht gegenhalten — das eskaliert. Ruhe bewahren, Abstand schaffen, sanft ansprechen. Ursache suchen: Schmerzen? Hunger? Toilette? Überreizung durch Lärm? Thema wechseln: "Weißt du noch, wie du früher..." Sicheren Abstand wahren bis die Situation sich beruhigt.',
-              },
-              {
-                situation: 'Verweigerung von Pflege',
-                strategie: 'Nicht erzwingen — das traumatisiert. Kurze Pause machen und es später nochmals versuchen. Andere Betreuungsperson versuchen lassen. Den Sinn der Handlung verständlich machen: "Wir waschen die Hände damit sie nicht kalt sind." Positiv einleiten: Lieblingslied spielen vor dem Waschen.',
-              },
-              {
-                situation: 'Wiederholte Fragen',
-                strategie: 'Geduldig dieselbe Antwort geben — auch zum zehnten Mal. Die Frage ist ein Zeichen von Unsicherheit, kein böser Wille. Ursache der Unsicherheit ansprechen: "Ich bin bei dir. Alles ist in Ordnung." Manchmal hilft eine schriftliche Notiz an gut sichtbarer Stelle.',
-              },
-              {
-                situation: 'Weinen und Traurigkeit',
-                strategie: 'Nicht ablenken oder aufheitern — das Gefühl anerkennen. "Ich sehe dass du traurig bist. Das ist in Ordnung." Körperkontakt anbieten. Nicht nach dem Grund fragen — einfach da sein.',
-              },
-            ].map((item) => (
-              <div key={item.situation} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.situation}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.strategie}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="schwierig" titel="Schwierige Situationen meistern">
+            <Punkte
+              punkte={[
+                { title: 'Aggression und Wutausbrüche', desc: 'Nicht gegenhalten — das eskaliert. Ruhe bewahren, Abstand schaffen, sanft ansprechen. Ursache suchen: Schmerzen? Hunger? Toilette? Überreizung durch Lärm? Thema wechseln: "Weißt du noch, wie du früher..." Sicheren Abstand wahren bis die Situation sich beruhigt.' },
+                { title: 'Verweigerung von Pflege', desc: 'Nicht erzwingen — das traumatisiert. Kurze Pause machen und es später nochmals versuchen. Andere Betreuungsperson versuchen lassen. Den Sinn der Handlung verständlich machen: "Wir waschen die Hände damit sie nicht kalt sind." Positiv einleiten: Lieblingslied spielen vor dem Waschen.' },
+                { title: 'Wiederholte Fragen', desc: 'Geduldig dieselbe Antwort geben — auch zum zehnten Mal. Die Frage ist ein Zeichen von Unsicherheit, kein böser Wille. Ursache der Unsicherheit ansprechen: "Ich bin bei dir. Alles ist in Ordnung." Manchmal hilft eine schriftliche Notiz an gut sichtbarer Stelle.' },
+                { title: 'Weinen und Traurigkeit', desc: 'Nicht ablenken oder aufheitern — das Gefühl anerkennen. "Ich sehe dass du traurig bist. Das ist in Ordnung." Körperkontakt anbieten. Nicht nach dem Grund fragen — einfach da sein.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="fuer-betreuungskraefte" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Besondere Tipps für 24h-Betreuungskräfte
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Eine 24h-Betreuungskraft verbringt den ganzen Tag mit dem demenzkranken Menschen — das ist besonders intensiv. Einige Dinge helfen besonders:
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
+          <DunklerAbschnitt
+            id="fuer-betreuungskraefte"
+            titel="Besondere Tipps für 24h-Betreuungskräfte"
+            einleitung="Eine 24h-Betreuungskraft verbringt den ganzen Tag mit dem demenzkranken Menschen — das ist besonders intensiv. Einige Dinge helfen besonders:"
+            punkte={[
               { title: 'Biografiearbeit am Anfang', desc: 'In den ersten Tagen: Familie erzählt über Vorlieben, Berufe, wichtige Lebenserinnerungen. Diese Informationen sind Gold wert für Gespräche und Beschäftigung.' },
               { title: 'Routine schafft Sicherheit', desc: 'Immer dieselbe Reihenfolge beim Aufstehen, Waschen, Frühstücken. Vorhersehbarkeit reduziert Angst und Aggressionen erheblich.' },
               { title: 'Pausen einplanen', desc: '24h Betreuung ist emotional intensiv. Wer sich nicht erholt, verliert die Geduld. Strukturierte Ruhephasen und regelmäßiger Kraftwechsel schützt vor Burnout.' },
               { title: 'Sprachbarriere', desc: 'Bei Betreuungskräften aus dem Ausland: Einfache Sprache, viele Gesten, Mimik und Berührung sind internationale Kommunikation — funktionieren oft besser als kompliziertes Deutsch.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Mehr:{' '}
-            <a href="/demenz-pflege-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Demenzpflege zuhause</a>
-            {' · '}
-            <a href="/tagesstruktur-demenz" className="text-pm-taupe underline hover:text-pm-taupe-deep">Tagesstruktur bei Demenz</a>
-            {' · '}
-            <a href="/alzheimer-betreuung-zuhause" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alzheimer zuhause betreuen</a>
-          </p>
+            ]}
+          >
+            <MehrDazu
+              label="Mehr:"
+              links={[{ href: "/demenz-pflege-zuhause", text: "Demenzpflege zuhause" }, { href: "/tagesstruktur-demenz", text: "Tagesstruktur bei Demenz" }, { href: "/alzheimer-betreuung-zuhause", text: "Alzheimer zuhause betreuen" }]}
+            />
+          </DunklerAbschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie kommuniziert man mit Demenzkranken?', a: 'Kurze einfache Sätze. Augenkontakt. Nicht korrigieren. In ihre Realität einsteigen. Emotionen ernst nehmen. Berührung nutzen. Nie streiten oder auf Korrektheit bestehen.' },
-              { q: 'Was sollte man bei Demenzkranken nicht sagen?', a: '"Das hast du gerade erst gefragt." "Das weißt du doch." "Papa ist schon lange tot." Korrektionen und Realitätskonfrontationen führen nur zu Distress ohne Nutzen.' },
-              { q: 'Was tun wenn Demenzkranke aggressiv werden?', a: 'Ruhe bewahren, nicht gegenhalten. Sicheren Abstand schaffen. Ursache suchen (Schmerzen, Hunger, Überforderung). Thema wechseln. Warten bis die Situation sich beruhigt.' },
-              { q: 'Wie reagiert man auf ständig wiederholte Fragen?', a: 'Geduldig dieselbe Antwort geben — auch zum zehnten Mal. Die Frage kommt aus Unsicherheit, nicht böser Absicht. Manchmal hilft eine schriftliche Notiz an sichtbarer Stelle.' },
-              { q: 'Kann eine Betreuungskraft die Deutsch nicht fließend spricht mit Demenzkranken kommunizieren?', a: 'Ja — im fortgeschrittenen Stadium ist Mimik, Tonfall und Berührung oft wichtiger als der Wortinhalt. Einfache, ruhige Sprache plus viel Körperkontakt funktionieren sprachübergreifend sehr gut.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="kommunikation-mit-demenzkranken" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie kommuniziert man mit Demenzkranken?', a: 'Kurze einfache Sätze. Augenkontakt. Nicht korrigieren. In ihre Realität einsteigen. Emotionen ernst nehmen. Berührung nutzen. Nie streiten oder auf Korrektheit bestehen.' },
+                { q: 'Was sollte man bei Demenzkranken nicht sagen?', a: '"Das hast du gerade erst gefragt." "Das weißt du doch." "Papa ist schon lange tot." Korrektionen und Realitätskonfrontationen führen nur zu Distress ohne Nutzen.' },
+                { q: 'Was tun wenn Demenzkranke aggressiv werden?', a: 'Ruhe bewahren, nicht gegenhalten. Sicheren Abstand schaffen. Ursache suchen (Schmerzen, Hunger, Überforderung). Thema wechseln. Warten bis die Situation sich beruhigt.' },
+                { q: 'Wie reagiert man auf ständig wiederholte Fragen?', a: 'Geduldig dieselbe Antwort geben — auch zum zehnten Mal. Die Frage kommt aus Unsicherheit, nicht böser Absicht. Manchmal hilft eine schriftliche Notiz an sichtbarer Stelle.' },
+                { q: 'Kann eine Betreuungskraft die Deutsch nicht fließend spricht mit Demenzkranken kommunizieren?', a: 'Ja — im fortgeschrittenen Stadium ist Mimik, Tonfall und Berührung oft wichtiger als der Wortinhalt. Einfache, ruhige Sprache plus viel Körperkontakt funktionieren sprachübergreifend sehr gut.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="kommunikation-mit-demenzkranken" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

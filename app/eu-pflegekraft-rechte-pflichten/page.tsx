@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,97 +61,68 @@ export default function EuPflegekraftRechtenPflichten() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Rechtliches", href: "/rechtliches" },
+            { label: "EU-Pflegekraft Rechte & Pflichten" },
+          ]}
+          augenbraue="Ratgeber Recht"
+          titel="EU-Pflegekraft — Rechte & Pflichten im Entsendemodell"
+          einleitung="Das Entsendemodell ist die rechtssichere Grundlage für die meisten 24h-Betreuungsverhältnisse in Deutschland. Es schützt beide Seiten — die Familie und die Betreuungskraft. Trotzdem gibt es häufige Missverständnisse: Was darf die Familie verlangen? Was hat die Kraft Anspruch auf? Dieser Ratgeber klärt auf."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/rechtliches" className="hover:text-pm-taupe transition-colors">Rechtliches</a>
-            <span>›</span>
-            <span className="text-pm-ink">EU-Pflegekraft Rechte & Pflichten</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="entsendemodell" titel="Das Entsendemodell — wie es funktioniert">
+            <Text>
+              Beim Entsendemodell ist die Betreuungskraft nicht bei der deutschen Familie angestellt — sie ist bei einem Unternehmen im EU-Heimatland (z.B. Polen, Bulgarien, Rumänien) angestellt und wird mit einer A1-Bescheinigung für typischerweise 6–8 Wochen nach Deutschland entsandt.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Betreuungskraft', desc: 'Angestellt beim EU-Unternehmen im Heimatland. Dort sozialversichert (Rente, Kranken-, Pflegeversicherung). A1-Bescheinigung belegt den legalen Entsendestatus in Deutschland.' },
+                { title: 'EU-Unternehmen (Entsendefirma)', desc: 'Arbeitgeber der Betreuungskraft. Zahlt Lohn, stellt A1-Bescheinigung aus, ist verantwortlich für Sozialversicherungsbeiträge im Heimatland.' },
+                { title: 'Deutsche Agentur (Primundus)', desc: 'Vermittelt und koordiniert. Ist Vertragspartner der deutschen Familie. Schnittstelle zwischen Familie, EU-Unternehmen und Betreuungskraft.' },
+                { title: 'Familie', desc: 'Kein eigenes Arbeitsverhältnis mit der Kraft. Vertrag nur mit Primundus. Keine deutschen Sozialabgaben. A1-Bescheinigung bei Kontrollen vorzeigen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Apr. 2026
-          </p>
+          <DunklerAbschnitt
+            id="rechte-kraft"
+            titel="Rechte der Betreuungskraft"
+            einleitung="Auch im Entsendemodell gelten für entsandte Arbeitnehmer bestimmte deutsche Mindeststandards (EU-Entsenderichtlinie, § 2 AEntG). Kein seriöser Betreiber unterschreitet diese."
+            punkte={[
+              { title: 'Mindestlohn', desc: 'Entsandte Arbeitnehmer haben Anspruch auf den deutschen Mindestlohn (2026: 12,82 €/Stunde). Sachbezüge (Kost & Logis) können angerechnet werden.' },
+              { title: 'Eigenes Zimmer & Privatsphäre', desc: 'Die Betreuungskraft hat Anspruch auf ein eigenes Zimmer mit Privatsphäre. Das ist Pflicht — kein Schlafen auf dem Sofa oder ohne abschließbaren Rückzugsort.' },
+              { title: 'Ruhezeiten', desc: 'Gesetzliche tägliche Ruhezeit von mindestens 11 Stunden. Bereitschaft ist keine Arbeitszeit wenn sie tatsächlich ungestört ist.' },
+              { title: 'Urlaub', desc: 'Gesetzlicher Mindesturlaub (4 Wochen/Jahr). Für die Dauer eines Einsatzes (6–8 Wochen) anteilig.' },
+              { title: 'Krankenversicherung', desc: 'Über das EU-Unternehmen im Heimatland sozialversichert. Bei Erkrankung in Deutschland: Behandlung über europäische Krankenversicherungskarte (EHIC) möglich.' },
+              { title: 'Würdevoller Umgang', desc: 'Die Kraft ist kein "Personal" das jederzeit Befehle entgegennehmen muss. Sie ist ein Mensch in einem Arbeitsverhältnis der Respekt verdient.' },
+            ]}
+          />
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            EU-Pflegekraft — Rechte & Pflichten im Entsendemodell
-          </h1>
+          <Abschnitt id="pflichten-kraft" titel="Pflichten der Betreuungskraft">
+            <Punkte
+              punkte={[
+                { title: 'Pflege- und Betreuungsleistungen erbringen', desc: 'Die vertraglich vereinbarten Leistungen zuverlässig und sorgfältig erbringen — Körperpflege, Haushalt, Betreuung, Gesellschaft.' },
+                { title: 'Verschwiegenheit', desc: 'Über alle persönlichen und gesundheitlichen Informationen des Pflegebedürftigen und der Familie ist absolute Verschwiegenheit zu wahren — auch nach dem Einsatz.' },
+                { title: 'A1-Bescheinigung mitführen', desc: 'Die A1-Bescheinigung belegt den legalen Entsendestatus und muss bei einer Kontrolle durch Behörden vorgezeigt werden können.' },
+                { title: 'Pünktlichkeit und Zuverlässigkeit', desc: 'An- und Abreise zum vereinbarten Zeitpunkt. Krankmeldung so früh wie möglich damit Ersatz organisiert werden kann.' },
+                { title: 'Umgang mit Wertgegenständen', desc: 'Sorgfältiger Umgang mit dem Eigentum der Familie und des Pflegebedürftigen. Keine Annahme von Geldgeschenken ohne Absprache.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Das Entsendemodell ist die rechtssichere Grundlage für die meisten 24h-Betreuungsverhältnisse in Deutschland. Es schützt beide Seiten — die Familie und die Betreuungskraft. Trotzdem gibt es häufige Missverständnisse: Was darf die Familie verlangen? Was hat die Kraft Anspruch auf? Dieser Ratgeber klärt auf.
-          </p>
-
-          <h2 id="entsendemodell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Das Entsendemodell — wie es funktioniert
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Beim Entsendemodell ist die Betreuungskraft nicht bei der deutschen Familie angestellt — sie ist bei einem Unternehmen im EU-Heimatland (z.B. Polen, Bulgarien, Rumänien) angestellt und wird mit einer A1-Bescheinigung für typischerweise 6–8 Wochen nach Deutschland entsandt.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { partei: 'Betreuungskraft', status: 'Angestellt beim EU-Unternehmen im Heimatland. Dort sozialversichert (Rente, Kranken-, Pflegeversicherung). A1-Bescheinigung belegt den legalen Entsendestatus in Deutschland.' },
-              { partei: 'EU-Unternehmen (Entsendefirma)', status: 'Arbeitgeber der Betreuungskraft. Zahlt Lohn, stellt A1-Bescheinigung aus, ist verantwortlich für Sozialversicherungsbeiträge im Heimatland.' },
-              { partei: 'Deutsche Agentur (Primundus)', status: 'Vermittelt und koordiniert. Ist Vertragspartner der deutschen Familie. Schnittstelle zwischen Familie, EU-Unternehmen und Betreuungskraft.' },
-              { partei: 'Familie', status: 'Kein eigenes Arbeitsverhältnis mit der Kraft. Vertrag nur mit Primundus. Keine deutschen Sozialabgaben. A1-Bescheinigung bei Kontrollen vorzeigen.' },
-            ].map((item) => (
-              <div key={item.partei} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.partei}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.status}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="rechte-kraft" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Rechte der Betreuungskraft
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Auch im Entsendemodell gelten für entsandte Arbeitnehmer bestimmte deutsche Mindeststandards (EU-Entsenderichtlinie, § 2 AEntG). Kein seriöser Betreiber unterschreitet diese.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { recht: 'Mindestlohn', detail: 'Entsandte Arbeitnehmer haben Anspruch auf den deutschen Mindestlohn (2026: 12,82 €/Stunde). Sachbezüge (Kost & Logis) können angerechnet werden.' },
-              { recht: 'Eigenes Zimmer & Privatsphäre', detail: 'Die Betreuungskraft hat Anspruch auf ein eigenes Zimmer mit Privatsphäre. Das ist Pflicht — kein Schlafen auf dem Sofa oder ohne abschließbaren Rückzugsort.' },
-              { recht: 'Ruhezeiten', detail: 'Gesetzliche tägliche Ruhezeit von mindestens 11 Stunden. Bereitschaft ist keine Arbeitszeit wenn sie tatsächlich ungestört ist.' },
-              { recht: 'Urlaub', detail: 'Gesetzlicher Mindesturlaub (4 Wochen/Jahr). Für die Dauer eines Einsatzes (6–8 Wochen) anteilig.' },
-              { recht: 'Krankenversicherung', detail: 'Über das EU-Unternehmen im Heimatland sozialversichert. Bei Erkrankung in Deutschland: Behandlung über europäische Krankenversicherungskarte (EHIC) möglich.' },
-              { recht: 'Würdevoller Umgang', detail: 'Die Kraft ist kein "Personal" das jederzeit Befehle entgegennehmen muss. Sie ist ein Mensch in einem Arbeitsverhältnis der Respekt verdient.' },
-            ].map((item) => (
-              <div key={item.recht} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.recht}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="pflichten-kraft" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflichten der Betreuungskraft
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { pflicht: 'Pflege- und Betreuungsleistungen erbringen', detail: 'Die vertraglich vereinbarten Leistungen zuverlässig und sorgfältig erbringen — Körperpflege, Haushalt, Betreuung, Gesellschaft.' },
-              { pflicht: 'Verschwiegenheit', detail: 'Über alle persönlichen und gesundheitlichen Informationen des Pflegebedürftigen und der Familie ist absolute Verschwiegenheit zu wahren — auch nach dem Einsatz.' },
-              { pflicht: 'A1-Bescheinigung mitführen', detail: 'Die A1-Bescheinigung belegt den legalen Entsendestatus und muss bei einer Kontrolle durch Behörden vorgezeigt werden können.' },
-              { pflicht: 'Pünktlichkeit und Zuverlässigkeit', detail: 'An- und Abreise zum vereinbarten Zeitpunkt. Krankmeldung so früh wie möglich damit Ersatz organisiert werden kann.' },
-              { pflicht: 'Umgang mit Wertgegenständen', detail: 'Sorgfältiger Umgang mit dem Eigentum der Familie und des Pflegebedürftigen. Keine Annahme von Geldgeschenken ohne Absprache.' },
-            ].map((item) => (
-              <div key={item.pflicht} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.pflicht}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="rechte-familie" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Rechte & Pflichten der Familie
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="rechte-familie" titel="Rechte & Pflichten der Familie">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               { aspekt: 'Familie hat Anspruch auf:', items: ['Vertragsgemäße Leistungserbringung', 'Informationen über Veränderungen im Pflegezustand', 'Verschwiegenheit über familiäre Angelegenheiten', 'A1-Bescheinigung der Kraft vorab'], positive: true },
               { aspekt: 'Familie ist verpflichtet:', items: ['Eigenes Zimmer mit Privatsphäre bereitzustellen', 'Kost und Logis zu gewähren', 'Würdevollen Umgang zu pflegen', 'Vertraglich vereinbarte Vergütung pünktlich zu zahlen (an Primundus)', 'Die Kraft nicht zu Leistungen zu verpflichten die nicht vereinbart sind'], positive: false },
@@ -166,36 +139,27 @@ export default function EuPflegekraftRechtenPflichten() {
               </div>
             ))}
           </div>
+            <Kasten titel="Gute Zusammenarbeit als Grundprinzip">
+              <Text>Die besten Pflegeverhältnisse entstehen wenn Familie und Betreuungskraft einander mit Respekt begegnen. Eine Kraft die sich wohlfühlt und wertgeschätzt wird, bleibt länger, engagiert sich mehr und pflegt mit mehr Herz. Das liegt im Interesse aller.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-taupe-ink mb-2">Gute Zusammenarbeit als Grundprinzip</p>
-            <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
-              Die besten Pflegeverhältnisse entstehen wenn Familie und Betreuungskraft einander mit Respekt begegnen. Eine Kraft die sich wohlfühlt und wertgeschätzt wird, bleibt länger, engagiert sich mehr und pflegt mit mehr Herz. Das liegt im Interesse aller.
-            </p>
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Welche Rechte hat eine EU-Pflegekraft in Deutschland?', a: 'Anspruch auf deutschen Mindestlohn, eigenes Zimmer, Ruhezeiten (min. 11 Std./Tag), anteiligen Urlaub, Krankenversicherung über EHIC und würdevollen Umgang.' },
+                { q: 'Muss die Familie soziale Abgaben für die EU-Pflegekraft zahlen?', a: 'Nein — beim Entsendemodell über Primundus zahlt die Familie keine deutschen Sozialabgaben. Die Kraft ist im EU-Heimatland sozialversichert.' },
+                { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Das EU-Unternehmen ist verantwortlicher Arbeitgeber. Primundus organisiert sofort Ersatzkraft.' },
+                { q: 'Darf die Familie der Pflegekraft Anweisungen geben?', a: 'Im Rahmen des vereinbarten Leistungsumfangs: Ja. Aber die Kraft ist kein "Personal auf Abruf" — Grundpflicht ist die vertraglich vereinbarte Tätigkeit, nicht unbegrenzte Verfügbarkeit für beliebige Aufgaben.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Welche Rechte hat eine EU-Pflegekraft in Deutschland?', a: 'Anspruch auf deutschen Mindestlohn, eigenes Zimmer, Ruhezeiten (min. 11 Std./Tag), anteiligen Urlaub, Krankenversicherung über EHIC und würdevollen Umgang.' },
-              { q: 'Muss die Familie soziale Abgaben für die EU-Pflegekraft zahlen?', a: 'Nein — beim Entsendemodell über Primundus zahlt die Familie keine deutschen Sozialabgaben. Die Kraft ist im EU-Heimatland sozialversichert.' },
-              { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Das EU-Unternehmen ist verantwortlicher Arbeitgeber. Primundus organisiert sofort Ersatzkraft.' },
-              { q: 'Darf die Familie der Pflegekraft Anweisungen geben?', a: 'Im Rahmen des vereinbarten Leistungsumfangs: Ja. Aber die Kraft ist kein "Personal auf Abruf" — Grundpflicht ist die vertraglich vereinbarte Tätigkeit, nicht unbegrenzte Verfügbarkeit für beliebige Aufgaben.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="eu-pflegekraft-rechte-pflichten" />
-          <ArticleCTA />
-        </div>
+
+          <Weiterlesen aktuell="eu-pflegekraft-rechte-pflichten" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

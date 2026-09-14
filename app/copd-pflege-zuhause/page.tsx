@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -86,73 +88,57 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-ink">COPD Pflege zuhause</span>
-          </nav>
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Krankheiten · 8 Min</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflege bei COPD: Wie Sie den Alltag zuhause sicher machen
-          </h1>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Ratgeber", href: "/krankheiten" },
+            { label: "COPD Pflege zuhause" },
+          ]}
+          augenbraue="Ratgeber COPD"
+          titel="Pflege bei COPD: Wie Sie den Alltag zuhause sicher machen"
+          einleitung="Wer einen Menschen mit COPD pflegt, kennt die ständige Sorge: Reicht die Luft heute? Kommt sie die Treppe noch hoch? Was, wenn nachts die Atemnot kommt — und niemand da ist? Dieser Ratgeber zeigt, welche pflegerische Unterstützung im Alltag wirklich hilft, wo die Grenzen von Angehörigen und Betreuungskräften liegen und wann Sie ärztliche Hilfe holen müssen."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="8 Min."
+        />
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Wer einen Menschen mit COPD pflegt, kennt die ständige Sorge: Reicht die Luft heute? Kommt sie
-            die Treppe noch hoch? Was, wenn nachts die Atemnot kommt — und niemand da ist? Dieser Ratgeber
-            zeigt, welche pflegerische Unterstützung im Alltag wirklich hilft, wo die Grenzen von Angehörigen
-            und Betreuungskräften liegen und wann Sie ärztliche Hilfe holen müssen.
-          </p>
-
-          {/* ① WAS IST COPD */}
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist COPD — und was bedeutet sie für den Alltag?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            COPD (chronisch obstruktive Lungenerkrankung) ist eine dauerhafte Verengung der Atemwege — meist
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-ist" titel="Was ist COPD — und was bedeutet sie für den Alltag?">
+            <Text>
+              COPD (chronisch obstruktive Lungenerkrankung) ist eine dauerhafte Verengung der Atemwege — meist
             nach Jahrzehnten des Rauchens, seltener durch Stäube oder Vorerkrankungen. Typisch sind die drei
             Beschwerden <strong>Atemnot, Husten und Auswurf</strong>, anfangs nur bei Anstrengung, später
             auch in Ruhe. Ärztinnen und Ärzte teilen den Schweregrad in die Stadien <strong>GOLD 1 bis
             GOLD 4</strong> ein — von leicht bis sehr schwer.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Für den Pflegealltag heißt das: COPD verläuft schleichend, aber sie verläuft. Was letztes Jahr
+            </Text>
+            <Text>
+              Für den Pflegealltag heißt das: COPD verläuft schleichend, aber sie verläuft. Was letztes Jahr
             noch ging — Einkaufen, Treppensteigen, das Bad im ersten Stock — kostet irgendwann mehr Luft, als
             da ist. Dazu kommen die gefürchteten <strong>Exazerbationen</strong>: akute Verschlechterungen,
             oft durch Infekte ausgelöst, die häufig im Krankenhaus enden. Gute Pflege zuhause hat deshalb zwei
             Ziele: <strong>Kraft sparen im Alltag</strong> und <strong>Verschlechterungen früh erkennen</strong>.
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* ② PFLEGERISCHE UNTERSTÜTZUNG */}
-          <h2 id="unterstuetzung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegerische Unterstützung bei COPD: worauf es im Alltag ankommt
-          </h2>
-          <div className="space-y-4 mb-8">
-            {[
-              { t: 'Kräfte einteilen — der Tag folgt der Luft', d: 'Anstrengendes auf die besten Stunden legen (bei vielen: der Vormittag nach dem Abhusten), zwischen allen Tätigkeiten Pausen einplanen, Wege verkürzen: was täglich gebraucht wird, gehört in Griffhöhe und ins Erdgeschoss. Duschen im Sitzen mit Duschhocker spart mehr Kraft, als viele denken.' },
-              { t: 'Atemnot-Momente ruhig begleiten', d: 'Panik verengt die Atemwege zusätzlich. Hilfreich ist, ruhig an die mit Arzt oder Atemphysiotherapie eingeübten Techniken zu erinnern und dabei zu begleiten — etwa die Lippenbremse oder atemerleichternde Haltungen wie den Kutschersitz — Fenster öffnen, beengende Kleidung lockern und da bleiben, bis sich die Atmung beruhigt.' },
-              { t: 'Medikamente und Inhalation im Takt', d: 'Dauermedikamente wirken nur bei regelmäßiger Einnahme — und das Bedarfsspray muss im richtigen Moment griffbereit sein. Die Betreuungskraft erinnert zuverlässig an Zeiten und achtet darauf, dass Inhalationsgeräte gereinigt bereitstehen — die Anleitung und Kontrolle der Inhalationstechnik bleibt bei Arzt und Pflegedienst.' },
-              { t: 'Essen und Trinken anpassen', d: 'Viele COPD-Patienten verlieren Gewicht, weil Atmen Kalorien verbrennt und volle Mägen aufs Zwerchfell drücken. Bewährt haben sich mehrere kleine, energiereiche Mahlzeiten statt drei großer — und ausreichend Trinken, damit sich Schleim leichter löst. Was im Einzelfall gilt, besprechen Sie mit Arzt oder Ernährungsberatung.' },
-              { t: 'Infekte fernhalten', d: 'Jeder Atemwegsinfekt kann eine Exazerbation auslösen. Konsequente Handhygiene, Abstand zu Erkälteten, regelmäßiges Lüften und die von der Ständigen Impfkommission empfohlenen Impfungen (etwa Grippe und Pneumokokken — bitte ärztlich beraten lassen) senken das Risiko spürbar.' },
-              { t: 'In Bewegung bleiben — in Grenzen', d: 'Schonung schwächt die Atemmuskulatur. Kurze, regelmäßige Bewegung im eigenen Tempo — Gehen, Treppenstufen nach Vermögen, Lungensport-Übungen — erhält Kraft und Lebensqualität. Das richtige Maß legt der Arzt fest; die Betreuungskraft begleitet und motiviert.' },
-            ].map((x) => (
-              <div key={x.t} className="bg-white border border-pm-line rounded-2xl p-5">
-                <p className="text-[15px] font-bold text-pm-ink mb-1.5">{x.t}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{x.d}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="unterstuetzung" titel="Pflegerische Unterstützung bei COPD: worauf es im Alltag ankommt">
+            <Punkte
+              punkte={[
+                { title: 'Kräfte einteilen — der Tag folgt der Luft', desc: 'Anstrengendes auf die besten Stunden legen (bei vielen: der Vormittag nach dem Abhusten), zwischen allen Tätigkeiten Pausen einplanen, Wege verkürzen: was täglich gebraucht wird, gehört in Griffhöhe und ins Erdgeschoss. Duschen im Sitzen mit Duschhocker spart mehr Kraft, als viele denken.' },
+                { title: 'Atemnot-Momente ruhig begleiten', desc: 'Panik verengt die Atemwege zusätzlich. Hilfreich ist, ruhig an die mit Arzt oder Atemphysiotherapie eingeübten Techniken zu erinnern und dabei zu begleiten — etwa die Lippenbremse oder atemerleichternde Haltungen wie den Kutschersitz — Fenster öffnen, beengende Kleidung lockern und da bleiben, bis sich die Atmung beruhigt.' },
+                { title: 'Medikamente und Inhalation im Takt', desc: 'Dauermedikamente wirken nur bei regelmäßiger Einnahme — und das Bedarfsspray muss im richtigen Moment griffbereit sein. Die Betreuungskraft erinnert zuverlässig an Zeiten und achtet darauf, dass Inhalationsgeräte gereinigt bereitstehen — die Anleitung und Kontrolle der Inhalationstechnik bleibt bei Arzt und Pflegedienst.' },
+                { title: 'Essen und Trinken anpassen', desc: 'Viele COPD-Patienten verlieren Gewicht, weil Atmen Kalorien verbrennt und volle Mägen aufs Zwerchfell drücken. Bewährt haben sich mehrere kleine, energiereiche Mahlzeiten statt drei großer — und ausreichend Trinken, damit sich Schleim leichter löst. Was im Einzelfall gilt, besprechen Sie mit Arzt oder Ernährungsberatung.' },
+                { title: 'Infekte fernhalten', desc: 'Jeder Atemwegsinfekt kann eine Exazerbation auslösen. Konsequente Handhygiene, Abstand zu Erkälteten, regelmäßiges Lüften und die von der Ständigen Impfkommission empfohlenen Impfungen (etwa Grippe und Pneumokokken — bitte ärztlich beraten lassen) senken das Risiko spürbar.' },
+                { title: 'In Bewegung bleiben — in Grenzen', desc: 'Schonung schwächt die Atemmuskulatur. Kurze, regelmäßige Bewegung im eigenen Tempo — Gehen, Treppenstufen nach Vermögen, Lungensport-Übungen — erhält Kraft und Lebensqualität. Das richtige Maß legt der Arzt fest; die Betreuungskraft begleitet und motiviert.' },
+              ]}
+            />
+          </Abschnitt>
 
-          {/* ③ AUFGABEN */}
-          <h2 id="aufgaben" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was übernimmt die Betreuungskraft — und was der Pflegedienst?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-4">
+          <Abschnitt id="aufgaben" titel="Was übernimmt die Betreuungskraft — und was der Pflegedienst?">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-4">
             <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-pm-line">
               <div className="p-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-green mb-4">Betreuungskraft übernimmt</p>
@@ -177,68 +163,58 @@ export default function Page() {
               <p className="text-[13px] text-pm-body leading-relaxed"><strong className="font-bold text-pm-ink">Beide zusammen machen häusliche Pflege auch bei fortgeschrittener COPD möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</p>
             </div>
           </div>
+          </Abschnitt>
 
-          {/* ④ NACHTS */}
-          <h2 id="nachts" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Nachts ist die Angst am größten
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Atemnot kommt bei COPD oft nachts — im Liegen sammelt sich Schleim, und wer allein aufwacht und
+          <Abschnitt id="nachts" titel="Nachts ist die Angst am größten">
+            <Text>
+              Atemnot kommt bei COPD oft nachts — im Liegen sammelt sich Schleim, und wer allein aufwacht und
             keine Luft bekommt, gerät in Panik, die alles schlimmer macht. Genau hier liegt der Unterschied
             der 24-Stunden-Betreuung zum ambulanten Dienst, der zweimal am Tag kommt: <strong>Es ist jemand
             da.</strong> Eine Betreuungskraft, die im Haus schläft, hört, wenn etwas nicht stimmt, hilft beim
             Aufsetzen, bleibt ruhig — und ruft Hilfe, wenn es nötig wird. Für viele Familien ist das der
             Moment, in dem sie nach Monaten zum ersten Mal wieder durchschlafen.
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* ⑤ NOTFALL */}
-          <h2 id="notfall" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Notfall erkennen: wann zum Arzt, wann die 112
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-4">
-            <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#B08A3E] mb-3">Zeitnah ärztlich abklären</p>
-            <p className="text-[14px] text-pm-body leading-relaxed mb-4">
-              Deutlich mehr Atemnot als sonst · mehr, zäherer oder verfärbter Auswurf · Fieber ·
+          <Abschnitt id="notfall" titel="Notfall erkennen: wann zum Arzt, wann die 112">
+            <Kasten augenbraue="Zeitnah ärztlich abklären">
+              <Text>Deutlich mehr Atemnot als sonst · mehr, zäherer oder verfärbter Auswurf · Fieber ·
               neue Schwellungen an den Beinen · ungewöhnliche Müdigkeit oder Verwirrtheit — das können
               Zeichen einer beginnenden Exazerbation sein. Je früher behandelt wird, desto eher lässt sich
-              das Krankenhaus vermeiden.
-            </p>
-            <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#B0553E] mb-3">Sofort 112 rufen</p>
-            <p className="text-[14px] text-pm-body leading-relaxed">
-              Schwere Atemnot in Ruhe, die sich mit Notfallspray und Atemtechniken nicht bessert ·
-              bläuliche Lippen oder Fingernägel · Benommenheit oder Bewusstseinstrübung. Hier zählt jede Minute.
-            </p>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            Hilfreich für alle Beteiligten: ein schriftlicher Notfallplan am Kühlschrank — Warnzeichen,
+              das Krankenhaus vermeiden.</Text>
+              <Text>Sofort 112 rufen</Text>
+              <Text>Schwere Atemnot in Ruhe, die sich mit Notfallspray und Atemtechniken nicht bessert ·
+              bläuliche Lippen oder Fingernägel · Benommenheit oder Bewusstseinstrübung. Hier zählt jede Minute.</Text>
+            </Kasten>
+            <Text>
+              Hilfreich für alle Beteiligten: ein schriftlicher Notfallplan am Kühlschrank — Warnzeichen,
             Medikamente, Telefonnummern von Hausarzt, Lungenfacharzt und Angehörigen. So handelt auch eine
             Betreuungskraft, die neu im Haushalt ist, sofort richtig.
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* ⑥ PFLEGEGRAD */}
-          <h2 id="pflegegrad" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            COPD und Pflegegrad: Was steht Ihnen zu?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Die Diagnose allein ergibt keinen Pflegegrad — bewertet wird, wie selbstständig jemand seinen
+          <Abschnitt id="pflegegrad" titel="COPD und Pflegegrad: Was steht Ihnen zu?">
+            <Text>
+              Die Diagnose allein ergibt keinen Pflegegrad — bewertet wird, wie selbstständig jemand seinen
             Alltag noch bewältigt. Bei COPD wird oft unterschätzt, wie viele Punkte zusammenkommen: Wer wegen
             Atemnot beim Waschen und Anziehen Hilfe braucht, Wege in der Wohnung nur mit Pausen schafft und
             nachts Unterstützung benötigt, hat gute Chancen auf <strong>Pflegegrad 2 oder 3</strong> — bei
             fortgeschrittener COPD (GOLD 3 und 4) mit Sauerstofftherapie auch darüber.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Der häufigste Fehler im Begutachtungstermin: den guten Tag zeigen. Schildern Sie den schlechten —
+            </Text>
+            <Text>
+              Der häufigste Fehler im Begutachtungstermin: den guten Tag zeigen. Schildern Sie den schlechten —
             der Gutachter bewertet den Alltag, nicht den Moment. Ein Pflegetagebuch über zwei Wochen hilft
             enorm.
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Erste Einschätzung in wenigen Minuten: <a href="/pflegegrad-rechner" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad-Rechner</a> ·
+            </Text>
+            <Text>
+              → Erste Einschätzung in wenigen Minuten: <a href="/pflegegrad-rechner" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad-Rechner</a> ·
             Schritt für Schritt: <a href="/pflegegrad-beantragen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegegrad beantragen</a>
-          </p>
+            </Text>
+          </Abschnitt>
 
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-12">
             {faqs.map((f) => (
               <details key={f.q} className="bg-white rounded-xl border border-pm-line group">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
@@ -249,9 +225,13 @@ export default function Page() {
               </details>
             ))}
           </div>
-          <Weiterlesen aktuell="copd-pflege-zuhause" />
-          <ArticleCTA />
-        </div>
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="copd-pflege-zuhause" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

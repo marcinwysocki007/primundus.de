@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -97,116 +99,71 @@ export default function VsKosten() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
-            <span>›</span>
-            <span className="text-pm-ink">24h-Pflege vs. Pflegeheim</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            24h-Pflege vs. Pflegeheim — Kostenvergleich 2026
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Vergleiche", href: "/vergleiche" },
+            { label: "24h-Pflege vs. Pflegeheim" },
+          ]}
+          augenbraue="Ratgeber Vergleich"
+          titel="24h-Pflege vs. Pflegeheim — Kostenvergleich 2026"
+          einleitung="Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+          blick={[
                 'Pflegeheim-Eigenanteil 2026: Ø 3.364 €/Monat (1. Jahr) — steigt jährlich',
                 '24h-Pflege zuhause: 2.200–3.500 €/Monat brutto bei Primundus',
                 'Nach Kassenzuschüssen (PG 3): Eigenanteil ca. 1.700–2.000 €/Monat',
                 '24h-Pflege ist oft günstiger UND bietet mehr individuelle Betreuung',
                 'Pflegeheim kann nach 2+ Jahren durch Kassenzuschläge günstiger werden',
                 'Vertraute Umgebung verlangsamt Demenzverläufe — gesundheitlicher Mehrwert',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+              ]}
+        />
 
-          {/* SECTION 1 — Grafik */}
-          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Die Kosten im direkten Vergleich
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der entscheidende Vergleich ist nicht Brutto gegen Brutto — sondern der tatsächliche Eigenanteil nach allen Kassenzuschüssen. Und dabei schneidet die 24h-Pflege zuhause in den meisten Fällen besser ab.
-          </p>
-          <GrafikKostenvergleich />
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="kosten" titel="Die Kosten im direkten Vergleich">
+            <Text>
+              Der entscheidende Vergleich ist nicht Brutto gegen Brutto — sondern der tatsächliche Eigenanteil nach allen Kassenzuschüssen. Und dabei schneidet die 24h-Pflege zuhause in den meisten Fällen besser ab.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <GrafikKostenvergleich />
+          </Abschnitt>
 
-          {/* SECTION 2 */}
-          <h2 id="pflegeheim" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was das Pflegeheim wirklich kostet
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Pflegeheimpreis besteht aus vier Komponenten. Die Pflegekasse übernimmt einen einheitlichen Betrag je Pflegegrad — alles darüber ist Eigenanteil.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Pflegeheimkosten 2026 — was setzt sich zusammen</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <tbody>
-                  {[
-                    ['Pflegebedingter Eigenanteil (EEE)', 'Ø 1.132 €/Monat', 'Identisch in allen Heimen eines Bundeslandes'],
-                    ['Unterkunft & Verpflegung', 'Ø 900 €/Monat', 'Je nach Zimmerausstattung und Region'],
-                    ['Investitionsumlage', 'Ø 500–600 €/Monat', 'Für Gebäude, Ausstattung — zahlt Bewohner'],
-                    ['Ausbildungsumlage', 'ca. 60–100 €/Monat', 'Seit 2020 bundeseinheitlich'],
-                    ['Gesamteigenanteil (Ø 1. Jahr)', '3.364 €/Monat', 'Bundesweiter Durchschnitt 2026'],
-                  ].map(([pos, wert, hinweis], i) => (
-                    <tr key={pos} className={i === 4 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{pos}</td>
-                      <td className={`px-5 py-3 text-[14px] font-bold border-b border-pm-line ${i === 4 ? 'text-pm-taupe' : 'text-pm-ink'}`}>{wert}</td>
-                      <td className="px-5 py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Quelle: vdek Pflegeversicherungsbericht 2024 · Bundesweiter Durchschnitt</p>
-            </div>
-          </div>
+          <Abschnitt id="pflegeheim" titel="Was das Pflegeheim wirklich kostet">
+            <Text>
+              Der Pflegeheimpreis besteht aus vier Komponenten. Die Pflegekasse übernimmt einen einheitlichen Betrag je Pflegegrad — alles darüber ist Eigenanteil.
+            </Text>
+            <Tabelle
+              titel="Pflegeheimkosten 2026 — was setzt sich zusammen"
+              zeilen={[
+                ['Pflegebedingter Eigenanteil (EEE)', 'Ø 1.132 €/Monat', 'Identisch in allen Heimen eines Bundeslandes'],
+                ['Unterkunft & Verpflegung', 'Ø 900 €/Monat', 'Je nach Zimmerausstattung und Region'],
+                ['Investitionsumlage', 'Ø 500–600 €/Monat', 'Für Gebäude, Ausstattung — zahlt Bewohner'],
+                ['Ausbildungsumlage', 'ca. 60–100 €/Monat', 'Seit 2020 bundeseinheitlich'],
+                ['Gesamteigenanteil (Ø 1. Jahr)', '3.364 €/Monat', 'Bundesweiter Durchschnitt 2026'],
+              ]}
+              fuss="Quelle: vdek Pflegeversicherungsbericht 2024 · Bundesweiter Durchschnitt"
+            />
+            <Kasten titel="Wichtig: Der Eigenanteil steigt jährlich" ton="koralle">
+              <Text>Im Pflegeheim steigt der Eigenanteil typischerweise 3–5 % pro Jahr — weil Personalkosten steigen aber die Kassenzuschüsse eingefroren sind (bis Jan. 2028). 2024 stieg der Eigenanteil um durchschnittlich 211 €/Monat.</Text>
+            </Kasten>
+            <MehrDazu
+              label="Mehr zum Thema:"
+              links={[{ href: "/pflegeheim-kosten-deutschland", text: "Pflegeheim Kosten Deutschland 2026 — vollständige Übersicht" }]}
+            />
+          </Abschnitt>
 
-          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.15)] rounded-2xl p-5 mb-6">
-            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Wichtig: Der Eigenanteil steigt jährlich</p>
-            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
-              Im Pflegeheim steigt der Eigenanteil typischerweise 3–5 % pro Jahr — weil Personalkosten steigen aber die Kassenzuschüsse eingefroren sind (bis Jan. 2028). 2024 stieg der Eigenanteil um durchschnittlich 211 €/Monat.
-            </p>
-          </div>
-
-          <p className="text-[15px] text-pm-body mb-10">
-            → Mehr zum Thema:{' '}
-            <a href="/pflegeheim-kosten-deutschland" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegeheim Kosten Deutschland 2026 — vollständige Übersicht</a>
-          </p>
-
-          {/* SECTION 3 */}
-          <h2 id="24h" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was 24h-Pflege wirklich kostet
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat — je nach Pflegebedarf. Mit allen Kassenzuschüssen sinkt der tatsächliche Eigenanteil deutlich.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
+          <Abschnitt id="24h" titel="Was 24h-Pflege wirklich kostet">
+            <Text>
+              Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat — je nach Pflegebedarf. Mit allen Kassenzuschüssen sinkt der tatsächliche Eigenanteil deutlich.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
             <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
               <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Eigenanteil 24h-Pflege nach Kassenzuschüssen — Pflegegrad 3</p>
             </div>
@@ -230,100 +187,63 @@ export default function VsKosten() {
               </table>
             </div>
           </div>
+          </Abschnitt>
 
-          {/* SECTION 4 */}
-          <h2 id="qualitaet" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Mehr als nur Kosten — was wirklich zählt
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Kostenvergleich ist wichtig — aber die Entscheidung für oder gegen ein Pflegeheim hängt von mehr ab als nur dem Preis.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Kriterium</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-taupe text-left border-b border-pm-line">24h-Pflege zuhause</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Pflegeheim</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Eigenanteil/Monat (PG 3)', 'ca. 1.700–2.000 €', 'Ø 3.364 € (steigend)'],
-                    ['Umgebung', 'Eigenes Zuhause', 'Neue, fremde Umgebung'],
-                    ['Betreuungsintensität', '1:1 rund um die Uhr', 'Geteilt, nach Dienstplan'],
-                    ['Tagesrhythmus', 'Vollständig eigener Rhythmus', 'Heimstruktur und -zeiten'],
-                    ['Angehörige', 'Täglich einbindbar', 'Besuchszeiten'],
-                    ['Demenz-Verlauf', 'Langsamer durch Vertrautheit', 'Häufig Verschlechterung durch Umzug'],
-                    ['Flexibilität', 'Täglich kündbar', 'Meist Kündigungsfristen'],
-                    ['Ersatz bei Ausfall', 'Primundus stellt sofort Ersatz', 'Immer Personal vorhanden'],
-                  ].map(([kriterium, zuhause, heim], i) => (
-                    <tr key={kriterium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{kriterium}</td>
-                      <td className="px-5 py-3 text-[14px] text-pm-green font-medium border-b border-pm-line">{zuhause}</td>
-                      <td className="px-5 py-3 text-[14px] text-pm-mute border-b border-pm-line">{heim}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <Abschnitt id="qualitaet" titel="Mehr als nur Kosten — was wirklich zählt">
+            <Text>
+              Der Kostenvergleich ist wichtig — aber die Entscheidung für oder gegen ein Pflegeheim hängt von mehr ab als nur dem Preis.
+            </Text>
+            <Tabelle
+              titel=""
+              kopf={["Kriterium", "24h-Pflege zuhause", "Pflegeheim"]}
+              zeilen={[
+                ['Eigenanteil/Monat (PG 3)', 'ca. 1.700–2.000 €', 'Ø 3.364 € (steigend)'],
+                ['Umgebung', 'Eigenes Zuhause', 'Neue, fremde Umgebung'],
+                ['Betreuungsintensität', '1:1 rund um die Uhr', 'Geteilt, nach Dienstplan'],
+                ['Tagesrhythmus', 'Vollständig eigener Rhythmus', 'Heimstruktur und -zeiten'],
+                ['Angehörige', 'Täglich einbindbar', 'Besuchszeiten'],
+                ['Demenz-Verlauf', 'Langsamer durch Vertrautheit', 'Häufig Verschlechterung durch Umzug'],
+                ['Flexibilität', 'Täglich kündbar', 'Meist Kündigungsfristen'],
+                ['Ersatz bei Ausfall', 'Primundus stellt sofort Ersatz', 'Immer Personal vorhanden'],
+              ]}
+              betont={1}
+            />
+          </Abschnitt>
 
-          {/* SECTION 5 */}
-          <h2 id="wann-heim" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann ist das Pflegeheim die bessere Wahl?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            In bestimmten Situationen ist das Pflegeheim tatsächlich die bessere oder einzige Option:
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
+          <DunklerAbschnitt
+            id="wann-heim"
+            titel="Wann ist das Pflegeheim die bessere Wahl?"
+            einleitung="In bestimmten Situationen ist das Pflegeheim tatsächlich die bessere oder einzige Option:"
+            punkte={[
               { title: 'Intensivmedizinische Behandlungspflege', desc: 'Wenn rund um die Uhr medizinische Fachkräfte notwendig sind — z.B. Beatmung, kontinuierliche Medikamentenpumpen, komplexe Wundversorgung. Das übersteigt das was eine 24h-Betreuungskraft leisten kann.' },
               { title: 'Kein geeigneter Wohnraum', desc: 'Wenn die Wohnung so klein ist dass kein Zimmer für die Betreuungskraft vorhanden ist, oder wenn Umbaumaßnahmen nicht möglich sind.' },
               { title: 'Expliziter Wunsch des Betroffenen', desc: 'Wenn der pflegebedürftige Mensch selbst — solange noch entscheidungsfähig — ins Pflegeheim möchte, um Gemeinschaft zu erleben.' },
               { title: 'Langzeit finanziell', desc: 'Ab dem 3. Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % mehr — das kann den Eigenanteil erheblich senken. Bei sehr hohem Pflegegrad kann das die Rechnung zugunsten des Heims kippen.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Was zuhause möglich ist:{' '}
-            <a href="/was-ist-24-stunden-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was ist 24-Stunden-Pflege? — alle Fakten</a>
-            {' · '}
-            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kosten der 24h-Pflege im Detail</a>
-          </p>
+            ]}
+          >
+            <MehrDazu
+              label="Was zuhause möglich ist:"
+              links={[{ href: "/was-ist-24-stunden-pflege", text: "Was ist 24-Stunden-Pflege? — alle Fakten" }, { href: "/kosten", text: "Kosten der 24h-Pflege im Detail" }]}
+            />
+          </DunklerAbschnitt>
 
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zum Kostenvergleich
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was kostet ein Pflegeheim 2026?', a: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
-              { q: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', a: 'Bei Primundus 2.200–3.500 €/Monat brutto. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.700–2.000 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
-              { q: 'Ist 24h-Pflege zuhause besser als ein Pflegeheim?', a: 'Für die meisten Pflegesituationen ja — günstigerer Eigenanteil, eigenes Zuhause, individuelle 1:1-Betreuung, kein Umzugsstress. Ein Pflegeheim ist besser bei intensivmedizinischem Dauerbedarf oder fehlendem Wohnraum.' },
-              { q: 'Wann kann das Pflegeheim günstiger werden?', a: 'Ab dem dritten Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % des pflegebedingten Eigenanteils. Bei sehr hohem Pflegegrad (PG 4–5) kann das langfristig die Rechnung zugunsten des Heims ändern.' },
-              { q: 'Was zahlt die Pflegekasse im Pflegeheim?', a: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen zum Kostenvergleich">
+            <Fragen
+              fragen={[
+                { q: 'Was kostet ein Pflegeheim 2026?', a: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
+                { q: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', a: 'Bei Primundus 2.200–3.500 €/Monat brutto. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.700–2.000 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
+                { q: 'Ist 24h-Pflege zuhause besser als ein Pflegeheim?', a: 'Für die meisten Pflegesituationen ja — günstigerer Eigenanteil, eigenes Zuhause, individuelle 1:1-Betreuung, kein Umzugsstress. Ein Pflegeheim ist besser bei intensivmedizinischem Dauerbedarf oder fehlendem Wohnraum.' },
+                { q: 'Wann kann das Pflegeheim günstiger werden?', a: 'Ab dem dritten Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % des pflegebedingten Eigenanteils. Bei sehr hohem Pflegegrad (PG 4–5) kann das langfristig die Rechnung zugunsten des Heims ändern.' },
+                { q: 'Was zahlt die Pflegekasse im Pflegeheim?', a: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <Weiterlesen aktuell="24h-pflege-vs-pflegeheim-kosten" />
-          <ArticleCTA />
-        </div>
+
+          <Weiterlesen aktuell="24h-pflege-vs-pflegeheim-kosten" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

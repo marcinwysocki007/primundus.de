@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
-import { AuthorByline } from '@/components/AuthorByline'
+import { ArticleTOC } from '@/components/ArticleTOC'
 import { KurzAntwort } from '@/components/KurzAntwort'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
@@ -13,6 +16,14 @@ const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-kostenuebernahme', '21. A
 // 38 Impr. auf Pos. 66 — keine fokussierte Seite. Kaufnahe Query; die
 // Kernfrage dahinter ist fast immer: "Zahlt das jemand für uns — und
 // müssen am Ende die Kinder ran?" (Antwort: 100.000-€-Regel).
+
+// Inhaltsverzeichnis (neu mit der Vorlage: Zwischenüberschriften hatten keine Anker)
+const SECTIONS = [
+  { id: 'die-drei-toepfe-pflegekasse', title: "Die drei Töpfe: Pflegekasse, Finanzamt, Sozialamt" },
+  { id: 'was-bleibt-am-ende', title: "Was bleibt am Ende wirklich zu zahlen?" },
+  { id: 'wenn-das-geld-nicht', title: "Wenn das Geld nicht reicht: Hilfe zur Pflege vom Sozialamt" },
+  { id: 'haeufige-fragen-zur-kostenuebernahme', title: "Häufige Fragen zur Kostenübernahme" },
+]
 
 export const metadata: Metadata = {
   title: 'Kostenübernahme 24-Stunden-Pflege: Wer zahlt was?',
@@ -95,45 +106,43 @@ export default function KostenuebernahmePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Kosten", href: "/kosten" },
+            { label: "Kostenübernahme" },
+          ]}
+          augenbraue="Ratgeber Kosten"
+          titel="Kostenübernahme bei der 24-Stunden-Pflege: Wer zahlt was?"
+          einleitung=""
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/kosten" className="hover:text-pm-taupe transition-colors">Kosten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Kostenübernahme</span>
-          </nav>
-
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            Kosten &amp; Finanzierung · Aktualisiert August 2026
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Kostenübernahme bei der 24-Stunden-Pflege: Wer zahlt was?
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <KurzAntwort frage="Wer zahlt bei einer 24-Stunden-Betreuung dazu?" stand="August 2026">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            {/* VORLAGE: unverändert übernommen */}
+            <KurzAntwort frage="Wer zahlt bei einer 24-Stunden-Betreuung dazu?" stand="August 2026">
             Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.
           </KurzAntwort>
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Die kurze, ehrliche Antwort: <strong>Komplett übernimmt die Kosten niemand</strong> — aber es
+            <Text>
+              Die kurze, ehrliche Antwort: <strong>Komplett übernimmt die Kosten niemand</strong> — aber es
             zahlen mehr Stellen mit, als die meisten Familien denken. Die Pflegekasse steuert je nach
             Pflegegrad oft 700 bis 1.200 Euro im Monat bei, das Finanzamt bis zu 4.000 Euro im Jahr, und
             wenn das Geld trotzdem nicht reicht, springt das Sozialamt ein. Die wichtigste Beruhigung
             vorweg: <strong>Kinder müssen erst ab 100.000 Euro Bruttojahreseinkommen für die Pflege ihrer
             Eltern zahlen.</strong>
-          </p>
+            </Text>
+          </Vorspann>
 
-          {/* ① WER ZAHLT WAS — TABELLE */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Die drei Töpfe: Pflegekasse, Finanzamt, Sozialamt
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8 overflow-x-auto">
+          <Abschnitt id="die-drei-toepfe-pflegekasse" titel="Die drei Töpfe: Pflegekasse, Finanzamt, Sozialamt">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8 overflow-x-auto">
             <table className="w-full text-[14px] text-pm-body">
               <thead>
                 <tr className="border-b-2 border-pm-line text-left">
@@ -175,12 +184,11 @@ export default function KostenuebernahmePage() {
               über welchen Anbieter die Betreuung organisiert wird.
             </p>
           </div>
+          </Abschnitt>
 
-          {/* ② RECHENBEISPIEL */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Was bleibt am Ende wirklich zu zahlen?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+          <Abschnitt id="was-bleibt-am-ende" titel="Was bleibt am Ende wirklich zu zahlen?">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-pm-body mb-4">
               Ein typisches Beispiel mit Pflegegrad 3: Die Betreuung kostet 2.800 Euro im Monat. Davon
               gehen ab: 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige
@@ -196,12 +204,11 @@ export default function KostenuebernahmePage() {
               Ihre Zuschüsse in 2 Minuten berechnen
             </a>
           </div>
+          </Abschnitt>
 
-          {/* ③ SOZIALAMT */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Wenn das Geld nicht reicht: Hilfe zur Pflege vom Sozialamt
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+          <Abschnitt id="wenn-das-geld-nicht" titel="Wenn das Geld nicht reicht: Hilfe zur Pflege vom Sozialamt">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-pm-body mb-4">
               Reichen Rente, Pflegegeld und Erspartes nicht aus, muss niemand auf Betreuung verzichten:
               Beim Sozialamt kann <strong>„Hilfe zur Pflege"</strong> beantragt werden. Dabei gilt ein{' '}
@@ -221,52 +228,24 @@ export default function KostenuebernahmePage() {
               </p>
             </div>
           </div>
+          </Abschnitt>
 
-          {/* ④ FAQ — identisch zum FAQPage-Schema */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Häufige Fragen zur Kostenübernahme
-          </h2>
-          <div className="space-y-4 mb-8">
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach
-                Pflegegrad), Entlastungsbetrag (131 Euro monatlich) und Verhinderungspflege (bis 3.539
-                Euro im Jahr). Zusammen deckt das oft 700 bis 1.200 Euro im Monat, den Rest tragen die
-                Familien selbst.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Zahlt das Sozialamt die 24-Stunden-Pflege, wenn das Geld nicht reicht?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Reichen Rente, Pflegegeld und Erspartes nicht, kann beim Sozialamt „Hilfe zur Pflege"
-                beantragt werden. Ein Schonvermögen von 10.000 Euro pro Person bleibt dabei geschützt.
-                Das Sozialamt prüft den Einzelfall und übernimmt anerkannte, angemessene Pflegekosten.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Müssen Kinder für die Pflege ihrer Eltern zahlen?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Nur bei sehr hohem Einkommen: Seit dem Angehörigen-Entlastungsgesetz müssen Kinder erst
-                ab 100.000 Euro Bruttojahreseinkommen zum Elternunterhalt beitragen. Wer darunter liegt,
-                wird vom Sozialamt nicht herangezogen — das Vermögen der Kinder spielt keine Rolle.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Kann man die 24-Stunden-Pflege von der Steuer absetzen?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Ja. Für haushaltsnahe Dienstleistungen erkennt das Finanzamt bis zu 4.000 Euro
+          <Abschnitt id="haeufige-fragen-zur-kostenuebernahme" titel="Häufige Fragen zur Kostenübernahme">
+            <Punkte
+              punkte={[
+                { title: "Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?", desc: "Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad), Entlastungsbetrag (131 Euro monatlich) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 700 bis 1.200 Euro im Monat, den Rest tragen die Familien selbst." },
+                { title: "Zahlt das Sozialamt die 24-Stunden-Pflege, wenn das Geld nicht reicht?", desc: "Reichen Rente, Pflegegeld und Erspartes nicht, kann beim Sozialamt „Hilfe zur Pflege\" beantragt werden. Ein Schonvermögen von 10.000 Euro pro Person bleibt dabei geschützt. Das Sozialamt prüft den Einzelfall und übernimmt anerkannte, angemessene Pflegekosten." },
+                { title: "Müssen Kinder für die Pflege ihrer Eltern zahlen?", desc: "Nur bei sehr hohem Einkommen: Seit dem Angehörigen-Entlastungsgesetz müssen Kinder erst ab 100.000 Euro Bruttojahreseinkommen zum Elternunterhalt beitragen. Wer darunter liegt, wird vom Sozialamt nicht herangezogen — das Vermögen der Kinder spielt keine Rolle." },
+                { title: "Kann man die 24-Stunden-Pflege von der Steuer absetzen?", desc: <>Ja. Für haushaltsnahe Dienstleistungen erkennt das Finanzamt bis zu 4.000 Euro
                 Steuerermäßigung pro Jahr an — das entspricht gut 330 Euro im Monat zusätzlicher
                 Entlastung. Mehr dazu:{' '}
                 <a href="/pflege-steuerlich-absetzen" className="text-pm-taupe underline underline-offset-2">
                   Pflege steuerlich absetzen
-                </a>.
-              </p>
-            </div>
-          </div>
-
-          {/* WEITERLESEN */}
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+                </a>.</> },
+              ]}
+            />
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
             <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-3">Weiterlesen</p>
             <div className="flex flex-wrap gap-2">
               <a href="/kosten" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Was kostet 24h-Pflege?</a>
@@ -275,13 +254,13 @@ export default function KostenuebernahmePage() {
               <a href="/eigenanteil-24h-pflege-senken" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Eigenanteil senken</a>
             </div>
           </div>
+          </Abschnitt>
 
-          <Weiterlesen aktuell="24-stunden-pflege-kostenuebernahme" />
-          <ArticleCTA
-            headline="Wie viel Zuschuss steht Ihrer Familie zu?"
-            subline="Der Kostenrechner zeigt es in 2 Minuten — kostenlos und unverbindlich."
-          />
-        </div>
+
+          <Weiterlesen aktuell="24-stunden-pflege-kostenuebernahme" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

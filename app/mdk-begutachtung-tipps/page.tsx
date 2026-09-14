@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -70,67 +72,48 @@ export default function MdkBegutachtungTipps() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Pflegegrade", href: "/pflegegrade" },
+            { label: "MDK-Begutachtung Tipps" },
+          ]}
+          augenbraue="Ratgeber Pflegegrad"
+          titel="MDK-Begutachtung Tipps — so bereiten Sie sich richtig vor"
+          einleitung="Die MDK-Begutachtung (seit 2023: MDS — Medizinischer Dienst) entscheidet über den Pflegegrad — und damit über hunderte Euro monatlich an Kassenzuschüssen. Viele Familien unterschätzen wie wichtig die Vorbereitung ist. Der Gutachter sieht den Pflegebedürftigen einmal, für etwa eine Stunde. Was in dieser Stunde gesagt und gezeigt wird, zählt."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="8 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/pflegegrade" className="hover:text-pm-taupe transition-colors">Pflegegrade</a>
-            <span>›</span>
-            <span className="text-pm-ink">MDK-Begutachtung Tipps</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Der häufigste Fehler" ton="koralle">
+              <Text>Pflegebedürftige geben sich beim Besuch des Gutachters mehr Mühe als sonst — aus Stolz oder um niemanden zu belasten. Das Ergebnis: zu niedriger Pflegegrad, zu wenig Zuschüsse. Den Gutachter interessiert der schlechteste typische Tag — nicht der gute Tag.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>8 Min Lesezeit · Apr. 2026
-          </p>
+          <Abschnitt id="ablauf" titel="Wie die MDK-Begutachtung abläuft">
+            <Text>
+              Nach dem Pflegekassen-Antrag beauftragt die Kasse den Medizinischen Dienst mit einer Begutachtung. Ein Gutachter (Arzt oder Pflegefachkraft) kommt zu einem angekündigten Termin nach Hause.
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'Terminankündigung', desc: 'Kasse teilt Termin mit — in der Regel 1–2 Wochen Vorlauf. Termin kann verschoben werden wenn nötig.' },
+                { title: 'Hausbesuch ca. 60–90 Minuten', desc: 'Gutachter befragt Pflegebedürftigen und Angehörige. Prüft 6 Lebensbereiche (Module). Schaut sich die Wohnsituation an.' },
+                { title: 'Die 6 Module des NBA', desc: 'Mobilität, kognitive Fähigkeiten, Verhaltensweisen, Selbstversorgung, Umgang mit Erkrankungen, Alltagsleben. Jedes Modul wird einzeln bewertet und gewichtet.' },
+                { title: 'Gutachten und Bescheid', desc: 'Gutachter erstellt Bericht, Pflegekasse erteilt Bescheid. Dauer: 4–6 Wochen. Bei Widerspruch: erneute Begutachtung möglich.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            MDK-Begutachtung Tipps — so bereiten Sie sich richtig vor
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Die MDK-Begutachtung (seit 2023: MDS — Medizinischer Dienst) entscheidet über den Pflegegrad — und damit über hunderte Euro monatlich an Kassenzuschüssen. Viele Familien unterschätzen wie wichtig die Vorbereitung ist. Der Gutachter sieht den Pflegebedürftigen einmal, für etwa eine Stunde. Was in dieser Stunde gesagt und gezeigt wird, zählt.
-          </p>
-
-          <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-coral-ink mb-2">Der häufigste Fehler</p>
-            <p className="text-[14px] text-pm-coral-ink leading-relaxed">
-              Pflegebedürftige geben sich beim Besuch des Gutachters mehr Mühe als sonst — aus Stolz oder um niemanden zu belasten. Das Ergebnis: zu niedriger Pflegegrad, zu wenig Zuschüsse. Den Gutachter interessiert der schlechteste typische Tag — nicht der gute Tag.
-            </p>
-          </div>
-
-          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wie die MDK-Begutachtung abläuft
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Nach dem Pflegekassen-Antrag beauftragt die Kasse den Medizinischen Dienst mit einer Begutachtung. Ein Gutachter (Arzt oder Pflegefachkraft) kommt zu einem angekündigten Termin nach Hause.
-          </p>
-          <ol className="space-y-3 mb-10">
-            {[
-              { n: '1', title: 'Terminankündigung', desc: 'Kasse teilt Termin mit — in der Regel 1–2 Wochen Vorlauf. Termin kann verschoben werden wenn nötig.' },
-              { n: '2', title: 'Hausbesuch ca. 60–90 Minuten', desc: 'Gutachter befragt Pflegebedürftigen und Angehörige. Prüft 6 Lebensbereiche (Module). Schaut sich die Wohnsituation an.' },
-              { n: '3', title: 'Die 6 Module des NBA', desc: 'Mobilität, kognitive Fähigkeiten, Verhaltensweisen, Selbstversorgung, Umgang mit Erkrankungen, Alltagsleben. Jedes Modul wird einzeln bewertet und gewichtet.' },
-              { n: '4', title: 'Gutachten und Bescheid', desc: 'Gutachter erstellt Bericht, Pflegekasse erteilt Bescheid. Dauer: 4–6 Wochen. Bei Widerspruch: erneute Begutachtung möglich.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <h2 id="vorbereitung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Konkrete Vorbereitung — Checkliste
-          </h2>
-          <div className="space-y-2 mb-10">
+          <Abschnitt id="vorbereitung" titel="Konkrete Vorbereitung — Checkliste">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-2 mb-10">
             {[
               ['Pflegetagebuch mindestens 2 Wochen vor dem Termin beginnen', true],
               ['Medikamentenliste aktuell und vollständig ausdrucken', true],
@@ -154,14 +137,14 @@ export default function MdkBegutachtungTipps() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="pflegetagebuch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Das Pflegetagebuch — das wichtigste Vorbereitungsinstrument
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Ein Pflegetagebuch dokumentiert täglich welche Hilfe geleistet wurde — mit Zeitangaben. Es ist das stärkste Argument wenn der Gutachter fragt wie viel Unterstützung wirklich nötig ist.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6">
+          <Abschnitt id="pflegetagebuch" titel="Das Pflegetagebuch — das wichtigste Vorbereitungsinstrument">
+            <Text>
+              Ein Pflegetagebuch dokumentiert täglich welche Hilfe geleistet wurde — mit Zeitangaben. Es ist das stärkste Argument wenn der Gutachter fragt wie viel Unterstützung wirklich nötig ist.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6">
             <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
               <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Was ins Pflegetagebuch gehört</p>
             </div>
@@ -180,57 +163,42 @@ export default function MdkBegutachtungTipps() {
               ))}
             </div>
           </div>
+          </Abschnitt>
 
-          <h2 id="am-tag" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Am Begutachtungstag — was zu beachten ist
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { tip: 'Angehörigen dabeihaben', desc: 'Eine vertraute Person ergänzt und korrigiert wenn der Pflegebedürftige etwas vergisst oder unterschätzt.' },
-              { tip: 'Nicht übertreiben — aber auch nicht untertreiben', desc: 'Den normalen schwierigen Alltag beschreiben. Keine Dramatisierung nötig, aber auch kein Schönreden.' },
-              { tip: 'Konkrete Beispiele nennen', desc: '"Er kann die Hose nicht alleine anziehen weil er das Gleichgewicht verliert" ist stärker als "Er braucht manchmal Hilfe."' },
-              { tip: 'Pflegetagebuch bereithalten', desc: 'Dem Gutachter zeigen. Es belegt was verbal gesagt wird.' },
-              { tip: 'Hilfsmittel nicht verstecken', desc: 'Rollator, Haltegriffe, Inkontinenzmaterial — alles sichtbar lassen. Das zeigt den tatsächlichen Versorgungsbedarf.' },
-              { tip: 'Nachfragen erlaubt', desc: 'Was wurde in welchem Modul wie bewertet? Gutachter müssen Auskunft geben.' },
-            ].map((item) => (
-              <div key={item.tip} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.tip}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="am-tag" titel="Am Begutachtungstag — was zu beachten ist">
+            <Punkte
+              punkte={[
+                { title: 'Angehörigen dabeihaben', desc: 'Eine vertraute Person ergänzt und korrigiert wenn der Pflegebedürftige etwas vergisst oder unterschätzt.' },
+                { title: 'Nicht übertreiben — aber auch nicht untertreiben', desc: 'Den normalen schwierigen Alltag beschreiben. Keine Dramatisierung nötig, aber auch kein Schönreden.' },
+                { title: 'Konkrete Beispiele nennen', desc: '"Er kann die Hose nicht alleine anziehen weil er das Gleichgewicht verliert" ist stärker als "Er braucht manchmal Hilfe."' },
+                { title: 'Pflegetagebuch bereithalten', desc: 'Dem Gutachter zeigen. Es belegt was verbal gesagt wird.' },
+                { title: 'Hilfsmittel nicht verstecken', desc: 'Rollator, Haltegriffe, Inkontinenzmaterial — alles sichtbar lassen. Das zeigt den tatsächlichen Versorgungsbedarf.' },
+                { title: 'Nachfragen erlaubt', desc: 'Was wurde in welchem Modul wie bewertet? Gutachter müssen Auskunft geben.' },
+              ]}
+            />
+            <Kasten titel="Ergebnis zu niedrig? Widerspruch einlegen!" ton="gruen">
+              <Text>Wer den Bescheid für zu niedrig hält, kann innerhalb von 4 Wochen Widerspruch einlegen — kostenlos und ohne Risiko. Eine erneute Begutachtung wird angesetzt.{' '}
+              <a href="/widerspruch-pflegekasse-einlegen" className="underline font-semibold">Widerspruch einlegen — wie es geht</a></Text>
+            </Kasten>
+          </Abschnitt>
 
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Ergebnis zu niedrig? Widerspruch einlegen!</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Wer den Bescheid für zu niedrig hält, kann innerhalb von 4 Wochen Widerspruch einlegen — kostenlos und ohne Risiko. Eine erneute Begutachtung wird angesetzt.{' '}
-              <a href="/widerspruch-pflegekasse-einlegen" className="underline font-semibold">Widerspruch einlegen — wie es geht</a>
-            </p>
-          </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wie bereitet man sich auf die MDK-Begutachtung vor?', a: 'Pflegetagebuch führen (2+ Wochen vorher), Medikamente und Diagnosen auflisten, Hilfsmittel sichtbar lassen, Angehörige dabei haben, schlechtesten typischen Tag beschreiben — nicht den guten.' },
+                { q: 'Was prüft der MDK-Gutachter genau?', a: 'Das NBA (Neue Begutachtungsassessment) prüft 6 Module: Mobilität, kognitive Fähigkeiten, Verhaltensweisen, Selbstversorgung, Umgang mit Erkrankungen, Alltagsleben. Jedes Modul wird gewichtet — Selbstversorgung zählt am stärksten.' },
+                { q: 'Darf jemand beim MDK-Termin dabei sein?', a: 'Ja — und es ist sehr empfehlenswert. Eine vertraute Person ergänzt, korrigiert und stellt sicher dass alle relevanten Einschränkungen genannt werden.' },
+                { q: 'Was wenn der Pflegegrad zu niedrig ist?', a: 'Innerhalb von 4 Wochen Widerspruch einlegen — kostenlos, ohne Risiko. Kasse muss erneut begutachten. Mit Pflegetagebuch und konkreten Beispielen ist der Widerspruch oft erfolgreich.' },
+                { q: 'Was ist ein Pflegetagebuch und wie schreibt man es?', a: 'Tägliche Aufzeichnung welche Hilfe geleistet wurde — mit Zeitangaben. Morgens, tagsüber, abends, nachts. Besondere Ereignisse (Stürze, Verwirrtheit) dokumentieren. Mindestens 2 Wochen vor dem Termin beginnen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie bereitet man sich auf die MDK-Begutachtung vor?', a: 'Pflegetagebuch führen (2+ Wochen vorher), Medikamente und Diagnosen auflisten, Hilfsmittel sichtbar lassen, Angehörige dabei haben, schlechtesten typischen Tag beschreiben — nicht den guten.' },
-              { q: 'Was prüft der MDK-Gutachter genau?', a: 'Das NBA (Neue Begutachtungsassessment) prüft 6 Module: Mobilität, kognitive Fähigkeiten, Verhaltensweisen, Selbstversorgung, Umgang mit Erkrankungen, Alltagsleben. Jedes Modul wird gewichtet — Selbstversorgung zählt am stärksten.' },
-              { q: 'Darf jemand beim MDK-Termin dabei sein?', a: 'Ja — und es ist sehr empfehlenswert. Eine vertraute Person ergänzt, korrigiert und stellt sicher dass alle relevanten Einschränkungen genannt werden.' },
-              { q: 'Was wenn der Pflegegrad zu niedrig ist?', a: 'Innerhalb von 4 Wochen Widerspruch einlegen — kostenlos, ohne Risiko. Kasse muss erneut begutachten. Mit Pflegetagebuch und konkreten Beispielen ist der Widerspruch oft erfolgreich.' },
-              { q: 'Was ist ein Pflegetagebuch und wie schreibt man es?', a: 'Tägliche Aufzeichnung welche Hilfe geleistet wurde — mit Zeitangaben. Morgens, tagsüber, abends, nachts. Besondere Ereignisse (Stürze, Verwirrtheit) dokumentieren. Mindestens 2 Wochen vor dem Termin beginnen.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="mdk-begutachtung-tipps" />
-          <ArticleCTA />
-        </div>
+
+          <Weiterlesen aktuell="mdk-begutachtung-tipps" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

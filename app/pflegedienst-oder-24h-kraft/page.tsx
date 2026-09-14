@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Werte,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -70,76 +72,49 @@ export default function PflegedienstOder24hKraft() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Vergleiche", href: "/vergleiche" },
+            { label: "Pflegedienst oder 24h-Kraft" },
+          ]}
+          augenbraue="Ratgeber Vergleich"
+          titel="Pflegedienst oder 24h-Kraft — was ist die bessere Wahl?"
+          einleitung="Ambulanter Pflegedienst oder 24h-Betreuungskraft zuhause — das ist oft die erste Frage wenn Pflege notwendig wird. Beide sind legitime Lösungen. Welche besser passt, hängt vom Pflegebedarf, den Lebensumständen und dem Budget ab. Und sehr oft ist die Antwort: beide zusammen."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/vergleiche" className="hover:text-pm-taupe transition-colors">Vergleiche</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegedienst oder 24h-Kraft</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="unterschied" titel="Der grundlegende Unterschied">
+            <Text>
+              Der entscheidende Unterschied ist nicht was geleistet wird — sondern wann und wie kontinuierlich.
+            </Text>
+            <Tabelle
+              titel=""
+              kopf={["Kriterium", "Ambulanter Pflegedienst", "24h-Betreuungskraft"]}
+              zeilen={[
+                ['Verfügbarkeit', '1–3 Einsätze täglich, danach weg', 'Rund um die Uhr vor Ort'],
+                ['Nachtbereitschaft', 'Kein Personal nachts', 'Immer anwesend'],
+                ['Haushalt & Kochen', 'Nicht im Leistungsspektrum', 'Vollständig übernommen'],
+                ['Gesellschaft', 'Nur während Einsatz', 'Ganztägige Begleitung'],
+                ['Demenzbetreuung', 'Schwierig ohne Kontinuität', 'Vertraute Bezugsperson'],
+                ['Behandlungspflege', 'Ja — Kernkompetenz', 'Nein — übernimmt Pflegedienst'],
+                ['Kosten/Monat', '800–2.500 €, oft durch KV gedeckt', '2.200–3.500 €, mit Pflegegeld'],
+                ['Kassenzuschuss', 'Sachleistungen PG 2–5', 'Pflegegeld + Entlastungsbudget'],
+                ['Kündigung', 'Vertragliche Fristen', 'Täglich kündbar (Primundus)'],
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegedienst oder 24h-Kraft — was ist die bessere Wahl?
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Ambulanter Pflegedienst oder 24h-Betreuungskraft zuhause — das ist oft die erste Frage wenn Pflege notwendig wird. Beide sind legitime Lösungen. Welche besser passt, hängt vom Pflegebedarf, den Lebensumständen und dem Budget ab. Und sehr oft ist die Antwort: beide zusammen.
-          </p>
-
-          <h2 id="unterschied" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Der grundlegende Unterschied
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der entscheidende Unterschied ist nicht was geleistet wird — sondern wann und wie kontinuierlich.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Kriterium</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Ambulanter Pflegedienst</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-taupe text-left border-b border-pm-line">24h-Betreuungskraft</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Verfügbarkeit', '1–3 Einsätze täglich, danach weg', 'Rund um die Uhr vor Ort'],
-                    ['Nachtbereitschaft', 'Kein Personal nachts', 'Immer anwesend'],
-                    ['Haushalt & Kochen', 'Nicht im Leistungsspektrum', 'Vollständig übernommen'],
-                    ['Gesellschaft', 'Nur während Einsatz', 'Ganztägige Begleitung'],
-                    ['Demenzbetreuung', 'Schwierig ohne Kontinuität', 'Vertraute Bezugsperson'],
-                    ['Behandlungspflege', 'Ja — Kernkompetenz', 'Nein — übernimmt Pflegedienst'],
-                    ['Kosten/Monat', '800–2.500 €, oft durch KV gedeckt', '2.200–3.500 €, mit Pflegegeld'],
-                    ['Kassenzuschuss', 'Sachleistungen PG 2–5', 'Pflegegeld + Entlastungsbudget'],
-                    ['Kündigung', 'Vertragliche Fristen', 'Täglich kündbar (Primundus)'],
-                  ].map(([k, d, p], i) => (
-                    <tr key={k} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{k}</td>
-                      <td className="px-5 py-3 text-[13px] text-pm-body border-b border-pm-line">{d}</td>
-                      <td className="px-5 py-3 text-[13px] text-pm-body border-b border-pm-line">{p}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kostenvergleich 2026
-          </h2>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="kosten" titel="Kostenvergleich 2026">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             <div className="bg-white rounded-xl p-5 border border-pm-line">
               <p className="text-[15px] font-bold text-pm-ink mb-2">Ambulanter Pflegedienst</p>
               <p className="text-[14px] text-pm-body leading-relaxed mb-2">800–2.500 €/Monat je nach Einsatzhäufigkeit. Die Pflegekasse zahlt Sachleistungen direkt an den Dienst: PG 2 = 796 €/Mo, PG 3 = 1.497 €/Mo, PG 4 = 1.859 €/Mo, PG 5 = 2.299 €/Mo. Bei moderatem Pflegebedarf kann der Eigenanteil sehr gering oder null sein.</p>
@@ -151,11 +126,11 @@ export default function PflegedienstOder24hKraft() {
               <p className="text-[13px] text-pm-mute">Kombination mit Pflegedienst für Behandlungspflege möglich — Kosten dann kumuliert aber Kassenzuschüsse laufen parallel.</p>
             </div>
           </div>
+          </Abschnitt>
 
-          <h2 id="wann-was" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wann ist was sinnvoll?
-          </h2>
-          <div className="space-y-3 mb-10">
+          <Abschnitt id="wann-was" titel="Wann ist was sinnvoll?">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-3 mb-10">
             {[
               {
                 label: 'Ambulanter Pflegedienst reicht wenn…',
@@ -182,54 +157,37 @@ export default function PflegedienstOder24hKraft() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="kombination" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kombination — oft die beste Lösung
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die häufigste und meist beste Lösung ist die Kombination: Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushalt, Gesellschaft und Nacht. Der ambulante Pflegedienst kommt täglich für Behandlungspflege (Injektionen, Verbandswechsel). Beide Kassenzuschüsse laufen parallel.
-          </p>
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-10">
-            <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Rechenbeispiel Kombination — PG 3</p>
-            <div className="space-y-1.5 text-[14px] text-pm-green-deep">
-              <div className="flex justify-between"><span>24h-Kraft (Primundus)</span><span>2.200–3.500 €/Mo</span></div>
-              <div className="flex justify-between"><span>Ambulanter Dienst (Behandlungspflege)</span><span>ca. 300–600 €/Mo</span></div>
-              <div className="flex justify-between font-semibold border-t border-[rgba(61,122,92,0.2)] pt-1.5 mt-1"><span>Gesamtkosten brutto</span><span>ca. 2.500–4.100 €/Mo</span></div>
-              <div className="flex justify-between text-pm-green"><span>− Pflegegeld PG 3</span><span>− 599 €/Mo</span></div>
-              <div className="flex justify-between text-pm-green"><span>− Sachleistungen (für Pflegedienst)</span><span>− bis 1.497 €/Mo</span></div>
-              <div className="flex justify-between text-pm-green"><span>− Entlastungsbetrag + Budget</span><span>− ca. 420 €/Mo</span></div>
-              <div className="flex justify-between font-bold border-t border-[rgba(61,122,92,0.2)] pt-1.5 mt-1"><span>Eigenanteil ca.</span><span>ca. 1.000–1.800 €/Mo</span></div>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Kombinationsmöglichkeiten:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung der 24h-Pflege</a>
-            {' · '}
-            <a href="/kombinationsleistung-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kombinationsleistung erklärt</a>
-          </p>
+          <Abschnitt id="kombination" titel="Kombination — oft die beste Lösung">
+            <Text>
+              Die häufigste und meist beste Lösung ist die Kombination: Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushalt, Gesellschaft und Nacht. Der ambulante Pflegedienst kommt täglich für Behandlungspflege (Injektionen, Verbandswechsel). Beide Kassenzuschüsse laufen parallel.
+            </Text>
+            <Kasten augenbraue="Rechenbeispiel Kombination — PG 3" ton="gruen">
+              <Werte zeilen={[[<>24h-Kraft (Primundus)</>, <>2.200–3.500 €/Mo</>], [<>Ambulanter Dienst (Behandlungspflege)</>, <>ca. 300–600 €/Mo</>], [<>Gesamtkosten brutto</>, <>ca. 2.500–4.100 €/Mo</>], [<>− Pflegegeld PG 3</>, <>− 599 €/Mo</>], [<>− Sachleistungen (für Pflegedienst)</>, <>− bis 1.497 €/Mo</>], [<>− Entlastungsbetrag + Budget</>, <>− ca. 420 €/Mo</>], [<>Eigenanteil ca.</>, <>ca. 1.000–1.800 €/Mo</>]]} />
+            </Kasten>
+            <MehrDazu
+              label="Alle Kombinationsmöglichkeiten:"
+              links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege" }, { href: "/kombinationsleistung-pflege", text: "Kombinationsleistung erklärt" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?', a: 'Pflegedienst: kommt zu festen Zeiten, geht dann wieder. Kernkompetenz Grund- und Behandlungspflege. 24h-Kraft: lebt im Haushalt, ist immer da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft, Nacht.' },
-              { q: 'Ist ambulante Pflege günstiger als eine 24h-Kraft?', a: 'Bei moderatem Bedarf ja — Sachleistungen decken oft den Pflegedienst vollständig. Bei hohem Gesamtbedarf (Haushalt, Betreuung, Nacht) ist die 24h-Kraft oft günstiger als mehrere Dienste kombiniert.' },
-              { q: 'Kann man Pflegedienst und 24h-Kraft kombinieren?', a: 'Ja — das ist die häufigste Lösung bei komplexem Bedarf. 24h-Kraft für Grundpflege/Haushalt/Nacht, Pflegedienst für Behandlungspflege. Beide Kassenzuschüsse (Pflegegeld + Sachleistungen) laufen parallel.' },
-              { q: 'Wann reicht ein ambulanter Pflegedienst nicht mehr aus?', a: 'Wenn nächtliche Betreuung nötig ist, Demenz kontinuierliche Anwesenheit erfordert, Angehörige die verbleibende Zeit nicht abdecken können, oder wenn der Gesamtaufwand (Haushalt, Kochen, Begleitung) den Pflegedienst übersteigt.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflegedienst-oder-24h-kraft" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?', a: 'Pflegedienst: kommt zu festen Zeiten, geht dann wieder. Kernkompetenz Grund- und Behandlungspflege. 24h-Kraft: lebt im Haushalt, ist immer da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft, Nacht.' },
+                { q: 'Ist ambulante Pflege günstiger als eine 24h-Kraft?', a: 'Bei moderatem Bedarf ja — Sachleistungen decken oft den Pflegedienst vollständig. Bei hohem Gesamtbedarf (Haushalt, Betreuung, Nacht) ist die 24h-Kraft oft günstiger als mehrere Dienste kombiniert.' },
+                { q: 'Kann man Pflegedienst und 24h-Kraft kombinieren?', a: 'Ja — das ist die häufigste Lösung bei komplexem Bedarf. 24h-Kraft für Grundpflege/Haushalt/Nacht, Pflegedienst für Behandlungspflege. Beide Kassenzuschüsse (Pflegegeld + Sachleistungen) laufen parallel.' },
+                { q: 'Wann reicht ein ambulanter Pflegedienst nicht mehr aus?', a: 'Wenn nächtliche Betreuung nötig ist, Demenz kontinuierliche Anwesenheit erfordert, Angehörige die verbleibende Zeit nicht abdecken können, oder wenn der Gesamtaufwand (Haushalt, Kochen, Begleitung) den Pflegedienst übersteigt.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="pflegedienst-oder-24h-kraft" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

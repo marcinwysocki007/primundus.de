@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
-import { AuthorByline } from '@/components/AuthorByline'
+import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -13,6 +16,14 @@ const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-wirkliche-kosten', '14. A
 // unbezifferte Nebenkosten. Dieser Artikel erklärt die Mechanismen OHNE
 // Firmennamen (rechtlich sauber) und stellt unsere transparente Rechnung
 // dagegen. Transparenz ist Primundus' stärkste Positionierung.
+
+// Inhaltsverzeichnis (neu mit der Vorlage: Zwischenüberschriften hatten keine Anker)
+const SECTIONS = [
+  { id: 'drei-preis-verpackungen-die', title: "Drei Preis-Verpackungen, die Sie kennen sollten" },
+  { id: 'so-sieht-die-vollstaendige', title: "So sieht die vollständige Rechnung aus (Beispiel Pflegegrad 3)" },
+  { id: 'diese-7-fragen-stellen', title: "Diese 7 Fragen stellen Sie jedem Anbieter" },
+  { id: 'haeufige-fragen', title: "Häufige Fragen" },
+]
 
 export const metadata: Metadata = {
   title: 'Was kostet 24-Stunden-Pflege wirklich? Die ehrliche Gesamtrechnung | Primundus',
@@ -97,76 +108,44 @@ export default function WirklicheKostenPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Kosten", href: "/kosten" },
+            { label: "Die ehrliche Gesamtrechnung" },
+          ]}
+          augenbraue="Ratgeber Kosten"
+          titel="Was kostet 24-Stunden-Pflege wirklich? Die ehrliche Gesamtrechnung"
+          einleitung={"Wer Angebote für 24-Stunden-Pflege vergleicht, stößt auf erstaunlich unterschiedliche Zahlen: mal „105 Euro am Tag\", mal „ab 945 Euro Eigenanteil\", mal „ab 2.850 Euro\". Alle drei Angaben können sich am Ende auf denselben Monatsbetrag summieren — sie sind nur unterschiedlich verpackt. Hier lesen Sie, wie Sie Preisangaben richtig deuten, welche Nebenkosten oft fehlen und wie eine vollständige Rechnung aussieht."}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/kosten" className="hover:text-pm-taupe transition-colors">Kosten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Die ehrliche Gesamtrechnung</span>
-          </nav>
-
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            Kosten &amp; Finanzierung · Aktualisiert August 2026
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Was kostet 24-Stunden-Pflege wirklich? Die ehrliche Gesamtrechnung
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Wer Angebote für 24-Stunden-Pflege vergleicht, stößt auf erstaunlich unterschiedliche Zahlen:
-            mal „105 Euro am Tag", mal „ab 945 Euro Eigenanteil", mal „ab 2.850 Euro". Alle drei Angaben
-            können sich am Ende auf denselben Monatsbetrag summieren — sie sind nur unterschiedlich
-            verpackt. Hier lesen Sie, wie Sie Preisangaben richtig deuten, welche Nebenkosten oft fehlen
-            und wie eine vollständige Rechnung aussieht.
-          </p>
-
-          {/* ① DIE DREI VERPACKUNGEN */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Drei Preis-Verpackungen, die Sie kennen sollten
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <div className="space-y-5">
-              <div>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">1. Der Tagespreis-Anker</p>
-                <p className="text-[15px] leading-relaxed text-pm-body">
-                  „105 Euro am Tag" klingt überschaubar — ein Restaurantbesuch für zwei. Gerechnet auf den
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="drei-preis-verpackungen-die" titel="Drei Preis-Verpackungen, die Sie kennen sollten">
+            <Punkte
+              punkte={[
+                { title: "1. Der Tagespreis-Anker", desc: <>„105 Euro am Tag" klingt überschaubar — ein Restaurantbesuch für zwei. Gerechnet auf den
                   Monat sind es aber über <strong>3.100 Euro</strong>. Rechnen Sie Tagespreise immer mal 30,
-                  bevor Sie vergleichen.
-                </p>
-              </div>
-              <div>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">2. Der „ab"-Preis</p>
-                <p className="text-[15px] leading-relaxed text-pm-body">
-                  „Ab"-Preise gelten für die einfachste denkbare Situation: eine mobile Person, keine
+                  bevor Sie vergleichen.</> },
+                { title: "2. Der „ab\"-Preis", desc: <>„Ab"-Preise gelten für die einfachste denkbare Situation: eine mobile Person, keine
                   Nachteinsätze, einfache Sprachkenntnisse der Kraft. Realistische Situationen liegen fast
                   immer darüber — fragen Sie deshalb nach der <strong>Spanne mit Obergrenze</strong>, nicht
                   nach dem Einstiegspreis. Und Vorsicht bei „ab"-Angaben, die bereits alle Zuschüsse
-                  abgezogen haben: Das ist kein Preis, sondern ein Rechenergebnis für den günstigsten Fall.
-                </p>
-              </div>
-              <div>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">3. Die unbezifferten Nebenkosten</p>
-                <p className="text-[15px] leading-relaxed text-pm-body">
-                  Kost und Logis, An- und Abreise der Betreuungskraft, Feiertagszuschläge, Kosten bei einem
-                  Kraftwechsel: Diese Posten gehören zu jeder 24h-Betreuung — aber nicht jeder Anbieter
-                  beziffert sie vor Vertragsschluss. Was vorher nicht in Euro dasteht, steht später auf der
-                  Rechnung.
-                </p>
-              </div>
-            </div>
-          </div>
+                  abgezogen haben: Das ist kein Preis, sondern ein Rechenergebnis für den günstigsten Fall.</> },
+                { title: "3. Die unbezifferten Nebenkosten", desc: "Kost und Logis, An- und Abreise der Betreuungskraft, Feiertagszuschläge, Kosten bei einem Kraftwechsel: Diese Posten gehören zu jeder 24h-Betreuung — aber nicht jeder Anbieter beziffert sie vor Vertragsschluss. Was vorher nicht in Euro dasteht, steht später auf der Rechnung." },
+              ]}
+            />
+          </Abschnitt>
 
-          {/* ② DIE EHRLICHE RECHNUNG */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            So sieht die vollständige Rechnung aus (Beispiel Pflegegrad 3)
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8 overflow-x-auto">
+          <Abschnitt id="so-sieht-die-vollstaendige" titel="So sieht die vollständige Rechnung aus (Beispiel Pflegegrad 3)">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8 overflow-x-auto">
             <table className="w-full text-[14px] text-pm-body">
               <tbody>
                 <tr className="border-b border-pm-line-soft">
@@ -210,12 +189,11 @@ export default function WirklicheKostenPage() {
               <a href="https://kostenrechner.primundus.de/" className="text-pm-taupe underline underline-offset-2">Kostenrechner in 2 Minuten</a>.
             </p>
           </div>
+          </Abschnitt>
 
-          {/* ③ CHECKLISTE */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Diese 7 Fragen stellen Sie jedem Anbieter
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+          <Abschnitt id="diese-7-fragen-stellen" titel="Diese 7 Fragen stellen Sie jedem Anbieter">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
             <p className="text-[15px] leading-relaxed text-pm-body mb-4">
               Egal, bei wem Sie anfragen — auch bei uns: Ein seriöser Anbieter beantwortet alle sieben
               Fragen sofort und in Euro. Ausweichende Antworten sind ein Warnsignal.
@@ -237,43 +215,21 @@ export default function WirklicheKostenPage() {
               </p>
             </div>
           </div>
+          </Abschnitt>
 
-          {/* ④ FAQ — identisch zum Schema */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Häufige Fragen
-          </h2>
-          <div className="space-y-4 mb-8">
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Warum wirken manche 24h-Pflege-Angebote so günstig?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Drei verbreitete Mechanismen: Tagespreise statt Monatssummen (105 Euro am Tag klingt klein,
-                sind aber über 3.100 Euro im Monat), „ab"-Preise, die nur für die einfachste Konstellation
-                gelten, und unbezifferte Nebenkosten wie Kost und Logis, Fahrtkosten oder
-                Feiertagszuschläge, die erst im Vertrag auftauchen.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Welche Nebenkosten kommen üblicherweise dazu?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Typisch sind: Kost und Logis für die Betreuungskraft (bei Primundus mit 200 bis 300 Euro
-                monatlich beziffert), An- und Abreisekosten bei Kraftwechseln sowie Zuschläge an
-                Feiertagen. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie
-                unterschreiben.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Beispielrechnung: 2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, 131 Euro
+          <Abschnitt id="haeufige-fragen" titel="Häufige Fragen">
+            <Punkte
+              punkte={[
+                { title: "Warum wirken manche 24h-Pflege-Angebote so günstig?", desc: "Drei verbreitete Mechanismen: Tagespreise statt Monatssummen (105 Euro am Tag klingt klein, sind aber über 3.100 Euro im Monat), „ab\"-Preise, die nur für die einfachste Konstellation gelten, und unbezifferte Nebenkosten wie Kost und Logis, Fahrtkosten oder Feiertagszuschläge, die erst im Vertrag auftauchen." },
+                { title: "Welche Nebenkosten kommen üblicherweise dazu?", desc: "Typisch sind: Kost und Logis für die Betreuungskraft (bei Primundus mit 200 bis 300 Euro monatlich beziffert), An- und Abreisekosten bei Kraftwechseln sowie Zuschläge an Feiertagen. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie unterschreiben." },
+                { title: "Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv?", desc: <>Beispielrechnung: 2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, 131 Euro
                 Entlastungsbetrag, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche
                 Steuerersparnis — es bleiben rund 1.450 Euro effektiv selbst zu tragen. Alle Details:{' '}
-                <a href="/24-stunden-pflege-kostenuebernahme" className="text-pm-taupe underline underline-offset-2">Wer übernimmt die Kosten?</a>
-              </p>
-            </div>
-          </div>
-
-          {/* WEITERLESEN */}
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
+                <a href="/24-stunden-pflege-kostenuebernahme" className="text-pm-taupe underline underline-offset-2">Wer übernimmt die Kosten?</a></> },
+              ]}
+            />
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
             <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-3">Weiterlesen</p>
             <div className="flex flex-wrap gap-2">
               <a href="/kosten" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Kosten &amp; Finanzierung</a>
@@ -282,13 +238,13 @@ export default function WirklicheKostenPage() {
               <a href="/testsieger-24-stunden-pflege" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Unsere Auszeichnung mit Beleg</a>
             </div>
           </div>
+          </Abschnitt>
 
-          <Weiterlesen aktuell="24-stunden-pflege-wirkliche-kosten" />
-          <ArticleCTA
-            headline="Ihre ehrliche Gesamtrechnung — in 2 Minuten"
-            subline="Alle Posten, alle Zuschüsse, Ihr effektiver Eigenanteil. Kostenlos und unverbindlich."
-          />
-        </div>
+
+          <Weiterlesen aktuell="24-stunden-pflege-wirkliche-kosten" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

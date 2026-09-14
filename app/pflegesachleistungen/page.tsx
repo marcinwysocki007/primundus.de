@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann, Werte,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -67,34 +69,28 @@ export default function Pflegesachleistungen() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Finanzierung", href: "/finanzierung" },
+            { label: "Pflegesachleistungen" },
+          ]}
+          augenbraue="Ratgeber Finanzierung"
+          titel="Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung"
+          einleitung="Pflegesachleistungen sind Kassengelder die direkt an ambulante Pflegedienste fließen — nicht an die Familie. Sie betragen 796 Euro (PG 2) bis 2.299 Euro (PG 5) pro Monat. Wer Sachleistungen nicht vollständig nutzt, bekommt anteiliges Pflegegeld — die Kombinationsleistung."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegesachleistungen</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Pflegesachleistungen sind Kassengelder die direkt an ambulante Pflegedienste fließen — nicht an die Familie. Sie betragen 796 Euro (PG 2) bis 2.299 Euro (PG 5) pro Monat. Wer Sachleistungen nicht vollständig nutzt, bekommt anteiliges Pflegegeld — die Kombinationsleistung.
-          </p>
-
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
             <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Pflegesachleistungen 2026 nach Pflegegrad</p>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -117,81 +113,58 @@ export default function Pflegesachleistungen() {
             </div>
             <p className="text-[11px] text-pm-mute mt-2">Stand 2026 · Identisch zu 2025</p>
           </div>
+          </Vorspann>
 
-          <h2 id="was-sind" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was sind Pflegesachleistungen?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Pflegesachleistungen (§ 36 SGB XI) sind Kassengelder die nicht an den Pflegebedürftigen ausgezahlt werden — sondern direkt an einen zugelassenen ambulanten Pflegedienst. Die Kasse bezahlt den Dienst im Rahmen des monatlichen Budgets.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Im Unterschied zum Pflegegeld: Pflegegeld wird frei ausgezahlt (für private Betreuung durch Angehörige). Sachleistungen können nur für zugelassene Pflegedienste genutzt werden.
-          </p>
+          <Abschnitt id="was-sind" titel="Was sind Pflegesachleistungen?">
+            <Text>
+              Pflegesachleistungen (§ 36 SGB XI) sind Kassengelder die nicht an den Pflegebedürftigen ausgezahlt werden — sondern direkt an einen zugelassenen ambulanten Pflegedienst. Die Kasse bezahlt den Dienst im Rahmen des monatlichen Budgets.
+            </Text>
+            <Text>
+              Im Unterschied zum Pflegegeld: Pflegegeld wird frei ausgezahlt (für private Betreuung durch Angehörige). Sachleistungen können nur für zugelassene Pflegedienste genutzt werden.
+            </Text>
+          </Abschnitt>
 
-          <h2 id="wofuer" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wofür können Pflegesachleistungen genutzt werden?
-          </h2>
-          <div className="space-y-3 mb-6">
-            {[
-              { titel: '✓ Körperpflege durch Pflegedienst', desc: 'Waschen, Anziehen, Zahnpflege, Rasieren — durch Fachkräfte des ambulanten Pflegedienstes.' },
-              { titel: '✓ Mobilisierung & Lagerung', desc: 'Transfer aus dem Bett, Gehübungen, Lagerungswechsel zur Dekubitusprophylaxe.' },
-              { titel: '✓ Behandlungspflege (SGB V)', desc: 'Medikamentengabe, Verbandswechsel, Insulininjektionen — wird zusätzlich von der Krankenversicherung bezahlt.' },
-              { titel: '✗ Nicht: Haushaltshilfe', desc: 'Putzen, Einkaufen, Kochen sind Sachleistungen nach SGB XI nicht zugeordnet — dafür gibt es den Entlastungsbetrag oder Kombinationsleistung.' },
-              { titel: '✗ Nicht: Private Betreuung durch Angehörige', desc: 'Sachleistungen können nur für zugelassene Dienste genutzt werden, nicht für die Arbeit von Angehörigen.' },
-            ].map((item) => (
-              <div key={item.titel} className={`rounded-xl p-4 border ${item.titel.startsWith('✗') ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.15)]' : 'bg-white border-pm-line'}`}>
-                <p className={`text-[14px] font-bold mb-1 ${item.titel.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-ink'}`}>{item.titel}</p>
-                <p className={`text-[14px] leading-relaxed ${item.titel.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-body'}`}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="wofuer" titel="Wofür können Pflegesachleistungen genutzt werden?">
+            <Punkte
+              punkte={[
+                { title: '✓ Körperpflege durch Pflegedienst', desc: 'Waschen, Anziehen, Zahnpflege, Rasieren — durch Fachkräfte des ambulanten Pflegedienstes.' },
+                { title: '✓ Mobilisierung & Lagerung', desc: 'Transfer aus dem Bett, Gehübungen, Lagerungswechsel zur Dekubitusprophylaxe.' },
+                { title: '✓ Behandlungspflege (SGB V)', desc: 'Medikamentengabe, Verbandswechsel, Insulininjektionen — wird zusätzlich von der Krankenversicherung bezahlt.' },
+                { title: '✗ Nicht: Haushaltshilfe', desc: 'Putzen, Einkaufen, Kochen sind Sachleistungen nach SGB XI nicht zugeordnet — dafür gibt es den Entlastungsbetrag oder Kombinationsleistung.' },
+                { title: '✗ Nicht: Private Betreuung durch Angehörige', desc: 'Sachleistungen können nur für zugelassene Dienste genutzt werden, nicht für die Arbeit von Angehörigen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="kombination" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Pflegegeld + Sachleistungen kombinieren — Kombinationsleistung
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Wer Sachleistungen nicht vollständig ausschöpft, bekommt für den ungenutzten Anteil anteiliges Pflegegeld — das ist die Kombinationsleistung nach § 38 SGB XI.
-          </p>
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-6 mb-6">
-            <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Rechenbeispiel — Kombinationsleistung PG 3</p>
-            <div className="space-y-2 text-[14px] text-pm-green-deep">
-              <div className="flex gap-3"><span className="font-bold w-[200px] flex-shrink-0">Sachleistungen PG 3:</span><span>1.497 €/Monat</span></div>
-              <div className="flex gap-3"><span className="font-bold w-[200px] flex-shrink-0">Genutzter Anteil:</span><span>748 € (50 %)</span></div>
-              <div className="flex gap-3"><span className="font-bold w-[200px] flex-shrink-0">Ungenutzter Anteil:</span><span>50 %</span></div>
-              <div className="flex gap-3"><span className="font-bold w-[200px] flex-shrink-0">Pflegegeld PG 3:</span><span>599 €/Monat</span></div>
-              <div className="flex gap-3 font-bold"><span className="w-[200px] flex-shrink-0">Anteiliges Pflegegeld:</span><span>299,50 € (50 % von 599 €)</span></div>
-              <div className="flex gap-3 font-bold mt-2 pt-2 border-t border-[rgba(61,122,92,0.2)]"><span className="w-[200px] flex-shrink-0">Gesamtentlastung:</span><span>748 € + 299,50 € = 1.047,50 €/Monat</span></div>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Kombinationen:{' '}
-            <a href="/kombinationsleistung-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Kombinationsleistung erklärt</a>
-            {' · '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Zuschüsse 2026</a>
-          </p>
+          <Abschnitt id="kombination" titel="Pflegegeld + Sachleistungen kombinieren — Kombinationsleistung">
+            <Text>
+              Wer Sachleistungen nicht vollständig ausschöpft, bekommt für den ungenutzten Anteil anteiliges Pflegegeld — das ist die Kombinationsleistung nach § 38 SGB XI.
+            </Text>
+            <Kasten augenbraue="Rechenbeispiel — Kombinationsleistung PG 3" ton="gruen">
+              <Werte zeilen={[[<>Sachleistungen PG 3:</>, <>1.497 €/Monat</>], [<>Genutzter Anteil:</>, <>748 € (50 %)</>], [<>Ungenutzter Anteil:</>, <>50 %</>], [<>Pflegegeld PG 3:</>, <>599 €/Monat</>], [<>Anteiliges Pflegegeld:</>, <>299,50 € (50 % von 599 €)</>], [<>Gesamtentlastung:</>, <>748 € + 299,50 € = 1.047,50 €/Monat</>]]} />
+            </Kasten>
+            <MehrDazu
+              label="Alle Kombinationen:"
+              links={[{ href: "/kombinationsleistung-pflege", text: "Kombinationsleistung erklärt" }, { href: "/finanzierung", text: "Alle Zuschüsse 2026" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was sind Pflegesachleistungen?', a: 'Kassengelder die direkt an zugelassene ambulante Pflegedienste gezahlt werden. 796 € (PG 2), 1.497 € (PG 3), 1.859 € (PG 4), 2.299 € (PG 5) pro Monat.' },
-              { q: 'Kann man Pflegesachleistungen und Pflegegeld kombinieren?', a: 'Ja — Kombinationsleistung: Genutzter Sachleistungsanteil + anteiliges Pflegegeld für den Rest. Beispiel: 50 % Sachleistungen = 50 % Pflegegeld.' },
-              { q: 'Wer kann Pflegesachleistungen in Anspruch nehmen?', a: 'Pflegebedürftige mit PG 2–5 die zu Hause von einem zugelassenen ambulanten Pflegedienst versorgt werden. PG 1 hat keinen Sachleistungsanspruch.' },
-              { q: 'Können Sachleistungen für eine 24h-Betreuungskraft genutzt werden?', a: 'Nur wenn die Betreuungskraft über einen zugelassenen Pflegedienst tätig ist. Bei der Primundus-Vermittlung im Entsendemodell werden stattdessen Pflegegeld und Entlastungsbudget genutzt.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflegesachleistungen" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Was sind Pflegesachleistungen?', a: 'Kassengelder die direkt an zugelassene ambulante Pflegedienste gezahlt werden. 796 € (PG 2), 1.497 € (PG 3), 1.859 € (PG 4), 2.299 € (PG 5) pro Monat.' },
+                { q: 'Kann man Pflegesachleistungen und Pflegegeld kombinieren?', a: 'Ja — Kombinationsleistung: Genutzter Sachleistungsanteil + anteiliges Pflegegeld für den Rest. Beispiel: 50 % Sachleistungen = 50 % Pflegegeld.' },
+                { q: 'Wer kann Pflegesachleistungen in Anspruch nehmen?', a: 'Pflegebedürftige mit PG 2–5 die zu Hause von einem zugelassenen ambulanten Pflegedienst versorgt werden. PG 1 hat keinen Sachleistungsanspruch.' },
+                { q: 'Können Sachleistungen für eine 24h-Betreuungskraft genutzt werden?', a: 'Nur wenn die Betreuungskraft über einen zugelassenen Pflegedienst tätig ist. Bei der Primundus-Vermittlung im Entsendemodell werden stattdessen Pflegegeld und Entlastungsbudget genutzt.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="pflegesachleistungen" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

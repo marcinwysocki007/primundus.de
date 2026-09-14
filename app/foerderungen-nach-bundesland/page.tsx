@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -70,40 +72,31 @@ export default function FoerderungenNachBundesland() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Finanzierung", href: "/finanzierung" },
+            { label: "Förderungen nach Bundesland" },
+          ]}
+          augenbraue="Ratgeber Finanzierung"
+          titel="Förderungen nach Bundesland — alle Pflegezuschüsse 2026"
+          einleitung="Viele Familien kennen die Pflegekassen-Zuschüsse — aber nicht alle wissen: Darüber hinaus gibt es KfW-Förderkredite für Wohnraumanpassung, steuerliche Absetzbarkeit, und in mehreren Bundesländern eigene Landeszuschüsse. Wer alle Förderungen kombiniert, kann den Eigenanteil bei der 24h-Pflege erheblich senken."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="7 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/finanzierung" className="hover:text-pm-taupe transition-colors">Finanzierung</a>
-            <span>›</span>
-            <span className="text-pm-ink">Förderungen nach Bundesland</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Aug. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Förderungen nach Bundesland — alle Pflegezuschüsse 2026
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Viele Familien kennen die Pflegekassen-Zuschüsse — aber nicht alle wissen: Darüber hinaus gibt es KfW-Förderkredite für Wohnraumanpassung, steuerliche Absetzbarkeit, und in mehreren Bundesländern eigene Landeszuschüsse. Wer alle Förderungen kombiniert, kann den Eigenanteil bei der 24h-Pflege erheblich senken.
-          </p>
-
-          <h2 id="bundesweit" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-6 mb-4 leading-snug">
-            Bundesweite Kassenzuschüsse 2026 — die Basis
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Diese Leistungen gelten in allen 16 Bundesländern identisch — für jeden Pflegebedürftigen mit anerkanntem Pflegegrad.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="bundesweit" titel="Bundesweite Kassenzuschüsse 2026 — die Basis">
+            <Text>
+              Diese Leistungen gelten in allen 16 Bundesländern identisch — für jeden Pflegebedürftigen mit anerkanntem Pflegegrad.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
@@ -137,14 +130,14 @@ export default function FoerderungenNachBundesland() {
               <p className="text-[11px] text-pm-mute">§36–45b SGB XI · Stand 2026 · Identisch zu 2025</p>
             </div>
           </div>
+          </Abschnitt>
 
-          <h2 id="laender" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Zusatzförderungen der Bundesländer
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Zusätzlich zu den bundesweiten Pflegekasse-Leistungen bieten einige Bundesländer eigene Pflegeprogramme. Diese variieren stark und werden regelmäßig angepasst — vor Antragstellung immer beim zuständigen Landesamt prüfen.
-          </p>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="laender" titel="Zusatzförderungen der Bundesländer">
+            <Text>
+              Zusätzlich zu den bundesweiten Pflegekasse-Leistungen bieten einige Bundesländer eigene Pflegeprogramme. Diese variieren stark und werden regelmäßig angepasst — vor Antragstellung immer beim zuständigen Landesamt prüfen.
+            </Text>
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             {[
               {
                 land: 'Bayern',
@@ -190,17 +183,14 @@ export default function FoerderungenNachBundesland() {
               </div>
             ))}
           </div>
-          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-taupe-ink mb-2">Hinweis zu Landesförderungen</p>
-            <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
-              Landesförderungen werden regelmäßig angepasst, eingestellt oder neu aufgelegt. Die hier genannten Leistungen entsprechen dem Stand April 2026. Vor der Antragstellung immer beim zuständigen Landesamt oder Pflegestützpunkt prüfen.
-            </p>
-          </div>
+            <Kasten titel="Hinweis zu Landesförderungen">
+              <Text>Landesförderungen werden regelmäßig angepasst, eingestellt oder neu aufgelegt. Die hier genannten Leistungen entsprechen dem Stand April 2026. Vor der Antragstellung immer beim zuständigen Landesamt oder Pflegestützpunkt prüfen.</Text>
+            </Kasten>
+          </Abschnitt>
 
-          <h2 id="kfw" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            KfW-Förderung & Steuerabzug — unterschätzte Möglichkeiten
-          </h2>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="kfw" titel="KfW-Förderung & Steuerabzug — unterschätzte Möglichkeiten">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             <div className="bg-white rounded-xl p-5 border border-pm-line">
               <p className="text-[15px] font-bold text-pm-ink mb-2">KfW-Programm 159 — Altersgerecht Umbauen</p>
               <p className="text-[14px] text-pm-body leading-relaxed mb-3">
@@ -223,11 +213,11 @@ export default function FoerderungenNachBundesland() {
               <p className="text-[13px] text-pm-mute">→ Details: <a href="/verhinderungspflege" className="text-pm-taupe underline">Verhinderungspflege erklärt</a></p>
             </div>
           </div>
+          </Abschnitt>
 
-          <h2 id="checkliste" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Checkliste: Alle Förderungen nutzen
-          </h2>
-          <div className="space-y-2 mb-10">
+          <Abschnitt id="checkliste" titel="Checkliste: Alle Förderungen nutzen">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-2 mb-10">
             {[
               { check: 'Pflegegrad beantragt (Antrag sofort stellen — rückwirkend ab Antragsdatum)', link: '/pflegegrad-beantragen' },
               { check: 'Pflegegeld oder Sachleistungen gewählt (oder Kombinationsleistung)', link: '/kombinationsleistung-pflege' },
@@ -251,35 +241,28 @@ export default function FoerderungenNachBundesland() {
               </div>
             ))}
           </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Kassenzuschüsse kombiniert:{' '}
-            <a href="/eigenanteil-24h-pflege-senken" className="text-pm-taupe underline hover:text-pm-taupe-deep">Eigenanteil bei 24h-Pflege senken</a>
-            {' · '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierungsübersicht 2026</a>
-          </p>
+            <MehrDazu
+              label="Alle Kassenzuschüsse kombiniert:"
+              links={[{ href: "/eigenanteil-24h-pflege-senken", text: "Eigenanteil bei 24h-Pflege senken" }, { href: "/finanzierung", text: "Finanzierungsübersicht 2026" }]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Gibt es Pflegeförderungen die über die Pflegekasse hinausgehen?', a: 'Ja: KfW-Förderkredit (bis 50.000 €) für Wohnraumanpassung, Steuerabzug (bis 4.000 €/Jahr), Landespflegegeld Bayern (1.000 €/Jahr), kommunale Zuschüsse regional. Pflegestützpunkt berät kostenlos.' },
-              { q: 'Wie viel Landespflegegeld gibt es in Bayern?', a: '1.000 €/Jahr für Pflegebedürftige mit PG 2–5 die zuhause gepflegt werden. Antrag beim Landesamt für Pflege (LfP) in Bayern.' },
-              { q: 'Kann man KfW-Kredit und Pflegekasse-Zuschuss kombinieren?', a: 'Ja — KfW-Kredit (bis 50.000 € für barrierefreien Umbau) läuft zusätzlich zu den Pflegekasse-Zuschüssen (4.180 €/Maßnahme). Beide kombinieren für größere Projekte.' },
-              { q: 'Wer berät kostenlos über alle Förderungen?', a: 'Pflegestützpunkte in jedem Bundesland bieten kostenlose, unabhängige Beratung. Primundus berät im kostenlosen Erstgespräch über alle relevanten Kassenzuschüsse.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="foerderungen-nach-bundesland" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Gibt es Pflegeförderungen die über die Pflegekasse hinausgehen?', a: 'Ja: KfW-Förderkredit (bis 50.000 €) für Wohnraumanpassung, Steuerabzug (bis 4.000 €/Jahr), Landespflegegeld Bayern (1.000 €/Jahr), kommunale Zuschüsse regional. Pflegestützpunkt berät kostenlos.' },
+                { q: 'Wie viel Landespflegegeld gibt es in Bayern?', a: '1.000 €/Jahr für Pflegebedürftige mit PG 2–5 die zuhause gepflegt werden. Antrag beim Landesamt für Pflege (LfP) in Bayern.' },
+                { q: 'Kann man KfW-Kredit und Pflegekasse-Zuschuss kombinieren?', a: 'Ja — KfW-Kredit (bis 50.000 € für barrierefreien Umbau) läuft zusätzlich zu den Pflegekasse-Zuschüssen (4.180 €/Maßnahme). Beide kombinieren für größere Projekte.' },
+                { q: 'Wer berät kostenlos über alle Förderungen?', a: 'Pflegestützpunkte in jedem Bundesland bieten kostenlose, unabhängige Beratung. Primundus berät im kostenlosen Erstgespräch über alle relevanten Kassenzuschüsse.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="foerderungen-nach-bundesland" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
+} from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
@@ -59,63 +61,45 @@ export default function PflegeNachOp() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: "Startseite", href: "/" },
+            { label: "Krankheiten", href: "/krankheiten" },
+            { label: "Pflege nach OP" },
+          ]}
+          augenbraue="Ratgeber Pflege nach OP"
+          titel="Pflege nach OP zuhause — Betreuung & Unterstützung"
+          einleitung="Nach einer Operation werden ältere Menschen heute schnell aus dem Krankenhaus entlassen — oft schneller als ihre Angehörigen gewappnet sind. Die ersten Wochen zuhause sind kritisch: Wundversorgung durch den Pflegedienst, Mobilisierung, Hilfsbedarf bei allen Alltagsaufgaben. Eine 24h-Betreuungskraft überbrückt diese Zeit — und lässt sich schon vor der OP planen."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/krankheiten" className="hover:text-pm-taupe transition-colors">Krankheiten</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflege nach OP</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Vorspann>
+            <Kasten titel="Wichtig: Betreuungskraft VOR der OP organisieren" ton="gruen">
+              <Text>Bei geplanten Operationen (Hüft-TEP, Knie-TEP, Herzeingriff): Primundus-Anfrage idealerweise 2–3 Wochen vor dem OP-Termin stellen. So ist die Kraft pünktlich zur Krankenhausentlassung bereit — ohne Versorgungslücke.</Text>
+            </Kasten>
+          </Vorspann>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>6 Min Lesezeit · Aug. 2026
-          </p>
+          <DunklerAbschnitt
+            id="nach-entlassung"
+            titel="Die Zeit nach der Entlassung — was zuhause nötig ist"
+            einleitung="Krankenhäuser entlassen heute früh — oft wenn die Person noch erhebliche Unterstützung braucht. Der Sozialdienst des Krankenhauses hilft bei der Planung der Nachversorgung — diesen Ansprechpartner frühzeitig ansprechen."
+            punkte={[
+              { title: 'Erste Woche zuhause', desc: 'Vollständige Hilfe bei Körperpflege, Ankleiden, Mobilisierung. Wundversorgung durch ambulanten Pflegedienst (Behandlungspflege). Schmerzmittelgabe nach Zeitplan. Keine Eigenbelastung.' },
+              { title: 'Wochen 2–6', desc: 'Zunehmend selbstständiger — aber Hilfe noch bei allen körperlichen Aktivitäten. Physiotherapie zu Hause oder begleitete Fahrten. Wunden heilen, Schwellung geht zurück.' },
+              { title: 'Ab Woche 6–8', desc: 'Viele Patienten sind deutlich selbstständiger. Entscheidung: Braucht es weitere Unterstützung oder kann auf Alltagsunterstützung durch ambulante Dienste umgestellt werden?' },
+            ]}
+          />
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflege nach OP zuhause — Betreuung & Unterstützung
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Nach einer Operation werden ältere Menschen heute schnell aus dem Krankenhaus entlassen — oft schneller als ihre Angehörigen gewappnet sind. Die ersten Wochen zuhause sind kritisch: Wundversorgung durch den Pflegedienst, Mobilisierung, Hilfsbedarf bei allen Alltagsaufgaben. Eine 24h-Betreuungskraft überbrückt diese Zeit — und lässt sich schon vor der OP planen.
-          </p>
-
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Wichtig: Betreuungskraft VOR der OP organisieren</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Bei geplanten Operationen (Hüft-TEP, Knie-TEP, Herzeingriff): Primundus-Anfrage idealerweise 2–3 Wochen vor dem OP-Termin stellen. So ist die Kraft pünktlich zur Krankenhausentlassung bereit — ohne Versorgungslücke.
-            </p>
-          </div>
-
-          <h2 id="nach-entlassung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Die Zeit nach der Entlassung — was zuhause nötig ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Krankenhäuser entlassen heute früh — oft wenn die Person noch erhebliche Unterstützung braucht. Der Sozialdienst des Krankenhauses hilft bei der Planung der Nachversorgung — diesen Ansprechpartner frühzeitig ansprechen.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { phase: 'Erste Woche zuhause', was: 'Vollständige Hilfe bei Körperpflege, Ankleiden, Mobilisierung. Wundversorgung durch ambulanten Pflegedienst (Behandlungspflege). Schmerzmittelgabe nach Zeitplan. Keine Eigenbelastung.' },
-              { phase: 'Wochen 2–6', was: 'Zunehmend selbstständiger — aber Hilfe noch bei allen körperlichen Aktivitäten. Physiotherapie zu Hause oder begleitete Fahrten. Wunden heilen, Schwellung geht zurück.' },
-              { phase: 'Ab Woche 6–8', was: 'Viele Patienten sind deutlich selbstständiger. Entscheidung: Braucht es weitere Unterstützung oder kann auf Alltagsunterstützung durch ambulante Dienste umgestellt werden?' },
-            ].map((item) => (
-              <div key={item.phase} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.phase}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.was}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="haeufige-ops" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Häufige OPs im Alter — was zu beachten ist
-          </h2>
-          <div className="space-y-4 mb-10">
+          <Abschnitt id="haeufige-ops" titel="Häufige OPs im Alter — was zu beachten ist">
+            {/* VORLAGE: unverändert übernommen */}
+            <div className="space-y-4 mb-10">
             {[
               {
                 op: 'Hüft-TEP (Hüftgelenkersatz)',
@@ -163,65 +147,48 @@ export default function PflegeNachOp() {
               </div>
             ))}
           </div>
+          </Abschnitt>
 
-          <h2 id="betreuung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was die Betreuungskraft nach OP übernimmt
-          </h2>
-          <div className="space-y-3 mb-6">
-            {[
-              { was: '✓ Körperpflege & Ankleiden', detail: 'Vollständige Unterstützung in den ersten Wochen — langsam, sorgfältig, die Operationsstelle schonend.' },
-              { was: '✓ Mobilisierung & Sicherheit', detail: 'Aufstehen, Gehen, Treppensteigen begleiten. Die 24h-Kraft kennt die Bewegungseinschränkungen und handelt entsprechend.' },
-              { was: '✓ Physiotherapie-Übungen begleiten', detail: 'Übungen die der Physiotherapeut verordnet hat täglich begleiten und dokumentieren.' },
-              { was: '✓ Medikamentenerinnerung', detail: 'Schmerzmedikamente, Blutverdünner, Herzmedikamente — zur richtigen Zeit erinnern und dokumentieren.' },
-              { was: '✓ Arzt- und Physiotherapeut-Termine begleiten', detail: 'Fahren, begleiten, Informationen weiterleiten.' },
-              { was: '✗ Wundversorgung', detail: 'Verbandswechsel und Nahtversorgung ist Behandlungspflege — übernimmt ambulanter Pflegedienst täglich oder nach Bedarf.' },
-            ].map((item) => (
-              <div key={item.was} className={`rounded-xl p-5 border ${item.was.startsWith('✗') ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.15)]' : 'bg-white border-pm-line'}`}>
-                <p className={`text-[14px] font-bold mb-1 ${item.was.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-ink'}`}>{item.was}</p>
-                <p className={`text-[14px] leading-relaxed ${item.was.startsWith('✗') ? 'text-pm-coral-ink' : 'text-pm-body'}`}>{item.detail}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="betreuung" titel="Was die Betreuungskraft nach OP übernimmt">
+            <Punkte
+              punkte={[
+                { title: '✓ Körperpflege & Ankleiden', desc: 'Vollständige Unterstützung in den ersten Wochen — langsam, sorgfältig, die Operationsstelle schonend.' },
+                { title: '✓ Mobilisierung & Sicherheit', desc: 'Aufstehen, Gehen, Treppensteigen begleiten. Die 24h-Kraft kennt die Bewegungseinschränkungen und handelt entsprechend.' },
+                { title: '✓ Physiotherapie-Übungen begleiten', desc: 'Übungen die der Physiotherapeut verordnet hat täglich begleiten und dokumentieren.' },
+                { title: '✓ Medikamentenerinnerung', desc: 'Schmerzmedikamente, Blutverdünner, Herzmedikamente — zur richtigen Zeit erinnern und dokumentieren.' },
+                { title: '✓ Arzt- und Physiotherapeut-Termine begleiten', desc: 'Fahren, begleiten, Informationen weiterleiten.' },
+                { title: '✗ Wundversorgung', desc: 'Verbandswechsel und Nahtversorgung ist Behandlungspflege — übernimmt ambulanter Pflegedienst täglich oder nach Bedarf.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kassenzuschüsse nach OP
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              { leistung: 'Pflegegrad beantragen', detail: 'Nach einer OP mit Einschränkungen sofort Antrag stellen. Rückwirkend ab Antragsdatum. Typisch nach Hüft- oder Knie-OP: PG 1–3 je nach verbleibendem Hilfebedarf.' },
-              { leistung: 'Kurzzeitpflege (§ 42 SGB XI)', detail: 'Bis zu 3.539 €/Jahr aus dem gemeinsamen Entlastungsbudget, wenn nach dem Krankenhausaufenthalt vorübergehend vollstationäre Pflege nötig ist. Alternativ: zu Hause durch Betreuungskraft organisiert.' },
-              { leistung: 'Behandlungspflege (SGB V)', detail: 'Wundversorgung, Injektionen durch Pflegedienst — von der Krankenversicherung übernommen. Hausarzt-Verordnung holen.' },
-              { leistung: 'Hilfsmittelversorgung (SGB V)', detail: 'Rollator, Gehstock, Sitzerhöhung, Badehilfen — mit Rezept von der Krankenkasse. Nach OP schnell verordnen lassen.' },
-            ].map((item) => (
-              <div key={item.leistung} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.leistung}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
+          <Abschnitt id="leistungen" titel="Kassenzuschüsse nach OP">
+            <Punkte
+              punkte={[
+                { title: 'Pflegegrad beantragen', desc: 'Nach einer OP mit Einschränkungen sofort Antrag stellen. Rückwirkend ab Antragsdatum. Typisch nach Hüft- oder Knie-OP: PG 1–3 je nach verbleibendem Hilfebedarf.' },
+                { title: 'Kurzzeitpflege (§ 42 SGB XI)', desc: 'Bis zu 3.539 €/Jahr aus dem gemeinsamen Entlastungsbudget, wenn nach dem Krankenhausaufenthalt vorübergehend vollstationäre Pflege nötig ist. Alternativ: zu Hause durch Betreuungskraft organisiert.' },
+                { title: 'Behandlungspflege (SGB V)', desc: 'Wundversorgung, Injektionen durch Pflegedienst — von der Krankenversicherung übernommen. Hausarzt-Verordnung holen.' },
+                { title: 'Hilfsmittelversorgung (SGB V)', desc: 'Rollator, Gehstock, Sitzerhöhung, Badehilfen — mit Rezept von der Krankenkasse. Nach OP schnell verordnen lassen.' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wann brauche ich nach einer OP eine Betreuungskraft?', a: 'Immer wenn man alleine lebt oder Angehörige nicht dauerhaft die Betreuung übernehmen können. Nach Hüft-OP, Knie-OP oder Herzeingriff: 4–12 Wochen intensive Unterstützung nötig.' },
-              { q: 'Wann sollte ich die Betreuungskraft für die Zeit nach der OP organisieren?', a: 'Bei geplanter OP: 2–3 Wochen vorher Primundus kontaktieren. So ist die Kraft pünktlich zur Entlassung bereit.' },
-              { q: 'Was kostet eine Betreuungskraft nach der OP?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegekasse-Zuschüssen (nach Pflegegrad), Kurzzeitpflege-Budget und Steuerabzug deutlich reduzierbar.' },
-              { q: 'Zahlt die Krankenkasse die Betreuung nach einer OP?', a: 'Behandlungspflege (Wundversorgung, Injektionen): Ja, über Krankenversicherung. Grundpflege und Betreuung: über Pflegekasse wenn Pflegegrad vorhanden. Die Betreuungskraft selbst: privat mit Kassenzuschüssen.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <Weiterlesen aktuell="pflege-nach-op" />
-          <ArticleCTA />
-        </div>
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen
+              fragen={[
+                { q: 'Wann brauche ich nach einer OP eine Betreuungskraft?', a: 'Immer wenn man alleine lebt oder Angehörige nicht dauerhaft die Betreuung übernehmen können. Nach Hüft-OP, Knie-OP oder Herzeingriff: 4–12 Wochen intensive Unterstützung nötig.' },
+                { q: 'Wann sollte ich die Betreuungskraft für die Zeit nach der OP organisieren?', a: 'Bei geplanter OP: 2–3 Wochen vorher Primundus kontaktieren. So ist die Kraft pünktlich zur Entlassung bereit.' },
+                { q: 'Was kostet eine Betreuungskraft nach der OP?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegekasse-Zuschüssen (nach Pflegegrad), Kurzzeitpflege-Budget und Steuerabzug deutlich reduzierbar.' },
+                { q: 'Zahlt die Krankenkasse die Betreuung nach einer OP?', a: 'Behandlungspflege (Wundversorgung, Injektionen): Ja, über Krankenversicherung. Grundpflege und Betreuung: über Pflegekasse wenn Pflegegrad vorhanden. Die Betreuungskraft selbst: privat mit Kassenzuschüssen.' },
+              ]}
+            />
+          </Abschnitt>
+
+
+          <Weiterlesen aktuell="pflege-nach-op" variante="vorlage" />
+        </RatgeberRumpf>
+
+        <KontaktBand />
       </div>
     </>
   )
