@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, HakenListe, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Fragen, Gruppen, HakenListe, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -106,44 +106,14 @@ export default function HausnotrufSenioren() {
           </Abschnitt>
 
           <Abschnitt id="arten" titel="Arten von Hausnotruf-Systemen">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              {
-                art: 'Klassischer Hausnotruf (Festnetz/Mobilfunk)',
-                kosten: '20–50 €/Monat',
-                fuer: 'Senioren die hauptsächlich in der Wohnung sind',
-                wie: 'Funksender als Armband/Anhänger verbindet sich mit Basisstation. Funktioniert nur in Reichweite der Basisstation (typisch 50–80 m).',
-              },
-              {
-                art: 'Mobilfunk-Notruf (außer Haus nutzbar)',
-                kosten: '30–80 €/Monat',
-                fuer: 'Senioren die noch nach draußen gehen',
-                wie: 'Gerät mit eigenem Mobilfunk — funktioniert überall in Deutschland wo Empfang ist. Häufig mit GPS-Ortung kombiniert.',
-              },
-              {
-                art: 'GPS-Tracker (besonders bei Demenz)',
-                kosten: '30–80 €/Monat',
-                fuer: 'Menschen mit Demenz und Weglauf-Tendenz',
-                wie: 'Kleines Gerät (als Uhr, im Schuh, am Gürtel) ermöglicht Ortung jederzeit. Angehörige können Standort per App verfolgen.',
-              },
-              {
-                art: 'Smarte Pflaster/Wearables',
-                kosten: '40–100 €/Monat',
-                fuer: 'Hohes Sturzrisiko, Herzpatienten',
-                wie: 'Automatische Sturzerkennung, Herzfrequenzüberwachung, automatischer Notruf ohne Knopfdruck.',
-              },
-            ].map((item) => (
-              <div key={item.art} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.art}</p>
-                  <span className="text-[13px] font-bold text-pm-green flex-shrink-0">{item.kosten}</span>
-                </div>
-                <p className="text-[12px] font-semibold text-pm-taupe-light mb-1">Für wen: {item.fuer}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.wie}</p>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                { title: 'Klassischer Hausnotruf (Festnetz/Mobilfunk)', zusatz: '20–50 €/Monat', punkte: [<><strong>Für wen:</strong> Senioren die hauptsächlich in der Wohnung sind</>, 'Funksender als Armband/Anhänger verbindet sich mit Basisstation. Funktioniert nur in Reichweite der Basisstation (typisch 50–80 m).'] },
+                { title: 'Mobilfunk-Notruf (außer Haus nutzbar)', zusatz: '30–80 €/Monat', punkte: [<><strong>Für wen:</strong> Senioren die noch nach draußen gehen</>, 'Gerät mit eigenem Mobilfunk — funktioniert überall in Deutschland wo Empfang ist. Häufig mit GPS-Ortung kombiniert.'] },
+                { title: 'GPS-Tracker (besonders bei Demenz)', zusatz: '30–80 €/Monat', punkte: [<><strong>Für wen:</strong> Menschen mit Demenz und Weglauf-Tendenz</>, 'Kleines Gerät (als Uhr, im Schuh, am Gürtel) ermöglicht Ortung jederzeit. Angehörige können Standort per App verfolgen.'] },
+                { title: 'Smarte Pflaster/Wearables', zusatz: '40–100 €/Monat', punkte: [<><strong>Für wen:</strong> Hohes Sturzrisiko, Herzpatienten</>, 'Automatische Sturzerkennung, Herzfrequenzüberwachung, automatischer Notruf ohne Knopfdruck.'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="kosten" titel="Kosten & Kassenzuschuss">

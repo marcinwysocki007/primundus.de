@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -131,21 +131,16 @@ export default function PflegekraftAusRumaenien() {
             <Text>
               Die Kosten entsprechen dem allgemeinen Primundus-Preisrahmen — das Herkunftsland hat keinen Einfluss auf den Preis.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              ['Kosten Primundus', '2.200–3.500 €/Monat', 'Je nach Pflegebedarf'],
-              ['Pflegegeld PG 3', '– 599 €/Monat', 'Kassenzuschuss'],
-              ['Entlastungsbetrag', '– 131 €/Monat', 'Kassenzuschuss'],
-              ['Eigenanteil ca. PG 3', 'ca. 1.700–2.500 €/Monat', 'Nach Zuschüssen'],
-            ].map(([pos, wert, hinweis]) => (
-              <div key={pos} className="flex items-center justify-between bg-white rounded-xl px-5 py-3 border border-pm-line">
-                <span className="text-[14px] text-pm-body">{pos}</span>
-                <span className="text-[14px] font-bold text-pm-ink">{wert}</span>
-                <span className="text-[12px] text-pm-mute hidden md:block">{hinweis}</span>
-              </div>
-            ))}
-          </div>
+            <Tabelle
+              titel=""
+              zeilen={[
+                ['Kosten Primundus', '2.200–3.500 €/Monat', 'Je nach Pflegebedarf'],
+                ['Pflegegeld PG 3', '– 599 €/Monat', 'Kassenzuschuss'],
+                ['Entlastungsbetrag', '– 131 €/Monat', 'Kassenzuschuss'],
+                ['Eigenanteil ca. PG 3', 'ca. 1.700–2.500 €/Monat', 'Nach Zuschüssen'],
+              ]}
+              betont={1}
+            />
             <MehrDazu
               label="Alle Kosten:"
               links={[{ href: "/kosten", text: "Was kostet 24h-Pflege?" }, { href: "/eigenanteil-24h-pflege-senken", text: "Eigenanteil senken" }]}

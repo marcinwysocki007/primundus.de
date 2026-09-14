@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
+  Abschnitt, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -126,10 +126,9 @@ export default function KostenuebernahmePage() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
-            {/* VORLAGE: unverändert übernommen */}
             <KurzAntwort frage="Wer zahlt bei einer 24-Stunden-Betreuung dazu?" stand="August 2026">
-            Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.
-          </KurzAntwort>
+              Die Pflegekasse beteiligt sich ab Pflegegrad 2 mit dem Pflegegeld (347–990 €/Monat je nach Pflegegrad), dem Entlastungsbetrag (131 €/Monat) und dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege (bis 3.539 €/Jahr). Zusätzlich sind 20 % der Kosten (max. 4.000 €/Jahr) steuerlich absetzbar.
+            </KurzAntwort>
             <Text>
               Die kurze, ehrliche Antwort: <strong>Komplett übernimmt die Kosten niemand</strong> — aber es
             zahlen mehr Stellen mit, als die meisten Familien denken. Die Pflegekasse steuert je nach
@@ -141,93 +140,56 @@ export default function KostenuebernahmePage() {
           </Vorspann>
 
           <Abschnitt id="die-drei-toepfe-pflegekasse" titel="Die drei Töpfe: Pflegekasse, Finanzamt, Sozialamt">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8 overflow-x-auto">
-            <table className="w-full text-[14px] text-pm-body">
-              <thead>
-                <tr className="border-b-2 border-pm-line text-left">
-                  <th className="py-3 pr-4 font-bold text-pm-ink">Wer zahlt?</th>
-                  <th className="py-3 pr-4 font-bold text-pm-ink">Was genau?</th>
-                  <th className="py-3 font-bold text-pm-ink">Wie viel?</th>
-                </tr>
-              </thead>
-              <tbody className="align-top">
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-3 pr-4 font-semibold">Pflegekasse</td>
-                  <td className="py-3 pr-4">Pflegegeld (bei Pflege zuhause)</td>
-                  <td className="py-3">347 € (PG 2) · 599 € (PG 3) · 800 € (PG 4) · 990 € (PG 5) monatlich</td>
-                </tr>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-3 pr-4 font-semibold">Pflegekasse</td>
-                  <td className="py-3 pr-4">Entlastungsbetrag</td>
-                  <td className="py-3">131 € monatlich (ab PG 1)</td>
-                </tr>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-3 pr-4 font-semibold">Pflegekasse</td>
-                  <td className="py-3 pr-4">Verhinderungspflege (gemeinsamer Jahresbetrag mit Kurzzeitpflege)</td>
-                  <td className="py-3">bis 3.539 € im Jahr (≈ 295 € monatlich)</td>
-                </tr>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-3 pr-4 font-semibold">Finanzamt</td>
-                  <td className="py-3 pr-4">Steuerermäßigung für haushaltsnahe Dienstleistungen (§ 35a EStG)</td>
-                  <td className="py-3">bis 4.000 € im Jahr (≈ 333 € monatlich)</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-4 font-semibold">Sozialamt</td>
-                  <td className="py-3 pr-4">„Hilfe zur Pflege", wenn Einkommen und Vermögen nicht reichen</td>
-                  <td className="py-3">einzelfallabhängig; 10.000 € Schonvermögen bleiben geschützt</td>
-                </tr>
-              </tbody>
-            </table>
-            <p className="text-[13px] text-pm-mute mt-4">
-              Stand: August 2026. Alle Beträge sind gesetzliche Leistungen — sie gelten unabhängig davon,
-              über welchen Anbieter die Betreuung organisiert wird.
-            </p>
-          </div>
+            {/* Lange Zellen: Tabelle setzt ab 640 px whitespace-nowrap, der span lässt sie im Textblock umbrechen (sonst Querscrollen); auf dem Handy trennt er lange Wörter wie „Verhinderungspflege" */}
+            <Tabelle
+              titel=""
+              kopf={['Wer zahlt?', 'Was genau?', 'Wie viel?']}
+              zeilen={[
+                ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Pflegegeld (bei Pflege zuhause)</span>, <span className="whitespace-normal max-sm:hyphens-auto">347 € (PG 2) · 599 € (PG 3) · 800 € (PG 4) · 990 € (PG 5) monatlich</span>],
+                ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Entlastungsbetrag</span>, <span className="whitespace-normal max-sm:hyphens-auto">131 € monatlich (ab PG 1)</span>],
+                ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Verhinderungspflege (gemeinsamer Jahresbetrag mit Kurzzeitpflege)</span>, <span className="whitespace-normal max-sm:hyphens-auto">bis 3.539 € im Jahr (≈ 295 € monatlich)</span>],
+                ['Finanzamt', <span className="whitespace-normal max-sm:hyphens-auto">Steuerermäßigung für haushaltsnahe Dienstleistungen (§ 35a EStG)</span>, <span className="whitespace-normal max-sm:hyphens-auto">bis 4.000 € im Jahr (≈ 333 € monatlich)</span>],
+                ['Sozialamt', <span className="whitespace-normal max-sm:hyphens-auto">„Hilfe zur Pflege", wenn Einkommen und Vermögen nicht reichen</span>, <span className="whitespace-normal max-sm:hyphens-auto">einzelfallabhängig; 10.000 € Schonvermögen bleiben geschützt</span>],
+              ]}
+              fuss="Stand: August 2026. Alle Beträge sind gesetzliche Leistungen — sie gelten unabhängig davon, über welchen Anbieter die Betreuung organisiert wird."
+            />
           </Abschnitt>
 
           <Abschnitt id="was-bleibt-am-ende" titel="Was bleibt am Ende wirklich zu zahlen?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-              Ein typisches Beispiel mit Pflegegrad 3: Die Betreuung kostet 2.800 Euro im Monat. Davon
-              gehen ab: 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige
-              Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.450 Euro
-              im Monat</strong> — für eine Kraft, die rund um die Uhr im Haus ist. Zum Vergleich: Ein
-              Heimplatz kostet im Bundesdurchschnitt rund 3.364 Euro Eigenanteil, und das Haus
-              steht leer.
-            </p>
-            <a
-              href="https://kostenrechner.primundus.de/"
-              className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-full transition-colors"
-            >
-              Ihre Zuschüsse in 2 Minuten berechnen
-            </a>
-          </div>
+            <Kasten>
+              <Text>
+                Ein typisches Beispiel mit Pflegegrad 3: Die Betreuung kostet 2.800 Euro im Monat. Davon
+                gehen ab: 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige
+                Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.450 Euro
+                im Monat</strong> — für eine Kraft, die rund um die Uhr im Haus ist. Zum Vergleich: Ein
+                Heimplatz kostet im Bundesdurchschnitt rund 3.364 Euro Eigenanteil, und das Haus
+                steht leer.
+              </Text>
+              <a
+                href="https://kostenrechner.primundus.de/"
+                className="self-start inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-full transition-colors"
+              >
+                Ihre Zuschüsse in 2 Minuten berechnen
+              </a>
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="wenn-das-geld-nicht" titel="Wenn das Geld nicht reicht: Hilfe zur Pflege vom Sozialamt">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            <Text>
               Reichen Rente, Pflegegeld und Erspartes nicht aus, muss niemand auf Betreuung verzichten:
               Beim Sozialamt kann <strong>„Hilfe zur Pflege"</strong> beantragt werden. Dabei gilt ein{' '}
               <strong>Schonvermögen von 10.000 Euro pro Person</strong> (bei Ehepaaren 20.000 Euro), das
               nicht angetastet wird. Auch das selbst bewohnte Haus ist in der Regel geschützt, solange der
               Ehepartner darin wohnt.
-            </p>
-            <div className="bg-pm-shell rounded-xl p-5">
-              <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-2">
-                Die 100.000-Euro-Regel — die wichtigste Entlastung für Angehörige
-              </p>
-              <p className="text-[13px] text-pm-taupe-ink leading-relaxed">
+            </Text>
+            <Kasten augenbraue="Die 100.000-Euro-Regel — die wichtigste Entlastung für Angehörige">
+              <Text>
                 Seit dem Angehörigen-Entlastungsgesetz zieht das Sozialamt Kinder erst dann zum
                 Elternunterhalt heran, wenn ihr <strong>Bruttojahreseinkommen über 100.000 Euro</strong>{' '}
                 liegt — pro Kind gerechnet, Vermögen zählt nicht. Für die allermeisten Familien heißt das:
                 Die Kinder zahlen nichts, auch wenn das Sozialamt einspringt.
-              </p>
-            </div>
-          </div>
+              </Text>
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="haeufige-fragen-zur-kostenuebernahme" titel="Häufige Fragen zur Kostenübernahme">
@@ -244,16 +206,15 @@ export default function KostenuebernahmePage() {
                 </a>.</> },
               ]}
             />
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-3">Weiterlesen</p>
-            <div className="flex flex-wrap gap-2">
-              <a href="/kosten" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Was kostet 24h-Pflege?</a>
-              <a href="/pflegegeld-und-24h-pflege-kombinieren" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Pflegegeld & 24h-Pflege kombinieren</a>
-              <a href="/sozialhilfe-bei-pflegebedarf" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Sozialhilfe bei Pflegebedarf</a>
-              <a href="/eigenanteil-24h-pflege-senken" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Eigenanteil senken</a>
-            </div>
-          </div>
+            <MehrDazu
+              label="Weiterlesen:"
+              links={[
+                { href: '/kosten', text: 'Was kostet 24h-Pflege?' },
+                { href: '/pflegegeld-und-24h-pflege-kombinieren', text: 'Pflegegeld & 24h-Pflege kombinieren' },
+                { href: '/sozialhilfe-bei-pflegebedarf', text: 'Sozialhilfe bei Pflegebedarf' },
+                { href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken' },
+              ]}
+            />
           </Abschnitt>
 
 

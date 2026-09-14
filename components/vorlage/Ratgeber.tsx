@@ -13,7 +13,7 @@ import { Fragment, type ReactNode } from 'react'
 import { RECHNER } from '@/components/ArticleCTA'
 import { InhaltLeiste } from './InhaltLeiste'
 
-const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance]'
+const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
 const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe'
 // Sprungmarken landen unter dem festen Kopf (64 px Handy, 121 px ab md)
 const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
@@ -55,7 +55,7 @@ export function RatgeberKopf({
   pfad: { label: string; href?: string }[]
   augenbraue: string
   titel: ReactNode
-  einleitung: ReactNode
+  einleitung?: ReactNode
   aktualisiert: string
   lesezeit: string
   /** Nur wenn die Seite schon eine „Auf einen Blick"-Liste hat — nie neu erfinden. */
@@ -82,12 +82,14 @@ export function RatgeberKopf({
         <div className={`mt-8 md:mt-12 grid gap-10 ${blick?.length ? 'lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-center' : 'max-w-[52rem]'}`}>
           <div className="min-w-0">
             <p className={AUGENBRAUE}>{augenbraue}</p>
-            <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">
+            <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
               {zusammenhalten(titel)}
             </h1>
-            <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
-              {einleitung}
-            </p>
+            {einleitung ? (
+              <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
+                {einleitung}
+              </p>
+            ) : null}
             <div className="mt-8 flex items-center gap-3">
               <Image
                 src="/images/marta-kapcio.jpg"
@@ -202,7 +204,7 @@ export function DunklerAbschnitt({
 }
 
 export function Text({ children }: { children: ReactNode }) {
-  return <p className="text-[18px] leading-[1.7] text-pm-body max-w-[68ch] [text-wrap:pretty]">{children}</p>
+  return <p className="text-[18px] leading-[1.7] text-pm-body max-w-[68ch] [text-wrap:pretty] [overflow-wrap:break-word]">{children}</p>
 }
 
 // Linienliste statt Kartenstapel: Titel links, Text rechts (ab 768 px).
@@ -323,7 +325,7 @@ export function Kasten({
   children?: ReactNode
 }) {
   return (
-    <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
+    <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8 [overflow-wrap:break-word]">
       {augenbraue && <p className={`${AUGENBRAUE} ${ton === 'gruen' ? '!text-pm-green' : ton === 'koralle' ? '!text-pm-coral-ink' : ''}`}>{augenbraue}</p>}
       {titel && <p className={`${augenbraue ? 'mt-2 ' : ''}text-[19px] font-bold leading-[1.3] tracking-[-0.015em] ${TITELFARBE[ton]} [text-wrap:balance]`}>{titel}</p>}
       {children && <div className={titel || augenbraue ? 'mt-5 flex flex-col gap-4' : 'flex flex-col gap-4'}>{children}</div>}
@@ -375,22 +377,25 @@ export function Tabelle({
   betont,
   fuss,
 }: {
-  titel: string
+  titel?: string
   kopf?: string[]
   zeilen: ReactNode[][]
   betont?: number
   fuss?: ReactNode
 }) {
+  // Viele Spalten → weniger Innenabstand; kurze Zellen („347 €", „PG 2–3") brechen am Desktop nie um
+  const eng = (kopf?.length ?? zeilen[0]?.length ?? 0) >= 5
+  const pad = eng ? 'px-3 md:px-4' : 'px-5 md:px-6'
   return (
     <div className="bg-white rounded-[20px] shadow-lift overflow-hidden">
-      <p className={`${AUGENBRAUE} px-5 md:px-6 pt-5 pb-4`}>{titel}</p>
+      {titel ? <p className={`${AUGENBRAUE} px-5 md:px-6 pt-5 pb-4`}>{titel}</p> : null}
       <div className="sm:overflow-x-auto">
         <table className="w-full text-left [font-variant-numeric:tabular-nums]">
           {kopf && (
           <thead className="max-sm:sr-only">
             <tr>
               {kopf.map((h) => (
-                <th key={h} scope="col" className="px-5 md:px-6 py-3 text-[13px] font-semibold text-pm-mute bg-pm-paper border-y border-pm-line whitespace-nowrap">
+                <th key={h} scope="col" className={`${pad} py-3 text-[13px] font-semibold text-pm-mute bg-pm-paper border-y border-pm-line align-bottom`}>
                   {h}
                 </th>
               ))}
@@ -404,9 +409,9 @@ export function Tabelle({
                   <td
                     key={j}
                     data-label={kopf?.[j] ?? ''}
-                    className={`px-5 md:px-6 py-4 text-[16px] ${kopf ? 'whitespace-nowrap max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:before:content-[attr(data-label)] max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px]' : 'align-top max-sm:block'} max-sm:p-0 max-sm:py-0.5 ${
+                    className={`${pad} py-4 text-[16px] align-top max-sm:hyphens-auto [overflow-wrap:break-word] ${typeof c === 'string' && c.length <= 16 ? 'sm:whitespace-nowrap' : ''} ${kopf ? 'max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:text-right max-sm:before:content-[attr(data-label)] max-sm:before:basis-[45%] max-sm:before:shrink-0 max-sm:before:text-left max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px]' : 'align-top max-sm:block'} max-sm:p-0 max-sm:py-0.5 ${
                       j === 0
-                        ? 'text-pm-body max-sm:before:content-none max-sm:pb-1.5 max-sm:text-[17px] max-sm:font-bold max-sm:text-pm-ink'
+                        ? 'text-pm-body max-sm:before:content-none max-sm:pb-1.5 max-sm:text-[17px] max-sm:!text-left max-sm:font-bold max-sm:text-pm-ink'
                         : j === betont
                           ? 'font-bold text-pm-green'
                           : 'font-semibold text-pm-ink'

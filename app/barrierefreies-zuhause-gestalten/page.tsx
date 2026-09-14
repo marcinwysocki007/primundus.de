@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann,
+  Abschnitt, Fragen, Gruppen, Kasten, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -118,25 +118,14 @@ export default function BarrierefreiesZuhause() {
             <Text>
               Bad und WC sind die gefährlichsten Räume für Senioren — nasse Böden, enge Räume, Badewannen ohne Haltegriff. Gleichzeitig sind es die Bereiche wo mit kleinem Aufwand die größte Sicherheit gewonnen wird.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { bereich: 'Dusche & Badewanne', massnahmen: ['Haltegriffe neben Dusche und Badewanne', 'Rutschfeste Einlagen oder Matten', 'Badewannenlifter wenn Badewanne behalten wird', 'Begehbare Dusche (ebenerdig) als beste Lösung', 'Klappsitz in der Dusche'] },
-              { bereich: 'WC', massnahmen: ['Haltegriffe links und rechts neben WC', 'Erhöhter WC-Sitz (10–15 cm Erhöhung)', 'Ausreichend Platz zum seitlichen Transfer (Rollstuhl)', 'WC auf Toilettenhöhe nach DIN 18040-2 (46–48 cm)'] },
-              { bereich: 'Allgemeines Bad', massnahmen: ['Waschtisch griffnah und unterfahrbar (für Rollstuhl)', 'Spiegel in geeigneter Höhe', 'Ausreichende Beleuchtung ohne Blendung', 'Türöffnung nach außen oder Schiebetür (Rettungszugang)'] },
-            ].map((item) => (
-              <div key={item.bereich} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-3">{item.bereich}</p>
-                <ul className="space-y-1">
-                  {item.massnahmen.map(m => (
-                    <li key={m} className="text-[14px] text-pm-body flex gap-2">
-                      <span className="text-pm-green flex-shrink-0">✓</span>{m}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              haken
+              gruppen={[
+                { title: 'Dusche & Badewanne', punkte: ['Haltegriffe neben Dusche und Badewanne', 'Rutschfeste Einlagen oder Matten', 'Badewannenlifter wenn Badewanne behalten wird', 'Begehbare Dusche (ebenerdig) als beste Lösung', 'Klappsitz in der Dusche'] },
+                { title: 'WC', punkte: ['Haltegriffe links und rechts neben WC', 'Erhöhter WC-Sitz (10–15 cm Erhöhung)', 'Ausreichend Platz zum seitlichen Transfer (Rollstuhl)', 'WC auf Toilettenhöhe nach DIN 18040-2 (46–48 cm)'] },
+                { title: 'Allgemeines Bad', punkte: ['Waschtisch griffnah und unterfahrbar (für Rollstuhl)', 'Spiegel in geeigneter Höhe', 'Ausreichende Beleuchtung ohne Blendung', 'Türöffnung nach außen oder Schiebetür (Rettungszugang)'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="foerderung" titel="Förderung beantragen — so geht es">
@@ -151,26 +140,15 @@ export default function BarrierefreiesZuhause() {
           </Abschnitt>
 
           <Abschnitt id="checkliste" titel="Raum-für-Raum Checkliste">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            {[
-              { raum: 'Eingang & Flur', punkte: ['Schwellen entfernen oder rampen', 'Breite Türen (mind. 80 cm, ideal 90 cm)', 'Haltegriffe an Haustür', 'Ausreichende Beleuchtung mit Bewegungsmelder'] },
-              { raum: 'Wohnzimmer & Schlafzimmer', punkte: ['Freie Durchgänge ≥ 120 cm (Rollstuhlbreite)', 'Rutschfeste Teppiche oder befestigte Teppiche', 'Höhenverstellbares Bett', 'Nachttischlampe gut erreichbar', 'Telefon immer in Reichweite'] },
-              { raum: 'Küche', punkte: ['Unterfahrbare Arbeitsflächen wenn Rollstuhl', 'Herdschutz (automatische Abschaltung)', 'Griffige Griffe an Schränken', 'Rutschfester Bodenbelag'] },
-              { raum: 'Treppe', punkte: ['Handläufe beidseitig', 'Rutschfeste Stufen oder Stufenmatten', 'Treppenlift bei dauerhafter Gehbehinderung', 'Gute Beleuchtung der gesamten Treppe'] },
-            ].map((item) => (
-              <div key={item.raum} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-3">{item.raum}</p>
-                <ul className="space-y-1">
-                  {item.punkte.map(p => (
-                    <li key={p} className="text-[14px] text-pm-body flex gap-2">
-                      <span className="text-pm-taupe flex-shrink-0">□</span>{p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              haken
+              gruppen={[
+                { title: 'Eingang & Flur', punkte: ['Schwellen entfernen oder rampen', 'Breite Türen (mind. 80 cm, ideal 90 cm)', 'Haltegriffe an Haustür', 'Ausreichende Beleuchtung mit Bewegungsmelder'] },
+                { title: 'Wohnzimmer & Schlafzimmer', punkte: ['Freie Durchgänge ≥ 120 cm (Rollstuhlbreite)', 'Rutschfeste Teppiche oder befestigte Teppiche', 'Höhenverstellbares Bett', 'Nachttischlampe gut erreichbar', 'Telefon immer in Reichweite'] },
+                { title: 'Küche', punkte: ['Unterfahrbare Arbeitsflächen wenn Rollstuhl', 'Herdschutz (automatische Abschaltung)', 'Griffige Griffe an Schränken', 'Rutschfester Bodenbelag'] },
+                { title: 'Treppe', punkte: ['Handläufe beidseitig', 'Rutschfeste Stufen oder Stufenmatten', 'Treppenlift bei dauerhafter Gehbehinderung', 'Gute Beleuchtung der gesamten Treppe'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="faq" titel="Häufige Fragen">

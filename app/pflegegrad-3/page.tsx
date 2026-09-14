@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, Liste, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -158,13 +158,14 @@ export default function Pflegegrad3() {
             <Text>
               Diese Leistungen senken bei Pflegegrad 3 den Eigenanteil:
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <ul className="text-[15px] text-pm-body mb-4 space-y-1.5 list-disc pl-5">
-            <li><strong>Pflegegeld:</strong> 599 €/Monat</li>
-            <li><strong>Entlastungsbetrag:</strong> 131 €/Monat</li>
-            <li><strong>Entlastungsbudget:</strong> 3.539 €/Jahr (Verhinderungs- & Kurzzeitpflege, seit Juli 2025 flexibel einsetzbar)</li>
-            <li><strong>Steuervorteil:</strong> 20 % der Kosten, bis zu 4.000 €/Jahr Steuerersparnis</li>
-          </ul>
+            <Liste
+              punkte={[
+                <><strong>Pflegegeld:</strong> 599 €/Monat</>,
+                <><strong>Entlastungsbetrag:</strong> 131 €/Monat</>,
+                <><strong>Entlastungsbudget:</strong> 3.539 €/Jahr (Verhinderungs- & Kurzzeitpflege, seit Juli 2025 flexibel einsetzbar)</>,
+                <><strong>Steuervorteil:</strong> 20 % der Kosten, bis zu 4.000 €/Jahr Steuerersparnis</>,
+              ]}
+            />
             <MehrDazu
               label="Individuelle Berechnung:"
               links={[{ href: "https://kostenrechner.primundus.de", text: "Kosten & passende Pflegekräfte in 2 Minuten" }]}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -153,24 +153,17 @@ export default function Pflegegrad4() {
             <Text>
               PG 4 ist der häufigste Pflegegrad bei dem Familien überlegen ins Pflegeheim zu wechseln. Mit einer 24h-Betreuungskraft ist zuhause bleiben in den meisten Fällen aber weiterhin möglich und wird von Betroffenen meist klar bevorzugt.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-6">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-2">Kostenvergleich bei PG 4</p>
-            <div className="space-y-1.5">
-              {[
-                ['24h-Pflege Primundus (brutto)', 'ca. 3.000 €/Monat'],
-                ['Abzüglich Pflegegeld PG 4', '– 800 €/Monat'],
-                ['Abzüglich Entlastungsbetrag', '– 131 €/Monat'],
-                ['Eigenanteil ca.', 'ca. 2.070 €/Monat'],
-                ['Pflegeheim Eigenanteil Ø', '3.364 €/Monat (steigend)'],
-              ].map(([label, wert]) => (
-                <div key={label} className="flex justify-between text-[14px] text-pm-green-deep">
-                  <span>{label}</span>
-                  <span className="font-bold">{wert}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+            <Kasten titel="Kostenvergleich bei PG 4" ton="gruen">
+              <Werte
+                zeilen={[
+                  ['24h-Pflege Primundus (brutto)', 'ca. 3.000 €/Monat'],
+                  ['Abzüglich Pflegegeld PG 4', '– 800 €/Monat'],
+                  ['Abzüglich Entlastungsbetrag', '– 131 €/Monat'],
+                  ['Eigenanteil ca.', 'ca. 2.070 €/Monat'],
+                  ['Pflegeheim Eigenanteil Ø', '3.364 €/Monat (steigend)'],
+                ]}
+              />
+            </Kasten>
             <MehrDazu
               label="Direkter Vergleich:"
               links={[{ href: "/24h-pflege-vs-pflegeheim-kosten", text: "24h-Pflege vs. Pflegeheim — Kostenvergleich 2026" }]}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann,
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann, Zwischentitel,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -106,22 +106,14 @@ export default function PflegekasseAntragStellen() {
             <Text>
               Dieser kurze Brief reicht vollständig aus. Die Pflegekasse veranlasst dann die Begutachtung durch den Medizinischen Dienst.
             </Text>
-            <Text>
-              Antrag stellen per:
-            </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="grid md:grid-cols-3 gap-3 mb-10">
-            {[
-              { weg: 'Brief / Post', desc: 'Formlos, kein Pflichtformular. Einwurf-Einschreiben empfohlen (Datum gesichert).' },
-              { weg: 'Telefon', desc: 'Anruf bei der Pflegekasse genügt. Datum notieren, Gesprächspartner notieren.' },
-              { weg: 'E-Mail / Online', desc: 'Viele Pflegekassen bieten Online-Antrag — Datum des Absenders gilt.' },
-            ].map((item) => (
-              <div key={item.weg} className="bg-white rounded-xl p-4 border border-pm-line">
-                <p className="text-[14px] font-bold text-pm-ink mb-1">{item.weg}</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+            <Zwischentitel>Antrag stellen per:</Zwischentitel>
+            <Punkte
+              punkte={[
+                { title: 'Brief / Post', desc: 'Formlos, kein Pflichtformular. Einwurf-Einschreiben empfohlen (Datum gesichert).' },
+                { title: 'Telefon', desc: 'Anruf bei der Pflegekasse genügt. Datum notieren, Gesprächspartner notieren.' },
+                { title: 'E-Mail / Online', desc: 'Viele Pflegekassen bieten Online-Antrag — Datum des Absenders gilt.' },
+              ]}
+            />
           </Abschnitt>
 
           <DunklerAbschnitt

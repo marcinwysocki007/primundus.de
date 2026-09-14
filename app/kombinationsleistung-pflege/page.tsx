@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Vorspann,
+  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Vorspann, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -81,7 +81,11 @@ export default function Kombinationsleistung() {
             { label: "Kombinationsleistung" },
           ]}
           augenbraue="Ratgeber Finanzierung"
-          titel="Kombinationsleistung Pflege — Pflegegeld & Sachleistungen kombinieren"
+          // „Kombinationsleistung" ist in der Titelschrift (34 px) 347 px breit, die Spalte
+          // auf 360-px-Handys nur 320 px: Das Dokument wurde 367 px breit. Unter 640 px
+          // Silbentrennung nur für Wörter ab 16 Zeichen mit je 8 Zeichen vor und nach der
+          // Trennstelle, also allein „Kombinations-leistung"; Wortlaut unverändert.
+          titel={<span className="max-sm:hyphens-auto max-sm:[hyphenate-limit-chars:16_8_8] max-sm:[-webkit-hyphenate-limit-before:8] max-sm:[-webkit-hyphenate-limit-after:8]">Kombinationsleistung Pflege — Pflegegeld &amp; Sachleistungen kombinieren</span>}
           einleitung="Wer nicht alle Sachleistungen durch einen ambulanten Pflegedienst nutzt, bekommt anteiliges Pflegegeld für den Rest — das ist die Kombinationsleistung nach § 38 SGB XI. Damit lassen sich ambulanter Pflegedienst und private Betreuung durch Angehörige oder eine 24h-Kraft optimal kombinieren."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
@@ -89,16 +93,11 @@ export default function Kombinationsleistung() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Die Grundformel</p>
-            <div className="bg-pm-paper rounded-xl p-4 text-center mb-3">
-              <p className="text-[16px] font-bold text-pm-ink">Nicht genutzte Sachleistungen × Pflegegeld = Anteiliges Pflegegeld</p>
-            </div>
-            <p className="text-[14px] text-pm-body">
-              Wenn 60 % der Sachleistungen durch den Pflegedienst genutzt werden → verbleiben 40 % ungenutzt → 40 % des Pflegegeldes werden ausgezahlt.
-            </p>
-          </div>
+            <Kasten augenbraue="Die Grundformel" titel="Nicht genutzte Sachleistungen × Pflegegeld = Anteiliges Pflegegeld">
+              <Text>
+                Wenn 60 % der Sachleistungen durch den Pflegedienst genutzt werden → verbleiben 40 % ungenutzt → 40 % des Pflegegeldes werden ausgezahlt.
+              </Text>
+            </Kasten>
           </Vorspann>
 
           <Abschnitt id="was-ist" titel="Was ist die Kombinationsleistung?">
@@ -111,47 +110,30 @@ export default function Kombinationsleistung() {
           </Abschnitt>
 
           <Abschnitt id="berechnung" titel="Berechnung & Rechenbeispiele">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            {[
-              {
-                beispiel: 'Rechenbeispiel 1 — Pflegegrad 3, 50 % Sachleistungen',
-                rows: [
+            <Kasten augenbraue="Rechenbeispiel 1 — Pflegegrad 3, 50 % Sachleistungen">
+              <Werte
+                zeilen={[
                   ['Sachleistungen PG 3', '1.497 €/Monat'],
                   ['Genutzter Anteil (50 %)', '748,50 €'],
                   ['Ungenutzter Anteil', '50 %'],
                   ['Pflegegeld PG 3 (voll)', '599 €/Monat'],
                   ['Anteiliges Pflegegeld (50 %)', '299,50 €'],
-                  ['Gesamtentlastung', '748,50 € + 299,50 € = 1.048 €/Monat'],
-                ],
-              },
-              {
-                beispiel: 'Rechenbeispiel 2 — Pflegegrad 4, 30 % Sachleistungen',
-                rows: [
+                  ['Gesamtentlastung', <strong>748,50 € + 299,50 € = 1.048 €/Monat</strong>],
+                ]}
+              />
+            </Kasten>
+            <Kasten augenbraue="Rechenbeispiel 2 — Pflegegrad 4, 30 % Sachleistungen">
+              <Werte
+                zeilen={[
                   ['Sachleistungen PG 4', '1.859 €/Monat'],
                   ['Genutzter Anteil (30 %)', '557,70 €'],
                   ['Ungenutzter Anteil', '70 %'],
                   ['Pflegegeld PG 4 (voll)', '800 €/Monat'],
                   ['Anteiliges Pflegegeld (70 %)', '560 €'],
-                  ['Gesamtentlastung', '557,70 € + 560 € = 1.117,70 €/Monat'],
-                ],
-              },
-            ].map((item) => (
-              <div key={item.beispiel} className="bg-white rounded-2xl border border-pm-line overflow-hidden shadow-sm">
-                <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">{item.beispiel}</p>
-                </div>
-                <div className="p-5 space-y-2">
-                  {item.rows.map(([label, wert], i) => (
-                    <div key={label} className={`flex justify-between items-center py-1 ${i === item.rows.length - 1 ? 'font-bold border-t border-pm-line mt-2 pt-3 text-pm-green' : ''}`}>
-                      <span className="text-[14px] text-pm-body">{label}</span>
-                      <span className={`text-[14px] ${i === item.rows.length - 1 ? 'text-pm-green font-bold' : 'text-pm-ink'}`}>{wert}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+                  ['Gesamtentlastung', <strong>557,70 € + 560 € = 1.117,70 €/Monat</strong>],
+                ]}
+              />
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="wann-sinnvoll" titel="Wann ist die Kombinationsleistung besonders sinnvoll?">

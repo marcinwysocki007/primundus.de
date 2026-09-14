@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -124,24 +124,15 @@ export default function PflegekraftFinden() {
             <Text>
               Diese Kriterien sollten bei jeder Pflegekraft — ob über Agentur oder direkt — geprüft werden:
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-6">
-            {[
-              { kriterium: 'Deutschkenntnisse', wichtigkeit: 'Pflicht', beschreibung: 'Grundlegende Kommunikation auf Deutsch ist Mindestanforderung. Bei Demenzbetroffenen kann emotionale Verbindung wichtiger sein als perfektes Deutsch.' },
-              { kriterium: 'Pflegeerfahrung', wichtigkeit: 'Pflicht', beschreibung: 'Wie viele Einsätze? Welche Pflegesituationen? Erfahrung mit spezifischen Erkrankungen (Demenz, Parkinson, Schlaganfall) bei Bedarf prüfen.' },
-              { kriterium: 'Referenzen', wichtigkeit: 'Empfohlen', beschreibung: 'Kontakt zu früheren Familien aufnehmen — falls verfügbar. Seriöse Agenturen stellen Referenzen auf Anfrage bereit.' },
-              { kriterium: 'Führerschein', wichtigkeit: 'Je nach Situation', beschreibung: 'Wenn Arztbesuche oder Einkaufsfahrten in ländlichen Gebieten zu den Aufgaben gehören.' },
-              { kriterium: 'Persönlichkeit & Passung', wichtigkeit: 'Sehr wichtig', beschreibung: 'Ein Telefonat vorab gibt einen ersten Eindruck. Schnuppertage in der ersten Woche helfen bei der endgültigen Entscheidung.' },
-            ].map((item) => (
-              <div key={item.kriterium} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-center gap-3 mb-1">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.kriterium}</p>
-                  <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${item.wichtigkeit === 'Pflicht' ? 'bg-pm-coral-tint text-pm-coral-ink' : item.wichtigkeit === 'Sehr wichtig' ? 'bg-pm-shell text-pm-taupe' : 'bg-pm-paper text-pm-mute'}`}>{item.wichtigkeit}</span>
-                </div>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.beschreibung}</p>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                { title: 'Deutschkenntnisse', zusatz: 'Pflicht', punkte: ['Grundlegende Kommunikation auf Deutsch ist Mindestanforderung. Bei Demenzbetroffenen kann emotionale Verbindung wichtiger sein als perfektes Deutsch.'] },
+                { title: 'Pflegeerfahrung', zusatz: 'Pflicht', punkte: ['Wie viele Einsätze? Welche Pflegesituationen? Erfahrung mit spezifischen Erkrankungen (Demenz, Parkinson, Schlaganfall) bei Bedarf prüfen.'] },
+                { title: 'Referenzen', zusatz: 'Empfohlen', punkte: ['Kontakt zu früheren Familien aufnehmen — falls verfügbar. Seriöse Agenturen stellen Referenzen auf Anfrage bereit.'] },
+                { title: 'Führerschein', zusatz: 'Je nach Situation', punkte: ['Wenn Arztbesuche oder Einkaufsfahrten in ländlichen Gebieten zu den Aufgaben gehören.'] },
+                { title: 'Persönlichkeit & Passung', zusatz: 'Sehr wichtig', punkte: ['Ein Telefonat vorab gibt einen ersten Eindruck. Schnuppertage in der ersten Woche helfen bei der endgültigen Entscheidung.'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="ablauf" titel="Ablauf bei Primundus — von Anfrage bis Start">

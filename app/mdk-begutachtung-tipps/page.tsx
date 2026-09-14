@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Vorspann,
+  Abschnitt, Fragen, HakenListe, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Vorspann, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -112,57 +112,44 @@ export default function MdkBegutachtungTipps() {
           </Abschnitt>
 
           <Abschnitt id="vorbereitung" titel="Konkrete Vorbereitung — Checkliste">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-2 mb-10">
-            {[
-              ['Pflegetagebuch mindestens 2 Wochen vor dem Termin beginnen', true],
-              ['Medikamentenliste aktuell und vollständig ausdrucken', true],
-              ['Alle Diagnosen und Krankenhausberichte bereithalten', true],
-              ['Hilfsmittel sichtbar platzieren (Rollator, Badehilfen, Haltegriffe)', true],
-              ['Angehörige oder Vertrauensperson beim Termin dabei haben', true],
-              ['Liste aller benötigten Hilfen beim Waschen, Anziehen, Essen notieren', true],
-              ['Nächtliche Unterbrechungen dokumentieren (wie oft, warum)', true],
-              ['Den schlechtesten typischen Tag beschreiben — nicht den guten', true],
-              ['Vorsorgevollmacht und Patientenverfügung griffbereit haben', false],
-              ['Hausarzt informieren dass Begutachtung stattfindet', false],
-            ].map(([item, pflicht]) => (
-              <div key={item as string} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className={`w-5 h-5 rounded flex-shrink-0 mt-0.5 flex items-center justify-center border-2 ${pflicht ? 'border-pm-taupe' : 'border-[#C8C3BA]'}`}>
-                  {pflicht && <span className="text-pm-taupe text-[10px] font-bold">✓</span>}
-                </span>
-                <div>
-                  <p className="text-[14px] text-pm-body">{item as string}</p>
-                  {pflicht && <p className="text-[11px] text-pm-taupe-light mt-0.5">Besonders wichtig</p>}
-                </div>
-              </div>
-            ))}
-          </div>
+            {/* Das Etikett „Besonders wichtig" (vorher unter jedem der ersten acht Punkte) steht als Augenbraue über ihnen */}
+            <Kasten augenbraue="Besonders wichtig">
+              <HakenListe
+                punkte={[
+                  'Pflegetagebuch mindestens 2 Wochen vor dem Termin beginnen',
+                  'Medikamentenliste aktuell und vollständig ausdrucken',
+                  'Alle Diagnosen und Krankenhausberichte bereithalten',
+                  'Hilfsmittel sichtbar platzieren (Rollator, Badehilfen, Haltegriffe)',
+                  'Angehörige oder Vertrauensperson beim Termin dabei haben',
+                  'Liste aller benötigten Hilfen beim Waschen, Anziehen, Essen notieren',
+                  'Nächtliche Unterbrechungen dokumentieren (wie oft, warum)',
+                  'Den schlechtesten typischen Tag beschreiben — nicht den guten',
+                ]}
+              />
+            </Kasten>
+            <HakenListe
+              punkte={[
+                'Vorsorgevollmacht und Patientenverfügung griffbereit haben',
+                'Hausarzt informieren dass Begutachtung stattfindet',
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="pflegetagebuch" titel="Das Pflegetagebuch — das wichtigste Vorbereitungsinstrument">
             <Text>
               Ein Pflegetagebuch dokumentiert täglich welche Hilfe geleistet wurde — mit Zeitangaben. Es ist das stärkste Argument wenn der Gutachter fragt wie viel Unterstützung wirklich nötig ist.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6">
-            <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Was ins Pflegetagebuch gehört</p>
-            </div>
-            <div className="divide-y divide-pm-line">
-              {[
-                { bereich: 'Morgens', inhalt: 'Aufstehen (alleine? mit Hilfe?), Waschen, Ankleiden, Frühstück — Zeit und Art der Hilfe' },
-                { bereich: 'Tagsüber', inhalt: 'Toilettengänge, Medikamente, Mahlzeiten, Mobilität, Stürze, Verwirrtheitsepisoden' },
-                { bereich: 'Abends', inhalt: 'Abendessen, Abendroutine, Zubettgehen — wie lange dauert es, wer hilft' },
-                { bereich: 'Nachts', inhalt: 'Wie oft aufgewacht, warum, wer musste helfen, wie lange dauerte es' },
-                { bereich: 'Besonderheiten', inhalt: 'Schlechte Tage dokumentieren — Aggressivität, Orientierungslosigkeit, Stürze, Schmerzen' },
-              ].map((item) => (
-                <div key={item.bereich} className="px-5 py-3">
-                  <p className="text-[13px] font-bold text-pm-ink mb-0.5">{item.bereich}</p>
-                  <p className="text-[13px] text-pm-body leading-relaxed">{item.inhalt}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+            <Kasten augenbraue="Was ins Pflegetagebuch gehört">
+              <Werte
+                zeilen={[
+                  ['Morgens', 'Aufstehen (alleine? mit Hilfe?), Waschen, Ankleiden, Frühstück — Zeit und Art der Hilfe'],
+                  ['Tagsüber', 'Toilettengänge, Medikamente, Mahlzeiten, Mobilität, Stürze, Verwirrtheitsepisoden'],
+                  ['Abends', 'Abendessen, Abendroutine, Zubettgehen — wie lange dauert es, wer hilft'],
+                  ['Nachts', 'Wie oft aufgewacht, warum, wer musste helfen, wie lange dauerte es'],
+                  ['Besonderheiten', 'Schlechte Tage dokumentieren — Aggressivität, Orientierungslosigkeit, Stürze, Schmerzen'],
+                ]}
+              />
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="am-tag" titel="Am Begutachtungstag — was zu beachten ist">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -138,63 +138,41 @@ export default function VsAmbulantePflege() {
             <Text>
               Der Kostenvergleich ist komplex — weil die Pflegekasse beide Modelle unterschiedlich bezuschusst.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Ambulante Pflege — Kosten und Kassenzuschüsse</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-3">Die Pflegekasse zahlt bei ambulanter Pflege die Sachleistungen direkt an den Pflegedienst: PG 2 = 796 €/Monat, PG 3 = 1.497 €/Monat, PG 4 = 1.859 €/Monat, PG 5 = 2.299 €/Monat. Viele ambulante Pflegeeinsätze werden damit vollständig gedeckt — Eigenanteil kann gegen null gehen wenn der Gesamtbedarf im Sachleistungsrahmen liegt.</p>
-              <p className="text-[13px] text-pm-mute">Bei hohem Pflegebedarf (viele Einsätze täglich) übersteigen die Kosten schnell den Sachleistungsrahmen.</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">24h-Pflege — Kosten und Kassenzuschüsse</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-3">Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. Bei PG 4: ca. 1.700–2.100 €/Monat.</p>
-              <p className="text-[13px] text-pm-mute">Inklusive: 24h-Verfügbarkeit, Haushalt, Betreuung, Gesellschaft — alles in einem Preis.</p>
-            </div>
-          </div>
+            <Gegenueber
+              seiten={[
+                { titel: 'Ambulante Pflege — Kosten und Kassenzuschüsse', ton: 'gruen', punkte: ['Die Pflegekasse zahlt bei ambulanter Pflege die Sachleistungen direkt an den Pflegedienst: PG 2 = 796 €/Monat, PG 3 = 1.497 €/Monat, PG 4 = 1.859 €/Monat, PG 5 = 2.299 €/Monat. Viele ambulante Pflegeeinsätze werden damit vollständig gedeckt — Eigenanteil kann gegen null gehen wenn der Gesamtbedarf im Sachleistungsrahmen liegt.', 'Bei hohem Pflegebedarf (viele Einsätze täglich) übersteigen die Kosten schnell den Sachleistungsrahmen.'] },
+                { titel: '24h-Pflege — Kosten und Kassenzuschüsse', ton: 'taupe', punkte: ['Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. Bei PG 4: ca. 1.700–2.100 €/Monat.', 'Inklusive: 24h-Verfügbarkeit, Haushalt, Betreuung, Gesellschaft — alles in einem Preis.'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="wann-was" titel="Wann ist was sinnvoll?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              {
-                label: 'Ambulante Pflege sinnvoll wenn…',
-                items: [
-                  'Pflegebedarf auf 2–3 definierte Einsätze täglich begrenzt ist',
-                  'Angehörige den Rest der Zeit zuverlässig übernehmen können',
-                  'Keine nächtliche Betreuung nötig',
-                  'Keine Demenz mit Weglaufen oder Verwirrtheit nachts',
-                  'Kosten vollständig durch Sachleistungen gedeckt werden können',
-                ],
-                color: 'bg-pm-mint border-[rgba(61,122,92,0.2)]',
-                textColor: 'text-pm-green-deep',
-              },
-              {
-                label: '24h-Pflege sinnvoll wenn…',
-                items: [
-                  'Pflegebedarf über den ganzen Tag verteilt ist und Angehörige nicht übernehmen können',
-                  'Nächtliche Unruhe, Toilettengänge oder Orientierungslosigkeit nachts auftreten',
-                  'Demenz mit Weglaufen oder Selbstgefährdung vorliegt',
-                  'Gesamtkosten ambulant die Sachleistungen deutlich übersteigen',
-                  'Gesellschaft und Begleitung rund um die Uhr gewünscht wird',
-                ],
-                color: 'bg-pm-shell border-[rgba(139,115,85,0.2)]',
-                textColor: 'text-pm-taupe-ink',
-              },
-            ].map((block) => (
-              <div key={block.label} className={`rounded-2xl p-5 border ${block.color}`}>
-                <p className={`text-[13px] font-bold uppercase tracking-[0.08em] mb-3 ${block.textColor}`}>{block.label}</p>
-                <ul className="space-y-1.5">
-                  {block.items.map((item) => (
-                    <li key={item} className={`text-[14px] leading-relaxed ${block.textColor} flex gap-2`}>
-                      <span className="flex-shrink-0 mt-0.5">→</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Ambulante Pflege sinnvoll wenn…',
+                  ton: 'gruen',
+                  punkte: [
+                    'Pflegebedarf auf 2–3 definierte Einsätze täglich begrenzt ist',
+                    'Angehörige den Rest der Zeit zuverlässig übernehmen können',
+                    'Keine nächtliche Betreuung nötig',
+                    'Keine Demenz mit Weglaufen oder Verwirrtheit nachts',
+                    'Kosten vollständig durch Sachleistungen gedeckt werden können',
+                  ],
+                },
+                {
+                  titel: '24h-Pflege sinnvoll wenn…',
+                  ton: 'taupe',
+                  punkte: [
+                    'Pflegebedarf über den ganzen Tag verteilt ist und Angehörige nicht übernehmen können',
+                    'Nächtliche Unruhe, Toilettengänge oder Orientierungslosigkeit nachts auftreten',
+                    'Demenz mit Weglaufen oder Selbstgefährdung vorliegt',
+                    'Gesamtkosten ambulant die Sachleistungen deutlich übersteigen',
+                    'Gesellschaft und Begleitung rund um die Uhr gewünscht wird',
+                  ],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="kombination" titel="Kombination aus ambulant und 24h möglich?">

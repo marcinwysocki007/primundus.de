@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Werte,
+  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -113,50 +113,39 @@ export default function PflegedienstOder24hKraft() {
           </Abschnitt>
 
           <Abschnitt id="kosten" titel="Kostenvergleich 2026">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Ambulanter Pflegedienst</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-2">800–2.500 €/Monat je nach Einsatzhäufigkeit. Die Pflegekasse zahlt Sachleistungen direkt an den Dienst: PG 2 = 796 €/Mo, PG 3 = 1.497 €/Mo, PG 4 = 1.859 €/Mo, PG 5 = 2.299 €/Mo. Bei moderatem Pflegebedarf kann der Eigenanteil sehr gering oder null sein.</p>
-              <p className="text-[13px] text-pm-mute">Bei hohem Pflegebedarf übersteigen die Kosten schnell den Sachleistungsrahmen.</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">24h-Betreuungskraft (Primundus)</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-2">2.200–3.500 €/Monat. Mit Pflegegeld (347–990 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget und Steuerabzug sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft, Nacht — alles in einem.</p>
-              <p className="text-[13px] text-pm-mute">Kombination mit Pflegedienst für Behandlungspflege möglich — Kosten dann kumuliert aber Kassenzuschüsse laufen parallel.</p>
-            </div>
-          </div>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Ambulanter Pflegedienst',
+                  ton: 'taupe',
+                  text: '800–2.500 €/Monat je nach Einsatzhäufigkeit. Die Pflegekasse zahlt Sachleistungen direkt an den Dienst: PG 2 = 796 €/Mo, PG 3 = 1.497 €/Mo, PG 4 = 1.859 €/Mo, PG 5 = 2.299 €/Mo. Bei moderatem Pflegebedarf kann der Eigenanteil sehr gering oder null sein.',
+                  punkte: ['Bei hohem Pflegebedarf übersteigen die Kosten schnell den Sachleistungsrahmen.'],
+                },
+                {
+                  titel: '24h-Betreuungskraft (Primundus)',
+                  ton: 'taupe',
+                  text: '2.200–3.500 €/Monat. Mit Pflegegeld (347–990 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget und Steuerabzug sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft, Nacht — alles in einem.',
+                  punkte: ['Kombination mit Pflegedienst für Behandlungspflege möglich — Kosten dann kumuliert aber Kassenzuschüsse laufen parallel.'],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="wann-was" titel="Wann ist was sinnvoll?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              {
-                label: 'Ambulanter Pflegedienst reicht wenn…',
-                items: ['Pflegebedarf auf 1–2 Einsätze täglich begrenzt', 'Angehörige den Rest verlässlich übernehmen', 'Keine Nachtbetreuung nötig', 'Kosten vollständig durch Sachleistungen gedeckt', 'Behandlungspflege (Injektionen, Wunden) im Vordergrund'],
-                color: 'bg-pm-mint border-[rgba(61,122,92,0.2)]',
-                text: 'text-pm-green-deep',
-              },
-              {
-                label: '24h-Betreuungskraft sinnvoll wenn…',
-                items: ['Pflegebedarf über den ganzen Tag verteilt', 'Nächtliche Unruhe, Stürze oder Orientierungslosigkeit', 'Demenz mit hohem Betreuungsbedarf', 'Angehörige nicht dauerhaft vor Ort', 'Haushalt vollständig übernommen werden soll'],
-                color: 'bg-pm-shell border-[rgba(139,115,85,0.2)]',
-                text: 'text-pm-taupe-ink',
-              },
-            ].map((block) => (
-              <div key={block.label} className={`rounded-2xl p-5 border ${block.color}`}>
-                <p className={`text-[13px] font-bold uppercase tracking-[0.08em] mb-3 ${block.text}`}>{block.label}</p>
-                <ul className="space-y-1.5">
-                  {block.items.map((item) => (
-                    <li key={item} className={`text-[14px] flex gap-2 ${block.text}`}>
-                      <span className="flex-shrink-0 mt-0.5">→</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Ambulanter Pflegedienst reicht wenn…',
+                  ton: 'gruen',
+                  punkte: ['Pflegebedarf auf 1–2 Einsätze täglich begrenzt', 'Angehörige den Rest verlässlich übernehmen', 'Keine Nachtbetreuung nötig', 'Kosten vollständig durch Sachleistungen gedeckt', 'Behandlungspflege (Injektionen, Wunden) im Vordergrund'],
+                },
+                {
+                  titel: '24h-Betreuungskraft sinnvoll wenn…',
+                  ton: 'taupe',
+                  punkte: ['Pflegebedarf über den ganzen Tag verteilt', 'Nächtliche Unruhe, Stürze oder Orientierungslosigkeit', 'Demenz mit hohem Betreuungsbedarf', 'Angehörige nicht dauerhaft vor Ort', 'Haushalt vollständig übernommen werden soll'],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="kombination" titel="Kombination — oft die beste Lösung">

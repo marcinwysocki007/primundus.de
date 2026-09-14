@@ -141,23 +141,14 @@ export default function EigenanteilSenken() {
           </Abschnitt>
 
           <Abschnitt id="kassenzuschuesse" titel="2. Alle Kassenzuschüsse voll ausschöpfen">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-6">
-            {[
-              { title: 'Pflegegeld — monatlich', desc: '347–990 €/Monat je nach Pflegegrad. Wird automatisch ausgezahlt — aber nur wenn Beratungseinsätze wahrgenommen werden (PG 2–3: halbjährlich, PG 4–5: vierteljährlich).', link: '/pflegegeld' },
-              { title: 'Entlastungsbetrag — 131 €/Monat', desc: 'Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen. Kann bis 30. Juni des Folgejahres angespart werden (max. 1.572 €).', link: '/entlastungsbetrag' },
-              { title: 'Entlastungsbudget — 3.539 €/Jahr', desc: 'Für Verhinderungs- und Kurzzeitpflege. Verfällt am 31. Dezember — rechtzeitig nutzen und einreichen. Vorpflegezeit entfällt seit Juli 2025.', link: '/verhinderungspflege' },
-              { title: 'Pflegehilfsmittel — 42 €/Monat', desc: 'Handschuhe, Desinfektionsmittel, Bettschutzeinlagen. Bei der Pflegekasse beantragen — werden direkt nach Hause geliefert. Kaum jemand nutzt das.', link: null },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed mb-2">{item.desc}</p>
-                {item.link && (
-                  <a href={item.link} className="text-[13px] text-pm-taupe underline hover:text-pm-taupe-deep">→ Mehr Details</a>
-                )}
-              </div>
-            ))}
-          </div>
+            <Punkte
+              punkte={[
+                { title: 'Pflegegeld — monatlich', desc: <>347–990 €/Monat je nach Pflegegrad. Wird automatisch ausgezahlt — aber nur wenn Beratungseinsätze wahrgenommen werden (PG 2–3: halbjährlich, PG 4–5: vierteljährlich).<br /><a href="/pflegegeld" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
+                { title: 'Entlastungsbetrag — 131 €/Monat', desc: <>Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen. Kann bis 30. Juni des Folgejahres angespart werden (max. 1.572 €).<br /><a href="/entlastungsbetrag" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
+                { title: 'Entlastungsbudget — 3.539 €/Jahr', desc: <>Für Verhinderungs- und Kurzzeitpflege. Verfällt am 31. Dezember — rechtzeitig nutzen und einreichen. Vorpflegezeit entfällt seit Juli 2025.<br /><a href="/verhinderungspflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
+                { title: 'Pflegehilfsmittel — 42 €/Monat', desc: 'Handschuhe, Desinfektionsmittel, Bettschutzeinlagen. Bei der Pflegekasse beantragen — werden direkt nach Hause geliefert. Kaum jemand nutzt das.' },
+              ]}
+            />
             <MehrDazu
               label="Alle Zuschüsse in einer Übersicht:"
               links={[{ href: "/finanzierung", text: "Finanzierung der 24h-Pflege — alle Kassenzuschüsse 2026" }]}

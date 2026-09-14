@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -121,24 +121,20 @@ export default function EuPflegekraftRechtenPflichten() {
           </Abschnitt>
 
           <Abschnitt id="rechte-familie" titel="Rechte & Pflichten der Familie">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { aspekt: 'Familie hat Anspruch auf:', items: ['Vertragsgemäße Leistungserbringung', 'Informationen über Veränderungen im Pflegezustand', 'Verschwiegenheit über familiäre Angelegenheiten', 'A1-Bescheinigung der Kraft vorab'], positive: true },
-              { aspekt: 'Familie ist verpflichtet:', items: ['Eigenes Zimmer mit Privatsphäre bereitzustellen', 'Kost und Logis zu gewähren', 'Würdevollen Umgang zu pflegen', 'Vertraglich vereinbarte Vergütung pünktlich zu zahlen (an Primundus)', 'Die Kraft nicht zu Leistungen zu verpflichten die nicht vereinbart sind'], positive: false },
-            ].map((block) => (
-              <div key={block.aspekt} className={`rounded-xl p-5 border ${block.positive ? 'bg-pm-mint border-[rgba(61,122,92,0.15)]' : 'bg-white border-pm-line'}`}>
-                <p className={`text-[13px] font-bold uppercase tracking-[0.08em] mb-3 ${block.positive ? 'text-pm-green-deep' : 'text-pm-taupe-light'}`}>{block.aspekt}</p>
-                <ul className="space-y-1">
-                  {block.items.map(i => (
-                    <li key={i} className={`text-[14px] flex gap-2 ${block.positive ? 'text-pm-green-deep' : 'text-pm-body'}`}>
-                      <span className="flex-shrink-0">{block.positive ? '✓' : '→'}</span>{i}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Familie hat Anspruch auf:',
+                  ton: 'gruen',
+                  punkte: ['Vertragsgemäße Leistungserbringung', 'Informationen über Veränderungen im Pflegezustand', 'Verschwiegenheit über familiäre Angelegenheiten', 'A1-Bescheinigung der Kraft vorab'],
+                },
+                {
+                  titel: 'Familie ist verpflichtet:',
+                  ton: 'taupe',
+                  punkte: ['Eigenes Zimmer mit Privatsphäre bereitzustellen', 'Kost und Logis zu gewähren', 'Würdevollen Umgang zu pflegen', 'Vertraglich vereinbarte Vergütung pünktlich zu zahlen (an Primundus)', 'Die Kraft nicht zu Leistungen zu verpflichten die nicht vereinbart sind'],
+                },
+              ]}
+            />
             <Kasten titel="Gute Zusammenarbeit als Grundprinzip">
               <Text>Die besten Pflegeverhältnisse entstehen wenn Familie und Betreuungskraft einander mit Respekt begegnen. Eine Kraft die sich wohlfühlt und wertgeschätzt wird, bleibt länger, engagiert sich mehr und pflegt mit mehr Herz. Das liegt im Interesse aller.</Text>
             </Kasten>

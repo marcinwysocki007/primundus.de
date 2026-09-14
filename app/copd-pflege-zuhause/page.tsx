@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -137,32 +137,15 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="aufgaben" titel="Was übernimmt die Betreuungskraft — und was der Pflegedienst?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-4">
-            <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-pm-line">
-              <div className="p-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-green mb-4">Betreuungskraft übernimmt</p>
-                {['Haushalt, Einkaufen, Kochen — alles, was Luft kostet','Wege abnehmen, Duschen und Ankleiden unterstützen','An Medikamente und Inhalationszeiten erinnern','Bei Atemnot Ruhe geben und eingeübte Haltungen unterstützen','Auf Warnzeichen achten, Veränderungen melden','Begleitung zu Arzt- und Therapieterminen','Nachts erreichbar — gerade bei Atemnot ein Sicherheitsnetz'].map((item) => (
-                  <div key={item} className="flex items-start gap-3 py-2 border-b border-pm-line-soft last:border-0">
-                    <span className="w-4 h-4 rounded-full bg-pm-mint flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-pm-green text-[9px] font-bold">✓</span></span>
-                    <span className="text-[13px] text-pm-body leading-relaxed">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="p-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe mb-4">Pflegedienst & Ärzte ergänzen</p>
-                {['Medikamente stellen und Inhalationstechnik kontrollieren','Sauerstoff-Langzeittherapie einrichten und überwachen','Behandlungspflege nach ärztlicher Verordnung','Atemphysiotherapie und Lungensport anleiten','Therapieanpassung bei Verschlechterung'].map((item) => (
-                  <div key={item} className="flex items-start gap-3 py-2 border-b border-pm-line-soft last:border-0">
-                    <span className="text-pm-taupe font-bold text-[12px] flex-shrink-0 mt-0.5">+</span>
-                    <span className="text-[13px] text-pm-body leading-relaxed">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-pm-paper border-t border-pm-line px-6 py-4">
-              <p className="text-[13px] text-pm-body leading-relaxed"><strong className="font-bold text-pm-ink">Beide zusammen machen häusliche Pflege auch bei fortgeschrittener COPD möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</p>
-            </div>
-          </div>
+            <Gegenueber
+              seiten={[
+                { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Haushalt, Einkaufen, Kochen — alles, was Luft kostet', 'Wege abnehmen, Duschen und Ankleiden unterstützen', 'An Medikamente und Inhalationszeiten erinnern', 'Bei Atemnot Ruhe geben und eingeübte Haltungen unterstützen', 'Auf Warnzeichen achten, Veränderungen melden', 'Begleitung zu Arzt- und Therapieterminen', 'Nachts erreichbar — gerade bei Atemnot ein Sicherheitsnetz'] },
+                { titel: 'Pflegedienst & Ärzte ergänzen', ton: 'taupe', punkte: ['Medikamente stellen und Inhalationstechnik kontrollieren', 'Sauerstoff-Langzeittherapie einrichten und überwachen', 'Behandlungspflege nach ärztlicher Verordnung', 'Atemphysiotherapie und Lungensport anleiten', 'Therapieanpassung bei Verschlechterung'] },
+              ]}
+            />
+            <Text>
+              <strong>Beide zusammen machen häusliche Pflege auch bei fortgeschrittener COPD möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.
+            </Text>
           </Abschnitt>
 
           <Abschnitt id="nachts" titel="Nachts ist die Angst am größten">
@@ -182,7 +165,8 @@ export default function Page() {
               neue Schwellungen an den Beinen · ungewöhnliche Müdigkeit oder Verwirrtheit — das können
               Zeichen einer beginnenden Exazerbation sein. Je früher behandelt wird, desto eher lässt sich
               das Krankenhaus vermeiden.</Text>
-              <Text>Sofort 112 rufen</Text>
+            </Kasten>
+            <Kasten augenbraue="Sofort 112 rufen" ton="koralle">
               <Text>Schwere Atemnot in Ruhe, die sich mit Notfallspray und Atemtechniken nicht bessert ·
               bläuliche Lippen oder Fingernägel · Benommenheit oder Bewusstseinstrübung. Hier zählt jede Minute.</Text>
             </Kasten>
@@ -213,18 +197,7 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="faq" titel="Häufige Fragen">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-12">
-            {faqs.map((f) => (
-              <details key={f.q} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{f.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">{f.a}</p></div>
-              </details>
-            ))}
-          </div>
+            <Fragen fragen={faqs} />
           </Abschnitt>
 
 

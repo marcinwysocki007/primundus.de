@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -81,30 +81,17 @@ export default function PflegeOrganisieren() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="schritt-fuer-schritt" titel="Schritt-für-Schritt-Planung">
-            {/* VORLAGE: unverändert übernommen */}
-            <ol className="space-y-4 mb-10">
-            {[
-              { n: '1', phase: 'Sofort (wenn Pflege nötig wird)', aufgaben: ['Pflegekasse-Antrag stellen (formlos, per Telefon — Datum sichern)', 'Primundus anrufen: 089 200 000 830 — kostenlose Beratung', 'Pflegetagebuch beginnen für spätere Begutachtung'] },
-              { n: '2', phase: 'Innerhalb 1–2 Wochen', aufgaben: ['Beschäftigungsmodell wählen (Empfehlung: Entsendemodell via Primundus)', 'Passende Kraft auswählen (Profil prüfen, Telefonat vorab)', 'Zimmer für die Betreuungskraft vorbereiten', 'Familienmitglieder informieren und einbeziehen'] },
-              { n: '3', phase: 'Vor Anreise der Kraft', aufgaben: ['Schlüssel bereitstellen, Hausordnung erklären', 'Kühlschrank und Vorräte auffüllen', 'Medikamentenliste und Arztdaten bereithalten', 'Pflegetagebuch und Routinepläne vorbereiten'] },
-              { n: '4', phase: 'Erste Woche — Eingewöhnung', aufgaben: ['Kraft in Haushalt, Routinen und Besonderheiten einführen', 'Lieblingsgerichte, Gewohnheiten, Vorlieben erklären', 'Arzt und Physiotherapeut vorstellen', 'Erreichbarkeit für Rückfragen sicherstellen'] },
-              { n: '5', phase: 'Laufend', aufgaben: ['Kraftwechsel alle 6–8 Wochen: Primundus organisiert nahtlos', 'Kassenzuschüsse monatlich optimieren', 'Pflegegrad regelmäßig auf Höherstufung prüfen', 'Primundus als laufenden Ansprechpartner nutzen'] },
-            ].map((step) => (
-              <li key={step.n} className="bg-white rounded-xl border border-pm-line overflow-hidden list-none">
-                <div className="bg-pm-paper px-5 py-3 border-b border-pm-line flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-full bg-pm-taupe text-white font-bold text-[13px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                  <p className="text-[14px] font-bold text-pm-ink">{step.phase}</p>
-                </div>
-                <ul className="divide-y divide-pm-paper">
-                  {step.aufgaben.map((a) => (
-                    <li key={a} className="flex items-start gap-3 px-5 py-3 text-[14px] text-pm-body">
-                      <span className="text-pm-green flex-shrink-0 mt-0.5">✓</span>{a}
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ol>
+            {/* Gruppen hat keine Nummernkreise: die Phasennummer steht vor dem Titel */}
+            <Gruppen
+              haken
+              gruppen={[
+                { n: '1', phase: 'Sofort (wenn Pflege nötig wird)', aufgaben: ['Pflegekasse-Antrag stellen (formlos, per Telefon — Datum sichern)', 'Primundus anrufen: 089 200 000 830 — kostenlose Beratung', 'Pflegetagebuch beginnen für spätere Begutachtung'] },
+                { n: '2', phase: 'Innerhalb 1–2 Wochen', aufgaben: ['Beschäftigungsmodell wählen (Empfehlung: Entsendemodell via Primundus)', 'Passende Kraft auswählen (Profil prüfen, Telefonat vorab)', 'Zimmer für die Betreuungskraft vorbereiten', 'Familienmitglieder informieren und einbeziehen'] },
+                { n: '3', phase: 'Vor Anreise der Kraft', aufgaben: ['Schlüssel bereitstellen, Hausordnung erklären', 'Kühlschrank und Vorräte auffüllen', 'Medikamentenliste und Arztdaten bereithalten', 'Pflegetagebuch und Routinepläne vorbereiten'] },
+                { n: '4', phase: 'Erste Woche — Eingewöhnung', aufgaben: ['Kraft in Haushalt, Routinen und Besonderheiten einführen', 'Lieblingsgerichte, Gewohnheiten, Vorlieben erklären', 'Arzt und Physiotherapeut vorstellen', 'Erreichbarkeit für Rückfragen sicherstellen'] },
+                { n: '5', phase: 'Laufend', aufgaben: ['Kraftwechsel alle 6–8 Wochen: Primundus organisiert nahtlos', 'Kassenzuschüsse monatlich optimieren', 'Pflegegrad regelmäßig auf Höherstufung prüfen', 'Primundus als laufenden Ansprechpartner nutzen'] },
+              ].map((s) => ({ title: `${s.n}. ${s.phase}`, punkte: s.aufgaben }))}
+            />
           </Abschnitt>
 
           <Abschnitt id="was-regeln" titel="Was vor dem Start geregelt sein muss">
@@ -122,25 +109,14 @@ export default function PflegeOrganisieren() {
             <Text>
               Die Betreuungskraft lebt dauerhaft im Haushalt. Ein eigenes Zimmer mit Privatsphäre ist Pflicht — kein Luxus, sondern Voraussetzung für eine gute Zusammenarbeit.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { thema: 'Zimmer der Betreuungskraft', anforderungen: ['Eigenes Zimmer mit Tür (Privatsphäre)', 'Bett oder Einzelbett, Schrank, Tisch', 'WLAN-Zugang', 'Kost und Logis werden auf die Vergütung angerechnet (ca. 300–400 €/Mo)'] },
-              { thema: 'Küche & Lebensmittel', anforderungen: ['Kühlschrank zugänglich für Betreuungskraft', 'Vorräte für erste Woche auffüllen', 'Diät- und Allergiehinweise kommunizieren', 'Budget für Lebensmitteleinkäufe klären'] },
-              { thema: 'Medikamente & Hilfsmittel', anforderungen: ['Medikamentenliste mit Einnahmezeitpunkten ausdrucken', 'Hilfsmittel (Rollator, Rollstuhl) zugänglich und funktionsfähig', 'Pflegehilfsmittel (Einmalhandschuhe, Inkontinenzmaterial) vorrätig', 'Verbandsmaterial und Erste-Hilfe-Kasten'] },
-            ].map((item) => (
-              <div key={item.thema} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[14px] font-bold text-pm-ink mb-3">{item.thema}</p>
-                <ul className="space-y-1">
-                  {item.anforderungen.map(a => (
-                    <li key={a} className="text-[13px] text-pm-body flex gap-2">
-                      <span className="text-pm-green flex-shrink-0">✓</span>{a}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              haken
+              gruppen={[
+                { title: 'Zimmer der Betreuungskraft', punkte: ['Eigenes Zimmer mit Tür (Privatsphäre)', 'Bett oder Einzelbett, Schrank, Tisch', 'WLAN-Zugang', 'Kost und Logis werden auf die Vergütung angerechnet (ca. 300–400 €/Mo)'] },
+                { title: 'Küche & Lebensmittel', punkte: ['Kühlschrank zugänglich für Betreuungskraft', 'Vorräte für erste Woche auffüllen', 'Diät- und Allergiehinweise kommunizieren', 'Budget für Lebensmitteleinkäufe klären'] },
+                { title: 'Medikamente & Hilfsmittel', punkte: ['Medikamentenliste mit Einnahmezeitpunkten ausdrucken', 'Hilfsmittel (Rollator, Rollstuhl) zugänglich und funktionsfähig', 'Pflegehilfsmittel (Einmalhandschuhe, Inkontinenzmaterial) vorrätig', 'Verbandsmaterial und Erste-Hilfe-Kasten'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="laufend" titel="Laufende Organisation — was regelmäßig anfällt">

@@ -98,21 +98,15 @@ export default function SozialhilfeBeiPflegebedarf() {
             <Text>
               Hilfe zur Pflege ist eine nachrangige Sozialhilfeleistung — das heißt: Sie greift erst wenn alle anderen Mittel ausgeschöpft sind. Die Reihenfolge:
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <ol className="space-y-2 mb-6">
-            {[
-              'Rente und eigenes Einkommen des Pflegebedürftigen',
-              'Pflegekasse-Leistungen (Pflegegeld, Sachleistungen)',
-              'Vermögen des Pflegebedürftigen (mit Freibetrag)',
-              'Unterhaltsansprüche gegen Kinder (nur über 100.000 €/Jahr)',
-              'Dann erst: Hilfe zur Pflege durch das Sozialamt',
-            ].map((item, i) => (
-              <li key={item} className="flex gap-3 text-[15px] text-pm-body">
-                <span className="w-6 h-6 rounded-full bg-pm-taupe text-white font-bold text-[12px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
-                {item}
-              </li>
-            ))}
-          </ol>
+            <Schritte
+              schritte={[
+                { title: 'Rente und eigenes Einkommen des Pflegebedürftigen' },
+                { title: 'Pflegekasse-Leistungen (Pflegegeld, Sachleistungen)' },
+                { title: 'Vermögen des Pflegebedürftigen (mit Freibetrag)' },
+                { title: 'Unterhaltsansprüche gegen Kinder (nur über 100.000 €/Jahr)' },
+                { title: 'Dann erst: Hilfe zur Pflege durch das Sozialamt' },
+              ]}
+            />
             <Text>
               Das Sozialamt übernimmt dann die Differenz zwischen den verfügbaren Mitteln und den tatsächlichen Pflegekosten — in der Regel für Heimkosten oder anerkannte ambulante Pflegeleistungen.
             </Text>

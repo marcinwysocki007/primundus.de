@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, MehrDazu, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -113,26 +113,24 @@ export default function PatientenverfuegungAufsetzen() {
             <Text>
               Je konkreter die Formulierungen, desto wirksamer. Allgemeine Aussagen wie "keine lebensverlängernden Maßnahmen" reichen oft nicht aus — Situationen und Maßnahmen müssen spezifiziert werden.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-6">
-            {[
-              { pflicht: true, titel: 'Persönliche Angaben', inhalt: 'Vollständiger Name, Geburtsdatum, Adresse — damit zweifelsfrei klar ist wer das Dokument verfasst hat.' },
-              { pflicht: true, titel: 'Konkrete Situationsbeschreibungen', inhalt: 'Für welche Situationen soll die Verfügung gelten? Z.B.: "Wenn ich mich im Endstadium einer unheilbaren Erkrankung befinde..." oder "Wenn ich dauerhaft bewusstlos bin..."' },
-              { pflicht: true, titel: 'Konkrete Maßnahmen — Wunsch oder Ablehnung', inhalt: 'Künstliche Beatmung, Wiederbelebung, künstliche Ernährung, Dialyse, Antibiotikagabe — für jede Maßnahme festlegen ob gewünscht oder abgelehnt.' },
-              { pflicht: true, titel: 'Eigenhändige Unterschrift + Datum', inhalt: 'Handgeschriebene Unterschrift und Datum sind Pflicht für die Rechtsgültigkeit. Kein Notar nötig.' },
-              { pflicht: false, titel: 'Schmerztherapie und Palliativversorgung', inhalt: 'Wünsche zur Schmerzlinderung und palliativen Begleitung ausdrücklich festhalten.' },
-              { pflicht: false, titel: 'Aussagen zur Organspende', inhalt: 'Separat vom Organspendeausweis in die PV aufnehmen wenn gewünscht.' },
-              { pflicht: false, titel: 'Kontaktperson / Bevollmächtigte', inhalt: 'Wer soll kontaktiert werden? Wenn eine Vorsorgevollmacht besteht: Bevollmächtigte Person benennen.' },
-            ].map((item) => (
-              <div key={item.titel} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-center gap-2 mb-1">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.titel}</p>
-                  {item.pflicht && <span className="text-[11px] font-semibold px-2 py-0.5 rounded-xl bg-pm-coral-tint text-pm-coral-ink">Pflicht</span>}
-                </div>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.inhalt}</p>
-              </div>
-            ))}
-          </div>
+            {/* Das Etikett „Pflicht" (vorher an jedem der ersten vier Punkte) steht als Augenbraue über ihnen */}
+            <Kasten augenbraue="Pflicht" ton="koralle">
+              <Punkte
+                punkte={[
+                  { title: 'Persönliche Angaben', desc: 'Vollständiger Name, Geburtsdatum, Adresse — damit zweifelsfrei klar ist wer das Dokument verfasst hat.' },
+                  { title: 'Konkrete Situationsbeschreibungen', desc: 'Für welche Situationen soll die Verfügung gelten? Z.B.: "Wenn ich mich im Endstadium einer unheilbaren Erkrankung befinde..." oder "Wenn ich dauerhaft bewusstlos bin..."' },
+                  { title: 'Konkrete Maßnahmen — Wunsch oder Ablehnung', desc: 'Künstliche Beatmung, Wiederbelebung, künstliche Ernährung, Dialyse, Antibiotikagabe — für jede Maßnahme festlegen ob gewünscht oder abgelehnt.' },
+                  { title: 'Eigenhändige Unterschrift + Datum', desc: 'Handgeschriebene Unterschrift und Datum sind Pflicht für die Rechtsgültigkeit. Kein Notar nötig.' },
+                ]}
+              />
+            </Kasten>
+            <Punkte
+              punkte={[
+                { title: 'Schmerztherapie und Palliativversorgung', desc: 'Wünsche zur Schmerzlinderung und palliativen Begleitung ausdrücklich festhalten.' },
+                { title: 'Aussagen zur Organspende', desc: 'Separat vom Organspendeausweis in die PV aufnehmen wenn gewünscht.' },
+                { title: 'Kontaktperson / Bevollmächtigte', desc: 'Wer soll kontaktiert werden? Wenn eine Vorsorgevollmacht besteht: Bevollmächtigte Person benennen.' },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="aufsetzen" titel="Schritt für Schritt aufsetzen">

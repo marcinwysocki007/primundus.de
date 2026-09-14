@@ -130,7 +130,6 @@ export default function VsKosten() {
             <Text>
               Der entscheidende Vergleich ist nicht Brutto gegen Brutto — sondern der tatsächliche Eigenanteil nach allen Kassenzuschüssen. Und dabei schneidet die 24h-Pflege zuhause in den meisten Fällen besser ab.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
             <GrafikKostenvergleich />
           </Abschnitt>
 
@@ -162,31 +161,18 @@ export default function VsKosten() {
             <Text>
               Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat — je nach Pflegebedarf. Mit allen Kassenzuschüssen sinkt der tatsächliche Eigenanteil deutlich.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Eigenanteil 24h-Pflege nach Kassenzuschüssen — Pflegegrad 3</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <tbody>
-                  {[
-                    ['Betreuungskosten Primundus', '2.700 €/Monat', 'neutral'],
-                    ['Kost & Logis Betreuungskraft', '250 €/Monat', 'neutral'],
-                    ['– Pflegegeld PG 3', '– 599 €/Monat', 'positive'],
-                    ['– Entlastungsbetrag', '– 131 €/Monat', 'positive'],
-                    ['– Entlastungsbudget (anteilig)', '– ca. 295 €/Monat', 'positive'],
-                    ['Eigenanteil', 'ca. 1.925 €/Monat', 'result'],
-                  ].map(([pos, wert, type], i) => (
-                    <tr key={pos} className={type === 'result' ? 'bg-[#EBF5F0]' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{pos}</td>
-                      <td className={`px-5 py-3 text-[14px] font-bold text-right border-b border-pm-line ${type === 'positive' ? 'text-pm-green' : type === 'result' ? 'text-pm-green' : 'text-pm-ink'}`}>{wert}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+            <Tabelle
+              titel="Eigenanteil 24h-Pflege nach Kassenzuschüssen — Pflegegrad 3"
+              zeilen={[
+                ['Betreuungskosten Primundus', '2.700 €/Monat'],
+                ['Kost & Logis Betreuungskraft', '250 €/Monat'],
+                ['– Pflegegeld PG 3', '– 599 €/Monat'],
+                ['– Entlastungsbetrag', '– 131 €/Monat'],
+                ['– Entlastungsbudget (anteilig)', '– ca. 295 €/Monat'],
+                ['Eigenanteil', 'ca. 1.925 €/Monat'],
+              ]}
+              betont={1}
+            />
           </Abschnitt>
 
           <Abschnitt id="qualitaet" titel="Mehr als nur Kosten — was wirklich zählt">

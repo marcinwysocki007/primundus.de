@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Kasten, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -112,22 +112,13 @@ export default function PflegekraftKuendigen() {
             <Text>
               Wer die Pflegekraft direkt angestellt hat, ist Arbeitgeber im deutschen Sinne. Die Kündigung muss schriftlich erfolgen und die gesetzlichen Fristen einhalten.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-6">
-            {[
-              { phase: 'Probezeit (max. 6 Monate)', frist: '2 Wochen', detail: 'Schriftliche Kündigung, keine Begründung nötig. Kündigung muss innerhalb der Probezeit zugehen.' },
-              { phase: 'Nach Probezeit (bis 2 Jahre)', frist: '4 Wochen zum 15. oder Monatsende', detail: 'Gesetzliche Grundkündigung nach § 622 Abs. 1 BGB.' },
-              { phase: 'Ab 2 Jahren Betriebszugehörigkeit', frist: '1 Monat zum Monatsende', detail: 'Verlängert sich stufenweise mit Dauer (ab 5 Jahre: 2 Monate, ab 8 Jahre: 3 Monate usw.).' },
-            ].map((item) => (
-              <div key={item.phase} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-center justify-between mb-1">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.phase}</p>
-                  <span className="text-[13px] font-bold text-pm-taupe bg-pm-shell px-3 py-1 rounded-full">{item.frist}</span>
-                </div>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
+            <Punkte
+              punkte={[
+                { title: 'Probezeit (max. 6 Monate)', desc: <><strong>2 Wochen</strong><br />Schriftliche Kündigung, keine Begründung nötig. Kündigung muss innerhalb der Probezeit zugehen.</> },
+                { title: 'Nach Probezeit (bis 2 Jahre)', desc: <><strong>4 Wochen zum 15. oder Monatsende</strong><br />Gesetzliche Grundkündigung nach § 622 Abs. 1 BGB.</> },
+                { title: 'Ab 2 Jahren Betriebszugehörigkeit', desc: <><strong>1 Monat zum Monatsende</strong><br />Verlängert sich stufenweise mit Dauer (ab 5 Jahre: 2 Monate, ab 8 Jahre: 3 Monate usw.).</> },
+              ]}
+            />
             <Kasten augenbraue="Musterschreiben Kündigung (Direktanstellung)">
               <Text>[Name Arbeitgeber]<br />[Adresse]<br />[Datum]</Text>
               <Text>Kündigung des Arbeitsverhältnisses<br />Arbeitnehmer: [Name der Pflegekraft]</Text>

@@ -1,0 +1,141 @@
+{
+ "_hinweis": "Zweite Korrekturliste (Funde der Helfer beim Umbau). Nur Stellen, die sich direkt aus Martins Regeln ergeben: Nächte ('bei Bedarf auch nachts vor Ort'), keine Wirkversprechen ohne Quelle, nie 'Vermittlung' für Primundus, Tippfehler. Zahlen-Neuberechnungen und fachliche Umschreibungen stehen NICHT hier, sondern als Entscheidung auf der Abnahmeseite.",
+ "korrekturen": [
+  {
+   "seite": "24h-pflege-vs-ambulante-pflege",
+   "art": "nacht",
+   "alt": "24h-Betreuungskraft lebt im Haushalt und ist immer da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft rund um die Uhr.",
+   "neu": "24h-Betreuungskraft lebt im Haushalt und ist bei Bedarf auch nachts da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft im Alltag.",
+   "mehrfach": true
+  },
+  {
+   "seite": "24h-pflege-vs-ambulante-pflege",
+   "art": "nacht",
+   "alt": "Eine 24h-Kraft lebt im Haushalt und ist immer da.",
+   "neu": "Eine 24h-Kraft lebt im Haushalt und ist bei Bedarf auch nachts da."
+  },
+  {
+   "seite": "24h-pflege-vs-ambulante-pflege",
+   "art": "nacht",
+   "alt": "['Verfügbarkeit', 'Nur zu Einsatzzeiten', 'Rund um die Uhr']",
+   "neu": "['Verfügbarkeit', 'Nur zu Einsatzzeiten', 'Lebt im Haushalt, bei Bedarf auch nachts']"
+  },
+  {
+   "seite": "24h-pflege-vs-ambulante-pflege",
+   "art": "nacht",
+   "alt": "Inklusive: 24h-Verfügbarkeit, Haushalt, Betreuung, Gesellschaft — alles in einem Preis.",
+   "neu": "Inklusive: Anwesenheit im Haushalt, Haushaltsführung, Betreuung, Gesellschaft — alles in einem Preis."
+  },
+  {
+   "seite": "24h-pflege-vs-ambulante-pflege",
+   "art": "nacht",
+   "alt": "Gesellschaft und Begleitung rund um die Uhr gewünscht wird",
+   "neu": "Gesellschaft und Begleitung im Alltag gewünscht wird"
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "nacht",
+   "alt": "ist die direkte menschliche Hilfe im Notfall sowieso immer vor Ort.",
+   "neu": "ist die direkte menschliche Hilfe im Notfall ohnehin im Haus."
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "nacht",
+   "alt": "Mit 24h-Betreuungskraft: Kraft ist immer da — Notruf als zusätzliche Absicherung",
+   "neu": "Mit 24h-Betreuungskraft: Kraft wohnt im Haus — Notruf als zusätzliche Absicherung"
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "nacht",
+   "alt": "ist menschliche Hilfe immer direkt vor Ort.",
+   "neu": "ist menschliche Hilfe direkt im Haus."
+  },
+  {
+   "seite": "hausnotruf-senioren",
+   "art": "nacht",
+   "alt": "Die 24h-Betreuungskraft ist immer direkt vor Ort.",
+   "neu": "Die 24h-Betreuungskraft wohnt mit im Haus."
+  },
+  {
+   "seite": "was-ist-24-stunden-pflege",
+   "art": "beleg",
+   "alt": "entscheidend für Wohlbefinden und Verlangsamung des Krankheitsfortschritts.",
+   "neu": "entscheidend für das Wohlbefinden."
+  },
+  {
+   "seite": "tagesstruktur-demenz",
+   "art": "beleg",
+   "alt": "Feste Tagesstrukturen sind das wirksamste nicht-medikamentöse Mittel bei Demenz.",
+   "neu": "Feste Tagesstrukturen geben Menschen mit Demenz Halt, ganz ohne Medikamente."
+  },
+  {
+   "seite": "sturzpraevention-senioren",
+   "art": "beleg",
+   "alt": "Besonders wirksam in Studien — reduziert Sturzrisiko um bis zu 40 %.",
+   "neu": "Für Tai Chi zeigt die Cochrane-Übersicht 2019 rund ein Fünftel weniger Stürze."
+  },
+  {
+   "seite": "sturzpraevention-senioren",
+   "art": "beleg",
+   "alt": "Tai Chi und Yoga für Senioren sind in Studien besonders wirksam.",
+   "neu": "Tai Chi senkt die Zahl der Stürze laut Cochrane-Übersicht 2019 um rund ein Fünftel."
+  },
+  {
+   "seite": "24-stunden-pflege-krankenhausaufenthalt",
+   "art": "vermittler",
+   "alt": "ohne Zusatzkosten für die Vermittlung",
+   "neu": "ohne Zusatzkosten",
+   "mehrfach": true
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "vermittler",
+   "alt": "Der zuverlässigste Weg ist die Vermittlung über eine seriöse Agentur wie Primundus.",
+   "neu": "Der zuverlässigste Weg ist ein seriöser Anbieter wie Primundus."
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "vermittler",
+   "alt": "Die Agentur übernimmt Suche, Prüfung und Vermittlung.",
+   "neu": "Die Agentur übernimmt Suche, Prüfung und Einsatzplanung."
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "vermittler",
+   "alt": "alles wird vor der Vermittlung geprüft.",
+   "neu": "alles wird vor dem Einsatz geprüft."
+  },
+  {
+   "seite": "pflegegrad-4",
+   "art": "satz",
+   "alt": "Primundus ist mit eigenen Betreuungskräften in 4–7 Tagen.",
+   "neu": "Primundus ist mit eigenen Betreuungskräften in 4–7 Tagen vor Ort."
+  },
+  {
+   "seite": "tagesstruktur-demenz",
+   "art": "tippfehler",
+   "alt": "Kaffeduft",
+   "neu": "Kaffeeduft"
+  },
+  {
+   "seite": "multiple-sklerose-pflege",
+   "art": "tippfehler",
+   "alt": "nach dem tatsächlichen Alltagsbeeinträchtigungen",
+   "neu": "nach den tatsächlichen Alltagsbeeinträchtigungen",
+   "mehrfach": true
+  },
+  {
+   "seite": "multiple-sklerose-pflege",
+   "art": "tippfehler",
+   "alt": "vom tatsächlichen Alltagsbeeinträchtigungen",
+   "neu": "von den tatsächlichen Alltagsbeeinträchtigungen",
+   "optional": true
+  },
+  {
+   "seite": "pflegesachleistungen",
+   "art": "vermittler",
+   "alt": "Bei der Primundus-Vermittlung im Entsendemodell werden stattdessen",
+   "neu": "Bei Primundus im Entsendemodell werden stattdessen"
+  }
+ ]
+}

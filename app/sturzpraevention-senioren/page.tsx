@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Fragen, Gruppen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -101,26 +101,14 @@ export default function SturzpraventionSenioren() {
             <Text>
               Wer die Risikofaktoren kennt, kann gezielt ansetzen. Viele sind modifizierbar — das heißt: behandelbar oder ausschaltbar.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="grid md:grid-cols-2 gap-3 mb-10">
-            {[
-              { kategorie: 'Körperliche Faktoren', items: ['Muskelschwäche in Beinen und Rumpf', 'Eingeschränktes Gleichgewicht', 'Gangstörungen, Parkinson-Tremor', 'Schwindel, Kreislaufprobleme', 'Eingeschränktes Sehvermögen'] },
-              { kategorie: 'Medikamente', items: ['Beruhigungsmittel, Schlaftabletten', 'Blutdruckmittel (Schwindel)', 'Diuretika (schnelles Aufstehen nötig)', 'Mehr als 4 Medikamente gleichzeitig', 'Neue Medikamente → Arzt fragen'] },
-              { kategorie: 'Umgebungsrisiken', items: ['Lose Teppiche, Kabel am Boden', 'Schlechte Beleuchtung', 'Fehlende Haltegriffe', 'Nasse Böden im Bad', 'Ungeeignetes Schuhwerk'] },
-              { kategorie: 'Psychische Faktoren', items: ['Sturzangst (paradoxerweise erhöht Sturzrisiko)', 'Unterschätzung eigener Einschränkungen', 'Eile, Ungeduld', 'Nachts keine Brille aufsetzen'] },
-            ].map((item) => (
-              <div key={item.kategorie} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[14px] font-bold text-pm-ink mb-3">{item.kategorie}</p>
-                <ul className="space-y-1">
-                  {item.items.map(i => (
-                    <li key={i} className="text-[13px] text-pm-body flex gap-2">
-                      <span className="text-pm-coral flex-shrink-0">!</span>{i}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                { title: 'Körperliche Faktoren', punkte: ['Muskelschwäche in Beinen und Rumpf', 'Eingeschränktes Gleichgewicht', 'Gangstörungen, Parkinson-Tremor', 'Schwindel, Kreislaufprobleme', 'Eingeschränktes Sehvermögen'] },
+                { title: 'Medikamente', punkte: ['Beruhigungsmittel, Schlaftabletten', 'Blutdruckmittel (Schwindel)', 'Diuretika (schnelles Aufstehen nötig)', 'Mehr als 4 Medikamente gleichzeitig', 'Neue Medikamente → Arzt fragen'] },
+                { title: 'Umgebungsrisiken', punkte: ['Lose Teppiche, Kabel am Boden', 'Schlechte Beleuchtung', 'Fehlende Haltegriffe', 'Nasse Böden im Bad', 'Ungeeignetes Schuhwerk'] },
+                { title: 'Psychische Faktoren', punkte: ['Sturzangst (paradoxerweise erhöht Sturzrisiko)', 'Unterschätzung eigener Einschränkungen', 'Eile, Ungeduld', 'Nachts keine Brille aufsetzen'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="wohnung" titel="Wohnung sichern — die wichtigsten Maßnahmen">
@@ -142,44 +130,26 @@ export default function SturzpraventionSenioren() {
             <Text>
               Gleichgewichts- und Krafttraining sind die wirksamsten Maßnahmen gegen Sturzrisiko. Studien zeigen: Regelmäßiges Training reduziert das Sturzrisiko um 30–40 %. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag pro Woche.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { uebung: 'Einbeinstand', ablauf: 'An Küchentisch oder Stuhl festhalten, ein Bein heben, 10–30 Sekunden halten. Täglich 3×, jedes Bein. Wenn sicher: Festhalten loslassen.', schwerpunkt: 'Gleichgewicht' },
-              { uebung: 'Aufstehen vom Stuhl ohne Hände', ablauf: 'Langsam ohne Zuhilfenahme der Hände aufstehen und hinsetzen. 10 Wiederholungen. Stärkt Beinmuskulatur und verbessert Gleichgewicht.', schwerpunkt: 'Kraft & Balance' },
-              { uebung: 'Tandemgang', ablauf: 'Fuß vor Fuß auf einer Linie gehen (wie auf einem Seil balancieren). Entlang Küchentisch oder Wand zur Sicherheit. Täglich 5 Meter vor und zurück.', schwerpunkt: 'Gleichgewicht' },
-              { uebung: 'Zehenspitzenstand', ablauf: 'An Stuhl festhalten, auf Zehenspitzen heben und langsam senken. 15 Wiederholungen. Stärkt Unterschenkelmuskulatur und verbessert Gleichgewicht.', schwerpunkt: 'Kraft' },
-              { uebung: 'Tai Chi oder Yoga für Senioren', ablauf: 'Kurse in Volkshochschulen oder Sportvereinen, auch als Video möglich. Besonders wirksam in Studien — reduziert Sturzrisiko um bis zu 40 %.', schwerpunkt: 'Gleichgewicht & Kraft' },
-            ].map((item) => (
-              <div key={item.uebung} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-center gap-3 mb-2">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.uebung}</p>
-                  <span className="text-[11px] bg-pm-shell text-pm-taupe font-semibold px-2 py-0.5 rounded-full">{item.schwerpunkt}</span>
-                </div>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.ablauf}</p>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                { title: 'Einbeinstand', zusatz: 'Gleichgewicht', punkte: ['An Küchentisch oder Stuhl festhalten, ein Bein heben, 10–30 Sekunden halten. Täglich 3×, jedes Bein. Wenn sicher: Festhalten loslassen.'] },
+                { title: 'Aufstehen vom Stuhl ohne Hände', zusatz: 'Kraft & Balance', punkte: ['Langsam ohne Zuhilfenahme der Hände aufstehen und hinsetzen. 10 Wiederholungen. Stärkt Beinmuskulatur und verbessert Gleichgewicht.'] },
+                { title: 'Tandemgang', zusatz: 'Gleichgewicht', punkte: ['Fuß vor Fuß auf einer Linie gehen (wie auf einem Seil balancieren). Entlang Küchentisch oder Wand zur Sicherheit. Täglich 5 Meter vor und zurück.'] },
+                { title: 'Zehenspitzenstand', zusatz: 'Kraft', punkte: ['An Stuhl festhalten, auf Zehenspitzen heben und langsam senken. 15 Wiederholungen. Stärkt Unterschenkelmuskulatur und verbessert Gleichgewicht.'] },
+                { title: 'Tai Chi oder Yoga für Senioren', zusatz: 'Gleichgewicht & Kraft', punkte: ['Kurse in Volkshochschulen oder Sportvereinen, auch als Video möglich. Besonders wirksam in Studien — reduziert Sturzrisiko um bis zu 40 %.'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="hilfsmittel" titel="Hilfsmittel & Versorgung">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { hilfsmittel: 'Gehstock / Rollator', erstattung: 'Krankenkasse', hinweis: 'Arztrezept nötig. Rollator hat mehr Stabilität als Gehstock — bei höherem Sturzrisiko bevorzugen.' },
-              { hilfsmittel: 'Hüftprotektor', erstattung: 'Hilfsmittelliste', hinweis: 'Polstereinlage in der Unterwäsche die bei Sturz Hüfte schützt. Besonders bei erhöhtem Sturzrisiko und Osteoporose sinnvoll.' },
-              { hilfsmittel: 'Hausnotruf', erstattung: 'Entlastungsbetrag (131 €/Mo)', hinweis: 'Wenn Sturz passiert und niemand da ist: Hausnotruf ermöglicht schnelle Hilfe.' },
-              { hilfsmittel: 'Orthopädische Schuhe', erstattung: 'Krankenkasse (ärztl. Verordnung)', hinweis: 'Bei Gangstörungen oder Fehlstellungen die Sturzrisiko erhöhen.' },
-            ].map((item) => (
-              <div key={item.hilfsmittel} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-start justify-between gap-4 mb-1">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.hilfsmittel}</p>
-                  <span className="text-[12px] bg-pm-mint text-pm-green font-semibold px-2 py-0.5 rounded-full flex-shrink-0">{item.erstattung}</span>
-                </div>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.hinweis}</p>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                { title: 'Gehstock / Rollator', zusatz: 'Krankenkasse', punkte: ['Arztrezept nötig. Rollator hat mehr Stabilität als Gehstock — bei höherem Sturzrisiko bevorzugen.'] },
+                { title: 'Hüftprotektor', zusatz: 'Hilfsmittelliste', punkte: ['Polstereinlage in der Unterwäsche die bei Sturz Hüfte schützt. Besonders bei erhöhtem Sturzrisiko und Osteoporose sinnvoll.'] },
+                { title: 'Hausnotruf', zusatz: 'Entlastungsbetrag (131 €/Mo)', punkte: ['Wenn Sturz passiert und niemand da ist: Hausnotruf ermöglicht schnelle Hilfe.'] },
+                { title: 'Orthopädische Schuhe', zusatz: 'Krankenkasse (ärztl. Verordnung)', punkte: ['Bei Gangstörungen oder Fehlstellungen die Sturzrisiko erhöhen.'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="faq" titel="Häufige Fragen">

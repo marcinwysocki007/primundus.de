@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
+  Abschnitt, Fragen, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -122,41 +122,47 @@ export default function DiabetesPflegeSenioren() {
             <Text>
               Eine Hypoglykämie (Unterzuckerung) ist ein Notfall — besonders bei älteren Menschen. Jede Betreuungskraft muss die Zeichen kennen und sofort handeln.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-6">
-            {[
-              { phase: 'Frühe Zeichen', zeichen: 'Zittern, Schwitzen, Blässe, Herzrasen, Hunger, Unruhe', handlung: 'Sofort Traubenzucker (15–20 g), Fruchtsaft oder Orangensaft geben. Blutzucker nach 15 Minuten nochmals messen.' },
-              { phase: 'Fortgeschrittene Zeichen', zeichen: 'Verwirrtheit, undeutliche Sprache, Aggression, Koordinationsstörungen', handlung: 'Sofortige Glukosegabe wenn noch schlucken möglich. Arzt oder Rettungsdienst anrufen. Nicht alleine lassen.' },
-              { phase: 'Schwere Hypoglykämie', zeichen: 'Bewusstlosigkeit, Krampfanfall', handlung: 'SOFORT Rettungsdienst (112) rufen. Nichts in den Mund. Stabile Seitenlage wenn möglich.' },
-            ].map((item) => (
-              <div key={item.phase} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.phase}</p>
-                <p className="text-[14px] font-semibold text-pm-ink mb-1">Zeichen: {item.zeichen}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">Handlung: {item.handlung}</p>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                {
+                  title: 'Frühe Zeichen',
+                  punkte: [
+                    <><strong>Zeichen:</strong> {'Zittern, Schwitzen, Blässe, Herzrasen, Hunger, Unruhe'}</>,
+                    <><strong>Handlung:</strong> {'Sofort Traubenzucker (15–20 g), Fruchtsaft oder Orangensaft geben. Blutzucker nach 15 Minuten nochmals messen.'}</>,
+                  ],
+                },
+                {
+                  title: 'Fortgeschrittene Zeichen',
+                  punkte: [
+                    <><strong>Zeichen:</strong> {'Verwirrtheit, undeutliche Sprache, Aggression, Koordinationsstörungen'}</>,
+                    <><strong>Handlung:</strong> {'Sofortige Glukosegabe wenn noch schlucken möglich. Arzt oder Rettungsdienst anrufen. Nicht alleine lassen.'}</>,
+                  ],
+                },
+                {
+                  title: 'Schwere Hypoglykämie',
+                  punkte: [
+                    <><strong>Zeichen:</strong> {'Bewusstlosigkeit, Krampfanfall'}</>,
+                    <><strong>Handlung:</strong> {'SOFORT Rettungsdienst (112) rufen. Nichts in den Mund. Stabile Seitenlage wenn möglich.'}</>,
+                  ],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="pflegegrad" titel="Pflegegrad & Kassenzuschüsse bei Diabetes">
             <Text>
               Diabetes allein führt oft zu PG 2–3. Wenn zusätzlich Einschränkungen durch Folgekomplikationen (Neuropathie, Niereninsuffizienz, eingeschränkte Mobilität) bestehen, sind höhere Pflegegrade möglich.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              ['Kein weiterer Hilfebedarf durch Diabetes', 'Ggf. kein PG', '—'],
-              ['Leichter Hilfebedarf, Blutzuckerkontrolle nötig', 'PG 1–2', '— bis 347 €/Mo'],
-              ['Erheblicher Hilfebedarf durch Diabetes + Folgekomplikationen', 'PG 2–3', '347–599 €/Mo'],
-              ['Schwerer Hilfebedarf (Mobilität, Wundversorgung, Sehverlust)', 'PG 3–4', '599–800 €/Mo'],
-            ].map(([situation, pg, pgeld]) => (
-              <div key={situation} className="flex items-center justify-between bg-white rounded-xl px-5 py-3 border border-pm-line">
-                <span className="text-[13px] text-pm-body flex-1">{situation}</span>
-                <span className="text-[13px] font-bold text-pm-ink px-4">{pg}</span>
-                <span className={`text-[13px] font-bold ${pgeld === '—' ? 'text-[#C8C3BA]' : 'text-pm-green'}`}>{pgeld}</span>
-              </div>
-            ))}
-          </div>
+            <Tabelle
+              titel=""
+              zeilen={[
+                ['Kein weiterer Hilfebedarf durch Diabetes', 'Ggf. kein PG', '—'],
+                ['Leichter Hilfebedarf, Blutzuckerkontrolle nötig', 'PG 1–2', '— bis 347 €/Mo'],
+                ['Erheblicher Hilfebedarf durch Diabetes + Folgekomplikationen', 'PG 2–3', '347–599 €/Mo'],
+                ['Schwerer Hilfebedarf (Mobilität, Wundversorgung, Sehverlust)', 'PG 3–4', '599–800 €/Mo'],
+              ]}
+              betont={2}
+            />
             <MehrDazu
               label="Pflegegrad beantragen:"
               links={[{ href: "/pflegegrad-beantragen", text: "Schritt-für-Schritt Anleitung" }]}

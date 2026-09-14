@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Gegenueber, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -23,7 +23,7 @@ const SECTIONS = [
   { id: 'fall-1-ihre-mutter', title: "Fall 1: Ihre Mutter muss ins Krankenhaus — zahlen Sie weiter?" },
   { id: 'fall-2-die-betreuungskraft', title: "Fall 2: Die Betreuungskraft wird krank oder fällt aus" },
   { id: 'fall-3-die-chemie', title: "Fall 3: Die Chemie stimmt nicht — was kostet ein Wechsel?" },
-  { id: 'fall-4-weihnachten-ostern', title: "Fall 4: Weihnachten, Ostern &amp; Co. — was kosten Feiertage?" },
+  { id: 'fall-4-weihnachten-ostern', title: "Fall 4: Weihnachten, Ostern & Co. — was kosten Feiertage?" },
   { id: 'die-antworten-auf-einen', title: "Die Antworten auf einen Blick" },
 ]
 
@@ -117,7 +117,7 @@ export default function KrankenhausPage() {
           pfad={[
             { label: "Startseite", href: "/" },
             { label: "Ratgeber", href: "/ratgeber" },
-            { label: "Krankenhaus, Ausfall &amp; Wechsel" },
+            { label: "Krankenhaus, Ausfall & Wechsel" },
           ]}
           augenbraue="Ratgeber Krankenhaus"
           titel="Krankenhaus, Ausfall, Wechsel: Was gilt bei der 24-Stunden-Pflege wirklich?"
@@ -128,38 +128,20 @@ export default function KrankenhausPage() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="fall-1-ihre-mutter" titel="Fall 1: Ihre Mutter muss ins Krankenhaus — zahlen Sie weiter?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-5">
+            <Text>
               Bei Primundus entscheiden Sie selbst — es gibt zwei ehrliche Wege, beide mit klaren Kosten:
-            </p>
-            <div className="grid md:grid-cols-2 gap-4 mb-5">
-              <div className="bg-pm-paper rounded-xl p-5">
-                <p className="text-[14px] font-bold text-pm-ink mb-2">Die Betreuungskraft bleibt im Haus</p>
-                <p className="text-[13px] text-pm-body leading-relaxed">
-                  Die Zahlung läuft weiter — dafür bleibt das Zuhause versorgt: Wäsche, Post, Blumen,
-                  Haustier. Ihre Mutter kommt in ein geführtes Zuhause zurück, nicht in eine verwaiste
-                  Wohnung, und die vertraute Kraft ist vom ersten Tag an wieder da. Bei kurzen
-                  Aufenthalten meist die bessere Wahl.
-                </p>
-              </div>
-              <div className="bg-pm-paper rounded-xl p-5">
-                <p className="text-[14px] font-bold text-pm-ink mb-2">Die Betreuungskraft reist ab</p>
-                <p className="text-[13px] text-pm-body leading-relaxed">
-                  Sie zahlen nur noch bis zur Abreise — in der Regel 2 bis 3 Tage. Bei längeren
-                  Klinik- oder Reha-Aufenthalten die wirtschaftliche Wahl; zur Rückkehr organisieren
-                  wir rechtzeitig eine neue Kraft (es fallen nur die üblichen Anreisekosten an).
-                </p>
-              </div>
-            </div>
-            <div className="bg-pm-shell rounded-xl p-5">
-              <p className="text-[13px] text-pm-taupe-ink leading-relaxed">
-                <strong>Gut zu wissen:</strong> Das Pflegegeld der Pflegekasse wird bei einem
-                Krankenhausaufenthalt bis zu vier Wochen weitergezahlt — die wichtigste Förderung
-                läuft also zunächst ungekürzt weiter.
-              </p>
-            </div>
-          </div>
+            </Text>
+            <Gegenueber
+              seiten={[
+                { titel: 'Die Betreuungskraft bleibt im Haus', ton: 'taupe', text: 'Die Zahlung läuft weiter — dafür bleibt das Zuhause versorgt: Wäsche, Post, Blumen, Haustier. Ihre Mutter kommt in ein geführtes Zuhause zurück, nicht in eine verwaiste Wohnung, und die vertraute Kraft ist vom ersten Tag an wieder da. Bei kurzen Aufenthalten meist die bessere Wahl.' },
+                { titel: 'Die Betreuungskraft reist ab', ton: 'taupe', text: 'Sie zahlen nur noch bis zur Abreise — in der Regel 2 bis 3 Tage. Bei längeren Klinik- oder Reha-Aufenthalten die wirtschaftliche Wahl; zur Rückkehr organisieren wir rechtzeitig eine neue Kraft (es fallen nur die üblichen Anreisekosten an).' },
+              ]}
+            />
+            <Kasten>
+              <Text><strong>Gut zu wissen:</strong> Das Pflegegeld der Pflegekasse wird bei einem
+              Krankenhausaufenthalt bis zu vier Wochen weitergezahlt — die wichtigste Förderung
+              läuft also zunächst ungekürzt weiter.</Text>
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="fall-2-die-betreuungskraft" titel="Fall 2: Die Betreuungskraft wird krank oder fällt aus">
@@ -203,16 +185,15 @@ export default function KrankenhausPage() {
                 <a href="/24-stunden-pflege-wirkliche-kosten" className="text-pm-taupe underline underline-offset-2">Die ehrliche Gesamtrechnung</a>.</> },
               ]}
             />
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-3">Weiterlesen</p>
-            <div className="flex flex-wrap gap-2">
-              <a href="/24-stunden-pflege-wirkliche-kosten" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Die ehrliche Gesamtrechnung</a>
-              <a href="/24-stunden-pflege-kostenuebernahme" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Wer übernimmt die Kosten?</a>
-              <a href="/pflegekraft-wechseln" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Pflegekraft wechseln</a>
-              <a href="/erste-hilfe-bei-pflegenotfall" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Erste Hilfe im Pflegenotfall</a>
-            </div>
-          </div>
+            <MehrDazu
+              label="Weiterlesen:"
+              links={[
+                { href: '/24-stunden-pflege-wirkliche-kosten', text: 'Die ehrliche Gesamtrechnung' },
+                { href: '/24-stunden-pflege-kostenuebernahme', text: 'Wer übernimmt die Kosten?' },
+                { href: '/pflegekraft-wechseln', text: 'Pflegekraft wechseln' },
+                { href: '/erste-hilfe-bei-pflegenotfall', text: 'Erste Hilfe im Pflegenotfall' },
+              ]}
+            />
           </Abschnitt>
 
 

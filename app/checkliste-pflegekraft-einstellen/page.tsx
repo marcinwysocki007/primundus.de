@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Liste, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Fragen, Gruppen, Liste, Punkte, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -81,77 +81,54 @@ export default function ChecklistePflegekraftEinstellen() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="vor-der-auswahl" titel="Vor der Auswahl — was klar sein muss">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-2 mb-10">
-            {[
-              ['Pflegebedarf definiert', 'Welche Hilfe ist nötig (Körperpflege, Haushalt, Mobilisierung, Demenz)?'],
-              ['Spezialanforderungen notiert', 'Welche Erkrankungen, Medikamente, Allergien, Ernährungsbesonderheiten?'],
-              ['Führerschein nötig?', 'Arzttermine, Einkaufen — braucht die Kraft ein Auto oder den eigenen Führerschein?'],
-              ['Sprachkenntnisse', 'Wie gut muss Deutsch sein? Was ist das Minimum für gute Kommunikation?'],
-              ['Zimmersituation geklärt', 'Eigenes Zimmer für die Kraft vorhanden und vorbereitet?'],
-              ['Beschäftigungsmodell gewählt', 'Entsendemodell (empfohlen), Direktanstellung oder andere Lösung?'],
-              ['Budget definiert', 'Was kann und soll monatlich ausgegeben werden (inkl. Kassenzuschüsse)?'],
-            ].map(([punkt, detail]) => (
-              <div key={punkt} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded border-2 border-pm-taupe flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-[14px] font-semibold text-pm-ink">{punkt}</p>
-                  <p className="text-[13px] text-pm-mute">{detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+            <Punkte
+              punkte={[
+                { title: 'Pflegebedarf definiert', desc: 'Welche Hilfe ist nötig (Körperpflege, Haushalt, Mobilisierung, Demenz)?' },
+                { title: 'Spezialanforderungen notiert', desc: 'Welche Erkrankungen, Medikamente, Allergien, Ernährungsbesonderheiten?' },
+                { title: 'Führerschein nötig?', desc: 'Arzttermine, Einkaufen — braucht die Kraft ein Auto oder den eigenen Führerschein?' },
+                { title: 'Sprachkenntnisse', desc: 'Wie gut muss Deutsch sein? Was ist das Minimum für gute Kommunikation?' },
+                { title: 'Zimmersituation geklärt', desc: 'Eigenes Zimmer für die Kraft vorhanden und vorbereitet?' },
+                { title: 'Beschäftigungsmodell gewählt', desc: 'Entsendemodell (empfohlen), Direktanstellung oder andere Lösung?' },
+                { title: 'Budget definiert', desc: 'Was kann und soll monatlich ausgegeben werden (inkl. Kassenzuschüsse)?' },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="auswahlgespräch" titel="Auswahlgespräch — diese Fragen stellen">
             <Text>
               Ein Telefonat vorab ist möglich — nutzen Sie es. Diese Fragen helfen einzuschätzen ob die Kraft wirklich passt.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            {[
-              {
-                kategorie: 'Erfahrung',
-                fragen: [
-                  'Wie viele Einsätze in der häuslichen 24h-Pflege haben Sie bisher gemacht?',
-                  'Was waren die häufigsten Diagnosen bei Ihren bisherigen Pflegebedürftigen?',
-                  'Haben Sie Erfahrung mit [spezifische Diagnose — Demenz, Parkinson etc.]?',
-                  'Darf ich Kontakt zu einer früheren Familie aufnehmen?',
-                ],
-              },
-              {
-                kategorie: 'Praktisches',
-                fragen: [
-                  'Kochen Sie gerne und was kochen Sie am liebsten?',
-                  'Haben Sie Erfahrung mit [spezifische Diät — Diabeteskost, pürierte Speisen]?',
-                  'Haben Sie einen Führerschein und würden Sie das Auto der Familie nutzen?',
-                  'Haben Sie Haustiere lieb oder gibt es Probleme damit?',
-                ],
-              },
-              {
-                kategorie: 'Persönlichkeit & Sprache',
-                fragen: [
-                  'Erzählen Sie mir etwas über sich — auf Deutsch. (Sprachniveau selbst beurteilen)',
-                  'Wie gehen Sie mit einem Bewohner um der manchmal aggressiv ist?',
-                  'Was tun Sie wenn jemand nicht essen oder Medikamente nehmen möchte?',
-                  'Wie verbringen Sie Ihre Freizeit wenn der Pflegebedürftige ruht?',
-                ],
-              },
-            ].map((block) => (
-              <div key={block.kategorie} className="bg-white rounded-xl border border-pm-line overflow-hidden">
-                <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light">{block.kategorie}</p>
-                </div>
-                <ul className="divide-y divide-pm-paper">
-                  {block.fragen.map(f => (
-                    <li key={f} className="px-5 py-3 text-[14px] text-pm-body flex gap-2">
-                      <span className="text-pm-taupe flex-shrink-0">?</span>{f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                {
+                  title: 'Erfahrung',
+                  punkte: [
+                    'Wie viele Einsätze in der häuslichen 24h-Pflege haben Sie bisher gemacht?',
+                    'Was waren die häufigsten Diagnosen bei Ihren bisherigen Pflegebedürftigen?',
+                    'Haben Sie Erfahrung mit [spezifische Diagnose — Demenz, Parkinson etc.]?',
+                    'Darf ich Kontakt zu einer früheren Familie aufnehmen?',
+                  ],
+                },
+                {
+                  title: 'Praktisches',
+                  punkte: [
+                    'Kochen Sie gerne und was kochen Sie am liebsten?',
+                    'Haben Sie Erfahrung mit [spezifische Diät — Diabeteskost, pürierte Speisen]?',
+                    'Haben Sie einen Führerschein und würden Sie das Auto der Familie nutzen?',
+                    'Haben Sie Haustiere lieb oder gibt es Probleme damit?',
+                  ],
+                },
+                {
+                  title: 'Persönlichkeit & Sprache',
+                  punkte: [
+                    'Erzählen Sie mir etwas über sich — auf Deutsch. (Sprachniveau selbst beurteilen)',
+                    'Wie gehen Sie mit einem Bewohner um der manchmal aggressiv ist?',
+                    'Was tun Sie wenn jemand nicht essen oder Medikamente nehmen möchte?',
+                    'Wie verbringen Sie Ihre Freizeit wenn der Pflegebedürftige ruht?',
+                  ],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="vor-anreise" titel="Vor der Anreise — Checkliste">

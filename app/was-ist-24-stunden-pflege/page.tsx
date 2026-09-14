@@ -22,6 +22,9 @@ const SECTIONS = [
   { id: 'faq',         title: 'Häufige Fragen' },
 ]
 
+// Links in den „Wann"-Punkten wie die Links der MehrDazu-Zeilen der Vorlage
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
 const GrafikPflegestatistik = dynamic(
   () => import('@/components/charts/GrafikPflegestatistik').then(m => ({ default: m.GrafikPflegestatistik })),
   {
@@ -161,10 +164,9 @@ export default function WasIst24StundenPflege() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
-            {/* VORLAGE: unverändert übernommen */}
             <KurzAntwort frage="Andere Namen für dasselbe Modell">
-            24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.
-          </KurzAntwort>
+              24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.
+            </KurzAntwort>
             <Text>
               24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
             </Text>
@@ -218,7 +220,6 @@ export default function WasIst24StundenPflege() {
               ]}
               fuss="Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2024"
             />
-            {/* VORLAGE: unverändert übernommen */}
             <GrafikPflegestatistik />
           </Abschnitt>
 
@@ -230,7 +231,6 @@ export default function WasIst24StundenPflege() {
               label="Vollständiger Kostenvergleich:"
               links={[{ href: "/24h-pflege-vs-pflegeheim-kosten", text: "24h-Pflege vs. Pflegeheim — was ist günstiger?" }]}
             />
-            {/* VORLAGE: unverändert übernommen */}
             <GrafikKostenvergleich />
             <Kasten augenbraue="Neu 2026 — Entlastungsbudget" titel="3.539 Euro pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
               <HakenListe punkte={[
@@ -275,39 +275,14 @@ export default function WasIst24StundenPflege() {
             <Text>
               24h-Pflege ist die richtige Wahl, wenn der pflegebedürftige Mensch in seiner vertrauten Umgebung bleiben möchte — unabhängig vom Pflegegrad.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-6">
-            {[
-              {
-                title: 'Demenz und Alzheimer',
-                desc: 'Tagesstruktur, Orientierung und konstante Bezugsperson — eine feste Betreuungskraft zuhause bietet das besser als jede Einrichtung.',
-                link: { text: 'Demenzpflege zuhause — was ist möglich?', href: '/demenz-pflege-zuhause' },
-              },
-              {
-                title: 'Nach Schlaganfall oder Operation',
-                desc: 'Kontinuierliche Unterstützung in der Reha-Phase ermöglicht Entlassung aus dem Krankenhaus ohne Umzug ins Heim.',
-                link: { text: 'Pflege nach OP — Organisation und Kosten', href: '/pflege-nach-op' },
-              },
-              {
-                title: 'Parkinson, MS, Herzinsuffizienz',
-                desc: 'Chronische Erkrankungen mit schwankendem Tagesverlauf — eine feste Kraft kennt die Muster und reagiert richtig.',
-                link: { text: 'Parkinson Pflege zuhause', href: '/parkinson-pflege-zuhause' },
-              },
-              {
-                title: 'Sturzgefahr und eingeschränkte Mobilität',
-                desc: 'Prävention, Mobilisierung, sichere Begleitung — rund um die Uhr.',
-                link: { text: 'Sturzprävention bei Senioren', href: '/sturzpraevention-senioren' },
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed mb-2">{item.desc}</p>
-                <a href={item.link.href} className="text-[13px] text-pm-taupe underline hover:text-pm-taupe-deep">
-                  → {item.link.text}
-                </a>
-              </div>
-            ))}
-          </div>
+            <Punkte
+              punkte={[
+                { title: 'Demenz und Alzheimer', desc: <>Tagesstruktur, Orientierung und konstante Bezugsperson — eine feste Betreuungskraft zuhause bietet das besser als jede Einrichtung.<br /><a href="/demenz-pflege-zuhause" className={LINK}>Demenzpflege zuhause — was ist möglich?</a></> },
+                { title: 'Nach Schlaganfall oder Operation', desc: <>Kontinuierliche Unterstützung in der Reha-Phase ermöglicht Entlassung aus dem Krankenhaus ohne Umzug ins Heim.<br /><a href="/pflege-nach-op" className={LINK}>Pflege nach OP — Organisation und Kosten</a></> },
+                { title: 'Parkinson, MS, Herzinsuffizienz', desc: <>Chronische Erkrankungen mit schwankendem Tagesverlauf — eine feste Kraft kennt die Muster und reagiert richtig.<br /><a href="/parkinson-pflege-zuhause" className={LINK}>Parkinson Pflege zuhause</a></> },
+                { title: 'Sturzgefahr und eingeschränkte Mobilität', desc: <>Prävention, Mobilisierung, sichere Begleitung — rund um die Uhr.<br /><a href="/sturzpraevention-senioren" className={LINK}>Sturzprävention bei Senioren</a></> },
+              ]}
+            />
             <MehrDazu
               label="Direkter Vergleich:"
               links={[{ href: "/24h-pflege-vs-pflegeheim-kosten", text: "24h-Pflege vs. Pflegeheim — was passt besser?" }]}

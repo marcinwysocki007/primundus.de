@@ -119,22 +119,13 @@ export default function InkontinenzPflegeZuhause() {
           </Abschnitt>
 
           <Abschnitt id="hilfsmittel" titel="Hilfsmittel & Kassenzuschuss">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Inkontinenzmaterial — Krankenversicherung</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-2">Inkontinenzmaterial ist ein Hilfsmittel nach SGB V. Mit Rezept vom Hausarzt wird es von der Krankenversicherung übernommen — kein Eigenanteil (außer Kassenrezept-Zuzahlung 10 %). Lieferung nach Hause über Vertragspartner möglich.</p>
-              <p className="text-[13px] text-pm-mute">Rezept beim Hausarzt → Apotheke oder Sanitätshaus → Abrechnung mit KV</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Pflegehilfsmittel-Pauschale — Pflegekasse</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-2">Die Pflegekasse zahlt zusätzlich 42 €/Monat Pflegehilfsmittel-Pauschale — für saugende Bettschutzeinlagen und andere Verbrauchsmaterialien. Separat beantragen.</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Nachtstuhl / Toilettenstuhl — Hilfsmittel</p>
-              <p className="text-[14px] text-pm-body leading-relaxed">Mit Rezept von Arzt von der Krankenkasse als Hilfsmittel übernommen. Für Menschen die nachts oder bei eingeschränkter Mobilität die Toilette nicht mehr sicher erreichen.</p>
-            </div>
-          </div>
+            <Punkte
+              punkte={[
+                { title: 'Inkontinenzmaterial — Krankenversicherung', desc: <>Inkontinenzmaterial ist ein Hilfsmittel nach SGB V. Mit Rezept vom Hausarzt wird es von der Krankenversicherung übernommen — kein Eigenanteil (außer Kassenrezept-Zuzahlung 10 %). Lieferung nach Hause über Vertragspartner möglich.<br />Rezept beim Hausarzt → Apotheke oder Sanitätshaus → Abrechnung mit KV</> },
+                { title: 'Pflegehilfsmittel-Pauschale — Pflegekasse', desc: 'Die Pflegekasse zahlt zusätzlich 42 €/Monat Pflegehilfsmittel-Pauschale — für saugende Bettschutzeinlagen und andere Verbrauchsmaterialien. Separat beantragen.' },
+                { title: 'Nachtstuhl / Toilettenstuhl — Hilfsmittel', desc: 'Mit Rezept von Arzt von der Krankenkasse als Hilfsmittel übernommen. Für Menschen die nachts oder bei eingeschränkter Mobilität die Toilette nicht mehr sicher erreichen.' },
+              ]}
+            />
           </Abschnitt>
 
           <DunklerAbschnitt

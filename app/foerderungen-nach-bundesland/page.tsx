@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Fragen, Gruppen, Kasten, Liste, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -10,6 +10,9 @@ import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
 const AKTUALISIERT = aktualisiertAm('foerderungen-nach-bundesland', '21. August 2026')
+
+// Links in der Checkliste wie die Linkzeilen der Vorlage (MehrDazu)
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
 const SECTIONS = [
   { id: 'bundesweit', title: 'Bundesweite Kassenzuschüsse' },
@@ -95,152 +98,118 @@ export default function FoerderungenNachBundesland() {
             <Text>
               Diese Leistungen gelten in allen 16 Bundesländern identisch — für jeden Pflegebedürftigen mit anerkanntem Pflegegrad.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Leistung', 'PG 2', 'PG 3', 'PG 4', 'PG 5', 'Besonderheit'].map(h => (
-                      <th key={h} className="px-3 py-3 text-[11px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Pflegegeld/Mo', '347 €', '599 €', '800 €', '990 €', 'Für private Pflege'],
-                    ['Sachleistungen/Mo', '796 €', '1.497 €', '1.859 €', '2.299 €', 'Für Pflegedienste'],
-                    ['Entlastungsbetrag/Mo', '131 €', '131 €', '131 €', '131 €', 'Auch PG 1'],
-                    ['Entlastungsbudget/Jahr', '3.539 €', '3.539 €', '3.539 €', '3.539 €', 'Angesammelt 3 Jahre'],
-                    ['Wohnraumanpassung/Maßnahme', '4.180 €', '4.180 €', '4.180 €', '4.180 €', 'Antrag vor Beginn'],
-                    ['Pflegehilfsmittel/Mo', '42 €', '42 €', '42 €', '42 €', 'Pauschale'],
-                  ].map(([leistung, pg2, pg3, pg4, pg5, hinweis], i) => (
-                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-3 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line">{leistung}</td>
-                      {[pg2, pg3, pg4, pg5].map((v, j) => (
-                        <td key={j} className="px-3 py-3 text-[13px] font-bold text-pm-green border-b border-pm-line">{v}</td>
-                      ))}
-                      <td className="px-3 py-3 text-[11px] text-pm-mute border-b border-pm-line">{hinweis}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">§36–45b SGB XI · Stand 2026 · Identisch zu 2025</p>
-            </div>
-          </div>
+            <Tabelle
+              titel=""
+              kopf={['Leistung', 'PG 2', 'PG 3', 'PG 4', 'PG 5', 'Besonderheit']}
+              zeilen={[
+                ['Pflegegeld/Mo', '347 €', '599 €', '800 €', '990 €', 'Für private Pflege'],
+                ['Sachleistungen/Mo', '796 €', '1.497 €', '1.859 €', '2.299 €', 'Für Pflegedienste'],
+                ['Entlastungsbetrag/Mo', '131 €', '131 €', '131 €', '131 €', 'Auch PG 1'],
+                ['Entlastungsbudget/Jahr', '3.539 €', '3.539 €', '3.539 €', '3.539 €', 'Angesammelt 3 Jahre'],
+                // Fett 283 px breit, auf 360 px stehen 280 px zur Verfügung: Umbruch nach dem Schrägstrich
+                // statt Silbentrennung „Maßnah-me"
+                [<span className="whitespace-normal hyphens-manual">Wohnraumanpassung/<wbr />Maßnahme</span>, '4.180 €', '4.180 €', '4.180 €', '4.180 €', 'Antrag vor Beginn'],
+                ['Pflegehilfsmittel/Mo', '42 €', '42 €', '42 €', '42 €', 'Pauschale'],
+              ]}
+              fuss="§36–45b SGB XI · Stand 2026 · Identisch zu 2025"
+            />
           </Abschnitt>
 
           <Abschnitt id="laender" titel="Zusatzförderungen der Bundesländer">
             <Text>
               Zusätzlich zu den bundesweiten Pflegekasse-Leistungen bieten einige Bundesländer eigene Pflegeprogramme. Diese variieren stark und werden regelmäßig angepasst — vor Antragstellung immer beim zuständigen Landesamt prüfen.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            {[
-              {
-                land: 'Bayern',
-                leistungen: [
-                  { name: 'Landespflegegeld', detail: '1.000 €/Jahr für Pflegebedürftige mit PG 2–5 die zuhause gepflegt werden. Antrag beim Landesamt für Pflege (LfP). Kumulierbar mit Pflegekasse-Leistungen.' },
-                  { name: 'Pflegeberatung (FQA)', detail: 'Kostenlose Fachberatung durch Fachstellen für Pflege- und Behinderteneinrichtungen – Qualitätsentwicklung und Aufsicht.' },
-                ],
-              },
-              {
-                land: 'Baden-Württemberg',
-                leistungen: [
-                  { name: 'Landesberatungsstellen', detail: 'Kostenlose Pflegestützpunkte in allen Kreisen. Beratung über kommunale Angebote und ergänzende Förderungen.' },
-                  { name: 'Kommunale Pflegefonds', detail: 'Einige Landkreise bieten zusätzliche Entlastungsangebote — regional unterschiedlich.' },
-                ],
-              },
-              {
-                land: 'NRW',
-                leistungen: [
-                  { name: 'Pflegestützpunkte', detail: '100+ Pflegestützpunkte in NRW für kostenlose, unabhängige Beratung zu allen Pflegefragen.' },
-                  { name: 'Programm "Pflege in NRW"', detail: 'Landesförderprogramme für niedrigschwellige Angebote und Ehrenamt in der Pflege.' },
-                ],
-              },
-              {
-                land: 'Alle Bundesländer',
-                leistungen: [
-                  { name: 'Pflegestützpunkte', detail: 'Jedes Bundesland betreibt ein Netz aus kostenlosen Pflegestützpunkten für unabhängige Beratung.' },
-                  { name: 'Verhinderungs- & Kurzzeitpflege', detail: 'Gemeinsames Entlastungsbudget bis 3.539 €/Jahr (bundesweit, seit Juli 2025) für Ersatzpflege, wenn die Hauptpflegeperson ausfällt.' },
-                ],
-              },
-            ].map((block) => (
-              <div key={block.land} className="bg-white rounded-xl border border-pm-line overflow-hidden">
-                <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
-                  <p className="text-[13px] font-bold text-pm-ink">{block.land}</p>
-                </div>
-                <div className="divide-y divide-pm-line">
-                  {block.leistungen.map((l) => (
-                    <div key={l.name} className="px-5 py-3">
-                      <p className="text-[13px] font-semibold text-pm-taupe mb-0.5">{l.name}</p>
-                      <p className="text-[13px] text-pm-body leading-relaxed">{l.detail}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                {
+                  title: 'Bayern',
+                  punkte: [
+                    <><strong>Landespflegegeld</strong><br />{'1.000 €/Jahr für Pflegebedürftige mit PG 2–5 die zuhause gepflegt werden. Antrag beim Landesamt für Pflege (LfP). Kumulierbar mit Pflegekasse-Leistungen.'}</>,
+                    <><strong>Pflegeberatung (FQA)</strong><br />{'Kostenlose Fachberatung durch Fachstellen für Pflege- und Behinderteneinrichtungen – Qualitätsentwicklung und Aufsicht.'}</>,
+                  ],
+                },
+                {
+                  title: 'Baden-Württemberg',
+                  punkte: [
+                    <><strong>Landesberatungsstellen</strong><br />{'Kostenlose Pflegestützpunkte in allen Kreisen. Beratung über kommunale Angebote und ergänzende Förderungen.'}</>,
+                    <><strong>Kommunale Pflegefonds</strong><br />{'Einige Landkreise bieten zusätzliche Entlastungsangebote — regional unterschiedlich.'}</>,
+                  ],
+                },
+                {
+                  title: 'NRW',
+                  punkte: [
+                    <><strong>Pflegestützpunkte</strong><br />{'100+ Pflegestützpunkte in NRW für kostenlose, unabhängige Beratung zu allen Pflegefragen.'}</>,
+                    <><strong>{'Programm "Pflege in NRW"'}</strong><br />{'Landesförderprogramme für niedrigschwellige Angebote und Ehrenamt in der Pflege.'}</>,
+                  ],
+                },
+                {
+                  title: 'Alle Bundesländer',
+                  punkte: [
+                    <><strong>Pflegestützpunkte</strong><br />{'Jedes Bundesland betreibt ein Netz aus kostenlosen Pflegestützpunkten für unabhängige Beratung.'}</>,
+                    <><strong>{'Verhinderungs- & Kurzzeitpflege'}</strong><br />{'Gemeinsames Entlastungsbudget bis 3.539 €/Jahr (bundesweit, seit Juli 2025) für Ersatzpflege, wenn die Hauptpflegeperson ausfällt.'}</>,
+                  ],
+                },
+              ]}
+            />
             <Kasten titel="Hinweis zu Landesförderungen">
               <Text>Landesförderungen werden regelmäßig angepasst, eingestellt oder neu aufgelegt. Die hier genannten Leistungen entsprechen dem Stand April 2026. Vor der Antragstellung immer beim zuständigen Landesamt oder Pflegestützpunkt prüfen.</Text>
             </Kasten>
           </Abschnitt>
 
           <Abschnitt id="kfw" titel="KfW-Förderung & Steuerabzug — unterschätzte Möglichkeiten">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">KfW-Programm 159 — Altersgerecht Umbauen</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-3">
-                KfW-Kredit bis 50.000 € für barrierefreie Wohnraumanpassung — zu günstigen Zinsen. Kombinierbar mit dem Pflegekasse-Zuschuss (4.180 €/Maßnahme). Für Maßnahmen die über den Pflegekasse-Zuschuss hinausgehen (z.B. Treppenlift, größerer Badumbau).
-              </p>
-              <p className="text-[13px] text-pm-mute">Antrag über Hausbank · kfw.de · Vor Beginn der Maßnahme beantragen</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Steuerliche Absetzbarkeit — bis 4.000 €/Jahr</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-3">
-                Pflege- und Betreuungskosten können bis zu 4.000 € pro Jahr als außergewöhnliche Belastung oder haushaltsnahe Dienstleistung von der Steuer abgesetzt werden. Bei Primundus-Kosten von 2.200–3.500 €/Monat ist der Steuereffekt erheblich.
-              </p>
-              <p className="text-[13px] text-pm-mute">→ Details: <a href="/pflege-steuerlich-absetzen" className="text-pm-taupe underline">Pflege steuerlich absetzen</a></p>
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Verhinderungspflege — bis 3.539 €/Jahr aus dem Entlastungsbudget</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-3">
-                Wenn die Hauptpflegeperson ausfällt (Urlaub, Krankheit), zahlt die Pflegekasse aus dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege bis zu 3.539 €/Jahr für eine Ersatzkraft — ab PG 2. Die frühere 6-Monats-Vorpflegezeit ist seit Juli 2025 entfallen.
-              </p>
-              <p className="text-[13px] text-pm-mute">→ Details: <a href="/verhinderungspflege" className="text-pm-taupe underline">Verhinderungspflege erklärt</a></p>
-            </div>
-          </div>
+            <Punkte
+              punkte={[
+                {
+                  title: 'KfW-Programm 159 — Altersgerecht Umbauen',
+                  desc: (
+                    <>
+                      <p>KfW-Kredit bis 50.000 € für barrierefreie Wohnraumanpassung — zu günstigen Zinsen. Kombinierbar mit dem Pflegekasse-Zuschuss (4.180 €/Maßnahme). Für Maßnahmen die über den Pflegekasse-Zuschuss hinausgehen (z.B. Treppenlift, größerer Badumbau).</p>
+                      <p className="mt-2 text-[15px] leading-[1.5] text-pm-mute">Antrag über Hausbank · kfw.de · Vor Beginn der Maßnahme beantragen</p>
+                    </>
+                  ),
+                },
+                {
+                  title: 'Steuerliche Absetzbarkeit — bis 4.000 €/Jahr',
+                  desc: (
+                    <>
+                      <p>Pflege- und Betreuungskosten können bis zu 4.000 € pro Jahr als außergewöhnliche Belastung oder haushaltsnahe Dienstleistung von der Steuer abgesetzt werden. Bei Primundus-Kosten von 2.200–3.500 €/Monat ist der Steuereffekt erheblich.</p>
+                      <div className="mt-2">
+                        <MehrDazu label="Details:" links={[{ href: '/pflege-steuerlich-absetzen', text: 'Pflege steuerlich absetzen' }]} />
+                      </div>
+                    </>
+                  ),
+                },
+                {
+                  title: 'Verhinderungspflege — bis 3.539 €/Jahr aus dem Entlastungsbudget',
+                  desc: (
+                    <>
+                      <p>Wenn die Hauptpflegeperson ausfällt (Urlaub, Krankheit), zahlt die Pflegekasse aus dem gemeinsamen Jahresbetrag für Verhinderungs- und Kurzzeitpflege bis zu 3.539 €/Jahr für eine Ersatzkraft — ab PG 2. Die frühere 6-Monats-Vorpflegezeit ist seit Juli 2025 entfallen.</p>
+                      <div className="mt-2">
+                        <MehrDazu label="Details:" links={[{ href: '/verhinderungspflege', text: 'Verhinderungspflege erklärt' }]} />
+                      </div>
+                    </>
+                  ),
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="checkliste" titel="Checkliste: Alle Förderungen nutzen">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-2 mb-10">
-            {[
-              { check: 'Pflegegrad beantragt (Antrag sofort stellen — rückwirkend ab Antragsdatum)', link: '/pflegegrad-beantragen' },
-              { check: 'Pflegegeld oder Sachleistungen gewählt (oder Kombinationsleistung)', link: '/kombinationsleistung-pflege' },
-              { check: 'Entlastungsbetrag (131 €/Mo) separat bei Pflegekasse beantragt', link: '/entlastungsbetrag' },
-              { check: 'Entlastungsbudget für anerkannte Leistungen genutzt (3.539 €/Jahr)', link: '/entlastungsbetrag' },
-              { check: 'Wohnraumanpassung beantragt (bis 4.180 €/Maßnahme, VOR Beginn beantragen)', link: '/barrierefreies-zuhause-gestalten' },
-              { check: 'Pflegehilfsmittel-Pauschale (42 €/Mo) genutzt', link: null },
-              { check: 'Verhinderungspflege eingeplant (Teil des Entlastungsbudgets, bis 3.539 €/Jahr)', link: '/verhinderungspflege' },
-              { check: 'Steuerliche Absetzbarkeit geprüft (bis 4.000 €/Jahr)', link: '/pflege-steuerlich-absetzen' },
-              { check: 'KfW-Kredit für größere Wohnraumanpassung geprüft (kfw.de)', link: null },
-              { check: 'Landespflegegeld Bayern (1.000 €/Jahr) beantragt — falls zutreffend', link: null },
-              { check: 'Lokalen Pflegestützpunkt kontaktiert für weitere Beratung', link: null },
-            ].map((item) => (
-              <div key={item.check} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded border-2 border-pm-taupe flex-shrink-0 mt-0.5" />
-                <p className="text-[14px] text-pm-body">
-                  {item.link ? (
-                    <a href={item.link} className="text-pm-taupe hover:underline">{item.check}</a>
-                  ) : item.check}
-                </p>
-              </div>
-            ))}
-          </div>
+            <Liste
+              punkte={[
+                <a href="/pflegegrad-beantragen" className={LINK}>Pflegegrad beantragt (Antrag sofort stellen — rückwirkend ab Antragsdatum)</a>,
+                <a href="/kombinationsleistung-pflege" className={LINK}>Pflegegeld oder Sachleistungen gewählt (oder Kombinationsleistung)</a>,
+                <a href="/entlastungsbetrag" className={LINK}>Entlastungsbetrag (131 €/Mo) separat bei Pflegekasse beantragt</a>,
+                <a href="/entlastungsbetrag" className={LINK}>Entlastungsbudget für anerkannte Leistungen genutzt (3.539 €/Jahr)</a>,
+                <a href="/barrierefreies-zuhause-gestalten" className={LINK}>Wohnraumanpassung beantragt (bis 4.180 €/Maßnahme, VOR Beginn beantragen)</a>,
+                'Pflegehilfsmittel-Pauschale (42 €/Mo) genutzt',
+                <a href="/verhinderungspflege" className={LINK}>Verhinderungspflege eingeplant (Teil des Entlastungsbudgets, bis 3.539 €/Jahr)</a>,
+                <a href="/pflege-steuerlich-absetzen" className={LINK}>Steuerliche Absetzbarkeit geprüft (bis 4.000 €/Jahr)</a>,
+                'KfW-Kredit für größere Wohnraumanpassung geprüft (kfw.de)',
+                'Landespflegegeld Bayern (1.000 €/Jahr) beantragt — falls zutreffend',
+                'Lokalen Pflegestützpunkt kontaktiert für weitere Beratung',
+              ]}
+            />
             <MehrDazu
               label="Alle Kassenzuschüsse kombiniert:"
               links={[{ href: "/eigenanteil-24h-pflege-senken", text: "Eigenanteil bei 24h-Pflege senken" }, { href: "/finanzierung", text: "Finanzierungsübersicht 2026" }]}

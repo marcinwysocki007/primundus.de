@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann, Werte,
+  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -89,30 +89,18 @@ export default function Pflegesachleistungen() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Pflegesachleistungen 2026 nach Pflegegrad</p>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <tbody>
-                  {[
-                    ['Pflegegrad 1', '—', 'Kein Anspruch auf Sachleistungen'],
-                    ['Pflegegrad 2', '796 €/Monat', 'Für ambulante Pflegedienste'],
-                    ['Pflegegrad 3', '1.497 €/Monat', 'Für ambulante Pflegedienste'],
-                    ['Pflegegrad 4', '1.859 €/Monat', 'Für ambulante Pflegedienste'],
-                    ['Pflegegrad 5', '2.299 €/Monat', 'Für ambulante Pflegedienste'],
-                  ].map(([grad, betrag, hinweis], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="py-3 pr-4 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
-                      <td className={`py-3 pr-4 text-[14px] font-bold border-b border-pm-line ${betrag === '—' ? 'text-[#C8C3BA]' : 'text-pm-green'}`}>{betrag}</td>
-                      <td className="py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-[11px] text-pm-mute mt-2">Stand 2026 · Identisch zu 2025</p>
-          </div>
+            <Tabelle
+              titel="Pflegesachleistungen 2026 nach Pflegegrad"
+              zeilen={[
+                ['Pflegegrad 1', '—', 'Kein Anspruch auf Sachleistungen'],
+                ['Pflegegrad 2', '796 €/Monat', 'Für ambulante Pflegedienste'],
+                ['Pflegegrad 3', '1.497 €/Monat', 'Für ambulante Pflegedienste'],
+                ['Pflegegrad 4', '1.859 €/Monat', 'Für ambulante Pflegedienste'],
+                ['Pflegegrad 5', '2.299 €/Monat', 'Für ambulante Pflegedienste'],
+              ]}
+              betont={1}
+              fuss="Stand 2026 · Identisch zu 2025"
+            />
           </Vorspann>
 
           <Abschnitt id="was-sind" titel="Was sind Pflegesachleistungen?">

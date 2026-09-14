@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, HakenListe, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -136,24 +136,18 @@ export default function BegutachtungVorbereiten() {
             <Text>
               Diese Unterlagen und Vorbereitungen sollten am Tag des Termins bereitliegen:
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { done: true, item: 'Pflegetagebuch der letzten 1–2 Wochen' },
-              { done: true, item: 'Aktuelle Arztberichte und Befunde (möglichst nicht älter als 6 Monate)' },
-              { done: true, item: 'Krankenhausentlassbriefe' },
-              { done: true, item: 'Vollständige Medikamentenliste mit Dosierungen' },
-              { done: true, item: 'Vertrauensperson (Angehöriger, Freund) angefragt und bereit' },
-              { done: true, item: 'Pflegehilfsmittel sichtbar aufgestellt (Rollator, Pflegebett, Badewannenlifter)' },
-              { done: true, item: 'Notizen zu schwierigen Tagen und Situationen der letzten Wochen' },
-              { done: true, item: 'Vorsorgevollmacht oder Betreuungsbeschluss wenn relevant' },
-            ].map((item) => (
-              <div key={item.item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-pm-body">{item.item}</p>
-              </div>
-            ))}
-          </div>
+            <HakenListe
+              punkte={[
+                'Pflegetagebuch der letzten 1–2 Wochen',
+                'Aktuelle Arztberichte und Befunde (möglichst nicht älter als 6 Monate)',
+                'Krankenhausentlassbriefe',
+                'Vollständige Medikamentenliste mit Dosierungen',
+                'Vertrauensperson (Angehöriger, Freund) angefragt und bereit',
+                'Pflegehilfsmittel sichtbar aufgestellt (Rollator, Pflegebett, Badewannenlifter)',
+                'Notizen zu schwierigen Tagen und Situationen der letzten Wochen',
+                'Vorsorgevollmacht oder Betreuungsbeschluss wenn relevant',
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="tipps" titel="7 Tipps für eine korrekte und faire Einstufung">

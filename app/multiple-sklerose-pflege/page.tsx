@@ -106,32 +106,13 @@ export default function MultipleSklerosePflege() {
           </Abschnitt>
 
           <Abschnitt id="verlauf" titel="Pflege je nach MS-Verlaufstyp">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              {
-                verlauf: 'Schubförmig-remittierend (RRMS)',
-                beschreibung: 'Häufigste Form. Schübe mit anschließender vollständiger oder teilweiser Erholung. In stabilen Phasen oft weitgehend selbstständig. Während Schüben vorübergehend mehr Unterstützung nötig.',
-                pflege: 'Ambulante Pflege und Angehörigen-Unterstützung oft ausreichend. Krisenplan für Schübe erstellen.',
-              },
-              {
-                verlauf: 'Sekundär-progredient (SPMS)',
-                beschreibung: 'Entwickelt sich aus RRMS. Zunehmende Behinderung auch ohne Schübe. Mobilität, Koordination, Blasenfunktion oft betroffen.',
-                pflege: 'Steigender Pflegebedarf über Zeit. 24h-Betreuung ab mittlerer bis schwerer Beeinträchtigung sinnvoll.',
-              },
-              {
-                verlauf: 'Primär-progredient (PPMS)',
-                beschreibung: 'Von Beginn an kontinuierliche Verschlechterung ohne Schübe. Häufig schwere Gehbehinderung.',
-                pflege: '24h-Betreuungskraft oft früh notwendig. Rollstuhlgerechte Wohnung und spezifische Hilfsmittel wichtig.',
-              },
-            ].map((item) => (
-              <div key={item.verlauf} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.verlauf}</p>
-                <p className="text-[13px] text-pm-mute mb-2">{item.beschreibung}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed font-medium">{item.pflege}</p>
-              </div>
-            ))}
-          </div>
+            <Punkte
+              punkte={[
+                { title: 'Schubförmig-remittierend (RRMS)', desc: <><p>Häufigste Form. Schübe mit anschließender vollständiger oder teilweiser Erholung. In stabilen Phasen oft weitgehend selbstständig. Während Schüben vorübergehend mehr Unterstützung nötig.</p><p className="mt-2 font-medium text-pm-ink">Ambulante Pflege und Angehörigen-Unterstützung oft ausreichend. Krisenplan für Schübe erstellen.</p></> },
+                { title: 'Sekundär-progredient (SPMS)', desc: <><p>Entwickelt sich aus RRMS. Zunehmende Behinderung auch ohne Schübe. Mobilität, Koordination, Blasenfunktion oft betroffen.</p><p className="mt-2 font-medium text-pm-ink">Steigender Pflegebedarf über Zeit. 24h-Betreuung ab mittlerer bis schwerer Beeinträchtigung sinnvoll.</p></> },
+                { title: 'Primär-progredient (PPMS)', desc: <><p>Von Beginn an kontinuierliche Verschlechterung ohne Schübe. Häufig schwere Gehbehinderung.</p><p className="mt-2 font-medium text-pm-ink">24h-Betreuungskraft oft früh notwendig. Rollstuhlgerechte Wohnung und spezifische Hilfsmittel wichtig.</p></> },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="alltag" titel="Alltagsherausforderungen & Lösungen bei MS">

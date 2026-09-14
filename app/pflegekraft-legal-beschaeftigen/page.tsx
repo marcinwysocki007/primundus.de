@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -148,23 +148,16 @@ export default function PflegekraftLegalBeschaeftigen() {
             <Text>
               Scheinselbstständigkeit liegt vor wenn eine Pflegekraft formal als Selbstständige bezeichnet wird, tatsächlich aber weisungsgebunden, dauerhaft und ausschließlich in einem Haushalt tätig ist. Das ist keine Grauzone — es ist eindeutig illegal.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.2)] rounded-2xl p-6 mb-6">
-            <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-coral-ink mb-3">Was Scheinselbstständigkeit konkret kostet</p>
-            <div className="space-y-2">
-              {[
-                ['Nachzahlung Sozialabgaben', 'Arbeitgeber- und Arbeitnehmeranteil der letzten 4 Jahre'],
-                ['Bußgelder', 'Bis zu 500.000 € bei gewerbsmäßiger Scheinselbstständigkeit'],
-                ['Strafverfolgung', 'Vorenthalten von Sozialabgaben ist ein Straftatbestand'],
-                ['Rückwirkende Lohnfortzahlung', 'Urlaub, Krankheit, Mutterschutz rückwirkend nachzuzahlen'],
-              ].map(([was, folge]) => (
-                <div key={was} className="flex gap-3">
-                  <span className="text-pm-coral font-bold text-[14px] flex-shrink-0 w-[180px]">{was}</span>
-                  <span className="text-[14px] text-pm-coral-ink">{folge}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+            <Kasten augenbraue="Was Scheinselbstständigkeit konkret kostet" ton="koralle">
+              <Werte
+                zeilen={[
+                  ['Nachzahlung Sozialabgaben', 'Arbeitgeber- und Arbeitnehmeranteil der letzten 4 Jahre'],
+                  ['Bußgelder', 'Bis zu 500.000 € bei gewerbsmäßiger Scheinselbstständigkeit'],
+                  ['Strafverfolgung', 'Vorenthalten von Sozialabgaben ist ein Straftatbestand'],
+                  ['Rückwirkende Lohnfortzahlung', 'Urlaub, Krankheit, Mutterschutz rückwirkend nachzuzahlen'],
+                ]}
+              />
+            </Kasten>
             <Text>
               Anzeichen für Scheinselbstständigkeit die Behörden prüfen: Die Kraft hat nur einen Auftraggeber. Sie ist in die Haushaltsorganisation vollständig eingebunden. Sie hat keine eigenen Betriebsmittel. Sie kann ihre Arbeitszeit nicht frei gestalten.
             </Text>

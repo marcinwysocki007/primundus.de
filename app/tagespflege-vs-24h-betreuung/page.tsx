@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -107,65 +107,50 @@ export default function TagespflegeVs24h() {
           </Abschnitt>
 
           <Abschnitt id="kosten" titel="Kostenvergleich 2026 — mit Kassenzuschüssen">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">Tagespflege — Kosten und Kassenzuschüsse</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-3">
-                Tagespflege hat ein eigenes Kassenzuschuss-Budget unabhängig von Pflegegeld und Sachleistungen: PG 2 = 721 €/Monat, PG 3 = 1.357 €/Monat, PG 4 = 1.685 €/Monat, PG 5 = 2.085 €/Monat. Die tatsächlichen Kosten einer Tagespflegeeinrichtung: ca. 800–2.000 €/Monat je nach Region und Einrichtung. Eigenanteil kann gering oder null sein.
-              </p>
-              <p className="text-[13px] text-pm-mute">Zusätzlich: Pflegegeld (anteilig), Entlastungsbetrag (131 €), Fahrtkosten-Zuschuss möglich.</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-2">24h-Pflege zuhause — Kosten und Kassenzuschüsse</p>
-              <p className="text-[14px] text-pm-body leading-relaxed mb-3">
-                Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft rund um die Uhr inklusive.
-              </p>
-            </div>
-          </div>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Tagespflege — Kosten und Kassenzuschüsse',
+                  ton: 'taupe',
+                  text: 'Tagespflege hat ein eigenes Kassenzuschuss-Budget unabhängig von Pflegegeld und Sachleistungen: PG 2 = 721 €/Monat, PG 3 = 1.357 €/Monat, PG 4 = 1.685 €/Monat, PG 5 = 2.085 €/Monat. Die tatsächlichen Kosten einer Tagespflegeeinrichtung: ca. 800–2.000 €/Monat je nach Region und Einrichtung. Eigenanteil kann gering oder null sein.',
+                  punkte: ['Zusätzlich: Pflegegeld (anteilig), Entlastungsbetrag (131 €), Fahrtkosten-Zuschuss möglich.'],
+                },
+                {
+                  titel: '24h-Pflege zuhause — Kosten und Kassenzuschüsse',
+                  ton: 'taupe',
+                  text: 'Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft rund um die Uhr inklusive.',
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="wann-was" titel="Wann ist was sinnvoll?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              {
-                label: 'Tagespflege sinnvoll wenn…',
-                items: [
-                  'Angehörige tagsüber arbeiten und entlastet werden wollen',
-                  'Soziale Kontakte und Gruppenaktivitäten wichtig sind',
-                  'Abends und nachts keine Betreuung nötig ist',
-                  'Kein nächtliches Weglaufen oder Unruhe',
-                  'Kosten durch das Tagespflege-Budget vollständig gedeckt',
-                ],
-                color: 'bg-pm-mint border-[rgba(61,122,92,0.2)]',
-                textColor: 'text-pm-green-deep',
-              },
-              {
-                label: '24h-Betreuung sinnvoll wenn…',
-                items: [
-                  'Betreuung auch abends und nachts nötig ist',
-                  'Demenz mit Orientierungslosigkeit oder Weglaufen',
-                  'Angehörige können die Abende/Nächte nicht übernehmen',
-                  'Haushaltsführung vollständig übernommen werden soll',
-                  'Pflegebedarf über den ganzen Tag verteilt ist',
-                ],
-                color: 'bg-pm-shell border-[rgba(139,115,85,0.2)]',
-                textColor: 'text-pm-taupe-ink',
-              },
-            ].map((block) => (
-              <div key={block.label} className={`rounded-2xl p-5 border ${block.color}`}>
-                <p className={`text-[13px] font-bold uppercase tracking-[0.08em] mb-3 ${block.textColor}`}>{block.label}</p>
-                <ul className="space-y-1.5">
-                  {block.items.map((item) => (
-                    <li key={item} className={`text-[14px] leading-relaxed ${block.textColor} flex gap-2`}>
-                      <span className="flex-shrink-0 mt-0.5">→</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Tagespflege sinnvoll wenn…',
+                  ton: 'gruen',
+                  punkte: [
+                    'Angehörige tagsüber arbeiten und entlastet werden wollen',
+                    'Soziale Kontakte und Gruppenaktivitäten wichtig sind',
+                    'Abends und nachts keine Betreuung nötig ist',
+                    'Kein nächtliches Weglaufen oder Unruhe',
+                    'Kosten durch das Tagespflege-Budget vollständig gedeckt',
+                  ],
+                },
+                {
+                  titel: '24h-Betreuung sinnvoll wenn…',
+                  ton: 'taupe',
+                  punkte: [
+                    'Betreuung auch abends und nachts nötig ist',
+                    'Demenz mit Orientierungslosigkeit oder Weglaufen',
+                    'Angehörige können die Abende/Nächte nicht übernehmen',
+                    'Haushaltsführung vollständig übernommen werden soll',
+                    'Pflegebedarf über den ganzen Tag verteilt ist',
+                  ],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="kombination" titel="Tagespflege + 24h-Kraft kombinieren?">

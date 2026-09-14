@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -144,77 +144,43 @@ export default function WirklicheKostenPage() {
           </Abschnitt>
 
           <Abschnitt id="so-sieht-die-vollstaendige" titel="So sieht die vollständige Rechnung aus (Beispiel Pflegegrad 3)">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8 overflow-x-auto">
-            <table className="w-full text-[14px] text-pm-body">
-              <tbody>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-2.5 pr-4">Betreuung (mittlere Anforderungen, gute Deutschkenntnisse)</td>
-                  <td className="py-2.5 text-right font-semibold whitespace-nowrap">2.800 €</td>
-                </tr>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-2.5 pr-4">Kost &amp; Logis für die Betreuungskraft (bei Primundus beziffert)</td>
-                  <td className="py-2.5 text-right font-semibold whitespace-nowrap">+ 200–300 €</td>
-                </tr>
-                <tr className="border-b-2 border-pm-line">
-                  <td className="py-2.5 pr-4 font-bold text-pm-ink">Ehrliche Gesamtkosten</td>
-                  <td className="py-2.5 text-right font-bold text-pm-ink whitespace-nowrap">≈ 3.050 €</td>
-                </tr>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-2.5 pr-4">Pflegegeld (Pflegegrad 3)</td>
-                  <td className="py-2.5 text-right font-semibold text-[#5C9F6E] whitespace-nowrap">− 599 €</td>
-                </tr>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-2.5 pr-4">Entlastungsbetrag</td>
-                  <td className="py-2.5 text-right font-semibold text-[#5C9F6E] whitespace-nowrap">− 131 €</td>
-                </tr>
-                <tr className="border-b border-pm-line-soft">
-                  <td className="py-2.5 pr-4">Verhinderungspflege (3.539 €/Jahr, monatlich verteilt)</td>
-                  <td className="py-2.5 text-right font-semibold text-[#5C9F6E] whitespace-nowrap">− 295 €</td>
-                </tr>
-                <tr className="border-b-2 border-pm-line">
-                  <td className="py-2.5 pr-4">Steuerermäßigung § 35a EStG (bis 4.000 €/Jahr)</td>
-                  <td className="py-2.5 text-right font-semibold text-[#5C9F6E] whitespace-nowrap">− 333 €</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-4 font-bold text-[16px] text-pm-ink">Effektiv selbst zu tragen</td>
-                  <td className="py-3 text-right font-bold text-[16px] text-pm-ink whitespace-nowrap">≈ 1.450–1.700 €</td>
-                </tr>
-              </tbody>
-            </table>
-            <p className="text-[13px] text-pm-mute mt-4">
-              Stand August 2026, Beispielwerte. Der Unterschied zu „ab 945 €"-Werbung: Wir zeigen den
-              Rechenweg — jede Zeile können Sie bei Ihrer Pflegekasse und Ihrem Steuerberater nachprüfen.
-              Ihre persönliche Rechnung erstellt der{' '}
-              <a href="https://kostenrechner.primundus.de/" className="text-pm-taupe underline underline-offset-2">Kostenrechner in 2 Minuten</a>.
-            </p>
-          </div>
+            {/* Rechnung: Betrag links, Posten rechts; die beiden Summenzeilen fett */}
+            <Kasten>
+              <Werte
+                zeilen={[
+                  [<>2.800 €</>, <>Betreuung (mittlere Anforderungen, gute Deutschkenntnisse)</>],
+                  [<>+ 200–300 €</>, <>Kost &amp; Logis für die Betreuungskraft (bei Primundus beziffert)</>],
+                  [<>≈ 3.050 €</>, <strong>Ehrliche Gesamtkosten</strong>],
+                  [<>− 599 €</>, <>Pflegegeld (Pflegegrad 3)</>],
+                  [<>− 131 €</>, <>Entlastungsbetrag</>],
+                  [<>− 295 €</>, <>Verhinderungspflege (3.539 €/Jahr, monatlich verteilt)</>],
+                  [<>− 333 €</>, <>Steuerermäßigung § 35a EStG (bis 4.000 €/Jahr)</>],
+                  [<>≈ 1.450–1.700 €</>, <strong>Effektiv selbst zu tragen</strong>],
+                ]}
+              />
+              <Text>
+                Stand August 2026, Beispielwerte. Der Unterschied zu „ab 945 €"-Werbung: Wir zeigen den
+                Rechenweg — jede Zeile können Sie bei Ihrer Pflegekasse und Ihrem Steuerberater nachprüfen.
+                Ihre persönliche Rechnung erstellt der{' '}
+                <a href="https://kostenrechner.primundus.de/" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Kostenrechner in 2 Minuten</a>.
+              </Text>
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="diese-7-fragen-stellen" titel="Diese 7 Fragen stellen Sie jedem Anbieter">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
+            <Text>
               Egal, bei wem Sie anfragen — auch bei uns: Ein seriöser Anbieter beantwortet alle sieben
               Fragen sofort und in Euro. Ausweichende Antworten sind ein Warnsignal.
-            </p>
-            <ol className="space-y-3">
-              {FRAGEN.map((f, i) => (
-                <li key={i} className="flex gap-3 items-start">
-                  <span className="w-7 h-7 rounded-full bg-pm-taupe text-white text-[13px] font-bold flex items-center justify-center flex-shrink-0">{i + 1}</span>
-                  <span className="text-[15px] leading-relaxed text-pm-body pt-0.5">{f}</span>
-                </li>
-              ))}
-            </ol>
-            <div className="bg-pm-shell rounded-xl p-5 mt-5">
-              <p className="text-[13px] text-pm-taupe-ink leading-relaxed">
+            </Text>
+            <Schritte schritte={FRAGEN.map((f) => ({ title: f }))} />
+            <Kasten>
+              <Text>
                 <strong>Unsere Antworten:</strong> Gesamtpreis 2.200–3.500 € je nach Situation, Kost &amp;
                 Logis 200–300 €, täglich kündbar ohne Mindestlaufzeit, Start meist in 4–7 Tagen — und die
                 Auszeichnung als Service-Champion bei DIE WELT ist{' '}
-                <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 font-semibold text-pm-taupe">mit dem Original-Dokument belegt</a>.
-              </p>
-            </div>
-          </div>
+                <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">mit dem Original-Dokument belegt</a>.
+              </Text>
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="haeufige-fragen" titel="Häufige Fragen">
@@ -228,16 +194,15 @@ export default function WirklicheKostenPage() {
                 <a href="/24-stunden-pflege-kostenuebernahme" className="text-pm-taupe underline underline-offset-2">Wer übernimmt die Kosten?</a></> },
               ]}
             />
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-3">Weiterlesen</p>
-            <div className="flex flex-wrap gap-2">
-              <a href="/kosten" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Kosten &amp; Finanzierung</a>
-              <a href="/24-stunden-pflege-kostenuebernahme" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Wer übernimmt die Kosten?</a>
-              <a href="/eigenanteil-24h-pflege-senken" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Eigenanteil senken</a>
-              <a href="/testsieger-24-stunden-pflege" className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors">Unsere Auszeichnung mit Beleg</a>
-            </div>
-          </div>
+            <MehrDazu
+              label="Weiterlesen:"
+              links={[
+                { href: '/kosten', text: 'Kosten & Finanzierung' },
+                { href: '/24-stunden-pflege-kostenuebernahme', text: 'Wer übernimmt die Kosten?' },
+                { href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken' },
+                { href: '/testsieger-24-stunden-pflege', text: 'Unsere Auszeichnung mit Beleg' },
+              ]}
+            />
           </Abschnitt>
 
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
+  Abschnitt, Fragen, Gruppen, Kasten, Liste, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -95,71 +95,31 @@ export default function PflegemangelMeldenBeschwerden() {
             <Text>
               Nicht jede Unzufriedenheit rechtfertigt sofort eine formelle Beschwerde — manchmal hilft ein direktes Gespräch. Aber in bestimmten Situationen ist schnelles Handeln nötig.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { situation: 'Sofort handeln — akute Gefahr', items: ['Körperliche oder psychische Gewalt gegen Pflegebedürftigen', 'Grobe Vernachlässigung (kein Essen, keine Pflege)', 'Medikamentenfehler mit Auswirkungen', 'Freiheitsentzug ohne rechtliche Grundlage'], dringend: true },
-              { situation: 'Eskalation wenn direktes Gespräch scheitert', items: ['Wiederholt schlechte Pflege trotz Hinweis', 'Nicht eingehaltene Leistungsvereinbarungen', 'Unzumutbare Wohnverhältnisse der Pflegekraft', 'Abrechnungsprobleme und Intransparenz'], dringend: false },
-            ].map((block) => (
-              <div key={block.situation} className={`rounded-2xl p-5 border ${block.dringend ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.2)]' : 'bg-white border-pm-line'}`}>
-                <p className={`text-[12px] font-bold uppercase tracking-[0.08em] mb-3 ${block.dringend ? 'text-pm-coral-ink' : 'text-pm-taupe-light'}`}>{block.situation}</p>
-                <ul className="space-y-1.5">
-                  {block.items.map(item => (
-                    <li key={item} className={`text-[14px] flex gap-2 ${block.dringend ? 'text-pm-coral-ink' : 'text-pm-body'}`}>
-                      <span className="flex-shrink-0 mt-0.5">{block.dringend ? '!' : '→'}</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Kasten augenbraue="Sofort handeln — akute Gefahr" ton="koralle">
+              <Liste punkte={['Körperliche oder psychische Gewalt gegen Pflegebedürftigen', 'Grobe Vernachlässigung (kein Essen, keine Pflege)', 'Medikamentenfehler mit Auswirkungen', 'Freiheitsentzug ohne rechtliche Grundlage']} />
+            </Kasten>
+            <Kasten augenbraue="Eskalation wenn direktes Gespräch scheitert">
+              <Liste punkte={['Wiederholt schlechte Pflege trotz Hinweis', 'Nicht eingehaltene Leistungsvereinbarungen', 'Unzumutbare Wohnverhältnisse der Pflegekraft', 'Abrechnungsprobleme und Intransparenz']} />
+            </Kasten>
           </Abschnitt>
 
           <Abschnitt id="an-wen" titel="An wen wendet man sich?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              {
-                stelle: 'Primundus (bei häuslicher Pflege)',
-                kontakt: '089 200 000 830 · info@primundus.de',
-                wann: 'Erste Anlaufstelle bei allen Problemen mit der Betreuungskraft. Primundus reagiert sofort — Gespräch mit Kraft, und wenn nötig unmittelbarer Wechsel. Täglich kündbar.',
-                primaer: true,
-              },
-              {
-                stelle: 'Pflegekasse',
-                kontakt: 'Telefonnummer auf der Versicherungskarte',
-                wann: 'Wenn ambulante Pflegeleistungen nicht vertragsgemäß erbracht werden. Pflegekasse kann Qualitätsprüfungen veranlassen.',
-                primaer: false,
-              },
-              {
-                stelle: 'Pflegestützpunkt',
-                kontakt: 'Lokalen Stützpunkt über pflegestuetzpunkte.de finden',
-                wann: 'Kostenlose unabhängige Beratung bei Problemen in der Pflege — für Betroffene und Angehörige. In allen Bundesländern.',
-                primaer: false,
-              },
-              {
-                stelle: 'Heimaufsicht (bei Pflegeheim)',
-                kontakt: 'Zuständige Behörde im Bundesland (variiert)',
-                wann: 'Zuständig für stationäre Pflegeeinrichtungen. Nimmt Beschwerden entgegen, führt unangekündigte Kontrollen durch.',
-                primaer: false,
-              },
-              {
-                stelle: 'Medizinischer Dienst (MD)',
-                kontakt: 'md-bund.de',
-                wann: 'Prüft Qualität von Pflegediensten und Pflegeheimen. Kann Beschwerden aufnehmen und Sonderprüfungen veranlassen.',
-                primaer: false,
-              },
-            ].map((item) => (
-              <div key={item.stelle} className={`rounded-xl p-5 border ${item.primaer ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
-                <div className="flex items-start justify-between gap-3 mb-1">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.stelle}</p>
-                  {item.primaer && <span className="bg-pm-shell text-pm-taupe text-[11px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">Erste Anlaufstelle</span>}
-                </div>
-                <p className="text-[12px] font-semibold text-pm-taupe mb-1">{item.kontakt}</p>
-                <p className="text-[13px] text-pm-body leading-relaxed">{item.wann}</p>
-              </div>
-            ))}
-          </div>
+            {/* Das Etikett „Erste Anlaufstelle" wird zur Augenbraue des Kastens */}
+            <Kasten augenbraue="Erste Anlaufstelle">
+              <Gruppen
+                gruppen={[
+                  { title: 'Primundus (bei häuslicher Pflege)', zusatz: '089 200 000 830 · info@primundus.de', punkte: ['Erste Anlaufstelle bei allen Problemen mit der Betreuungskraft. Primundus reagiert sofort — Gespräch mit Kraft, und wenn nötig unmittelbarer Wechsel. Täglich kündbar.'] },
+                ]}
+              />
+            </Kasten>
+            <Gruppen
+              gruppen={[
+                { title: 'Pflegekasse', zusatz: 'Telefonnummer auf der Versicherungskarte', punkte: ['Wenn ambulante Pflegeleistungen nicht vertragsgemäß erbracht werden. Pflegekasse kann Qualitätsprüfungen veranlassen.'] },
+                { title: 'Pflegestützpunkt', zusatz: 'Lokalen Stützpunkt über pflegestuetzpunkte.de finden', punkte: ['Kostenlose unabhängige Beratung bei Problemen in der Pflege — für Betroffene und Angehörige. In allen Bundesländern.'] },
+                { title: 'Heimaufsicht (bei Pflegeheim)', zusatz: 'Zuständige Behörde im Bundesland (variiert)', punkte: ['Zuständig für stationäre Pflegeeinrichtungen. Nimmt Beschwerden entgegen, führt unangekündigte Kontrollen durch.'] },
+                { title: 'Medizinischer Dienst (MD)', zusatz: 'md-bund.de', punkte: ['Prüft Qualität von Pflegediensten und Pflegeheimen. Kann Beschwerden aufnehmen und Sonderprüfungen veranlassen.'] },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="wie-melden" titel="Wie eine Beschwerde einreichen — Schritt für Schritt">

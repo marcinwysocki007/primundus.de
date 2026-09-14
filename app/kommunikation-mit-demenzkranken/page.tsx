@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf,
+  Abschnitt, DunklerAbschnitt, Fragen, Gegenueber, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -90,63 +90,54 @@ export default function KommunikationMitDemenzkranken() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="grundprinzipien" titel="Die 5 Grundprinzipien">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            {[
-              {
-                n: '1',
-                title: 'In die Welt des Betroffenen einsteigen',
-                desc: 'Demenzkranke leben in ihrer eigenen Realität — einer die von Erinnerungen aus früheren Jahrzehnten geprägt sein kann. Statt zu korrigieren: mitgehen. Wenn Großvater fragt ob er zur Arbeit muss, ist es besser zu sagen "Die haben angerufen, heute frei" als "Du bist seit 30 Jahren in Rente".',
-                example: { falsch: '"Das stimmt nicht, Papa ist schon seit 10 Jahren tot."', richtig: '"Er ist nicht hier gerade. Magst du mir von ihm erzählen?"' },
-              },
-              {
-                n: '2',
-                title: 'Kurze, einfache Sätze',
-                desc: 'Maximal eine Information pro Satz. Langsam sprechen, Pausen lassen. Keine rhetorischen Fragen, keine Mehrfachanweisungen. "Komm, wir waschen jetzt deine Hände" statt "Meinst du nicht auch, dass wir jetzt vielleicht die Hände waschen sollten bevor wir essen?"',
-                example: null,
-              },
-              {
-                n: '3',
-                title: 'Emotionen ernst nehmen',
-                desc: 'Das Gefühl ist immer real — auch wenn der Inhalt falsch ist. Wenn jemand weint weil er glaubt sein Kind ist krank, ist der Schmerz echt. Nicht den Irrtum korrigieren — den Schmerz anerkennen. "Ich sehe dass du dir Sorgen machst. Ich bin bei dir."',
-                example: null,
-              },
-              {
-                n: '4',
-                title: 'Augenkontakt und Körperhöhe',
-                desc: 'Immer auf Augenhöhe kommunizieren — hinknien oder hinsetzen wenn die Person sitzt. Augenkontakt herstellen bevor man spricht. Berührung (Hand halten, Schulter berühren) kann mehr sagen als Worte.',
-                example: null,
-              },
-              {
-                n: '5',
-                title: 'Nie korrigieren, nie streiten',
-                desc: 'Eine Korrektur bewirkt nur Distress — keine Einsicht. Das Kurzgedächtnis speichert die Korrektur nicht. Was bleibt ist das negative Gefühl. Kein "Das weißt du doch", kein "Das hast du gerade erst gefragt".',
-                example: { falsch: '"Das habe ich dir doch gerade erst erklärt!"', richtig: 'Ruhig nochmals antworten — gern zum zehnten Mal.' },
-              },
-            ].map((item) => (
-              <div key={item.n} className="bg-white rounded-xl p-6 border border-pm-line">
-                <div className="flex gap-4 items-start">
-                  <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{item.n}</span>
-                  <div className="flex-1">
-                    <p className="text-[15px] font-bold text-pm-ink mb-2">{item.title}</p>
-                    <p className="text-[14px] text-pm-body leading-relaxed mb-3">{item.desc}</p>
-                    {item.example && (
-                      <div className="space-y-2">
-                        <div className="bg-pm-coral-tint rounded-xl px-4 py-2.5">
-                          <p className="text-[12px] font-bold text-pm-coral-ink mb-1">✗ Nicht:</p>
-                          <p className="text-[13px] text-pm-coral-ink italic">{item.example.falsch}</p>
-                        </div>
-                        <div className="bg-pm-mint rounded-lg px-4 py-2.5">
-                          <p className="text-[12px] font-bold text-pm-green-deep mb-1">✓ Besser:</p>
-                          <p className="text-[13px] text-pm-green-deep italic">{item.example.richtig}</p>
-                        </div>
+            <Punkte
+              punkte={[
+                {
+                  title: 'In die Welt des Betroffenen einsteigen',
+                  desc: (
+                    <>
+                      <p>{'Demenzkranke leben in ihrer eigenen Realität — einer die von Erinnerungen aus früheren Jahrzehnten geprägt sein kann. Statt zu korrigieren: mitgehen. Wenn Großvater fragt ob er zur Arbeit muss, ist es besser zu sagen "Die haben angerufen, heute frei" als "Du bist seit 30 Jahren in Rente".'}</p>
+                      <div className="mt-4">
+                        <Gegenueber
+                          seiten={[
+                            { titel: 'Nicht:', ton: 'koralle', text: '"Das stimmt nicht, Papa ist schon seit 10 Jahren tot."' },
+                            { titel: 'Besser:', ton: 'gruen', text: '"Er ist nicht hier gerade. Magst du mir von ihm erzählen?"' },
+                          ]}
+                        />
                       </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                    </>
+                  ),
+                },
+                {
+                  title: 'Kurze, einfache Sätze',
+                  desc: 'Maximal eine Information pro Satz. Langsam sprechen, Pausen lassen. Keine rhetorischen Fragen, keine Mehrfachanweisungen. "Komm, wir waschen jetzt deine Hände" statt "Meinst du nicht auch, dass wir jetzt vielleicht die Hände waschen sollten bevor wir essen?"',
+                },
+                {
+                  title: 'Emotionen ernst nehmen',
+                  desc: 'Das Gefühl ist immer real — auch wenn der Inhalt falsch ist. Wenn jemand weint weil er glaubt sein Kind ist krank, ist der Schmerz echt. Nicht den Irrtum korrigieren — den Schmerz anerkennen. "Ich sehe dass du dir Sorgen machst. Ich bin bei dir."',
+                },
+                {
+                  title: 'Augenkontakt und Körperhöhe',
+                  desc: 'Immer auf Augenhöhe kommunizieren — hinknien oder hinsetzen wenn die Person sitzt. Augenkontakt herstellen bevor man spricht. Berührung (Hand halten, Schulter berühren) kann mehr sagen als Worte.',
+                },
+                {
+                  title: 'Nie korrigieren, nie streiten',
+                  desc: (
+                    <>
+                      <p>{'Eine Korrektur bewirkt nur Distress — keine Einsicht. Das Kurzgedächtnis speichert die Korrektur nicht. Was bleibt ist das negative Gefühl. Kein "Das weißt du doch", kein "Das hast du gerade erst gefragt".'}</p>
+                      <div className="mt-4">
+                        <Gegenueber
+                          seiten={[
+                            { titel: 'Nicht:', ton: 'koralle', text: '"Das habe ich dir doch gerade erst erklärt!"' },
+                            { titel: 'Besser:', ton: 'gruen', text: 'Ruhig nochmals antworten — gern zum zehnten Mal.' },
+                          ]}
+                        />
+                      </div>
+                    </>
+                  ),
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="konkret" titel="Was konkret hilft — praktische Tipps">

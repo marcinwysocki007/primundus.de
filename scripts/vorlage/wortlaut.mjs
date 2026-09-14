@@ -32,7 +32,7 @@ const norm = (t) =>
 
 // Klassenlisten, Pfade und Code sind kein Text
 const istCode = (t) =>
-  /(^|\s)(text|bg|border|rounded|flex|grid|px|py|pt|pb|mt|mb|mx|my|gap|w|h|max|min|font|leading|tracking|items|justify|space|shadow|overflow|hover|md|sm|lg|group|inline|block|hidden|sr)-/.test(t) ||
+  /(^|\s)(text|bg|border|rounded|flex|grid|px|py|pt|pb|mt|mb|mx|my|gap|w|h|max|min|font|leading|tracking|items|justify|space|shadow|overflow|hover|md|sm|lg|group|inline|block|hidden|sr|divide|order|col|row|place|self|z|top|left|right|bottom|inset)-/.test(t) ||
   /^[/#@.,]/.test(t) || /[{}]|=>|\(\)|===|\bconst\b|\bimport\b/.test(t) || /^https?:/.test(t)
 
 // Erlaubte Umformungen der Vorlage vor dem Vergleich entfernen

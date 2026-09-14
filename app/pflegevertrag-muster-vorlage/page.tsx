@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
+  Abschnitt, Fragen, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann, Zwischentitel,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -111,52 +111,55 @@ export default function PflegevertragMusterVorlage() {
           </Abschnitt>
 
           <Abschnitt id="vorlage" titel="Vorlage — vollständiges Pflegevertrag-Muster">
-            <Kasten augenbraue="ARBEITSVERTRAG — Häusliche Betreuung und Pflege" titel="§ 1 Vertragsparteien">
-              <Text>zwischen</Text>
-              <Text>Name, Adresse der Familie / bevollmächtigten Person (nachfolgend „Arbeitgeber")</Text>
-              <Text>und</Text>
-              <Text>Name, Adresse der Betreuungskraft (nachfolgend „Arbeitnehmer")</Text>
-              <Text>§ 2 Beginn und Dauer</Text>
-              <Text>Das Arbeitsverhältnis beginnt am ____________ und wird auf unbestimmte Zeit / bis zum ____________ geschlossen.</Text>
-              <Text>Die ersten __ Wochen gelten als Probezeit.</Text>
-              <Text>§ 3 Tätigkeitsbeschreibung</Text>
-              <Text>Der Arbeitnehmer übernimmt die häusliche Betreuung und Pflege von:</Text>
-              <Text>Name des Pflegebedürftigen: ________________________</Text>
-              <Text>Die Tätigkeit umfasst insbesondere:</Text>
-              <Text>□ Körperpflege (Waschen, Ankleiden, Zahnpflege)</Text>
-              <Text>□ Mobilisierung und Begleitung</Text>
-              <Text>□ Haushaltsführung (Kochen, Reinigung, Wäsche)</Text>
-              <Text>□ Gesellschaft und Betreuung</Text>
-              <Text>□ Medikamentenerinnerung</Text>
-              <Text>□ Begleitung zu Terminen</Text>
-              <Text>□ Weitere: _______________________________________</Text>
-              <Text>§ 4 Arbeitszeit</Text>
-              <Text>Regelmäßige wöchentliche Arbeitszeit: __ Stunden.</Text>
-              <Text>Davon: aktive Arbeitszeit __ Std. / Bereitschaftszeit __ Std.</Text>
-              <Text>Einteilung der Arbeitszeit nach betrieblichen Erfordernissen.</Text>
-              <Text>§ 5 Vergütung</Text>
-              <Text>Bruttomonatslohn: ____________ Euro.</Text>
-              <Text>Zahlung bis zum __ des Folgemonats auf das Konto: ____________.</Text>
-              <Text>Kost und Logis werden als Sachbezug nach gesetzlichen Werten angerechnet (2026: Unterkunft ca. 278 €, Verpflegung ca. 313 €/Monat).</Text>
-              <Text>§ 6 Urlaub</Text>
-              <Text>Dem Arbeitnehmer stehen __ Werktage Urlaub pro Jahr zu (mind. 20 Tage bei 5-Tage-Woche).</Text>
-              <Text>Urlaubsplanung in Abstimmung mit dem Arbeitgeber. Ersatzpflege während des Urlaubs organisiert der Arbeitgeber.</Text>
-              <Text>§ 7 Krankheit</Text>
-              <Text>Im Krankheitsfall besteht Anspruch auf Lohnfortzahlung für 6 Wochen (§ 3 EntgFG).</Text>
-              <Text>Erkrankung ist unverzüglich zu melden. Ab dem 3. Krankheitstag ist eine ärztliche Bescheinigung vorzulegen.</Text>
-              <Text>§ 8 Kündigung</Text>
-              <Text>Während der Probezeit: Kündigungsfrist 2 Wochen.</Text>
-              <Text>Nach der Probezeit: Kündigungsfrist 4 Wochen zum 15. oder zum Ende des Kalendermonats (§ 622 BGB).</Text>
-              <Text>Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.</Text>
-              <Text>§ 9 Verschwiegenheit</Text>
-              <Text>Der Arbeitnehmer ist zur Verschwiegenheit über alle ihm bekannt gewordenen persönlichen und gesundheitlichen Informationen des Pflegebedürftigen verpflichtet. Diese Verpflichtung gilt auch nach Beendigung des Arbeitsverhältnisses.</Text>
-              <Text>§ 10 Schlussbestimmungen</Text>
-              <Text>Änderungen und Ergänzungen dieses Vertrages bedürfen der Schriftform.</Text>
-              <Text>Es gilt deutsches Recht.</Text>
-              <Text>Ort, Datum: _________________________</Text>
-              <Text>_________________________ &nbsp;&nbsp;&nbsp; _________________________</Text>
-              <Text>Unterschrift Arbeitgeber &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift Arbeitnehmer</Text>
-            </Kasten>
+            {/* break-words: Unterstrich-Zeilen haben keine Umbruchstelle und ragten auf 360 px über den Rand */}
+            <div className="break-words">
+              <Kasten augenbraue="ARBEITSVERTRAG — Häusliche Betreuung und Pflege" titel="§ 1 Vertragsparteien">
+                <Text>zwischen</Text>
+                <Text>Name, Adresse der Familie / bevollmächtigten Person (nachfolgend „Arbeitgeber")</Text>
+                <Text>und</Text>
+                <Text>Name, Adresse der Betreuungskraft (nachfolgend „Arbeitnehmer")</Text>
+                <Zwischentitel>§ 2 Beginn und Dauer</Zwischentitel>
+                <Text>Das Arbeitsverhältnis beginnt am ____________ und wird auf unbestimmte Zeit / bis zum ____________ geschlossen.</Text>
+                <Text>Die ersten __ Wochen gelten als Probezeit.</Text>
+                <Zwischentitel>§ 3 Tätigkeitsbeschreibung</Zwischentitel>
+                <Text>Der Arbeitnehmer übernimmt die häusliche Betreuung und Pflege von:</Text>
+                <Text>Name des Pflegebedürftigen: ________________________</Text>
+                <Text>Die Tätigkeit umfasst insbesondere:</Text>
+                <Text>□ Körperpflege (Waschen, Ankleiden, Zahnpflege)</Text>
+                <Text>□ Mobilisierung und Begleitung</Text>
+                <Text>□ Haushaltsführung (Kochen, Reinigung, Wäsche)</Text>
+                <Text>□ Gesellschaft und Betreuung</Text>
+                <Text>□ Medikamentenerinnerung</Text>
+                <Text>□ Begleitung zu Terminen</Text>
+                <Text>□ Weitere: _______________________________________</Text>
+                <Zwischentitel>§ 4 Arbeitszeit</Zwischentitel>
+                <Text>Regelmäßige wöchentliche Arbeitszeit: __ Stunden.</Text>
+                <Text>Davon: aktive Arbeitszeit __ Std. / Bereitschaftszeit __ Std.</Text>
+                <Text>Einteilung der Arbeitszeit nach betrieblichen Erfordernissen.</Text>
+                <Zwischentitel>§ 5 Vergütung</Zwischentitel>
+                <Text>Bruttomonatslohn: ____________ Euro.</Text>
+                <Text>Zahlung bis zum __ des Folgemonats auf das Konto: ____________.</Text>
+                <Text>Kost und Logis werden als Sachbezug nach gesetzlichen Werten angerechnet (2026: Unterkunft ca. 278 €, Verpflegung ca. 313 €/Monat).</Text>
+                <Zwischentitel>§ 6 Urlaub</Zwischentitel>
+                <Text>Dem Arbeitnehmer stehen __ Werktage Urlaub pro Jahr zu (mind. 20 Tage bei 5-Tage-Woche).</Text>
+                <Text>Urlaubsplanung in Abstimmung mit dem Arbeitgeber. Ersatzpflege während des Urlaubs organisiert der Arbeitgeber.</Text>
+                <Zwischentitel>§ 7 Krankheit</Zwischentitel>
+                <Text>Im Krankheitsfall besteht Anspruch auf Lohnfortzahlung für 6 Wochen (§ 3 EntgFG).</Text>
+                <Text>Erkrankung ist unverzüglich zu melden. Ab dem 3. Krankheitstag ist eine ärztliche Bescheinigung vorzulegen.</Text>
+                <Zwischentitel>§ 8 Kündigung</Zwischentitel>
+                <Text>Während der Probezeit: Kündigungsfrist 2 Wochen.</Text>
+                <Text>Nach der Probezeit: Kündigungsfrist 4 Wochen zum 15. oder zum Ende des Kalendermonats (§ 622 BGB).</Text>
+                <Text>Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.</Text>
+                <Zwischentitel>§ 9 Verschwiegenheit</Zwischentitel>
+                <Text>Der Arbeitnehmer ist zur Verschwiegenheit über alle ihm bekannt gewordenen persönlichen und gesundheitlichen Informationen des Pflegebedürftigen verpflichtet. Diese Verpflichtung gilt auch nach Beendigung des Arbeitsverhältnisses.</Text>
+                <Zwischentitel>§ 10 Schlussbestimmungen</Zwischentitel>
+                <Text>Änderungen und Ergänzungen dieses Vertrages bedürfen der Schriftform.</Text>
+                <Text>Es gilt deutsches Recht.</Text>
+                <Text>Ort, Datum: _________________________</Text>
+                <Text>_________________________ &nbsp;&nbsp;&nbsp; _________________________</Text>
+                <Text>Unterschrift Arbeitgeber &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift Arbeitnehmer</Text>
+              </Kasten>
+            </div>
           </Abschnitt>
 
           <Abschnitt id="kost-logis" titel="Kost & Logis richtig regeln">
@@ -175,23 +178,14 @@ export default function PflegevertragMusterVorlage() {
           </Abschnitt>
 
           <Abschnitt id="kuendigung" titel="Kündigung — was gesetzlich gilt">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { phase: 'Während der Probezeit', frist: '2 Wochen', hinweis: 'Probezeit max. 6 Monate. In dieser Zeit 2 Wochen Kündigungsfrist für beide Seiten.' },
-              { phase: 'Nach der Probezeit (bis 2 Jahre)', frist: '4 Wochen zum 15. oder Monatsende', hinweis: 'Gesetzliche Grundkündigung nach § 622 Abs. 1 BGB.' },
-              { phase: 'Ab 2 Jahren Betriebszugehörigkeit', frist: '1 Monat zum Monatsende', hinweis: 'Frist verlängert sich stufenweise mit der Dauer der Betriebszugehörigkeit.' },
-              { phase: 'Außerordentliche Kündigung', frist: 'Sofort', hinweis: 'Bei wichtigem Grund (z.B. grobe Pflichtverletzung, Diebstahl). Begründungspflicht.' },
-            ].map((item) => (
-              <div key={item.phase} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-center justify-between mb-1">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.phase}</p>
-                  <span className="text-[13px] font-bold text-pm-taupe bg-pm-shell px-3 py-1 rounded-full">{item.frist}</span>
-                </div>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.hinweis}</p>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                { title: 'Während der Probezeit', zusatz: '2 Wochen', punkte: ['Probezeit max. 6 Monate. In dieser Zeit 2 Wochen Kündigungsfrist für beide Seiten.'] },
+                { title: 'Nach der Probezeit (bis 2 Jahre)', zusatz: '4 Wochen zum 15. oder Monatsende', punkte: ['Gesetzliche Grundkündigung nach § 622 Abs. 1 BGB.'] },
+                { title: 'Ab 2 Jahren Betriebszugehörigkeit', zusatz: '1 Monat zum Monatsende', punkte: ['Frist verlängert sich stufenweise mit der Dauer der Betriebszugehörigkeit.'] },
+                { title: 'Außerordentliche Kündigung', zusatz: 'Sofort', punkte: ['Bei wichtigem Grund (z.B. grobe Pflichtverletzung, Diebstahl). Begründungspflicht.'] },
+              ]}
+            />
             <MehrDazu
               label="Beschäftigungsmodelle im Überblick:"
               links={[{ href: "/pflegekraft-legal-beschaeftigen", text: "Pflegekraft legal beschäftigen" }, { href: "/pflegevertrag-aufsetzen", text: "Pflegevertrag aufsetzen — alle Pflichtangaben" }]}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
+  Abschnitt, DunklerAbschnitt, Fragen, HakenListe, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -89,35 +89,17 @@ export default function PflegegradErhoehen() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Was sich bei Höherstufung ändert</p>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    {['Von → Nach', 'Mehr Pflegegeld/Monat', 'Mehr/Jahr (Pflegegeld)'].map(h => (
-                      <th key={h} className="text-left text-[12px] font-semibold text-pm-mute pb-2 pr-4">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-pm-line">
-                  {[
-                    ['PG 1 → PG 2', '+ 347 €/Monat', '+ 4.164 €/Jahr'],
-                    ['PG 2 → PG 3', '+ 252 €/Monat', '+ 3.024 €/Jahr'],
-                    ['PG 3 → PG 4', '+ 201 €/Monat', '+ 2.412 €/Jahr'],
-                    ['PG 4 → PG 5', '+ 190 €/Monat', '+ 2.280 €/Jahr'],
-                  ].map(([stufe, mehr, jahr]) => (
-                    <tr key={stufe}>
-                      <td className="py-2 pr-4 text-[14px] font-semibold text-pm-ink">{stufe}</td>
-                      <td className="py-2 pr-4 text-[14px] font-bold text-pm-green">{mehr}</td>
-                      <td className="py-2 text-[14px] text-pm-body">{jahr}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+            <Tabelle
+              titel="Was sich bei Höherstufung ändert"
+              kopf={['Von → Nach', 'Mehr Pflegegeld/Monat', 'Mehr/Jahr (Pflegegeld)']}
+              zeilen={[
+                ['PG 1 → PG 2', '+ 347 €/Monat', '+ 4.164 €/Jahr'],
+                ['PG 2 → PG 3', '+ 252 €/Monat', '+ 3.024 €/Jahr'],
+                ['PG 3 → PG 4', '+ 201 €/Monat', '+ 2.412 €/Jahr'],
+                ['PG 4 → PG 5', '+ 190 €/Monat', '+ 2.280 €/Jahr'],
+              ]}
+              betont={1}
+            />
           </Vorspann>
 
           <DunklerAbschnitt
@@ -152,21 +134,13 @@ export default function PflegegradErhoehen() {
             <Text>
               Nach dem Antrag kommt ein neuer Begutachtungstermin. Die Vorbereitung ist dieselbe wie beim Erstantrag — mit besonderem Fokus auf die Verschlechterungen seit der letzten Begutachtung.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-6">
-            {[
-              { check: 'Pflegetagebuch der letzten 2 Wochen — mit konkreten Beispielen der Verschlechterung' },
-              { check: 'Neue Arztberichte und Befunde seit der letzten Begutachtung' },
-              { check: 'Vertrauensperson dabei haben die die Verschlechterung schildern kann' },
-              { check: 'Schlechtesten Tag schildern — nicht den guten Tag' },
-              { check: 'Konkret benennen was früher noch ging und jetzt nicht mehr' },
-            ].map((item) => (
-              <div key={item.check} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-pm-body">{item.check}</p>
-              </div>
-            ))}
-          </div>
+            <HakenListe punkte={[
+              'Pflegetagebuch der letzten 2 Wochen — mit konkreten Beispielen der Verschlechterung',
+              'Neue Arztberichte und Befunde seit der letzten Begutachtung',
+              'Vertrauensperson dabei haben die die Verschlechterung schildern kann',
+              'Schlechtesten Tag schildern — nicht den guten Tag',
+              'Konkret benennen was früher noch ging und jetzt nicht mehr',
+            ]} />
             <MehrDazu
               label="Alle Tipps:"
               links={[{ href: "/pflegegrad-begutachtung-vorbereiten", text: "MD-Begutachtung vorbereiten — Checkliste & 7 Tipps" }]}

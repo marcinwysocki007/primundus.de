@@ -1,0 +1,51 @@
+{
+ "_hinweis": "Entscheidungsliste (Martin): Neuberechnungen ohne Entlastungsbetrag und fachliche Umschreibungen. Wird erst nach Freigabe angewendet.",
+ "korrekturen": [
+  {
+   "seite": "24h-pflege-vs-pflegeheim-kosten",
+   "art": "kosten",
+   "alt": "Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.700–2.000 €/Monat",
+   "neu": "Mit Pflegegeld (599 € bei Pflegegrad 3) sinkt der Eigenanteil auf ca. 1.850–2.150 €/Monat",
+   "mehrfach": true
+  },
+  {
+   "seite": "24-stunden-pflege-wirkliche-kosten",
+   "art": "kosten",
+   "alt": "2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, 131 Euro Entlastungsbetrag, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche Steuerersparnis — es bleiben rund 1.450 Euro effektiv selbst zu tragen",
+   "neu": "2.800 Euro Betreuungskosten minus 599 Euro Pflegegeld, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro monatliche Steuerersparnis — es bleiben rund 1.570 Euro effektiv selbst zu tragen",
+   "mehrfach": true,
+   "hinweis": "Tabelle: Zeile Entlastungsbetrag entfällt, Ergebnis ≈ 1.570–1.820 € (von Hand)"
+  },
+  {
+   "seite": "pflegegrad-4",
+   "art": "kosten",
+   "alt": "['Abzüglich Entlastungsbetrag', '– 131 €/Monat'],",
+   "neu": "",
+   "warum": "3.000 € − 800 € Pflegegeld = 2.200 €"
+  },
+  {
+   "seite": "pflegegrad-4",
+   "art": "kosten",
+   "alt": "ca. 2.070 €/Monat",
+   "neu": "ca. 2.200 €/Monat"
+  },
+  {
+   "seite": "24h-pflege-vs-ambulante-pflege",
+   "art": "kosten",
+   "alt": "Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. Bei PG 4: ca. 1.700–2.100 €/Monat.",
+   "neu": "Mit Pflegegeld (statt Sachleistungen) und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.050 €/Monat. Bei PG 4: ca. 1.850–2.250 €/Monat."
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "tempo",
+   "alt": "Primundus stellt sofort eine Ersatzkraft.",
+   "neu": "Primundus stellt eine Ersatzkraft."
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "tempo",
+   "alt": "Primundus findet unverzüglich eine Ersatzkraft — kein Versorgungsausfall.",
+   "neu": "Primundus findet eine Ersatzkraft, in der Regel innerhalb weniger Tage."
+  }
+ ]
+}

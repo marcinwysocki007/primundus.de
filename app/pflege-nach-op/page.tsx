@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
+  Abschnitt, DunklerAbschnitt, Fragen, Gruppen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text, Vorspann,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -98,55 +98,40 @@ export default function PflegeNachOp() {
           />
 
           <Abschnitt id="haeufige-ops" titel="Häufige OPs im Alter — was zu beachten ist">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            {[
-              {
-                op: 'Hüft-TEP (Hüftgelenkersatz)',
-                dauer: '6–12 Wochen Erholungsphase',
-                besonderheiten: [
-                  'Kein Beugen des Hüftgelenks über 90° in ersten Wochen',
-                  'Speziell erhöhte Toilette und Sitzerhöhung nötig',
-                  'Keine Schuhe alleine anziehen in ersten Wochen',
-                  'Thrombose-Prophylaxe: tägliche Injektion durch Pflegedienst',
-                ],
-              },
-              {
-                op: 'Knie-TEP (Kniegelenkersatz)',
-                dauer: '6–8 Wochen Erholungsphase',
-                besonderheiten: [
-                  'Treppensteigen eingeschränkt — Schlafplatz idealerweise im Erdgeschoss',
-                  'Kühlpacks regelmäßig für Schwellung',
-                  'Intensive Physiotherapie wichtig für gutes Langzeitergebnis',
-                  'Schmerzmanagement in ersten Wochen oft aufwändig',
-                ],
-              },
-              {
-                op: 'Herzeingriff (Bypass, Klappenersatz)',
-                dauer: '4–8 Wochen Erholungsphase',
-                besonderheiten: [
-                  'Brustbein heilt ca. 6 Wochen — keine Hebung von Lasten',
-                  'Herzrhythmus und Blutdruck täglich messen und dokumentieren',
-                  'Wundkontrolle an Narbe',
-                  'Keine Fahrerlaubnis in ersten Wochen',
-                ],
-              },
-            ].map((item) => (
-              <div key={item.op} className="bg-white rounded-xl border border-pm-line overflow-hidden">
-                <div className="bg-pm-paper px-5 py-3 border-b border-pm-line flex items-center justify-between">
-                  <p className="text-[14px] font-bold text-pm-ink">{item.op}</p>
-                  <span className="text-[12px] text-pm-taupe font-semibold bg-pm-shell px-3 py-1 rounded-full">{item.dauer}</span>
-                </div>
-                <ul className="divide-y divide-pm-paper">
-                  {item.besonderheiten.map(b => (
-                    <li key={b} className="flex items-start gap-3 px-5 py-3 text-[14px] text-pm-body">
-                      <span className="text-pm-green flex-shrink-0 mt-0.5">→</span>{b}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                {
+                  title: 'Hüft-TEP (Hüftgelenkersatz)',
+                  zusatz: '6–12 Wochen Erholungsphase',
+                  punkte: [
+                    'Kein Beugen des Hüftgelenks über 90° in ersten Wochen',
+                    'Speziell erhöhte Toilette und Sitzerhöhung nötig',
+                    'Keine Schuhe alleine anziehen in ersten Wochen',
+                    'Thrombose-Prophylaxe: tägliche Injektion durch Pflegedienst',
+                  ],
+                },
+                {
+                  title: 'Knie-TEP (Kniegelenkersatz)',
+                  zusatz: '6–8 Wochen Erholungsphase',
+                  punkte: [
+                    'Treppensteigen eingeschränkt — Schlafplatz idealerweise im Erdgeschoss',
+                    'Kühlpacks regelmäßig für Schwellung',
+                    'Intensive Physiotherapie wichtig für gutes Langzeitergebnis',
+                    'Schmerzmanagement in ersten Wochen oft aufwändig',
+                  ],
+                },
+                {
+                  title: 'Herzeingriff (Bypass, Klappenersatz)',
+                  zusatz: '4–8 Wochen Erholungsphase',
+                  punkte: [
+                    'Brustbein heilt ca. 6 Wochen — keine Hebung von Lasten',
+                    'Herzrhythmus und Blutdruck täglich messen und dokumentieren',
+                    'Wundkontrolle an Narbe',
+                    'Keine Fahrerlaubnis in ersten Wochen',
+                  ],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="betreuung" titel="Was die Betreuungskraft nach OP übernimmt">

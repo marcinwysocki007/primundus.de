@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -181,18 +181,7 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="faq" titel="Häufige Fragen">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-12">
-            {faqs.map((f) => (
-              <details key={f.q} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{f.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">{f.a}</p></div>
-              </details>
-            ))}
-          </div>
+            <Fragen fragen={faqs} />
           </Abschnitt>
 
 

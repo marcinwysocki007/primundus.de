@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, HakenListe, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, Gruppen, HakenListe, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -110,71 +110,34 @@ export default function TagesstrukturDemenz() {
             <Text>
               Dieser Tagesplan ist ein Ausgangspunkt — er sollte an den früheren Lebensrhythmus des Betroffenen angepasst werden. Wer immer Frühaufsteher war, steht früh auf. Wer Nachtmensch war, startet langsamer.
             </Text>
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-10 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Beispiel-Tagesplan bei mittlerem Demenzstadium</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <tbody>
-                  {[
-                    ['7:30–8:00', 'Aufwachen & Körperpflege', 'Langsam, ohne Druck, vertraute Abläufe'],
-                    ['8:00–8:30', 'Frühstück', 'Lieblingsessen, ruhige Atmosphäre, kein TV'],
-                    ['8:30–10:00', 'Ruhige Aktivität', 'Zeitung/Fotos anschauen, leichte Hausarbeit'],
-                    ['10:00–11:00', 'Bewegung / Spaziergang', 'Immer dieselbe Strecke wenn möglich'],
-                    ['11:00–12:30', 'Beschäftigung', 'Handwerk, Musik, Gespräche, Gartenarbeit'],
-                    ['12:30–13:00', 'Mittagessen', 'Hauptmahlzeit — Lieblingsgerichte bevorzugen'],
-                    ['13:00–14:30', 'Mittagsruhe', 'Schlafen oder entspannen — nicht erzwingen'],
-                    ['14:30–16:00', 'Aktivität', 'Einfache Spiele, Musik, Biographiearbeit'],
-                    ['15:30', 'Kaffeezeit', 'Festes Ritual — Kaffee/Tee mit Gebäck'],
-                    ['16:00–17:30', 'Ruhigere Phase', 'Sundowning-Zeit: Reize reduzieren'],
-                    ['17:30–18:30', 'Abendessen', 'Leichte Mahlzeit, früh genug'],
-                    ['18:30–20:00', 'Abendprogramm', 'Vertraute Sendungen, Musik, Gespräche'],
-                    ['20:00–21:00', 'Einschlafroutine', 'Immer dieselbe Abfolge: Zähneputzen, Pyjama, Bett'],
-                  ].map(([zeit, aktivität, hinweis], i) => (
-                    <tr key={zeit} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[13px] font-semibold text-pm-taupe border-b border-pm-line w-[100px]">{zeit}</td>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{aktivität}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{hinweis}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+            <Tabelle
+              titel="Beispiel-Tagesplan bei mittlerem Demenzstadium"
+              zeilen={[
+                ['7:30–8:00', 'Aufwachen & Körperpflege', 'Langsam, ohne Druck, vertraute Abläufe'],
+                ['8:00–8:30', 'Frühstück', 'Lieblingsessen, ruhige Atmosphäre, kein TV'],
+                ['8:30–10:00', 'Ruhige Aktivität', 'Zeitung/Fotos anschauen, leichte Hausarbeit'],
+                ['10:00–11:00', 'Bewegung / Spaziergang', 'Immer dieselbe Strecke wenn möglich'],
+                ['11:00–12:30', 'Beschäftigung', 'Handwerk, Musik, Gespräche, Gartenarbeit'],
+                ['12:30–13:00', 'Mittagessen', 'Hauptmahlzeit — Lieblingsgerichte bevorzugen'],
+                ['13:00–14:30', 'Mittagsruhe', 'Schlafen oder entspannen — nicht erzwingen'],
+                ['14:30–16:00', 'Aktivität', 'Einfache Spiele, Musik, Biographiearbeit'],
+                ['15:30', 'Kaffeezeit', 'Festes Ritual — Kaffee/Tee mit Gebäck'],
+                ['16:00–17:30', 'Ruhigere Phase', 'Sundowning-Zeit: Reize reduzieren'],
+                ['17:30–18:30', 'Abendessen', 'Leichte Mahlzeit, früh genug'],
+                ['18:30–20:00', 'Abendprogramm', 'Vertraute Sendungen, Musik, Gespräche'],
+                ['20:00–21:00', 'Einschlafroutine', 'Immer dieselbe Abfolge: Zähneputzen, Pyjama, Bett'],
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="aktivitaeten" titel="Sinnvolle Aktivitäten je Stadium">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              {
-                title: 'Frühes Stadium',
-                items: ['Lesen, Kreuzworträtsel, einfache Brettspiele', 'Gartenarbeit, Handwerk, Backen', 'Gesellschaftliche Treffen, Ausflüge', 'Gedächtnisübungen, Musikinstrument spielen'],
-              },
-              {
-                title: 'Mittleres Stadium',
-                items: ['Fotos sortieren und Geschichten erzählen', 'Musik aus der Jugendzeit hören und mitsingen', 'Einfache Haushaltsaufgaben: Wäsche falten, Tisch decken', 'Spaziergänge auf vertrauten Wegen'],
-              },
-              {
-                title: 'Schweres Stadium',
-                items: ['Musik hören — auch non-verbal wirksam', 'Berührungen, Massagen, sensorische Reize', 'Vertraute Gerüche: Kaffeduft, Lieblingsparfum', 'Vorlesen bekannter Texte oder Gedichte'],
-              },
-            ].map((group) => (
-              <div key={group.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-3">{group.title}</p>
-                <ul className="space-y-1.5">
-                  {group.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[14px] text-pm-body">
-                      <span className="text-pm-taupe font-bold flex-shrink-0">·</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              gruppen={[
+                { title: 'Frühes Stadium', punkte: ['Lesen, Kreuzworträtsel, einfache Brettspiele', 'Gartenarbeit, Handwerk, Backen', 'Gesellschaftliche Treffen, Ausflüge', 'Gedächtnisübungen, Musikinstrument spielen'] },
+                { title: 'Mittleres Stadium', punkte: ['Fotos sortieren und Geschichten erzählen', 'Musik aus der Jugendzeit hören und mitsingen', 'Einfache Haushaltsaufgaben: Wäsche falten, Tisch decken', 'Spaziergänge auf vertrauten Wegen'] },
+                { title: 'Schweres Stadium', punkte: ['Musik hören — auch non-verbal wirksam', 'Berührungen, Massagen, sensorische Reize', 'Vertraute Gerüche: Kaffeduft, Lieblingsparfum', 'Vorlesen bekannter Texte oder Gedichte'] },
+              ]}
+            />
           </Abschnitt>
 
           <DunklerAbschnitt

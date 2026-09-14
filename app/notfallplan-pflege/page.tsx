@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
+  Abschnitt, Fragen, Gruppen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Text,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -87,112 +87,105 @@ export default function NotfallplanPflege() {
           </Abschnitt>
 
           <Abschnitt id="inhalt" titel="Was in den Notfallplan gehört">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-4 mb-10">
-            {[
-              {
-                kategorie: 'Persönliche Daten',
-                punkte: [
-                  'Vollständiger Name, Geburtsdatum',
-                  'Adresse (auch für Rettungsdienst-Angabe)',
-                  'Versicherungsnummer Kranken- und Pflegekasse',
-                  'Pflegegrad',
-                  'Blutgruppe (wenn bekannt)',
-                ],
-              },
-              {
-                kategorie: 'Notfallkontakte',
-                punkte: [
-                  'Rettungsdienst: 112',
-                  'Hausarzt: Name, Telefon, Adresse',
-                  'Facharzt(e): Name, Telefon',
-                  'Hauptansprechpartner Familie: Name, Telefon (1. Kontakt)',
-                  'Weiterer Angehöriger: Name, Telefon (2. Kontakt)',
-                  'Primundus: 089 200 000 830',
-                  'Nachbar mit Schlüssel: Name, Telefon',
-                ],
-              },
-              {
-                kategorie: 'Medikamente',
-                punkte: [
-                  'Vollständige Medikamentenliste (Name, Dosis, Einnahmezeit)',
-                  'Allergien und Unverträglichkeiten',
-                  'Besondere Hinweise (z.B. Blutverdünner — wichtig bei Verletzungen)',
-                  'Ort der Medikamente im Haushalt',
-                ],
-              },
-              {
-                kategorie: 'Diagnosen & Vorerkrankungen',
-                punkte: [
-                  'Hauptdiagnosen (z.B. Demenz PG 3, Herzinsuffizienz, Parkinson)',
-                  'Implantate (Herzschrittmacher, Hüftprothese)',
-                  'Für Rettungsdienst wichtige Informationen',
-                ],
-              },
-              {
-                kategorie: 'Rechtliche Dokumente',
-                punkte: [
-                  'Vorsorgevollmacht — Ort im Haushalt und bevollmächtigte Person',
-                  'Patientenverfügung — Ort im Haushalt',
-                  'Organspendeausweis (ja/nein)',
-                ],
-              },
-              {
-                kategorie: 'Für die Betreuungskraft',
-                punkte: [
-                  'Was tun bei Sturz? (Nicht sofort aufrichten, Zustand prüfen, Arzt/112)',
-                  'Was tun bei Bewusstlosigkeit? (112, stabile Seitenlage, Angehörige)',
-                  'Was tun bei Herzinfarkt-Verdacht? (112, ruhig halten)',
-                  'Erkennbare Zeichen einer Hypoglykämie (falls Diabetes)',
-                  'Was gehört zu einer typisch guten vs. schlechten Verfassung?',
-                ],
-              },
-            ].map((block) => (
-              <div key={block.kategorie} className="bg-white rounded-xl border border-pm-line overflow-hidden">
-                <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
-                  <p className="text-[13px] font-bold text-pm-ink">{block.kategorie}</p>
-                </div>
-                <ul className="divide-y divide-pm-paper">
-                  {block.punkte.map(p => (
-                    <li key={p} className="flex items-start gap-3 px-5 py-3 text-[14px] text-pm-body">
-                      <span className="w-4 h-4 rounded border border-[#C8C3BA] flex-shrink-0 mt-0.5" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+            <Gruppen
+              haken
+              gruppen={[
+                {
+                  title: 'Persönliche Daten',
+                  punkte: [
+                    'Vollständiger Name, Geburtsdatum',
+                    'Adresse (auch für Rettungsdienst-Angabe)',
+                    'Versicherungsnummer Kranken- und Pflegekasse',
+                    'Pflegegrad',
+                    'Blutgruppe (wenn bekannt)',
+                  ],
+                },
+                {
+                  title: 'Notfallkontakte',
+                  punkte: [
+                    'Rettungsdienst: 112',
+                    'Hausarzt: Name, Telefon, Adresse',
+                    'Facharzt(e): Name, Telefon',
+                    'Hauptansprechpartner Familie: Name, Telefon (1. Kontakt)',
+                    'Weiterer Angehöriger: Name, Telefon (2. Kontakt)',
+                    'Primundus: 089 200 000 830',
+                    'Nachbar mit Schlüssel: Name, Telefon',
+                  ],
+                },
+                {
+                  title: 'Medikamente',
+                  punkte: [
+                    'Vollständige Medikamentenliste (Name, Dosis, Einnahmezeit)',
+                    'Allergien und Unverträglichkeiten',
+                    'Besondere Hinweise (z.B. Blutverdünner — wichtig bei Verletzungen)',
+                    'Ort der Medikamente im Haushalt',
+                  ],
+                },
+                {
+                  title: 'Diagnosen & Vorerkrankungen',
+                  punkte: [
+                    'Hauptdiagnosen (z.B. Demenz PG 3, Herzinsuffizienz, Parkinson)',
+                    'Implantate (Herzschrittmacher, Hüftprothese)',
+                    'Für Rettungsdienst wichtige Informationen',
+                  ],
+                },
+                {
+                  title: 'Rechtliche Dokumente',
+                  punkte: [
+                    'Vorsorgevollmacht — Ort im Haushalt und bevollmächtigte Person',
+                    'Patientenverfügung — Ort im Haushalt',
+                    'Organspendeausweis (ja/nein)',
+                  ],
+                },
+                {
+                  title: 'Für die Betreuungskraft',
+                  punkte: [
+                    'Was tun bei Sturz? (Nicht sofort aufrichten, Zustand prüfen, Arzt/112)',
+                    'Was tun bei Bewusstlosigkeit? (112, stabile Seitenlage, Angehörige)',
+                    'Was tun bei Herzinfarkt-Verdacht? (112, ruhig halten)',
+                    'Erkennbare Zeichen einer Hypoglykämie (falls Diabetes)',
+                    'Was gehört zu einer typisch guten vs. schlechten Verfassung?',
+                  ],
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="vorlage" titel="Vorlage: Notfallplan zum Ausfüllen">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="bg-pm-paper border border-pm-line rounded-2xl p-6 mb-10 font-mono text-[13px] leading-loose text-pm-body">
-            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-4">NOTFALLPLAN — zum Ausdrucken und Aufhängen</p>
-            <p className="font-bold">PERSONALIEN</p>
-            <p>Name: _________________________ Geb.: _____________</p>
-            <p>Adresse: _____________________________________________</p>
-            <p>Pflegegrad: _____ Blutgruppe: _______</p>
-            <br />
-            <p className="font-bold">NOTFALL-TELEFONNUMMERN</p>
-            <p>Rettungsdienst: <strong>112</strong></p>
-            <p>Hausarzt: _____________ Tel: ________________</p>
-            <p>Angehörige (1): ___________ Tel: ________________</p>
-            <p>Angehörige (2): ___________ Tel: ________________</p>
-            <p>Primundus: <strong>089 200 000 830</strong></p>
-            <br />
-            <p className="font-bold">MEDIKAMENTE (mit Uhrzeit)</p>
-            <p>1. ______________________ Dosis: ______ Uhrzeit: ______</p>
-            <p>2. ______________________ Dosis: ______ Uhrzeit: ______</p>
-            <p>3. ______________________ Dosis: ______ Uhrzeit: ______</p>
-            <p>Allergien: ___________________________________________</p>
-            <br />
-            <p className="font-bold">DIAGNOSEN</p>
-            <p>_____________________________________________________</p>
-            <br />
-            <p className="font-bold">VORSORGEVOLLMACHT liegt: _______________</p>
-            <p className="font-bold">Bevollmächtigte Person: ________ Tel: _______</p>
-          </div>
+            {/* break-words: Unterstrich-Zeilen haben keine Umbruchstelle und ragten auf 360 px über den Rand */}
+            <div className="break-words">
+              <Kasten augenbraue="NOTFALLPLAN — zum Ausdrucken und Aufhängen">
+                <Text>
+                  <strong>PERSONALIEN</strong><br />
+                  Name: _________________________ Geb.: _____________<br />
+                  Adresse: _____________________________________________<br />
+                  Pflegegrad: _____ Blutgruppe: _______
+                </Text>
+                <Text>
+                  <strong>NOTFALL-TELEFONNUMMERN</strong><br />
+                  Rettungsdienst: <strong>112</strong><br />
+                  Hausarzt: _____________ Tel: ________________<br />
+                  Angehörige (1): ___________ Tel: ________________<br />
+                  Angehörige (2): ___________ Tel: ________________<br />
+                  Primundus: <strong>089 200 000 830</strong>
+                </Text>
+                <Text>
+                  <strong>MEDIKAMENTE (mit Uhrzeit)</strong><br />
+                  1. ______________________ Dosis: ______ Uhrzeit: ______<br />
+                  2. ______________________ Dosis: ______ Uhrzeit: ______<br />
+                  3. ______________________ Dosis: ______ Uhrzeit: ______<br />
+                  Allergien: ___________________________________________
+                </Text>
+                <Text>
+                  <strong>DIAGNOSEN</strong><br />
+                  _____________________________________________________
+                </Text>
+                <Text>
+                  <strong>VORSORGEVOLLMACHT liegt: _______________</strong><br />
+                  <strong>Bevollmächtigte Person: ________ Tel: _______</strong>
+                </Text>
+              </Kasten>
+            </div>
           </Abschnitt>
 
           <Abschnitt id="aufbewahren" titel="Wo aufbewahren & wie aktuell halten">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Kasten, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann,
+  Abschnitt, DunklerAbschnitt, Fragen, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Vorspann,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -87,22 +87,22 @@ export default function PflegekraftSozialversicherungAnmelden() {
           </Vorspann>
 
           <Abschnitt id="wann-nötig" titel="Wann ist eine Sozialversicherungsanmeldung nötig?">
-            {/* VORLAGE: unverändert übernommen */}
-            <div className="space-y-3 mb-10">
-            {[
-              { modell: 'Entsendemodell (Primundus)', pflicht: 'Keine Anmeldung', detail: 'Kraft ist im EU-Heimatland angestellt und sozialversichert. A1-Bescheinigung belegt das. Familie hat keine Arbeitgeberpflichten.' },
-              { modell: 'Direktanstellung — Minijob (bis 556 €/Mo)', pflicht: 'Anmeldung bei der Minijob-Zentrale', detail: 'Pauschalabgaben: ca. 15 % Kranken-, 15 % Rentenversicherung, 2 % pauschale Lohnsteuer. Über minijob-zentrale.de.' },
-              { modell: 'Direktanstellung — regulär (über 556 €/Mo)', pflicht: 'Anmeldung bei Krankenkasse + Betriebsnummer', detail: 'Volle Sozialversicherungsbeiträge (ca. 40 % geteilt zwischen Arbeitgeber und Arbeitnehmer). Lohnabrechnung erforderlich.' },
-            ].map((item) => (
-              <div key={item.modell} className="bg-white rounded-xl p-5 border border-pm-line">
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <p className="text-[15px] font-bold text-pm-ink">{item.modell}</p>
-                  <span className={`text-[12px] font-bold px-3 py-1 rounded-full flex-shrink-0 ${item.pflicht === 'Keine Anmeldung' ? 'bg-pm-mint text-pm-green' : 'bg-pm-coral-tint text-pm-coral-ink'}`}>{item.pflicht}</span>
-                </div>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
+            <Punkte
+              punkte={[
+                {
+                  title: 'Entsendemodell (Primundus)',
+                  desc: <><strong>Keine Anmeldung</strong><br />{'Kraft ist im EU-Heimatland angestellt und sozialversichert. A1-Bescheinigung belegt das. Familie hat keine Arbeitgeberpflichten.'}</>,
+                },
+                {
+                  title: 'Direktanstellung — Minijob (bis 556 €/Mo)',
+                  desc: <><strong>Anmeldung bei der Minijob-Zentrale</strong><br />{'Pauschalabgaben: ca. 15 % Kranken-, 15 % Rentenversicherung, 2 % pauschale Lohnsteuer. Über minijob-zentrale.de.'}</>,
+                },
+                {
+                  title: 'Direktanstellung — regulär (über 556 €/Mo)',
+                  desc: <><strong>Anmeldung bei Krankenkasse + Betriebsnummer</strong><br />{'Volle Sozialversicherungsbeiträge (ca. 40 % geteilt zwischen Arbeitgeber und Arbeitnehmer). Lohnabrechnung erforderlich.'}</>,
+                },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="minijob" titel="Minijob — Haushaltshilfe über die Minijob-Zentrale">
