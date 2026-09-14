@@ -102,7 +102,7 @@ export default function OsteoporosePflegeZuhause() {
             <Punkte
               punkte={[
                 { title: 'Wohnraumanpassung', desc: 'Haltegriffe im Bad (neben Dusche, WC, Badewanne), rutschfeste Matten, Schwellen entfernen, Teppiche befestigen oder entfernen. Pflegekasse fördert bis 4.180 €/Maßnahme — Antrag vor Beginn stellen.' },
-                { title: 'Hüftprotektor', desc: 'Spezielle Hose mit gepolsterten Einlagen die die Hüfte beim Sturz schützen. Studien zeigen: Hüftfrakturen bei Trägern deutlich seltener. Krankenversicherung kann mit Rezept übernehmen.' },
+                { title: 'Hüftprotektor', desc: 'Spezielle Hose mit gepolsterten Einlagen die die Hüfte beim Sturz schützen. Krankenversicherung kann mit Rezept übernehmen.' },
                 { title: 'Gleichgewichts- und Krafttraining', desc: 'Auch bei Osteoporose: regelmäßige Bewegung ist Therapie — nicht Schonung. Tai Chi, Physiotherapie, gezielte Kräftigungsübungen unter Aufsicht. Betreuungskraft begleitet täglich.' },
                 { title: 'Geeignetes Schuhwerk', desc: 'Feste Sohle, kein offenes Fersenteil, keine Hausschuhe ohne Halt. Orthopädische Schuhe wenn Fehlstellungen vorhanden.' },
                 { title: 'Gute Beleuchtung', desc: 'Nachtlicht auf dem Weg zur Toilette. Bewegungsmelder im Flur. Keine dunklen Ecken wo Hindernisse übersehen werden.' },

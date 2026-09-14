@@ -54,7 +54,7 @@ const schemaMarkup = [
     mainEntity: [
       { '@type': 'Question', name: 'Was sind die größten Vorteile der 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Eigenes Zuhause bleibt, 1:1-Betreuung rund um die Uhr, Haushalt vollständig übernommen, täglich kündbar, oft günstiger als Pflegeheim.' } },
       { '@type': 'Question', name: 'Ist 24h-Pflege wirklich günstiger als ein Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ja — mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf 1.500–2.000 €/Monat. Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat.' } },
-      { '@type': 'Question', name: 'Welche Vorteile hat 24h-Pflege bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson ist immer da — das reduziert Desorientierung und Stress nachweislich.' } }
+      { '@type': 'Question', name: 'Welche Vorteile hat 24h-Pflege bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson ist immer da — das gibt Orientierung und Sicherheit.' } }
     ],
   },
 ]
@@ -87,7 +87,7 @@ export default function Page() {
               Das eigene Zuhause ist mehr als vier Wände — es ist Identität, Erinnerung, Sicherheit. Jeder gewohnte Handgriff, jedes vertraute Gesicht in der Nachbarschaft, der eigene Garten. Ein Pflegeheim kann das nicht ersetzen.
             </Text>
             <Text>
-              Bei der 24h-Pflege bleibt das alles erhalten. Die Betreuungskraft kommt in das Zuhause des Pflegebedürftigen — nicht umgekehrt. Das reduziert nachweislich Desorientierung, besonders bei Demenz.
+              Bei der 24h-Pflege bleibt das alles erhalten. Die Betreuungskraft kommt in das Zuhause des Pflegebedürftigen — nicht umgekehrt. Das gibt Orientierung, besonders bei Demenz.
             </Text>
           </Abschnitt>
 
@@ -124,7 +124,7 @@ export default function Page() {
               fragen={[
                 { q: "Was sind die größten Vorteile der 24h-Pflege?", a: "Eigenes Zuhause bleibt, 1:1-Betreuung rund um die Uhr, Haushalt vollständig übernommen, täglich kündbar, oft günstiger als Pflegeheim." },
                 { q: "Ist 24h-Pflege wirklich günstiger als ein Pflegeheim?", a: "Oft ja — mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf 1.500–2.000 €/Monat. Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat." },
-                { q: "Welche Vorteile hat 24h-Pflege bei Demenz?", a: "Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson ist immer da — das reduziert Desorientierung und Stress nachweislich." },
+                { q: "Welche Vorteile hat 24h-Pflege bei Demenz?", a: "Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson ist immer da — das gibt Orientierung und Sicherheit." },
               ]}
             />
           </Abschnitt>

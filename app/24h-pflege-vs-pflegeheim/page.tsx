@@ -106,7 +106,7 @@ export default function Page() {
             </Text>
             <Punkte
               punkte={[
-                { title: "Eigenes Zuhause vs. Heimzimmer", desc: "Vertraute Umgebung erhält nachweislich die kognitive Funktion länger." },
+                { title: "Eigenes Zuhause vs. Heimzimmer", desc: "Vertraute Umgebung gibt Orientierung und Halt." },
                 { title: "Flexibler Tagesablauf vs. Heimstruktur", desc: "Kein Frühstück um 7:30 wenn man Langschläfer ist — der Alltag bleibt selbstbestimmt." },
                 { title: "Besuche jederzeit vs. Besuchszeiten", desc: "Familie und Freunde können jederzeit kommen — keine Einschränkungen." },
               ]}

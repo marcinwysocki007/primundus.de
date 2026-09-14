@@ -61,7 +61,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Pflegedienst kommt zu definierten Zeiten (typisch 1–3 Mal täglich) und geht danach wieder. Eine 24h-Betreuungskraft lebt dauerhaft im Haushalt und ist rund um die Uhr — einschließlich Nächten — erreichbar. Der Pflegedienst ist auf Grundpflege und Behandlungspflege spezialisiert; die 24h-Kraft übernimmt zusätzlich Haushalt, Gesellschaft und Begleitung.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Pflegedienst kommt zu definierten Zeiten (typisch 1–3 Mal täglich) und geht danach wieder. Eine 24h-Betreuungskraft lebt dauerhaft im Haushalt und ist bei Bedarf auch nachts da. Der Pflegedienst ist auf Grundpflege und Behandlungspflege spezialisiert; die 24h-Kraft übernimmt zusätzlich Haushalt, Gesellschaft und Begleitung.' },
       },
     ],
   },
@@ -99,8 +99,8 @@ export default function PflegedienstOder24hKraft() {
               titel=""
               kopf={["Kriterium", "Ambulanter Pflegedienst", "24h-Betreuungskraft"]}
               zeilen={[
-                ['Verfügbarkeit', '1–3 Einsätze täglich, danach weg', 'Rund um die Uhr vor Ort'],
-                ['Nachtbereitschaft', 'Kein Personal nachts', 'Immer anwesend'],
+                ['Verfügbarkeit', '1–3 Einsätze täglich, danach weg', 'Lebt im Haushalt, bei Bedarf auch nachts'],
+                ['Nachtbereitschaft', 'Kein Personal nachts', 'Bei Bedarf da'],
                 ['Haushalt & Kochen', 'Nicht im Leistungsspektrum', 'Vollständig übernommen'],
                 ['Gesellschaft', 'Nur während Einsatz', 'Ganztägige Begleitung'],
                 ['Demenzbetreuung', 'Schwierig ohne Kontinuität', 'Vertraute Bezugsperson'],
@@ -164,7 +164,7 @@ export default function PflegedienstOder24hKraft() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?', a: 'Pflegedienst: kommt zu festen Zeiten, geht dann wieder. Kernkompetenz Grund- und Behandlungspflege. 24h-Kraft: lebt im Haushalt, ist immer da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft, Nacht.' },
+                { q: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?', a: 'Pflegedienst: kommt zu festen Zeiten, geht dann wieder. Kernkompetenz Grund- und Behandlungspflege. 24h-Kraft: lebt im Haushalt, ist bei Bedarf auch nachts da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft.' },
                 { q: 'Ist ambulante Pflege günstiger als eine 24h-Kraft?', a: 'Bei moderatem Bedarf ja — Sachleistungen decken oft den Pflegedienst vollständig. Bei hohem Gesamtbedarf (Haushalt, Betreuung, Nacht) ist die 24h-Kraft oft günstiger als mehrere Dienste kombiniert.' },
                 { q: 'Kann man Pflegedienst und 24h-Kraft kombinieren?', a: 'Ja — das ist die häufigste Lösung bei komplexem Bedarf. 24h-Kraft für Grundpflege/Haushalt/Nacht, Pflegedienst für Behandlungspflege. Beide Kassenzuschüsse (Pflegegeld + Sachleistungen) laufen parallel.' },
                 { q: 'Wann reicht ein ambulanter Pflegedienst nicht mehr aus?', a: 'Wenn nächtliche Betreuung nötig ist, Demenz kontinuierliche Anwesenheit erfordert, Angehörige die verbleibende Zeit nicht abdecken können, oder wenn der Gesamtaufwand (Haushalt, Kochen, Begleitung) den Pflegedienst übersteigt.' },

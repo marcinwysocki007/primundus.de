@@ -149,7 +149,7 @@ export default function Pflegegrad5() {
               fragen={[
                 { q: 'Was bekommt man bei Pflegegrad 5?', a: '990 € Pflegegeld/Monat (höchster Satz), 2.299 € Sachleistungen/Monat, 131 € Entlastungsbetrag/Monat, 3.539 € Entlastungsbudget/Jahr. Stand 2026, identisch zu 2025.' },
                 { q: 'Was unterscheidet PG 5 von PG 4?', a: 'PG 5 erfordert 90–100 NBA-Punkte plus besonderen Beaufsichtigungs- und Begleitungsbedarf. Bei PG 4 reichen 70–89,9 Punkte. Pflegegeld PG 5: 990 € (+190 € gegenüber PG 4).' },
-                { q: 'Kann man mit Pflegegrad 5 zuhause bleiben?', a: 'In vielen Fällen ja — mit einer 24h-Betreuungskraft die rund um die Uhr präsent ist. Nicht möglich bei intensivmedizinischem Dauerbedarf (Beatmung etc.) oder wenn aggressive Verhaltensweisen die Betreuungssicherheit gefährden.' },
+                { q: 'Kann man mit Pflegegrad 5 zuhause bleiben?', a: 'In vielen Fällen ja — mit einer 24h-Betreuungskraft, die mit im Haus lebt. Nicht möglich bei intensivmedizinischem Dauerbedarf (Beatmung etc.) oder wenn aggressive Verhaltensweisen die Betreuungssicherheit gefährden.' },
               ]}
             />
           </Abschnitt>

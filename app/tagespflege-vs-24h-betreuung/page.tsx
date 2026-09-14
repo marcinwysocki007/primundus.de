@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was ist der Unterschied zwischen Tagespflege und 24h-Betreuung?', acceptedAnswer: { '@type': 'Answer', text: 'Tagespflege: Pflegebedürftige verbringen den Tag in einer Tageseinrichtung und kehren abends nach Hause zurück — Angehörige sind entlastet. 24h-Betreuung: Betreuungskraft lebt dauerhaft im Haushalt, ist rund um die Uhr anwesend — für Fälle wo abendliche und nächtliche Betreuung nötig ist.' } },
+      { '@type': 'Question', name: 'Was ist der Unterschied zwischen Tagespflege und 24h-Betreuung?', acceptedAnswer: { '@type': 'Answer', text: 'Tagespflege: Pflegebedürftige verbringen den Tag in einer Tageseinrichtung und kehren abends nach Hause zurück — Angehörige sind entlastet. 24h-Betreuung: Betreuungskraft lebt dauerhaft im Haushalt und ist bei Bedarf auch nachts vor Ort — für Fälle, wo abendliche und nächtliche Betreuung nötig ist.' } },
       { '@type': 'Question', name: 'Was zahlt die Pflegekasse für Tagespflege?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse zahlt für Tagespflege ein eigenes Budget: PG 2 = 721 €/Monat, PG 3 = 1.357 €/Monat, PG 4 = 1.685 €/Monat, PG 5 = 2.085 €/Monat. Dieses Budget ist vom Pflegegeld und den Sachleistungen unabhängig — es kommt obendrauf.' } },
     ],
   },
@@ -82,7 +82,7 @@ export default function TagespflegeVs24h() {
           ]}
           augenbraue="Ratgeber Vergleich"
           titel="Tagespflege vs. 24h-Betreuung — Vergleich 2026"
-          einleitung="Tagespflege und 24h-Betreuung sind zwei sehr unterschiedliche Modelle. Tagespflege entlastet Angehörige tagsüber und bietet soziale Kontakte für den Pflegebedürftigen — abends kommen alle nach Hause. Eine 24h-Betreuungskraft ist rund um die Uhr da und sinnvoll wenn Tag und Nacht Betreuung nötig ist."
+          einleitung="Tagespflege und 24h-Betreuung sind zwei sehr unterschiedliche Modelle. Tagespflege entlastet Angehörige tagsüber und bietet soziale Kontakte für den Pflegebedürftigen — abends kommen alle nach Hause. Eine 24h-Betreuungskraft wohnt mit im Haus und ist sinnvoll, wenn Tag und Nacht Betreuung nötig ist."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
         />
@@ -93,7 +93,7 @@ export default function TagespflegeVs24h() {
               titel=""
               kopf={["Kriterium", "Tagespflege", "24h-Betreuung (Primundus)"]}
               zeilen={[
-                ['Verfügbarkeit', 'Nur tagsüber (ca. 6–10 Std.)', 'Rund um die Uhr'],
+                ['Verfügbarkeit', 'Nur tagsüber (ca. 6–10 Std.)', 'Lebt im Haushalt, bei Bedarf auch nachts'],
                 ['Nachtbetreuung', 'Nein', 'Ja'],
                 ['Ort', 'Externe Einrichtung', 'Eigenes Zuhause'],
                 ['Soziale Kontakte', 'Viele (Gruppenangebote)', '1:1-Beziehung zur Kraft'],
@@ -118,7 +118,7 @@ export default function TagespflegeVs24h() {
                 {
                   titel: '24h-Pflege zuhause — Kosten und Kassenzuschüsse',
                   ton: 'taupe',
-                  text: 'Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft rund um die Uhr inklusive.',
+                  text: 'Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft inklusive.',
                 },
               ]}
             />
@@ -166,7 +166,7 @@ export default function TagespflegeVs24h() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Was ist der Unterschied zwischen Tagespflege und 24h-Betreuung?', a: 'Tagespflege: Pflegebedürftige verbringen den Tag in einer Einrichtung, abends nach Hause. 24h-Betreuung: Kraft lebt dauerhaft im Haushalt, rund um die Uhr anwesend — für Fälle wo Tag und Nacht Betreuung nötig ist.' },
+                { q: 'Was ist der Unterschied zwischen Tagespflege und 24h-Betreuung?', a: 'Tagespflege: Pflegebedürftige verbringen den Tag in einer Einrichtung, abends nach Hause. 24h-Betreuung: Kraft lebt dauerhaft im Haushalt, bei Bedarf auch nachts vor Ort — für Fälle, wo Tag und Nacht Betreuung nötig ist.' },
                 { q: 'Was zahlt die Pflegekasse für Tagespflege?', a: 'Eigenes Tagespflege-Budget: PG 2 = 721 €, PG 3 = 1.357 €, PG 4 = 1.685 €, PG 5 = 2.085 €/Monat. Unabhängig von Pflegegeld und Sachleistungen.' },
                 { q: 'Wann reicht Tagespflege nicht aus?', a: 'Wenn Betreuung auch abends oder nachts nötig ist, bei Demenz mit nächtlicher Unruhe oder Weglaufen, wenn Angehörige keine Abende/Nächte übernehmen können.' },
                 { q: 'Kann man Tagespflege und 24h-Kraft kombinieren?', a: 'Ja — Tagespflege-Budget und Pflegegeld laufen parallel. Sinnvoll wenn soziale Gruppenangebote gewünscht sind und abends/nachts trotzdem eine Kraft da sein soll.' },

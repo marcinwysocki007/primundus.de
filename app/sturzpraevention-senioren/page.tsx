@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie kann man Stürze im Alter verhindern?', acceptedAnswer: { '@type': 'Answer', text: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (nachweislich Sturzrisiko um 30–40 % reduzierend), Wohnungssicherung (Haltegriffe, rutschfeste Böden, gute Beleuchtung), Medikamente überprüfen lassen (Schwindel als Nebenwirkung), geeignetes Schuhwerk, Sehvermögen regelmäßig prüfen.' } },
+      { '@type': 'Question', name: 'Wie kann man Stürze im Alter verhindern?', acceptedAnswer: { '@type': 'Answer', text: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (rund ein Viertel weniger Stürze, Cochrane-Übersicht 2019), Wohnungssicherung (Haltegriffe, rutschfeste Böden, gute Beleuchtung), Medikamente überprüfen lassen (Schwindel als Nebenwirkung), geeignetes Schuhwerk, Sehvermögen regelmäßig prüfen.' } },
       { '@type': 'Question', name: 'Welche Übungen helfen gegen Sturzgefahr?', acceptedAnswer: { '@type': 'Answer', text: 'Gleichgewichtsübungen: Einbeinstand (mit Festhalten anfangen), Tandemgang, Tai Chi, Yoga für Senioren. Kraftübungen für die Beinmuskulatur: Aufstehen vom Stuhl ohne Hände, Zehenspitzenstand. Täglich 10–15 Minuten sind wirksamer als einmal pro Woche viel.' } },
     ],
   },
@@ -82,11 +82,11 @@ export default function SturzpraventionSenioren() {
           ]}
           augenbraue="Ratgeber Sicherheit"
           titel="Sturzprävention Senioren — wie man Stürze wirklich verhindert"
-          einleitung="Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein reduziert das Sturzrisiko nachweislich um 30–40 Prozent. Die Wohnungssicherung tut ihr Übriges."
+          einleitung="Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein senkt die Zahl der Stürze um rund ein Viertel (Cochrane-Übersicht 2019). Die Wohnungssicherung tut ihr Übriges."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
           blick={[
-                'Gleichgewichtstraining: reduziert Sturzrisiko um 30–40 % (täglich 10–15 Min reichen)',
+                'Gleichgewichtstraining: rund ein Viertel weniger Stürze (täglich 10–15 Min reichen)',
                 'Haltegriffe im Bad und an der Toilette: günstiger Einbau, sofort wirksam',
                 'Medikamente überprüfen: Schwindel als Nebenwirkung ist häufig unterschätzt',
                 'Gutes Schuhwerk: feste Sohle, kein offenes Fersenteil, keine Hausschuhe ohne Halt',
@@ -128,7 +128,7 @@ export default function SturzpraventionSenioren() {
 
           <Abschnitt id="uebungen" titel="Übungen & Training — was wirklich hilft">
             <Text>
-              Gleichgewichts- und Krafttraining sind die wirksamsten Maßnahmen gegen Sturzrisiko. Studien zeigen: Regelmäßiges Training reduziert das Sturzrisiko um 30–40 %. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag pro Woche.
+              Gleichgewichts- und Krafttraining sind die wirksamsten Maßnahmen gegen Sturzrisiko. Die Cochrane-Übersicht von 2019 zeigt: Regelmäßiges Gleichgewichts- und Krafttraining senkt die Zahl der Stürze um rund ein Drittel. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag pro Woche.
             </Text>
             <Gruppen
               gruppen={[
@@ -136,7 +136,7 @@ export default function SturzpraventionSenioren() {
                 { title: 'Aufstehen vom Stuhl ohne Hände', zusatz: 'Kraft & Balance', punkte: ['Langsam ohne Zuhilfenahme der Hände aufstehen und hinsetzen. 10 Wiederholungen. Stärkt Beinmuskulatur und verbessert Gleichgewicht.'] },
                 { title: 'Tandemgang', zusatz: 'Gleichgewicht', punkte: ['Fuß vor Fuß auf einer Linie gehen (wie auf einem Seil balancieren). Entlang Küchentisch oder Wand zur Sicherheit. Täglich 5 Meter vor und zurück.'] },
                 { title: 'Zehenspitzenstand', zusatz: 'Kraft', punkte: ['An Stuhl festhalten, auf Zehenspitzen heben und langsam senken. 15 Wiederholungen. Stärkt Unterschenkelmuskulatur und verbessert Gleichgewicht.'] },
-                { title: 'Tai Chi oder Yoga für Senioren', zusatz: 'Gleichgewicht & Kraft', punkte: ['Kurse in Volkshochschulen oder Sportvereinen, auch als Video möglich. Besonders wirksam in Studien — reduziert Sturzrisiko um bis zu 40 %.'] },
+                { title: 'Tai Chi oder Yoga für Senioren', zusatz: 'Gleichgewicht & Kraft', punkte: ['Kurse in Volkshochschulen oder Sportvereinen, auch als Video möglich. Für Tai Chi zeigt die Cochrane-Übersicht 2019 rund ein Fünftel weniger Stürze.'] },
               ]}
             />
           </Abschnitt>
@@ -155,8 +155,8 @@ export default function SturzpraventionSenioren() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (30–40 % weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },
-                { q: 'Welche Übungen helfen gegen Sturzgefahr?', a: 'Einbeinstand, Aufstehen vom Stuhl ohne Hände, Tandemgang, Zehenspitzenstand. Tai Chi und Yoga für Senioren sind in Studien besonders wirksam. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag.' },
+                { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (rund ein Viertel weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },
+                { q: 'Welche Übungen helfen gegen Sturzgefahr?', a: 'Einbeinstand, Aufstehen vom Stuhl ohne Hände, Tandemgang, Zehenspitzenstand. Tai Chi senkt die Zahl der Stürze laut Cochrane-Übersicht 2019 um rund ein Fünftel. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag.' },
                 { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: über Entlastungsbetrag (131 €/Monat) der Pflegekasse. Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
                 { q: 'Was tun wenn jemand gestürzt ist?', a: 'Nicht sofort aufrichten wenn Verletzung möglich. Notarzt rufen bei Verdacht auf Knochenbruch, Kopfverletzung oder Bewusstlosigkeit. Danach Arzt aufsuchen, Ursache des Sturzes analysieren, Präventionsmaßnahmen anpassen.' },
               ]}

@@ -59,7 +59,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Kann man Alzheimer-Patienten zuhause betreuen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — in allen Stadien ist häusliche Betreuung grundsätzlich möglich. Die vertraute Umgebung verlangsamt den Krankheitsverlauf, gibt Orientierung und erhält Würde. Ab dem mittleren Stadium ist eine 24h-Betreuungskraft empfehlenswert, um Sicherheit und Tagesstruktur rund um die Uhr zu gewährleisten.' } },
+      { '@type': 'Question', name: 'Kann man Alzheimer-Patienten zuhause betreuen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — in allen Stadien ist häusliche Betreuung grundsätzlich möglich. Die vertraute Umgebung gibt Orientierung und Halt und erhält Würde. Ab dem mittleren Stadium ist eine 24h-Betreuungskraft empfehlenswert, um Sicherheit und Tagesstruktur rund um die Uhr zu gewährleisten.' } },
       { '@type': 'Question', name: 'Welchen Pflegegrad hat man bei Alzheimer?', acceptedAnswer: { '@type': 'Answer', text: 'Leichtes Stadium: oft PG 2–3. Mittleres Stadium: PG 3–4. Schweres Stadium: PG 4–5. Seit 2017 werden kognitive Einschränkungen im NBA-Begutachtungsverfahren deutlich stärker gewichtet — Alzheimer-Betroffene werden besser eingestuft als früher.' } },
       { '@type': 'Question', name: 'Wie unterscheidet sich Alzheimer von Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Alzheimer ist die häufigste Form der Demenz (ca. 60–70 % aller Demenzkranken). Demenz ist der Oberbegriff — Alzheimer ist eine spezifische neurodegenerative Erkrankung mit typischem Verlaufsmuster: Gedächtnisverlust beginnt mit Kurzzeitspeicher, Langzeitgedächtnis ist lange intakt.' } },
     ],
@@ -89,7 +89,7 @@ export default function AlzheimerBetreuungZuhause() {
           lesezeit="8 Min."
           blick={[
             'Häusliche Betreuung ist in allen Alzheimer-Stadien grundsätzlich möglich',
-            'Vertraute Umgebung verlangsamt nachweislich den kognitiven Abbau',
+            'Vertraute Umgebung gibt Orientierung und Halt',
             'Ab mittlerem Stadium: 24h-Präsenz für Sicherheit und Tagesstruktur notwendig',
             'Pflegegrad 2–5 je nach Stadium — frühzeitig beantragen',
             'Pflegegeld: 347–990 €/Monat · Entlastungsbudget: 3.539 €/Jahr',
@@ -116,7 +116,7 @@ export default function AlzheimerBetreuungZuhause() {
 
           <Abschnitt id="zuhause" titel="Was zuhause möglich ist">
             <Text>
-              Das eigene Zuhause ist für Alzheimer-Betroffene kein Luxus — es ist therapeutisch wirksam. Bekannte Bilder an der Wand, der vertraute Geruch der Küche, der gewohnte Blick aus dem Fenster: Das alles gibt Orientierung wenn das Kurzzeitgedächtnis versagt.
+              Das eigene Zuhause ist für Alzheimer-Betroffene kein Luxus — es gibt Halt. Bekannte Bilder an der Wand, der vertraute Geruch der Küche, der gewohnte Blick aus dem Fenster: Das alles gibt Orientierung wenn das Kurzzeitgedächtnis versagt.
             </Text>
             <Punkte
               punkte={[
@@ -152,7 +152,7 @@ export default function AlzheimerBetreuungZuhause() {
             titel="Wann 24h-Pflege bei Alzheimer die richtige Lösung ist"
             einleitung="Ab dem mittleren Stadium ist eine feste Bezugsperson rund um die Uhr in den meisten Fällen die beste Lösung — sowohl für Sicherheit als auch für Lebensqualität."
             punkte={[
-              { title: 'Was eine Primundus-Kraft bei Alzheimer leistet', desc: 'Tagesstruktur und Rituale konsequent einhalten. Rund um die Uhr ansprechbar. Weglaufen und Sicherheitsrisiken verhindern. Körperpflege und Mahlzeiten. Biographiearbeit und emotionale Begleitung. Entlastung der Familie.' },
+              { title: 'Was eine Primundus-Kraft bei Alzheimer leistet', desc: 'Tagesstruktur und Rituale konsequent einhalten. Bei Bedarf auch nachts vor Ort. Weglaufen und Sicherheitsrisiken verhindern. Körperpflege und Mahlzeiten. Biographiearbeit und emotionale Begleitung. Entlastung der Familie.' },
               { title: 'Erfahrung mit Alzheimer wichtig', desc: 'Eine Kraft die Alzheimer kennt weiß: nicht korrigieren, in die Welt des Betroffenen einsteigen, mit Validierung und nicht mit Realitätsorientierung arbeiten. Primundus wählt gezielt Kräfte mit Demenz-Erfahrung.' },
             ]}
           >
@@ -190,11 +190,11 @@ export default function AlzheimerBetreuungZuhause() {
           <Abschnitt id="faq" titel="Häufige Fragen zur Alzheimer-Betreuung">
             <Fragen
               fragen={[
-                { q: 'Kann man Alzheimer-Patienten zuhause betreuen?', a: 'Ja — in allen Stadien ist häusliche Betreuung grundsätzlich möglich. Die vertraute Umgebung verlangsamt den kognitiven Abbau, gibt Orientierung und erhält Würde. Ab dem mittleren Stadium ist eine 24h-Betreuungskraft empfehlenswert.' },
+                { q: 'Kann man Alzheimer-Patienten zuhause betreuen?', a: 'Ja — in allen Stadien ist häusliche Betreuung grundsätzlich möglich. Die vertraute Umgebung gibt Orientierung und Halt und erhält Würde. Ab dem mittleren Stadium ist eine 24h-Betreuungskraft empfehlenswert.' },
                 { q: 'Welchen Pflegegrad hat man bei Alzheimer?', a: 'Je nach Stadium PG 2–5. Seit 2017 werden kognitive Einschränkungen im NBA-Begutachtungsverfahren deutlich stärker gewichtet — Alzheimer-Betroffene werden besser eingestuft als früher.' },
                 { q: 'Wie unterscheidet sich Alzheimer von Demenz?', a: 'Alzheimer ist die häufigste Demenzform (60–70 % aller Fälle). Typisch: Kurzzeitspeicher zuerst betroffen, Langzeitgedächtnis lange intakt. Demenz ist der Oberbegriff — Alzheimer eine spezifische Ursache.' },
                 { q: 'Was sind die häufigsten Herausforderungen bei der Alzheimer-Betreuung?', a: 'Weglaufen (Hinlaufen), Nachtunruhe, Verweigerung von Körperpflege und Mahlzeiten, Verhaltensveränderungen wie Aggressionen oder Ängste, Kommunikation wenn Sprache abnimmt.' },
-                { q: 'Was kostet Alzheimer-Betreuung zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil auf ca. 1.500–2.800 €/Monat.' },
+                { q: 'Was kostet Alzheimer-Betreuung zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (599 € bei Pflegegrad 3) bleiben rund 1.600–2.900 € im Monat. Den Entlastungsbetrag von 131 € zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
               ]}
             />
           </Abschnitt>

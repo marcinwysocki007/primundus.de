@@ -61,7 +61,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was ist der Unterschied zwischen ambulanter Pflege und 24h-Pflege?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ambulanter Pflegedienst kommt zu vereinbarten Zeiten, geht dann wieder. 24h-Betreuungskraft lebt im Haushalt und ist immer da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft rund um die Uhr.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ambulanter Pflegedienst kommt zu vereinbarten Zeiten, geht dann wieder. 24h-Betreuungskraft lebt im Haushalt und ist bei Bedarf auch nachts da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft im Alltag.' },
       },
       {
         '@type': 'Question',
@@ -100,12 +100,12 @@ export default function VsAmbulantePflege() {
           ]}
           augenbraue="Ratgeber Vergleich"
           titel="24h-Pflege vs. ambulante Pflege — Vergleich 2026"
-          einleitung="Ambulante Pflege oder 24h-Betreuung — das ist oft die erste Entscheidung wenn Pflege notwendig wird. Ambulante Dienste kommen mehrmals täglich für definierte Einsätze. Eine 24h-Kraft lebt im Haushalt und ist immer da. Wann was sinnvoll ist, hängt nicht nur von den Kosten ab — sondern vom tatsächlichen Pflegebedarf."
+          einleitung="Ambulante Pflege oder 24h-Betreuung — das ist oft die erste Entscheidung wenn Pflege notwendig wird. Ambulante Dienste kommen mehrmals täglich für definierte Einsätze. Eine 24h-Kraft lebt im Haushalt und ist bei Bedarf auch nachts da. Wann was sinnvoll ist, hängt nicht nur von den Kosten ab — sondern vom tatsächlichen Pflegebedarf."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
           blick={[
                 'Ambulante Pflege: kommt für definierte Einsätze — außerhalb nicht vor Ort',
-                '24h-Betreuung: Kraft lebt im Haushalt — rund um die Uhr erreichbar',
+                '24h-Betreuung: Kraft lebt im Haushalt — bei Bedarf auch nachts vor Ort',
                 'Kosten ambulant: 800–2.500 €/Monat, oft durch Sachleistungen gedeckt',
                 'Kosten 24h: 2.200–3.500 €/Monat, Eigenanteil mit Zuschüssen ab ca. 1.500 €',
                 'Wechsel von ambulant zu 24h meist wenn: Demenz, Sturzrisiko nachts, hoher Gesamtbedarf',
@@ -122,7 +122,7 @@ export default function VsAmbulantePflege() {
               titel=""
               kopf={["Kriterium", "Ambulante Pflege", "24h-Pflege (Primundus)"]}
               zeilen={[
-                ['Verfügbarkeit', 'Nur zu Einsatzzeiten', 'Rund um die Uhr'],
+                ['Verfügbarkeit', 'Nur zu Einsatzzeiten', 'Lebt im Haushalt, bei Bedarf auch nachts'],
                 ['Nächtliche Sicherheit', 'Kein Personal nachts', 'Immer anwesend'],
                 ['Gesellschaft & Betreuung', 'Nur während Einsatz', 'Ganztagsbegleitung'],
                 ['Haushalt', 'Begrenzt je Einsatz', 'Vollständige Haushaltsführung'],
@@ -141,7 +141,7 @@ export default function VsAmbulantePflege() {
             <Gegenueber
               seiten={[
                 { titel: 'Ambulante Pflege — Kosten und Kassenzuschüsse', ton: 'gruen', punkte: ['Die Pflegekasse zahlt bei ambulanter Pflege die Sachleistungen direkt an den Pflegedienst: PG 2 = 796 €/Monat, PG 3 = 1.497 €/Monat, PG 4 = 1.859 €/Monat, PG 5 = 2.299 €/Monat. Viele ambulante Pflegeeinsätze werden damit vollständig gedeckt — Eigenanteil kann gegen null gehen wenn der Gesamtbedarf im Sachleistungsrahmen liegt.', 'Bei hohem Pflegebedarf (viele Einsätze täglich) übersteigen die Kosten schnell den Sachleistungsrahmen.'] },
-                { titel: '24h-Pflege — Kosten und Kassenzuschüsse', ton: 'taupe', punkte: ['Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. Bei PG 4: ca. 1.700–2.100 €/Monat.', 'Inklusive: 24h-Verfügbarkeit, Haushalt, Betreuung, Gesellschaft — alles in einem Preis.'] },
+                { titel: '24h-Pflege — Kosten und Kassenzuschüsse', ton: 'taupe', punkte: ['Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen), Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.500–1.900 €/Monat. Bei PG 4: ca. 1.700–2.100 €/Monat.', 'Inklusive: Anwesenheit im Haushalt, Haushaltsführung, Betreuung, Gesellschaft — alles in einem Preis.'] },
               ]}
             />
           </Abschnitt>
@@ -168,7 +168,7 @@ export default function VsAmbulantePflege() {
                     'Nächtliche Unruhe, Toilettengänge oder Orientierungslosigkeit nachts auftreten',
                     'Demenz mit Weglaufen oder Selbstgefährdung vorliegt',
                     'Gesamtkosten ambulant die Sachleistungen deutlich übersteigen',
-                    'Gesellschaft und Begleitung rund um die Uhr gewünscht wird',
+                    'Gesellschaft und Begleitung im Alltag gewünscht wird',
                   ],
                 },
               ]}
@@ -188,7 +188,7 @@ export default function VsAmbulantePflege() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Was ist der Unterschied zwischen ambulanter Pflege und 24h-Pflege?', a: 'Ambulanter Pflegedienst kommt zu vereinbarten Zeiten, geht dann wieder. 24h-Betreuungskraft lebt im Haushalt und ist immer da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft rund um die Uhr.' },
+                { q: 'Was ist der Unterschied zwischen ambulanter Pflege und 24h-Pflege?', a: 'Ambulanter Pflegedienst kommt zu vereinbarten Zeiten, geht dann wieder. 24h-Betreuungskraft lebt im Haushalt und ist bei Bedarf auch nachts da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft im Alltag.' },
                 { q: 'Wann reicht ambulante Pflege nicht mehr aus?', a: 'Wenn Pflegebedarf über mehrere Tageszeiten verteilt ist und Angehörige nicht übernehmen können, bei nächtlichem Betreuungsbedarf, bei Demenz mit Weglaufen oder Selbstgefährdung, oder wenn ambulante Kosten die Sachleistungen deutlich übersteigen.' },
                 { q: 'Was kostet ambulante Pflege im Vergleich zu 24h?', a: 'Ambulant: 800–2.500 €/Monat, bei PG 2–5 oft durch Sachleistungen vollständig gedeckt. 24h: 2.200–3.500 €/Monat brutto, Eigenanteil mit Zuschüssen bei PG 3 ca. 1.500–1.900 €.' },
                 { q: 'Kann man ambulante Pflege und 24h kombinieren?', a: 'Ja — Kombinationsleistung: Sachleistungen für ambulanten Pflegedienst + anteiliges Pflegegeld für private Betreuung. Sinnvoll wenn z.B. medizinische Behandlungspflege durch Dienst und Betreuung durch 24h-Kraft.' },

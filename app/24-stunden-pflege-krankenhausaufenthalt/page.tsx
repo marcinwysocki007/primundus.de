@@ -71,7 +71,7 @@ const schemaMarkup = [
         name: 'Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Primundus stellt eine Ersatzkraft — ohne Zusatzkosten für die Vermittlung. Es fallen wie bei jedem Kraftwechsel nur die An- und Abreisekosten an. Durch das große Netzwerk ist Ersatz in der Regel innerhalb weniger Tage vor Ort.',
+          text: 'Primundus stellt eine Ersatzkraft — ohne Zusatzkosten. Es fallen wie bei jedem Kraftwechsel nur die An- und Abreisekosten an. Durch das große Netzwerk ist Ersatz in der Regel innerhalb weniger Tage vor Ort.',
         },
       },
       {
@@ -146,8 +146,7 @@ export default function KrankenhausPage() {
 
           <Abschnitt id="fall-2-die-betreuungskraft" titel="Fall 2: Die Betreuungskraft wird krank oder fällt aus">
             <Kasten>
-              <Text>Dann ist es unsere Aufgabe, nicht Ihre: Primundus stellt eine Ersatzkraft — <strong>ohne
-              Zusatzkosten für die Vermittlung</strong>. Berechnet werden ausschließlich die An- und
+              <Text>Dann ist es unsere Aufgabe, nicht Ihre: Primundus stellt eine Ersatzkraft — <strong>ohne Zusatzkosten</strong>. Berechnet werden ausschließlich die An- und
               Abreisekosten, wie bei jedem regulären Wechsel auch. Durch unser Netzwerk aus tausenden
               geprüften Kräften ist der Ersatz in der Regel innerhalb weniger Tage im Haus. Sie müssen
               nichts organisieren, niemanden suchen, nichts verhandeln — ein Anruf genügt.</Text>
@@ -178,7 +177,7 @@ export default function KrankenhausPage() {
             <Punkte
               punkte={[
                 { title: "Muss ich die 24-Stunden-Pflege weiterzahlen, wenn meine Mutter ins Krankenhaus kommt?", desc: "Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter. Soll sie abreisen, zahlen Sie nur noch bis zur Abreise — in der Regel 2 bis 3 Tage. Zusätzlich zahlt die Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu vier Wochen weiter." },
-                { title: "Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?", desc: "Primundus stellt eine Ersatzkraft — ohne Zusatzkosten für die Vermittlung. Es fallen wie bei jedem Kraftwechsel nur die An- und Abreisekosten an. Durch das große Netzwerk ist Ersatz in der Regel innerhalb weniger Tage vor Ort." },
+                { title: "Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?", desc: "Primundus stellt eine Ersatzkraft — ohne Zusatzkosten. Es fallen wie bei jedem Kraftwechsel nur die An- und Abreisekosten an. Durch das große Netzwerk ist Ersatz in der Regel innerhalb weniger Tage vor Ort." },
                 { title: "Kostet ein Wechsel der Betreuungskraft etwas?", desc: "Nein — der Wechsel selbst kostet bei Primundus nichts, egal ob turnusmäßig oder weil die Chemie nicht stimmt. Berechnet werden ausschließlich die An- und Abreisekosten der Kräfte." },
                 { title: "Wie hoch sind die Feiertagszuschläge?", desc: <>An gesetzlichen Feiertagen gilt der doppelte Tagessatz — bei 2.800 Euro Monatspreis rund
                 93 Euro Aufschlag pro Feiertag. Mehr zu ehrlichen Gesamtkosten:{' '}

@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie findet man eine gute Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Der zuverlässigste Weg ist die Vermittlung über eine seriöse Agentur wie Primundus. Die Agentur prüft Qualifikation, Erfahrung und Deutschkenntnisse, stellt Ersatz bei Ausfall und regelt das Rechtliche. Direktsuche über Portale ist möglich, erfordert aber mehr Eigenaufwand und rechtliches Know-how.' } },
+      { '@type': 'Question', name: 'Wie findet man eine gute Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Der zuverlässigste Weg ist ein seriöser Anbieter wie Primundus. Die Agentur prüft Qualifikation, Erfahrung und Deutschkenntnisse, stellt Ersatz bei Ausfall und regelt das Rechtliche. Direktsuche über Portale ist möglich, erfordert aber mehr Eigenaufwand und rechtliches Know-how.' } },
       { '@type': 'Question', name: 'Worauf sollte man bei der Auswahl achten?', acceptedAnswer: { '@type': 'Answer', text: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung (Anzahl und Art früherer Einsätze), Referenzen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen (Demenz, Parkinson) auf Spezialerfahrung achten.' } },
       { '@type': 'Question', name: 'Wie schnell findet Primundus eine Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus findet typischerweise innerhalb von 4–7 Tagen nach dem ersten Beratungsgespräch eine passende Betreuungskraft. In dringenden Fällen ist ein schnellerer Start möglich.' } },
     ],
@@ -100,7 +100,7 @@ export default function PflegekraftFinden() {
           <Abschnitt id="wege" titel="Wege zur Pflegekraft — was gibt es?">
             <Punkte
               punkte={[
-                { title: 'Über eine Agentur (empfohlen)', desc: 'Die Agentur übernimmt Suche, Prüfung und Vermittlung. Bei Primundus: Rechtssicheres Entsendemodell mit A1-Bescheinigung, Ersatz bei Ausfall, persönliche Beratung.' },
+                { title: 'Über eine Agentur (empfohlen)', desc: 'Die Agentur übernimmt Suche, Prüfung und Einsatzplanung. Bei Primundus: Rechtssicheres Entsendemodell mit A1-Bescheinigung, Ersatz bei Ausfall, persönliche Beratung.' },
                 { title: 'Direktsuche über Portale', desc: 'Plattformen wie Pflegemarkt.de, care.de oder Kleinanzeigen. Mehr Eigenaufwand bei Prüfung und Rechtlichem — aber potenziell günstigere Preise.' },
                 { title: 'Weiterempfehlung im Bekanntenkreis', desc: 'Oft der persönlichste Weg — aber Rechtliches (Arbeitsvertrag, Sozialversicherung) muss trotzdem sorgfältig geregelt werden.' },
               ]}
@@ -112,7 +112,7 @@ export default function PflegekraftFinden() {
             titel="Über eine Agentur — was die Vorteile sind"
             einleitung="Eine seriöse Agentur wie Primundus übernimmt alles was bei der Direktsuche an der Familie hängenbleibt — und liefert zusätzliche Sicherheitsnetze."
             punkte={[
-              { title: 'Geprüfte Qualifikation', desc: 'Pflegeerfahrung, Deutschkenntnisse, Referenzen — alles wird vor der Vermittlung geprüft. Kein Risiko mit ungeprüften Personen.' },
+              { title: 'Geprüfte Qualifikation', desc: 'Pflegeerfahrung, Deutschkenntnisse, Referenzen — alles wird vor dem Einsatz geprüft. Kein Risiko mit ungeprüften Personen.' },
               { title: 'Rechtliche Absicherung', desc: 'Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher. Die Familie hat kein eigenes Arbeitsverhältnis.' },
               { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank oder muss wechseln — Primundus stellt sofort eine Ersatzkraft. Kein Versorgungsausfall.' },
               { title: 'Nahtlose Rotation', desc: 'Wechsel der Kraft alle 6–8 Wochen ist organisiert und wird von Primundus koordiniert — Familie muss sich nicht selbst darum kümmern.' },

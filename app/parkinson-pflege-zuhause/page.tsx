@@ -118,7 +118,7 @@ export default function ParkinsonPflegeZuhause() {
                 { title: 'Pflege in On-Phasen planen', desc: 'Körperpflege, Essen und Bewegungsübungen wenn möglich in On-Phasen legen — kurz nach Medikamenteneinnahme wenn die Motorik am besten ist.' },
                 { title: 'Sturzprävention im Haushalt', desc: 'Stolperfallen beseitigen, Haltegriffe im Bad, rutschfeste Matten, freie Wege ohne Hindernisse. Rollator oder Gehstock bereithalten.' },
                 { title: 'Kommunikation anpassen', desc: 'Sprechen kann bei Parkinson leiser und undeutlicher werden. Geduld, Rückfragen, schriftliche Alternativen anbieten.' },
-                { title: 'Bewegung fördern', desc: 'Tägliche Physiotherapie-Übungen — idealerweise angeleitet. Tanzen und Rhythmus sind nachweislich hilfreich bei Parkinson. Spaziergänge wenn möglich.' },
+                { title: 'Bewegung fördern', desc: 'Tägliche Physiotherapie-Übungen — idealerweise angeleitet. Tanzen und Rhythmus helfen vielen Menschen mit Parkinson. Spaziergänge wenn möglich.' },
                 { title: 'Ernährung anpassen', desc: 'Proteinreiche Mahlzeiten zeitlich von L-Dopa-Einnahme trennen (min. 30 Min). Bei Schluckproblemen angepasste Konsistenz. Ausreichend Flüssigkeit.' },
               ]}
             />

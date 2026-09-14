@@ -82,7 +82,7 @@ export default function HausnotrufSenioren() {
           ]}
           augenbraue="Ratgeber Sicherheit"
           titel="Hausnotruf für Senioren — Kosten, Zuschuss & Auswahl"
-          einleitung="Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse kann über den Entlastungsbetrag die Kosten übernehmen. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall sowieso immer vor Ort."
+          einleitung="Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse kann über den Entlastungsbetrag die Kosten übernehmen. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall ohnehin im Haus."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
           blick={[
@@ -90,7 +90,7 @@ export default function HausnotrufSenioren() {
                 'Mobilfunk-Notruf: 30–80 €/Monat — auch außerhalb der Wohnung nutzbar',
                 'GPS-Tracker: 30–80 €/Monat — besonders bei Demenz und Weglaufen wichtig',
                 'Finanzierung: Entlastungsbetrag (131 €/Monat) der Pflegekasse kann genutzt werden',
-                'Mit 24h-Betreuungskraft: Kraft ist immer da — Notruf als zusätzliche Absicherung',
+                'Mit 24h-Betreuungskraft: Kraft wohnt im Haus — Notruf als zusätzliche Absicherung',
                 'Anbieter: DRK, Malteser, Johanniter, DUSSMANN, viele weitere',
               ]}
         />
@@ -141,7 +141,7 @@ export default function HausnotrufSenioren() {
               'Überbrückung bis zur Betreuungskraft — oder als ergänzende Sicherheit bei 24h-Pflege',
             ]} />
             <Kasten titel="Mit 24h-Betreuungskraft — Hausnotruf als zusätzliche Absicherung">
-              <Text>Wenn eine 24h-Betreuungskraft dauerhaft im Haushalt lebt, ist menschliche Hilfe immer direkt vor Ort. Ein zusätzlicher Hausnotruf kann trotzdem sinnvoll sein — als Absicherung für Momente wenn die Kraft kurz abwesend ist oder als Notfallweg direkt zum Rettungsdienst.</Text>
+              <Text>Wenn eine 24h-Betreuungskraft dauerhaft im Haushalt lebt, ist menschliche Hilfe direkt im Haus. Ein zusätzlicher Hausnotruf kann trotzdem sinnvoll sein — als Absicherung für Momente wenn die Kraft kurz abwesend ist oder als Notfallweg direkt zum Rettungsdienst.</Text>
             </Kasten>
           </Abschnitt>
 
@@ -151,7 +151,7 @@ export default function HausnotrufSenioren() {
                 { q: 'Was kostet ein Hausnotruf?', a: 'Klassischer Hausnotruf: 20–50 €/Monat. Mobilfunk-Notruf mit GPS: 30–80 €/Monat. Einmalige Anschlussgebühr 20–80 € (viele Anbieter ohne). Entlastungsbetrag (131 €/Monat) der Pflegekasse kann die Kosten decken.' },
                 { q: 'Zahlt die Pflegekasse den Hausnotruf?', a: 'Indirekt — über den Entlastungsbetrag (131 €/Monat, alle Pflegegrade 1–5). Voraussetzung: Anbieter muss als anerkanntes Betreuungsangebot zugelassen sein. Viele Wohlfahrtsverbände (DRK, Malteser, Johanniter) sind anerkannt.' },
                 { q: 'Was ist der Unterschied zwischen Hausnotruf und GPS-Tracker?', a: 'Hausnotruf: Knopfdruck löst Notruf aus, funktioniert klassisch nur in der Wohnung. GPS-Tracker: Echtzeit-Ortung jederzeit, besonders für Demenzkranke mit Weglauftendenz.' },
-                { q: 'Ist ein Hausnotruf bei 24h-Pflege noch nötig?', a: 'Nicht zwingend — aber als zusätzliche Absicherung sinnvoll. Die 24h-Betreuungskraft ist immer direkt vor Ort. Ein Notruf-System gibt zusätzliche Sicherheit für Momente wenn die Kraft kurz abwesend ist.' },
+                { q: 'Ist ein Hausnotruf bei 24h-Pflege noch nötig?', a: 'Nicht zwingend — aber als zusätzliche Absicherung sinnvoll. Die 24h-Betreuungskraft wohnt mit im Haus. Ein Notruf-System gibt zusätzliche Sicherheit für Momente wenn die Kraft kurz abwesend ist.' },
               ]}
             />
           </Abschnitt>

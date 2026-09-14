@@ -59,7 +59,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Kann man Multiple Sklerose zuhause pflegen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — in den meisten MS-Verläufen ist häusliche Pflege gut möglich. Bei schubförmigem MS mit stabilen Phasen ist oft ambulante Unterstützung ausreichend. Bei sekundär-progredientem oder primär-progredientem Verlauf kann eine 24h-Betreuungskraft notwendig werden.' } },
-      { '@type': 'Question', name: 'Welchen Pflegegrad bekommt man bei MS?', acceptedAnswer: { '@type': 'Answer', text: 'Je nach Einschränkungen: Leichte MS meist PG 1–2. Moderate Einschränkungen PG 2–3. Schwere Einschränkungen PG 3–4. Rollstuhlpflicht und vollständige Pflegeabhängigkeit PG 4–5. Die Einstufung hängt vom tatsächlichen Alltagsbeeinträchtigungen ab, nicht von der Diagnose allein.' } },
+      { '@type': 'Question', name: 'Welchen Pflegegrad bekommt man bei MS?', acceptedAnswer: { '@type': 'Answer', text: 'Je nach Einschränkungen: Leichte MS meist PG 1–2. Moderate Einschränkungen PG 2–3. Schwere Einschränkungen PG 3–4. Rollstuhlpflicht und vollständige Pflegeabhängigkeit PG 4–5. Die Einstufung hängt von den tatsächlichen Alltagsbeeinträchtigungen ab, nicht von der Diagnose allein.' } },
     ],
   },
 ]
@@ -129,7 +129,7 @@ export default function MultipleSklerosePflege() {
 
           <Abschnitt id="pflegegrad" titel="Pflegegrad & Kassenzuschüsse bei MS">
             <Text>
-              Der Pflegegrad richtet sich nach dem tatsächlichen Alltagsbeeinträchtigungen — nicht nach der Diagnose. Bei MS können die Einschränkungen stark schwanken (in Schüben) oder kontinuierlich zunehmen.
+              Der Pflegegrad richtet sich nach den tatsächlichen Alltagsbeeinträchtigungen — nicht nach der Diagnose. Bei MS können die Einschränkungen stark schwanken (in Schüben) oder kontinuierlich zunehmen.
             </Text>
             <Tabelle
               titel=""

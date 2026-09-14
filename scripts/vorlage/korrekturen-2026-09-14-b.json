@@ -136,6 +136,68 @@
    "art": "vermittler",
    "alt": "Bei der Primundus-Vermittlung im Entsendemodell werden stattdessen",
    "neu": "Bei Primundus im Entsendemodell werden stattdessen"
+  },
+  {
+   "seite": "pflegedienst-oder-24h-kraft",
+   "art": "nacht",
+   "alt": "lebt dauerhaft im Haushalt und ist rund um die Uhr — einschließlich Nächten — erreichbar.",
+   "neu": "lebt dauerhaft im Haushalt und ist bei Bedarf auch nachts da.",
+   "mehrfach": true
+  },
+  {
+   "seite": "pflegedienst-oder-24h-kraft",
+   "art": "nacht",
+   "alt": "'Rund um die Uhr vor Ort']",
+   "neu": "'Lebt im Haushalt, bei Bedarf auch nachts']"
+  },
+  {
+   "seite": "pflegedienst-oder-24h-kraft",
+   "art": "nacht",
+   "alt": "['Nachtbereitschaft', 'Kein Personal nachts', 'Immer anwesend']",
+   "neu": "['Nachtbereitschaft', 'Kein Personal nachts', 'Bei Bedarf da']"
+  },
+  {
+   "seite": "pflegedienst-oder-24h-kraft",
+   "art": "nacht",
+   "alt": "24h-Kraft: lebt im Haushalt, ist immer da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft, Nacht.",
+   "neu": "24h-Kraft: lebt im Haushalt, ist bei Bedarf auch nachts da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft."
+  },
+  {
+   "seite": "tagespflege-vs-24h-betreuung",
+   "art": "nacht",
+   "alt": "24h-Betreuung, Haushalt und Gesellschaft rund um die Uhr inklusive.",
+   "neu": "24h-Betreuung, Haushalt und Gesellschaft inklusive."
+  },
+  {
+   "seite": "24h-pflege-vs-pflegeheim-kosten",
+   "art": "beleg",
+   "alt": "Vertraute Umgebung verlangsamt Demenzverläufe",
+   "neu": "Vertraute Umgebung gibt Orientierung und Halt"
+  },
+  {
+   "seite": "24h-pflege-vs-pflegeheim-kosten",
+   "art": "beleg",
+   "alt": "Langsamer durch Vertrautheit",
+   "neu": "Mehr Halt durch Vertrautheit"
+  },
+  {
+   "seite": "pflegegrad-3",
+   "art": "satz",
+   "alt": "Bei Primundus sind die Betreuungskräfte fest angestellt und starten, die in 4–7 Tagen starten können.",
+   "neu": "Bei Primundus sind die Betreuungskräfte fest angestellt und können in 4–7 Tagen starten.",
+   "mehrfach": true
+  },
+  {
+   "seite": "pflegekraft-aus-rumaenien",
+   "art": "satz",
+   "alt": "Primundus arbeitet auf Wunsch auch rumänische Betreuungskräfte",
+   "neu": "Primundus setzt auf Wunsch auch rumänische Betreuungskräfte ein"
+  },
+  {
+   "seite": "tagespflege-vs-24h-betreuung",
+   "art": "nacht",
+   "alt": "['Verfügbarkeit', 'Nur tagsüber (ca. 6–10 Std.)', 'Rund um die Uhr']",
+   "neu": "['Verfügbarkeit', 'Nur tagsüber (ca. 6–10 Std.)', 'Lebt im Haushalt, bei Bedarf auch nachts']"
   }
  ]
 }

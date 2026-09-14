@@ -172,7 +172,7 @@ export default function PflegegradBeiDemenz() {
                 { q: 'Wie wird Demenz beim Pflegegrad bewertet?', a: 'Im NBA werden kognitive Fähigkeiten (15 %), Verhaltensweisen (15 %) und Selbstversorgung (36 %) bewertet — alle bei Demenz stark betroffenen Bereiche. Seit 2017 werden kognitive Einschränkungen deutlich stärker gewichtet.' },
                 { q: 'Wie bereite ich die Begutachtung bei Demenz vor?', a: 'Pflegetagebuch mit konkreten Beispielen kognitiver Defizite: Weglaufen, Vergessen, Nachtunruhe, Orientierungslosigkeit. Vertrauensperson muss beim Termin die tatsächlichen Einschränkungen schildern — Betroffene minimieren oft selbst.' },
                 { q: 'Was passiert wenn der Pflegegrad bei Demenz zu niedrig ist?', a: 'Innerhalb eines Monats Widerspruch einlegen, neues Pflegetagebuch mit explizit kognitiven Beispielen nachreichen. Bei Demenz sind Widersprüche besonders häufig erfolgreich wenn kognitive Defizite besser dokumentiert werden.' },
-                { q: 'Kann man bei Demenz zuhause bleiben?', a: 'In den meisten Stadien ja — mit einer 24h-Betreuungskraft die dauerhaft im Haushalt lebt. Die vertraute Umgebung verlangsamt nachweislich den Krankheitsverlauf.' },
+                { q: 'Kann man bei Demenz zuhause bleiben?', a: 'In den meisten Stadien ja — mit einer 24h-Betreuungskraft die dauerhaft im Haushalt lebt. Die vertraute Umgebung gibt Orientierung und Halt.' },
               ]}
             />
           </Abschnitt>

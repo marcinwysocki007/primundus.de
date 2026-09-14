@@ -82,7 +82,7 @@ export default function TagesstrukturDemenz() {
           ]}
           augenbraue="Ratgeber Demenz"
           titel="Tagesstruktur bei Demenz — Tagesplan, Aktivitäten & Tipps"
-          einleitung="Feste Tagesstrukturen sind das wirksamste nicht-medikamentöse Mittel bei Demenz. Sie reduzieren Angst, Unruhe und Verhaltensauffälligkeiten erheblich — weil sie Orientierung geben ohne Gedächtnis zu brauchen. Der Körper erinnert sich auch wenn der Kopf es nicht mehr kann."
+          einleitung="Feste Tagesstrukturen geben Menschen mit Demenz Halt, ganz ohne Medikamente. Sie reduzieren Angst, Unruhe und Verhaltensauffälligkeiten erheblich — weil sie Orientierung geben ohne Gedächtnis zu brauchen. Der Körper erinnert sich auch wenn der Kopf es nicht mehr kann."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
         />
@@ -135,7 +135,7 @@ export default function TagesstrukturDemenz() {
               gruppen={[
                 { title: 'Frühes Stadium', punkte: ['Lesen, Kreuzworträtsel, einfache Brettspiele', 'Gartenarbeit, Handwerk, Backen', 'Gesellschaftliche Treffen, Ausflüge', 'Gedächtnisübungen, Musikinstrument spielen'] },
                 { title: 'Mittleres Stadium', punkte: ['Fotos sortieren und Geschichten erzählen', 'Musik aus der Jugendzeit hören und mitsingen', 'Einfache Haushaltsaufgaben: Wäsche falten, Tisch decken', 'Spaziergänge auf vertrauten Wegen'] },
-                { title: 'Schweres Stadium', punkte: ['Musik hören — auch non-verbal wirksam', 'Berührungen, Massagen, sensorische Reize', 'Vertraute Gerüche: Kaffeduft, Lieblingsparfum', 'Vorlesen bekannter Texte oder Gedichte'] },
+                { title: 'Schweres Stadium', punkte: ['Musik hören — auch non-verbal wirksam', 'Berührungen, Massagen, sensorische Reize', 'Vertraute Gerüche: Kaffeeduft, Lieblingsparfum', 'Vorlesen bekannter Texte oder Gedichte'] },
               ]}
             />
           </Abschnitt>

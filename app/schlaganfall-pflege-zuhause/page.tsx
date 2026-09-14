@@ -83,13 +83,13 @@ export default function SchlaganfallPflegeZuhause() {
           ]}
           augenbraue="Ratgeber Schlaganfall"
           titel="Pflege nach Schlaganfall zuhause — was möglich ist"
-          einleitung="Nach einem Schlaganfall stellen sich Familien sofort die Frage: Pflegeheim oder zuhause? In den meisten Fällen ist häusliche Pflege mit einer 24h-Betreuungskraft möglich — und ermöglicht eine frühzeitige Entlassung aus Krankenhaus oder Reha. Die vertraute Umgebung fördert die Erholung nachweislich."
+          einleitung="Nach einem Schlaganfall stellen sich Familien sofort die Frage: Pflegeheim oder zuhause? In den meisten Fällen ist häusliche Pflege mit einer 24h-Betreuungskraft möglich — und ermöglicht eine frühzeitige Entlassung aus Krankenhaus oder Reha. Die vertraute Umgebung gibt Orientierung und Halt."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
           blick={[
                 'Häusliche Pflege nach Schlaganfall in den meisten Fällen möglich',
                 'Frühzeitige Entlassung aus Klinik durch 24h-Betreuungskraft möglich',
-                'Vertraute Umgebung fördert Reha-Erfolg nachweislich',
+                'Vertraute Umgebung gibt Orientierung und Halt',
                 'Pflegegrad 2–5 je nach Schwere — sofort nach Entlassung beantragen',
                 'Primundus startet in 4–7 Tagen — auch als Überbrückung nach Klinik',
                 'Physiotherapie und Logopädie können zuhause fortgesetzt werden',

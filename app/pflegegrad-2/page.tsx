@@ -61,7 +61,7 @@ const schemaMarkup = [
     mainEntity: [
       { '@type': 'Question', name: 'Was bekommt man bei Pflegegrad 2?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 2 gibt es 347 € Pflegegeld/Monat (wenn Angehörige pflegen), 796 € Pflegesachleistungen (für ambulante Pflegedienste), 131 € Entlastungsbetrag/Monat und 3.539 € Entlastungsbudget/Jahr für Verhinderungs- und Kurzzeitpflege. Stand 2026, identisch zu 2025.' } },
       { '@type': 'Question', name: 'Was sind die Voraussetzungen für Pflegegrad 2?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegrad 2 wird vergeben wenn beim NBA-Begutachtungsverfahren 27 bis 47,4 Punkte erreicht werden. Es liegt erhebliche Beeinträchtigung der Selbstständigkeit vor — Hilfe bei mehreren Alltagsaktivitäten nötig, aber noch weitgehend eigenständig.' } },
-      { '@type': 'Question', name: 'Kann man mit Pflegegrad 2 eine 24h-Betreuungskraft bekommen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — 24h-Pflege ist ab Pflegegrad 2 möglich. Bei PG 2 ist der Pflegebedarf noch moderat, aber eine rund um die Uhr präsente Betreuungskraft kann sinnvoll sein wenn der Pflegebedürftige allein lebt, Sicherheitsrisiken bestehen oder Angehörige nicht täglich präsent sein können.' } },
+      { '@type': 'Question', name: 'Kann man mit Pflegegrad 2 eine 24h-Betreuungskraft bekommen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — 24h-Pflege ist ab Pflegegrad 2 möglich. Bei PG 2 ist der Pflegebedarf noch moderat, aber eine Betreuungskraft, die mit im Haus lebt, kann sinnvoll sein, wenn der Pflegebedürftige allein lebt, Sicherheitsrisiken bestehen oder Angehörige nicht täglich präsent sein können.' } },
     ],
   },
 ]

@@ -94,7 +94,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was versteht man unter 24-Stunden-Pflege?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr erreichbar — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim.' },
       },
       {
         '@type': 'Question',
@@ -168,11 +168,11 @@ export default function WasIst24StundenPflege() {
               24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.
             </KurzAntwort>
             <Text>
-              24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
+              24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
             </Text>
             <Kasten augenbraue="Auf einen Blick">
               <HakenListe punkte={[
-                'Betreuungskraft lebt dauerhaft im Haushalt — rund um die Uhr erreichbar',
+                'Betreuungskraft lebt dauerhaft im Haushalt — bei Bedarf auch nachts vor Ort',
                 'Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf und Anbieter',
                 'Pflegekasse zahlt: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr (seit Juli 2025)',
                 'Geeignet bei Demenz, nach Schlaganfall, bei Parkinson und vielen weiteren Situationen',
@@ -189,7 +189,7 @@ export default function WasIst24StundenPflege() {
             punkte={[
               { title: 'Grundpflege', desc: 'Körperhygiene, Ankleiden, Nahrungsaufnahme, Lagerung und Mobilisierung. Bei Menschen mit Demenz, nach Schlaganfall oder mit eingeschränkter Beweglichkeit bildet das den Kern des Alltags.' },
               { title: 'Haushaltsführung', desc: 'Kochen, Einkaufen, Reinigen, Wäsche, Begleitung zu Arztterminen. Die Betreuungskraft führt den Haushalt selbständig und entlastet damit Angehörige vollständig.' },
-              { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Tagesstruktur — besonders bei Demenz ist menschliche Nähe entscheidend für Wohlbefinden und Verlangsamung des Krankheitsfortschritts.' },
+              { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Tagesstruktur — besonders bei Demenz ist menschliche Nähe entscheidend für das Wohlbefinden.' },
             ]}
           >
             <Text>
@@ -292,7 +292,7 @@ export default function WasIst24StundenPflege() {
           <Abschnitt id="faq" titel="Häufige Fragen zur 24-Stunden-Pflege">
             <Fragen
               fragen={[
-                { q: 'Was versteht man unter 24-Stunden-Pflege?', a: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und rund um die Uhr erreichbar ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und die beliebteste Alternative zum Pflegeheim in Deutschland.' },
+                { q: 'Was versteht man unter 24-Stunden-Pflege?', a: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und bei Bedarf auch nachts vor Ort ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und die beliebteste Alternative zum Pflegeheim in Deutschland.' },
                 { q: 'Was kostet 24-Stunden-Pflege 2026?', a: 'Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.' },
                 { q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?', a: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die frühere Verhinderungspflege und Kurzzeitpflege zusammen. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
                 { q: 'Ist 24-Stunden-Pflege legal?', a: 'Ja — über eine seriöse Agentur im Entsendemodell ist 24h-Pflege absolut legal. Die A1-Bescheinigung belegt die Sozialversicherung im Heimatland. Scheinselbstständigkeit ist dagegen strafbar und kann zu hohen Nachzahlungen von Sozialabgaben führen.' },

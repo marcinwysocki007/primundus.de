@@ -121,7 +121,7 @@ export default function VsKosten() {
                 'Nach Kassenzuschüssen (PG 3): Eigenanteil ca. 1.700–2.000 €/Monat',
                 '24h-Pflege ist oft günstiger UND bietet mehr individuelle Betreuung',
                 'Pflegeheim kann nach 2+ Jahren durch Kassenzuschläge günstiger werden',
-                'Vertraute Umgebung verlangsamt Demenzverläufe — gesundheitlicher Mehrwert',
+                'Vertraute Umgebung gibt Orientierung und Halt — gesundheitlicher Mehrwert',
               ]}
         />
 
@@ -188,7 +188,7 @@ export default function VsKosten() {
                 ['Betreuungsintensität', '1:1 rund um die Uhr', 'Geteilt, nach Dienstplan'],
                 ['Tagesrhythmus', 'Vollständig eigener Rhythmus', 'Heimstruktur und -zeiten'],
                 ['Angehörige', 'Täglich einbindbar', 'Besuchszeiten'],
-                ['Demenz-Verlauf', 'Langsamer durch Vertrautheit', 'Häufig Verschlechterung durch Umzug'],
+                ['Demenz-Verlauf', 'Mehr Halt durch Vertrautheit', 'Häufig Verschlechterung durch Umzug'],
                 ['Flexibilität', 'Täglich kündbar', 'Meist Kündigungsfristen'],
                 ['Ersatz bei Ausfall', 'Primundus stellt sofort Ersatz', 'Immer Personal vorhanden'],
               ]}

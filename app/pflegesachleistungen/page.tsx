@@ -143,7 +143,7 @@ export default function Pflegesachleistungen() {
                 { q: 'Was sind Pflegesachleistungen?', a: 'Kassengelder die direkt an zugelassene ambulante Pflegedienste gezahlt werden. 796 € (PG 2), 1.497 € (PG 3), 1.859 € (PG 4), 2.299 € (PG 5) pro Monat.' },
                 { q: 'Kann man Pflegesachleistungen und Pflegegeld kombinieren?', a: 'Ja — Kombinationsleistung: Genutzter Sachleistungsanteil + anteiliges Pflegegeld für den Rest. Beispiel: 50 % Sachleistungen = 50 % Pflegegeld.' },
                 { q: 'Wer kann Pflegesachleistungen in Anspruch nehmen?', a: 'Pflegebedürftige mit PG 2–5 die zu Hause von einem zugelassenen ambulanten Pflegedienst versorgt werden. PG 1 hat keinen Sachleistungsanspruch.' },
-                { q: 'Können Sachleistungen für eine 24h-Betreuungskraft genutzt werden?', a: 'Nur wenn die Betreuungskraft über einen zugelassenen Pflegedienst tätig ist. Bei der Primundus-Vermittlung im Entsendemodell werden stattdessen Pflegegeld und Entlastungsbudget genutzt.' },
+                { q: 'Können Sachleistungen für eine 24h-Betreuungskraft genutzt werden?', a: 'Nur wenn die Betreuungskraft über einen zugelassenen Pflegedienst tätig ist. Bei Primundus im Entsendemodell werden stattdessen Pflegegeld und Entlastungsbudget genutzt.' },
               ]}
             />
           </Abschnitt>
