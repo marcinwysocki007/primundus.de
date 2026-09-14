@@ -36,8 +36,9 @@ export function Zusagen({ teile }: { teile: string[] }) {
     <>
       {teile.map((t, i) => (
         <span key={t}>
-          {i > 0 && ' · '}
-          <span className="whitespace-nowrap">{t}</span>
+          {/* Trennpunkt hängt am vorigen Teil, damit keine Zeile mit „·" beginnt */}
+          <span className="whitespace-nowrap">{t}{i < teile.length - 1 ? ' ·' : ''}</span>
+          {i < teile.length - 1 ? ' ' : ''}
         </span>
       ))}
     </>
@@ -90,7 +91,7 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
     )
   }
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-start sm:items-center gap-4">
       {foto(60)}
       <div className="min-w-0">
         <p className="text-[17px] font-semibold leading-[1.4] text-pm-ink">Lieber erst sprechen?</p>
