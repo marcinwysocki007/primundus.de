@@ -49,6 +49,8 @@ const config: Config = {
           coral: { DEFAULT: '#E76F63', deep: '#D45F53', tint: '#FDF0EE', ink: '#8B3E2F' },
           cocoa: '#3D2314',
           gold: '#D4A843',
+          // Dunkles Band der Partnerseite (/pflegekraefte-fuer-vermittler), Vorlage seit 14.09.2026
+          deep: { DEFAULT: '#191715', 2: '#221F1C', ink: '#F2EDE5', body: '#A9A199', line: '#34302B' },
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -90,6 +92,10 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+      },
+      boxShadow: {
+        // Weiße Kästen der Partnerseite (--lift)
+        lift: '0 1px 2px rgba(28,28,28,.04), 0 14px 38px -16px rgba(28,28,28,.18)',
       },
       keyframes: {
         'accordion-down': {

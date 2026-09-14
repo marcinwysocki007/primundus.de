@@ -47,7 +47,8 @@ function worte(a: { slug: string; titel: string }): string[] {
   )
 }
 
-export function Weiterlesen({ aktuell }: { aktuell: string }) {
+// variante="vorlage": Linienliste der neuen Seitenvorlagen (Partnerseiten-Stil, 14.09.2026).
+export function Weiterlesen({ aktuell, variante = 'kasten' }: { aktuell: string; variante?: 'kasten' | 'vorlage' }) {
   const me = ARTIKEL.find((a) => a.slug === aktuell)
   if (!me) return null
 
@@ -80,6 +81,33 @@ export function Weiterlesen({ aktuell }: { aktuell: string }) {
     .sort((a, b) => rang(a) - rang(b))
     .filter((a) => !nachNaehe.includes(a))
   const auswahl = [...nachNaehe, ...nachRotation].slice(0, 4)
+  const name = RUBRIK_NAMEN[me.rubrik] ?? me.rubrik
+
+  if (variante === 'vorlage') {
+    return (
+      <nav aria-label="Weiterlesen" className="mt-20">
+        <p className="text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe">Weiterlesen: {name}</p>
+        <ul className="mt-4 border-t border-pm-line sm:grid sm:grid-cols-2 sm:gap-x-10">
+          {auswahl.map((a) => (
+            <li key={a.slug} className="border-b border-pm-line">
+              <a
+                href={`/${a.slug}`}
+                className="group flex items-center justify-between gap-4 py-4 text-[17px] font-semibold leading-[1.35] text-pm-ink hover:text-pm-taupe-ink transition-colors"
+              >
+                <span>{a.titel}</span>
+                <svg aria-hidden="true" viewBox="0 0 16 16" className="w-4 h-4 flex-none text-pm-coral transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 8h10M9 4l4 4-4 4" />
+                </svg>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a href={`/${me.rubrik}`} className="mt-5 inline-block text-[15px] font-semibold text-pm-taupe-ink hover:text-pm-ink transition-colors">
+          Alle Beiträge zu {name} →
+        </a>
+      </nav>
+    )
+  }
 
   return (
     <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
