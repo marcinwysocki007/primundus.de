@@ -7,16 +7,20 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: { unoptimized: true },
-  // 14.09.2026: Partner-Landingpage fuer Vermittler als eigenstaendiges HTML (eigener Kopf
-  // und Fuss fuer Partner, kein Kunden-Header). Quelle: public/partner-werden/.
+  // 14.09.2026: Landingpage fuer Vermittler als eigenstaendiges HTML (eigener Kopf und Fuss
+  // fuer Partner, kein Kunden-Header). Quelle: public/pflegekraefte-fuer-vermittler/.
   async rewrites() {
     return [
-      { source: '/partner-werden', destination: '/partner-werden/index.html' },
-      { source: '/partner-werden/agb', destination: '/partner-werden/agb/index.html' },
+      { source: '/pflegekraefte-fuer-vermittler', destination: '/pflegekraefte-fuer-vermittler/index.html' },
+      { source: '/pflegekraefte-fuer-vermittler/agb', destination: '/pflegekraefte-fuer-vermittler/agb/index.html' },
     ]
   },
   async redirects() {
     return [
+      // 14.09.2026: /partner-werden hiess die Seite nur einen Vormittag lang (Martin: „umbenennen,
+      // auch die URL"). Alte Links (Tests, Uebergaben) landen auf der neuen Adresse, Query bleibt.
+      { source: '/partner-werden', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
+      { source: '/partner-werden/agb', destination: '/pflegekraefte-fuer-vermittler/agb', permanent: true },
       // 03.09.2026: Jahres-URL in die Evergreen-Seite (3 gegen 49 Impressionen,
       // kein eigener Inhalt; Jahreszahl gehoert in den Titel, nicht in den Slug)
       { source: '/pflegegrade-2025', destination: '/pflegegrade', permanent: true },
