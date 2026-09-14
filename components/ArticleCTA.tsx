@@ -22,7 +22,7 @@ export function ArticleCTA() {
         <ul className="space-y-1.5">
           {[
             'Zuhause bleiben statt ins Heim',
-            'Individuelle 1:1-Betreuung, 24h anwesend',
+            'Individuelle 1:1-Betreuung',
             'Täglich kündbar – keine Mindestlaufzeit',
           ].map(item => (
             <li key={item} className="flex items-center gap-2 text-[13px] text-pm-ink">
@@ -74,7 +74,7 @@ export function ArticleCTA() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/4989200000830?text=Hallo%20Frau%20Wysocki%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A"
+                href="https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-lg bg-[#25D366] hover:bg-[#20C05A] transition-colors"

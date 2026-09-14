@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ArticleCTA } from '@/components/ArticleCTA'
-import { ANBIETER, PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND } from '@/lib/anbieterVergleich'
+import { VergleichDuell } from '@/components/VergleichDuell'
+import { ANBIETER, STAND } from '@/lib/anbieterVergleich'
 
 const PH = ANBIETER.find((a) => a.slug === 'promedica24')!
 
@@ -61,13 +62,6 @@ const schemaMarkup = JSON.stringify([
   },
 ])
 
-const ICON: Record<string, { sym: string; cls: string }> = {
-  ja: { sym: '✓', cls: 'text-pm-green' },
-  teils: { sym: '◐', cls: 'text-[#B08A3E]' },
-  nein: { sym: '—', cls: 'text-[#B0553E]' },
-  ka: { sym: '?', cls: 'text-pm-mute' },
-}
-
 export default function Page() {
   return (
     <>
@@ -116,60 +110,8 @@ export default function Page() {
             </p>
           </div>
 
-          {/* Duell-Tabelle */}
-          <section className="mb-12">
-            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Die Konditionen im Vergleich</h2>
-            <div className="bg-white border border-pm-line rounded-2xl overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[560px]">
-                  <thead>
-                    <tr className="bg-pm-paper">
-                      <th className="px-4 py-3 text-left text-[12px] font-semibold text-pm-mute border-b border-pm-line w-[30%]">Kriterium</th>
-                      <th className="px-4 py-3 text-left text-[12px] font-bold text-pm-taupe border-b border-pm-line bg-pm-shell w-[35%]">Primundus</th>
-                      <th className="px-4 py-3 text-left text-[12px] font-bold text-pm-ink border-b border-pm-line w-[35%]">Promedica24</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="px-4 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line-soft">Preis ab</td>
-                      <td className="px-4 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line-soft bg-[#FBF9F5]">{PRIMUNDUS.preisAb}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line-soft">{PH.preisAb}</td>
-                    </tr>
-                    {KRITERIEN.map((k) => {
-                      const p = PRIMUNDUS[k.key]
-                      const h = PH[k.key]
-                      return (
-                        <tr key={k.key}>
-                          <td className="px-4 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line-soft">{k.label}</td>
-                          <td className="px-4 py-3 text-[12.5px] leading-snug text-pm-ink border-b border-pm-line-soft bg-[#FBF9F5]">
-                            <span className={`font-bold mr-1 ${ICON[p.wertung].cls}`}>{ICON[p.wertung].sym}</span>{p.kurz}
-                          </td>
-                          <td className="px-4 py-3 text-[12.5px] leading-snug text-pm-body border-b border-pm-line-soft">
-                            <span className={`font-bold mr-1 ${ICON[h.wertung].cls}`}>{ICON[h.wertung].sym}</span>{h.kurz}
-                          </td>
-                        </tr>
-                      )
-                    })}
-                    <tr>
-                      <td className="px-4 py-3 text-[13px] font-semibold text-pm-ink">Modell</td>
-                      <td className="px-4 py-3 text-[12.5px] leading-snug text-pm-ink bg-[#FBF9F5]">{PRIMUNDUS.modell}</td>
-                      <td className="px-4 py-3 text-[12.5px] leading-snug text-pm-body">{PH.modell}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="bg-pm-paper border-t border-pm-line px-4 py-3">
-                <div className="space-y-1">
-                  <p className="text-[11px] text-pm-mute">
-                    Angaben zu Promedica24: promedica24.de, Stand {STAND}. ✓ = ja · ◐ = teilweise · — = nein · k. A. = keine Angabe.
-                  </p>
-                  {FUSSNOTEN.filter((f) => [PH.preisAb, ...KRITERIEN.map((k) => PH[k.key].kurz)].join(' ').includes(f.nr)).map((f) => (
-                    <p key={f.nr} className="text-[11px] text-pm-mute">{f.nr} {f.text}</p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+          {/* Duell-Tabelle: gemeinsamer Baustein, auf dem Handy als Karten (Optik-Plan Stufe 0) */}
+          <VergleichDuell anbieter={PH} />
 
           {/* Worin Promedica24 stark ist */}
           <section className="mb-12">

@@ -110,15 +110,15 @@ export default function Page() {
 
           {/* ── Vergleichstabelle (Desktop) ── */}
           <section className="mb-6 hidden md:block">
-            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
+            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
             <div className="bg-white border border-pm-line rounded-2xl overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[860px]">
+                <table className="w-full min-w-[1040px]">
                   <thead>
                     <tr className="bg-pm-paper">
-                      <th className="sticky left-0 bg-pm-paper px-4 py-3 text-left text-[12px] font-semibold text-pm-mute border-b border-pm-line min-w-[190px]">Kriterium</th>
+                      <th className="sticky left-0 bg-pm-paper px-4 py-3 text-left text-[15px] font-semibold text-pm-mute border-b border-pm-line min-w-[210px]">Kriterium</th>
                       {ALLE.map((a) => (
-                        <th key={a.slug} className={`px-3 py-3 text-left text-[12px] font-bold border-b border-pm-line min-w-[150px] ${a.slug === 'primundus' ? 'text-pm-taupe bg-pm-shell' : 'text-pm-ink'}`}>
+                        <th key={a.slug} className={`px-3 py-3 text-left text-[15px] font-bold border-b border-pm-line min-w-[170px] ${a.slug === 'primundus' ? 'text-pm-taupe bg-pm-shell' : 'text-pm-ink'}`}>
                           {a.name}
                         </th>
                       ))}
@@ -126,20 +126,20 @@ export default function Page() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="sticky left-0 bg-white px-4 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line-soft">Preis ab</td>
+                      <td className="sticky left-0 bg-white px-4 py-3 text-[16px] font-semibold text-pm-ink border-b border-pm-line-soft">Preis ab</td>
                       {ALLE.map((a) => (
-                        <td key={a.slug} className={`px-3 py-3 text-[13px] border-b border-pm-line-soft ${a.slug === 'primundus' ? 'bg-[#FBF9F5] font-semibold text-pm-ink' : 'text-pm-body'}`}>
+                        <td key={a.slug} className={`px-3 py-3 text-[16px] border-b border-pm-line-soft ${a.slug === 'primundus' ? 'bg-[#FBF9F5] font-semibold text-pm-ink' : 'text-pm-body'}`}>
                           {a.preisAb}
                         </td>
                       ))}
                     </tr>
                     {KRITERIEN.map((k) => (
                       <tr key={k.key}>
-                        <td className="sticky left-0 bg-white px-4 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line-soft">{k.label}</td>
+                        <td className="sticky left-0 bg-white px-4 py-3 text-[16px] font-semibold text-pm-ink border-b border-pm-line-soft">{k.label}</td>
                         {ALLE.map((a) => {
                           const kr = a[k.key]
                           return (
-                            <td key={a.slug} className={`px-3 py-3 text-[12.5px] leading-snug border-b border-pm-line-soft ${a.slug === 'primundus' ? 'bg-[#FBF9F5] text-pm-ink' : 'text-pm-body'}`}>
+                            <td key={a.slug} className={`px-3 py-3 text-[16px] leading-snug border-b border-pm-line-soft ${a.slug === 'primundus' ? 'bg-[#FBF9F5] text-pm-ink' : 'text-pm-body'}`}>
                               <span className={`font-bold mr-1 ${ICON[kr.wertung].cls}`}>{ICON[kr.wertung].sym}</span>
                               {kr.kurz}
                             </td>
@@ -148,9 +148,9 @@ export default function Page() {
                       </tr>
                     ))}
                     <tr>
-                      <td className="sticky left-0 bg-white px-4 py-3 text-[13px] font-semibold text-pm-ink">Modell</td>
+                      <td className="sticky left-0 bg-white px-4 py-3 text-[16px] font-semibold text-pm-ink">Modell</td>
                       {ALLE.map((a) => (
-                        <td key={a.slug} className={`px-3 py-3 text-[12.5px] leading-snug ${a.slug === 'primundus' ? 'bg-[#FBF9F5] text-pm-ink' : 'text-pm-body'}`}>
+                        <td key={a.slug} className={`px-3 py-3 text-[16px] leading-snug ${a.slug === 'primundus' ? 'bg-[#FBF9F5] text-pm-ink' : 'text-pm-body'}`}>
                           {a.modell}
                         </td>
                       ))}
@@ -159,12 +159,12 @@ export default function Page() {
                 </table>
               </div>
               <div className="bg-pm-paper border-t border-pm-line px-4 py-3 space-y-1">
-                <p className="text-[11px] text-pm-mute">
+                <p className="text-[15px] leading-relaxed text-pm-mute">
                   ✓ = bietet der Anbieter · ◐ = teilweise / mit Einschränkung · — = bietet er nicht · k. A. = keine Angabe auf der Website ·
                   Quellen: eigene Websites der Anbieter, Stand {STAND}
                 </p>
                 {FUSSNOTEN.map((f) => (
-                  <p key={f.nr} className="text-[11px] text-pm-mute">{f.nr} {f.text}</p>
+                  <p key={f.nr} className="text-[15px] leading-relaxed text-pm-mute">{f.nr} {f.text}</p>
                 ))}
               </div>
             </div>
@@ -172,21 +172,21 @@ export default function Page() {
 
           {/* ── Vergleich als Karten (Mobil) ── */}
           <section className="mb-6 md:hidden">
-            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
+            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
             <div className="space-y-4">
               {ALLE.map((a) => (
                 <div key={a.slug} className={`bg-white border rounded-2xl overflow-hidden ${a.slug === 'primundus' ? 'border-pm-taupe' : 'border-pm-line'}`}>
                   <div className={`px-4 py-3 ${a.slug === 'primundus' ? 'bg-pm-taupe' : 'bg-pm-paper border-b border-pm-line'}`}>
-                    <p className={`text-[15px] font-bold ${a.slug === 'primundus' ? 'text-white' : 'text-pm-ink'}`}>{a.name}</p>
-                    <p className={`text-[12px] ${a.slug === 'primundus' ? 'text-white/80' : 'text-pm-mute'}`}>{a.kurz} · {a.preisAb}</p>
+                    <p className={`text-[18px] font-bold ${a.slug === 'primundus' ? 'text-white' : 'text-pm-ink'}`}>{a.name}</p>
+                    <p className={`text-[15px] ${a.slug === 'primundus' ? 'text-white/80' : 'text-pm-mute'}`}>{a.kurz} · {a.preisAb}</p>
                   </div>
                   <div className="px-4 py-2">
                     {KRITERIEN.map((k) => {
                       const kr = a[k.key]
                       return (
                         <div key={k.key} className="py-2 border-b border-pm-line-soft last:border-0">
-                          <p className="text-[11px] font-semibold uppercase tracking-wide text-pm-mute mb-0.5">{k.label}</p>
-                          <p className="text-[13px] text-pm-ink leading-snug">
+                          <p className="text-[14px] font-semibold uppercase tracking-wide text-pm-mute mb-1">{k.label}</p>
+                          <p className="text-[17px] text-pm-ink leading-snug">
                             <span className={`font-bold mr-1 ${ICON[kr.wertung].cls}`}>{ICON[kr.wertung].sym}</span>
                             {kr.kurz}
                           </p>
@@ -198,9 +198,9 @@ export default function Page() {
               ))}
             </div>
             <div className="mt-3 space-y-1">
-              <p className="text-[11px] text-pm-mute">Quellen: eigene Websites der Anbieter, Stand {STAND}</p>
+              <p className="text-[15px] leading-relaxed text-pm-mute">Quellen: eigene Websites der Anbieter, Stand {STAND}</p>
               {FUSSNOTEN.map((f) => (
-                <p key={f.nr} className="text-[11px] text-pm-mute">{f.nr} {f.text}</p>
+                <p key={f.nr} className="text-[15px] leading-relaxed text-pm-mute">{f.nr} {f.text}</p>
               ))}
             </div>
           </section>
