@@ -7,6 +7,14 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: { unoptimized: true },
+  // 14.09.2026: Partner-Landingpage fuer Vermittler als eigenstaendiges HTML (eigener Kopf
+  // und Fuss fuer Partner, kein Kunden-Header). Quelle: public/partner-werden/.
+  async rewrites() {
+    return [
+      { source: '/partner-werden', destination: '/partner-werden/index.html' },
+      { source: '/partner-werden/agb', destination: '/partner-werden/agb/index.html' },
+    ]
+  },
   async redirects() {
     return [
       // 03.09.2026: Jahres-URL in die Evergreen-Seite (3 gegen 49 Impressionen,
