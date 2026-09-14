@@ -10,7 +10,7 @@
 // dunkles Band, weiße Kästen mit weichem Schatten. Keine Symbol-Kacheln.
 import Image from 'next/image'
 import { Fragment, type ReactNode } from 'react'
-import { RECHNER } from '@/components/ArticleCTA'
+import { RECHNER, Zusagen } from '@/components/ArticleCTA'
 import { InhaltLeiste } from './InhaltLeiste'
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
@@ -147,7 +147,7 @@ export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: stri
               Kosten &amp; Pflegekräfte ansehen
             </a>
             {/* Kein Preis (zeigt der Rechner sofort); ohne Siegel hier deshalb die Auszeichnung. Nie „DIE WELT" zuschreiben. */}
-            <p className="mt-3 text-[13.5px] leading-[1.45] text-pm-taupe-ink">6× Preis-Leistungssieger · keine Vermittlungsgebühr</p>
+            <p className="mt-3 text-[13.5px] leading-[1.45] text-pm-taupe-ink"><Zusagen teile={['6× Preis-Leistungssieger', 'keine Vermittlungsgebühr']} /></p>
           </div>
         </div>
       </aside>

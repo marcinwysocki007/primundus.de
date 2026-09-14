@@ -28,7 +28,21 @@ const TEXT =
   'gibt es erst, wenn Sie gewählt haben.'
 // Zeile unter dem Knopf (Martin 14.09.: keinen Preis nennen, den zeigt der Rechner sofort;
 // stattdessen Zusagen). Die Auszeichnung steht daneben im Siegel.
-const ZUSAGE = 'Keine Vermittlungsgebühr · täglich kündbar · Bestpreisgarantie'
+const ZUSAGEN = ['Keine Vermittlungsgebühr', 'täglich kündbar', 'Bestpreisgarantie']
+
+// Einheiten nicht mitten im Wort umbrechen („keine / Vermittlungsgebühr"), nur am Trennpunkt
+export function Zusagen({ teile }: { teile: string[] }) {
+  return (
+    <>
+      {teile.map((t, i) => (
+        <span key={t}>
+          {i > 0 && ' · '}
+          <span className="whitespace-nowrap">{t}</span>
+        </span>
+      ))}
+    </>
+  )
+}
 const KNOPF =
   'inline-flex w-full sm:w-auto items-center justify-center text-center leading-snug min-h-[56px] px-4 sm:px-8 py-3 rounded-full bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[17px] sm:text-[18px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe'
 
@@ -90,7 +104,7 @@ export function KontaktBand() {
           <a href={RECHNER} referrerPolicy="no-referrer-when-downgrade" className={`mt-8 ${KNOPF}`}>
             Kosten &amp; Pflegekräfte ansehen
           </a>
-          <p className="mt-3 text-[15px] text-pm-taupe-ink">{ZUSAGE}</p>
+          <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
         </div>
         <div className="rounded-[20px] bg-pm-paper p-6 md:p-8">
           <Ansprechpartnerin />
@@ -111,7 +125,7 @@ export function ArticleCTA() {
       <a href={RECHNER} referrerPolicy="no-referrer-when-downgrade" className={`mt-6 ${KNOPF}`}>
         Kosten &amp; Pflegekräfte ansehen
       </a>
-      <p className="mt-3 text-[15px] text-pm-taupe-ink">{ZUSAGE}</p>
+      <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
 
       <div className="mt-8 pt-7 border-t border-pm-line flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
         <Ansprechpartnerin />
