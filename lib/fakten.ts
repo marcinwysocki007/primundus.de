@@ -39,5 +39,5 @@ export const TELEFON_E164 = '+4989200000830'
 export const MODELL_KURZ = 'Eigene, bei der Unternehmensgruppe angestellte Betreuungskräfte — Einsatz über das Entsendemodell mit A1-Bescheinigung'
 
 /** Auszeichnung — exaktes Kategorie-Wording von DIE WELT/ServiceValue (10/2021) beibehalten */
-export const AWARD = 'Nr. 1 der Pflegekräfte-Vermittler — Service-Champions von DIE WELT & ServiceValue (10/2021)'
+export const AWARD = '6× Preis-Leistungssieger; Service-Champion bei DIE WELT & ServiceValue (10/2021)'
 export const AWARD_BELEG = 'https://primundus.de/testsieger-24-stunden-pflege'

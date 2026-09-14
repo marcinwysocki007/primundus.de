@@ -9,15 +9,15 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 // Beleg (PDF + Siegel) liegt lokal unter /downloads bzw. /images.
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Testsieger: Primundus 6× in Folge Nr. 1',
+  title: '24-Stunden-Pflege Testsieger: 6× Preis-Leistungssieger',
   description:
-    'Primundus ist Testsieger, 6× in Folge: Nr. 1 der Pflegekräfte-Vermittler, ausgezeichnet von DIE WELT und ServiceValue. Original-Siegel als PDF ansehen.',
+    'Primundus ist 6× Preis-Leistungssieger und Service-Champion bei DIE WELT und ServiceValue. Das Original-Siegel und die Veröffentlichung als PDF.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege Testsieger: Primundus 6× in Folge Nr. 1',
+    title: '24-Stunden-Pflege Testsieger: 6× Preis-Leistungssieger',
     description:
-      'Nr. 1 der Pflegekräfte-Vermittler — ausgezeichnet von DIE WELT und ServiceValue. Mit Original-Beleg als PDF.',
+      '6× Preis-Leistungssieger, Service-Champion bei DIE WELT und ServiceValue. Mit Original-Beleg als PDF.',
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -43,7 +43,7 @@ const schemaMarkup = [
         name: 'Wer ist Testsieger in der 24-Stunden-Pflege?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Primundus wurde von DIE WELT und ServiceValue als Nr. 1 der Pflegekräfte-Vermittler ausgezeichnet (Service-Champions, Veröffentlichung Oktober 2021).',
+          text: 'Primundus ist 6× Preis-Leistungssieger. DIE WELT und ServiceValue haben Primundus als Service-Champion im erlebten Kundenservice ausgezeichnet (Veröffentlichung Oktober 2021).',
         },
       },
       {
@@ -85,13 +85,12 @@ export default function TestsiegerPage() {
             Auszeichnung · Aktualisiert am 27. August 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Testsieger in der 24-Stunden-Pflege: Primundus ist 6× in Folge die Nr. 1
+            Testsieger in der 24-Stunden-Pflege: Primundus ist 6× Preis-Leistungssieger
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Primundus wurde von DIE WELT und der ServiceValue GmbH als <strong>Nr. 1 der Pflegekräfte-Vermittler</strong> ausgezeichnet
-            — als Service-Champion im erlebten Kundenservice, ermittelt in Deutschlands großer Service-Studie mit mehr als
-            380 untersuchten Branchen (Veröffentlichung: Oktober 2021). Als bester Vermittler von 24-Stunden-Pflegekräften
-            steht Primundus für die beste Kombination aus Preis, Qualität und Kundenservice.
+            Primundus wurde von DIE WELT und der ServiceValue GmbH als <strong>Service-Champion im erlebten Kundenservice</strong>
+            ausgezeichnet, ermittelt in Deutschlands großer Service-Studie mit mehr als 380 untersuchten Branchen
+            (Veröffentlichung: Oktober 2021). Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice.
           </p>
 
           {/* ① SIEGEL + BELEG */}
@@ -99,13 +98,13 @@ export default function TestsiegerPage() {
             <div className="flex flex-col md:flex-row md:items-center gap-6 text-center md:text-left">
               <img
                 src="/images/service-champions-2021.png"
-                alt="Siegel DIE WELT Service-Champions: primundus.de Nr. 1 der Pflegekräfte-Vermittler"
+                alt="Siegel DIE WELT Service-Champions 2021: primundus.de"
                 className="w-44 h-auto mx-auto md:mx-0 flex-shrink-0"
               />
               <div>
                 <h2 className="text-[22px] font-bold text-pm-ink mb-2">Das Original-Siegel</h2>
                 <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-                  „DIE WELT Service-Champions im erlebten Kundenservice: primundus.de — Nr. 1 der Pflegekräfte-Vermittler"
+                  „DIE WELT Service-Champions im erlebten Kundenservice: primundus.de"
                   (ServiceValue GmbH, 10/2021). Die vollständige Veröffentlichung können Sie hier ansehen:
                 </p>
                 <a
@@ -128,7 +127,7 @@ export default function TestsiegerPage() {
             <p className="text-[15px] leading-relaxed text-pm-body">
               DIE WELT und die ServiceValue GmbH untersuchen jedes Jahr, wie zufrieden Kundinnen und Kunden mit deutschen
               Unternehmen sind. Dafür werden Millionen von Kundenurteilen ausgewertet — über alle Branchen hinweg, von Banken
-              bis zur Pflege. Im Ranking der Pflegekräfte-Vermittler erreichte primundus.de <strong>Platz 1</strong>.
+              bis zur Pflege. In seiner Kategorie erreichte primundus.de <strong>Platz 1</strong>.
               Ausgezeichnet wird dabei das, worauf es in der Pflege am meisten ankommt: der <strong>erlebte Kundenservice</strong> —
               also wie gut sich Familien beraten, begleitet und betreut fühlen.
             </p>
@@ -190,8 +189,8 @@ export default function TestsiegerPage() {
             <div className="bg-white border border-pm-line rounded-2xl p-6">
               <p className="text-[16px] font-bold text-pm-ink mb-2">Wer ist Testsieger in der 24-Stunden-Pflege?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
-                Primundus wurde von DIE WELT und ServiceValue als Nr. 1 der Pflegekräfte-Vermittler ausgezeichnet
-                (Service-Champions, Veröffentlichung Oktober 2021). Die vollständige Veröffentlichung können Sie{' '}
+                Primundus ist 6× Preis-Leistungssieger. DIE WELT und ServiceValue haben Primundus als Service-Champion im erlebten
+                Kundenservice ausgezeichnet (Veröffentlichung Oktober 2021). Die vollständige Veröffentlichung können Sie{' '}
                 <a href="/downloads/die-welt-service-champions-2021.pdf" target="_blank" rel="noopener" className="text-pm-taupe underline underline-offset-2">
                   als PDF ansehen
                 </a>.

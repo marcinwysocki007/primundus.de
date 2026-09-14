@@ -98,10 +98,10 @@ export function ArticleCTA() {
             />
             <div>
               <p className="text-[12px] font-bold text-pm-ink">
-                Testsieger <span className="text-pm-taupe">DIE WELT</span>
+                6× Preis-Leistungssieger
               </p>
               <p className="text-[10px] text-[#6B5A45] leading-relaxed mt-0.5">
-                <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-pm-taupe">Ausgezeichnet für Preis, Qualität &amp; Kundenservice — zum Beleg</a>
+                <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-pm-taupe">Service-Champion bei DIE WELT — zum Beleg</a>
               </p>
             </div>
           </div>

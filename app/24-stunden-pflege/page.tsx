@@ -15,11 +15,11 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-  description: '24h-Pflege von Primundus: Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. Testsieger DIE WELT, 6× in Folge. Ab 2.200 €/Monat.',
+  description: '24h-Pflege von Primundus: Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. 6× Preis-Leistungssieger. Ab 2.200 €/Monat.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege' },
   openGraph: {
     title: '24-Stunden-Pflege | Primundus — Testsieger & 20 Jahre Erfahrung',
-    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. Testsieger DIE WELT, 6× in Folge.',
+    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. 6× Preis-Leistungssieger.',
     url: 'https://primundus.de/24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -61,7 +61,7 @@ const schemaMarkup = [
       { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege bei Primundus?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat, je nach Pflegebedarf. Mit Pflegegeld (bis 990 €/Monat) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil deutlich. Kostenlose Beratung: 089 200 000 830.' } },
       { '@type': 'Question', name: 'Wie schnell kann 24h-Pflege bei Primundus starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.' } },
       { '@type': 'Question', name: 'Ist 24-Stunden-Pflege bei Primundus legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus arbeitet ausschließlich im rechtssicheren Entsendemodell. Alle Betreuungskräfte sind im Heimatland sozialversichert und mit A1-Bescheinigung legal in Deutschland tätig.' } },
-      { '@type': 'Question', name: 'Warum ist Primundus Testsieger?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Nr. 1 der Pflegekräfte-Vermittler ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' } },
+      { '@type': 'Question', name: 'Warum ist Primundus Testsieger?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus ist 6× Preis-Leistungssieger und wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Service-Champion ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' } },
     ],
   },
 ]
@@ -91,7 +91,7 @@ export default function VierUndZwanzigStundenPflege() {
           </h1>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. Testsieger DIE WELT, 6× in Folge.
+            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. 6× Preis-Leistungssieger.
           </p>
 
           <KurzAntwort frage="Was unterscheidet Primundus von Vermittlungsagenturen?">
@@ -103,7 +103,7 @@ export default function VierUndZwanzigStundenPflege() {
             <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Warum Primundus?</p>
             <div className="grid md:grid-cols-2 gap-3">
               {[
-                { icon: '★', title: 'Testsieger DIE WELT', desc: 'Nr. 1 der Pflegekräfte-Vermittler — Service-Studie DIE WELT/ServiceValue 2021' },
+                { icon: '★', title: '6× Preis-Leistungssieger', desc: 'Service-Champion bei DIE WELT & ServiceValue (2021)' },
                 { icon: '✓', title: 'Rechtssicher', desc: 'Entsendemodell mit A1-Bescheinigung — kein rechtliches Risiko für die Familie' },
                 { icon: '↺', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung — volle Flexibilität' },
                 { icon: '⚡', title: 'In 4–7 Tagen startklar', desc: 'Vom ersten Gespräch bis zur Anreise der Betreuungskraft' },
@@ -296,7 +296,7 @@ export default function VierUndZwanzigStundenPflege() {
               { q: 'Was kostet 24-Stunden-Pflege bei Primundus?', a: '2.200–3.500 €/Monat je nach Pflegebedarf. Mit Pflegegeld (bis 990 €/Monat) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil erheblich. Kostenlose Beratung: 089 200 000 830.' },
               { q: 'Wie schnell kann 24h-Pflege bei Primundus starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja — Primundus setzt ausschließlich eigene Betreuungskräfte im Entsendemodell mit A1-Bescheinigung. Vollständig rechtssicher, kein Risiko für die Familie.' },
-              { q: 'Warum ist Primundus Testsieger?', a: 'Primundus wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Nr. 1 der Pflegekräfte-Vermittler ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
+              { q: 'Warum ist Primundus Testsieger?', a: 'Primundus ist 6× Preis-Leistungssieger und wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Service-Champion ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
               { q: 'Was passiert wenn die Betreuungskraft krank wird?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke. Das ist einer der zentralen Vorteile der Agenturvermittlung.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

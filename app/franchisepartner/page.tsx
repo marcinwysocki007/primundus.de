@@ -133,8 +133,8 @@ export default function FranchisePage() {
                 height={96}
                 className="object-contain mb-3"
               />
-              <p className="text-[15px] font-bold text-pm-ink">Testsieger DIE WELT – 6× in Folge</p>
-              <p className="text-small text-pm-mute mt-1">Nr. 1 der Pflegekräfte-Vermittler — DIE WELT & ServiceValue</p>
+              <p className="text-[15px] font-bold text-pm-ink">6× Preis-Leistungssieger</p>
+              <p className="text-small text-pm-mute mt-1">Service-Champion bei DIE WELT & ServiceValue</p>
             </div>
             <div className="bg-white border border-pm-line rounded-2xl p-6 flex flex-col items-center justify-center text-center">
               <p className="text-h2 md:text-h2-lg font-bold text-pm-ink">ab 5.500 €</p>
@@ -297,7 +297,7 @@ export default function FranchisePage() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                {['Branchen-Erfahrung seit 2006', 'Testsieger DIE WELT · 6× in Folge', 'Eigene Software', 'Eigenes Personal'].map((tag) => (
+                {['Branchen-Erfahrung seit 2006', '6× Preis-Leistungssieger', 'Eigene Software', 'Eigenes Personal'].map((tag) => (
                   <span key={tag} className="text-[12px] text-pm-taupe border border-[#D4C5B0] rounded-full px-3 py-1 bg-[#FDFCFA]">
                     {tag}
                   </span>

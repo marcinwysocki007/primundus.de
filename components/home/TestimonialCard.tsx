@@ -48,7 +48,7 @@ export function TestimonialCard() {
             <span className="text-sm font-semibold text-pm-ink">Testsieger-Auszeichnung</span>
           </div>
           <p className="text-[13px] text-pm-body leading-snug">
-            Nr. 1 der Pflegekräfte-Vermittler — DIE WELT &amp; ServiceValue (10/2021)
+            6× Preis-Leistungssieger · Service-Champion bei DIE WELT &amp; ServiceValue (10/2021)
           </p>
           <p className="text-[12px] text-pm-mute">Zur Auszeichnung mit Beleg →</p>
         </a>

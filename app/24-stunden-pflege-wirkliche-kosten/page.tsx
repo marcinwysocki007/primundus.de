@@ -232,7 +232,7 @@ export default function WirklicheKostenPage() {
               <p className="text-[13px] text-pm-taupe-ink leading-relaxed">
                 <strong>Unsere Antworten:</strong> Gesamtpreis 2.200–3.500 € je nach Situation, Kost &amp;
                 Logis 200–300 €, täglich kündbar ohne Mindestlaufzeit, Start meist in 4–7 Tagen — und die
-                Auszeichnung als Nr. 1 der Pflegekräfte-Vermittler ist{' '}
+                Auszeichnung als Service-Champion bei DIE WELT ist{' '}
                 <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 font-semibold text-pm-taupe">mit dem Original-Dokument belegt</a>.
               </p>
             </div>
