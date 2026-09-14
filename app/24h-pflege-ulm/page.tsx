@@ -50,7 +50,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Pflegekraft in Ulm starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
       {
         '@type': 'Question',
@@ -138,7 +138,7 @@ export default function UlmPage() {
             24-Stunden-Pflege und Betreuung in Ulm
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Söflingen, Eselsberg oder drüben in Wiblingen: Ulmer bleiben ihrer Stadt an der Donau treu — dem Markt, dem Münsterblick, den eigenen vier Wänden. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
+            Söflingen, Eselsberg oder drüben in Wiblingen: Ulmer bleiben ihrer Stadt an der Donau treu — dem Markt, dem Münsterblick, den eigenen vier Wänden. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist rund um die Uhr da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
@@ -378,7 +378,7 @@ export default function UlmPage() {
           <div className="space-y-3 mb-12">
             {[
               { q: 'Was kostet eine 24h-Pflegekraft in Ulm?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
-              { q: 'Wie schnell kann eine 24h-Pflegekraft in Ulm starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Ulm starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Ulm rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
               { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Ulm?', a: 'Das hängt am Grundriss, und die Ausgangslage in Ulm ist bekannt: Die durchschnittliche Wohnung misst 87,6 Quadratmeter, 27,8 Prozent liegen unter 60 Quadratmetern (Baden-Württemberg: 18,1 Prozent), und 35,2 Prozent der Haushalte wohnen im Eigentum (Baden-Württemberg: 51,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
@@ -445,7 +445,7 @@ export default function UlmPage() {
             {[
               { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', chip: '⏱ Dauert unter 2 Minuten' },
               { n: '2', title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Ihr Zugang kommt auch per E-Mail' },
-              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, meist in 4–7 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
+              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="w-11 h-11 rounded-full bg-pm-cocoa text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>

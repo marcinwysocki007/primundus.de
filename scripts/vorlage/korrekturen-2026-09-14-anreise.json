@@ -1,0 +1,134 @@
+{
+ "_hinweis": "Übernahme der Anreise-Sätze aus main 3aa9627 (andere Sitzung, Martin 14.09.: mach alles) auf die umgebauten Ratgeber; bei pflegegrad-3/4 auf meine Satzkorrektur.",
+ "korrekturen": [
+  {
+   "seite": "24-stunden-pflege-wirkliche-kosten",
+   "art": "anreise",
+   "alt": "Start meist in 4–7 Tagen — und die",
+   "neu": "Anreise schon in 3 Tagen möglich — und die"
+  },
+  {
+   "seite": "24h-pflege-fuer-angehoerige",
+   "art": "anreise",
+   "alt": "und der Start organisiert — in 4–7 Tagen.",
+   "neu": "und der Start organisiert — wenn nötig schon in 3 Tagen.",
+   "mehrfach": true
+  },
+  {
+   "seite": "24h-pflege-fuer-angehoerige",
+   "art": "anreise",
+   "alt": "Vom ersten Anruf bis zum Start der Betreuung vergehen typisch 4–7 Tage. In dringenden Situationen auch schneller.",
+   "neu": "Eine Anreise ist schon 3 Tage nach dem ersten Anruf möglich. Wann genau, richtet sich nach Ihrem Wunschtermin."
+  },
+  {
+   "seite": "alzheimer-betreuung-zuhause",
+   "art": "anreise",
+   "alt": "Primundus setzt eigene Kräfte mit Alzheimer/Demenz-Erfahrung ein — Start in 4–7 Tagen",
+   "neu": "Primundus setzt eigene Kräfte mit Alzheimer/Demenz-Erfahrung ein — Anreise in 3 Tagen möglich"
+  },
+  {
+   "seite": "burnout-pflegende-angehoerige",
+   "art": "anreise",
+   "alt": "Primundus startet in 4–7 Tagen.",
+   "neu": "Bei Primundus ist eine Anreise schon in 3 Tagen möglich."
+  },
+  {
+   "seite": "kurzzeitpflege-oder-24h-pflege",
+   "art": "anreise",
+   "alt": "Primundus kann in 4–7 Tagen starten.",
+   "neu": "Primundus kann schon in 3 Tagen starten.",
+   "mehrfach": true
+  },
+  {
+   "seite": "osteuropaeische-pflegekraft-oder-agentur",
+   "art": "anreise",
+   "alt": "'4–7 Tage']",
+   "neu": "'ab 3 Tagen']"
+  },
+  {
+   "seite": "osteuropaeische-pflegekraft-oder-agentur",
+   "art": "anreise",
+   "alt": "4–7 Tage von der Anfrage bis zur Kraft zuhause. Wer selbst sucht braucht Wochen bis Monate.",
+   "neu": "Anreise schon 3 Tage nach der Anfrage möglich. Wer selbst sucht, braucht Wochen bis Monate."
+  },
+  {
+   "seite": "osteuropaeische-pflegekraft-oder-agentur",
+   "art": "anreise",
+   "alt": "Start in 4–7 Tagen nach Erstgespräch",
+   "neu": "Anreise schon 3 Tage nach dem Erstgespräch möglich"
+  },
+  {
+   "seite": "pflegegrad-3",
+   "art": "anreise",
+   "alt": "fest angestellt und können in 4–7 Tagen starten.",
+   "neu": "fest angestellt, eine Anreise ist schon in 3 Tagen möglich.",
+   "mehrfach": true
+  },
+  {
+   "seite": "pflegegrad-4",
+   "art": "anreise",
+   "alt": "Primundus ist mit eigenen Betreuungskräften in 4–7 Tagen vor Ort.",
+   "neu": "Mit eigenen Betreuungskräften ist bei Primundus eine Anreise schon in 3 Tagen möglich."
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "anreise",
+   "alt": "Primundus findet typischerweise innerhalb von 4–7 Tagen nach dem ersten Beratungsgespräch eine passende Betreuungskraft. In dringenden Fällen ist ein schnellerer Start möglich.",
+   "neu": "Eine Anreise ist schon 3 Tage nach dem ersten Beratungsgespräch möglich. Wann genau, richtet sich nach Ihrem Wunschtermin."
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "anreise",
+   "alt": "Bei Primundus ist die passende Kraft in 4–7 Tagen vor Ort.",
+   "neu": "Bei Primundus kann die passende Kraft schon in 3 Tagen vor Ort sein."
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "anreise",
+   "alt": "Start: Mit Primundus in 4–7 Tagen nach Erstgespräch",
+   "neu": "Start: Anreise schon 3 Tage nach dem Erstgespräch möglich"
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "anreise",
+   "alt": "'Anreise in 4–7 Tagen'",
+   "neu": "'Anreise in 3 Tagen möglich'"
+  },
+  {
+   "seite": "pflegekraft-finden",
+   "art": "anreise",
+   "alt": "Typischerweise 4–7 Tage nach dem ersten Beratungsgespräch. In dringenden Situationen ist oft ein schnellerer Start möglich.",
+   "neu": "Eine Anreise ist schon 3 Tage nach dem ersten Beratungsgespräch möglich. Wann genau, richtet sich nach Ihrem Wunschtermin."
+  },
+  {
+   "seite": "schlaganfall-pflege-zuhause",
+   "art": "anreise",
+   "alt": "Primundus startet in 4–7 Tagen — auch als Überbrückung nach Klinik",
+   "neu": "Primundus kann schon in 3 Tagen starten — auch als Überbrückung nach Klinik"
+  },
+  {
+   "seite": "schlaganfall-pflege-zuhause",
+   "art": "anreise",
+   "alt": "Primundus kann eine Betreuungskraft in 4–7 Tagen bereitstellen",
+   "neu": "Primundus kann eine Betreuungskraft schon in 3 Tagen bereitstellen"
+  },
+  {
+   "seite": "schlaganfall-pflege-zuhause",
+   "art": "anreise",
+   "alt": "Primundus kann in 4–7 Tagen eine Kraft bereitstellen",
+   "neu": "Primundus kann schon in 3 Tagen eine Kraft bereitstellen"
+  },
+  {
+   "seite": "vorteile-24h-pflege",
+   "art": "anreise",
+   "alt": "In 4–7 Tagen startklar",
+   "neu": "Anreise in 3 Tagen möglich"
+  },
+  {
+   "seite": "was-ist-24-stunden-pflege",
+   "art": "anreise",
+   "alt": "Betreuung startet in 4–7 Tagen — täglich kündbar",
+   "neu": "Anreise in 3 Tagen möglich — täglich kündbar"
+  }
+ ]
+}

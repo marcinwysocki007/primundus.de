@@ -50,7 +50,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Pflegekraft in Saarbrücken starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
       },
       {
         '@type': 'Question',
@@ -103,7 +103,7 @@ export default function SaarbrueckenPage() {
             24-Stunden-Pflege und Betreuung in Saarbrücken
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Von St. Johann über Dudweiler bis Burbach: Saarbrücker bleiben ihrem Viertel treu — oft ein Leben lang. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, im vertrauten Zuhause statt im Heim, auch im Umland bis Völklingen und Sulzbach. Täglich kündbar, rechtssicher, meist startklar in 4–7 Tagen.
+            Von St. Johann über Dudweiler bis Burbach: Saarbrücker bleiben ihrem Viertel treu — oft ein Leben lang. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein: rund um die Uhr da, im vertrauten Zuhause statt im Heim, auch im Umland bis Völklingen und Sulzbach. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
@@ -346,7 +346,7 @@ export default function SaarbrueckenPage() {
           <div className="space-y-3 mb-12">
             {[
               { q: 'Was kostet eine 24h-Pflegekraft in Saarbrücken?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1300–2400 €/Monat — deutlich günstiger als ein Heimplatz in Saarland (Eigenanteil rund 3.690 €/Monat, vdek 07/2026).' },
-              { q: 'Wie schnell kann eine 24h-Pflegekraft in Saarbrücken starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Saarbrücken starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Saarbrücken rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
               { q: 'Lohnt sich 24-Stunden-Pflege, wenn es in Saarbrücken genug ambulante Dienste gibt?', a: 'Die Frage ist berechtigt — der Regionalverband ist dicht besiedelt, ambulante Dienste sind erreichbar. Der Unterschied liegt nicht in der Entfernung, sondern in der Anwesenheit. Ein Dienst kommt zu festen Zeiten und bleibt zwanzig Minuten. Er ist nicht da, wenn nachts jemand aufsteht, er kocht nicht mit und er merkt nicht, wenn tagsüber etwas nicht stimmt. Wo es um Begleitung über den ganzen Tag geht, ersetzt kein Einsatzplan jemanden, der im Haus wohnt.' },
@@ -406,7 +406,7 @@ export default function SaarbrueckenPage() {
             {[
               { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', chip: '⏱ Dauert unter 2 Minuten' },
               { n: '2', title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Ihr Zugang kommt auch per E-Mail' },
-              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, meist in 4–7 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
+              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="w-11 h-11 rounded-full bg-pm-cocoa text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>

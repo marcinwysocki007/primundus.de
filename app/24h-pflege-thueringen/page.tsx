@@ -55,7 +55,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Pflegekraft in Thüringen starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Thüringen — auch in ländlichen Regionen.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Thüringen — auch in ländlichen Regionen.' },
       },
       {
         '@type': 'Question',
@@ -93,7 +93,7 @@ export default function ThueringenPage() {
             24h-Pflege Thüringen — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Fachwerk in Erfurt, Plattenbau in Jena, Haus am Waldrand im Thüringer Wald: Zuhause ist in Thüringen mehr als eine Adresse. Damit es auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein — rund um die Uhr da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
+            Fachwerk in Erfurt, Plattenbau in Jena, Haus am Waldrand im Thüringer Wald: Zuhause ist in Thüringen mehr als eine Adresse. Damit es auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein — rund um die Uhr da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
@@ -366,7 +366,7 @@ export default function ThueringenPage() {
             {[
               { q: 'Warum wird in Thüringen so viel zu Hause gepflegt?', a: 'Weil kaum etwas anderes übrig bleibt. Zwischen 2017 und 2023 stieg die Zahl der Pflegebedürftigen in Thüringen um 67,7 Prozent, während die Zahl der Menschen im Heim um vier Prozent sank. Der gesamte Zuwachs — rund 78.300 Menschen — landete bei den Familien. Das Land schreibt in seinem Pflegeentwicklungsplan von 2025 selbst: „In mehr als der Hälfte der Fälle betreuen die An- und Zugehörigen die Pflegebedürftigen ohne Unterstützung durch ambulante Pflege- und Betreuungsdienste.“ Erschwerend kommt hinzu, dass die Zahl der 20- bis 65-Jährigen bis 2042 um 14 Prozent sinkt — die Generation, die diese Pflege leisten soll, wird kleiner.' },
               { q: 'Was kostet eine 24h-Pflegekraft in Thüringen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Thüringen (Eigenanteil rund 3.000 €/Monat, vdek 07/2026).' },
-              { q: 'Wie schnell kann eine 24h-Pflegekraft in Thüringen starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Thüringen — auch in ländlichen Regionen.' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Thüringen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Thüringen — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Thüringen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
             ].map((item, i) => (
@@ -423,7 +423,7 @@ export default function ThueringenPage() {
             {[
               { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', chip: '⏱ Dauert unter 2 Minuten' },
               { n: '2', title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Ihr Zugang kommt auch per E-Mail' },
-              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, meist in 4–7 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
+              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="w-11 h-11 rounded-full bg-pm-cocoa text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>

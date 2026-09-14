@@ -91,7 +91,7 @@ export default function SchlaganfallPflegeZuhause() {
                 'Frühzeitige Entlassung aus Klinik durch 24h-Betreuungskraft möglich',
                 'Vertraute Umgebung gibt Orientierung und Halt',
                 'Pflegegrad 2–5 je nach Schwere — sofort nach Entlassung beantragen',
-                'Primundus startet in 4–7 Tagen — auch als Überbrückung nach Klinik',
+                'Primundus kann schon in 3 Tagen starten — auch als Überbrückung nach Klinik',
                 'Physiotherapie und Logopädie können zuhause fortgesetzt werden',
               ]}
         />
@@ -118,7 +118,7 @@ export default function SchlaganfallPflegeZuhause() {
             </Text>
             <Punkte
               punkte={[
-                { title: 'Frühzeitige Entlassung möglich', desc: 'Das Krankenhaus kann den Patienten früher entlassen wenn die häusliche Versorgung sichergestellt ist. Primundus kann eine Betreuungskraft in 4–7 Tagen bereitstellen — oft schneller als ein Pflegeheimplatz gefunden ist.' },
+                { title: 'Frühzeitige Entlassung möglich', desc: 'Das Krankenhaus kann den Patienten früher entlassen wenn die häusliche Versorgung sichergestellt ist. Primundus kann eine Betreuungskraft schon in 3 Tagen bereitstellen — oft schneller als ein Pflegeheimplatz gefunden ist.' },
                 { title: 'Reha-Therapien zuhause fortsetzen', desc: 'Physiotherapeuten und Logopäden kommen nach Hause. Die Betreuungskraft begleitet die Übungen im Alltag — konsequenter als eine Einrichtung es könnte.' },
                 { title: 'Kurzzeitpflege als Überbrückung', desc: 'Wenn die Wohnungssituation erst angepasst werden muss (Badumbau, Rollstuhlzugang) kann das Entlastungsbudget für Kurzzeitpflege genutzt werden.' },
               ]}
@@ -152,7 +152,7 @@ export default function SchlaganfallPflegeZuhause() {
           <DunklerAbschnitt
             id="24h"
             titel="24h-Pflege nach Schlaganfall — wann und wie"
-            einleitung="Eine 24h-Betreuungskraft ist nach Schlaganfall die häufigste Lösung für Familien die den Angehörigen zuhause versorgen wollen. Primundus kann in 4–7 Tagen eine Kraft bereitstellen — auch als Überbrückung direkt nach Krankenhausentlassung."
+            einleitung="Eine 24h-Betreuungskraft ist nach Schlaganfall die häufigste Lösung für Familien die den Angehörigen zuhause versorgen wollen. Primundus kann schon in 3 Tagen eine Kraft bereitstellen — auch als Überbrückung direkt nach Krankenhausentlassung."
             punkte={[
               { title: 'Was die Betreuungskraft nach Schlaganfall macht', desc: 'Körperpflege und Transfer aus dem Bett, Unterstützung bei Essen (ggf. angepasste Konsistenz), Begleitung bei Physiotherapie-Übungen im Alltag, Sprache fördern durch Gespräche, Sturzsicherheit gewährleisten, emotionale Begleitung.' },
               { title: 'Qualifikation beachten', desc: 'Bei Schluckstörungen oder intensivpflegerischen Anforderungen sollte die Kraft nachgewiesene Pflegeerfahrung haben. Primundus berücksichtigt das bei der Auswahl.' },

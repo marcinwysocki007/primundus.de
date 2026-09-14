@@ -148,7 +148,7 @@ export default function TestsiegerPage() {
                 { icon: '💶', title: 'Keine Vermittlungsgebühr', desc: 'Keine Anzahlung, keine Aufnahmegebühr — der Monatspreis ist der Preis' },
                 { icon: '📅', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, kein Risiko' },
                 { icon: '🧾', title: 'Taggenaue Abrechnung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist' },
-                { icon: '⚡', title: 'Start in 4–7 Tagen', desc: 'Auch bei dringendem Bedarf' },
+                { icon: '⚡', title: 'Anreise in 3 Tagen möglich', desc: 'Auch bei dringendem Bedarf' },
                 { icon: '👩', title: 'Persönliche Ansprechpartnerin', desc: 'Marta Kapcio begleitet Sie von der Anfrage bis zum Start' },
                 { icon: '🛡️', title: 'Rechtssicher', desc: 'Offiziell in der EU angestellte, sozialversicherte Betreuungskräfte' },
               ].map((item) => (

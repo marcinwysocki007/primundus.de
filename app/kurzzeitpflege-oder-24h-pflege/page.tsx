@@ -53,7 +53,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was ist günstiger — Kurzzeitpflege oder 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Für kurze Übergänge (unter 4 Wochen): Kurzzeitpflege mit Entlastungsbudget oft günstiger. Bei dauerhaftem Bedarf: 24h-Pflege mit allen Zuschüssen meist günstiger als stationäre Lösung.' } },
-      { '@type': 'Question', name: 'Kann man Kurzzeitpflege als Übergang nutzen und dann 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann in 4–7 Tagen starten.' } }
+      { '@type': 'Question', name: 'Kann man Kurzzeitpflege als Übergang nutzen und dann 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann schon in 3 Tagen starten.' } }
     ],
   },
 ]
@@ -106,7 +106,7 @@ export default function Page() {
             <Fragen
               fragen={[
                 { q: "Was ist günstiger — Kurzzeitpflege oder 24h-Pflege?", a: "Für kurze Übergänge (unter 4 Wochen): Kurzzeitpflege mit Entlastungsbudget oft günstiger. Bei dauerhaftem Bedarf: 24h-Pflege mit allen Zuschüssen meist günstiger als stationäre Lösung." },
-                { q: "Kann man Kurzzeitpflege als Übergang nutzen und dann 24h-Pflege?", a: "Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann in 4–7 Tagen starten." },
+                { q: "Kann man Kurzzeitpflege als Übergang nutzen und dann 24h-Pflege?", a: "Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann schon in 3 Tagen starten." },
               ]}
             />
           </Abschnitt>

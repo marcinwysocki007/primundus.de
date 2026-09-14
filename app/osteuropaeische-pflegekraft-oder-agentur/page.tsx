@@ -90,7 +90,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
                 ['Ersatz bei Ausfall', 'Familie organisiert selbst — oft Versorgungslücke', 'Primundus stellt sofort Ersatz'],
                 ['Zeitaufwand', 'Erheblich — Suche, Verhandlung, Verträge', 'Minimal — Primundus übernimmt alles'],
                 ['Kraftwechsel', 'Familie muss neu suchen', 'Primundus organisiert nahtlos'],
-                ['Startzeitraum', 'Wochen bis Monate', '4–7 Tage'],
+                ['Startzeitraum', 'Wochen bis Monate', 'ab 3 Tagen'],
                 ['Qualitätssicherung', 'Keine systematische', 'Laufend durch Primundus'],
                 ['Kosten', 'Evtl. niedriger', '2.200–3.500 €/Mo — transparent'],
               ]}
@@ -105,7 +105,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
                 { title: 'Geprüfte Kräfte aus einem Pool', desc: 'Primundus prüft Deutschkenntnisse aktiv, prüft Referenzen, wählt nach Erfahrung und Diagnose aus. Wer selbst sucht — auf Facebook, Anzeigenmärkten — hat keine verlässliche Grundlage für die Qualitätsbewertung.' },
                 { title: 'Ersatz ohne Lücke', desc: 'Was passiert wenn die direkt gesuchte Kraft krank wird, kündigt oder nach Hause möchte? Die Familie muss von vorne anfangen — während die Versorgung nicht gesichert ist. Bei Primundus gibt es sofort Ersatz.' },
                 { title: 'Kraftwechsel ohne Aufwand', desc: 'Alle 6–8 Wochen wechselt die Kraft. Primundus kündigt rechtzeitig an, stellt die neue Kraft vor, organisiert die Übergabe. Die Familie muss sich nicht darum kümmern.' },
-                { title: 'Schneller Start', desc: '4–7 Tage von der Anfrage bis zur Kraft zuhause. Wer selbst sucht braucht Wochen bis Monate.' },
+                { title: 'Schneller Start', desc: 'Anreise schon 3 Tage nach der Anfrage möglich. Wer selbst sucht, braucht Wochen bis Monate.' },
               ]}
             />
           </Abschnitt>
@@ -132,7 +132,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               'Aktive Qualitätsprüfung aller Kräfte (Deutsch, Erfahrung, Referenzen)',
               'Sofortiger Ersatz bei Ausfall — keine Versorgungslücke',
               'Laufende Betreuung durch Primundus als Ansprechpartner',
-              'Start in 4–7 Tagen nach Erstgespräch',
+              'Anreise schon 3 Tage nach dem Erstgespräch möglich',
             ]} />
           </Abschnitt>
 

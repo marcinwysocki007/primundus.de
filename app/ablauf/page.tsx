@@ -19,7 +19,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Ablauf der 24h-Pflege mit Primundus — von Anfrage bis Start',
-  description: 'So läuft die 24h-Pflege mit Primundus ab: Beratungsgespräch, Kraftauswahl, Vertragsabschluss, Anreise in 4–7 Tagen. Der vollständige Ablauf erklärt.',
+  description: 'So läuft die 24h-Pflege mit Primundus ab: Beratungsgespräch, Kraftauswahl, Vertragsabschluss, Anreise schon in 3 Tagen möglich. Der vollständige Ablauf erklärt.',
   alternates: { canonical: 'https://primundus.de/ablauf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -58,13 +58,13 @@ const schemaMarkup = [
     step: [
       { '@type': 'HowToStep', name: 'Kostenloses Beratungsgespräch', text: 'Situation schildern, Fragen stellen, Angebot erhalten. Kein Auftrag, kein Risiko.' },
       { '@type': 'HowToStep', name: 'Kraft vorschlagen & bestätigen', text: 'Primundus schlägt geprüfte, passende Kraft vor. Telefonat vorab möglich.' },
-      { '@type': 'HowToStep', name: 'Vertrag & Anreise', text: 'Transparentes Angebot, Vertragsabschluss. Betreuungskraft reist in 4–7 Tagen an.' },
+      { '@type': 'HowToStep', name: 'Vertrag & Anreise', text: 'Transparentes Angebot, Vertragsabschluss. Betreuungskraft reist an, wenn nötig schon in 3 Tagen.' },
       { '@type': 'HowToStep', name: 'Eingewöhnung & Kraftwechsel', text: 'Erste Woche Eingewöhnung. Alle 6–8 Wochen Kraftwechsel, nahtlos organisiert.' },
     ],
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie schnell kann eine 24h-Pflegekraft starten?', acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' } },
+      { '@type': 'Question', name: 'Wie schnell kann eine 24h-Pflegekraft starten?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' } },
     ],
   },
 ]
@@ -96,11 +96,11 @@ export default function Ablauf() {
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <KurzAntwort frage="Wie schnell kann die Betreuung starten?">
-            In der Regel startet die Betreuungskraft 4–7 Tage nach der Anfrage. Vorher sehen Sie Profile mit Foto, Erfahrung und Sprachkenntnissen und wählen selbst aus — ein Vertrag entsteht erst nach Ihrer Entscheidung. Bei dringendem Bedarf, etwa nach einer Krankenhausentlassung, geht es oft schneller.
+            Eine Anreise ist schon 3 Tage nach der Anfrage möglich. Vorher sehen Sie Profile mit Foto, Erfahrung und Sprachkenntnissen und wählen selbst aus — ein Vertrag entsteht erst nach Ihrer Entscheidung. Bei dringendem Bedarf, etwa nach einer Krankenhausentlassung, geht es oft schneller.
           </KurzAntwort>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            In 2 Minuten sehen Sie Ihr persönliches Angebot und passende Pflegekräfte — sofort, ohne Wartezeit. Primundus übernimmt danach die gesamte Organisation: Kraftauswahl, A1-Bescheinigung, Vertragsabschluss, Anreise. Bis zur Betreuungskraft zuhause vergehen typischerweise 4–7 Tage.
+            In 2 Minuten sehen Sie Ihr persönliches Angebot und passende Pflegekräfte — sofort, ohne Wartezeit. Primundus übernimmt danach die gesamte Organisation: Kraftauswahl, A1-Bescheinigung, Vertragsabschluss, Anreise. Eine Anreise ist schon in 3 Tagen möglich.
           </p>
 
           <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10">
@@ -110,7 +110,7 @@ export default function Ablauf() {
                 { schritt: 'Sofort', titel: 'Angebot einholen', desc: 'Online-Formular, 2 Min — sofort Kosten & Pflegekräfte sehen' },
                 { schritt: 'Tag 1–2', titel: 'Kraft bestätigen', desc: 'Primundus stimmt Kraftprofil mit Familie ab' },
                 { schritt: 'Tag 2–3', titel: 'Vertrag', desc: 'Transparentes Angebot & Vertragsabschluss' },
-                { schritt: 'Tag 4–7', titel: 'Start', desc: 'Je nach Wunschtermin & Reaktion — Betreuungskraft reist an' },
+                { schritt: 'ab Tag 3', titel: 'Start', desc: 'Je nach Wunschtermin & Reaktion — Betreuungskraft reist an' },
               ].map((item) => (
                 <div key={item.schritt} className="text-center">
                   <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.schritt}</p>
@@ -165,7 +165,7 @@ export default function Ablauf() {
                 badge: 'Je nach Wunschtermin',
                 badgeColor: 'bg-[#F0FDF4] text-[#166534]',
                 title: 'Anreise der Betreuungskraft',
-                desc: 'Die Betreuungskraft reist zum vereinbarten Termin an — typischerweise 4–7 Tage nach Vertragsabschluss, abhängig von Ihrem Wunschtermin. Primundus koordiniert An- und Abreise vollständig. Erste Tage: Eingewöhnung in Haus, Routine und Pflegesituation.',
+                desc: 'Die Betreuungskraft reist zum vereinbarten Termin an — wenn nötig schon 3 Tage nach Vertragsabschluss, abhängig von Ihrem Wunschtermin. Primundus koordiniert An- und Abreise vollständig. Erste Tage: Eingewöhnung in Haus, Routine und Pflegesituation.',
                 detail: '',
               },
             ].map((step) => (
@@ -240,7 +240,7 @@ export default function Ablauf() {
           <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">
             {[
-              { q: 'Wie schnell kann eine 24h-Pflegekraft starten?', a: 'In 4–7 Tagen nach dem ersten Beratungsgespräch. In dringenden Fällen ist ein schnellerer Start möglich — direkt anrufen: 089 200 000 830.' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Wann genau, richtet sich nach Ihrem Wunschtermin. Wenn es dringend ist, direkt anrufen: 089 200 000 830.' },
               { q: 'Was kostet das Beratungsgespräch?', a: 'Nichts — das Beratungsgespräch ist vollständig kostenlos und unverbindlich. Kein Auftrag, kein Risiko.' },
               { q: 'Muss ich einen Vertrag mit langer Laufzeit abschließen?', a: 'Nein — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen.' },
               { q: 'Was passiert wenn ich die Kraft wechseln möchte?', a: 'Täglich kündbar. Primundus stellt sofort Ersatz — nahtlos, ohne Lücke in der Versorgung.' },

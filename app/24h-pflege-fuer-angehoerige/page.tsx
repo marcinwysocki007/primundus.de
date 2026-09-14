@@ -52,7 +52,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie organisiere ich 24h-Pflege für meine Eltern?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — in 4–7 Tagen.' } },
+      { '@type': 'Question', name: 'Wie organisiere ich 24h-Pflege für meine Eltern?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — wenn nötig schon in 3 Tagen.' } },
       { '@type': 'Question', name: 'Was kostet 24h-Pflege für meine Mutter / meinen Vater?', acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat.' } },
       { '@type': 'Question', name: 'Kann ich täglich kündbar sein?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen.' } }
     ],
@@ -96,7 +96,7 @@ export default function Page() {
               Primundus übernimmt die gesamte Organisation: Beratungsgespräch, Auswahl der Kraft, Koordination des Starts, laufende Betreuung. Familien müssen nicht selbst suchen, prüfen oder verwalten.
             </Text>
             <Text>
-              Vom ersten Anruf bis zum Start der Betreuung vergehen typisch 4–7 Tage. In dringenden Situationen auch schneller.
+              Eine Anreise ist schon 3 Tage nach dem ersten Anruf möglich. Wann genau, richtet sich nach Ihrem Wunschtermin.
             </Text>
           </Abschnitt>
 
@@ -112,7 +112,7 @@ export default function Page() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: "Wie organisiere ich 24h-Pflege für meine Eltern?", a: "Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — in 4–7 Tagen." },
+                { q: "Wie organisiere ich 24h-Pflege für meine Eltern?", a: "Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — wenn nötig schon in 3 Tagen." },
                 { q: "Was kostet 24h-Pflege für meine Mutter / meinen Vater?", a: "2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat." },
                 { q: "Kann ich täglich kündbar sein?", a: "Ja — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen." },
               ]}

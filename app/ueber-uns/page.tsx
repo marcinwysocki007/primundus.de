@@ -149,7 +149,7 @@ export default function Page() {
               },
               {
                 title: 'Schneller Start',
-                text: 'In der Regel können wir innerhalb von 4–7 Tagen eine passende Betreuungskraft organisieren — auch in dringenden Situationen.',
+                text: 'Wir können schon in 3 Tagen eine passende Betreuungskraft organisieren — gerade in dringenden Situationen.',
                 icon: 'M13 10V3L4 14h7v7l9-11h-7z',
               },
               {

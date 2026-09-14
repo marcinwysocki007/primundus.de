@@ -145,7 +145,7 @@ export default function Organisation() {
           <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-12">
             <div>
               <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Primundus Ablauf</p>
-              <p className="text-[15px] font-semibold text-pm-ink">In 4–7 Tagen zur Betreuungskraft</p>
+              <p className="text-[15px] font-semibold text-pm-ink">Anreise in 3 Tagen möglich</p>
               <p className="text-[13px] text-pm-body mt-0.5">Transparent, rechtssicher, täglich kündbar</p>
             </div>
             <a

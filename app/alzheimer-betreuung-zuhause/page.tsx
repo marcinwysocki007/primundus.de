@@ -93,7 +93,7 @@ export default function AlzheimerBetreuungZuhause() {
             'Ab mittlerem Stadium: 24h-Präsenz für Sicherheit und Tagesstruktur notwendig',
             'Pflegegrad 2–5 je nach Stadium — frühzeitig beantragen',
             'Pflegegeld: 347–990 €/Monat · Entlastungsbudget: 3.539 €/Jahr',
-            'Primundus setzt eigene Kräfte mit Alzheimer/Demenz-Erfahrung ein — Start in 4–7 Tagen',
+            'Primundus setzt eigene Kräfte mit Alzheimer/Demenz-Erfahrung ein — Anreise in 3 Tagen möglich',
           ]}
         />
 

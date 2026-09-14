@@ -10,7 +10,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege & Betreuung in Wittmund | Primundus',
   description:
-    '24h-Pflege im Kreis Wittmund: Betreuungskraft zuhause in Wittmund, Esens, Carolinensiel & ganz Ostfriesland. Täglich kündbar, Start in 4–7 Tagen.',
+    '24h-Pflege im Kreis Wittmund: Betreuungskraft zuhause in Wittmund, Esens, Carolinensiel & ganz Ostfriesland. Täglich kündbar, Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-wittmund' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -101,7 +101,7 @@ export default function WittmundPage() {
             und keinen Grund, es im Alter zu verlassen. Doch Heimplätze sind hier rar, und der nächste
             Pflegedienst fährt weit. Die Lösung wohnt mit ein: Eine Betreuungskraft von Primundus ist
             rund um die Uhr da, im vertrauten Zuhause hinterm Deich. Täglich kündbar, rechtssicher,
-            meist startklar in 4–7 Tagen.
+            Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① SITUATION VOR ORT */}

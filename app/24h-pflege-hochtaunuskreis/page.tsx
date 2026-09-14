@@ -10,7 +10,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege & Betreuung in Hochtaunuskreis | Primundus',
   description:
-    '24h-Pflege im Hochtaunuskreis: Betreuungskraft zuhause in Oberursel, Königstein, Kronberg, Usingen & Umgebung. Täglich kündbar, Start in 4–7 Tagen.',
+    '24h-Pflege im Hochtaunuskreis: Betreuungskraft zuhause in Oberursel, Königstein, Kronberg, Usingen & Umgebung. Täglich kündbar, Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hochtaunuskreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -101,7 +101,7 @@ export default function HochtaunuskreisPage() {
             Königstein oder einem der Dörfer im Usinger Land. Wenn plötzlich Pflege nötig wird, stellt sich
             nicht die Frage nach dem „ob", sondern nach dem „wie": Heim — oder zuhause bleiben? Eine
             Betreuungskraft von Primundus zieht mit ein und macht das Zuhausebleiben möglich. Täglich
-            kündbar, rechtssicher, meist startklar in 4–7 Tagen.
+            kündbar, rechtssicher, Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① SITUATION VOR ORT */}
@@ -118,7 +118,7 @@ export default function HochtaunuskreisPage() {
             <div className="grid grid-cols-3 gap-3">
               {[
                 { icon: '🏡', title: 'Zuhause bleiben', desc: 'Haus, Garten und Nachbarschaft bleiben erhalten' },
-                { icon: '⏱️', title: 'Keine Warteliste', desc: 'Start meist in 4–7 Tagen statt Monaten' },
+                { icon: '⏱️', title: 'Keine Warteliste', desc: 'Anreise in 3 Tagen möglich statt Monaten Wartezeit' },
                 { icon: '💶', title: 'Oft günstiger als das Heim', desc: 'Gerade im Taunus mit seinen hohen Heimkosten' },
               ].map((item) => (
                 <div key={item.title} className="bg-pm-paper rounded-xl p-4 text-center">

@@ -176,7 +176,7 @@ export default function WirklicheKostenPage() {
             <Kasten>
               <Text>
                 <strong>Unsere Antworten:</strong> Gesamtpreis 2.200–3.500 € je nach Situation, Kost &amp;
-                Logis 200–300 €, täglich kündbar ohne Mindestlaufzeit, Start meist in 4–7 Tagen — und die
+                Logis 200–300 €, täglich kündbar ohne Mindestlaufzeit, Anreise schon in 3 Tagen möglich — und die
                 Auszeichnung als Service-Champion bei DIE WELT ist{' '}
                 <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">mit dem Original-Dokument belegt</a>.
               </Text>

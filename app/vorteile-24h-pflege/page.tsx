@@ -101,7 +101,7 @@ export default function Page() {
             <Punkte
               punkte={[
                 { title: "Täglich kündbar", desc: "Keine Mindestlaufzeit, keine Fristen — maximale Flexibilität für die Familie." },
-                { title: "In 4–7 Tagen startklar", desc: "Primundus organisiert den Start schnell — auch in dringenden Situationen." },
+                { title: "Anreise in 3 Tagen möglich", desc: "Primundus organisiert den Start schnell — auch in dringenden Situationen." },
                 { title: "Haushalt vollständig übernommen", desc: "Kochen, Putzen, Einkaufen, Wäsche — alles inklusive." },
                 { title: "Nachtbereitschaft", desc: "Immer erreichbar — auch bei nächtlicher Unruhe oder Stürzen." },
                 { title: "Günstiger als Pflegeheim", desc: "Mit Kassenzuschüssen oft unter dem Pflegeheim-Eigenanteil." },
