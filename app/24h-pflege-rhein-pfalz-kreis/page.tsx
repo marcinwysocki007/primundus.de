@@ -10,7 +10,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege & Betreuung in Rhein-Pfalz-Kreis',
   description:
-    '24h-Pflege im Rhein-Pfalz-Kreis: Betreuungskraft zuhause in Schifferstadt, Limburgerhof, Mutterstadt & dem ganzen Kreis. Täglich kündbar, Start in 4–7 Tagen.',
+    '24h-Pflege im Rhein-Pfalz-Kreis: Betreuungskraft zuhause in Schifferstadt, Limburgerhof, Mutterstadt & dem ganzen Kreis. Täglich kündbar, Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -101,7 +101,7 @@ export default function RheinPfalzKreisPage() {
             der Garten in Limburgerhof, die Felder vor der Tür. Viele haben ein Leben lang bei der BASF
             gearbeitet und möchten ihren Ruhestand genau hier verbringen — nicht im Heim. Eine
             Betreuungskraft von Primundus zieht mit ein und ist rund um die Uhr da. Täglich kündbar,
-            rechtssicher, meist startklar in 4–7 Tagen.
+            rechtssicher, Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① SITUATION VOR ORT */}

@@ -89,7 +89,7 @@ export default function Page() {
               <p className="text-[14px] text-pm-body leading-relaxed">Keine Mindestlaufzeit, keine Fristen — maximale Flexibilität für die Familie.</p>
             </div>
             <div className="bg-white rounded-xl p-5 border border-pm-line">
-              <p className="text-[15px] font-bold text-pm-ink mb-1">In 4–7 Tagen startklar</p>
+              <p className="text-[15px] font-bold text-pm-ink mb-1">Anreise in 3 Tagen möglich</p>
               <p className="text-[14px] text-pm-body leading-relaxed">Primundus organisiert den Start schnell — auch in dringenden Situationen.</p>
             </div>
             <div className="bg-white rounded-xl p-5 border border-pm-line">

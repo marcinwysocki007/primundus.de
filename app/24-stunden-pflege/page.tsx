@@ -15,11 +15,11 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-  description: '24h-Pflege von Primundus: Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. 6× Preis-Leistungssieger. Ab 2.200 €/Monat.',
+  description: '24h-Pflege von Primundus: Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Preis-Leistungssieger. Ab 2.200 €/Monat.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege' },
   openGraph: {
     title: '24-Stunden-Pflege | Primundus — Testsieger & 20 Jahre Erfahrung',
-    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, in 4–7 Tagen startklar. 6× Preis-Leistungssieger.',
+    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Preis-Leistungssieger.',
     url: 'https://primundus.de/24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -40,7 +40,7 @@ const schemaMarkup = [
       telephone: '+4989200000830',
       award: 'Testsieger DIE WELT',
     },
-    description: '24-Stunden-Betreuung zu Hause mit eigenem, fest angestelltem Personal in Deutschland. Täglich kündbar, taggenaue Abrechnung, Start in 4–7 Tagen.',
+    description: '24-Stunden-Betreuung zu Hause mit eigenem, fest angestelltem Personal in Deutschland. Täglich kündbar, taggenaue Abrechnung, Anreise in 3 Tagen möglich.',
     areaServed: 'DE',
     serviceType: '24-Stunden-Pflege',
     offers: { '@type': 'Offer', priceRange: '2200-3500 €/Monat' },
@@ -91,7 +91,7 @@ export default function VierUndZwanzigStundenPflege() {
           </h1>
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, in 4–7 Tagen startklar. Ab 2.200 Euro pro Monat. 6× Preis-Leistungssieger.
+            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, Anreise in 3 Tagen möglich. Ab 2.200 Euro pro Monat. 6× Preis-Leistungssieger.
           </p>
 
           <KurzAntwort frage="Was unterscheidet Primundus von Vermittlungsagenturen?">
@@ -106,7 +106,7 @@ export default function VierUndZwanzigStundenPflege() {
                 { icon: '★', title: '6× Preis-Leistungssieger', desc: 'Service-Champion bei DIE WELT & ServiceValue (2021)' },
                 { icon: '✓', title: 'Rechtssicher', desc: 'Entsendemodell mit A1-Bescheinigung — kein rechtliches Risiko für die Familie' },
                 { icon: '↺', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung — volle Flexibilität' },
-                { icon: '⚡', title: 'In 4–7 Tagen startklar', desc: 'Vom ersten Gespräch bis zur Anreise der Betreuungskraft' },
+                { icon: '⚡', title: 'Anreise in 3 Tagen möglich', desc: 'Vom ersten Gespräch bis zur Anreise der Betreuungskraft' },
                 { icon: '🛡', title: 'Ersatzkraft bei Ausfall', desc: 'Primundus stellt sofort Ersatz — kein Versorgungsausfall' },
                 { icon: '♥', title: 'Persönliche Beratung', desc: 'Marta Kapcio & Team, Mo – So 8 – 20 Uhr, 7 Tage/Woche erreichbar' },
               ].map((usp) => (
@@ -218,7 +218,7 @@ export default function VierUndZwanzigStundenPflege() {
 
           {/* SECTION 4 */}
           <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Ablauf — in 4–7 Tagen zur Betreuungskraft
+            Ablauf — Anreise in 3 Tagen möglich
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
             Von der ersten Anfrage bis zur Anreise der Betreuungskraft vergehen bei Primundus typischerweise 4 bis 7 Tage.
@@ -294,7 +294,7 @@ export default function VierUndZwanzigStundenPflege() {
             {[
               { q: 'Was ist 24-Stunden-Pflege?', a: 'Eine Betreuungskraft lebt dauerhaft im Haushalt und ist rund um die Uhr erreichbar — für Grundpflege, Haushalt und Gesellschaft. Sie ist die meistgenutzte Alternative zum Pflegeheim in Deutschland.' },
               { q: 'Was kostet 24-Stunden-Pflege bei Primundus?', a: '2.200–3.500 €/Monat je nach Pflegebedarf. Mit Pflegegeld (bis 990 €/Monat) und Entlastungsbudget (3.539 €/Jahr) sinkt der Eigenanteil erheblich. Kostenlose Beratung: 089 200 000 830.' },
-              { q: 'Wie schnell kann 24h-Pflege bei Primundus starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+              { q: 'Wie schnell kann 24h-Pflege bei Primundus starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
               { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja — Primundus setzt ausschließlich eigene Betreuungskräfte im Entsendemodell mit A1-Bescheinigung. Vollständig rechtssicher, kein Risiko für die Familie.' },
               { q: 'Warum ist Primundus Testsieger?', a: 'Primundus ist 6× Preis-Leistungssieger und wurde in Deutschlands großer Service-Studie von DIE WELT und ServiceValue (2021) als Service-Champion ausgezeichnet. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice — getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
               { q: 'Was passiert wenn die Betreuungskraft krank wird?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke. Das ist einer der zentralen Vorteile der Agenturvermittlung.' },

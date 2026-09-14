@@ -159,7 +159,7 @@ export default function Page() {
                   {[
                     'Preis online berechnen — dauert unter 2 Minuten',
                     'Passende Betreuungskräfte im Kundenportal ansehen und vergleichen',
-                    'Auswählen — erst dann Vertrag; Anreise meist in 4–7 Tagen',
+                    'Auswählen — erst dann Vertrag; Anreise in 3 Tagen möglich',
                   ].map((s, i) => (
                     <li key={s} className="flex gap-2.5 text-[13px] text-pm-ink leading-relaxed">
                       <span className="w-5 h-5 rounded-full bg-pm-taupe text-white text-[11px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

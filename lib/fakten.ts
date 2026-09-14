@@ -27,7 +27,7 @@ export const PREIS_MAX = 3500
 export const PREIS_SPANNE = '2.200–3.500 €/Monat'
 
 /** Typischer Einsatzstart nach Anfrage */
-export const VORLAUF = '4–7 Tage'
+export const VORLAUF = 'ab 3 Tagen'
 
 /** Kontakt */
 export const TELEFON = '089 200 000 830'

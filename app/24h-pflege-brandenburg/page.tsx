@@ -55,7 +55,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Pflegekraft in Brandenburg starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Brandenburg — auch in ländlichen Regionen.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Brandenburg — auch in ländlichen Regionen.' },
       },
       {
         '@type': 'Question',
@@ -93,7 +93,7 @@ export default function BrandenburgPage() {
             24h-Pflege Brandenburg — Betreuungskraft zuhause
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Das Haus am Stadtrand von Potsdam, die Wohnung in Berlin, das Grundstück in der Uckermark: Rund um die Hauptstadt wohnen viele Eltern, deren Kinder mitten im Berliner Alltag stecken. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht — rund um die Uhr da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, startklar in 4–7 Tagen.
+            Das Haus am Stadtrand von Potsdam, die Wohnung in Berlin, das Grundstück in der Uckermark: Rund um die Hauptstadt wohnen viele Eltern, deren Kinder mitten im Berliner Alltag stecken. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht — rund um die Uhr da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① WAS IST 24H-PFLEGE */}
@@ -368,7 +368,7 @@ export default function BrandenburgPage() {
             {[
               { q: 'Warum sind Heimplätze in Brandenburg so knapp?', a: 'Weil das Angebot nicht mitgewachsen ist. Zwischen 2013 und 2023 hat sich die Zahl der Pflegebedürftigen in Brandenburg verdoppelt — rund 111.100 Menschen mehr —, während die Zahl der Dauerpflegeplätze um knapp sechs Prozent zunahm; 2023 ist sie erstmals gesunken. Brandenburg hat dadurch den niedrigsten Heimanteil aller Bundesländer (11,1 Prozent) und zugleich die wenigsten Plätze je Ältere (39 je 1.000 ab 65, Bund 47). Das Land nennt in seinem Pflegebericht zwei Gründe: stark gestiegene Eigenanteile und ein Angebot, das wegen fehlenden Personals zurückgeht. Besonders eng ist es in der Uckermark, in Elbe-Elster und in Ostprignitz-Ruppin.' },
               { q: 'Was kostet eine 24h-Pflegekraft in Brandenburg?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (rund 3.020 €/Monat) oder Berlin (rund 3.100 €/Monat, vdek 07/2026).' },
-              { q: 'Wie schnell kann eine 24h-Pflegekraft in Brandenburg starten?', a: 'In der Regel in 4–7 Tagen. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Brandenburg — auch in ländlichen Regionen.' },
+              { q: 'Wie schnell kann eine 24h-Pflegekraft in Brandenburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Brandenburg — auch in ländlichen Regionen.' },
               { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
               { q: 'Ist 24h-Pflege über Primundus in Brandenburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
             ].map((item, i) => (
@@ -425,7 +425,7 @@ export default function BrandenburgPage() {
             {[
               { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', chip: '⏱ Dauert unter 2 Minuten' },
               { n: '2', title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Ihr Zugang kommt auch per E-Mail' },
-              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, meist in 4–7 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
+              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="w-11 h-11 rounded-full bg-pm-cocoa text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>

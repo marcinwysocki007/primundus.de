@@ -61,7 +61,7 @@ const marketBars = [
 const unterschiede = [
   { problem: 'Keine Transparenz über die Pflegekraft', loesung: 'Kunden und Pflegekräfte verbinden sich direkt — mit Foto, Profil und Bewertungen im Primundus-Portal' },
   { problem: 'Lange Kündigungsfristen binden Familien', loesung: 'Täglich kündbar — einmalig in der Branche, keine Mindestlaufzeit' },
-  { problem: 'Wochen Wartezeit bis zur Betreuungskraft', loesung: 'Sofortangebot in 24 Stunden, Pflegekraft in 4–7 Tagen' },
+  { problem: 'Wochen Wartezeit bis zur Betreuungskraft', loesung: 'Sofortangebot in 24 Stunden, Anreise in 3 Tagen möglich' },
   { problem: 'Intransparente Abrechnung, versteckte Kosten', loesung: 'Tagsgenaue Abrechnung, klarer Vertragsaufbau' },
   { problem: 'Abhängigkeit von externer Software', loesung: 'Proprietäre Plattform — Kunden- und Pflegekraftportal aus einer Hand' },
   { problem: 'Reine Vermittler ohne eigenes Personal', loesung: 'Eigenes Team in Deutschland — Qualitätsverantwortung und Kontinuität' },

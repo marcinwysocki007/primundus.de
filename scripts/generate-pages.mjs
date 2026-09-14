@@ -37,15 +37,15 @@ function toTitle(slug) {
 
 // ─── Page types ───────────────────────────────────────────────────────────────
 const moneyPages = [
-  { slug: '', title: 'Primundus — 24-Stunden-Pflege | Testsieger & 20 Jahre Erfahrung', desc: 'Primundus vermittelt rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Betreuung in 4–7 Tagen. Kostenlose Beratung: 089 200 000 830.', h1: '24-Stunden-Pflege zu Hause — sicher, legal & persönlich', type: 'home' },
-  { slug: '24-stunden-pflege', title: '24-Stunden-Pflege zu Hause', desc: 'Was ist 24-Stunden-Pflege? Wie funktioniert das Betreuungsmodell? Rechtssicher, täglich kündbar, in 4–7 Tagen startklar. Jetzt informieren.', h1: '24-Stunden-Pflege zu Hause — so funktioniert es', type: 'money' },
+  { slug: '', title: 'Primundus — 24-Stunden-Pflege | Testsieger & 20 Jahre Erfahrung', desc: 'Primundus bietet rechtssichere 24h-Pflege zu Hause. Testsieger DIE WELT. Täglich kündbar. Anreise in 3 Tagen möglich. Kostenlose Beratung: 089 200 000 830.', h1: '24-Stunden-Pflege zu Hause — sicher, legal & persönlich', type: 'home' },
+  { slug: '24-stunden-pflege', title: '24-Stunden-Pflege zu Hause', desc: 'Was ist 24-Stunden-Pflege? Wie funktioniert das Betreuungsmodell? Rechtssicher, täglich kündbar, Anreise in 3 Tagen möglich. Jetzt informieren.', h1: '24-Stunden-Pflege zu Hause — so funktioniert es', type: 'money' },
   { slug: 'kosten', title: 'Kosten 24h-Pflege 2025', desc: 'Was kostet 24h-Pflege? Alle Kosten, Zuschüsse und Einsparoptionen im Überblick. Ab ca. 2.500 €/Monat. Kostenlose Beratung.', h1: 'Kosten der 24-Stunden-Pflege 2025 — transparent erklärt', type: 'money' },
   { slug: 'leistungen', title: 'Leistungen der 24h-Pflege', desc: 'Welche Leistungen sind in der 24h-Pflege enthalten? Von Grundpflege bis Betreuung — alle Leistungen von Primundus im Überblick.', h1: 'Leistungen der 24h-Pflege bei Primundus', type: 'money' },
   { slug: 'ablauf', title: 'Ablauf: 24h-Pflege beauftragen', desc: 'In 4 einfachen Schritten zur 24h-Pflege. Beratung, Angebot, Vermittlung, Start — so läuft es bei Primundus ab.', h1: 'Ablauf: So starten Sie Ihre 24h-Pflege in 4 Schritten', type: 'money' },
   { slug: 'rechtssicher', title: '24h-Pflege rechtssicher & legal', desc: 'Wie funktioniert legale 24h-Pflege in Deutschland? Entsendemodell, EU-Recht, Sozialversicherung — alles erklärt.', h1: '24h-Pflege rechtssicher & ohne Risiko', type: 'money' },
   { slug: 'qualitaet', title: 'Qualität & Auswahl der Pflegekräfte', desc: 'Wie wählt Primundus Pflegekräfte aus? Qualitätsstandards, Qualifikationen und persönliche Betreuung erklärt.', h1: 'Qualität & Auswahl — so finden wir Ihre Pflegekraft', type: 'money' },
   { slug: 'kontakt', title: 'Kontakt | Primundus', desc: 'Kontaktieren Sie Primundus für eine kostenlose Beratung zur 24h-Pflege. Tel: 089 200 000 830. Mo–Fr 9–18 Uhr.', h1: 'Kontakt — wir beraten Sie persönlich', type: 'money' },
-  { slug: 'beratungsgespraech', title: 'Kostenloses Beratungsgespräch', desc: 'Vereinbaren Sie ein kostenloses Beratungsgespräch zur 24h-Pflege. Persönlich, unverbindlich, in 4–7 Tagen startklar.', h1: 'Kostenloses Beratungsgespräch vereinbaren', type: 'money' },
+  { slug: 'beratungsgespraech', title: 'Kostenloses Beratungsgespräch', desc: 'Vereinbaren Sie ein kostenloses Beratungsgespräch zur 24h-Pflege. Persönlich, unverbindlich, Anreise in 3 Tagen möglich.', h1: 'Kostenloses Beratungsgespräch vereinbaren', type: 'money' },
 ];
 
 const hubs = [
@@ -631,7 +631,7 @@ function generateRegionPage({ slug, city, isState }) {
   const fileName = join(APP, slug, 'page.tsx');
   const h1 = `24h-Pflege ${city} — Betreuung zu Hause`;
   const title = `24h-Pflege ${city}`;
-  const desc = `24-Stunden-Pflege in ${city} von Primundus — dem Testsieger. Rechtssicher, täglich kündbar, in 4–7 Tagen startklar. Kostenlose Beratung: 089 200 000 830.`;
+  const desc = `24-Stunden-Pflege in ${city} von Primundus — dem Testsieger. Rechtssicher, täglich kündbar, Anreise in 3 Tagen möglich. Kostenlose Beratung: 089 200 000 830.`;
 
   const service = serviceSchema(city);
   const breadcrumb = breadcrumbSchema(slug, title);

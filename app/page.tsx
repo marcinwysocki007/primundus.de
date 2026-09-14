@@ -65,7 +65,7 @@ const schemaMarkup = JSON.stringify([
       {
         "@type": "Question",
         "name": "Wie schnell kann eine Betreuungskraft starten?",
-        "acceptedAnswer": { "@type": "Answer", "text": "In der Regel kann innerhalb von 4–7 Tagen eine passende Betreuungskraft bei Ihnen starten. Bei dringendem Bedarf auch schneller – sprechen Sie uns einfach an." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Eine Anreise ist schon in 3 Tagen möglich. Wann genau, richtet sich nach Ihrem Wunschtermin. Ist es dringend, rufen Sie uns an." }
       },
       {
         "@type": "Question",
@@ -120,7 +120,7 @@ export default function Page() {
                 24-Stunden-Pflege im eigenen Zuhause
               </h1>
               <p className="text-[17px] leading-[1.6] text-pm-body mb-8 max-w-md mx-auto">
-                Primundus betreut mit eigenen, geprüften Betreuungskräften zuhause — rechtssicher, täglich kündbar, einsatzbereit in 4–7 Tagen.
+                Primundus betreut mit eigenen, geprüften Betreuungskräften zuhause — rechtssicher, täglich kündbar, Anreise in 3 Tagen möglich.
               </p>
               <div className="flex flex-col gap-3 max-w-sm mx-auto">
                 <a
@@ -199,7 +199,7 @@ export default function Page() {
                 24-Stunden-Pflege im eigenen Zuhause
               </p>
               <p className="text-[18px] leading-[1.6] text-pm-body mb-8">
-                Betreut von unseren eigenen, geprüften Betreuungskräften — bezahlbare Alternative zum Pflegeheim, einsatzbereit in 4–7 Tagen.
+                Betreut von unseren eigenen, geprüften Betreuungskräften — bezahlbare Alternative zum Pflegeheim, Anreise in 3 Tagen möglich.
               </p>
 
               {/* USP-Box mit Medienlogos */}
@@ -461,7 +461,7 @@ export default function Page() {
               {[
                 {
                   title: 'Nach Schlaganfall oder Krankenhausaufenthalt',
-                  text: 'Plötzlich ist eine intensive Betreuung nötig. Wir können in 4–7 Tagen eine passende Kraft organisieren — schnell, zuverlässig, rechtssicher.',
+                  text: 'Plötzlich ist eine intensive Betreuung nötig. Wir können schon in 3 Tagen eine passende Kraft organisieren — schnell, zuverlässig, rechtssicher.',
                   link: '/pflegegrad-nach-schlaganfall',
                   linkLabel: 'Schlaganfall & Pflege →',
                   icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',

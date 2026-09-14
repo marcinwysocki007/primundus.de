@@ -171,7 +171,7 @@ export default function BurnoutPflegendeAngehoerige() {
               },
               {
                 title: '24h-Betreuungskraft — dauerhafte Entlastung',
-                desc: 'Die wirkungsvollste Lösung: Eine Betreuungskraft übernimmt die tägliche Pflege. Angehörige sind wieder Angehörige — nicht rund um die Uhr Pflegepersonal. Primundus startet in 4–7 Tagen.',
+                desc: 'Die wirkungsvollste Lösung: Eine Betreuungskraft übernimmt die tägliche Pflege. Angehörige sind wieder Angehörige — nicht rund um die Uhr Pflegepersonal. Bei Primundus ist eine Anreise schon in 3 Tagen möglich.',
                 highlight: false,
               },
               {

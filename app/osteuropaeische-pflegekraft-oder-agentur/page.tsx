@@ -106,7 +106,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
                     ['Ersatz bei Ausfall', 'Familie organisiert selbst — oft Versorgungslücke', 'Primundus stellt sofort Ersatz'],
                     ['Zeitaufwand', 'Erheblich — Suche, Verhandlung, Verträge', 'Minimal — Primundus übernimmt alles'],
                     ['Kraftwechsel', 'Familie muss neu suchen', 'Primundus organisiert nahtlos'],
-                    ['Startzeitraum', 'Wochen bis Monate', '4–7 Tage'],
+                    ['Startzeitraum', 'Wochen bis Monate', 'ab 3 Tagen'],
                     ['Qualitätssicherung', 'Keine systematische', 'Laufend durch Primundus'],
                     ['Kosten', 'Evtl. niedriger', '2.200–3.500 €/Mo — transparent'],
                   ].map(([krit, direkt, agentur], i) => (
@@ -130,7 +130,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               { vorteil: 'Geprüfte Kräfte aus einem Pool', desc: 'Primundus prüft Deutschkenntnisse aktiv, prüft Referenzen, wählt nach Erfahrung und Diagnose aus. Wer selbst sucht — auf Facebook, Anzeigenmärkten — hat keine verlässliche Grundlage für die Qualitätsbewertung.' },
               { vorteil: 'Ersatz ohne Lücke', desc: 'Was passiert wenn die direkt gesuchte Kraft krank wird, kündigt oder nach Hause möchte? Die Familie muss von vorne anfangen — während die Versorgung nicht gesichert ist. Bei Primundus gibt es sofort Ersatz.' },
               { vorteil: 'Kraftwechsel ohne Aufwand', desc: 'Alle 6–8 Wochen wechselt die Kraft. Primundus kündigt rechtzeitig an, stellt die neue Kraft vor, organisiert die Übergabe. Die Familie muss sich nicht darum kümmern.' },
-              { vorteil: 'Schneller Start', desc: '4–7 Tage von der Anfrage bis zur Kraft zuhause. Wer selbst sucht braucht Wochen bis Monate.' },
+              { vorteil: 'Schneller Start', desc: 'Anreise schon 3 Tage nach der Anfrage möglich. Wer selbst sucht, braucht Wochen bis Monate.' },
             ].map((item) => (
               <div key={item.vorteil} className="bg-white rounded-xl p-5 border border-pm-line">
                 <p className="text-[15px] font-bold text-pm-ink mb-1">{item.vorteil}</p>
@@ -172,7 +172,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               'Aktive Qualitätsprüfung aller Kräfte (Deutsch, Erfahrung, Referenzen)',
               'Sofortiger Ersatz bei Ausfall — keine Versorgungslücke',
               'Laufende Betreuung durch Primundus als Ansprechpartner',
-              'Start in 4–7 Tagen nach Erstgespräch',
+              'Anreise schon 3 Tage nach dem Erstgespräch möglich',
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
                 <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>

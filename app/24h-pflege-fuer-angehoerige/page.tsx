@@ -50,7 +50,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie organisiere ich 24h-Pflege für meine Eltern?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — in 4–7 Tagen.' } },
+      { '@type': 'Question', name: 'Wie organisiere ich 24h-Pflege für meine Eltern?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — wenn nötig schon in 3 Tagen.' } },
       { '@type': 'Question', name: 'Was kostet 24h-Pflege für meine Mutter / meinen Vater?', acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat.' } },
       { '@type': 'Question', name: 'Kann ich täglich kündbar sein?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen.' } }
     ],
@@ -88,7 +88,7 @@ export default function Page() {
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Krankenhausaufenthalt — was danach?</div>
           </div>          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Wie läuft die Organisation ab?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Primundus übernimmt die gesamte Organisation: Beratungsgespräch, Auswahl der Kraft, Koordination des Starts, laufende Betreuung. Familien müssen nicht selbst suchen, prüfen oder verwalten.</p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Vom ersten Anruf bis zum Start der Betreuung vergehen typisch 4–7 Tage. In dringenden Situationen auch schneller.</p>
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Eine Anreise ist schon 3 Tage nach dem ersten Anruf möglich. Wann genau, richtet sich nach Ihrem Wunschtermin.</p>
           <h2 id="entlastung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Entlastung für pflegende Angehörige</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Wer Eltern oder Partner pflegt, gibt oft die eigene Gesundheit dafür her. Die 24h-Kraft übernimmt nicht nur die Pflege — sie gibt Angehörigen ihr Leben zurück. Beruf, eigene Kinder, Erholung, Schlaf.</p>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Dazu kommt: Pflegende Angehörige haben Anspruch auf Pflegegeld wenn sie die Pflege selbst übernehmen. Mit einer 24h-Kraft geht das Pflegegeld direkt an die Familie.</p>
@@ -100,7 +100,7 @@ export default function Page() {
                 <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Wie organisiere ich 24h-Pflege für meine Eltern?</h3>
                 <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — in 4–7 Tagen.</p></div>
+              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — wenn nötig schon in 3 Tagen.</p></div>
             </details>
             <details className="bg-white rounded-xl border border-pm-line group">
               <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

@@ -10,7 +10,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege & Betreuung in Kreis Alzey-Worms',
   description:
-    '24h-Pflege im Landkreis Alzey-Worms: geprüfte Betreuungskraft zuhause in Alzey, Wörrstadt, Osthofen & Umgebung. Täglich kündbar, Start in 4–7 Tagen.',
+    '24h-Pflege im Landkreis Alzey-Worms: geprüfte Betreuungskraft zuhause in Alzey, Wörrstadt, Osthofen & Umgebung. Täglich kündbar, Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-alzey-worms' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -101,7 +101,7 @@ export default function AlzeyWormsPage() {
             Weinbergen vor der Tür und Nachbarn, die man beim Namen kennt. Wenn die Eltern Hilfe brauchen,
             soll genau das nicht verloren gehen. Eine Betreuungskraft von Primundus zieht mit ein und ist da,
             rund um die Uhr: in Alzey, Wörrstadt, Osthofen und im ganzen Landkreis. Täglich kündbar,
-            rechtssicher, meist startklar in 4–7 Tagen.
+            rechtssicher, Anreise in 3 Tagen möglich.
           </p>
 
           {/* ① SITUATION VOR ORT */}

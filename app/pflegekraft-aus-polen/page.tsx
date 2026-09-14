@@ -61,7 +61,7 @@ const schemaMarkup = [
       { '@type': 'Question', name: 'Ist eine Pflegekraft aus Polen legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — über das Entsendemodell mit A1-Bescheinigung vollständig legal. Die Kraft ist in Polen sozialversichert, in Deutschland rechtlich abgesichert. Scheinselbstständigkeit ist dagegen strafbar.' } },
       { '@type': 'Question', name: 'Wie funktioniert das Entsendemodell?', acceptedAnswer: { '@type': 'Answer', text: 'Die Kraft ist fest bei uns angestellt — bei der PRIMUNDUS Sp. z o.o. in Polen — und wird für 6–8 Wochen entsandt. Sie schließen den Vertrag mit Primundus in Deutschland: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' } },
       { '@type': 'Question', name: 'Was leistet eine Pflegekraft aus Polen?', acceptedAnswer: { '@type': 'Answer', text: 'Grundpflege, Haushaltsführung, Begleitung zu Arztterminen und soziale Betreuung. Keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe. Behandlungspflege nur mit Qualifikationsnachweis.' } },
-      { '@type': 'Question', name: 'Wie schnell kann eine Pflegekraft aus Polen starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus typischerweise 4–7 Tage nach dem ersten Gespräch — täglich kündbar, taggenaue Abrechnung.' } },
+      { '@type': 'Question', name: 'Wie schnell kann eine Pflegekraft aus Polen starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist eine Anreise schon 3 Tage nach dem ersten Gespräch möglich — täglich kündbar, taggenaue Abrechnung.' } },
     ],
   },
 ]
@@ -104,7 +104,7 @@ export default function PflegekraftAusPolen() {
               {[
                 'Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf + Kost & Logis',
                 'Legal: Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher',
-                'Start: In 4–7 Tagen nach dem ersten Beratungsgespräch vor Ort',
+                'Start: Anreise schon 3 Tage nach dem ersten Beratungsgespräch möglich',
                 'Rotation: Wechsel der Kraft alle 6–8 Wochen — nahtlose Übergabe',
                 'Qualifikation: Grundpflege, Haushalt, Betreuung — kein Arztdiplom aber mehr als Haushaltshilfe',
                 'Bei Ausfall: Primundus stellt sofort Ersatzkraft — kein Versorgungsausfall',
@@ -399,7 +399,7 @@ export default function PflegekraftAusPolen() {
               { q: 'Ist eine Pflegekraft aus Polen legal?', a: 'Ja — über das Entsendemodell mit A1-Bescheinigung vollständig legal. Die Kraft ist in Polen sozialversichert, in Deutschland rechtlich abgesichert. Scheinselbstständigkeit ist dagegen strafbar.' },
               { q: 'Wie funktioniert das Entsendemodell?', a: 'Die Kraft ist fest bei uns angestellt — bei der PRIMUNDUS Sp. z o.o. in Polen — und wird für 6–8 Wochen entsandt. Sie schließen den Vertrag mit Primundus in Deutschland: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' },
               { q: 'Was leistet eine Pflegekraft aus Polen?', a: 'Grundpflege, Haushaltsführung, Begleitung zu Arztterminen und soziale Betreuung. Keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe. Behandlungspflege nur mit Qualifikationsnachweis.' },
-              { q: 'Wie schnell kann eine Pflegekraft aus Polen starten?', a: 'Mit Primundus typischerweise 4–7 Tage nach dem ersten Gespräch — täglich kündbar, taggenaue Abrechnung.' },
+              { q: 'Wie schnell kann eine Pflegekraft aus Polen starten?', a: 'Mit Primundus ist eine Anreise schon 3 Tage nach dem ersten Gespräch möglich — täglich kündbar, taggenaue Abrechnung.' },
               { q: 'Was passiert wenn die Pflegekraft krank wird oder ausfällt?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke für die Familie. Das ist einer der zentralen Vorteile einer Agenturvermittlung gegenüber einer Direktanstellung.' },
             ].map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-pm-line group">

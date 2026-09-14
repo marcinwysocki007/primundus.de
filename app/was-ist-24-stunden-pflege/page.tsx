@@ -186,7 +186,7 @@ export default function WasIst24StundenPflege() {
                 'Pflegekasse zahlt: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr (seit Juli 2025)',
                 'Geeignet bei Demenz, nach Schlaganfall, bei Parkinson und vielen weiteren Situationen',
                 'Rechtlich sicher über Entsendemodell mit A1-Bescheinigung',
-                'Betreuung startet in 4–7 Tagen — täglich kündbar',
+                'Anreise in 3 Tagen möglich — täglich kündbar',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
                   <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>

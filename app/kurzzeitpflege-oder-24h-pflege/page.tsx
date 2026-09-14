@@ -51,7 +51,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was ist günstiger — Kurzzeitpflege oder 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Für kurze Übergänge (unter 4 Wochen): Kurzzeitpflege mit Entlastungsbudget oft günstiger. Bei dauerhaftem Bedarf: 24h-Pflege mit allen Zuschüssen meist günstiger als stationäre Lösung.' } },
-      { '@type': 'Question', name: 'Kann man Kurzzeitpflege als Übergang nutzen und dann 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann in 4–7 Tagen starten.' } }
+      { '@type': 'Question', name: 'Kann man Kurzzeitpflege als Übergang nutzen und dann 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann schon in 3 Tagen starten.' } }
     ],
   },
 ]
@@ -105,7 +105,7 @@ export default function Page() {
                 <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Kann man Kurzzeitpflege als Übergang nutzen und dann 24h-Pflege?</h3>
                 <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann in 4–7 Tagen starten.</p></div>
+              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Ja — das ist ein häufiges Muster. Kurzzeitpflege überbrückt die Zeit bis die 24h-Kraft startet. Primundus kann schon in 3 Tagen starten.</p></div>
             </details>
           </div>
           <Weiterlesen aktuell="kurzzeitpflege-oder-24h-pflege" />

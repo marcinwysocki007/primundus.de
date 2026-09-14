@@ -89,7 +89,7 @@ export default function Page() {
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Antrag bei der Pflegekasse</div>
           </div>          <h2 id="alternative" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Wann ist 24h-Pflege besser als Kurzzeitpflege?</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Kurzzeitpflege eignet sich für kurze Übergangsphasen. Wenn der Bedarf dauerhaft ist — oder wenn das Pflegeheim als Lösung nicht in Frage kommt — ist die 24h-Pflege zuhause die bessere und oft günstigere Alternative.</p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bei Primundus ist ein Start in 4–7 Tagen möglich. Täglich kündbar — auch wenn der Bedarf sich als kürzer herausstellt als gedacht.</p>
+          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Bei Primundus ist ein Anreise in 3 Tagen möglich möglich. Täglich kündbar — auch wenn der Bedarf sich als kürzer herausstellt als gedacht.</p>
 
           <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
           <div className="space-y-4 mb-12">

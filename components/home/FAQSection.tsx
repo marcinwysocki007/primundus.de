@@ -17,7 +17,7 @@ export function FAQSection() {
     },
     {
       question: "Wie schnell kann eine Betreuungskraft starten?",
-      answer: "In der Regel kann innerhalb von 4–7 Tagen eine passende Betreuungskraft bei Ihnen starten. Bei dringendem Bedarf auch schneller – sprechen Sie uns einfach an."
+      answer: "Eine Anreise ist schon in 3 Tagen möglich. Wann genau, richtet sich nach Ihrem Wunschtermin. Ist es dringend, rufen Sie uns an."
     },
     {
       question: "Was passiert, wenn die Betreuungskraft krank wird?",
