@@ -46,28 +46,60 @@ export function Zusagen({ teile }: { teile: string[] }) {
 const KNOPF =
   'inline-flex w-full sm:w-auto items-center justify-center text-center leading-snug min-h-[56px] px-4 sm:px-8 py-3 rounded-full bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[17px] sm:text-[18px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe'
 
-// Ansprechpartnerin, kompakt (Martin 14.09.: der lange Satz neben dem Siegel sah
-// gequetscht aus). Drei kurze Zeilen statt eines Satzes über fünf Zeilen.
-function Ansprechpartnerin({ gross = false }: { gross?: boolean }) {
+// Ansprechpartnerin (Martin 14.09.: der lange Satz neben dem Siegel sah gequetscht aus).
+// kompakt = Zeile im Kasten; karte = Visitenkarte im Schlussband. Umbrüche nur
+// zwischen den Einheiten, nie in „8– / 20 Uhr".
+const nw = 'whitespace-nowrap'
+function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
+  const telefon = (
+    <a href="tel:+4989200000830" className={`font-bold text-pm-ink hover:text-pm-taupe-ink ${nw} ${karte ? 'text-[22px]' : 'text-[19px]'}`}>
+      089 200 000 830
+    </a>
+  )
+  const whatsapp = (
+    <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className={`text-[16px] font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink ${nw}`}>
+      Per WhatsApp schreiben
+    </a>
+  )
+  const foto = (groesse: number) => (
+    <Image
+      src="/images/marta-kapcio.jpg"
+      alt="Marta Kapcio, Ansprechpartnerin bei Primundus"
+      width={groesse}
+      height={groesse}
+      style={{ width: groesse, height: groesse }}
+      className="rounded-full object-cover object-top flex-shrink-0"
+    />
+  )
+  if (karte) {
+    return (
+      <div>
+        <div className="flex items-center gap-4">
+          {foto(72)}
+          <div>
+            <p className="text-[18px] font-bold leading-tight text-pm-ink">Marta Kapcio</p>
+            <p className="mt-0.5 text-[15px] text-pm-mute">Ihre Ansprechpartnerin</p>
+          </div>
+        </div>
+        <p className="mt-5 text-[17px] leading-[1.5] text-pm-body">
+          <span className="font-semibold text-pm-ink">Lieber erst sprechen?</span> <span className={nw}>Täglich von 8 bis 20 Uhr.</span>
+        </p>
+        <p className="mt-2">{telefon}</p>
+        <p className="mt-1">{whatsapp}</p>
+      </div>
+    )
+  }
   return (
     <div className="flex items-center gap-4">
-      <Image
-        src="/images/marta-kapcio.jpg"
-        alt="Marta Kapcio, Ansprechpartnerin bei Primundus"
-        width={gross ? 72 : 60}
-        height={gross ? 72 : 60}
-        className={`${gross ? 'w-[72px] h-[72px]' : 'w-[60px] h-[60px]'} rounded-full object-cover object-top flex-shrink-0`}
-      />
+      {foto(60)}
       <div className="min-w-0">
         <p className="text-[17px] font-semibold leading-[1.4] text-pm-ink">Lieber erst sprechen?</p>
-        <p className="text-[15px] leading-[1.45] text-pm-mute">Marta Kapcio, Ihre Ansprechpartnerin · täglich 8–20&nbsp;Uhr</p>
+        <p className="text-[15px] leading-[1.45] text-pm-mute">
+          <span className={nw}>Marta Kapcio,</span> <span className={nw}>Ihre Ansprechpartnerin,</span> <span className={nw}>täglich 8–20 Uhr</span>
+        </p>
         <p className="mt-1.5 flex flex-wrap items-baseline gap-x-5 gap-y-1">
-          <a href="tel:+4989200000830" className="text-[19px] font-bold text-pm-ink hover:text-pm-taupe-ink whitespace-nowrap">
-            089 200 000 830
-          </a>
-          <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-[16px] font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink whitespace-nowrap">
-            Per WhatsApp schreiben
-          </a>
+          {telefon}
+          {whatsapp}
         </p>
       </div>
     </div>
@@ -110,7 +142,7 @@ export function KontaktBand() {
           <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
         </div>
         <div className="rounded-[20px] bg-pm-paper p-6 md:p-8">
-          <Ansprechpartnerin gross />
+          <Ansprechpartnerin karte />
         </div>
       </div>
     </aside>
