@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const WA_URL = `https://wa.me/4989200000830?text=Hallo%20Frau%20Wysocki%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A`;
+const WA_URL = `https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A`;
 
 export function WhatsAppFloat() {
   const [tooltipPhase, setTooltipPhase] = useState<0 | 1 | 2>(0);
@@ -35,7 +35,7 @@ export function WhatsAppFloat() {
           className="relative bg-white text-[#1a1a1a] text-sm font-medium px-3.5 py-2.5 rounded-2xl rounded-br-sm shadow-lg border border-gray-100 whitespace-nowrap"
           style={{ animation: fadingOut ? 'waFadeOutDown 0.4s ease forwards' : 'waFadeInUp 0.3s ease forwards' }}
         >
-          {tooltipPhase === 1 ? 'Haben Sie Fragen?' : 'Schreiben Sie Frau Wysocki...'}
+          {tooltipPhase === 1 ? 'Haben Sie Fragen?' : 'Schreiben Sie Frau Kapcio...'}
           <span className="absolute -bottom-1.5 right-3 w-3 h-3 bg-white border-r border-b border-gray-100 rotate-45" />
         </div>
       )}
