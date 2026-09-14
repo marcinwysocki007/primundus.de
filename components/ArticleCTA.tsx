@@ -1,156 +1,80 @@
 import Image from 'next/image'
 
+// Kontaktbereich auf allen Ratgeber- und Vergleichsseiten (345 Seiten).
+// Neu nach dem Optik-Plan vom 14.09.2026, Stufe 1 (Martin: „rest kannst du machen"):
+// eine Botschaft, ein Knopf, eine Person. Vorher standen sieben Botschaften in
+// fünf Kästen (Tipp-Kopf mit Frage, Häkchen, Beraterin, Siegel-Pille, drei Kacheln
+// mit Linien-Symbolen, Logo-Band, Knopf). Keine Symbole, Schrift nach der neuen
+// Skala (Fließtext 18 px, Kleingedrucktes 15 px), nur pm-Farben.
+//
+// referrerPolicy am Rechner-Knopf: Die Website sendet sonst nur „primundus.de"
+// als Herkunft (strict-origin-when-cross-origin). So kommt die Unterseite im
+// Kostenrechner an (websiteHerkunft → pfad) und steht in Lead und Team-Mail;
+// damit sehen wir je Seite, was wirkt. Die Quelle bleibt apex-components, weil
+// der Rechner nur apex-[a-z-] ohne Ziffern annimmt.
+
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-components'
+const WHATSAPP = 'https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A'
+
 export function ArticleCTA() {
   return (
-    <aside className="my-10 rounded-2xl overflow-hidden border border-pm-line shadow-md bg-white">
+    <aside className="my-12 rounded-3xl bg-pm-shell px-5 py-8 sm:px-8 md:px-10 md:py-10" aria-labelledby="kontaktbereich-titel">
+      <p id="kontaktbereich-titel" className="text-[26px] md:text-[30px] leading-[1.2] font-bold text-pm-ink [text-wrap:balance]">
+        Ihr Preis und passende Betreuungskräfte in 2 Minuten
+      </p>
+      <p className="mt-3 text-[18px] leading-[1.65] text-pm-body max-w-[60ch]">
+        Sie beantworten ein paar Fragen zur Pflegesituation. Danach sehen Sie den Monatspreis und die
+        Betreuungskräfte, die dafür in Frage kommen, mit Foto, Erfahrung und Deutschniveau. Einen Vertrag
+        gibt es erst, wenn Sie gewählt haben.
+      </p>
+      <a
+        href={RECHNER}
+        referrerPolicy="no-referrer-when-downgrade"
+        className="mt-6 inline-flex w-full sm:w-auto items-center justify-center text-center leading-snug min-h-[56px] px-4 sm:px-8 py-3 rounded-full bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[17px] sm:text-[18px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
+      >
+        Kosten &amp; Pflegekräfte ansehen
+      </a>
+      <p className="mt-3 text-[15px] text-pm-taupe-ink">
+        Ab 2.200 € im Monat · täglich kündbar · Bestpreisgarantie
+      </p>
 
-      {/* 1 — Hook */}
-      <div className="bg-pm-taupe px-5 py-3.5">
-        <p className="text-white/70 text-[11px] uppercase tracking-widest font-semibold mb-1">
-          Tipp
-        </p>
-        <p className="text-white font-bold text-[16px] leading-snug">
-          Wer möchte im Alter nicht lieber zu Hause betreut werden?
-        </p>
-      </div>
-
-      {/* 2 — Erklärung + Häkchen */}
-      <div className="bg-pm-paper px-5 py-4 space-y-3 border-b border-pm-line">
-        <p className="text-[13px] text-pm-body leading-relaxed">
-          Die 24-Stunden-Pflege macht es möglich — eine Betreuungskraft zieht ein, rund um die Uhr anwesend, im vertrauten Zuhause.
-        </p>
-        <ul className="space-y-1.5">
-          {[
-            'Zuhause bleiben statt ins Heim',
-            'Individuelle 1:1-Betreuung',
-            'Täglich kündbar – keine Mindestlaufzeit',
-          ].map(item => (
-            <li key={item} className="flex items-center gap-2 text-[13px] text-pm-ink">
-              <svg className="w-3.5 h-3.5 text-[#5C9F6E] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-              </svg>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="p-5 space-y-4">
-
-        {/* 3+4+5 — Beraterin / USPs / Testsieger (reordered mobile vs desktop) */}
-        <p className="text-[11px] font-semibold text-pm-mute uppercase tracking-wider text-center sm:text-left">
-          Kostenlose Beratung
-        </p>
-
-        <div className="flex flex-col sm:grid sm:grid-cols-[3fr_2fr] sm:gap-x-3 gap-y-4">
-
-          {/* Beraterin — with inline phone + WA buttons */}
-          <div className="order-1 flex items-center gap-3">
-            <div className="relative flex-shrink-0">
-              <div className="w-11 h-11 rounded-full overflow-hidden border border-pm-line">
-                <Image
-                  src="/images/marta-kapcio.jpg"
-                  alt="Marta Kapcio – Pflegeberaterin Primundus"
-                  width={44}
-                  height={44}
-                  className="object-cover object-top w-full h-full"
-                />
-              </div>
-              <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-[#5C9F6E] rounded-full border-2 border-white" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="font-bold text-pm-ink text-[13px]">Marta Kapcio</p>
-              <p className="text-[11px] text-pm-mute leading-snug">Pflegeberaterin</p>
-              <p className="text-[11px] text-pm-mute leading-snug">Mo – So, 8 – 20 Uhr</p>
-            </div>
-            <div className="flex gap-1.5 flex-shrink-0">
-              <a
-                href="tel:+4989200000830"
-                className="w-9 h-9 flex items-center justify-center rounded-lg bg-pm-paper hover:bg-pm-line border border-pm-line transition-colors"
-                aria-label="Anrufen"
-              >
-                <svg className="w-4 h-4 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+      <div className="mt-8 pt-7 border-t border-pm-line flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+        <div className="flex gap-4 items-start">
+          <Image
+            src="/images/marta-kapcio.jpg"
+            alt="Marta Kapcio, Ansprechpartnerin bei Primundus"
+            width={64}
+            height={64}
+            className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0"
+          />
+          <div>
+            <p className="text-[17px] leading-[1.6] text-pm-body max-w-[42ch]">
+              <span className="font-semibold text-pm-ink">Lieber erst sprechen?</span> Marta Kapcio ist Ihre
+              Ansprechpartnerin, sieben Tage die Woche von 8 bis 20 Uhr.
+            </p>
+            <p className="mt-2 flex flex-wrap items-baseline gap-x-5 gap-y-1">
+              <a href="tel:+4989200000830" className="text-[20px] font-bold text-pm-ink hover:text-pm-taupe-ink">
+                089 200 000 830
               </a>
-              <a
-                href="https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-lg bg-[#25D366] hover:bg-[#20C05A] transition-colors"
-                aria-label="WhatsApp"
-              >
-                <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-[17px] font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">
+                Per WhatsApp schreiben
               </a>
-            </div>
+            </p>
           </div>
-
-          {/* Testsieger — after USPs on mobile (order-3), right col on desktop (order-2) */}
-          <div className="order-3 sm:order-2 flex items-center gap-3 bg-[#FBF8F3] border border-[#E8DECE] rounded-full px-4 py-3 sm:self-center">
-            <Image
-              src="/images/primundus_testsieger-2021.webp"
-              alt="Testsieger DIE WELT"
-              width={44}
-              height={44}
-              className="object-contain flex-shrink-0"
-            />
-            <div>
-              <p className="text-[12px] font-bold text-pm-ink">
-                6× Preis-Leistungssieger
-              </p>
-              <p className="text-[10px] text-[#6B5A45] leading-relaxed mt-0.5">
-                <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-pm-taupe">Service-Champion bei DIE WELT — zum Beleg</a>
-              </p>
-            </div>
-          </div>
-
-          {/* USPs — middle on mobile (order-2), full-width second row on desktop (order-3) */}
-          <div className="order-2 sm:order-3 sm:col-span-2 rounded-full border border-pm-line overflow-hidden">
-            <ul className="divide-y divide-pm-line-soft sm:divide-y-0 sm:grid sm:grid-cols-3 sm:divide-x">
-              {[
-                { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', text: '20 Jahre Erfahrung' },
-                { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z', text: '60.000+ betreute Einsätze' },
-                { icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z', text: 'Persönlicher Ansprechpartner, 7 Tage/Woche' },
-              ].map(({ icon, text }) => (
-                <li key={text} className="flex flex-col items-center justify-center gap-1.5 px-3 py-3 text-[12px] text-pm-ink text-center sm:py-3.5">
-                  <svg className="w-5 h-5 text-pm-taupe flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icon} />
-                  </svg>
-                  <span className="leading-tight font-medium">{text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
         </div>
-
-        {/* 6 — Bekannt aus */}
-        <div className="flex items-center justify-center gap-4 flex-wrap py-0.5">
-          {['die-welt', 'frankfurter-allgemeine', 'ard', 'ndr', 'sat1', 'bild-der-frau'].map(logo => (
-            <Image
-              key={logo}
-              src={`/images/media/${logo}.webp`}
-              alt={logo}
-              width={40}
-              height={16}
-              className="h-[13px] w-auto object-contain opacity-40 hover:opacity-70 transition-opacity"
-            />
-          ))}
-        </div>
-
-        {/* 7 — Aktion */}
-        <a
-          href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
-          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-full transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
-        >
-          Kosten & Pflegekräfte ansehen
-          <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+        <a href="/testsieger-24-stunden-pflege" className="flex items-center gap-3 flex-shrink-0 group">
+          <Image
+            src="/images/primundus_testsieger-2021.webp"
+            alt="Siegel DIE WELT Service-Champions 2021"
+            width={52}
+            height={52}
+            className="object-contain"
+          />
+          <span className="text-[15px] leading-snug text-pm-taupe-ink">
+            <span className="font-semibold text-pm-ink">6× Preis-Leistungssieger</span><br />
+            Service-Champion bei DIE WELT · <span className="underline underline-offset-4 group-hover:text-pm-ink">zum Beleg</span>
+          </span>
         </a>
-
       </div>
     </aside>
   )
