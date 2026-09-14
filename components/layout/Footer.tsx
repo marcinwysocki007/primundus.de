@@ -46,7 +46,8 @@ const serviceLinks = [
   // Beide stehen bei Google als „Duplikat" und wurden seit Juli nicht gecrawlt.
   { label: 'Leistungen', href: '/leistungen' },
   { label: 'Ablauf', href: '/ablauf' },
-  { label: 'Franchisepartner werden', href: '/franchisepartner' },
+  // 14.09.2026 umbenannt (Martin): vorher „Franchisepartner werden".
+  { label: 'Vertriebspartner werden', href: '/franchisepartner' },
   // 14.09.2026: Partner-Landingpage fuer Vermittler (statisch unter public/partner-werden).
   { label: 'Partner werden', href: '/partner-werden' },
 ]

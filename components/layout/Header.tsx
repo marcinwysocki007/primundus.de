@@ -13,7 +13,7 @@ const nav = [
   { label: 'Tools', href: '/tools' },
   { label: 'Regionen', href: '/regionen' },
   { label: 'Über uns', href: '/ueber-uns' },
-  { label: 'Franchise', href: '/franchisepartner' },
+  // 14.09.2026: „Franchise" raus aus dem Kopf (Martin), steht als „Vertriebspartner werden" im Footer.
 ]
 
 export function SiteHeader() {
