@@ -496,6 +496,8 @@ a{color:inherit; text-decoration:none}
 .wiz__nav .pill{min-width:150px}
 .wiz__back{appearance:none; border:0; background:none; font:inherit; font-size:14px; font-weight:600; color:var(--mute); cursor:pointer; padding:8px 4px}
 .wiz__back:hover{color:var(--ink)}
+.wiz__pending{margin:4px 0 10px; padding:12px 14px; border-radius:12px; background:var(--coral-wash); font-size:14px; line-height:1.5; color:var(--ink)}
+.wiz__pending a{color:inherit; font-weight:600; text-decoration:underline}
 .wiz__error{margin:4px 0 10px; font-size:13.5px; line-height:1.5; color:var(--err); font-weight:600}
 .wiz__error a{color:inherit; text-decoration:underline}
 .site__home{display:block; line-height:0}
@@ -1050,6 +1052,7 @@ html:has(.agbdlg[open]){overflow:hidden}
           </div>
           <p class="req-note"><span class="req" aria-hidden="true">*</span> Pflichtfeld</p>
           <p class="wiz__agb">Mit „Zugang anfordern“ gelten unsere <a href="#" data-agb-popup aria-haspopup="dialog">Kooperationsbedingungen / AGB</a>.</p>
+          <p class="wiz__pending" role="status" hidden>Die Online-Anmeldung wird in den nächsten Tagen freigeschaltet. Ihren Zugang richten wir Ihnen bis dahin gern persönlich ein: Magdalena Gorska, <a href="tel:+4989200000831">089 200 000 831</a>.</p>
           <p class="wiz__error" role="alert" hidden>Das hat leider nicht geklappt. Bitte versuchen Sie es noch einmal oder rufen Sie Magdalena Gorska an: <a href="tel:+4989200000831">089 200 000 831</a>.</p>
           <div class="wiz__nav"><button class="wiz__back" type="button" data-back>Zurück</button><button class="pill" type="button" data-next>Zugang anfordern</button></div>
         </fieldset>
@@ -1496,7 +1499,7 @@ html:has(.agbdlg[open]){overflow:hidden}
   });
   // Formular: Schritt 1 Firma + E-Mail, Schritt 2 Profil + Adresse, dann Bestaetigung.
   // Gesendet wird an data-endpoint des Formulars (JSON, POST) — die Adresse traegt Michal
-  // ein. Ohne Adresse (Testphase) geht nichts raus, die Bestaetigung erscheint trotzdem.
+  // ein. Ohne Adresse geht nichts raus: Hinweis auf Magdalena, mit ?test=1 die Bestaetigung.
   // Schritt 1 Firma + E-Mail, Schritt 2 Profil + Adresse, dann Bestaetigung.
   var wiz = document.querySelector('.wiz');
   if (wiz) {
@@ -1531,7 +1534,13 @@ html:has(.agbdlg[open]){overflow:hidden}
       var endpoint = wiz.getAttribute('data-endpoint');
       var err = wiz.querySelector('.wiz__error');
       if (err) err.hidden = true;
-      if (!endpoint) { show(LAST + 1); return; }
+      if (!endpoint) {
+        // Noch nicht angebunden: keine Bestaetigung vortaeuschen. ?test=1 zeigt sie fuer Tests.
+        if (/[?&]test=1(?:&|$)/.test(location.search)) { show(LAST + 1); return; }
+        var pending = wiz.querySelector('.wiz__pending');
+        if (pending) pending.hidden = false;
+        return;
+      }
       var q = new URLSearchParams(location.search), utm = {};
       ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function(k){ if (q.get(k)) utm[k] = q.get(k); });
       var anrede = wiz.querySelector('input[name="anrede"]:checked');
