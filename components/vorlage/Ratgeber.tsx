@@ -206,13 +206,13 @@ export function Text({ children }: { children: ReactNode }) {
 }
 
 // Linienliste statt Kartenstapel: Titel links, Text rechts (ab 768 px).
-export function Punkte({ punkte }: { punkte: { title: string; desc: ReactNode }[] }) {
+export function Punkte({ punkte }: { punkte: { title: ReactNode; desc: ReactNode }[] }) {
   return (
     <div className="border-t border-pm-line">
-      {punkte.map((p) => (
-        <div key={p.title} className="py-5 border-b border-pm-line md:grid md:grid-cols-[13rem_minmax(0,1fr)] md:gap-8">
+      {punkte.map((p, i) => (
+        <div key={i} className="py-5 border-b border-pm-line md:grid md:grid-cols-[13rem_minmax(0,1fr)] md:gap-8">
           <h3 className="text-[18px] font-bold leading-[1.35] tracking-[-0.015em] text-pm-ink">{p.title}</h3>
-          <p className="mt-1.5 md:mt-0 text-[17px] leading-[1.65] text-pm-body">{p.desc}</p>
+          <div className="mt-1.5 md:mt-0 text-[17px] leading-[1.65] text-pm-body">{p.desc}</div>
         </div>
       ))}
     </div>
@@ -245,6 +245,37 @@ export function Schritte({
         </li>
       ))}
     </ol>
+  )
+}
+
+// Titel mit Unterliste („Bad: Haltegriffe, Duschsitz …", „Phase 2: Aufgaben …").
+// haken = Häkchen wie in „Auf einen Blick" (für To-dos), sonst schlichte Linien.
+export function Gruppen({
+  gruppen,
+  haken = false,
+}: {
+  gruppen: { title: ReactNode; zusatz?: ReactNode; punkte: ReactNode[] }[]
+  haken?: boolean
+}) {
+  return (
+    <div className="border-t border-pm-line">
+      {gruppen.map((g, i) => (
+        <div key={i} className="py-5 border-b border-pm-line md:grid md:grid-cols-[13rem_minmax(0,1fr)] md:gap-8">
+          <div>
+            <h3 className="text-[18px] font-bold leading-[1.35] tracking-[-0.015em] text-pm-ink">{g.title}</h3>
+            {g.zusatz && <p className="mt-1 text-[15px] leading-[1.5] text-pm-mute">{g.zusatz}</p>}
+          </div>
+          <ul className="mt-2 md:mt-0 grid gap-2">
+            {g.punkte.map((p, j) => (
+              <li key={j} className="flex gap-3 text-[17px] leading-[1.6] text-pm-body">
+                {haken ? <Haken /> : <span aria-hidden="true" className="mt-[11px] w-1.5 h-1.5 rounded-full bg-pm-taupe flex-none" />}
+                <span className="min-w-0">{p}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
   )
 }
 
