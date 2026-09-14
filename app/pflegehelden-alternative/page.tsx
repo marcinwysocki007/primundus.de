@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'Muss ich einen Vertrag unterschreiben, bevor ich die Betreuungskraft kenne?',
-    a: 'Bei Primundus nicht: Sie sehen passende Betreuungskräfte direkt mit dem Angebot und wählen aus — erst danach kommt der Vertrag. Pflegehelden beschreibt den eigenen Ablauf so: „Sie entscheiden sich für eine Zusammenarbeit und wählen Ihre gewünschte Pflegekraft aus."',
+    a: 'Bei Primundus nicht: Sie sehen passende Betreuungskräfte direkt mit dem Angebot und wählen aus — erst danach kommt der Vertrag. Pflegehelden beschreibt den eigenen Ablauf so: „Sie entscheiden sich für eine Zusammenarbeit und wählen Ihre gewünschte Pflegekraft aus." Die Zusammenarbeit beginnt dort mit dem Vermittlungsvertrag, die Auswahl der Pflegekraft kommt danach.',
   },
   {
     q: 'Gibt es bei Primundus eine Mindestvertragslaufzeit?',
@@ -163,7 +163,7 @@ export default function Page() {
                   <p className="text-[11px] text-pm-mute">
                     Angaben zu Pflegehelden: pflegehelden.de, Stand {STAND}. ✓ = ja · ◐ = teilweise · — = nein · k. A. = keine Angabe.
                   </p>
-                  {FUSSNOTEN.filter((f) => ['¹','²','³','⁷'].includes(f.nr)).map((f) => (
+                  {FUSSNOTEN.filter((f) => [PH.preisAb, ...KRITERIEN.map((k) => PH[k.key].kurz)].join(' ').includes(f.nr)).map((f) => (
                     <p key={f.nr} className="text-[11px] text-pm-mute">{f.nr} {f.text}</p>
                   ))}
                 </div>
@@ -233,7 +233,7 @@ export default function Page() {
                   {[
                     'Situation schildern und Wünsche an die Pflegekraft beschreiben',
                     'Unverbindliches Angebot innerhalb eines Tages',
-                    'Entscheidung für die Zusammenarbeit, dann Auswahl der Pflegekraft',
+                    'Vermittlungsvertrag, danach Auswahl aus den Personalvorschlägen',
                     'Betreuungsstart — Vermittlung innerhalb von sieben Werktagen',
                   ].map((s, i) => (
                     <li key={s} className="flex gap-2.5 text-[13px] text-pm-body leading-relaxed">

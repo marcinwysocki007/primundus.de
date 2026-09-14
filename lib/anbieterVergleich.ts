@@ -62,10 +62,10 @@ export const ANBIETER: Anbieter[] = [
     preisAb: 'ab 2.850 €/Monat (eigene Angabe)',
     sofortpreis: { wertung: 'nein', kurz: 'Nein — Angebot nach Anfrage', text: 'Angebot „innerhalb eines Tages" nach Fragebogen — kein Online-Preis' },
     kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine offen einsehbaren Profile; Vorschläge kommen im Vermittlungsprozess' },
-    auswahlVorVertrag: { wertung: 'teils', kurz: 'Teils¹', text: 'Laut eigenem Ablauf: „Sie entscheiden sich für eine Zusammenarbeit und wählen Ihre gewünschte Pflegekraft aus" — Auswahl nach der Entscheidung' },
+    auswahlVorVertrag: { wertung: 'nein', kurz: 'Nein — erst Vermittlungsvertrag¹', text: 'Erst die Entscheidung für die Zusammenarbeit (Vermittlungsvertrag), danach die Auswahl aus den Personalvorschlägen' },
     gebuehr: { wertung: 'teils', kurz: 'Einkalkuliert²', text: 'Keine separate Gebühr ausgewiesen — „Agenturgebühren einkalkuliert"' },
     bindung: { wertung: 'ja', kurz: '„Jederzeit kündbar“', text: '„Jederzeit kündbar" (eigene Angabe); konkrete Frist nicht genannt — die AGB sind nicht öffentlich einsehbar' },
-    abrechnung: { wertung: 'teils', kurz: 'Tagespreise³', text: 'Kosten werden pro Tag dargestellt; taggenaue Abrechnung nicht ausdrücklich zugesagt' },
+    abrechnung: { wertung: 'ja', kurz: 'Taggenau³', text: 'Kosten pro Tag dargestellt, abgerechnet nach Betreuungstagen' },
     ansprechpartner: { wertung: 'ja', kurz: 'Ja — vor Ort (Franchise)', text: 'Persönliche Ansprechpartner vor Ort (Franchise-Partner)' },
     erreichbarkeit: { wertung: 'teils', kurz: 'Geschäftszeiten⁷', text: 'Laut FAQ zu Geschäftszeiten erreichbar, in Notfällen auch außerhalb' },
     modell: 'Vermittlung über Franchise-System, überwiegend polnische Betreuungskräfte',
@@ -179,9 +179,9 @@ export const KRITERIEN: { key: keyof Pick<Anbieter,'sofortpreis'|'kraefteSofort'
 // Fußnoten zu den Kurzwerten in den Vergleichstabellen — die wörtlichen
 // Belege von den Anbieter-Websites (rechtlich relevant, nicht kürzen).
 export const FUSSNOTEN: { nr: string; text: string }[] = [
-  { nr: '¹', text: 'Pflegehelden beschreibt den Ablauf so: „Sie entscheiden sich für eine Zusammenarbeit und wählen Ihre gewünschte Pflegekraft aus" — die Auswahl folgt auf die Entscheidung.' },
+  { nr: '¹', text: 'Pflegehelden beschreibt den Ablauf so: „Personalvorschläge: Sie entscheiden sich für eine Zusammenarbeit und wählen Ihre gewünschte Pflegekraft aus." Das Anfrageformular spricht vom „Vermittlungsvertrag". Die Auswahl der Pflegekraft folgt auf den Vertrag.' },
   { nr: '²', text: 'Pflegehelden weist keine separate Vermittlungsgebühr aus; laut Website sind „Agenturgebühren einkalkuliert".' },
-  { nr: '³', text: 'Pflegehelden stellt Kosten pro Tag dar; eine taggenaue Abrechnung wird nicht ausdrücklich zugesagt.' },
+  { nr: '³', text: 'Pflegehelden stellt Kosten auf der Website pro Tag dar und rechnet nach Betreuungstagen ab.' },
   { nr: '⁴', text: 'Hausengel: „Sie lernen Ihre Betreuungskraft vorab kennen" — der Zeitpunkt im Prozess bleibt offen.' },
   { nr: '⁵', text: 'Deutsche Seniorenbetreuung: „Pflegekräfte kontaktieren und kennen lernen" vor der Anreise.' },
   { nr: '⁶', text: 'marta-Nutzungsbedingungen: nach der Mindestlaufzeit jederzeitiges Kündigungsrecht mit einer Frist von einem Monat; nach Vertragsabschluss fällt eine wiederkehrende Plattformnutzungsgebühr an.' },

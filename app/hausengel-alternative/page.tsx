@@ -163,7 +163,7 @@ export default function Page() {
                   <p className="text-[11px] text-pm-mute">
                     Angaben zu Hausengel: hausengel.de, Stand {STAND}. ✓ = ja · ◐ = teilweise · — = nein · k. A. = keine Angabe.
                   </p>
-                  {FUSSNOTEN.filter((f) => ['¹','²','³','⁷'].includes(f.nr)).map((f) => (
+                  {FUSSNOTEN.filter((f) => [PH.preisAb, ...KRITERIEN.map((k) => PH[k.key].kurz)].join(' ').includes(f.nr)).map((f) => (
                     <p key={f.nr} className="text-[11px] text-pm-mute">{f.nr} {f.text}</p>
                   ))}
                 </div>
