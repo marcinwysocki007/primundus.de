@@ -27,7 +27,7 @@ const TEXT =
   'Betreuungskräfte, die dafür in Frage kommen, mit Foto, Erfahrung und Deutschniveau. Einen Vertrag ' +
   'gibt es erst, wenn Sie gewählt haben.'
 // Zeile unter dem Knopf (Martin 14.09.: keinen Preis nennen, den zeigt der Rechner sofort;
-// stattdessen Zusagen). Die Auszeichnung steht daneben im Siegel.
+// stattdessen Zusagen). Die Auszeichnung steht darüber am Siegel.
 const ZUSAGEN = ['Keine Vermittlungsgebühr', 'täglich kündbar', 'Bestpreisgarantie']
 
 // Einheiten nicht mitten im Wort umbrechen („keine / Vermittlungsgebühr"), nur am Trennpunkt
@@ -46,26 +46,26 @@ export function Zusagen({ teile }: { teile: string[] }) {
 const KNOPF =
   'inline-flex w-full sm:w-auto items-center justify-center text-center leading-snug min-h-[56px] px-4 sm:px-8 py-3 rounded-full bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[17px] sm:text-[18px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe'
 
-function Ansprechpartnerin() {
+// Ansprechpartnerin, kompakt (Martin 14.09.: der lange Satz neben dem Siegel sah
+// gequetscht aus). Drei kurze Zeilen statt eines Satzes über fünf Zeilen.
+function Ansprechpartnerin({ gross = false }: { gross?: boolean }) {
   return (
-    <div className="flex gap-4 items-start">
+    <div className="flex items-center gap-4">
       <Image
         src="/images/marta-kapcio.jpg"
         alt="Marta Kapcio, Ansprechpartnerin bei Primundus"
-        width={64}
-        height={64}
-        className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0"
+        width={gross ? 72 : 60}
+        height={gross ? 72 : 60}
+        className={`${gross ? 'w-[72px] h-[72px]' : 'w-[60px] h-[60px]'} rounded-full object-cover object-top flex-shrink-0`}
       />
-      <div>
-        <p className="text-[17px] leading-[1.6] text-pm-body max-w-[42ch]">
-          <span className="font-semibold text-pm-ink">Lieber erst sprechen?</span> Marta Kapcio ist Ihre
-          Ansprechpartnerin, sieben Tage die Woche von 8 bis 20 Uhr.
-        </p>
-        <p className="mt-2 flex flex-wrap items-baseline gap-x-5 gap-y-1">
-          <a href="tel:+4989200000830" className="text-[20px] font-bold text-pm-ink hover:text-pm-taupe-ink">
+      <div className="min-w-0">
+        <p className="text-[17px] font-semibold leading-[1.4] text-pm-ink">Lieber erst sprechen?</p>
+        <p className="text-[15px] leading-[1.45] text-pm-mute">Marta Kapcio, Ihre Ansprechpartnerin · täglich 8–20&nbsp;Uhr</p>
+        <p className="mt-1.5 flex flex-wrap items-baseline gap-x-5 gap-y-1">
+          <a href="tel:+4989200000830" className="text-[19px] font-bold text-pm-ink hover:text-pm-taupe-ink whitespace-nowrap">
             089 200 000 830
           </a>
-          <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-[17px] font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">
+          <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-[16px] font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink whitespace-nowrap">
             Per WhatsApp schreiben
           </a>
         </p>
@@ -74,19 +74,21 @@ function Ansprechpartnerin() {
   )
 }
 
-function Siegel({ className = '' }: { className?: string }) {
+// Auszeichnung wie im Kostenrechner: Siegel groß mit Schatten, daneben nur die
+// Auszeichnung (Martin 14.09.: „Preis-Leistungs-Sieger", kein „zum Beleg").
+// Die Belegseite hängt am ganzen Siegel. Nie „DIE WELT" an „6×" hängen.
+function Siegel() {
   return (
-    <a href="/testsieger-24-stunden-pflege" className={`flex items-center gap-3 flex-shrink-0 group ${className}`}>
+    <a href="/testsieger-24-stunden-pflege" className="group inline-flex items-center gap-4" aria-label="6× Preis-Leistungs-Sieger — mehr zur Auszeichnung">
       <Image
-        src="/images/primundus_testsieger-2021.webp"
+        src="/images/siegel-welt-2021-160.webp"
         alt="Siegel DIE WELT Service-Champions 2021"
-        width={52}
-        height={52}
-        className="object-contain"
+        width={48}
+        height={72}
+        className="h-[72px] w-auto rounded-[5px] shadow-[0_2px_8px_rgba(0,0,0,0.2)] flex-shrink-0"
       />
-      <span className="text-[15px] leading-snug text-pm-taupe-ink">
-        <span className="font-semibold text-pm-ink">6× Preis-Leistungssieger</span><br />
-        Service-Champion bei DIE WELT · <span className="underline underline-offset-4 group-hover:text-pm-ink">zum Beleg</span>
+      <span className="text-[19px] md:text-[21px] font-extrabold leading-[1.15] tracking-[-0.02em] text-pm-ink group-hover:text-pm-taupe-ink transition-colors">
+        6× Preis-Leistungs-Sieger
       </span>
     </a>
   )
@@ -95,9 +97,10 @@ function Siegel({ className = '' }: { className?: string }) {
 export function KontaktBand() {
   return (
     <aside className="bg-white border-t border-pm-line" aria-labelledby="kontaktbereich-titel">
-      <div className="max-w-[1200px] mx-auto px-5 py-16 md:py-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_440px] lg:gap-16 lg:items-center">
+      <div className="max-w-[1200px] mx-auto px-5 py-16 md:py-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-16 lg:items-center">
         <div className="min-w-0">
-          <p id="kontaktbereich-titel" className="text-[clamp(28px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.034em] text-pm-ink [text-wrap:balance]">
+          <Siegel />
+          <p id="kontaktbereich-titel" className="mt-7 text-[clamp(28px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.034em] text-pm-ink [text-wrap:balance]">
             {TITEL}
           </p>
           <p className="mt-5 text-[18px] leading-[1.65] text-pm-body max-w-[54ch]">{TEXT}</p>
@@ -107,8 +110,7 @@ export function KontaktBand() {
           <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
         </div>
         <div className="rounded-[20px] bg-pm-paper p-6 md:p-8">
-          <Ansprechpartnerin />
-          <Siegel className="mt-6 pt-6 border-t border-pm-line" />
+          <Ansprechpartnerin gross />
         </div>
       </div>
     </aside>
@@ -118,7 +120,8 @@ export function KontaktBand() {
 export function ArticleCTA() {
   return (
     <aside className="my-12 rounded-3xl bg-pm-shell px-5 py-8 sm:px-8 md:px-10 md:py-10" aria-labelledby="kontaktbereich-titel">
-      <p id="kontaktbereich-titel" className="text-[26px] md:text-[30px] leading-[1.2] font-bold text-pm-ink [text-wrap:balance]">
+      <Siegel />
+      <p id="kontaktbereich-titel" className="mt-6 text-[26px] md:text-[30px] leading-[1.2] font-bold text-pm-ink [text-wrap:balance]">
         {TITEL}
       </p>
       <p className="mt-3 text-[18px] leading-[1.65] text-pm-body max-w-[60ch]">{TEXT}</p>
@@ -127,9 +130,8 @@ export function ArticleCTA() {
       </a>
       <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
 
-      <div className="mt-8 pt-7 border-t border-pm-line flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+      <div className="mt-8 pt-7 border-t border-pm-line">
         <Ansprechpartnerin />
-        <Siegel />
       </div>
     </aside>
   )
