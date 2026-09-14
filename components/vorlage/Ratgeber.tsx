@@ -18,6 +18,20 @@ const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-t
 // Sprungmarken landen unter dem festen Kopf (64 px Handy, 121 px ab md)
 const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
 
+// Überschriften sollen nicht bei „24h-" umbrechen („Wann braucht es 24h- / Pflege").
+// Kurze Bindestrich-Wörter bleiben zusammen; lange wie „24-Stunden-Pflege" dürfen
+// weiter trennen, sonst ragen sie auf 320-px-Handys in 34 px aus dem Rand.
+function zusammenhalten(titel: ReactNode): ReactNode {
+  if (typeof titel !== 'string') return titel
+  return titel.split(/(\S+-\S+)/).map((teil, i) =>
+    i % 2 === 1 && teil.length <= 14 ? (
+      <span key={i} className="whitespace-nowrap">{teil}</span>
+    ) : (
+      teil
+    ),
+  )
+}
+
 function Haken() {
   return (
     <span aria-hidden="true" className="mt-[1px] w-[22px] h-[22px] rounded-[7px] bg-pm-coral-tint text-pm-coral flex items-center justify-center flex-none">
@@ -61,11 +75,11 @@ export function RatgeberKopf({
           ))}
         </nav>
 
-        <div className="mt-8 md:mt-12 grid gap-10 lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-end">
+        <div className="mt-8 md:mt-12 grid gap-10 lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-center">
           <div className="min-w-0">
             <p className={AUGENBRAUE}>{augenbraue}</p>
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">
-              {titel}
+              {zusammenhalten(titel)}
             </h1>
             <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
               {einleitung}
@@ -78,11 +92,12 @@ export function RatgeberKopf({
                 height={44}
                 className="w-11 h-11 rounded-full object-cover object-top flex-none"
               />
+              {/* Umbrüche nur zwischen den Einheiten, nicht in „8 Min. / Lesezeit" */}
               <p className="text-[14px] leading-[1.45] text-pm-mute">
                 <a href="/ueber-uns#team" className="font-semibold text-pm-ink hover:text-pm-taupe-ink transition-colors">Marta Kapcio</a>
-                , Pflegeberaterin bei Primundus
+                , <span className="whitespace-nowrap">Pflegeberaterin bei Primundus</span>
                 <br />
-                Aktualisiert am {aktualisiert} · {lesezeit} Lesezeit
+                <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
               </p>
             </div>
           </div>
@@ -107,7 +122,7 @@ export function RatgeberKopf({
 // Text links, rechts Inhaltsverzeichnis und Kostenknopf (beide mitlaufend, erst ab 1024 px).
 export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: string; title: string }[]; children: ReactNode }) {
   return (
-    <div className="max-w-[1200px] mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-20">
+    <div className="max-w-[1200px] mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
       <article className="min-w-0 max-w-[46rem]">{children}</article>
       <aside className="hidden lg:block" aria-label="Inhalt und Kosten">
         <div className="sticky top-[152px]">
@@ -119,7 +134,7 @@ export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: stri
             <a
               href={RECHNER}
               referrerPolicy="no-referrer-when-downgrade"
-              className="mt-4 flex items-center justify-center text-center min-h-[48px] px-5 rounded-full bg-pm-coral hover:bg-pm-coral-deep text-white font-semibold text-[15px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
+              className="mt-4 flex items-center justify-center text-center min-h-[48px] px-4 rounded-full bg-pm-coral hover:bg-pm-coral-deep text-white font-semibold text-[15px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
             >
               Kosten &amp; Pflegekräfte ansehen
             </a>
@@ -134,7 +149,7 @@ export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: stri
 export function Abschnitt({ id, titel, children }: { id: string; titel: ReactNode; children: ReactNode }) {
   return (
     <section id={id} className={`${SPRUNG} pt-16 md:pt-20 first:pt-0`}>
-      <h2 className={`${H2} text-pm-ink`}>{titel}</h2>
+      <h2 className={`${H2} text-pm-ink`}>{zusammenhalten(titel)}</h2>
       <div className="mt-6 flex flex-col gap-6">{children}</div>
     </section>
   )
@@ -159,7 +174,7 @@ export function DunklerAbschnitt({
   return (
     <section id={id} className={`${SPRUNG} pt-16 md:pt-20`}>
       <div className="-mx-5 md:mx-0 bg-pm-deep md:rounded-[28px] px-5 py-12 md:px-11 md:py-12">
-        <h2 className={`${H2} text-pm-deep-ink`}>{titel}</h2>
+        <h2 className={`${H2} text-pm-deep-ink`}>{zusammenhalten(titel)}</h2>
         <p className="mt-5 text-[18px] leading-[1.7] text-pm-deep-body max-w-[60ch]">{einleitung}</p>
         <div className="mt-9 grid gap-x-10 gap-y-8 md:grid-cols-2">
           {punkte.map((p) => (
@@ -240,6 +255,8 @@ export function Gegenueber({ seiten }: { seiten: { titel: string; ton: 'gruen' |
   )
 }
 
+// Unter 640 px wird jede Zeile ein Block mit Beschriftung (data-label), statt die
+// letzte Spalte nur per Wischen zu zeigen. Ein Satz Markup für beide Formen.
 export function Tabelle({
   titel,
   kopf,
@@ -256,9 +273,9 @@ export function Tabelle({
   return (
     <div className="bg-white rounded-[20px] shadow-lift overflow-hidden">
       <p className={`${AUGENBRAUE} px-5 md:px-6 pt-5 pb-4`}>{titel}</p>
-      <div className="overflow-x-auto">
+      <div className="sm:overflow-x-auto">
         <table className="w-full text-left [font-variant-numeric:tabular-nums]">
-          <thead>
+          <thead className="max-sm:sr-only">
             <tr>
               {kopf.map((h) => (
                 <th key={h} scope="col" className="px-5 md:px-6 py-3 text-[13px] font-semibold text-pm-mute bg-pm-paper border-y border-pm-line whitespace-nowrap">
@@ -267,14 +284,19 @@ export function Tabelle({
               ))}
             </tr>
           </thead>
-          <tbody>
+          <tbody className="max-sm:border-t max-sm:border-pm-line">
             {zeilen.map((z) => (
-              <tr key={z[0]} className="border-b border-pm-line-soft last:border-0">
+              <tr key={z[0]} className="border-b border-pm-line-soft last:border-0 max-sm:block max-sm:px-5 max-sm:py-4">
                 {z.map((c, j) => (
                   <td
                     key={j}
-                    className={`px-5 md:px-6 py-4 text-[16px] whitespace-nowrap ${
-                      j === 0 ? 'text-pm-body' : j === betont ? 'font-bold text-pm-green' : 'font-semibold text-pm-ink'
+                    data-label={kopf[j]}
+                    className={`px-5 md:px-6 py-4 text-[16px] whitespace-nowrap max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:p-0 max-sm:py-0.5 max-sm:before:content-[attr(data-label)] max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px] ${
+                      j === 0
+                        ? 'text-pm-body max-sm:before:content-none max-sm:pb-1.5 max-sm:text-[17px] max-sm:font-bold max-sm:text-pm-ink'
+                        : j === betont
+                          ? 'font-bold text-pm-green'
+                          : 'font-semibold text-pm-ink'
                     }`}
                   >
                     {c}
@@ -312,9 +334,9 @@ export function Fragen({ fragen }: { fragen: { q: string; a: string }[] }) {
     <div className="border-t border-pm-line">
       {fragen.map((f) => (
         <details key={f.q} className="group border-b border-pm-line">
-          <summary className="flex items-start justify-between gap-6 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pm-coral rounded-sm">
+          <summary className="flex items-center justify-between gap-6 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pm-coral rounded-sm">
             <h3 className="text-[18px] md:text-[19px] font-bold leading-[1.4] tracking-[-0.015em] text-pm-ink">{f.q}</h3>
-            <span aria-hidden="true" className="mt-0.5 w-8 h-8 rounded-full bg-white border border-pm-line flex items-center justify-center flex-none text-pm-ink transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none">
+            <span aria-hidden="true" className="w-8 h-8 rounded-full bg-white border border-pm-line flex items-center justify-center flex-none text-pm-ink transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none">
               <svg viewBox="0 0 12 12" className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                 <path d="M6 1.5v9M1.5 6h9" />
               </svg>

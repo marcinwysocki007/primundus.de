@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -266,7 +266,7 @@ export default function DemenzPflegeZuhause() {
           <Weiterlesen aktuell="demenz-pflege-zuhause" variante="vorlage" />
         </RatgeberRumpf>
 
-        <ArticleCTA variante="band" />
+        <KontaktBand />
       </div>
     </>
   )
