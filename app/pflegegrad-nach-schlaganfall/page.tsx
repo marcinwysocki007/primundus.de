@@ -144,7 +144,7 @@ export default function PflegegradNachSchlaganfall() {
                 ['Entlastungsbudget/Jahr', '3.539 €', '3.539 €', '3.539 €'],
                 ['Wohnraumanpassung/Maßnahme', '4.180 €', '4.180 €', '4.180 €'],
               ]}
-              betont={1}
+              betont={[1, 2, 3]}
             />
             <Text>
               → Zusätzlich: Krankenversicherung übernimmt Behandlungspflege (Physiotherapie, Ergotherapie, Logopädie) und Hilfsmittel (Rollstuhl, Rollator, Badehilfen) separat.

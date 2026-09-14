@@ -380,12 +380,14 @@ export function Tabelle({
   titel?: string
   kopf?: string[]
   zeilen: ReactNode[][]
-  betont?: number
+  /** Hervorgehobene Geld-Spalte(n), z. B. 2 oder [1, 2, 3] */
+  betont?: number | number[]
   fuss?: ReactNode
 }) {
   // Viele Spalten → weniger Innenabstand; kurze Zellen („347 €", „PG 2–3") brechen am Desktop nie um
   const eng = (kopf?.length ?? zeilen[0]?.length ?? 0) >= 5
   const pad = eng ? 'px-3 md:px-4' : 'px-5 md:px-6'
+  const hervor = Array.isArray(betont) ? betont : betont !== undefined ? [betont] : []
   return (
     <div className="bg-white rounded-[20px] shadow-lift overflow-hidden">
       {titel ? <p className={`${AUGENBRAUE} px-5 md:px-6 pt-5 pb-4`}>{titel}</p> : null}
@@ -412,7 +414,7 @@ export function Tabelle({
                     className={`${pad} py-4 text-[16px] align-top max-sm:hyphens-auto [overflow-wrap:break-word] ${typeof c === 'string' && c.length <= 16 ? 'sm:whitespace-nowrap' : ''} ${kopf ? 'max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:text-right max-sm:before:content-[attr(data-label)] max-sm:before:basis-[45%] max-sm:before:shrink-0 max-sm:before:text-left max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px]' : 'align-top max-sm:block'} max-sm:p-0 max-sm:py-0.5 ${
                       j === 0
                         ? 'text-pm-body max-sm:before:content-none max-sm:pb-1.5 max-sm:text-[17px] max-sm:!text-left max-sm:font-bold max-sm:text-pm-ink'
-                        : j === betont
+                        : hervor.includes(j)
                           ? 'font-bold text-pm-green'
                           : 'font-semibold text-pm-ink'
                     }`}

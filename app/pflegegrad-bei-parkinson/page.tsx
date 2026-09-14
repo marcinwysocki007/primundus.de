@@ -138,7 +138,7 @@ export default function PflegegradBeiParkinson() {
                 ['Entlastungsbetrag/Monat', '131 €', '131 €', '131 €'],
                 ['Wohnraumanpassung/Maßnahme', '4.180 €', '4.180 €', '4.180 €'],
               ]}
-              betont={1}
+              betont={[1, 2, 3]}
             />
           </Abschnitt>
 
