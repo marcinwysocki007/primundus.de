@@ -96,10 +96,15 @@ export default function TestsiegerPage() {
           {/* ① SIEGEL + BELEG */}
           <div className="bg-white border-2 border-pm-gold rounded-2xl p-6 md:p-8 mb-10">
             <div className="flex flex-col md:flex-row md:items-center gap-6 text-center md:text-left">
+              {/* Original-Siegel wie auf allen anderen Seiten (Martin 15.09.: „wir nutzen das
+                  originale überall"), verkleinert aus primundus_testsieger-2021.webp. Vorher stand
+                  hier ein Nachbau (service-champions-2021.png). */}
               <img
-                src="/images/service-champions-2021.png"
+                src="/images/siegel-welt-2021-352.webp"
                 alt="Siegel DIE WELT Service-Champions 2021: primundus.de"
-                className="w-44 h-auto mx-auto md:mx-0 flex-shrink-0"
+                width={176}
+                height={264}
+                className="w-44 h-auto mx-auto md:mx-0 flex-shrink-0 rounded-[6px] shadow-[0_2px_8px_rgba(0,0,0,0.2)]"
               />
               <div>
                 <h2 className="text-[22px] font-bold text-pm-ink mb-2">Das Original-Siegel</h2>
