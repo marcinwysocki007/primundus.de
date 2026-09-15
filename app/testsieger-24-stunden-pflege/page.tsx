@@ -5,20 +5,20 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 // Ziel-Queries (GSC 08/2026): "24 stunden pflege testsieger" (270 Impr./4 Wo.,
 // Pos. 8,7), "24-stunden pflege testsieger" (248 Impr.), "…testsieger 2025".
 // Wortlaut (Martin 15.09.2026): „6× Testsieger / DIE WELT / Preis & Qualität" wie im
-// Rechner. Ausgezeichnet 2021 bis 2026, sechsmal in Folge; die Urkunde von 2021 reicht als
+// Rechner. Ausgezeichnet 2021 bis 2026, sechsmal in Folge; Siegel + Veröffentlichung 2021 reichen als
 // Nachweis (Martin). Keine Prozentzahlen; Preis/Qualität als Eigenaussage, nie als Zitat.
-// Urkunde (PDF + Siegel) liegt lokal unter /downloads bzw. /images.
+// Veröffentlichung (PDF) und Original-Siegel liegen lokal unter /downloads bzw. /images.
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
   description:
-    'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Mit der Urkunde von 2021 und der Veröffentlichung als PDF.',
+    'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Mit dem Original-Siegel von 2021 und der Veröffentlichung als PDF.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
     description:
-      '6× Testsieger bei DIE WELT, sechsmal in Folge von 2021 bis 2026. Mit Urkunde und Veröffentlichung als PDF.',
+      '6× Testsieger bei DIE WELT, sechsmal in Folge von 2021 bis 2026. Mit Original-Siegel und Veröffentlichung als PDF.',
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -44,7 +44,7 @@ const schemaMarkup = [
         name: 'Wer ist Testsieger in der 24-Stunden-Pflege?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Urkunde von 2021 (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie als PDF ansehen.',
+          text: 'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Veröffentlichung von 2021 (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie als PDF ansehen.',
         },
       },
       {
@@ -68,7 +68,7 @@ const schemaMarkup = [
         name: 'Ist Primundus auch aktuell ausgezeichnet?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ja. Primundus wurde von 2021 bis 2026 jedes Jahr ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir stellvertretend die Urkunde von 2021.',
+          text: 'Ja. Primundus wurde von 2021 bis 2026 jedes Jahr ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir stellvertretend das Siegel von 2021.',
         },
       },
     ],
@@ -98,8 +98,8 @@ export default function TestsiegerPage() {
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
             Von 2021 bis 2026 hat DIE WELT Primundus <strong>sechsmal in Folge</strong> ausgezeichnet. Primundus steht für
-            die beste Kombination aus Preis, Qualität und Kundenservice. Stellvertretend zeigen wir hier die Urkunde von 2021
-            mit der vollständigen Veröffentlichung.
+            die beste Kombination aus Preis, Qualität und Kundenservice. Stellvertretend zeigen wir hier das Original-Siegel von
+            2021 mit der vollständigen Veröffentlichung.
           </p>
 
           {/* ① SIEGEL + BELEG */}
@@ -116,7 +116,7 @@ export default function TestsiegerPage() {
                 className="w-44 h-auto mx-auto md:mx-0 flex-shrink-0 rounded-[6px] shadow-[0_2px_8px_rgba(0,0,0,0.2)]"
               />
               <div>
-                <h2 className="text-[22px] font-bold text-pm-ink mb-2">Die Urkunde von 2021</h2>
+                <h2 className="text-[22px] font-bold text-pm-ink mb-2">Das Original-Siegel von 2021</h2>
                 <p className="text-[15px] leading-relaxed text-pm-body mb-4">
                   „DIE WELT Service-Champions im erlebten Kundenservice: primundus.de"
                   (ServiceValue GmbH, Oktober 2021). Die vollständige Veröffentlichung können Sie hier ansehen:
@@ -203,8 +203,8 @@ export default function TestsiegerPage() {
             <div className="bg-white border border-pm-line rounded-2xl p-6">
               <p className="text-[16px] font-bold text-pm-ink mb-2">Wer ist Testsieger in der 24-Stunden-Pflege?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
-                Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Urkunde von 2021
-                (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie{' '}
+                Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Veröffentlichung von
+                2021 (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie{' '}
                 <a href="/downloads/die-welt-service-champions-2021.pdf" target="_blank" rel="noopener" className="text-pm-taupe underline underline-offset-2">
                   als PDF ansehen
                 </a>.
@@ -234,7 +234,7 @@ export default function TestsiegerPage() {
               <p className="text-[16px] font-bold text-pm-ink mb-2">Ist Primundus auch aktuell ausgezeichnet?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
                 Ja. Primundus wurde von 2021 bis 2026 jedes Jahr ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir
-                stellvertretend die Urkunde von 2021.
+                stellvertretend das Siegel von 2021.
               </p>
             </div>
           </div>
