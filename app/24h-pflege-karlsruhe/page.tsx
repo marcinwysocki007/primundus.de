@@ -427,13 +427,14 @@ export default function KarlsruhePage() {
                 </div>
               </div>
             ))}
-            <div className="flex items-center gap-3 pt-4 mt-1 border-t border-pm-line">
+            <a href="/testsieger-24-stunden-pflege" className="group flex items-center gap-3 pt-4 mt-1 border-t border-pm-line">
               <img width={40} height={48} src="/images/primundus_testsieger-2021.webp" alt="Testsieger DIE WELT" className="w-10 h-12 object-contain flex-shrink-0" />
               <div>
-                <p className="text-[14px] font-bold text-pm-ink">6× Preis-Leistungssieger</p>
-                <p className="text-[13px] text-pm-mute">Service-Champion bei DIE WELT und ServiceValue — <a href="/testsieger-24-stunden-pflege" className="underline underline-offset-2 hover:text-pm-taupe">zur Auszeichnung mit Beleg</a></p>
+                <p className="text-[14px] font-bold text-pm-ink group-hover:text-pm-taupe-ink">6× Testsieger</p>
+                <p className="text-[13px] font-semibold text-pm-taupe">DIE WELT</p>
+                <p className="text-[13px] text-pm-mute">Preis &amp; Qualität</p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* ⑨ ABLAUF */}

@@ -103,7 +103,7 @@ export default function VierUndZwanzigStundenPflege() {
             <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Warum Primundus?</p>
             <div className="grid md:grid-cols-2 gap-3">
               {[
-                { icon: '★', title: '6× Preis-Leistungssieger', desc: 'Service-Champion bei DIE WELT & ServiceValue (2021)' },
+                { icon: '★', title: '6× Testsieger DIE WELT', desc: 'Preis & Qualität' },
                 { icon: '✓', title: 'Rechtssicher', desc: 'Entsendemodell mit A1-Bescheinigung — kein rechtliches Risiko für die Familie' },
                 { icon: '↺', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung — volle Flexibilität' },
                 { icon: '⚡', title: 'Anreise in 3 Tagen möglich', desc: 'Vom ersten Gespräch bis zur Anreise der Betreuungskraft' },

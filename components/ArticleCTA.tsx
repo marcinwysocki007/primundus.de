@@ -109,29 +109,25 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
 
 // Auszeichnung wie im Kostenrechner und in den Mails: Siegel mit Schatten, Trennstrich,
 // drei Zeilen (fett / sandbraun / grau). Martin 15.09.: eine Zeile neben dem hohen
-// Siegel sah verloren aus. Die Auszeichnungsseite hängt am ganzen Block.
-// Zeile 2 und 3 sagen, was das WELT-Siegel belegt (Service-Champion 2021);
-// „6×" und „Preis-Leistung" nie der WELT zuschreiben.
-const AUSZEICHNUNG = ['6× Preis-Leistungs-Sieger', 'Service-Champion', 'bei DIE WELT']
+// Siegel sah verloren aus; Wortlaut „wie im Rechner … überall so machen auf primundus.de".
+// Die Auszeichnungsseite hängt am ganzen Block. Kurze Zeilen, passen auch bei 320 px.
+const AUSZEICHNUNG = ['6× Testsieger', 'DIE WELT', 'Preis & Qualität']
 function Siegel() {
   const [oben, mitte, unten] = AUSZEICHNUNG
   return (
-    <a href="/testsieger-24-stunden-pflege" className="group inline-flex items-center gap-[clamp(8px,2.8vw,12px)] sm:gap-4" aria-label={`${AUSZEICHNUNG.join(', ')} — mehr zur Auszeichnung`}>
-      {/* Handy: Siegel, Abstände und Schrift wachsen mit der Breite. „6× Preis-Leistungs-
-          Sieger" ist fett rund 12,6 × Schriftgröße breit und muss bei 320 px in den Kasten passen
-          (gemessen 15.09.). Ab sm feste Größen. */}
+    <a href="/testsieger-24-stunden-pflege" className="group inline-flex items-center gap-4" aria-label={`${AUSZEICHNUNG.join(', ')} — mehr zur Auszeichnung`}>
       <Image
         src="/images/siegel-welt-2021-160.webp"
         alt="Siegel DIE WELT Service-Champions 2021"
         width={48}
         height={72}
-        className="h-[clamp(52px,16vw,64px)] sm:h-[72px] w-auto rounded-[5px] shadow-[0_2px_8px_rgba(0,0,0,0.2)] flex-shrink-0"
+        className="h-[72px] w-auto rounded-[5px] shadow-[0_2px_8px_rgba(0,0,0,0.2)] flex-shrink-0"
       />
       <span aria-hidden className="w-px self-stretch my-1 bg-pm-line flex-shrink-0" />
       <span className="flex flex-col min-w-0">
-        <span className="text-[clamp(14px,4.5vw,18px)] sm:text-[21px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink group-hover:text-pm-taupe-ink transition-colors whitespace-nowrap">{oben}</span>
-        <span className="mt-0.5 text-[clamp(15px,4.1vw,16px)] sm:text-[17px] font-bold leading-[1.3] text-pm-taupe whitespace-nowrap">{mitte}</span>
-        <span className="text-[clamp(14px,3.85vw,15px)] sm:text-[15px] leading-[1.35] text-pm-body/70 whitespace-nowrap">{unten}</span>
+        <span className="text-[19px] sm:text-[21px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink group-hover:text-pm-taupe-ink transition-colors whitespace-nowrap">{oben}</span>
+        <span className="mt-0.5 text-[16px] sm:text-[17px] font-bold leading-[1.3] tracking-[0.02em] text-pm-taupe whitespace-nowrap">{mitte}</span>
+        <span className="text-[15px] leading-[1.35] text-pm-body/70 whitespace-nowrap">{unten}</span>
       </span>
     </a>
   )

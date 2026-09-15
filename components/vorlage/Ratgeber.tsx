@@ -146,8 +146,8 @@ export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: stri
             >
               Kosten &amp; Pflegekräfte ansehen
             </a>
-            {/* Kein Preis (zeigt der Rechner sofort); ohne Siegel hier deshalb die Auszeichnung. Nie „DIE WELT" zuschreiben. */}
-            <p className="mt-3 text-[13.5px] leading-[1.45] text-pm-taupe-ink"><Zusagen teile={['6× Preis-Leistungs-Sieger', 'keine Vermittlungsgebühr']} /></p>
+            {/* Kein Preis (zeigt der Rechner sofort); ohne Siegel hier deshalb die Auszeichnung, Wortlaut wie im Rechner (Martin 15.09.). */}
+            <p className="mt-3 text-[13.5px] leading-[1.45] text-pm-taupe-ink"><Zusagen teile={['6× Testsieger DIE WELT', 'keine Vermittlungsgebühr']} /></p>
           </div>
         </div>
       </aside>

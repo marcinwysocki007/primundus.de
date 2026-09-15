@@ -532,15 +532,15 @@ export default function Page() {
                       className="h-[80px] w-[80px] object-contain flex-shrink-0"
                     />
                     <div>
-                      <p className="text-[11px] font-bold text-pm-gold uppercase tracking-wider mb-0.5">Testsieger</p>
-                      <p className="text-[17px] font-bold text-pm-ink leading-tight">6× Preis-Leistungssieger</p>
-                      <p className="text-[12px] text-pm-mute mt-0.5">Ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue</p>
+                      <p className="text-[17px] font-bold text-pm-ink leading-tight">6× Testsieger</p>
+                      <p className="text-[14px] font-semibold text-pm-taupe mt-0.5">DIE WELT</p>
+                      <p className="text-[13px] text-pm-mute">Preis &amp; Qualität</p>
                     </div>
                   </div>
                   <div className="border-t border-[#F0EBE3] pt-3">
                     <p className="text-[14px] text-pm-body leading-relaxed">
                       Die beste Kombination aus Preis, Qualität und Kundenservice.{' '}
-                      <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe underline underline-offset-2 font-semibold">Zur Auszeichnung mit Original-Beleg</a>
+                      <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe underline underline-offset-2 font-semibold">Zur Auszeichnung</a>
                     </p>
                   </div>
                 </div>

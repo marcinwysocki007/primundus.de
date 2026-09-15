@@ -49,7 +49,7 @@ export default function Page() {
           {[
             { zahl: '20+', label: 'Jahre Erfahrung' },
             { zahl: '60.000+', label: 'Betreuungen' },
-            { zahl: '6×', label: 'Preis-Leistungssieger' },
+            { zahl: '6×', label: 'Testsieger DIE WELT' },
             { zahl: 'Mo–So', label: '8 – 20 Uhr erreichbar' },
           ].map((item) => (
             <div key={item.label} className="bg-white border border-pm-line rounded-2xl p-5 text-center">
@@ -116,14 +116,14 @@ export default function Page() {
               className="h-[100px] w-[100px] object-contain flex-shrink-0"
             />
             <div>
-              <p className="text-[12px] font-bold text-pm-gold uppercase tracking-wider mb-1">Testsieger</p>
-              <h2 className="text-[22px] md:text-[26px] font-bold text-pm-ink leading-tight mb-2">
-                6× Preis-Leistungssieger
+              <h2 className="text-[22px] md:text-[26px] font-bold text-pm-ink leading-tight">
+                6× Testsieger
               </h2>
-              <p className="text-[15px] text-pm-body mb-3">Ausgezeichnet in Deutschlands großer Service-Studie von DIE WELT und ServiceValue</p>
+              <p className="text-[17px] font-semibold text-pm-taupe mt-1">DIE WELT</p>
+              <p className="text-[15px] text-pm-mute mb-3">Preis &amp; Qualität</p>
               <p className="text-[15px] text-pm-body leading-relaxed border-t border-[#F0EBE3] pt-3">
                 Die beste Kombination aus Preis, Qualität und Kundenservice.{' '}
-                <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe underline underline-offset-2 font-semibold">Zur Auszeichnung mit Original-Beleg</a>
+                <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe underline underline-offset-2 font-semibold">Zur Auszeichnung</a>
               </p>
             </div>
           </div>

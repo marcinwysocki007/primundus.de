@@ -45,12 +45,12 @@ export function TestimonialCard() {
         >
           <div className="flex items-center gap-2">
             <img src="/images/primundus_testsieger-2021.webp" alt="Testsieger-Siegel DIE WELT/ServiceValue" width={28} height={28} className="w-7 h-7 object-contain" />
-            <span className="text-sm font-semibold text-pm-ink">Testsieger-Auszeichnung</span>
+            <span className="text-sm font-semibold text-pm-ink">6× Testsieger</span>
           </div>
           <p className="text-[13px] text-pm-body leading-snug">
-            6× Preis-Leistungssieger · Service-Champion bei DIE WELT &amp; ServiceValue (10/2021)
+            DIE WELT · Preis &amp; Qualität
           </p>
-          <p className="text-[12px] text-pm-mute">Zur Auszeichnung mit Beleg →</p>
+          <p className="text-[12px] text-pm-mute">Zur Auszeichnung →</p>
         </a>
 
         {/* Trustpilot */}
