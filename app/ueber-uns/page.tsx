@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
-  description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Preis-Leistungssieger. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
+  description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
-    description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Preis-Leistungssieger. 60.000+ erfolgreiche Betreuungen.',
+    description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen.',
     url: 'https://primundus.de/ueber-uns',
     siteName: 'Primundus',
     locale: 'de_DE',

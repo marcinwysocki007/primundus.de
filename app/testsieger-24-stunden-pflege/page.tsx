@@ -4,20 +4,21 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 
 // Ziel-Queries (GSC 08/2026): "24 stunden pflege testsieger" (270 Impr./4 Wo.,
 // Pos. 8,7), "24-stunden pflege testsieger" (248 Impr.), "…testsieger 2025".
-// Formulierungslinie (Martin, 14.08.2026): keine Prozentzahlen, Nr.-1-Claim
-// wörtlich vom Siegel, Preis/Qualität-Botschaft als Eigenaussage (kein Zitat).
-// Beleg (PDF + Siegel) liegt lokal unter /downloads bzw. /images.
+// Wortlaut (Martin 15.09.2026): „6× Testsieger / DIE WELT / Preis & Qualität" wie im
+// Rechner. Ausgezeichnet 2021 bis 2026, sechsmal in Folge; die Urkunde von 2021 reicht als
+// Nachweis (Martin). Keine Prozentzahlen; Preis/Qualität als Eigenaussage, nie als Zitat.
+// Urkunde (PDF + Siegel) liegt lokal unter /downloads bzw. /images.
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Testsieger: 6× Preis-Leistungssieger',
+  title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
   description:
-    'Primundus ist 6× Preis-Leistungssieger und Service-Champion bei DIE WELT und ServiceValue. Das Original-Siegel und die Veröffentlichung als PDF.',
+    'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Mit der Urkunde von 2021 und der Veröffentlichung als PDF.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege Testsieger: 6× Preis-Leistungssieger',
+    title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
     description:
-      '6× Preis-Leistungssieger, Service-Champion bei DIE WELT und ServiceValue. Mit Original-Beleg als PDF.',
+      '6× Testsieger bei DIE WELT, sechsmal in Folge von 2021 bis 2026. Mit Urkunde und Veröffentlichung als PDF.',
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -43,7 +44,7 @@ const schemaMarkup = [
         name: 'Wer ist Testsieger in der 24-Stunden-Pflege?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Primundus ist 6× Preis-Leistungssieger. DIE WELT und ServiceValue haben Primundus als Service-Champion im erlebten Kundenservice ausgezeichnet (Veröffentlichung Oktober 2021).',
+          text: 'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Urkunde von 2021 (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie als PDF ansehen.',
         },
       },
       {
@@ -51,7 +52,7 @@ const schemaMarkup = [
         name: 'Worauf beruht die Auszeichnung?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Auf einer der größten Kundenbefragungen Deutschlands: Die ServiceValue GmbH wertet gemeinsam mit DIE WELT jährlich Millionen Kundenurteile zu mehr als 380 Branchen aus. Bewertet wird der erlebte Kundenservice.',
+          text: 'Auf einer der größten Kundenbefragungen Deutschlands: Die ServiceValue GmbH wertet gemeinsam mit DIE WELT jährlich Millionen Kundenurteile zu mehr als 380 Branchen aus. 2021 ging es um den erlebten Kundenservice. primundus.de erreichte in seiner Kategorie Platz 1.',
         },
       },
       {
@@ -60,6 +61,14 @@ const schemaMarkup = [
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Eine 24-Stunden-Betreuung kostet bei Primundus meist zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen der Betreuungskraft. Nach Abzug der Pflegekassen-Zuschüsse bleiben oft rund 1.500 bis 2.500 Euro selbst zu tragen.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist Primundus auch aktuell ausgezeichnet?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja. Primundus wurde von 2021 bis 2026 jedes Jahr ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir stellvertretend die Urkunde von 2021.',
         },
       },
     ],
@@ -82,15 +91,15 @@ export default function TestsiegerPage() {
           </nav>
 
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            Auszeichnung · Aktualisiert am 27. August 2026
+            Auszeichnung · Aktualisiert am 15. September 2026
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Testsieger in der 24-Stunden-Pflege: Primundus ist 6× Preis-Leistungssieger
+            Testsieger in der 24-Stunden-Pflege: 6× in Folge bei DIE WELT
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Primundus wurde von DIE WELT und der ServiceValue GmbH als <strong>Service-Champion im erlebten Kundenservice</strong>
-            ausgezeichnet, ermittelt in Deutschlands großer Service-Studie mit mehr als 380 untersuchten Branchen
-            (Veröffentlichung: Oktober 2021). Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice.
+            Von 2021 bis 2026 hat DIE WELT Primundus <strong>sechsmal in Folge</strong> ausgezeichnet. Primundus steht für
+            die beste Kombination aus Preis, Qualität und Kundenservice. Stellvertretend zeigen wir hier die Urkunde von 2021
+            mit der vollständigen Veröffentlichung.
           </p>
 
           {/* ① SIEGEL + BELEG */}
@@ -107,10 +116,10 @@ export default function TestsiegerPage() {
                 className="w-44 h-auto mx-auto md:mx-0 flex-shrink-0 rounded-[6px] shadow-[0_2px_8px_rgba(0,0,0,0.2)]"
               />
               <div>
-                <h2 className="text-[22px] font-bold text-pm-ink mb-2">Das Original-Siegel</h2>
+                <h2 className="text-[22px] font-bold text-pm-ink mb-2">Die Urkunde von 2021</h2>
                 <p className="text-[15px] leading-relaxed text-pm-body mb-4">
                   „DIE WELT Service-Champions im erlebten Kundenservice: primundus.de"
-                  (ServiceValue GmbH, 10/2021). Die vollständige Veröffentlichung können Sie hier ansehen:
+                  (ServiceValue GmbH, Oktober 2021). Die vollständige Veröffentlichung können Sie hier ansehen:
                 </p>
                 <a
                   href="/downloads/die-welt-service-champions-2021.pdf"
@@ -118,7 +127,7 @@ export default function TestsiegerPage() {
                   rel="noopener"
                   className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-pm-taupe hover:text-[#6B5738] underline underline-offset-2 transition-colors"
                 >
-                  Original-Veröffentlichung ansehen (PDF)
+                  Veröffentlichung ansehen (PDF)
                 </a>
               </div>
             </div>
@@ -132,9 +141,9 @@ export default function TestsiegerPage() {
             <p className="text-[15px] leading-relaxed text-pm-body">
               DIE WELT und die ServiceValue GmbH untersuchen jedes Jahr, wie zufrieden Kundinnen und Kunden mit deutschen
               Unternehmen sind. Dafür werden Millionen von Kundenurteilen ausgewertet — über alle Branchen hinweg, von Banken
-              bis zur Pflege. In seiner Kategorie erreichte primundus.de <strong>Platz 1</strong>.
-              Ausgezeichnet wird dabei das, worauf es in der Pflege am meisten ankommt: der <strong>erlebte Kundenservice</strong> —
-              also wie gut sich Familien beraten, begleitet und betreut fühlen.
+              bis zur Pflege. Primundus wurde von 2021 bis 2026 sechsmal in Folge ausgezeichnet. 2021 erreichte primundus.de
+              in seiner Kategorie <strong>Platz 1</strong> im <strong>erlebten Kundenservice</strong>, also darin, wie gut sich
+              Familien beraten, begleitet und betreut fühlen.
             </p>
           </div>
 
@@ -194,8 +203,8 @@ export default function TestsiegerPage() {
             <div className="bg-white border border-pm-line rounded-2xl p-6">
               <p className="text-[16px] font-bold text-pm-ink mb-2">Wer ist Testsieger in der 24-Stunden-Pflege?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
-                Primundus ist 6× Preis-Leistungssieger. DIE WELT und ServiceValue haben Primundus als Service-Champion im erlebten
-                Kundenservice ausgezeichnet (Veröffentlichung Oktober 2021). Die vollständige Veröffentlichung können Sie{' '}
+                Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Urkunde von 2021
+                (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie{' '}
                 <a href="/downloads/die-welt-service-champions-2021.pdf" target="_blank" rel="noopener" className="text-pm-taupe underline underline-offset-2">
                   als PDF ansehen
                 </a>.
@@ -205,8 +214,8 @@ export default function TestsiegerPage() {
               <p className="text-[16px] font-bold text-pm-ink mb-2">Worauf beruht die Auszeichnung?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
                 Auf einer der größten Kundenbefragungen Deutschlands: Die ServiceValue GmbH wertet gemeinsam mit DIE WELT
-                jährlich Millionen Kundenurteile zu mehr als 380 Branchen aus. Bewertet wird der erlebte Kundenservice —
-                nicht Werbung, sondern echte Erfahrungen von Familien.
+                jährlich Millionen Kundenurteile zu mehr als 380 Branchen aus. 2021 ging es um den erlebten Kundenservice.
+                primundus.de erreichte in seiner Kategorie Platz 1.
               </p>
             </div>
             <div className="bg-white border border-pm-line rounded-2xl p-6">
@@ -224,9 +233,8 @@ export default function TestsiegerPage() {
             <div className="bg-white border border-pm-line rounded-2xl p-6">
               <p className="text-[16px] font-bold text-pm-ink mb-2">Ist Primundus auch aktuell ausgezeichnet?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
-                Die Auszeichnung stammt aus der Veröffentlichung von Oktober 2021. An unserem Anspruch hat sich seitdem
-                nichts geändert: gleiche Ansprechpartner, gleiche Qualität, täglich kündbar. Überzeugen Sie sich am
-                einfachsten selbst — mit einem unverbindlichen Angebot in 2 Minuten.
+                Ja. Primundus wurde von 2021 bis 2026 jedes Jahr ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir
+                stellvertretend die Urkunde von 2021.
               </p>
             </div>
           </div>
