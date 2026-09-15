@@ -79,7 +79,7 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
           {foto(72)}
           <div>
             <p className="text-[18px] font-bold leading-tight text-pm-ink">Marta Kapcio</p>
-            <p className="mt-0.5 text-[15px] text-pm-mute">Ihre Ansprechpartnerin</p>
+            <p className="mt-0.5 text-[15px] text-pm-body/70">Ihre Ansprechpartnerin</p>
           </div>
         </div>
         <p className="mt-5 text-[17px] leading-[1.5] text-pm-body">
@@ -95,7 +95,7 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
       {foto(60)}
       <div className="min-w-0">
         <p className="text-[17px] font-semibold leading-[1.4] text-pm-ink">Lieber erst sprechen?</p>
-        <p className="text-[15px] leading-[1.45] text-pm-mute">
+        <p className="text-[15px] leading-[1.45] text-pm-body/70">
           <span className={nw}>Marta Kapcio,</span> <span className={nw}>Ihre Ansprechpartnerin,</span> <span className={nw}>täglich 8–20 Uhr</span>
         </p>
         <p className="mt-1.5 flex flex-wrap items-baseline gap-x-5 gap-y-1">
@@ -107,21 +107,31 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
   )
 }
 
-// Auszeichnung wie im Kostenrechner: Siegel groß mit Schatten, daneben nur die
-// Auszeichnung (Martin 14.09.: „Preis-Leistungs-Sieger", kein „zum Beleg").
-// Die Belegseite hängt am ganzen Siegel. Nie „DIE WELT" an „6×" hängen.
+// Auszeichnung wie im Kostenrechner und in den Mails: Siegel mit Schatten, Trennstrich,
+// drei Zeilen (fett / sandbraun / grau). Martin 15.09.: eine Zeile neben dem hohen
+// Siegel sah verloren aus. Die Auszeichnungsseite hängt am ganzen Block.
+// Zeile 2 und 3 sagen, was das WELT-Siegel belegt (Service-Champion 2021);
+// „6×" und „Preis-Leistung" nie der WELT zuschreiben.
+const AUSZEICHNUNG = ['6× Preis-Leistungs-Sieger', 'Service-Champion', 'bei DIE WELT']
 function Siegel() {
+  const [oben, mitte, unten] = AUSZEICHNUNG
   return (
-    <a href="/testsieger-24-stunden-pflege" className="group inline-flex items-center gap-4" aria-label="6× Preis-Leistungs-Sieger — mehr zur Auszeichnung">
+    <a href="/testsieger-24-stunden-pflege" className="group inline-flex items-center gap-[clamp(8px,2.8vw,12px)] sm:gap-4" aria-label={`${AUSZEICHNUNG.join(', ')} — mehr zur Auszeichnung`}>
+      {/* Handy: Siegel, Abstände und Schrift wachsen mit der Breite. „6× Preis-Leistungs-
+          Sieger" ist fett rund 12,6 × Schriftgröße breit und muss bei 320 px in den Kasten passen
+          (gemessen 15.09.). Ab sm feste Größen. */}
       <Image
         src="/images/siegel-welt-2021-160.webp"
         alt="Siegel DIE WELT Service-Champions 2021"
         width={48}
         height={72}
-        className="h-[72px] w-auto rounded-[5px] shadow-[0_2px_8px_rgba(0,0,0,0.2)] flex-shrink-0"
+        className="h-[clamp(52px,16vw,64px)] sm:h-[72px] w-auto rounded-[5px] shadow-[0_2px_8px_rgba(0,0,0,0.2)] flex-shrink-0"
       />
-      <span className="text-[19px] md:text-[21px] font-extrabold leading-[1.15] tracking-[-0.02em] text-pm-ink group-hover:text-pm-taupe-ink transition-colors">
-        6× Preis-Leistungs-Sieger
+      <span aria-hidden className="w-px self-stretch my-1 bg-pm-line flex-shrink-0" />
+      <span className="flex flex-col min-w-0">
+        <span className="text-[clamp(14px,4.5vw,18px)] sm:text-[21px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink group-hover:text-pm-taupe-ink transition-colors whitespace-nowrap">{oben}</span>
+        <span className="mt-0.5 text-[clamp(15px,4.1vw,16px)] sm:text-[17px] font-bold leading-[1.3] text-pm-taupe whitespace-nowrap">{mitte}</span>
+        <span className="text-[clamp(14px,3.85vw,15px)] sm:text-[15px] leading-[1.35] text-pm-body/70 whitespace-nowrap">{unten}</span>
       </span>
     </a>
   )
