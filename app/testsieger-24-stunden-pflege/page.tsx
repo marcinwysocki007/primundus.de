@@ -5,20 +5,20 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 // Ziel-Queries (GSC 08/2026): "24 stunden pflege testsieger" (270 Impr./4 Wo.,
 // Pos. 8,7), "24-stunden pflege testsieger" (248 Impr.), "…testsieger 2025".
 // Wortlaut (Martin 15.09.2026): „6× Testsieger / DIE WELT / Preis & Qualität" wie im
-// Rechner. Ausgezeichnet 2021 bis 2026, sechsmal in Folge; Siegel + Veröffentlichung 2021 reichen als
-// Nachweis (Martin). Keine Prozentzahlen; Preis/Qualität als Eigenaussage, nie als Zitat.
+// Rechner. Sechsmal in Folge ausgezeichnet, Siegel + Veröffentlichung 2021 reichen als Nachweis;
+// Jahreszahlen nur, wo nötig (Martin 16.09.: „nicht unnötig 2021–2026 anzeigen“). Keine Prozentzahlen; Preis/Qualität als Eigenaussage, nie als Zitat.
 // Veröffentlichung (PDF) und Original-Siegel liegen lokal unter /downloads bzw. /images.
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
   description:
-    'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Mit dem Original-Siegel von 2021 und der Veröffentlichung als PDF.',
+    'Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Mit dem Original-Siegel von 2021 und der Veröffentlichung als PDF.',
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
     description:
-      '6× Testsieger bei DIE WELT, sechsmal in Folge von 2021 bis 2026. Mit Original-Siegel und Veröffentlichung als PDF.',
+      'Sechsmal in Folge Testsieger bei DIE WELT. Mit Original-Siegel und Veröffentlichung als PDF.',
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -44,7 +44,7 @@ const schemaMarkup = [
         name: 'Wer ist Testsieger in der 24-Stunden-Pflege?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Veröffentlichung von 2021 (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie als PDF ansehen.',
+          text: 'Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Die Veröffentlichung von 2021 (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie als PDF ansehen.',
         },
       },
       {
@@ -68,7 +68,7 @@ const schemaMarkup = [
         name: 'Ist Primundus auch aktuell ausgezeichnet?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ja. Primundus wurde von 2021 bis 2026 jedes Jahr ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir stellvertretend das Siegel von 2021.',
+          text: 'Ja. Primundus wurde sechsmal in Folge ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir stellvertretend das Siegel von 2021.',
         },
       },
     ],
@@ -97,7 +97,7 @@ export default function TestsiegerPage() {
             Testsieger in der 24-Stunden-Pflege: 6× in Folge bei DIE WELT
           </h1>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Von 2021 bis 2026 hat DIE WELT Primundus <strong>sechsmal in Folge</strong> ausgezeichnet. Primundus steht für
+            DIE WELT hat Primundus <strong>sechsmal in Folge</strong> ausgezeichnet. Primundus steht für
             die beste Kombination aus Preis, Qualität und Kundenservice. Stellvertretend zeigen wir hier das Original-Siegel von
             2021 mit der vollständigen Veröffentlichung.
           </p>
@@ -141,7 +141,7 @@ export default function TestsiegerPage() {
             <p className="text-[15px] leading-relaxed text-pm-body">
               DIE WELT und die ServiceValue GmbH untersuchen jedes Jahr, wie zufrieden Kundinnen und Kunden mit deutschen
               Unternehmen sind. Dafür werden Millionen von Kundenurteilen ausgewertet — über alle Branchen hinweg, von Banken
-              bis zur Pflege. Primundus wurde von 2021 bis 2026 sechsmal in Folge ausgezeichnet. 2021 erreichte primundus.de
+              bis zur Pflege. Primundus wurde sechsmal in Folge ausgezeichnet. 2021 erreichte primundus.de
               in seiner Kategorie <strong>Platz 1</strong> im <strong>erlebten Kundenservice</strong>, also darin, wie gut sich
               Familien beraten, begleitet und betreut fühlen.
             </p>
@@ -203,8 +203,8 @@ export default function TestsiegerPage() {
             <div className="bg-white border border-pm-line rounded-2xl p-6">
               <p className="text-[16px] font-bold text-pm-ink mb-2">Wer ist Testsieger in der 24-Stunden-Pflege?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
-                Primundus ist 6× Testsieger bei DIE WELT: sechsmal in Folge ausgezeichnet, von 2021 bis 2026. Die Veröffentlichung von
-                2021 (Service-Champion im erlebten Kundenservice, ServiceValue GmbH) können Sie{' '}
+                Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Die Veröffentlichung von 2021 (Service-Champion im
+                erlebten Kundenservice, ServiceValue GmbH) können Sie{' '}
                 <a href="/downloads/die-welt-service-champions-2021.pdf" target="_blank" rel="noopener" className="text-pm-taupe underline underline-offset-2">
                   als PDF ansehen
                 </a>.
@@ -233,7 +233,7 @@ export default function TestsiegerPage() {
             <div className="bg-white border border-pm-line rounded-2xl p-6">
               <p className="text-[16px] font-bold text-pm-ink mb-2">Ist Primundus auch aktuell ausgezeichnet?</p>
               <p className="text-[15px] leading-relaxed text-pm-body">
-                Ja. Primundus wurde von 2021 bis 2026 jedes Jahr ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir
+                Ja. Primundus wurde sechsmal in Folge ausgezeichnet, zuletzt 2026. Auf dieser Seite zeigen wir
                 stellvertretend das Siegel von 2021.
               </p>
             </div>

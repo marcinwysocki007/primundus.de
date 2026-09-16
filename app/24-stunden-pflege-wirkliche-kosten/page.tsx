@@ -178,8 +178,7 @@ export default function WirklicheKostenPage() {
                 <strong>Unsere Antworten:</strong> Gesamtpreis 2.200–3.500 € je nach Situation, Kost &amp;
                 Logis 200–300 €, täglich kündbar ohne Mindestlaufzeit, Anreise schon in 3 Tagen möglich — und wir
                 sind{' '}
-                <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">6× Testsieger bei DIE WELT</a>,
-                sechsmal in Folge von 2021 bis 2026.
+                <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">sechsmal in Folge Testsieger bei DIE WELT</a>.
               </Text>
             </Kasten>
           </Abschnitt>
