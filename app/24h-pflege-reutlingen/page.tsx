@@ -1,7 +1,30 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import {
+  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
+  RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
+import { ArticleTOC } from '@/components/ArticleTOC'
+
+// Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
+// mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
+// Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
+// Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
+
+const SECTIONS = [
+  { id: 'was-ist-24-stunden', title: "Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?" },
+  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
+  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
+  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Reutlingen 2026" },
+  { id: 'polnische-betreuungskraefte-in-reutlingen', title: "Polnische Betreuungskräfte in Reutlingen" },
+  { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Reutlingen" },
+  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Reutlingen ausmacht" },
+  { id: 'einzugsgebiet-reutlingen', title: "Einzugsgebiet Reutlingen" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Reutlingen" },
+]
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege & Betreuung in Reutlingen | Primundus',
@@ -55,7 +78,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
       },
       {
         '@type': 'Question',
@@ -86,378 +109,195 @@ const schemaMarkup = [
   },
 ]
 
-export default function ReutlingenPage() {
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Reutlingen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Reutlingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Reutlingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Kommt eine Betreuungskraft auch nach Gönningen oder Bronnweiler?', a: 'Ja, und gerade dort lohnt es sich besonders. Zwischen den bewohnten Ortskernen Reutlingens liegen rund 215 Höhenmeter — Mittelstadt am Neckar auf 320, Gönningen am Fuß des Albtraufs auf 521 Metern. Gönningen ist flächenmäßig gut halb so groß wie die gesamte Kernstadt, hat aber nur 3.902 Einwohner. Für ambulante Dienste bedeutet das lange Fahrwege zwischen wenigen Terminen; für eine Betreuungskraft, die im Haus lebt, spielt die Entfernung schlicht keine Rolle. Anreise und Preis sind in allen zwölf Stadtbezirken gleich.' },
+  { q: 'Wie ist die Pflegesituation in Reutlingen und Umgebung?', a: 'Auffällig familiär. Von den 16.341 Pflegebedürftigen im Landkreis Reutlingen werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent gegenüber 55,9 Prozent in Baden-Württemberg. Ambulante Dienste (13,6 statt 16,4 Prozent) und Heimplätze (12,9 statt 14,9 Prozent) liegen entsprechend unter dem Landeswert. Seit 2021 ist die Zahl der Pflegebedürftigen um 16,7 Prozent gestiegen. Die Statistik wird nur auf Kreisebene erhoben, für die Stadt allein gibt es keine eigenen Zahlen.' },
+  { q: 'Passt eine Betreuungskraft in eine Reutlinger Wohnung?', a: 'In den Stadtbezirken meist ohne Weiteres: Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), überwiegend in Ein- und Zweifamilienhäusern, das Zimmer ist oft schon da. In der Kernstadt kommt es auf den Grundriss an — ein Drittel der Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter, im Schnitt sind es 92. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Alles andere klären wir vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
+  { q: 'Welches Einzugsgebiet wird in Reutlingen bedient?', a: 'Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen' },
+]
+
+export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <span className="text-pm-ink">24h-Pflege Reutlingen</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            24h-Pflege in Reutlingen · Aktualisiert am 27. August 2026
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            24-Stunden-Pflege und Betreuung in Reutlingen
-          </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Am Fuß der Achalm bleibt man verwurzelt: das Haus in Betzingen, die Wohnung in Sondelfingen, der Blick auf die Alb. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein und ist Tag und Nacht da — 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.
-          </p>
-
-          {/* ① WAS IST 24H-PFLEGE */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-6">
-              Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist rund um die Uhr erreichbar — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Reutlingen heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.
-            </p>
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { icon: '🏠', title: 'Eigenes Zuhause', desc: 'Vertraute Umgebung bleibt — kein Heimumzug' },
-                { icon: '👤', title: '1:1-Betreuung', desc: 'Eine Kraft, ein Mensch — keine wechselnden Gesichter' },
-                { icon: '🌙', title: 'Tag & Nacht da', desc: 'Rund um die Uhr erreichbar — auch nachts' },
-              ].map((item) => (
-                <div key={item.title} className="bg-pm-paper rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className="text-[13px] font-bold text-pm-ink mb-1">{item.title}</p>
-                  <p className="text-[12px] text-pm-mute leading-snug">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* ② FÜR WEN */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Für wen ist 24h-Pflege die richtige Wahl?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-6">
-              Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.
-            </p>
-            <div className="grid md:grid-cols-2 gap-3 mb-6">
-              {[
-                { icon: '🧓', title: 'Selbstständigkeit lässt nach', desc: 'Alltägliches gelingt nicht mehr zuverlässig alleine — Anziehen, Kochen, Waschen, Orientierung' },
-                { icon: '👨‍👩‍👧', title: 'Familie kann nicht immer da sein', desc: 'Beruf, eigene Kinder, Entfernung — Angehörige wollen helfen, aber nicht rund um die Uhr' },
-                { icon: '🏠', title: 'Pflegeheim ist keine Option', desc: 'Das eigene Zuhause, die gewohnten Möbel, der Garten — das soll bleiben' },
-                { icon: '🌙', title: 'Nächtliche Unsicherheit', desc: 'Stürze, Toilettengänge, Orientierungslosigkeit — nachts ist niemand da' },
-                { icon: '🧠', title: 'Demenz oder Orientierungsprobleme', desc: 'Vertraute Ansprechpartnerin nötig — keine wechselnden Gesichter' },
-                { icon: '🏥', title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
-              ].map((item) => (
-                <div key={item.title} className="bg-pm-paper rounded-xl p-4 flex gap-3 items-start">
-                  <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
-                  <div>
-                    <p className="text-[13px] font-bold text-pm-ink mb-1">{item.title}</p>
-                    <p className="text-[12px] text-pm-mute leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="bg-pm-shell rounded-xl p-5 mb-3">
-              <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-taupe mb-2">Wann 24h-Pflege alleine nicht ausreicht</p>
-              <p className="text-[13px] text-pm-taupe-ink leading-relaxed">
-                Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.
-              </p>
-            </div>
-            <div className="bg-pm-coral-tint rounded-xl p-4">
-              <p className="text-[13px] text-pm-coral-ink leading-relaxed">
-                Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.
-              </p>
-            </div>
-          </div>
-
-          {/* ③ LEISTUNGEN */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-8">
-            <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-pm-line">
-              <div className="p-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-green mb-4">Betreuungskraft übernimmt</p>
-                {['Körperpflege — Waschen, Ankleiden, Zahnpflege','Kochen — frisch, nach Vorlieben und Diät','Haushalt — Putzen, Einkaufen, Wäsche','Mobilisierung, Spaziergänge, Begleitung','Gesellschaft und Begleitung — ganztags','Medikamentenerinnerung','Arzt- und Therapietermine begleiten','Nachtbereitschaft — immer erreichbar'].map((item) => (
-                  <div key={item} className="flex items-start gap-3 py-2 border-b border-pm-line-soft last:border-0">
-                    <span className="w-4 h-4 rounded-full bg-pm-mint flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-pm-green text-[9px] font-bold">✓</span></span>
-                    <span className="text-[13px] text-pm-body leading-relaxed">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="p-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe mb-4">Ambulanter Pflegedienst ergänzt</p>
-                {['Injektionen (Insulin, Blutverdünner)','Verbandswechsel, Wundversorgung','Katheterversorgung','Ernährung über Magensonde','Beatmungspflege','Komplexe medizinische Versorgung'].map((item) => (
-                  <div key={item} className="flex items-start gap-3 py-2 border-b border-pm-line-soft last:border-0">
-                    <span className="text-pm-taupe font-bold text-[12px] flex-shrink-0 mt-0.5">+</span>
-                    <span className="text-[13px] text-pm-body leading-relaxed">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-pm-paper border-t border-pm-line px-6 py-4">
-              <p className="text-[13px] text-pm-body leading-relaxed"><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</p>
-            </div>
-          </div>
-
-          {/* ④ KOSTEN */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Kosten & Kassenzuschüsse in Reutlingen 2026
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-4">
-            <div className="bg-pm-paper px-5 py-3 border-b border-pm-line">
-              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-mute">Kostenbeispiel — Pflegegrad 3 in Reutlingen</p>
-            </div>
-            <div className="px-5 py-4 space-y-2">
-              {[
-                { label: 'Kosten Primundus', value: '2.200–3.500 €/Monat', green: false },
-                { label: '− Pflegegeld PG 3', value: '− 599 €/Monat', green: true },
-                { label: '− Entlastungsbudget (anteilig)', value: '− ca. 295 €/Monat', green: true },
-                { label: '− Steuerabzug (ca.)', value: '− ca. 200 €/Monat', green: true },
-              ].map((row) => (
-                <div key={row.label} className="flex justify-between items-center text-[14px]">
-                  <span className="text-pm-mute">{row.label}</span>
-                  <span className={`font-semibold whitespace-nowrap text-right ${row.green ? 'text-pm-green' : 'text-pm-ink'}`}>{row.value}</span>
-                </div>
-              ))}
-              <div className="flex justify-between items-center text-[15px] font-bold pt-3 mt-1 border-t border-pm-line">
-                <span className="text-pm-ink">Ihr Eigenanteil</span>
-                <span className="text-pm-taupe">ca. 1200–2300 €/Monat</span>
-              </div>
-            </div>
-            <div className="bg-pm-paper border-t border-pm-line px-5 py-3">
-              <p className="text-[12px] text-pm-mute">Pflegeheim in Baden-Württemberg: Eigenanteil rund 3.660 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause</p>
-            </div>
-          </div>
-          <div className="bg-white border border-pm-line rounded-2xl overflow-hidden mb-4">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead><tr className="bg-pm-paper">
-                  {['Pflegegrad','Pflegegeld/Mo','Entlastungsbudget/Jahr'].map((h) => (
-                    <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                  ))}
-                </tr></thead>
-                <tbody>
-                  {[['PG 2','347 €','3.539 €'],['PG 3','599 €','3.539 €'],['PG 4','800 €','3.539 €'],['PG 5','990 €','3.539 €']].map(([pg,pgeld,budget],i) => (
-                    <tr key={pg} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[13px] font-bold text-pm-green border-b border-pm-line">{pgeld}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-body border-b border-pm-line">{budget}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-4 py-2"><p className="text-[11px] text-pm-mute">Stand 2026 · Bundesweit einheitlich</p></div>
-          </div>
-          
-
-          {/* ④c RECHNER */}
-          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-6 mb-10">
-            <p className="text-[15px] font-bold text-pm-ink mb-2">Ihren eigenen Fall durchrechnen</p>
-            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-              Welcher Pflegegrad realistisch ist und was am Ende tatsächlich übrig bleibt, hängt von
-              der konkreten Situation ab. Zwei Rechner helfen weiter — beide kostenlos und ohne Anmeldung:
-            </p>
-            <div className="flex flex-col gap-2">
-              <a href="/pflegegrad-rechner" className="text-[15px] text-pm-taupe font-semibold hover:underline">
-                → Pflegegrad berechnen — dieselben sechs Module wie bei der Begutachtung
-              </a>
-              <a href="https://kostenrechner.primundus.de/?start=1&amp;src=ort-reutlingen" target="_blank" rel="noopener" className="text-[15px] text-pm-taupe font-semibold hover:underline">
-                → Preis und Betreuungskräfte für Reutlingen ansehen — in 2 Minuten
-              </a>
-            </div>
-          </div>
-
-          {/* ④b POLEN */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Polnische Betreuungskräfte in Reutlingen</h2>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wer in Reutlingen nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe:
-            jemanden, der im Haushalt lebt und rund um die Uhr da ist. Genau das leisten unsere
-            Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien —
-            und sie sind in Reutlingen und im gesamten Umland im Einsatz.
-          </p>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-4">
-            <p className="text-[15px] font-bold text-pm-ink mb-2">Angestellt statt vermittelt</p>
-            <p className="text-[15px] leading-relaxed text-pm-body">
-              Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte
-              fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum
-              Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland,
-              Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine
-              Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren
-              wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.
-            </p>
-          </div>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            <strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft
-            kostet:</strong> zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation und
-            Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbetrag und
-            Entlastungsbudget in Baden-Württemberg meist rund 1200 bis 2300 Euro Eigenanteil —
-            deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.660 Euro im Monat kostet.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            <strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte
-            Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der
-            Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen
-            mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei
-            vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-8">
-            Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie
-            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — was sie kosten und wie es rechtlich läuft</a>.
-          </p>
-          {/* ⑤ EINZUGSGEBIET */}
-          {/* ⑤ KREIS-H2 */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">24-Stunden-Pflege im Landkreis Reutlingen</h2>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">Unsere Betreuungskräfte ziehen in Reutlingen und im Landkreis Reutlingen ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</p>
-          <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-5 mb-10">
-            <p className="text-[13px] font-bold text-pm-taupe-ink mb-1">Einzugsgebiet Reutlingen</p>
-            <p className="text-[13px] text-pm-taupe-ink leading-relaxed">Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen</p>
-          </div>
-
-          {/* ⑤c VOR ORT — individueller Text je Stadt (kein Baustein) */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Reutlingen ausmacht</h2>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Reutlingen ist zwei Städte in einer, und das fällt erst auf, wenn jemand pflegebedürftig
-            wird. In der Kernstadt leben rund 70.700 Menschen auf 2.780 Hektar. Gönningen, der
-            südlichste Stadtbezirk, ist mit 1.568 Hektar flächenmäßig gut halb so groß wie die
-            gesamte Kernstadt — und hat 3.902 Einwohner. Zwischen den bewohnten Ortskernen liegen
-            rund 215 Höhenmeter: Mittelstadt am Neckar auf 320 Metern, Gönningen am Fuß des
-            Albtraufs auf 521. Wer dort oben alt wird, hat für jeden Weg — Arzt, Apotheke, Einkauf —
-            eine andere Rechnung aufzumachen als jemand in der Innenstadt.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Die Pflegestatistik gibt es nur für den Landkreis, nicht für die Stadt allein. Sie zeigt
-            aber etwas, das kaum jemand erwartet: <strong className="text-pm-ink font-semibold">Von
-            den 16.341 Pflegebedürftigen im Kreis werden 9.895 ausschließlich von Angehörigen
-            versorgt — 60,6 Prozent, ganz ohne Pflegedienst.</strong> In Baden-Württemberg sind es
-            55,9 Prozent. Beide professionellen Formen liegen entsprechend darunter: ambulant 13,6
-            statt 16,4 Prozent, vollstationär 12,9 statt 14,9. Hier wird also häufiger als sonst im
-            Land allein gepflegt — von Töchtern, Söhnen und Ehepartnern, die das über Jahre neben
-            Beruf und eigenem Haushalt stemmen. Dass die Zahl der Pflegebedürftigen seit 2021 um
-            16,7 Prozent gestiegen ist, macht die Sache nicht leichter.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Beim Wohnen spielt Reutlingen der 24-Stunden-Betreuung in die Hände — allerdings nicht
-            überall. Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), und in den
-            zwölf Stadtbezirken stehen überwiegend Ein- und Zweifamilienhäuser. Da ist das
-            Gästezimmer meist schon vorhanden. In der Kernstadt sieht es anders aus: Ein Drittel
-            aller Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat
-            unter 60 Quadratmeter. Die durchschnittliche Reutlinger Wohnung misst 92 Quadratmeter
-            und damit sieben weniger als der Landesschnitt. Ob eine Betreuungskraft einziehen kann,
-            entscheidet sich also nicht an der Stadt, sondern am Stadtbezirk.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Eine gute Nachricht gibt es seit Kurzem: Die akutgeriatrischen Betten liegen erst seit
-            Mai 2023 im Klinikum am Steinenberg in der Stadt selbst — vorher musste man dafür in die
-            Ermstalklinik nach Bad Urach. Wer nach einem Sturz oder Schlaganfall aus der
-            Altersmedizin entlassen wird, steht damit zwar näher an zu Hause, aber vor derselben
-            Frage: Wie geht es in der eigenen Wohnung weiter, wenn die Familie schon am Limit ist?
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einziehen kann: Sie ist
-            nachts da, führt den Haushalt und nimmt den Angehörigen die Dauerverantwortung ab — ohne
-            dass jemand aus Gönningen oder Bronnweiler wegziehen muss. Bevor Sie sich festlegen,
-            lassen Sie sich unabhängig beraten. Die Pflegeberatung ist kostenlos, trägerunabhängig
-            und kommt auf Wunsch zu Ihnen nach Hause (§ 7a SGB XI).
-          </p>
-
-          {/* ⑥ FAQ */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen — 24h-Pflege in Reutlingen</h2>
-          <div className="space-y-3 mb-12">
-            {[
-              { q: 'Was kostet eine 24h-Pflegekraft in Reutlingen?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1200–2300 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
-              { q: 'Wie schnell kann eine 24h-Pflegekraft in Reutlingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-              { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-              { q: 'Ist 24h-Pflege über Primundus in Reutlingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-              { q: 'Kommt eine Betreuungskraft auch nach Gönningen oder Bronnweiler?', a: 'Ja, und gerade dort lohnt es sich besonders. Zwischen den bewohnten Ortskernen Reutlingens liegen rund 215 Höhenmeter — Mittelstadt am Neckar auf 320, Gönningen am Fuß des Albtraufs auf 521 Metern. Gönningen ist flächenmäßig gut halb so groß wie die gesamte Kernstadt, hat aber nur 3.902 Einwohner. Für ambulante Dienste bedeutet das lange Fahrwege zwischen wenigen Terminen; für eine Betreuungskraft, die im Haus lebt, spielt die Entfernung schlicht keine Rolle. Anreise und Preis sind in allen zwölf Stadtbezirken gleich.' },
-              { q: 'Wie ist die Pflegesituation in Reutlingen und Umgebung?', a: 'Auffällig familiär. Von den 16.341 Pflegebedürftigen im Landkreis Reutlingen werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent gegenüber 55,9 Prozent in Baden-Württemberg. Ambulante Dienste (13,6 statt 16,4 Prozent) und Heimplätze (12,9 statt 14,9 Prozent) liegen entsprechend unter dem Landeswert. Seit 2021 ist die Zahl der Pflegebedürftigen um 16,7 Prozent gestiegen. Die Statistik wird nur auf Kreisebene erhoben, für die Stadt allein gibt es keine eigenen Zahlen.' },
-              { q: 'Passt eine Betreuungskraft in eine Reutlinger Wohnung?', a: 'In den Stadtbezirken meist ohne Weiteres: Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), überwiegend in Ein- und Zweifamilienhäusern, das Zimmer ist oft schon da. In der Kernstadt kommt es auf den Grundriss an — ein Drittel der Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter, im Schnitt sind es 92. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Alles andere klären wir vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-              { q: 'Welches Einzugsgebiet wird in Reutlingen bedient?', a: 'Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4"><p className="text-[14px] text-pm-body leading-relaxed">{item.a}</p></div>
-              </details>
-            ))}
-          </div>
-
-          {/* ⑦ TRENNLINIE */}
-          <div className="flex items-center gap-4 my-10">
-            <div className="flex-1 h-px bg-pm-line" />
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-pm-mute whitespace-nowrap">So arbeiten wir</p>
-            <div className="flex-1 h-px bg-pm-line" />
-          </div>
-
-          {/* ⑧ KONDITIONEN */}
-          <div className="bg-white border border-pm-line rounded-2xl p-5 mb-8">
-            <div className="flex items-start gap-3 pb-4 mb-2 border-b border-pm-line">
-              <span className="w-7 h-7 rounded-full bg-pm-taupe text-white text-[13px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
-              <div className="flex-1 min-w-0"><span className="text-[15px] font-bold text-pm-ink block mb-1">Unsere Konditionen</span>
-              <span className="bg-pm-mint text-pm-green-deep text-[11px] font-semibold px-3 py-1 rounded-full inline-block">100% Sorgenfrei und ohne Risiko</span></div>
-            </div>
-            {[
-              { icon: '🛡', title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
-              { icon: '📄', title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
-              { icon: '⏱', title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
-              { icon: '👤', title: 'Persönlicher Ansprechpartner', desc: '7 Tage/Woche für Sie da' },
-            ].map((item) => (
-              <div key={item.title} className="flex gap-3 py-3 border-b border-pm-line-soft last:border-0">
-                <div className="w-9 h-9 rounded-lg border border-pm-line flex items-center justify-center flex-shrink-0 text-lg">{item.icon}</div>
-                <div>
-                  <p className="text-[14px] font-bold text-pm-ink mb-0.5">{item.title}</p>
-                  <p className="text-[13px] text-pm-mute">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-            <a href="/testsieger-24-stunden-pflege" className="group flex items-center gap-3 pt-4 mt-1 border-t border-pm-line">
-              <img width={40} height={48} src="/images/primundus_testsieger-2021.webp" alt="Testsieger DIE WELT" className="w-10 h-12 object-contain flex-shrink-0" />
-              <div>
-                <p className="text-[14px] font-bold text-pm-ink group-hover:text-pm-taupe-ink">6× Testsieger</p>
-                <p className="text-[13px] font-semibold text-pm-taupe">DIE WELT</p>
-                <p className="text-[13px] text-pm-mute">Preis &amp; Qualität</p>
-              </div>
-            </a>
-          </div>
-
-          {/* ⑨ ABLAUF */}
-          <h2 className="text-[22px] md:text-[26px] font-bold text-pm-ink text-center mb-8">In 2 Minuten zu Ihrem persönlichen Angebot</h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {[
-              { n: '1', title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', chip: '⏱ Dauert unter 2 Minuten' },
-              { n: '2', title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', chip: '✉ Ihr Zugang kommt auch per E-Mail' },
-              { n: '3', title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', chip: '✓ Kein Vertrag vor Ihrer Auswahl' },
-            ].map((step) => (
-              <div key={step.n} className="text-center">
-                <div className="w-11 h-11 rounded-full bg-pm-cocoa text-white text-[18px] font-bold flex items-center justify-center mx-auto mb-4">{step.n}</div>
-                <p className="text-[14px] font-bold text-pm-ink mb-2 leading-snug">{step.title}</p>
-                <p className="text-[13px] text-pm-mute leading-relaxed mb-3">{step.desc}</p>
-                <span className="inline-flex items-center gap-1.5 bg-pm-mint text-pm-green-deep text-[11px] font-semibold px-3 py-1 rounded-full">{step.chip}</span>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mb-12">
-            <a href="https://kostenrechner.primundus.de/?start=1&src=apex-24h-pflege-reutlingen" className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[16px] py-4 px-10 rounded-full transition-all duration-200 shadow-sm hover:shadow-md">
-              Kosten & Pflegekräfte ansehen
-            </a>
-          </div>
-
-          {/* ⑩ CTA */}
-          <NearbyCities current="reutlingen" />
-
-          <ArticleCTA
-            headline="Ist 24h-Pflege in Reutlingen die richtige Lösung?"
-            subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."
-          />
-
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Regionen', href: '/regionen' },
+            { label: 'Reutlingen' },
+          ]}
+          augenbraue="24-Stunden-Pflege in Reutlingen"
+          titel="24-Stunden-Pflege und Betreuung in Reutlingen"
+          einleitung={<>Am Fuß der Achalm bleibt man verwurzelt: das Haus in Betzingen, die Wohnung in Sondelfingen, der Blick auf die Alb. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da — 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
+          aktualisiert="27. August 2026"
+          lesezeit="6 Min."
+          blick={[
+            'Preis bei Primundus: 2.200–3.500 €/Monat',
+            'Ihr Eigenanteil bei Pflegegrad 3: ca. 1200–2300 €/Monat',
+            'Pflegeheim in Baden-Württemberg: Eigenanteil rund 3.660 €/Monat (vdek, 07/2026)',
+            'Täglich kündbar, keine Vermittlungsgebühr',
+            'Anreise in 3 Tagen möglich',
+          ]}
+          blickTitel="Reutlingen auf einen Blick"
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-ist-24-stunden" titel="Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?">
+            <Text>Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Reutlingen heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.</Text>
+            <Punkte
+              punkte={[
+                { title: 'Eigenes Zuhause', desc: 'Vertraute Umgebung bleibt — kein Heimumzug' },
+                { title: '1:1-Betreuung', desc: 'Eine Kraft, ein Mensch — keine wechselnden Gesichter' },
+                { title: 'Nachts im Haus', desc: 'Da, wenn nachts Hilfe gebraucht wird' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
+            <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
+            <Punkte
+              punkte={[
+                { title: 'Selbstständigkeit lässt nach', desc: 'Alltägliches gelingt nicht mehr zuverlässig alleine — Anziehen, Kochen, Waschen, Orientierung' },
+                { title: 'Familie kann nicht immer da sein', desc: 'Beruf, eigene Kinder, Entfernung — Angehörige wollen helfen, aber nicht rund um die Uhr' },
+                { title: 'Pflegeheim ist keine Option', desc: 'Das eigene Zuhause, die gewohnten Möbel, der Garten — das soll bleiben' },
+                { title: 'Nächtliche Unsicherheit', desc: 'Stürze, Toilettengänge, Orientierungslosigkeit — nachts ist niemand da' },
+                { title: 'Demenz oder Orientierungsprobleme', desc: 'Vertraute Ansprechpartnerin nötig — keine wechselnden Gesichter' },
+                { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
+              ]}
+            />
+            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
+              <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
+            </Kasten>
+            <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
+          </Abschnitt>
+
+          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
+            <Gegenueber
+              seiten={[
+                { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Körperpflege — Waschen, Ankleiden, Zahnpflege', 'Kochen — frisch, nach Vorlieben und Diät', 'Haushalt — Putzen, Einkaufen, Wäsche', 'Mobilisierung, Spaziergänge, Begleitung', 'Gesellschaft und Begleitung im Alltag', 'Medikamentenerinnerung', 'Arzt- und Therapietermine begleiten', 'Nachts im Haus — da, wenn Hilfe gebraucht wird'] },
+                { titel: 'Ambulanter Pflegedienst ergänzt', ton: 'taupe', punkte: ['Injektionen (Insulin, Blutverdünner)', 'Verbandswechsel, Wundversorgung', 'Katheterversorgung', 'Ernährung über Magensonde', 'Beatmungspflege', 'Komplexe medizinische Versorgung'] },
+              ]}
+            />
+            <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
+          </Abschnitt>
+
+          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Reutlingen 2026">
+            <Tabelle
+              titel="Kostenbeispiel — Pflegegrad 3 in Reutlingen"
+              zeilen={[
+                ['Kosten Primundus', '2.200–3.500 €/Monat'],
+                ['− Pflegegeld PG 3', '− 599 €/Monat'],
+                ['− Entlastungsbudget (anteilig)', '− ca. 295 €/Monat'],
+                ['− Steuerabzug (ca.)', '− ca. 200 €/Monat'],
+                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ca. 1200–2300 €/Monat</strong>],
+              ]}
+              betont={1}
+              fuss="Pflegeheim in Baden-Württemberg: Eigenanteil rund 3.660 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
+            />
+            <Tabelle
+              titel="Was die Pflegekasse zahlt"
+              kopf={['Pflegegrad', 'Pflegegeld je Monat', 'Entlastungsbudget je Jahr']}
+              zeilen={[
+                ['PG 2', '347 €', '3.539 €'],
+                ['PG 3', '599 €', '3.539 €'],
+                ['PG 4', '800 €', '3.539 €'],
+                ['PG 5', '990 €', '3.539 €'],
+              ]}
+              betont={1}
+              fuss="Stand 2026 · bundesweit einheitlich"
+            />
+            <Kasten titel="Ihren eigenen Fall durchrechnen">
+              <Text>Welcher Pflegegrad realistisch ist und was am Ende tatsächlich übrig bleibt, hängt von der konkreten Situation ab. Zwei Rechner helfen weiter — beide kostenlos und ohne Anmeldung:</Text>
+              <MehrDazu
+                label="Rechner:"
+                links={[
+                  { href: '/pflegegrad-rechner', text: 'Pflegegrad berechnen — dieselben sechs Module wie bei der Begutachtung' },
+                  { href: 'https://kostenrechner.primundus.de/?start=1&amp;src=ort-reutlingen', text: 'Preis und Betreuungskräfte für Reutlingen ansehen — in 2 Minuten' },
+                ]}
+              />
+            </Kasten>
+          </Abschnitt>
+
+          <Abschnitt id="polnische-betreuungskraefte-in-reutlingen" titel="Polnische Betreuungskräfte in Reutlingen">
+            <Text>Wer in Reutlingen nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien — und sie sind in Reutlingen und im gesamten Umland im Einsatz.</Text>
+            <Kasten titel="Angestellt statt vermittelt">
+              <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
+            </Kasten>
+            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet:</strong> zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbetrag und Entlastungsbudget in Baden-Württemberg meist rund 1200 bis 2300 Euro Eigenanteil — deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.660 Euro im Monat kostet.</Text>
+            <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
+            <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — was sie kosten und wie es rechtlich läuft</a>.</Text>
+          </Abschnitt>
+
+          <Abschnitt id="24-stunden-pflege-im" titel="24-Stunden-Pflege im Landkreis Reutlingen">
+            <Text>Unsere Betreuungskräfte ziehen in Reutlingen und im Landkreis Reutlingen ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</Text>
+          </Abschnitt>
+
+          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Reutlingen ausmacht">
+            <Text>Reutlingen ist zwei Städte in einer, und das fällt erst auf, wenn jemand pflegebedürftig wird. In der Kernstadt leben rund 70.700 Menschen auf 2.780 Hektar. Gönningen, der südlichste Stadtbezirk, ist mit 1.568 Hektar flächenmäßig gut halb so groß wie die gesamte Kernstadt — und hat 3.902 Einwohner. Zwischen den bewohnten Ortskernen liegen rund 215 Höhenmeter: Mittelstadt am Neckar auf 320 Metern, Gönningen am Fuß des Albtraufs auf 521. Wer dort oben alt wird, hat für jeden Weg — Arzt, Apotheke, Einkauf — eine andere Rechnung aufzumachen als jemand in der Innenstadt.</Text>
+            <Text>Die Pflegestatistik gibt es nur für den Landkreis, nicht für die Stadt allein. Sie zeigt aber etwas, das kaum jemand erwartet: <strong className="text-pm-ink font-semibold">Von den 16.341 Pflegebedürftigen im Kreis werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent, ganz ohne Pflegedienst.</strong> In Baden-Württemberg sind es 55,9 Prozent. Beide professionellen Formen liegen entsprechend darunter: ambulant 13,6 statt 16,4 Prozent, vollstationär 12,9 statt 14,9. Hier wird also häufiger als sonst im Land allein gepflegt — von Töchtern, Söhnen und Ehepartnern, die das über Jahre neben Beruf und eigenem Haushalt stemmen. Dass die Zahl der Pflegebedürftigen seit 2021 um 16,7 Prozent gestiegen ist, macht die Sache nicht leichter.</Text>
+            <Text>Beim Wohnen spielt Reutlingen der 24-Stunden-Betreuung in die Hände — allerdings nicht überall. Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), und in den zwölf Stadtbezirken stehen überwiegend Ein- und Zweifamilienhäuser. Da ist das Gästezimmer meist schon vorhanden. In der Kernstadt sieht es anders aus: Ein Drittel aller Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter. Die durchschnittliche Reutlinger Wohnung misst 92 Quadratmeter und damit sieben weniger als der Landesschnitt. Ob eine Betreuungskraft einziehen kann, entscheidet sich also nicht an der Stadt, sondern am Stadtbezirk.</Text>
+            <Text>Eine gute Nachricht gibt es seit Kurzem: Die akutgeriatrischen Betten liegen erst seit Mai 2023 im Klinikum am Steinenberg in der Stadt selbst — vorher musste man dafür in die Ermstalklinik nach Bad Urach. Wer nach einem Sturz oder Schlaganfall aus der Altersmedizin entlassen wird, steht damit zwar näher an zu Hause, aber vor derselben Frage: Wie geht es in der eigenen Wohnung weiter, wenn die Familie schon am Limit ist?</Text>
+            <Text>Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einziehen kann: Sie ist nachts da, führt den Haushalt und nimmt den Angehörigen die Dauerverantwortung ab — ohne dass jemand aus Gönningen oder Bronnweiler wegziehen muss. Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten. Die Pflegeberatung ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause (§ 7a SGB XI).</Text>
+          </Abschnitt>
+
+          <Abschnitt id="einzugsgebiet-reutlingen" titel="Einzugsgebiet Reutlingen">
+            <Text>Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen</Text>
+            <NearbyCities current="reutlingen" />
+          </Abschnitt>
+
+          <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
+            <Punkte
+              punkte={[
+                { title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
+                { title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
+                { title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
+                { title: 'Persönlicher Ansprechpartner', desc: '7 Tage/Woche für Sie da' },
+              ]}
+            />
+            <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
+              <img
+                src="/images/bestpreisgarantie-siegel.webp"
+                alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
+                width={900}
+                height={256}
+                loading="lazy"
+                className="h-[64px] md:h-[72px] w-auto mb-5"
+              />
+              <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
+                Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
+              </p>
+              <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
+                Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
+                Vermittlungsgebühr anfällt.{' '}
+                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
+              </p>
+            </div>
+            <Schritte
+              schritte={[
+                { title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
+                { title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', tag: 'Ihr Zugang kommt auch per E-Mail', tagTon: 'gruen' },
+                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Reutlingen">
+            <Fragen fragen={FRAGEN} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

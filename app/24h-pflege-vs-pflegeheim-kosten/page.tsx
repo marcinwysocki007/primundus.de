@@ -184,7 +184,7 @@ export default function VsKosten() {
               zeilen={[
                 ['Eigenanteil/Monat (PG 3)', 'ca. 1.700–2.000 €', 'Ø 3.364 € (steigend)'],
                 ['Umgebung', 'Eigenes Zuhause', 'Neue, fremde Umgebung'],
-                ['Betreuungsintensität', '1:1 rund um die Uhr', 'Geteilt, nach Dienstplan'],
+                ['Betreuungsintensität', '1:1, bei Bedarf auch nachts', 'Geteilt, nach Dienstplan'],
                 ['Tagesrhythmus', 'Vollständig eigener Rhythmus', 'Heimstruktur und -zeiten'],
                 ['Angehörige', 'Täglich einbindbar', 'Besuchszeiten'],
                 ['Demenz-Verlauf', 'Mehr Halt durch Vertrautheit', 'Häufig Verschlechterung durch Umzug'],

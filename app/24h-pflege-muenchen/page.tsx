@@ -2,27 +2,27 @@ import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
+  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
   RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 
-// Ortsseite in der Seitenvorlage (16.09.2026, Musterseite München): Kopf mit „Auf einen
-// Blick", Seitenleiste mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji,
-// Fließtext 17 px. Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert
-// bis auf die Nachtaussage (Martin 14.09.: „bei Bedarf auch nachts vor Ort").
+// Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
+// mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
+// Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
+// Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'was-ist-24-stunden-betreuung', title: "Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?" },
-  { id: 'fuer-wen-ist-24h-pflege', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
+  { id: 'was-ist-24-stunden', title: "Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?" },
+  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
   { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
-  { id: 'kosten-und-kassenzuschuesse', title: "Kosten und Kassenzuschüsse in München 2026" },
-  { id: 'polnische-betreuungskraefte', title: "Polnische Betreuungskräfte in München" },
-  { id: 'pflege-zu-hause-vor-ort', title: "Was die Pflege zu Hause in München ausmacht" },
-  { id: 'einzugsgebiet', title: "Einzugsgebiet München" },
+  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in München 2026" },
+  { id: 'polnische-betreuungskraefte-in-muenchen', title: "Polnische Betreuungskräfte in München" },
+  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in München ausmacht" },
+  { id: 'einzugsgebiet-muenchen', title: "Einzugsgebiet München" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
-  { id: 'haeufige-fragen', title: "Häufige Fragen — 24h-Pflege in München" },
+  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in München" },
 ]
 
 export const metadata: Metadata = {
@@ -158,7 +158,7 @@ export default function Page() {
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden-betreuung" titel="Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?">
+          <Abschnitt id="was-ist-24-stunden" titel="Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?">
             <Text>Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in München heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.</Text>
             <Punkte
               punkte={[
@@ -169,7 +169,7 @@ export default function Page() {
             />
           </Abschnitt>
 
-          <Abschnitt id="fuer-wen-ist-24h-pflege" titel="Für wen ist 24h-Pflege die richtige Wahl?">
+          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
             <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
             <Punkte
               punkte={[
@@ -181,12 +181,10 @@ export default function Page() {
                 { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
               ]}
             />
-            <Kasten augenbraue="Wann 24h-Pflege allein nicht ausreicht">
+            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
               <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
             </Kasten>
-            <Kasten ton="koralle">
-              <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
-            </Kasten>
+            <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
           </Abschnitt>
 
           <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
@@ -196,10 +194,10 @@ export default function Page() {
                 { titel: 'Ambulanter Pflegedienst ergänzt', ton: 'taupe', punkte: ['Injektionen (Insulin, Blutverdünner)', 'Verbandswechsel, Wundversorgung', 'Katheterversorgung', 'Ernährung über Magensonde', 'Beatmungspflege', 'Komplexe medizinische Versorgung'] },
               ]}
             />
-            <Text>Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich. Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
+            <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
           </Abschnitt>
 
-          <Abschnitt id="kosten-und-kassenzuschuesse" titel="Kosten und Kassenzuschüsse in München 2026">
+          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in München 2026">
             <Tabelle
               titel="Kostenbeispiel — Pflegegrad 3 in München"
               zeilen={[
@@ -227,20 +225,19 @@ export default function Page() {
             <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +1.000 €/Jahr">
               <Text>Bayern zahlt zusätzlich 1.000 €/Jahr (ca. 83 €/Monat) für alle PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern) — kumulierbar mit allen Pflegekasse-Zuschüssen.</Text>
             </Kasten>
-
             <Kasten titel="Ihren eigenen Fall durchrechnen">
               <Text>Welcher Pflegegrad realistisch ist und was am Ende tatsächlich übrig bleibt, hängt von der konkreten Situation ab. Zwei Rechner helfen weiter — beide kostenlos und ohne Anmeldung:</Text>
               <MehrDazu
                 label="Rechner:"
                 links={[
                   { href: '/pflegegrad-rechner', text: 'Pflegegrad berechnen — dieselben sechs Module wie bei der Begutachtung' },
-                  { href: 'https://kostenrechner.primundus.de/?start=1&src=ort-muenchen', text: 'Preis und Betreuungskräfte für München ansehen — in 2 Minuten' },
+                  { href: 'https://kostenrechner.primundus.de/?start=1&amp;src=ort-muenchen', text: 'Preis und Betreuungskräfte für München ansehen — in 2 Minuten' },
                 ]}
               />
             </Kasten>
           </Abschnitt>
 
-          <Abschnitt id="polnische-betreuungskraefte" titel="Polnische Betreuungskräfte in München">
+          <Abschnitt id="polnische-betreuungskraefte-in-muenchen" titel="Polnische Betreuungskräfte in München">
             <Text>Wer in München nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien — und sie sind in München und im gesamten Umland im Einsatz.</Text>
             <Kasten titel="Angestellt statt vermittelt">
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
@@ -250,20 +247,16 @@ export default function Page() {
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — Kosten, Recht und Ablauf</a>.</Text>
           </Abschnitt>
 
-          <DunklerAbschnitt
-            id="pflege-zu-hause-vor-ort"
-            titel="Was die Pflege zu Hause in München ausmacht"
-            einleitung={<>München ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 5,6 Wohnungen, in Bayern 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. Die durchschnittliche Wohnung misst 73,5 Quadratmeter gegenüber 100,5 in Bayern — rund 27 Quadratmeter weniger.</>}
-            punkte={[]}
-          >
+          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in München ausmacht">
+            <Text>München ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 5,6 Wohnungen, in Bayern 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. Die durchschnittliche Wohnung misst 73,5 Quadratmeter gegenüber 100,5 in Bayern — rund 27 Quadratmeter weniger.</Text>
             <Text>In München wohnen nur 23,9 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Mit 12,89 Euro Nettokaltmiete je Quadratmeter wohnt es sich in München teurer als im Schnitt von Bayern (8,74 Euro).</Text>
             <Text>Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in München häufiger als anderswo. Zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. 44,4 Prozent der Gebäude in München sind Reihenhäuser — in Bayern 14,7 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 33,9 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent.</Text>
             <Text>In Zahlen: 137.429 Menschen in München sind 75 Jahre oder älter, und es gibt 824.103 Wohnungen in 147.196 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
             <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
-            <p className="text-[15px] leading-[1.6] text-pm-deep-body">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
-          </DunklerAbschnitt>
+            <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
+          </Abschnitt>
 
-          <Abschnitt id="einzugsgebiet" titel="Einzugsgebiet München">
+          <Abschnitt id="einzugsgebiet-muenchen" titel="Einzugsgebiet München">
             <Text>Schwabing, Bogenhausen, Solln, Pullach, Grünwald, Unterhaching, Ottobrunn, Haar, Dachau, Freising, Starnberg, Germering, Gauting, Weilheim, Landsberg am Lech und alle Gemeinden im Landkreis München</Text>
             <NearbyCities current="muenchen" />
           </Abschnitt>
@@ -277,16 +270,34 @@ export default function Page() {
                 { title: 'Persönlicher Ansprechpartner', desc: '7 Tage/Woche für Sie da' },
               ]}
             />
+            <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
+              <img
+                src="/images/bestpreisgarantie-siegel.webp"
+                alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
+                width={900}
+                height={256}
+                loading="lazy"
+                className="h-[64px] md:h-[72px] w-auto mb-5"
+              />
+              <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
+                Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
+              </p>
+              <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
+                Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
+                Vermittlungsgebühr anfällt.{' '}
+                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
+              </p>
+            </div>
             <Schritte
               schritte={[
                 { title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
                 { title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', tag: 'Ihr Zugang kommt auch per E-Mail', tagTon: 'gruen' },
-                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: '✓ Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
+                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
               ]}
             />
           </Abschnitt>
 
-          <Abschnitt id="haeufige-fragen" titel="Häufige Fragen — 24h-Pflege in München">
+          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in München">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>

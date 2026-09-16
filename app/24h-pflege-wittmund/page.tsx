@@ -1,11 +1,27 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
-import { ArticleProgressBar } from '@/components/ArticleProgressBar'
+import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import {
+  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
+  RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
+import { ArticleProgressBar } from '@/components/ArticleProgressBar'
+import { ArticleTOC } from '@/components/ArticleTOC'
 
-// Nachfrage-Lücke (GSC 08/2026): "24 stunden pflege wittmund" hatte 84
-// Impressionen in 3 Monaten (meiste aller fehlenden Orte) auf Pos. 44 —
-// ohne jede Seite. Ostfriesland: weite Wege, wenige Heimplätze.
+// Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
+// mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
+// Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
+// Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
+
+const SECTIONS = [
+  { id: 'pflege-in-ostfriesland-weite', title: "Pflege in Ostfriesland: Weite Wege, knappe Plätze — und eine bessere Lösung" },
+  { id: 'unser-einsatzgebiet-im-landkreis', title: "Unser Einsatzgebiet im Landkreis Wittmund" },
+  { id: 'was-kostet-das-und', title: "Was kostet das — und was zahlt die Pflegekasse dazu?" },
+  { id: 'polnische-betreuungskraefte-in-wittmund', title: "Polnische Betreuungskräfte in Wittmund" },
+  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wittmund ausmacht" },
+  { id: 'einzugsgebiet-landkreis-wittmund', title: "Einzugsgebiet Landkreis Wittmund" },
+  { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Harlingerland" },
+]
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege & Betreuung in Wittmund | Primundus',
@@ -75,195 +91,95 @@ const schemaMarkup = [
   },
 ]
 
-export default function WittmundPage() {
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Wittmund?', a: 'Meist zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation. Mit den Zuschüssen der Pflegekasse bleiben bei Pflegegrad 3 oft rund 1.500 bis 2.400 Euro selbst zu tragen.' },
+  { q: 'Welche Orte im Kreis Wittmund deckt Primundus ab?', a: 'Das ganze Harlingerland: Wittmund, Esens, Carolinensiel, Harlesiel, Neuharlingersiel, Westerholt, Friedeburg und alle Dörfer dazwischen — bis an die Küste.' },
+  { q: 'Lohnt sich 24h-Pflege auch auf dem Land in Ostfriesland?', a: 'Gerade dort: Heimplätze sind rar und weit entfernt, ambulante Dienste haben lange Anfahrten. Eine Betreuungskraft, die mit im Haus wohnt, macht Wege überflüssig — und das Zuhause bleibt erhalten.' },
+]
+
+export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <span className="text-pm-ink">24h-Pflege Wittmund</span>
-          </nav>
-
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            24h-Pflege im Landkreis Wittmund · Aktualisiert am 28. August 2026
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            24h-Pflege in Wittmund und dem Harlingerland — Betreuung im eigenen Zuhause
-          </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Wer zwischen Wittmund, Esens und der Küste zuhause ist, hat meist ein Haus mit Geschichte —
-            und keinen Grund, es im Alter zu verlassen. Doch Heimplätze sind hier rar, und der nächste
-            Pflegedienst fährt weit. Die Lösung wohnt mit ein: Eine Betreuungskraft von Primundus ist
-            rund um die Uhr da, im vertrauten Zuhause hinterm Deich. Täglich kündbar, rechtssicher,
-            Anreise in 3 Tagen möglich.
-          </p>
-
-          {/* ① SITUATION VOR ORT */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Pflege in Ostfriesland: Weite Wege, knappe Plätze — und eine bessere Lösung
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-              Im Harlingerland ist Pflege vor allem eine Frage der Entfernung: Die Kinder wohnen oft in
-              Oldenburg, Bremen oder noch weiter — und ein Heimplatz bedeutet für Besucher jedes Mal eine
-              halbe Tagesreise. Eine Betreuungskraft, die mit im Haus lebt, dreht das um: Die Hilfe ist
-              immer da, die Familie kommt zu Besuch wie früher, und das Zuhause bleibt der Mittelpunkt.
-            </p>
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { icon: '🏡', title: 'Das Haus bleibt', desc: 'Kein Verkauf, keine Auflösung nach Generationen' },
-                { icon: '🌊', title: 'Küste & Dorf vertraut', desc: 'Deich, Nachbarn, Teezeit — alles wie gewohnt' },
-                { icon: '🚘', title: 'Keine weiten Wege mehr', desc: 'Die Hilfe wohnt im Haus, nicht 40 km entfernt' },
-              ].map((item) => (
-                <div key={item.title} className="bg-pm-paper rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className="text-[13px] font-bold text-pm-ink mb-1">{item.title}</p>
-                  <p className="text-[12px] text-pm-mute leading-snug">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* ② EINSATZGEBIET */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Unser Einsatzgebiet im Landkreis Wittmund
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body">
-              Wir sind im ganzen Harlingerland im Einsatz: <strong>Wittmund</strong>, <strong>Esens</strong>,{' '}
-              <strong>Carolinensiel</strong> und <strong>Harlesiel</strong>, <strong>Neuharlingersiel</strong>,{' '}
-              <strong>Westerholt</strong>, <strong>Friedeburg</strong> und allen Dörfern dazwischen — bis an
-              die Nordseeküste. Auch{' '}
-              <a href="/24h-pflege-oldenburg" className="text-pm-taupe underline underline-offset-2">Oldenburg</a>{' '}
-              und <a href="/24h-pflege-bremerhaven" className="text-pm-taupe underline underline-offset-2">Bremerhaven</a>{' '}
-              haben eigene Seiten.
-            </p>
-          </div>
-
-          {/* ③ KOSTEN */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Was kostet das — und was zahlt die Pflegekasse dazu?
-          </h2>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-8">
-            <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-              Eine 24h-Betreuung kostet über Primundus meist <strong>2.200 bis 3.500 Euro im Monat</strong>.
-              Mit Pflegegeld, Entlastungsbetrag und Verhinderungspflege bleiben bei Pflegegrad 3 oft{' '}
-              <strong>rund 1.500 bis 2.400 Euro</strong> selbst zu tragen — und anders als beim Heimplatz
-              bleibt das Haus im Familienbesitz.
-            </p>
-            <a
-              href="https://kostenrechner.primundus.de/?start=1&amp;src=ort-wittmund"
-              className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-full transition-colors"
-            >
-              Ihren Preis in 2 Minuten berechnen
-            </a>
-            <a href="/pflegegrad-rechner" className="block mt-4 text-[15px] text-pm-taupe font-semibold hover:underline">
-              → Unsicher beim Pflegegrad? Hier mit denselben sechs Modulen rechnen wie bei der Begutachtung
-            </a>
-          </div>
-
-          {/* ③b POLEN */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Polnische Betreuungskräfte in Wittmund</h2>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Wer in Wittmund nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe:
-            jemanden, der im Haushalt lebt und rund um die Uhr da ist. Genau das leisten unsere
-            Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien —
-            und sie sind in Wittmund und im gesamten Umland im Einsatz.
-          </p>
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-4">
-            <p className="text-[15px] font-bold text-pm-ink mb-2">Angestellt statt vermittelt</p>
-            <p className="text-[15px] leading-relaxed text-pm-body">
-              Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte
-              fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum
-              Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland,
-              Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine
-              Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren
-              wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.
-            </p>
-          </div>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            <strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte
-            Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der
-            Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen
-            mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei
-            vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Der Kostenvergleich fällt in Wittmund deutlich aus: Bei Pflegegrad 3 bleiben nach Pflegegeld,
-            Entlastungsbetrag und Entlastungsbudget meist rund 1.500 bis 2.400 Euro Eigenanteil.
-            Ein Heimplatz kostet in Niedersachsen im ersten Jahr im Schnitt rund 3.010 Euro
-            im Monat — und die vertraute Wohnung bleibt dabei auf der Strecke.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-8">
-            Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie
-            schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.
-          </p>
-
-          {/* ⑤c VOR ORT — aus Zensus-2022-Daten, je Ort verschieden */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">Was die Pflege zu Hause in Wittmund ausmacht</h2>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Gut drei von fünf Haushalten in Wittmund wohnen im Eigentum — in Niedersachsen sind es 51,1 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. 28,7 Prozent der Haushalte in Wittmund bestehen nur aus Menschen ab 65 — in Niedersachsen 25,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            Reihenhäuser sind in Wittmund mit 4,4 Prozent seltener als in Niedersachsen (12,9 Prozent). 5,2 Prozent der Wohnungen stehen leer, in Niedersachsen 4,0 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-            In Zahlen: 6.648 Menschen in Wittmund sind 75 Jahre oder älter, und es gibt 31.761 Wohnungen in 23.407 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.
-          </p>
-          <p className="text-[15px] leading-relaxed text-pm-body mb-10">
-            Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung —
-            insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft.
-            Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI
-            ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.
-          </p>
-          <p className="text-[13px] text-pm-mute mb-10">
-            Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes
-            und der Länder, Stichtag 15. Mai 2022.
-          </p>
-
-          {/* ④ FAQ — identisch zum FAQPage-Schema */}
-          <h2 className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-4">
-            Häufige Fragen aus dem Harlingerland
-          </h2>
-          <div className="space-y-4 mb-8">
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Was kostet eine 24h-Pflegekraft in Wittmund?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Meist zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation. Mit den Zuschüssen
-                der Pflegekasse bleiben bei Pflegegrad 3 oft rund 1.500 bis 2.400 Euro selbst zu tragen.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Welche Orte im Kreis Wittmund deckt Primundus ab?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Das ganze Harlingerland: Wittmund, Esens, Carolinensiel, Harlesiel, Neuharlingersiel,
-                Westerholt, Friedeburg und alle Dörfer dazwischen — bis an die Küste.
-              </p>
-            </div>
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <p className="text-[16px] font-bold text-pm-ink mb-2">Lohnt sich 24h-Pflege auch auf dem Land in Ostfriesland?</p>
-              <p className="text-[15px] leading-relaxed text-pm-body">
-                Gerade dort: Heimplätze sind rar und weit entfernt, ambulante Dienste haben lange
-                Anfahrten. Eine Betreuungskraft, die mit im Haus wohnt, macht Wege überflüssig — und das
-                Zuhause bleibt erhalten.
-              </p>
-            </div>
-          </div>
-
-          <NearbyCities current="wittmund" />
-
-          <ArticleCTA
-            headline="Ist 24h-Pflege in Wittmund die richtige Lösung?"
-            subline="Sprechen Sie jetzt mit uns — kostenlos und unverbindlich."
-          />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Regionen', href: '/regionen' },
+            { label: 'Landkreis Wittmund' },
+          ]}
+          augenbraue="24-Stunden-Pflege in Landkreis Wittmund"
+          titel="24h-Pflege in Wittmund und dem Harlingerland — Betreuung im eigenen Zuhause"
+          einleitung={<>Wer zwischen Wittmund, Esens und der Küste zuhause ist, hat meist ein Haus mit Geschichte — und keinen Grund, es im Alter zu verlassen. Doch Heimplätze sind hier rar, und der nächste Pflegedienst fährt weit. Die Lösung wohnt mit ein: Eine Betreuungskraft von Primundus ist bei Bedarf auch nachts da, im vertrauten Zuhause hinterm Deich. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
+          aktualisiert="28. August 2026"
+          lesezeit="6 Min."
+          blick={[
+            'Täglich kündbar, keine Vermittlungsgebühr',
+            'Anreise in 3 Tagen möglich',
+          ]}
+          blickTitel="Landkreis Wittmund auf einen Blick"
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="pflege-in-ostfriesland-weite" titel="Pflege in Ostfriesland: Weite Wege, knappe Plätze — und eine bessere Lösung">
+            <Text>Im Harlingerland ist Pflege vor allem eine Frage der Entfernung: Die Kinder wohnen oft in Oldenburg, Bremen oder noch weiter — und ein Heimplatz bedeutet für Besucher jedes Mal eine halbe Tagesreise. Eine Betreuungskraft, die mit im Haus lebt, dreht das um: Die Hilfe ist immer da, die Familie kommt zu Besuch wie früher, und das Zuhause bleibt der Mittelpunkt.</Text>
+            <Punkte
+              punkte={[
+                { title: 'Das Haus bleibt', desc: 'Kein Verkauf, keine Auflösung nach Generationen' },
+                { title: 'Küste & Dorf vertraut', desc: 'Deich, Nachbarn, Teezeit — alles wie gewohnt' },
+                { title: 'Keine weiten Wege mehr', desc: 'Die Hilfe wohnt im Haus, nicht 40 km entfernt' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="unser-einsatzgebiet-im-landkreis" titel="Unser Einsatzgebiet im Landkreis Wittmund">
+            <Text>Wir sind im ganzen Harlingerland im Einsatz: <strong>Wittmund</strong>, <strong>Esens</strong>,{' '} <strong>Carolinensiel</strong> und <strong>Harlesiel</strong>, <strong>Neuharlingersiel</strong>,{' '} <strong>Westerholt</strong>, <strong>Friedeburg</strong> und allen Dörfern dazwischen — bis an die Nordseeküste. Auch{' '} <a href="/24h-pflege-oldenburg" className="text-pm-taupe underline underline-offset-2">Oldenburg</a>{' '} und <a href="/24h-pflege-bremerhaven" className="text-pm-taupe underline underline-offset-2">Bremerhaven</a>{' '} haben eigene Seiten.</Text>
+          </Abschnitt>
+
+          <Abschnitt id="was-kostet-das-und" titel="Was kostet das — und was zahlt die Pflegekasse dazu?">
+            <Text>Eine 24h-Betreuung kostet über Primundus meist <strong>2.200 bis 3.500 Euro im Monat</strong>. Mit Pflegegeld, Entlastungsbetrag und Verhinderungspflege bleiben bei Pflegegrad 3 oft{' '} <strong>rund 1.500 bis 2.400 Euro</strong> selbst zu tragen — und anders als beim Heimplatz bleibt das Haus im Familienbesitz.</Text>
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/pflegegrad-rechner', text: 'Unsicher beim Pflegegrad? Hier mit denselben sechs Modulen rechnen wie bei der Begutachtung' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="polnische-betreuungskraefte-in-wittmund" titel="Polnische Betreuungskräfte in Wittmund">
+            <Text>Wer in Wittmund nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien — und sie sind in Wittmund und im gesamten Umland im Einsatz.</Text>
+            <Kasten titel="Angestellt statt vermittelt">
+              <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
+            </Kasten>
+            <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
+            <Text>Der Kostenvergleich fällt in Wittmund deutlich aus: Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbetrag und Entlastungsbudget meist rund 1.500 bis 2.400 Euro Eigenanteil. Ein Heimplatz kostet in Niedersachsen im ersten Jahr im Schnitt rund 3.010 Euro im Monat — und die vertraute Wohnung bleibt dabei auf der Strecke.</Text>
+            <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</Text>
+          </Abschnitt>
+
+          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Wittmund ausmacht">
+            <Text>Gut drei von fünf Haushalten in Wittmund wohnen im Eigentum — in Niedersachsen sind es 51,1 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. 28,7 Prozent der Haushalte in Wittmund bestehen nur aus Menschen ab 65 — in Niedersachsen 25,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+            <Text>Reihenhäuser sind in Wittmund mit 4,4 Prozent seltener als in Niedersachsen (12,9 Prozent). 5,2 Prozent der Wohnungen stehen leer, in Niedersachsen 4,0 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.</Text>
+            <Text>In Zahlen: 6.648 Menschen in Wittmund sind 75 Jahre oder älter, und es gibt 31.761 Wohnungen in 23.407 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
+          </Abschnitt>
+
+          <Abschnitt id="einzugsgebiet-landkreis-wittmund" titel="Einzugsgebiet Landkreis Wittmund">
+            <NearbyCities current="wittmund" />
+          </Abschnitt>
+
+          <Abschnitt id="haeufige-fragen-aus-dem" titel="Häufige Fragen aus dem Harlingerland">
+            <Fragen fragen={FRAGEN} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

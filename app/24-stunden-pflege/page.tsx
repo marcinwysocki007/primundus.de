@@ -266,7 +266,7 @@ export default function VierUndZwanzigStundenPflege() {
                   {[
                     ['Eigenanteil/Monat', 'ab ca. 1.500 € (mit Zuschüssen)', 'Ø 3.364 € (2026)'],
                     ['Vertraute Umgebung', '✓ Eigenes Zuhause', '✗ Neue Einrichtung'],
-                    ['Betreuungsintensität', '1:1 rund um die Uhr', 'Geteilte Betreuung'],
+                    ['Betreuungsintensität', '1:1, bei Bedarf auch nachts', 'Geteilte Betreuung'],
                     ['Eigener Tagesrhythmus', '✓ Vollständig erhalten', '✗ Heimstruktur'],
                     ['Angehörige einbinden', '✓ Jederzeit möglich', 'Besuchszeiten'],
                     ['Kündigung', 'Täglich möglich', 'Meist Kündigungsfristen'],
