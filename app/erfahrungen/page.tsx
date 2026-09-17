@@ -83,12 +83,13 @@ function fragen(d: Daten) {
 export async function generateMetadata(): Promise<Metadata> {
   const d = await laden()
   return {
-    title: 'Primundus Erfahrungen und Bewertungen | 24-Stunden-Pflege',
-    description: `Primundus Erfahrungen: ${d.schnitt} von 5 Sternen aus ${d.alle.length} Bewertungen von Familien, ${TP_AN ? 'direkt an Primundus, auf Google und Trustpilot' : 'direkt an Primundus und auf Google'}. Alle im Wortlaut, auch die kritischen, dazu das Formular für Ihre eigene Bewertung.`,
+    // Titel ≤ 60, Beschreibung ≤ 155 Zeichen (sonst kürzt Google). Zahlen live aus den Bewertungen.
+    title: `Primundus Erfahrungen: ${d.schnitt} von 5 Sternen aus ${d.alle.length} Bewertungen`,
+    description: `Erfahrungen mit der 24-Stunden-Pflege von Primundus: ${d.alle.length} Bewertungen von Familien im Wortlaut, auch die kritischen. Jetzt selbst bewerten.`,
     alternates: { canonical: SEITE_URL },
     openGraph: {
-      title: 'Primundus Erfahrungen und Bewertungen',
-      description: `${d.schnitt} von 5 Sternen aus ${d.alle.length} Bewertungen. Alle im Wortlaut, auch die kritischen.`,
+      title: `Primundus Erfahrungen: ${d.schnitt} von 5 Sternen`,
+      description: `${d.alle.length} Bewertungen von Familien zur 24-Stunden-Pflege, alle im Wortlaut, auch die kritischen.`,
       url: SEITE_URL,
       siteName: 'Primundus',
       locale: 'de_DE',
@@ -106,6 +107,7 @@ function schemaMarkup(d: Daten) {
       '@id': `${SEITE_URL}#webpage`,
       url: SEITE_URL,
       name: 'Primundus Erfahrungen und Bewertungen',
+      description: `${d.alle.length} Bewertungen von Familien zur 24-Stunden-Pflege von Primundus im Wortlaut.`,
       inLanguage: 'de-DE',
       isPartOf: { '@id': WEBSITE_ID },
       about: { '@id': ORG_ID },

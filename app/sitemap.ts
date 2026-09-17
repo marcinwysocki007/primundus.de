@@ -27,6 +27,8 @@ const hubs = [
   'rechtliches',
   'regionen',
   'tools',
+  // 17.09.2026: Bewertungsseite — Markensuche „Primundus Erfahrungen", neue Bewertungen laufend
+  'erfahrungen',
 ]
 
 const artikel = [
@@ -179,7 +181,6 @@ const regionen = [
 // impressum/datenschutz/sitemap sind noindex → gehören nicht in die Sitemap.
 const trust = [
   'ueber-uns',
-  'erfahrungen',
   'agb',
 ]
 
