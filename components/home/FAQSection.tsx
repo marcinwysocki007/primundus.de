@@ -13,7 +13,7 @@ export function FAQSection() {
   const faqs: FAQItem[] = [
     {
       question: "Was kostet eine 24-Stunden-Pflege ungefähr?",
-      answer: "Die Kosten variieren je nach Pflegebedarf und Qualifikation der Betreuungskraft. Mit unserem Online-Rechner erhalten Sie in 2 Minuten Ihren individuellen Preis – inklusive möglicher Zuschüsse durch die Pflegekasse, die den Eigenanteil erheblich senken können."
+      answer: "Bei Primundus ab 2.150 € im Monat für eine Person, je nach Pflegebedarf und Deutschkenntnissen der Betreuungskraft. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat. Ihren genauen Preis zeigt der Online-Rechner in 2 Minuten."
     },
     {
       question: "Wie schnell kann eine Betreuungskraft starten?",
@@ -21,7 +21,7 @@ export function FAQSection() {
     },
     {
       question: "Was passiert, wenn die Betreuungskraft krank wird?",
-      answer: "Wir stellen schnellstmöglich eine Ersatzkraft. Weil unsere Betreuungskräfte bei uns angestellt sind, können wir kurzfristig umplanen – die Anreise der Ersatzkraft übernehmen wir."
+      answer: "Wir stellen schnellstmöglich eine Ersatzkraft. Weil unsere Betreuungskräfte bei uns angestellt sind, können wir kurzfristig umplanen. Der Wechsel kostet nichts extra, es fallen nur die An- und Abreisekosten an."
     },
     {
       question: "Kann ich die Betreuung jederzeit kündigen?",
