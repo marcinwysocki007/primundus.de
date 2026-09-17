@@ -10,7 +10,7 @@
 // dunkles Band, weiße Kästen mit weichem Schatten. Keine Symbol-Kacheln.
 import Image from 'next/image'
 import { Fragment, type ReactNode } from 'react'
-import { RECHNER, Zusagen } from '@/components/ArticleCTA'
+import { KNOPF, RECHNER, Zusagen } from '@/components/ArticleCTA'
 import { InhaltLeiste } from './InhaltLeiste'
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
@@ -51,6 +51,7 @@ export function RatgeberKopf({
   lesezeit,
   blick,
   blickTitel = 'Auf einen Blick',
+  knopf,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -62,6 +63,8 @@ export function RatgeberKopf({
   blick?: string[]
   /** Überschrift des Kastens, falls die Seite eine eigene hatte („Auf einen Blick — Pflegegrad 3") */
   blickTitel?: string
+  /** Knopf unter der Einleitung, nur wo die Seite schon einen hatte (Kernseiten wie /kosten) */
+  knopf?: { href: string; text: string }
 }) {
   return (
     <div className="bg-pm-shell">
@@ -89,6 +92,11 @@ export function RatgeberKopf({
               <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
                 {einleitung}
               </p>
+            ) : null}
+            {knopf ? (
+              <a href={knopf.href} referrerPolicy="no-referrer-when-downgrade" className={`mt-8 ${KNOPF}`}>
+                {knopf.text}
+              </a>
             ) : null}
             <div className="mt-8 flex items-center gap-3">
               <Image
