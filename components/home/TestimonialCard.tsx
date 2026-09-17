@@ -1,7 +1,6 @@
-"use client";
-
+// Server-Komponente (keine Interaktion): so landen die Bewertungsdaten nicht im JS der Startseite.
 import { Sterne } from "@/components/bewertungen/Sterne";
-import { googleSchnitt, STAND, TRUSTPILOT_SICHTBAR } from "@/lib/bewertungen";
+import { schnittText, TRUSTPILOT_SICHTBAR } from "@/lib/bewertungen";
 
 // Vertrauensblock: Google-Schnitt mit Link auf /erfahrungen (dort alle Bewertungen im Wortlaut,
 // auch die direkt an Primundus geschickten, Martin 17.09.2026).
@@ -9,11 +8,11 @@ import { googleSchnitt, STAND, TRUSTPILOT_SICHTBAR } from "@/lib/bewertungen";
 // München und Hamburg, jede Rezension im Wortlaut auf /erfahrungen). Vorher stand hier
 // „5,0 aus 3" (nur München, Stand August), bis eine 4-Sterne-Rezension dazukam.
 // Die früheren sechs anonymen Testimonial-Karten waren nicht belegbar und wurden entfernt.
-const GOOGLE = googleSchnitt();
-const STAND_MONAT = STAND.sichtbar.replace(/^\d+\. /, "");
 const TRUSTPILOT_URL = "https://www.trustpilot.com/review/primundus.de";
 
-export function TestimonialCard() {
+// google: Schnitt und Anzahl über beide Google-Profile, von app/page.tsx geladen
+// (lib/google-bewertungen.ts: live über die Places API, sonst feste Einträge).
+export function TestimonialCard({ google }: { google: { wert: number; anzahl: number } }) {
   return (
     <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -32,10 +31,10 @@ export function TestimonialCard() {
             <span className="text-sm font-semibold text-pm-ink">Google Bewertungen</span>
           </div>
           <div className="flex items-center gap-1">
-            <Sterne wert={GOOGLE.wert} groesse={16} />
-            <span className="text-[14px] font-bold text-pm-ink ml-1">{GOOGLE.text}</span>
+            <Sterne wert={google.wert} groesse={16} />
+            <span className="text-[14px] font-bold text-pm-ink ml-1">{schnittText(google.wert)}</span>
           </div>
-          <p className="text-[12px] text-pm-mute">{GOOGLE.anzahl} Rezensionen · Stand {STAND_MONAT} · Alle Bewertungen lesen →</p>
+          <p className="text-[12px] text-pm-mute">{google.anzahl} Rezensionen · Alle Bewertungen lesen →</p>
         </a>
 
         {/* Testsieger */}

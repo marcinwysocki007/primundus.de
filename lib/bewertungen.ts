@@ -80,6 +80,8 @@ export interface Bewertung {
   sortierDatum: string
   kundeBestaetigt?: boolean
   antwort?: string
+  /** Google: Profil der Verfasserin/des Verfassers (Pflicht-Namensnennung der Places-API) */
+  autorUrl?: string
 }
 
 // Google und Trustpilot. Reihenfolge: neueste zuerst.
@@ -166,11 +168,22 @@ export const BEWERTUNGEN: Bewertung[] = [
 export const TRUSTPILOT_MINDESTENS = 5
 export const TRUSTPILOT_SICHTBAR = BEWERTUNGEN.filter((b) => b.quelle === 'trustpilot').length >= TRUSTPILOT_MINDESTENS
 
-/** Alle Bewertungen mit Sternen (direkt erhalten, Google, ggf. Trustpilot), neueste zuerst */
-export function alleBewertungen(zusaetzlich: Bewertung[] = []): Bewertung[] {
-  return [...zusaetzlich, ...DIREKT_ERHALTEN, ...BEWERTUNGEN]
-    .filter((b) => TRUSTPILOT_SICHTBAR || b.quelle !== 'trustpilot')
-    .sort((a, b) => b.sortierDatum.localeCompare(a.sortierDatum))
+/** Alle Bewertungen mit Sternen, neueste zuerst.
+ *  google: aktuelle Google-Rezensionen (lib/google-bewertungen.ts, sonst die festen Einträge)
+ *  zusaetzlich: Bewertungen aus dem Backend (Formular, im Admin eingetragen) */
+export function alleBewertungen(google: Bewertung[] = googleBewertungen(), zusaetzlich: Bewertung[] = []): Bewertung[] {
+  const tp = TRUSTPILOT_SICHTBAR ? BEWERTUNGEN.filter((b) => b.quelle === 'trustpilot') : []
+  const extern = [...google, ...tp]
+  // Im Admin nachgetragene Google-Rezensionen nicht doppelt zeigen, wenn die API sie schon liefert
+  const eigene = zusaetzlich.filter((z) => z.quelle !== 'google' || !extern.some((e) => gleicherText(e, z)))
+  return [...eigene, ...DIREKT_ERHALTEN, ...extern].sort((a, b) => b.sortierDatum.localeCompare(a.sortierDatum))
+}
+
+/** Gleiche Rezension? Vergleicht die ersten 40 Buchstaben ohne Satzzeichen und Leerraum. */
+export function gleicherText(a: Pick<Bewertung, 'text' | 'titel'>, b: Pick<Bewertung, 'text' | 'titel'>): boolean {
+  const kern = (t?: string) => (t ?? '').toLowerCase().replace(/[^a-zäöüß0-9]/g, '').slice(0, 40)
+  const ka = kern(a.text || a.titel)
+  return ka.length >= 10 && ka === kern(b.text || b.titel)
 }
 
 export function nachQuelle(quelle: Quelle, liste: Bewertung[]): Bewertung[] {
@@ -246,6 +259,8 @@ export interface ApiBewertung {
   kunde_bestaetigt: boolean
   antwort: string | null
   antwort_datum: string | null
+  /** formular = über diese Seite, team = im Admin eingetragen (Mail, Telefon, Brief), google = im Admin von Google übernommen */
+  herkunft?: 'formular' | 'team' | 'google'
 }
 
 const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
@@ -261,7 +276,7 @@ export function ausApi(b: ApiBewertung): Bewertung | null {
   if (sterne < 1 || sterne > 5 || !b.text) return null
   return {
     id: `p-${b.id}`,
-    quelle: 'primundus',
+    quelle: b.herkunft === 'google' ? 'google' : 'primundus',
     sterne: sterne as Bewertung['sterne'],
     text: b.text,
     name: b.name,

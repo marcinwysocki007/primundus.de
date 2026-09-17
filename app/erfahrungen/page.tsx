@@ -7,8 +7,9 @@ import { BewertungsFormular } from '@/components/bewertungen/BewertungsFormular'
 import { GoogleLogo, Sterne, TrustpilotLogo } from '@/components/bewertungen/Sterne'
 import {
   KUNDENSTIMMEN, KUNDENSTIMMEN_QUELLE, PROFILE, STAND,
-  TRUSTPILOT_SICHTBAR, alleBewertungen, anzahlText, googleBewertungen, ladeDirekteBewertungen, nachQuelle, schnitt, schnittText, verteilung, vonProfil,
+  TRUSTPILOT_SICHTBAR, alleBewertungen, anzahlText, ladeDirekteBewertungen, nachQuelle, schnitt, schnittText, verteilung, vonProfil,
 } from '@/lib/bewertungen'
+import { ladeGoogleDaten } from '@/lib/google-bewertungen'
 import { PrimundusMarke } from '@/components/bewertungen/Sterne'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { ORG_ID, WEBSITE_ID } from '@/lib/schema'
@@ -29,93 +30,118 @@ const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-
 const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe'
 const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
 
-const google = googleBewertungen()
-const G_ANZAHL = google.length
-// Stand ohne Formular-Bewertungen (für Metadaten, FAQ und Kopf; das Formular ist noch nicht live)
-const ALLE = alleBewertungen()
-const DIREKT = nachQuelle('primundus', ALLE)
-const A_SCHNITT = schnittText(schnitt(ALLE))
-const A_ANZAHL = ALLE.length
-const MUC = vonProfil('muenchen')
-const HH = vonProfil('hamburg')
-const TP = vonProfil('trustpilot')
 // Trustpilot erst ab 5 Bewertungen (lib/bewertungen.ts)
 const TP_AN = TRUSTPILOT_SICHTBAR
+const TP = vonProfil('trustpilot')
 const EXTERN = TP_AN ? 'Google und Trustpilot' : 'Google'
 const EXTERN_PRUEFT = TP_AN ? 'Google und Trustpilot prüfen' : 'Google prüft'
 function aufzaehlung(teile: string[]): string {
   return teile.length < 2 ? teile.join('') : `${teile.slice(0, -1).join(', ')} und ${teile[teile.length - 1]}`
 }
 
-const FRAGEN = [
-  {
-    q: 'Welche Erfahrungen machen Familien mit Primundus?',
-    a: `Familien bewerten Primundus mit ${A_SCHNITT} von 5 Sternen, aus ${A_ANZAHL} Bewertungen (Stand ${STAND.sichtbar}): ${aufzaehlung([`${DIREKT.length} Rückmeldungen direkt an Primundus`, `${G_ANZAHL} auf Google`, ...(TP_AN ? [`${TP.length} auf Trustpilot`] : [])])}. Gelobt werden die passende Betreuungskraft, Erreichbarkeit auch am Wochenende, klare Kosten und die eigene Auswahl der Betreuungskraft. Kritik gibt es an Wechseln nach der ersten Betreuungskraft und an verspäteten Anreisen.`,
-  },
-  {
-    q: 'Ist Primundus seriös?',
-    a: 'Primundus hat 20 Jahre Erfahrung in der 24-Stunden-Pflege und ist 6× Testsieger DIE WELT. Firmensitz und Registernummer stehen im Impressum: PRIMUNDUS Sp. z o.o., Warschau, KRS 0001259402. Die Betreuungskräfte sind bei der Unternehmensgruppe angestellt und arbeiten mit A1-Bescheinigung. Der Vertrag ist täglich kündbar.',
-  },
-  {
-    q: 'Wie kann ich Primundus bewerten?',
-    a: `Direkt auf dieser Seite: Sterne wählen, Erfahrung beschreiben, Namen und E-Mail-Adresse angeben und die Bewertung über den Link in der E-Mail bestätigen. Wir prüfen sie und veröffentlichen sie danach hier. Sie können Primundus auch auf ${TP_AN ? 'Google oder Trustpilot' : 'Google'} bewerten.`,
-  },
-  {
-    q: 'Veröffentlicht Primundus auch negative Bewertungen?',
-    a: `Ja. Wir veröffentlichen jede bestätigte Bewertung, auch mit einem Stern, solange sie keine Beleidigungen, Werbung oder Daten anderer Personen enthält. Auf dieser Seite stehen auch Bewertungen mit drei und vier Sternen, von ${EXTERN} alle Rezensionen unserer Profile.`,
-  },
-  {
-    q: 'Sind die Bewertungen auf dieser Seite echt?',
-    a: `Rezensionen von ${EXTERN} sind mit ihrer Quelle verlinkt. Die Rückmeldungen direkt an Primundus haben uns Familien geschickt, wir zeigen sie im Wortlaut mit Datum und Ort. Bewertungen über das Formular auf dieser Seite müssen per E-Mail bestätigt werden, bevor wir sie prüfen. Passt die Adresse zu einer Betreuung, steht an der Bewertung „Kunde bestätigt".`,
-  },
-]
+// Alles, was sich ohne Deploy ändert: Google (Places API, alle 6 Std.) und Backend
+// (Formular und Admin-Einträge, alle 5 Min.). fetch-Ergebnisse teilen sich Metadaten und Seite.
+async function laden() {
+  const [backend, google] = await Promise.all([ladeDirekteBewertungen(), ladeGoogleDaten()])
+  const alle = alleBewertungen(google.bewertungen, backend)
+  const googleListe = nachQuelle('google', alle)
+  return {
+    alle,
+    google,
+    googleAnzahl: googleListe.length,
+    direkt: nachQuelle('primundus', alle),
+    schnitt: schnittText(schnitt(alle)),
+  }
+}
+type Daten = Awaited<ReturnType<typeof laden>>
 
-export const metadata: Metadata = {
-  title: 'Primundus Erfahrungen und Bewertungen | 24-Stunden-Pflege',
-  description: `Primundus Erfahrungen: ${A_SCHNITT} von 5 Sternen aus ${A_ANZAHL} Bewertungen von Familien, ${TP_AN ? 'direkt an Primundus, auf Google und Trustpilot' : 'direkt an Primundus und auf Google'}. Alle im Wortlaut, auch die kritischen, dazu das Formular für Ihre eigene Bewertung.`,
-  alternates: { canonical: SEITE_URL },
-  openGraph: {
-    title: 'Primundus Erfahrungen und Bewertungen',
-    description: `${A_SCHNITT} von 5 Sternen aus ${A_ANZAHL} Bewertungen. Alle im Wortlaut, auch die kritischen.`,
-    url: SEITE_URL,
-    siteName: 'Primundus',
-    locale: 'de_DE',
-    type: 'website',
-    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-  },
+function fragen(d: Daten) {
+  return [
+    {
+      q: 'Welche Erfahrungen machen Familien mit Primundus?',
+      a: `Familien bewerten Primundus mit ${d.schnitt} von 5 Sternen, aus ${d.alle.length} Bewertungen: ${aufzaehlung([`${d.direkt.length} direkt an Primundus`, `${d.googleAnzahl} auf Google`, ...(TP_AN ? [`${TP.length} auf Trustpilot`] : [])])}. Gelobt werden die passende Betreuungskraft, Erreichbarkeit auch am Wochenende, klare Kosten und die eigene Auswahl der Betreuungskraft. Kritik gibt es an Wechseln nach der ersten Betreuungskraft und an verspäteten Anreisen.`,
+    },
+    {
+      q: 'Ist Primundus seriös?',
+      a: 'Primundus hat 20 Jahre Erfahrung in der 24-Stunden-Pflege und ist 6× Testsieger DIE WELT. Firmensitz und Registernummer stehen im Impressum: PRIMUNDUS Sp. z o.o., Warschau, KRS 0001259402. Die Betreuungskräfte sind bei der Unternehmensgruppe angestellt und arbeiten mit A1-Bescheinigung. Der Vertrag ist täglich kündbar.',
+    },
+    {
+      q: 'Wie kann ich Primundus bewerten?',
+      a: `Direkt auf dieser Seite: Sterne wählen, Erfahrung beschreiben, Namen und E-Mail-Adresse angeben und die Bewertung über den Link in der E-Mail bestätigen. Wir prüfen sie und veröffentlichen sie danach hier. Sie können Primundus auch auf ${TP_AN ? 'Google oder Trustpilot' : 'Google'} bewerten.`,
+    },
+    {
+      q: 'Veröffentlicht Primundus auch negative Bewertungen?',
+      a: `Ja. Wir veröffentlichen jede bestätigte Bewertung, auch mit einem Stern, solange sie keine Beleidigungen, Werbung oder Daten anderer Personen enthält. Auf dieser Seite stehen auch Bewertungen mit drei und vier Sternen, von ${EXTERN} alle Rezensionen unserer Profile.`,
+    },
+    {
+      q: 'Sind die Bewertungen auf dieser Seite echt?',
+      a: `Rezensionen von ${EXTERN} sind mit ihrer Quelle verlinkt. Die Rückmeldungen direkt an Primundus haben uns Familien geschickt, wir zeigen sie im Wortlaut mit Datum und Ort. Bewertungen über das Formular auf dieser Seite müssen per E-Mail bestätigt werden, bevor wir sie prüfen. Passt die Adresse zu einer Betreuung, steht an der Bewertung „Kunde bestätigt".`,
+    },
+  ]
 }
 
-const schemaMarkup = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${SEITE_URL}#webpage`,
-    url: SEITE_URL,
-    name: 'Primundus Erfahrungen und Bewertungen',
-    inLanguage: 'de-DE',
-    isPartOf: { '@id': WEBSITE_ID },
-    about: { '@id': ORG_ID },
-    dateModified: AKTUALISIERT.iso,
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Über uns', item: 'https://primundus.de/ueber-uns' },
-      { '@type': 'ListItem', position: 3, name: 'Erfahrungen und Bewertungen', item: SEITE_URL },
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  },
-]
+export async function generateMetadata(): Promise<Metadata> {
+  const d = await laden()
+  return {
+    title: 'Primundus Erfahrungen und Bewertungen | 24-Stunden-Pflege',
+    description: `Primundus Erfahrungen: ${d.schnitt} von 5 Sternen aus ${d.alle.length} Bewertungen von Familien, ${TP_AN ? 'direkt an Primundus, auf Google und Trustpilot' : 'direkt an Primundus und auf Google'}. Alle im Wortlaut, auch die kritischen, dazu das Formular für Ihre eigene Bewertung.`,
+    alternates: { canonical: SEITE_URL },
+    openGraph: {
+      title: 'Primundus Erfahrungen und Bewertungen',
+      description: `${d.schnitt} von 5 Sternen aus ${d.alle.length} Bewertungen. Alle im Wortlaut, auch die kritischen.`,
+      url: SEITE_URL,
+      siteName: 'Primundus',
+      locale: 'de_DE',
+      type: 'website',
+      images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
+    },
+  }
+}
+
+function schemaMarkup(d: Daten) {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SEITE_URL}#webpage`,
+      url: SEITE_URL,
+      name: 'Primundus Erfahrungen und Bewertungen',
+      inLanguage: 'de-DE',
+      isPartOf: { '@id': WEBSITE_ID },
+      about: { '@id': ORG_ID },
+      dateModified: AKTUALISIERT.iso,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
+        { '@type': 'ListItem', position: 2, name: 'Über uns', item: 'https://primundus.de/ueber-uns' },
+        { '@type': 'ListItem', position: 3, name: 'Erfahrungen und Bewertungen', item: SEITE_URL },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: fragen(d).map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ]
+}
 
 function ProfilZeile({
-  logo, titel, liste, href, zusatz, einheit = ['Rezension', 'Rezensionen'],
-}: { logo: ReactNode; titel: string; liste: { sterne: number }[]; href?: string; zusatz?: string; einheit?: [string, string] }) {
+  logo, titel, liste, href, zusatz, einheit = ['Rezension', 'Rezensionen'], stand,
+}: {
+  logo: ReactNode
+  titel: string
+  liste: { sterne: number }[]
+  href?: string
+  zusatz?: string
+  einheit?: [string, string]
+  /** Schnitt und Anzahl von der Quelle selbst (Google), sonst aus liste gerechnet */
+  stand?: { schnitt: number; anzahl: number }
+}) {
+  const wert = stand ? stand.schnitt : schnitt(liste)
+  const anzahl = stand ? stand.anzahl : liste.length
   const innen = (
     <>
         {logo}
@@ -124,7 +150,7 @@ function ProfilZeile({
           <span className="text-pm-mute whitespace-nowrap">{zusatz}</span>
         ) : (
           <span className="text-pm-body whitespace-nowrap [font-variant-numeric:tabular-nums]">
-            <span className="font-bold text-pm-ink">{schnittText(schnitt(liste))}</span> · {anzahlText(liste.length, einheit[0], einheit[1])}
+            <span className="font-bold text-pm-ink">{schnittText(wert)}</span> · {anzahlText(anzahl, einheit[0], einheit[1])}
           </span>
         )}
       {href && (
@@ -150,14 +176,14 @@ function ProfilZeile({
 }
 
 export default async function ErfahrungenPage() {
-  const direkt = await ladeDirekteBewertungen()
-  const alle = alleBewertungen(direkt)
+  const d = await laden()
+  const { alle } = d
   const stufen = verteilung(alle)
   const max = Math.max(...stufen.map((s) => s.anzahl), 1)
 
   return (
     <>
-      {schemaMarkup.map((s, i) => (
+      {schemaMarkup(d).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
 
@@ -228,8 +254,8 @@ export default async function ErfahrungenPage() {
 
                 <ul className="mt-5 pt-2 border-t border-pm-line">
                   <ProfilZeile logo={<PrimundusMarke />} titel="Primundus" liste={nachQuelle('primundus', alle)} einheit={['Bewertung', 'Bewertungen']} />
-                  <ProfilZeile logo={<GoogleLogo />} titel="München" liste={MUC} href={PROFILE.muenchen.url} />
-                  <ProfilZeile logo={<GoogleLogo />} titel="Hamburg" liste={HH} href={PROFILE.hamburg.url} />
+                  <ProfilZeile logo={<GoogleLogo />} titel="München" liste={[]} stand={d.google.profile.muenchen} href={PROFILE.muenchen.url} />
+                  <ProfilZeile logo={<GoogleLogo />} titel="Hamburg" liste={[]} stand={d.google.profile.hamburg} href={PROFILE.hamburg.url} />
                   {TP_AN && (
                     <ProfilZeile
                       logo={<TrustpilotLogo />}
@@ -240,7 +266,9 @@ export default async function ErfahrungenPage() {
                     />
                   )}
                 </ul>
-                <p className="mt-4 text-[13px] leading-[1.5] text-pm-mute">Stand {STAND.sichtbar}. {EXTERN_PRUEFT} nicht, ob Verfasser Kunden sind.</p>
+                <p className="mt-4 text-[13px] leading-[1.5] text-pm-mute">
+                  {d.google.live ? 'Google-Werte laufend aktualisiert.' : `Stand ${STAND.sichtbar}.`} {EXTERN_PRUEFT} nicht, ob Verfasser Kunden sind.
+                </p>
               </aside>
             </div>
           </div>
@@ -251,8 +279,7 @@ export default async function ErfahrungenPage() {
           <div className="max-w-[46rem]">
             <h2 className={H2}>Was Familien über Primundus schreiben</h2>
             <p className="mt-5 text-[18px] leading-[1.7] text-pm-body [text-wrap:pretty]">
-              Alle Bewertungen im Wortlaut, auch die mit drei und vier Sternen. Die neuesten stehen oben. Bei Google-Rezensionen stehen die Zeitangaben wie in
-              der Quelle, Stand {STAND.sichtbar}.
+              Alle Bewertungen im Wortlaut, auch die mit drei und vier Sternen. Die neuesten stehen oben.
             </p>
           </div>
           <div className="mt-8">
@@ -342,11 +369,13 @@ export default async function ErfahrungenPage() {
                 punkte={[
                   {
                     title: 'Rückmeldungen direkt an Primundus',
-                    desc: `Diese ${DIREKT.length} Bewertungen haben uns Familien direkt geschickt, bevor es das Formular auf dieser Seite gab. Wir zeigen sie im Wortlaut mit Sternen, Datum und Ort, auch die mit drei und vier Sternen. Nachnamen kürzen wir auf den Anfangsbuchstaben.`,
+                    desc: 'Diese Bewertungen haben uns Familien direkt geschickt, nicht über das Formular auf dieser Seite. Wir zeigen sie im Wortlaut mit Sternen, Datum und Ort, auch die mit drei und vier Sternen. Nachnamen kürzen wir auf den Anfangsbuchstaben.',
                   },
                   {
                     title: EXTERN,
-                    desc: `Wir übernehmen alle Rezensionen unserer Google-Profile München und Hamburg${TP_AN ? ' und von Trustpilot' : ''} im Wortlaut und verlinken die Quelle. ${EXTERN_PRUEFT} nicht, ob die Verfasser Kunden von Primundus sind. Nachnamen kürzen wir auf den Anfangsbuchstaben. Stand: ${STAND.sichtbar}.`,
+                    desc: d.google.live
+                      ? `Rezensionen unserer Google-Profile München und Hamburg${TP_AN ? ' und von Trustpilot' : ''} erscheinen hier im Wortlaut und mit Link zur Quelle. Google-Rezensionen holen wir automatisch über die Google-Schnittstelle, mit dem Namen wie bei Google. ${EXTERN_PRUEFT} nicht, ob die Verfasser Kunden von Primundus sind.`
+                      : `Wir übernehmen alle Rezensionen unserer Google-Profile München und Hamburg${TP_AN ? ' und von Trustpilot' : ''} im Wortlaut und verlinken die Quelle. ${EXTERN_PRUEFT} nicht, ob die Verfasser Kunden von Primundus sind. Nachnamen kürzen wir auf den Anfangsbuchstaben. Stand: ${STAND.sichtbar}.`,
                   },
                   {
                     title: 'Bewertungen über das Formular',
@@ -375,7 +404,7 @@ export default async function ErfahrungenPage() {
           <div className="max-w-[46rem]">
             <h2 className={H2}>Häufige Fragen</h2>
             <div className="mt-8">
-              <Fragen fragen={FRAGEN} />
+              <Fragen fragen={fragen(d)} />
             </div>
             <div className="mt-10">
               <MehrDazu

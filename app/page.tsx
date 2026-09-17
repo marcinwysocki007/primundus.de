@@ -4,6 +4,7 @@ import { FAQSection } from '@/components/home/FAQSection'
 import { ComparisonSection } from '@/components/home/ComparisonSection'
 import { FinalCTA } from '@/components/home/FinalCTA'
 import { TestimonialCard } from '@/components/home/TestimonialCard'
+import { googleGesamt, ladeGoogleDaten } from '@/lib/google-bewertungen'
 
 // Titel und Beschreibung geaendert am 01.09.2026, Freigabe Martin.
 //
@@ -91,7 +92,9 @@ const schemaMarkup = JSON.stringify([
   }
 ])
 
-export default function Page() {
+export default async function Page() {
+  // Google-Schnitt für den Kundenstimmen-Block (Places API alle 6 Std., sonst feste Einträge)
+  const google = googleGesamt(await ladeGoogleDaten())
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
@@ -643,7 +646,7 @@ export default function Page() {
             <h2 className="text-[26px] md:text-[32px] leading-[1.25] font-bold text-pm-ink mb-8">
               Das sagen unsere Familien
             </h2>
-            <TestimonialCard />
+            <TestimonialCard google={google} />
           </div>
         </section>
 

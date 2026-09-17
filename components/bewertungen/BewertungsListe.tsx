@@ -86,7 +86,13 @@ function BewertungsKarte({ b }: { b: Bewertung }) {
 
       <div className="mt-5 pt-4 border-t border-pm-line-soft flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
         <p className="text-[15px] leading-[1.4]">
-          <span className="font-semibold text-pm-ink">{b.name}</span>
+          {b.autorUrl ? (
+            <a href={b.autorUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-pm-ink hover:underline underline-offset-4">
+              {b.name}
+            </a>
+          ) : (
+            <span className="font-semibold text-pm-ink">{b.name}</span>
+          )}
           {b.ort && <span className="text-pm-mute">, {b.ort}</span>}
           {b.kundeBestaetigt && (
             <span className="ml-2 inline-block align-middle text-[12.5px] font-semibold px-2.5 py-0.5 rounded-full bg-pm-mint text-pm-green-deep">Kunde bestätigt</span>
