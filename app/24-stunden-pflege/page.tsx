@@ -1,16 +1,30 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+} from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { KurzAntwort } from '@/components/KurzAntwort'
+import { aktualisiertAm } from '@/lib/lastmod'
+import { ORG_ID } from '@/lib/schema'
+
+// Kernseite in der Seitenvorlage (17.09.2026). Inhalt gegen Kostenrechner, Startseite und Mustervertrag geprüft:
+// Preise aus dem Rechner (ab 2.150 €, Pflegegrad 3 ab ca. 923 €), Nächte „bei Bedarf auch nachts",
+// Ersatzkraft nach Vertrag § 1 („schnellstmöglich, in der Regel innerhalb von 3 Tagen", Krankheitstage ohne
+// Honorar nach § 4), Ablauf in drei Schritten wie auf der Startseite und im Rechner.
+
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '17. September 2026')
+const RECHNER_SEITE = 'https://kostenrechner.primundus.de/?start=1&src=apex-24-stunden-pflege'
+const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist 24-Stunden-Pflege?' },
   { id: 'leistungen', title: 'Was leistet Primundus?' },
   { id: 'kosten', title: 'Kosten & Kassenzuschüsse' },
   { id: 'ablauf', title: 'Ablauf & Start' },
-  { id: 'vorteile', title: 'Vorteile gegenüber Pflegeheim' },
+  { id: 'vorteile', title: 'Vergleich mit dem Pflegeheim' },
   { id: 'faq', title: 'Häufige Fragen' },
+  { id: 'themen', title: 'Weitere Themen' },
 ]
 
 export const metadata: Metadata = {
@@ -28,19 +42,22 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was ist 24-Stunden-Pflege?', a: 'Eine Betreuungskraft zieht bei dem Pflegebedürftigen ein und hilft im Alltag: bei der Körperpflege, im Haushalt und mit Gesellschaft. Sie wohnt mit im Haus und ist bei Bedarf auch nachts da. Dabei hat sie geregelte Arbeitszeiten mit Pausen und Ruhezeiten.' },
+  { q: 'Was kostet 24-Stunden-Pflege bei Primundus?', a: 'Ab 2.150 € im Monat für eine Person. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat selbst zu tragen. Dazu kommen An- und Abreise mit 125 € je Strecke. Kostenlose Beratung: 089 200 000 830.' },
+  { q: 'Wie schnell kann 24h-Pflege bei Primundus starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online; ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
+  { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja. Die Betreuungskräfte sind bei uns angestellt und arbeiten im Entsendemodell mit A1-Bescheinigung: Sie sind in Polen sozialversichert und legal in Deutschland tätig. Sie als Familie werden nicht Arbeitgeber.' },
+  { q: 'Warum ist Primundus Testsieger?', a: 'Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice, getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
+  { q: 'Was passiert, wenn die Betreuungskraft krank wird?', a: 'Wir stellen schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Für die Tage, an denen die Betreuungskraft krank ist, berechnen wir nichts. Der Wechsel kostet nichts extra, es fallen nur die An- und Abreisekosten an.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: '24-Stunden-Pflege',
-    provider: {
-      '@type': 'Organization',
-      name: 'Primundus',
-      url: 'https://primundus.de',
-      telephone: '+4989200000830',
-      award: 'Testsieger DIE WELT',
-    },
-    description: '24-Stunden-Betreuung zu Hause mit eigenem, fest angestelltem Personal in Deutschland. Täglich kündbar, taggenaue Abrechnung, Anreise in 3 Tagen möglich.',
+    provider: { '@id': ORG_ID },
+    description: '24-Stunden-Betreuung zu Hause durch eigene, bei Primundus angestellte Betreuungskräfte im Entsendemodell mit A1-Bescheinigung. Täglich kündbar, taggenaue Abrechnung, Anreise in 3 Tagen möglich.',
     areaServed: 'DE',
     serviceType: '24-Stunden-Pflege',
     offers: { '@type': 'Offer', priceRange: 'ab 2150 €/Monat' },
@@ -56,12 +73,47 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Was ist 24-Stunden-Pflege?', acceptedAnswer: { '@type': 'Answer', text: '24-Stunden-Pflege bedeutet: Eine Betreuungskraft lebt dauerhaft im Haushalt des Pflegebedürftigen und ist rund um die Uhr erreichbar — für Grundpflege, Haushaltsführung und Gesellschaft. Sie ist die meistgenutzte Alternative zum Pflegeheim in Deutschland.' } },
-      { '@type': 'Question', name: 'Was kostet 24-Stunden-Pflege bei Primundus?', acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat je nach Pflegebedarf. Nach Pflegegeld (bis 990 €/Monat), Entlastungsbudget (3.539 €/Jahr) und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 €/Monat. Kostenlose Beratung: 089 200 000 830.' } },
-      { '@type': 'Question', name: 'Wie schnell kann 24h-Pflege bei Primundus starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.' } },
-      { '@type': 'Question', name: 'Ist 24-Stunden-Pflege bei Primundus legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus arbeitet ausschließlich im rechtssicheren Entsendemodell. Alle Betreuungskräfte sind im Heimatland sozialversichert und mit A1-Bescheinigung legal in Deutschland tätig.' } },
-      { '@type': 'Question', name: 'Warum ist Primundus Testsieger?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice, getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' } },
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+]
+
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
+const THEMEN = [
+  {
+    title: 'Grundlagen',
+    links: [
+      { href: '/was-ist-24-stunden-pflege', text: 'Was ist 24h-Pflege?' },
+      { href: '/wann-brauche-ich-24h-pflege', text: 'Wann brauche ich 24h-Pflege?' },
+      { href: '/vorteile-24h-pflege', text: 'Vorteile der 24h-Pflege' },
+      { href: '/nachteile-24h-pflege', text: 'Nachteile ehrlich betrachtet' },
+    ],
+  },
+  {
+    title: 'Ablauf & Organisation',
+    links: [
+      { href: '/ablauf', text: 'So läuft es ab' },
+      { href: '/24h-pflege-organisieren', text: '24h-Pflege organisieren' },
+      { href: '/pflegekraft-finden', text: 'Pflegekraft finden' },
+      { href: '/checkliste-pflegekraft-einstellen', text: 'Checkliste: Pflegekraft einstellen' },
+    ],
+  },
+  {
+    title: 'Vergleiche',
+    links: [
+      { href: '/24h-pflege-vs-pflegeheim', text: '24h-Pflege oder Pflegeheim' },
+      { href: '/24h-pflege-vs-ambulante-pflege', text: '24h-Pflege oder ambulante Pflege' },
+      { href: '/selbst-pflegen-oder-24h-pflege', text: 'Selbst pflegen oder 24h-Pflege?' },
+      { href: '/tagespflege-vs-24h-betreuung', text: 'Tagespflege oder 24h-Betreuung' },
+    ],
+  },
+  {
+    title: 'Pflegekräfte',
+    links: [
+      { href: '/pflegekraft-aus-polen', text: 'Pflegekraft aus Polen' },
+      { href: '/pflegekraft-aus-rumaenien', text: 'Pflegekraft aus Rumänien' },
+      { href: '/pflegekraft-aus-bulgarien', text: 'Pflegekraft aus Bulgarien' },
+      { href: '/eu-pflegekraft-rechte-pflichten', text: 'EU-Pflegekraft: Rechte & Pflichten' },
     ],
   },
 ]
@@ -71,293 +123,171 @@ export default function VierUndZwanzigStundenPflege() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <span className="text-pm-ink">24-Stunden-Pflege</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            Testsieger DIE WELT · 20 Jahre Erfahrung · 60.000+ Betreuungen
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            24-Stunden-Pflege — geprüft, rechtssicher & täglich kündbar
-          </h1>
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Bei Primundus arbeiten Menschen, die seit 2006 in der häuslichen 24-Stunden-Pflege zu Hause sind — mit eigenen, geprüften Betreuungskräften für die häusliche 24-Stunden-Pflege — rechtssicher im Entsendemodell, täglich kündbar, Anreise in 3 Tagen möglich. Ab 2.150 Euro pro Monat. 6× Testsieger DIE WELT.
-          </p>
-
-          <KurzAntwort frage="Was unterscheidet Primundus von Vermittlungsagenturen?">
-            Die Betreuungskräfte sind bei unserer Unternehmensgruppe angestellt — nicht als Selbstständige vermittelt. Sie sehen Preis und passende Betreuungskräfte vor Vertragsabschluss, zahlen keine Vermittlungsgebühr, haben keine Mindestlaufzeit und können täglich kündigen; abgerechnet wird taggenau.
-          </KurzAntwort>
-
-          {/* USP-Box */}
-          <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Warum Primundus?</p>
-            <div className="grid md:grid-cols-2 gap-3">
-              {[
-                { icon: '★', title: '6× Testsieger DIE WELT', desc: 'Preis & Qualität' },
-                { icon: '✓', title: 'Rechtssicher', desc: 'Entsendemodell mit A1-Bescheinigung — kein rechtliches Risiko für die Familie' },
-                { icon: '↺', title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung — volle Flexibilität' },
-                { icon: '⚡', title: 'Anreise in 3 Tagen möglich', desc: 'Vom ersten Gespräch bis zur Anreise der Betreuungskraft' },
-                { icon: '🛡', title: 'Ersatzkraft bei Ausfall', desc: 'Primundus stellt sofort Ersatz — kein Versorgungsausfall' },
-                { icon: '♥', title: 'Persönliche Beratung', desc: 'Marta Kapcio & Team, Mo – So 8 – 20 Uhr, 7 Tage/Woche erreichbar' },
-              ].map((usp) => (
-                <div key={usp.title} className="flex items-start gap-3">
-                  <span className="text-pm-taupe text-[18px] flex-shrink-0 w-6 text-center">{usp.icon}</span>
-                  <div>
-                    <p className="text-[14px] font-bold text-pm-ink">{usp.title}</p>
-                    <p className="text-[13px] text-pm-mute">{usp.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* SECTION 1 */}
-          <h2 id="was-ist" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist 24-Stunden-Pflege?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht dauerhaft in den Haushalt des Pflegebedürftigen ein und ist rund um die Uhr vor Ort. Sie übernimmt Grundpflege, Haushaltsführung und Gesellschaft — und ermöglicht es, im eigenen Zuhause zu bleiben statt ins Pflegeheim zu wechseln.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            In Deutschland nutzen schätzungsweise 300.000 bis 400.000 Haushalte eine 24h-Betreuung durch Kräfte aus EU-Ländern. Von den rund 6 Millionen Pflegebedürftigen werden 86 Prozent zu Hause versorgt — 24h-Pflege ist damit die intensivste Form der häuslichen Betreuung.
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Ausführliche Erklärung:{' '}
-            <a href="/was-ist-24-stunden-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was ist 24-Stunden-Pflege? — alle Fakten</a>
-          </p>
-
-          {/* SECTION 2 */}
-          <h2 id="leistungen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was leistet Primundus?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Bei Primundus gibt es keinen Vermittler dazwischen: Die Betreuungskräfte sind bei uns angestellt. Wir wählen die Kraft aus, die zu Ihrer Situation passt, und entsenden sie im rechtssicheren Entsendemodell mit A1-Bescheinigung zu Ihnen nach Hause. Ein Ansprechpartner, ein Vertrag, klare Verantwortung.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Grundpflege', desc: 'Körperhygiene, Ankleiden, Nahrungsaufnahme, Lagerung, Mobilisierung — die tägliche körperliche Unterstützung.' },
-              { title: 'Haushaltsführung', desc: 'Kochen, Einkaufen, Putzen, Wäsche, Begleitung zu Arztterminen — vollständige Haushaltsführung.' },
-              { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Tagesstruktur, emotionale Begleitung — besonders wertvoll bei Demenz.' },
-              { title: 'Qualitätssicherung', desc: 'Regelmäßiger Kontakt mit Primundus, Qualitätschecks, nahtloser Kraftwechsel alle 6–8 Wochen.' },
-              { title: 'Ersatzkraft bei Ausfall', desc: 'Wird die Betreuungskraft krank oder fällt aus — Primundus stellt sofort Ersatz. Kein Versorgungsausfall.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Vollständige Leistungsübersicht:{' '}
-            <a href="/leistungen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was Primundus leistet</a>
-            {' · '}
-            <a href="/rechtssicher" className="text-pm-taupe underline hover:text-pm-taupe-deep">Rechtssicherheit & Entsendemodell</a>
-          </p>
-
-          {/* SECTION 3 */}
-          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kosten & Kassenzuschüsse 2026
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die monatlichen Kosten beginnen bei 2.150 Euro, je nach Pflegebedarf. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro — oft deutlich weniger als im Pflegeheim.
-          </p>
-
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Kassenzuschüsse 2026 — Pflegegeld je Pflegegrad</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Pflegegrad', 'Pflegegeld/Monat', '+ Entlastungsbetrag', 'Entlastungsbudget/Jahr'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['PG 2', '347 €', '131 €', '3.539 €'],
-                    ['PG 3', '599 €', '131 €', '3.539 €'],
-                    ['PG 4', '800 €', '131 €', '3.539 €'],
-                    ['PG 5', '990 €', '131 €', '3.539 €'],
-                  ].map(([grad, pg, eb, budget], i) => (
-                    <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-4 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{grad}</td>
-                      <td className="px-4 py-3 text-[14px] font-bold text-pm-green border-b border-pm-line">{pg}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{eb}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{budget}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Stand 2026 · Entlastungsbudget: gemeinsames Budget für Verhinderungs- und Kurzzeitpflege seit Juli 2025</p>
-            </div>
-          </div>
-
-          <p className="text-[15px] text-pm-body mb-3">
-            → Alle Kosten im Detail:{' '}
-            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was kostet 24h-Pflege? — vollständige Übersicht</a>
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Zuschüsse optimal nutzen:{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Finanzierung — alle Kassenzuschüsse 2026</a>
-          </p>
-
-          {/* SECTION 4 */}
-          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Ablauf — Anreise in 3 Tagen möglich
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Von der ersten Anfrage bis zur Anreise der Betreuungskraft vergehen bei Primundus typischerweise 4 bis 7 Tage.
-          </p>
-          <ol className="space-y-3 mb-6">
-            {[
-              { n: '1', title: 'Kostenloses Beratungsgespräch', desc: 'Pflegesituation, Erkrankungen, besondere Anforderungen erfassen. Kein Auftrag, kein Risiko.' },
-              { n: '2', title: 'Individuelles Angebot', desc: 'Transparente Kosten, klarer Leistungsumfang, faire Vertragsbedingungen — meist innerhalb von Stunden.' },
-              { n: '3', title: 'Kraft auswählen', desc: 'Profil prüfen, Telefonat vorab möglich. A1-Bescheinigung liegt vor.' },
-              { n: '4', title: 'Anreise & Start', desc: 'Betreuungskraft trifft ein, Angehörige übergeben alle relevanten Informationen.' },
-              { n: '5', title: 'Laufende Betreuung', desc: 'Qualitätssicherung durch Primundus, Kraftwechsel alle 6–8 Wochen, Ersatz bei Ausfall.' },
-            ].map((step) => (
-              <li key={step.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line list-none">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{step.n}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{step.title}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{step.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Schritt für Schritt erklärt:{' '}
-            <a href="/ablauf" className="text-pm-taupe underline hover:text-pm-taupe-deep">Ablauf der 24h-Pflege bei Primundus</a>
-          </p>
-
-          {/* SECTION 5 */}
-          <h2 id="vorteile" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Vorteile gegenüber dem Pflegeheim
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der Eigenanteil im Pflegeheim liegt bundesweit bei durchschnittlich 3.364 Euro pro Monat (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — und steigt jährlich. 24h-Pflege zuhause ist damit oft nicht teurer, bietet aber deutlich mehr.
-          </p>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Kriterium</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-taupe text-left border-b border-pm-line">24h-Pflege zuhause</th>
-                    <th className="px-5 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">Pflegeheim</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Eigenanteil/Monat', 'ab ca. 1.500 € (mit Zuschüssen)', 'Ø 3.364 € (2026)'],
-                    ['Vertraute Umgebung', '✓ Eigenes Zuhause', '✗ Neue Einrichtung'],
-                    ['Betreuungsintensität', '1:1, bei Bedarf auch nachts', 'Geteilte Betreuung'],
-                    ['Eigener Tagesrhythmus', '✓ Vollständig erhalten', '✗ Heimstruktur'],
-                    ['Angehörige einbinden', '✓ Jederzeit möglich', 'Besuchszeiten'],
-                    ['Kündigung', 'Täglich möglich', 'Meist Kündigungsfristen'],
-                  ].map(([kriterium, zuhause, heim], i) => (
-                    <tr key={kriterium} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] font-semibold text-pm-ink border-b border-pm-line">{kriterium}</td>
-                      <td className="px-5 py-3 text-[14px] text-pm-green font-medium border-b border-pm-line">{zuhause}</td>
-                      <td className="px-5 py-3 text-[14px] text-pm-mute border-b border-pm-line">{heim}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Detaillierter Vergleich:{' '}
-            <a href="/24h-pflege-vs-pflegeheim-kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">24h-Pflege vs. Pflegeheim — Kostenvergleich 2026</a>
-          </p>
-
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur 24-Stunden-Pflege
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was ist 24-Stunden-Pflege?', a: 'Eine Betreuungskraft lebt dauerhaft im Haushalt und ist rund um die Uhr erreichbar — für Grundpflege, Haushalt und Gesellschaft. Sie ist die meistgenutzte Alternative zum Pflegeheim in Deutschland.' },
-              { q: 'Was kostet 24-Stunden-Pflege bei Primundus?', a: 'Ab 2.150 €/Monat je nach Pflegebedarf. Nach Pflegegeld (bis 990 €/Monat), Entlastungsbudget (3.539 €/Jahr) und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 €/Monat. Kostenlose Beratung: 089 200 000 830.' },
-              { q: 'Wie schnell kann 24h-Pflege bei Primundus starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-              { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja — Primundus setzt ausschließlich eigene Betreuungskräfte im Entsendemodell mit A1-Bescheinigung. Vollständig rechtssicher, kein Risiko für die Familie.' },
-              { q: 'Warum ist Primundus Testsieger?', a: 'Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice, getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
-              { q: 'Was passiert wenn die Betreuungskraft krank wird?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke. Das ist einer der zentralen Vorteile der Agenturvermittlung.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-
-          {/* Weitere Artikel */}
-          <div className="mt-12 mb-4">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Alle Artikel zur 24h-Pflege</p>
-            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Weitere Themen im Überblick</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Grundlagen */}
-              <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-pm-ink mb-2">Grundlagen</p>
-                <a href="/was-ist-24-stunden-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Was ist 24h-Pflege?</a>
-                <a href="/wann-brauche-ich-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Wann brauche ich 24h-Pflege?</a>
-                <a href="/vorteile-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Vorteile der 24h-Pflege</a>
-                <a href="/nachteile-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Nachteile ehrlich betrachtet</a>
-              </div>
-
-              {/* Ablauf & Organisation */}
-              <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-pm-ink mb-2">Ablauf & Organisation</p>
-                <a href="/ablauf" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› So läuft's ab</a>
-                <a href="/24h-pflege-organisieren" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› 24h-Pflege organisieren</a>
-                <a href="/pflegekraft-finden" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegekraft finden</a>
-                <a href="/checkliste-pflegekraft-einstellen" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Checkliste: Pflegekraft einstellen</a>
-              </div>
-
-              {/* Vergleiche */}
-              <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-pm-ink mb-2">Vergleiche</p>
-                <a href="/24h-pflege-vs-pflegeheim" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› 24h-Pflege vs. Pflegeheim</a>
-                <a href="/24h-pflege-vs-ambulante-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› vs. ambulante Pflege</a>
-                <a href="/selbst-pflegen-oder-24h-pflege" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Selbst pflegen oder 24h-Pflege?</a>
-                <a href="/tagespflege-vs-24h-betreuung" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› vs. Tagespflege</a>
-              </div>
-
-              {/* Pflegekräfte */}
-              <div className="bg-white border border-pm-line rounded-xl p-4">
-                <p className="text-[14px] font-bold text-pm-ink mb-2">Pflegekräfte</p>
-                <a href="/pflegekraft-aus-rumaenien" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› Pflegekraft aus Rumänien</a>
-                <a href="/pflegekraft-aus-polen" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› aus Polen</a>
-                <a href="/pflegekraft-aus-bulgarien" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› aus Bulgarien</a>
-                <a href="/eu-pflegekraft-rechte-pflichten" className="text-[13px] text-pm-taupe hover:underline block py-0.5">› EU-Pflegekraft: Rechte & Pflichten</a>
-              </div>
-            </div>
-          </div>
-
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: '24-Stunden-Pflege' },
+          ]}
+          augenbraue="6× Testsieger DIE WELT"
+          titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
+          einleitung={<>Eine Betreuungskraft zieht bei Ihrem Angehörigen ein, hilft im Alltag und ist bei Bedarf auch nachts da. Bei Primundus ist sie bei uns angestellt, der Vertrag ist täglich kündbar, und eine Anreise ist in 3 Tagen möglich. Die Betreuung kostet ab 2.150&nbsp;€ im Monat; bei Pflegegrad 3 bleiben davon nach Pflegegeld und Zuschüssen ab ca. 923&nbsp;€ selbst zu tragen.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="6 Min."
+          knopf={{ href: RECHNER_SEITE, text: 'Kosten & Pflegekräfte ansehen' }}
+          blickTitel="Warum Primundus"
+          blick={[
+            '6× Testsieger DIE WELT',
+            'Betreuungskräfte bei uns angestellt, Einsatz mit A1-Bescheinigung',
+            'Preis und passende Pflegekräfte sofort sehen, Vertrag erst nach Ihrer Auswahl',
+            'Täglich kündbar, keine Vermittlungsgebühr',
+            'Anreise in 3 Tagen möglich, Ersatzkraft bei Ausfall',
+            'Ansprechpartnerin täglich von 8 bis 20 Uhr',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-ist" titel="Was ist 24-Stunden-Pflege?">
+            <Text>
+              Bei der 24-Stunden-Pflege zieht eine Betreuungskraft in den Haushalt des Pflegebedürftigen. Sie hilft bei
+              der Körperpflege, führt den Haushalt und leistet Gesellschaft. So kann Ihr Angehöriger in seiner Wohnung
+              bleiben und muss nicht in ein Pflegeheim ziehen.
+            </Text>
+            <Kasten titel="Was „24 Stunden“ bedeutet">
+              <Text>
+                Die Betreuungskraft wohnt mit im Haus und ist bei Bedarf auch nachts da. Sie hat geregelte Arbeitszeiten
+                mit Pausen und Ruhezeiten. Medizinische Behandlungspflege wie Spritzen oder Verbände übernimmt ein
+                ambulanter Pflegedienst.
+              </Text>
+            </Kasten>
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/was-ist-24-stunden-pflege', text: 'Was ist 24-Stunden-Pflege? Alle Fakten' },
+                { href: '/wann-brauche-ich-24h-pflege', text: 'Wann braucht es 24h-Pflege?' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="leistungen" titel="Was leistet Primundus?">
+            <Text>
+              Unsere Betreuungskräfte sind bei uns angestellt, es gibt keinen Vermittler dazwischen. Sie wählen aus den
+              Bewerbungen die Betreuungskraft aus, die zu Ihrem Angehörigen passt, und wir setzen sie im Entsendemodell
+              mit A1-Bescheinigung bei Ihnen ein. Sie haben einen Vertrag und eine Ansprechpartnerin.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Grundpflege', desc: 'Waschen, Duschen, An- und Auskleiden, Hilfe beim Essen, beim Aufstehen und beim Zubettgehen.' },
+                { title: 'Haushalt', desc: 'Kochen, Einkaufen, Wäsche und Ordnung in den Räumen, die Ihr Angehöriger nutzt.' },
+                { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Begleitung zu Arztterminen und ein fester Tagesablauf, der gerade bei Demenz wichtig ist.' },
+                { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank, stellen wir schnellstmöglich eine Ersatzkraft, in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
+                { title: 'Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team sind täglich von 8 bis 20 Uhr erreichbar, auch am Wochenende.' },
+              ]}
+            />
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/leistungen', text: 'Alle Leistungen im Detail' },
+                { href: '/rechtssicher', text: 'Rechtssicherheit & Entsendemodell' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="kosten" titel="Kosten & Kassenzuschüsse 2026">
+            <Text>
+              Die Betreuung einer Person kostet ab 2.150 € im Monat. Wie viel genau, hängt zum Beispiel davon ab, ob die
+              Betreuungskraft nachts gebraucht wird oder einen Führerschein haben soll. Pflegegeld, Entlastungsbudget und
+              Steuerermäßigung senken den Betrag, den Sie selbst tragen:
+            </Text>
+            <Tabelle
+              kopf={['Pflegegrad', 'Betreuung', 'Pflegegeld', 'Selbst zu tragen']}
+              zeilen={[
+                ['Pflegegrad 2', 'ab 2.150 €', '− 347 €', 'ab ca. 1.175 €'],
+                ['Pflegegrad 3', 'ab 2.150 €', '− 599 €', 'ab ca. 923 €'],
+                ['Pflegegrad 4', 'ab 2.150 €', '− 800 €', 'ab ca. 722 €'],
+                ['Pflegegrad 5', 'ab 2.200 €', '− 990 €', 'ab ca. 582 €'],
+              ]}
+              betont={3}
+              fuss="Selbst zu tragen: nach Pflegegeld, 295 € Entlastungsbudget (3.539 € im Jahr) und 333 € Steuerermäßigung im Monat · zzgl. An- und Abreise 125 € je Strecke · Kost und Logis stellen Sie · Stand September 2026, Werte aus unserem Kostenrechner"
+            />
+            <RechnerKasten src="apex-24-stunden-pflege" />
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/kosten', text: 'Alle Kosten im Detail' },
+                { href: '/finanzierung', text: 'Alle Kassenzuschüsse 2026' },
+                { href: '/pflegegeld-und-24h-pflege-kombinieren', text: 'Pflegegeld und 24h-Pflege kombinieren' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="ablauf" titel="Ablauf: Anreise in 3 Tagen möglich">
+            <Schritte
+              schritte={[
+                {
+                  title: 'Sofort Angebot und Pflegekräfte einsehen',
+                  desc: 'Sie machen wenige preisrelevante Angaben und hinterlassen für die Kopie des Angebots Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte — die Kopie kommt zusätzlich per E-Mail.',
+                  tag: 'Unter 2 Minuten',
+                  tagTon: 'gruen',
+                },
+                {
+                  title: 'Profil vervollständigen — Bewerbungen erhalten',
+                  desc: 'Passt das für Sie, ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit.',
+                  tag: 'Bewerbungen am selben Werktag',
+                  tagTon: 'gruen',
+                },
+                {
+                  title: 'Aussuchen — erst dann der Vertrag',
+                  desc: <>Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag — den <a href={MUSTERVERTRAG} className={LINK}>Mustervertrag</a> können Sie jederzeit vorher lesen. Danach reist Ihre Betreuungskraft an.</>,
+                  tag: 'Anreise in 3 Tagen möglich',
+                  tagTon: 'gruen',
+                },
+              ]}
+            />
+            <MehrDazu label="Schritt für Schritt erklärt:" links={[{ href: '/ablauf', text: 'Ablauf der 24h-Pflege bei Primundus' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="vorteile" titel="24-Stunden-Pflege oder Pflegeheim?">
+            <Text>
+              Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit 3.364 € im Monat (vdek-Auswertung,
+              Stand 1. Juli 2026). Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 ab ca. 923 € im Monat, und Ihr
+              Angehöriger bleibt in seiner vertrauten Umgebung.
+            </Text>
+            <Tabelle
+              kopf={['', '24-Stunden-Pflege', 'Pflegeheim']}
+              zeilen={[
+                ['Selbst zu tragen im Monat', 'ab ca. 923 €', 'Ø 3.364 €'],
+                ['Wohnen', 'im eigenen Zuhause', 'Umzug ins Heim'],
+                ['Betreuung', '1:1, bei Bedarf auch nachts', 'Pflegepersonal für mehrere Bewohner'],
+                ['Tagesablauf', 'nach eigenen Gewohnheiten', 'nach den Abläufen im Heim'],
+                ['Kündigung', 'täglich', 'mit Frist zum Monatsende'],
+              ]}
+              betont={1}
+              fuss="24-Stunden-Pflege: eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner, zzgl. An- und Abreise · Pflegeheim: bundesweiter Durchschnitt, vdek-Auswertung, Stand 1. Juli 2026"
+            />
+            <MehrDazu label="Detaillierter Vergleich:" links={[{ href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen zur 24-Stunden-Pflege">
+            <Fragen fragen={FRAGEN} />
+          </Abschnitt>
+
+          <Abschnitt id="themen" titel="Weitere Themen zur 24-Stunden-Pflege">
+            <Gruppen
+              gruppen={THEMEN.map((g) => ({
+                title: g.title,
+                punkte: g.links.map((l) => <a key={l.href} href={l.href} className={LINK}>{l.text}</a>),
+              }))}
+            />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

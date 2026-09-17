@@ -1,24 +1,30 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Gegenueber, Gruppen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Text,
+} from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('leistungen', '25. April 2026')
+// Kernseite in der Seitenvorlage (17.09.2026). Leistungen nach dem Mustervertrag (Anlage 2 Leistungsumfang:
+// Hauswirtschaft, Grundpflege nach § 14 Abs. 4 Nr. 1–3 SGB XI, Behandlungspflege nach SGB V ausgenommen).
+// Nächte „bei Bedarf auch nachts" (Martin 14.09.), keine Stundenzahlen (Martin 12.09.).
+
+const AKTUALISIERT = aktualisiertAm('leistungen', '17. September 2026')
 
 const SECTIONS = [
   { id: 'was-inbegriffen', title: 'Was ist inbegriffen?' },
-  { id: 'betreuung', title: 'Betreuung & Pflege' },
-  { id: 'haushalt', title: 'Haushalt & Alltag' },
+  { id: 'betreuung', title: 'Ein Tag mit Betreuungskraft' },
+  { id: 'nachts', title: 'Nachts und in der Freizeit' },
   { id: 'medizinisch', title: 'Medizinische Unterstützung' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
   title: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht',
-  description: 'Was macht eine 24h-Betreuungskraft? Pflege, Haushalt, Begleitung, medizinische Unterstützung — alle Leistungen der Primundus 24h-Pflege im Überblick.',
+  description: 'Was macht eine 24h-Betreuungskraft? Körperpflege, Haushalt, Begleitung und bei Bedarf Hilfe in der Nacht. Was inbegriffen ist und was ein Pflegedienst übernimmt.',
   alternates: { canonical: 'https://primundus.de/leistungen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -30,6 +36,15 @@ export const metadata: Metadata = {
     type: 'article',
   },
 }
+
+const FRAGEN = [
+  { q: 'Was macht eine 24h-Betreuungskraft?', a: 'Sie hilft bei der Körperpflege, beim Essen und beim Aufstehen, kocht, kauft ein, wäscht und hält die Räume Ihres Angehörigen in Ordnung. Sie leistet Gesellschaft, geht mit spazieren, begleitet zum Arzt und erinnert an Medikamente. Sie wohnt mit im Haushalt und ist bei Bedarf auch nachts da.' },
+  { q: 'Was macht eine 24h-Kraft nicht?', a: 'Medizinische Behandlungspflege wie Spritzen, Verbandswechsel oder Katheterversorgung. Das übernimmt ein ambulanter Pflegedienst: Der Arzt verordnet die Behandlungspflege, die Krankenkasse zahlt sie.' },
+  { q: 'Kocht die Betreuungskraft auch?', a: 'Ja. Sie kauft ein und kocht frisch, nach den Vorlieben Ihres Angehörigen und nach seiner Diät.' },
+  { q: 'Ist die Betreuungskraft auch nachts da?', a: 'Ja, bei Bedarf. Sie wohnt mit im Haus und ist da, wenn nachts etwas ist. Muss sie regelmäßig nachts aufstehen, braucht sie dafür einen Ausgleich. Wie oft nachts Hilfe nötig ist, fließt deshalb in den Preis ein.' },
+  { q: 'Hat die Betreuungskraft Freizeit?', a: 'Ja. Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten. In ihrer freien Zeit kann sie das Haus verlassen.' },
+  { q: 'Versorgt die Betreuungskraft auch Haustiere?', a: 'Ja. Die Versorgung von Haustieren gehört ebenso zu den Leistungen wie die Pflege der Zimmerpflanzen.' },
+]
 
 const schemaMarkup = [
   {
@@ -53,10 +68,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Was macht eine 24h-Betreuungskraft?', acceptedAnswer: { '@type': 'Answer', text: 'Eine 24h-Betreuungskraft übernimmt: Körperpflege (Waschen, Ankleiden, Zahnpflege), Haushalt (Kochen, Einkaufen, Putzen, Wäsche), Begleitung und Gesellschaft, Medikamentenerinnerung, Mobilisierung, Begleitung zu Arzt- und Therapieterminen. Sie lebt dauerhaft im Haushalt und ist rund um die Uhr erreichbar.' } },
-      { '@type': 'Question', name: 'Was macht eine 24h-Kraft nicht?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft ist keine examinierte Krankenpflegerin. Medizinische Behandlungspflege (Injektionen, Verbandswechsel, Katheterversorgung) wird durch einen ambulanten Pflegedienst erbracht. Primundus koordiniert auf Wunsch die Zusammenarbeit.' } },
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
 ]
 
@@ -65,152 +77,163 @@ export default function Leistungen() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <span className="text-pm-ink">Leistungen</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>5 Min Lesezeit · Apr. 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Leistungen der 24h-Pflege — was eine Betreuungskraft macht
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Eine 24h-Betreuungskraft von Primundus ist weit mehr als eine Pflegehilfe — sie ist Begleiterin, Haushälterin, Gesellschafterin und Ansprechpartnerin in einem. Rund um die Uhr, dauerhaft im Haushalt, vertraut mit dem Pflegebedürftigen. Hier ist der vollständige Überblick was inbegriffen ist.
-          </p>
-
-          <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Alle Leistungen auf einen Blick</p>
-            <div className="grid md:grid-cols-2 gap-3">
-              {[
-                '✓ Körperpflege — Waschen, Ankleiden, Zahnpflege',
-                '✓ Kochen — frische, altersgerechte Mahlzeiten',
-                '✓ Einkaufen und Erledigungen',
-                '✓ Haushaltsführung — Putzen, Wäsche, Ordnung',
-                '✓ Gesellschaft und Begleitung — rund um die Uhr',
-                '✓ Medikamentenerinnerung',
-                '✓ Mobilisierung und Spaziergänge',
-                '✓ Begleitung zu Arzt- und Therapieterminen',
-                '✓ Nachtbereitschaft — immer erreichbar',
-                '✓ Demenzbetreuung — Struktur und Sicherheit',
-              ].map((item) => (
-                <div key={item} className="text-[14px] text-pm-body flex gap-2">
-                  <span className="text-pm-green flex-shrink-0 font-bold">✓</span>
-                  {item.replace('✓ ', '')}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <h2 id="was-inbegriffen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was ist inbegriffen — das Gesamtpaket
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Der entscheidende Unterschied zu ambulanter Pflege: Eine 24h-Betreuungskraft übernimmt nicht einzelne Leistungen zu definierten Zeiten — sie ist vollständig da. Das bedeutet: Alles was im Alltag anfällt, wird gemeinsam bewältigt.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { bereich: 'Pflege', items: ['Körperpflege: Waschen, Duschen, Baden, Zahnpflege, Rasieren', 'Ankleiden und Auskleiden — angepasst an Einschränkungen', 'Lagerung und Positionswechsel zur Dekubitusprophylaxe', 'Inkontinenzversorgung', 'Mobilisierung und Gehübungen'] },
-              { bereich: 'Haushalt', items: ['Kochen — frisch, altersgerecht, nach Vorlieben und Diät', 'Einkaufen und Besorgungen', 'Putzen, Wäsche waschen, Bügeln', 'Ordnung und Sauberkeit', 'Tierpflege möglich'] },
-              { bereich: 'Begleitung & Soziales', items: ['Gesellschaft und Gespräche — den ganzen Tag', 'Spaziergänge und Ausflüge', 'Begleitung zu Arzt- und Therapieterminen', 'Freizeitgestaltung nach Interessen', 'Kontakt mit Familie halten'] },
-              { bereich: 'Sicherheit', items: ['Nachtbereitschaft — immer erreichbar', 'Sturzprävention im Alltag', 'Notfallreaktion sofort', 'Medikamentenerinnerung (nicht -verabreichung)', 'Gewichtskontrolle und Vitalzeichen dokumentieren'] },
-            ].map((block) => (
-              <div key={block.bereich} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-3">{block.bereich}</p>
-                <ul className="space-y-1">
-                  {block.items.map(item => (
-                    <li key={item} className="text-[14px] text-pm-body flex gap-2">
-                      <span className="text-pm-green flex-shrink-0">✓</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="betreuung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Betreuung & Pflege — was das im Alltag bedeutet
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Eine gute Betreuungskraft passt sich dem Rhythmus und den Gewohnheiten des Pflegebedürftigen an — nicht umgekehrt. Das Frühstück wann man will, die Lieblingszeitung beim Kaffee, der Spaziergang im eigenen Tempo. Das ist der Kern von 24h-Betreuung zuhause: das eigene Leben so wie es war — mit Unterstützung.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { beispiel: 'Morgens', ablauf: 'Aufstehen gemeinsam. Körperpflege in Ruhe, ohne Hetze. Frühstück nach Wunsch. Zeitung, Kaffee, Gespräch. Die Kraft ist da — aber nie aufdringlich.' },
-              { beispiel: 'Tagsüber', ablauf: 'Haushalt, Einkäufe, Arzttermin begleiten. Beschäftigung nach Interesse: Gartenarbeit, Puzzeln, Musik, Besuche. Mittagessen frisch zubereitet. Mittagsruhe.' },
-              { beispiel: 'Abends', ablauf: 'Abendessen, Fernsehen, Gespräch. Abendpflege. Zu Bett bringen. Die Kraft ist für die Nacht da — bereit einzugreifen wenn etwas passiert.' },
-            ].map((item) => (
-              <div key={item.beispiel} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-pm-taupe-light mb-1">{item.beispiel}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.ablauf}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="haushalt" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Haushalt & Alltag — vollständig übernommen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Die Betreuungskraft führt den Haushalt eigenständig. Frische Mahlzeiten, saubere Wäsche, ordentliche Wohnung — alles läuft, ohne dass Angehörige eingreifen müssen. Das ist einer der wichtigsten Entlastungseffekte für pflegende Familien.
-          </p>
-
-          <h2 id="medizinisch" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Medizinische Unterstützung — was geht, was nicht
-          </h2>
-          <div className="space-y-3 mb-6">
-            {[
-              { was: '✓ Inbegriffen', items: ['Medikamentenerinnerung ("Bitte Ihre Tabletten nehmen")', 'Vitalzeichen beobachten und dokumentieren (Puls, Gewicht)', 'Arzttermine begleiten und unterstützen', 'Kommunikation mit Ärzten auf Wunsch', 'Notfall erkennen und sofort reagieren / Rettungsdienst rufen'], farbe: 'bg-pm-mint border-[rgba(61,122,92,0.15)]', textColor: 'text-pm-green-deep' },
-              { was: '✗ Nicht inbegriffen (Pflegedienst)', items: ['Injektionen (Insulin, Blutgerinnungshemmer)', 'Verbandswechsel bei Wunden', 'Katheterversorgung', 'Ernährung über Magensonde', 'Inhalationstherapie'], farbe: 'bg-pm-coral-tint border-[rgba(231,111,99,0.15)]', textColor: 'text-pm-coral-ink' },
-            ].map((block) => (
-              <div key={block.was} className={`rounded-xl p-5 border ${block.farbe}`}>
-                <p className={`text-[13px] font-bold uppercase tracking-[0.08em] mb-3 ${block.textColor}`}>{block.was}</p>
-                <ul className="space-y-1">
-                  {block.items.map(item => (
-                    <li key={item} className={`text-[14px] ${block.textColor} flex gap-2`}>
-                      <span className="flex-shrink-0">{block.was.startsWith('✓') ? '✓' : '✗'}</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            Für Behandlungspflege koordiniert Primundus auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst — nahtlos und ohne zusätzlichen Aufwand für die Familie.
-          </p>
-
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was macht eine 24h-Betreuungskraft?', a: 'Körperpflege, Haushalt (Kochen, Einkaufen, Putzen), Gesellschaft und Begleitung rund um die Uhr, Medikamentenerinnerung, Mobilisierung, Arzttermine begleiten, Nachtbereitschaft.' },
-              { q: 'Was macht eine 24h-Kraft nicht?', a: 'Medizinische Behandlungspflege (Injektionen, Verbandswechsel, Katheter) — das übernimmt ein ambulanter Pflegedienst. Primundus koordiniert auf Wunsch die Zusammenarbeit.' },
-              { q: 'Kocht die Betreuungskraft auch?', a: 'Ja — frische, altersgerechte Mahlzeiten nach Vorlieben und Diät sind Bestandteil der 24h-Betreuung. Viele Familien schätzen das als einen der größten Entlastungseffekte.' },
-              { q: 'Ist die Betreuungskraft auch nachts verfügbar?', a: 'Ja — Nachtbereitschaft ist inbegriffen. Die Kraft schläft im Haushalt und ist sofort erreichbar wenn nachts etwas passiert.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Leistungen' },
+          ]}
+          augenbraue="Leistungen"
+          titel="Leistungen der 24h-Pflege — was eine Betreuungskraft macht"
+          einleitung="Eine Betreuungskraft von Primundus wohnt mit im Haushalt Ihres Angehörigen. Sie führt den Haushalt, hilft bei der Körperpflege, leistet Gesellschaft und ist bei Bedarf auch nachts da. Behandlungspflege wie Spritzen oder Verbände übernimmt ein ambulanter Pflegedienst."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+          blickTitel="Alle Leistungen auf einen Blick"
+          blick={[
+            'Körperpflege: Waschen, Duschen, Zahnpflege',
+            'Hilfe beim Essen, Aufstehen und Anziehen',
+            'Kochen, Einkaufen und Wäsche',
+            'Ordnung in den Räumen Ihres Angehörigen',
+            'Gesellschaft, Spaziergänge, Arztbesuche',
+            'Bei Bedarf auch nachts da',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="was-inbegriffen" titel="Was ist inbegriffen?">
+            <Text>
+              Ein ambulanter Pflegedienst kommt zu festen Zeiten für einzelne Aufgaben. Eine Betreuungskraft lebt im
+              Haushalt und hilft über den Tag verteilt bei dem, was anfällt. Diese Leistungen stehen in unserem
+              Betreuungsvertrag:
+            </Text>
+            <Gruppen
+              gruppen={[
+                {
+                  title: 'Körperpflege und Bewegung',
+                  punkte: [
+                    'Waschen, Duschen, Baden, Rasieren, Mund- und Zahnpflege, Hautpflege',
+                    'Hilfe bei Inkontinenz',
+                    'Hilfe beim Essen und Trinken',
+                    'Aufstehen, Zubettgehen, An- und Auskleiden, Treppensteigen',
+                    'Lagern und Umlagern, wenn Ihr Angehöriger viel liegt',
+                  ],
+                },
+                {
+                  title: 'Haushalt',
+                  punkte: [
+                    'Kochen nach Vorlieben und Diät',
+                    'Einkaufen und Besorgungen',
+                    'Wäsche waschen und wechseln, Geschirr spülen',
+                    'Ordnung und Sauberkeit in den Räumen, die Ihr Angehöriger nutzt',
+                    'Haustiere und Zimmerpflanzen versorgen',
+                  ],
+                },
+                {
+                  title: 'Begleitung und Alltag',
+                  punkte: [
+                    'Gesellschaft und Gespräche',
+                    'Spaziergänge, Spiele, Begleitung zu Veranstaltungen',
+                    'Begleitung zu Arzt- und Therapieterminen',
+                    'Beschäftigung nach Interessen',
+                    'Kontakt mit der Familie halten',
+                  ],
+                },
+                {
+                  title: 'Sicherheit',
+                  punkte: [
+                    'Bei Bedarf auch nachts da',
+                    'An Medikamente erinnern',
+                    'Stürzen im Alltag vorbeugen',
+                    'Im Notfall den Rettungsdienst rufen',
+                  ],
+                },
+              ]}
+            />
+            <Text>
+              Nicht dazu gehören Fensterputzen und die Reinigung von Garage, Heizraum und Nebengebäuden.
+            </Text>
+          </Abschnitt>
+
+          <Abschnitt id="betreuung" titel="Ein Tag mit Betreuungskraft">
+            <Text>
+              Der Tag richtet sich nach den Gewohnheiten Ihres Angehörigen: Frühstück, wann er möchte, die Zeitung zum
+              Kaffee, der Spaziergang im eigenen Tempo. So kann ein Tag aussehen:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Morgens', desc: 'Gemeinsam aufstehen, Körperpflege in Ruhe, Frühstück nach Wunsch. Danach Zeitung, Kaffee und Gespräch.' },
+                { title: 'Tagsüber', desc: 'Haushalt und Einkäufe, bei Bedarf der Weg zum Arzt. Beschäftigung nach Interesse: Garten, Puzzeln, Musik, Besuch. Frisch gekochtes Mittagessen, danach Mittagsruhe.' },
+                { title: 'Abends', desc: 'Abendessen, Gespräch oder Fernsehen, Abendpflege und zu Bett bringen. Nachts ist sie im Haus und bei Bedarf da.' },
+              ]}
+            />
+            <Text>
+              Den Haushalt führt die Betreuungskraft selbstständig. Einkäufe, Wäsche und Mahlzeiten müssen Angehörige
+              nicht mehr organisieren.
+            </Text>
+          </Abschnitt>
+
+          <Abschnitt id="nachts" titel="Nachts und in der Freizeit">
+            <Text>
+              Die Betreuungskraft wohnt mit im Haus. Braucht Ihr Angehöriger nachts Hilfe, ist sie da. Muss sie
+              regelmäßig nachts aufstehen, braucht sie dafür einen Ausgleich. Wie oft nachts Hilfe nötig ist, fließt
+              deshalb in den Preis ein.
+            </Text>
+            <Text>
+              Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten. In ihrer freien Zeit kann sie das Haus
+              verlassen.
+            </Text>
+            <RechnerKasten src="apex-leistungen" />
+          </Abschnitt>
+
+          <Abschnitt id="medizinisch" titel="Medizinische Unterstützung — was geht, was nicht">
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Übernimmt die Betreuungskraft',
+                  ton: 'gruen',
+                  punkte: [
+                    'An Medikamente erinnern',
+                    'Zu Arzt- und Therapieterminen begleiten',
+                    'Auf Wunsch mit Ärzten sprechen',
+                    'Im Notfall den Rettungsdienst rufen',
+                  ],
+                },
+                {
+                  titel: 'Übernimmt ein Pflegedienst',
+                  ton: 'koralle',
+                  punkte: [
+                    'Spritzen, etwa Insulin oder Blutverdünner',
+                    'Verbandswechsel und Wundversorgung',
+                    'Katheterversorgung',
+                    'Ernährung über eine Magensonde',
+                    'Inhalationstherapie',
+                  ],
+                },
+              ]}
+            />
+            <Text>
+              Behandlungspflege verordnet der Arzt. Die Krankenkasse zahlt sie, und das Pflegegeld bleibt davon unberührt.
+            </Text>
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/pflegedienst-oder-24h-kraft', text: 'Pflegedienst oder 24h-Kraft' },
+                { href: '/pflegegeld-und-24h-pflege-kombinieren', text: 'Pflegegeld und Pflegedienst kombinieren' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen fragen={FRAGEN} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

@@ -1,25 +1,32 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import {
+  Abschnitt, Fragen, Liste, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
+} from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
-import { KurzAntwort } from '@/components/KurzAntwort'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('ablauf', '21. August 2026')
+// Kernseite in der Seitenvorlage (17.09.2026). Ablauf wie im Kostenrechner und auf der Startseite (drei Schritte,
+// Plaketten „Bewerbungen am selben Werktag" und „Anreise in 3 Tagen möglich"). Wechsel und Ersatz nach dem
+// Mustervertrag (§ 1: Ersatz schnellstmöglich, in der Regel innerhalb von 3 Tagen; § 4: Krankheitstage ohne Honorar,
+// Reisekostenpauschale 125 € je Fahrt). Der alte Zeitplan „Tag 1–2 / Tag 2–3" war nicht belegt und ist raus.
+
+const AKTUALISIERT = aktualisiertAm('ablauf', '17. September 2026')
+const RECHNER_SEITE = 'https://kostenrechner.primundus.de/?start=1&src=apex-ablauf'
+const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
 const SECTIONS = [
   { id: 'schritte', title: 'Schritt für Schritt' },
-  { id: 'angebot', title: 'Das Online-Angebot' },
-  { id: 'auswahl', title: 'Kraft auswählen & Anreise' },
-  { id: 'wechsel', title: 'Kraftwechsel & laufende Betreuung' },
+  { id: 'auswahl', title: 'Betreuungskraft auswählen' },
+  { id: 'wechsel', title: 'Wechsel und Ersatz' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
   title: 'Ablauf der 24h-Pflege mit Primundus — von Anfrage bis Start',
-  description: 'So läuft die 24h-Pflege mit Primundus ab: Beratungsgespräch, Kraftauswahl, Vertragsabschluss, Anreise schon in 3 Tagen möglich. Der vollständige Ablauf erklärt.',
+  description: 'So läuft die 24h-Pflege mit Primundus ab: Preis und Pflegekräfte sofort sehen, Bewerbungen erhalten, selbst auswählen, dann der Vertrag. Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/ablauf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -32,11 +39,19 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Wie schnell kann eine 24h-Pflegekraft starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Wann genau, richtet sich nach Ihrem Wunschtermin und danach, wann Sie sich für eine Betreuungskraft entscheiden. Wenn es dringend ist, rufen Sie an: 089 200 000 830.' },
+  { q: 'Was kostet das Beratungsgespräch?', a: 'Nichts. Beratung, Angebot und die Profile der Pflegekräfte sind kostenlos und unverbindlich. Einen Vertrag gibt es erst, wenn Sie eine Betreuungskraft ausgewählt haben.' },
+  { q: 'Muss ich einen Vertrag mit langer Laufzeit abschließen?', a: 'Nein. Der Vertrag hat keine Mindestlaufzeit und ist täglich kündbar, per Brief oder E-Mail. Abgerechnet wird taggenau.' },
+  { q: 'Werde ich Arbeitgeber der Betreuungskraft?', a: 'Nein. Die Betreuungskraft ist bei Primundus angestellt und kommt mit A1-Bescheinigung. Sie schließen mit uns einen Betreuungsvertrag.' },
+  { q: 'Was passiert, wenn die Betreuungskraft krank wird?', a: 'Wir stellen schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Für die Tage, an denen die Betreuungskraft krank ist, berechnen wir nichts. Der Wechsel kostet nichts extra, es fallen nur die An- und Abreisekosten an.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Ablauf der 24h-Pflege mit Primundus — von Anfrage bis Start',
+    headline: 'Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -53,212 +68,119 @@ const schemaMarkup = [
   },
   {
     '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: 'So läuft die 24h-Pflege mit Primundus ab',
-    step: [
-      { '@type': 'HowToStep', name: 'Kostenloses Beratungsgespräch', text: 'Situation schildern, Fragen stellen, Angebot erhalten. Kein Auftrag, kein Risiko.' },
-      { '@type': 'HowToStep', name: 'Kraft vorschlagen & bestätigen', text: 'Primundus schlägt geprüfte, passende Kraft vor. Telefonat vorab möglich.' },
-      { '@type': 'HowToStep', name: 'Vertrag & Anreise', text: 'Transparentes Angebot, Vertragsabschluss. Betreuungskraft reist an, wenn nötig schon in 3 Tagen.' },
-      { '@type': 'HowToStep', name: 'Eingewöhnung & Kraftwechsel', text: 'Erste Woche Eingewöhnung. Alle 6–8 Wochen Kraftwechsel, nahtlos organisiert.' },
-    ],
-    '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Wie schnell kann eine 24h-Pflegekraft starten?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' } },
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
 ]
+
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
 export default function Ablauf() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <span className="text-pm-ink">Ablauf</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            So funktioniert es · Aktualisiert April 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <KurzAntwort frage="Wie schnell kann die Betreuung starten?">
-            Eine Anreise ist schon 3 Tage nach der Anfrage möglich. Vorher sehen Sie Profile mit Foto, Erfahrung und Sprachkenntnissen und wählen selbst aus — ein Vertrag entsteht erst nach Ihrer Entscheidung. Bei dringendem Bedarf, etwa nach einer Krankenhausentlassung, geht es oft schneller.
-          </KurzAntwort>
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            In 2 Minuten sehen Sie Ihr persönliches Angebot und passende Pflegekräfte — sofort, ohne Wartezeit. Primundus übernimmt danach die gesamte Organisation: Kraftauswahl, A1-Bescheinigung, Vertragsabschluss, Anreise. Eine Anreise ist schon in 3 Tagen möglich.
-          </p>
-
-          <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <div className="grid md:grid-cols-4 gap-4">
-              {[
-                { schritt: 'Sofort', titel: 'Angebot einholen', desc: 'Online-Formular, 2 Min — sofort Kosten & Pflegekräfte sehen' },
-                { schritt: 'Tag 1–2', titel: 'Kraft bestätigen', desc: 'Primundus stimmt Kraftprofil mit Familie ab' },
-                { schritt: 'Tag 2–3', titel: 'Vertrag', desc: 'Transparentes Angebot & Vertragsabschluss' },
-                { schritt: 'ab Tag 3', titel: 'Start', desc: 'Je nach Wunschtermin & Reaktion — Betreuungskraft reist an' },
-              ].map((item) => (
-                <div key={item.schritt} className="text-center">
-                  <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">{item.schritt}</p>
-                  <p className="text-[16px] font-bold text-pm-ink mb-1">{item.titel}</p>
-                  <p className="text-[13px] text-pm-mute">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* USP-Banner */}
-          <div className="bg-pm-taupe rounded-2xl p-5 mb-10 text-white">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-white/60 mb-2">Was Primundus anders macht</p>
-            <p className="text-[17px] font-bold leading-snug mb-2">Keine Katze im Sack — Sie sehen alles sofort.</p>
-            <p className="text-[14px] text-white/85 leading-relaxed">
-              Angebot, Kosten und echte Pflegekräfte-Profile erscheinen sofort — Sie entscheiden, wen Sie einladen. Bewerbungen laufen transparent ein. Sie sehen zu jedem Zeitpunkt, was passiert.
-            </p>
-          </div>
-
-          <h2 id="schritte" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Schritt für Schritt — der vollständige Ablauf
-          </h2>
-          <ol className="space-y-4 mb-10">
-            {[
-              {
-                n: '1',
-                badge: 'Sofort',
-                badgeColor: 'bg-pm-mint text-[#2E7D32]',
-                title: 'Angebot & Pflegekräfte sofort einsehen',
-                desc: 'Wenige kurze Fragen zur Pflegesituation beantworten — dauert unter 2 Minuten. Direkt danach: Ihr persönliches Angebot mit allen Kosten, Kassenzuschüssen und Steuervorteilen. Und sofort dazu: echte Pflegekräfte-Profile, die zu Ihrer Situation passen. Kein Warten, keine E-Mail, kein Rückruf nötig.',
-                detail: '',
-                cta: { label: 'Jetzt Angebot & Pflegekräfte ansehen', href: 'https://kostenrechner.primundus.de/?start=1&src=apex-ablauf' },
-              },
-              {
-                n: '2',
-                badge: 'Transparent',
-                badgeColor: 'bg-[#EEF2FF] text-[#3730A3]',
-                title: 'Bewerbungen erhalten — und selbst Einfluss nehmen',
-                desc: 'Passende Pflegekräfte bewerben sich automatisch bei Ihnen — Sie müssen dafür nichts tun. Gleichzeitig können Sie aus den gezeigten Profilen selbst Wunsch-Pflegekräfte gezielt einladen. Beides läuft transparent: Sie sehen in Echtzeit, wer sich bewirbt, wer verfügbar ist und wie der Stand ist — Sie behalten jederzeit den Überblick und entscheiden selbst.',
-                detail: '',
-              },
-              {
-                n: '3',
-                badge: 'Flexibel',
-                badgeColor: 'bg-[#FFF7ED] text-[#92400E]',
-                title: 'Vertrag abschließen — täglich kündbar',
-                desc: 'Sie haben Ihre Wunschkraft gefunden: Vertrag mit Primundus als Agentur — kein eigenes Arbeitsverhältnis für die Familie. A1-Bescheinigung liegt vor. Täglich kündbar, keine Mindestlaufzeit.',
-                detail: '',
-              },
-              {
-                n: '4',
-                badge: 'Je nach Wunschtermin',
-                badgeColor: 'bg-[#F0FDF4] text-[#166534]',
-                title: 'Anreise der Betreuungskraft',
-                desc: 'Die Betreuungskraft reist zum vereinbarten Termin an — wenn nötig schon 3 Tage nach Vertragsabschluss, abhängig von Ihrem Wunschtermin. Primundus koordiniert An- und Abreise vollständig. Erste Tage: Eingewöhnung in Haus, Routine und Pflegesituation.',
-                detail: '',
-              },
-            ].map((step) => (
-              <li key={step.n} className="bg-white rounded-xl border border-pm-line overflow-hidden list-none">
-                <div className="flex gap-4 p-5">
-                  <span className="w-10 h-10 rounded-full bg-pm-taupe text-white font-bold text-[17px] flex items-center justify-center flex-shrink-0 mt-0.5">{step.n}</span>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <p className="text-[16px] font-bold text-pm-ink">{step.title}</p>
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${step.badgeColor}`}>{step.badge}</span>
-                    </div>
-                    <p className="text-[14px] text-pm-body leading-relaxed mb-2">{step.desc}</p>
-                    {step.detail && <p className="text-[12px] text-pm-taupe font-semibold">{step.detail}</p>}
-                    {'cta' in step && step.cta && (
-                      <a
-                        href={step.cta.href}
-                        className="inline-flex items-center gap-1.5 mt-3 px-4 py-2 bg-pm-coral hover:bg-pm-coral-deep text-white text-[13px] font-bold rounded-full transition-colors"
-                      >
-                        {step.cta.label}
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <h2 id="auswahl" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kraft auswählen & Anreise — wie die Auswahl funktioniert
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Primundus wählt die passende Betreuungskraft aus einem geprüften EU-Pool aus. Kriterien:
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              'Pflegeerfahrung — Anzahl und Art früherer Einsätze',
-              'Deutschkenntnisse — aktiv geprüft, nicht nur selbst angegeben',
-              'Spezialerfahrung bei spezifischen Erkrankungen',
-              'Persönlichkeit & Passung — auf Wunsch Telefonat vorab',
-              'Führerschein wenn relevant (ländliche Gebiete, Arzttermine)',
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-pm-body">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="wechsel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kraftwechsel & laufende Betreuung
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Eine 24h-Betreuungskraft bleibt in der Regel 6–8 Wochen, dann folgt ein Wechsel zur nächsten Kraft. Beim Wechsel läuft alles genauso ab wie beim ersten Mal: Sie sehen neue Pflegekräfte-Profile, können gezielt einladen, Bewerbungen kommen transparent rein — Sie entscheiden wieder selbst. Primundus koordiniert den Übergang nahtlos.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { frage: 'Was passiert beim Kraftwechsel?', antwort: 'Beim Wechsel sehen Sie wieder neue Pflegekräfte-Profile, können Wunschkräfte einladen und verfolgen Bewerbungen transparent — genau wie beim ersten Mal. Primundus kündigt den Wechsel rechtzeitig an und koordiniert den Übergang vollständig.' },
-              { frage: 'Was wenn die Kraft krank wird?', antwort: 'Primundus stellt unverzüglich eine Ersatzkraft. Die Familie hat immer einen Ansprechpartner und ist nie ohne Versorgung.' },
-              { frage: 'Kann man eine Kraft behalten die gut passt?', antwort: 'Auf Wunsch gerne — Primundus berücksichtigt Präferenzen bei der Kraftauswahl für Folgebesetzungen.' },
-              { frage: 'Was wenn die Kraft nicht passt?', antwort: 'Täglich kündbar — und Primundus stellt sofort Ersatz. Kein Risiko, keine Mindestlaufzeit.' },
-            ].map((item) => (
-              <div key={item.frage} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.frage}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.antwort}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie schnell kann eine 24h-Pflegekraft starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Wann genau, richtet sich nach Ihrem Wunschtermin. Wenn es dringend ist, direkt anrufen: 089 200 000 830.' },
-              { q: 'Was kostet das Beratungsgespräch?', a: 'Nichts — das Beratungsgespräch ist vollständig kostenlos und unverbindlich. Kein Auftrag, kein Risiko.' },
-              { q: 'Muss ich einen Vertrag mit langer Laufzeit abschließen?', a: 'Nein — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen.' },
-              { q: 'Was passiert wenn ich die Kraft wechseln möchte?', a: 'Täglich kündbar. Primundus stellt sofort Ersatz — nahtlos, ohne Lücke in der Versorgung.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Ablauf' },
+          ]}
+          augenbraue="So funktioniert es"
+          titel="Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start"
+          einleitung="In 2 Minuten sehen Sie Ihr Angebot und passende Pflegekräfte. Danach bewerben sich Betreuungskräfte bei Ihnen, Sie wählen selbst aus, und erst dann kommt der Vertrag. Eine Anreise ist in 3 Tagen möglich."
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="4 Min."
+          knopf={{ href: RECHNER_SEITE, text: 'Angebot & Pflegekräfte ansehen' }}
+          blick={[
+            'Angebot und passende Pflegekräfte sofort, in unter 2 Minuten',
+            'Bewerbungen am selben Werktag',
+            'Sie wählen selbst aus, erst dann kommt der Vertrag',
+            'Anreise in 3 Tagen möglich',
+            'Täglich kündbar, keine Vermittlungsgebühr',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="schritte" titel="Schritt für Schritt — der vollständige Ablauf">
+            <Schritte
+              schritte={[
+                {
+                  title: 'Sofort Angebot und Pflegekräfte einsehen',
+                  desc: 'Sie machen wenige preisrelevante Angaben und hinterlassen für die Kopie des Angebots Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte — die Kopie kommt zusätzlich per E-Mail.',
+                  tag: 'Unter 2 Minuten',
+                  tagTon: 'gruen',
+                },
+                {
+                  title: 'Profil vervollständigen — Bewerbungen erhalten',
+                  desc: 'Passt das für Sie, ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit. Zusätzlich können Sie Pflegekräfte aus den gezeigten Profilen gezielt einladen. Wer sich beworben hat, sehen Sie jederzeit im Kundenportal.',
+                  tag: 'Bewerbungen am selben Werktag',
+                  tagTon: 'gruen',
+                },
+                {
+                  title: 'Aussuchen — erst dann der Vertrag',
+                  desc: <>Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag — den <a href={MUSTERVERTRAG} className={LINK}>Mustervertrag</a> können Sie jederzeit vorher lesen. Der Vertrag hat keine Mindestlaufzeit und ist täglich kündbar.</>,
+                  tag: 'Keine Vermittlungsgebühr',
+                  tagTon: 'gruen',
+                },
+                {
+                  title: 'Anreise der Betreuungskraft',
+                  desc: 'Die Betreuungskraft reist zum vereinbarten Termin an. Wir organisieren die Fahrt; am Ankunftstag holen Sie die Betreuungskraft am nächstgelegenen Ankunftsort ab. An- und Abreise kosten 125 € je Strecke.',
+                  tag: 'Anreise in 3 Tagen möglich',
+                  tagTon: 'gruen',
+                },
+                {
+                  title: 'Die ersten Tage',
+                  desc: 'Die Betreuungskraft lernt Ihren Angehörigen, den Haushalt und die Abläufe kennen. Bei Fragen erreichen Sie Ihre Ansprechpartnerin täglich von 8 bis 20 Uhr.',
+                },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="auswahl" titel="Betreuungskraft auswählen — worauf Sie achten können">
+            <Text>
+              Sie entscheiden, wer zu Ihrem Angehörigen kommt. In den Profilen sehen Sie Foto, Erfahrung und
+              Verfügbarkeit der Betreuungskräfte. Diese Wünsche geben Sie schon im Kostenrechner an, weil sie den Preis
+              beeinflussen:
+            </Text>
+            <Liste
+              punkte={[
+                'Deutschkenntnisse der Betreuungskraft',
+                'Führerschein, zum Beispiel für Arzttermine auf dem Land',
+                'Betreuerin oder Betreuer',
+                'Hilfe in der Nacht: gelegentlich, täglich oder mehrmals',
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="wechsel" titel="Wechsel und Ersatz">
+            <Text>
+              Betreuungskräfte wechseln sich ab. Wie lange eine Betreuungskraft bleibt, steht vorab als geplanter
+              Einsatzzeitraum fest. Für den Wechsel sehen Sie wieder Profile und Bewerbungen und wählen selbst aus, wie
+              beim ersten Mal.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Die Betreuungskraft wird krank', desc: 'Wir stellen schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Für die Tage, an denen die Betreuungskraft krank ist, berechnen wir nichts.' },
+                { title: 'Die Betreuungskraft passt nicht', desc: 'Sagen Sie uns, was nicht passt. Wir organisieren einen Wechsel, und Sie wählen wieder aus den Bewerbungen aus.' },
+                { title: 'Die Betreuungskraft passt sehr gut', desc: 'Sagen Sie es uns. Wir berücksichtigen das, wenn wir die nächsten Einsätze planen.' },
+                { title: 'Kosten beim Wechsel', desc: 'Für jeden Wechsel fallen An- und Abreise mit 125 € je Strecke an.' },
+              ]}
+            />
+            <MehrDazu label="Alle Kosten im Überblick:" links={[{ href: '/kosten', text: 'Was kostet 24-Stunden-Pflege? Kosten & Zuschüsse 2026' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen">
+            <Fragen fragen={FRAGEN} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }
