@@ -31,12 +31,14 @@ export function SiteHeader() {
               alt="Primundus"
               width={160}
               height={40}
-              className="h-8 md:h-11 w-auto"
+              className="h-6 min-[360px]:h-8 md:h-11 w-auto"
               priority
             />
           </Link>
 
-          <div className="flex items-center gap-3">
+          {/* Unter 375 px passten Logo und drei Knöpfe nicht in die Zeile (320 px: 25 px Querscrollen, 17.09.2026):
+              dort engerer Abstand, unter 360 px das Logo 24 statt 32 px hoch. Ab 375 px unverändert. */}
+          <div className="flex items-center gap-2 min-[375px]:gap-3">
             {/* Desktop: phone button */}
             <a
               href="tel:+4989200000830"
