@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PflegevertragClient from './PflegevertragClient'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
   title: 'Pflegevertrag-Generator 2026 — kostenlos | Primundus',
@@ -182,6 +183,8 @@ export default function Page() {
 
         </div>
       </div>
+      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
+      <BewertungsAuszug />
     </>
   )
 }

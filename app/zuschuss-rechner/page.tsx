@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ZuschussRechnerClient } from './ZuschussRechnerClient'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
   title: 'Pflegezuschüsse 2026 — alle Leistungen im Überblick',
@@ -208,6 +209,8 @@ export default function ZuschussRechnerPage() {
 
         </div>
       </div>
+      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
+      <BewertungsAuszug />
     </>
   )
 }

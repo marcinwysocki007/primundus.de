@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
   title: 'Kontakt — persönliche Beratung zur 24h-Pflege | Primundus',
@@ -130,6 +131,8 @@ export default function Page() {
         </div>
 
       </div>
+      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
+      <BewertungsAuszug />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { PflegeheimVergleichClient } from './PflegeheimVergleichClient'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
   title: 'Pflegeheim vs. 24h-Pflege Kostenvergleich 2026 | Primundus',
@@ -198,6 +199,8 @@ export default function Page() {
 
         </div>
       </div>
+      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
+      <BewertungsAuszug />
     </>
   )
 }

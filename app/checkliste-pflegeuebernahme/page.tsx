@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ChecklisteClient } from './ChecklisteClient'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
   title: 'Checkliste Pflegeübernahme — 30 Schritte in 5 Phasen',
@@ -190,6 +191,8 @@ export default function Page() {
 
         </div>
       </div>
+      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
+      <BewertungsAuszug />
     </>
   )
 }

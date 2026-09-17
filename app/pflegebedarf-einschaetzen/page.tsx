@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { PflegebedarfClient } from './PflegebedarfClient'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
   title: 'Pflegebedarf einschätzen — kostenloser Self-Check',
@@ -185,6 +186,8 @@ export default function Page() {
 
         </div>
       </div>
+      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
+      <BewertungsAuszug />
     </>
   )
 }

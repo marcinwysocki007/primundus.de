@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
+import { BewertungsAuszug, BewertungsZeile } from '@/components/bewertungen/BewertungsAuszug'
 import { Phone } from 'lucide-react'
 
 // Kontaktbereich auf allen Ratgeber- und Vergleichsseiten (345 Seiten).
@@ -144,24 +144,35 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
 // Siegel sah verloren aus; Wortlaut „wie im Rechner … überall so machen auf primundus.de".
 // Die Auszeichnungsseite hängt am ganzen Block. Kurze Zeilen, passen auch bei 320 px.
 const AUSZEICHNUNG = ['6× Testsieger', 'DIE WELT', 'Preis & Qualität']
-function Siegel() {
+function Siegel({ klein = false }: { klein?: boolean }) {
   const [oben, mitte, unten] = AUSZEICHNUNG
   return (
-    <a href="/testsieger-24-stunden-pflege" className="group inline-flex items-center gap-4" aria-label={`${AUSZEICHNUNG.join(', ')} — mehr zur Auszeichnung`}>
+    <a href="/testsieger-24-stunden-pflege" className={`group inline-flex items-center ${klein ? 'gap-3' : 'gap-4'}`} aria-label={`${AUSZEICHNUNG.join(', ')} — mehr zur Auszeichnung`}>
       <Image
         src="/images/siegel-welt-2021-160.webp"
         alt="Siegel DIE WELT Service-Champions 2021"
         width={48}
         height={72}
-        className="h-[72px] w-auto rounded-[5px] shadow-[0_2px_8px_rgba(0,0,0,0.2)] flex-shrink-0"
+        className={`${klein ? 'h-[56px]' : 'h-[72px]'} w-auto rounded-[5px] shadow-[0_2px_8px_rgba(0,0,0,0.2)] flex-shrink-0`}
       />
       <span aria-hidden className="w-px self-stretch my-1 bg-pm-line flex-shrink-0" />
       <span className="flex flex-col min-w-0">
-        <span className="text-[19px] sm:text-[21px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink group-hover:text-pm-taupe-ink transition-colors whitespace-nowrap">{oben}</span>
-        <span className="mt-0.5 text-[16px] sm:text-[17px] font-bold leading-[1.3] tracking-[0.02em] text-pm-taupe whitespace-nowrap">{mitte}</span>
-        <span className="text-[15px] leading-[1.35] text-pm-body/70 whitespace-nowrap">{unten}</span>
+        <span className={`${klein ? 'text-[16px]' : 'text-[19px] sm:text-[21px]'} font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink group-hover:text-pm-taupe-ink transition-colors whitespace-nowrap`}>{oben}</span>
+        <span className={`mt-0.5 ${klein ? 'text-[14px]' : 'text-[16px] sm:text-[17px]'} font-bold leading-[1.3] tracking-[0.02em] text-pm-taupe whitespace-nowrap`}>{mitte}</span>
+        <span className={`${klein ? 'text-[13px]' : 'text-[15px]'} leading-[1.35] text-pm-body/70 whitespace-nowrap`}>{unten}</span>
       </span>
     </a>
+  )
+}
+
+// Siegel und Bewertungen immer bei Marta, wie im Signatur-Block der Kundenmails (Martin 17.09.2026:
+// „das Siegel immer bei ihr wie in den Mails", Bewertungen „unter dem Kontakt von Marta").
+function MartaVertrauen() {
+  return (
+    <div className="mt-5 pt-5 border-t border-pm-line flex flex-col gap-3.5">
+      <Siegel klein />
+      <BewertungsZeile />
+    </div>
   )
 }
 
@@ -173,8 +184,7 @@ export function KontaktBand({ ohneBewertungen = false }: { ohneBewertungen?: boo
     <aside className="bg-white border-t border-pm-line" aria-labelledby="kontaktbereich-titel">
       <div className="max-w-[1200px] mx-auto px-5 py-16 md:py-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16 lg:items-center">
         <div className="min-w-0">
-          <Siegel />
-          <p id="kontaktbereich-titel" className="mt-7 text-[clamp(28px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.034em] text-pm-ink [text-wrap:balance]">
+          <p id="kontaktbereich-titel" className="text-[clamp(28px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.034em] text-pm-ink [text-wrap:balance]">
             {TITEL}
           </p>
           <p className="mt-5 text-[18px] leading-[1.65] text-pm-body max-w-[54ch]">{TEXT}</p>
@@ -185,6 +195,7 @@ export function KontaktBand({ ohneBewertungen = false }: { ohneBewertungen?: boo
         </div>
         <div className="min-w-0 rounded-[20px] bg-pm-paper p-4 sm:p-5 md:p-6 max-w-[420px]">
           <Ansprechpartnerin karte />
+          <MartaVertrauen />
         </div>
       </div>
     </aside>
@@ -195,8 +206,7 @@ export function KontaktBand({ ohneBewertungen = false }: { ohneBewertungen?: boo
 export function ArticleCTA() {
   return (
     <aside className="my-12 rounded-3xl bg-pm-shell px-5 py-8 sm:px-8 md:px-10 md:py-10" aria-labelledby="kontaktbereich-titel">
-      <Siegel />
-      <p id="kontaktbereich-titel" className="mt-6 text-[26px] md:text-[30px] leading-[1.2] font-bold text-pm-ink [text-wrap:balance]">
+      <p id="kontaktbereich-titel" className="text-[26px] md:text-[30px] leading-[1.2] font-bold text-pm-ink [text-wrap:balance]">
         {TITEL}
       </p>
       <p className="mt-3 text-[18px] leading-[1.65] text-pm-body max-w-[60ch]">{TEXT}</p>
@@ -205,11 +215,12 @@ export function ArticleCTA() {
       </a>
       <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
 
-      <BewertungsAuszug variante="kasten" />
-
       <div className="mt-8 pt-7 border-t border-pm-line">
         <Ansprechpartnerin />
+        <MartaVertrauen />
       </div>
+
+      <BewertungsAuszug variante="kasten" />
     </aside>
   )
 }

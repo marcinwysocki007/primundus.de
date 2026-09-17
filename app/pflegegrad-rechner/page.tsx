@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PflegegradRechnerClient from './PflegegradRechnerClient'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
   title: 'Pflegegrad berechnen — kostenloser Pflegegrad-Rechner',
@@ -282,6 +283,8 @@ export default function Page() {
 
         </div>
       </div>
+      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
+      <BewertungsAuszug />
     </>
   )
 }

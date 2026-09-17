@@ -13,7 +13,7 @@ import { Sterne } from './Sterne'
 const AUSZUG = ['k-20260814-andrea', 'k-20260624-ralf', 'k-20260208-andrea']
 const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
 
-async function laden() {
+export async function ladeBewertungsStand() {
   const [backend, google] = await Promise.all([ladeDirekteBewertungen(60 * 60), ladeGoogleDaten()])
   const alle = alleBewertungen(google.bewertungen, backend)
   const auszug = AUSZUG.map((id) => alle.find((b) => b.id === id)).filter((b): b is Bewertung => Boolean(b))
@@ -41,7 +41,7 @@ function Karte({ b, klein = false }: { b: Bewertung; klein?: boolean }) {
   )
 }
 
-function Kopfzeile({ d, klein = false }: { d: Awaited<ReturnType<typeof laden>>; klein?: boolean }) {
+function Kopfzeile({ d, klein = false }: { d: Awaited<ReturnType<typeof ladeBewertungsStand>>; klein?: boolean }) {
   return (
     <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
       <Sterne wert={d.wert} groesse={klein ? 18 : 22} />
@@ -56,20 +56,15 @@ const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underli
 
 /** band: eigene Fläche vor dem Kontaktbereich · inline: nur Kopfzeile + Karten (Startseite) · kasten: im Kontaktkasten */
 export async function BewertungsAuszug({ variante = 'band' }: { variante?: 'band' | 'inline' | 'kasten' }) {
-  const d = await laden()
+  const d = await ladeBewertungsStand()
   if (!d.auszug.length) return null
 
   if (variante === 'kasten') {
+    // Schnitt und Anzahl stehen im Kasten schon unter Marta (BewertungsZeile), hier nur eine Stimme
     const [erste] = d.auszug
     return (
-      <div className="mt-8 pt-7 border-t border-pm-line">
-        <p className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-          <Kopfzeile d={d} klein />
-          <a href="/erfahrungen" className={`text-[15px] ${LINK}`}>Erfahrungen lesen →</a>
-        </p>
-        <div className="mt-4">
-          <Karte b={erste} klein />
-        </div>
+      <div className="mt-6">
+        <Karte b={erste} klein />
       </div>
     )
   }
@@ -111,5 +106,22 @@ export async function BewertungsAuszug({ variante = 'band' }: { variante?: 'band
         <div className="mt-8">{karten}</div>
       </div>
     </aside>
+  )
+}
+
+/** Eine Zeile unter Martas Kontakt (Martin 17.09.2026): Sterne, Schnitt, Anzahl, Link auf /erfahrungen */
+export async function BewertungsZeile() {
+  const d = await ladeBewertungsStand()
+  if (!d.anzahl) return null
+  return (
+    <a href="/erfahrungen" aria-label={`${d.schnitt} von 5 Sternen aus ${d.anzahl} Bewertungen lesen`} className="group flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[14.5px] leading-[1.4] text-pm-body">
+      <Sterne wert={d.wert} groesse={16} />
+      <span className="whitespace-nowrap">
+        <strong className="text-pm-ink">{d.schnitt}</strong> ·{' '}
+        <span className="underline decoration-pm-taupe/40 underline-offset-4 group-hover:decoration-pm-ink">
+          {anzahlText(d.anzahl, 'Bewertung', 'Bewertungen')} →
+        </span>
+      </span>
+    </a>
   )
 }
