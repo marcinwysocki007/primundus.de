@@ -18,7 +18,10 @@ import { ORG_ID, WEBSITE_ID } from '@/lib/schema'
 // (München, Hamburg) und Trustpilot im Wortlaut mit Quelle, darunter das Formular für
 // eigene Bewertungen. Pflichtangabe nach § 5b Abs. 3 UWG: ob und wie wir prüfen, dass
 // Bewertungen von Kunden stammen (Abschnitt „So prüfen wir Bewertungen").
-// Kein Review-/AggregateRating-Markup, siehe lib/bewertungen.ts.
+// Sterne-Markup (Martin 17.09.2026, trotz Hinweis auf Googles Richtlinie zu Eigenbewertungen):
+// Product „24-Stunden-Pflege von Primundus" mit aggregateRating NUR aus unseren eigenen Bewertungen
+// (direkt erhalten, Formular, Admin), ohne Google/Trustpilot, und nur auf dieser Seite, wo alle
+// sichtbar sind. scripts/check-jsonld.mjs erlaubt es ausschließlich hier.
 
 const SEITE_URL = 'https://primundus.de/erfahrungen'
 const AKTUALISIERT = aktualisiertAm('erfahrungen', '17. September 2026')
@@ -122,6 +125,35 @@ function schemaMarkup(d: Daten) {
         { '@type': 'ListItem', position: 3, name: 'Erfahrungen und Bewertungen', item: SEITE_URL },
       ],
     },
+    ...(d.direkt.length
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            '@id': `${SEITE_URL}#24-stunden-pflege`,
+            name: '24-Stunden-Pflege von Primundus',
+            description: 'Betreuung zu Hause durch Betreuungskräfte, die bei der Unternehmensgruppe angestellt sind. Täglich kündbar.',
+            brand: { '@type': 'Brand', name: 'Primundus' },
+            image: 'https://primundus.de/images/og-default.jpg',
+            url: SEITE_URL,
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: Math.round(schnitt(d.direkt) * 10) / 10,
+              bestRating: 5,
+              worstRating: 1,
+              ratingCount: d.direkt.length,
+              reviewCount: d.direkt.filter((b) => b.text).length,
+            },
+            review: d.direkt.slice(0, 10).map((b) => ({
+              '@type': 'Review',
+              author: { '@type': 'Person', name: b.name },
+              datePublished: b.sortierDatum,
+              ...(b.text ? { reviewBody: b.text } : {}),
+              reviewRating: { '@type': 'Rating', ratingValue: b.sterne, bestRating: 5, worstRating: 1 },
+            })),
+          },
+        ]
+      : []),
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',

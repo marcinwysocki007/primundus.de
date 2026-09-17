@@ -1,8 +1,8 @@
 // lib/bewertungen.ts — Bewertungen für /erfahrungen und den Kundenstimmen-Block der Startseite.
 //
 // Jede Bewertung steht im Wortlaut; Google-Rezensionen mit Profil-Link. Durchschnitt und
-// Verteilung werden aus den Einträgen gerechnet, nie von Hand gesetzt. Kein Review-/AggregateRating-JSON-LD
-// (scripts/check-jsonld.mjs lehnt es ab, Google-Richtlinie zu Eigenbewertungen).
+// Verteilung werden aus den Einträgen gerechnet, nie von Hand gesetzt. Sterne-Markup nur auf
+// /erfahrungen und nur aus eigenen Bewertungen (app/erfahrungen/page.tsx, scripts/check-jsonld.mjs).
 //
 // Übernommen am 17.09.2026 aus Google Maps (Profile München und Hamburg) und Trustpilot.
 // Nachnamen auf den Anfangsbuchstaben gekürzt. Neue Rezensionen: Eintrag ergänzen,

@@ -26,6 +26,7 @@ const errors = []
 const warnings = []
 let blockCount = 0
 const typeCount = {}
+const BEWERTUNGS_SEITE = '/erfahrungen'
 
 function nodesOf(parsed) {
   const arr = Array.isArray(parsed) ? parsed : [parsed]
@@ -78,10 +79,28 @@ function checkNode(node, page) {
         break
       case 'AggregateRating':
       case 'Review':
-        errors.push(`${page}: ${type} gefunden — nur mit echten, belegten Bewertungen zulässig (Richtlinie)`)
+        errors.push(`${page}: ${type} als eigener Block — Bewertungen nur als aggregateRating/review eines Product auf ${BEWERTUNGS_SEITE}`)
         break
+      case 'Product': {
+        if (!node.name) errors.push(`${page}: Product ohne name`)
+        const r = node.aggregateRating
+        if (r) {
+          const wert = Number(r.ratingValue)
+          if (!(wert >= 1 && wert <= 5)) errors.push(`${page}: aggregateRating.ratingValue ${r.ratingValue} nicht zwischen 1 und 5`)
+          if (!(Number(r.ratingCount || r.reviewCount) >= 1)) errors.push(`${page}: aggregateRating ohne ratingCount/reviewCount`)
+        }
+        for (const [i, rv] of (Array.isArray(node.review) ? node.review : node.review ? [node.review] : []).entries()) {
+          if (!rv?.author?.name) errors.push(`${page}: review ${i + 1} ohne author.name`)
+          if (!rv?.reviewRating?.ratingValue) errors.push(`${page}: review ${i + 1} ohne reviewRating.ratingValue`)
+        }
+        break
+      }
     }
   }
+  // Martin 17.09.2026: Sterne-Markup gewollt, aber NUR auf der Seite, auf der die Bewertungen
+  // sichtbar stehen (Google-Richtlinie: Markup nur für sichtbare Bewertungen). Überall sonst Fehler.
+  if ((node.aggregateRating || node.review) && page !== BEWERTUNGS_SEITE)
+    errors.push(`${page}: aggregateRating/review außerhalb von ${BEWERTUNGS_SEITE} — dort sind keine Bewertungen sichtbar`)
 }
 
 for (const f of htmlFiles) {
