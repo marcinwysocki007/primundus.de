@@ -25,7 +25,7 @@ const ratgeberLinks = [
 ]
 
 const serviceLinks = [
-  { label: 'Kostenrechner', href: 'https://kostenrechner.primundus.de', external: true },
+  { label: 'Kostenrechner', href: 'https://kostenrechner.primundus.de/?start=1&src=apex-footer', external: true },
   { label: 'Pflegegrad-Rechner', href: '/pflegegrad-rechner' },
   { label: 'Pflegevertrag-Generator', href: '/pflegevertrag-generator' },
   { label: 'Vollmacht-Generator', href: '/vollmacht-generator' },

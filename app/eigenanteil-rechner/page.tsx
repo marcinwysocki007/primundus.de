@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function EigenanteilRechner() {
-  redirect('https://kostenrechner.primundus.de')
+  redirect('https://kostenrechner.primundus.de/?start=1&src=apex-eigenanteil-rechner')
 }

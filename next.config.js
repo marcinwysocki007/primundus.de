@@ -45,14 +45,26 @@ const nextConfig = {
         destination: 'https://kostenrechner.primundus.de/',
         permanent: false,
       },
+      // 17.09.2026 (Martin): Wer Kosten berechnen will, landet direkt im Formular des Rechners,
+      // mit Quelle. /eigenanteil-rechner leitete bisher nur im Browser um (Server antwortete 200).
       {
         source: '/kostenrechner',
-        destination: 'https://kostenrechner.primundus.de',
+        destination: 'https://kostenrechner.primundus.de/?start=1&src=apex-kostenrechner',
         permanent: false,
       },
       {
         source: '/kostenrechner/',
-        destination: 'https://kostenrechner.primundus.de',
+        destination: 'https://kostenrechner.primundus.de/?start=1&src=apex-kostenrechner',
+        permanent: false,
+      },
+      {
+        source: '/eigenanteil-rechner',
+        destination: 'https://kostenrechner.primundus.de/?start=1&src=apex-eigenanteil-rechner',
+        permanent: false,
+      },
+      {
+        source: '/eigenanteil-rechner/',
+        destination: 'https://kostenrechner.primundus.de/?start=1&src=apex-eigenanteil-rechner',
         permanent: false,
       },
     ]

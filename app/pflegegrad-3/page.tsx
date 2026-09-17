@@ -167,7 +167,7 @@ export default function Pflegegrad3() {
             />
             <MehrDazu
               label="Individuelle Berechnung:"
-              links={[{ href: "https://kostenrechner.primundus.de", text: "Kosten & passende Pflegekräfte in 2 Minuten" }]}
+              links={[{ href: "https://kostenrechner.primundus.de/?start=1&src=apex-pflegegrad-3", text: "Kosten & passende Pflegekräfte in 2 Minuten" }]}
             />
             <MehrDazu
               label="Alle Kostenfaktoren im Detail:"

@@ -263,7 +263,7 @@ export default function Page() {
                 // verlinkte Pflegegrad-Selbsttests würden einander Konkurrenz machen.
                 { href: '/pflegebedarf-einschaetzen', label: 'Pflegebedarf genauer einschätzen', desc: 'Ausführlicher Self-Check über alle sechs Bereiche' },
                 { href: '/zuschuss-rechner', label: 'Zuschüsse berechnen', desc: 'Alle Leistungen nach Pflegegrad im Überblick' },
-                { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
+                { href: 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegegrad-rechner', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
                 { href: '/pflegegrad-beantragen', label: 'Pflegegrad beantragen', desc: 'Schritt-für-Schritt Anleitung' },
                 { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
               ].map((item) => (

@@ -18,7 +18,7 @@ const sections = [
       { label: 'Leistungen', href: '/leistungen' },
       { label: 'Ablauf & Schritte', href: '/ablauf' },
       { label: 'Qualität & Standards', href: '/qualitaet' },
-      { label: 'Kostenrechner', href: 'https://kostenrechner.primundus.de' },
+      { label: 'Kostenrechner', href: 'https://kostenrechner.primundus.de/?start=1&src=apex-sitemap' },
     ],
   },
   {
@@ -32,7 +32,7 @@ const sections = [
   {
     title: 'Tools & Rechner',
     links: [
-      { label: 'Pflegekosten-Rechner', href: 'https://kostenrechner.primundus.de' },
+      { label: 'Pflegekosten-Rechner', href: 'https://kostenrechner.primundus.de/?start=1&src=apex-sitemap' },
       { label: 'Pflegegrad-Rechner', href: '/pflegegrad-rechner' },
       { label: 'Eigenanteil-Rechner', href: '/eigenanteil-rechner' },
       { label: 'Zuschuss-Rechner', href: '/zuschuss-rechner' },

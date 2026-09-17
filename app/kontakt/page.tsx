@@ -96,7 +96,7 @@ export default function Page() {
               </div>
               <p className="text-[14px] text-pm-body mb-3">Kosten sofort berechnen & Pflegekräfte ansehen</p>
               <a
-                href="https://kostenrechner.primundus.de"
+                href="https://kostenrechner.primundus.de/?start=1&src=apex-kontakt"
                 className="text-[15px] font-semibold text-pm-taupe hover:text-pm-taupe-ink transition-colors"
               >
                 Zum Kostenrechner →

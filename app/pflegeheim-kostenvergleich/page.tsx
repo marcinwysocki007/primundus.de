@@ -181,7 +181,7 @@ export default function Page() {
                 { href: '/24h-pflege-vs-pflegeheim', label: '24h-Pflege vs. Pflegeheim', desc: 'Detaillierter Vergleich mit allen Vor- und Nachteilen' },
                 { href: '/24h-pflege-vs-pflegeheim-kosten', label: 'Kosten im Detail', desc: 'Tiefer Einblick in Kostenstrukturen' },
                 { href: '/pflegeheim-kosten-deutschland', label: 'Pflegeheim-Kosten nach Region', desc: 'Eigenanteile in allen Bundesländern' },
-                { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil individuell ermitteln', external: true },
+                { href: 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegeheim-kostenvergleich', label: '24h-Kosten berechnen', desc: 'Eigenanteil individuell ermitteln', external: true },
               ].map((item) => (
                 <a
                   key={item.href}

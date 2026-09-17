@@ -167,7 +167,7 @@ export default function Page() {
               {[
                 { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Detaillierte Pflegegrad-Einschätzung' },
                 { href: '/zuschuss-rechner', label: 'Zuschüsse berechnen', desc: 'Alle Leistungen nach Pflegegrad' },
-                { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil sofort ermitteln', external: true },
+                { href: 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegebedarf-einschaetzen', label: '24h-Kosten berechnen', desc: 'Eigenanteil sofort ermitteln', external: true },
                 { href: '/pflegegrad-beantragen', label: 'Pflegegrad beantragen', desc: 'Schritt-für-Schritt Anleitung' },
               ].map((item) => (
                 <a

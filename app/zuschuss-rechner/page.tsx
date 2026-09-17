@@ -189,7 +189,7 @@ export default function ZuschussRechnerPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf in 3 Minuten einschätzen' },
-                { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil individuell berechnen', external: true },
+                { href: 'https://kostenrechner.primundus.de/?start=1&src=apex-zuschuss-rechner', label: '24h-Kosten berechnen', desc: 'Eigenanteil individuell berechnen', external: true },
                 { href: '/pflegeheim-kostenvergleich', label: 'Pflegeheim-Vergleich', desc: 'Pflegeheim vs. 24h-Pflege im Vergleich' },
                 { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
               ].map((item) => (

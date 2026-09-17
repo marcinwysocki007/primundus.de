@@ -233,7 +233,7 @@ export default function Page() {
 
           {/* Featured Hero Tool */}
           <a
-            href="https://kostenrechner.primundus.de"
+            href="https://kostenrechner.primundus.de/?start=1&src=apex-tools"
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-[#2E2319] rounded-2xl p-6 md:p-8 mb-5 group no-underline"

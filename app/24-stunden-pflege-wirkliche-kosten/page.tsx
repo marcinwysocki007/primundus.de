@@ -163,7 +163,7 @@ export default function WirklicheKostenPage() {
             <Text>
               Der Preis richtet sich danach, was Ihre Situation braucht, zum Beispiel Hilfe in der Nacht, bessere
               Deutschkenntnisse oder einen Führerschein. Ihren Preis berechnet der{' '}
-              <a href="https://kostenrechner.primundus.de/" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Kostenrechner in 2 Minuten</a> mit denselben Werten. Entlastungsbudget und Steuerermäßigung hängen von Ihrer
+              <a href="https://kostenrechner.primundus.de/?start=1&src=apex-wirkliche-kosten" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Kostenrechner in 2 Minuten</a> mit denselben Werten. Entlastungsbudget und Steuerermäßigung hängen von Ihrer
               Situation ab; jede Zeile können Sie bei Ihrer Pflegekasse und Ihrem Steuerberater nachprüfen.
             </Text>
             <Kasten titel="Diese Kosten können dazukommen">

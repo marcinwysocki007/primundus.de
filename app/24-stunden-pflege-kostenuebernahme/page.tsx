@@ -165,7 +165,7 @@ export default function KostenuebernahmePage() {
                 steht leer.
               </Text>
               <a
-                href="https://kostenrechner.primundus.de/"
+                href="https://kostenrechner.primundus.de/?start=1&src=apex-kostenuebernahme"
                 className="self-start inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-3 px-6 rounded-full transition-colors"
               >
                 Ihre Zuschüsse in 2 Minuten berechnen

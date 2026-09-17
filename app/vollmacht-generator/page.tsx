@@ -186,7 +186,7 @@ export default function Page() {
               {[
                 { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf selbst einschätzen — in 3 Minuten' },
                 { href: '/pflegevertrag-generator', label: 'Pflegevertrag-Generator', desc: 'Rechtssicheren Pflegevertrag kostenlos erstellen' },
-                { href: 'https://kostenrechner.primundus.de', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
+                { href: 'https://kostenrechner.primundus.de/?start=1&src=apex-vollmacht-generator', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
                 { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
               ].map((item) => (
                 <a

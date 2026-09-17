@@ -142,7 +142,7 @@ export default function Ablauf() {
                 title: 'Angebot & Pflegekräfte sofort einsehen',
                 desc: 'Wenige kurze Fragen zur Pflegesituation beantworten — dauert unter 2 Minuten. Direkt danach: Ihr persönliches Angebot mit allen Kosten, Kassenzuschüssen und Steuervorteilen. Und sofort dazu: echte Pflegekräfte-Profile, die zu Ihrer Situation passen. Kein Warten, keine E-Mail, kein Rückruf nötig.',
                 detail: '',
-                cta: { label: 'Jetzt Angebot & Pflegekräfte ansehen', href: 'https://kostenrechner.primundus.de' },
+                cta: { label: 'Jetzt Angebot & Pflegekräfte ansehen', href: 'https://kostenrechner.primundus.de/?start=1&src=apex-ablauf' },
               },
               {
                 n: '2',
