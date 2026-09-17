@@ -202,8 +202,8 @@ export default async function ErfahrungenPage() {
                 </ul>
 
                 <ul className="mt-5 pt-2 border-t border-pm-line">
-                  <ProfilZeile logo={<GoogleLogo />} titel="Google · München" liste={MUC} href={PROFILE.muenchen.url} />
-                  <ProfilZeile logo={<GoogleLogo />} titel="Google · Hamburg" liste={HH} href={PROFILE.hamburg.url} />
+                  <ProfilZeile logo={<GoogleLogo />} titel="München" liste={MUC} href={PROFILE.muenchen.url} />
+                  <ProfilZeile logo={<GoogleLogo />} titel="Hamburg" liste={HH} href={PROFILE.hamburg.url} />
                   <ProfilZeile
                     logo={<TrustpilotLogo />}
                     titel="Trustpilot"
