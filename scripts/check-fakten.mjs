@@ -22,6 +22,8 @@ const STALE = [
   // (Pflegeheim-Kostenvergleich, Zuschuss-Rechner) folgen mit ihrer Seitenart.
   ['Alte Preisspanne (2.200–3.500)', /2\.200\s*(?:€\s*)?(?:und|bis|–|-)\s*3\.500/g],
   ['Alter Einstiegspreis (ab 2.200 €/Monat)', /\b[Aa]b\s+(?:ca\.\s+)?2\.200\s*(?:€\s*\/\s*Mo|Euro|€\s+gegenüber)/g],
+  // Bayerisches Landespflegegeld seit Pflegegeldjahr 2026: 500 € (LfP Bayern)
+  ['Landespflegegeld Bayern alt (1.000 €)', /Landespflegegeld[^.\n(]{0,40}1\.000\s*(?:€|Euro)/g],
   ['Eigenanteil mit Entlastungsbetrag gerechnet', /(?:Pflegegeld|Pflegegeld\s+und),?\s+Entlastungsbetrag\s+und\s+(?:Entlastungsbudget|Verhinderungspflege)/g],
 ]
 

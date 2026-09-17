@@ -72,7 +72,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Gibt es in Bayern besondere Pflegeförderungen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
       },
       {
         '@type': 'Question',
@@ -97,7 +97,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Gibt es in Bayern zusätzliche Leistungen zum Pflegegeld?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja, das Landespflegegeld: 1.000 Euro im Jahr für Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt und ob zusätzlich Pflegegeld oder Sachleistungen fließen. Der Antrag läuft über das Landesamt für Pflege. Zusammen mit Pflegegeld und Entlastungsbetrag senkt das den Eigenanteil einer 24-Stunden-Betreuung spürbar.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja, das Landespflegegeld: 500 Euro im Jahr für Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt und ob zusätzlich Pflegegeld oder Sachleistungen fließen. Der Antrag läuft über das Landesamt für Pflege. Zusammen mit Pflegegeld und Entlastungsbetrag senkt das den Eigenanteil einer 24-Stunden-Betreuung spürbar.' },
       },
       {
         '@type': 'Question',
@@ -110,12 +110,12 @@ const schemaMarkup = [
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Landshut?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Landshut starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
   { q: 'Ist 24h-Pflege über Primundus in Landshut rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Kommt eine Betreuungskraft auch in die Dörfer im Landkreis Landshut?', a: 'Ja, und dort wiegt der Unterschied am schwersten. Auf über 1.300 Quadratkilometern verteilen sich 35 Gemeinden mit im Schnitt gut 120 Einwohnern je Quadratkilometer — deutlich dünner besiedelt als Bayern insgesamt. Ambulante Dienste fahren entsprechend lange Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft, die im Haus wohnt, braucht keine Anfahrt. Der Preis ist im Landkreis derselbe wie in der Stadt.' },
-  { q: 'Gibt es in Bayern zusätzliche Leistungen zum Pflegegeld?', a: 'Ja, das Landespflegegeld: 1.000 Euro im Jahr für Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt und ob zusätzlich Pflegegeld oder Sachleistungen fließen. Der Antrag läuft über das Landesamt für Pflege. Zusammen mit Pflegegeld und Entlastungsbetrag senkt das den Eigenanteil einer 24-Stunden-Betreuung spürbar.' },
+  { q: 'Gibt es in Bayern zusätzliche Leistungen zum Pflegegeld?', a: 'Ja, das Landespflegegeld: 500 Euro im Jahr für Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt und ob zusätzlich Pflegegeld oder Sachleistungen fließen. Der Antrag läuft über das Landesamt für Pflege. Zusammen mit Pflegegeld und Entlastungsbetrag senkt das den Eigenanteil einer 24-Stunden-Betreuung spürbar.' },
   { q: 'Welches Einzugsgebiet wird in Landshut bedient?', a: 'Landshut und Landkreis Landshut: Rottenburg, Geisenhausen, Ergoldsbach und alle Gemeinden im Landkreis Landshut und Dingolfing-Landau' },
 ]
 
@@ -144,7 +144,7 @@ export default function Page() {
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
             'Pflegeheim in Bayern: Eigenanteil rund 3.200 €/Monat (vdek, 07/2026)',
-            'Bayern: Landespflegegeld +1.000 €/Jahr',
+            'Bayern: Landespflegegeld +500 €/Jahr',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
           ]}
@@ -216,7 +216,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +1.000 €/Jahr">
+            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +500 €/Jahr">
               <Text>Bayern zahlt zusätzlich 1.000 €/Jahr (ca. 83 €/Monat) für alle PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern) — kumulierbar mit allen Pflegekasse-Zuschüssen.</Text>
             </Kasten>
             <RechnerKasten src="ort-landshut" />
@@ -240,7 +240,7 @@ export default function Page() {
             <Text>In Landshut selbst sind die Wege kurz. Der bebaute Teil der Stadt liegt auf den flachen Terrassen im Isartal, und wer in der Altstadt oder in Achdorf wohnt, hat Arzt, Apotheke und Bäcker in erreichbarer Nähe. Steil wird es erst am Rand, wo die Hügelketten ansteigen und die Burg Trausnitz über dem Hofberg liegt.</Text>
             <Text>Ganz anders sieht es im Landkreis aus. Auf über 1.300 Quadratkilometern verteilen sich 35 Gemeinden, im Schnitt gerade einmal gut 120 Einwohner je Quadratkilometer — deutlich dünner besiedelt als Bayern insgesamt. Wer in einem der Dörfer wohnt, für den bedeutet Pflege zu Hause vor allem eines: Jemand muss die Strecke fahren. Der ambulante Dienst legt lange Touren zurück und kommt, wann es der Plan hergibt. Und wenn der eigene Führerschein wegfällt, wird aus jedem Arzttermin ein organisatorisches Projekt.</Text>
             <Text>Genau dort liegt die Stärke einer Betreuungskraft, die mit einzieht: Sie ist keine Anfahrt, sie ist schon da — morgens, nachts und an dem Nachmittag, an dem sonst niemand vorbeikommt. Das gilt in Landshut ebenso wie in Ergolding, Essenbach, Altdorf oder Vilsbiburg. Landshut wächst seit Jahren kräftig, aber die Menschen, die hier alt werden, bleiben meist genau dort wohnen, wo sie ihr Leben verbracht haben.</Text>
-            <Text>Bevor Sie sich entscheiden, holen Sie sich eine neutrale Einschätzung: Die Fachstellen für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause (§ 7a SGB XI). Dazu kommt in Bayern das Landespflegegeld: 1.000 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
+            <Text>Bevor Sie sich entscheiden, holen Sie sich eine neutrale Einschätzung: Die Fachstellen für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause (§ 7a SGB XI). Dazu kommt in Bayern das Landespflegegeld: 500 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-landshut" titel="Einzugsgebiet Landshut">

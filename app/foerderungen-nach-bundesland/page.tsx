@@ -124,7 +124,7 @@ export default function FoerderungenNachBundesland() {
                 {
                   title: 'Bayern',
                   punkte: [
-                    <><strong>Landespflegegeld</strong><br />{'1.000 €/Jahr für Pflegebedürftige mit PG 2–5 die zuhause gepflegt werden. Antrag beim Landesamt für Pflege (LfP). Kumulierbar mit Pflegekasse-Leistungen.'}</>,
+                    <><strong>Landespflegegeld</strong><br />{'500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP). Kumulierbar mit Pflegekasse-Leistungen.'}</>,
                     <><strong>Pflegeberatung (FQA)</strong><br />{'Kostenlose Fachberatung durch Fachstellen für Pflege- und Behinderteneinrichtungen – Qualitätsentwicklung und Aufsicht.'}</>,
                   ],
                 },
@@ -206,7 +206,7 @@ export default function FoerderungenNachBundesland() {
                 <a href="/verhinderungspflege" className={LINK}>Verhinderungspflege eingeplant (Teil des Entlastungsbudgets, bis 3.539 €/Jahr)</a>,
                 <a href="/pflege-steuerlich-absetzen" className={LINK}>Steuerliche Absetzbarkeit geprüft (bis 4.000 €/Jahr)</a>,
                 'KfW-Kredit für größere Wohnraumanpassung geprüft (kfw.de)',
-                'Landespflegegeld Bayern (1.000 €/Jahr) beantragt — falls zutreffend',
+                'Landespflegegeld Bayern (500 €/Jahr) beantragt — falls zutreffend',
                 'Lokalen Pflegestützpunkt kontaktiert für weitere Beratung',
               ]}
             />
@@ -219,8 +219,8 @@ export default function FoerderungenNachBundesland() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Gibt es Pflegeförderungen die über die Pflegekasse hinausgehen?', a: 'Ja: KfW-Förderkredit (bis 50.000 €) für Wohnraumanpassung, Steuerabzug (bis 4.000 €/Jahr), Landespflegegeld Bayern (1.000 €/Jahr), kommunale Zuschüsse regional. Pflegestützpunkt berät kostenlos.' },
-                { q: 'Wie viel Landespflegegeld gibt es in Bayern?', a: '1.000 €/Jahr für Pflegebedürftige mit PG 2–5 die zuhause gepflegt werden. Antrag beim Landesamt für Pflege (LfP) in Bayern.' },
+                { q: 'Gibt es Pflegeförderungen die über die Pflegekasse hinausgehen?', a: 'Ja: KfW-Förderkredit (bis 50.000 €) für Wohnraumanpassung, Steuerabzug (bis 4.000 €/Jahr), Landespflegegeld Bayern (500 €/Jahr), kommunale Zuschüsse regional. Pflegestützpunkt berät kostenlos.' },
+                { q: 'Wie viel Landespflegegeld gibt es in Bayern?', a: '500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP) in Bayern.' },
                 { q: 'Kann man KfW-Kredit und Pflegekasse-Zuschuss kombinieren?', a: 'Ja — KfW-Kredit (bis 50.000 € für barrierefreien Umbau) läuft zusätzlich zu den Pflegekasse-Zuschüssen (4.180 €/Maßnahme). Beide kombinieren für größere Projekte.' },
                 { q: 'Wer berät kostenlos über alle Förderungen?', a: 'Pflegestützpunkte in jedem Bundesland bieten kostenlose, unabhängige Beratung. Primundus berät im kostenlosen Erstgespräch über alle relevanten Kassenzuschüsse.' },
               ]}

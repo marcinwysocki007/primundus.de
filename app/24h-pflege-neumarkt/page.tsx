@@ -110,7 +110,7 @@ const schemaMarkup = [
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Neumarkt in der Oberpfalz?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Neumarkt in der Oberpfalz starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
   { q: 'Ist 24h-Pflege über Primundus in Neumarkt in der Oberpfalz rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
@@ -145,7 +145,7 @@ export default function Page() {
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
             'Pflegeheim in Bayern: Eigenanteil rund 3.200 €/Monat (vdek, 07/2026)',
-            'Bayern: Landespflegegeld +1.000 €/Jahr',
+            'Bayern: Landespflegegeld +500 €/Jahr',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
           ]}
@@ -217,7 +217,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +1.000 €/Jahr">
+            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +500 €/Jahr">
               <Text>Bayern zahlt zusätzlich 1.000 €/Jahr (ca. 83 €/Monat) für alle PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern) — kumulierbar mit allen Pflegekasse-Zuschüssen.</Text>
             </Kasten>
             <RechnerKasten src="ort-neumarkt" />
@@ -242,7 +242,7 @@ export default function Page() {
             <Text>Entsprechend häufig endet der Weg im Heim. Im Landkreis leben 20 Prozent aller Pflegebedürftigen in stationärer Dauerpflege — in Bayern sind es 17, im Bund 14 Prozent. Das ist keine Frage der Vorliebe, sondern eine Frage fehlender Alternativen. Eine Betreuungskraft, die mit einzieht, ist genau diese Alternative: Sie hängt an keiner Tourenplanung, weil sie im Haus wohnt, und sie ist auch nachts und am Wochenende da.</Text>
             <Text>Dazu kommen die Entfernungen. Im Landkreis liegt der nächste Hausarzt im Schnitt fast 1.900 Meter entfernt, die nächste Apotheke fast 2.500 — deutlich weiter als im bayerischen Durchschnitt. Solange man Auto fährt, ist das kein Thema. Wenn der Führerschein wegfällt, wird daraus schnell die Frage, wer denn nun fährt. In der Stadt Neumarkt selbst ist die Lage besser, dafür ist die Stadt spürbar älter als ihr Umland: Über elf Prozent der Neumarkter sind über 75, im Landkreis sind es gut neun.</Text>
             <Text>Beim Wohnen prägt bis heute der April 1945. Im historischen Stadtkern lagen damals 92 Prozent der Bausubstanz in Trümmern; in der Marktstraße blieben zwei Häuser stehen. Was heute steht, ist deshalb fast durchweg Nachkriegsbau — <strong className="text-pm-ink font-semibold"> nur gut ein Prozent der Neumarkter Wohnungen stammt aus der Zeit vor 1919</strong>, im Bundesschnitt sind es dreizehn. Diese Häuser sind solide, aber sie entstanden vor jedem Gedanken an Barrierefreiheit. Und im Landkreis, wo mehr als sieben von zehn Wohnungen in Ein- oder Zweifamilienhäusern liegen, ist es meist die eigene Treppe, die zum Problem wird — in Freystadt, Berching oder Postbauer-Heng genauso wie in der Kernstadt.</Text>
-            <Text>Bevor Sie etwas entscheiden, holen Sie sich eine neutrale Einschätzung: Die Fachstellen für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause (§ 7a SGB XI). Dazu kommt das bayerische Landespflegegeld: 1.000 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
+            <Text>Bevor Sie etwas entscheiden, holen Sie sich eine neutrale Einschätzung: Die Fachstellen für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause (§ 7a SGB XI). Dazu kommt das bayerische Landespflegegeld: 500 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-neumarkt-in-der" titel="Einzugsgebiet Neumarkt in der Oberpfalz">

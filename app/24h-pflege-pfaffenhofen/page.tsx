@@ -92,7 +92,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was passiert, wenn der Führerschein wegfällt?',
-        acceptedAnswer: { '@type': 'Answer', text: 'In einer so gestreuten Siedlungsstruktur ist das oft der Moment, in dem der Alltag kippt — nicht die Pflegebedürftigkeit selbst. Einkaufen, Arzttermine, Besuche: alles hängt plötzlich an anderen. Eine Betreuungskraft im Haushalt löst beides auf einmal, weil sie da ist und die Wege übernimmt. In Bayern kommt das Landespflegegeld von 1.000 Euro im Jahr ab Pflegegrad 2 hinzu, unabhängig davon, wer die Pflege leistet.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'In einer so gestreuten Siedlungsstruktur ist das oft der Moment, in dem der Alltag kippt — nicht die Pflegebedürftigkeit selbst. Einkaufen, Arzttermine, Besuche: alles hängt plötzlich an anderen. Eine Betreuungskraft im Haushalt löst beides auf einmal, weil sie da ist und die Wege übernimmt. In Bayern kommt das Landespflegegeld von 500 Euro im Jahr ab Pflegegrad 2 hinzu, unabhängig davon, wer die Pflege leistet.' },
       },
       {
         '@type': 'Question',
@@ -105,12 +105,12 @@ const schemaMarkup = [
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Pfaffenhofen an der Ilm?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Pfaffenhofen an der Ilm starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
   { q: 'Ist 24h-Pflege über Primundus in Pfaffenhofen an der Ilm rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Kommt eine Betreuungskraft auch in die Gemeindeteile rund um Pfaffenhofen?', a: 'Ja, und dort ist der Unterschied besonders groß. Zum Stadtgebiet gehören 62 Gemeindeteile auf gut 92 Quadratkilometern — rechnerisch keine 300 Einwohner je Quadratkilometer. Wer in Förnbach, Tegernbach oder Uttenhofen wohnt, hängt bei jedem Termin daran, dass jemand fährt. Eine Betreuungskraft, die im Haus wohnt, übernimmt diese Wege und ist von keiner Tourenplanung abhängig. Anfahrtskosten berechnen wir nicht.' },
-  { q: 'Was passiert, wenn der Führerschein wegfällt?', a: 'In einer so gestreuten Siedlungsstruktur ist das oft der Moment, in dem der Alltag kippt — nicht die Pflegebedürftigkeit selbst. Einkaufen, Arzttermine, Besuche: alles hängt plötzlich an anderen. Eine Betreuungskraft im Haushalt löst beides auf einmal, weil sie da ist und die Wege übernimmt. In Bayern kommt das Landespflegegeld von 1.000 Euro im Jahr ab Pflegegrad 2 hinzu, unabhängig davon, wer die Pflege leistet.' },
+  { q: 'Was passiert, wenn der Führerschein wegfällt?', a: 'In einer so gestreuten Siedlungsstruktur ist das oft der Moment, in dem der Alltag kippt — nicht die Pflegebedürftigkeit selbst. Einkaufen, Arzttermine, Besuche: alles hängt plötzlich an anderen. Eine Betreuungskraft im Haushalt löst beides auf einmal, weil sie da ist und die Wege übernimmt. In Bayern kommt das Landespflegegeld von 500 Euro im Jahr ab Pflegegrad 2 hinzu, unabhängig davon, wer die Pflege leistet.' },
   { q: 'Welches Einzugsgebiet wird in Pfaffenhofen an der Ilm bedient?', a: 'Pfaffenhofen und Landkreis Pfaffenhofen: Wolnzach, Schrobenhausen-Grenze, Geisenfeld und alle Gemeinden im Landkreis Pfaffenhofen an der Ilm' },
 ]
 
@@ -139,7 +139,7 @@ export default function Page() {
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
             'Pflegeheim in Bayern: Eigenanteil rund 3.200 €/Monat (vdek, 07/2026)',
-            'Bayern: Landespflegegeld +1.000 €/Jahr',
+            'Bayern: Landespflegegeld +500 €/Jahr',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
           ]}
@@ -211,7 +211,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +1.000 €/Jahr">
+            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +500 €/Jahr">
               <Text>Bayern zahlt zusätzlich 1.000 €/Jahr (ca. 83 €/Monat) für alle PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern) — kumulierbar mit allen Pflegekasse-Zuschüssen.</Text>
             </Kasten>
             <RechnerKasten src="ort-pfaffenhofen" />
@@ -235,7 +235,7 @@ export default function Page() {
             <Text>Pfaffenhofen heißt Stadt, ist aber zu großen Teilen Land. Zum Stadtgebiet gehören 62 Gemeindeteile, verteilt über gut 92 Quadratkilometer — rechnerisch keine 300 Einwohner je Quadratkilometer. Wer nicht in der Kernstadt wohnt, sondern in Förnbach, Tegernbach, Uttenhofen oder auf einem der Höfe dazwischen, lebt schön, aber weit auseinander.</Text>
             <Text>Für die Pflege ist das der entscheidende Punkt. Solange man selbst Auto fährt, ist die Streulage kein Thema. Wenn der Führerschein wegfällt, wird sie zum täglichen Problem: Einkaufen, Arzttermine, der Besuch bei der Nachbarin — alles hängt daran, dass jemand fährt. Und ein ambulanter Dienst, der solche Strecken zurücklegt, kommt dann, wann die Tour es hergibt, nicht wann es passt. Eine Betreuungskraft, die im Haus wohnt, löst beides auf einmal: Sie ist da, und sie übernimmt die Wege.</Text>
             <Text>Das Ilmtal liegt bei gut 400 Metern, die Höhenzüge ringsum reichen auf über 500 — sanft geschwungenes Hügelland mit einzelnen steileren Hängen. Bemerkenswert ist die Altersstruktur: Die Stadt Pfaffenhofen ist etwas älter als ihr Landkreis, gut jeder Fünfte ist hier über 65. Für Familien in Wolnzach, Geisenfeld, Reichertshofen oder Hohenwart stellt sich dieselbe Frage.</Text>
-            <Text>Wenn Sie zuerst wissen wollen, was Ihnen zusteht: Die Fachstellen für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause. Der Beratungsanspruch ist gesetzlich verankert (§ 7a SGB XI). In Bayern kommt das Landespflegegeld dazu: 1.000 Euro im Jahr für Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
+            <Text>Wenn Sie zuerst wissen wollen, was Ihnen zusteht: Die Fachstellen für Pflege- und Behindertenberatung in Bayern beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause. Der Beratungsanspruch ist gesetzlich verankert (§ 7a SGB XI). In Bayern kommt das Landespflegegeld dazu: 500 Euro im Jahr für Pflegebedürftige ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-pfaffenhofen-an-der" titel="Einzugsgebiet Pfaffenhofen an der Ilm">

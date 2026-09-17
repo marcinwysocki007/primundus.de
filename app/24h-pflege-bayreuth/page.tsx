@@ -72,7 +72,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Gibt es in Bayern besondere Pflegeförderungen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
       },
       {
         '@type': 'Question',
@@ -115,7 +115,7 @@ const schemaMarkup = [
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Bayreuth?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 1.000 €/Jahr für PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Bayreuth starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
   { q: 'Ist 24h-Pflege über Primundus in Bayreuth rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
@@ -150,7 +150,7 @@ export default function Page() {
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
             'Pflegeheim in Bayern: Eigenanteil rund 3.200 €/Monat (vdek, 07/2026)',
-            'Bayern: Landespflegegeld +1.000 €/Jahr',
+            'Bayern: Landespflegegeld +500 €/Jahr',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
           ]}
@@ -222,7 +222,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +1.000 €/Jahr">
+            <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +500 €/Jahr">
               <Text>Bayern zahlt zusätzlich 1.000 €/Jahr (ca. 83 €/Monat) für alle PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern) — kumulierbar mit allen Pflegekasse-Zuschüssen.</Text>
             </Kasten>
             <RechnerKasten src="ort-bayreuth" />
@@ -247,7 +247,7 @@ export default function Page() {
             <Text>Beim Blick in die Pflegestatistik trennen sich Stadt und Landkreis dann deutlich. In der Stadt Bayreuth leben <strong className="text-pm-ink font-semibold">26,8 Prozent aller Pflegebedürftigen im Heim</strong> — in Bayern sind es 17,6 Prozent. Auf 1.000 Einwohner über 65 kommen hier 82 Heimplätze, im Land nur 44. Bayreuth ist damit eine der am stärksten heimgeprägten Städte Bayerns. Im Landkreis ist es genau umgekehrt: Dort werden fast die Hälfte der Menschen mit Pflegegrad 5 zu Hause versorgt statt stationär. Dahinter stehen Familien, die das über Jahre allein stemmen.</Text>
             <Text>Dass das so ist, hat auch mit den Entfernungen zu tun. Die Stadt Bayreuth kommt auf gut 1.000 Einwohner je Quadratkilometer, der Landkreis auf 81 — er ist einer der am dünnsten besiedelten Bayerns. Ein ambulanter Dienst, der Pegnitz, Bad Berneck und die Dörfer dazwischen bedienen soll, fährt lange Touren, und die Termine richten sich nach der Route. Dazu kommt: Die Wohnungen im Landkreis sind mit durchschnittlich 114 Quadratmetern deutlich größer als in der Stadt mit 78 — meist Einfamilienhäuser mit Treppe, Garten und allem, was gepflegt werden will.</Text>
             <Text>Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einzieht. Sie ersetzt die Angehörigen nicht, sondern nimmt ihnen die Dauerbelastung ab: nachts, an Wochenenden und in den Stunden, in denen sonst niemand da wäre. Sie ist von keiner Tourenplanung abhängig, weil sie im Haus wohnt. Und sie führt den Haushalt mit — was gerade in einem großen Haus den Unterschied macht.</Text>
-            <Text>Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten. In Bayreuth gibt es seit Juli 2025 einen eigenen Pflegestützpunkt, getragen von Stadt, Bezirk und den Pflegekassen; die Beratung ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI). Für pflegende Angehörige gibt es zusätzlich eine eigene Fachstelle. Und in Bayern kommt das Landespflegegeld hinzu: 1.000 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
+            <Text>Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten. In Bayreuth gibt es seit Juli 2025 einen eigenen Pflegestützpunkt, getragen von Stadt, Bezirk und den Pflegekassen; die Beratung ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI). Für pflegende Angehörige gibt es zusätzlich eine eigene Fachstelle. Und in Bayern kommt das Landespflegegeld hinzu: 500 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bayreuth" titel="Einzugsgebiet Bayreuth">
