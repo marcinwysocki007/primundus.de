@@ -8,8 +8,8 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-// Kernseite in der Seitenvorlage (17.09.2026). Ablauf wie im Kostenrechner und auf der Startseite (drei Schritte,
-// Plaketten „Bewerbungen am selben Werktag" und „Anreise in 3 Tagen möglich"). Wechsel und Ersatz nach dem
+// Kernseite in der Seitenvorlage (17.09.2026). Ablauf wie im Kostenrechner seit „Preis zuerst" (17.09. 13:05: Preisseite,
+// dann Kontaktseite, dann Portal), Plaketten „Bewerbungen am selben Werktag" und „Anreise in 3 Tagen möglich". Wechsel und Ersatz nach dem
 // Mustervertrag (§ 1: Ersatz schnellstmöglich, in der Regel innerhalb von 3 Tagen; § 4: Krankheitstage ohne Honorar,
 // Reisekostenpauschale 125 € je Fahrt). Der alte Zeitplan „Tag 1–2 / Tag 2–3" war nicht belegt und ist raus.
 
@@ -92,12 +92,13 @@ export default function Ablauf() {
           ]}
           augenbraue="So funktioniert es"
           titel="Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start"
-          einleitung="In 2 Minuten sehen Sie Ihr Angebot und passende Pflegekräfte. Danach bewerben sich Betreuungskräfte bei Ihnen, Sie wählen selbst aus, und erst dann kommt der Vertrag. Eine Anreise ist in 3 Tagen möglich."
+          einleitung="In 2 Minuten sehen Sie Ihren Preis, gleich danach passende Pflegekräfte. Dann bewerben sich Betreuungskräfte bei Ihnen, Sie wählen selbst aus, und erst dann kommt der Vertrag. Eine Anreise ist in 3 Tagen möglich."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."
-          knopf={{ href: RECHNER_SEITE, text: 'Angebot & Pflegekräfte ansehen' }}
+          knopf={{ href: RECHNER_SEITE, text: 'Preis & Pflegekräfte ansehen' }}
           blick={[
-            'Angebot und passende Pflegekräfte sofort, in unter 2 Minuten',
+            'Preis in unter 2 Minuten, noch ohne Kontaktdaten',
+            'Passende Pflegekräfte direkt nach dem Speichern',
             'Bewerbungen am selben Werktag',
             'Sie wählen selbst aus, erst dann kommt der Vertrag',
             'Anreise in 3 Tagen möglich',
@@ -110,14 +111,18 @@ export default function Ablauf() {
             <Schritte
               schritte={[
                 {
-                  title: 'Sofort Angebot und Pflegekräfte einsehen',
-                  desc: 'Sie machen wenige preisrelevante Angaben und hinterlassen für die Kopie des Angebots Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte — die Kopie kommt zusätzlich per E-Mail.',
+                  title: 'Preis sofort sehen',
+                  desc: 'Sie beantworten ein paar kurze Fragen zur Pflegesituation und sehen sofort Ihren Monatspreis, auch was nach Zuschüssen bleibt. Ihre Kontaktdaten brauchen wir dafür noch nicht.',
                   tag: 'Unter 2 Minuten',
                   tagTon: 'gruen',
                 },
                 {
+                  title: 'Speichern — passende Pflegekräfte ansehen',
+                  desc: 'Mit Namen, E-Mail und Telefonnummer speichern Sie die Berechnung. Danach sehen Sie im Kundenportal sofort die Pflegekräfte, die zu Ihren Angaben passen.',
+                },
+                {
                   title: 'Profil vervollständigen — Bewerbungen erhalten',
-                  desc: 'Passt das für Sie, ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit. Zusätzlich können Sie Pflegekräfte aus den gezeigten Profilen gezielt einladen. Wer sich beworben hat, sehen Sie jederzeit im Kundenportal.',
+                  desc: 'Ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit. Zusätzlich können Sie Pflegekräfte aus den gezeigten Profilen gezielt einladen. Wer sich beworben hat, sehen Sie jederzeit im Kundenportal.',
                   tag: 'Bewerbungen am selben Werktag',
                   tagTon: 'gruen',
                 },
