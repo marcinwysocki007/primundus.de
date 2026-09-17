@@ -339,7 +339,7 @@ export function BewertungsFormular() {
               <span className="text-[15px] leading-[1.55] text-pm-body">
                 Ich habe die Betreuung durch Primundus in meiner Familie selbst erlebt. Primundus darf Sterne, Text, Name und Ort auf
                 primundus.de veröffentlichen. Meine E-Mail-Adresse wird nur für die Bestätigung und mögliche Rückfragen genutzt (
-                <a href="/datenschutz" className="underline underline-offset-2 hover:text-pm-ink">Datenschutz</a>).
+                <a href="/datenschutz#bewertungen" className="underline underline-offset-2 hover:text-pm-ink">Datenschutz</a>).
               </span>
             </label>
             {fehler.einwilligung && <p className="mt-1 ml-8 text-[14.5px] text-pm-coral-ink">{fehler.einwilligung}</p>}

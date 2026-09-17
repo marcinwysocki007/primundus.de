@@ -73,6 +73,25 @@ export default function Page() {
             <p className="text-[15px] text-pm-body leading-[1.7]">
               Mit dem Abschluss des Formulars wird automatisch ein persönliches Kundenkonto angelegt. Über dieses Konto können Sie Ihr individuelles Angebot einsehen, passende Pflegekräfte-Profile ansehen und Betreuungskräfte direkt einladen. Der Zugang erfolgt über einen Ihnen per E-Mail zugesandten persönlichen Einmal-Link (Magic Link) — es ist kein separates Passwort erforderlich.
             </p>
+            {/* 17.09.2026: Bewertungsformular auf /erfahrungen (Backend im Kostenrechner, Tabelle bewertungen) */}
+            <h3 id="bewertungen" className="text-[15px] font-semibold text-pm-ink mb-2 mt-5">2.3 Bewertungen auf primundus.de/erfahrungen</h3>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
+              Wenn Sie Primundus über das Formular auf <a href="/erfahrungen" className="text-pm-taupe hover:underline">primundus.de/erfahrungen</a> bewerten, verarbeiten wir:
+            </p>
+            <ul className="list-disc pl-5 mb-3 space-y-1 text-[15px] text-pm-body">
+              <li>Sterne, Text Ihrer Bewertung, den Namen, unter dem sie erscheinen soll, und freiwillig Ihren Ort</li>
+              <li>Ihre E-Mail-Adresse für den Bestätigungslink und mögliche Rückfragen</li>
+              <li>Zum Schutz vor Missbrauch: Zeitpunkt, eine nicht umkehrbare Prüfsumme Ihrer IP-Adresse (nicht die Adresse selbst) und die Kennung Ihres Browsers</li>
+            </ul>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
+              Nach Ihrer Bestätigung prüfen wir die Bewertung. Dabei gleichen wir Ihre E-Mail-Adresse mit unseren Anfrage- und Kundendaten ab; passt sie zu einer Betreuung, kennzeichnen wir die Bewertung mit „Kunde bestätigt“. Veröffentlicht werden nur Sterne, Text, Name, Ort, Datum und gegebenenfalls unsere Antwort, nie Ihre E-Mail-Adresse.
+            </p>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
+              Sie können Ihre Einwilligung zur Veröffentlichung jederzeit per E-Mail an <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a> widerrufen. Wir nehmen die Bewertung dann von der Seite und löschen Ihre Daten, soweit keine Aufbewahrungspflicht besteht. Bewertungen, die nicht bestätigt oder nicht freigegeben werden, veröffentlichen wir nicht.
+            </p>
+            <p className="text-[15px] text-pm-body leading-[1.7]">
+              Auf derselben Seite zeigen wir Rezensionen aus unseren Google-Unternehmensprofilen so, wie sie bei Google veröffentlicht sind, mit Link zur Quelle. Diese Rezensionen ruft unser Server bei Google ab; beim Besuch der Seite überträgt Ihr Browser dafür keine Daten an Google.
+            </p>
           </div>
 
           <div className="bg-white border border-pm-line rounded-2xl p-7">
@@ -84,6 +103,7 @@ export default function Page() {
               <li>Ermöglichung der direkten Einladung von Betreuungskräften über Ihr Konto</li>
               <li>Bearbeitung von Anfragen und Beratungsgesprächen</li>
               <li>Zusendung des persönlichen Zugangs-Links (Magic Link) und Kalkulationsergebnissen per E-Mail</li>
+              <li>Prüfung und Veröffentlichung von Bewertungen sowie Schutz des Bewertungsformulars vor Missbrauch</li>
               <li>Statistische Auswertung zur Verbesserung unseres Angebots</li>
             </ul>
           </div>
@@ -91,9 +111,9 @@ export default function Page() {
           <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-pm-ink mb-4">4. Rechtsgrundlage der Verarbeitung</h2>
             <ul className="list-disc pl-5 space-y-2 text-[15px] text-pm-body">
-              <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) — bei Angebotsanfragen</li>
+              <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) — bei Angebotsanfragen und für die Veröffentlichung Ihrer Bewertung</li>
               <li>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung)</li>
-              <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) — für technische Administration und Statistik</li>
+              <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) — für technische Administration, Statistik und den Schutz des Bewertungsformulars vor Missbrauch</li>
             </ul>
           </div>
 
@@ -107,7 +127,7 @@ export default function Page() {
           <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-pm-ink mb-4">6. Speicherdauer</h2>
             <p className="text-[15px] text-pm-body leading-[1.7]">
-              Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies für die Erfüllung der genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Anfragedaten werden nach Abschluss der Bearbeitung oder auf Ihren Wunsch gelöscht.
+              Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies für die Erfüllung der genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Anfragedaten werden nach Abschluss der Bearbeitung oder auf Ihren Wunsch gelöscht. Veröffentlichte Bewertungen bleiben online, bis Sie Ihre Einwilligung widerrufen.
             </p>
           </div>
 
@@ -154,7 +174,7 @@ export default function Page() {
           <div className="bg-white border border-pm-line rounded-2xl p-7">
             <h2 className="text-[20px] font-bold text-pm-ink mb-3">10. Aktualität dieser Datenschutzerklärung</h2>
             <p className="text-[15px] text-pm-body leading-[1.7]">
-              Diese Datenschutzerklärung hat den Stand Februar 2026. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher Vorgaben kann es notwendig werden, diese Erklärung zu ändern.
+              Diese Datenschutzerklärung hat den Stand September 2026. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher Vorgaben kann es notwendig werden, diese Erklärung zu ändern.
             </p>
           </div>
 
