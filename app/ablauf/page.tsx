@@ -12,6 +12,8 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // dann Kontaktseite, dann Portal), Plaketten „Bewerbungen am selben Werktag" und „Anreise in 3 Tagen möglich". Wechsel und Ersatz nach dem
 // Mustervertrag (§ 1: Ersatz schnellstmöglich, in der Regel innerhalb von 3 Tagen; § 4: Krankheitstage ohne Honorar,
 // Reisekostenpauschale 125 € je Fahrt). Der alte Zeitplan „Tag 1–2 / Tag 2–3" war nicht belegt und ist raus.
+// Martin 17.09.: Abholung ist normalerweise nicht nötig (Kraft wird zur Adresse gebracht); Wechseltag für beide Kräfte
+// berechnet ist normal, weil An- und Abreisetag Arbeitstage sind; Wechsel alle 6–8 Wochen stimmt.
 
 const AKTUALISIERT = aktualisiertAm('ablauf', '17. September 2026')
 const RECHNER_SEITE = 'https://kostenrechner.primundus.de/?start=1&src=apex-ablauf'
@@ -134,7 +136,7 @@ export default function Ablauf() {
                 },
                 {
                   title: 'Anreise der Betreuungskraft',
-                  desc: 'Die Betreuungskraft reist zum vereinbarten Termin an. Wir organisieren die Fahrt; am Ankunftstag holen Sie die Betreuungskraft am nächstgelegenen Ankunftsort ab. An- und Abreise kosten 125 € je Strecke.',
+                  desc: 'Die Betreuungskraft reist zum vereinbarten Termin an. Wir organisieren die Fahrt, in der Regel wird sie direkt zu Ihnen nach Hause gebracht. An- und Abreise kosten 125 € je Strecke.',
                   tag: 'Anreise in 3 Tagen möglich',
                   tagTon: 'gruen',
                 },
@@ -164,16 +166,15 @@ export default function Ablauf() {
 
           <Abschnitt id="wechsel" titel="Wechsel und Ersatz">
             <Text>
-              Betreuungskräfte wechseln sich ab. Wie lange eine Betreuungskraft bleibt, steht vorab als geplanter
-              Einsatzzeitraum fest. Für den Wechsel sehen Sie wieder Profile und Bewerbungen und wählen selbst aus, wie
-              beim ersten Mal.
+              Betreuungskräfte wechseln sich in der Regel alle 6–8 Wochen ab. Für den Wechsel sehen Sie wieder Profile
+              und Bewerbungen und wählen selbst aus, wie beim ersten Mal.
             </Text>
             <Punkte
               punkte={[
                 { title: 'Die Betreuungskraft wird krank', desc: 'Wir stellen schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Für die Tage, an denen die Betreuungskraft krank ist, berechnen wir nichts.' },
                 { title: 'Die Betreuungskraft passt nicht', desc: 'Sagen Sie uns, was nicht passt. Wir organisieren einen Wechsel, und Sie wählen wieder aus den Bewerbungen aus.' },
                 { title: 'Die Betreuungskraft passt sehr gut', desc: 'Sagen Sie es uns. Wir berücksichtigen das, wenn wir die nächsten Einsätze planen.' },
-                { title: 'Kosten beim Wechsel', desc: 'Für jeden Wechsel fallen An- und Abreise mit 125 € je Strecke an.' },
+                { title: 'Kosten beim Wechsel', desc: 'An- und Abreisetag sind Arbeitstage. Am Wechseltag berechnen wir deshalb den Tagessatz für beide Betreuungskräfte, dazu An- und Abreise mit 125 € je Strecke.' },
               ]}
             />
             <MehrDazu label="Alle Kosten im Überblick:" links={[{ href: '/kosten', text: 'Was kostet 24-Stunden-Pflege? Kosten & Zuschüsse 2026' }]} />

@@ -69,7 +69,7 @@ const schemaMarkup = [
         name: 'Welche Nebenkosten kommen bei der 24-Stunden-Pflege üblicherweise dazu?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typisch sind: An- und Abreisekosten der Betreuungskraft (bei Primundus 125 Euro je Strecke, auch bei einem Wechsel der Kraft) und Zuschläge an Feiertagen (bei Primundus der doppelte Tagessatz). Kost und Logis stellen Sie selbst: ein eigenes Zimmer und Verpflegung. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie unterschreiben.',
+          text: 'Typisch sind: An- und Abreisekosten der Betreuungskraft (bei Primundus 125 Euro je Strecke, auch bei einem Wechsel der Kraft) und Zuschläge an Feiertagen (bei Primundus der doppelte Tagessatz an neun Feiertagen). Am Tag eines Wechsels berechnet Primundus den Tagessatz für beide Betreuungskräfte, weil An- und Abreisetag Arbeitstage sind. Kost und Logis stellen Sie selbst: ein eigenes Zimmer und Verpflegung. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie unterschreiben.',
         },
       },
       {
@@ -170,7 +170,8 @@ export default function WirklicheKostenPage() {
               <Werte
                 zeilen={[
                   [<>125 € je Strecke</>, <>An- und Abreise der Betreuungskraft, auch bei einem Wechsel der Kraft</>],
-                  [<>doppelter Tagessatz</>, <>an gesetzlichen Feiertagen, beim Grundpreis von 2.150 € ca. 72 € mehr je Feiertag</>],
+                  [<>doppelter Tagessatz</>, <>an neun Feiertagen (Karfreitag, Ostersonntag, Ostermontag, 1. Mai, Heiligabend, 1. und 2. Weihnachtstag, Silvester, Neujahr), beim Grundpreis von 2.150 € ca. 72 € mehr je Feiertag</>],
+                  [<>Tagessatz für beide</>, <>am Tag eines Wechsels der Kraft, weil An- und Abreisetag Arbeitstage sind</>],
                   [<>gestellt</>, <>Kost und Logis: ein eigenes Zimmer und Verpflegung</>],
                   [<>0 €</>, <>Vermittlungsgebühr, Anzahlung oder Vorauszahlung; abgerechnet wird taggenau ab Anreise</>],
                 ]}
@@ -190,8 +191,8 @@ export default function WirklicheKostenPage() {
                   [<>1. Preis</>, <>ab 2.150 € im Monat für eine Person, bei Pflegegrad 3 selbst zu tragen ab ca. 923 € (Rechnung oben); den Preis für Ihre Situation berechnet der Kostenrechner in 2 Minuten</>],
                   [<>2. Kost und Logis</>, <>ein eigenes Zimmer und Verpflegung stellen Sie</>],
                   [<>3. An- und Abreise</>, <>125 € je Strecke, auch bei jedem Wechsel der Kraft</>],
-                  [<>4. Feiertage</>, <>doppelter Tagessatz, beim Grundpreis von 2.150 € ca. 72 € mehr je Feiertag</>],
-                  [<>5. Kündigung</>, <>täglich kündbar ohne Mindestlaufzeit; ein Wechsel der Kraft kostet nur die An- und Abreise</>],
+                  [<>4. Feiertage</>, <>doppelter Tagessatz an neun Feiertagen, beim Grundpreis von 2.150 € ca. 72 € mehr je Feiertag</>],
+                  [<>5. Kündigung</>, <>täglich kündbar ohne Mindestlaufzeit; beim Wechsel der Kraft zahlen Sie die An- und Abreise und am Wechseltag den Tagessatz für beide Betreuungskräfte</>],
                   [<>6. Gebühren</>, <>keine Vermittlungsgebühr, keine Anzahlung, keine Vorauszahlung — abgerechnet wird taggenau ab Anreise</>],
                   [<>7. Auszeichnung</>, <><a href="/testsieger-24-stunden-pflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">sechsmal in Folge Testsieger bei DIE WELT</a>, mit Original-Siegel und Veröffentlichung</>],
                 ]}
@@ -203,7 +204,7 @@ export default function WirklicheKostenPage() {
             <Punkte
               punkte={[
                 { title: "Warum wirken manche 24h-Pflege-Angebote so günstig?", desc: "Drei verbreitete Mechanismen: Tagespreise statt Monatssummen (105 Euro am Tag klingt klein, sind aber über 3.100 Euro im Monat), „ab\"-Preise, die nur für die einfachste Konstellation gelten, und unbezifferte Nebenkosten wie Fahrtkosten oder Feiertagszuschläge, die erst im Vertrag auftauchen." },
-                { title: "Welche Nebenkosten kommen üblicherweise dazu?", desc: "Typisch sind: An- und Abreisekosten der Betreuungskraft (bei Primundus 125 Euro je Strecke, auch bei einem Wechsel der Kraft) und Zuschläge an Feiertagen (bei Primundus der doppelte Tagessatz). Kost und Logis stellen Sie selbst: ein eigenes Zimmer und Verpflegung. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie unterschreiben." },
+                { title: "Welche Nebenkosten kommen üblicherweise dazu?", desc: "Typisch sind: An- und Abreisekosten der Betreuungskraft (bei Primundus 125 Euro je Strecke, auch bei einem Wechsel der Kraft) und Zuschläge an Feiertagen (bei Primundus der doppelte Tagessatz an neun Feiertagen). Am Tag eines Wechsels berechnet Primundus den Tagessatz für beide Betreuungskräfte, weil An- und Abreisetag Arbeitstage sind. Kost und Logis stellen Sie selbst: ein eigenes Zimmer und Verpflegung. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie unterschreiben." },
                 { title: "Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv?", desc: <>Bei Primundus ab 2.150 Euro im Monat für eine Person. Nach 599 Euro Pflegegeld, rund 295 Euro anteiligem Entlastungsbudget und etwa 333 Euro Steuerermäßigung bleiben ab ca. 923 Euro effektiv selbst zu tragen. Dazu kommen An- und Abreise mit 125 Euro je Strecke. Alle Details:{' '}
                 <a href="/24-stunden-pflege-kostenuebernahme" className="text-pm-taupe underline underline-offset-2">Wer übernimmt die Kosten?</a></> },
               ]}

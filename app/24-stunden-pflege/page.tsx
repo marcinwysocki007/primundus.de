@@ -184,7 +184,7 @@ export default function VierUndZwanzigStundenPflege() {
                 { title: 'Grundpflege', desc: 'Waschen, Duschen, An- und Auskleiden, Hilfe beim Essen, beim Aufstehen und beim Zubettgehen.' },
                 { title: 'Haushalt', desc: 'Kochen, Einkaufen, Wäsche und Ordnung in den Räumen, die Ihr Angehöriger nutzt.' },
                 { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Begleitung zu Arztterminen und ein fester Tagesablauf, der gerade bei Demenz wichtig ist.' },
-                { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank, stellen wir schnellstmöglich eine Ersatzkraft, in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
+                { title: 'Wechsel und Ersatz', desc: 'Betreuungskräfte wechseln sich in der Regel alle 6–8 Wochen ab, und Sie wählen jedes Mal selbst aus. Wird eine Betreuungskraft krank, stellen wir schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen; die Krankheitstage berechnen wir nicht.' },
                 { title: 'Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team sind an 7 Tagen die Woche von 8 bis 20 Uhr erreichbar.' },
               ]}
             />
