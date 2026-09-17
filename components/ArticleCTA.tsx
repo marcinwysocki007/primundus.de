@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 import { Phone } from 'lucide-react'
 
 // Kontaktbereich auf allen Ratgeber- und Vergleichsseiten (345 Seiten).
@@ -164,8 +165,11 @@ function Siegel() {
   )
 }
 
-export function KontaktBand() {
+// ohneBewertungen: auf /erfahrungen stehen die Bewertungen schon vollständig darüber
+export function KontaktBand({ ohneBewertungen = false }: { ohneBewertungen?: boolean } = {}) {
   return (
+    <>
+    {!ohneBewertungen && <BewertungsAuszug />}
     <aside className="bg-white border-t border-pm-line" aria-labelledby="kontaktbereich-titel">
       <div className="max-w-[1200px] mx-auto px-5 py-16 md:py-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16 lg:items-center">
         <div className="min-w-0">
@@ -184,6 +188,7 @@ export function KontaktBand() {
         </div>
       </div>
     </aside>
+    </>
   )
 }
 
@@ -199,6 +204,8 @@ export function ArticleCTA() {
         Kosten &amp; Pflegekräfte ansehen
       </a>
       <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
+
+      <BewertungsAuszug variante="kasten" />
 
       <div className="mt-8 pt-7 border-t border-pm-line">
         <Ansprechpartnerin />

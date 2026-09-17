@@ -454,7 +454,7 @@ export default async function ErfahrungenPage() {
         </section>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -3,8 +3,7 @@ import { HowItWorks } from '@/components/home/HowItWorks'
 import { FAQSection } from '@/components/home/FAQSection'
 import { ComparisonSection } from '@/components/home/ComparisonSection'
 import { FinalCTA } from '@/components/home/FinalCTA'
-import { TestimonialCard } from '@/components/home/TestimonialCard'
-import { googleGesamt, ladeGoogleDaten } from '@/lib/google-bewertungen'
+import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 // Titel und Beschreibung geaendert am 01.09.2026, Freigabe Martin.
 //
@@ -92,9 +91,7 @@ const schemaMarkup = JSON.stringify([
   }
 ])
 
-export default async function Page() {
-  // Google-Schnitt für den Kundenstimmen-Block (Places API alle 6 Std., sonst feste Einträge)
-  const google = googleGesamt(await ladeGoogleDaten())
+export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
@@ -641,12 +638,13 @@ export default async function Page() {
 
         {/* ── 8. KUNDENSTIMMEN ────────────────────────────────────────────── */}
         <section className="py-14 md:py-16 px-5 bg-white">
-          <div className="max-w-[860px] mx-auto">
+          {/* 17.09.2026: echte Bewertungen statt der Karten Google/Testsieger/Trustpilot (Martin: „Hemmnisnehmer") */}
+          <div className="max-w-wide mx-auto">
             <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Kundenstimmen</p>
             <h2 className="text-[26px] md:text-[32px] leading-[1.25] font-bold text-pm-ink mb-8">
               Das sagen unsere Familien
             </h2>
-            <TestimonialCard google={google} />
+            <BewertungsAuszug variante="inline" />
           </div>
         </section>
 

@@ -289,10 +289,10 @@ export function ausApi(b: ApiBewertung): Bewertung | null {
 }
 
 /** Direkt abgegebene Bewertungen laden (nur wenn BEWERTUNGEN_ONLINE). Fehler → leere Liste. */
-export async function ladeDirekteBewertungen(): Promise<Bewertung[]> {
+export async function ladeDirekteBewertungen(neuLadenSekunden = 300): Promise<Bewertung[]> {
   if (!BEWERTUNGEN_ONLINE) return []
   try {
-    const res = await fetch(BEWERTUNG_API, { next: { revalidate: 300 } })
+    const res = await fetch(BEWERTUNG_API, { next: { revalidate: neuLadenSekunden } })
     if (!res.ok) return []
     const data = (await res.json()) as { bewertungen?: ApiBewertung[] }
     return (data.bewertungen ?? []).map(ausApi).filter((b): b is Bewertung => b !== null)
