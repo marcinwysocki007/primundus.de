@@ -1,9 +1,7 @@
 // lib/bewertungen.ts — Bewertungen für /erfahrungen und den Kundenstimmen-Block der Startseite.
 //
-// Regel der Website (seit 21.08.2026, siehe components/home/TestimonialCard.tsx):
-// nur belegbare Bewertungen mit Link zur Quelle. Deshalb steht hier jede Rezension im
-// Wortlaut mit Profil-Link, und Durchschnitt und Verteilung werden aus diesen Einträgen
-// gerechnet, nie von Hand gesetzt. Kein Review-/AggregateRating-JSON-LD
+// Jede Bewertung steht im Wortlaut; Google-Rezensionen mit Profil-Link. Durchschnitt und
+// Verteilung werden aus den Einträgen gerechnet, nie von Hand gesetzt. Kein Review-/AggregateRating-JSON-LD
 // (scripts/check-jsonld.mjs lehnt es ab, Google-Richtlinie zu Eigenbewertungen).
 //
 // Übernommen am 17.09.2026 aus Google Maps (Profile München und Hamburg) und Trustpilot.
@@ -161,9 +159,18 @@ export const BEWERTUNGEN: Bewertung[] = [
   },
 ]
 
-/** Alle Bewertungen mit Sternen (Google, Trustpilot, direkt erhalten), neueste zuerst */
+/** Martin 17.09.2026: Trustpilot erst zeigen, wenn dort mindestens 5 Bewertungen stehen.
+ *  Bis dahin bleiben die Einträge oben gespeichert, erscheinen aber nirgends (Seite, Schnitt,
+ *  Startseite). Sobald der fünfte Eintrag ergänzt ist, zeigt sich alles von selbst; nur
+ *  public/llms.txt muss dann von Hand nachgezogen werden. */
+export const TRUSTPILOT_MINDESTENS = 5
+export const TRUSTPILOT_SICHTBAR = BEWERTUNGEN.filter((b) => b.quelle === 'trustpilot').length >= TRUSTPILOT_MINDESTENS
+
+/** Alle Bewertungen mit Sternen (direkt erhalten, Google, ggf. Trustpilot), neueste zuerst */
 export function alleBewertungen(zusaetzlich: Bewertung[] = []): Bewertung[] {
-  return [...zusaetzlich, ...DIREKT_ERHALTEN, ...BEWERTUNGEN].sort((a, b) => b.sortierDatum.localeCompare(a.sortierDatum))
+  return [...zusaetzlich, ...DIREKT_ERHALTEN, ...BEWERTUNGEN]
+    .filter((b) => TRUSTPILOT_SICHTBAR || b.quelle !== 'trustpilot')
+    .sort((a, b) => b.sortierDatum.localeCompare(a.sortierDatum))
 }
 
 export function nachQuelle(quelle: Quelle, liste: Bewertung[]): Bewertung[] {

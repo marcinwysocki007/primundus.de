@@ -7,7 +7,7 @@ import { BewertungsFormular } from '@/components/bewertungen/BewertungsFormular'
 import { GoogleLogo, Sterne, TrustpilotLogo } from '@/components/bewertungen/Sterne'
 import {
   KUNDENSTIMMEN, KUNDENSTIMMEN_QUELLE, PROFILE, STAND,
-  alleBewertungen, anzahlText, googleBewertungen, ladeDirekteBewertungen, nachQuelle, schnitt, schnittText, verteilung, vonProfil,
+  TRUSTPILOT_SICHTBAR, alleBewertungen, anzahlText, googleBewertungen, ladeDirekteBewertungen, nachQuelle, schnitt, schnittText, verteilung, vonProfil,
 } from '@/lib/bewertungen'
 import { PrimundusMarke } from '@/components/bewertungen/Sterne'
 import { aktualisiertAm } from '@/lib/lastmod'
@@ -39,11 +39,18 @@ const A_ANZAHL = ALLE.length
 const MUC = vonProfil('muenchen')
 const HH = vonProfil('hamburg')
 const TP = vonProfil('trustpilot')
+// Trustpilot erst ab 5 Bewertungen (lib/bewertungen.ts)
+const TP_AN = TRUSTPILOT_SICHTBAR
+const EXTERN = TP_AN ? 'Google und Trustpilot' : 'Google'
+const EXTERN_PRUEFT = TP_AN ? 'Google und Trustpilot prüfen' : 'Google prüft'
+function aufzaehlung(teile: string[]): string {
+  return teile.length < 2 ? teile.join('') : `${teile.slice(0, -1).join(', ')} und ${teile[teile.length - 1]}`
+}
 
 const FRAGEN = [
   {
     q: 'Welche Erfahrungen machen Familien mit Primundus?',
-    a: `Familien bewerten Primundus mit ${A_SCHNITT} von 5 Sternen, aus ${A_ANZAHL} Bewertungen (Stand ${STAND.sichtbar}): ${DIREKT.length} Rückmeldungen direkt an Primundus, ${G_ANZAHL} auf Google, ${TP.length} auf Trustpilot. Gelobt werden die passende Betreuungskraft, Erreichbarkeit auch am Wochenende, klare Kosten und die eigene Auswahl der Betreuungskraft. Kritik gibt es an Wechseln nach der ersten Betreuungskraft und an verspäteten Anreisen.`,
+    a: `Familien bewerten Primundus mit ${A_SCHNITT} von 5 Sternen, aus ${A_ANZAHL} Bewertungen (Stand ${STAND.sichtbar}): ${aufzaehlung([`${DIREKT.length} Rückmeldungen direkt an Primundus`, `${G_ANZAHL} auf Google`, ...(TP_AN ? [`${TP.length} auf Trustpilot`] : [])])}. Gelobt werden die passende Betreuungskraft, Erreichbarkeit auch am Wochenende, klare Kosten und die eigene Auswahl der Betreuungskraft. Kritik gibt es an Wechseln nach der ersten Betreuungskraft und an verspäteten Anreisen.`,
   },
   {
     q: 'Ist Primundus seriös?',
@@ -51,21 +58,21 @@ const FRAGEN = [
   },
   {
     q: 'Wie kann ich Primundus bewerten?',
-    a: 'Direkt auf dieser Seite: Sterne wählen, Erfahrung beschreiben, Namen und E-Mail-Adresse angeben und die Bewertung über den Link in der E-Mail bestätigen. Wir prüfen sie und veröffentlichen sie danach hier. Sie können Primundus auch auf Google oder Trustpilot bewerten.',
+    a: `Direkt auf dieser Seite: Sterne wählen, Erfahrung beschreiben, Namen und E-Mail-Adresse angeben und die Bewertung über den Link in der E-Mail bestätigen. Wir prüfen sie und veröffentlichen sie danach hier. Sie können Primundus auch auf ${TP_AN ? 'Google oder Trustpilot' : 'Google'} bewerten.`,
   },
   {
     q: 'Veröffentlicht Primundus auch negative Bewertungen?',
-    a: 'Ja. Wir veröffentlichen jede bestätigte Bewertung, auch mit einem Stern, solange sie keine Beleidigungen, Werbung oder Daten anderer Personen enthält. Auf dieser Seite stehen auch Bewertungen mit drei und vier Sternen, von Google und Trustpilot alle Rezensionen unserer Profile.',
+    a: `Ja. Wir veröffentlichen jede bestätigte Bewertung, auch mit einem Stern, solange sie keine Beleidigungen, Werbung oder Daten anderer Personen enthält. Auf dieser Seite stehen auch Bewertungen mit drei und vier Sternen, von ${EXTERN} alle Rezensionen unserer Profile.`,
   },
   {
     q: 'Sind die Bewertungen auf dieser Seite echt?',
-    a: 'Rezensionen von Google und Trustpilot sind mit ihrer Quelle verlinkt. Die Rückmeldungen direkt an Primundus haben uns Familien geschickt, wir zeigen sie im Wortlaut mit Datum und Ort. Bewertungen über das Formular auf dieser Seite müssen per E-Mail bestätigt werden, bevor wir sie prüfen. Passt die Adresse zu einer Betreuung, steht an der Bewertung „Kunde bestätigt".',
+    a: `Rezensionen von ${EXTERN} sind mit ihrer Quelle verlinkt. Die Rückmeldungen direkt an Primundus haben uns Familien geschickt, wir zeigen sie im Wortlaut mit Datum und Ort. Bewertungen über das Formular auf dieser Seite müssen per E-Mail bestätigt werden, bevor wir sie prüfen. Passt die Adresse zu einer Betreuung, steht an der Bewertung „Kunde bestätigt".`,
   },
 ]
 
 export const metadata: Metadata = {
   title: 'Primundus Erfahrungen und Bewertungen | 24-Stunden-Pflege',
-  description: `Primundus Erfahrungen: ${A_SCHNITT} von 5 Sternen aus ${A_ANZAHL} Bewertungen von Familien, direkt an Primundus, auf Google und Trustpilot. Alle im Wortlaut, auch die kritischen, dazu das Formular für Ihre eigene Bewertung.`,
+  description: `Primundus Erfahrungen: ${A_SCHNITT} von 5 Sternen aus ${A_ANZAHL} Bewertungen von Familien, ${TP_AN ? 'direkt an Primundus, auf Google und Trustpilot' : 'direkt an Primundus und auf Google'}. Alle im Wortlaut, auch die kritischen, dazu das Formular für Ihre eigene Bewertung.`,
   alternates: { canonical: SEITE_URL },
   openGraph: {
     title: 'Primundus Erfahrungen und Bewertungen',
@@ -173,8 +180,9 @@ export default async function ErfahrungenPage() {
                   Primundus Erfahrungen und Bewertungen
                 </h1>
                 <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
-                  Familien bewerten Primundus mit {schnittText(schnitt(alle))} von 5 Sternen, aus {alle.length} Bewertungen: Rückmeldungen direkt an uns,
-                  Google-Rezensionen für München und Hamburg und Trustpilot. Hier lesen Sie jede im Wortlaut, auch die kritischen. Sind Sie selbst Kunde,
+                  Familien bewerten Primundus mit {schnittText(schnitt(alle))} von 5 Sternen, aus {alle.length} Bewertungen:{' '}
+                  {TP_AN ? 'Rückmeldungen direkt an uns, Google-Rezensionen für München und Hamburg und Trustpilot.' : 'Rückmeldungen direkt an uns und Google-Rezensionen für München und Hamburg.'}{' '}
+                  Hier lesen Sie jede im Wortlaut, auch die kritischen. Sind Sie selbst Kunde,
                   können Sie Primundus direkt auf dieser Seite bewerten.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
@@ -222,15 +230,17 @@ export default async function ErfahrungenPage() {
                   <ProfilZeile logo={<PrimundusMarke />} titel="Primundus" liste={nachQuelle('primundus', alle)} einheit={['Bewertung', 'Bewertungen']} />
                   <ProfilZeile logo={<GoogleLogo />} titel="München" liste={MUC} href={PROFILE.muenchen.url} />
                   <ProfilZeile logo={<GoogleLogo />} titel="Hamburg" liste={HH} href={PROFILE.hamburg.url} />
-                  <ProfilZeile
-                    logo={<TrustpilotLogo />}
-                    titel="Trustpilot"
-                    liste={TP}
-                    href={PROFILE.trustpilot.url}
-                    zusatz={anzahlText(TP.length, 'Bewertung', 'Bewertungen')}
-                  />
+                  {TP_AN && (
+                    <ProfilZeile
+                      logo={<TrustpilotLogo />}
+                      titel="Trustpilot"
+                      liste={TP}
+                      href={PROFILE.trustpilot.url}
+                      zusatz={anzahlText(TP.length, 'Bewertung', 'Bewertungen')}
+                    />
+                  )}
                 </ul>
-                <p className="mt-4 text-[13px] leading-[1.5] text-pm-mute">Stand {STAND.sichtbar}. Google und Trustpilot prüfen nicht, ob Verfasser Kunden sind.</p>
+                <p className="mt-4 text-[13px] leading-[1.5] text-pm-mute">Stand {STAND.sichtbar}. {EXTERN_PRUEFT} nicht, ob Verfasser Kunden sind.</p>
               </aside>
             </div>
           </div>
@@ -335,8 +345,8 @@ export default async function ErfahrungenPage() {
                     desc: `Diese ${DIREKT.length} Bewertungen haben uns Familien direkt geschickt, bevor es das Formular auf dieser Seite gab. Wir zeigen sie im Wortlaut mit Sternen, Datum und Ort, auch die mit drei und vier Sternen. Nachnamen kürzen wir auf den Anfangsbuchstaben.`,
                   },
                   {
-                    title: 'Google und Trustpilot',
-                    desc: `Wir übernehmen alle Rezensionen unserer Google-Profile München und Hamburg und von Trustpilot im Wortlaut und verlinken die Quelle. Google und Trustpilot prüfen nicht, ob die Verfasser Kunden von Primundus sind. Nachnamen kürzen wir auf den Anfangsbuchstaben. Stand: ${STAND.sichtbar}.`,
+                    title: EXTERN,
+                    desc: `Wir übernehmen alle Rezensionen unserer Google-Profile München und Hamburg${TP_AN ? ' und von Trustpilot' : ''} im Wortlaut und verlinken die Quelle. ${EXTERN_PRUEFT} nicht, ob die Verfasser Kunden von Primundus sind. Nachnamen kürzen wir auf den Anfangsbuchstaben. Stand: ${STAND.sichtbar}.`,
                   },
                   {
                     title: 'Bewertungen über das Formular',

@@ -1,10 +1,10 @@
 "use client";
 
 import { Sterne } from "@/components/bewertungen/Sterne";
-import { googleSchnitt, STAND } from "@/lib/bewertungen";
+import { googleSchnitt, STAND, TRUSTPILOT_SICHTBAR } from "@/lib/bewertungen";
 
-// Ehrlicher Vertrauensblock:
-// Wir zeigen ausschließlich belegbare Bewertungen mit Link zur Quelle.
+// Vertrauensblock: Google-Schnitt mit Link auf /erfahrungen (dort alle Bewertungen im Wortlaut,
+// auch die direkt an Primundus geschickten, Martin 17.09.2026).
 // Google: Schnitt und Anzahl kommen seit 17.09.2026 aus lib/bewertungen.ts (beide Profile,
 // München und Hamburg, jede Rezension im Wortlaut auf /erfahrungen). Vorher stand hier
 // „5,0 aus 3" (nur München, Stand August), bis eine 4-Sterne-Rezension dazukam.
@@ -53,26 +53,39 @@ export function TestimonialCard() {
           <p className="text-[12px] text-pm-mute">Zur Auszeichnung →</p>
         </a>
 
-        {/* Trustpilot */}
-        <a
-          href={TRUSTPILOT_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
-        >
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 2l2.9 6.9L22 9.2l-5.4 4.9L18.2 22 12 18.1 5.8 22l1.6-7.9L2 9.2l7.1-.3z"/></svg>
-            <span className="text-sm font-semibold text-pm-ink">Trustpilot</span>
-          </div>
-          <p className="text-[13px] text-pm-body leading-snug">
-            Ihre Erfahrung hilft anderen Familien bei der Entscheidung.
-          </p>
-          <p className="text-[12px] text-pm-mute">Primundus auf Trustpilot bewerten →</p>
-        </a>
+        {/* Trustpilot erst ab 5 Bewertungen (Martin 17.09.2026), bis dahin Einladung zur eigenen Bewertung */}
+        {TRUSTPILOT_SICHTBAR ? (
+          <a
+            href={TRUSTPILOT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
+          >
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 2l2.9 6.9L22 9.2l-5.4 4.9L18.2 22 12 18.1 5.8 22l1.6-7.9L2 9.2l7.1-.3z"/></svg>
+              <span className="text-sm font-semibold text-pm-ink">Trustpilot</span>
+            </div>
+            <p className="text-[13px] text-pm-body leading-snug">
+              Ihre Erfahrung hilft anderen Familien bei der Entscheidung.
+            </p>
+            <p className="text-[12px] text-pm-mute">Primundus auf Trustpilot bewerten →</p>
+          </a>
+        ) : (
+          <a
+            href="/erfahrungen#bewerten"
+            className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
+          >
+            <span className="text-sm font-semibold text-pm-ink">Ihre Bewertung</span>
+            <p className="text-[13px] text-pm-body leading-snug">
+              Ihre Erfahrung hilft anderen Familien bei der Entscheidung.
+            </p>
+            <p className="text-[12px] text-pm-mute">Primundus bewerten →</p>
+          </a>
+        )}
       </div>
 
       <p className="text-[12px] text-pm-mute mt-4">
-        Wir zeigen nur belegbare Bewertungen mit Link zur Quelle — jede einzelne zählt.
+        <a href="/erfahrungen" className="underline underline-offset-2 hover:text-pm-ink">Alle Bewertungen im Wortlaut lesen</a>
       </p>
     </div>
   );
