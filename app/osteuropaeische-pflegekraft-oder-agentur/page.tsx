@@ -92,7 +92,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
                 ['Kraftwechsel', 'Familie muss neu suchen', 'Primundus organisiert nahtlos'],
                 ['Startzeitraum', 'Wochen bis Monate', 'ab 3 Tagen'],
                 ['Qualitätssicherung', 'Keine systematische', 'Laufend durch Primundus'],
-                ['Kosten', 'Evtl. niedriger', '2.200–3.500 €/Mo — transparent'],
+                ['Kosten', 'Evtl. niedriger', 'ab 2.150 €/Mo — transparent'],
               ]}
               betont={2}
             />
@@ -128,7 +128,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               '20+ Jahre Markterfahrung — 60.000+ Betreuungen durchgeführt',
               'Testsieger DIE WELT — unabhängig bewertet',
               'Täglich kündbar — ohne Mindestlaufzeit',
-              'Transparente Preise: 2.200–3.500 €/Monat, alles inklusive',
+              'Transparente Preise: ab 2.150 €/Monat, alle Kosten vorab genannt',
               'Aktive Qualitätsprüfung aller Kräfte (Deutsch, Erfahrung, Referenzen)',
               'Sofortiger Ersatz bei Ausfall — keine Versorgungslücke',
               'Laufende Betreuung durch Primundus als Ansprechpartner',

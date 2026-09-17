@@ -36,7 +36,7 @@ const schemaMarkup = JSON.stringify([
         "name": "Was kostet eine 24-Stunden-Pflegekraft im Monat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Die Kosten für eine 24h-Pflegekraft liegen bei Primundus zwischen 2.200 und 3.500 Euro pro Monat, abhängig von Pflegebedarf und Qualifikation der Betreuungskraft. Pflegegeld und andere Leistungen der Pflegekasse können die Eigenkosten deutlich reduzieren."
+          "text": "Eine 24h-Pflegekraft kostet bei Primundus ab 2.150 Euro pro Monat, abhängig von Pflegebedarf und Qualifikation der Betreuungskraft. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro im Monat."
         }
       },
       {

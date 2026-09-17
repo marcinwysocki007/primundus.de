@@ -28,7 +28,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
-  description: 'Pflegeheim: Ø 3.364 €/Monat Eigenanteil. 24h-Pflege: ab ca. 1.500 €/Monat nach Kassenzuschüssen. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
+  description: 'Pflegeheim: Ø 3.364 €/Monat Eigenanteil. 24h-Pflege: bei Pflegegrad 3 ab ca. 923 €/Monat nach Zuschüssen und Steuer. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten' },
   openGraph: {
     title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
@@ -73,7 +73,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus 2.200–3.500 €/Monat brutto. Mit Pflegegeld (599 € bei Pflegegrad 3) sinkt der Eigenanteil auf ca. 1.850–2.150 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Bei Primundus ab 2.150 €/Monat. Nach Pflegegeld (599 € bei Pflegegrad 3), Entlastungsbudget und Steuerermäßigung bleiben ab ca. 923 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
       },
       {
         '@type': 'Question',
@@ -112,13 +112,13 @@ export default function VsKosten() {
           ]}
           augenbraue="Ratgeber Vergleich"
           titel="24h-Pflege vs. Pflegeheim — Kostenvergleich 2026"
-          einleitung="Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause sinkt der Eigenanteil mit Kassenzuschüssen bei Pflegegrad 3 auf ca. 1.700–2.000 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung."
+          einleitung="Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
           blick={[
                 'Pflegeheim-Eigenanteil 2026: Ø 3.364 €/Monat (1. Jahr) — steigt jährlich',
-                '24h-Pflege zuhause: 2.200–3.500 €/Monat brutto bei Primundus',
-                'Nach Kassenzuschüssen (PG 3): Eigenanteil ca. 1.850–2.150 €/Monat',
+                '24h-Pflege zuhause: ab 2.150 €/Monat bei Primundus',
+                'Nach Zuschüssen und Steuer (PG 3): Eigenanteil ab ca. 923 €/Monat',
                 '24h-Pflege ist oft günstiger UND bietet mehr individuelle Betreuung',
                 'Pflegeheim kann nach 2+ Jahren durch Kassenzuschläge günstiger werden',
                 'Vertraute Umgebung gibt Orientierung und Halt — gesundheitlicher Mehrwert',
@@ -159,7 +159,7 @@ export default function VsKosten() {
 
           <Abschnitt id="24h" titel="Was 24h-Pflege wirklich kostet">
             <Text>
-              Bei Primundus kostet 24h-Pflege 2.200–3.500 Euro pro Monat — je nach Pflegebedarf. Mit allen Kassenzuschüssen sinkt der tatsächliche Eigenanteil deutlich.
+              Bei Primundus kostet 24h-Pflege ab 2.150 Euro pro Monat — je nach Pflegebedarf. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro.
             </Text>
             <Tabelle
               titel="Eigenanteil 24h-Pflege nach Kassenzuschüssen — Pflegegrad 3"
@@ -216,7 +216,7 @@ export default function VsKosten() {
             <Fragen
               fragen={[
                 { q: 'Was kostet ein Pflegeheim 2026?', a: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
-                { q: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', a: 'Bei Primundus 2.200–3.500 €/Monat brutto. Mit Pflegegeld (599 € bei Pflegegrad 3) sinkt der Eigenanteil auf ca. 1.850–2.150 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
+                { q: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', a: 'Bei Primundus ab 2.150 €/Monat. Nach Pflegegeld (599 € bei Pflegegrad 3), Entlastungsbudget und Steuerermäßigung bleiben ab ca. 923 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
                 { q: 'Ist 24h-Pflege zuhause besser als ein Pflegeheim?', a: 'Für die meisten Pflegesituationen ja — günstigerer Eigenanteil, eigenes Zuhause, individuelle 1:1-Betreuung, kein Umzugsstress. Ein Pflegeheim ist besser bei intensivmedizinischem Dauerbedarf oder fehlendem Wohnraum.' },
                 { q: 'Wann kann das Pflegeheim günstiger werden?', a: 'Ab dem dritten Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % des pflegebedingten Eigenanteils. Bei sehr hohem Pflegegrad (PG 4–5) kann das langfristig die Rechnung zugunsten des Heims ändern.' },
                 { q: 'Was zahlt die Pflegekasse im Pflegeheim?', a: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },

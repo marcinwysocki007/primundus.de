@@ -43,7 +43,7 @@ const schemaMarkup = JSON.stringify([
         name: 'Ist 24h-Pflege günstiger als ein Pflegeheim?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'In den meisten Fällen ja — vor allem ab Pflegegrad 3. Der durchschnittliche Eigenanteil bei 24h-Pflege zuhause liegt bei 1.500–2.500 €/Monat, bei einem Pflegeheim oft bei 2.700–3.500 €. Hochgerechnet sind das 8.000–12.000 € Ersparnis pro Jahr — bei gleichzeitig vertrautem Umfeld und persönlicher 1:1-Betreuung.',
+          text: 'In den meisten Fällen ja — vor allem ab Pflegegrad 3. Bei 24h-Pflege zuhause bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 €/Monat, bei einem Pflegeheim oft 2.700–3.500 €. Beim Grundpreis sind das über 20.000 € Unterschied pro Jahr — bei gleichzeitig vertrautem Umfeld und persönlicher 1:1-Betreuung.',
         },
       },
       {
@@ -104,7 +104,7 @@ const faqs = [
   },
   {
     q: 'Ist 24h-Pflege günstiger als ein Pflegeheim?',
-    a: 'In den meisten Fällen ja — vor allem ab PG 3. Eigenanteil 24h-Pflege: 1.500–2.500 €/Monat, Pflegeheim: Ø 3.364 €. Hochgerechnet 8.000–12.000 € Ersparnis pro Jahr.',
+    a: 'In den meisten Fällen ja — vor allem ab PG 3. Eigenanteil 24h-Pflege bei PG 3: ab ca. 923 €/Monat, Pflegeheim: Ø 3.364 €. Beim Grundpreis sind das über 20.000 € Unterschied pro Jahr.',
   },
   {
     q: 'Warum sind Pflegeheime in Bayern und BW so teuer?',

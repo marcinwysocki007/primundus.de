@@ -68,7 +68,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet eine 24h-Pflegekraft in Berlin?',
-        acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
       },
       {
         '@type': 'Question',
@@ -100,7 +100,7 @@ const schemaMarkup = [
 ]
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Berlin?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegegeld, Entlastungsbetrag und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1000–2000 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Berlin?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Berlin starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Berlin — auch in ländlichen Regionen.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
   { q: 'Funktioniert 24-Stunden-Pflege auch in einer Berliner Altbauwohnung?', a: 'Ja — und in Vierteln wie Prenzlauer Berg, wo zwei Drittel der Wohnungen aus der Zeit zwischen 1871 und 1914 stammen, ist sie oft die Lösung, die das Wohnenbleiben überhaupt erlaubt. Die Betreuungskraft braucht ein eigenes Zimmer; ansonsten stellt der Altbau keine besonderen Anforderungen. Entscheidend ist, dass jemand die Wege nach draußen übernimmt, sobald das Treppenhaus zur Hürde wird.' },
@@ -130,8 +130,8 @@ export default function Page() {
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
           blick={[
-            'Preis bei Primundus: 2.200–3.500 €/Monat',
-            'Ihr Eigenanteil bei Pflegegrad 3: ca. 1000–2000 €/Monat',
+            'Preis bei Primundus: ab 2.150 €/Monat',
+            'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
             'Pflegeheim in Brandenburg: Eigenanteil rund 3.020 €/Monat (vdek, 07/2026)',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
@@ -183,14 +183,14 @@ export default function Page() {
             <Tabelle
               titel="Kostenbeispiel — Pflegegrad 3 in Berlin"
               zeilen={[
-                ['Kosten Primundus', '2.200–3.500 €/Monat'],
+                ['Kosten Primundus', 'ab 2.150 €/Monat'],
                 ['− Pflegegeld PG 3', '− 599 €/Monat'],
                 ['− Entlastungsbudget (anteilig)', '− ca. 295 €/Monat'],
-                ['− Steuerabzug (ca.)', '− ca. 200 €/Monat'],
-                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ca. 1000–2000 €/Monat</strong>],
+                ['− Steuerermäßigung (20 %, bis 4.000 €/Jahr)', '− ca. 333 €/Monat'],
+                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Pflegeheim in Brandenburg: Eigenanteil rund 3.020 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
+              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Pflegeheim in Brandenburg: Eigenanteil rund 3.020 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -221,7 +221,7 @@ export default function Page() {
             <Kasten titel="Angestellt statt vermittelt">
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet:</strong> zwischen 2.200 und 3.500 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbetrag und Entlastungsbudget in Brandenburg meist rund 1000 bis 2000 Euro Eigenanteil — deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.020 Euro im Monat kostet.</Text>
+            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet:</strong> ab 2.150 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil — deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.020 Euro im Monat kostet.</Text>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Betreuungskräfte — das Entsendemodell erklärt</a>.</Text>
           </Abschnitt>

@@ -95,7 +95,7 @@ export default function Vergleiche() {
                 <tbody>
                   {[
                     ['Pflegeheim', '2.500–5.000 €', '~3.364 € Ø', 'Kein eigenes Zuhause'],
-                    ['24h-Pflege (Primundus)', '2.200–3.500 €', 'ca. 1.500–2.000 €', 'Eigenes Zuhause, 24h Betreuung'],
+                    ['24h-Pflege (Primundus)', 'ab 2.150 €', 'ab ca. 923 € (PG 3)', 'Eigenes Zuhause, 24h Betreuung'],
                     ['Ambulante Pflege', '800–2.500 €', 'ca. 0–1.000 €', 'Nur zu Einsatzzeiten da'],
                     ['Tagespflege', '800–2.000 €', 'ca. 0–500 €', 'Nur tagsüber, keine Nacht'],
                   ].map(([form, gesamt, eigenanteil, besonderheit], i) => (
@@ -110,7 +110,7 @@ export default function Vergleiche() {
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Eigenanteil 24h-Pflege mit Pflegegeld + Entlastungsbetrag + Entlastungsbudget optimiert · Stand 2026</p>
+              <p className="text-[11px] text-pm-mute">Eigenanteil 24h-Pflege: eine Person, Pflegegrad 3, nach Pflegegeld, Entlastungsbudget und Steuerermäßigung · Stand September 2026</p>
             </div>
           </div>
 

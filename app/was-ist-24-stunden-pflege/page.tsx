@@ -47,13 +47,13 @@ const GrafikKostenvergleich = dynamic(
 
 export const metadata: Metadata = {
   title: 'Was ist 24-Stunden-Pflege? Definition, Kosten & Ablauf',
-  description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet 2.200–3.500 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
+  description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet ab 2.150 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
   alternates: {
     canonical: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   openGraph: {
     title: 'Was ist 24-Stunden-Pflege? | Primundus',
-    description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet 2.200–3.500 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
+    description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet ab 2.150 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
     url: 'https://primundus.de/was-ist-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -94,12 +94,12 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was versteht man unter 24-Stunden-Pflege?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten beginnen bei 2.150 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim.' },
       },
       {
         '@type': 'Question',
         name: 'Was kostet 24-Stunden-Pflege 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Die Kosten liegen zwischen 2.200 und 3.500 Euro pro Monat. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Die monatlichen Kosten beginnen bei 2.150 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse senken die Eigenkosten erheblich, dazu sind 20 % der Kosten als haushaltsnahe Dienstleistung steuerlich absetzbar. Bei Pflegegrad 3 bleiben so ab ca. 923 € im Monat.' },
       },
       {
         '@type': 'Question',
@@ -168,12 +168,12 @@ export default function WasIst24StundenPflege() {
               24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.
             </KurzAntwort>
             <Text>
-              24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
+              24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten beginnen bei 2.150 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
             </Text>
             <Kasten augenbraue="Auf einen Blick">
               <HakenListe punkte={[
                 'Betreuungskraft lebt dauerhaft im Haushalt — bei Bedarf auch nachts vor Ort',
-                'Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf und Anbieter',
+                'Kosten bei Primundus: ab 2.150 €/Monat, je nach Pflegebedarf',
                 'Pflegekasse zahlt: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr (seit Juli 2025)',
                 'Geeignet bei Demenz, nach Schlaganfall, bei Parkinson und vielen weiteren Situationen',
                 'Rechtlich sicher über Entsendemodell mit A1-Bescheinigung',
@@ -293,7 +293,7 @@ export default function WasIst24StundenPflege() {
             <Fragen
               fragen={[
                 { q: 'Was versteht man unter 24-Stunden-Pflege?', a: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und bei Bedarf auch nachts vor Ort ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und die beliebteste Alternative zum Pflegeheim in Deutschland.' },
-                { q: 'Was kostet 24-Stunden-Pflege 2026?', a: 'Die monatlichen Kosten liegen zwischen 2.200 und 3.500 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse können die Eigenkosten erheblich senken. Steuerlich sind 20 % der Kosten als haushaltsnahe Dienstleistung absetzbar.' },
+                { q: 'Was kostet 24-Stunden-Pflege 2026?', a: 'Die monatlichen Kosten beginnen bei 2.150 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse senken die Eigenkosten erheblich, dazu sind 20 % der Kosten als haushaltsnahe Dienstleistung steuerlich absetzbar. Bei Pflegegrad 3 bleiben so ab ca. 923 € im Monat.' },
                 { q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?', a: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die frühere Verhinderungspflege und Kurzzeitpflege zusammen. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
                 { q: 'Ist 24-Stunden-Pflege legal?', a: 'Ja — über eine seriöse Agentur im Entsendemodell ist 24h-Pflege absolut legal. Die A1-Bescheinigung belegt die Sozialversicherung im Heimatland. Scheinselbstständigkeit ist dagegen strafbar und kann zu hohen Nachzahlungen von Sozialabgaben führen.' },
                 { q: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?', a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Betreuung rund um die Uhr und zahlt oft vergleichbare oder geringere Gesamtkosten.' },

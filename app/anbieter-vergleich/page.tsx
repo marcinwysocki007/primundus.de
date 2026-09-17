@@ -101,7 +101,7 @@ export default function Page() {
             Wann die Betreuungskraft? Was kostet der Einstieg, und wie lange binden Sie sich?
             Primundus geht dabei bewusst den direkteren, moderneren Weg: Preis und Betreuungskräfte
             sofort online, Vertrag erst nach Ihrer Auswahl, keine Vermittlungsgebühr, keine
-            Mindestlaufzeit — ab 2.200 €/Monat.
+            Mindestlaufzeit — ab 2.150 €/Monat.
           </p>
           <p className="text-[13px] text-pm-mute leading-relaxed mb-10 max-w-[720px]">
             Alle Angaben zu anderen Anbietern stammen von deren eigenen Websites (Stand {STAND}) und sind

@@ -21,10 +21,9 @@ export const ENTLASTUNGSBUDGET = 3539
 /** Steuerermäßigung haushaltsnahe Dienstleistungen: 20 %, max. €/Jahr — § 35a EStG */
 export const STEUER_MAX_JAHR = 4000
 
-/** Primundus-Preisspanne €/Monat (Angebotsrealität, Betreiber-bestätigt als kanonisch) */
-export const PREIS_MIN = 2200
-export const PREIS_MAX = 3500
-export const PREIS_SPANNE = '2.200–3.500 €/Monat'
+/** Primundus-Grundpreis €/Monat für eine Person: Kostenrechner, pricing_config „basis" (Martin 17.09.2026: Preise aus dem Rechner, keine Spanne) */
+export const PREIS_AB = 2150
+export const PREIS_AB_TEXT = 'ab 2.150 €/Monat'
 
 /** Typischer Einsatzstart nach Anfrage */
 export const VORLAUF = 'ab 3 Tagen'

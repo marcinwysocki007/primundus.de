@@ -68,7 +68,7 @@ const schemaMarkup = [
         name: 'Was kostet eine 24h-Pflegekraft im Hochtaunuskreis?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Meist zwischen 2.200 und 3.500 Euro im Monat — und damit oft weniger als ein Heimplatz im Taunus, wo die Eigenanteile zu den höchsten in Hessen gehören. Mit den Zuschüssen der Pflegekasse bleiben bei Pflegegrad 3 häufig rund 1.500 bis 2.400 Euro selbst zu tragen.',
+          text: 'Ab 2.150 Euro im Monat — und damit oft weniger als ein Heimplatz im Taunus, wo die Eigenanteile zu den höchsten in Hessen gehören. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.',
         },
       },
       {
@@ -92,7 +92,7 @@ const schemaMarkup = [
 ]
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft im Hochtaunuskreis?', a: 'Meist zwischen 2.200 und 3.500 Euro im Monat — und damit oft weniger als ein Heimplatz im Taunus, wo die Eigenanteile zu den höchsten in Hessen gehören. Mit den Zuschüssen der Pflegekasse bleiben bei Pflegegrad 3 häufig rund 1.500 bis 2.400 Euro selbst zu tragen.' },
+  { q: 'Was kostet eine 24h-Pflegekraft im Hochtaunuskreis?', a: 'Ab 2.150 Euro im Monat — und damit oft weniger als ein Heimplatz im Taunus, wo die Eigenanteile zu den höchsten in Hessen gehören. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.' },
   { q: 'Welche Orte im Hochtaunuskreis deckt Primundus ab?', a: 'Den ganzen Kreis: Bad Homburg, Oberursel, Königstein, Kronberg, Friedrichsdorf, Steinbach, Schmitten, Usingen, Neu-Anspach, Wehrheim und alle Gemeinden im Usinger Land.' },
   { q: 'Wie schnell kann eine Betreuungskraft im Taunus starten?', a: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf, etwa nach einem Sturz oder Klinikaufenthalt, oft auch schneller.' },
 ]
@@ -142,7 +142,7 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="was-kostet-das-und" titel="Was kostet das — und was zahlt die Pflegekasse dazu?">
-            <Text>Eine 24h-Betreuung kostet über Primundus meist <strong>2.200 bis 3.500 Euro im Monat</strong> — abhängig davon, ob eine oder zwei Personen betreut werden, wie mobil Ihre Angehörigen sind und ob nachts Hilfe nötig ist. Mit Pflegegeld, Entlastungsbetrag und Verhinderungspflege bleiben bei Pflegegrad 3 oft <strong>rund 1.500 bis 2.400 Euro</strong> selbst zu tragen. Gerade im Hochtaunuskreis, wo Heimplätze besonders teuer sind, rechnet sich das Zuhausebleiben doppelt.</Text>
+            <Text>Eine 24h-Betreuung kostet über Primundus <strong>ab 2.150 Euro im Monat</strong> — abhängig davon, ob eine oder zwei Personen betreut werden, wie mobil Ihre Angehörigen sind und ob nachts Hilfe nötig ist. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3{' '}<strong>ab ca. 923 Euro</strong> selbst zu tragen. Gerade im Hochtaunuskreis, wo Heimplätze besonders teuer sind, rechnet sich das Zuhausebleiben doppelt.</Text>
             <MehrDazu
               label="Mehr dazu:"
               links={[
@@ -157,7 +157,7 @@ export default function Page() {
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Der Kostenvergleich fällt im Hochtaunuskreis deutlich aus: Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbetrag und Entlastungsbudget meist rund 1.500 bis 2.400 Euro Eigenanteil. Ein Heimplatz kostet in Hessen im ersten Jahr im Schnitt rund 3.230 Euro im Monat — und die vertraute Wohnung bleibt dabei auf der Strecke.</Text>
+            <Text>Der Kostenvergleich fällt im Hochtaunuskreis deutlich aus: Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil. Ein Heimplatz kostet in Hessen im ersten Jahr im Schnitt rund 3.230 Euro im Monat — und die vertraute Wohnung bleibt dabei auf der Strecke.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Betreuungskräfte — das Entsendemodell erklärt</a>.</Text>
           </Abschnitt>
 

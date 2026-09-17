@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: 'Was kostet 24-Stunden-Pflege bei Primundus im Vergleich zu Pflegehelden?',
-    a: 'Primundus beginnt ab 2.200 €/Monat, Pflegehelden nach eigener Angabe ab 2.850 €/Monat. Bei beiden hängt der Preis von Pflegesituation und Sprachkenntnissen ab. Den Primundus-Preis sehen Sie in 2 Minuten online — ohne Rückruf.',
+    a: 'Primundus beginnt ab 2.150 €/Monat, Pflegehelden nach eigener Angabe ab 2.850 €/Monat. Bei beiden hängt der Preis von Pflegesituation und Sprachkenntnissen ab. Den Primundus-Preis sehen Sie in 2 Minuten online — ohne Rückruf.',
   },
   {
     q: 'Muss ich einen Vertrag unterschreiben, bevor ich die Betreuungskraft kenne?',
@@ -99,14 +99,14 @@ export default function Page() {
               Ansprechpartnern vor Ort; ein Angebot gibt es nach eigener Angabe innerhalb eines Tages nach
               Anfrage, ab 2.850 €/Monat. <strong>Primundus</strong> zeigt Preis <em>und</em> passende
               Betreuungskräfte sofort online — Sie wählen Ihre Betreuungskraft aus, <em>bevor</em> ein
-              Vertrag unterschrieben wird. Ab 2.200 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
+              Vertrag unterschrieben wird. Ab 2.150 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
               taggenau abgerechnet.
             </p>
             <p className="text-[14px] text-pm-ink leading-relaxed mt-3">
               <strong>Kurz:</strong> Pflegehelden ist der klassische Weg über die persönliche Beratung vor Ort —
               Primundus der direkte, moderne Weg: schneller beim Preis (2 Minuten statt Angebot nach Anfrage),
               schneller bei der Auswahl (Betreuungskräfte sofort sichtbar) und mit niedrigerem Einstiegspreis
-              (ab 2.200 € gegenüber ab 2.850 €).
+              (ab 2.150 € gegenüber ab 2.850 €).
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function Page() {
                 { t: 'Erst auswählen, dann Vertrag', d: 'Sie entscheiden, wer zu Ihnen kommt. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag.' },
                 { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt — ein Ansprechpartner für alles, 7 Tage die Woche.' },
                 { t: 'Keine Gebühren, keine Bindung', d: 'Keine Vermittlungs- oder Aufnahmegebühr, keine Mindestlaufzeit — täglich kündbar, taggenau abgerechnet.' },
-                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.200 €/Monat.' },
+                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.150 €/Monat.' },
               ].map((x) => (
                 <div key={x.t} className="bg-white border border-pm-line rounded-2xl p-4">
                   <p className="text-[14px] font-bold text-pm-ink mb-1">{x.t}</p>

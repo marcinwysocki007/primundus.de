@@ -53,7 +53,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie organisiere ich 24h-Pflege für meine Eltern?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — wenn nötig schon in 3 Tagen.' } },
-      { '@type': 'Question', name: 'Was kostet 24h-Pflege für meine Mutter / meinen Vater?', acceptedAnswer: { '@type': 'Answer', text: '2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat.' } },
+      { '@type': 'Question', name: 'Was kostet 24h-Pflege für meine Mutter / meinen Vater?', acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.' } },
       { '@type': 'Question', name: 'Kann ich täglich kündbar sein?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen.' } }
     ],
   },
@@ -113,7 +113,7 @@ export default function Page() {
             <Fragen
               fragen={[
                 { q: "Wie organisiere ich 24h-Pflege für meine Eltern?", a: "Primundus anrufen (089 200 000 830) oder online anfragen. Im Beratungsgespräch wird die Situation besprochen, eine passende Kraft ausgewählt, und der Start organisiert — wenn nötig schon in 3 Tagen." },
-                { q: "Was kostet 24h-Pflege für meine Mutter / meinen Vater?", a: "2.200–3.500 €/Monat. Mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 auf ca. 1.500–2.000 €/Monat." },
+                { q: "Was kostet 24h-Pflege für meine Mutter / meinen Vater?", a: "Ab 2.150 €/Monat. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat." },
                 { q: "Kann ich täglich kündbar sein?", a: "Ja — Primundus ist täglich kündbar. Keine Mindestlaufzeit, keine Kündigungsfristen." },
               ]}
             />

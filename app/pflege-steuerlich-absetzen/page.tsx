@@ -60,7 +60,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie viel Pflege kann man von der Steuer absetzen?', acceptedAnswer: { '@type': 'Answer', text: '20 % der Aufwendungen für haushaltsnahe Pflegedienstleistungen können direkt von der Steuerschuld abgezogen werden — maximal 4.000 Euro Steuerersparnis pro Jahr. Das Maximum wird bei Pflegekosten von 20.000 €/Jahr erreicht.' } },
-      { '@type': 'Question', name: 'Kann man 24h-Pflege von der Steuer absetzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — 24h-Pflegekosten bei einer Agentur wie Primundus sind als haushaltsnahe Dienstleistungen absetzbar. 20 % der jährlichen Kosten, maximal 4.000 € Steuerersparnis. Die Kosten werden in der Anlage V der Steuererklärung eingetragen.' } },
+      { '@type': 'Question', name: 'Kann man 24h-Pflege von der Steuer absetzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — 24h-Pflegekosten bei einer Agentur wie Primundus sind als haushaltsnahe Dienstleistungen absetzbar. 20 % der jährlichen Kosten, maximal 4.000 € Steuerersparnis. Die Kosten werden in der Anlage Haushaltsnahe Aufwendungen der Steuererklärung eingetragen.' } },
       { '@type': 'Question', name: 'Können Angehörige die Pflegekosten absetzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — wenn Angehörige die Pflegekosten für eine pflegebedürftige Person tragen und diese nicht selbst die finanzielle Belastung übernehmen kann, können die Kosten als außergewöhnliche Belastungen geltend gemacht werden — allerdings nur über die zumutbare Belastung hinaus.' } },
     ],
   },
@@ -93,7 +93,7 @@ export default function PflegeSteuerlichAbsetzen() {
                 'Maximum bei Pflegekosten von 20.000 €/Jahr erreicht',
                 'Zusätzlich: Außergewöhnliche Belastungen für nicht erstattete Pflegekosten möglich',
                 'Voraussetzung: Überweisung (kein Barzahlung) + Rechnung aufbewahren',
-                'Eintrag: Anlage V der Einkommensteuererklärung',
+                'Eintrag: Anlage Haushaltsnahe Aufwendungen der Einkommensteuererklärung',
               ]}
         />
 
@@ -159,7 +159,7 @@ export default function PflegeSteuerlichAbsetzen() {
             <Schritte
               schritte={[
                 { title: 'Belege sammeln', desc: 'Alle Rechnungen von Primundus/dem Pflegedienst plus Überweisungsbelege des Jahres. Keine Barzahlungen — nur Überweisungen sind absetzbar.' },
-                { title: 'Anlage V ausfüllen', desc: 'In der Einkommensteuererklärung: Anlage V "Haushaltsnahe Aufwendungen". Dort die Gesamtsumme der Pflegekosten eintragen — das Finanzamt berechnet automatisch 20 %, max. 4.000 €.' },
+                { title: 'Anlage Haushaltsnahe Aufwendungen ausfüllen', desc: 'In der Einkommensteuererklärung: Anlage „Haushaltsnahe Aufwendungen". Dort die Gesamtsumme der Pflegekosten eintragen — das Finanzamt berechnet automatisch 20 %, max. 4.000 €.' },
                 { title: 'Belege aufbewahren', desc: 'Rechnungen und Überweisungsbelege 10 Jahre aufbewahren — das Finanzamt kann sie anfordern. Digitale Kopien ausreichend.' },
                 { title: 'Steuerberater hinzuziehen', desc: 'Bei hohen Pflegekosten und möglicher Kombination mit außergewöhnlichen Belastungen lohnt sich ein Steuerberater — um das Maximum herauszuholen.' },
               ]}
@@ -174,7 +174,7 @@ export default function PflegeSteuerlichAbsetzen() {
             <Fragen
               fragen={[
                 { q: 'Wie viel Pflege kann man von der Steuer absetzen?', a: '20 % der Aufwendungen für haushaltsnahe Pflegeleistungen (§ 35a EStG), maximal 4.000 Euro Steuerersparnis pro Jahr. Der Abzug erfolgt direkt von der Steuerschuld — das ist besonders wertvoll.' },
-                { q: 'Kann man 24h-Pflege von der Steuer absetzen?', a: 'Ja — 24h-Pflegekosten bei Primundus sind als haushaltsnahe Dienstleistungen absetzbar. 20 % der Jahreskosten, max. 4.000 € Steuerersparnis. Eintrag in Anlage V der Steuererklärung.' },
+                { q: 'Kann man 24h-Pflege von der Steuer absetzen?', a: 'Ja — 24h-Pflegekosten bei Primundus sind als haushaltsnahe Dienstleistungen absetzbar. 20 % der Jahreskosten, max. 4.000 € Steuerersparnis. Eintrag in der Anlage Haushaltsnahe Aufwendungen der Steuererklärung.' },
                 { q: 'Müssen Pflegekosten per Überweisung bezahlt werden?', a: 'Ja — Barzahlungen sind nicht absetzbar. Nur Überweisungen, Lastschriften oder Kartenzahlungen gelten. Überweisungsbelege und Rechnungen aufbewahren.' },
                 { q: 'Können Angehörige Pflegekosten absetzen?', a: 'Wenn Angehörige die Pflegekosten für eine pflegebedürftige Person tragen und diese nicht selbst tragen kann, können die Kosten als außergewöhnliche Belastungen geltend gemacht werden — über die zumutbare Eigenbelastung hinaus.' },
                 { q: 'Was ist der Pflege-Pauschbetrag?', a: '1.800 €/Jahr (PG 4–5 oder Merkzeichen "H") bzw. 600 €/Jahr (PG 2–3) für pflegende Angehörige — ohne Einzelnachweise. Wird in der Steuererklärung des pflegenden Angehörigen eingetragen.' },

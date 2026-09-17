@@ -172,7 +172,7 @@ export default function FoerderungenNachBundesland() {
                   title: 'Steuerliche Absetzbarkeit — bis 4.000 €/Jahr',
                   desc: (
                     <>
-                      <p>Pflege- und Betreuungskosten können bis zu 4.000 € pro Jahr als außergewöhnliche Belastung oder haushaltsnahe Dienstleistung von der Steuer abgesetzt werden. Bei Primundus-Kosten von 2.200–3.500 €/Monat ist der Steuereffekt erheblich.</p>
+                      <p>Pflege- und Betreuungskosten können bis zu 4.000 € pro Jahr als außergewöhnliche Belastung oder haushaltsnahe Dienstleistung von der Steuer abgesetzt werden. Schon beim Primundus-Grundpreis von 2.150 €/Monat wird dieser Höchstbetrag erreicht.</p>
                       <div className="mt-2">
                         <MehrDazu label="Details:" links={[{ href: '/pflege-steuerlich-absetzen', text: 'Pflege steuerlich absetzen' }]} />
                       </div>

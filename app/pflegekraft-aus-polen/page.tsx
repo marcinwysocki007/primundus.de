@@ -20,11 +20,11 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Polnische Pflegekräfte — legal, sicher & bezahlbar 2026',
-  description: 'Polnische Pflegekräfte für die 24h-Pflege: 2.200–3.500 €/Monat, legal über das Entsendemodell mit A1-Bescheinigung. Kosten, Recht und Auswahl — einfach erklärt.',
+  description: 'Polnische Pflegekräfte für die 24h-Pflege: ab 2.150 €/Monat, legal über das Entsendemodell mit A1-Bescheinigung. Kosten, Recht und Auswahl — einfach erklärt.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen' },
   openGraph: {
     title: 'Polnische Pflegekräfte — legal & sicher 2026 | Primundus',
-    description: 'Pflegekraft aus Polen: 2.200–3.500 €/Monat, legal über Entsendemodell. Kosten, Rechtliches & Qualität erklärt.',
+    description: 'Pflegekraft aus Polen: ab 2.150 €/Monat, legal über Entsendemodell. Kosten, Rechtliches & Qualität erklärt.',
     url: 'https://primundus.de/pflegekraft-aus-polen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -57,7 +57,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was kostet eine Pflegekraft aus Polen?', acceptedAnswer: { '@type': 'Answer', text: 'Über Primundus 2.200–3.500 €/Monat je nach Pflegebedarf, plus Kost & Logis (ca. 200–300 €/Monat). Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil deutlich.' } },
+      { '@type': 'Question', name: 'Was kostet eine Pflegekraft aus Polen?', acceptedAnswer: { '@type': 'Answer', text: 'Über Primundus ab 2.150 €/Monat je nach Pflegebedarf, dazu An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld (z. B. 599 €/Monat bei PG 3), Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.' } },
       { '@type': 'Question', name: 'Ist eine Pflegekraft aus Polen legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — über das Entsendemodell mit A1-Bescheinigung vollständig legal. Die Kraft ist in Polen sozialversichert, in Deutschland rechtlich abgesichert. Scheinselbstständigkeit ist dagegen strafbar.' } },
       { '@type': 'Question', name: 'Wie funktioniert das Entsendemodell?', acceptedAnswer: { '@type': 'Answer', text: 'Die Kraft ist fest bei uns angestellt — bei der PRIMUNDUS Sp. z o.o. in Polen — und wird für 6–8 Wochen entsandt. Sie schließen den Vertrag mit Primundus in Deutschland: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' } },
       { '@type': 'Question', name: 'Was leistet eine Pflegekraft aus Polen?', acceptedAnswer: { '@type': 'Answer', text: 'Grundpflege, Haushaltsführung, Begleitung zu Arztterminen und soziale Betreuung. Keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe. Behandlungspflege nur mit Qualifikationsnachweis.' } },
@@ -95,14 +95,14 @@ export default function PflegekraftAusPolen() {
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Eine polnische Pflegekraft kostet 2.200–3.500 Euro pro Monat und ist über das Entsendemodell vollständig legal — mit A1-Bescheinigung, sozialversichert in Polen, rechtlich abgesichert in Deutschland. Polen ist das meistgenutzte Herkunftsland für 24h-Betreuungskräfte in Deutschland: gute Sprachkenntnisse, kulturelle Nähe, kurze Anreise.
+            Eine polnische Pflegekraft kostet ab 2.150 Euro pro Monat und ist über das Entsendemodell vollständig legal — mit A1-Bescheinigung, sozialversichert in Polen, rechtlich abgesichert in Deutschland. Polen ist das meistgenutzte Herkunftsland für 24h-Betreuungskräfte in Deutschland: gute Sprachkenntnisse, kulturelle Nähe, kurze Anreise.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
             <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
             <ul className="space-y-2.5">
               {[
-                'Kosten: 2.200–3.500 €/Monat je nach Pflegebedarf + Kost & Logis',
+                'Kosten: ab 2.150 €/Monat je nach Pflegebedarf, Kost und Logis stellen Sie',
                 'Legal: Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher',
                 'Start: Anreise schon 3 Tage nach dem ersten Beratungsgespräch möglich',
                 'Rotation: Wechsel der Kraft alle 6–8 Wochen — nahtlose Übergabe',
@@ -149,7 +149,7 @@ export default function PflegekraftAusPolen() {
             Kosten & was inbegriffen ist
           </h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die monatlichen Kosten setzen sich aus dem Betreuungspreis und Kost & Logis zusammen — eine Vermittlungsgebühr fällt bei uns nicht an. Mit den Zuschüssen der Pflegekasse sinkt der tatsächliche Eigenanteil deutlich.
+            Sie zahlen den Betreuungspreis und die An- und Abreise der Betreuungskraft mit 125 € je Strecke; Kost und Logis stellen Sie im Haushalt. Eine Vermittlungsgebühr fällt bei uns nicht an. Mit Pflegegeld, Entlastungsbudget und Steuerermäßigung sinkt der tatsächliche Eigenanteil deutlich.
           </p>
 
           <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
@@ -160,22 +160,23 @@ export default function PflegekraftAusPolen() {
               <table className="w-full">
                 <tbody>
                   {[
-                    ['Betreuungskosten', '2.200–3.500 €/Monat'],
-                    ['Kost & Logis (im Haushalt)', 'ca. 200–300 €/Monat'],
+                    ['Betreuungskosten', 'ab 2.150 €/Monat'],
+                    ['Kost und Logis (im Haushalt)', 'stellen Sie'],
                     ['Abzüglich Pflegegeld PG 3', '– 599 €/Monat'],
-                    ['Abzüglich Entlastungsbetrag', '– 131 €/Monat'],
-                    ['Eigenanteil (Richtwert PG 3)', 'ca. 1.700–2.100 €/Monat'],
+                    ['Abzüglich Entlastungsbudget (anteilig)', '– 295 €/Monat'],
+                    ['Abzüglich Steuerermäßigung', '– 333 €/Monat'],
+                    ['Eigenanteil (PG 3)', 'ab ca. 923 €/Monat'],
                   ].map(([label, value], i) => (
-                    <tr key={label} className={i === 4 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
+                    <tr key={label} className={i === 5 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
                       <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{label}</td>
-                      <td className={`px-5 py-3 text-[14px] font-bold border-b border-pm-line text-right ${i === 4 ? 'text-pm-taupe' : i >= 2 ? 'text-pm-green' : 'text-pm-ink'}`}>{value}</td>
+                      <td className={`px-5 py-3 text-[14px] font-bold border-b border-pm-line text-right ${i === 5 ? 'text-pm-taupe' : i >= 2 ? 'text-pm-green' : 'text-pm-ink'}`}>{value}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Richtwerte Primundus 2026 · Eigenanteil variiert je nach tatsächlichen Kosten und Pflegegrad</p>
+              <p className="text-[11px] text-pm-mute">Werte aus unserem Kostenrechner, Stand September 2026 · zzgl. An- und Abreise 125 € je Strecke</p>
             </div>
           </div>
 
@@ -253,10 +254,7 @@ export default function PflegekraftAusPolen() {
           })()}
 
           <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Bei Pflegegrad 3 bleibt damit der oben genannte Eigenanteil von rund
-            1.700–2.100 € im Monat. Bei Pflegegrad 4 oder 5 wird es entsprechend weniger,
-            bei Pflegegrad 1 mehr. Wer zusätzlich das Entlastungsbudget nutzt, kommt oft
-            noch darunter.{' '}
+            Bei Pflegegrad 3 bleibt damit der oben genannte Eigenanteil ab ca. 923 € im Monat, schon mit Entlastungsbudget und Steuerermäßigung. Bei Pflegegrad 4 oder 5 wird es entsprechend weniger, bei Pflegegrad 1 und 2 mehr.{' '}
             <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Zuschüsse im Überblick</a>
           </p>
 
@@ -395,7 +393,7 @@ export default function PflegekraftAusPolen() {
           </h2>
           <div className="space-y-4 mb-12">
             {[
-              { q: 'Was kostet eine Pflegekraft aus Polen?', a: 'Über Primundus 2.200–3.500 €/Monat je nach Pflegebedarf, plus Kost & Logis (ca. 200–300 €/Monat). Mit Pflegegeld (z.B. 599 €/Monat bei PG 3) und Entlastungsbetrag (131 €/Monat) sinkt der Eigenanteil deutlich.' },
+              { q: 'Was kostet eine Pflegekraft aus Polen?', a: 'Über Primundus ab 2.150 €/Monat je nach Pflegebedarf, dazu An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld (z. B. 599 €/Monat bei PG 3), Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.' },
               { q: 'Ist eine Pflegekraft aus Polen legal?', a: 'Ja — über das Entsendemodell mit A1-Bescheinigung vollständig legal. Die Kraft ist in Polen sozialversichert, in Deutschland rechtlich abgesichert. Scheinselbstständigkeit ist dagegen strafbar.' },
               { q: 'Wie funktioniert das Entsendemodell?', a: 'Die Kraft ist fest bei uns angestellt — bei der PRIMUNDUS Sp. z o.o. in Polen — und wird für 6–8 Wochen entsandt. Sie schließen den Vertrag mit Primundus in Deutschland: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' },
               { q: 'Was leistet eine Pflegekraft aus Polen?', a: 'Grundpflege, Haushaltsführung, Begleitung zu Arztterminen und soziale Betreuung. Keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe. Behandlungspflege nur mit Qualifikationsnachweis.' },

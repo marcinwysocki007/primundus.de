@@ -84,10 +84,10 @@ export default function Page() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="kosten" titel="Kostenvergleich 2026">
             <Text>
-              Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat bundesweit (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — in Bayern und Baden-Württemberg deutlich höher. 24h-Pflege über Primundus kostet 2.200–3.500 €/Monat, mit Kassenzuschüssen sinkt der Eigenanteil bei PG 3 typisch auf 1.500–2.000 €/Monat.
+              Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat bundesweit (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — in Bayern und Baden-Württemberg deutlich höher. 24h-Pflege über Primundus kostet ab 2.150 €/Monat; nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.
             </Text>
             <Kasten augenbraue="Kosten im Vergleich — Pflegegrad 3" ton="gruen">
-              <Liste punkte={["Pflegeheim bundesweit: Ø 3.364 €/Monat Eigenanteil", "Pflegeheim Bayern/BW: bis 4.000 €/Monat Eigenanteil", "24h-Pflege brutto: 2.200–3.500 €/Monat", "24h-Pflege nach Zuschüssen: ca. 1.500–2.000 €/Monat", "Ersparnis vs. Pflegeheim Bayern: bis 2.500 €/Monat möglich"]} />
+              <Liste punkte={["Pflegeheim bundesweit: Ø 3.364 €/Monat Eigenanteil", "Pflegeheim Bayern/BW: bis 4.000 €/Monat Eigenanteil", "24h-Pflege: ab 2.150 €/Monat", "24h-Pflege nach Zuschüssen und Steuer: ab ca. 923 €/Monat", "Ersparnis vs. Pflegeheim Bayern: bis 2.500 €/Monat möglich"]} />
             </Kasten>
           </Abschnitt>
 

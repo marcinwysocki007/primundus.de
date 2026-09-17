@@ -52,7 +52,7 @@ const schemaMarkup = JSON.stringify([
         name: 'Was kostet 24h-Pflege im Monat nach Abzug aller Zuschüsse?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Die Kosten für eine 24h-Betreuungskraft bei Primundus liegen zwischen 2.200 und 3.500 €/Monat. Nach Abzug von Pflegegeld, Entlastungsbudget und Steuervorteilen reduziert sich der Eigenanteil je nach Pflegegrad auf ca. 500 bis 1.800 €/Monat.',
+          text: 'Bei Primundus kostet die Betreuung ab 2.150 €/Monat. Nach Abzug von Pflegegeld, Entlastungsbudget und Steuervorteil bleiben bei Pflegegrad 3 ab ca. 923 €/Monat (Pflegegrad 2: ab ca. 1.175 €, Pflegegrad 5: ab ca. 582 €) — oft günstiger als ein Pflegeheimplatz.',
         },
       },
       {
@@ -194,7 +194,7 @@ const faqs = [
   },
   {
     q: 'Was kostet 24h-Pflege nach Abzug aller Zuschüsse?',
-    a: 'Bei Primundus liegen die Kosten zwischen 2.200 und 3.500 €/Monat. Nach Abzug von Pflegegeld, Entlastungsbudget und Steuervorteilen reduziert sich der Eigenanteil je nach Pflegegrad auf ca. 500 bis 1.800 €/Monat — oft günstiger als ein Pflegeheimplatz.',
+    a: 'Bei Primundus kostet die Betreuung ab 2.150 €/Monat. Nach Abzug von Pflegegeld, Entlastungsbudget und Steuervorteil bleiben bei Pflegegrad 3 ab ca. 923 €/Monat (Pflegegrad 2: ab ca. 1.175 €, Pflegegrad 5: ab ca. 582 €) — oft günstiger als ein Pflegeheimplatz.',
   },
   {
     q: 'Kann ich gleichzeitig Pflegegeld und eine 24h-Betreuungskraft haben?',

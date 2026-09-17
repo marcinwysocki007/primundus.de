@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: 'Was kostet 24-Stunden-Pflege bei Hausengel im Vergleich?',
-    a: 'Hausengel wirbt mit „ab 945 € Eigenanteil" — das ist der Betrag nach Abzug von Kassenleistungen, kein Gesamtpreis; einen Online-Preis gibt es nicht. Primundus nennt den Gesamtpreis offen: ab 2.200 €/Monat, in 2 Minuten online berechnet — inklusive Aufstellung, was die Kasse übernimmt.',
+    a: 'Hausengel wirbt mit „ab 945 € Eigenanteil" — das ist der Betrag nach Abzug von Kassenleistungen, kein Gesamtpreis; einen Online-Preis gibt es nicht. Primundus nennt den Gesamtpreis offen: ab 2.150 €/Monat, in 2 Minuten online berechnet — inklusive Aufstellung, was die Kasse übernimmt.',
   },
   {
     q: 'Gibt es bei Primundus eine Mindestvertragslaufzeit?',
@@ -99,7 +99,7 @@ export default function Page() {
               „ab 945 € Eigenanteil" — dem Betrag nach Kassenzuschüssen, nicht dem Gesamtpreis; ein Angebot
               gibt es über das Beratungsgespräch. <strong>Primundus</strong> zeigt Preis <em>und</em> passende
               Betreuungskräfte sofort online — Sie wählen Ihre Betreuungskraft aus, <em>bevor</em> ein
-              Vertrag unterschrieben wird. Ab 2.200 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
+              Vertrag unterschrieben wird. Ab 2.150 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
               taggenau abgerechnet.
             </p>
             <p className="text-[14px] text-pm-ink leading-relaxed mt-3">
@@ -136,7 +136,7 @@ export default function Page() {
                 { t: 'Erst auswählen, dann Vertrag', d: 'Sie entscheiden, wer zu Ihnen kommt. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag.' },
                 { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt — ein Ansprechpartner für alles, 7 Tage die Woche.' },
                 { t: 'Keine Gebühren, keine Bindung', d: 'Keine Vermittlungs- oder Aufnahmegebühr, keine Mindestlaufzeit — täglich kündbar, taggenau abgerechnet.' },
-                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.200 €/Monat.' },
+                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.150 €/Monat.' },
               ].map((x) => (
                 <div key={x.t} className="bg-white border border-pm-line rounded-2xl p-4">
                   <p className="text-[14px] font-bold text-pm-ink mb-1">{x.t}</p>

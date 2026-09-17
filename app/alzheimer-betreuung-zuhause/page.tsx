@@ -194,7 +194,7 @@ export default function AlzheimerBetreuungZuhause() {
                 { q: 'Welchen Pflegegrad hat man bei Alzheimer?', a: 'Je nach Stadium PG 2–5. Seit 2017 werden kognitive Einschränkungen im NBA-Begutachtungsverfahren deutlich stärker gewichtet — Alzheimer-Betroffene werden besser eingestuft als früher.' },
                 { q: 'Wie unterscheidet sich Alzheimer von Demenz?', a: 'Alzheimer ist die häufigste Demenzform (60–70 % aller Fälle). Typisch: Kurzzeitspeicher zuerst betroffen, Langzeitgedächtnis lange intakt. Demenz ist der Oberbegriff — Alzheimer eine spezifische Ursache.' },
                 { q: 'Was sind die häufigsten Herausforderungen bei der Alzheimer-Betreuung?', a: 'Weglaufen (Hinlaufen), Nachtunruhe, Verweigerung von Körperpflege und Mahlzeiten, Verhaltensveränderungen wie Aggressionen oder Ängste, Kommunikation wenn Sprache abnimmt.' },
-                { q: 'Was kostet Alzheimer-Betreuung zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: 2.200–3.500 €/Monat. Mit Pflegegeld (599 € bei Pflegegrad 3) bleiben rund 1.600–2.900 € im Monat. Den Entlastungsbetrag von 131 € zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
+                { q: 'Was kostet Alzheimer-Betreuung zuhause?', a: 'Mit einer 24h-Betreuungskraft von Primundus: ab 2.150 €/Monat. Nach Pflegegeld (599 € bei Pflegegrad 3), Entlastungsbudget und Steuerermäßigung bleiben ab ca. 923 € im Monat. Den Entlastungsbetrag von 131 € zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
               ]}
             />
           </Abschnitt>

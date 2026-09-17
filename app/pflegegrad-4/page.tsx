@@ -156,10 +156,11 @@ export default function Pflegegrad4() {
             <Kasten titel="Kostenvergleich bei PG 4" ton="gruen">
               <Werte
                 zeilen={[
-                  ['24h-Pflege Primundus (brutto)', 'ca. 3.000 €/Monat'],
+                  ['24h-Pflege Primundus', 'ab 2.150 €/Monat'],
                   ['Abzüglich Pflegegeld PG 4', '– 800 €/Monat'],
-                  
-                  ['Eigenanteil ca.', 'ca. 2.200 €/Monat'],
+                  ['Abzüglich Entlastungsbudget (anteilig)', '– 295 €/Monat'],
+                  ['Abzüglich Steuerermäßigung', '– 333 €/Monat'],
+                  ['Eigenanteil', 'ab ca. 722 €/Monat'],
                   ['Pflegeheim Eigenanteil Ø', '3.364 €/Monat (steigend)'],
                 ]}
               />

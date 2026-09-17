@@ -163,7 +163,7 @@ export default function PflegeNachOp() {
               fragen={[
                 { q: 'Wann brauche ich nach einer OP eine Betreuungskraft?', a: 'Immer wenn man alleine lebt oder Angehörige nicht dauerhaft die Betreuung übernehmen können. Nach Hüft-OP, Knie-OP oder Herzeingriff: 4–12 Wochen intensive Unterstützung nötig.' },
                 { q: 'Wann sollte ich die Betreuungskraft für die Zeit nach der OP organisieren?', a: 'Bei geplanter OP: 2–3 Wochen vorher Primundus kontaktieren. So ist die Kraft pünktlich zur Entlassung bereit.' },
-                { q: 'Was kostet eine Betreuungskraft nach der OP?', a: '2.200–3.500 €/Monat über Primundus. Mit Pflegekasse-Zuschüssen (nach Pflegegrad), Kurzzeitpflege-Budget und Steuerabzug deutlich reduzierbar.' },
+                { q: 'Was kostet eine Betreuungskraft nach der OP?', a: 'Ab 2.150 €/Monat über Primundus. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 €/Monat.' },
                 { q: 'Zahlt die Krankenkasse die Betreuung nach einer OP?', a: 'Behandlungspflege (Wundversorgung, Injektionen): Ja, über Krankenversicherung. Grundpflege und Betreuung: über Pflegekasse wenn Pflegegrad vorhanden. Die Betreuungskraft selbst: privat mit Kassenzuschüssen.' },
               ]}
             />

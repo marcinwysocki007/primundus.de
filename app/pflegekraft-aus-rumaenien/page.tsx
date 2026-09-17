@@ -81,7 +81,7 @@ export default function PflegekraftAusRumaenien() {
                 'Rumänien ist EU-Mitglied — Entsendemodell funktioniert identisch wie bei Polen',
                 'Rechtssicher mit A1-Bescheinigung aus Rumänien',
                 'Rumänien: zweithäufigste Herkunft nach Polen bei osteuropäischen Pflegekräften',
-                'Kosten: 2.200–3.500 €/Monat — identisch zu anderen EU-Kräften',
+                'Kosten: ab 2.150 €/Monat — identisch zu anderen EU-Kräften',
                 'Primundus prüft Erfahrung, Deutschkenntnisse und Referenzen',
                 'Täglich kündbar — volle Flexibilität',
               ]}
@@ -134,7 +134,7 @@ export default function PflegekraftAusRumaenien() {
             <Tabelle
               titel=""
               zeilen={[
-                ['Kosten Primundus', '2.200–3.500 €/Monat', 'Je nach Pflegebedarf'],
+                ['Kosten Primundus', 'ab 2.150 €/Monat', 'Je nach Pflegebedarf'],
                 ['Pflegegeld PG 3', '– 599 €/Monat', 'Kassenzuschuss'],
                 ['Eigenanteil ca. PG 3', 'ca. 1.850–2.650 €/Monat', 'Nach Zuschüssen'],
               ]}
@@ -150,7 +150,7 @@ export default function PflegekraftAusRumaenien() {
             <Fragen
               fragen={[
                 { q: 'Ist eine Pflegekraft aus Rumänien legal?', a: 'Ja — wenn sie im Entsendemodell über eine seriöse Agentur vermittelt wird. A1-Bescheinigung aus Rumänien belegt den legalen EU-Entsendestatus. Vollständig rechtssicher.' },
-                { q: 'Was kostet eine Pflegekraft aus Rumänien?', a: 'Identisch zum allgemeinen Primundus-Preisrahmen: 2.200–3.500 €/Monat. Das Herkunftsland hat keinen Einfluss auf den Preis.' },
+                { q: 'Was kostet eine Pflegekraft aus Rumänien?', a: 'Identisch zum allgemeinen Primundus-Preis: ab 2.150 €/Monat. Das Herkunftsland hat keinen Einfluss auf den Preis.' },
                 { q: 'Wie unterscheiden sich polnische und rumänische Pflegekräfte?', a: 'Rechtlich und preislich identisch — beide EU-Länder, beide im Entsendemodell. Qualitätsstandards sind bei Primundus gleich. Manchmal passt die Persönlichkeit einer rumänischen Kraft besser.' },
                 { q: 'Wie finde ich eine passende Betreuungskraft aus Rumänien?', a: 'Primundus wählt aus dem gesamten EU-Pool die passende Kraft aus — auf Wunsch aus Rumänien. Anfrage genügt: 089 200 000 830 oder info@primundus.de.' },
               ]}

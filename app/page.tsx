@@ -580,7 +580,7 @@ export default function Page() {
               Was kostet 24-Stunden-Pflege?
             </h2>
             <p className="text-[16px] md:text-[17px] leading-[1.7] text-pm-body mb-6">
-              Die Kosten für eine 24-Stunden-Betreuung liegen je nach Pflegebedarf und Qualifikation der Betreuungskraft zwischen <strong className="text-pm-ink">2.200 € und 3.500 € pro Monat</strong>. Was viele nicht wissen: Die Pflegekasse übernimmt je nach Pflegegrad einen erheblichen Teil. Nach Abzug von Pflegegeld, Verhinderungspflege und Entlastungsbetrag liegt der tatsächliche <strong className="text-pm-ink">Eigenanteil meist bei 1.500–2.500 € monatlich</strong> — und damit häufig deutlich unter den Kosten eines Pflegeheims.
+              Die Kosten für eine 24-Stunden-Betreuung beginnen bei <strong className="text-pm-ink">2.150 € pro Monat</strong>, je nach Pflegebedarf und Qualifikation der Betreuungskraft. Was viele nicht wissen: Die Pflegekasse übernimmt je nach Pflegegrad einen erheblichen Teil. Nach Abzug von Pflegegeld, Entlastungsbudget und Steuerermäßigung liegt der tatsächliche <strong className="text-pm-ink">Eigenanteil bei Pflegegrad 3 ab ca. 923 € monatlich</strong> — und damit häufig deutlich unter den Kosten eines Pflegeheims.
             </p>
 
             {/* Tabelle Pflegegeld */}

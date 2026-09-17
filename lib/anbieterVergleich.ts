@@ -39,7 +39,7 @@ export const PRIMUNDUS: Anbieter = {
   slug: 'primundus',
   name: 'Primundus',
   kurz: 'Eigenes Betreuungspersonal, Preis und Kräfte sofort online',
-  preisAb: 'ab 2.200 €/Monat',
+  preisAb: 'ab 2.150 €/Monat',
   sofortpreis: { wertung: 'ja', kurz: 'Ja — in 2 Minuten', text: 'Preis in 2 Minuten online — ohne Rückruf, ohne Termin' },
   kraefteSofort: { wertung: 'ja', kurz: 'Ja — direkt mit dem Angebot', text: 'Direkt mit dem Angebot: passende Betreuungskräfte mit Erfahrung und Sprachkenntnissen einsehen und vergleichen' },
   auswahlVorVertrag: { wertung: 'ja', kurz: 'Ja', text: 'Erst wählen Sie Ihre Betreuungskraft aus — dann erst kommt der Vertrag' },

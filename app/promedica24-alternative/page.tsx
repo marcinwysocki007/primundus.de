@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: 'Was kostet 24-Stunden-Pflege bei Promedica24?',
-    a: 'Promedica24 nennt auf der eigenen Website keine Preise — ein Angebot gibt es nach eigener Angabe erst nach einer individuellen Beratung. Primundus zeigt den Preis in 2 Minuten online: ab 2.200 €/Monat, je nach Pflegesituation und Sprachkenntnissen.',
+    a: 'Promedica24 nennt auf der eigenen Website keine Preise — ein Angebot gibt es nach eigener Angabe erst nach einer individuellen Beratung. Primundus zeigt den Preis in 2 Minuten online: ab 2.150 €/Monat, je nach Pflegesituation und Sprachkenntnissen.',
   },
   {
     q: 'Kann ich bei Promedica24 die Betreuungskraft selbst auswählen?',
@@ -100,7 +100,7 @@ export default function Page() {
               individuellen Beratung, die Betreuungskraft wählt die Zentrale aus dem Pool von über 6.800
               Kräften aus. <strong>Primundus</strong> zeigt Preis <em>und</em> passende
               Betreuungskräfte sofort online — Sie wählen Ihre Betreuungskraft aus, <em>bevor</em> ein
-              Vertrag unterschrieben wird. Ab 2.200 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
+              Vertrag unterschrieben wird. Ab 2.150 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
               taggenau abgerechnet.
             </p>
             <p className="text-[14px] text-pm-ink leading-relaxed mt-3">
@@ -137,7 +137,7 @@ export default function Page() {
                 { t: 'Erst auswählen, dann Vertrag', d: 'Sie entscheiden, wer zu Ihnen kommt. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag.' },
                 { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt — ein Ansprechpartner für alles, 7 Tage die Woche.' },
                 { t: 'Keine Gebühren, keine Bindung', d: 'Keine Vermittlungs- oder Aufnahmegebühr, keine Mindestlaufzeit — täglich kündbar, taggenau abgerechnet.' },
-                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.200 €/Monat.' },
+                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.150 €/Monat.' },
               ].map((x) => (
                 <div key={x.t} className="bg-white border border-pm-line rounded-2xl p-4">
                   <p className="text-[14px] font-bold text-pm-ink mb-1">{x.t}</p>

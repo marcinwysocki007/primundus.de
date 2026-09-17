@@ -105,7 +105,7 @@ export default function PflegedienstOder24hKraft() {
                 ['Gesellschaft', 'Nur während Einsatz', 'Ganztägige Begleitung'],
                 ['Demenzbetreuung', 'Schwierig ohne Kontinuität', 'Vertraute Bezugsperson'],
                 ['Behandlungspflege', 'Ja — Kernkompetenz', 'Nein — übernimmt Pflegedienst'],
-                ['Kosten/Monat', '800–2.500 €, oft durch KV gedeckt', '2.200–3.500 €, mit Pflegegeld'],
+                ['Kosten/Monat', '800–2.500 €, oft durch KV gedeckt', 'ab 2.150 €, mit Pflegegeld'],
                 ['Kassenzuschuss', 'Sachleistungen PG 2–5', 'Pflegegeld + Entlastungsbudget'],
                 ['Kündigung', 'Vertragliche Fristen', 'Täglich kündbar (Primundus)'],
               ]}
@@ -124,7 +124,7 @@ export default function PflegedienstOder24hKraft() {
                 {
                   titel: '24h-Betreuungskraft (Primundus)',
                   ton: 'taupe',
-                  text: '2.200–3.500 €/Monat. Mit Pflegegeld (347–990 €/Mo), Entlastungsbudget und Steuerabzug sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.150 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft — alles in einem.',
+                  text: 'Ab 2.150 €/Monat. Nach Pflegegeld (347–990 €/Mo), Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft — alles in einem.',
                   punkte: ['Kombination mit Pflegedienst für Behandlungspflege möglich — Kosten dann kumuliert aber Kassenzuschüsse laufen parallel.'],
                 },
               ]}
@@ -153,7 +153,7 @@ export default function PflegedienstOder24hKraft() {
               Die häufigste und meist beste Lösung ist die Kombination: Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushalt, Gesellschaft und Nacht. Der ambulante Pflegedienst kommt täglich für Behandlungspflege (Injektionen, Verbandswechsel). Beide Kassenzuschüsse laufen parallel.
             </Text>
             <Kasten augenbraue="Rechenbeispiel Kombination — PG 3" ton="gruen">
-              <Werte zeilen={[[<>24h-Kraft (Primundus)</>, <>2.200–3.500 €/Mo</>], [<>Ambulanter Dienst (Behandlungspflege)</>, <>ca. 300–600 €/Mo</>], [<>Gesamtkosten brutto</>, <>ca. 2.500–4.100 €/Mo</>], [<>− Sachleistungen (für den Pflegedienst)</>, <>− ca. 300–600 €/Mo</>], [<>− anteiliges Pflegegeld PG 3 (Kombinationsleistung)</>, <>− ca. 360–480 €/Mo</>], [<>− Entlastungsbudget (anteilig)</>, <>− ca. 295 €/Mo</>], [<>Eigenanteil ca.</>, <>ca. 1.450–2.850 €/Mo</>]]} />
+              <Werte zeilen={[[<>24h-Kraft (Primundus)</>, <>ab 2.150 €/Mo</>], [<>Ambulanter Dienst (Behandlungspflege)</>, <>ca. 300 €/Mo</>], [<>Gesamtkosten</>, <>ab ca. 2.450 €/Mo</>], [<>− Sachleistungen (für den Pflegedienst)</>, <>− ca. 300 €/Mo</>], [<>− anteiliges Pflegegeld PG 3 (Kombinationsleistung)</>, <>− ca. 480 €/Mo</>], [<>− Entlastungsbudget (anteilig)</>, <>− ca. 295 €/Mo</>], [<>− Steuerermäßigung</>, <>− ca. 333 €/Mo</>], [<>Eigenanteil</>, <>ab ca. 1.040 €/Mo</>]]} />
             </Kasten>
             <MehrDazu
               label="Alle Kombinationsmöglichkeiten:"

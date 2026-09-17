@@ -98,7 +98,7 @@ export default function TagespflegeVs24h() {
                 ['Ort', 'Externe Einrichtung', 'Eigenes Zuhause'],
                 ['Soziale Kontakte', 'Viele (Gruppenangebote)', '1:1-Beziehung zur Kraft'],
                 ['Angehörigen-Entlastung', 'Tagsüber', 'Rund um die Uhr'],
-                ['Kosten/Monat', '400–2.000+ €', '2.200–3.500 €'],
+                ['Kosten/Monat', '400–2.000+ €', 'ab 2.150 €'],
                 ['Kassenzuschuss', 'Eigenes Tages-/Nachtpflegebudget', 'Pflegegeld + Entlastungsbudget'],
                 ['Demenzbetreuung', 'Begrenzt (fremde Umgebung)', 'Besser (vertrautes Zuhause)'],
               ]}
@@ -118,7 +118,7 @@ export default function TagespflegeVs24h() {
                 {
                   titel: '24h-Pflege zuhause — Kosten und Kassenzuschüsse',
                   ton: 'taupe',
-                  text: 'Gesamtkosten 2.200–3.500 €/Monat. Mit Pflegegeld (statt Sachleistungen) und Entlastungsbudget sinkt der Eigenanteil bei PG 3 auf ca. 1.650–2.050 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft inklusive.',
+                  text: 'Gesamtkosten ab 2.150 €/Monat. Nach Pflegegeld (statt Sachleistungen), Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat. 24h-Betreuung, Haushalt und Gesellschaft inklusive.',
                 },
               ]}
             />

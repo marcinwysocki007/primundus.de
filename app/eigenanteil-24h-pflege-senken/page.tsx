@@ -22,7 +22,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026',
-  description: 'Eigenanteil der 24h-Pflege senken: Pflegegrad erhöhen, Entlastungsbudget nutzen, Steuerabzug, Hilfsmittel. Mit allen Maßnahmen auf unter 1.500 €/Monat.',
+  description: 'Eigenanteil der 24h-Pflege senken: Pflegegrad erhöhen, Entlastungsbudget nutzen, Steuerabzug, Hilfsmittel. Bei Pflegegrad 3 bleiben ab ca. 923 €/Monat.',
   alternates: { canonical: 'https://primundus.de/eigenanteil-24h-pflege-senken' },
   openGraph: {
     title: 'Eigenanteil 24h-Pflege senken | Primundus',
@@ -60,7 +60,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie kann ich den Eigenanteil der 24h-Pflege senken?', acceptedAnswer: { '@type': 'Answer', text: 'Die wichtigsten Stellschrauben: 1. Pflegegrad korrekt beantragen — jede Stufe bedeutet hunderte Euro mehr. 2. Entlastungsbudget (3.539 €/Jahr) voll ausschöpfen. 3. Steuerlich absetzen (max. 4.000 €/Jahr). 4. Pflegehilfsmittel (42 €/Monat) beantragen. 5. Wohnraumanpassungsförderung nutzen.' } },
-      { '@type': 'Question', name: 'Wie viel kann man beim Eigenanteil sparen?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 3 können durch Pflegegeld (599 €/Monat), Entlastungsbudget (ca. 295 €/Monat anteilig) und Steuerabzug (ca. 333 €/Monat) zusammen über 1.200 € monatlich eingespart werden — aus Bruttokosten von 2.700 € werden ca. 1.470 € Eigenanteil.' } },
+      { '@type': 'Question', name: 'Wie viel kann man beim Eigenanteil sparen?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Pflegegrad 3 können durch Pflegegeld (599 €/Monat), Entlastungsbudget (ca. 295 €/Monat anteilig) und Steuerabzug (ca. 333 €/Monat) zusammen über 1.200 € monatlich eingespart werden — beim Grundpreis von 2.150 € bleiben ab ca. 923 € Eigenanteil.' } },
     ],
   },
 ]
@@ -83,7 +83,7 @@ export default function EigenanteilSenken() {
           ]}
           augenbraue="Ratgeber Kosten"
           titel="Eigenanteil der 24h-Pflege senken — alle Möglichkeiten 2026"
-          einleitung="24h-Pflege kostet 2.200–3.500 Euro brutto — aber wer alle verfügbaren Leistungen kennt und kombiniert, kann den tatsächlichen Eigenanteil auf unter 1.500 Euro pro Monat senken. Viele Familien verschenken hunderte Euro monatlich weil sie nicht alle Möglichkeiten nutzen."
+          einleitung="24h-Pflege kostet ab 2.150 Euro im Monat — aber wer alle verfügbaren Leistungen kennt und kombiniert, senkt den tatsächlichen Eigenanteil bei Pflegegrad 3 auf ab ca. 923 Euro. Viele Familien verschenken hunderte Euro monatlich weil sie nicht alle Möglichkeiten nutzen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
         />
@@ -159,7 +159,7 @@ export default function EigenanteilSenken() {
               20 % der Pflegekosten können als haushaltsnahe Dienstleistungen von der Steuerschuld abgezogen werden — direkt, nicht nur vom zu versteuernden Einkommen. Maximum: 4.000 € Steuerersparnis pro Jahr.
             </Text>
             <Text>
-              Bei Primundus-Kosten von 2.700 €/Monat (32.400 €/Jahr) sind das 4.000 € Maximalersparnis — entspricht ca. 333 €/Monat. Voraussetzung: Zahlung per Überweisung, Rechnung aufbewahren, Anlage V der Steuererklärung.
+              Schon beim Primundus-Grundpreis von 2.150 €/Monat (25.800 €/Jahr) sind das 4.000 € Maximalersparnis — entspricht ca. 333 €/Monat. Voraussetzung: Zahlung per Überweisung, Rechnung aufbewahren, Anlage Haushaltsnahe Aufwendungen der Steuererklärung.
             </Text>
             <MehrDazu
               label="Ausführlich erklärt:"

@@ -95,7 +95,7 @@ export default function Page() {
 
           <Abschnitt id="kosten" titel="Kostenvergleich">
             <Text>
-              Kurzzeitpflege kostet typisch 80–130 €/Tag in einer Einrichtung. Mit Entlastungsbudget (3.539 €/Jahr) sind ca. 30–40 Tage gedeckt. 24h-Pflege: 2.200–3.500 €/Monat, mit Kassenzuschüssen ab ca. 1.500 €/Monat Eigenanteil.
+              Kurzzeitpflege kostet typisch 80–130 €/Tag in einer Einrichtung. Mit Entlastungsbudget (3.539 €/Jahr) sind ca. 30–40 Tage gedeckt. 24h-Pflege: ab 2.150 €/Monat, nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bei Pflegegrad 3 ab ca. 923 €/Monat Eigenanteil.
             </Text>
             <Text>
               Für Übergangsphasen bis 4 Wochen: Kurzzeitpflege oft günstiger. Für dauerhaften Bedarf: 24h-Pflege typisch günstiger als stationär — und das Zuhause bleibt.

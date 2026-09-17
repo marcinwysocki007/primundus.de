@@ -90,7 +90,7 @@ export default function Page() {
                 { title: "Regelmäßige Kraftwechsel", desc: "Alle 6–8 Wochen kommt eine neue Kraft. Das erfordert Eingewöhnungszeit — besonders bei Demenz kann das herausfordernd sein." },
                 { title: "Kein Ersatz für medizinische Pflege", desc: "Behandlungspflege (Injektionen, Wundversorgung) muss ein ambulanter Pflegedienst übernehmen. Die 24h-Kraft ergänzt, ersetzt aber keinen Pflegedienst." },
                 { title: "Wohnraumanpassung nötig", desc: "Die Kraft braucht ein eigenes Zimmer. Nicht jeder Haushalt hat dafür Platz." },
-                { title: "Kosten trotz Zuschüssen nicht null", desc: "Auch mit allen Kassenzuschüssen bleibt ein Eigenanteil von typisch 1.000–2.000 €/Monat — für manche Familien zu viel." },
+                { title: "Kosten trotz Zuschüssen nicht null", desc: "Auch mit allen Zuschüssen und der Steuerermäßigung bleibt bei Pflegegrad 3 ein Eigenanteil ab ca. 923 €/Monat — für manche Familien zu viel." },
               ]}
             />
           </Vorspann>

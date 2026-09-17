@@ -18,6 +18,11 @@ const STALE = [
   ['Verhinderungspflege alt (3.224 €)', /3\.224\s*€/g],
   ['Falsche Preisspanne (2.500–4.500)', /2\.500\s*(?:und|bis|–|-)\s*4\.500/g],
   ['Entlastungsbetrag alt (125 €)', /125\s*€\s*(?:monatlich|pro Monat|\/\s*Monat)/g],
+  // Preis aus dem Kostenrechner: ab 2.150 € (Martin 17.09.2026), keine Spanne. Werkzeuge mit eigener Rechnung
+  // (Pflegeheim-Kostenvergleich, Zuschuss-Rechner) folgen mit ihrer Seitenart.
+  ['Alte Preisspanne (2.200–3.500)', /2\.200\s*(?:€\s*)?(?:und|bis|–|-)\s*3\.500/g],
+  ['Alter Einstiegspreis (ab 2.200 €/Monat)', /\b[Aa]b\s+(?:ca\.\s+)?2\.200\s*(?:€\s*\/\s*Mo|Euro|€\s+gegenüber)/g],
+  ['Eigenanteil mit Entlastungsbetrag gerechnet', /(?:Pflegegeld|Pflegegeld\s+und),?\s+Entlastungsbetrag\s+und\s+(?:Entlastungsbudget|Verhinderungspflege)/g],
 ]
 
 const SCAN_DIRS = ['app', 'components', 'lib']

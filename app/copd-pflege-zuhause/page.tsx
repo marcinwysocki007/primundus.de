@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: 'Was kostet 24-Stunden-Pflege bei COPD?',
-    a: 'Bei Primundus 2.200–3.500 € pro Monat, je nach Betreuungsbedarf und Sprachkenntnissen der Kraft — die Diagnose selbst ändert den Preis nicht. Mit Pflegegeld und anteiligem Entlastungsbudget sinkt der Eigenanteil je nach Pflegegrad deutlich. Den Preis für Ihre Situation sehen Sie in 2 Minuten im Kostenrechner.',
+    a: 'Bei Primundus ab 2.150 € pro Monat, je nach Betreuungsbedarf und Sprachkenntnissen der Kraft — die Diagnose selbst ändert den Preis nicht. Nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat. Den Preis für Ihre Situation sehen Sie in 2 Minuten im Kostenrechner.',
   },
 ]
 
