@@ -41,7 +41,7 @@ const FRAGEN = [
   { q: 'Was macht eine 24h-Betreuungskraft?', a: 'Sie hilft bei der Körperpflege, beim Essen und beim Aufstehen, kocht, kauft ein, wäscht und hält die Räume Ihres Angehörigen in Ordnung. Sie leistet Gesellschaft, geht mit spazieren, begleitet zum Arzt und erinnert an Medikamente. Sie wohnt mit im Haushalt und ist bei Bedarf auch nachts da.' },
   { q: 'Was macht eine 24h-Kraft nicht?', a: 'Medizinische Behandlungspflege wie Spritzen, Verbandswechsel oder Katheterversorgung. Das übernimmt ein ambulanter Pflegedienst: Der Arzt verordnet die Behandlungspflege, die Krankenkasse zahlt sie.' },
   { q: 'Kocht die Betreuungskraft auch?', a: 'Ja. Sie kauft ein und kocht frisch, nach den Vorlieben Ihres Angehörigen und nach seiner Diät.' },
-  { q: 'Ist die Betreuungskraft auch nachts da?', a: 'Ja, bei Bedarf. Sie wohnt mit im Haus und ist da, wenn nachts etwas ist. Muss sie regelmäßig nachts aufstehen, braucht sie dafür einen Ausgleich. Wie oft nachts Hilfe nötig ist, fließt deshalb in den Preis ein.' },
+  { q: 'Ist die Betreuungskraft auch nachts da?', a: 'Ja, bei Bedarf. Sie wohnt mit im Haus und ist da, wenn nachts etwas ist. Regelmäßige Einsätze in der Nacht müssen ausgeglichen werden; wie oft nachts Hilfe nötig ist, fließt deshalb in den Preis ein.' },
   { q: 'Hat die Betreuungskraft Freizeit?', a: 'Ja. Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten. In ihrer freien Zeit kann sie das Haus verlassen.' },
   { q: 'Versorgt die Betreuungskraft auch Haustiere?', a: 'Ja. Die Versorgung von Haustieren gehört ebenso zu den Leistungen wie die Pflege der Zimmerpflanzen.' },
 ]
@@ -89,7 +89,7 @@ export default function Leistungen() {
           ]}
           augenbraue="Leistungen"
           titel="Leistungen der 24h-Pflege — was eine Betreuungskraft macht"
-          einleitung="Eine Betreuungskraft von Primundus wohnt mit im Haushalt Ihres Angehörigen. Sie führt den Haushalt, hilft bei der Körperpflege, leistet Gesellschaft und ist bei Bedarf auch nachts da. Behandlungspflege wie Spritzen oder Verbände übernimmt ein ambulanter Pflegedienst."
+          einleitung="Eine Betreuungskraft von Primundus zieht bei Ihrem Angehörigen ein. Sie führt den Haushalt, hilft bei der Körperpflege, leistet Gesellschaft und ist bei Bedarf auch nachts da. Behandlungspflege wie Spritzen oder Verbände übernimmt ein ambulanter Pflegedienst."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
           blickTitel="Alle Leistungen auf einen Blick"
@@ -107,8 +107,7 @@ export default function Leistungen() {
           <Abschnitt id="was-inbegriffen" titel="Was ist inbegriffen?">
             <Text>
               Ein ambulanter Pflegedienst kommt zu festen Zeiten für einzelne Aufgaben. Eine Betreuungskraft lebt im
-              Haushalt und hilft über den Tag verteilt bei dem, was anfällt. Diese Leistungen stehen in unserem
-              Betreuungsvertrag:
+              Haushalt und hilft über den Tag verteilt bei dem, was anfällt. Das gehört dazu:
             </Text>
             <Gruppen
               gruppen={[
@@ -154,7 +153,7 @@ export default function Leistungen() {
               ]}
             />
             <Text>
-              Nicht dazu gehören Fensterputzen und die Reinigung von Garage, Heizraum und Nebengebäuden.
+              Nicht dazu gehören laut Betreuungsvertrag Fensterputzen und die Reinigung von Garage, Heizraum und Nebengebäuden.
             </Text>
           </Abschnitt>
 
@@ -178,9 +177,9 @@ export default function Leistungen() {
 
           <Abschnitt id="nachts" titel="Nachts und in der Freizeit">
             <Text>
-              Die Betreuungskraft wohnt mit im Haus. Braucht Ihr Angehöriger nachts Hilfe, ist sie da. Muss sie
-              regelmäßig nachts aufstehen, braucht sie dafür einen Ausgleich. Wie oft nachts Hilfe nötig ist, fließt
-              deshalb in den Preis ein.
+              Die Betreuungskraft wohnt mit im Haus. Braucht Ihr Angehöriger nachts Hilfe, ist sie da. Regelmäßige
+              Einsätze in der Nacht müssen ausgeglichen werden; wie oft nachts Hilfe nötig ist, fließt deshalb in den
+              Preis ein.
             </Text>
             <Text>
               Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten. In ihrer freien Zeit kann sie das Haus

@@ -143,8 +143,8 @@ export default function Ablauf() {
 
           <Abschnitt id="auswahl" titel="Betreuungskraft auswählen — worauf Sie achten können">
             <Text>
-              Sie entscheiden, wer zu Ihrem Angehörigen kommt. In den Profilen sehen Sie Foto, Erfahrung und
-              Verfügbarkeit der Betreuungskräfte. Diese Wünsche geben Sie schon im Kostenrechner an, weil sie den Preis
+              Sie entscheiden, wer zu Ihrem Angehörigen kommt. In den Profilen sehen Sie Foto, Erfahrung, Deutschkenntnisse
+              und Verfügbarkeit der Betreuungskräfte. Diese Wünsche geben Sie schon im Kostenrechner an, weil sie den Preis
               beeinflussen:
             </Text>
             <Liste
@@ -152,7 +152,7 @@ export default function Ablauf() {
                 'Deutschkenntnisse der Betreuungskraft',
                 'Führerschein, zum Beispiel für Arzttermine auf dem Land',
                 'Betreuerin oder Betreuer',
-                'Hilfe in der Nacht: gelegentlich, täglich oder mehrmals',
+                'Hilfe in der Nacht: gelegentlich, jede Nacht einmal oder mehrmals',
               ]}
             />
           </Abschnitt>

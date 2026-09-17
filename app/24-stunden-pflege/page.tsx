@@ -135,7 +135,7 @@ export default function VierUndZwanzigStundenPflege() {
           ]}
           augenbraue="6× Testsieger DIE WELT"
           titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
-          einleitung={<>Eine Betreuungskraft zieht bei Ihrem Angehörigen ein, hilft im Alltag und ist bei Bedarf auch nachts da. Bei Primundus ist sie bei uns angestellt, der Vertrag ist täglich kündbar, und eine Anreise ist in 3 Tagen möglich. Die Betreuung kostet ab 2.150&nbsp;€ im Monat; bei Pflegegrad 3 bleiben davon nach Pflegegeld und Zuschüssen ab ca. 923&nbsp;€ selbst zu tragen.</>}
+          einleitung={<>Eine Betreuungskraft zieht bei Ihrem Angehörigen ein, hilft im Alltag und ist bei Bedarf auch nachts da. Unsere Betreuungskräfte sind bei uns angestellt, der Vertrag ist täglich kündbar, und eine Anreise ist in 3 Tagen möglich. Die Betreuung kostet ab 2.150&nbsp;€ im Monat; bei Pflegegrad 3 bleiben davon nach Kassenleistungen und Steuerermäßigung ab ca. 923&nbsp;€ selbst zu tragen.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Kosten & Pflegekräfte ansehen' }}
@@ -146,7 +146,7 @@ export default function VierUndZwanzigStundenPflege() {
             'Preis und passende Pflegekräfte sofort sehen, Vertrag erst nach Ihrer Auswahl',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich, Ersatzkraft bei Ausfall',
-            'Ansprechpartnerin täglich von 8 bis 20 Uhr',
+            'Ansprechpartnerin täglich 8–20 Uhr',
           ]}
         />
 
@@ -175,8 +175,8 @@ export default function VierUndZwanzigStundenPflege() {
 
           <Abschnitt id="leistungen" titel="Was leistet Primundus?">
             <Text>
-              Unsere Betreuungskräfte sind bei uns angestellt, es gibt keinen Vermittler dazwischen. Sie wählen aus den
-              Bewerbungen die Betreuungskraft aus, die zu Ihrem Angehörigen passt, und wir setzen sie im Entsendemodell
+              Zwischen Ihnen und der Betreuungskraft steht kein Vermittler. Sie wählen aus den Bewerbungen die
+              Betreuungskraft aus, die zu Ihrem Angehörigen passt, und wir setzen sie im Entsendemodell
               mit A1-Bescheinigung bei Ihnen ein. Sie haben einen Vertrag und eine Ansprechpartnerin.
             </Text>
             <Punkte
@@ -185,7 +185,7 @@ export default function VierUndZwanzigStundenPflege() {
                 { title: 'Haushalt', desc: 'Kochen, Einkaufen, Wäsche und Ordnung in den Räumen, die Ihr Angehöriger nutzt.' },
                 { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Begleitung zu Arztterminen und ein fester Tagesablauf, der gerade bei Demenz wichtig ist.' },
                 { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank, stellen wir schnellstmöglich eine Ersatzkraft, in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
-                { title: 'Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team sind täglich von 8 bis 20 Uhr erreichbar, auch am Wochenende.' },
+                { title: 'Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team sind an 7 Tagen die Woche von 8 bis 20 Uhr erreichbar.' },
               ]}
             />
             <MehrDazu
@@ -254,8 +254,8 @@ export default function VierUndZwanzigStundenPflege() {
           <Abschnitt id="vorteile" titel="24-Stunden-Pflege oder Pflegeheim?">
             <Text>
               Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit 3.364 € im Monat (vdek-Auswertung,
-              Stand 1. Juli 2026). Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 ab ca. 923 € im Monat, und Ihr
-              Angehöriger bleibt in seiner vertrauten Umgebung.
+              Stand 1. Juli 2026). Bei der 24-Stunden-Pflege tragen Sie bei Pflegegrad 3 ab ca. 923 € im Monat selbst,
+              und Ihr Angehöriger bleibt in seiner vertrauten Umgebung.
             </Text>
             <Tabelle
               kopf={['', '24-Stunden-Pflege', 'Pflegeheim']}
