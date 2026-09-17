@@ -59,7 +59,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was kostet ein Pflegeheim in Deutschland 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit ca. 3.364 €/Monat (Pflege + Unterkunft + Verpflegung + Investitionskosten). Die Pflegekasse zahlt dazu je nach Pflegegrad 770–2.005 €/Monat — deckt aber nie die vollen Kosten.' } },
-      { '@type': 'Question', name: 'Ist das Pflegeheim oder 24h-Pflege zuhause günstiger?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege zuhause kann günstiger sein: Bei PG 3 bleiben mit Primundus nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 €/Monat — also bis zu rund 2.400 € weniger als im Pflegeheim (Ø 3.364 €/Monat). Dazu kommt der nicht messbare Wert: die vertraute Umgebung.' } },
+      { '@type': 'Question', name: 'Ist das Pflegeheim oder 24h-Pflege zuhause günstiger?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege zuhause kann günstiger sein: Bei PG 3 bleiben mit Primundus nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 €/Monat — beim Grundpreis also rund 2.440 € weniger als im Pflegeheim (Ø 3.364 €/Monat). Dazu kommt der nicht messbare Wert: die vertraute Umgebung.' } },
     ],
   },
 ]
@@ -178,7 +178,7 @@ export default function PflegeheimKosten() {
               fragen={[
                 { q: 'Was kostet ein Pflegeheim in Deutschland 2026?', a: 'Eigenanteil bundesweit Ø ca. 3.364 €/Monat (Pflege + Unterkunft + Verpflegung + Investitionskosten). Je nach Region und Einrichtung 1.700–4.000+ €/Monat. Pflegekasse zahlt 770–2.005 €/Monat je nach Pflegegrad dazu.' },
                 { q: 'Was deckt die Pflegekasse im Pflegeheim?', a: 'Die Pflegekasse zahlt einen festen Zuschuss für den Pflegeanteil: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €/Monat. Unterkunft, Verpflegung und Investitionskosten trägt der Bewohner selbst.' },
-                { q: 'Ist Pflegeheim günstiger als 24h-Pflege zuhause?', a: 'Oft nicht — bei PG 3 bleiben mit 24h-Pflege zuhause nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 €/Monat — also bis zu rund 2.400 € weniger als im Pflegeheim (Ø 3.364 €/Monat).' },
+                { q: 'Ist Pflegeheim günstiger als 24h-Pflege zuhause?', a: 'Oft nicht — bei PG 3 bleiben mit 24h-Pflege zuhause nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 €/Monat — beim Grundpreis also rund 2.440 € weniger als im Pflegeheim (Ø 3.364 €/Monat).' },
                 { q: 'Was passiert wenn das Geld für das Pflegeheim nicht reicht?', a: 'Wenn Rente und Eigenkapital nicht reichen, werden zunächst Vermögen und unter bestimmten Umständen Kinder zur Zuzahlung herangezogen. Sozialhilfe (§61 SGB XII) springt als letztes Mittel ein.' },
               ]}
             />

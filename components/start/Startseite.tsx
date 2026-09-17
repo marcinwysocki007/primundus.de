@@ -155,7 +155,7 @@ export function VertrauensKarten() {
     <section className="bg-pm-paper px-5 pb-14 lg:pb-20">
       <div className="max-w-wide mx-auto grid gap-6 md:grid-cols-2">
         <div className="relative bg-white rounded-[20px] border-2 border-pm-green/60 p-6 md:p-8">
-          <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-pm-green px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em] text-white">★ Bestpreisgarantie</span>
+          <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-pm-green px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em] text-white">★ 100 % Sorgenfrei</span>
           <div className="flex flex-col sm:flex-row sm:items-center gap-5">
             <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[52px] w-auto self-start sm:self-center flex-none" />
             <div>
@@ -326,7 +326,7 @@ export function HeimVergleich() {
             <div className="mt-6 border-t-2 border-pm-green/30 pt-5 text-center">
               <p className="text-[15px] text-pm-body">Selbst zu tragen bei Pflegegrad 3</p>
               <p className="mt-1 text-[40px] font-extrabold tracking-[-0.02em] text-pm-green-deep">ab ca. 923 €</p>
-              <p className="text-[15px] font-semibold text-pm-green-deep">bis zu rund 2.400 € weniger im Monat</p>
+              <p className="text-[15px] font-semibold text-pm-green-deep">Beim Grundpreis rund 2.440 € weniger im Monat</p>
             </div>
           </div>
         </div>
