@@ -133,7 +133,7 @@ export default function Page() {
                   href="tel:+4989200000830"
                   className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-white border border-pm-line hover:border-pm-taupe text-pm-ink font-bold text-[16px] rounded-xl transition-all duration-200"
                 >
-                  <img width={44} height={44} src="/images/marta-kapcio.jpg" loading="lazy" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
+                  <img width={44} height={44} src="/images/marta-kapcio-gesicht.jpg" loading="lazy" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
                   089 200 000 830
                 </a>
               </div>
@@ -281,7 +281,7 @@ export default function Page() {
                     href="tel:+4989200000830"
                     className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-pm-paper hover:bg-[#F0EBE3] border border-pm-line hover:border-pm-taupe text-pm-ink font-bold text-[15px] rounded-xl transition-all duration-200"
                   >
-                    <img width={44} height={44} src="/images/marta-kapcio.jpg" loading="lazy" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
+                    <img width={44} height={44} src="/images/marta-kapcio-gesicht.jpg" loading="lazy" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover" />
                     089 200 000 830
                   </a>
                 </div>

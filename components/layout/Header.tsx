@@ -43,7 +43,7 @@ export function SiteHeader() {
               className="hidden md:flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full bg-pm-paper hover:bg-pm-taupe hover:text-white transition-all duration-200 group"
             >
               <Image
-                src="/images/marta-kapcio.jpg"
+                src="/images/marta-kapcio-gesicht.jpg"
                 alt="Marta Kapcio"
                 width={40}
                 height={40}
@@ -153,7 +153,7 @@ export function SiteHeader() {
               <div className="flex items-center gap-3 px-4 py-3 border-b border-pm-line">
                 <div className="relative flex-shrink-0">
                   <Image
-                    src="/images/marta-kapcio.jpg"
+                    src="/images/marta-kapcio-gesicht.jpg"
                     alt="Marta Kapcio"
                     width={44}
                     height={44}
