@@ -12,15 +12,15 @@
 // September 2026): lib/bewertungen-direkt.ts.
 //
 // Direkt abgegebene Bewertungen kommen aus dem Kostenrechner-Backend (CAapp, project 3,
-// /api/bewertungen). Solange es nicht live ist, bleibt BEWERTUNGEN_ONLINE false:
-// Die Seite zeigt dann nur die Einträge unten, das Formular verweist auf Google.
+// /api/bewertungen), live seit 17.09.2026 (CAapp PR #723). BEWERTUNGEN_ONLINE = false schaltet
+// Formular und Abruf ab (das Formular verweist dann auf Google).
 
 import { DIREKT_ERHALTEN } from './bewertungen-direkt'
 
 export const STAND = { iso: '2026-09-17', sichtbar: '17. September 2026' }
 
 export const BEWERTUNG_API = 'https://kostenrechner.primundus.de/api/bewertungen'
-export const BEWERTUNGEN_ONLINE = false
+export const BEWERTUNGEN_ONLINE = true
 /** Cloudflare Turnstile, öffentlicher Site-Key. Leer = ohne Turnstile (Backend prüft dann nicht). */
 export const TURNSTILE_SITE_KEY = ''
 
