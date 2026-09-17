@@ -179,6 +179,7 @@ const regionen = [
 // impressum/datenschutz/sitemap sind noindex → gehören nicht in die Sitemap.
 const trust = [
   'ueber-uns',
+  'erfahrungen',
   'agb',
 ]
 

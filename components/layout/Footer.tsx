@@ -63,6 +63,8 @@ const vergleichLinks = [
   // Der Unterschied ist nicht der Inhalt, sondern die Erreichbarkeit.
   { label: 'Anbieter-Vergleich', href: '/anbieter-vergleich' },
   { label: 'Qualität & Standards', href: '/qualitaet' },
+  // 17.09.2026: Bewertungsseite (Google München/Hamburg, Trustpilot, eigenes Formular)
+  { label: 'Erfahrungen & Bewertungen', href: '/erfahrungen' },
   { label: 'Rechtssicherheit', href: '/rechtssicher' },
   { label: 'Pflegehelden-Alternative', href: '/pflegehelden-alternative' },
   { label: 'Promedica24-Alternative', href: '/promedica24-alternative' },

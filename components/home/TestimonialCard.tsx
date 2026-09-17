@@ -1,12 +1,16 @@
 "use client";
 
-import { Star } from "lucide-react";
+import { Sterne } from "@/components/bewertungen/Sterne";
+import { googleSchnitt, STAND } from "@/lib/bewertungen";
 
-// Ehrlicher Vertrauensblock (Stand August 2026):
+// Ehrlicher Vertrauensblock:
 // Wir zeigen ausschließlich belegbare Bewertungen mit Link zur Quelle.
-// Google-Unternehmensprofil: 5,0 aus 3 Bewertungen (bei neuen Bewertungen nachziehen).
+// Google: Schnitt und Anzahl kommen seit 17.09.2026 aus lib/bewertungen.ts (beide Profile,
+// München und Hamburg, jede Rezension im Wortlaut auf /erfahrungen). Vorher stand hier
+// „5,0 aus 3" (nur München, Stand August), bis eine 4-Sterne-Rezension dazukam.
 // Die früheren sechs anonymen Testimonial-Karten waren nicht belegbar und wurden entfernt.
-const GOOGLE_PROFIL_URL = "https://share.google/u2axb21OVWp838DPl";
+const GOOGLE = googleSchnitt();
+const STAND_MONAT = STAND.sichtbar.replace(/^\d+\. /, "");
 const TRUSTPILOT_URL = "https://www.trustpilot.com/review/primundus.de";
 
 export function TestimonialCard() {
@@ -15,9 +19,7 @@ export function TestimonialCard() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Google */}
         <a
-          href={GOOGLE_PROFIL_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/erfahrungen"
           className="bg-white border border-pm-line rounded-2xl p-5 flex flex-col gap-2 hover:border-pm-taupe transition-colors no-underline"
         >
           <div className="flex items-center gap-2">
@@ -30,12 +32,10 @@ export function TestimonialCard() {
             <span className="text-sm font-semibold text-pm-ink">Google Bewertungen</span>
           </div>
           <div className="flex items-center gap-1">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-[#FBBC04] text-[#FBBC04]" />
-            ))}
-            <span className="text-[14px] font-bold text-pm-ink ml-1">5,0</span>
+            <Sterne wert={GOOGLE.wert} groesse={16} />
+            <span className="text-[14px] font-bold text-pm-ink ml-1">{GOOGLE.text}</span>
           </div>
-          <p className="text-[12px] text-pm-mute">3 Bewertungen · Stand August 2026 · Profil ansehen →</p>
+          <p className="text-[12px] text-pm-mute">{GOOGLE.anzahl} Rezensionen · Stand {STAND_MONAT} · Alle Bewertungen lesen →</p>
         </a>
 
         {/* Testsieger */}

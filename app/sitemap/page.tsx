@@ -25,6 +25,7 @@ const sections = [
     title: 'Über Primundus',
     links: [
       { label: 'Über uns', href: '/ueber-uns' },
+      { label: 'Erfahrungen & Bewertungen', href: '/erfahrungen' },
       { label: 'Kontakt', href: '/kontakt' },
       { label: 'Franchisepartner werden', href: '/franchisepartner' },
     ],
