@@ -6,9 +6,10 @@ import { BewertungsListe } from '@/components/bewertungen/BewertungsListe'
 import { BewertungsFormular } from '@/components/bewertungen/BewertungsFormular'
 import { GoogleLogo, Sterne, TrustpilotLogo } from '@/components/bewertungen/Sterne'
 import {
-  BEWERTUNGEN, KUNDENSTIMMEN, KUNDENSTIMMEN_QUELLE, PROFILE, STAND,
-  anzahlText, googleBewertungen, ladeDirekteBewertungen, schnitt, schnittText, verteilung, vonProfil,
+  KUNDENSTIMMEN, KUNDENSTIMMEN_QUELLE, PROFILE, STAND,
+  alleBewertungen, anzahlText, googleBewertungen, ladeDirekteBewertungen, nachQuelle, schnitt, schnittText, verteilung, vonProfil,
 } from '@/lib/bewertungen'
+import { PrimundusMarke } from '@/components/bewertungen/Sterne'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { ORG_ID, WEBSITE_ID } from '@/lib/schema'
 
@@ -29,8 +30,12 @@ const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-t
 const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
 
 const google = googleBewertungen()
-const G_SCHNITT = schnittText(schnitt(google))
 const G_ANZAHL = google.length
+// Stand ohne Formular-Bewertungen (für Metadaten, FAQ und Kopf; das Formular ist noch nicht live)
+const ALLE = alleBewertungen()
+const DIREKT = nachQuelle('primundus', ALLE)
+const A_SCHNITT = schnittText(schnitt(ALLE))
+const A_ANZAHL = ALLE.length
 const MUC = vonProfil('muenchen')
 const HH = vonProfil('hamburg')
 const TP = vonProfil('trustpilot')
@@ -38,7 +43,7 @@ const TP = vonProfil('trustpilot')
 const FRAGEN = [
   {
     q: 'Welche Erfahrungen machen Familien mit Primundus?',
-    a: `Auf Google bewerten Familien Primundus mit ${G_SCHNITT} von 5 Sternen, aus ${G_ANZAHL} Rezensionen für die Standorte München und Hamburg (Stand ${STAND.sichtbar}). Gelobt werden vor allem schnelle Hilfe, reibungslose Abläufe und freundliche Ansprechpartner. Eine Rezension vergibt 4 Sterne. Alle Rezensionen stehen im Wortlaut auf dieser Seite.`,
+    a: `Familien bewerten Primundus mit ${A_SCHNITT} von 5 Sternen, aus ${A_ANZAHL} Bewertungen (Stand ${STAND.sichtbar}): ${DIREKT.length} Rückmeldungen direkt an Primundus, ${G_ANZAHL} auf Google, ${TP.length} auf Trustpilot. Gelobt werden die passende Betreuungskraft, Erreichbarkeit auch am Wochenende, klare Kosten und die eigene Auswahl der Betreuungskraft. Kritik gibt es an Wechseln nach der ersten Betreuungskraft und an verspäteten Anreisen.`,
   },
   {
     q: 'Ist Primundus seriös?',
@@ -50,21 +55,21 @@ const FRAGEN = [
   },
   {
     q: 'Veröffentlicht Primundus auch negative Bewertungen?',
-    a: 'Ja. Wir veröffentlichen jede bestätigte Bewertung, auch mit einem Stern, solange sie keine Beleidigungen, Werbung oder Daten anderer Personen enthält. Von Google und Trustpilot zeigen wir alle Rezensionen unserer Profile, nicht nur die guten.',
+    a: 'Ja. Wir veröffentlichen jede bestätigte Bewertung, auch mit einem Stern, solange sie keine Beleidigungen, Werbung oder Daten anderer Personen enthält. Auf dieser Seite stehen auch Bewertungen mit drei und vier Sternen, von Google und Trustpilot alle Rezensionen unserer Profile.',
   },
   {
     q: 'Sind die Bewertungen auf dieser Seite echt?',
-    a: 'Jede Rezension von Google und Trustpilot ist mit ihrer Quelle verlinkt, dort können Sie sie nachlesen. Bewertungen, die Kunden hier abgeben, müssen per E-Mail bestätigt werden, bevor wir sie prüfen. Können wir die E-Mail-Adresse einer Betreuung bei Primundus zuordnen, steht an der Bewertung „Kunde bestätigt".',
+    a: 'Rezensionen von Google und Trustpilot sind mit ihrer Quelle verlinkt. Die Rückmeldungen direkt an Primundus haben uns Familien geschickt, wir zeigen sie im Wortlaut mit Datum und Ort. Bewertungen über das Formular auf dieser Seite müssen per E-Mail bestätigt werden, bevor wir sie prüfen. Passt die Adresse zu einer Betreuung, steht an der Bewertung „Kunde bestätigt".',
   },
 ]
 
 export const metadata: Metadata = {
   title: 'Primundus Erfahrungen und Bewertungen | 24-Stunden-Pflege',
-  description: `Primundus Erfahrungen: ${G_SCHNITT} von 5 Sternen auf Google aus ${G_ANZAHL} Rezensionen (München, Hamburg). Alle Bewertungen im Wortlaut mit Quelle, dazu das Formular für Ihre eigene Bewertung.`,
+  description: `Primundus Erfahrungen: ${A_SCHNITT} von 5 Sternen aus ${A_ANZAHL} Bewertungen von Familien, direkt an Primundus, auf Google und Trustpilot. Alle im Wortlaut, auch die kritischen, dazu das Formular für Ihre eigene Bewertung.`,
   alternates: { canonical: SEITE_URL },
   openGraph: {
     title: 'Primundus Erfahrungen und Bewertungen',
-    description: `${G_SCHNITT} von 5 Sternen auf Google. Alle Rezensionen im Wortlaut, mit Link zur Quelle.`,
+    description: `${A_SCHNITT} von 5 Sternen aus ${A_ANZAHL} Bewertungen. Alle im Wortlaut, auch die kritischen.`,
     url: SEITE_URL,
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -101,35 +106,46 @@ const schemaMarkup = [
   },
 ]
 
-function ProfilZeile({ logo, titel, liste, href, zusatz }: { logo: ReactNode; titel: string; liste: { sterne: number }[]; href: string; zusatz?: string }) {
-  return (
-    <li>
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex items-center gap-3 py-3 border-b border-pm-line-soft last:border-0 text-[15.5px]"
-      >
+function ProfilZeile({
+  logo, titel, liste, href, zusatz, einheit = ['Rezension', 'Rezensionen'],
+}: { logo: ReactNode; titel: string; liste: { sterne: number }[]; href?: string; zusatz?: string; einheit?: [string, string] }) {
+  const innen = (
+    <>
         {logo}
         <span className="min-w-0 flex-1 font-semibold text-pm-ink group-hover:text-pm-taupe-ink">{titel}</span>
         {zusatz ? (
           <span className="text-pm-mute whitespace-nowrap">{zusatz}</span>
         ) : (
           <span className="text-pm-body whitespace-nowrap [font-variant-numeric:tabular-nums]">
-            <span className="font-bold text-pm-ink">{schnittText(schnitt(liste))}</span> · {anzahlText(liste.length, 'Rezension', 'Rezensionen')}
+            <span className="font-bold text-pm-ink">{schnittText(schnitt(liste))}</span> · {anzahlText(liste.length, einheit[0], einheit[1])}
           </span>
         )}
-        <span aria-hidden="true" className="text-pm-taupe group-hover:translate-x-0.5 transition-transform">→</span>
-        <span className="sr-only">(öffnet in neuem Fenster)</span>
-      </a>
+      {href && (
+        <>
+          <span aria-hidden="true" className="text-pm-taupe group-hover:translate-x-0.5 transition-transform">→</span>
+          <span className="sr-only">(öffnet in neuem Fenster)</span>
+        </>
+      )}
+    </>
+  )
+  const zeile = 'group flex items-center gap-3 py-3 text-[15.5px]'
+  return (
+    <li className="border-b border-pm-line-soft last:border-0">
+      {href ? (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={zeile}>
+          {innen}
+        </a>
+      ) : (
+        <div className={zeile}>{innen}</div>
+      )}
     </li>
   )
 }
 
 export default async function ErfahrungenPage() {
   const direkt = await ladeDirekteBewertungen()
-  const alle = [...direkt, ...BEWERTUNGEN].sort((a, b) => b.sortierDatum.localeCompare(a.sortierDatum))
-  const stufen = verteilung(google)
+  const alle = alleBewertungen(direkt)
+  const stufen = verteilung(alle)
   const max = Math.max(...stufen.map((s) => s.anzahl), 1)
 
   return (
@@ -157,8 +173,9 @@ export default async function ErfahrungenPage() {
                   Primundus Erfahrungen und Bewertungen
                 </h1>
                 <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
-                  Familien bewerten Primundus auf Google mit {G_SCHNITT} von 5 Sternen, aus {G_ANZAHL} Rezensionen für unsere Standorte München und Hamburg.
-                  Hier lesen Sie jede Rezension im Wortlaut, mit Link zur Quelle. Sind Sie selbst Kunde, können Sie Primundus direkt auf dieser Seite bewerten.
+                  Familien bewerten Primundus mit {schnittText(schnitt(alle))} von 5 Sternen, aus {alle.length} Bewertungen: Rückmeldungen direkt an uns,
+                  Google-Rezensionen für München und Hamburg und Trustpilot. Hier lesen Sie jede im Wortlaut, auch die kritischen. Sind Sie selbst Kunde,
+                  können Sie Primundus direkt auf dieser Seite bewerten.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
                   <a
@@ -178,14 +195,14 @@ export default async function ErfahrungenPage() {
               </div>
 
               <aside aria-label="Bewertungen im Überblick" className="bg-white rounded-[24px] shadow-lift p-6 md:p-8">
-                <p className={`${AUGENBRAUE} flex items-center gap-2`}>
-                  <GoogleLogo groesse={16} /> Google-Bewertungen
-                </p>
+                <p className={AUGENBRAUE}>Alle Bewertungen</p>
                 <div className="mt-4 flex items-center gap-4">
-                  <span className="text-[56px] font-extrabold leading-none tracking-[-0.04em] text-pm-ink [font-variant-numeric:tabular-nums]">{G_SCHNITT}</span>
+                  <span className="text-[56px] font-extrabold leading-none tracking-[-0.04em] text-pm-ink [font-variant-numeric:tabular-nums]">
+                    {schnittText(schnitt(alle))}
+                  </span>
                   <span>
-                    <Sterne wert={schnitt(google)} groesse={22} />
-                    <span className="mt-1 block text-[15px] text-pm-body">aus {anzahlText(G_ANZAHL, 'Rezension', 'Rezensionen')}</span>
+                    <Sterne wert={schnitt(alle)} groesse={22} />
+                    <span className="mt-1 block text-[15px] text-pm-body">aus {anzahlText(alle.length, 'Bewertung', 'Bewertungen')}</span>
                   </span>
                 </div>
 
@@ -196,12 +213,13 @@ export default async function ErfahrungenPage() {
                       <span className="flex-1 h-2 rounded-full bg-pm-line-soft overflow-hidden" aria-hidden="true">
                         <span className="block h-full rounded-full bg-pm-gold" style={{ width: `${(s.anzahl / max) * 100}%` }} />
                       </span>
-                      <span className="w-4 text-right">{s.anzahl}</span>
+                      <span className="w-8 text-right">{s.anzahl}</span>
                     </li>
                   ))}
                 </ul>
 
                 <ul className="mt-5 pt-2 border-t border-pm-line">
+                  <ProfilZeile logo={<PrimundusMarke />} titel="Primundus" liste={nachQuelle('primundus', alle)} einheit={['Bewertung', 'Bewertungen']} />
                   <ProfilZeile logo={<GoogleLogo />} titel="München" liste={MUC} href={PROFILE.muenchen.url} />
                   <ProfilZeile logo={<GoogleLogo />} titel="Hamburg" liste={HH} href={PROFILE.hamburg.url} />
                   <ProfilZeile
@@ -223,8 +241,8 @@ export default async function ErfahrungenPage() {
           <div className="max-w-[46rem]">
             <h2 className={H2}>Was Familien über Primundus schreiben</h2>
             <p className="mt-5 text-[18px] leading-[1.7] text-pm-body [text-wrap:pretty]">
-              Alle Rezensionen unserer Google-Profile und von Trustpilot, auch die mit weniger als 5 Sternen. Die neuesten stehen oben. Zeitangaben wie in der
-              Quelle, Stand {STAND.sichtbar}.
+              Alle Bewertungen im Wortlaut, auch die mit drei und vier Sternen. Die neuesten stehen oben. Bei Google-Rezensionen stehen die Zeitangaben wie in
+              der Quelle, Stand {STAND.sichtbar}.
             </p>
           </div>
           <div className="mt-8">
@@ -307,11 +325,15 @@ export default async function ErfahrungenPage() {
           <div className="max-w-[46rem]">
             <h2 className={H2}>So prüfen wir Bewertungen</h2>
             <p className="mt-5 text-[18px] leading-[1.7] text-pm-body">
-              Auf dieser Seite stehen Bewertungen aus drei Quellen. Für jede gilt eine andere Prüfung.
+              Die Bewertungen auf dieser Seite kommen auf verschiedenen Wegen zu uns. Für jeden Weg steht hier, woher sie stammen und was wir prüfen.
             </p>
             <div className="mt-8">
               <Punkte
                 punkte={[
+                  {
+                    title: 'Rückmeldungen direkt an Primundus',
+                    desc: `Diese ${DIREKT.length} Bewertungen haben uns Familien direkt geschickt, bevor es das Formular auf dieser Seite gab. Wir zeigen sie im Wortlaut mit Sternen, Datum und Ort, auch die mit drei und vier Sternen. Nachnamen kürzen wir auf den Anfangsbuchstaben.`,
+                  },
                   {
                     title: 'Google und Trustpilot',
                     desc: `Wir übernehmen alle Rezensionen unserer Google-Profile München und Hamburg und von Trustpilot im Wortlaut und verlinken die Quelle. Google und Trustpilot prüfen nicht, ob die Verfasser Kunden von Primundus sind. Nachnamen kürzen wir auf den Anfangsbuchstaben. Stand: ${STAND.sichtbar}.`,

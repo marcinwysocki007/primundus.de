@@ -61,5 +61,5 @@ export function QuellenLogo({ quelle, groesse }: { quelle: Quelle; groesse?: num
 export const QUELLEN_NAME: Record<Quelle, string> = {
   google: 'Google',
   trustpilot: 'Trustpilot',
-  primundus: 'Direkt bei Primundus',
+  primundus: 'Direkt an Primundus',
 }

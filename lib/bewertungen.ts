@@ -10,9 +10,14 @@
 // Nachnamen auf den Anfangsbuchstaben gekürzt. Neue Rezensionen: Eintrag ergänzen,
 // STAND anpassen, Startseiten-Block prüft sich über googleSchnitt() selbst.
 //
+// Rückmeldungen, die Primundus auf anderem Weg direkt erhalten hat (120, Oktober 2024 bis
+// September 2026): lib/bewertungen-direkt.ts.
+//
 // Direkt abgegebene Bewertungen kommen aus dem Kostenrechner-Backend (CAapp, project 3,
 // /api/bewertungen). Solange es nicht live ist, bleibt BEWERTUNGEN_ONLINE false:
 // Die Seite zeigt dann nur die Einträge unten, das Formular verweist auf Google.
+
+import { DIREKT_ERHALTEN } from './bewertungen-direkt'
 
 export const STAND = { iso: '2026-09-17', sichtbar: '17. September 2026' }
 
@@ -79,7 +84,7 @@ export interface Bewertung {
   antwort?: string
 }
 
-// Reihenfolge = Anzeige ohne Filter: neueste zuerst.
+// Google und Trustpilot. Reihenfolge: neueste zuerst.
 export const BEWERTUNGEN: Bewertung[] = [
   {
     id: 'g-muc-stephanie',
@@ -155,6 +160,15 @@ export const BEWERTUNGEN: Bewertung[] = [
     sortierDatum: '2022-06-01',
   },
 ]
+
+/** Alle Bewertungen mit Sternen (Google, Trustpilot, direkt erhalten), neueste zuerst */
+export function alleBewertungen(zusaetzlich: Bewertung[] = []): Bewertung[] {
+  return [...zusaetzlich, ...DIREKT_ERHALTEN, ...BEWERTUNGEN].sort((a, b) => b.sortierDatum.localeCompare(a.sortierDatum))
+}
+
+export function nachQuelle(quelle: Quelle, liste: Bewertung[]): Bewertung[] {
+  return liste.filter((b) => b.quelle === quelle)
+}
 
 // Kundenstimmen ohne Sterne von der früheren Hamburger Website (primundus-hamburg.de,
 // Abschnitt „Was unsere Kunden sagen", abgerufen 17.09.2026). Nicht im Durchschnitt.
