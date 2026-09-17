@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Werte,
+  Abschnitt, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -77,7 +77,7 @@ const schemaMarkup = [
         name: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv im Monat?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Bei Primundus ab 2.200 Euro im Monat. Nach 599 Euro Pflegegeld, rund 295 Euro anteiligem Entlastungsbudget und etwa 333 Euro Steuerermäßigung bleiben ab ca. 970 Euro effektiv selbst zu tragen. Dazu kommen An- und Abreise mit 125 Euro je Strecke (Stand September 2026).',
+          text: 'Bei Primundus 2.150 bis 3.850 Euro im Monat, je nach Situation. Nach 599 Euro Pflegegeld, rund 295 Euro anteiligem Entlastungsbudget und etwa 333 Euro Steuerermäßigung bleiben ca. 923 bis 2.623 Euro effektiv selbst zu tragen. Dazu kommen An- und Abreise mit 125 Euro je Strecke (Stand September 2026).',
         },
       },
     ],
@@ -99,7 +99,7 @@ const FRAGEN = [
   'Was kosten An- und Abreise, auch bei jedem Kraftwechsel?',
   'Wie hoch sind Feiertags- und Weihnachtszuschläge — konkret in Euro?',
   'Wie schnell kann ich kündigen, und kostet ein Wechsel der Kraft etwas?',
-  'Was zahle ich, wenn meine Mutter ins Krankenhaus muss?',
+  'Gibt es eine Vermittlungsgebühr, Anzahlung oder Vorauszahlung?',
   'Ist Ihre Auszeichnung oder Bewertung belegt — mit Link oder Dokument?',
 ]
 
@@ -134,44 +134,51 @@ export default function WirklicheKostenPage() {
                   Monat sind es aber über <strong>3.100 Euro</strong>. Rechnen Sie Tagespreise immer mal 30,
                   bevor Sie vergleichen.</> },
                 { title: "2. Der „ab\"-Preis", desc: <>„Ab"-Preise gelten für die einfachste denkbare Situation: eine mobile Person, keine
-                  Nachteinsätze, einfache Sprachkenntnisse der Kraft. Fragen Sie deshalb, was <strong>Ihre
-                  Situation</strong> kostet — ein seriöser Anbieter nennt Ihnen diesen Preis, bevor Sie
-                  unterschreiben. Und Vorsicht bei „ab"-Angaben, die bereits alle Zuschüsse
-                  abgezogen haben: Das ist kein Preis, sondern ein Rechenergebnis für den günstigsten Fall — seriös nur mit Rechenweg.</> },
+                  Nachteinsätze, einfache Sprachkenntnisse der Kraft. Realistische Situationen liegen fast
+                  immer darüber — fragen Sie deshalb nach der <strong>Spanne mit Obergrenze</strong>, nicht
+                  nach dem Einstiegspreis. Und Vorsicht bei „ab"-Angaben, die bereits alle Zuschüsse
+                  abgezogen haben: Das ist kein Preis, sondern ein Rechenergebnis für den günstigsten Fall.</> },
                 { title: "3. Die unbezifferten Nebenkosten", desc: "An- und Abreise der Betreuungskraft, Feiertagszuschläge, Kosten bei einem Kraftwechsel: Diese Posten gehören zu jeder 24h-Betreuung — aber nicht jeder Anbieter beziffert sie vor Vertragsschluss. Was vorher nicht in Euro dasteht, steht später auf der Rechnung." },
               ]}
             />
           </Abschnitt>
 
           <Abschnitt id="so-sieht-die-vollstaendige" titel="So sieht die vollständige Rechnung aus (Beispiel Pflegegrad 3)">
-            {/* Rechnung: Betrag links, Posten rechts. Martin 17.09.: Entlastungsbudget und Steuervorteil
-                gehören in den Eigenanteil, und alle Kosten, die dazukommen können, müssen auf der Seite stehen. */}
-            <Kasten>
-              <Werte
-                zeilen={[
-                  [<>ab 2.200 €</>, <>Betreuung im Monat bei Primundus</>],
-                  [<>− 599 €</>, <>Pflegegeld (Pflegegrad 3)</>],
-                  [<>− 295 €</>, <>Entlastungsbudget (3.539 € im Jahr, monatlich verteilt)</>],
-                  [<>− 333 €</>, <>Steuerermäßigung § 35a EStG (bis 4.000 € im Jahr)</>],
-                  [<>ab ca. 970 €</>, <strong>Effektiv selbst zu tragen im Monat</strong>],
-                ]}
-              />
-              <Text>
-                Stand September 2026. Entlastungsbudget und Steuerermäßigung hängen von Ihrer Situation ab. Der
-                Unterschied zu „ab 945 €"-Werbung: Wir zeigen den Rechenweg und alle Kosten, die dazukommen können —
-                jede Zeile können Sie bei Ihrer Pflegekasse und Ihrem Steuerberater nachprüfen. Ihre persönliche
-                Rechnung erstellt der{' '}
-                <a href="https://kostenrechner.primundus.de/" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Kostenrechner in 2 Minuten</a>.
-              </Text>
-            </Kasten>
+            {/* Rechnung mit den Werten aus dem Kostenrechner (pricing_config/subsidies, Stand 17.09.2026):
+                Grundpreis 2.150 €; teuerster Fall bei Pflegegrad 3 = 3.850 € (Ehepaar +450, weitere Person
+                +200, gute Deutschkenntnisse +450, Führerschein +100, Betreuerin +100, Rollstuhl/bettlägerig
+                +100, mehrmals nachts +300). Zuschüsse wie im Rechner: Pflegegeld, Entlastungsbudget/12,
+                Steuervorteil 20 % bis 4.000 €/Jahr. Martin 17.09.: Mindest- und Höchstpreis aus dem Rechner. */}
+            <Tabelle
+              titel="Beispiel Pflegegrad 3: günstigster und teuerster Fall"
+              kopf={['Posten', 'Günstigster Fall', 'Teuerster Fall']}
+              zeilen={[
+                ['Betreuung im Monat', '2.150 €', '3.850 €'],
+                ['Pflegegeld (Pflegegrad 3)', '− 599 €', '− 599 €'],
+                ['Entlastungsbudget (3.539 € im Jahr)', '− 295 €', '− 295 €'],
+                ['Steuerermäßigung (20 %, bis 4.000 € im Jahr)', '− 333 €', '− 333 €'],
+                [<strong key="s">Selbst zu tragen im Monat</strong>, <strong key="m">ca. 923 €</strong>, <strong key="x">ca. 2.623 €</strong>],
+              ]}
+              betont={[1, 2]}
+              fuss="Stand September 2026, Werte aus unserem Kostenrechner."
+            />
+            <Text>
+              <strong>Günstigster Fall:</strong> eine Person, mobil, keine Einsätze in der Nacht, einfache
+              Deutschkenntnisse der Betreuungskraft. <strong>Teuerster Fall:</strong> ein Ehepaar und eine weitere
+              Person im Haushalt, Rollstuhl oder bettlägerig, mehrmals Hilfe in der Nacht, gute Deutschkenntnisse,
+              Führerschein und der Wunsch nach einer Betreuerin. Entlastungsbudget und Steuerermäßigung hängen von
+              Ihrer Situation ab. Wir zeigen den Rechenweg und alle Kosten, die dazukommen können — jede Zeile
+              können Sie bei Ihrer Pflegekasse und Ihrem Steuerberater nachprüfen. Ihre persönliche Rechnung
+              erstellt der{' '}
+              <a href="https://kostenrechner.primundus.de/" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Kostenrechner in 2 Minuten</a>.
+            </Text>
             <Kasten titel="Diese Kosten können dazukommen">
               <Werte
                 zeilen={[
                   [<>125 € je Strecke</>, <>An- und Abreise der Betreuungskraft, auch bei einem Wechsel der Kraft</>],
-                  [<>doppelter Tagessatz</>, <>an gesetzlichen Feiertagen, bei 2.200 € im Monat ca. 73 € mehr je Feiertag</>],
-                  [<>Preis läuft weiter</>, <>bei einem Krankenhausaufenthalt, wenn die Betreuungskraft im Haushalt bleibt; sonst bis zur Abreise, meist 2 bis 3 Tage</>],
+                  [<>doppelter Tagessatz</>, <>an gesetzlichen Feiertagen, beim Grundpreis von 2.150 € ca. 72 € mehr je Feiertag</>],
                   [<>gestellt</>, <>Kost und Logis: ein eigenes Zimmer und Verpflegung</>],
-                  [<>0 €</>, <>Vermittlungsgebühr, Anzahlung oder Vorauszahlung</>],
+                  [<>0 €</>, <>Vermittlungsgebühr, Anzahlung oder Vorauszahlung; abgerechnet wird taggenau ab Anreise</>],
                 ]}
               />
             </Kasten>
@@ -186,12 +193,12 @@ export default function WirklicheKostenPage() {
             <Kasten titel="Unsere Antworten">
               <Werte
                 zeilen={[
-                  [<>1. Preis</>, <>ab 2.200 € im Monat, bei Pflegegrad 3 ab ca. 970 € Eigenanteil (Rechnung oben); den Preis für Ihre Situation zeigt der Kostenrechner sofort</>],
+                  [<>1. Preis</>, <>2.150 bis 3.900 € im Monat je nach Situation; bei Pflegegrad 3 selbst zu tragen ca. 923 bis 2.623 € (Rechnung oben); Ihren Preis zeigt der Kostenrechner sofort</>],
                   [<>2. Kost und Logis</>, <>ein eigenes Zimmer und Verpflegung stellen Sie</>],
                   [<>3. An- und Abreise</>, <>125 € je Strecke, auch bei jedem Wechsel der Kraft</>],
-                  [<>4. Feiertage</>, <>doppelter Tagessatz, bei 2.200 € im Monat ca. 73 € mehr je Feiertag</>],
+                  [<>4. Feiertage</>, <>doppelter Tagessatz, beim Grundpreis von 2.150 € ca. 72 € mehr je Feiertag</>],
                   [<>5. Kündigung</>, <>täglich kündbar ohne Mindestlaufzeit; ein Wechsel der Kraft kostet nur die An- und Abreise</>],
-                  [<>6. Krankenhaus</>, <>bleibt die Betreuungskraft im Haushalt, läuft der Preis weiter; sonst bis zur Abreise, meist 2 bis 3 Tage</>],
+                  [<>6. Gebühren</>, <>keine Vermittlungsgebühr, keine Anzahlung, keine Vorauszahlung — abgerechnet wird taggenau ab Anreise</>],
                   [<>7. Auszeichnung</>, <><a href="/testsieger-24-stunden-pflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">sechsmal in Folge Testsieger bei DIE WELT</a>, mit Original-Siegel und Veröffentlichung</>],
                 ]}
               />
@@ -203,7 +210,7 @@ export default function WirklicheKostenPage() {
               punkte={[
                 { title: "Warum wirken manche 24h-Pflege-Angebote so günstig?", desc: "Drei verbreitete Mechanismen: Tagespreise statt Monatssummen (105 Euro am Tag klingt klein, sind aber über 3.100 Euro im Monat), „ab\"-Preise, die nur für die einfachste Konstellation gelten, und unbezifferte Nebenkosten wie Fahrtkosten oder Feiertagszuschläge, die erst im Vertrag auftauchen." },
                 { title: "Welche Nebenkosten kommen üblicherweise dazu?", desc: "Typisch sind: An- und Abreisekosten der Betreuungskraft (bei Primundus 125 Euro je Strecke, auch bei einem Wechsel der Kraft) und Zuschläge an Feiertagen (bei Primundus der doppelte Tagessatz). Kost und Logis stellen Sie selbst: ein eigenes Zimmer und Verpflegung. Seriöse Anbieter nennen diese Posten mit konkreten Zahlen, bevor Sie unterschreiben." },
-                { title: "Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv?", desc: <>Bei Primundus ab 2.200 Euro im Monat. Nach 599 Euro Pflegegeld, rund 295 Euro anteiligem Entlastungsbudget und etwa 333 Euro Steuerermäßigung bleiben ab ca. 970 Euro effektiv selbst zu tragen. Dazu kommen An- und Abreise mit 125 Euro je Strecke. Alle Details:{' '}
+                { title: "Was kostet 24-Stunden-Pflege bei Pflegegrad 3 effektiv?", desc: <>Bei Primundus 2.150 bis 3.850 Euro im Monat, je nach Situation. Nach 599 Euro Pflegegeld, rund 295 Euro anteiligem Entlastungsbudget und etwa 333 Euro Steuerermäßigung bleiben ca. 923 bis 2.623 Euro effektiv selbst zu tragen. Dazu kommen An- und Abreise mit 125 Euro je Strecke. Alle Details:{' '}
                 <a href="/24-stunden-pflege-kostenuebernahme" className="text-pm-taupe underline underline-offset-2">Wer übernimmt die Kosten?</a></> },
               ]}
             />
