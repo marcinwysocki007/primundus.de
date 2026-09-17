@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
-  RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -143,12 +142,7 @@ export default function Page() {
 
           <Abschnitt id="was-kostet-das-und" titel="Was kostet das — und was zahlt die Pflegekasse dazu?">
             <Text>Eine 24h-Betreuung kostet über Primundus <strong>ab 2.150 Euro im Monat</strong> — je nachdem, ob eine oder zwei Personen betreut werden, wie mobil Ihre Angehörigen sind und ob nachts Hilfe nötig ist. Die Pflegekasse zahlt kräftig mit: Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3{' '}<strong>ab ca. 923 Euro</strong>{' '} im Monat selbst zu tragen. Zum Vergleich: Ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.364 Euro Eigenanteil — ohne dass jemand rund um die Uhr nur für Ihre Mutter da wäre.</Text>
-            <MehrDazu
-              label="Mehr dazu:"
-              links={[
-                { href: '/pflegegrad-rechner', text: 'Unsicher beim Pflegegrad? Hier mit denselben sechs Modulen rechnen wie bei der Begutachtung' },
-              ]}
-            />
+            <RechnerKasten src="ort-alzey-worms" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-im-kreis" titel="Polnische Betreuungskräfte im Kreis Alzey-Worms">

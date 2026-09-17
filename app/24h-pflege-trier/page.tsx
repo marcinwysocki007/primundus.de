@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
-  RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -221,16 +220,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <Kasten titel="Ihren eigenen Fall durchrechnen">
-              <Text>Welcher Pflegegrad realistisch ist und was am Ende tatsächlich übrig bleibt, hängt von der konkreten Situation ab. Zwei Rechner helfen weiter — beide kostenlos und ohne Anmeldung:</Text>
-              <MehrDazu
-                label="Rechner:"
-                links={[
-                  { href: '/pflegegrad-rechner', text: 'Pflegegrad berechnen — dieselben sechs Module wie bei der Begutachtung' },
-                  { href: 'https://kostenrechner.primundus.de/?start=1&amp;src=ort-trier', text: 'Preis und Betreuungskräfte für Trier ansehen — in 2 Minuten' },
-                ]}
-              />
-            </Kasten>
+            <RechnerKasten src="ort-trier" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-trier" titel="Polnische Betreuungskräfte in Trier">

@@ -342,6 +342,26 @@ export function Kasten({
   )
 }
 
+// „Preis berechnen" führt direkt in den Kostenrechner, nicht zu Pflegegrad- oder Schätzrechnern
+// (Martin 17.09.2026). src bleibt je Seite, damit Anfragen ihrer Seite zugeordnet werden.
+export function RechnerKasten({ src }: { src: string }) {
+  return (
+    <Kasten titel="Berechnen Sie Ihren Preis und sehen Sie passende Pflegekräfte sofort">
+      <Text>
+        Sie beantworten ein paar Fragen zur Pflegesituation. Danach sehen Sie den Monatspreis und die
+        Betreuungskräfte, die dafür in Frage kommen. Das dauert 2 Minuten.
+      </Text>
+      <a
+        href={`https://kostenrechner.primundus.de/?start=1&src=${src}`}
+        referrerPolicy="no-referrer-when-downgrade"
+        className={`${KNOPF} sm:self-start`}
+      >
+        Preis berechnen
+      </a>
+    </Kasten>
+  )
+}
+
 export function HakenListe({ punkte, zweispaltig = false }: { punkte: string[]; zweispaltig?: boolean }) {
   return (
     <ul className={`grid gap-3.5 ${zweispaltig ? 'sm:grid-cols-2 sm:gap-x-8' : ''}`}>

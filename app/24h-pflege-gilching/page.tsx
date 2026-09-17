@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
-  RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -221,16 +220,7 @@ export default function Page() {
             <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +1.000 €/Jahr">
               <Text>Bayern zahlt zusätzlich 1.000 €/Jahr (ca. 83 €/Monat) für alle PG 2–5 in häuslicher Pflege. Antrag beim Landesamt für Pflege (LfP Bayern) — kumulierbar mit allen Pflegekasse-Zuschüssen.</Text>
             </Kasten>
-            <Kasten titel="Ihren eigenen Fall durchrechnen">
-              <Text>Welcher Pflegegrad realistisch ist und was am Ende tatsächlich übrig bleibt, hängt von der konkreten Situation ab. Zwei Rechner helfen weiter — beide kostenlos und ohne Anmeldung:</Text>
-              <MehrDazu
-                label="Rechner:"
-                links={[
-                  { href: '/pflegegrad-rechner', text: 'Pflegegrad berechnen — dieselben sechs Module wie bei der Begutachtung' },
-                  { href: 'https://kostenrechner.primundus.de/?start=1&amp;src=ort-gilching', text: 'Preis und Betreuungskräfte für Gilching ansehen — in 2 Minuten' },
-                ]}
-              />
-            </Kasten>
+            <RechnerKasten src="ort-gilching" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-gilching" titel="Polnische Betreuungskräfte in Gilching">

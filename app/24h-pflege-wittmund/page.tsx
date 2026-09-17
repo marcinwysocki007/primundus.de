@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte,
-  RatgeberKopf, RatgeberRumpf, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -143,12 +142,7 @@ export default function Page() {
 
           <Abschnitt id="was-kostet-das-und" titel="Was kostet das — und was zahlt die Pflegekasse dazu?">
             <Text>Eine 24h-Betreuung kostet über Primundus <strong>ab 2.150 Euro im Monat</strong>. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3{' '}<strong>ab ca. 923 Euro</strong> selbst zu tragen — und anders als beim Heimplatz bleibt das Haus im Familienbesitz.</Text>
-            <MehrDazu
-              label="Mehr dazu:"
-              links={[
-                { href: '/pflegegrad-rechner', text: 'Unsicher beim Pflegegrad? Hier mit denselben sechs Modulen rechnen wie bei der Begutachtung' },
-              ]}
-            />
+            <RechnerKasten src="ort-wittmund" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-wittmund" titel="Polnische Betreuungskräfte in Wittmund">
