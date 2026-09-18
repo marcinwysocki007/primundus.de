@@ -8,7 +8,6 @@
 // Übernommen von der Partnerseite: Breite 1200 px wie Kopf und Fuß, Überschriften
 // in Stärke 800 mit enger Laufweite, Fließtext 18 px, Linien statt Karten, ein
 // dunkles Band, weiße Kästen mit weichem Schatten. Keine Symbol-Kacheln.
-import Image from 'next/image'
 import { Fragment, type ReactNode } from 'react'
 import { KNOPF } from '@/components/ArticleCTA'
 import { LeistenKarte, RechnerBlock } from '@/components/vertrauen/Vertrauen'
@@ -101,25 +100,11 @@ export function RatgeberKopf({
                 <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
               </div>
             ) : null}
-            {/* Marta wie überall (Martin 18.09.: „an Standard anpassen"): Gesichtsausschnitt, Name, „Ihre Beraterin", Zeiten; Datum darunter */}
-            <div className="mt-8 flex items-center gap-3.5">
-              <Image
-                src="/images/marta-kapcio-gesicht.jpg"
-                alt="Marta Kapcio"
-                width={52}
-                height={52}
-                className="w-[52px] h-[52px] rounded-full object-cover flex-none"
-              />
-              {/* Umbrüche nur zwischen den Einheiten, nicht in „8 Min. / Lesezeit" */}
-              <p className="text-[15.5px] leading-[1.45] text-pm-body">
-                <a href="/ueber-uns#team" className="font-bold text-pm-ink hover:text-pm-taupe-ink transition-colors">Marta Kapcio</a>
-                , Ihre Beraterin · <span className="whitespace-nowrap">täglich 8–20 Uhr</span>
-                <br />
-                <span className="text-[14px] text-pm-mute">
-                  <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
-                </span>
-              </p>
-            </div>
+            {/* Keine Marta-Zeile im Kopf (Martin 18.09.: „ohne Button blöd, aber Button wären zu viel") — sie steht in der
+                Kopfzeile und am Seitenende. Nur das Datum bleibt; die Autorin steht in den Daten für Google. */}
+            <p className="mt-7 text-[14px] leading-[1.45] text-pm-mute">
+              <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
+            </p>
           </div>
 
           {blick?.length ? (
