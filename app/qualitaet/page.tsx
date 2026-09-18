@@ -1,29 +1,40 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Werte } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('qualitaet', '25. April 2026')
+// Kernseite in der Seitenvorlage (Paket 2, 18.09.2026). Inhalt gegen Rechner, Kundenportal und Mustervertrag geprüft:
+// Betreuungskräfte sind bei uns angestellt (kein „vermitteln"), Sie sehen vorab das Profil (Foto, Erfahrung, Einsätze,
+// Deutschkenntnisse) und wählen selbst; Ersatz bei Krankheit „in der Regel innerhalb von 3 Tagen" (Vertrag § 1), Wechsel
+// mit An-/Abreise 125 € je Strecke und Wechseltag für beide (§ 4 Nr. 7) statt „keine Zusatzkosten"; kein „sofortiger
+// Ersatz", kein „Vermittlungsrisiko". Aussagen ohne Beleg (Deutsch im Gespräch geprüft, Referenzen, Führerschein verifiziert,
+// Telefonat vorab) sind raus, bis Martin sie bestätigt.
+
+const AKTUALISIERT = aktualisiertAm('qualitaet', '18. September 2026')
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-qualitaet'
+const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
 const SECTIONS = [
-  { id: 'auswahl', title: 'Wie Primundus Kräfte auswählt' },
-  { id: 'pruefung', title: 'Was aktiv geprüft wird' },
-  { id: 'laufend', title: 'Laufende Qualitätssicherung' },
-  { id: 'wechsel', title: 'Was wenn es nicht passt?' },
+  { id: 'auswahl', title: 'Wie wir Betreuungskräfte auswählen' },
+  { id: 'vorab', title: 'Was Sie vorab sehen' },
+  { id: 'einsatz', title: 'Während des Einsatzes' },
+  { id: 'wechsel', title: 'Wenn es nicht passt' },
+  { id: 'belege', title: 'Woran Sie das messen können' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
-  title: 'Qualität der 24h-Pflege bei Primundus — wie wir Kräfte prüfen | Primundus',
-  description: 'Wie Primundus Betreuungskräfte auswählt und prüft: Sprachniveau, Erfahrung, Referenzen und laufende Qualitätssicherung — nachvollziehbar für Angehörige.',
+  title: 'Qualität der 24h-Pflege bei Primundus — wie wir Betreuungskräfte auswählen | Primundus',
+  description: 'Wie Primundus Betreuungskräfte auswählt: bei uns angestellt, Profil mit Foto, Erfahrung und Deutschkenntnissen vorab, Sie wählen selbst, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/qualitaet' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Qualität der 24h-Pflege | Primundus',
-    description: 'Wie Primundus Betreuungskräfte prüft und Qualität dauerhaft sicherstellt.',
+    description: 'Bei uns angestellte Betreuungskräfte, Profil vorab, Sie wählen selbst, täglich kündbar.',
     url: 'https://primundus.de/qualitaet',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -31,11 +42,31 @@ export const metadata: Metadata = {
   },
 }
 
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const FRAGEN = [
+  {
+    q: 'Wie stellt Primundus die Qualität der Betreuungskräfte sicher?',
+    a: 'Unsere Betreuungskräfte sind bei uns angestellt. Sie sehen vor der Entscheidung das Profil mit Foto, Erfahrung, Einsätzen über Primundus und Deutschkenntnissen und wählen selbst aus. Während des Einsatzes sind Marta Kapcio und ihr Team täglich von 8 bis 20 Uhr erreichbar. Passt es nicht, wechseln Sie; der Vertrag ist täglich kündbar.',
+  },
+  {
+    q: 'Was passiert, wenn die Betreuungskraft nicht passt?',
+    a: 'Sagen Sie uns Bescheid, dann suchen wir eine andere Betreuungskraft, und Sie wählen wieder selbst aus. Sie zahlen An- und Abreise mit 125 € je Strecke; am Wechseltag berechnen wir den Tagessatz für beide Betreuungskräfte, weil An- und Abreisetag Arbeitstage sind. Eine Gebühr für den Wechsel gibt es nicht.',
+  },
+  {
+    q: 'Was passiert, wenn die Betreuungskraft krank wird?',
+    a: 'Wir stellen schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Für die Krankheitstage berechnen wir nichts; es fallen nur An- und Abreise mit 125 € je Strecke an.',
+  },
+  {
+    q: 'Woher weiß Primundus, ob eine Betreuungskraft gut ist?',
+    a: 'Aus über 20 Jahren und mehr als 60.000 Betreuungen und aus den Rückmeldungen der Familien. Im Profil sehen Sie, wie viele Einsätze eine Betreuungskraft über Primundus hatte. Bewertungen unserer Familien finden Sie auf der Seite Erfahrungen.',
+  },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Qualität der 24h-Pflege bei Primundus — wie wir Kräfte prüfen',
+    headline: 'Qualität der 24h-Pflege bei Primundus — wie wir Betreuungskräfte auswählen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -53,13 +84,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Wie stellt Primundus die Qualität der Betreuungskräfte sicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Primundus prüft alle Betreuungskräfte aktiv: Deutschkenntnisse werden im Gespräch bewertet (nicht nur selbst angegeben), Pflegeerfahrung und Referenzen aus früheren Einsätzen geprüft. Laufende Qualitätssicherung durch Primundus als Ansprechpartner. Bei Nichterfüllung: sofortiger Wechsel, täglich kündbar.' },
-      },
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
 ]
 
@@ -68,168 +93,135 @@ export default function Qualitaet() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <span className="text-pm-ink">Qualität</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            Über Primundus · Aktualisiert April 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Qualität der 24h-Pflege — wie Primundus Kräfte prüft und sichert
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Über 20 Jahre, mehr als 60.000 Betreuungen, Testsieger DIE WELT — diese Zahlen entstehen nicht durch Zufall. Sie entstehen durch ein konsequentes Qualitätssystem: aktive Prüfung vor jedem Einsatz, laufende Betreuung während des Einsatzes, und die Bereitschaft sofort zu reagieren wenn etwas nicht stimmt.
-          </p>
-
-          {/* Trust-Zahlen */}
-          <div className="grid grid-cols-3 gap-4 mb-10">
-            {[
-              { zahl: '20+', label: 'Jahre Erfahrung' },
-              { zahl: '60.000+', label: 'Betreuungen' },
-              { zahl: 'Testsieger', label: 'DIE WELT' },
-            ].map((item) => (
-              <div key={item.label} className="bg-white border border-pm-line rounded-2xl p-5 text-center shadow-sm">
-                <p className="text-[24px] font-bold text-pm-taupe">{item.zahl}</p>
-                <p className="text-[13px] text-pm-mute mt-1">{item.label}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="auswahl" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wie Primundus Betreuungskräfte auswählt
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Nicht jede Kraft die sich bewirbt wird vermittelt. Primundus trifft eine gezielte Auswahl — basierend auf Erfahrung, Qualifikation, Persönlichkeit und dem spezifischen Bedarf der Familie.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { schritt: 'Bewerbung und Erstgespräch', desc: 'Jede Kraft durchläuft ein strukturiertes Gespräch. Erfahrung, Motivation und Persönlichkeit werden bewertet — nicht nur Unterlagen geprüft.' },
-              { schritt: 'Aktive Deutschprüfung', desc: 'Deutschkenntnisse werden im Gespräch aktiv bewertet — nicht auf Selbstauskunft verlassen. Grundkommunikation ist Mindestanforderung. Viele Kräfte sprechen gut Deutsch durch frühere Einsätze.' },
-              { schritt: 'Referenzprüfung', desc: 'Kontakt zu früheren Familien möglich. Primundus prüft Anzahl und Art früherer Einsätze.' },
-              { schritt: 'Spezialerfahrung abgleichen', desc: 'Bei Demenz, Parkinson, Schlaganfall oder anderen Diagnosen: Kraft mit entsprechender Vorerfahrung zuordnen.' },
-              { schritt: 'Matching zur Familie', desc: 'Persönlichkeit, Interessen, Erfahrungsprofil — Primundus wählt die Kraft die zur spezifischen Situation passt. Telefonat vorab auf Wunsch möglich.' },
-            ].map((item, i) => (
-              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.schritt}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="pruefung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was aktiv geprüft wird — und was nicht reicht
-          </h2>
-          <div className="grid md:grid-cols-2 gap-4 mb-10">
-            <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-green-deep mb-3">Primundus prüft aktiv</p>
-              {[
-                'Deutschkenntnisse im Gespräch bewertet',
-                'Anzahl und Art früherer Einsätze dokumentiert',
-                'Referenzen aus früheren Familien möglich',
-                'Spezialerfahrung (Demenz, Parkinson etc.) abgefragt',
-                'Führerschein verifiziert wenn relevant',
-                'Persönlichkeit und Kommunikationsstil eingeschätzt',
-              ].map((item) => (
-                <div key={item} className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(61,122,92,0.1)] last:border-0">
-                  <span className="flex-shrink-0">✓</span>{item}
-                </div>
-              ))}
-            </div>
-            <div className="bg-pm-coral-tint border border-[rgba(231,111,99,0.15)] rounded-2xl p-5">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-coral-ink mb-3">Was nicht ausreicht</p>
-              {[
-                'Nur Selbstauskunft der Kraft ohne Prüfung',
-                'Zertifikate ohne Verifizierung der Praxiserfahrung',
-                'Deutschniveau-Angaben ohne Gespräch',
-                'Profile aus Online-Marktplätzen ohne Hintergrundprüfung',
-                'Kräfte ohne nachweisbare 24h-Einsatzerfahrung',
-              ].map((item) => (
-                <div key={item} className="flex gap-2 text-[13px] text-pm-coral-ink py-1.5 border-b border-[rgba(231,111,99,0.1)] last:border-0">
-                  <span className="flex-shrink-0">✗</span>{item}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <h2 id="laufend" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Laufende Qualitätssicherung während des Einsatzes
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Qualität endet nicht nach der Vermittlung. Primundus bleibt laufender Ansprechpartner — für Familien und für Kräfte.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { aspekt: 'Erreichbarkeit Mo – So 8 – 20 Uhr', desc: 'Primundus ist für alle Fragen, Anliegen und Probleme direkt erreichbar — per Telefon und E-Mail.' },
-              { aspekt: 'Regelmäßige Rückmeldungen', desc: 'Primundus holt aktiv Feedback von Familien ein — besonders nach Kraftwechseln und in der Eingewöhnungsphase.' },
-              { aspekt: 'Sofortreaktion bei Problemen', desc: 'Wenn die Qualität nicht stimmt: Primundus handelt sofort — Gespräch mit der Kraft, und wenn nötig unmittelbarer Wechsel.' },
-              { aspekt: 'Kraftwechsel ohne Lücke', desc: 'Alle 6–8 Wochen regulärer Wechsel — nahtlos organisiert. Primundus stellt sicher dass die neue Kraft das Profil der Familie kennt.' },
-            ].map((item) => (
-              <div key={item.aspekt} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.aspekt}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="wechsel" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was wenn es nicht passt — täglich kündbar
-          </h2>
-          <div className="bg-white border-2 border-pm-taupe rounded-2xl p-6 mb-10">
-            <p className="text-[16px] font-bold text-pm-ink mb-3">Die Primundus-Garantie</p>
-            <div className="space-y-3">
-              {[
-                { punkt: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, keine Fristen. Wenn die Kraft nicht passt — ein Anruf genügt.' },
-                { punkt: 'Sofortiger Ersatz', desc: 'Primundus stellt unverzüglich eine neue Kraft — keine Versorgungslücke, kein Organisationsaufwand für die Familie.' },
-                { punkt: 'Keine Zusatzkosten beim Wechsel', desc: 'Wechsel aus Qualitätsgründen kostet nichts zusätzlich. Primundus trägt das Vermittlungsrisiko.' },
-              ].map((item) => (
-                <div key={item.punkt} className="flex gap-3">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  <div>
-                    <p className="text-[14px] font-bold text-pm-ink">{item.punkt}</p>
-                    <p className="text-[13px] text-pm-body">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen zur Qualität</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie stellt Primundus die Qualität der Betreuungskräfte sicher?', a: 'Aktive Prüfung vor jedem Einsatz: Deutschkenntnisse im Gespräch bewertet, Erfahrung und Referenzen geprüft, Spezialerfahrung abgeglichen. Laufende Betreuung durch Primundus als Ansprechpartner. Bei Qualitätsproblemen sofortiger Wechsel — täglich kündbar.' },
-              { q: 'Kann ich die Kraft vorher kennenlernen?', a: 'Auf Wunsch ist ein Telefonat mit der Kraft vorab möglich. So kann ein erster Eindruck von Sprachkenntnissen und Persönlichkeit gewonnen werden.' },
-              { q: 'Was passiert wenn die Kraft nicht gut ist?', a: 'Sofort Primundus informieren. Primundus reagiert unverzüglich — Gespräch mit der Kraft und wenn nötig sofortiger Wechsel. Keine Zusatzkosten, keine langen Fristen. Täglich kündbar.' },
-              { q: 'Woher weiß Primundus ob eine Kraft gut ist?', a: 'Aus 20+ Jahren Erfahrung und 60.000+ Einsätzen. Primundus kennt die Qualitätskriterien die in der Praxis entscheiden — Deutschkenntnisse, Belastbarkeit, Empathie, Strukturfähigkeit. Und holt aktiv Feedback von Familien ein.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Qualität' },
+          ]}
+          augenbraue="Über Primundus"
+          titel="Qualität der 24h-Pflege — wie wir Betreuungskräfte auswählen und den Einsatz begleiten"
+          einleitung={<>Über 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, sechsmal Testsieger bei DIE WELT. Dahinter steht ein einfaches System: Unsere Betreuungskräfte sind bei uns angestellt, Sie sehen vor der Entscheidung, wer zu Ihnen kommt, und wenn es nicht passt, wechseln Sie. Der Vertrag ist täglich kündbar.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="4 Min."
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          blickTitel="Auf einen Blick"
+          blick={[
+            'Betreuungskräfte bei uns angestellt, Einsatz mit A1-Bescheinigung',
+            'Sie sehen vorab Foto, Erfahrung, Einsätze und Deutschkenntnisse',
+            'Sie wählen aus, erst dann der Vertrag',
+            'Ersatz bei Krankheit in der Regel innerhalb von 3 Tagen',
+            'Täglich kündbar, taggenau abgerechnet',
+            'Ansprechpartnerin täglich 8–20 Uhr',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="auswahl" titel="Wie wir Betreuungskräfte auswählen">
+            <Text>
+              Zwischen Ihnen und der Betreuungskraft steht kein Vermittler. Die Betreuungskräfte bewerben sich bei uns,
+              wir stellen sie an und setzen sie im Entsendemodell mit A1-Bescheinigung bei Ihnen ein. Sie werden nicht
+              Arbeitgeber, und Sie entscheiden, wer kommt.
+            </Text>
+            <Schritte
+              schritte={[
+                {
+                  title: 'Bewerbung bei Primundus',
+                  desc: 'Betreuungskräfte bewerben sich bei uns, nicht bei Ihnen. Wer bei uns arbeitet, ist bei uns angestellt und in Polen sozialversichert.',
+                },
+                {
+                  title: 'Profil für jede Betreuungskraft',
+                  desc: 'Foto, Alter, Deutschkenntnisse, Jahre Erfahrung und die Zahl der Einsätze über Primundus. Das Profil sehen Sie, bevor Sie sich entscheiden.',
+                },
+                {
+                  title: 'Passung zu Ihrer Situation',
+                  desc: 'Sie geben an, was gebraucht wird: Hilfe in der Nacht, Führerschein, Deutschkenntnisse. Die Betreuungskräfte, die sich bei Ihnen bewerben, kennen diese Angaben.',
+                },
+                {
+                  title: 'Sie entscheiden',
+                  desc: <>Sie sehen die Bewerbungen und wählen aus, erst danach kommt der Vertrag. Den <a href={MUSTERVERTRAG} className={LINK}>Mustervertrag</a> können Sie vorher lesen. Wer nicht passt, dem sagen Sie ab.</>,
+                },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="vorab" titel="Was Sie vor der Entscheidung sehen">
+            <Text>
+              Sie müssen niemandem vertrauen, den Sie nicht kennen. Im Kundenportal steht zu jeder Betreuungskraft, die
+              sich bei Ihnen bewirbt:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Foto und Alter', desc: 'Sie sehen, wer bei Ihrem Angehörigen einziehen würde.' },
+                { title: 'Deutschkenntnisse', desc: 'Als Stufe im Profil, von mittel bis gut. Gute Deutschkenntnisse fließen in den Preis ein.' },
+                { title: 'Erfahrung und Einsätze', desc: 'Jahre in der Betreuung und die Zahl der Einsätze, die die Betreuungskraft schon über Primundus hatte.' },
+                { title: 'Verfügbarkeit', desc: 'Ab wann die Betreuungskraft anreisen kann. Eine Anreise ist in 3 Tagen möglich.' },
+              ]}
+            />
+            <MehrDazu label="So läuft es ab:" links={[{ href: '/ablauf', text: 'Von der Preisberechnung bis zur Anreise' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="einsatz" titel="Während des Einsatzes">
+            <Text>
+              Mit der Anreise endet unsere Arbeit nicht. Sie haben einen Vertrag mit uns, eine Ansprechpartnerin und
+              feste Regeln für Wechsel und Ausfall:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Ansprechpartnerin täglich 8–20 Uhr', desc: 'Marta Kapcio und ihr Team sind an sieben Tagen die Woche erreichbar, per Telefon, E-Mail und WhatsApp.' },
+                { title: 'Wechsel alle 6–8 Wochen', desc: 'Die Betreuungskräfte wechseln sich in der Regel alle 6–8 Wochen ab. Sie wählen jedes Mal selbst aus.' },
+                { title: 'Ersatz bei Krankheit', desc: 'Fällt eine Betreuungskraft aus, stellen wir schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
+                { title: 'Ihre Rückmeldung', desc: 'Wir bitten Familien um eine Bewertung. Was sie schreiben, lesen Sie auf der Seite Erfahrungen.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="wechsel" titel="Wenn es nicht passt">
+            <Text>
+              Manchmal stimmt die Chemie nicht. Dann sagen Sie uns Bescheid, wir suchen eine andere Betreuungskraft, und
+              Sie wählen wieder selbst aus. Ob regulär alle 6–8 Wochen oder weil es nicht passt: Sie zahlen An- und
+              Abreise mit 125 € je Strecke, und weil An- und Abreisetag Arbeitstage sind, berechnen wir am Wechseltag den
+              Tagessatz für beide Betreuungskräfte. Eine Gebühr für den Wechsel gibt es nicht.
+            </Text>
+            <Kasten augenbraue="Ihr Vertrag" titel="Täglich kündbar, taggenau abgerechnet">
+              <Text>
+                Keine Mindestlaufzeit, keine Kündigungsfrist zum Monatsende. Abgerechnet wird taggenau, dazu kommen An-
+                und Abreise mit 125 € je Strecke. So steht es im Vertrag, den Sie vor Ihrer Auswahl lesen können.
+              </Text>
+              <MehrDazu label="Nachlesen:" links={[{ href: MUSTERVERTRAG, text: 'Mustervertrag (PDF)' }, { href: '/24-stunden-pflege-krankenhausaufenthalt', text: 'Was bei Krankenhaus, Ausfall und Wechsel gilt' }]} />
+            </Kasten>
+          </Abschnitt>
+
+          <Abschnitt id="belege" titel="Woran Sie das messen können">
+            <Werte
+              zeilen={[
+                ['über 20 Jahre', 'Erfahrung in der häuslichen 24-Stunden-Betreuung'],
+                ['über 60.000', 'Betreuungen'],
+                ['6× Testsieger', 'DIE WELT, Preis & Qualität, sechsmal in Folge'],
+              ]}
+            />
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/testsieger-24-stunden-pflege', text: 'Die Auszeichnung mit Original-Siegel und Veröffentlichung' },
+                { href: '/erfahrungen', text: 'Bewertungen unserer Familien' },
+                { href: '/rechtssicher', text: 'Rechtssicherheit und Entsendemodell' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen zur Qualität">
+            <Fragen fragen={FRAGEN} />
+            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis und passende Pflegekräfte in 2 Minuten' }]} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }
