@@ -203,16 +203,17 @@ export default function VierUndZwanzigStundenPflege() {
               Betreuungskraft nachts gebraucht wird oder einen Führerschein haben soll. Pflegegeld, Entlastungsbudget und
               Steuerermäßigung senken den Betrag, den Sie selbst tragen:
             </Text>
+            {/* Alle drei Abzüge als Spalten wie auf /kosten (Martin 18.09.: „Pflegegeld und das Budget sind immer zu berücksichtigen. Immer.") */}
             <Tabelle
-              kopf={['Pflegegrad', 'Betreuung', 'Pflegegeld', 'Selbst zu tragen']}
+              kopf={['Pflegegrad', 'Betreuung', 'Pflegegeld', 'Entlastungsbudget', 'Steuer', 'Selbst zu tragen']}
               zeilen={[
-                ['Pflegegrad 2', 'ab 2.150 €', '− 347 €', 'ab ca. 1.175 €'],
-                ['Pflegegrad 3', 'ab 2.150 €', '− 599 €', 'ab ca. 923 €'],
-                ['Pflegegrad 4', 'ab 2.150 €', '− 800 €', 'ab ca. 722 €'],
-                ['Pflegegrad 5', 'ab 2.200 €', '− 990 €', 'ab ca. 582 €'],
+                ['Pflegegrad 2', 'ab 2.150 €', '− 347 €', '− 295 €', '− 333 €', 'ab ca. 1.175 €'],
+                ['Pflegegrad 3', 'ab 2.150 €', '− 599 €', '− 295 €', '− 333 €', 'ab ca. 923 €'],
+                ['Pflegegrad 4', 'ab 2.150 €', '− 800 €', '− 295 €', '− 333 €', 'ab ca. 722 €'],
+                ['Pflegegrad 5', 'ab 2.200 €', '− 990 €', '− 295 €', '− 333 €', 'ab ca. 582 €'],
               ]}
-              betont={3}
-              fuss="Selbst zu tragen: nach Pflegegeld, 295 € Entlastungsbudget (3.539 € im Jahr) und 333 € Steuerermäßigung im Monat · zzgl. An- und Abreise 125 € je Strecke · Kost und Logis stellen Sie · Stand September 2026, Werte aus unserem Kostenrechner"
+              betont={5}
+              fuss="Entlastungsbudget: 3.539 € im Jahr, anteilig je Monat · Steuerermäßigung: 20 %, bis 4.000 € im Jahr · zzgl. An- und Abreise 125 € je Strecke · Kost und Logis stellen Sie · Stand September 2026, Werte aus unserem Kostenrechner"
             />
             <RechnerKasten src="apex-24-stunden-pflege" />
             <MehrDazu
