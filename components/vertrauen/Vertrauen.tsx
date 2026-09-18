@@ -84,8 +84,9 @@ function SterneLink({ d, klein = false, dunkel = false }: { d: Stand; klein?: bo
   )
 }
 
-/** Der Aufruf, überall gleich: Knopf und Plakette gleich breit, darunter die vier Punkte und die Sterne. */
-export async function RechnerBlock({ src, sterne = true }: { src: string; sterne?: boolean }) {
+/** Der Aufruf, überall gleich: Knopf und Plakette gleich breit, darunter die vier Punkte und die Sterne.
+ * punkte=false im Kopf der Kernseiten (Martin 18.09.: Plakette und Sterne unter den Knopf; die Punkte stehen dort im Kasten rechts). */
+export async function RechnerBlock({ src, sterne = true, punkte = true }: { src: string; sterne?: boolean; punkte?: boolean }) {
   const d = sterne ? await ladeStimmen(0) : null
   return (
     <div>
@@ -112,11 +113,13 @@ export async function RechnerBlock({ src, sterne = true }: { src: string; sterne
           <span className="hidden max-[359px]:inline">Passende Pflegekräfte verfügbar</span>
         </a>
       </div>
-      <div className="mt-7">
-        <Punkte />
-      </div>
+      {punkte && (
+        <div className="mt-7">
+          <Punkte />
+        </div>
+      )}
       {d && d.anzahl > 0 && (
-        <div className="mt-6">
+        <div className={punkte ? 'mt-6' : 'mt-5'}>
           <SterneLink d={d} />
         </div>
       )}

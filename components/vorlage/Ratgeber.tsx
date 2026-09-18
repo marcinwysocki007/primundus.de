@@ -11,7 +11,7 @@
 import Image from 'next/image'
 import { Fragment, type ReactNode } from 'react'
 import { KNOPF } from '@/components/ArticleCTA'
-import { LeistenKarte } from '@/components/vertrauen/Vertrauen'
+import { LeistenKarte, RechnerBlock } from '@/components/vertrauen/Vertrauen'
 import { InhaltLeiste } from './InhaltLeiste'
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
@@ -95,25 +95,29 @@ export function RatgeberKopf({
                 {einleitung}
               </p>
             ) : null}
+            {/* Kernseiten: Knopf, Plakette und Sterne wie im Startseiten-Kopf (Martin 18.09.); die Punkte stehen im Kasten rechts */}
             {knopf ? (
-              <a href={knopf.href} referrerPolicy="no-referrer-when-downgrade" className={`mt-8 ${KNOPF}`}>
-                {knopf.text}
-              </a>
+              <div className="mt-8">
+                <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+              </div>
             ) : null}
-            <div className="mt-8 flex items-center gap-3">
+            {/* Marta wie überall (Martin 18.09.: „an Standard anpassen"): Gesichtsausschnitt, Name, „Ihre Beraterin", Zeiten; Datum darunter */}
+            <div className="mt-8 flex items-center gap-3.5">
               <Image
                 src="/images/marta-kapcio-gesicht.jpg"
                 alt="Marta Kapcio"
-                width={44}
-                height={44}
-                className="w-11 h-11 rounded-full object-cover flex-none"
+                width={52}
+                height={52}
+                className="w-[52px] h-[52px] rounded-full object-cover flex-none"
               />
               {/* Umbrüche nur zwischen den Einheiten, nicht in „8 Min. / Lesezeit" */}
-              <p className="text-[14px] leading-[1.45] text-pm-mute">
-                <a href="/ueber-uns#team" className="font-semibold text-pm-ink hover:text-pm-taupe-ink transition-colors">Marta Kapcio</a>
-                , <span className="whitespace-nowrap">Pflegeberaterin bei Primundus</span>
+              <p className="text-[15.5px] leading-[1.45] text-pm-body">
+                <a href="/ueber-uns#team" className="font-bold text-pm-ink hover:text-pm-taupe-ink transition-colors">Marta Kapcio</a>
+                , Ihre Beraterin · <span className="whitespace-nowrap">täglich 8–20 Uhr</span>
                 <br />
-                <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
+                <span className="text-[14px] text-pm-mute">
+                  <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
+                </span>
               </p>
             </div>
           </div>
@@ -135,6 +139,15 @@ export function RatgeberKopf({
       </div>
     </div>
   )
+}
+
+// src aus dem Rechner-Link der Seite (knopf.href); ohne src die allgemeine Quelle
+function rechnerQuelle(href: string): string {
+  try {
+    return new URL(href).searchParams.get('src') || 'apex-components'
+  } catch {
+    return 'apex-components'
+  }
 }
 
 // Text links, rechts Inhaltsverzeichnis und Kostenknopf (beide mitlaufend, erst ab 1024 px).
