@@ -10,7 +10,8 @@
 // dunkles Band, weiße Kästen mit weichem Schatten. Keine Symbol-Kacheln.
 import Image from 'next/image'
 import { Fragment, type ReactNode } from 'react'
-import { KNOPF, RECHNER, Zusagen } from '@/components/ArticleCTA'
+import { KNOPF } from '@/components/ArticleCTA'
+import { LeistenKarte } from '@/components/vertrauen/Vertrauen'
 import { InhaltLeiste } from './InhaltLeiste'
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
@@ -66,6 +67,7 @@ export function RatgeberKopf({
   /** Knopf unter der Einleitung, nur wo die Seite schon einen hatte (Kernseiten wie /kosten) */
   knopf?: { href: string; text: string }
 }) {
+  const zweiSpalten = Boolean(blick?.length)
   return (
     <div className="bg-pm-shell">
       <div className="max-w-[1200px] mx-auto px-5 pt-6 pb-12 md:pt-8 md:pb-16">
@@ -82,7 +84,7 @@ export function RatgeberKopf({
           ))}
         </nav>
 
-        <div className={`mt-8 md:mt-12 grid gap-10 ${blick?.length ? 'lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-center' : 'max-w-[52rem]'}`}>
+        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? 'lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-center' : 'max-w-[52rem]'}`}>
           <div className="min-w-0">
             <p className={AUGENBRAUE}>{augenbraue}</p>
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
@@ -100,11 +102,11 @@ export function RatgeberKopf({
             ) : null}
             <div className="mt-8 flex items-center gap-3">
               <Image
-                src="/images/marta-kapcio.jpg"
+                src="/images/marta-kapcio-gesicht.jpg"
                 alt="Marta Kapcio"
                 width={44}
                 height={44}
-                className="w-11 h-11 rounded-full object-cover object-top flex-none"
+                className="w-11 h-11 rounded-full object-cover flex-none"
               />
               {/* Umbrüche nur zwischen den Einheiten, nicht in „8 Min. / Lesezeit" */}
               <p className="text-[14px] leading-[1.45] text-pm-mute">
@@ -143,19 +145,8 @@ export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: stri
       <aside className="hidden lg:block" aria-label="Inhalt und Kosten">
         <div className="sticky top-[152px]">
           <InhaltLeiste abschnitte={abschnitte} />
-          <div className="mt-8 bg-white rounded-[20px] shadow-lift p-5">
-            <p className="text-[17px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
-              Ihr Preis und passende Betreuungskräfte in 2 Minuten
-            </p>
-            <a
-              href={RECHNER}
-              referrerPolicy="no-referrer-when-downgrade"
-              className="mt-4 flex items-center justify-center text-center min-h-[48px] px-4 rounded-full bg-pm-coral hover:bg-pm-coral-deep text-white font-semibold text-[15px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
-            >
-              Kosten &amp; Pflegekräfte ansehen
-            </a>
-            {/* Kein Preis (zeigt der Rechner sofort); ohne Siegel hier deshalb die Auszeichnung, Wortlaut wie im Rechner (Martin 15.09.). */}
-            <p className="mt-3 text-[13.5px] leading-[1.45] text-pm-taupe-ink"><Zusagen teile={['6× Testsieger DIE WELT', 'keine Vermittlungsgebühr']} /></p>
+          <div className="mt-8">
+            <LeistenKarte src="apex-components" />
           </div>
         </div>
       </aside>

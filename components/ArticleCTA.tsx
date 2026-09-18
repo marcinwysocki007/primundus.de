@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { BewertungsAuszug, BewertungsZeile } from '@/components/bewertungen/BewertungsAuszug'
+import { BewertungsZeile } from '@/components/bewertungen/BewertungsAuszug'
+import { Schluss, SchlussKasten, Stimmen } from '@/components/vertrauen/Vertrauen'
 import { Phone } from 'lucide-react'
 
 // Kontaktbereich auf allen Ratgeber- und Vergleichsseiten (345 Seiten).
@@ -176,51 +177,18 @@ function MartaVertrauen() {
   )
 }
 
+// Vorschlag 2 vom 17.09.2026 (Martin: „vereinheitliche es", „so schön und horizontal scrollbar", „cooles Design
+// wie auf den anderen"): Seitenende = Bewertungen zum Wischen + Aufruf mit Punkten, Siegel und Marta (Telefon, WhatsApp).
 // ohneBewertungen: auf /erfahrungen stehen die Bewertungen schon vollständig darüber
 export function KontaktBand({ ohneBewertungen = false }: { ohneBewertungen?: boolean } = {}) {
-  return (
-    <>
-    {!ohneBewertungen && <BewertungsAuszug />}
-    <aside className="bg-white border-t border-pm-line" aria-labelledby="kontaktbereich-titel">
-      <div className="max-w-[1200px] mx-auto px-5 py-16 md:py-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16 lg:items-center">
-        <div className="min-w-0">
-          <p id="kontaktbereich-titel" className="text-[clamp(28px,3.6vw,42px)] font-extrabold leading-[1.1] tracking-[-0.034em] text-pm-ink [text-wrap:balance]">
-            {TITEL}
-          </p>
-          <p className="mt-5 text-[18px] leading-[1.65] text-pm-body max-w-[54ch]">{TEXT}</p>
-          <a href={RECHNER} referrerPolicy="no-referrer-when-downgrade" className={`mt-8 ${KNOPF}`}>
-            Kosten &amp; Pflegekräfte ansehen
-          </a>
-          <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
-        </div>
-        <div className="min-w-0 rounded-[20px] bg-pm-paper p-4 sm:p-5 md:p-6 max-w-[420px]">
-          <Ansprechpartnerin karte />
-          <MartaVertrauen />
-        </div>
-      </div>
-    </aside>
-    </>
-  )
+  return <Schluss src="apex-components" ohneStimmen={ohneBewertungen} />
 }
 
 export function ArticleCTA() {
   return (
-    <aside className="my-12 rounded-3xl bg-pm-shell px-5 py-8 sm:px-8 md:px-10 md:py-10" aria-labelledby="kontaktbereich-titel">
-      <p id="kontaktbereich-titel" className="text-[26px] md:text-[30px] leading-[1.2] font-bold text-pm-ink [text-wrap:balance]">
-        {TITEL}
-      </p>
-      <p className="mt-3 text-[18px] leading-[1.65] text-pm-body max-w-[60ch]">{TEXT}</p>
-      <a href={RECHNER} referrerPolicy="no-referrer-when-downgrade" className={`mt-6 ${KNOPF}`}>
-        Kosten &amp; Pflegekräfte ansehen
-      </a>
-      <p className="mt-3 text-[15px] text-pm-taupe-ink"><Zusagen teile={ZUSAGEN} /></p>
-
-      <div className="mt-8 pt-7 border-t border-pm-line">
-        <Ansprechpartnerin />
-        <MartaVertrauen />
-      </div>
-
-      <BewertungsAuszug variante="kasten" />
-    </aside>
+    <>
+      <Stimmen eingebettet />
+      <SchlussKasten src="apex-components" />
+    </>
   )
 }

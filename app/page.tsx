@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { FAQSection } from '@/components/home/FAQSection'
-import { FinalCTA } from '@/components/home/FinalCTA'
-import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
+import { SchlussAufruf, Stimmen, VertrauensKarten } from '@/components/vertrauen/Vertrauen'
 import {
-  BekanntAus, HeimVergleich, RundumVersorgt, SoFunktionierts, StartKopf, Voraussetzungen, VertrauensKarten, WasIst,
+  BekanntAus, HeimVergleich, RundumVersorgt, SoFunktionierts, StartKopf, Voraussetzungen, WasIst,
 } from '@/components/start/Startseite'
 
 // Titel und Beschreibung geaendert am 01.09.2026, Freigabe Martin.
@@ -108,17 +107,8 @@ export default function Page() {
         <HeimVergleich />
         <RundumVersorgt />
 
-        {/* ── 8. KUNDENSTIMMEN ────────────────────────────────────────────── */}
-        <section className="py-14 md:py-16 px-5 bg-white">
-          {/* 17.09.2026: echte Bewertungen statt der Karten Google/Testsieger/Trustpilot (Martin: „Hemmnisnehmer") */}
-          <div className="max-w-wide mx-auto">
-            <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Kundenstimmen</p>
-            <h2 className="text-[26px] md:text-[32px] leading-[1.25] font-bold text-pm-ink mb-8">
-              Das sagen unsere Familien
-            </h2>
-            <BewertungsAuszug variante="inline" />
-          </div>
-        </section>
+        {/* ── 8. KUNDENSTIMMEN wie im Rechner ─────────────────────────────── */}
+        <Stimmen />
 
         {/* ── 6. WAS KOSTET 24H-PFLEGE? (SEO) ────────────────────────────── */}
         <section className="py-14 md:py-16 lg:py-20 px-5 bg-white">
@@ -226,7 +216,7 @@ export default function Page() {
         <FAQSection />
 
         {/* ── SCHLUSSBAND ─────────────────────────────────────────────────── */}
-        <FinalCTA />
+        <SchlussAufruf src="apex-startseite" bild="team" />
 
       </div>
     </>

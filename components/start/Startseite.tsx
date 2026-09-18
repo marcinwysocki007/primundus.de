@@ -4,9 +4,7 @@
 // Korrekturen der Website: Eigenanteil aus dem Rechner (ab ca. 923 € statt 1.500 €), Nächte „bei Bedarf
 // auch nachts" statt „rund um die Uhr", Auszeichnung ohne „Vermittler", Sterne aus echten Bewertungen.
 import Image from 'next/image'
-import { Sterne } from '@/components/bewertungen/Sterne'
-import { ladeBewertungsStand } from '@/components/bewertungen/BewertungsAuszug'
-import { anzahlText } from '@/lib/bewertungen'
+import { RechnerBlock } from '@/components/vertrauen/Vertrauen'
 
 export const RECHNER_START = 'https://kostenrechner.primundus.de/?start=1&src=apex-startseite'
 const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
@@ -42,11 +40,10 @@ function RechnerKnopf({ className = '' }: { className?: string }) {
 }
 
 // ── 1. Kopf ──────────────────────────────────────────────────────────────────────────────
-const PUNKTE = ['Keine Vermittlungsgebühr', 'Kein Vertrag vor Ihrer Auswahl', 'Täglich kündbar, taggenau abgerechnet', 'Anreise in 3 Tagen möglich']
-const KRAEFTE = ['/images/caregivers/pk-1.jpg', '/images/caregivers/pk-2.jpg', '/images/caregivers/pk-3.jpg', '/images/caregivers/pk-4.jpg']
+// Wie im Rechner seit 17.09. (#728): drei Punkte + Bestpreisgarantie (im Baustein RechnerBlock), „Anreise in 3 Tagen
+// möglich" steht in der Unterzeile
 
-export async function StartKopf() {
-  const bewertung = await ladeBewertungsStand()
+export function StartKopf() {
   return (
     <section className="bg-pm-paper">
       <div className="max-w-wide mx-auto lg:px-5 lg:pt-12 lg:pb-14 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] lg:gap-14 lg:items-center">
@@ -79,43 +76,12 @@ export async function StartKopf() {
             <span className="mt-3 block text-[36px] md:text-[50px] lg:text-[56px] font-extrabold leading-[1.04] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">Ihre Eltern müssen nicht ins Heim.</span>
           </h1>
           <p className="mt-5 text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem]">
-            Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und <strong className="text-pm-ink">welche Pflegekräfte verfügbar sind</strong> – 100&nbsp;% kostenfrei und unverbindlich.
+            Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und <strong className="text-pm-ink">welche Pflegekräfte verfügbar sind</strong>&nbsp;– <span className="whitespace-nowrap">Anreise in 3 Tagen möglich.</span>
           </p>
-          <RechnerKnopf className="mt-7 w-full sm:w-auto" />
-          <div className="mt-3">
-            <a href={RECHNER_START} className="inline-flex items-center gap-2 sm:gap-2.5 whitespace-nowrap rounded-full border border-pm-green/25 bg-pm-mint py-1 pl-1 pr-3 sm:pr-3.5 text-[13px] sm:text-[14.5px] text-pm-green-deep hover:border-pm-green/50 transition-colors">
-              <span className="flex -space-x-2">
-                {KRAEFTE.map((k) => (
-                  <Image key={k} src={k} alt="" width={28} height={28} className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover object-top border-2 border-pm-mint" />
-                ))}
-              </span>
-              Passende Pflegekräfte sofort verfügbar <span aria-hidden="true" className="max-[379px]:hidden">→</span>
-            </a>
+          {/* Knopf, Plakette, Punkte und Sterne: derselbe Baustein wie auf allen Seiten, Maße wie im Rechner-Kopf */}
+          <div className="mt-7">
+            <RechnerBlock src="apex-startseite" />
           </div>
-          <ul className="mt-6 grid gap-2.5">
-            {PUNKTE.map((p) => (
-              <li key={p} className="flex gap-3 text-[17px] leading-[1.45] text-pm-ink">
-                <Haken />
-                <span>{p}</span>
-              </li>
-            ))}
-            <li className="flex gap-3 text-[17px] leading-[1.45] text-pm-ink">
-              <Haken />
-              <span>
-                Bestpreisgarantie{' '}
-                <a href={GARANTIE} className="font-semibold text-pm-green-deep underline decoration-pm-green/40 underline-offset-4 hover:decoration-pm-green-deep">Mehr Infos</a>
-              </span>
-            </li>
-          </ul>
-          {bewertung.anzahl > 0 && (
-            <a href="/erfahrungen" className="mt-6 inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-[16px] text-pm-body hover:text-pm-ink transition-colors">
-              <Sterne wert={bewertung.wert} groesse={20} />
-              <span>
-                <strong className="text-pm-ink">{bewertung.schnitt}</strong> von 5 aus{' '}
-                <span className="underline decoration-pm-taupe/40 underline-offset-4">{anzahlText(bewertung.anzahl, 'Bewertung', 'Bewertungen')}</span>
-              </span>
-            </a>
-          )}
         </div>
       </div>
     </section>
@@ -132,15 +98,16 @@ const MEDIEN = [
   { src: '/images/media/frankfurter-allgemeine.webp', alt: 'Frankfurter Allgemeine', w: 1236, h: 168 },
 ]
 
+// Weißer Kasten, weil die Logos weiße Bildhintergründe haben (Martin 18.09.: „die Medienlogos müssen auf weißem Hintergrund sein")
 export function BekanntAus() {
   return (
     <section className="bg-pm-paper px-5 pb-10 lg:pb-14">
-      <div className="max-w-wide mx-auto border-y border-pm-line py-5">
+      <div className="max-w-wide mx-auto rounded-[20px] bg-white px-5 py-5 shadow-lift sm:px-7 md:px-8 md:py-6">
         <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-pm-mute">Bekannt aus</p>
-        <ul className="mt-4 grid grid-cols-4 md:grid-cols-6 items-center gap-x-5 gap-y-5">
-          {MEDIEN.map((m, i) => (
-            <li key={m.alt} className={`flex items-center justify-center md:justify-start ${i > 3 ? 'max-md:hidden' : ''}`}>
-              <Image src={m.src} alt={m.alt} width={m.w} height={m.h} className="h-5 md:h-7 w-auto object-contain opacity-80" />
+        <ul className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-4 sm:gap-x-8 md:justify-between md:gap-x-6">
+          {MEDIEN.map((m) => (
+            <li key={m.alt} className="flex items-center">
+              <Image src={m.src} alt={m.alt} width={m.w} height={m.h} className="h-5 w-auto object-contain sm:h-6 lg:h-7" />
             </li>
           ))}
         </ul>
@@ -149,41 +116,7 @@ export function BekanntAus() {
   )
 }
 
-// ── 3. Bestpreisgarantie und Testsieger ──────────────────────────────────────────────────────
-export function VertrauensKarten() {
-  return (
-    <section className="bg-pm-paper px-5 pb-14 lg:pb-20">
-      <div className="max-w-wide mx-auto grid gap-6 md:grid-cols-2">
-        <div className="relative bg-white rounded-[20px] border-2 border-pm-green/60 p-6 md:p-8">
-          <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-pm-green px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em] text-white">★ 100 % Sorgenfrei</span>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-            <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[52px] w-auto self-start sm:self-center flex-none" />
-            <div>
-              <p className="text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.</p>
-              <p className="mt-2 text-[16.5px] leading-[1.6] text-pm-body">Das können wir, weil unsere Pflegekräfte bei uns angestellt sind und keine Vermittlungsgebühr anfällt.</p>
-              <a href={GARANTIE} className="mt-3 inline-block font-semibold text-pm-green-deep underline decoration-pm-green/40 underline-offset-4 hover:decoration-pm-green-deep">Was heißt vergleichbar? Mehr Infos</a>
-            </div>
-          </div>
-        </div>
-        <div className="relative bg-white rounded-[20px] border-2 border-pm-gold/70 p-6 md:p-8">
-          <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-pm-gold px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em] text-pm-ink">★ Testsieger · 6× in Folge</span>
-          <div className="flex items-center gap-5">
-            <a href="/testsieger-24-stunden-pflege" className="flex-none">
-              <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className="h-[116px] w-auto rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)]" />
-            </a>
-            <div>
-              <p className="text-[24px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink">6× Testsieger</p>
-              <p className="mt-0.5 text-[17px] font-bold tracking-[0.02em] text-pm-taupe">DIE WELT</p>
-              <p className="text-[16px] text-pm-body/70">Preis &amp; Qualität</p>
-              <p className="mt-3 text-[16.5px] leading-[1.6] text-pm-body">DIE WELT hat Primundus sechsmal in Folge ausgezeichnet.</p>
-              <a href="/testsieger-24-stunden-pflege" className="mt-2 inline-block font-semibold text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink">Zur Auszeichnung</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+// ── 3. Bestpreisgarantie und Testsieger: siehe VertrauensKarten in components/vertrauen/Vertrauen.tsx ─────────────
 
 // ── 4. So funktioniert's ────────────────────────────────────────────────────────────────────
 const SCHRITTE = [
