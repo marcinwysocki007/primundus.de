@@ -376,7 +376,7 @@ export default function VierUndZwanzigStundenPflege() {
 
           <Abschnitt id="betreuungskraefte" titel="Die Betreuungskräfte: Herkunft, Deutsch, Erfahrung">
             <Text>
-              Unsere Betreuungskräfte kommen überwiegend aus Polen, dazu aus Rumänien und Bulgarien. Viele sind seit
+              Unsere Betreuungskräfte kommen aus Polen. Viele sind seit
               Jahren in der häuslichen Betreuung tätig und waren schon mehrfach über Primundus im Einsatz. Deutsche
               Pflegekräfte, die im Haushalt wohnen, gibt es in diesem Modell praktisch nicht; die Frage nach der
               Verständigung beantworten wir deshalb offen: Wie gut eine Betreuungskraft Deutsch spricht, steht als

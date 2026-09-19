@@ -143,7 +143,7 @@ export default function UeberUnsPage() {
               <figcaption className="px-6 py-4 text-[15px] leading-[1.5] text-pm-mute">Marta Kapcio, Ihre Ansprechpartnerin, und Karolina Jakubowska, Geschäftsführerin von Primundus.</figcaption>
             </figure>
             <Text>
-              Primundus organisiert 24-Stunden-Pflege zu Hause: Eine Betreuungskraft aus Polen, Rumänien oder Bulgarien zieht
+              Primundus organisiert 24-Stunden-Pflege zu Hause: Eine Betreuungskraft aus Polen zieht
               bei Ihrem Angehörigen ein, hilft im Alltag und ist bei Bedarf auch nachts da. Die Firmengruppe hinter Primundus
               macht das seit 2006. In dieser Zeit sind über 60.000 Betreuungen zustande gekommen, und DIE WELT hat Primundus
               sechsmal in Folge ausgezeichnet.
