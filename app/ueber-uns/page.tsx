@@ -84,14 +84,10 @@ const schemaMarkup = [
   },
 ]
 
-function Person({ bild, initialen, name, rolle, children }: { bild?: string; initialen?: string; name: string; rolle: string; children: ReactNode }) {
+function Person({ bild, name, rolle, children }: { bild: string; name: string; rolle: string; children: ReactNode }) {
   return (
     <div className="flex gap-5 rounded-[20px] bg-white p-6 shadow-lift md:p-7">
-      {bild ? (
-        <Image src={bild} alt={name} width={160} height={160} className="h-16 w-16 flex-none rounded-full object-cover object-top md:h-20 md:w-20" />
-      ) : (
-        <span aria-hidden="true" className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-pm-shell text-[19px] font-bold text-pm-taupe-ink md:h-20 md:w-20 md:text-[22px]">{initialen}</span>
-      )}
+      <Image src={bild} alt={name} width={160} height={160} className="h-16 w-16 flex-none rounded-full object-cover object-top md:h-20 md:w-20" />
       <div className="min-w-0">
         <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">{name}</p>
         <p className="mt-0.5 text-[14.5px] font-semibold text-pm-taupe">{rolle}</p>
@@ -138,12 +134,13 @@ export default function UeberUnsPage() {
             <figure className="overflow-hidden rounded-[20px] bg-white shadow-lift">
               <Image
                 src="/images/team-primundus-deutschland.webp"
-                alt="Das Team von Primundus"
+                alt="Marta Kapcio und Karolina Jakubowska von Primundus"
                 width={1448}
                 height={1086}
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="aspect-[4/3] w-full object-cover"
               />
+              <figcaption className="px-6 py-4 text-[15px] leading-[1.5] text-pm-mute">Marta Kapcio, Ihre Ansprechpartnerin, und Karolina Jakubowska, Geschäftsführerin von Primundus.</figcaption>
             </figure>
             <Text>
               Primundus organisiert 24-Stunden-Pflege zu Hause: Eine Betreuungskraft aus Polen, Rumänien oder Bulgarien zieht
@@ -193,7 +190,7 @@ export default function UeberUnsPage() {
                 Marta Kapcio begleitet Sie von der ersten Frage bis zum Start der Betreuung, und auch danach, wenn etwas zu
                 klären ist. Sie erreichen sie und ihr Team täglich von 8 bis 20 Uhr, per Telefon oder WhatsApp.
               </Person>
-              <Person initialen="KJ" name="Karolina Jakubowska" rolle="Gründerin & Geschäftsführerin">
+              <Person bild="/images/karolina-jakubowska-gesicht.jpg" name="Karolina Jakubowska" rolle="Gründerin & Geschäftsführerin">
                 Karolina Jakubowska ist Gründerin und Geschäftsführerin von Primundus. Die Firmengruppe hinter Primundus ist
                 seit 2006 in der häuslichen 24-Stunden-Pflege tätig.
               </Person>
