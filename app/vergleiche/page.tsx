@@ -94,9 +94,9 @@ export default function Vergleiche() {
           <Abschnitt id="anbieter-und-modelle-vergleichen" titel="Anbieter & Modelle vergleichen">
             <Punkte
               punkte={[
-                { title: l('/osteuropaeische-pflegekraft-oder-agentur', 'Osteuropäische Pflegekraft oder Agentur'), desc: 'Direkte Suche vs. Agentur — Risiken, Aufwand und was wirklich besser ist.' },
+                { title: l('/osteuropaeische-pflegekraft-oder-agentur', 'Osteuropäische Pflegekraft oder Agentur'), desc: 'Betreuungskraft selbst suchen oder über einen Anbieter: Risiken, Aufwand, Kosten.' },
                 { title: l('/selbst-pflegen-oder-24h-pflege', 'Selbst pflegen oder 24h-Pflege'), desc: 'Wann die Familie an ihre Grenzen stößt und professionelle Unterstützung nötig wird.' },
-                { title: l('/anbieter-vergleich', '24h-Pflege Anbieter vergleichen'), desc: 'Neutraler Vergleich der wichtigsten 24h-Pflegeagenturen.' },
+                { title: l('/anbieter-vergleich', '24h-Pflege Anbieter vergleichen'), desc: 'Die bekannten Anbieter für 24-Stunden-Pflege im Vergleich: Preise, Gebühren, Vertragsbindung.' },
                 { title: l('/24h-pflege-checkliste', 'Checkliste: Worauf bei 24h-Pflege achten'), desc: 'Die wichtigsten Prüfpunkte vor der Anbieter-Entscheidung — kompakt zum Abhaken.' },
               ]}
             />

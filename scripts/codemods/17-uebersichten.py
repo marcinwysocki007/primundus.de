@@ -33,6 +33,8 @@ SEITEN = {
         'desc': {
             '/pflegekraft-aus-bulgarien': 'Was bei Betreuungskräften aus Bulgarien rechtlich gilt.',
             '/pflegekraft-aus-rumaenien': 'Was bei Betreuungskräften aus Rumänien rechtlich gilt.',
+            # ein Generator kann keine Rechtssicherheit garantieren
+            '/pflegevertrag-generator': 'Einen Pflegevertrag online erstellen, anpassen und herunterladen.',
         },
         # Pflegeberater stand zweimal; bleibt unter „Koordination & Notfall"
         'raus': [('Wechsel & laufende Betreuung', '/pflegeberater-finden')],
@@ -59,6 +61,9 @@ SEITEN = {
             '/pflegekraft-aus-polen': 'Das Entsendemodell mit Betreuungskräften aus Polen: rechtlicher Rahmen, Kosten, Qualifikation.',
             '/pflegekraft-aus-bulgarien': 'Was bei Betreuungskräften aus Bulgarien rechtlich gilt.',
             '/pflegekraft-aus-rumaenien': 'Was bei Betreuungskräften aus Rumänien rechtlich gilt.',
+            # „neutral" stimmt nicht, wir vergleichen uns selbst mit
+            '/anbieter-vergleich': 'Die bekannten Anbieter für 24-Stunden-Pflege im Vergleich: Preise, Gebühren, Vertragsbindung.',
+            '/osteuropaeische-pflegekraft-oder-agentur': 'Betreuungskraft selbst suchen oder über einen Anbieter: Risiken, Aufwand, Kosten.',
         },
         # Die alte Tabelle (Spannen ohne Quelle, „~3.364 €", „24h Betreuung") wird durch die belegte Grafik der Hauptseite ersetzt
         'im_abschnitt': {'Kostenvergleiche': '<HeimVsZuhause />'},

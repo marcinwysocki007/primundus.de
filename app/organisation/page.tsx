@@ -82,7 +82,7 @@ export default function Organisation() {
               punkte={[
                 { title: l('/pflegekraft-legal-beschaeftigen', 'Pflegekraft legal beschäftigen'), desc: 'Die 3 Modelle: Entsendemodell, Direktanstellung, Selbstständigkeit — mit allen Risiken.' },
                 { title: l('/pflegevertrag-aufsetzen', 'Pflegevertrag aufsetzen'), desc: 'Was in jeden Pflegevertrag gehört — Leistungsumfang, Vergütung, Kündigung.' },
-                { title: l('/pflegevertrag-generator', 'Pflegevertrag Generator'), desc: 'Rechtssicheren Pflegevertrag in wenigen Minuten online erstellen.' },
+                { title: l('/pflegevertrag-generator', 'Pflegevertrag Generator'), desc: 'Einen Pflegevertrag online erstellen, anpassen und herunterladen.' },
                 { title: l('/pflegevertrag-muster-vorlage', 'Pflegevertrag Muster & Vorlage'), desc: 'Musterpflegevertrag als Vorlage zum Download.' },
                 { title: l('/scheinselbststaendigkeit-pflege-vermeiden', 'Scheinselbstständigkeit vermeiden'), desc: 'Warum Scheinselbstständigkeit ein hohes Risiko ist und wie man es vermeidet.' },
               ]}
