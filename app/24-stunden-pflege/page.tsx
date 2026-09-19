@@ -151,7 +151,7 @@ export default function VierUndZwanzigStundenPflege() {
           titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
           einleitung={<>Eine Betreuungskraft zieht bei Ihrem Angehörigen ein, hilft im Alltag und ist bei Bedarf auch nachts da. Unsere Betreuungskräfte sind bei uns angestellt, der Vertrag ist täglich kündbar, und eine Anreise ist in 3 Tagen möglich. Die Betreuung kostet ab 2.150&nbsp;€ im Monat; bei Pflegegrad 3 bleiben davon nach Kassenleistungen und Steuerermäßigung ab ca. 923&nbsp;€ selbst zu tragen.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
-          lesezeit="6 Min."
+          lesezeit="11 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Kosten & Pflegekräfte ansehen' }}
           blickTitel="Warum Primundus"
           blick={[
@@ -386,8 +386,8 @@ export default function VierUndZwanzigStundenPflege() {
               punkte={[
                 { title: 'Sie sehen vorab, wer kommt', desc: 'Foto, Alter, Deutschkenntnisse, Jahre Erfahrung und die Zahl der Einsätze über Primundus stehen im Profil jeder Betreuungskraft, die sich bei Ihnen bewirbt.' },
                 { title: 'Bei uns angestellt', desc: 'Kein Vermittler dazwischen: Die Betreuungskräfte sind bei Primundus angestellt und in Polen sozialversichert. Sie wählen aus, wir setzen sie bei Ihnen ein.' },
-                { title: 'Wechsel alle 6–8 Wochen', desc: 'Die Betreuungskräfte wechseln sich in der Regel alle 6–8 Wochen ab. Sie wählen jedes Mal selbst aus, viele Familien bleiben bei zwei Kräften im Wechsel.' },
-                { title: 'Bewertungen echter Familien', desc: 'Was Familien über ihre Betreuungskräfte schreiben, lesen Sie auf der Seite Erfahrungen, aus Google, Trustpilot und unserem Formular.' },
+                { title: 'Wechsel alle 6–8 Wochen', desc: 'Die Betreuungskräfte wechseln sich in der Regel alle 6–8 Wochen ab. Sie sehen vorher, wer kommt, und wählen jedes Mal selbst aus.' },
+                { title: 'Bewertungen echter Familien', desc: 'Was Familien über ihre Betreuungskräfte schreiben, lesen Sie auf der Seite Erfahrungen: Google-Rezensionen und Rückmeldungen über unser Formular, jeweils mit Quelle.' },
               ]}
             />
             <MehrDazu
@@ -409,7 +409,7 @@ export default function VierUndZwanzigStundenPflege() {
               punkte={[
                 { title: 'Ein Mensch, keine Rundumüberwachung', desc: 'Die Betreuungskraft hat Pausen und Ruhezeiten und schläft nachts. Wer eine lückenlose Aufsicht braucht, etwa bei schwerer Demenz mit Weglauftendenz, braucht zusätzlich Technik oder Angehörige.' },
                 { title: 'Platz und Privatsphäre', desc: 'Sie brauchen ein freies Zimmer, und es lebt ein weiterer Mensch im Haus. Manche Angehörige brauchen ein paar Wochen, bis sich das vertraut anfühlt.' },
-                { title: 'Wechsel', desc: 'Alle 6–8 Wochen kommt eine andere Betreuungskraft. Viele Familien lösen das mit zwei festen Kräften im Wechsel.' },
+                { title: 'Wechsel', desc: 'Alle 6–8 Wochen kommt eine andere Betreuungskraft. Sie sehen vorher, wer kommt, und wählen wieder selbst aus.' },
                 { title: 'Keine Fachpflege', desc: 'Spritzen, Verbände und Medikamente nach ärztlicher Anordnung bleiben beim Pflegedienst. Bei sehr hohem medizinischem Bedarf reicht eine Betreuungskraft nicht.' },
                 { title: 'Kost und Logis, Reisen, Feiertage', desc: 'Neben dem Monatspreis stellen Sie Kost und Logis, zahlen An- und Abreise mit 125 € je Strecke und an neun Feiertagen im Jahr den doppelten Tagessatz.' },
               ]}
@@ -417,7 +417,7 @@ export default function VierUndZwanzigStundenPflege() {
             <Kasten augenbraue="Seriös oder nicht" titel="Vier Dinge, die Sie vor der Unterschrift sehen sollten">
               <Punkte
                 punkte={[
-                  { title: 'A1-Bescheinigung für jede Betreuungskraft', desc: 'Sie belegt die Sozialversicherung im Heimatland. Ohne A1 ist der Einsatz nicht legal.' },
+                  { title: 'A1-Bescheinigung für jede Betreuungskraft', desc: 'Sie belegt, dass die Betreuungskraft im Heimatland sozialversichert ist. Ohne A1 fehlt dieser Nachweis.' },
                   { title: 'Preis und Betreuungskraft vor dem Vertrag', desc: 'Ein seriöser Anbieter nennt den Monatspreis vorher und zeigt, wer kommt. Bei Primundus sehen Sie beides online, bevor Sie etwas unterschreiben.' },
                   { title: 'Klare Regeln im Vertrag', desc: 'An- und Abreise, Ersatz bei Krankheit, Feiertage und Kündigung stehen schwarz auf weiß. Unseren Mustervertrag können Sie vorab lesen.' },
                   { title: 'Keine Vermittlungsgebühr, keine Anzahlung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist, und können täglich kündigen.' },

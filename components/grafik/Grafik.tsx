@@ -157,20 +157,20 @@ export function Beispieltag() {
   const stunde = (h: number) => `${h % 24}:00`
   return (
     <GrafikRahmen titel="Ein Beispieltag mit Betreuungskraft" quelle="Beispiel. Den Tagesablauf legen Sie mit der Betreuungskraft fest; sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten. Wie oft nachts Hilfe nötig ist, fließt in den Preis ein.">
-      <div className="hidden md:block">
-        <div className="flex h-12 w-full overflow-hidden rounded-[10px]" role="img" aria-label="Beispieltag von 7 bis 7 Uhr: Betreuung am Vormittag, Mittag, Ruhezeit am Nachmittag, Betreuung am Abend, nachts Hilfe nur bei Bedarf">
+      <div>
+        <div className="flex h-10 w-full overflow-hidden rounded-[10px] md:h-12" role="img" aria-label="Beispieltag von 7 bis 7 Uhr: Betreuung am Vormittag, Mittag, Ruhezeit am Nachmittag, Betreuung am Abend, nachts Hilfe nur bei Bedarf">
           {bloecke.map((b) => (
             <span key={b.von} className={`h-full ${farbe[b.art as keyof typeof farbe]}`} style={{ width: `${((b.bis - b.von) / 24) * 100}%` }} aria-hidden="true" />
           ))}
         </div>
         <div className="relative mt-1.5 h-5 text-[13px] text-pm-mute [font-variant-numeric:tabular-nums]" aria-hidden="true">
           {[7, 9, 12, 16, 19, 21].map((h) => (
-            <span key={h} className="absolute -translate-x-1/2" style={{ left: `${((h - start) / 24) * 100}%` }}>{stunde(h)}</span>
+            <span key={h} className={`absolute -translate-x-1/2 ${h === 9 || h === 19 ? 'hidden md:inline' : ''}`} style={{ left: `${((h - start) / 24) * 100}%` }}>{stunde(h)}</span>
           ))}
           <span className="absolute right-0">7:00</span>
         </div>
       </div>
-      <ul className="mt-2 grid gap-2.5 md:mt-5 md:grid-cols-2 md:gap-x-8">
+      <ul className="mt-5 grid gap-2.5 md:grid-cols-2 md:gap-x-8">
         {bloecke.map((b) => (
           <li key={b.von} className="flex items-start gap-3 text-[15.5px] leading-[1.45] text-pm-body">
             <span aria-hidden="true" className={`mt-[3px] h-3.5 w-3.5 flex-none rounded-[4px] ${farbe[b.art as keyof typeof farbe]}`} />

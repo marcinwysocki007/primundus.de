@@ -402,9 +402,13 @@ export function Tabelle({
   betont?: number | number[]
   fuss?: ReactNode
 }) {
-  // Viele Spalten → weniger Innenabstand; kurze Zellen („347 €", „PG 2–3") brechen am Desktop nie um
-  const eng = (kopf?.length ?? zeilen[0]?.length ?? 0) >= 5
-  const pad = eng ? 'px-3 md:px-4' : 'px-5 md:px-6'
+  // Viele Spalten oder lange Zellen → weniger Innenabstand und 15 px, damit die Tabelle neben der Seitenleiste
+  // (1024–1199 px: 604 px breit) nicht quer scrollt; kurze Zellen („347 €", „PG 2–3") brechen am Desktop nie um
+  const spalten = kopf?.length ?? zeilen[0]?.length ?? 0
+  const lang = zeilen.some((z) => z.some((c) => typeof c === 'string' && c.length > 30))
+  const eng = spalten >= 5 || (spalten >= 4 && lang)
+  const pad = eng ? 'px-2.5 md:px-3' : 'px-5 md:px-6'
+  const schrift = eng ? 'text-[15px]' : 'text-[16px]'
   const hervor = Array.isArray(betont) ? betont : betont !== undefined ? [betont] : []
   return (
     <div className="bg-white rounded-[20px] shadow-lift overflow-hidden">
@@ -415,7 +419,7 @@ export function Tabelle({
           <thead className="max-sm:sr-only">
             <tr>
               {kopf.map((h) => (
-                <th key={h} scope="col" className={`${pad} py-3 text-[13px] font-semibold text-pm-mute bg-pm-paper border-y border-pm-line align-bottom`}>
+                <th key={h} scope="col" className={`${pad} py-3 text-[13px] font-semibold text-pm-mute bg-pm-paper border-y border-pm-line align-bottom hyphens-auto`}>
                   {h}
                 </th>
               ))}
@@ -429,7 +433,7 @@ export function Tabelle({
                   <td
                     key={j}
                     data-label={kopf?.[j] ?? ''}
-                    className={`${pad} py-4 text-[16px] align-top max-sm:hyphens-auto [overflow-wrap:break-word] ${typeof c === 'string' && c.length <= 16 ? 'sm:whitespace-nowrap' : ''} ${kopf ? 'max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:text-right max-sm:before:content-[attr(data-label)] max-sm:before:basis-[45%] max-sm:before:shrink-0 max-sm:before:text-left max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px]' : 'align-top max-sm:block'} max-sm:p-0 max-sm:py-0.5 ${
+                    className={`${pad} py-4 ${schrift} align-top hyphens-auto [overflow-wrap:break-word] ${typeof c === 'string' && c.length <= 16 ? 'sm:whitespace-nowrap' : ''} ${kopf ? 'max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-4 max-sm:text-right max-sm:before:content-[attr(data-label)] max-sm:before:basis-[45%] max-sm:before:shrink-0 max-sm:before:text-left max-sm:before:font-normal max-sm:before:text-pm-mute max-sm:before:text-[15px]' : 'align-top max-sm:block'} max-sm:p-0 max-sm:py-0.5 ${
                       j === 0
                         ? 'text-pm-body max-sm:before:content-none max-sm:pb-1.5 max-sm:text-[17px] max-sm:!text-left max-sm:font-bold max-sm:text-pm-ink'
                         : hervor.includes(j)

@@ -165,7 +165,7 @@ function StimmeKarte({ b, schmal }: { b: Bewertung; schmal: boolean }) {
       <figure className="flex h-full flex-col rounded-[20px] bg-white p-6 md:p-7">
         <div className="flex items-center justify-between gap-3">
           <Sterne wert={b.sterne} groesse={18} label={`${b.sterne} von 5 Sternen`} />
-          <span className="whitespace-nowrap text-[14px] text-pm-mute">{monat(b)}</span>
+          <span className="whitespace-nowrap text-[13px] text-pm-mute min-[360px]:text-[14px]">{monat(b)}</span>
         </div>
         <blockquote className="mt-4 flex-1 text-[17px] leading-[1.65] text-pm-ink [text-wrap:pretty] md:text-[18px]">„{b.text}“</blockquote>
         <figcaption className="mt-6 flex items-center gap-3 border-t border-pm-line-soft pt-5">
