@@ -57,7 +57,7 @@ export function KostenAufteilung() {
                   style={{ width: `${(t.wert / z.preis) * 100}%` }}
                   aria-hidden="true"
                 >
-                  <span className="hidden sm:inline">{t.wert >= 300 ? euro(t.wert) : ''}</span>
+                  <span className="hidden sm:inline">{t.wert >= 280 ? euro(t.wert) : ''}</span>
                 </span>
               ))}
             </div>
@@ -103,7 +103,7 @@ export function HeimVsZuhause() {
       quelle="Pflegeheim: Eigenanteil im ersten Jahr, Bundesdurchschnitt, vdek-Auswertung, Stand 1. Juli 2026. 24-Stunden-Pflege: eine Person, Pflegegrad 3, nach Pflegegeld, Entlastungsbudget und Steuerermäßigung, Werte aus unserem Kostenrechner, zzgl. An- und Abreise."
     >
       <ul className="grid gap-6">
-        {balken(heim, 'bg-pm-line', 'Pflegeheim, Eigenanteil im Monat', 'Ø ')}
+        {balken(heim, 'bg-pm-taupe-light', 'Pflegeheim, Eigenanteil im Monat', 'Ø ')}
         {balken(zuhause, 'bg-pm-green', '24-Stunden-Pflege zu Hause, Pflegegrad 3', 'ab ca. ')}
       </ul>
       <p className="mt-5 text-[16.5px] leading-[1.55] text-pm-body">
@@ -164,7 +164,7 @@ export function Beispieltag() {
           ))}
         </div>
         <div className="relative mt-1.5 h-5 text-[13px] text-pm-mute [font-variant-numeric:tabular-nums]" aria-hidden="true">
-          {[7, 9, 12, 13, 16, 19, 21].map((h) => (
+          {[7, 9, 12, 16, 19, 21].map((h) => (
             <span key={h} className="absolute -translate-x-1/2" style={{ left: `${((h - start) / 24) * 100}%` }}>{stunde(h)}</span>
           ))}
           <span className="absolute right-0">7:00</span>
@@ -199,8 +199,8 @@ export function ZuhauseQuote() {
           <text x="70" y="86" textAnchor="middle" fontSize="12" fontWeight="600" fill="#8B8B8B">zu Hause</text>
         </svg>
         <ul className="grid gap-3 text-[16.5px] leading-[1.5] text-pm-body">
-          <li className="flex items-center gap-3"><span aria-hidden="true" className="h-3.5 w-3.5 flex-none rounded-[4px] bg-pm-green" /><strong className="text-pm-ink">86 %</strong>&nbsp;werden zu Hause versorgt, von Angehörigen, Pflegediensten oder Betreuungskräften</li>
-          <li className="flex items-center gap-3"><span aria-hidden="true" className="h-3.5 w-3.5 flex-none rounded-[4px] bg-pm-line" /><strong className="text-pm-ink">14 %</strong>&nbsp;leben im Pflegeheim</li>
+          <li className="flex items-start gap-3"><span aria-hidden="true" className="mt-[5px] h-3.5 w-3.5 flex-none rounded-[4px] bg-pm-green" /><span><strong className="text-pm-ink">86 %</strong> werden zu Hause versorgt, von Angehörigen, Pflegediensten oder Betreuungskräften</span></li>
+          <li className="flex items-start gap-3"><span aria-hidden="true" className="mt-[5px] h-3.5 w-3.5 flex-none rounded-[4px] bg-pm-line" /><span><strong className="text-pm-ink">14 %</strong> leben im Pflegeheim</span></li>
         </ul>
       </div>
     </GrafikRahmen>
