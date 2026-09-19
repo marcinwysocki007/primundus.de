@@ -1,15 +1,42 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
+import Image from 'next/image'
+import type { ReactNode } from 'react'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text, Werte } from '@/components/vorlage/Ratgeber'
+import { VertrauensKarten } from '@/components/vertrauen/Vertrauen'
+import { ArticleProgressBar } from '@/components/ArticleProgressBar'
+import { ArticleTOC } from '@/components/ArticleTOC'
+import { aktualisiertAm } from '@/lib/lastmod'
+
+// Kernseite in der Seitenvorlage (Paket 3, 19.09.2026; Martin: „warum ist die Über-uns-Seite noch alt"). Vorher: alte Optik,
+// eigener Siegelkasten mit Goldrahmen, Bewertungs-Auszug und Kontaktkasten in Taupe. Jetzt: Kopf der Vorlage, Siegelkarten wie
+// auf der Startseite (VertrauensKarten), Kundenstimmen und Schlussblock wie überall (KontaktBand). Fakten aus Impressum und
+// lib/schema.ts: Firmengruppe seit 2006 (kein Gründungsjahr der heutigen Gesellschaft), über 60.000 Betreuungen, Vertragspartner
+// PRIMUNDUS Sp. z o.o. in Warschau, Büro Landsberger Str. 155 in München, Geschäftsführung Karolina Jakubowska. Raus: „Jede
+// Betreuungskraft wird persönlich überprüft" (nicht belegbar, wie auf /qualitaet), „Menschen, die wirklich passen".
+
+const AKTUALISIERT = aktualisiertAm('ueber-uns', '19. September 2026')
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-ueber-uns'
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
+const SECTIONS = [
+  { id: 'wer', title: 'Wer wir sind' },
+  { id: 'arbeitsweise', title: 'Wie wir arbeiten' },
+  { id: 'team', title: 'Wer für Sie da ist' },
+  { id: 'auszeichnung', title: 'Auszeichnung & Garantie' },
+  { id: 'firma', title: 'Firma & Sitz' },
+  { id: 'faq', title: 'Häufige Fragen' },
+]
 
 export const metadata: Metadata = {
-  title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
-  description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen. Persönlich, verlässlich, rechtssicher.',
+  title: 'Über Primundus: seit 2006 in der 24-Stunden-Pflege zu Hause',
+  description:
+    'Wer hinter Primundus steht: Firmengruppe seit 2006 in der 24-Stunden-Pflege, über 60.000 Betreuungen, 6× Testsieger DIE WELT, Betreuungskräfte bei uns angestellt, Büro in München.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Über Primundus — 20 Jahre Erfahrung in der 24h-Pflege',
-    description: 'Primundus basiert auf 20 Jahren Erfahrung in der 24h-Pflege. 6× Testsieger DIE WELT. 60.000+ erfolgreiche Betreuungen.',
+    title: 'Über Primundus: seit 2006 in der 24-Stunden-Pflege zu Hause',
+    description: 'Firmengruppe seit 2006, über 60.000 Betreuungen, 6× Testsieger DIE WELT, Betreuungskräfte bei uns angestellt.',
     url: 'https://primundus.de/ueber-uns',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -17,200 +44,190 @@ export const metadata: Metadata = {
   },
 }
 
-// Organization + Gründerin (Karolina Jakubowska) kommen zentral aus lib/schema.ts
-// (Root-Layout). Hier nur die zusätzliche Ansprechpartnerin dieser Seite.
-const schemaMarkup = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@graph': [
-  ],
-})
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const FRAGEN = [
+  {
+    q: 'Wer steht hinter Primundus?',
+    a: 'Primundus wird von Karolina Jakubowska geführt. Die Firmengruppe hinter Primundus ist seit 2006 in der häuslichen 24-Stunden-Pflege tätig und hat seitdem über 60.000 Betreuungen organisiert. Ihre Ansprechpartnerin in Deutschland ist Marta Kapcio.',
+  },
+  {
+    q: 'Wo sitzt Primundus?',
+    a: 'Das Büro in Deutschland ist in München, Landsberger Str. 155. Vertragspartner ist die PRIMUNDUS Sp. z o.o. mit Sitz in Warschau, bei der die Betreuungskräfte angestellt sind.',
+  },
+  {
+    q: 'Sind die Betreuungskräfte bei Primundus angestellt?',
+    a: 'Ja. Die Betreuungskräfte sind bei uns angestellt und in Polen sozialversichert; jeder Einsatz läuft im Entsendemodell mit A1-Bescheinigung. Sie zahlen keine Vermittlungsgebühr.',
+  },
+  {
+    q: 'Ist Primundus ausgezeichnet?',
+    a: 'DIE WELT hat Primundus sechsmal in Folge ausgezeichnet. Das Original-Siegel von 2021 und die Veröffentlichung als PDF zeigen wir auf der Seite zur Auszeichnung.',
+  },
+  {
+    q: 'Wie erreiche ich Primundus?',
+    a: 'Täglich von 8 bis 20 Uhr unter 089 200 000 830, per WhatsApp oder per E-Mail an info@primundus.de. Ihren Preis und passende Betreuungskräfte sehen Sie jederzeit im Kostenrechner, ohne Kontaktdaten.',
+  },
+]
 
-export default function Page() {
+const schemaMarkup = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
+      { '@type': 'ListItem', position: 2, name: 'Über uns', item: 'https://primundus.de/ueber-uns' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+]
+
+function Person({ bild, initialen, name, rolle, children }: { bild?: string; initialen?: string; name: string; rolle: string; children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-pm-paper">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
+    <div className="flex gap-5 rounded-[20px] bg-white p-6 shadow-lift md:p-7">
+      {bild ? (
+        <Image src={bild} alt={name} width={160} height={160} className="h-16 w-16 flex-none rounded-full object-cover object-top md:h-20 md:w-20" />
+      ) : (
+        <span aria-hidden="true" className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-pm-shell text-[19px] font-bold text-pm-taupe-ink md:h-20 md:w-20 md:text-[22px]">{initialen}</span>
+      )}
+      <div className="min-w-0">
+        <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">{name}</p>
+        <p className="mt-0.5 text-[14.5px] font-semibold text-pm-taupe">{rolle}</p>
+        <p className="mt-3 text-[16.5px] leading-[1.6] text-pm-body">{children}</p>
+      </div>
+    </div>
+  )
+}
 
-      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
-            <span>›</span>
-            <span className="text-pm-ink">Über uns</span>
-          </nav>
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Über Primundus</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Persönlich. Erfahren. Verlässlich.
-          </h1>
-          <p className="text-[17px] md:text-[19px] text-pm-body leading-[1.7] max-w-2xl mb-12">
-            Primundus ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland — mit 20 Jahren Erfahrung und mehr als 60.000 erfolgreich begleiteten Betreuungen.
-          </p>
+export default function UeberUnsPage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
+      <ArticleProgressBar />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Über uns' },
+          ]}
+          augenbraue="Über Primundus"
+          titel={<>Über Primundus — seit 2006 in der <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span> zu Hause</>}
+          einleitung={<>Die Firmengruppe hinter Primundus organisiert seit 2006 Betreuungskräfte für Familien in Deutschland, über <strong className="text-pm-ink">60.000 Betreuungen</strong> bis heute. DIE WELT hat Primundus <strong className="text-pm-ink">sechsmal in Folge</strong> ausgezeichnet. Unsere Betreuungskräfte sind bei uns angestellt, Sie sehen Preis und passende Kräfte vor dem Vertrag, und mit Marta Kapcio haben Sie eine Ansprechpartnerin, die Ihre Situation kennt.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="4 Min."
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          blickTitel="Auf einen Blick"
+          blick={[
+            'Erfahrung in der häuslichen 24-Stunden-Pflege seit 2006',
+            'Über 60.000 Betreuungen',
+            '6× Testsieger DIE WELT',
+            'Betreuungskräfte bei uns angestellt, Einsatz mit A1-Bescheinigung',
+            'Geschäftsführung Karolina Jakubowska, Büro in München',
+            'Marta Kapcio, Ihre Ansprechpartnerin, täglich 8–20 Uhr',
+          ]}
+        />
 
-        {/* Fakten */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
-          {[
-            { zahl: '20+', label: 'Jahre Erfahrung' },
-            { zahl: '60.000+', label: 'Betreuungen' },
-            { zahl: '6×', label: 'Testsieger DIE WELT' },
-            { zahl: 'Mo–So', label: '8 – 20 Uhr erreichbar' },
-          ].map((item) => (
-            <div key={item.label} className="bg-white border border-pm-line rounded-2xl p-5 text-center">
-              <p className="text-[26px] font-bold text-pm-ink leading-none">{item.zahl}</p>
-              <p className="text-[13px] text-pm-mute mt-1.5">{item.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Bild + Text */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-14">
-          <div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F0EBE3]">
-              <img
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="wer" titel="Wer wir sind">
+            <figure className="overflow-hidden rounded-[20px] bg-white shadow-lift">
+              <Image
                 src="/images/team-primundus-deutschland.webp"
                 alt="Das Team von Primundus"
-                className="w-full h-full object-cover"
+                width={1448}
+                height={1086}
+                sizes="(min-width: 1024px) 760px, 100vw"
+                className="aspect-[4/3] w-full object-cover"
               />
-            </div>
-          </div>
-          <div>
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Wer wir sind</p>
-            <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink leading-tight mb-5">
-              Menschen, die wirklich passen — das ist unser Anspruch
-            </h2>
-            <p className="text-[16px] text-pm-body leading-[1.7] mb-4">
-              Primundus basiert auf 20 Jahren Erfahrung und ist eine der erfahrensten Adressen für häusliche 24-Stunden-Pflege in Deutschland. Bei uns kommen keine anonymen Arbeitskräfte — wir finden Menschen, die zu Ihnen und Ihrer Familie passen.
-            </p>
-            <p className="text-[16px] text-pm-body leading-[1.7] mb-4">
-              Hinter jedem Betreuungsverhältnis steht ein persönlicher Ansprechpartner. Unser Team ist Mo–So von 8 bis 20 Uhr erreichbar — nicht als Hotline, sondern als echte Ansprechpartner, die Ihre Situation kennen.
-            </p>
-            <p className="text-[16px] text-pm-body leading-[1.7]">
-              Wir arbeiten rechtssicher, transparent und ohne versteckte Kosten. Täglich kündbar — weil wir überzeugen wollen, nicht binden.
-            </p>
-          </div>
-        </div>
-
-        {/* Team */}
-        <div className="mb-14" id="team">
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Die Menschen hinter Primundus</p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink leading-tight mb-8">
-            Wer für Sie da ist
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-pm-line rounded-2xl p-6 flex gap-5">
-              <div className="w-16 h-16 rounded-full bg-pm-taupe text-white flex items-center justify-center font-bold text-[18px] flex-shrink-0">KJ</div>
-              <div>
-                <h3 className="text-[18px] font-bold text-pm-ink leading-tight">Karolina Jakubowska</h3>
-                <p className="text-[13px] font-semibold text-pm-taupe mb-2">Gründerin &amp; Geschäftsführerin</p>
-                <p className="text-[14px] text-pm-body leading-[1.6]">
-                  Karolina führt Primundus mit dem Anspruch, häusliche Betreuung ehrlich, rechtssicher und persönlich zu machen. Die Firmengruppe hinter Primundus bringt Erfahrung in der häuslichen 24-Stunden-Pflege seit 2006 mit.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Testsieger */}
-        <div className="bg-white border-2 border-pm-gold rounded-2xl p-7 md:p-10 mb-14">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <img
-              src="/images/primundus_testsieger-2021.webp"
-              alt="Testsieger DIE WELT"
-              className="h-[100px] w-[100px] object-contain flex-shrink-0"
+            </figure>
+            <Text>
+              Primundus organisiert 24-Stunden-Pflege zu Hause: Eine Betreuungskraft aus Polen, Rumänien oder Bulgarien zieht
+              bei Ihrem Angehörigen ein, hilft im Alltag und ist bei Bedarf auch nachts da. Die Firmengruppe hinter Primundus
+              macht das seit 2006. In dieser Zeit sind über 60.000 Betreuungen zustande gekommen, und DIE WELT hat Primundus
+              sechsmal in Folge ausgezeichnet.
+            </Text>
+            <Text>
+              Der Unterschied zu einer Vermittlungsagentur: Unsere Betreuungskräfte sind bei uns angestellt und in Polen
+              sozialversichert, jeder Einsatz läuft im Entsendemodell mit A1-Bescheinigung. Sie zahlen keine Vermittlungsgebühr,
+              sehen Preis und passende Betreuungskräfte, bevor Sie etwas unterschreiben, und können täglich kündigen.
+            </Text>
+            <Werte
+              zeilen={[
+                ['seit 2006', 'Erfahrung der Firmengruppe in der häuslichen 24-Stunden-Pflege'],
+                ['über 60.000', 'Betreuungen'],
+                ['6× in Folge', 'Testsieger bei DIE WELT, Preis & Qualität'],
+                ['täglich 8–20 Uhr', 'Marta Kapcio und ihr Team, per Telefon und WhatsApp'],
+              ]}
             />
-            <div>
-              <h2 className="text-[22px] md:text-[26px] font-bold text-pm-ink leading-tight">
-                6× Testsieger
-              </h2>
-              <p className="text-[17px] font-semibold text-pm-taupe mt-1">DIE WELT</p>
-              <p className="text-[15px] text-pm-mute mb-3">Preis &amp; Qualität</p>
-              <p className="text-[15px] text-pm-body leading-relaxed border-t border-[#F0EBE3] pt-3">
-                Die beste Kombination aus Preis, Qualität und Kundenservice.{' '}
-                <a href="/testsieger-24-stunden-pflege" className="text-pm-taupe underline underline-offset-2 font-semibold">Zur Auszeichnung</a>
-              </p>
+          </Abschnitt>
+
+          <Abschnitt id="arbeitsweise" titel="Wie wir arbeiten">
+            <Punkte
+              punkte={[
+                { title: 'Preis vor dem Kontakt', desc: 'Ein paar Fragen im Kostenrechner, und Sie sehen Ihren Monatspreis, noch ohne Kontaktdaten. Das dauert 2 Minuten.' },
+                { title: 'Sie wählen aus', desc: 'Sie sehen Profile mit Foto, Erfahrung, Einsätzen über Primundus und Deutschkenntnissen. Bewerbungen kommen am selben Werktag, den Vertrag gibt es erst nach Ihrer Auswahl.' },
+                { title: 'Angestellt, nicht vermittelt', desc: 'Die Betreuungskräfte sind bei uns angestellt, jeder Einsatz läuft mit A1-Bescheinigung. Eine Vermittlungsgebühr gibt es nicht.' },
+                { title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung. Sie zahlen erst, wenn die Betreuungskraft da ist.' },
+                { title: 'Ersatz bei Krankheit', desc: 'Fällt eine Betreuungskraft aus, stellen wir schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
+                { title: 'Deutschlandweit', desc: 'Unsere Betreuungskräfte sind in ganz Deutschland im Einsatz, in Großstädten wie auf dem Land. Eine Anreise ist in 3 Tagen möglich.' },
+              ]}
+            />
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/ablauf', text: 'So läuft es ab' },
+                { href: '/qualitaet', text: 'Wie wir Betreuungskräfte auswählen' },
+                { href: '/rechtssicher', text: 'Rechtssicherheit und Entsendemodell' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="team" titel="Wer für Sie da ist">
+            <div className="grid gap-5">
+              <Person bild="/images/marta-kapcio.jpg" name="Marta Kapcio" rolle="Ihre Ansprechpartnerin">
+                Marta Kapcio begleitet Sie von der ersten Frage bis zum Start der Betreuung, und auch danach, wenn etwas zu
+                klären ist. Sie erreichen sie und ihr Team täglich von 8 bis 20 Uhr, per Telefon oder WhatsApp.
+              </Person>
+              <Person initialen="KJ" name="Karolina Jakubowska" rolle="Gründerin & Geschäftsführerin">
+                Karolina Jakubowska ist Gründerin und Geschäftsführerin von Primundus. Die Firmengruppe hinter Primundus ist
+                seit 2006 in der häuslichen 24-Stunden-Pflege tätig.
+              </Person>
             </div>
-          </div>
-        </div>
+          </Abschnitt>
 
-        {/* Was uns unterscheidet */}
-        <div className="mb-14">
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Was uns unterscheidet</p>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-pm-ink leading-tight mb-8">
-            Unser Versprechen an Sie
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[
-              {
-                title: 'Persönlicher Ansprechpartner',
-                text: 'Sie erhalten einen festen Ansprechpartner, der Ihre Situation kennt — kein Callcenter, keine wechselnden Zuständigkeiten.',
-                icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
-              },
-              {
-                title: 'Täglich kündbar',
-                text: 'Keine Mindestlaufzeit, keine Kündigungsfristen. Taggenaue Abrechnung — weil wir durch Qualität überzeugen, nicht durch Vertragsbindung.',
-                icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
-              },
-              {
-                title: 'Schneller Start',
-                text: 'Wir können schon in 3 Tagen eine passende Betreuungskraft organisieren — gerade in dringenden Situationen.',
-                icon: 'M13 10V3L4 14h7v7l9-11h-7z',
-              },
-              {
-                title: 'Rechtssicher & transparent',
-                text: 'Alle Betreuungsverhältnisse werden rechtssicher aufgesetzt. Keine Scheinselbstständigkeit, keine versteckten Kosten.',
-                icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
-              },
-              {
-                title: 'Geprüfte Pflegekräfte',
-                text: 'Jede Betreuungskraft wird persönlich überprüft. Wir kennen unsere Kräfte und stehen für die Qualität ihrer Arbeit ein.',
-                icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z',
-              },
-              {
-                title: 'Deutschlandweit',
-                text: 'Unsere Betreuungskräfte sind in ganz Deutschland im Einsatz — von München bis Hamburg, von der Großstadt bis in ländliche Regionen.',
-                icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064',
-              },
-            ].map((item, i) => (
-              <div key={i} className="bg-white border border-pm-line rounded-2xl p-6 hover:border-pm-taupe transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-pm-taupe/10 flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d={item.icon} />
-                  </svg>
-                </div>
-                <h3 className="text-[16px] font-bold text-pm-ink mb-2">{item.title}</h3>
-                <p className="text-[14px] text-pm-body leading-[1.6]">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+          <Abschnitt id="auszeichnung" titel="Auszeichnung und Garantie">
+            <VertrauensKarten eingebettet />
+          </Abschnitt>
 
-        {/* CTA */}
-        <div className="bg-pm-taupe rounded-2xl p-8 md:p-10 text-center">
-          <h2 className="text-h2 md:text-h2-lg font-bold text-white mb-3">
-            Lernen Sie uns kennen
-          </h2>
-          <p className="text-[16px] text-white/80 mb-7 max-w-xl mx-auto">
-            Sprechen Sie mit uns — kostenlos, unverbindlich und ohne Druck. Wir finden gemeinsam die beste Lösung für Ihre Situation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="https://kostenrechner.primundus.de/?start=1&src=apex-ueber-uns"
-              className="inline-flex items-center justify-center px-7 py-4 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[16px] rounded-xl transition-all duration-200 shadow-md"
-            >
-              Kosten & Pflegekräfte ansehen
-            </a>
-            <a
-              href="tel:+4989200000830"
-              className="inline-flex items-center justify-center gap-3 px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-[16px] rounded-xl transition-all duration-200"
-            >
-              <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover object-top" />
-              089 200 000 830
-            </a>
-          </div>
-          <p className="text-[13px] text-white/50 mt-4">Mo – So · 8 – 20 Uhr</p>
-        </div>
+          <Abschnitt id="firma" titel="Firma und Sitz">
+            <Werte
+              zeilen={[
+                ['Büro Deutschland', 'Primundus Deutschland, Landsberger Str. 155, 80687 München'],
+                ['Vertragspartner', 'PRIMUNDUS Sp. z o.o., Poznańska 21/48, 00-685 Warszawa, Polen (KRS 0001259402)'],
+                ['Geschäftsführung', 'Karolina Jakubowska'],
+                ['Kontakt', <>089 200 000 830, täglich 8–20 Uhr · <a href="mailto:info@primundus.de" className={LINK}>info@primundus.de</a></>],
+              ]}
+            />
+            <Text>
+              Ihr Betreuungsvertrag kommt mit der PRIMUNDUS Sp. z o.o. zustande, bei der die Betreuungskräfte angestellt sind.
+              Den Mustervertrag können Sie vor jeder Entscheidung lesen; alle Angaben zur Firma stehen im{' '}
+              <a href="/impressum" className={LINK}>Impressum</a>.
+            </Text>
+          </Abschnitt>
 
+          <Abschnitt id="faq" titel="Häufige Fragen zu Primundus">
+            <Fragen fragen={FRAGEN} />
+            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis und passende Pflegekräfte in 2 Minuten' }]} />
+          </Abschnitt>
+        </RatgeberRumpf>
       </div>
-      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
-      <BewertungsAuszug />
-    </div>
+
+      <KontaktBand />
+    </>
   )
 }
