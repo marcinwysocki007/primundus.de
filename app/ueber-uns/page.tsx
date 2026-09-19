@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Wer steht hinter Primundus?',
-    a: 'Primundus wird von Karolina Jakubowska geführt. Die Firmengruppe hinter Primundus ist seit 2006 in der häuslichen 24-Stunden-Pflege tätig und hat seitdem über 60.000 Betreuungen organisiert. Ihre Ansprechpartnerin in Deutschland ist Marta Kapcio.',
+    a: 'Primundus wird von Karolina Jakubowska geführt. Die Firmengruppe hinter Primundus ist seit 2006 in der häuslichen 24-Stunden-Pflege tätig und hat seitdem über 60.000 Betreuungen organisiert. Ihre Ansprechpartner in Deutschland sind Marta Kapcio und ihr Team.',
   },
   {
     q: 'Wo sitzt Primundus?',
@@ -114,7 +114,7 @@ export default function UeberUnsPage() {
           ]}
           augenbraue="Über Primundus"
           titel={<>Über Primundus — seit 2006 in der <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span> zu Hause</>}
-          einleitung={<>Die Firmengruppe hinter Primundus organisiert seit 2006 Betreuungskräfte für Familien in Deutschland, über <strong className="text-pm-ink">60.000 Betreuungen</strong> bis heute. DIE WELT hat Primundus <strong className="text-pm-ink">sechsmal in Folge</strong> ausgezeichnet. Unsere Betreuungskräfte sind bei uns angestellt, Sie sehen Preis und passende Kräfte vor dem Vertrag, und mit Marta Kapcio haben Sie eine Ansprechpartnerin, die Ihre Situation kennt.</>}
+          einleitung={<>Die Firmengruppe hinter Primundus organisiert seit 2006 Betreuungskräfte für Familien in Deutschland, über <strong className="text-pm-ink">60.000 Betreuungen</strong> bis heute. DIE WELT hat Primundus <strong className="text-pm-ink">sechsmal in Folge</strong> ausgezeichnet. Unsere Betreuungskräfte sind bei uns angestellt, Sie sehen Preis und passende Kräfte vor dem Vertrag. Marta Kapcio und ihr Team sind täglich von 8 bis 20 Uhr für Sie da.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
@@ -125,7 +125,7 @@ export default function UeberUnsPage() {
             '6× Testsieger DIE WELT',
             'Betreuungskräfte bei uns angestellt, Einsatz mit A1-Bescheinigung',
             'Geschäftsführung Karolina Jakubowska, Büro in München',
-            'Marta Kapcio, Ihre Ansprechpartnerin, täglich 8–20 Uhr',
+            'Marta Kapcio und ihr Team, täglich 8–20 Uhr',
           ]}
         />
 

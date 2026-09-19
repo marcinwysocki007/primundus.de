@@ -105,7 +105,7 @@ export default function BeratungsgespraechPage() {
           ]}
           augenbraue="Über Primundus"
           titel={<>Beratungsgespräch zur <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span>: so läuft es ab</>}
-          einleitung={<>Sie müssen nicht anrufen, um den Preis zu erfahren: Der steht nach <strong className="text-pm-ink">2 Minuten</strong> im Kostenrechner. Wenn Sie lieber sprechen oder Fragen haben, erreichen Sie Marta Kapcio <strong className="text-pm-ink">täglich von 8 bis 20 Uhr</strong>. Hier lesen Sie, was wir fragen, was Sie fragen sollten und was nach dem Gespräch passiert.</>}
+          einleitung={<>Sie müssen nicht anrufen, um den Preis zu erfahren: Der steht nach <strong className="text-pm-ink">2 Minuten</strong> im Kostenrechner. Wenn Sie lieber sprechen oder Fragen haben, erreichen Sie Marta Kapcio und ihr Team <strong className="text-pm-ink">täglich von 8 bis 20 Uhr</strong>. Hier lesen Sie, was wir fragen, was Sie fragen sollten und was nach dem Gespräch passiert.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}

@@ -163,8 +163,8 @@ export default function RechtssicherPage() {
             <Kasten augenbraue="Ihr Vertragspartner" titel="Wer bei Primundus Ihr Vertragspartner ist">
               <Text>
                 Ihr Betreuungsvertrag kommt mit der PRIMUNDUS Sp. z o.o. mit Sitz in Warschau zustande. Bei ihr sind die
-                Betreuungskräfte angestellt; genau deshalb funktioniert die Entsendung. Ihre Ansprechpartnerin sitzt in München:
-                Marta Kapcio, täglich von 8 bis 20 Uhr.
+                Betreuungskräfte angestellt; genau deshalb funktioniert die Entsendung. Ihre Ansprechpartner sitzen in München:
+                Marta Kapcio und ihr Team, täglich von 8 bis 20 Uhr.
               </Text>
             </Kasten>
           </Abschnitt>
