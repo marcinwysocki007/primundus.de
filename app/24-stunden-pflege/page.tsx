@@ -1,13 +1,18 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
+import { AblaufZeitstrahl, Beispieltag, HeimVsZuhause, KostenAufteilung, ZuhauseQuote } from '@/components/grafik/Grafik'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { ORG_ID } from '@/lib/schema'
 
+// Ausbau 19.09.2026 (Martin: „wir brauchen viel mehr Content, um ernsthaft Chancen zu haben, mit eigenen Grafiken"):
+// Seiten auf Platz 2–3 für „24 stunden pflege" haben 2.900–4.900 Wörter und 14–22 Bilder, wir hatten 920 Wörter und keine.
+// Neue Abschnitte nach den Fragen, die Google zum Begriff zeigt (Pflegekasse, Nachteile, Heim oder zu Hause, Kosten im Monat,
+// Voraussetzungen, Arbeitszeit, Erfahrungen, deutsche Pflegekräfte), fünf eigene Grafiken (components/grafik/Grafik.tsx).
 // Kernseite in der Seitenvorlage (17.09.2026). Inhalt gegen Kostenrechner, Startseite und Mustervertrag geprüft:
 // Preise aus dem Rechner (ab 2.150 €, Pflegegrad 3 ab ca. 923 €), Nächte „bei Bedarf auch nachts",
 // Ersatzkraft nach Vertrag § 1 („schnellstmöglich, in der Regel innerhalb von 3 Tagen", Krankheitstage ohne
@@ -19,10 +24,14 @@ const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist 24-Stunden-Pflege?' },
+  { id: 'fuer-wen', title: 'Für wen sie passt' },
   { id: 'leistungen', title: 'Was leistet Primundus?' },
+  { id: 'modelle', title: 'Legal: die drei Modelle' },
   { id: 'kosten', title: 'Kosten & Kassenzuschüsse' },
-  { id: 'ablauf', title: 'Ablauf & Start' },
   { id: 'vorteile', title: 'Vergleich mit dem Pflegeheim' },
+  { id: 'ablauf', title: 'Ablauf & Start' },
+  { id: 'betreuungskraefte', title: 'Die Betreuungskräfte' },
+  { id: 'nachteile', title: 'Nachteile & seriöse Anbieter' },
   { id: 'faq', title: 'Häufige Fragen' },
   { id: 'themen', title: 'Weitere Themen' },
 ]
@@ -49,6 +58,11 @@ const FRAGEN = [
   { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja. Die Betreuungskräfte sind bei uns angestellt und arbeiten im Entsendemodell mit A1-Bescheinigung: Sie sind in Polen sozialversichert und legal in Deutschland tätig. Sie als Familie werden nicht Arbeitgeber.' },
   { q: 'Warum ist Primundus Testsieger?', a: 'Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice, getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
   { q: 'Was passiert, wenn die Betreuungskraft krank wird?', a: 'Wir stellen schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Für die Tage, an denen die Betreuungskraft krank ist, berechnen wir nichts. Der Wechsel kostet nichts extra, es fallen nur die An- und Abreisekosten an.' },
+  { q: 'Was zahlt die Pflegekasse bei einer 24-Stunden-Pflege?', a: 'Das Pflegegeld, je nach Pflegegrad 347 bis 990 € im Monat, und das Entlastungsbudget von 3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege. Dazu kommt die Steuerermäßigung von 20 %, höchstens 4.000 € im Jahr. Die Krankenkasse zahlt nichts, und der Entlastungsbetrag von 131 € im Monat ist nur für anerkannte Alltagshilfen gedacht, in der Regel nicht für die Betreuungskraft.' },
+  { q: 'Was sind die Nachteile der 24-Stunden-Pflege?', a: 'Die Betreuungskraft braucht ein eigenes Zimmer, Kost und Logis stellen Sie. Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, eine Überwachung rund um die Uhr gibt es nicht. Alle 6 bis 8 Wochen wechselt die Betreuungskraft, und medizinische Behandlungspflege übernimmt weiter ein Pflegedienst. Für Menschen, die dauerhaft Fachpflege brauchen, passt sie nicht.' },
+  { q: 'Was ist billiger, Pflegeheim oder 24-Stunden-Pflege?', a: 'Meist die 24-Stunden-Pflege. Im Pflegeheim zahlen Sie bundesweit im Durchschnitt 3.364 € im Monat selbst (vdek, Stand 1. Juli 2026). Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 € im Monat, zzgl. An- und Abreise sowie Kost und Logis.' },
+  { q: 'Wie lange arbeitet eine Betreuungskraft am Tag?', a: 'Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, so wie jede Arbeitnehmerin. Den Tagesablauf legen Sie gemeinsam fest: Hilfe am Morgen, im Haushalt, am Nachmittag und am Abend, dazwischen ihre Ruhezeit. Nachts schläft sie im Haus und hilft, wenn etwas ist; wie oft nachts Hilfe nötig ist, fließt in den Preis ein.' },
+  { q: 'Woran erkenne ich einen seriösen Anbieter?', a: 'An vier Dingen: Für jede Betreuungskraft liegt eine A1-Bescheinigung vor. Sie sehen Preis und Betreuungskräfte, bevor Sie etwas unterschreiben. Der Vertrag nennt An- und Abreise, Ersatz bei Krankheit und die Kündigung klar. Und es gibt keine Vermittlungsgebühr oder Anzahlung. Den Mustervertrag von Primundus können Sie vorab lesen.' },
 ]
 
 const schemaMarkup = [
@@ -160,15 +174,69 @@ export default function VierUndZwanzigStundenPflege() {
             <Kasten titel="Was „24 Stunden“ bedeutet">
               <Text>
                 Die Betreuungskraft wohnt mit im Haus und ist bei Bedarf auch nachts da. Sie hat geregelte Arbeitszeiten
-                mit Pausen und Ruhezeiten. Medizinische Behandlungspflege wie Spritzen oder Verbände übernimmt ein
-                ambulanter Pflegedienst.
+                mit Pausen und Ruhezeiten, so wie jede Arbeitnehmerin. „24 Stunden“ heißt also: Sie ist rund um die Uhr
+                erreichbar, nicht rund um die Uhr im Einsatz. Medizinische Behandlungspflege wie Spritzen oder Verbände
+                übernimmt ein ambulanter Pflegedienst.
               </Text>
             </Kasten>
+            <Text>
+              Wie ein Tag aussieht, legen Sie mit der Betreuungskraft fest. Typisch ist ein Rhythmus aus Hilfe am Morgen,
+              Haushalt am Vormittag, einer Ruhezeit am Nachmittag und Gesellschaft am Abend. Nachts schläft die
+              Betreuungskraft im Haus. Braucht Ihr Angehöriger regelmäßig nachts Hilfe, sagen Sie uns das bei der
+              Preisberechnung; es fließt in den Preis ein und wird ausgeglichen.
+            </Text>
+            <Beispieltag />
+            <Text>
+              Die meisten Familien in Deutschland organisieren die Pflege zu Hause, mit Angehörigen, einem Pflegedienst
+              oder einer Betreuungskraft. Das Pflegeheim ist die Ausnahme, nicht die Regel:
+            </Text>
+            <ZuhauseQuote />
             <MehrDazu
               label="Mehr dazu:"
               links={[
                 { href: '/was-ist-24-stunden-pflege', text: 'Was ist 24-Stunden-Pflege? Alle Fakten' },
                 { href: '/wann-brauche-ich-24h-pflege', text: 'Wann braucht es 24h-Pflege?' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="fuer-wen" titel="Für wen 24-Stunden-Pflege passt, und für wen nicht">
+            <Text>
+              24-Stunden-Pflege passt, wenn Ihr Angehöriger zu Hause bleiben möchte und im Alltag durchgehend Hilfe
+              braucht: bei Demenz, nach einem Schlaganfall oder einer Operation, bei Parkinson, Herzschwäche oder wenn
+              das Sturzrisiko allein zu Hause zu groß wird. Voraussetzung ist ein Pflegegrad ab 2, damit Pflegegeld und
+              Entlastungsbudget den Eigenanteil senken; die Betreuung selbst ist auch ohne Pflegegrad möglich.
+            </Text>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Das braucht es zu Hause',
+                  ton: 'gruen',
+                  punkte: [
+                    'Ein eigenes, abschließbares Zimmer mit Bett für die Betreuungskraft',
+                    'Küche, Bad und Internetanschluss zur Mitbenutzung',
+                    'Eine gewisse Grundmobilität des Angehörigen, etwa Gehen mit Unterstützung',
+                    'Kost und Logis stellen Sie, wie bei einem Mitbewohner',
+                  ],
+                },
+                {
+                  titel: 'Dafür ist sie nicht gedacht',
+                  ton: 'koralle',
+                  punkte: [
+                    'Intensivpflege oder dauerhafte medizinische Behandlungspflege, dafür braucht es Fachkräfte',
+                    'Eine Aufsicht rund um die Uhr ohne Pausen, das leistet kein einzelner Mensch',
+                    'Haushalte ohne freies Zimmer',
+                    'Wenn Ihr Angehöriger ausdrücklich ins Heim möchte',
+                  ],
+                },
+              ]}
+            />
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/demenz-pflege-zuhause', text: 'Demenzbetreuung zu Hause' },
+                { href: '/pflege-nach-op', text: 'Pflege nach einer Operation' },
+                { href: '/pflegedienst-oder-24h-kraft', text: 'Pflegedienst oder Betreuungskraft?' },
               ]}
             />
           </Abschnitt>
@@ -188,11 +256,47 @@ export default function VierUndZwanzigStundenPflege() {
                 { title: 'Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team sind an 7 Tagen die Woche von 8 bis 20 Uhr erreichbar.' },
               ]}
             />
+            <Kasten augenbraue="Nicht enthalten" titel="Was die Betreuungskraft nicht übernimmt">
+              <Text>
+                Medizinische Behandlungspflege wie Injektionen, Verbandswechsel oder das Stellen von Medikamenten nach
+                ärztlicher Anordnung bleibt Sache eines ambulanten Pflegedienstes; beides lässt sich gut kombinieren.
+                Auch Fensterputzen und die Reinigung von Garage, Heizraum und Nebengebäuden gehören laut
+                Betreuungsvertrag nicht dazu.
+              </Text>
+            </Kasten>
             <MehrDazu
               label="Mehr dazu:"
               links={[
                 { href: '/leistungen', text: 'Alle Leistungen im Detail' },
-                { href: '/rechtssicher', text: 'Rechtssicherheit & Entsendemodell' },
+                { href: '/24h-pflege-vs-ambulante-pflege', text: 'Betreuungskraft und Pflegedienst kombinieren' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="modelle" titel="Legal zu Hause betreuen: die drei Modelle">
+            <Text>
+              Eine Betreuungskraft aus dem EU-Ausland kann auf drei Wegen bei Ihnen arbeiten. Entscheidend ist, wer
+              ihr Arbeitgeber ist und wer die Sozialabgaben zahlt. Bei Primundus arbeiten die Betreuungskräfte im
+              Entsendemodell: Sie sind bei uns angestellt, in Polen sozialversichert und für jeden Einsatz liegt eine
+              A1-Bescheinigung vor. Sie als Familie werden nicht Arbeitgeber.
+            </Text>
+            <Tabelle
+              kopf={['', 'Entsendemodell (Primundus)', 'Arbeitgebermodell', 'Selbstständige Kraft']}
+              zeilen={[
+                ['Arbeitgeber', 'Primundus', 'Sie als Familie', 'niemand, die Kraft arbeitet auf eigene Rechnung'],
+                ['Sozialabgaben', 'zahlt Primundus in Polen, Nachweis A1-Bescheinigung', 'zahlen Sie in Deutschland', 'zahlt die Kraft selbst'],
+                ['Ihr Aufwand', 'ein Vertrag mit uns', 'Anmeldung, Lohnabrechnung, Urlaub, Krankheit, Ersatz', 'Verträge und Nachweise selbst prüfen'],
+                ['Risiko', 'keines für Sie, Arbeitszeitregeln liegen bei uns', 'Arbeitgeberpflichten liegen bei Ihnen', 'Scheinselbstständigkeit: Nachzahlungen und Bußgelder möglich'],
+                ['Ersatz bei Ausfall', 'in der Regel innerhalb von 3 Tagen', 'müssen Sie selbst organisieren', 'müssen Sie selbst organisieren'],
+              ]}
+              fuss="Entsendung nach EU-Verordnung 883/2004, die A1-Bescheinigung weist die Sozialversicherung im Heimatland nach. Wer eine weisungsgebunden im Haushalt lebende Kraft als „selbstständig“ beauftragt, riskiert Nachzahlungen von Sozialabgaben."
+            />
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/rechtssicher', text: 'Rechtssicherheit und Entsendemodell' },
+                { href: '/pflegekraft-legal-beschaeftigen', text: 'Pflegekraft legal beschäftigen' },
+                { href: '/eu-pflegekraft-rechte-pflichten', text: 'EU-Pflegekraft: Rechte und Pflichten' },
               ]}
             />
           </Abschnitt>
@@ -215,6 +319,23 @@ export default function VierUndZwanzigStundenPflege() {
               betont={5}
               fuss="Entlastungsbudget: 3.539 € im Jahr, anteilig je Monat · Steuerermäßigung: 20 %, bis 4.000 € im Jahr · zzgl. An- und Abreise 125 € je Strecke · Kost und Logis stellen Sie · Stand September 2026, Werte aus unserem Kostenrechner"
             />
+            <KostenAufteilung />
+            <Kasten augenbraue="Was zahlt wer" titel="Pflegekasse ja, Krankenkasse nein">
+              <Text>
+                Die Pflegekasse zahlt das Pflegegeld direkt an Ihren Angehörigen, unabhängig davon, ob Angehörige oder
+                eine Betreuungskraft helfen. Das Entlastungsbudget von 3.539 € im Jahr für Verhinderungs- und
+                Kurzzeitpflege können Sie für die Betreuungskraft nutzen, wenn Ihre Kasse den Einsatz als
+                Verhinderungspflege anerkennt. Die Krankenkasse zahlt für die Betreuung nichts. Der Entlastungsbetrag von
+                131 € im Monat ist für anerkannte Alltagshilfen gedacht, in der Regel nicht für die Betreuungskraft.
+                Die Steuerermäßigung holen Sie sich mit der Steuererklärung: 20 % der Kosten, höchstens 4.000 € im Jahr.
+              </Text>
+            </Kasten>
+            <Text>
+              Was den Preis nach oben oder unten bewegt: die Zahl der zu betreuenden Personen, wie oft nachts Hilfe nötig
+              ist, ob die Betreuungskraft einen Führerschein braucht, und wie gut sie Deutsch spricht. Nicht im Preis:
+              An- und Abreise mit 125 € je Strecke, Kost und Logis, und an neun Feiertagen im Jahr der doppelte
+              Tagessatz.
+            </Text>
             <RechnerKasten src="apex-24-stunden-pflege" />
             <MehrDazu
               label="Mehr dazu:"
@@ -249,7 +370,68 @@ export default function VierUndZwanzigStundenPflege() {
                 },
               ]}
             />
+            <AblaufZeitstrahl />
             <MehrDazu label="Schritt für Schritt erklärt:" links={[{ href: '/ablauf', text: 'Ablauf der 24h-Pflege bei Primundus' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="betreuungskraefte" titel="Die Betreuungskräfte: Herkunft, Deutsch, Erfahrung">
+            <Text>
+              Unsere Betreuungskräfte kommen überwiegend aus Polen, dazu aus Rumänien und Bulgarien. Viele sind seit
+              Jahren in der häuslichen Betreuung tätig und waren schon mehrfach über Primundus im Einsatz. Deutsche
+              Pflegekräfte, die im Haushalt wohnen, gibt es in diesem Modell praktisch nicht; die Frage nach der
+              Verständigung beantworten wir deshalb offen: Wie gut eine Betreuungskraft Deutsch spricht, steht als
+              Stufe in ihrem Profil, und gute Deutschkenntnisse fließen in den Preis ein.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Sie sehen vorab, wer kommt', desc: 'Foto, Alter, Deutschkenntnisse, Jahre Erfahrung und die Zahl der Einsätze über Primundus stehen im Profil jeder Betreuungskraft, die sich bei Ihnen bewirbt.' },
+                { title: 'Bei uns angestellt', desc: 'Kein Vermittler dazwischen: Die Betreuungskräfte sind bei Primundus angestellt und in Polen sozialversichert. Sie wählen aus, wir setzen sie bei Ihnen ein.' },
+                { title: 'Wechsel alle 6–8 Wochen', desc: 'Die Betreuungskräfte wechseln sich in der Regel alle 6–8 Wochen ab. Sie wählen jedes Mal selbst aus, viele Familien bleiben bei zwei Kräften im Wechsel.' },
+                { title: 'Bewertungen echter Familien', desc: 'Was Familien über ihre Betreuungskräfte schreiben, lesen Sie auf der Seite Erfahrungen, aus Google, Trustpilot und unserem Formular.' },
+              ]}
+            />
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/pflegekraft-aus-polen', text: 'Pflegekraft aus Polen' },
+                { href: '/qualitaet', text: 'Wie wir Betreuungskräfte auswählen' },
+                { href: '/erfahrungen', text: 'Erfahrungen und Bewertungen' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="nachteile" titel="Nachteile, und woran Sie einen seriösen Anbieter erkennen">
+            <Text>
+              24-Stunden-Pflege ist für viele Familien die beste Lösung, aber nicht für alle. Das sollten Sie vorher
+              wissen:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Ein Mensch, keine Rundumüberwachung', desc: 'Die Betreuungskraft hat Pausen und Ruhezeiten und schläft nachts. Wer eine lückenlose Aufsicht braucht, etwa bei schwerer Demenz mit Weglauftendenz, braucht zusätzlich Technik oder Angehörige.' },
+                { title: 'Platz und Privatsphäre', desc: 'Sie brauchen ein freies Zimmer, und es lebt ein weiterer Mensch im Haus. Manche Angehörige brauchen ein paar Wochen, bis sich das vertraut anfühlt.' },
+                { title: 'Wechsel', desc: 'Alle 6–8 Wochen kommt eine andere Betreuungskraft. Viele Familien lösen das mit zwei festen Kräften im Wechsel.' },
+                { title: 'Keine Fachpflege', desc: 'Spritzen, Verbände und Medikamente nach ärztlicher Anordnung bleiben beim Pflegedienst. Bei sehr hohem medizinischem Bedarf reicht eine Betreuungskraft nicht.' },
+                { title: 'Kost und Logis, Reisen, Feiertage', desc: 'Neben dem Monatspreis stellen Sie Kost und Logis, zahlen An- und Abreise mit 125 € je Strecke und an neun Feiertagen im Jahr den doppelten Tagessatz.' },
+              ]}
+            />
+            <Kasten augenbraue="Seriös oder nicht" titel="Vier Dinge, die Sie vor der Unterschrift sehen sollten">
+              <Punkte
+                punkte={[
+                  { title: 'A1-Bescheinigung für jede Betreuungskraft', desc: 'Sie belegt die Sozialversicherung im Heimatland. Ohne A1 ist der Einsatz nicht legal.' },
+                  { title: 'Preis und Betreuungskraft vor dem Vertrag', desc: 'Ein seriöser Anbieter nennt den Monatspreis vorher und zeigt, wer kommt. Bei Primundus sehen Sie beides online, bevor Sie etwas unterschreiben.' },
+                  { title: 'Klare Regeln im Vertrag', desc: 'An- und Abreise, Ersatz bei Krankheit, Feiertage und Kündigung stehen schwarz auf weiß. Unseren Mustervertrag können Sie vorab lesen.' },
+                  { title: 'Keine Vermittlungsgebühr, keine Anzahlung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist, und können täglich kündigen.' },
+                ]}
+              />
+            </Kasten>
+            <MehrDazu
+              label="Mehr dazu:"
+              links={[
+                { href: '/nachteile-24h-pflege', text: 'Nachteile ehrlich betrachtet' },
+                { href: '/anbieter-vergleich', text: '24h-Pflege-Anbieter im Vergleich 2026' },
+                { href: '/24-stunden-pflege-wirkliche-kosten', text: 'Die ehrliche Gesamtrechnung' },
+              ]}
+            />
           </Abschnitt>
 
           <Abschnitt id="vorteile" titel="24-Stunden-Pflege oder Pflegeheim?">
@@ -258,6 +440,7 @@ export default function VierUndZwanzigStundenPflege() {
               Stand 1. Juli 2026). Bei der 24-Stunden-Pflege tragen Sie bei Pflegegrad 3 ab ca. 923 € im Monat selbst,
               und Ihr Angehöriger bleibt in seiner vertrauten Umgebung.
             </Text>
+            <HeimVsZuhause />
             <Tabelle
               kopf={['', '24-Stunden-Pflege', 'Pflegeheim']}
               zeilen={[

@@ -83,7 +83,7 @@ const schemaMarkup = [
         name: 'Wie schnell kann eine Betreuungskraft im Taunus starten?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf, etwa nach einem Sturz oder Klinikaufenthalt, oft auch schneller.',
+          text: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.',
         },
       },
     ],
@@ -93,7 +93,7 @@ const schemaMarkup = [
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Hochtaunuskreis?', a: 'Ab 2.150 Euro im Monat — und damit oft weniger als ein Heimplatz im Taunus, wo die Eigenanteile zu den höchsten in Hessen gehören. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.' },
   { q: 'Welche Orte im Hochtaunuskreis deckt Primundus ab?', a: 'Den ganzen Kreis: Bad Homburg, Oberursel, Königstein, Kronberg, Friedrichsdorf, Steinbach, Schmitten, Usingen, Neu-Anspach, Wehrheim und alle Gemeinden im Usinger Land.' },
-  { q: 'Wie schnell kann eine Betreuungskraft im Taunus starten?', a: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf, etwa nach einem Sturz oder Klinikaufenthalt, oft auch schneller.' },
+  { q: 'Wie schnell kann eine Betreuungskraft im Taunus starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
 ]
 
 export default function Page() {

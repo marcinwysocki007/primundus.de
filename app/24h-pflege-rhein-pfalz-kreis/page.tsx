@@ -83,7 +83,7 @@ const schemaMarkup = [
         name: 'Wie schnell kann die Betreuung in der Vorderpfalz starten?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf oft auch schneller.',
+          text: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.',
         },
       },
     ],
@@ -93,7 +93,7 @@ const schemaMarkup = [
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Rhein-Pfalz-Kreis?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.' },
   { q: 'Welche Orte im Rhein-Pfalz-Kreis deckt Primundus ab?', a: 'Den ganzen Kreis rund um Ludwigshafen: Schifferstadt, Limburgerhof, Mutterstadt, Maxdorf, Böhl-Iggelheim, Dudenhofen, Römerberg, Altrip und alle weiteren Gemeinden der Vorderpfalz.' },
-  { q: 'Wie schnell kann die Betreuung in der Vorderpfalz starten?', a: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf oft auch schneller.' },
+  { q: 'Wie schnell kann die Betreuung in der Vorderpfalz starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
 ]
 
 export default function Page() {

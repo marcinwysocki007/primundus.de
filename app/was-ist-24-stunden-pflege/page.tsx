@@ -119,7 +119,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Wie schnell kann eine 24h-Betreuung beginnen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist eine Anreise in 3 Tagen möglich: Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag — täglich kündbar, taggenaue Abrechnung.' },
       },
       {
         '@type': 'Question',
@@ -225,7 +225,7 @@ export default function WasIst24StundenPflege() {
 
           <Abschnitt id="kosten" titel="Was kostet 24-Stunden-Pflege — und was zahlt die Kasse 2026?">
             <Text>
-              24-Stunden-Pflege kostet monatlich 2.500 bis 4.000 Euro — je nach Pflegebedarf, Qualifikation der Betreuungskraft und Anbieter. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.364 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
+              24-Stunden-Pflege kostet bei Primundus ab 2.150 Euro im Monat — je nach Pflegesituation und Deutschkenntnissen der Betreuungskraft. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.364 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
             </Text>
             <MehrDazu
               label="Vollständiger Kostenvergleich:"
@@ -297,7 +297,7 @@ export default function WasIst24StundenPflege() {
                 { q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?', a: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die frühere Verhinderungspflege und Kurzzeitpflege zusammen. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
                 { q: 'Ist 24-Stunden-Pflege legal?', a: 'Ja — über eine seriöse Agentur im Entsendemodell ist 24h-Pflege absolut legal. Die A1-Bescheinigung belegt die Sozialversicherung im Heimatland. Scheinselbstständigkeit ist dagegen strafbar und kann zu hohen Nachzahlungen von Sozialabgaben führen.' },
                 { q: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?', a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Betreuung rund um die Uhr und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
-                { q: 'Wie schnell kann eine 24h-Betreuung beginnen?', a: 'Mit Primundus ist die Betreuungskraft typischerweise innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch vor Ort — täglich kündbar, taggenaue Abrechnung.' },
+                { q: 'Wie schnell kann eine 24h-Betreuung beginnen?', a: 'Mit Primundus ist eine Anreise in 3 Tagen möglich: Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag — täglich kündbar, taggenaue Abrechnung.' },
                 { q: 'Für welche Pflegesituationen ist 24h-Pflege geeignet?', a: '24h-Pflege ist geeignet ab Pflegegrad 2 — für Demenz, Alzheimer, nach Schlaganfall oder Operation, bei Parkinson, MS, Herzinsuffizienz, eingeschränkter Mobilität und Sturzrisiko. Sie funktioniert überall dort, wo kontinuierliche Präsenz wichtiger ist als stationäre medizinische Versorgung.' },
                 { q: 'Was ist der Unterschied zwischen Verhinderungspflege und Entlastungsbudget?', a: 'Seit Juli 2025 gibt es kein getrenntes Budget mehr für Verhinderungspflege und Kurzzeitpflege — beide wurden im gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengeführt. Der monatliche Entlastungsbetrag von 131 Euro ist davon getrennt und kann zusätzlich für anerkannte Betreuungsleistungen eingesetzt werden.' },
               ]}

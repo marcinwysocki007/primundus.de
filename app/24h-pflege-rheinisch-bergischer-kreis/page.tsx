@@ -83,7 +83,7 @@ const schemaMarkup = [
         name: 'Wie schnell kann die Betreuung im Bergischen starten?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf, etwa nach einem Klinikaufenthalt, oft auch schneller.',
+          text: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.',
         },
       },
     ],
@@ -93,7 +93,7 @@ const schemaMarkup = [
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Rheinisch-Bergischen Kreis?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen — in der Regel weniger als ein Heimplatz im Rheinland.' },
   { q: 'Welche Orte im Rheinisch-Bergischen Kreis deckt Primundus ab?', a: 'Den ganzen Kreis: Bergisch Gladbach, Wermelskirchen, Overath, Rösrath, Leichlingen, Burscheid, Odenthal und Kürten — von der Kölner Stadtgrenze bis ins Bergische Land.' },
-  { q: 'Wie schnell kann die Betreuung im Bergischen starten?', a: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf, etwa nach einem Klinikaufenthalt, oft auch schneller.' },
+  { q: 'Wie schnell kann die Betreuung im Bergischen starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
 ]
 
 export default function Page() {

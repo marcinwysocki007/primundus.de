@@ -83,7 +83,7 @@ const schemaMarkup = [
         name: 'Wie schnell kann die Betreuung in Alzey-Worms starten?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf, etwa nach einem Krankenhausaufenthalt, oft auch schneller.',
+          text: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.',
         },
       },
     ],
@@ -93,7 +93,7 @@ const schemaMarkup = [
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Kreis Alzey-Worms?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen — deutlich weniger als ein Heimplatz in Rheinhessen.' },
   { q: 'In welchen Orten des Kreises Alzey-Worms ist Primundus tätig?', a: 'Im gesamten Landkreis — unter anderem in Alzey, Wörrstadt, Osthofen, Westhofen, Gau-Odernheim, Wonsheim und allen umliegenden Gemeinden. Auch Worms und Mainz sind über eigene Seiten abgedeckt.' },
-  { q: 'Wie schnell kann die Betreuung in Alzey-Worms starten?', a: 'In der Regel innerhalb von 4 bis 7 Tagen nach dem ersten Gespräch — bei dringendem Bedarf, etwa nach einem Krankenhausaufenthalt, oft auch schneller.' },
+  { q: 'Wie schnell kann die Betreuung in Alzey-Worms starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
 ]
 
 export default function Page() {
