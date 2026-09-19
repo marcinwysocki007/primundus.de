@@ -18,7 +18,7 @@ import { ORG_ID } from '@/lib/schema'
 // Ersatzkraft nach Vertrag § 1 („schnellstmöglich, in der Regel innerhalb von 3 Tagen", Krankheitstage ohne
 // Honorar nach § 4), Ablauf in drei Schritten wie auf der Startseite und im Rechner.
 
-const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '17. September 2026')
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '19. September 2026')
 const RECHNER_SEITE = 'https://kostenrechner.primundus.de/?start=1&src=apex-24-stunden-pflege'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
