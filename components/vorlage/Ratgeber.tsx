@@ -57,8 +57,9 @@ export function RatgeberKopf({
   augenbraue: string
   titel: ReactNode
   einleitung?: ReactNode
-  aktualisiert: string
-  lesezeit: string
+  /** Übersichtsseiten (Hubs) haben weder Datum noch Lesezeit: dann entfällt die Zeile */
+  aktualisiert?: string
+  lesezeit?: string
   /** Nur wenn die Seite schon eine „Auf einen Blick"-Liste hat — nie neu erfinden. */
   blick?: string[]
   /** Überschrift des Kastens, falls die Seite eine eigene hatte („Auf einen Blick — Pflegegrad 3") */
@@ -102,9 +103,11 @@ export function RatgeberKopf({
             ) : null}
             {/* Keine Marta-Zeile im Kopf (Martin 18.09.: „ohne Button blöd, aber Button wären zu viel") — sie steht in der
                 Kopfzeile und am Seitenende. Nur das Datum bleibt; die Autorin steht in den Daten für Google. */}
-            <p className="mt-7 text-[14px] leading-[1.45] text-pm-mute">
-              <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
-            </p>
+            {aktualisiert && lesezeit ? (
+              <p className="mt-7 text-[14px] leading-[1.45] text-pm-mute">
+                <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
+              </p>
+            ) : null}
           </div>
 
           {blick?.length ? (

@@ -1,5 +1,10 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf } from '@/components/vorlage/Ratgeber'
+import { ArticleTOC } from '@/components/ArticleTOC'
+
+// Übersicht in der Seitenvorlage (19.09.2026, scripts/codemods/17-uebersichten.py; Muster /finanzierung). Linklisten
+// unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
   title: 'Organisation der 24h-Pflege — so geht es 2026 | Primundus',
@@ -28,137 +33,101 @@ const schemaMarkup = JSON.stringify([
   },
 ])
 
+const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+const l = (href: string, text: string) => <a href={href} className={LINK}>{text}</a>
+
+const SECTIONS = [
+  { id: 'pflegekraft-finden-und-auswaehlen', title: 'Pflegekraft finden & auswählen' },
+  { id: 'rechtliches-und-vertraege', title: 'Rechtliches & Verträge' },
+  { id: 'wechsel-und-laufende-betreuung', title: 'Wechsel & laufende Betreuung' },
+  { id: 'koordination-und-notfall', title: 'Koordination & Notfall' },
+  { id: 'hilfsmittel-und-wohnen', title: 'Hilfsmittel & Wohnen' },
+]
+
 export default function Organisation() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          {/* Breadcrumb */}
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-body">Organisation</span>
-          </nav>
-
-          {/* Header */}
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            RATGEBER
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Organisation der 24h-Pflege
-          </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Von der Suche nach der richtigen Pflegekraft bis zum laufenden Betrieb — alle Schritte und Ratgeber zur praktischen Organisation der 24h-Pflege.
-          </p>
-
-          {/* Pflegekraft finden */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Pflegekraft finden & auswählen</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Pflegekraft finden — worauf achten?', href: '/pflegekraft-finden', desc: 'Deutschkenntnisse, Erfahrung, Persönlichkeit — die wichtigsten Auswahlkriterien.' },
-              { titel: 'Checkliste Pflegekraft einstellen', href: '/checkliste-pflegekraft-einstellen', desc: 'Alle Schritte von der Suche bis zum ersten Einsatztag auf einen Blick.' },
-              { titel: 'Pflegekraft aus Polen', href: '/pflegekraft-aus-polen', desc: 'Das Entsendemodell aus Polen erklärt — rechtlicher Rahmen und Ablauf.' },
-              { titel: 'Pflegekraft aus Bulgarien', href: '/pflegekraft-aus-bulgarien', desc: 'EU-Entsendung aus Bulgarien — rechtssicher und transparent.' },
-              { titel: 'Pflegekraft aus Rumänien', href: '/pflegekraft-aus-rumaenien', desc: 'Rumänische Betreuungskräfte — Erfahrung, Leistung und Kosten.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Rechtliches & Verträge */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Rechtliches & Verträge</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Pflegekraft legal beschäftigen', href: '/pflegekraft-legal-beschaeftigen', desc: 'Die 3 Modelle: Entsendemodell, Direktanstellung, Selbstständigkeit — mit allen Risiken.' },
-              { titel: 'Pflegevertrag aufsetzen', href: '/pflegevertrag-aufsetzen', desc: 'Was in jeden Pflegevertrag gehört — Leistungsumfang, Vergütung, Kündigung.' },
-              { titel: 'Pflegevertrag Generator', href: '/pflegevertrag-generator', desc: 'Rechtssicheren Pflegevertrag in wenigen Minuten online erstellen.' },
-              { titel: 'Pflegevertrag Muster & Vorlage', href: '/pflegevertrag-muster-vorlage', desc: 'Musterpflegevertrag als Vorlage zum Download.' },
-              { titel: 'Scheinselbstständigkeit vermeiden', href: '/scheinselbststaendigkeit-pflege-vermeiden', desc: 'Warum Scheinselbstständigkeit ein hohes Risiko ist und wie man es vermeidet.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Wechsel & laufende Betreuung */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Wechsel & laufende Betreuung</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Pflegekraft wechseln', href: '/pflegekraft-wechseln', desc: 'Wann ein Wechsel sinnvoll ist, wie er reibungslos läuft und was zu beachten ist.' },
-              { titel: 'Pflegekraft kündigen', href: '/pflegekraft-kuendigen', desc: 'Kündigungsfristen, Formulierungen und der richtige Weg — für alle Modelle.' },
-              { titel: 'Checkliste Pflegeübernahme', href: '/checkliste-pflegeuebernahme', desc: 'Alles was die neue Pflegekraft wissen muss — strukturierte Übergabe.' },
-              { titel: 'Pflegedokumentation führen', href: '/pflegedokumentation-fuehren', desc: 'Was dokumentiert werden muss und wie man es sinnvoll organisiert.' },
-              { titel: 'Pflegeberater finden', href: '/pflegeberater-finden', desc: 'Wann ein unabhängiger Pflegeberater hilft und wie man den richtigen findet.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Koordination & Notfall */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Koordination & Notfall</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: '24h-Pflege organisieren — Schritt für Schritt', href: '/24h-pflege-organisieren', desc: 'Von der ersten Überlegung bis zur laufenden Betreuung — vollständiger Ablauf.' },
-              { titel: 'Pflege aus der Ferne koordinieren', href: '/pflege-aus-der-ferne-koordinieren', desc: 'Wenn Kinder nicht vor Ort sind — wie man Pflege zuverlässig aus der Distanz organisiert.' },
-              { titel: 'Erste Hilfe bei Pflegenotfall', href: '/erste-hilfe-bei-pflegenotfall', desc: 'Was zu tun ist wenn die Pflege plötzlich wegfällt oder ein Notfall eintritt.' },
-              { titel: 'Notfallplan Pflege erstellen', href: '/notfallplan-pflege', desc: 'Wer wird informiert, wer übernimmt — Notfallplan für Pflegehaushalte.' },
-              { titel: 'Pflegeberater finden', href: '/pflegeberater-finden', desc: 'Wann ein unabhängiger Pflegeberater hilft und wie man den richtigen findet.' },
-              { titel: 'Pflegestützpunkte in Deutschland', href: '/pflegestuetzpunkte-deutschland', desc: 'Kostenlose Beratung vor Ort — wo Pflegestützpunkte sind und was sie leisten.' },
-              { titel: 'Betreuung nach dem Krankenhausaufenthalt', href: '/24-stunden-pflege-krankenhausaufenthalt', desc: 'Entlassung steht an und niemand kann da sein? So wird die Betreuung schnell organisiert.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Hilfsmittel & Wohnen */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Hilfsmittel & Wohnen</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Pflegehilfsmittel organisieren', href: '/pflegehilfsmittel-organisieren', desc: 'Welche Hilfsmittel im Pflegealltag sinnvoll sind und wie man sie bekommt.' },
-              { titel: 'Wohnraumanpassung planen', href: '/wohnraumanpassung-planen', desc: 'Welche Umbaumaßnahmen sinnvoll sind und wie man sie Schritt für Schritt umsetzt.' },
-              { titel: 'Rollstuhl & Hilfsmittel beantragen', href: '/hilfsmittel-rollstuhl-beantragen', desc: 'Rollstuhl, Pflegebett, Gehilfen — Antrag, Fristen und was die Kasse zahlt.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Ablauf bei Primundus */}
-          <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-12">
-            <div>
-              <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Primundus Ablauf</p>
-              <p className="text-[15px] font-semibold text-pm-ink">Anreise in 3 Tagen möglich</p>
-              <p className="text-[13px] text-pm-body mt-0.5">Transparent, rechtssicher, täglich kündbar</p>
-            </div>
-            <a
-              href="/ablauf"
-              className="shrink-0 inline-flex items-center gap-2 text-[14px] font-semibold text-pm-taupe hover:text-[#7D6848] transition-colors whitespace-nowrap"
-            >
-              Zum Ablauf →
-            </a>
-          </div>
-
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Ratgeber', href: '/ratgeber' },
+            { label: 'Organisation' },
+          ]}
+          augenbraue="Ratgeber"
+          titel="Organisation der 24h-Pflege"
+          einleitung="Von der Suche nach der passenden Betreuungskraft bis zum laufenden Einsatz: alle Ratgeber zur Organisation der 24-Stunden-Pflege."
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="pflegekraft-finden-und-auswaehlen" titel="Pflegekraft finden & auswählen">
+            <Punkte
+              punkte={[
+                { title: l('/pflegekraft-finden', 'Pflegekraft finden — worauf achten?'), desc: 'Deutschkenntnisse, Erfahrung, Persönlichkeit — die wichtigsten Auswahlkriterien.' },
+                { title: l('/checkliste-pflegekraft-einstellen', 'Checkliste Pflegekraft einstellen'), desc: 'Alle Schritte von der Suche bis zum ersten Einsatztag auf einen Blick.' },
+                { title: l('/pflegekraft-aus-polen', 'Pflegekraft aus Polen'), desc: 'Das Entsendemodell aus Polen erklärt — rechtlicher Rahmen und Ablauf.' },
+                { title: l('/pflegekraft-aus-bulgarien', 'Pflegekraft aus Bulgarien'), desc: 'Was bei Betreuungskräften aus Bulgarien rechtlich gilt.' },
+                { title: l('/pflegekraft-aus-rumaenien', 'Pflegekraft aus Rumänien'), desc: 'Was bei Betreuungskräften aus Rumänien rechtlich gilt.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="rechtliches-und-vertraege" titel="Rechtliches & Verträge">
+            <Punkte
+              punkte={[
+                { title: l('/pflegekraft-legal-beschaeftigen', 'Pflegekraft legal beschäftigen'), desc: 'Die 3 Modelle: Entsendemodell, Direktanstellung, Selbstständigkeit — mit allen Risiken.' },
+                { title: l('/pflegevertrag-aufsetzen', 'Pflegevertrag aufsetzen'), desc: 'Was in jeden Pflegevertrag gehört — Leistungsumfang, Vergütung, Kündigung.' },
+                { title: l('/pflegevertrag-generator', 'Pflegevertrag Generator'), desc: 'Rechtssicheren Pflegevertrag in wenigen Minuten online erstellen.' },
+                { title: l('/pflegevertrag-muster-vorlage', 'Pflegevertrag Muster & Vorlage'), desc: 'Musterpflegevertrag als Vorlage zum Download.' },
+                { title: l('/scheinselbststaendigkeit-pflege-vermeiden', 'Scheinselbstständigkeit vermeiden'), desc: 'Warum Scheinselbstständigkeit ein hohes Risiko ist und wie man es vermeidet.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="wechsel-und-laufende-betreuung" titel="Wechsel & laufende Betreuung">
+            <Punkte
+              punkte={[
+                { title: l('/pflegekraft-wechseln', 'Pflegekraft wechseln'), desc: 'Wann ein Wechsel sinnvoll ist, wie er reibungslos läuft und was zu beachten ist.' },
+                { title: l('/pflegekraft-kuendigen', 'Pflegekraft kündigen'), desc: 'Kündigungsfristen, Formulierungen und der richtige Weg — für alle Modelle.' },
+                { title: l('/checkliste-pflegeuebernahme', 'Checkliste Pflegeübernahme'), desc: 'Alles was die neue Pflegekraft wissen muss — strukturierte Übergabe.' },
+                { title: l('/pflegedokumentation-fuehren', 'Pflegedokumentation führen'), desc: 'Was dokumentiert werden muss und wie man es sinnvoll organisiert.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="koordination-und-notfall" titel="Koordination & Notfall">
+            <Punkte
+              punkte={[
+                { title: l('/24h-pflege-organisieren', '24h-Pflege organisieren — Schritt für Schritt'), desc: 'Von der ersten Überlegung bis zur laufenden Betreuung — vollständiger Ablauf.' },
+                { title: l('/pflege-aus-der-ferne-koordinieren', 'Pflege aus der Ferne koordinieren'), desc: 'Wenn Kinder nicht vor Ort sind — wie man Pflege zuverlässig aus der Distanz organisiert.' },
+                { title: l('/erste-hilfe-bei-pflegenotfall', 'Erste Hilfe bei Pflegenotfall'), desc: 'Was zu tun ist wenn die Pflege plötzlich wegfällt oder ein Notfall eintritt.' },
+                { title: l('/notfallplan-pflege', 'Notfallplan Pflege erstellen'), desc: 'Wer wird informiert, wer übernimmt — Notfallplan für Pflegehaushalte.' },
+                { title: l('/pflegeberater-finden', 'Pflegeberater finden'), desc: 'Wann ein unabhängiger Pflegeberater hilft und wie man den richtigen findet.' },
+                { title: l('/pflegestuetzpunkte-deutschland', 'Pflegestützpunkte in Deutschland'), desc: 'Kostenlose Beratung vor Ort — wo Pflegestützpunkte sind und was sie leisten.' },
+                { title: l('/24-stunden-pflege-krankenhausaufenthalt', 'Betreuung nach dem Krankenhausaufenthalt'), desc: 'Entlassung steht an und niemand kann da sein? So wird die Betreuung schnell organisiert.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="hilfsmittel-und-wohnen" titel="Hilfsmittel & Wohnen">
+            <Punkte
+              punkte={[
+                { title: l('/pflegehilfsmittel-organisieren', 'Pflegehilfsmittel organisieren'), desc: 'Welche Hilfsmittel im Pflegealltag sinnvoll sind und wie man sie bekommt.' },
+                { title: l('/wohnraumanpassung-planen', 'Wohnraumanpassung planen'), desc: 'Welche Umbaumaßnahmen sinnvoll sind und wie man sie Schritt für Schritt umsetzt.' },
+                { title: l('/hilfsmittel-rollstuhl-beantragen', 'Rollstuhl & Hilfsmittel beantragen'), desc: 'Rollstuhl, Pflegebett, Gehilfen — Antrag, Fristen und was die Kasse zahlt.' },
+              ]}
+            />
+            <MehrDazu label="Schritt für Schritt:" links={[{ href: '/ablauf', text: 'So läuft die 24-Stunden-Pflege bei Primundus ab' }]} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

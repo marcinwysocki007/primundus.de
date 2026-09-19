@@ -1,5 +1,10 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Punkte, RatgeberKopf, RatgeberRumpf } from '@/components/vorlage/Ratgeber'
+import { ArticleTOC } from '@/components/ArticleTOC'
+
+// Übersicht in der Seitenvorlage (19.09.2026, scripts/codemods/17-uebersichten.py; Muster /finanzierung). Linklisten
+// unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
   title: 'Alltag & Angehörige — Ratgeber für pflegende Familien',
@@ -28,104 +33,87 @@ const schemaMarkup = JSON.stringify([
   },
 ])
 
+const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+const l = (href: string, text: string) => <a href={href} className={LINK}>{text}</a>
+
+const SECTIONS = [
+  { id: 'fuer-pflegende-angehoerige', title: 'Für pflegende Angehörige' },
+  { id: 'vorsorge-und-rechtliches', title: 'Vorsorge & Rechtliches' },
+  { id: 'wohnen-und-sicherheit', title: 'Wohnen & Sicherheit' },
+  { id: 'beschaeftigung-und-wohlbefinden', title: 'Beschäftigung & Wohlbefinden' },
+]
+
 export default function Alltag() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          {/* Breadcrumb */}
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-body">Alltag & Angehörige</span>
-          </nav>
-
-          {/* Header */}
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            RATGEBER
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Alltag & Angehörige
-          </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Pflege betrifft den gesamten Alltag — der Pflegebedürftigen und der pflegenden Angehörigen. Alle Ratgeber zu den Themen die wirklich zählen.
-          </p>
-
-          {/* Für pflegende Angehörige */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Für pflegende Angehörige</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Pflegende Angehörige unterstützen', href: '/pflegende-angehoerige-unterstuetzen', desc: 'Was pflegende Angehörige brauchen — Entlastung, Anerkennung und praktische Hilfen.' },
-              { titel: 'Burnout pflegender Angehöriger', href: '/burnout-pflegende-angehoerige', desc: 'Warnsignale erkennen, Grenzen setzen und rechtzeitig Hilfe holen.' },
-              { titel: 'Pflege und Beruf vereinbaren', href: '/pflege-und-beruf-vereinbaren', desc: 'Freistellungsrechte, Pflegeunterstützungsgeld, praktische Lösungen.' },
-              { titel: 'Wenn Eltern Pflege verweigern', href: '/wenn-eltern-pflege-verweigern', desc: 'Wie man mit Widerstand umgeht und trotzdem die Versorgung sicherstellt.' },
-              { titel: 'Tagesstruktur bei Demenz', href: '/tagesstruktur-demenz', desc: 'Feste Routinen als wirksamstes Mittel — Muster-Tagesplan.' },
-              { titel: 'Kommunikation mit Demenzkranken', href: '/kommunikation-mit-demenzkranken', desc: '5 Grundprinzipien und schwierige Situationen meistern.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Vorsorge & Rechtliches */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Vorsorge & Rechtliches</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Vorsorgevollmacht erstellen', href: '/vorsorgevollmacht-erstellen', desc: 'Was eine Vorsorgevollmacht regelt, wie man sie erstellt und worauf zu achten ist.' },
-              { titel: 'Patientenverfügung aufsetzen', href: '/patientenverfuegung-aufsetzen', desc: 'Was hineingehört, wie man sie gültig erstellt — Anleitung und Musterschreiben.' },
-              { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie.' },
-              { titel: 'Wann brauche ich 24h-Pflege?', href: '/wann-brauche-ich-24h-pflege', desc: '10 Warnsignale und der ehrliche Selbsttest.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Wohnen & Sicherheit */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Wohnen & Sicherheit</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Barrierefreies Zuhause gestalten', href: '/barrierefreies-zuhause-gestalten', desc: 'Wohnraumanpassung, Fördermittel bis 4.180 €/Maßnahme, was wirklich hilft.' },
-              { titel: 'Hausnotruf für Senioren', href: '/hausnotruf-senioren', desc: 'Kosten, Kassenzuschuss und welche Systeme für wen geeignet sind.' },
-              { titel: 'Sturzprävention Senioren', href: '/sturzpraevention-senioren', desc: 'Stürze sind die häufigste Unfallursache im Alter — wie man sie verhindert.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Beschäftigung & Wohlbefinden */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Beschäftigung & Wohlbefinden</h2>
-          <div className="grid gap-3 mb-12">
-            {[
-              { titel: 'Medikamente für Senioren verwalten', href: '/medikamente-senioren-verwalten', desc: 'Einnahmezeiten, Wechselwirkungen, Dosierungshilfen — sicher im Pflegealltag.' },
-              { titel: 'Beschäftigung für Senioren zuhause', href: '/beschaeftigung-senioren-zuhause', desc: 'Sinnvolle Aktivitäten die Freude machen und kognitiv fordern.' },
-              { titel: 'Ernährung pflegebedürftiger Senioren', href: '/ernaehrung-pflegebeduerftige-senioren', desc: 'Besondere Ernährungsbedürfnisse und praktische Lösungen im Alltag.' },
-              { titel: 'Bewegung für Senioren zuhause', href: '/bewegung-senioren-zuhause', desc: 'Gezielte Übungen die im Wohnzimmer möglich sind — für alle Mobilitätslevel.' },
-              { titel: 'Einsamkeit im Alter bekämpfen', href: '/einsamkeit-senioren-bekaempfen', desc: 'Soziale Kontakte fördern und Isolation verhindern.' },
-              { titel: 'Schlafprobleme bei Senioren', href: '/schlafprobleme-senioren-loesen', desc: 'Ursachen und wirksame Maßnahmen für besseren Schlaf im Alter.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Ratgeber', href: '/ratgeber' },
+            { label: 'Alltag & Angehörige' },
+          ]}
+          augenbraue="Ratgeber"
+          titel="Alltag & Angehörige"
+          einleitung="Pflege betrifft den ganzen Alltag, den der Pflegebedürftigen und den ihrer Angehörigen. Hier finden Sie alle Ratgeber dazu: Entlastung für Angehörige, Vorsorge, Wohnen und Sicherheit, Beschäftigung."
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="fuer-pflegende-angehoerige" titel="Für pflegende Angehörige">
+            <Punkte
+              punkte={[
+                { title: l('/pflegende-angehoerige-unterstuetzen', 'Pflegende Angehörige unterstützen'), desc: 'Was pflegende Angehörige brauchen — Entlastung, Anerkennung und praktische Hilfen.' },
+                { title: l('/burnout-pflegende-angehoerige', 'Burnout pflegender Angehöriger'), desc: 'Warnsignale erkennen, Grenzen setzen und rechtzeitig Hilfe holen.' },
+                { title: l('/pflege-und-beruf-vereinbaren', 'Pflege und Beruf vereinbaren'), desc: 'Freistellungsrechte, Pflegeunterstützungsgeld, praktische Lösungen.' },
+                { title: l('/wenn-eltern-pflege-verweigern', 'Wenn Eltern Pflege verweigern'), desc: 'Wie man mit Widerstand umgeht und trotzdem die Versorgung sicherstellt.' },
+                { title: l('/tagesstruktur-demenz', 'Tagesstruktur bei Demenz'), desc: 'Feste Routinen als wirksamstes Mittel — Muster-Tagesplan.' },
+                { title: l('/kommunikation-mit-demenzkranken', 'Kommunikation mit Demenzkranken'), desc: '5 Grundprinzipien und schwierige Situationen meistern.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="vorsorge-und-rechtliches" titel="Vorsorge & Rechtliches">
+            <Punkte
+              punkte={[
+                { title: l('/vorsorgevollmacht-erstellen', 'Vorsorgevollmacht erstellen'), desc: 'Was eine Vorsorgevollmacht regelt, wie man sie erstellt und worauf zu achten ist.' },
+                { title: l('/patientenverfuegung-aufsetzen', 'Patientenverfügung aufsetzen'), desc: 'Was hineingehört, wie man sie gültig erstellt — Anleitung und Musterschreiben.' },
+                { title: l('/pflege-steuerlich-absetzen', 'Pflege steuerlich absetzen'), desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie.' },
+                { title: l('/wann-brauche-ich-24h-pflege', 'Wann brauche ich 24h-Pflege?'), desc: '10 Warnsignale und der ehrliche Selbsttest.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="wohnen-und-sicherheit" titel="Wohnen & Sicherheit">
+            <Punkte
+              punkte={[
+                { title: l('/barrierefreies-zuhause-gestalten', 'Barrierefreies Zuhause gestalten'), desc: 'Wohnraumanpassung, Fördermittel bis 4.180 €/Maßnahme, was wirklich hilft.' },
+                { title: l('/hausnotruf-senioren', 'Hausnotruf für Senioren'), desc: 'Kosten, Kassenzuschuss und welche Systeme für wen geeignet sind.' },
+                { title: l('/sturzpraevention-senioren', 'Sturzprävention Senioren'), desc: 'Stürze sind die häufigste Unfallursache im Alter — wie man sie verhindert.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="beschaeftigung-und-wohlbefinden" titel="Beschäftigung & Wohlbefinden">
+            <Punkte
+              punkte={[
+                { title: l('/medikamente-senioren-verwalten', 'Medikamente für Senioren verwalten'), desc: 'Einnahmezeiten, Wechselwirkungen, Dosierungshilfen — sicher im Pflegealltag.' },
+                { title: l('/beschaeftigung-senioren-zuhause', 'Beschäftigung für Senioren zuhause'), desc: 'Sinnvolle Aktivitäten die Freude machen und kognitiv fordern.' },
+                { title: l('/ernaehrung-pflegebeduerftige-senioren', 'Ernährung pflegebedürftiger Senioren'), desc: 'Besondere Ernährungsbedürfnisse und praktische Lösungen im Alltag.' },
+                { title: l('/bewegung-senioren-zuhause', 'Bewegung für Senioren zuhause'), desc: 'Gezielte Übungen die im Wohnzimmer möglich sind — für alle Mobilitätslevel.' },
+                { title: l('/einsamkeit-senioren-bekaempfen', 'Einsamkeit im Alter bekämpfen'), desc: 'Soziale Kontakte fördern und Isolation verhindern.' },
+                { title: l('/schlafprobleme-senioren-loesen', 'Schlafprobleme bei Senioren'), desc: 'Ursachen und wirksame Maßnahmen für besseren Schlaf im Alter.' },
+              ]}
+            />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

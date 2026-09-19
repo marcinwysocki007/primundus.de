@@ -1,5 +1,11 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Punkte, RatgeberKopf, RatgeberRumpf, Text } from '@/components/vorlage/Ratgeber'
+import { MartaBand } from '@/components/vertrauen/Vertrauen'
+import { ArticleTOC } from '@/components/ArticleTOC'
+
+// Übersicht in der Seitenvorlage (19.09.2026, scripts/codemods/17-uebersichten.py; Muster /finanzierung). Linklisten
+// unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
   title: 'Krankheiten & Pflege zuhause — Ratgeber für alle Diagnosen',
@@ -28,116 +34,99 @@ const schemaMarkup = JSON.stringify([
   },
 ])
 
+const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+const l = (href: string, text: string) => <a href={href} className={LINK}>{text}</a>
+
+const SECTIONS = [
+  { id: 'demenzerkrankungen', title: 'Demenzerkrankungen' },
+  { id: 'neurologische-erkrankungen', title: 'Neurologische Erkrankungen' },
+  { id: 'herz-kreislauf-und-weitere-erkrankungen', title: 'Herz-Kreislauf & weitere Erkrankungen' },
+  { id: 'palliativ-und-intensivpflege', title: 'Palliativ- & Intensivpflege' },
+  { id: 'beratung', title: 'Beratung' },
+]
+
 export default function Krankheiten() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          {/* Breadcrumb */}
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-body">Pflege bei Krankheiten</span>
-          </nav>
-
-          {/* Header */}
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            RATGEBER
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflege bei Krankheiten
-          </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Jede Erkrankung stellt andere Anforderungen an die häusliche Pflege. Alle krankheitsspezifischen Ratgeber — direkt auf Ihre Situation zugeschnitten.
-          </p>
-
-          {/* Demenzerkrankungen */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Demenzerkrankungen</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Demenz — Pflege zuhause', href: '/demenz-pflege-zuhause', desc: 'Was möglich ist, wie man den Alltag gestaltet und ab wann eine 24h-Kraft nötig wird.' },
-              { titel: 'Alzheimer — Betreuung zuhause', href: '/alzheimer-betreuung-zuhause', desc: 'Alzheimer je nach Stadium pflegen — Alltagstipps, Sicherheit und 24h-Betreuung.' },
-              { titel: 'Pflegegrad bei Demenz', href: '/pflegegrad-bei-demenz', desc: 'Welcher Pflegegrad bei welchem Stadium — und wie man die Begutachtung vorbereitet.' },
-              { titel: 'Tagesstruktur bei Demenz', href: '/tagesstruktur-demenz', desc: 'Feste Routinen als wichtigstes Werkzeug — Muster-Tagesplan und konkrete Tipps.' },
-              { titel: 'Kommunikation mit Demenzkranken', href: '/kommunikation-mit-demenzkranken', desc: '5 Grundprinzipien und wie man schwierige Situationen meistert.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Neurologische Erkrankungen */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Neurologische Erkrankungen</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Parkinson — Pflege zuhause', href: '/parkinson-pflege-zuhause', desc: 'Motorische Einschränkungen, Medikamentengabe, Alltagssicherheit bei Parkinson.' },
-              { titel: 'Schlaganfall — Pflege zuhause', href: '/schlaganfall-pflege-zuhause', desc: 'Was nach dem Schlaganfall zu Hause möglich ist und wie die Rehabilitation unterstützt wird.' },
-              { titel: 'Multiple Sklerose — Pflege', href: '/multiple-sklerose-pflege', desc: 'MS-Pflege je nach Verlaufstyp — Fatigue, Wärmeempfindlichkeit, Spastiken meistern.' },
-              { titel: 'Pflegegrad nach Schlaganfall', href: '/pflegegrad-nach-schlaganfall', desc: 'Welcher Pflegegrad nach dem Schlaganfall — Begutachtung und Leistungen.' },
-              { titel: 'Pflegegrad bei Parkinson', href: '/pflegegrad-bei-parkinson', desc: 'Einstufung und Kassenzuschüsse bei Parkinson-Erkrankung.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Herz-Kreislauf & weitere Erkrankungen */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Herz-Kreislauf & weitere Erkrankungen</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Herzinsuffizienz — Pflege', href: '/herzinsuffizienz-pflege', desc: 'Tägliche Gewichtskontrolle, Medikamentengabe, Notfallzeichen erkennen.' },
-              { titel: 'COPD — Pflege zuhause', href: '/copd-pflege-zuhause', desc: 'Kräfte einteilen, Atemnot ruhig begleiten, Infekte fernhalten — und wann der Arzt gerufen werden muss' },
-              { titel: 'Diabetes — Pflege Senioren', href: '/diabetes-pflege-senioren', desc: 'Blutzuckerkontrolle, Ernährung, Fußpflege und Hypoglykämie im Pflegealltag.' },
-              { titel: 'Osteoporose — Pflege zuhause', href: '/osteoporose-pflege-zuhause', desc: 'Sturzprävention, Schmerzkontrolle, Mobilität erhalten bei Osteoporose.' },
-              { titel: 'Krebspatienten — Pflege zuhause', href: '/krebspatienten-zuhause-pflegen', desc: 'Unterstützung während Therapie und in der palliativen Phase zu Hause.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Palliativ & Intensiv */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Palliativ- & Intensivpflege</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Palliativpflege zuhause', href: '/palliativpflege-zuhause', desc: 'Würdevolle Begleitung in der letzten Lebensphase zuhause.' },
-              { titel: 'Intensivpflege zuhause', href: '/intensivpflege-zuhause', desc: 'Wann Intensivpflege zu Hause möglich ist und was dafür nötig ist.' },
-              { titel: 'Depression im Alter', href: '/depression-im-alter-pflege', desc: 'Symptome erkennen, richtig unterstützen und therapeutische Hilfe organisieren.' },
-              { titel: 'Pflege nach OP & Reha', href: '/pflege-nach-op', desc: 'Entlassung aus Krankenhaus oder Reha — wie 24h-Pflege die Versorgung zuhause sichert.' },
-              { titel: 'Sehbehinderung & Blindheit', href: '/sehbehinderung-blindheit-pflege', desc: 'Pflege bei stark eingeschränktem Sehen — Sicherheit, Hilfsmittel und Alltag.' },
-              { titel: 'Inkontinenz — Pflege zuhause', href: '/inkontinenz-pflege-zuhause', desc: 'Würdevoller Umgang mit Inkontinenz im Pflegealltag.' },
-              { titel: 'Wunden verbinden zuhause', href: '/wunden-verbinden-zuhause', desc: 'Wundversorgung im Pflegealltag — was Laien können und wann ein Pflegedienst muss.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Info box */}
-          <div className="bg-[#F2ECE4] border border-[#DDD3C2] rounded-2xl px-6 py-5 mb-12">
-            <p className="text-[14px] font-bold text-pm-taupe-ink mb-2">Ihre Erkrankung nicht gefunden?</p>
-            <p className="text-[14px] text-pm-taupe-ink leading-relaxed">
-              Marta Kapcio und das Primundus-Team beraten Sie kostenlos zu Ihrer spezifischen Pflegesituation — welche Erfahrungen eine Betreuungskraft mitbringen sollte und wie die Finanzierung aussehen könnte.
-            </p>
-            <p className="text-[14px] font-bold text-pm-taupe-ink mt-2">089 200 000 830 · Mo – So 8 – 20 Uhr</p>
-          </div>
-
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Ratgeber', href: '/ratgeber' },
+            { label: 'Pflege bei Krankheiten' },
+          ]}
+          augenbraue="Ratgeber"
+          titel="Pflege bei Krankheiten"
+          einleitung="Jede Erkrankung stellt andere Anforderungen an die Pflege zu Hause. Hier finden Sie alle Ratgeber zu einzelnen Krankheiten, von Demenz über Parkinson und Schlaganfall bis zur Palliativpflege."
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="demenzerkrankungen" titel="Demenzerkrankungen">
+            <Punkte
+              punkte={[
+                { title: l('/demenz-pflege-zuhause', 'Demenz — Pflege zuhause'), desc: 'Was möglich ist, wie man den Alltag gestaltet und ab wann eine 24h-Kraft nötig wird.' },
+                { title: l('/alzheimer-betreuung-zuhause', 'Alzheimer — Betreuung zuhause'), desc: 'Alzheimer je nach Stadium pflegen — Alltagstipps, Sicherheit und 24h-Betreuung.' },
+                { title: l('/pflegegrad-bei-demenz', 'Pflegegrad bei Demenz'), desc: 'Welcher Pflegegrad bei welchem Stadium — und wie man die Begutachtung vorbereitet.' },
+                { title: l('/tagesstruktur-demenz', 'Tagesstruktur bei Demenz'), desc: 'Feste Routinen als wichtigstes Werkzeug — Muster-Tagesplan und konkrete Tipps.' },
+                { title: l('/kommunikation-mit-demenzkranken', 'Kommunikation mit Demenzkranken'), desc: '5 Grundprinzipien und wie man schwierige Situationen meistert.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="neurologische-erkrankungen" titel="Neurologische Erkrankungen">
+            <Punkte
+              punkte={[
+                { title: l('/parkinson-pflege-zuhause', 'Parkinson — Pflege zuhause'), desc: 'Motorische Einschränkungen, Medikamentengabe, Alltagssicherheit bei Parkinson.' },
+                { title: l('/schlaganfall-pflege-zuhause', 'Schlaganfall — Pflege zuhause'), desc: 'Was nach dem Schlaganfall zu Hause möglich ist und wie die Rehabilitation unterstützt wird.' },
+                { title: l('/multiple-sklerose-pflege', 'Multiple Sklerose — Pflege'), desc: 'MS-Pflege je nach Verlaufstyp — Fatigue, Wärmeempfindlichkeit, Spastiken meistern.' },
+                { title: l('/pflegegrad-nach-schlaganfall', 'Pflegegrad nach Schlaganfall'), desc: 'Welcher Pflegegrad nach dem Schlaganfall — Begutachtung und Leistungen.' },
+                { title: l('/pflegegrad-bei-parkinson', 'Pflegegrad bei Parkinson'), desc: 'Einstufung und Kassenzuschüsse bei Parkinson-Erkrankung.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="herz-kreislauf-und-weitere-erkrankungen" titel="Herz-Kreislauf & weitere Erkrankungen">
+            <Punkte
+              punkte={[
+                { title: l('/herzinsuffizienz-pflege', 'Herzinsuffizienz — Pflege'), desc: 'Tägliche Gewichtskontrolle, Medikamentengabe, Notfallzeichen erkennen.' },
+                { title: l('/copd-pflege-zuhause', 'COPD — Pflege zuhause'), desc: 'Kräfte einteilen, Atemnot ruhig begleiten, Infekte fernhalten — und wann der Arzt gerufen werden muss' },
+                { title: l('/diabetes-pflege-senioren', 'Diabetes — Pflege Senioren'), desc: 'Blutzuckerkontrolle, Ernährung, Fußpflege und Hypoglykämie im Pflegealltag.' },
+                { title: l('/osteoporose-pflege-zuhause', 'Osteoporose — Pflege zuhause'), desc: 'Sturzprävention, Schmerzkontrolle, Mobilität erhalten bei Osteoporose.' },
+                { title: l('/krebspatienten-zuhause-pflegen', 'Krebspatienten — Pflege zuhause'), desc: 'Unterstützung während Therapie und in der palliativen Phase zu Hause.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="palliativ-und-intensivpflege" titel="Palliativ- & Intensivpflege">
+            <Punkte
+              punkte={[
+                { title: l('/palliativpflege-zuhause', 'Palliativpflege zuhause'), desc: 'Würdevolle Begleitung in der letzten Lebensphase zuhause.' },
+                { title: l('/intensivpflege-zuhause', 'Intensivpflege zuhause'), desc: 'Wann Intensivpflege zu Hause möglich ist und was dafür nötig ist.' },
+                { title: l('/depression-im-alter-pflege', 'Depression im Alter'), desc: 'Symptome erkennen, richtig unterstützen und therapeutische Hilfe organisieren.' },
+                { title: l('/pflege-nach-op', 'Pflege nach OP & Reha'), desc: 'Entlassung aus Krankenhaus oder Reha — wie 24h-Pflege die Versorgung zuhause sichert.' },
+                { title: l('/sehbehinderung-blindheit-pflege', 'Sehbehinderung & Blindheit'), desc: 'Pflege bei stark eingeschränktem Sehen — Sicherheit, Hilfsmittel und Alltag.' },
+                { title: l('/inkontinenz-pflege-zuhause', 'Inkontinenz — Pflege zuhause'), desc: 'Würdevoller Umgang mit Inkontinenz im Pflegealltag.' },
+                { title: l('/wunden-verbinden-zuhause', 'Wunden verbinden zuhause'), desc: 'Wundversorgung im Pflegealltag — was Laien können und wann ein Pflegedienst muss.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="beratung" titel="Ihre Erkrankung nicht gefunden?">
+            <Text>
+              Marta Kapcio und ihr Team beraten Sie kostenlos zu Ihrer Pflegesituation: welche Erfahrung eine Betreuungskraft
+              mitbringen sollte und was die Betreuung kostet.
+            </Text>
+            <MartaBand eingebettet />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }
