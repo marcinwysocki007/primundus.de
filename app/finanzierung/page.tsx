@@ -1,22 +1,61 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text } from '@/components/vorlage/Ratgeber'
+import { KostenAufteilung } from '@/components/grafik/Grafik'
+import { ArticleProgressBar } from '@/components/ArticleProgressBar'
+import { ArticleTOC } from '@/components/ArticleTOC'
+import { aktualisiertAm } from '@/lib/lastmod'
+
+// Übersichtsseite Finanzierung in der Seitenvorlage (Paket 3, 19.09.2026). Inhalt wie bisher (Zuschüsse 2026, drei Linklisten,
+// Tabelle nach Pflegegrad), dazu die Grafik „Wer zahlt was" der Hauptseite und ein Absatz, wie sich die Zuschüsse zum Eigenanteil
+// verrechnen. Beträge 2026 = 2025 (GKV-Spitzenverband), Entlastungsbetrag nur für anerkannte Alltagshilfen.
+
+const AKTUALISIERT = aktualisiertAm('finanzierung', '19. September 2026')
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-finanzierung'
+const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
+const SECTIONS = [
+  { id: 'rechnung', title: 'Was am Ende bleibt' },
+  { id: 'pflegegeld', title: 'Pflegegeld & Kasse' },
+  { id: 'entlastung', title: 'Entlastungsbudget' },
+  { id: 'steuer', title: 'Steuer & Förderung' },
+  { id: 'tabelle', title: 'Leistungen nach Pflegegrad' },
+  { id: 'faq', title: 'Häufige Fragen' },
+]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege finanzieren — alle Kassenzuschüsse 2026',
-  description: '24h-Pflege finanzieren: Pflegegeld bis 990 €/Monat + Entlastungsbudget 3.539 €/Jahr + 4.000 € Steuerersparnis. Alle Zuschüsse 2026 optimal kombiniert.',
+  title: '24h-Pflege finanzieren: alle Kassenzuschüsse 2026',
+  description:
+    '24-Stunden-Pflege finanzieren: Pflegegeld bis 990 € im Monat, Entlastungsbudget 3.539 € im Jahr, Steuerermäßigung bis 4.000 €. Alle Zuschüsse 2026 und was bei Pflegegrad 2 bis 5 selbst zu tragen bleibt.',
   alternates: { canonical: 'https://primundus.de/finanzierung' },
   openGraph: {
-    title: '24h-Pflege finanzieren — alle Zuschüsse 2026 | Primundus',
-    description: 'Pflegegeld + Entlastungsbudget + Steuerabzug: So senken Sie den Eigenanteil der 24h-Pflege.',
+    title: '24h-Pflege finanzieren: alle Kassenzuschüsse 2026',
+    description: 'Pflegegeld, Entlastungsbudget, Steuerermäßigung: was bei Pflegegrad 2 bis 5 selbst zu tragen bleibt.',
     url: 'https://primundus.de/finanzierung',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'website',
-    images: [{ url: '/images/primundus_logo_header.webp' }],
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
   },
 }
 
-const schemaMarkup = JSON.stringify([
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const FRAGEN = [
+  {
+    q: 'Wie kann ich 24-Stunden-Pflege finanzieren?',
+    a: 'Mit drei Bausteinen: Pflegegeld (347 bis 990 € im Monat je nach Pflegegrad), Entlastungsbudget (3.539 € im Jahr, wenn die Kasse den Einsatz als Verhinderungspflege anerkennt) und Steuerermäßigung (20 % der Kosten, höchstens 4.000 € im Jahr). Den Entlastungsbetrag von 131 € im Monat zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft. Bei Pflegegrad 3 bleiben so ab ca. 923 € im Monat selbst zu tragen.',
+  },
+  {
+    q: 'Was ist das Entlastungsbudget 2026?',
+    a: 'Das Entlastungsbudget von 3.539 € im Jahr fasst seit Juli 2025 Verhinderungspflege und Kurzzeitpflege zusammen. Es gilt ab Pflegegrad 2 und lässt sich frei aufteilen. 2026 ist das erste volle Jahr ohne Übergangsregelungen.',
+  },
+  {
+    q: 'Bekomme ich Pflegegeld, wenn eine Betreuungskraft im Haus ist?',
+    a: 'Ja. Pflegegeld gibt es, wenn die Pflege zu Hause selbst organisiert ist, mit Angehörigen oder einer Betreuungskraft. Es geht direkt an Ihren Angehörigen; bei Pflegegrad 3 sind das 599 € im Monat.',
+  },
+]
+
+const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -29,156 +68,119 @@ const schemaMarkup = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Wie kann ich 24h-Pflege finanzieren?', acceptedAnswer: { '@type': 'Answer', text: 'Die wichtigsten Zuschüsse: Pflegegeld (347–990 €/Monat je nach Pflegegrad), Entlastungsbudget (3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege) und steuerlicher Abzug (20 % der Kosten, max. 4.000 € Ersparnis/Jahr). Den Entlastungsbetrag (131 €/Monat) zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft. Richtig kombiniert bleiben bei PG 3 ab ca. 923 €/Monat.' } },
-      { '@type': 'Question', name: 'Was ist das Entlastungsbudget 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Das Entlastungsbudget (3.539 €/Jahr) fasst seit Juli 2025 Verhinderungspflege und Kurzzeitpflege zusammen. Es gilt für PG 2–5, ist flexibel aufteilbar und ersetzt die frühere getrennte Beantragung. 2026 ist das erste volle Jahr ohne Übergangsregelungen.' } },
-      { '@type': 'Question', name: 'Kann man Pflegegeld und 24h-Pflege kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Pflegegeld wird auch bei einer 24h-Betreuungskraft ausgezahlt, solange Angehörige als Hauptpflegepersonen anerkannt sind. Die Betreuungskraft unterstützt, die Familie bleibt formell Hauptpflegeperson.' } },
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
-])
+]
 
-export default function Finanzierung() {
+const l = (href: string, text: string) => <a href={href} className={LINK}>{text}</a>
+
+export default function FinanzierungPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          {/* Breadcrumb */}
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-body">Finanzierung & Zuschüsse</span>
-          </nav>
-
-          {/* Header */}
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            RATGEBER
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Finanzierung & Zuschüsse
-          </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Pflegegeld, Entlastungsbudget, Steuerabzug und mehr — alle Zuschüsse 2026 auf einen Blick und wie man sie optimal kombiniert.
-          </p>
-
-          {/* Auf einen Blick */}
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Alle Zuschüsse 2026 — auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
-                'Pflegegeld: 347–990 €/Monat je nach Pflegegrad (ab PG 2)',
-                'Entlastungsbetrag: 131 €/Monat für alle Pflegegrade',
-                'Entlastungsbudget: 3.539 €/Jahr für Verhinderungs- und Kurzzeitpflege (ab PG 2)',
-                'Steuerabzug: 20 % der Kosten, max. 4.000 € Ersparnis/Jahr',
-                'Pflegehilfsmittel: 42 €/Monat (Handschuhe, Desinfektionsmittel etc.)',
-                'Wohnraumanpassung: bis 4.180 € je Maßnahme (PG 1–5)',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[14px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Pflegegeld & Kassenzuschüsse */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Pflegegeld & Kassenzuschüsse</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Pflegegeld 2026 — Beträge & Anspruch', href: '/pflegegeld', desc: 'Wer Pflegegeld bekommt, wie hoch es ist und was bei gleichzeitiger 24h-Pflege gilt.' },
-              { titel: 'Pflegegeld & 24h-Pflege kombinieren', href: '/pflegegeld-und-24h-pflege-kombinieren', desc: 'Wie Pflegegeld und 24h-Betreuungskraft gleichzeitig möglich sind.' },
-              { titel: 'Pflegesachleistungen', href: '/pflegesachleistungen', desc: 'Wann Pflegesachleistungen statt Pflegegeld sinnvoll sind und wie man sie beantragt.' },
-              { titel: 'Kombinationsleistung Pflege', href: '/kombinationsleistung-pflege', desc: 'Pflegegeld und Sachleistungen gleichzeitig nutzen — wie das geht.' },
-              { titel: 'Pflegeversicherung Leistungen Übersicht', href: '/pflegeversicherung-leistungen-uebersicht', desc: 'Vollständige Übersicht aller Leistungen der Pflegeversicherung 2026.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Entlastungsbudget & Kurzzeitpflege */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Entlastungsbudget & Kurzzeitpflege</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Verhinderungspflege & Entlastungsbudget 2026', href: '/verhinderungspflege', desc: '3.539 €/Jahr flexibel für Verhinderungs- und Kurzzeitpflege — alle Regeln 2026.' },
-              { titel: 'Kurzzeitpflege', href: '/kurzzeitpflege', desc: 'Kurzzeitpflege beantragen, Kosten und wie das Budget optimal genutzt wird.' },
-              { titel: 'Kurzzeitpflege oder 24h-Pflege', href: '/kurzzeitpflege-oder-24h-pflege', desc: 'Wann Kurzzeitpflege reicht und wann eine 24h-Kraft die bessere Lösung ist.' },
-              { titel: 'Pflegereform 2025 — alle Änderungen', href: '/pflegereform-2025', desc: 'Gemeinsamer Jahresbetrag, höhere Leistungen — was die Reform für Familien bedeutet.' },
-              { titel: 'Entlastungsbetrag — 131 €/Monat nutzen', href: '/entlastungsbetrag', desc: 'Was der Entlastungsbetrag ist, für was er genutzt werden kann und wie man ihn beantragt.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Steuer & weitere Förderungen */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Steuer & weitere Förderungen</h2>
-          <div className="grid gap-3 mb-10">
-            {[
-              { titel: 'Pflege steuerlich absetzen', href: '/pflege-steuerlich-absetzen', desc: 'Bis zu 4.000 €/Jahr Steuerersparnis — was absetzbar ist und wie man es richtig macht.' },
-              { titel: 'Eigenanteil 24h-Pflege senken', href: '/eigenanteil-24h-pflege-senken', desc: 'Alle Möglichkeiten 2026 um den monatlichen Eigenanteil zu reduzieren.' },
-              { titel: 'Sozialhilfe bei Pflegebedarf', href: '/sozialhilfe-bei-pflegebedarf', desc: 'Wenn das Einkommen nicht reicht — Hilfe zur Pflege und Sozialhilfe im Überblick.' },
-              { titel: 'Förderungen nach Bundesland', href: '/foerderungen-nach-bundesland', desc: 'Landesspezifische Förderprogramme für Pflege — alle Bundesländer im Überblick.' },
-              { titel: 'Pflegehilfsmittel beantragen', href: '/pflegehilfsmittel-beantragen', desc: '42 €/Monat für Pflegehilfsmittel zum Verbrauch — was dazugehört und wie man es beantragt.' },
-              { titel: 'Wohnraumanpassung — Förderung beantragen', href: '/wohnraumanpassung-foerderung', desc: 'Bis zu 4.180 € je Maßnahme — welche Umbaumaßnahmen gefördert werden und wie man den Zuschuss beantragt.' },
-            ].map((item) => (
-              <a key={item.titel} href={item.href} className="bg-white border border-pm-line rounded-xl p-5 hover:border-pm-taupe hover:shadow-sm transition-all group">
-                <p className="text-[15px] font-bold text-pm-ink group-hover:text-pm-taupe transition-colors mb-1">{item.titel} →</p>
-                <p className="text-[13px] text-pm-mute">{item.desc}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* Leistungsbeträge Tabelle */}
-          <h2 className="text-[20px] font-bold text-pm-ink mb-4">Alle Leistungen nach Pflegegrad 2026</h2>
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-4 shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Leistung', 'PG 1', 'PG 2', 'PG 3', 'PG 4', 'PG 5'].map(h => (
-                      <th key={h} className="px-3 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Pflegegeld/Monat', '—', '347 €', '599 €', '800 €', '990 €'],
-                    ['Sachleistungen/Monat', '—', '796 €', '1.497 €', '1.859 €', '2.299 €'],
-                    ['Entlastungsbetrag/Monat', '131 €', '131 €', '131 €', '131 €', '131 €'],
-                    ['Entlastungsbudget/Jahr', '—', '3.539 €', '3.539 €', '3.539 €', '3.539 €'],
-                    ['Pflegehilfsmittel/Monat', '42 €', '42 €', '42 €', '42 €', '42 €'],
-                  ].map(([leistung, ...werte], i) => (
-                    <tr key={leistung} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-3 py-3 text-[13px] font-semibold text-pm-ink border-b border-pm-line">{leistung}</td>
-                      {werte.map((w, j) => (
-                        <td key={j} className={`px-3 py-3 text-[13px] border-b border-pm-line whitespace-nowrap tabular-nums text-right ${w === '—' ? 'text-[#C8C3BA]' : 'text-pm-green font-semibold'}`}>{w}</td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Quelle: GKV-Spitzenverband · SGB XI · Stand 2026 · Identisch zu 2025</p>
-            </div>
-          </div>
-          <p className="text-[14px] text-pm-body mb-12">
-            → Welcher Pflegegrad gilt für Sie?{' '}
-            <a href="/pflegegrade" className="text-pm-taupe underline hover:text-[#7D6848]">Alle Pflegegrade 2026 im Überblick</a>
-          </p>
-
-          <ArticleCTA />
-        </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
+      <ArticleProgressBar />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Ratgeber', href: '/ratgeber' },
+            { label: 'Finanzierung & Zuschüsse' },
+          ]}
+          augenbraue="Ratgeber"
+          titel={<><span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span> finanzieren: alle Zuschüsse 2026</>}
+          einleitung={<>Pflegegeld, Entlastungsbudget und Steuerermäßigung senken den Betrag, den Sie selbst tragen: Bei Pflegegrad 3 bleiben von <strong className="text-pm-ink">ab 2.150 €</strong> im Monat <strong className="text-pm-ink">ab ca. 923 €</strong>. Hier stehen alle Zuschüsse 2026, was die Kasse wofür zahlt, und die Ratgeber zu jedem einzelnen.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          blickTitel="Alle Zuschüsse 2026"
+          blick={[
+            'Pflegegeld: 347 bis 990 € im Monat je nach Pflegegrad (ab Pflegegrad 2)',
+            'Entlastungsbudget: 3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege (ab Pflegegrad 2)',
+            'Steuerermäßigung: 20 % der Kosten, höchstens 4.000 € im Jahr',
+            'Entlastungsbetrag: 131 € im Monat, nur für anerkannte Alltagshilfen',
+            'Pflegehilfsmittel: 42 € im Monat für Verbrauchsmittel',
+            'Wohnraumanpassung: bis 4.180 € je Maßnahme',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="rechnung" titel="Was am Ende bleibt">
+            <Text>
+              Drei Zuschüsse zählen bei der 24-Stunden-Pflege: Das Pflegegeld zahlt die Pflegekasse jeden Monat direkt an Ihren
+              Angehörigen. Das Entlastungsbudget können Sie für die Betreuungskraft einsetzen, wenn Ihre Kasse den Einsatz als
+              Verhinderungspflege anerkennt, anteilig 295 € im Monat. Die Steuerermäßigung holen Sie sich mit der Steuererklärung:
+              20 % der Kosten, höchstens 4.000 € im Jahr, anteilig 333 € im Monat. Der Preis bleibt der Preis; die Zuschüsse
+              bekommen Sie daneben.
+            </Text>
+            <KostenAufteilung />
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/kosten', text: 'Alle Kosten im Detail' }, { href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="pflegegeld" titel="Pflegegeld und Kassenleistungen">
+            <Punkte
+              punkte={[
+                { title: l('/pflegegeld', 'Pflegegeld 2026: Beträge und Anspruch'), desc: 'Wer Pflegegeld bekommt, wie hoch es ist und was bei einer Betreuungskraft im Haus gilt.' },
+                { title: l('/pflegegeld-und-24h-pflege-kombinieren', 'Pflegegeld und 24h-Pflege kombinieren'), desc: 'Wie Pflegegeld und Betreuungskraft gleichzeitig möglich sind.' },
+                { title: l('/pflegesachleistungen', 'Pflegesachleistungen'), desc: 'Nur für zugelassene Pflegedienste, nicht für die Betreuungskraft; wann sie sich trotzdem lohnen.' },
+                { title: l('/kombinationsleistung-pflege', 'Kombinationsleistung'), desc: 'Pflegegeld und Sachleistungen gleichzeitig nutzen, wenn ein Pflegedienst dazukommt.' },
+                { title: l('/pflegeversicherung-leistungen-uebersicht', 'Alle Leistungen der Pflegeversicherung'), desc: 'Die vollständige Übersicht 2026.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="entlastung" titel="Entlastungsbudget und Kurzzeitpflege">
+            <Punkte
+              punkte={[
+                { title: l('/verhinderungspflege', 'Verhinderungspflege und Entlastungsbudget 2026'), desc: '3.539 € im Jahr, frei aufteilbar auf Verhinderungs- und Kurzzeitpflege; alle Regeln.' },
+                { title: l('/kurzzeitpflege', 'Kurzzeitpflege'), desc: 'Beantragen, Kosten, und wie das Budget genutzt wird.' },
+                { title: l('/kurzzeitpflege-oder-24h-pflege', 'Kurzzeitpflege oder 24h-Pflege'), desc: 'Wann Kurzzeitpflege reicht und wann eine Betreuungskraft zu Hause die bessere Lösung ist.' },
+                { title: l('/pflegereform-2025', 'Pflegereform 2025'), desc: 'Gemeinsamer Jahresbetrag, höhere Leistungen: was die Reform für Familien bedeutet.' },
+                { title: l('/entlastungsbetrag', 'Entlastungsbetrag: 131 € im Monat'), desc: 'Wofür die Kasse ihn zahlt und warum er in der Regel nicht für die Betreuungskraft gilt.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="steuer" titel="Steuer und weitere Förderungen">
+            <Punkte
+              punkte={[
+                { title: l('/pflege-steuerlich-absetzen', 'Pflege steuerlich absetzen'), desc: 'Bis zu 4.000 € Ersparnis im Jahr: was absetzbar ist und wie Sie es angeben.' },
+                { title: l('/eigenanteil-24h-pflege-senken', 'Eigenanteil der 24h-Pflege senken'), desc: 'Alle Möglichkeiten 2026, den monatlichen Eigenanteil zu verringern.' },
+                { title: l('/sozialhilfe-bei-pflegebedarf', 'Sozialhilfe bei Pflegebedarf'), desc: 'Wenn das Einkommen nicht reicht: Hilfe zur Pflege im Überblick.' },
+                { title: l('/foerderungen-nach-bundesland', 'Förderungen nach Bundesland'), desc: 'Landespflegegeld und Programme der Länder, etwa 500 € im Jahr in Bayern ab Pflegegrad 2.' },
+                { title: l('/pflegehilfsmittel-beantragen', 'Pflegehilfsmittel beantragen'), desc: '42 € im Monat für Verbrauchsmittel: was dazugehört und wie Sie es beantragen.' },
+                { title: l('/wohnraumanpassung-foerderung', 'Wohnraumanpassung: Förderung beantragen'), desc: 'Bis zu 4.180 € je Maßnahme, welche Umbauten gefördert werden.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="tabelle" titel="Alle Leistungen nach Pflegegrad 2026">
+            <Tabelle
+              kopf={['Leistung', 'PG 1', 'PG 2', 'PG 3', 'PG 4', 'PG 5']}
+              zeilen={[
+                ['Pflegegeld im Monat', '—', '347 €', '599 €', '800 €', '990 €'],
+                ['Sachleistungen im Monat', '—', '796 €', '1.497 €', '1.859 €', '2.299 €'],
+                ['Entlastungsbetrag im Monat', '131 €', '131 €', '131 €', '131 €', '131 €'],
+                ['Entlastungsbudget im Jahr', '—', '3.539 €', '3.539 €', '3.539 €', '3.539 €'],
+                ['Pflegehilfsmittel im Monat', '42 €', '42 €', '42 €', '42 €', '42 €'],
+              ]}
+              betont={[2, 3, 4, 5]}
+              fuss="Quelle: GKV-Spitzenverband, SGB XI, Stand 2026 (identisch zu 2025). Sachleistungen nur für zugelassene Pflegedienste, nicht für die Betreuungskraft."
+            />
+            <MehrDazu label="Welcher Pflegegrad gilt für Sie?" links={[{ href: '/pflegegrade', text: 'Alle Pflegegrade 2026 im Überblick' }, { href: '/pflegegrad-rechner', text: 'Pflegegrad-Rechner' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen zur Finanzierung">
+            <Fragen fragen={FRAGEN} />
+            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis und passende Pflegekräfte in 2 Minuten' }]} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

@@ -1,30 +1,39 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
-import { KurzAntwort } from '@/components/KurzAntwort'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('rechtssicher', '21. August 2026')
+// Kernseite in der Seitenvorlage (Paket 3, 19.09.2026). Inhalt gegen Impressum, Mustervertrag und die Hauptseite geprüft.
+// Raus, weil nicht belegbar oder falsch: „Kein einziger Kundenfall mit rechtlichen Konsequenzen" / „0 rechtliche Probleme" /
+// „null rechtliche Probleme", „laufende Rechtsprüfung, Änderungen sofort umgesetzt", „Tausende Haushalte … wissen es nicht",
+// „Kontrollen seit Jahren häufiger", „Vertrag mit Primundus als deutscher Agentur" (Vertragspartner ist die PRIMUNDUS
+// Sp. z o.o.; kein „Agentur"), „seit 20 Jahren ausschließlich". Die Kurzantwort (August 2026) steht jetzt als Einleitung.
+
+const AKTUALISIERT = aktualisiertAm('rechtssicher', '19. September 2026')
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-rechtssicher'
+const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
 const SECTIONS = [
-  { id: 'das-problem', title: 'Das rechtliche Problem' },
-  { id: 'entsendemodell', title: 'Die Lösung: Entsendemodell' },
-  { id: 'primundus', title: 'Wie Primundus Rechtssicherheit herstellt' },
-  { id: 'kontrolle', title: 'Was bei einer Kontrolle passiert' },
+  { id: 'modelle', title: 'Drei Modelle, ein legales' },
+  { id: 'entsendemodell', title: 'So funktioniert das Entsendemodell' },
+  { id: 'primundus', title: 'Was Primundus dafür tut' },
+  { id: 'kontrolle', title: 'Bei einer Kontrolle' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
-  title: 'Rechtssichere 24h-Pflege — wie es funktioniert | Primundus',
-  description: '24h-Pflege rechtssicher organisieren: Warum das Entsendemodell die einzig sichere Lösung ist, wie A1-Bescheinigung schützt und was bei einer Kontrolle passiert.',
+  title: 'Rechtssichere 24-Stunden-Pflege: Entsendemodell mit A1',
+  description:
+    '24-Stunden-Pflege legal organisieren: Betreuungskraft bei Primundus angestellt, A1-Bescheinigung für jeden Einsatz, Sie werden nicht Arbeitgeber. Was bei einer Kontrolle zählt und warum „selbstständige“ Kräfte riskant sind.',
   alternates: { canonical: 'https://primundus.de/rechtssicher' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Rechtssichere 24h-Pflege | Primundus',
-    description: 'Wie 24h-Pflege rechtssicher funktioniert — Entsendemodell, A1-Bescheinigung, keine Scheinselbstständigkeit.',
+    title: 'Rechtssichere 24-Stunden-Pflege: Entsendemodell mit A1',
+    description: 'Betreuungskraft angestellt, A1-Bescheinigung für jeden Einsatz, Sie werden nicht Arbeitgeber.',
     url: 'https://primundus.de/rechtssicher',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -32,11 +41,31 @@ export const metadata: Metadata = {
   },
 }
 
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const FRAGEN = [
+  {
+    q: 'Ist 24-Stunden-Pflege legal?',
+    a: 'Ja, im Entsendemodell: Die Betreuungskraft ist bei einem Unternehmen in einem anderen EU-Land angestellt und dort sozialversichert, für jeden Einsatz liegt eine A1-Bescheinigung vor, und sie hat geregelte Arbeits- und Ruhezeiten. Bei Primundus sind die Betreuungskräfte bei uns angestellt und in Polen sozialversichert; Sie als Familie werden nicht Arbeitgeber.',
+  },
+  {
+    q: 'Was passiert bei einer behördlichen Kontrolle?',
+    a: 'Sie zeigen die A1-Bescheinigung der Betreuungskraft und Ihren Betreuungsvertrag mit Primundus und rufen uns an (089 200 000 830). Beides belegt, dass die Betreuungskraft angestellt und sozialversichert ist und Sie kein Arbeitsverhältnis haben.',
+  },
+  {
+    q: 'Warum ist eine „selbstständige“ Betreuungskraft riskant?',
+    a: 'Wer im Haushalt wohnt, weisungsgebunden arbeitet und nur einen Auftraggeber hat, ist in der Regel scheinselbstständig. Dann gilt die Familie als Arbeitgeber: Sozialversicherungsbeiträge können für bis zu vier Jahre nachgefordert werden, dazu Bußgelder, bei Vorsatz auch ein Strafverfahren.',
+  },
+  {
+    q: 'Gilt das Entsendemodell in ganz Deutschland?',
+    a: 'Ja. Es beruht auf der EU-Verordnung 883/2004 zur Koordinierung der Sozialversicherung und gilt in allen Bundesländern gleich.',
+  },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Rechtssichere 24h-Pflege — wie es funktioniert',
+    headline: 'Rechtssichere 24-Stunden-Pflege: so stellt Primundus das sicher',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -54,172 +83,114 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', acceptedAnswer: { '@type': 'Answer', text: 'Über das Entsendemodell mit A1-Bescheinigung. Die Betreuungskraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, kommt mit A1-Bescheinigung nach Deutschland und ist vollständig sozialversicherungsrechtlich im Heimatland abgesichert. Die Familie hat kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Bei Kontrollen: A1-Bescheinigung vorzeigen.' } },
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
 ]
 
-export default function Rechtssicher() {
+export default function RechtssicherPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <span className="text-pm-ink">Rechtssicher</span>
-          </nav>
-
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            Über Primundus · Aktualisiert April 2026
-          </p>
-
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Rechtssichere 24h-Pflege — wie Primundus das sicherstellt
-          </h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-
-          <KurzAntwort frage="Ist 24-Stunden-Pflege legal?" stand="August 2026">
-            Ja. Legal ist die 24-Stunden-Betreuung im Entsendemodell: Die Betreuungskraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, für jeden Einsatz liegt eine A1-Bescheinigung vor, und Arbeits- und Ruhezeiten werden im Betreuungsalltag eingehalten. Eine einzelne Kraft arbeitet dabei nicht 24 Stunden durch — sie lebt im Haushalt, ist nach Plan tätig und für Notfälle erreichbar.
-          </KurzAntwort>
-
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Das Thema Rechtssicherheit ist in der 24h-Pflege entscheidend — und wird von vielen Familien unterschätzt. Tausende Haushalte in Deutschland beschäftigen Pflegekräfte auf unsichere Weise und wissen es nicht. Primundus arbeitet seit 20 Jahren ausschließlich im rechtssicheren Entsendemodell. Kein einziger Kundenfall mit rechtlichen Konsequenzen.
-          </p>
-
-          {/* Trust-Indikatoren */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
-            {[
-              { zahl: '20+', label: 'Jahre Erfahrung' },
-              { zahl: '60.000+', label: 'Betreuungen' },
-              { zahl: '0', label: 'Rechtliche Probleme' },
-              { zahl: 'Testsieger', label: 'DIE WELT' },
-            ].map((item) => (
-              <div key={item.label} className="bg-white border border-pm-line rounded-xl p-4 text-center">
-                <p className="text-[20px] font-bold text-pm-taupe">{item.zahl}</p>
-                <p className="text-[12px] text-pm-mute mt-0.5">{item.label}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="das-problem" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Das rechtliche Problem bei unseriösen Modellen
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Viele Familien glauben sie seien rechtlich abgesichert wenn sie mit einer Agentur arbeiten — das stimmt nicht automatisch. Es kommt darauf an wie die Agentur das Beschäftigungsverhältnis gestaltet.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { modell: '❌ "Selbstständige Pflegekraft"', risiko: 'Scheinselbstständigkeit — in der Praxis bei 24h-Pflege fast immer vorhanden. Behörden prüfen aktiv. Folge: Nachzahlung aller Sozialversicherungsbeiträge (bis 4 Jahre rückwirkend), Bußgelder, Strafverfolgung.' },
-              { modell: '⚠️ Direktanstellung ohne korrekte Anmeldung', risiko: 'Lohnsteuerhinterziehung und fehlende Sozialversicherungsanmeldung. Ebenfalls strafbar. Häufig als "günstigere Alternative" beworben.' },
-              { modell: '✓ Entsendemodell über seriöse Agentur', risiko: 'Vollständig rechtssicher. EU-Recht, A1-Bescheinigung, kein eigenes Arbeitsverhältnis der Familie. Das Modell das Primundus seit 20 Jahren anwendet.' },
-            ].map((item) => (
-              <div key={item.modell} className={`rounded-xl p-5 border ${item.modell.startsWith('✓') ? 'bg-white border-pm-taupe border-2' : item.modell.startsWith('⚠️') ? 'bg-pm-coral-tint border-[rgba(231,111,99,0.15)]' : 'bg-pm-coral-tint border-[rgba(231,111,99,0.2)]'}`}>
-                <p className={`text-[15px] font-bold mb-1 ${item.modell.startsWith('✓') ? 'text-pm-ink' : 'text-pm-coral-ink'}`}>{item.modell}</p>
-                <p className={`text-[14px] leading-relaxed ${item.modell.startsWith('✓') ? 'text-pm-body' : 'text-pm-coral-ink'}`}>{item.risiko}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="entsendemodell" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Die Lösung: Das Entsendemodell
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Das Entsendemodell basiert auf EU-Recht und deutschem Recht: Eine Betreuungskraft die in einem EU-Mitgliedsland angestellt ist kann für begrenzte Zeit (typisch 6–8 Wochen) nach Deutschland entsandt werden. Ihr Sozialversicherungsstatus im Heimatland wird durch die A1-Bescheinigung dokumentiert und anerkannt.
-          </p>
-          <div className="space-y-3 mb-10">
-            {[
-              { schritt: 'Kraft angestellt bei EU-Unternehmen', detail: 'Reguläres Arbeitsverhältnis in Polen, Bulgarien oder Rumänien. Dort kranken- und rentenversichert. Kein Scheinselbstständigkeitsrisiko.' },
-              { schritt: 'A1-Bescheinigung ausgestellt', detail: 'Offizielle Bescheinigung der Heimatbehörde die den EU-Entsendestatus belegt. Muss bei Kontrollen vorgezeigt werden können.' },
-              { schritt: 'Entsendung nach Deutschland', detail: 'Die Kraft arbeitet für 6–8 Wochen in Deutschland — vollständig legal, ohne deutsches Arbeitsverhältnis.' },
-              { schritt: 'Familie hat kein eigenes Arbeitsverhältnis', detail: 'Vertrag nur mit Primundus als deutscher Agentur. Keine deutschen Sozialabgaben, keine Lohnsteuerpflicht für die Familie.' },
-            ].map((item) => (
-              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-green text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">✓</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.schritt}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="primundus" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wie Primundus Rechtssicherheit herstellt
-          </h2>
-          <div className="space-y-3 mb-10">
-            {[
-              'Jede Kraft kommt mit gültiger A1-Bescheinigung — kein Einsatz ohne',
-              'Vertrag mit der Familie über Primundus als Agentur — kein verstecktes Arbeitsverhältnis',
-              'Klare Leistungsbeschreibung die den Entsendecharakter dokumentiert',
-              'Laufende Rechtsprüfung der Modellgestaltung — Änderungen in EU-Recht werden sofort umgesetzt',
-              'Über 20 Jahre und 60.000+ Betreuungen: null rechtliche Probleme für Kundefamilien',
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-pm-line">
-                <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                <p className="text-[14px] text-pm-body">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 id="kontrolle" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was bei einer Kontrolle passiert
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Kontrollen durch den Zoll (FKS), die Rentenversicherung oder Ausländerbehörde sind möglich — und seit Jahren häufiger. Was dann zu tun ist:
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { schritt: 'Ruhe bewahren', detail: 'Eine Kontrolle ist kein Problem wenn das Entsendemodell korrekt umgesetzt ist.' },
-              { schritt: 'A1-Bescheinigung vorzeigen', detail: 'Das zentrale Dokument. Liegt immer bei der Betreuungskraft. Belegt den legalen EU-Entsendestatus.' },
-              { schritt: 'Primundus-Vertrag parat haben', detail: 'Der Vertrag mit Primundus belegt das korrekte Agenturverhältnis — kein eigenes Arbeitsverhältnis der Familie.' },
-              { schritt: 'Primundus sofort anrufen', detail: '089 200 000 830 — Primundus unterstützt bei allen behördlichen Rückfragen.' },
-            ].map((item, i) => (
-              <div key={item.schritt} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
-                <span className="w-8 h-8 rounded-full bg-pm-taupe text-white font-bold text-[15px] flex items-center justify-center flex-shrink-0">{i + 1}</span>
-                <div>
-                  <p className="text-[15px] font-bold text-pm-ink mb-1">{item.schritt}</p>
-                  <p className="text-[14px] text-pm-body leading-relaxed">{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Hintergründe:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft legal beschäftigen — die 3 Modelle</a>
-            {' · '}
-            <a href="/scheinselbststaendigkeit-pflege-vermeiden" className="text-pm-taupe underline hover:text-pm-taupe-deep">Scheinselbstständigkeit vermeiden</a>
-          </p>
-
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Wie ist 24h-Pflege rechtssicher zu organisieren?', a: 'Über das Entsendemodell mit A1-Bescheinigung. Die Kraft ist bei einem EU-Unternehmen unserer Unternehmensgruppe angestellt, kommt mit A1-Bescheinigung, die Familie hat kein eigenes Arbeitsverhältnis.' },
-              { q: 'Was passiert bei einer behördlichen Kontrolle?', a: 'A1-Bescheinigung vorzeigen, Primundus-Vertrag zeigen, Primundus anrufen (089 200 000 830). Kein Problem bei korrektem Entsendemodell.' },
-              { q: 'Warum ist "selbstständige Pflegekraft" riskant?', a: 'Scheinselbstständigkeit — bei 24h-Pflege fast immer vorhanden. Behörden fordern Sozialversicherungsbeiträge für bis zu 4 Jahre nach, plus Bußgelder und Strafverfolgung.' },
-              { q: 'Ist das Entsendemodell in ganz Deutschland legal?', a: 'Ja — das Entsendemodell basiert auf EU-Recht und gilt in allen 16 Bundesländern. Primundus wendet es seit 20 Jahren ohne einen einzigen Rechtsfall an.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Rechtssicher' },
+          ]}
+          augenbraue="Über Primundus"
+          titel={<>Rechtssichere <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span>: so stellt Primundus das sicher</>}
+          einleitung={<>Legal ist die 24-Stunden-Betreuung im <strong className="text-pm-ink">Entsendemodell</strong>: Die Betreuungskraft ist bei uns angestellt und sozialversichert, für jeden Einsatz liegt eine <strong className="text-pm-ink">A1-Bescheinigung</strong> vor, und sie hat geregelte Arbeits- und Ruhezeiten. Sie als Familie werden nicht Arbeitgeber. Was das im Einzelnen heißt, warum „selbstständige“ Kräfte riskant sind und was bei einer Kontrolle zählt.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="5 Min."
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          blickTitel="Auf einen Blick"
+          blick={[
+            'A1-Bescheinigung für jeden Einsatz, kein Einsatz ohne',
+            'Betreuungskraft bei uns angestellt, in Polen sozialversichert',
+            'Sie werden nicht Arbeitgeber: keine Anmeldung, keine Sozialabgaben, keine Lohnsteuer',
+            'Vertragspartner: PRIMUNDUS Sp. z o.o., Mustervertrag vorab lesbar',
+            'Wechsel in der Regel alle 6–8 Wochen',
+            'Bei Kontrolle: A1 und Vertrag zeigen, uns anrufen',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="modelle" titel="Drei Modelle, ein legales">
+            <Text>
+              Eine Betreuungskraft aus dem EU-Ausland kann auf drei Wegen bei Ihnen arbeiten. Entscheidend ist, wer ihr Arbeitgeber
+              ist und wer die Sozialabgaben zahlt:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: '„Selbstständige“ Betreuungskraft', desc: 'Sie beauftragen die Kraft direkt, sie stellt Rechnungen. Wer im Haushalt wohnt, weisungsgebunden arbeitet und nur einen Auftraggeber hat, ist in der Regel scheinselbstständig. Dann gelten Sie als Arbeitgeber: Sozialversicherungsbeiträge können für bis zu vier Jahre nachgefordert werden, dazu Bußgelder, bei Vorsatz ein Strafverfahren.' },
+                { title: 'Sie stellen selbst an', desc: 'Legal, aber Sie sind Arbeitgeber: Anmeldung bei der Sozialversicherung, Lohnabrechnung, Lohnsteuer, Urlaub, Krankheit, Ersatz. Ohne korrekte Anmeldung ist es Schwarzarbeit.' },
+                { title: 'Entsendemodell (Primundus)', desc: 'Die Betreuungskraft ist bei uns angestellt und in Polen sozialversichert, jeder Einsatz läuft mit A1-Bescheinigung. Sie haben einen Betreuungsvertrag mit uns und werden nicht Arbeitgeber.' },
+              ]}
+            />
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/pflegekraft-legal-beschaeftigen', text: 'Pflegekraft legal beschäftigen: die drei Modelle' }, { href: '/scheinselbststaendigkeit-pflege-vermeiden', text: 'Scheinselbstständigkeit vermeiden' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="entsendemodell" titel="So funktioniert das Entsendemodell">
+            <Text>
+              Grundlage ist die EU-Verordnung 883/2004: Wer in einem EU-Land angestellt und sozialversichert ist, kann vorübergehend in
+              ein anderes EU-Land entsandt werden und bleibt dabei im Heimatland versichert. Den Nachweis liefert die
+              A1-Bescheinigung des Sozialversicherungsträgers im Heimatland.
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'Anstellung bei uns', desc: 'Die Betreuungskraft hat einen Arbeitsvertrag mit der PRIMUNDUS Sp. z o.o. und ist in Polen kranken- und rentenversichert.' },
+                { title: 'A1-Bescheinigung für den Einsatz', desc: 'Vor jedem Einsatz wird die A1-Bescheinigung ausgestellt. Sie belegt, dass die Sozialabgaben in Polen gezahlt werden, und liegt bei der Betreuungskraft.' },
+                { title: 'Einsatz bei Ihnen', desc: 'Die Betreuungskraft wohnt und arbeitet bei Ihnen, in der Regel 6–8 Wochen, dann wechselt sie sich mit einer Kollegin ab. Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten.' },
+                { title: 'Ihr Vertrag', desc: 'Sie schließen einen Betreuungsvertrag mit der PRIMUNDUS Sp. z o.o. Sie werden nicht Arbeitgeber: keine Anmeldung, keine Sozialabgaben, keine Lohnsteuer.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="primundus" titel="Was Primundus dafür tut">
+            <Punkte
+              punkte={[
+                { title: 'A1 vor jedem Einsatz', desc: 'Keine Betreuungskraft reist ohne gültige A1-Bescheinigung an. Sie liegt bei ihr und kann bei jeder Kontrolle vorgezeigt werden.' },
+                { title: 'Vertrag vorab lesbar', desc: <>Den <a href={MUSTERVERTRAG} target="_blank" rel="noopener" className={LINK}>Mustervertrag</a> können Sie vor jeder Entscheidung lesen: Leistungen, An- und Abreise, Ersatz bei Krankheit, Feiertage, Kündigung.</> },
+                { title: 'Geregelte Arbeitszeiten', desc: 'Die Betreuungskraft hat Pausen und Ruhezeiten wie jede Arbeitnehmerin. „24 Stunden“ heißt: Sie wohnt im Haus und ist bei Bedarf auch nachts da, nicht rund um die Uhr im Einsatz.' },
+                { title: 'Ersatz bei Krankheit', desc: 'Fällt eine Betreuungskraft aus, stellen wir schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
+              ]}
+            />
+            <Kasten augenbraue="Ihr Vertragspartner" titel="Wer bei Primundus Ihr Vertragspartner ist">
+              <Text>
+                Ihr Betreuungsvertrag kommt mit der PRIMUNDUS Sp. z o.o. mit Sitz in Warschau zustande. Bei ihr sind die
+                Betreuungskräfte angestellt; genau deshalb funktioniert die Entsendung. Ihre Ansprechpartnerin sitzt in München:
+                Marta Kapcio, täglich von 8 bis 20 Uhr.
+              </Text>
+            </Kasten>
+          </Abschnitt>
+
+          <Abschnitt id="kontrolle" titel="Was bei einer Kontrolle passiert">
+            <Text>
+              Kontrollen durch den Zoll (Finanzkontrolle Schwarzarbeit) oder die Rentenversicherung sind möglich. Im Entsendemodell
+              sind sie kein Problem, wenn drei Dinge da sind:
+            </Text>
+            <Schritte
+              schritte={[
+                { title: 'A1-Bescheinigung zeigen', desc: 'Das zentrale Dokument. Es liegt bei der Betreuungskraft und belegt die Sozialversicherung in Polen.' },
+                { title: 'Betreuungsvertrag zeigen', desc: 'Ihr Vertrag mit Primundus belegt, dass Sie kein Arbeitsverhältnis mit der Betreuungskraft haben.' },
+                { title: 'Uns anrufen', desc: '089 200 000 830, täglich 8–20 Uhr. Wir beantworten Rückfragen der Behörde und liefern Unterlagen nach.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen zur Rechtssicherheit">
+            <Fragen fragen={FRAGEN} />
+            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis und passende Pflegekräfte in 2 Minuten' }]} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

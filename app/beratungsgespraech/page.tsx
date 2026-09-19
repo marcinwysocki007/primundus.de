@@ -1,24 +1,38 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
-import { Weiterlesen } from '@/components/Weiterlesen'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Text } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('beratungsgespraech', '30. April 2026')
+// Kernseite in der Seitenvorlage (Paket 3, 19.09.2026). Vorher eine leere Hülle („Dieser Ratgeber gibt Ihnen einen kompakten
+// Überblick …") mit „15–20 Minuten" und „Am Ende kennen Sie Ihren Eigenanteil", was seit „Preis zuerst" (17.09.) nicht mehr
+// stimmt: Den Preis zeigt der Rechner vorab. Jetzt: was wir fragen (die Fragen des Rechners), was Sie fragen sollten (Vertrag,
+// Kosten, Krankheit, Kündigung), was danach passiert. Keine Dauer-Angabe, kein „kein Verkaufsgespräch".
 
-const SECTIONS = [{ id: 'ablauf', title: 'Ablauf' }, { id: 'fragen', title: 'Was gefragt wird' }, { id: 'danach', title: 'Was danach passiert' }, { id: 'faq', title: 'Häufige Fragen' }]
+const AKTUALISIERT = aktualisiertAm('beratungsgespraech', '19. September 2026')
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-beratungsgespraech'
+const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
+const SECTIONS = [
+  { id: 'vorab', title: 'Vor dem Gespräch' },
+  { id: 'fragen', title: 'Was wir fragen' },
+  { id: 'ihre-fragen', title: 'Was Sie fragen sollten' },
+  { id: 'danach', title: 'Was danach passiert' },
+  { id: 'faq', title: 'Häufige Fragen' },
+]
 
 export const metadata: Metadata = {
-  title: 'Beratungsgespräch Pflege — was Sie erwartet | Primundus',
-  description: 'Wie ein Beratungsgespräch bei Primundus abläuft, welche Fragen gestellt werden und was danach passiert. Kostenlos und unverbindlich.',
+  title: 'Beratungsgespräch zur 24-Stunden-Pflege: so läuft es ab',
+  description:
+    'Was Primundus im Beratungsgespräch fragt, was Sie fragen sollten und was danach passiert. Kostenlos, täglich 8–20 Uhr; den Preis sehen Sie schon vorher im Kostenrechner.',
   alternates: { canonical: 'https://primundus.de/beratungsgespraech' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Beratungsgespräch Pflege',
-    description: 'Wie ein Beratungsgespräch bei Primundus abläuft, welche Fragen gestellt werden und was danach passiert. Kostenlos und unverbindlich.',
+    title: 'Beratungsgespräch zur 24-Stunden-Pflege: so läuft es ab',
+    description: 'Was wir fragen, was Sie fragen sollten und was danach passiert. Kostenlos, täglich 8–20 Uhr.',
     url: 'https://primundus.de/beratungsgespraech',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,11 +40,31 @@ export const metadata: Metadata = {
   },
 }
 
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const FRAGEN = [
+  {
+    q: 'Ist das Beratungsgespräch kostenlos?',
+    a: 'Ja. Das Gespräch kostet nichts und verpflichtet zu nichts. Sie zahlen erst, wenn eine Betreuungskraft bei Ihnen ist, und können täglich kündigen.',
+  },
+  {
+    q: 'Brauche ich einen Termin?',
+    a: 'Nein. Rufen Sie täglich zwischen 8 und 20 Uhr an, auch am Wochenende. Wenn Sie lieber schreiben, geht das per WhatsApp oder E-Mail.',
+  },
+  {
+    q: 'Muss ich vorher den Kostenrechner benutzen?',
+    a: 'Nein, aber es hilft: Nach 2 Minuten kennen Sie Ihren Monatspreis, und im Gespräch geht es dann um Ihre Fragen statt um Zahlen. Wenn Sie die Berechnung speichern, sehen Sie außerdem sofort passende Pflegekräfte.',
+  },
+  {
+    q: 'Was sollte ich zum Gespräch bereithalten?',
+    a: 'Den Pflegegrad, falls vorhanden, ein paar Angaben zur Pflegesituation (Mobilität, Demenz, nächtliche Hilfe) und den gewünschten Starttermin. Ein Pflegegradbescheid ist hilfreich, aber nicht nötig.',
+  },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Beratungsgespräch bei Primundus — so läuft es ab',
+    headline: 'Beratungsgespräch zur 24-Stunden-Pflege: so läuft es ab',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -49,61 +83,101 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Ist das Beratungsgespräch wirklich kostenlos?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — vollständig kostenlos und unverbindlich. Kein Verkaufsgespräch, sondern ehrliche Beratung.' } },
-      { '@type': 'Question', name: 'Wie lange dauert das Gespräch?', acceptedAnswer: { '@type': 'Answer', text: '15–20 Minuten. Wenn gewünscht auch länger.' } }
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
 ]
 
-export default function Page() {
+export default function BeratungsgespraechPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/ratgeber" className="hover:text-pm-taupe transition-colors">Ratgeber</a>
-            <span>›</span>
-            <span className="text-pm-ink">Beratungsgespräch</span>
-          </nav>
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Über Primundus · 4 Min</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Beratungsgespräch bei Primundus — so läuft es ab</h1>
-
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Das kostenlose Beratungsgespräch mit Primundus dauert 15–20 Minuten. Keine versteckten Kosten, kein Druck, keine Verpflichtung. Am Ende kennen Sie Ihren individuellen Eigenanteil und alle Möglichkeiten.</p>
-          <h2 id="ablauf" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Ablauf</h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Dieser Ratgeber gibt Ihnen einen kompakten Überblick über das Thema — praxisnah und auf die Situation pflegender Familien zugeschnitten.</p>
-          <h2 id="fragen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Was gefragt wird</h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Die wichtigsten Informationen für Ihren Alltag mit Pflege: Was konkret zu tun ist, worauf man achten sollte und wie Primundus unterstützen kann.</p>
-          <h2 id="danach" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Was danach passiert</h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">Wenn Sie unsicher sind wie Sie vorgehen sollen — sprechen Sie mit uns. Primundus berät kostenlos und ehrlich: 089 200 000 830.</p>
-
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-          <div className="space-y-4 mb-12">
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Ist das Beratungsgespräch wirklich kostenlos?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Ja — vollständig kostenlos und unverbindlich. Kein Verkaufsgespräch, sondern ehrliche Beratung.</p></div>
-            </details>
-            <details className="bg-white rounded-xl border border-pm-line group">
-              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Wie lange dauert das Gespräch?</h3>
-                <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">15–20 Minuten. Wenn gewünscht auch länger.</p></div>
-            </details>
-          </div>
-          <Weiterlesen aktuell="beratungsgespraech" />
-          <ArticleCTA />
-        </div>
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
       </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Ratgeber', href: '/ratgeber' },
+            { label: 'Beratungsgespräch' },
+          ]}
+          augenbraue="Über Primundus"
+          titel={<>Beratungsgespräch zur <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span>: so läuft es ab</>}
+          einleitung={<>Sie müssen nicht anrufen, um den Preis zu erfahren: Der steht nach <strong className="text-pm-ink">2 Minuten</strong> im Kostenrechner. Wenn Sie lieber sprechen oder Fragen haben, erreichen Sie Marta Kapcio <strong className="text-pm-ink">täglich von 8 bis 20 Uhr</strong>. Hier lesen Sie, was wir fragen, was Sie fragen sollten und was nach dem Gespräch passiert.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="4 Min."
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          blickTitel="Auf einen Blick"
+          blick={[
+            'Kostenlos, ohne Termin, täglich 8–20 Uhr',
+            'Preis vorab online, ohne Kontaktdaten',
+            'Wir fragen nach Pflegegrad, Alltag, Nacht, Wohnung und Wünschen',
+            'Sie sehen Profile und wählen selbst aus',
+            'Vertrag erst nach Ihrer Auswahl, täglich kündbar',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="vorab" titel="Vor dem Gespräch: der Preis in 2 Minuten">
+            <Text>
+              Früher war das Beratungsgespräch der erste Schritt zum Preis. Heute ist es umgekehrt: Sie beantworten im Kostenrechner
+              ein paar Fragen zur Pflegesituation und sehen sofort Ihren Monatspreis, dazu was nach Pflegegeld, Entlastungsbudget
+              und Steuerermäßigung selbst zu tragen bleibt. Erst wenn Sie die Berechnung speichern, geben Sie Kontaktdaten an und
+              sehen passende Pflegekräfte. Das Gespräch ist dann für die Fragen da, die ein Rechner nicht beantwortet.
+            </Text>
+            <RechnerKasten src="apex-beratungsgespraech" />
+          </Abschnitt>
+
+          <Abschnitt id="fragen" titel="Was wir Sie fragen">
+            <Text>
+              Am Telefon stellen wir dieselben Fragen wie der Kostenrechner, weil daran hängt, welche Betreuungskraft passt und was
+              die Betreuung kostet:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Pflegegrad und Hilfebedarf', desc: 'Welcher Pflegegrad besteht oder beantragt ist, wobei Ihr Angehöriger Hilfe braucht: Körperpflege, Aufstehen, Essen, Haushalt, Begleitung.' },
+                { title: 'Tag und Nacht', desc: 'Ob nachts regelmäßig Hilfe nötig ist, etwa bei Demenz oder Toilettengängen. Das fließt in den Preis ein.' },
+                { title: 'Wohnung', desc: 'Ob ein eigenes Zimmer für die Betreuungskraft frei ist (das ist Voraussetzung) und ob eine oder zwei Personen betreut werden.' },
+                { title: 'Wünsche an die Betreuungskraft', desc: 'Deutschkenntnisse, Führerschein, Erfahrung mit Demenz oder Schlaganfall. Gute Deutschkenntnisse erhöhen den Preis.' },
+                { title: 'Start', desc: 'Wann die Betreuung beginnen soll. Eine Anreise ist in 3 Tagen möglich.' },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="ihre-fragen" titel="Was Sie uns fragen sollten">
+            <Text>Diese fünf Fragen sollten Sie jedem Anbieter stellen. So beantworten wir sie:</Text>
+            <Punkte
+              punkte={[
+                { title: 'Wer ist Arbeitgeber der Betreuungskraft?', desc: 'Wir. Die Betreuungskräfte sind bei uns angestellt und sozialversichert, für jeden Einsatz liegt eine A1-Bescheinigung vor. Sie werden nicht Arbeitgeber.' },
+                { title: 'Was kostet es genau, und was kommt dazu?', desc: 'Der Monatspreis aus dem Rechner, ab 2.150 €. Dazu An- und Abreise mit 125 € je Strecke, Kost und Logis, und an neun Feiertagen im Jahr der doppelte Tagessatz. Eine Vermittlungsgebühr gibt es nicht.' },
+                { title: 'Was passiert, wenn die Betreuungskraft krank wird?', desc: 'Wir stellen schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
+                { title: 'Wie komme ich wieder raus?', desc: 'Täglich kündbar, taggenau abgerechnet. Keine Mindestlaufzeit.' },
+                { title: 'Sehe ich vorher, wer kommt?', desc: <>Ja. Sie sehen Profile mit Foto, Alter, Erfahrung, Einsätzen über Primundus und Deutschkenntnissen und wählen selbst. Den <a href={MUSTERVERTRAG} target="_blank" rel="noopener" className={LINK}>Mustervertrag</a> können Sie vorher lesen.</> },
+              ]}
+            />
+          </Abschnitt>
+
+          <Abschnitt id="danach" titel="Was nach dem Gespräch passiert">
+            <Schritte
+              schritte={[
+                { title: 'Berechnung speichern', desc: 'Sie speichern die Berechnung mit Ihren Kontaktdaten und sehen sofort passende Pflegekräfte im Kundenportal.', tag: 'Sofort' },
+                { title: 'Bewerbungen ansehen', desc: 'Betreuungskräfte bewerben sich auf Ihre Betreuung, mit Foto, Erfahrung und Verfügbarkeit. Bewerbungen kommen am selben Werktag.', tag: 'Bewerbungen am selben Werktag' },
+                { title: 'Aussuchen, dann Vertrag', desc: 'Sie entscheiden, wer kommt. Erst danach kommt der Betreuungsvertrag, dann reist die Betreuungskraft an.', tag: 'Anreise in 3 Tagen möglich' },
+              ]}
+            />
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/ablauf', text: 'So läuft es ab' }, { href: '/kontakt', text: 'Kontakt' }, { href: '/kosten', text: 'Was 24-Stunden-Pflege kostet' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen zum Beratungsgespräch">
+            <Fragen fragen={FRAGEN} />
+            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis und passende Pflegekräfte in 2 Minuten' }]} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
     </>
   )
 }

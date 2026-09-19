@@ -1,15 +1,36 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
+import Image from 'next/image'
+import { KNOPF, KontaktBand } from '@/components/ArticleCTA'
+import { Abschnitt, Fragen, MehrDazu, RatgeberKopf, RatgeberRumpf, Schritte, Text, Werte } from '@/components/vorlage/Ratgeber'
+import { ArticleProgressBar } from '@/components/ArticleProgressBar'
+import { ArticleTOC } from '@/components/ArticleTOC'
+import { aktualisiertAm } from '@/lib/lastmod'
+
+// Kernseite in der Seitenvorlage (Paket 3, 19.09.2026). Vorher: alte Optik mit Symbol-Kästen, Taupe-Hinweis, Bewertungs-Auszug.
+// Jetzt: Kopf der Vorlage, drei Wege (Telefon, WhatsApp, E-Mail) als Karten, Anschrift, was nach der Anfrage passiert (wie
+// Rechner und Kundenportal seit „Preis zuerst"), Fragen, Seitenende wie überall. Raus: „Kein Callcenter, kein Warteschleife",
+// „Keine Anfrage zu groß oder zu klein" (Floskeln ohne Inhalt).
+
+const AKTUALISIERT = aktualisiertAm('kontakt', '19. September 2026')
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-kontakt'
+const WHATSAPP = 'https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20Frage%3A'
+
+const SECTIONS = [
+  { id: 'wege', title: 'So erreichen Sie uns' },
+  { id: 'anschrift', title: 'Anschrift' },
+  { id: 'danach', title: 'Was nach Ihrer Anfrage passiert' },
+  { id: 'faq', title: 'Häufige Fragen' },
+]
 
 export const metadata: Metadata = {
-  title: 'Kontakt — persönliche Beratung zur 24h-Pflege | Primundus',
-  description: 'Primundus persönlich erreichen: 089 200 000 830 · Mo–So 8–20 Uhr · info@primundus.de. Kostenlose Beratung zur 24-Stunden-Pflege.',
+  title: 'Kontakt: Primundus täglich 8–20 Uhr erreichen',
+  description:
+    'Primundus erreichen: 089 200 000 830 täglich 8–20 Uhr, WhatsApp, info@primundus.de. Büro Landsberger Str. 155, München. Preis und Pflegekräfte auch ohne Anruf im Kostenrechner.',
   alternates: { canonical: 'https://primundus.de/kontakt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Kontakt | Primundus — 24h-Pflege',
-    description: 'Primundus persönlich erreichen: 089 200 000 830 · Mo–So 8–20 Uhr.',
+    title: 'Kontakt: Primundus täglich 8–20 Uhr erreichen',
+    description: '089 200 000 830 täglich 8–20 Uhr, WhatsApp, info@primundus.de. Büro in München.',
     url: 'https://primundus.de/kontakt',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -17,122 +38,154 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Page() {
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const FRAGEN = [
+  {
+    q: 'Muss ich anrufen, um den Preis zu erfahren?',
+    a: 'Nein. Im Kostenrechner beantworten Sie ein paar Fragen zur Pflegesituation und sehen nach 2 Minuten Ihren Monatspreis, noch ohne Kontaktdaten. Anrufen können Sie, wenn Sie Fragen haben.',
+  },
+  {
+    q: 'Wann erreiche ich jemanden bei Primundus?',
+    a: 'Täglich von 8 bis 20 Uhr unter 089 200 000 830, auch am Wochenende. Per WhatsApp an dieselbe Nummer und per E-Mail an info@primundus.de können Sie jederzeit schreiben.',
+  },
+  {
+    q: 'Mit wem spreche ich?',
+    a: 'Mit Marta Kapcio und ihrem Team. Marta Kapcio begleitet Familien von der ersten Frage bis zum Start der Betreuung und ist auch danach Ihre Ansprechpartnerin.',
+  },
+  {
+    q: 'Wo ist das Büro von Primundus?',
+    a: 'Primundus Deutschland, Landsberger Str. 155, 80687 München. Vertragspartner ist die PRIMUNDUS Sp. z o.o. in Warschau, bei der die Betreuungskräfte angestellt sind.',
+  },
+]
+
+const schemaMarkup = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
+      { '@type': 'ListItem', position: 2, name: 'Kontakt', item: 'https://primundus.de/kontakt' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+]
+
+const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe'
+const KNOPF_HELL = 'inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-pm-ink/15 bg-white px-5 py-3 text-[16px] font-bold text-pm-ink transition-colors hover:border-pm-taupe min-h-[52px]'
+
+/** Drei Wege, gleich gebaut: Augenbraue, große Angabe, Knopf. */
+function Wege() {
   return (
-    <div className="min-h-screen bg-pm-paper">
-      <div className="max-w-article mx-auto px-5 py-10 md:py-16">
-
-        <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-          <Link href="/" className="hover:text-pm-taupe transition-colors">Startseite</Link>
-          <span>›</span>
-          <span className="text-pm-ink">Kontakt</span>
-        </nav>
-
-        <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Wir sind für Sie da</p>
-        <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-          Persönliche Beratung — kostenlos & unverbindlich
-        </h1>
-        <p className="text-[17px] text-pm-body leading-[1.7] mb-10 max-w-xl">
-          Sprechen Sie direkt mit uns. Kein Callcenter, kein Warteschleife — ein echter Ansprechpartner, der Ihre Situation kennt.
-        </p>
-
-        {/* Kontakt-Karten */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
-
-          {/* Telefon */}
-          <div className="bg-white border border-pm-line rounded-2xl p-7">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-11 h-11 rounded-xl bg-pm-taupe/10 flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-[12px] font-bold uppercase tracking-wider text-pm-taupe-light">Telefon</p>
-                <p className="text-[13px] text-pm-mute">Mo – So · 8 – 20 Uhr</p>
-              </div>
-            </div>
-            <a
-              href="tel:+4989200000830"
-              className="text-[28px] font-bold text-pm-ink hover:text-pm-taupe transition-colors block mb-4"
-            >
-              089 200 000 830
-            </a>
-            <a
-              href="tel:+4989200000830"
-              className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] rounded-full transition-all duration-200"
-            >
-              <img width={44} height={44} src="/images/marta-kapcio.jpg" alt="Marta Kapcio" className="w-7 h-7 rounded-full object-cover object-top" />
-              Jetzt anrufen
-            </a>
-          </div>
-
-          {/* E-Mail + Kostenrechner */}
-          <div className="flex flex-col gap-5">
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <div className="flex items-center gap-4 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-pm-taupe/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-[12px] font-bold uppercase tracking-wider text-pm-taupe-light">E-Mail</p>
-              </div>
-              <a
-                href="mailto:info@primundus.de"
-                className="text-[18px] font-semibold text-pm-ink hover:text-pm-taupe transition-colors"
-              >
-                info@primundus.de
-              </a>
-            </div>
-
-            <div className="bg-white border border-pm-line rounded-2xl p-6">
-              <div className="flex items-center gap-4 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-pm-taupe/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-[12px] font-bold uppercase tracking-wider text-pm-taupe-light">Online</p>
-              </div>
-              <p className="text-[14px] text-pm-body mb-3">Kosten sofort berechnen & Pflegekräfte ansehen</p>
-              <a
-                href="https://kostenrechner.primundus.de/?start=1&src=apex-kontakt"
-                className="text-[15px] font-semibold text-pm-taupe hover:text-pm-taupe-ink transition-colors"
-              >
-                Zum Kostenrechner →
-              </a>
-            </div>
-          </div>
+    <div className="grid gap-5 md:grid-cols-3">
+      <div className="flex flex-col rounded-[20px] bg-white p-6 shadow-lift">
+        <p className={AUGENBRAUE}>Telefon</p>
+        <a href="tel:+4989200000830" className="mt-3 text-[24px] font-extrabold leading-none tracking-[-0.02em] text-pm-ink whitespace-nowrap hover:text-pm-taupe-ink min-[375px]:text-[26px] md:text-[21px] xl:text-[24px]">089 200 000 830</a>
+        <p className="mt-2 text-[15px] leading-[1.5] text-pm-mute">Täglich 8–20 Uhr, auch am Wochenende</p>
+        <div className="mt-auto pt-5">
+          <a href="tel:+4989200000830" className={`${KNOPF} !min-h-[52px] !text-[16px] gap-3 !px-5`}>
+            <Image src="/images/marta-kapcio-gesicht.jpg" alt="" width={64} height={64} className="h-7 w-7 rounded-full object-cover ring-2 ring-white/70" />
+            Anrufen
+          </a>
         </div>
-
-        {/* Adresse */}
-        <div className="bg-white border border-pm-line rounded-2xl p-7 mb-10">
-          <p className="text-[12px] font-bold uppercase tracking-wider text-pm-taupe-light mb-4">Anschrift</p>
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-pm-taupe/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg className="w-5 h-5 text-pm-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <div className="text-[15px] text-pm-body leading-[1.8]">
-              <p className="font-semibold text-pm-ink">Primundus Deutschland</p>
-              <p>Landsberger Str. 155</p>
-              <p>80687 München</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Note */}
-        <div className="bg-[#F0EBE3] rounded-2xl p-6 text-center">
-          <p className="text-[15px] text-pm-body leading-[1.7]">
-            Keine Anfrage zu groß oder zu klein — wir helfen Ihnen gerne dabei, die richtige Lösung für Ihre Situation zu finden. Komplett kostenlos und ohne Verpflichtung.
-          </p>
-        </div>
-
       </div>
-      {/* Bewertungen als Hemmnisnehmer (Martin 17.09.2026: „warum nicht auf allen Seiten") */}
-      <BewertungsAuszug />
+      <div className="flex flex-col rounded-[20px] bg-white p-6 shadow-lift">
+        <p className={AUGENBRAUE}>WhatsApp</p>
+        <p className="mt-3 text-[24px] font-extrabold leading-none tracking-[-0.02em] text-pm-ink whitespace-nowrap min-[375px]:text-[26px] md:text-[21px] xl:text-[24px]">089 200 000 830</p>
+        <p className="mt-2 text-[15px] leading-[1.5] text-pm-mute">Schreiben Sie, wann es Ihnen passt</p>
+        <div className="mt-auto pt-5">
+        <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-[16px] font-bold text-white transition-colors hover:bg-[#1FB854]">
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z" /></svg>
+          <span className="xl:hidden">WhatsApp</span><span className="hidden xl:inline">WhatsApp schreiben</span>
+        </a>
+        </div>
+      </div>
+      <div className="flex flex-col rounded-[20px] bg-white p-6 shadow-lift">
+        <p className={AUGENBRAUE}>E-Mail</p>
+        <a href="mailto:info@primundus.de" className="mt-3 whitespace-nowrap text-[21px] font-extrabold leading-none tracking-[-0.02em] text-pm-ink hover:text-pm-taupe-ink min-[375px]:text-[22px] md:text-[16.5px] xl:text-[19px]">info@primundus.de</a>
+        <p className="mt-2 text-[15px] leading-[1.5] text-pm-mute">Für Unterlagen und alles, was Zeit hat</p>
+        <div className="mt-auto pt-5">
+          <a href="mailto:info@primundus.de" className={KNOPF_HELL}><span className="xl:hidden">E-Mail</span><span className="hidden xl:inline">E-Mail schreiben</span></a>
+        </div>
+      </div>
     </div>
+  )
+}
+
+export default function KontaktPage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
+      <ArticleProgressBar />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
+
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: 'Kontakt' },
+          ]}
+          augenbraue="Kontakt"
+          titel="Kontakt: Marta Kapcio erreichen Sie täglich von 8 bis 20 Uhr"
+          einleitung={<>Rufen Sie an, schreiben Sie per WhatsApp oder E-Mail. Ihren Preis und passende Betreuungskräfte sehen Sie auch ohne Anruf: im Kostenrechner, in <strong className="text-pm-ink">2 Minuten</strong>, ohne Kontaktdaten. Für alles andere ist Marta Kapcio da, <strong className="text-pm-ink">täglich von 8 bis 20 Uhr</strong>.</>}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="2 Min."
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          blickTitel="Auf einen Blick"
+          blick={[
+            'Telefon 089 200 000 830, täglich 8–20 Uhr',
+            'WhatsApp an dieselbe Nummer',
+            'E-Mail info@primundus.de',
+            'Büro: Landsberger Str. 155, 80687 München',
+            'Preis und Pflegekräfte online, ohne Kontaktdaten',
+          ]}
+        />
+
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="wege" titel="So erreichen Sie uns">
+            <Wege />
+            <Text>
+              Am schnellsten geht es am Telefon: Marta Kapcio und ihr Team sind täglich von 8 bis 20 Uhr erreichbar, auch
+              samstags und sonntags. Wenn Sie lieber schreiben, nutzen Sie WhatsApp oder E-Mail; Unterlagen wie einen
+              Pflegegradbescheid schicken Sie am besten per E-Mail.
+            </Text>
+          </Abschnitt>
+
+          <Abschnitt id="anschrift" titel="Anschrift">
+            <Werte
+              zeilen={[
+                ['Büro Deutschland', 'Primundus Deutschland, Landsberger Str. 155, 80687 München'],
+                ['Vertragspartner', 'PRIMUNDUS Sp. z o.o., Poznańska 21/48, 00-685 Warszawa, Polen'],
+                ['Geschäftsführung', 'Karolina Jakubowska'],
+              ]}
+            />
+            <MehrDazu label="Mehr über uns:" links={[{ href: '/ueber-uns', text: 'Wer hinter Primundus steht' }, { href: '/impressum', text: 'Impressum' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="danach" titel="Was nach Ihrer Anfrage passiert">
+            <Schritte
+              schritte={[
+                { title: 'Preis sehen', desc: 'Im Kostenrechner oder am Telefon: Sie beantworten ein paar Fragen zur Pflegesituation und kennen Ihren Monatspreis, auch was nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleibt.', tag: 'Unter 2 Minuten' },
+                { title: 'Pflegekräfte ansehen', desc: 'Mit Ihren Kontaktdaten speichern Sie die Berechnung und sehen passende Pflegekräfte mit Foto, Erfahrung und Deutschkenntnissen. Bewerbungen kommen am selben Werktag.', tag: 'Bewerbungen am selben Werktag' },
+                { title: 'Aussuchen, dann Vertrag', desc: 'Sie entscheiden, wer kommt. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag; den Mustervertrag können Sie vorher lesen. Danach reist die Betreuungskraft an.', tag: 'Anreise in 3 Tagen möglich' },
+              ]}
+            />
+            <MehrDazu label="Schritt für Schritt:" links={[{ href: '/ablauf', text: 'Ablauf der 24h-Pflege bei Primundus' }, { href: '/beratungsgespraech', text: 'So läuft ein Gespräch mit uns ab' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen zum Kontakt">
+            <Fragen fragen={FRAGEN} />
+            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis und passende Pflegekräfte in 2 Minuten' }]} />
+          </Abschnitt>
+        </RatgeberRumpf>
+      </div>
+
+      <KontaktBand />
+    </>
   )
 }
