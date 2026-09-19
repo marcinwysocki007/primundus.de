@@ -255,11 +255,13 @@ export function MartaBand({ eingebettet = false }: { eingebettet?: boolean }) {
       <div
         className={`flex flex-col gap-6 ${
           eingebettet
-            ? 'bg-pm-shell px-5 py-8 md:rounded-[24px] md:px-8 md:py-7 lg:flex-row lg:items-center lg:justify-between'
+            ? 'bg-pm-shell px-5 py-8 md:rounded-[24px] md:px-8 md:py-7 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between'
             : 'mx-auto max-w-[1200px] px-5 py-10 md:py-12 lg:flex-row lg:items-center lg:justify-between lg:gap-10'
         }`}
       >
-        <div className="flex items-center gap-4 md:gap-5">
+        {/* Eingebettet: Knöpfe rutschen in die zweite Zeile, wenn die Spalte schmal ist (Vorlage mit Inhaltsleiste: Band 604–736 px;
+            Martin 19.09.: „der eine Button klemmt“). Grundbreite = Foto + Überschrift, damit breite Spalten (820 px) einzeilig bleiben. */}
+        <div className={`flex items-center gap-4 md:gap-5 ${eingebettet ? 'lg:grow lg:basis-[356px]' : ''}`}>
           <Image src="/images/marta-kapcio-gesicht.jpg" alt="Marta Kapcio" width={88} height={88} className="h-[68px] w-[68px] flex-none rounded-full object-cover md:h-[88px] md:w-[88px]" />
           <div className="min-w-0">
             <p className={`whitespace-nowrap text-[20px] font-extrabold leading-[1.15] tracking-[-0.025em] text-pm-ink min-[390px]:text-[22px] ${eingebettet ? 'md:text-[24px]' : 'md:text-[28px]'}`}>Lieber erst sprechen?</p>
