@@ -213,6 +213,65 @@ export default function Page() {
           </div>
         </section>
 
+        {/* ── REGIONEN ────────────────────────────────────────────
+             20.09.2026: Die Startseite verlinkte keine einzige Ortsseite. Google zeigte sie deshalb selbst für
+             Ortsanfragen („altenpflege hamburg" Position 7,6, „polnische pflegekräfte vermittlung münchen" 3,3) — mit
+             null Klicks, weil die Startseite die Stadt nicht beantwortet. Martin am 20.09.: „Ortsanfragen sollten zu
+             unseren Seiten gehen, auf denen wir diesen Ort verwenden." Dieser Block zeigt auf die Ortsseiten. */}
+        <section className="py-14 md:py-16 lg:py-20 px-5 bg-white">
+          <div className="max-w-wide mx-auto">
+            <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-pm-taupe-light mb-2">Regionen</p>
+            <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-pm-ink mb-3">
+              Betreuung zu Hause in Ihrer Stadt
+            </h2>
+            <p className="text-[16px] text-pm-body mb-8 max-w-2xl">
+              Ob Sie es Altenpflege, Seniorenbetreuung oder 24-Stunden-Pflege nennen: Auf den Seiten für Ihre Stadt stehen
+              die Preise, die Kassenzuschüsse und die Stadtteile, in denen unsere Betreuungskräfte im Einsatz sind.
+            </p>
+            <ul className="flex flex-wrap gap-2.5">
+              {[
+                ['München', '/24h-pflege-muenchen'],
+                ['Hamburg', '/24h-pflege-hamburg'],
+                ['Berlin', '/24h-pflege-berlin'],
+                ['Köln', '/24h-pflege-koeln'],
+                ['Frankfurt', '/24h-pflege-frankfurt'],
+                ['Stuttgart', '/24h-pflege-stuttgart'],
+                ['Düsseldorf', '/24h-pflege-duesseldorf'],
+                ['Dortmund', '/24h-pflege-dortmund'],
+                ['Essen', '/24h-pflege-essen'],
+                ['Bremen', '/24h-pflege-bremen'],
+                ['Leipzig', '/24h-pflege-leipzig'],
+                ['Dresden', '/24h-pflege-dresden'],
+                ['Hannover', '/24h-pflege-hannover'],
+                ['Nürnberg', '/24h-pflege-nuernberg'],
+              ].map(([ort, href]) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="inline-flex min-h-[44px] items-center rounded-full border border-pm-line bg-white px-4 text-[15.5px] font-semibold text-pm-ink hover:border-pm-taupe hover:text-pm-taupe-ink transition-colors"
+                  >
+                    {ort}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="/regionen"
+                  className="inline-flex min-h-[44px] items-center rounded-full bg-pm-paper px-4 text-[15.5px] font-semibold text-pm-taupe-ink hover:bg-pm-taupe hover:text-white transition-colors"
+                >
+                  Alle Orte ansehen
+                </a>
+              </li>
+            </ul>
+            <p className="mt-6 text-[15.5px] text-pm-body">
+              Unsere Betreuungskräfte kommen aus Polen. Wie Auswahl, Anreise und Wechsel ablaufen, steht auf{' '}
+              <a href="/pflegekraft-aus-polen" className="font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">
+                polnische Pflegekräfte: Kosten, Auswahl, Ablauf
+              </a>.
+            </p>
+          </div>
+        </section>
+
         {/* ── FAQ ─────────────────────────────────────────────────────────── */}
         <Sicher name="FAQ"><FAQSection /></Sicher>
 
