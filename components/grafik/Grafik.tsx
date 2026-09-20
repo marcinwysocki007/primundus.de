@@ -386,3 +386,30 @@ export function Preisfaktoren() {
     </GrafikRahmen>
   )
 }
+
+/** Der Weg nach dem Schlaganfall: von der Stroke Unit über die Reha bis nach Hause, mit den Brücken, die das Gesetz vorsieht. */
+export function SchlaganfallWeg() {
+  const stationen = [
+    { name: 'Stroke Unit', dauer: 'die ersten Tage', was: 'Akutbehandlung im Krankenhaus. Der Sozialdienst beantragt die Anschlussrehabilitation und, wenn nötig, den Pflegegrad; im Krankenhaus wird spätestens am fünften Arbeitstag begutachtet.' },
+    { name: 'Reha', dauer: 'meist mehrere Wochen', was: 'Anschlussrehabilitation in der Klinik oder ambulant: Physiotherapie, Ergotherapie, Logopädie, Training für den Alltag. Ziel ist so viel Selbständigkeit wie möglich.' },
+    { name: 'Brücke', dauer: 'bis 10 Tage oder bis 8 Wochen', was: 'Ist zu Hause noch nichts vorbereitet: Übergangspflege im Krankenhaus bis zu 10 Tage (§ 39e SGB V) oder Kurzzeitpflege bis zu 8 Wochen im Jahr (§ 42 SGB XI), bezahlt aus dem Entlastungsbudget.' },
+    { name: 'Zu Hause', dauer: 'auf Dauer', was: 'Therapien als Hausbesuch, Pflegedienst für die Behandlungspflege, Angehörige oder eine Betreuungskraft im Haus für Grundpflege, Haushalt und Begleitung.' },
+  ]
+  return (
+    <GrafikRahmen
+      titel="Der Weg nach dem Schlaganfall: Klinik, Reha, Brücke, zu Hause"
+      quelle="§ 39e SGB V (Übergangspflege), § 42 SGB XI (Kurzzeitpflege), § 18a Abs. 5 SGB XI (Begutachtung im Krankenhaus). Dauer der Reha nach ärztlicher Verordnung; sie ist bei jedem Menschen anders."
+    >
+      <ol className="grid gap-3 md:grid-cols-4">
+        {stationen.map((s, i) => (
+          <li key={s.name} className="relative rounded-[14px] border border-pm-line-soft bg-pm-paper p-4">
+            <span aria-hidden="true" className={`absolute left-4 top-4 flex h-7 w-7 items-center justify-center rounded-full text-[13px] font-bold text-white ${i === 3 ? 'bg-pm-green' : 'bg-pm-taupe'}`}>{i + 1}</span>
+            <p className="pl-9 text-[17px] font-bold leading-[1.3] text-pm-ink">{s.name}</p>
+            <p className="pl-9 text-[13.5px] text-pm-mute">{s.dauer}</p>
+            <p className="mt-3 text-[14.5px] leading-[1.5] text-pm-body">{s.was}</p>
+          </li>
+        ))}
+      </ol>
+    </GrafikRahmen>
+  )
+}
