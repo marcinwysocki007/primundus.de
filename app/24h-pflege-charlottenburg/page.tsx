@@ -26,8 +26,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Berlin-Charlottenburg',
-  description: '24-Stunden-Pflege in Berlin-Charlottenburg: Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Berlin-Charlottenburg: ab 2.150 €',
+  description: '24-Stunden-Pflege in Berlin-Charlottenburg: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-charlottenburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -26,8 +26,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Neuburg an der Donau',
-  description: '24-Stunden-Pflege in Neuburg an der Donau: Eigenanteil ab ca. 1100 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Neuburg an der Donau: ab 2.150 €',
+  description: '24-Stunden-Pflege in Neuburg an der Donau: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-neuburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

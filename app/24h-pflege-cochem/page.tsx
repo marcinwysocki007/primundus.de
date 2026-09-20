@@ -26,8 +26,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Cochem an der Mosel',
-  description: '24-Stunden-Pflege in Cochem an der Mosel: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Cochem an der Mosel: ab 2.150 €',
+  description: '24-Stunden-Pflege in Cochem an der Mosel: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-cochem' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

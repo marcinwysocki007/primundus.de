@@ -26,8 +26,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Bottrop | Primundus',
-  description: '24-Stunden-Pflege in Bottrop: Eigenanteil ab ca. 1300 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Bottrop: ab 2.150 €, täglich kündbar',
+  description: '24-Stunden-Pflege in Bottrop: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bottrop' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

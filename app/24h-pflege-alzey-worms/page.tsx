@@ -23,9 +23,9 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Kreis Alzey-Worms',
+  title: '24-Stunden-Pflege in Kreis Alzey-Worms: ab 2.150 €',
   description:
-    '24h-Pflege im Landkreis Alzey-Worms: geprüfte Betreuungskraft zuhause in Alzey, Wörrstadt, Osthofen & Umgebung. Täglich kündbar, Anreise in 3 Tagen möglich.',
+    '24-Stunden-Pflege in Kreis Alzey-Worms: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-alzey-worms' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

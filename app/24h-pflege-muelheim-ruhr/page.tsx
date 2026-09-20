@@ -25,8 +25,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Mülheim an der Ruhr',
-  description: '24-Stunden-Pflege in Mülheim an der Ruhr: Eigenanteil ab ca. 1200 €/Monat (PG 3). Betreuungskräfte vorher ansehen, keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Mülheim an der Ruhr: ab 2.150 €',
+  description: '24-Stunden-Pflege in Mülheim an der Ruhr: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muelheim-ruhr' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

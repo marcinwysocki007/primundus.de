@@ -23,9 +23,9 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Rhein-Pfalz-Kreis',
+  title: '24-Stunden-Pflege in Rhein-Pfalz-Kreis: ab 2.150 €',
   description:
-    '24h-Pflege im Rhein-Pfalz-Kreis: Betreuungskraft zuhause in Schifferstadt, Limburgerhof, Mutterstadt & dem ganzen Kreis. Täglich kündbar, Anreise in 3 Tagen möglich.',
+    '24-Stunden-Pflege in Rhein-Pfalz-Kreis: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

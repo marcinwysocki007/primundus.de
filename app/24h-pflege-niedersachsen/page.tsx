@@ -25,8 +25,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Niedersachsen — Betreuungskraft | Primundus',
-  description: '24h-Pflege in Niedersachsen: Geprüfte Betreuungskraft zuhause. Rechtssicher, täglich kündbar, startklar. Ab ca. 1000 €/Monat Eigenanteil (PG 3).',
+  title: '24-Stunden-Pflege in Niedersachsen: ab 2.150 €',
+  description: '24-Stunden-Pflege in Niedersachsen: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-niedersachsen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -23,9 +23,9 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege & Betreuung in Hochtaunuskreis | Primundus',
+  title: '24-Stunden-Pflege in Hochtaunuskreis: ab 2.150 €',
   description:
-    '24h-Pflege im Hochtaunuskreis: Betreuungskraft zuhause in Oberursel, Königstein, Kronberg, Usingen & Umgebung. Täglich kündbar, Anreise in 3 Tagen möglich.',
+    '24-Stunden-Pflege in Hochtaunuskreis: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hochtaunuskreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
