@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Hanau ab 2.150 €: 1:1 zu Hause',
-  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Eine Betreuungskraft zieht in Hanau ein und entlastet die Familie. Ab 2.150 €, täglich kündbar.',
+  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Betreuungskraft zieht in Hanau ein, entlastet die Familie. Ab 2.150 €, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hanau' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

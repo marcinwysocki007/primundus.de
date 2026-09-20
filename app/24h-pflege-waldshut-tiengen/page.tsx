@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege Waldshut-Tiengen ab 2.150 €: 1:1 zu Hause',
-  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Waldshut-Tiengen ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
+  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Betreuungskraft zieht in Waldshut-Tiengen ein, entlastet die Familie. Ab 2.150 €, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-waldshut-tiengen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

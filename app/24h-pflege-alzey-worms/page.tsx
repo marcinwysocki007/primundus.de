@@ -30,7 +30,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege Kreis Alzey-Worms ab 2.150 €: 1:1 zu Hause',
   description:
-    '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Kreis Alzey-Worms ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
+    '1:1-Betreuung zu Hause statt Heimplatz: Betreuungskraft zieht in Kreis Alzey-Worms ein, entlastet die Familie. Ab 2.150 €, Bestpreisgarantie, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-alzey-worms' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

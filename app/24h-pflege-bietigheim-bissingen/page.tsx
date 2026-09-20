@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bietigheim-Bissingen ab 2.150 €',
-  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Bietigheim-Bissingen ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
+  description: '1:1-Betreuung zu Hause statt Heim: Betreuungskraft zieht in Bietigheim-Bissingen ein, entlastet die Familie. Ab 2.150 €, Bestpreisgarantie, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bietigheim-bissingen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
