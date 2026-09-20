@@ -22,9 +22,17 @@ const STALE = [
   // (Pflegeheim-Kostenvergleich, Zuschuss-Rechner) folgen mit ihrer Seitenart.
   ['Alte Preisspanne (2.200–3.500)', /2\.200\s*(?:€\s*)?(?:und|bis|–|-)\s*3\.500/g],
   ['Alter Einstiegspreis (ab 2.200 €/Monat)', /\b[Aa]b\s+(?:ca\.\s+)?2\.200\s*(?:€\s*\/\s*Mo|Euro|€\s+gegenüber)/g],
-  // Bayerisches Landespflegegeld seit Pflegegeldjahr 2026: 500 € (LfP Bayern)
-  ['Landespflegegeld Bayern alt (1.000 €)', /Landespflegegeld[^.\n(]{0,40}1\.000\s*(?:€|Euro)/g],
+  // Bayerisches Landespflegegeld seit Pflegegeldjahr 2026: 500 € (LfP Bayern).
+  // Zeilenumbrüche sind erlaubt, weil der alte Wert am 20.09. auf 51 Ortsseiten stand, wo das Wort in der
+  // Kasten-Überschrift und die Zahl im Text darunter steht — mit [^.\n(] rutschte das durch. „(" beendet die
+  // Suche weiterhin, damit der historische Hinweis „(bis 2025: 1.000 €)" erlaubt bleibt.
+  ['Landespflegegeld Bayern alt (1.000 €)', /Landespflegegeld[^.(]{0,120}1\.000\s*(?:€|Euro)/g],
   ['Eigenanteil mit Entlastungsbetrag gerechnet', /(?:Pflegegeld|Pflegegeld\s+und),?\s+Entlastungsbetrag\s+und\s+(?:Entlastungsbudget|Verhinderungspflege)/g],
+  // Herkunft der eigenen Betreuungskräfte (Martin 19.09.2026): derzeit nur Polen — nicht „nur" schreiben,
+  // aber auch keine anderen Länder als unsere Kräfte ausgeben. Am 20.09. stand die Aufzählung noch auf
+  // 207 Ortsseiten. Die Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien bleiben erlaubt:
+  // Diese Regel trifft nur die Aufzählung, mit der wir eigene Kräfte beschreiben.
+  ['Herkunft aufgezählt (nur Polen)', /(?:einige|überwiegend|teils|auch)\s+aus\s+(?:Rumänien|Bulgarien)/g],
 ]
 
 const SCAN_DIRS = ['app', 'components', 'lib']

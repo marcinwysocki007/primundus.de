@@ -204,7 +204,7 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-thueringen" titel="Polnische Betreuungskräfte in Thüringen">
-            <Text>Wer in Thüringen nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Die meisten kommen aus Polen, einige aus Rumänien oder Bulgarien — und sie sind in ganz Thüringen im Einsatz, in der Großstadt wie im kleinsten Dorf.</Text>
+            <Text>Wer in Thüringen nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Sie kommen aus Polen und sind in ganz Thüringen im Einsatz, in der Großstadt wie im kleinsten Dorf.</Text>
             <Kasten titel="Angestellt statt vermittelt">
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
