@@ -1,35 +1,76 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
-import { AuthorByline } from '@/components/AuthorByline'
+import {
+  RatgeberKopf, RatgeberRumpf, Abschnitt, DunklerAbschnitt, Text, Punkte, Kasten, HakenListe, Tabelle, MehrDazu, Fragen,
+  RechnerKasten, Zwischentitel, Werte,
+} from '@/components/vorlage/Ratgeber'
+import { Beispieltag, HeimVsZuhause, KostenAufteilung, Preisfaktoren } from '@/components/grafik/Grafik'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
+import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN } from '@/lib/fakten'
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-polen', '25. April 2026')
+// Neu in der Vorlage am 20.09.2026 (Martin: „bestmöglichen Content liefern, um auf die Top-3-Positionen zu kommen"). Vorher alte
+// Optik mit „rund um die Uhr erreichbar", „200.000–300.000 Betreuungskräfte aus Polen" ohne Quelle und „sofort Ersatzkraft".
+// Grundlage: Search Console (986 Impressionen, 0 Klicks, Position 37–75; alle Kosten-Suchen der Website landen hier: „pflegekraft
+// aus polen kosten" 61, „kosten polnische pflegekraft" 60, „kosten polnische pflegekraft pflegegrad 3" 36, „polnische pflegekraft
+// legal" 75, „polnische agentur" 24, „… privat" 11), Keyword-Planer („polnische pflegekraft" 1.600, „pflegekraft aus polen" 880,
+// „kosten polnische pflegekraft pflegegrad 3" 720, „pflegekraft polen" 590, „polnische pflegekraft kosten" 390, „polnische
+// haushaltshilfe" 210, „… erfahrungen" 210, „… agentur" 210, „… privat" 140 im Monat), Googles Fragen („Was zahlt die Pflegekasse
+// für eine polnische Pflegekraft?", „Wer darf die 125 Euro abrechnen?", „Was kostet eine polnische 24-Stunden-Pflegekraft im
+// Monat?", „Warum müssen polnische Pflegekräfte nach 3 Monaten zurück?"), Verfeinerungen (Pflegegrad 2–5, Zimmer, nachts, ohne
+// Agentur, privat, Voraussetzungen, Erfahrungen) und die Seiten auf Platz 1–8 (742–4.012 Wörter; Anbieterpreise 2.490–2.990 €).
+// Preise aus der Preiskonfiguration des Rechners (20.09.), Vertragsfakten aus dem Mustervertrag, Recht: VO (EG) 883/2004 Art. 12,
+// § 35a EStG, §§ 36, 37, 42a, 45b SGB XI, SGB XII. Herkunft: unsere Betreuungskräfte kommen aus Polen; keine anderen Länder bewerben.
+
+const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-polen', '20. September 2026')
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-polen'
+const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
+const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 
 const SECTIONS = [
-  { id: 'was-bedeutet', title: 'Was bedeutet Pflegekraft aus Polen?' },
-  { id: 'kosten', title: 'Kosten & was inbegriffen ist' },
-  { id: 'legal', title: 'Legal beschäftigen — so geht es' },
-  { id: 'qualitaet', title: 'Qualität & Auswahl der Kraft' },
-  { id: 'alternativen', title: 'Polen vs. andere Länder' },
+  { id: 'kosten', title: 'Was sie im Monat kostet' },
+  { id: 'pflegegrad', title: 'Kosten nach Pflegegrad' },
+  { id: 'pflegekasse', title: 'Was die Kasse zahlt' },
+  { id: 'legal', title: 'Legal beschäftigen: drei Wege' },
+  { id: 'leistungen', title: 'Was sie tut, was nicht' },
+  { id: 'zimmer', title: 'Zimmer und Alltag' },
+  { id: 'auswahl', title: 'Auswahl, Start, Wechsel' },
+  { id: 'erfahrungen', title: 'Erfahrungen und Sorgen' },
+  { id: 'vergleich', title: 'Oder Pflegeheim?' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const FRAGEN = [
+  { q: 'Was kostet eine polnische Pflegekraft im Monat?', a: 'Bei Primundus ab 2.150 € im Monat für eine Person, ohne Vermittlungsgebühr; für ein Ehepaar ab 2.600 €. Mehr kostet es, wenn nachts Hilfe nötig ist, die Betreuungskraft besser Deutsch sprechen soll oder weitere Wünsche dazukommen. Dazu kommen An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat.' },
+  { q: 'Was kostet eine polnische Pflegekraft bei Pflegegrad 3?', a: 'Die Betreuung kostet ab 2.150 € im Monat. Davon gehen 599 € Pflegegeld ab, 295 € aus dem Entlastungsbudget (wenn die Kasse den Einsatz als Verhinderungspflege anerkennt) und bis zu 333 € Steuerermäßigung. Selbst zu tragen bleiben ab ca. 923 € im Monat. Bei Pflegegrad 2 sind es ab ca. 1.175 €, bei Pflegegrad 4 ab ca. 722 €, bei Pflegegrad 5 ab ca. 582 €.' },
+  { q: 'Was zahlt die Pflegekasse für eine polnische Pflegekraft?', a: 'Die Pflegekasse zahlt die Betreuungskraft nicht direkt, aber Sie setzen ihre Leistungen dafür ein: das Pflegegeld (347 € bis 990 € im Monat ab Pflegegrad 2), das Entlastungsbudget von 3.539 € im Jahr für Verhinderungspflege, wenn die Kasse die Rechnung anerkennt, und Pflegehilfsmittel. Pflegesachleistungen gibt es nur für zugelassene Pflegedienste.' },
+  { q: 'Wer darf den Entlastungsbetrag von 131 € abrechnen?', a: 'Nur Anbieter, die das Bundesland anerkannt hat: Tages- und Kurzzeitpflege, ambulante Pflegedienste und anerkannte Alltagshilfen. Eine Betreuungskraft, die mit im Haus wohnt, gehört in der Regel nicht dazu. Rechnen Sie den Entlastungsbetrag deshalb nicht in Ihren Eigenanteil ein.' },
+  { q: 'Ist eine polnische Pflegekraft legal?', a: 'Ja, wenn sie sozialversichert ist und jemand ihre Beiträge nachweisbar zahlt. Bei uns ist die Betreuungskraft bei der PRIMUNDUS Sp. z o.o. angestellt und wird mit A1-Bescheinigung nach Deutschland entsandt; Sie schließen den Vertrag mit Primundus und werden nicht Arbeitgeber. Nicht legal ist eine „selbstständige" Kraft, die wie eine Angestellte bei Ihnen wohnt und nach Ihren Anweisungen arbeitet, ohne dass Sozialbeiträge fließen.' },
+  { q: 'Warum müssen polnische Pflegekräfte nach 3 Monaten zurück?', a: 'Müssen sie nicht. Eine Regel „nach drei Monaten zurück" gibt es nicht; eine Entsendung innerhalb der EU darf bis zu 24 Monate dauern. Unsere Betreuungskräfte wechseln sich in der Regel alle 6 bis 8 Wochen ab, weil sie Familie in Polen haben und Erholung brauchen. Jeden Wechsel organisieren wir, und Sie wählen die nächste Betreuungskraft selbst aus.' },
+  { q: 'Kann ich eine polnische Pflegekraft privat anstellen?', a: 'Ja. Sie werden dann Arbeitgeber: Anmeldung bei Sozialversicherung und Finanzamt, Lohn nach deutschem Recht, Urlaub, Lohnfortzahlung bei Krankheit, Ersatz bei Ausfall organisieren Sie selbst. Das passt, wenn Sie eine Betreuungskraft schon kennen und die Verwaltung nicht scheuen. Über uns entfällt das alles; der Preis ist trotzdem niedriger als bei den großen Anbietern.' },
+  { q: 'Was kostet eine polnische Pflegekraft ohne Agentur?', a: 'Ohne Anbieter zahlen Sie den Lohn plus Sozialabgaben und tragen Ausfall, Urlaub und Ersatz selbst; seriös liegt das nicht unter dem Preis über einen Anbieter, der die Betreuungskraft angestellt hat. Angebote deutlich unter 2.000 € im Monat funktionieren fast immer über Scheinselbstständigkeit; das Risiko liegt bei Ihnen.' },
+  { q: 'Welches Zimmer braucht eine polnische Pflegekraft?', a: 'Ein eigenes Zimmer mit Bett, Schrank, Tisch und Tür, die Mitbenutzung von Bad und Küche, Verpflegung, WLAN und einen Schlüssel. Das Zimmer muss nicht groß sein, aber abschließbar und beheizt. Pflegebett und Hilfsmittel für die betreute Person beantragen Sie bei der Pflegekasse.' },
+  { q: 'Hilft eine polnische Pflegekraft auch nachts?', a: 'Ja, weil sie mit im Haus wohnt, ist sie bei Bedarf auch nachts da. Gelegentliche Nachteinsätze kosten 50 € im Monat mehr, einmal pro Nacht 100 €, mehrmals pro Nacht 300 €. Sie braucht wie jeder Mensch ihre Nachtruhe; wer jede Nacht mehrfach Hilfe braucht, sagt das im Kostenrechner an, dann passen Preis und Auswahl.' },
+  { q: 'Kann ich die Kosten steuerlich absetzen?', a: 'Ja, als haushaltsnahe Dienstleistung nach § 35a EStG: 20 Prozent der Kosten, bis zu 4.000 € im Jahr, also bis zu 333 € im Monat. Voraussetzung: Rechnung und Überweisung, keine Barzahlung. Die Ermäßigung zieht das Finanzamt direkt von der Steuer ab.' },
+  { q: 'Zahlt das Sozialamt eine polnische Pflegekraft?', a: 'Reichen Rente, Einkommen und Vermögen nicht, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch zu Hause; ob es eine Betreuungskraft übernimmt, entscheidet es im Einzelfall. Kinder werden erst ab einem Bruttoeinkommen von 100.000 € im Jahr herangezogen. Stellen Sie den Antrag, bevor die Betreuung beginnt.' },
+]
+
 export const metadata: Metadata = {
-  title: 'Polnische Pflegekräfte — legal, sicher & bezahlbar 2026',
-  description: 'Polnische Pflegekräfte für die 24h-Pflege: ab 2.150 €/Monat, legal über das Entsendemodell mit A1-Bescheinigung. Kosten, Recht und Auswahl — einfach erklärt.',
+  title: 'Polnische Pflegekraft: Kosten 2026 ab 2.150 €, legal, sicher',
+  description: 'Polnische Pflegekraft: ab 2.150 € im Monat ohne Vermittlungsgebühr, Kosten je Pflegegrad, was die Pflegekasse zahlt, drei legale Wege, Nächte, Wechsel.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen' },
   openGraph: {
-    title: 'Polnische Pflegekräfte — legal & sicher 2026 | Primundus',
-    description: 'Pflegekraft aus Polen: ab 2.150 €/Monat, legal über Entsendemodell. Kosten, Rechtliches & Qualität erklärt.',
+    title: 'Polnische Pflegekraft: Kosten 2026 ab 2.150 €, legal beschäftigen',
+    description: 'Ab 2.150 € im Monat, Kosten je Pflegegrad, was die Pflegekasse zahlt, drei legale Wege, Zimmer, Nächte, Wechsel.',
     url: 'https://primundus.de/pflegekraft-aus-polen',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
-    images: [{ url: '/images/primundus_logo_header.webp' }],
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
   },
 }
 
@@ -37,7 +78,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Polnische Pflegekräfte — legal beschäftigen 2026',
+    headline: 'Polnische Pflegekraft: Was sie 2026 kostet, was die Kasse zahlt und wie Sie sie legal beschäftigen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -49,372 +90,286 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Organisation', item: 'https://primundus.de/organisation' },
+      { '@type': 'ListItem', position: 2, name: '24-Stunden-Pflege', item: 'https://primundus.de/24-stunden-pflege' },
       { '@type': 'ListItem', position: 3, name: 'Pflegekraft aus Polen', item: 'https://primundus.de/pflegekraft-aus-polen' },
     ],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Was kostet eine Pflegekraft aus Polen?', acceptedAnswer: { '@type': 'Answer', text: 'Über Primundus ab 2.150 €/Monat je nach Pflegebedarf, dazu An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld (z. B. 599 €/Monat bei PG 3), Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.' } },
-      { '@type': 'Question', name: 'Ist eine Pflegekraft aus Polen legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — über das Entsendemodell mit A1-Bescheinigung vollständig legal. Die Kraft ist in Polen sozialversichert, in Deutschland rechtlich abgesichert. Scheinselbstständigkeit ist dagegen strafbar.' } },
-      { '@type': 'Question', name: 'Wie funktioniert das Entsendemodell?', acceptedAnswer: { '@type': 'Answer', text: 'Die Kraft ist fest bei uns angestellt — bei der PRIMUNDUS Sp. z o.o. in Polen — und wird für 6–8 Wochen entsandt. Sie schließen den Vertrag mit Primundus in Deutschland: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' } },
-      { '@type': 'Question', name: 'Was leistet eine Pflegekraft aus Polen?', acceptedAnswer: { '@type': 'Answer', text: 'Grundpflege, Haushaltsführung, Begleitung zu Arztterminen und soziale Betreuung. Keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe. Behandlungspflege nur mit Qualifikationsnachweis.' } },
-      { '@type': 'Question', name: 'Wie schnell kann eine Pflegekraft aus Polen starten?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Primundus ist eine Anreise schon 3 Tage nach dem ersten Gespräch möglich — täglich kündbar, taggenaue Abrechnung.' } },
-    ],
+    mainEntity: FRAGEN.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   },
 ]
+
+const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+const l = (href: string, text: string) => <a href={href} className={LINK}>{text}</a>
+const QUELLE = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
 export default function PflegekraftAusPolen() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <ArticleProgressBar />
-      <ArticleTOC sections={SECTIONS} />
+      <div className="lg:hidden">
+        <ArticleTOC sections={SECTIONS} />
+      </div>
 
-      <div className="min-h-screen bg-pm-paper">
-        <div className="max-w-article mx-auto px-5 py-10 md:py-16">
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[
+            { label: 'Startseite', href: '/' },
+            { label: '24-Stunden-Pflege', href: '/24-stunden-pflege' },
+            { label: 'Pflegekraft aus Polen' },
+          ]}
+          augenbraue="Pflegekraft aus Polen 2026"
+          titel="Polnische Pflegekraft: Was sie 2026 kostet, was die Kasse zahlt und wie Sie sie legal beschäftigen"
+          einleitung={<>Eine polnische Pflegekraft kostet bei Primundus ab 2.150 € im Monat, ohne Vermittlungsgebühr. Sie ist bei uns angestellt und mit A1-Bescheinigung legal in Deutschland tätig; Sie werden nicht Arbeitgeber. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat. Ihren Preis und die Betreuungskräfte, die dafür in Frage kommen, zeigt der <a href={RECHNER} className={QUELLE}>Kostenrechner in 2 Minuten</a>.</>}
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          aktualisiert={AKTUALISIERT.sichtbar}
+          lesezeit="11 Min."
+          blick={[
+            'Preis: ab 2.150 € im Monat für eine Person, ab 2.600 € für ein Ehepaar, keine Vermittlungsgebühr',
+            'Selbst zu tragen bei Pflegegrad 3: ab ca. 923 € nach Pflegegeld, Entlastungsbudget und Steuer',
+            'Legal: bei uns angestellt, Entsendung mit A1-Bescheinigung, Vertrag mit Primundus',
+            'Sie sehen vorab, wer kommt: Profil mit Foto, Deutschkenntnissen und Erfahrung',
+            'Anreise in 3 Tagen möglich, Wechsel alle 6 bis 8 Wochen, täglich kündbar',
+            'Dazu: An- und Abreise 125 € je Strecke; Zimmer, Kost und Logis stellen Sie',
+          ]}
+        />
 
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span>›</span>
-            <a href="/organisation" className="hover:text-pm-taupe transition-colors">Organisation</a>
-            <span>›</span>
-            <span className="text-pm-ink">Pflegekraft aus Polen</span>
-          </nav>
+        <RatgeberRumpf abschnitte={SECTIONS}>
+          <Abschnitt id="kosten" titel="Was kostet eine polnische Pflegekraft im Monat?">
+            <Text>
+              Der Grundpreis von 2.150 € im Monat gilt für die Betreuung einer Person. Die Betreuungskraft hat dann grundlegende
+              Deutschkenntnisse und wird nachts nicht gebraucht. Es ist der Bruttopreis; Zuschüsse sind nicht eingerechnet. Was den Preis
+              erhöht, legen wir offen; die Beträge kommen aus unserem Kostenrechner.
+            </Text>
+            <Preisfaktoren />
+            <Text>
+              Dazu kommen An- und Abreise der Betreuungskraft mit 125 € je Strecke, auch bei jedem Wechsel. An neun Feiertagen im Jahr gilt der
+              doppelte Tagessatz. Ein eigenes Zimmer, Verpflegung und WLAN stellen Sie; das bezahlen Sie nicht an uns. Abgerechnet wird
+              taggenau: Monatspreis geteilt durch 30, beim Grundpreis rund 72 € am Tag. Sie zahlen nur Tage, an denen die Betreuungskraft da ist.
+            </Text>
+            <Kasten augenbraue="Zum Vergleich" titel="Was polnische Pflegekräfte bei anderen Anbietern kosten">
+              <Text>
+                Bei den großen Anbietern beginnen die Preise 2026 zwischen rund 2.500 und 3.000 € im Monat, oft plus Vermittlungsgebühr. Wir liegen mit
+                2.150 € darunter. Unsere Betreuungskräfte sind bei uns angestellt, und eine Gebühr fällt nicht an. Dazu kommt die Bestpreisgarantie:
+                nie mehr als für ein vergleichbares Angebot. Angebote deutlich unter 2.000 € funktionieren fast immer über Scheinselbstständigkeit.
+              </Text>
+            </Kasten>
+            <RechnerKasten src="apex-polen" />
+          </Abschnitt>
 
-          <p className="flex items-center gap-1.5 text-[11px] text-pm-taupe-light mb-4">
-            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>7 Min Lesezeit · Aug. 2026
-          </p>
+          <Abschnitt id="pflegegrad" titel="Kosten nach Pflegegrad 2, 3, 4 und 5">
+            <Text>
+              Der Pflegegrad ändert den Preis kaum (nur Pflegegrad 5 kostet 50 € mehr), aber er bestimmt, was die Pflegekasse dazugibt. Die
+              Tabelle rechnet mit dem Grundpreis, dem Pflegegeld, dem anteiligen Entlastungsbudget und der Steuerermäßigung. Der Entlastungsbetrag
+              von {euro(ENTLASTUNGSBETRAG)} fehlt bewusst: Die Kasse zahlt ihn in der Regel nicht für die Betreuungskraft.
+            </Text>
+            <Tabelle
+              titel="Eine Person, Grundpreis, Stand 2026"
+              kopf={['', 'PG 2', 'PG 3', 'PG 4', 'PG 5']}
+              zeilen={[
+                ['Betreuung ab', '2.150 €', '2.150 €', '2.150 €', '2.200 €'],
+                ['Pflegegeld', `− ${euro(PFLEGEGELD[2])}`, `− ${euro(PFLEGEGELD[3])}`, `− ${euro(PFLEGEGELD[4])}`, `− ${euro(PFLEGEGELD[5])}`],
+                ['Entlastungsbudget, anteilig', '− 295 €', '− 295 €', '− 295 €', '− 295 €'],
+                ['Steuerermäßigung, bis zu', '− 333 €', '− 333 €', '− 333 €', '− 333 €'],
+                ['Selbst zu tragen ab ca.', '1.175 €', '923 €', '722 €', '582 €'],
+              ]}
+              betont={[1, 2, 3, 4]}
+              fuss={`Pflegegeld § 37 SGB XI. Entlastungsbudget ${euro(ENTLASTUNGSBUDGET)} im Jahr (§ 42a), anteilig 295 € im Monat, wenn die Kasse den Einsatz als Verhinderungspflege anerkennt. Steuerermäßigung § 35a EStG: 20 %, höchstens 4.000 € im Jahr. Dazu An- und Abreise 125 € je Strecke.`}
+            />
+            <KostenAufteilung />
+            <Text>
+              Für ein Ehepaar kostet die Betreuung ab 2.600 €. Beide Partner bekommen ihr eigenes Pflegegeld und ihr eigenes Entlastungsbudget;
+              bei Pflegegrad 3 und 2 bleiben so ab ca. 731 € im Monat. Alle Rechenwege stehen auf der {l('/kosten', 'Kostenseite')}.
+            </Text>
+          </Abschnitt>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Polnische Pflegekräfte — legal, sicher & bezahlbar
-          </h1>
+          <Abschnitt id="pflegekasse" titel="Was zahlt die Pflegekasse für eine polnische Pflegekraft?">
+            <Text>
+              Die Pflegekasse überweist der Betreuungskraft nichts. Sie zahlt Ihnen Leistungen, die Sie für die Betreuung einsetzen. Vier davon
+              zählen, eine wird oft falsch versprochen:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: `Pflegegeld: ${euro(PFLEGEGELD[2])} bis ${euro(PFLEGEGELD[5])} im Monat`, desc: 'Ab Pflegegrad 2, monatlich aufs Konto, frei verwendbar. Voraussetzung ist, dass die Pflege zu Hause gesichert ist, und das ist sie mit einer Betreuungskraft. Alle sechs Monate kommt ein Beratungsbesuch nach § 37 Abs. 3.' },
+                { title: `Entlastungsbudget: ${euro(ENTLASTUNGSBUDGET)} im Jahr`, desc: 'Für Verhinderungs- und Kurzzeitpflege ab Pflegegrad 2. Erkennt die Kasse den Einsatz der Betreuungskraft als Verhinderungspflege an, weil die Pflegeperson aus der Familie verhindert ist, erstattet sie unsere Rechnung bis zum Budget. Fragen Sie vorher schriftlich nach.' },
+                { title: 'Pflegehilfsmittel: 42 € im Monat, Wohnumfeld: bis 4.180 €', desc: 'Handschuhe, Bettschutz, Desinfektion zum Verbrauch; Badumbau, Treppenlift oder Türverbreiterung je Maßnahme. Beides ab Pflegegrad 1.' },
+                { title: 'Steuer: bis 4.000 € im Jahr', desc: 'Das Finanzamt zieht 20 Prozent der Kosten von der Steuer ab, höchstens 4.000 € im Jahr (§ 35a EStG). Nur bei Rechnung und Überweisung.' },
+                { title: `Entlastungsbetrag: ${euro(ENTLASTUNGSBETRAG)}, aber meist nicht für die Betreuungskraft`, desc: 'Die Kasse erstattet ihn nur gegen Rechnung eines vom Land anerkannten Anbieters: Tagespflege, Pflegedienst, anerkannte Alltagshilfen. Eine Betreuungskraft im Haus gehört in der Regel nicht dazu. Wer Ihnen die 131 € „einrechnet", rechnet schön.' },
+              ]}
+            />
+            <Zwischentitel>Pflegedienst daneben, Landespflegegeld, Sozialamt</Zwischentitel>
+            <Text>
+              Pflegesachleistungen ({euro(PFLEGESACHLEISTUNGEN[2])} bis {euro(PFLEGESACHLEISTUNGEN[5])} im Monat) zahlt die Kasse nur an zugelassene Pflegedienste. Sie
+              können sie neben der Betreuungskraft nutzen, zum Beispiel für die Behandlungspflege; dann sinkt das Pflegegeld anteilig
+              (Kombinationsleistung). In Bayern kommt das Landespflegegeld von 500 € im Jahr ab Pflegegrad 2 dazu. Reicht das Geld nicht,
+              prüft das Sozialamt Hilfe zur Pflege.
+            </Text>
+            <MehrDazu
+              label="Weiter:"
+              links={[
+                { href: '/finanzierung', text: 'Alle Zuschüsse kombinieren' },
+                { href: '/pflegegeld-und-24h-pflege-kombinieren', text: 'Pflegegeld und Betreuungskraft' },
+                { href: '/verhinderungspflege', text: 'Verhinderungspflege nutzen' },
+              ]}
+            />
+          </Abschnitt>
 
-          <AuthorByline updated={AKTUALISIERT.sichtbar} />
+          <DunklerAbschnitt
+            id="legal"
+            titel="Polnische Pflegekraft legal beschäftigen: drei Wege"
+            einleitung="Legal ist eine Betreuungskraft, wenn sie sozialversichert ist und jemand ihre Beiträge nachweisbar zahlt. Dafür gibt es drei Wege; nur zwei davon sind ohne Risiko."
+            punkte={[
+              { title: 'Entsendung (unser Modell)', desc: 'Die Betreuungskraft ist bei der PRIMUNDUS Sp. z o.o. angestellt, in Polen sozialversichert und wird nach Deutschland entsandt. Die A1-Bescheinigung belegt das. Sie schließen den Vertrag mit Primundus, werden nicht Arbeitgeber und kündigen täglich.' },
+              { title: 'Selbst anstellen', desc: 'Sie werden Arbeitgeber: Anmeldung, Sozialabgaben, Lohn nach deutschem Recht, Urlaub, Lohnfortzahlung, Ersatz bei Ausfall. Legal, aber viel Verwaltung, und ohne Netz, wenn die Betreuungskraft ausfällt.' },
+              { title: 'Selbstständige Betreuungskraft', desc: 'Nur legal, wenn sie wirklich selbstständig arbeitet: mehrere Auftraggeber, eigene Zeiteinteilung, eigenes Risiko. Wohnt sie bei Ihnen und arbeitet nach Ihren Anweisungen, ist das Scheinselbstständigkeit; Nachzahlungen und Strafen treffen Sie.' },
+              { title: 'Der Mythos „nach drei Monaten zurück"', desc: 'Eine solche Regel gibt es nicht. Eine Entsendung innerhalb der EU darf bis zu 24 Monate dauern. Unsere Betreuungskräfte wechseln alle 6 bis 8 Wochen, weil sie Familie in Polen haben und Erholung brauchen, nicht weil das Gesetz es verlangt.' },
+            ]}
+          >
+            <Kasten titel="Woran Sie ein legales Angebot erkennen">
+              <HakenListe
+                zweispaltig
+                punkte={[
+                  'A1-Bescheinigung für jede Betreuungskraft, vor der Anreise',
+                  'Ihr Vertragspartner ist das Unternehmen, nicht die Betreuungskraft',
+                  'Rechnung und Überweisung, kein Bargeld',
+                  'Ersatz bei Ausfall ist geregelt, bei uns in der Regel innerhalb von 3 Tagen',
+                  'Kündigung ohne Mindestlaufzeit, bei uns täglich',
+                  'Der Vertrag liegt vorher offen: unser Mustervertrag zum Nachlesen',
+                ]}
+              />
+            </Kasten>
+            <MehrDazu
+              label="Weiter:"
+              links={[
+                { href: '/rechtssicher', text: 'Entsendemodell und A1 im Detail' },
+                { href: '/pflegekraft-legal-beschaeftigen', text: 'Pflegekraft legal beschäftigen' },
+                { href: MUSTERVERTRAG, text: 'Mustervertrag (PDF)' },
+              ]}
+            />
+          </DunklerAbschnitt>
 
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Eine polnische Pflegekraft kostet ab 2.150 Euro pro Monat und ist über das Entsendemodell vollständig legal — mit A1-Bescheinigung, sozialversichert in Polen, rechtlich abgesichert in Deutschland. Polen ist das meistgenutzte Herkunftsland für 24h-Betreuungskräfte in Deutschland: gute Sprachkenntnisse, kulturelle Nähe, kurze Anreise.
-          </p>
+          <Abschnitt id="leistungen" titel="Was eine polnische Pflegekraft tut, und was nicht">
+            <Text>
+              „Pflegekraft" ist der Suchbegriff, „Betreuungskraft" die richtige Bezeichnung: Sie übernimmt Grundpflege, Haushalt und Betreuung
+              und lebt mit im Haus. Medizinische Behandlungspflege wie Spritzen, Verbände oder Infusionen bleibt beim ambulanten Pflegedienst,
+              den der Arzt verordnet und die Krankenkasse zahlt.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Grundpflege', desc: 'Waschen, Duschen, Anziehen, Toilettengang, Hilfe beim Essen, Umlagern, Mobilisieren, Erinnerung an Medikamente.' },
+                { title: 'Haushalt', desc: 'Kochen nach den Gewohnheiten des Hauses, Einkaufen, Wäsche, Putzen der genutzten Räume, Pflanzen und Haustier versorgen.' },
+                { title: 'Betreuung und Begleitung', desc: 'Gespräche, Spaziergänge, Vorlesen, Spiele, Tagesstruktur; Begleitung zu Arzt, Friseur und Behörden, bei Führerschein auch mit dem Auto.' },
+                { title: 'Nicht dabei', desc: 'Behandlungspflege, schwere Gartenarbeit, Renovierung, Betreuung weiterer Haushalte. Und: Sie ist ein Mensch mit Nachtruhe und freier Zeit, keine Kraft „rund um die Uhr".' },
+              ]}
+            />
+            <Beispieltag />
+            <MehrDazu
+              label="Weiter:"
+              links={[
+                { href: '/leistungen', text: 'Alle Leistungen im Überblick' },
+                { href: '/24-stunden-pflege', text: 'So funktioniert 24-Stunden-Pflege' },
+              ]}
+            />
+          </Abschnitt>
 
-          <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
-            <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Auf einen Blick</p>
-            <ul className="space-y-2.5">
-              {[
-                'Kosten: ab 2.150 €/Monat je nach Pflegebedarf, Kost und Logis stellen Sie',
-                'Legal: Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher',
-                'Start: Anreise schon 3 Tage nach dem ersten Beratungsgespräch möglich',
-                'Rotation: Wechsel der Kraft alle 6–8 Wochen — nahtlose Übergabe',
-                'Qualifikation: Grundpflege, Haushalt, Betreuung — kein Arztdiplom aber mehr als Haushaltshilfe',
-                'Bei Ausfall: Primundus stellt sofort Ersatzkraft — kein Versorgungsausfall',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] text-pm-body">
-                  <span className="w-5 h-5 rounded-full bg-pm-mint text-pm-green flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <Abschnitt id="zimmer" titel="Zimmer, Kost und Logis: was Sie bereitstellen">
+            <Text>
+              Die Betreuungskraft wohnt bei Ihnen. Das ist der Grund, warum sie bei Bedarf auch nachts da ist, und es ist der Teil der Kosten,
+              der nicht auf unserer Rechnung steht.
+            </Text>
+            <Werte
+              zeilen={[
+                ['Zimmer', 'Eigenes Zimmer mit Bett, Schrank, Tisch und abschließbarer Tür, beheizt; es muss nicht groß sein.'],
+                ['Bad und Küche', 'Mitbenutzung reicht. Ein eigenes Bad ist ein Plus, keine Bedingung.'],
+                ['Verpflegung', 'Die Betreuungskraft isst mit; sie kocht für beide, Sie stellen die Lebensmittel.'],
+                ['WLAN und Telefon', 'Für den Kontakt nach Hause. Ein Fernseher im Zimmer wird gern gesehen.'],
+                ['Schlüssel und Notfallblatt', 'Hausschlüssel, Hausärztin, Medikamentenplan, Kontakte der Familie, Regel fürs Haushaltsgeld.'],
+                ['Hilfsmittel', 'Pflegebett, Rollator, Duschhocker beantragen Sie für die betreute Person bei der Pflegekasse; wir helfen beim Antrag.'],
+              ]}
+            />
+            <Kasten augenbraue="Nachts" titel="Hilfe in der Nacht">
+              <Text>
+                Weil die Betreuungskraft im Haus wohnt, ist sie bei Bedarf auch nachts da. Gelegentliche Nachteinsätze kosten 50 € im Monat mehr,
+                einmal pro Nacht 100 €, mehrmals pro Nacht 300 €. Wer jede Nacht mehrfach Hilfe braucht, gibt das im Kostenrechner an; dann
+                stimmen Preis und Auswahl, und die Betreuungskraft weiß vorher, was auf sie zukommt.
+              </Text>
+            </Kasten>
+          </Abschnitt>
 
-          {/* SECTION 1 */}
-          <h2 id="was-bedeutet" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was bedeutet „Pflegekraft aus Polen"?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            In Deutschland leben und arbeiten schätzungsweise 200.000–300.000 Betreuungskräfte aus Polen — sie stellen den größten Anteil aller 24h-Betreuungskräfte aus EU-Ländern. Der Begriff meint Frauen und Männer, die dauerhaft im Haushalt des Pflegebedürftigen leben und rund um die Uhr erreichbar sind.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Typischerweise arbeiten sie im Rotationsprinzip: 6–8 Wochen in Deutschland, dann Rückkehr nach Polen, gleichzeitiger Beginn einer Nachfolgekraft. So ist die Betreuung dauerhaft sichergestellt — ohne Lücken.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Grundpflege', desc: 'Körperhygiene, Ankleiden, Nahrungsaufnahme, Lagerung und Mobilisierung. Unterstützung bei allem was der Pflegebedürftige nicht mehr selbst schafft.' },
-              { title: 'Haushaltsführung', desc: 'Kochen, Putzen, Einkaufen, Wäsche, Begleitung zu Arztterminen. Die Betreuungskraft führt den Haushalt eigenständig.' },
-              { title: 'Betreuung und Gesellschaft', desc: 'Gespräche, Spaziergänge, Tagesstruktur — gerade bei Demenz entscheidend. Polnische Betreuungskräfte sind oft für ihre Geduld und Herzlichkeit bekannt.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Was genau inbegriffen ist:{' '}
-            <a href="/leistungen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Leistungen der 24h-Pflege bei Primundus</a>
-          </p>
+          <Abschnitt id="auswahl" titel="Auswahl, Start und Wechsel: so läuft es bei Primundus">
+            <Punkte
+              punkte={[
+                { title: 'Sie sehen vorab, wer kommt', desc: 'Foto, Alter, Deutschkenntnisse, Jahre Erfahrung und die Zahl der Einsätze über Primundus stehen im Profil jeder Betreuungskraft, die sich bei Ihnen bewirbt. Bewerbungen kommen am selben Werktag.' },
+                { title: 'Deutschkenntnisse in drei Stufen', desc: 'Grundlegend (im Grundpreis), kommunikativ (+250 €) oder gut (+450 €). Für Demenz und Alleinlebende lohnt sich mindestens „kommunikativ".' },
+                { title: 'Anreise in 3 Tagen möglich', desc: 'Nach Ihrer Auswahl reist die Betreuungskraft an; wir organisieren Fahrt und Übergabe. Sie zahlen erst ab dem ersten Tag im Haus.' },
+                { title: 'Wechsel alle 6 bis 8 Wochen', desc: 'Die nächste Betreuungskraft wählen Sie wieder selbst; die Übergabe läuft am Wechseltag im Haus. Der Wechsel kostet nichts extra, nur die An- und Abreise.' },
+                { title: 'Ersatz und Kündigung', desc: 'Fällt eine Betreuungskraft aus, stellen wir Ersatz in der Regel innerhalb von 3 Tagen. Sie kündigen täglich, ohne Mindestlaufzeit; abgerechnet wird taggenau.' },
+              ]}
+            />
+            <MehrDazu
+              label="Weiter:"
+              links={[
+                { href: '/qualitaet', text: 'Wie wir Betreuungskräfte auswählen' },
+                { href: '/ablauf', text: 'Ablauf von der Anfrage bis zur Anreise' },
+              ]}
+            />
+          </Abschnitt>
 
-          {/* SECTION 2 */}
-          <h2 id="kosten" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Kosten & was inbegriffen ist
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Sie zahlen den Betreuungspreis und die An- und Abreise der Betreuungskraft mit 125 € je Strecke; Kost und Logis stellen Sie im Haushalt. Eine Vermittlungsgebühr fällt bei uns nicht an. Mit Pflegegeld, Entlastungsbudget und Steuerermäßigung sinkt der tatsächliche Eigenanteil deutlich.
-          </p>
+          <Abschnitt id="erfahrungen" titel="Erfahrungen mit polnischen Pflegekräften: die vier Sorgen vor dem Start">
+            <Punkte
+              punkte={[
+                { title: '„Verstehen wir uns?"', desc: 'Die Deutschstufe steht im Profil, und Sie sprechen vor der Entscheidung mit der Betreuungskraft. Für den Alltag reicht „kommunikativ"; wer viel reden möchte, wählt „gut".' },
+                { title: '„Ein fremder Mensch im Haus."', desc: 'Nach ein paar Tagen ist es meist ein vertrauter Mensch. Passt es nicht, wechseln wir die Betreuungskraft; Sie sind nicht gebunden.' },
+                { title: '„Was, wenn sie krank wird oder heimfährt?"', desc: 'Dann stellen wir Ersatz, in der Regel innerhalb von 3 Tagen. Krankheitstage berechnen wir nicht.' },
+                { title: '„Wird sie fair behandelt?"', desc: 'Sie ist bei uns angestellt, sozialversichert, hat Nachtruhe, freie Zeit und einen festen Wechselrhythmus. Das ist auch Ihre Sicherheit: Wer fair beschäftigt ist, bleibt.' },
+              ]}
+            />
+            <Text>
+              Was Familien nach dem Start berichten, lesen Sie auf der Seite {l('/erfahrungen', 'Erfahrungen')}.
+            </Text>
+          </Abschnitt>
 
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Kostenübersicht Pflegekraft aus Polen — Primundus 2026</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <tbody>
-                  {[
-                    ['Betreuungskosten', 'ab 2.150 €/Monat'],
-                    ['Kost und Logis (im Haushalt)', 'stellen Sie'],
-                    ['Abzüglich Pflegegeld PG 3', '– 599 €/Monat'],
-                    ['Abzüglich Entlastungsbudget (anteilig)', '– 295 €/Monat'],
-                    ['Abzüglich Steuerermäßigung', '– 333 €/Monat'],
-                    ['Eigenanteil (PG 3)', 'ab ca. 923 €/Monat'],
-                  ].map(([label, value], i) => (
-                    <tr key={label} className={i === 5 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className="px-5 py-3 text-[14px] text-pm-body border-b border-pm-line">{label}</td>
-                      <td className={`px-5 py-3 text-[14px] font-bold border-b border-pm-line text-right ${i === 5 ? 'text-pm-taupe' : i >= 2 ? 'text-pm-green' : 'text-pm-ink'}`}>{value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-5 py-2">
-              <p className="text-[11px] text-pm-mute">Werte aus unserem Kostenrechner, Stand September 2026 · zzgl. An- und Abreise 125 € je Strecke</p>
-            </div>
-          </div>
+          <Abschnitt id="vergleich" titel="Polnische Pflegekraft oder Pflegeheim?">
+            <Text>
+              Der Eigenanteil im Pflegeheim liegt bundesweit bei durchschnittlich 3.364 € im Monat (vdek, Juli 2026), bei einer Betreuungskraft im
+              Haus bei Pflegegrad 3 ab ca. 923 €. Dazu kommt, was sich nicht in Euro rechnet: die eigene Wohnung, ein Tagesablauf nach den
+              eigenen Gewohnheiten und eine feste Bezugsperson statt wechselnder Schichten.
+            </Text>
+            <HeimVsZuhause />
+            <MehrDazu
+              label="Weiter:"
+              links={[
+                { href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege oder Pflegeheim: Kosten' },
+                { href: '/pflegeheim-kostenvergleich', text: 'Pflegeheim-Kostenvergleich' },
+              ]}
+            />
+          </Abschnitt>
 
-          <p className="text-[15px] text-pm-body mb-10">
-            → Alle Kosten im Detail:{' '}
-            <a href="/kosten" className="text-pm-taupe underline hover:text-pm-taupe-deep">Was kostet 24h-Pflege? — vollständige Kostenübersicht</a>
-            {' · '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Zuschüsse 2026</a>
-          </p>
+          <Abschnitt id="faq" titel="Häufige Fragen zur polnischen Pflegekraft">
+            <Fragen fragen={FRAGEN} />
+            <RechnerKasten src="apex-polen" />
+            <Text>
+              Quellen: Preiskonfiguration unseres Kostenrechners und {' '}
+              <a href={MUSTERVERTRAG} className={QUELLE} target="_blank" rel="noopener">Mustervertrag</a> (Stand September 2026), VO (EG) 883/2004 Art. 12 (Entsendung bis 24 Monate),
+              §§ 36, 37, 40, 42a, 45b SGB XI, § 35a EStG, SGB XII, Landesamt für Pflege Bayern, vdek-Statistik zum Heim-Eigenanteil (Juli 2026),
+              Anbieterseiten (Stand 20. September 2026).
+            </Text>
+            <MehrDazu
+              label="Betreuungskräfte aus anderen Ländern:"
+              links={[
+                { href: '/pflegekraft-aus-bulgarien', text: 'Pflegekraft aus Bulgarien' },
+                { href: '/pflegekraft-aus-rumaenien', text: 'Pflegekraft aus Rumänien' },
+              ]}
+            />
+          </Abschnitt>
 
-          <h2 id="pflegekasse" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Was zahlt die Pflegekasse dazu?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die Pflegekasse zahlt die Betreuungskraft nicht direkt. Das <strong>Pflegegeld</strong> überweist
-            sie Ihnen monatlich aufs Konto — darüber können Sie frei verfügen. Den{' '}
-            <a href="/entlastungsbetrag" className="text-pm-taupe underline hover:text-pm-taupe-deep">Entlastungsbetrag</a>{' '}
-            von 131 € bekommen Sie dagegen gegen Rechnung erstattet, wenn die Betreuung über einen
-            anerkannten Anbieter läuft. Wir sagen Ihnen, was in Ihrem Bundesland anerkannt ist.
-          </p>
+          <Weiterlesen aktuell="pflegekraft-aus-polen" variante="vorlage" />
+        </RatgeberRumpf>
 
-          {(() => {
-            const ZUSCHUESSE: [string, string, string][] = [
-              ['Pflegegrad 1', 'kein Pflegegeld', '131 €'],
-              ['Pflegegrad 2', '347 €', '131 €'],
-              ['Pflegegrad 3', '599 €', '131 €'],
-              ['Pflegegrad 4', '800 €', '131 €'],
-              ['Pflegegrad 5', '990 €', '131 €'],
-            ];
-            return (
-              <div className="mb-4">
-                {/* Breite Bildschirme: Tabelle. Schmale: gestapelte Karten —
-                    drei Spalten mit Geldbeträgen schneiden auf dem Handy ab. */}
-                <div className="hidden md:block bg-white rounded-2xl border border-pm-line overflow-hidden shadow-sm">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="bg-pm-paper">
-                        <th className="px-5 py-3 text-left text-[12px] font-bold uppercase tracking-[0.06em] text-pm-mute border-b border-pm-line">Pflegegrad</th>
-                        <th className="px-5 py-3 text-right text-[12px] font-bold uppercase tracking-[0.06em] text-pm-mute border-b border-pm-line">Pflegegeld — frei verfügbar</th>
-                        <th className="px-5 py-3 text-right text-[12px] font-bold uppercase tracking-[0.06em] text-pm-mute border-b border-pm-line">Entlastungsbetrag — als Erstattung</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {ZUSCHUESSE.map(([grad, geld, entlastung], i) => (
-                        <tr key={grad} className={i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                          <td className="px-5 py-3 text-[14px] font-medium text-pm-body border-b border-pm-line">{grad}</td>
-                          <td className="px-5 py-3 text-[14px] text-right font-semibold text-pm-green border-b border-pm-line">{geld}</td>
-                          <td className="px-5 py-3 text-[14px] text-right font-semibold text-pm-green border-b border-pm-line">{entlastung}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                <div className="md:hidden flex flex-col gap-2.5">
-                  {ZUSCHUESSE.map(([grad, geld, entlastung]) => (
-                    <div key={grad} className="bg-white rounded-xl border border-pm-line p-4 shadow-sm">
-                      <p className="text-[15px] font-bold text-pm-ink mb-2">{grad}</p>
-                      <div className="flex justify-between text-[14px] mb-1">
-                        <span className="text-pm-body">Pflegegeld, frei verfügbar</span>
-                        <span className="font-semibold text-pm-green">{geld}</span>
-                      </div>
-                      <div className="flex justify-between text-[14px]">
-                        <span className="text-pm-body">Entlastungsbetrag, als Erstattung</span>
-                        <span className="font-semibold text-pm-green">{entlastung}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-[11px] text-pm-mute mt-2 px-1">
-                  Monatliche Beträge · Ab Pflegegrad 2 kommt das Entlastungsbudget mit bis zu
-                  3.539 € im Jahr dazu (Verhinderungs- und Kurzzeitpflege zusammengefasst)
-                </p>
-              </div>
-            );
-          })()}
-
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Bei Pflegegrad 3 bleibt damit der oben genannte Eigenanteil ab ca. 923 € im Monat, schon mit Entlastungsbudget und Steuerermäßigung. Bei Pflegegrad 4 oder 5 wird es entsprechend weniger, bei Pflegegrad 1 und 2 mehr.{' '}
-            <a href="/finanzierung" className="text-pm-taupe underline hover:text-pm-taupe-deep">Alle Zuschüsse im Überblick</a>
-          </p>
-
-          <h2 id="versicherung" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Wie ist die Betreuungskraft versichert?
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-4">
-            Unsere Betreuungskräfte sind bei uns fest angestellt und bleiben während des
-            Einsatzes in Polen sozialversichert — Kranken-, Renten- und Unfallversicherung
-            laufen dort weiter. Belegt wird das durch die A1-Bescheinigung, die jede Kraft
-            mitbringt.
-          </p>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-10">
-            Für Sie als Familie heißt das: Solange die Betreuung über uns läuft, werden Sie
-            nicht zum Arbeitgeber. Sie melden niemanden bei einer Krankenkasse an und führen
-            keine Sozialbeiträge ab. Diese Pflichten liegen bei uns.
-          </p>
-
-          {/* SECTION 3 */}
-          <h2 id="legal" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Legal beschäftigen — so funktioniert das Entsendemodell
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Das Entsendemodell ist das einzige wirklich rechtssichere Modell für Betreuungskräfte aus Polen. Es ist auch das meistgenutzte — weil es für alle Seiten unkompliziert ist.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              {
-                title: 'Entsendemodell (empfohlen)',
-                desc: 'Die Betreuungskraft ist fest bei uns angestellt — bei der PRIMUNDUS Sp. z o.o. in Polen. Sie wird für 6–8 Wochen nach Deutschland entsandt, mit A1-Bescheinigung als Nachweis der Sozialversicherung in Polen. Sie schließen den Vertrag mit Primundus in Deutschland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.',
-                highlight: true,
-              },
-              {
-                title: 'Direktanstellung',
-                desc: 'Die Familie stellt die Kraft selbst als Arbeitgeberin an. Rechtlich eindeutig, aber mit hohem Aufwand: Lohnabrechnung, deutsche Sozialversicherung, Urlaubsvertretung bei Krankheit.',
-                highlight: false,
-              },
-              {
-                title: 'Scheinselbstständigkeit (verboten)',
-                desc: 'Wer eine polnische Pflegekraft "freiberuflich" beauftragt, die faktisch weisungsgebunden im Haushalt lebt, begeht Scheinselbstständigkeit. Das ist strafbar: Nachzahlungen von Sozialabgaben plus Bußgelder.',
-                highlight: false,
-              },
-            ].map((item) => (
-              <div key={item.title} className={`rounded-xl p-5 border ${item.highlight ? 'bg-white border-pm-taupe border-2' : 'bg-white border-pm-line'}`}>
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-pm-mint border border-[rgba(61,122,92,0.2)] rounded-2xl p-5 mb-6">
-            <p className="text-[14px] font-bold text-pm-green-deep mb-1">Was die A1-Bescheinigung ist</p>
-            <p className="text-[14px] text-pm-green-deep leading-relaxed">
-              Die A1-Bescheinigung ist ein EU-Dokument das belegt, dass die Betreuungskraft in ihrem Heimatland (Polen) sozialversichert ist und deshalb in Deutschland keine zusätzlichen Sozialabgaben anfallen. Wir beantragen sie für jede Kraft bei der polnischen Sozialversicherung ZUS; während des Einsatzes muss sie vorliegen.
-            </p>
-          </div>
-
-          <p className="text-[15px] text-pm-body mb-3">
-            → Alle Beschäftigungsmodelle im Vergleich:{' '}
-            <a href="/pflegekraft-legal-beschaeftigen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft legal beschäftigen — die 3 Wege</a>
-          </p>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Was im Vertrag stehen muss:{' '}
-            <a href="/pflegevertrag-aufsetzen" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegevertrag aufsetzen — worauf achten?</a>
-          </p>
-
-          {/* SECTION 4 */}
-          <h2 id="qualitaet" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Qualität & Auswahl der richtigen Kraft
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Die größte Sorge bei der Entscheidung für eine Pflegekraft aus Polen: Wie gut ist sie wirklich? Bei Primundus werden Betreuungskräfte sorgfältig ausgewählt — mit konkreten Kriterien die für jede Pflegesituation passen.
-          </p>
-          <div className="space-y-3 mb-6">
-            {[
-              { title: 'Deutschkenntnisse', desc: 'Grundlegende Kommunikation auf Deutsch ist Voraussetzung. Je nach Pflegesituation kann auch Grundkenntnisse ausreichen — bei Demenzbetroffenen zählt oft mehr die emotionale Verbindung als perfektes Deutsch.' },
-              { title: 'Pflegeerfahrung', desc: 'Primundus prüft die Erfahrung jeder Kraft — Anzahl der Einsätze, Pflegesituationen, Referenzen. Bei besonderen Diagnosen (z.B. Parkinson, schwere Demenz) wird gezielt nach Spezialerfahrung gesucht.' },
-              { title: 'Führerschein', desc: 'Wenn nötig — z.B. für Arztbesuche oder Einkaufsfahrten in ländlichen Gebieten. Beim ersten Gespräch klären.' },
-              { title: 'Persönlichkeit & Passung', desc: 'Telefonat vorab möglich. Schnuppertage in der ersten Woche helfen beiden Seiten sich kennenzulernen. Bei Nichtpassung: unkomplizierter Wechsel.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">
-                <p className="text-[15px] font-bold text-pm-ink mb-1">{item.title}</p>
-                <p className="text-[14px] text-pm-body leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* SECTION 5 */}
-          <h2 id="alternativen" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">
-            Polen vs. andere Herkunftsländer
-          </h2>
-          <p className="text-[16px] leading-relaxed text-pm-body mb-6">
-            Neben Polen sind Bulgarien und Rumänien die häufigsten Herkunftsländer für 24h-Betreuungskräfte. Die Wahl hängt weniger vom Land als von der einzelnen Kraft und der Agentur ab.
-          </p>
-
-          <div className="bg-white rounded-2xl border border-pm-line overflow-hidden mb-6 shadow-sm">
-            <div className="px-5 py-3 bg-pm-paper border-b border-pm-line">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-pm-mute">Herkunftsländer im Überblick</p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pm-paper">
-                    {['Land', 'Anreise', 'Deutschkenntnisse', 'Besonderheit'].map(h => (
-                      <th key={h} className="px-4 py-3 text-[12px] font-semibold text-pm-mute text-left border-b border-pm-line">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Polen', 'kurz (Zug/Auto)', 'oft solide', 'Meistgenutzt, kulturelle Nähe'],
-                    ['Bulgarien', 'länger (Flug)', 'variiert', 'Gute Verfügbarkeit'],
-                    ['Rumänien', 'länger (Flug)', 'variiert', 'Oft Pflegefachkräfte verfügbar'],
-                  ].map(([land, anreise, deutsch, info], i) => (
-                    <tr key={land} className={i === 0 ? 'bg-pm-shell' : i % 2 === 0 ? 'bg-white' : 'bg-pm-paper'}>
-                      <td className={`px-4 py-3 text-[14px] font-semibold border-b border-pm-line ${i === 0 ? 'text-pm-taupe' : 'text-pm-ink'}`}>{land}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{anreise}</td>
-                      <td className="px-4 py-3 text-[14px] text-pm-body border-b border-pm-line">{deutsch}</td>
-                      <td className="px-4 py-3 text-[13px] text-pm-mute border-b border-pm-line">{info}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p className="text-[15px] text-pm-body mb-10">
-            → Andere Herkunftsländer:{' '}
-            <a href="/pflegekraft-aus-bulgarien" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft aus Bulgarien</a>
-            {' · '}
-            <a href="/pflegekraft-aus-rumaenien" className="text-pm-taupe underline hover:text-pm-taupe-deep">Pflegekraft aus Rumänien</a>
-          </p>
-
-          {/* FAQ */}
-          <h2 id="faq" className="text-h2 md:text-h2-lg font-bold text-pm-ink mb-6">
-            Häufige Fragen zur Pflegekraft aus Polen
-          </h2>
-          <div className="space-y-4 mb-12">
-            {[
-              { q: 'Was kostet eine Pflegekraft aus Polen?', a: 'Über Primundus ab 2.150 €/Monat je nach Pflegebedarf, dazu An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld (z. B. 599 €/Monat bei PG 3), Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.' },
-              { q: 'Ist eine Pflegekraft aus Polen legal?', a: 'Ja — über das Entsendemodell mit A1-Bescheinigung vollständig legal. Die Kraft ist in Polen sozialversichert, in Deutschland rechtlich abgesichert. Scheinselbstständigkeit ist dagegen strafbar.' },
-              { q: 'Wie funktioniert das Entsendemodell?', a: 'Die Kraft ist fest bei uns angestellt — bei der PRIMUNDUS Sp. z o.o. in Polen — und wird für 6–8 Wochen entsandt. Sie schließen den Vertrag mit Primundus in Deutschland: kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' },
-              { q: 'Was leistet eine Pflegekraft aus Polen?', a: 'Grundpflege, Haushaltsführung, Begleitung zu Arztterminen und soziale Betreuung. Keine Krankenschwester, aber deutlich mehr als eine Haushaltshilfe. Behandlungspflege nur mit Qualifikationsnachweis.' },
-              { q: 'Wie schnell kann eine Pflegekraft aus Polen starten?', a: 'Mit Primundus ist eine Anreise schon 3 Tage nach dem ersten Gespräch möglich — täglich kündbar, taggenaue Abrechnung.' },
-              { q: 'Was passiert wenn die Pflegekraft krank wird oder ausfällt?', a: 'Primundus stellt sofort eine Ersatzkraft — ohne Versorgungslücke für die Familie. Das ist einer der zentralen Vorteile einer Agenturvermittlung gegenüber einer Direktanstellung.' },
-            ].map((item, i) => (
-              <details key={i} className="bg-white rounded-xl border border-pm-line group">
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <h3 className="text-[15px] font-semibold text-pm-ink pr-4">{item.q}</h3>
-                  <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4">
-                  <p className="text-[15px] text-pm-body leading-relaxed">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-
-          <Weiterlesen aktuell="pflegekraft-aus-polen" />
-          <ArticleCTA />
-        </div>
+        <KontaktBand />
       </div>
     </>
   )
