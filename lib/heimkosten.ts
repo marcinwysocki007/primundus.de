@@ -65,3 +65,23 @@ export function bundeslandFuerStadt(slug: string, regionSlug: string): string {
 export function euroFormat(betrag: number): string {
   return betrag.toLocaleString('de-DE');
 }
+
+// Bestandteile des Eigenanteils im Bundesdurchschnitt (vdek, 1. Juli 2026, erstes Heimjahr):
+// pflegebedingter Eigenanteil (EEE, nach 15 % Leistungszuschlag) 1.775 € + Unterkunft/Verpflegung 1.068 € + Investitionskosten 521 €.
+export const HEIM_EEE_BUND_JAHR1 = 1775;
+export const HEIM_UNTERKUNFT_BUND = 1068;
+export const HEIM_INVEST_BUND = 521;
+
+/** Leistungszuschlag der Pflegekasse auf den pflegebedingten Eigenanteil nach Aufenthaltsdauer (§ 43c SGB XI): 1. Jahr 15 %, 2. Jahr 30 %, 3. Jahr 50 %, ab dem 4. Jahr 75 %. */
+export const HEIM_ZUSCHLAG: Record<1 | 2 | 3 | 4, number> = { 1: 0.15, 2: 0.3, 3: 0.5, 4: 0.75 };
+
+/** Pauschaler Leistungsbetrag der Pflegekasse im Heim je Kalendermonat (§ 43 Abs. 2 SGB XI, seit 01.01.2025). Pflegegrad 1: 131 € Zuschuss (§ 43 Abs. 3). */
+export const HEIM_LEISTUNG: Record<2 | 3 | 4 | 5, number> = { 2: 805, 3: 1319, 4: 1855, 5: 2096 };
+
+/** Pflegebedingter Eigenanteil im Bundesdurchschnitt vor dem Zuschlag (1.775 € entsprechen 85 %). */
+export const HEIM_EEE_BUND_OHNE_ZUSCHLAG = Math.round(HEIM_EEE_BUND_JAHR1 / (1 - HEIM_ZUSCHLAG[1]));
+
+/** Eigenanteil im Bundesdurchschnitt je Aufenthaltsjahr (EEE nach Zuschlag + Unterkunft/Verpflegung + Investitionskosten), auf volle Euro gerundet. */
+export function heimEigenanteilBundJahr(jahr: 1 | 2 | 3 | 4): number {
+  return Math.round(HEIM_EEE_BUND_OHNE_ZUSCHLAG * (1 - HEIM_ZUSCHLAG[jahr])) + HEIM_UNTERKUNFT_BUND + HEIM_INVEST_BUND;
+}
