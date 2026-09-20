@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { KontaktBand } from '@/components/ArticleCTA'
+import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -28,7 +28,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Wittmund: zu Hause bleiben statt Heim',
+  title: '24-Stunden-Pflege in Wittmund | 6× Testsieger',
   description:
     'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-wittmund' },
@@ -110,6 +110,7 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Landkreis Wittmund auf einen Blick"
+          person={<Ansprechpartnerin karte ort="Wittmund" titel="Ihre Ansprechpartnerin für Wittmund" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

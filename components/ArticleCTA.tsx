@@ -53,8 +53,17 @@ export const KNOPF =
 // Ansprechpartnerin (Martin 14.09.: der lange Satz neben dem Siegel sah gequetscht aus).
 // kompakt = Zeile im Kasten; karte = Visitenkarte im Schlussband. Umbrüche nur
 // zwischen den Einheiten, nie in „8– / 20 Uhr".
+// Seit 20.09.2026 auch auf den Ortsseiten verwendet (Martin: „tatsächlich mit Marta groß, Ihre
+// Ansprechpartnerin, wenn es um die 24-Stunden-Pflege in München geht, mit der entsprechenden
+// Telefonnummer"). Deshalb exportiert — damit dort dieselbe Karte steht und keine zweite entsteht.
 const nw = 'whitespace-nowrap'
-function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
+export function Ansprechpartnerin({ karte = false, ort, titel }: { karte?: boolean; ort?: string; titel?: string }) {
+  // Alt-Text trägt den Ort, wo einer gegeben ist. Eine Bilddatei, viele Alt-Texte — das Attribut
+  // hängt am <img>, nicht an der Datei. Dieselbe Datei 207-mal zu kopieren brächte nichts: Google
+  // führt bytegleiche Bilder zusammen, und 207 Dateinamen mit Stadtnamen sind ein Türseiten-Signal.
+  const alt = ort
+    ? `Marta Kapcio, Ansprechpartnerin für 24-Stunden-Pflege in ${ort}`
+    : 'Marta Kapcio, Ansprechpartnerin bei Primundus'
   const telefon = (
     <a href="tel:+4989200000830" className={`font-bold text-pm-ink hover:text-pm-taupe-ink ${nw} ${karte ? 'text-[22px]' : 'text-[19px]'}`}>
       089 200 000 830
@@ -68,7 +77,7 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
   const foto = (groesse: number) => (
     <Image
       src="/images/marta-kapcio.jpg"
-      alt="Marta Kapcio, Ansprechpartnerin bei Primundus"
+      alt={alt}
       width={groesse}
       height={groesse}
       style={{ width: groesse, height: groesse }}
@@ -80,22 +89,32 @@ function Ansprechpartnerin({ karte = false }: { karte?: boolean }) {
     // Nummer steht im Kopf der Seite und im Namen des Anruf-Knopfs (Screenreader, Tooltip).
     return (
       <div>
-        <p className="text-[15px] font-semibold leading-[1.4] text-pm-ink">Lieber erst sprechen?</p>
+        <p className="text-[15px] font-semibold leading-[1.4] text-pm-ink">{titel ?? 'Lieber erst sprechen?'}</p>
         <div className="mt-4 flex items-center gap-2.5 sm:gap-3.5">
           <Image
             src="/images/marta-kapcio.jpg"
-            alt="Marta Kapcio, Ansprechpartnerin bei Primundus"
+            alt={alt}
             width={52}
             height={52}
             className="w-11 h-11 sm:w-[52px] sm:h-[52px] rounded-full object-cover object-top flex-shrink-0"
           />
           <div className="min-w-0 flex-1">
             <p className="text-[17px] font-bold leading-tight text-pm-ink whitespace-nowrap">Marta Kapcio</p>
-            <p className="mt-1 text-[14px] leading-[1.4] text-pm-body/70">
-              Ansprechpartnerin
-              <br />
-              <span className={nw}>Täglich 8–20 Uhr</span>
-            </p>
+            {/* Martin 20.09.: „mit der entsprechenden Telefonnummer" — die Nummer muss lesbar sein,
+                nicht nur im Namen des Symbols stehen. Ohne eigenen Titel bleibt es bei der Rolle. */}
+            {titel ? (
+              <p className="mt-0.5 text-[14px] leading-[1.4] text-pm-body/70">
+                <a href="tel:+4989200000830" className={`font-bold text-[16px] text-pm-ink hover:text-pm-taupe-ink ${nw}`}>089 200 000 830</a>
+                <br />
+                <span className={nw}>Täglich 8–20 Uhr</span>
+              </p>
+            ) : (
+              <p className="mt-1 text-[14px] leading-[1.4] text-pm-body/70">
+                Ansprechpartnerin
+                <br />
+                <span className={nw}>Täglich 8–20 Uhr</span>
+              </p>
+            )}
           </div>
           <div className="flex gap-2 flex-none">
             <a

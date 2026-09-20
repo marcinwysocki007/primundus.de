@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { KontaktBand } from '@/components/ArticleCTA'
+import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Freiburg & Umland: zu Hause statt Heim',
-  description: 'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
+  title: '24-Stunden-Pflege in Freiburg & Umland | 6× Testsieger',
+  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-freiburg-umland' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -118,6 +118,7 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Breisach am Rhein auf einen Blick"
+          person={<Ansprechpartnerin karte ort="Freiburg & Umland" titel="Ihre Ansprechpartnerin für Freiburg & Umland" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { KontaktBand } from '@/components/ArticleCTA'
+import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -12,24 +12,46 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 
 // Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
 // mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
-// Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
-// Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
+// Ursprünglich erzeugt von scripts/codemods/13-ortsseiten.py; seit 20.09.2026 ist diese
+// Seite von Hand geschrieben und nicht mehr aus der Vorlage gefüllt — siehe unten.
 
+const QUELLE = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
+// München von Hand geschrieben (20.09.2026) — erste der zehn großen Ortsseiten.
+//
+// Gemessen für „24 stunden pflege münchen" (mobil, 20.09.): SECHS Kartenblock-Einträge stehen über
+// dem ersten organischen Treffer, alle ambulante Pflegedienste mit 4,9–5,0 Sternen; der erste
+// organische Platz ist ein Branchenbuch. Ins Kartenpaket kommen wir ohne Standort in München nicht.
+// Der organische Treffer muss den Klick also allein verdienen — mit dem, was die Karte nicht liefert.
+// Daraus die drei neuen Abschnitte:
+//  1. „Betreuungskraft oder Pflegedienst" — die Entscheidung, vor der die Familie wirklich steht.
+//     Keine Seite auf Platz 1–10 erklärt sie; bei uns stand sie versteckt im FAQ.
+//  2. „Wie schnell es gehen kann" — eine der vier Fragen, die Google bei dieser Suche selbst stellt.
+//     Wir sind die Einzigen mit einer belegten Antwort (Anreise in 3 Tagen, Bewerbung am selben Werktag).
+//  3. „Was in den ersten Tagen schiefgeht" — „Schlechte Erfahrungen mit 24-Stunden Pflege" zeigt Google
+//     als verwandte Suche. Unsere vier echten Münchner Rückmeldungen (4/4/3/5 Sterne) sind der Beleg,
+//     den kein Wettbewerber auf seiner Standortseite hat. Martin am 16.09.: „erfahrungen nie pauschal negieren".
+//  4. „Wo Sie sich unabhängig beraten lassen" — „pflegeberatung münchen" wird 170× im Monat gesucht,
+//     genauso oft wie unser Hauptbegriff; verwandte Suchen nennen die Pflegestützpunkte nach Stadtteil.
+//     Alle vier Adressen am 20.09.2026 auf Erreichbarkeit geprüft (HTTP 200).
 const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in München bedeutet" },
+  { id: 'was-ist-24-stunden', title: "Betreuungskraft oder Pflegedienst — was wofür zuständig ist" },
+  { id: 'wie-schnell', title: "Wie schnell es gehen kann" },
   { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in München 2026" },
   { id: 'polnische-betreuungskraefte-in-muenchen', title: "Polnische Betreuungskräfte in München" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in München ausmacht" },
   { id: 'einzugsgebiet-muenchen', title: "Einzugsgebiet München" },
   { id: 'werkzeuge', title: "Was es in München kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'erste-tage', title: "Was in den ersten Tagen schiefgeht" },
   { id: 'stimmen-vor-ort', title: "Familien aus München über uns" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in München" },
+  { id: 'beratung-muenchen', title: "Wo Sie sich in München unabhängig beraten lassen" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in München: zu Hause bleiben statt Heim',
-  description: 'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
+  title: '24-Stunden-Pflege in München | 6× Testsieger',
+  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muenchen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -108,25 +130,65 @@ export default function Page() {
           augenbraue="24-Stunden-Pflege in München"
           titel="24-Stunden-Pflege und Betreuung in München"
           einleitung={<>Schwabing, Sendling, Pasing oder draußen in Trudering: Münchner geben ihre Wohnung nicht her — schon gar nicht bei den Heimkosten der Stadt. Primundus betreut in München seit 20 Jahren mit eigenen Betreuungskräften — <a href="/pflegekraft-aus-polen" className="text-pm-taupe underline underline-offset-2">polnische Pflegekräfte</a>, die mit einziehen und im Haushalt leben. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="20. September 2026"
           lesezeit="6 Min."
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
             'Pflegeheim in Bayern: Eigenanteil rund 3.200 €/Monat (vdek, 07/2026)',
             'Bayern: Landespflegegeld +500 €/Jahr',
-            'Täglich kündbar, keine Vermittlungsgebühr',
+            'Täglich kündbar, keine Vermittlungsgebühr, Bestpreisgarantie',
             'Anreise in 3 Tagen möglich',
+            '6× Testsieger bei DIE WELT — Preis & Qualität',
           ]}
           blickTitel="München auf einen Blick"
+          person={<Ansprechpartnerin karte ort="München" titel="Ihre Ansprechpartnerin für München" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in München bedeutet">
+          <Abschnitt id="was-ist-24-stunden" titel="Betreuungskraft oder Pflegedienst — was wofür zuständig ist">
             <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
-              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
-              Heim, wo der Umzug ansteht. Das Zuhause in München bleibt, der gewohnte Tagesablauf auch.
+              Wer in München nach 24-Stunden-Pflege sucht, stößt zuerst auf ambulante Pflegedienste. Die leisten etwas anderes,
+              und für viele Situationen genau das Richtige: Ein Pflegedienst kommt zu vereinbarten Zeiten ins Haus, übernimmt
+              Behandlungspflege wie Spritzen, Verbandswechsel und Katheter — dafür zahlt die Krankenkasse — und auf Wunsch
+              Grundpflege über die Pflegesachleistung. Danach fährt er wieder.
+            </Text>
+            <Text>
+              Eine Betreuungskraft wohnt im Haushalt. Sie kocht, kauft ein, begleitet zum Arzt, hilft beim Waschen und Anziehen
+              und ist bei Bedarf auch nachts da. Behandlungspflege übernimmt sie nicht. Beides schließt sich aber nicht aus:
+              Kommt zusätzlich ein Pflegedienst, rechnet die Pflegekasse Pflegegeld und Sachleistung anteilig ab —
+              Kombinationsleistung nach{' '}
+              <a href="https://www.gesetze-im-internet.de/sgb_11/__38.html" target="_blank" rel="noopener noreferrer" className={QUELLE}>§ 38 SGB XI</a>.
+            </Text>
+            <Gegenueber
+              seiten={[
+                {
+                  titel: 'Ambulanter Pflegedienst',
+                  ton: 'taupe',
+                  punkte: [
+                    'Kommt ein- bis dreimal am Tag zu festen Zeiten',
+                    'Medikamente, Verbände, Katheter — das zahlt die Krankenkasse',
+                    'Nachts und am Wochenende ist niemand da',
+                    'Haushalt, Einkauf und Begleitung gehören nicht dazu',
+                  ],
+                },
+                {
+                  titel: 'Betreuungskraft, die im Haushalt lebt',
+                  ton: 'gruen',
+                  punkte: [
+                    'Den ganzen Tag ansprechbar, nachts im Haus',
+                    'Körperpflege, Kochen, Einkäufe, Wäsche, Begleitung',
+                    'Dieselbe Person über Wochen — das zählt bei Demenz',
+                    'Keine Behandlungspflege; dafür bleibt der Pflegedienst',
+                  ],
+                },
+              ]}
+            />
+            <Text>
+              Ein Wort zum Namen: „24-Stunden-Pflege" beschreibt, dass jemand im Haushalt lebt — nicht, dass jemand 24 Stunden
+              am Tag arbeitet. Die Betreuungskraft hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten und kann in ihrer
+              freien Zeit das Haus verlassen. Ihre Nachtruhe braucht sie wie jeder andere auch. Wenn nachts regelmäßig mehrfach
+              Hilfe nötig ist, sagen Sie das im Kostenrechner an — dann passen Preis und Auswahl dazu.
             </Text>
             <MehrDazu
               label="Ausführlich auf den Themenseiten:"
@@ -137,6 +199,15 @@ export default function Page() {
               ]}
             />
           </Abschnitt>
+
+          <Abschnitt id="wie-schnell" titel="Wie schnell es gehen kann">
+            <Text>
+              Preis und Betreuungskräfte sehen Sie sofort — ohne Gespräch und ohne Freischaltung per E-Mail. Wenn es eilt, etwa
+              nach einer Entlassung aus dem Krankenhaus oder einem Sturz, ist eine Anreise in drei Tagen möglich. Bewerbungen
+              von Betreuungskräften kommen am selben Werktag. Unterschrieben wird erst, nachdem Sie ausgewählt haben.
+            </Text>
+          </Abschnitt>
+
 
           <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in München 2026">
             <Tabelle
@@ -232,6 +303,33 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <Abschnitt id="erste-tage" titel="Was in den ersten Tagen schiefgeht">
+            <Text>
+              Vier Familien aus München haben uns bewertet, eine davon mit drei Sternen. Ihre Rückmeldungen stehen gleich
+              darunter im Wortlaut, und sie zeigen dasselbe Muster: Was schiefgeht, geht in den ersten Tagen schief. Deshalb
+              hier, was vorkommt und was dann hilft.
+            </Text>
+            <Punkte
+              punkte={[
+                {
+                  title: 'Der Anreisetag steht, die Uhrzeit noch nicht',
+                  desc: 'Das ist der häufigste Ärger am Anfang. Fragen Sie am Vortag nach, wenn Sie nichts gehört haben — Ihren Ansprechpartner erreichen Sie auch am Wochenende.',
+                },
+                {
+                  title: 'Die ersten Tage sind holprig',
+                  desc: 'Zwei fremde Menschen teilen sich plötzlich eine Wohnung. Wo steht was, wann wird gegessen, wie viel Nähe ist recht? Rechnen Sie mit ein bis zwei Wochen, bis sich ein Rhythmus einspielt. Das ist kein Fehlstart, das ist normal.',
+                },
+                {
+                  title: 'Die Betreuungskraft passt nicht zur Situation',
+                  desc: 'Kommt vor, und je schwerer der Pflegebedarf, desto eher. Sagen Sie es früh statt es auszuhalten: Den Ersatz organisieren wir in der Regel innerhalb von drei Tagen. Eine Gebühr fällt dafür nicht an, nur die An- und Abreise.',
+                },
+              ]}
+            />
+            <Text>
+              Und weil täglich kündbar ist, sitzen Sie einen Fehlstart nicht monatelang ab.
+            </Text>
+          </Abschnitt>
+
           <OrtStimmen
 
             ort={'München'}
@@ -245,6 +343,46 @@ export default function Page() {
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in München">
             <Fragen fragen={FRAGEN} />
+          </Abschnitt>
+
+          <Abschnitt id="beratung-muenchen" titel="Wo Sie sich in München unabhängig beraten lassen">
+            <Text>
+              Bevor Sie sich für irgendetwas entscheiden, auch gegen uns: Die Pflegeberatung nach § 7a SGB XI ist kostenlos,
+              trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause. In München gibt es dafür feste Anlaufstellen, und es
+              lohnt sich, eine davon anzurufen — auch wegen der Zuschüsse, die häufig ungenutzt bleiben.
+            </Text>
+            <Punkte
+              punkte={[
+                {
+                  title: (
+                    <a href="https://stadt.muenchen.de/buergerservice/gesundheit-soziales/alter-pflege.html" target="_blank" rel="noopener noreferrer" className={QUELLE}>Landeshauptstadt München — Alter und Pflegebedarf</a>
+                  ),
+                  desc: 'Die Übersicht der Stadt: Beratungsstellen, Alten- und Service-Zentren, Beschwerdestelle Pflege.',
+                },
+                {
+                  title: (
+                    <a href="https://www.stmgp.bayern.de/pflege/pflege-zu-hause/fachstellen_pflegende_angehoerige/" target="_blank" rel="noopener noreferrer" className={QUELLE}>Fachstellen für pflegende Angehörige</a>
+                  ),
+                  desc: 'Beratung und Entlastung für die, die pflegen — in München nach Stadtteil aufgeteilt. Verzeichnis des Bayerischen Gesundheitsministeriums.',
+                },
+                {
+                  title: (
+                    <a href="https://www.landkreis-muenchen.de/themen/familie-soziales/senioren/pflege/pflegestuetzpunkt/" target="_blank" rel="noopener noreferrer" className={QUELLE}>Pflegestützpunkt Landkreis München</a>
+                  ),
+                  desc: 'Für Haar, Unterhaching, Ottobrunn, Grünwald, Pullach und die übrigen Gemeinden im Landkreis.',
+                },
+                {
+                  title: (
+                    <a href="https://www.lfp.bayern.de/landespflegegeld/" target="_blank" rel="noopener noreferrer" className={QUELLE}>Landesamt für Pflege — Landespflegegeld</a>
+                  ),
+                  desc: 'Hier wird das bayerische Landespflegegeld beantragt: 500 € im Jahr ab Pflegegrad 2, zusätzlich zu allem, was die Pflegekasse zahlt.',
+                },
+              ]}
+            />
+            <p className="text-[15px] leading-[1.6] text-pm-body/70">
+              Die vier Adressen haben wir am 20. September 2026 geprüft. Wir bekommen für diese Verweise nichts, und die
+              Stellen wissen nichts von uns.
+            </p>
           </Abschnitt>
         </RatgeberRumpf>
       </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
-import { KontaktBand } from '@/components/ArticleCTA'
+import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
@@ -27,8 +27,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Schleswig-Holstein: zu Hause statt Heim',
-  description: 'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
+  title: '24-Stunden-Pflege in Schleswig-Holstein | 6× Testsieger',
+  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-schleswig-holstein' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -112,6 +112,7 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Schleswig-Holstein auf einen Blick"
+          person={<Ansprechpartnerin karte ort="Schleswig-Holstein" titel="Ihre Ansprechpartnerin für Schleswig-Holstein" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

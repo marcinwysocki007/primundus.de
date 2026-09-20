@@ -52,6 +52,7 @@ export function RatgeberKopf({
   blick,
   blickTitel = 'Auf einen Blick',
   knopf,
+  person,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -66,8 +67,19 @@ export function RatgeberKopf({
   blickTitel?: string
   /** Knopf unter der Einleitung, nur wo die Seite schon einen hatte (Kernseiten wie /kosten) */
   knopf?: { href: string; text: string }
+  /**
+   * Ansprechpartnerin im Kopf — nur auf den Ortsseiten (Martin 20.09.2026: „ich will Marta
+   * zentral, oben im Hero, mit Infos, Kontakt und dann der richtige Inhalt daneben, darüber,
+   * damit das … bei den regionalen Seiten, die uns so super wichtig sind, immer passt").
+   *
+   * Hebt die Entscheidung vom 18.09. („ohne Button blöd, aber Button wären zu viel") bewusst
+   * nur für die Ortsseiten auf: Dort stehen bis zu sechs Kartenblock-Einträge mit Telefonnummer
+   * über unserem Treffer, und die organisch davor liegenden Seiten haben alle einen Menschen mit
+   * Namen und Nummer. Auf den Ratgeberseiten bleibt der Kopf wie er ist.
+   */
+  person?: ReactNode
 }) {
-  const zweiSpalten = Boolean(blick?.length)
+  const zweiSpalten = Boolean(blick?.length) || Boolean(person)
   return (
     <div className="bg-pm-shell">
       <div className="max-w-[1200px] mx-auto px-5 pt-6 pb-12 md:pt-8 md:pb-16">
@@ -84,12 +96,18 @@ export function RatgeberKopf({
           ))}
         </nav>
 
-        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? 'lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 lg:items-center' : 'max-w-[52rem]'}`}>
+        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? `lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 ${person ? 'lg:items-start' : 'lg:items-center'}` : 'max-w-[52rem]'}`}>
           <div className="min-w-0">
             <p className={AUGENBRAUE}>{augenbraue}</p>
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
               {zusammenhalten(titel)}
             </h1>
+            {/* Auf dem Handy direkt unter die Überschrift (Martin 20.09.: „Marta zentral, oben im
+                Hero"). Nach der Einleitung läge sie bei 698 px und damit halb unter dem Rand eines
+                iPhone-Bildschirms; hier ist sie ganz sichtbar. Ab 1024 px steht sie rechts. */}
+            {person ? (
+              <div className="mt-7 lg:hidden bg-white rounded-[20px] shadow-lift p-6">{person}</div>
+            ) : null}
             {einleitung ? (
               <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
                 {einleitung}
@@ -101,8 +119,9 @@ export function RatgeberKopf({
                 <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
               </div>
             ) : null}
-            {/* Keine Marta-Zeile im Kopf (Martin 18.09.: „ohne Button blöd, aber Button wären zu viel") — sie steht in der
-                Kopfzeile und am Seitenende. Nur das Datum bleibt; die Autorin steht in den Daten für Google. */}
+            {/* Ohne `person` keine Marta-Zeile im Kopf (Martin 18.09.: „ohne Button blöd, aber Button
+                wären zu viel") — dann steht sie nur in der Kopfzeile und am Seitenende. Das gilt weiter
+                für alle Seitenarten außer den Ortsseiten. */}
             {aktualisiert && lesezeit ? (
               <p className="mt-7 text-[14px] leading-[1.45] text-pm-mute">
                 <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
@@ -110,18 +129,26 @@ export function RatgeberKopf({
             ) : null}
           </div>
 
-          {blick?.length ? (
-          <aside aria-label="Auf einen Blick" className="bg-white rounded-[20px] shadow-lift p-6 md:p-7">
-            <p className={AUGENBRAUE}>{blickTitel}</p>
-            <ul className="mt-4 grid gap-3.5">
-              {blick.map((b) => (
-                <li key={b} className="flex gap-3 text-[16px] leading-[1.5] font-medium text-pm-ink">
-                  <Haken />
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          {person || blick?.length ? (
+          <div className="grid gap-5">
+            {/* Ansprechpartnerin über den Fakten, nicht darunter. */}
+            {person ? (
+              <div className="hidden lg:block bg-white rounded-[20px] shadow-lift p-6 md:p-7">{person}</div>
+            ) : null}
+            {blick?.length ? (
+            <aside aria-label="Auf einen Blick" className="bg-white rounded-[20px] shadow-lift p-6 md:p-7">
+              <p className={AUGENBRAUE}>{blickTitel}</p>
+              <ul className="mt-4 grid gap-3.5">
+                {blick.map((b) => (
+                  <li key={b} className="flex gap-3 text-[16px] leading-[1.5] font-medium text-pm-ink">
+                    <Haken />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+            ) : null}
+          </div>
           ) : null}
         </div>
       </div>
