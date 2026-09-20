@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
+import { Sicher } from '@/components/Sicher'
 import {
   Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
@@ -186,7 +187,9 @@ export default function PflegegradRechnerSeite() {
               seinem Besuch. Sie brauchen etwa zehn Minuten. Markieren Sie nur, wo die Person Hilfe braucht; alles andere bleibt auf
               „selbständig".
             </Text>
-            <PflegegradRechner />
+            <Sicher name="Pflegegrad-Rechner" fallback={<Kasten><Text>Der Rechner lädt gerade nicht. Laden Sie die Seite neu; die Punktetabelle unten zeigt die Grenzen der Pflegegrade.</Text></Kasten>}>
+              <PflegegradRechner />
+            </Sicher>
           </Abschnitt>
 
           <Abschnitt id="so-rechnet" titel="So rechnet der Gutachter: sechs Module, 100 Punkte">
