@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Miesbach" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Miesbach ausmacht" },
   { id: 'einzugsgebiet-miesbach', title: "Einzugsgebiet Miesbach" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Miesbach kostet" },
+  { id: 'werkzeuge', title: "Was es in Miesbach kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Miesbach" },
 ]
@@ -229,7 +229,7 @@ export default function Page() {
             <NearbyCities current="miesbach" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Miesbach'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Miesbach'} land={'Bayern'} altbau={43.1} miete={8.88} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Ludwigslust-Parchim" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Schwerin ausmacht" },
   { id: 'einzugsgebiet-schwerin', title: "Einzugsgebiet Schwerin" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Schwerin kostet" },
+  { id: 'werkzeuge', title: "Was es in Schwerin kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Schwerin" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="schwerin" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Schwerin'} land={'Mecklenburg-Vorpommern'} />
+          <OrtWerkzeuge ort={'Schwerin'} land={'Mecklenburg-Vorpommern'} altbau={40.2} miete={6.06} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

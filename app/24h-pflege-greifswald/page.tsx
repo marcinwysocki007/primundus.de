@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Vorpommern-Greifswald" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Greifswald ausmacht" },
   { id: 'einzugsgebiet-greifswald', title: "Einzugsgebiet Greifswald" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Greifswald kostet" },
+  { id: 'werkzeuge', title: "Was es in Greifswald kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Greifswald" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="greifswald" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Greifswald'} land={'Mecklenburg-Vorpommern'} />
+          <OrtWerkzeuge ort={'Greifswald'} land={'Mecklenburg-Vorpommern'} altbau={30.1} miete={6.41} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

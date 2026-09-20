@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Kreis Minden-Lübbecke" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Minden ausmacht" },
   { id: 'einzugsgebiet-minden', title: "Einzugsgebiet Minden" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Minden kostet" },
+  { id: 'werkzeuge', title: "Was es in Minden kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Minden" },
 ]
@@ -229,7 +229,7 @@ export default function Page() {
             <NearbyCities current="minden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Minden'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Minden'} land={'Nordrhein-Westfalen'} altbau={57.7} miete={6.14} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

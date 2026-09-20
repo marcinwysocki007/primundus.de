@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-brandenburg', title: "Polnische Betreuungskräfte in Brandenburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Brandenburg ausmacht" },
   { id: 'einzugsgebiet-brandenburg', title: "Einzugsgebiet Brandenburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Brandenburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Brandenburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Brandenburg" },
 ]
@@ -228,7 +228,7 @@ export default function Page() {
             <CitiesOfRegion region="brandenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Brandenburg'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Brandenburg'} land={'Deutschland insgesamt'} altbau={48.2} miete={6.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

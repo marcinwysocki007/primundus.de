@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-thueringen', title: "Polnische Betreuungskräfte in Thüringen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Thüringen ausmacht" },
   { id: 'einzugsgebiet-thueringen', title: "Einzugsgebiet Thüringen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Thüringen kostet" },
+  { id: 'werkzeuge', title: "Was es in Thüringen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Thüringen" },
 ]
@@ -228,7 +228,7 @@ export default function Page() {
             <CitiesOfRegion region="thueringen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Thüringen'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Thüringen'} land={'Deutschland insgesamt'} altbau={55.7} miete={5.65} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

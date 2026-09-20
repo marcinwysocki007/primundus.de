@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in Charlottenburg-Wilmersdorf und im Berliner Westen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Berlin-Charlottenburg ausmacht" },
   { id: 'einzugsgebiet-berlin-charlottenburg', title: "Einzugsgebiet Berlin-Charlottenburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Berlin-Charlottenburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Berlin-Charlottenburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Berlin-Charlottenburg" },
 ]
@@ -199,7 +199,7 @@ export default function Page() {
             <NearbyCities current="berlin" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Berlin-Charlottenburg'} land={'Berlin'} />
+          <OrtWerkzeuge ort={'Berlin-Charlottenburg'} land={'Berlin'} altbau={61.9} miete={7.67} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

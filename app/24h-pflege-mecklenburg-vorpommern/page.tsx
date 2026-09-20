@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-mecklenburg', title: "Polnische Betreuungskräfte in Mecklenburg-Vorpommern" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mecklenburg-Vorpommern ausmacht" },
   { id: 'einzugsgebiet-mecklenburg-vorpommern', title: "Einzugsgebiet Mecklenburg-Vorpommern" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mecklenburg-Vorpommern kostet" },
+  { id: 'werkzeuge', title: "Was es in Mecklenburg-Vorpommern kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Mecklenburg-Vorpommern" },
 ]
@@ -221,7 +221,7 @@ export default function Page() {
             <CitiesOfRegion region="mecklenburg-vorpommern" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mecklenburg-Vorpommern'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Mecklenburg-Vorpommern'} land={'Deutschland insgesamt'} altbau={44.6} miete={5.91} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

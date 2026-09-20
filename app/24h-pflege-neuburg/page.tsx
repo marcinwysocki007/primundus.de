@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Neuburg-Schrobenhausen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Neuburg an der Donau ausmacht" },
   { id: 'einzugsgebiet-neuburg-an-der', title: "Einzugsgebiet Neuburg an der Donau" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Neuburg an der Donau kostet" },
+  { id: 'werkzeuge', title: "Was es in Neuburg an der Donau kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Neuburg an der Donau" },
 ]
@@ -228,7 +228,7 @@ export default function Page() {
             <NearbyCities current="neuburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neuburg an der Donau'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Neuburg an der Donau'} land={'Bayern'} altbau={41.8} miete={7.85} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

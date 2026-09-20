@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-erfurt', title: "Polnische Betreuungskräfte in Erfurt" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Erfurt ausmacht" },
   { id: 'einzugsgebiet-erfurt', title: "Einzugsgebiet Erfurt" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Erfurt kostet" },
+  { id: 'werkzeuge', title: "Was es in Erfurt kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Erfurt" },
 ]
@@ -219,7 +219,7 @@ export default function Page() {
             <NearbyCities current="erfurt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Erfurt'} land={'Thüringen'} />
+          <OrtWerkzeuge ort={'Erfurt'} land={'Thüringen'} altbau={49.1} miete={6.48} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

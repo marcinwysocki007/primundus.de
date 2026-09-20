@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im westlichen Breisgau-Hochschwarzwald" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Freiburg und im Umland ausmacht" },
   { id: 'einzugsgebiet-breisach-am-rhein', title: "Einzugsgebiet Breisach am Rhein" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Freiburg & Umland kostet" },
+  { id: 'werkzeuge', title: "Was es in Freiburg & Umland kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Breisach am Rhein" },
 ]
@@ -224,7 +224,7 @@ export default function Page() {
             <NearbyCities current="freiburg-umland" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Freiburg & Umland'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Freiburg & Umland'} land={'Baden-Württemberg'} altbau={48.1} miete={9.74} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

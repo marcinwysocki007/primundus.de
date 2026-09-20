@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-kassel', title: "Polnische Betreuungskräfte in Kassel" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kassel ausmacht" },
   { id: 'einzugsgebiet-kassel', title: "Einzugsgebiet Kassel" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Kassel kostet" },
+  { id: 'werkzeuge', title: "Was es in Kassel kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Kassel" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="kassel" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kassel'} land={'Hessen'} />
+          <OrtWerkzeuge ort={'Kassel'} land={'Hessen'} altbau={67.4} miete={6.77} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

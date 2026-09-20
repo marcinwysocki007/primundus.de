@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-baden', title: "Polnische Betreuungskräfte in Baden-Württemberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Baden-Württemberg ausmacht" },
   { id: 'einzugsgebiet-baden-wuerttemberg', title: "Einzugsgebiet Baden-Württemberg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Baden-Württemberg kostet" },
+  { id: 'werkzeuge', title: "Was es in Baden-Württemberg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Baden-Württemberg" },
 ]
@@ -221,7 +221,7 @@ export default function Page() {
             <CitiesOfRegion region="baden-wuerttemberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Baden-Württemberg'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Baden-Württemberg'} land={'Deutschland insgesamt'} altbau={43.7} miete={8.13} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

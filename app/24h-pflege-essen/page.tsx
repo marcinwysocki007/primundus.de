@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-essen', title: "Polnische Betreuungskräfte in Essen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Essen ausmacht" },
   { id: 'einzugsgebiet-essen', title: "Einzugsgebiet Essen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Essen kostet" },
+  { id: 'werkzeuge', title: "Was es in Essen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Essen" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="essen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Essen'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Essen'} land={'Nordrhein-Westfalen'} altbau={70.8} miete={6.72} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

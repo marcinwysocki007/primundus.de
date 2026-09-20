@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-kreis', title: "Polnische Betreuungskräfte im Kreis Alzey-Worms" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kreis Alzey-Worms ausmacht" },
   { id: 'einzugsgebiet-landkreis-alzey-worms', title: "Einzugsgebiet Landkreis Alzey-Worms" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Kreis Alzey-Worms kostet" },
+  { id: 'werkzeuge', title: "Was es in Kreis Alzey-Worms kostet, und was die Pflegekasse dazugibt" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -172,7 +172,7 @@ export default function Page() {
             <NearbyCities current="alzey-worms" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kreis Alzey-Worms'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Kreis Alzey-Worms'} land={'Rheinland-Pfalz'} altbau={39.6} miete={6.52} />
 
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">

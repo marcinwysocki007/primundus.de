@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-wolfsburg', title: "Polnische Betreuungskräfte in Wolfsburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wolfsburg ausmacht" },
   { id: 'einzugsgebiet-wolfsburg', title: "Einzugsgebiet Wolfsburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Wolfsburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Wolfsburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Wolfsburg" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="wolfsburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wolfsburg'} land={'Niedersachsen'} />
+          <OrtWerkzeuge ort={'Wolfsburg'} land={'Niedersachsen'} altbau={54.5} miete={7.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

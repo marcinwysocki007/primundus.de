@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Alb-Donau-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Ulm ausmacht" },
   { id: 'einzugsgebiet-ulm', title: "Einzugsgebiet Ulm" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Ulm kostet" },
+  { id: 'werkzeuge', title: "Was es in Ulm kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Ulm" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="ulm" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ulm'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Ulm'} land={'Baden-Württemberg'} altbau={47.3} miete={8.48} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

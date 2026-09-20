@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Alzey-Worms" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Worms ausmacht" },
   { id: 'einzugsgebiet-worms', title: "Einzugsgebiet Worms" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Worms kostet" },
+  { id: 'werkzeuge', title: "Was es in Worms kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Worms" },
 ]
@@ -218,7 +218,7 @@ export default function Page() {
             <NearbyCities current="worms" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Worms'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Worms'} land={'Rheinland-Pfalz'} altbau={54.8} miete={6.91} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

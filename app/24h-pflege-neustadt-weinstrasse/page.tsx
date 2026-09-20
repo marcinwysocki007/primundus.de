@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der Südlichen Weinstraße" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Neustadt an der Weinstraße ausmacht" },
   { id: 'einzugsgebiet-neustadt-an-der', title: "Einzugsgebiet Neustadt an der Weinstraße" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Neustadt an der Weinstraße kostet" },
+  { id: 'werkzeuge', title: "Was es in Neustadt an der Weinstraße kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Neustadt an der Weinstraße" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="neustadt-weinstrasse" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neustadt an der Weinstraße'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Neustadt an der Weinstraße'} land={'Rheinland-Pfalz'} altbau={55.6} miete={6.85} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

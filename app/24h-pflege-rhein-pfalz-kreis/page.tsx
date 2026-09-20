@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-rhein', title: "Polnische Betreuungskräfte im Rhein-Pfalz-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rhein-Pfalz-Kreis ausmacht" },
   { id: 'einzugsgebiet-rhein-pfalz-kreis', title: "Einzugsgebiet Rhein-Pfalz-Kreis" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Rhein-Pfalz-Kreis kostet" },
+  { id: 'werkzeuge', title: "Was es in Rhein-Pfalz-Kreis kostet, und was die Pflegekasse dazugibt" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -172,7 +172,7 @@ export default function Page() {
             <NearbyCities current="rhein-pfalz-kreis" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} altbau={39.8} miete={6.91} />
 
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">

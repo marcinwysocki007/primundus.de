@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-wiesbaden', title: "Polnische Betreuungskräfte in Wiesbaden" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wiesbaden ausmacht" },
   { id: 'einzugsgebiet-wiesbaden', title: "Einzugsgebiet Wiesbaden" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Wiesbaden kostet" },
+  { id: 'werkzeuge', title: "Was es in Wiesbaden kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Wiesbaden" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="wiesbaden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wiesbaden'} land={'Hessen'} />
+          <OrtWerkzeuge ort={'Wiesbaden'} land={'Hessen'} altbau={58.7} miete={9.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

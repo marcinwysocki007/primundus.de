@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-oldenburg', title: "Polnische Betreuungskräfte in Oldenburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Oldenburg ausmacht" },
   { id: 'einzugsgebiet-oldenburg', title: "Einzugsgebiet Oldenburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Oldenburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Oldenburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Oldenburg" },
 ]
@@ -216,7 +216,7 @@ export default function Page() {
             <NearbyCities current="oldenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Oldenburg'} land={'Niedersachsen'} />
+          <OrtWerkzeuge ort={'Oldenburg'} land={'Niedersachsen'} altbau={41.0} miete={7.79} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

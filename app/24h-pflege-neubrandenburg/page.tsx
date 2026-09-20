@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der Mecklenburgischen Seenplatte" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Neubrandenburg ausmacht" },
   { id: 'einzugsgebiet-neubrandenburg', title: "Einzugsgebiet Neubrandenburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Neubrandenburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Neubrandenburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Neubrandenburg" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="neubrandenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neubrandenburg'} land={'Mecklenburg-Vorpommern'} />
+          <OrtWerkzeuge ort={'Neubrandenburg'} land={'Mecklenburg-Vorpommern'} altbau={25.9} miete={5.49} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

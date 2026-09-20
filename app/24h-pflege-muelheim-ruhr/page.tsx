@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-muelheim', title: "Polnische Betreuungskräfte in Mülheim an der Ruhr" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mülheim an der Ruhr ausmacht" },
   { id: 'einzugsgebiet-muelheim-an-der', title: "Einzugsgebiet Mülheim an der Ruhr" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mülheim an der Ruhr kostet" },
+  { id: 'werkzeuge', title: "Was es in Mülheim an der Ruhr kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Mülheim an der Ruhr" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="muelheim-ruhr" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mülheim an der Ruhr'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Mülheim an der Ruhr'} land={'Nordrhein-Westfalen'} altbau={63.2} miete={6.5} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Bamberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bamberg ausmacht" },
   { id: 'einzugsgebiet-bamberg', title: "Einzugsgebiet Bamberg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bamberg kostet" },
+  { id: 'werkzeuge', title: "Was es in Bamberg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bamberg" },
 ]
@@ -235,7 +235,7 @@ export default function Page() {
             <NearbyCities current="bamberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bamberg'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Bamberg'} land={'Bayern'} altbau={55.9} miete={7.66} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-troisdorf', title: "Polnische Betreuungskräfte in Troisdorf" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Troisdorf ausmacht" },
   { id: 'einzugsgebiet-troisdorf', title: "Einzugsgebiet Troisdorf" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Troisdorf kostet" },
+  { id: 'werkzeuge', title: "Was es in Troisdorf kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Troisdorf" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="troisdorf" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Troisdorf'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Troisdorf'} land={'Nordrhein-Westfalen'} altbau={40.3} miete={7.01} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

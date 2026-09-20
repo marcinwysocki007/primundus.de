@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Bad Tölz-Wolfratshausen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Tölz ausmacht" },
   { id: 'einzugsgebiet-bad-toelz', title: "Einzugsgebiet Bad Tölz" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bad Tölz kostet" },
+  { id: 'werkzeuge', title: "Was es in Bad Tölz kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Tölz" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="bad-toelz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Tölz'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Bad Tölz'} land={'Bayern'} altbau={49.5} miete={9.29} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-hochtaunuskreis', title: "Polnische Betreuungskräfte im Hochtaunuskreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hochtaunuskreis ausmacht" },
   { id: 'einzugsgebiet-hochtaunuskreis', title: "Einzugsgebiet Hochtaunuskreis" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hochtaunuskreis kostet" },
+  { id: 'werkzeuge', title: "Was es in Hochtaunuskreis kostet, und was die Pflegekasse dazugibt" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -172,7 +172,7 @@ export default function Page() {
             <NearbyCities current="hochtaunuskreis" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hochtaunuskreis'} land={'Hessen'} />
+          <OrtWerkzeuge ort={'Hochtaunuskreis'} land={'Hessen'} altbau={41.8} miete={9.23} />
 
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">

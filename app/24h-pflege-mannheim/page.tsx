@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der Metropolregion Rhein-Neckar" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mannheim ausmacht" },
   { id: 'einzugsgebiet-mannheim', title: "Einzugsgebiet Mannheim" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mannheim kostet" },
+  { id: 'werkzeuge', title: "Was es in Mannheim kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Mannheim" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="mannheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mannheim'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Mannheim'} land={'Baden-Württemberg'} altbau={63.6} miete={8.39} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

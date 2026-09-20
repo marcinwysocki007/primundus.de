@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Bad Dürkheim" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Dürkheim ausmacht" },
   { id: 'einzugsgebiet-bad-duerkheim', title: "Einzugsgebiet Bad Dürkheim" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bad Dürkheim kostet" },
+  { id: 'werkzeuge', title: "Was es in Bad Dürkheim kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Dürkheim" },
 ]
@@ -224,7 +224,7 @@ export default function Page() {
             <NearbyCities current="bad-duerkheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Dürkheim'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Bad Dürkheim'} land={'Rheinland-Pfalz'} altbau={45.7} miete={7.5} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

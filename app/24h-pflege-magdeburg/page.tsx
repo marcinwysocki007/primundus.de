@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-magdeburg', title: "Polnische Betreuungskräfte in Magdeburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Magdeburg ausmacht" },
   { id: 'einzugsgebiet-magdeburg', title: "Einzugsgebiet Magdeburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Magdeburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Magdeburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Magdeburg" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="magdeburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Magdeburg'} land={'Sachsen-Anhalt'} />
+          <OrtWerkzeuge ort={'Magdeburg'} land={'Sachsen-Anhalt'} altbau={54.5} miete={5.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

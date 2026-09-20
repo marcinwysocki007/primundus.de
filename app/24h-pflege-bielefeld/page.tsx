@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-bielefeld', title: "Polnische Betreuungskräfte in Bielefeld" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bielefeld ausmacht" },
   { id: 'einzugsgebiet-bielefeld', title: "Einzugsgebiet Bielefeld" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bielefeld kostet" },
+  { id: 'werkzeuge', title: "Was es in Bielefeld kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bielefeld" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="bielefeld" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bielefeld'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Bielefeld'} land={'Nordrhein-Westfalen'} altbau={55.7} miete={7.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

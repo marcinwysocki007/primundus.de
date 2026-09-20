@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-luenen', title: "Polnische Betreuungskräfte in Lünen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Lünen ausmacht" },
   { id: 'einzugsgebiet-luenen', title: "Einzugsgebiet Lünen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Lünen kostet" },
+  { id: 'werkzeuge', title: "Was es in Lünen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Lünen" },
 ]
@@ -219,7 +219,7 @@ export default function Page() {
             <NearbyCities current="luenen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Lünen'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Lünen'} land={'Nordrhein-Westfalen'} altbau={59.9} miete={5.67} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

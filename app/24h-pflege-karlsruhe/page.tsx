@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-karlsruhe', title: "Polnische Betreuungskräfte in Karlsruhe" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Karlsruhe ausmacht" },
   { id: 'einzugsgebiet-karlsruhe', title: "Einzugsgebiet Karlsruhe" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Karlsruhe kostet" },
+  { id: 'werkzeuge', title: "Was es in Karlsruhe kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Karlsruhe" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="karlsruhe" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Karlsruhe'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Karlsruhe'} land={'Baden-Württemberg'} altbau={62.7} miete={8.46} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

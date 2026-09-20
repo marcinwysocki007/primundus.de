@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-muenster', title: "Polnische Betreuungskräfte in Münster" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Münster ausmacht" },
   { id: 'einzugsgebiet-muenster', title: "Einzugsgebiet Münster" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Münster kostet" },
+  { id: 'werkzeuge', title: "Was es in Münster kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Münster" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="muenster" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Münster'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Münster'} land={'Nordrhein-Westfalen'} altbau={45.1} miete={8.71} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

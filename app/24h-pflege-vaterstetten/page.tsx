@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im östlichen Landkreis München" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Vaterstetten ausmacht" },
   { id: 'einzugsgebiet-vaterstetten', title: "Einzugsgebiet Vaterstetten" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Vaterstetten kostet" },
+  { id: 'werkzeuge', title: "Was es in Vaterstetten kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Vaterstetten" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="vaterstetten" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Vaterstetten'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Vaterstetten'} land={'Bayern'} altbau={22.9} miete={12.13} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

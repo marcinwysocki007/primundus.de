@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-freiburg', title: "Polnische Betreuungskräfte in Freiburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Freiburg ausmacht" },
   { id: 'einzugsgebiet-freiburg-im-breisgau', title: "Einzugsgebiet Freiburg im Breisgau" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Freiburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Freiburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Freiburg im Breisgau" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="freiburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Freiburg'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Freiburg'} land={'Baden-Württemberg'} altbau={48.1} miete={9.74} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

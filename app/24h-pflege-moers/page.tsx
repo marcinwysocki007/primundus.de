@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-moers', title: "Polnische Betreuungskräfte in Moers" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Moers ausmacht" },
   { id: 'einzugsgebiet-moers', title: "Einzugsgebiet Moers" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Moers kostet" },
+  { id: 'werkzeuge', title: "Was es in Moers kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Moers" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="moers" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Moers'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Moers'} land={'Nordrhein-Westfalen'} altbau={54.4} miete={6.26} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

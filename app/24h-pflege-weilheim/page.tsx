@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Weilheim-Schongau" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Weilheim ausmacht" },
   { id: 'einzugsgebiet-weilheim-in-oberbayern', title: "Einzugsgebiet Weilheim in Oberbayern" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Weilheim kostet" },
+  { id: 'werkzeuge', title: "Was es in Weilheim kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Weilheim in Oberbayern" },
 ]
@@ -229,7 +229,7 @@ export default function Page() {
             <NearbyCities current="weilheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Weilheim'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Weilheim'} land={'Bayern'} altbau={34.2} miete={8.91} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-marl', title: "Polnische Betreuungskräfte in Marl" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Marl ausmacht" },
   { id: 'einzugsgebiet-marl', title: "Einzugsgebiet Marl" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Marl kostet" },
+  { id: 'werkzeuge', title: "Was es in Marl kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Marl" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="marl" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Marl'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Marl'} land={'Nordrhein-Westfalen'} altbau={57.1} miete={6.09} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

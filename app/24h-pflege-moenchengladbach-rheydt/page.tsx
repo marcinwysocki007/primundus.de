@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-moenchengladbach', title: "Polnische Betreuungskräfte in Mönchengladbach-Rheydt" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mönchengladbach-Rheydt ausmacht" },
   { id: 'einzugsgebiet-rheydt', title: "Einzugsgebiet Rheydt" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mönchengladbach-Rheydt kostet" },
+  { id: 'werkzeuge', title: "Was es in Mönchengladbach-Rheydt kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rheydt" },
 ]
@@ -219,7 +219,7 @@ export default function Page() {
             <NearbyCities current="moenchengladbach-rheydt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mönchengladbach-Rheydt'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Mönchengladbach-Rheydt'} land={'Nordrhein-Westfalen'} altbau={54.9} miete={6.41} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

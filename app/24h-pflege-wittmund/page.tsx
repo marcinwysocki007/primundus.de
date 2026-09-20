@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-wittmund', title: "Polnische Betreuungskräfte in Wittmund" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wittmund ausmacht" },
   { id: 'einzugsgebiet-landkreis-wittmund', title: "Einzugsgebiet Landkreis Wittmund" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Wittmund kostet" },
+  { id: 'werkzeuge', title: "Was es in Wittmund kostet, und was die Pflegekasse dazugibt" },
   { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Harlingerland" },
 ]
 
@@ -171,7 +171,7 @@ export default function Page() {
             <NearbyCities current="wittmund" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wittmund'} land={'Niedersachsen'} />
+          <OrtWerkzeuge ort={'Wittmund'} land={'Niedersachsen'} altbau={40.3} miete={6.35} />
 
 
           <Abschnitt id="haeufige-fragen-aus-dem" titel="Häufige Fragen aus dem Harlingerland">

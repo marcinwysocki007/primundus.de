@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Karlsruhe Nord" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bruchsal ausmacht" },
   { id: 'einzugsgebiet-bruchsal', title: "Einzugsgebiet Bruchsal" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bruchsal kostet" },
+  { id: 'werkzeuge', title: "Was es in Bruchsal kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bruchsal" },
 ]
@@ -229,7 +229,7 @@ export default function Page() {
             <NearbyCities current="bruchsal" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bruchsal'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Bruchsal'} land={'Baden-Württemberg'} altbau={48.4} miete={7.48} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

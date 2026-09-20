@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Rhein-Neckar-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Heidelberg ausmacht" },
   { id: 'einzugsgebiet-heidelberg', title: "Einzugsgebiet Heidelberg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Heidelberg kostet" },
+  { id: 'werkzeuge', title: "Was es in Heidelberg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Heidelberg" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="heidelberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Heidelberg'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Heidelberg'} land={'Baden-Württemberg'} altbau={54.2} miete={10.02} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

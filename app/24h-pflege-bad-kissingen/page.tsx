@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Bad Kissingen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Kissingen ausmacht" },
   { id: 'einzugsgebiet-bad-kissingen', title: "Einzugsgebiet Bad Kissingen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bad Kissingen kostet" },
+  { id: 'werkzeuge', title: "Was es in Bad Kissingen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Kissingen" },
 ]
@@ -222,7 +222,7 @@ export default function Page() {
             <NearbyCities current="bad-kissingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Kissingen'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Bad Kissingen'} land={'Bayern'} altbau={47.0} miete={6.3} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

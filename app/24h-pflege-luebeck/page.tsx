@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-luebeck', title: "Polnische Betreuungskräfte in Lübeck" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Lübeck ausmacht" },
   { id: 'einzugsgebiet-luebeck', title: "Einzugsgebiet Lübeck" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Lübeck kostet" },
+  { id: 'werkzeuge', title: "Was es in Lübeck kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Lübeck" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="luebeck" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Lübeck'} land={'Schleswig-Holstein'} />
+          <OrtWerkzeuge ort={'Lübeck'} land={'Schleswig-Holstein'} altbau={65.8} miete={7.47} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

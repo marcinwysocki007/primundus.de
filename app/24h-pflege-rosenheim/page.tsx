@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Rosenheim" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rosenheim ausmacht" },
   { id: 'einzugsgebiet-rosenheim', title: "Einzugsgebiet Rosenheim" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Rosenheim kostet" },
+  { id: 'werkzeuge', title: "Was es in Rosenheim kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rosenheim" },
 ]
@@ -239,7 +239,7 @@ export default function Page() {
             <NearbyCities current="rosenheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rosenheim'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Rosenheim'} land={'Bayern'} altbau={38.4} miete={9.09} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

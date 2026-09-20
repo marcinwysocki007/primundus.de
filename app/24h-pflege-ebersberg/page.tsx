@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Ebersberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Ebersberg ausmacht" },
   { id: 'einzugsgebiet-ebersberg', title: "Einzugsgebiet Ebersberg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Ebersberg kostet" },
+  { id: 'werkzeuge', title: "Was es in Ebersberg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Ebersberg" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="ebersberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ebersberg'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Ebersberg'} land={'Bayern'} altbau={28.3} miete={9.72} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

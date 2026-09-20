@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Waldshut" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Waldshut-Tiengen ausmacht" },
   { id: 'einzugsgebiet-waldshut-tiengen', title: "Einzugsgebiet Waldshut-Tiengen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Waldshut-Tiengen kostet" },
+  { id: 'werkzeuge', title: "Was es in Waldshut-Tiengen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Waldshut-Tiengen" },
 ]
@@ -223,7 +223,7 @@ export default function Page() {
             <NearbyCities current="aalen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Waldshut-Tiengen'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Waldshut-Tiengen'} land={'Baden-Württemberg'} altbau={48.1} miete={7.27} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

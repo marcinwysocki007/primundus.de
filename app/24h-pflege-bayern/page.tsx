@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-bayern', title: "Polnische Betreuungskräfte in Bayern" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bayern ausmacht" },
   { id: 'einzugsgebiet-bayern', title: "Einzugsgebiet Bayern" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bayern kostet" },
+  { id: 'werkzeuge', title: "Was es in Bayern kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bayern" },
 ]
@@ -231,7 +231,7 @@ export default function Page() {
             <CitiesOfRegion region="bayern" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bayern'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Bayern'} land={'Deutschland insgesamt'} altbau={41.1} miete={8.74} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

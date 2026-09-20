@@ -1,37 +1,63 @@
-// Werkzeug-Abschnitt für die Ortsseiten (20.09.2026). Martin: „vielleicht auch dort ein Pflegegradrechner, ein Preisrechner,
-// alle Rechner vielleicht auch von dort verlinken". Bisher stand auf den Ortsseiten nur der Preisrechner; der Pflegegrad-Rechner,
-// der Zuschuss-Rechner, der Heim-Rechner und die Generatoren waren von dort aus nicht erreichbar.
+// Kosten- und Werkzeug-Abschnitt für die Ortsseiten (20.09.2026).
 //
-// Korrektur am 20.09. nach Martins Hinweis: Der Preis hängt NICHT am Pflegegrad, sondern an der Pflegesituation und daran, was
-// die Familie von der Betreuungskraft erwartet (Deutsch, Nächte, zweite Person). Der Pflegegrad bestimmt nur, wie viel die
-// Pflegekasse dazugibt. Und: keine Behördensprache — es geht um Eltern, nicht um „Fälle".
+// Martin am 20.09.:
+//  1. „vielleicht auch dort ein Pflegegradrechner, ein Preisrechner, alle Rechner vielleicht auch von dort verlinken"
+//  2. „Rechnen Sie Ihren Fall durch, hört sich doch komisch an, das ist doch kein Fall" — keine Behördensprache.
+//  3. Der Preis hängt an der Pflegesituation und an den Wünschen an die Betreuungskraft; der Pflegegrad bestimmt nur den Zuschuss.
+//  4. „und wenn es nicht die Eltern sind? kann für Angehörige sein oder nur Mutter" — also niemanden voraussetzen.
+//  5. „es muss noch mehr Unterscheidung" — deshalb rechnet der Abschnitt mit den Zahlen des jeweiligen Orts: Baujahre des
+//     Wohnungsbestands (Treppe, Aufzug, Bad) und Mietniveau kommen aus dem Zensus 2022 und sind je Stadt verschieden.
 import { Abschnitt, MehrDazu, Punkte, Text } from '@/components/vorlage/Ratgeber'
 import { HEIM_EIGENANTEIL, HEIM_EIGENANTEIL_BUND } from '@/lib/heimkosten'
 import { PFLEGEGELD } from '@/lib/fakten'
 
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
+const prozent = (n: number) => n.toLocaleString('de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
 const EIGEN_PG3 = 2150 - PFLEGEGELD[3] - 295 - 333
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
-export function OrtWerkzeuge({ ort, land }: { ort: string; land: string }) {
+export function OrtWerkzeuge({
+  ort,
+  land,
+  altbau,
+  miete,
+}: {
+  ort: string
+  land: string
+  /** Anteil der Wohnungen, die vor 1970 gebaut wurden (Zensus 2022) */
+  altbau?: number
+  /** Nettokaltmiete je m² (Zensus 2022) */
+  miete?: number
+}) {
   const heim = HEIM_EIGENANTEIL[land] ?? HEIM_EIGENANTEIL_BUND
+  const bayern = land === 'Bayern'
 
   return (
-    <Abschnitt id="werkzeuge" titel={`Was es für Ihre Eltern in ${ort} kostet`}>
+    <Abschnitt id="werkzeuge" titel={`Was es in ${ort} kostet, und was die Pflegekasse dazugibt`}>
       <Text>
-        Zwei Dinge entscheiden darüber, was Sie am Ende selbst zahlen. Das erste ist der Preis: Er beginnt bei 2.150 € im Monat
-        und richtet sich danach, wie viel Hilfe Ihre Mutter oder Ihr Vater braucht und was Sie sich von der Betreuungskraft
-        wünschen — wie gut sie Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob nachts jemand aufstehen muss, ob zwei
-        Personen im Haushalt versorgt werden.
+        Zwei Dinge entscheiden darüber, was am Ende selbst zu zahlen ist. Das erste ist der Preis: Er beginnt bei 2.150 € im
+        Monat und richtet sich danach, wie viel Hilfe nötig ist und was Sie von der Betreuungskraft erwarten — wie gut sie
+        Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob nachts jemand aufstehen muss, ob zwei Personen im Haushalt
+        versorgt werden.
       </Text>
       <Text>
         Das zweite ist der Pflegegrad. Er bestimmt nicht den Preis, sondern das, was die Pflegekasse dazugibt: Pflegegeld,
         anteiliges Entlastungsbudget, dazu die Steuerermäßigung. Bei Pflegegrad 3 bleiben so ab ca. {euro(EIGEN_PG3)} im Monat
         übrig. Ein Heimplatz in {land} kostet im Vergleich rund {euro(heim)} Eigenanteil im Monat.
+        {bayern ? ' Wer in Bayern wohnt, bekommt ab Pflegegrad 2 zusätzlich 500 € Landespflegegeld im Jahr.' : ''}
       </Text>
-      <Text>
-        Wie beides bei Ihnen zusammenkommt, zeigen diese Rechner — kostenlos, ohne Anmeldung, in wenigen Minuten:
-      </Text>
+      {altbau !== undefined && (
+        <Text>
+          Was in {ort} dazukommt: {prozent(altbau)} der Wohnungen stammen aus der Zeit vor 1970.{' '}
+          {altbau >= 60
+            ? 'In diesem Bestand fehlt häufiger ein Aufzug, das Bad ist klein und die Treppe steil — genau die Punkte, an denen Alleinleben scheitert und jemand im Haus den Unterschied macht.'
+            : 'Ein Teil davon hat keinen Aufzug und ein kleines Bad; das ist oft der Grund, warum es allein nicht mehr geht.'}
+          {miete !== undefined
+            ? ` Umziehen ist selten die Antwort: Neu vermietet wird in ${ort} für ${miete.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} € je Quadratmeter.`
+            : ''}
+        </Text>
+      )}
+      <Text>Wie beides bei Ihnen zusammenkommt, zeigen diese Rechner — kostenlos, ohne Anmeldung, in wenigen Minuten:</Text>
       <Punkte
         punkte={[
           {
@@ -44,7 +70,7 @@ export function OrtWerkzeuge({ ort, land }: { ort: string; land: string }) {
           },
           {
             title: <a href="/zuschuss-rechner" className={LINK}>Zuschuss-Rechner</a>,
-            desc: 'Was die Pflegekasse bei Ihrem Pflegegrad zahlt und wie viel davon zusammenkommt.',
+            desc: 'Was die Pflegekasse bei welchem Pflegegrad zahlt und wie viel davon zusammenkommt.',
           },
           {
             title: <a href="/pflegeheim-kosten-deutschland" className={LINK}>Pflegeheim-Kosten-Rechner</a>,
@@ -52,7 +78,7 @@ export function OrtWerkzeuge({ ort, land }: { ort: string; land: string }) {
           },
           {
             title: <a href="/vollmacht-generator" className={LINK}>Vorsorgevollmacht erstellen</a>,
-            desc: 'Wenn Ihre Eltern nicht mehr selbst entscheiden können: Vollmacht Schritt für Schritt ausfüllen und ausdrucken.',
+            desc: 'Für den Fall, dass jemand nicht mehr selbst entscheiden kann: Vollmacht Schritt für Schritt ausfüllen und ausdrucken.',
           },
           {
             title: <a href="/pflegevertrag-generator" className={LINK}>Pflegevertrag prüfen</a>,

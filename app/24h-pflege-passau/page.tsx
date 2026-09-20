@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Passau" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Passau ausmacht" },
   { id: 'einzugsgebiet-passau', title: "Einzugsgebiet Passau" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Passau kostet" },
+  { id: 'werkzeuge', title: "Was es in Passau kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Passau" },
 ]
@@ -235,7 +235,7 @@ export default function Page() {
             <NearbyCities current="passau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Passau'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Passau'} land={'Bayern'} altbau={40.5} miete={8.03} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

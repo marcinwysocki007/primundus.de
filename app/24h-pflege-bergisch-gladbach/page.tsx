@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Rheinisch-Bergischen Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bergisch Gladbach ausmacht" },
   { id: 'einzugsgebiet-bergisch-gladbach', title: "Einzugsgebiet Bergisch Gladbach" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bergisch Gladbach kostet" },
+  { id: 'werkzeuge', title: "Was es in Bergisch Gladbach kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bergisch Gladbach" },
 ]
@@ -217,7 +217,7 @@ export default function Page() {
             <NearbyCities current="bergisch-gladbach" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bergisch Gladbach'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Bergisch Gladbach'} land={'Nordrhein-Westfalen'} altbau={42.3} miete={8.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

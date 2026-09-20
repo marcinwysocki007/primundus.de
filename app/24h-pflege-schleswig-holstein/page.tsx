@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-schleswig', title: "Polnische Betreuungskräfte in Schleswig-Holstein" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Schleswig-Holstein ausmacht" },
   { id: 'einzugsgebiet-schleswig-holstein', title: "Einzugsgebiet Schleswig-Holstein" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Schleswig-Holstein kostet" },
+  { id: 'werkzeuge', title: "Was es in Schleswig-Holstein kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Schleswig-Holstein" },
 ]
@@ -221,7 +221,7 @@ export default function Page() {
             <CitiesOfRegion region="schleswig-holstein" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Schleswig-Holstein'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Schleswig-Holstein'} land={'Deutschland insgesamt'} altbau={48.9} miete={7.41} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

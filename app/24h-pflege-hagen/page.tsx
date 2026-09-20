@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-hagen', title: "Polnische Betreuungskräfte in Hagen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hagen ausmacht" },
   { id: 'einzugsgebiet-hagen', title: "Einzugsgebiet Hagen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hagen kostet" },
+  { id: 'werkzeuge', title: "Was es in Hagen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hagen" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="hagen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hagen'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Hagen'} land={'Nordrhein-Westfalen'} altbau={67.9} miete={5.39} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-hessen', title: "Polnische Betreuungskräfte in Hessen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hessen ausmacht" },
   { id: 'einzugsgebiet-hessen', title: "Einzugsgebiet Hessen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hessen kostet" },
+  { id: 'werkzeuge', title: "Was es in Hessen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hessen" },
 ]
@@ -221,7 +221,7 @@ export default function Page() {
             <CitiesOfRegion region="hessen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hessen'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Hessen'} land={'Deutschland insgesamt'} altbau={50.8} miete={8.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

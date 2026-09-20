@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Hochtaunuskreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Homburg ausmacht" },
   { id: 'einzugsgebiet-bad-homburg-vor', title: "Einzugsgebiet Bad Homburg vor der Höhe" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bad Homburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Bad Homburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Homburg vor der Höhe" },
 ]
@@ -224,7 +224,7 @@ export default function Page() {
             <NearbyCities current="bad-homburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Homburg'} land={'Hessen'} />
+          <OrtWerkzeuge ort={'Bad Homburg'} land={'Hessen'} altbau={49.6} miete={9.95} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

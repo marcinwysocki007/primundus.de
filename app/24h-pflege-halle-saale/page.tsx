@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Saalekreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Halle (Saale) ausmacht" },
   { id: 'einzugsgebiet-halle-saale', title: "Einzugsgebiet Halle (Saale)" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Halle (Saale) kostet" },
+  { id: 'werkzeuge', title: "Was es in Halle (Saale) kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Halle (Saale)" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="halle-saale" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Halle (Saale)'} land={'Sachsen-Anhalt'} />
+          <OrtWerkzeuge ort={'Halle (Saale)'} land={'Sachsen-Anhalt'} altbau={55.3} miete={5.92} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

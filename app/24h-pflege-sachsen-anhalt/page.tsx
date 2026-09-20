@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-sachsen', title: "Polnische Betreuungskräfte in Sachsen-Anhalt" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Sachsen-Anhalt ausmacht" },
   { id: 'einzugsgebiet-sachsen-anhalt', title: "Einzugsgebiet Sachsen-Anhalt" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Sachsen-Anhalt kostet" },
+  { id: 'werkzeuge', title: "Was es in Sachsen-Anhalt kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Sachsen-Anhalt" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <CitiesOfRegion region="sachsen-anhalt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Sachsen-Anhalt'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Sachsen-Anhalt'} land={'Deutschland insgesamt'} altbau={59.1} miete={5.38} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

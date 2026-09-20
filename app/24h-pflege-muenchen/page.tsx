@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-muenchen', title: "Polnische Betreuungskräfte in München" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in München ausmacht" },
   { id: 'einzugsgebiet-muenchen', title: "Einzugsgebiet München" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in München kostet" },
+  { id: 'werkzeuge', title: "Was es in München kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in München" },
 ]
@@ -231,7 +231,7 @@ export default function Page() {
             <NearbyCities current="muenchen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'München'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

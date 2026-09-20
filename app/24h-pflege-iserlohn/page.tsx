@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Märkischen Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Iserlohn ausmacht" },
   { id: 'einzugsgebiet-iserlohn', title: "Einzugsgebiet Iserlohn" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Iserlohn kostet" },
+  { id: 'werkzeuge', title: "Was es in Iserlohn kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Iserlohn" },
 ]
@@ -224,7 +224,7 @@ export default function Page() {
             <NearbyCities current="iserlohn" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Iserlohn'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Iserlohn'} land={'Nordrhein-Westfalen'} altbau={59.8} miete={5.69} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

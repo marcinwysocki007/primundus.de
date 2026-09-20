@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-saarland', title: "Polnische Betreuungskräfte im Saarland" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause im Saarland ausmacht" },
   { id: 'einzugsgebiet-saarland', title: "Einzugsgebiet Saarland" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Saarland kostet" },
+  { id: 'werkzeuge', title: "Was es in Saarland kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Saarland" },
 ]
@@ -227,7 +227,7 @@ export default function Page() {
             <CitiesOfRegion region="saarland" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Saarland'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Saarland'} land={'Deutschland insgesamt'} altbau={59.9} miete={6.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

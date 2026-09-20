@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-ingolstadt', title: "Polnische Betreuungskräfte in Ingolstadt" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Ingolstadt ausmacht" },
   { id: 'einzugsgebiet-ingolstadt', title: "Einzugsgebiet Ingolstadt" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Ingolstadt kostet" },
+  { id: 'werkzeuge', title: "Was es in Ingolstadt kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Ingolstadt" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="ingolstadt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ingolstadt'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Ingolstadt'} land={'Bayern'} altbau={34.4} miete={9.16} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

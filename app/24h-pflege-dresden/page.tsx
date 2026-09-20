@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-dresden', title: "Polnische Betreuungskräfte in Dresden" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Dresden ausmacht" },
   { id: 'einzugsgebiet-dresden', title: "Einzugsgebiet Dresden" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Dresden kostet" },
+  { id: 'werkzeuge', title: "Was es in Dresden kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Dresden" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="dresden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Dresden'} land={'Sachsen'} />
+          <OrtWerkzeuge ort={'Dresden'} land={'Sachsen'} altbau={52.7} miete={6.92} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

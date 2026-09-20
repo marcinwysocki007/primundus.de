@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-duesseldorf', title: "Polnische Betreuungskräfte in Düsseldorf" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Düsseldorf ausmacht" },
   { id: 'einzugsgebiet-duesseldorf', title: "Einzugsgebiet Düsseldorf" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Düsseldorf kostet" },
+  { id: 'werkzeuge', title: "Was es in Düsseldorf kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Düsseldorf" },
 ]
@@ -219,7 +219,7 @@ export default function Page() {
             <NearbyCities current="duesseldorf" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Düsseldorf'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Düsseldorf'} land={'Nordrhein-Westfalen'} altbau={65.4} miete={9.24} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

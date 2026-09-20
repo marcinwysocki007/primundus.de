@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-herne', title: "Polnische Betreuungskräfte in Herne" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Herne ausmacht" },
   { id: 'einzugsgebiet-herne', title: "Einzugsgebiet Herne" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Herne kostet" },
+  { id: 'werkzeuge', title: "Was es in Herne kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Herne" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="herne" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Herne'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Herne'} land={'Nordrhein-Westfalen'} altbau={71.3} miete={5.71} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

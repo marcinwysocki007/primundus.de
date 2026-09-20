@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-bremen', title: "Polnische Betreuungskräfte in Bremen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bremen ausmacht" },
   { id: 'einzugsgebiet-bremen', title: "Einzugsgebiet Bremen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bremen kostet" },
+  { id: 'werkzeuge', title: "Was es in Bremen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bremen" },
 ]
@@ -194,7 +194,7 @@ export default function Page() {
             <NearbyCities current="bremen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bremen'} land={'Bremen'} />
+          <OrtWerkzeuge ort={'Bremen'} land={'Bremen'} altbau={65.4} miete={7.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

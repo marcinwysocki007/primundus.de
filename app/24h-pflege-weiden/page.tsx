@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Neustadt an der Waldnaab" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Weiden i.d. Oberpfalz ausmacht" },
   { id: 'einzugsgebiet-weiden-in-der', title: "Einzugsgebiet Weiden in der Oberpfalz" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Weiden i.d. Oberpfalz kostet" },
+  { id: 'werkzeuge', title: "Was es in Weiden i.d. Oberpfalz kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Weiden in der Oberpfalz" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="weiden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Weiden i.d. Oberpfalz'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Weiden i.d. Oberpfalz'} land={'Bayern'} altbau={54.7} miete={5.95} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

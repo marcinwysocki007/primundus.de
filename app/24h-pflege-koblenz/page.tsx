@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-am', title: "24-Stunden-Pflege am Mittelrhein" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Koblenz ausmacht" },
   { id: 'einzugsgebiet-koblenz', title: "Einzugsgebiet Koblenz" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Koblenz kostet" },
+  { id: 'werkzeuge', title: "Was es in Koblenz kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Koblenz" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="koblenz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Koblenz'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Koblenz'} land={'Rheinland-Pfalz'} altbau={59.6} miete={7.45} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

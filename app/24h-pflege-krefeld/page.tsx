@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-krefeld', title: "Polnische Betreuungskräfte in Krefeld" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Krefeld ausmacht" },
   { id: 'einzugsgebiet-krefeld', title: "Einzugsgebiet Krefeld" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Krefeld kostet" },
+  { id: 'werkzeuge', title: "Was es in Krefeld kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Krefeld" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="krefeld" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Krefeld'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Krefeld'} land={'Nordrhein-Westfalen'} altbau={61.5} miete={6.66} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

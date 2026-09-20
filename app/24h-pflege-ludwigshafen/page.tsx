@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Rhein-Pfalz-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Ludwigshafen ausmacht" },
   { id: 'einzugsgebiet-ludwigshafen-am-rhein', title: "Einzugsgebiet Ludwigshafen am Rhein" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Ludwigshafen kostet" },
+  { id: 'werkzeuge', title: "Was es in Ludwigshafen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Ludwigshafen am Rhein" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="ludwigshafen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ludwigshafen'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Ludwigshafen'} land={'Rheinland-Pfalz'} altbau={60.8} miete={7.31} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

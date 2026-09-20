@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Allgäu" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kempten ausmacht" },
   { id: 'einzugsgebiet-kempten', title: "Einzugsgebiet Kempten" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Kempten kostet" },
+  { id: 'werkzeuge', title: "Was es in Kempten kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Kempten" },
 ]
@@ -235,7 +235,7 @@ export default function Page() {
             <NearbyCities current="kempten" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kempten'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Kempten'} land={'Bayern'} altbau={46.4} miete={7.18} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

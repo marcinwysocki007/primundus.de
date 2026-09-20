@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-rheinland', title: "Polnische Betreuungskräfte in Rheinland-Pfalz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rheinland-Pfalz ausmacht" },
   { id: 'einzugsgebiet-rheinland-pfalz', title: "Einzugsgebiet Rheinland-Pfalz" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Rheinland-Pfalz kostet" },
+  { id: 'werkzeuge', title: "Was es in Rheinland-Pfalz kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rheinland-Pfalz" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <CitiesOfRegion region="rheinland-pfalz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rheinland-Pfalz'} land={'Deutschland insgesamt'} />
+          <OrtWerkzeuge ort={'Rheinland-Pfalz'} land={'Deutschland insgesamt'} altbau={47.4} miete={6.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

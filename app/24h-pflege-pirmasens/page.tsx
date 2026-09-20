@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Südwestpfalz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Pirmasens ausmacht" },
   { id: 'einzugsgebiet-pirmasens', title: "Einzugsgebiet Pirmasens" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Pirmasens kostet" },
+  { id: 'werkzeuge', title: "Was es in Pirmasens kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Pirmasens" },
 ]
@@ -217,7 +217,7 @@ export default function Page() {
             <NearbyCities current="pirmasens" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Pirmasens'} land={'Rheinland-Pfalz'} />
+          <OrtWerkzeuge ort={'Pirmasens'} land={'Rheinland-Pfalz'} altbau={71.9} miete={4.62} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-stralsund', title: "Polnische Betreuungskräfte in Stralsund" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Stralsund ausmacht" },
   { id: 'einzugsgebiet-stralsund', title: "Einzugsgebiet Stralsund" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Stralsund kostet" },
+  { id: 'werkzeuge', title: "Was es in Stralsund kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Stralsund" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="stralsund" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Stralsund'} land={'Mecklenburg-Vorpommern'} />
+          <OrtWerkzeuge ort={'Stralsund'} land={'Mecklenburg-Vorpommern'} altbau={49.1} miete={5.83} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

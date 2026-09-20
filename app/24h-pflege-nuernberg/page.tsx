@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-nuernberg', title: "Polnische Betreuungskräfte in Nürnberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Nürnberg ausmacht" },
   { id: 'einzugsgebiet-nuernberg', title: "Einzugsgebiet Nürnberg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Nürnberg kostet" },
+  { id: 'werkzeuge', title: "Was es in Nürnberg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Nürnberg" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="nuernberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Nürnberg'} land={'Bayern'} />
+          <OrtWerkzeuge ort={'Nürnberg'} land={'Bayern'} altbau={61.3} miete={8.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

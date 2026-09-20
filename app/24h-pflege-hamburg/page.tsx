@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in allen Hamburger Bezirken" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hamburg ausmacht" },
   { id: 'einzugsgebiet-hamburg', title: "Einzugsgebiet Hamburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hamburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Hamburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hamburg" },
 ]
@@ -200,7 +200,7 @@ export default function Page() {
             <NearbyCities current="hamburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hamburg'} land={'Hamburg'} />
+          <OrtWerkzeuge ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

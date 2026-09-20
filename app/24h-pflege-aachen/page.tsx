@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der StädteRegion Aachen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Aachen ausmacht" },
   { id: 'einzugsgebiet-aachen', title: "Einzugsgebiet Aachen" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Aachen kostet" },
+  { id: 'werkzeuge', title: "Was es in Aachen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Aachen" },
 ]
@@ -230,7 +230,7 @@ export default function Page() {
             <NearbyCities current="aachen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Aachen'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Aachen'} land={'Nordrhein-Westfalen'} altbau={56.3} miete={8.04} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

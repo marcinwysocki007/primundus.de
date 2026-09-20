@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Ludwigsburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Ludwigsburg ausmacht" },
   { id: 'einzugsgebiet-ludwigsburg', title: "Einzugsgebiet Ludwigsburg" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Ludwigsburg kostet" },
+  { id: 'werkzeuge', title: "Was es in Ludwigsburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Ludwigsburg" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="ludwigsburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ludwigsburg'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Ludwigsburg'} land={'Baden-Württemberg'} altbau={51.3} miete={9.38} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

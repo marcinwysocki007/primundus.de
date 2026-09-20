@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-koeln', title: "Polnische Betreuungskräfte in Köln" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Köln ausmacht" },
   { id: 'einzugsgebiet-koeln', title: "Einzugsgebiet Köln" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Köln kostet" },
+  { id: 'werkzeuge', title: "Was es in Köln kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Köln" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="koeln" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Köln'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Köln'} land={'Nordrhein-Westfalen'} altbau={58.0} miete={9.39} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-kiel', title: "Polnische Betreuungskräfte in Kiel" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kiel ausmacht" },
   { id: 'einzugsgebiet-kiel', title: "Einzugsgebiet Kiel" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Kiel kostet" },
+  { id: 'werkzeuge', title: "Was es in Kiel kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Kiel" },
 ]
@@ -225,7 +225,7 @@ export default function Page() {
             <NearbyCities current="kiel" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kiel'} land={'Schleswig-Holstein'} />
+          <OrtWerkzeuge ort={'Kiel'} land={'Schleswig-Holstein'} altbau={70.6} miete={7.64} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

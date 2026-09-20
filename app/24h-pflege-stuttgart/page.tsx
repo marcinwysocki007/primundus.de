@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-stuttgart', title: "Polnische Betreuungskräfte in Stuttgart" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Stuttgart ausmacht" },
   { id: 'einzugsgebiet-stuttgart', title: "Einzugsgebiet Stuttgart" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Stuttgart kostet" },
+  { id: 'werkzeuge', title: "Was es in Stuttgart kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Stuttgart" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="stuttgart" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Stuttgart'} land={'Baden-Württemberg'} />
+          <OrtWerkzeuge ort={'Stuttgart'} land={'Baden-Württemberg'} altbau={62.0} miete={10.39} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

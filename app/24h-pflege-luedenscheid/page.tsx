@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-luedenscheid', title: "Polnische Betreuungskräfte in Lüdenscheid" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Lüdenscheid ausmacht" },
   { id: 'einzugsgebiet-luedenscheid', title: "Einzugsgebiet Lüdenscheid" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Lüdenscheid kostet" },
+  { id: 'werkzeuge', title: "Was es in Lüdenscheid kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Lüdenscheid" },
 ]
@@ -220,7 +220,7 @@ export default function Page() {
             <NearbyCities current="luedenscheid" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Lüdenscheid'} land={'Nordrhein-Westfalen'} />
+          <OrtWerkzeuge ort={'Lüdenscheid'} land={'Nordrhein-Westfalen'} altbau={64.3} miete={5.72} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-saarbruecken', title: "Polnische Betreuungskräfte in Saarbrücken" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Saarbrücken ausmacht" },
   { id: 'einzugsgebiet-saarbruecken', title: "Einzugsgebiet Saarbrücken" },
-  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Saarbrücken kostet" },
+  { id: 'werkzeuge', title: "Was es in Saarbrücken kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Saarbrücken" },
 ]
@@ -212,7 +212,7 @@ export default function Page() {
             <NearbyCities current="saarbruecken" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Saarbrücken'} land={'Saarland'} />
+          <OrtWerkzeuge ort={'Saarbrücken'} land={'Saarland'} altbau={67.2} miete={6.71} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
