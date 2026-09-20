@@ -26,8 +26,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Dessau-Roßlau: ab 2.150 € im Monat',
-  description: '24-Stunden-Pflege in Dessau-Roßlau: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Dessau-Roßlau: Preis sofort sehen',
+  description: '24-Stunden-Pflege in Dessau-Roßlau: Preis und passende Betreuungskräfte in 2 Minuten sehen — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-dessau' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

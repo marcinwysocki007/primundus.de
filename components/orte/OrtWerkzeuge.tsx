@@ -5,15 +5,17 @@
 //  2. „Rechnen Sie Ihren Fall durch, hört sich doch komisch an, das ist doch kein Fall" — keine Behördensprache.
 //  3. Der Preis hängt an der Pflegesituation und an den Wünschen an die Betreuungskraft; der Pflegegrad bestimmt nur den Zuschuss.
 //  4. „und wenn es nicht die Eltern sind? kann für Angehörige sein oder nur Mutter" — also niemanden voraussetzen.
-//  5. „es muss noch mehr Unterscheidung" — deshalb rechnet der Abschnitt mit den Zahlen des jeweiligen Orts: Baujahre des
-//     Wohnungsbestands (Treppe, Aufzug, Bad) und Mietniveau kommen aus dem Zensus 2022 und sind je Stadt verschieden.
+//  5. „es muss noch mehr Unterscheidung"
+//  6. „aber warum Eigenanteil. Preis wollen wir doch nicht, dazu der Kostenrechner" — kein Preis und kein Eigenanteil von uns
+//     im Titel, in der Beschreibung oder als Aufhänger; der Monatspreis kommt aus dem Rechner. Der Heim-Eigenanteil des
+//     Bundeslands bleibt, das ist die Zahl der anderen Seite und kein Preis von uns.
+//  Zu 5: Der Abschnitt rechnet mit den Zahlen des jeweiligen Orts — Baujahre des Wohnungsbestands (Treppe, Aufzug, Bad) und
+//     Mietniveau aus dem Zensus 2022, je Stadt verschieden.
 import { Abschnitt, MehrDazu, Punkte, Text } from '@/components/vorlage/Ratgeber'
 import { HEIM_EIGENANTEIL, HEIM_EIGENANTEIL_BUND } from '@/lib/heimkosten'
-import { PFLEGEGELD } from '@/lib/fakten'
 
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 const prozent = (n: number) => n.toLocaleString('de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
-const EIGEN_PG3 = 2150 - PFLEGEGELD[3] - 295 - 333
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
 export function OrtWerkzeuge({
@@ -35,15 +37,15 @@ export function OrtWerkzeuge({
   return (
     <Abschnitt id="werkzeuge" titel={`Was es in ${ort} kostet, und was die Pflegekasse dazugibt`}>
       <Text>
-        Zwei Dinge entscheiden darüber, was am Ende selbst zu zahlen ist. Das erste ist der Preis: Er beginnt bei 2.150 € im
-        Monat und richtet sich danach, wie viel Hilfe nötig ist und was Sie von der Betreuungskraft erwarten — wie gut sie
-        Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob nachts jemand aufstehen muss, ob zwei Personen im Haushalt
-        versorgt werden.
+        Einen festen Monatspreis gibt es nicht, und wir nennen hier bewusst keinen: Er richtet sich danach, wie viel Hilfe nötig
+        ist und was Sie von der Betreuungskraft erwarten — wie gut sie Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob
+        nachts jemand aufstehen muss, ob zwei Personen im Haushalt versorgt werden. Was für Sie in {ort} herauskommt, zeigt der
+        Kostenrechner in zwei Minuten, zusammen mit den Betreuungskräften, die dafür in Frage kommen.
       </Text>
       <Text>
-        Das zweite ist der Pflegegrad. Er bestimmt nicht den Preis, sondern das, was die Pflegekasse dazugibt: Pflegegeld,
-        anteiliges Entlastungsbudget, dazu die Steuerermäßigung. Bei Pflegegrad 3 bleiben so ab ca. {euro(EIGEN_PG3)} im Monat
-        übrig. Ein Heimplatz in {land} kostet im Vergleich rund {euro(heim)} Eigenanteil im Monat.
+        Vom Pflegegrad hängt etwas anderes ab: das, was die Pflegekasse dazugibt — Pflegegeld, anteiliges Entlastungsbudget,
+        dazu die Steuerermäßigung. Diese Zuschüsse werden vom Preis abgezogen, übrig bleibt Ihr Eigenanteil. Zum Vergleich: Ein
+        Heimplatz in {land} kostet rund {euro(heim)} Eigenanteil im Monat, und der hängt nicht vom Pflegegrad ab.
         {bayern ? ' Wer in Bayern wohnt, bekommt ab Pflegegrad 2 zusätzlich 500 € Landespflegegeld im Jahr.' : ''}
       </Text>
       {altbau !== undefined && (
@@ -57,7 +59,7 @@ export function OrtWerkzeuge({
             : ''}
         </Text>
       )}
-      <Text>Wie beides bei Ihnen zusammenkommt, zeigen diese Rechner — kostenlos, ohne Anmeldung, in wenigen Minuten:</Text>
+      <Text>Alles, was Sie dafür brauchen, steht hier — kostenlos, ohne Anmeldung:</Text>
       <Punkte
         punkte={[
           {

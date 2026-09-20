@@ -27,8 +27,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Mecklenburg-Vorpommern: ab 2.150 €',
-  description: '24-Stunden-Pflege in Mecklenburg-Vorpommern: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
+  title: '24-Stunden-Pflege in Mecklenburg-Vorpommern',
+  description: '24-Stunden-Pflege in Mecklenburg-Vorpommern: Preis und passende Betreuungskräfte in 2 Minuten sehen — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

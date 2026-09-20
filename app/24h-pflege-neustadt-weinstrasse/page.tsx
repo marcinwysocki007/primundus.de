@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Neustadt an der Weinstraße: ab 2.150 €',
-  description: '24-Stunden-Pflege in Neustadt an der Weinstraße: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
+  title: '24-Stunden-Pflege in Neustadt an der Weinstraße',
+  description: '24-Stunden-Pflege in Neustadt an der Weinstraße: Preis und passende Betreuungskräfte in 2 Minuten sehen. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-neustadt-weinstrasse' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

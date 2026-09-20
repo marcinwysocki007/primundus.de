@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Mönchengladbach-Rheydt: ab 2.150 €',
-  description: '24-Stunden-Pflege in Mönchengladbach-Rheydt: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
+  title: '24-Stunden-Pflege in Mönchengladbach-Rheydt',
+  description: '24-Stunden-Pflege in Mönchengladbach-Rheydt: Preis und passende Betreuungskräfte in 2 Minuten sehen — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-moenchengladbach-rheydt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

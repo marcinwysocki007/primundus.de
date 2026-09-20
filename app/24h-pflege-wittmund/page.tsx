@@ -28,9 +28,9 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Wittmund: ab 2.150 €, täglich kündbar',
+  title: '24-Stunden-Pflege in Wittmund: Preis und Kräfte sofort sehen',
   description:
-    '24-Stunden-Pflege in Wittmund: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
+    '24-Stunden-Pflege in Wittmund: Ihren Preis und die passenden Betreuungskräfte sehen Sie in 2 Minuten — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-wittmund' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

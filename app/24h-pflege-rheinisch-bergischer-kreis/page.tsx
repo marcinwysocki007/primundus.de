@@ -28,9 +28,9 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rheinisch-Bergischer Kreis: ab 2.150 €',
+  title: '24-Stunden-Pflege in Rheinisch-Bergischer Kreis',
   description:
-    '24-Stunden-Pflege in Rheinisch-Bergischer Kreis: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
+    '24-Stunden-Pflege in Rheinisch-Bergischer Kreis: Preis und passende Betreuungskräfte in 2 Minuten sehen. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

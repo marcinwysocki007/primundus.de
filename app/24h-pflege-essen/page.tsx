@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Essen: ab 2.150 €, täglich kündbar',
-  description: '24-Stunden-Pflege in Essen: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Essen: Preis und Kräfte sofort sehen',
+  description: '24-Stunden-Pflege in Essen: Ihren Preis und die passenden Betreuungskräfte sehen Sie in 2 Minuten — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-essen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

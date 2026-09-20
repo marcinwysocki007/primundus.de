@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Schwarzwald-Baar-Kreis & Villingen-Schwenn',
-  description: '24-Stunden-Pflege in Schwarzwald-Baar-Kreis & Villingen-Schwenningen: ab 2.150 € im Monat, Eigenanteil ab ca. 923 € (Pflegegrad 3).',
+  title: '24-Stunden-Pflege in Villingen-Schwenningen',
+  description: '24-Stunden-Pflege in Villingen-Schwenningen: Preis und passende Betreuungskräfte in 2 Minuten sehen — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-villingen-schwenningen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

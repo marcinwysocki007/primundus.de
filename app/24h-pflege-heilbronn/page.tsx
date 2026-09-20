@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Heilbronn — Stadt- und Landkreis',
-  description: '24-Stunden-Pflege in Heilbronn — Stadt- und Landkreis: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
+  description: '24-Stunden-Pflege in Heilbronn — Stadt- und Landkreis: Preis und passende Betreuungskräfte in 2 Minuten sehen. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-heilbronn' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

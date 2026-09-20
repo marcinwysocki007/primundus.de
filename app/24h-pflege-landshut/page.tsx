@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in in Landshut und im Landkreis',
-  description: '24-Stunden-Pflege in in Landshut und im Landkreis: ab 2.150 € im Monat, bei Pflegegrad 3 ab ca. 923 € Eigenanteil. Kräfte vorher ansehen, täglich kündbar.',
+  description: '24-Stunden-Pflege in in Landshut und im Landkreis: Preis und passende Betreuungskräfte in 2 Minuten sehen. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-landshut' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

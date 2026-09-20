@@ -25,8 +25,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Magdeburg: ab 2.150 €, täglich kündbar',
-  description: '24-Stunden-Pflege in Magdeburg: ab 2.150 € im Monat, Eigenanteil bei Pflegegrad 3 ab ca. 923 €. Kräfte vorher ansehen, keine Gebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Magdeburg: Preis sofort sehen',
+  description: '24-Stunden-Pflege in Magdeburg: Preis und passende Betreuungskräfte in 2 Minuten sehen — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-magdeburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
