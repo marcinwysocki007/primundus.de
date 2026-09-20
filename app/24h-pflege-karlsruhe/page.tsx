@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Karlsruhe: Preis sofort sehen',
-  description: 'In Karlsruhe zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Bretten und Bruchsal. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Karlsruhe: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Karlsruhe bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-karlsruhe' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

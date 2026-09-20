@@ -27,8 +27,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rheinland-Pfalz: Preis sofort sehen',
-  description: 'In Rheinland-Pfalz zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Rheinland-Pfalz: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Rheinland-Pfalz bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinland-pfalz' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

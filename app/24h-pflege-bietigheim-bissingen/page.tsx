@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bietigheim-Bissingen',
-  description: 'In Bietigheim-Bissingen zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+  description: 'Muss nicht das Heim sein: Eine Betreuungskraft zieht in Bietigheim-Bissingen bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie, bevor Sie sich entscheiden.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bietigheim-bissingen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

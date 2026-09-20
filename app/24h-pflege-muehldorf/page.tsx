@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Mühldorf am Inn: Preis sofort sehen',
-  description: 'In Mühldorf am Inn zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Mühldorf am Inn: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Mühldorf am Inn bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muehldorf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

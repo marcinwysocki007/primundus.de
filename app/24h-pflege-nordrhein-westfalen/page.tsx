@@ -27,8 +27,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Nordrhein-Westfalen: Preis sofort sehen',
-  description: 'In Nordrhein-Westfalen zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Nordrhein-Westfalen',
+  description: 'Muss nicht das Heim sein: Eine Betreuungskraft zieht in Nordrhein-Westfalen bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie, bevor Sie sich entscheiden.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-nordrhein-westfalen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

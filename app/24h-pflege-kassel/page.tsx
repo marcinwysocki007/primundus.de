@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Kassel: Preis und Kräfte sofort sehen',
-  description: 'In Kassel zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Bad Hersfeld und Fulda. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Kassel: erst ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Kassel bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie vorher.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-kassel' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

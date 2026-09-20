@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Neuburg an der Donau',
-  description: 'In Neuburg an der Donau zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+  description: 'Muss nicht das Heim sein: Eine Betreuungskraft zieht in Neuburg an der Donau bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie, bevor Sie sich entscheiden.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-neuburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Germering: Preis sofort sehen',
-  description: 'In Germering zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Olching und Puchheim. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Germering: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Germering bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-germering' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

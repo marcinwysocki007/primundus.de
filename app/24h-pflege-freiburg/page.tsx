@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Freiburg: Preis und Kräfte sofort sehen',
-  description: 'In Freiburg zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Breisach und Merzhausen. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Freiburg: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Freiburg bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-freiburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

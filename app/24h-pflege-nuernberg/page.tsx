@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Nürnberg: Preis und Kräfte sofort sehen',
-  description: 'In Nürnberg zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Fürth und Erlangen. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Nürnberg: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Nürnberg bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-nuernberg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

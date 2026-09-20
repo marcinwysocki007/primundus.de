@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Jena: Preis und Kräfte sofort sehen',
-  description: 'In Jena zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Kahla und Stadtroda. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Jena: Kräfte ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Jena bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie vorher.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-jena' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

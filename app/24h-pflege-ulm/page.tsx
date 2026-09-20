@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Ulm: Preis und Kräfte sofort sehen',
-  description: 'In Ulm zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Neu-Ulm und Blaubeuren. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Ulm: Kräfte ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Ulm bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie vorher.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-ulm' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

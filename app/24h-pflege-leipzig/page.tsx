@@ -25,8 +25,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Leipzig: Preis und Kräfte sofort sehen',
-  description: 'In Leipzig zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Markkleeberg und Umgebung. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Leipzig: erst ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Leipzig bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-leipzig' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

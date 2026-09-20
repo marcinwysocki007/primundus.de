@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Mainz: Preis und Kräfte sofort sehen',
-  description: 'In Mainz zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Wiesbaden und Bingen. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Mainz: Kräfte ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Mainz bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie vorher.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-mainz' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

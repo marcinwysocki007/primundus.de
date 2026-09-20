@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Traunstein: Preis sofort sehen',
-  description: 'In Traunstein zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Siegsdorf und Umgebung. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Traunstein: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Traunstein bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-traunstein' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

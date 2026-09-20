@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Greifswald: Preis sofort sehen',
-  description: 'In Greifswald zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Anklam und Wolgast. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Greifswald: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Greifswald bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-greifswald' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

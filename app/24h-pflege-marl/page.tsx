@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Marl: Preis und Kräfte sofort sehen',
-  description: 'In Marl zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Recklinghausen und Umgebung. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Marl: Kräfte ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Marl bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie vorher.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-marl' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

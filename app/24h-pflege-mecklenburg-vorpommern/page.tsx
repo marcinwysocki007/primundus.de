@@ -28,7 +28,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Mecklenburg-Vorpommern',
-  description: 'In Mecklenburg-Vorpommern zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+  description: 'Eine Betreuungskraft zieht in Mecklenburg-Vorpommern bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-mecklenburg-vorpommern' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Deggendorf: Preis sofort sehen',
-  description: 'In Deggendorf zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Plattling und Umgebung. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Deggendorf: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Deggendorf bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-deggendorf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

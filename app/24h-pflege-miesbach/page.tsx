@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Miesbach: Preis und Kräfte sofort sehen',
-  description: 'In Miesbach zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Holzkirchen und Umgebung. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Miesbach: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Miesbach bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-miesbach' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

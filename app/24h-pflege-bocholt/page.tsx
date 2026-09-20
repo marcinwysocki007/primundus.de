@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bocholt: Preis und Kräfte sofort sehen',
-  description: 'In Bocholt zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Rhede und Borken. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Bocholt: erst ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Bocholt bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bocholt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

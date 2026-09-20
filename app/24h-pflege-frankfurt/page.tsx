@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Frankfurt: Preis sofort sehen',
-  description: 'In Frankfurt zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Offenbach und Hanau. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Frankfurt: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Frankfurt bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-frankfurt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

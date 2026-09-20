@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Eschborn: Preis und Kräfte sofort sehen',
-  description: 'In Eschborn zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Sulzbach und Kelkheim. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Eschborn: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Eschborn bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-eschborn' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

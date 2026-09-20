@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bochum: Preis und Kräfte sofort sehen',
-  description: 'In Bochum zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Herne, Witten und Dortmund. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Bochum: erst ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Bochum bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie vorher.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bochum' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

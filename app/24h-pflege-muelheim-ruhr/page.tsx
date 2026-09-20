@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Mülheim an der Ruhr: Preis sofort sehen',
-  description: 'In Mülheim an der Ruhr zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Mülheim an der Ruhr',
+  description: 'Muss nicht das Heim sein: Eine Betreuungskraft zieht in Mülheim an der Ruhr bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie, bevor Sie sich entscheiden.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muelheim-ruhr' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

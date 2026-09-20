@@ -28,9 +28,9 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rhein-Pfalz-Kreis: Preis sofort sehen',
+  title: '24-Stunden-Pflege in Rhein-Pfalz-Kreis',
   description:
-    'In Rhein-Pfalz-Kreis zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+    'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Rhein-Pfalz-Kreis bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

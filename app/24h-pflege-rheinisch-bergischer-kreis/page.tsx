@@ -30,7 +30,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Rheinisch-Bergischer Kreis',
   description:
-    'In Rheinisch-Bergischer Kreis zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
+    'Eine Betreuungskraft zieht in Rheinisch-Bergischer Kreis bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

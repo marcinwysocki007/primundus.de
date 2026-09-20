@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Münster: Preis und Kräfte sofort sehen',
-  description: 'In Münster zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Warendorf und Coesfeld. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Münster: erst ansehen, dann entscheiden',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Münster bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muenster' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

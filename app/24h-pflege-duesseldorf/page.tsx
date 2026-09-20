@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Düsseldorf: Preis sofort sehen',
-  description: 'In Düsseldorf zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Ratingen und Mettmann. Keine Vermittlungsgebühr, täglich kündbar.',
+  title: '24-Stunden-Pflege in Düsseldorf: Kräfte vorher ansehen',
+  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Düsseldorf bei Ihnen ein. Sie wählen sie vorher selbst aus.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-duesseldorf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
