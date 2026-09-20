@@ -1,65 +1,125 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, HakenListe, Kasten, Liste, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
+  Abschnitt, Fragen, HakenListe, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
+import { HeimVsZuhause, KostenAufteilung, Preisfaktoren } from '@/components/grafik/Grafik'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-// Kernseite Kosten in der Seitenvorlage (Musterseite Kernseiten, 17.09.2026).
-// Zahlen wie im Kostenrechner (pricing_config/subsidies, gelesen 17.09.): Grundpreis 2.150 € für
-// eine Person, Pflegegrad 5 +50 €; Eigenanteil = Preis − Pflegegeld − Entlastungsbudget/12 −
-// Steuervorteil (20 %, bis 4.000 €/Jahr). Entlastungsbetrag (131 €) nie abziehen (Martin 14.09.).
-// Kost und Logis nicht beziffern, An- und Abreise 125 € je Strecke (Martin 17.09.). Kein „ab"-Rechenbeispiel
-// als Spanne: ein konkreter Fall, den genauen Preis zeigt der Rechner (Martin 17.09.).
+// Kernseite Kosten, ausgebaut am 20.09.2026 (Martin: „bestmöglichen Content liefern, um auf die Top-3-Positionen zu kommen").
+// Grundlage: Search Console (Kosten-Suchen landen bisher auf /pflegekraft-aus-polen, Position 37–60), Keyword-Planer
+// („24 stunden pflege kosten" 1.300, „… kostenübernahme krankenkasse" 1.600, „was kostet …" 590, „kosten polnische
+// pflegekraft pflegegrad 3" 720, „24 stunden pflege zu hause kosten" 480 im Monat), Google-Fragen („Wer übernimmt die
+// Kosten?", „Was ist billiger, Heim oder 24-Stunden-Pflege?", „für 2 Personen", „Pflegegrad 3/4/5", „Rechner") und die
+// Seiten auf Platz 1–5 (1.350–4.400 Wörter). Alle Preise aus der Preiskonfiguration des Kostenrechners (pricing_config,
+// gelesen 20.09.): Grundpreis 2.150 €, Ehepaar +450, Deutsch kommunikativ +250 / gut +450, Nächte +50/+100/+300,
+// Rollstuhl/bettlägerig +100, weitere Personen +200, Führerschein +100, Betreuerin gewünscht +100, Pflegegrad 5 +50.
+// Eigenanteil = Preis − Pflegegeld − Entlastungsbudget/12 − Steuerermäßigung (Martin 14.09.); Entlastungsbetrag (131 €)
+// nie abziehen; Kost und Logis nicht beziffern; An- und Abreise 125 € je Strecke, Wechseltag für beide Kräfte, neun
+// Feiertage doppelt, Krankheitstage nicht berechnet (Mustervertrag, Martin 17.09.). CariFair-Zahlen von carifair.de.
 
-const AKTUALISIERT = aktualisiertAm('kosten', '17. September 2026')
+const AKTUALISIERT = aktualisiertAm('kosten', '20. September 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-kosten'
+const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
 const SECTIONS = [
   { id: 'kosten-uebersicht', title: 'Was kostet 24h-Pflege?' },
-  { id: 'kassenzuschuesse', title: 'Kassenzuschüsse 2026' },
+  { id: 'preisfaktoren', title: 'Was den Preis bewegt' },
+  { id: 'nebenkosten', title: 'Was dazukommt' },
   { id: 'pflegegrad-kosten', title: 'Kosten nach Pflegegrad' },
+  { id: 'zwei-personen', title: 'Für zwei Personen' },
+  { id: 'wer-zahlt', title: 'Wer zahlt: Kasse, Steuer, Amt' },
   { id: 'polnische-pflegekraft', title: 'Polnische Pflegekraft' },
-  { id: 'vergleich', title: 'Vergleich: 24h-Pflege vs. Pflegeheim' },
+  { id: 'vergleich', title: 'Vergleich mit dem Pflegeheim' },
   { id: 'eigenanteil', title: 'Eigenanteil senken' },
+  { id: 'guenstiger', title: 'Günstiger nur mit Risiko' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
-  title: 'Kosten 24h-Pflege 2026 — Preise, Zuschüsse & Vergleich',
-  description: '24-Stunden-Pflege ab 2.150 € im Monat. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 €. Alle Zahlen 2026.',
+  title: '24-Stunden-Pflege Kosten 2026: ab 2.150 €, alle Zuschüsse',
+  description:
+    '24-Stunden-Pflege Kosten 2026: ab 2.150 € im Monat, alle Preisfaktoren offen. Was Pflegekasse, Steuer und Sozialamt zahlen und was Ihnen bei Pflegegrad 2 bis 5 bleibt.',
   alternates: { canonical: 'https://primundus.de/kosten' },
   openGraph: {
-    title: 'Kosten 24h-Pflege 2026 | Primundus',
-    description: '24-Stunden-Pflege ab 2.150 € im Monat. Mit Kassenzuschüssen und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 €.',
+    title: '24-Stunden-Pflege Kosten 2026: ab 2.150 € im Monat',
+    description: 'Alle Preisfaktoren, Zuschüsse der Pflegekasse, Steuer und was bei Pflegegrad 2 bis 5 selbst zu tragen bleibt.',
     url: 'https://primundus.de/kosten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
-    images: [{ url: '/images/primundus_logo_header.webp' }],
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
   },
 }
 
+// Sichtbare Fragen = Daten für Google (eine Quelle)
 const FRAGEN = [
-  { q: 'Was kostet 24-Stunden-Pflege im Monat?', a: 'Bei Primundus ab 2.150 € im Monat für eine Person. Der genaue Preis richtet sich nach der Situation, zum Beispiel Hilfe in der Nacht oder Deutschkenntnisse der Betreuungskraft. Dazu kommen An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat.' },
-  { q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 3?', a: 'Bei Pflegegrad 3 zahlt die Pflegekasse 599 € Pflegegeld und anteilig ca. 295 € aus dem Entlastungsbudget; die Steuerermäßigung bringt bis zu 333 € im Monat. Bei Kosten ab 2.150 € im Monat bleiben damit ab ca. 923 € selbst zu tragen.' },
-  { q: 'Was kostet eine polnische Pflegekraft im Monat?', a: 'Eine polnische Betreuungskraft kostet bei Primundus ab 2.150 € im Monat für eine Person — angestellt bei Primundus, legal über das Entsendemodell mit A1-Bescheinigung. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 € im Monat.' },
-  { q: 'Was kostet eine 24-Stunden-Pflegekraft?', a: 'Eine 24-Stunden-Pflegekraft kostet bei Primundus ab 2.150 € im Monat, abhängig von Deutschkenntnissen und Pflegebedarf. Darin enthalten sind Lohn und Sozialabgaben der Betreuungskraft sowie Ersatz bei Ausfall; dazu kommen An- und Abreise mit 125 € je Strecke. Kost und Logis stellen Sie.' },
-  { q: 'Was zahlt die Pflegekasse bei 24h-Pflege?', a: 'Pflegegeld (347–990 € im Monat je nach Pflegegrad) und das Entlastungsbudget (3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege). Bei Pflegegrad 3 sind das 599 € plus anteilig ca. 295 € im Monat. Den Entlastungsbetrag (131 € im Monat) zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
-  { q: 'Ist 24h-Pflege günstiger als ein Pflegeheim?', a: 'Oft ja — der Pflegeheim-Eigenanteil liegt bundesweit bei Ø 3.364 € im Monat (2026). Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 nach Kassenzuschüssen und Steuerermäßigung ab ca. 923 € im Monat. Und der Pflegebedürftige bleibt in seiner vertrauten Umgebung.' },
-  { q: 'Was ist das Entlastungsbudget 2026?', a: '3.539 €/Jahr, seit Juli 2025 als gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Gilt für PG 2–5, flexibel aufteilbar, Vorpflegezeit entfällt. 2026 ist das erste volle Jahr ohne Übergangsregelungen. Achtung: verfällt am 31. Dezember.' },
-  { q: 'Kann man Pflegekosten von der Steuer absetzen?', a: '20 % der Aufwendungen für haushaltsnahe Dienstleistungen, höchstens 4.000 € Steuerermäßigung im Jahr. Schon beim Einstiegspreis von 2.150 € im Monat (25.800 € im Jahr) wird dieses Maximum erreicht.' },
-  { q: 'Wie kann ich den Eigenanteil senken?', a: 'Pflegegrad korrekt und vollständig beantragen, Entlastungsbudget voll ausschöpfen, steuerlich absetzen, Pflegehilfsmittel (42 €/Monat) beantragen, Wohnraumanpassungsförderung (bis 4.180 € je Maßnahme) nutzen.' },
+  {
+    q: 'Was kostet 24-Stunden-Pflege im Monat?',
+    a: 'Bei Primundus ab 2.150 € im Monat für eine Person, bei einem Ehepaar ab 2.600 €. Der genaue Preis hängt davon ab, ob nachts Hilfe nötig ist, wie gut die Betreuungskraft Deutsch spricht und ob Sie weitere Wünsche haben. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat selbst zu tragen.',
+  },
+  {
+    q: 'Was kostet 24-Stunden-Pflege pro Tag?',
+    a: 'Wir rechnen taggenau ab: Der Monatspreis wird durch 30 geteilt. Beim Grundpreis von 2.150 € sind das rund 72 € am Tag. Sie zahlen nur für Tage, an denen die Betreuungskraft bei Ihnen ist; Krankheitstage berechnen wir nicht.',
+  },
+  {
+    q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 3?',
+    a: 'Die Betreuung kostet ab 2.150 € im Monat. Bei Pflegegrad 3 zahlt die Pflegekasse 599 € Pflegegeld und, wenn sie den Einsatz als Verhinderungspflege anerkennt, anteilig 295 € aus dem Entlastungsbudget. Die Steuerermäßigung bringt bis zu 333 € im Monat. Selbst zu tragen bleiben ab ca. 923 €.',
+  },
+  {
+    q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 4 und 5?',
+    a: 'Bei Pflegegrad 4 bleiben nach Pflegegeld (800 €), Entlastungsbudget (295 €) und Steuerermäßigung (333 €) ab ca. 722 € im Monat. Bei Pflegegrad 5 kostet die Betreuung ab 2.200 €; nach 990 € Pflegegeld, 295 € Budget und 333 € Steuer bleiben ab ca. 582 €.',
+  },
+  {
+    q: 'Was kostet 24-Stunden-Pflege für 2 Personen?',
+    a: 'Für ein Ehepaar kostet die Betreuung ab 2.600 € im Monat, 450 € mehr als für eine Person. Dafür bekommen beide Partner ihr eigenes Pflegegeld und ihr eigenes Entlastungsbudget. Bei Pflegegrad 3 und 2 bleiben so ab ca. 731 € im Monat selbst zu tragen.',
+  },
+  {
+    q: 'Wer übernimmt die Kosten für eine 24-Stunden-Pflege?',
+    a: 'Einen Teil die Pflegekasse: Pflegegeld ab Pflegegrad 2, 347 bis 990 € im Monat. Dazu das Entlastungsbudget von 3.539 € im Jahr, wenn sie den Einsatz als Verhinderungspflege anerkennt. Einen Teil das Finanzamt: 20 % der Kosten, höchstens 4.000 € im Jahr. Den Rest tragen Sie selbst. Reicht das Einkommen nicht, kann das Sozialamt mit Hilfe zur Pflege einspringen.',
+  },
+  {
+    q: 'Zahlt die Krankenkasse die 24-Stunden-Pflege?',
+    a: 'Nein. Die Krankenkasse zahlt nur medizinische Behandlungspflege, etwa Spritzen oder Verbandswechsel durch einen Pflegedienst. Für die Betreuungskraft ist die Pflegekasse zuständig, mit Pflegegeld und Entlastungsbudget. Ob AOK, TK, Barmer oder DAK: Die Leistungen der Pflegekasse sind gesetzlich gleich.',
+  },
+  {
+    q: 'Zahlt das Sozialamt die 24-Stunden-Pflege?',
+    a: 'Wenn Rente, Einkommen und Vermögen nicht reichen, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch für die Pflege zu Hause. Es prüft dafür Einkommen und Vermögen des Pflegebedürftigen. Kinder werden nur herangezogen, wenn sie mehr als 100.000 € brutto im Jahr verdienen.',
+  },
+  {
+    q: 'Kann ich die 24-Stunden-Pflege von der Steuer absetzen?',
+    a: 'Ja. 20 % der Kosten können Sie als haushaltsnahe Dienstleistung von der Steuer abziehen, höchstens 4.000 € im Jahr. Schon beim Grundpreis von 2.150 € im Monat erreichen Sie den Höchstbetrag. Sie tragen die Kosten in der Steuererklärung in der Anlage Haushaltsnahe Aufwendungen ein.',
+  },
+  {
+    q: 'Was kostet eine polnische Pflegekraft im Monat?',
+    a: 'Bei Primundus ab 2.150 € im Monat für eine Person. Unsere Betreuungskräfte kommen aus Polen, sind bei uns angestellt und in Polen sozialversichert; für jeden Einsatz liegt eine A1-Bescheinigung vor. Bei Pflegegrad 3 bleiben nach den Zuschüssen ab ca. 923 € im Monat.',
+  },
+  {
+    q: 'Was ist billiger, Pflegeheim oder 24-Stunden-Pflege?',
+    a: 'Meist die Betreuung zu Hause. Der Eigenanteil im Pflegeheim liegt 2026 im Bundesdurchschnitt bei 3.364 € im Monat. Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 ab ca. 923 € im Monat, und Ihr Angehöriger bleibt in seiner Wohnung.',
+  },
+  {
+    q: 'Geht 24-Stunden-Pflege auch ohne Pflegegrad?',
+    a: 'Ja, die Betreuung selbst setzt keinen Pflegegrad voraus. Ohne Pflegegrad gibt es aber kein Pflegegeld und kein Entlastungsbudget; nur die Steuerermäßigung bleibt. Wir empfehlen, den Pflegegrad parallel zu beantragen.',
+  },
+  {
+    q: 'Gibt es auch eine 8- oder 12-Stunden-Betreuung zu Hause?',
+    a: 'Bei uns nicht: Unsere Betreuungskräfte wohnen im Haushalt. Für stundenweise Hilfe sind ambulante Pflegedienste und anerkannte Alltagshelfer da. Deren Kosten rechnet die Pflegekasse über Pflegesachleistungen und den Entlastungsbetrag von 131 € im Monat ab.',
+  },
+  {
+    q: 'Stimmt es, dass die Caritas 24-Stunden-Betreuung für 1.850 € anbietet?',
+    a: 'Nein, die Zahl stammt aus alten Berichten. Beim Caritas-Modell CariFair sind Sie selbst Arbeitgeber der Betreuungskraft. Nach Angaben von CariFair kostet das rund 2.730 € Bruttogehalt im Monat. Dazu kommen etwa 600 € Sozialabgaben und 170 € für die Koordination, bei 38,5 Wochenstunden.',
+  },
 ]
 
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Was kostet 24h-Pflege? Kosten, Zuschüsse & Vergleich 2026',
+    headline: 'Was kostet 24-Stunden-Pflege? Kosten und Zuschüsse 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-01-15',
@@ -101,40 +161,33 @@ export default function Kosten() {
             { label: 'Kosten' },
           ]}
           augenbraue="Kosten 2026"
-          titel="Was kostet 24-Stunden-Pflege? Kosten & Zuschüsse 2026"
-          einleitung={<>24-Stunden-Pflege kostet bei Primundus ab 2.150 € im Monat für eine Person. Pflegegeld, Entlastungsbudget und die Steuerermäßigung senken den Betrag, den Sie selbst tragen — bei Pflegegrad 3 auf ab ca. 923 € im Monat. Anreise schon in 3 Tagen möglich. Ihren Preis berechnet der <a href={RECHNER} className={QUELLE}>Kostenrechner in 2 Minuten</a>.</>}
-          knopf={{ href: RECHNER, text: 'Kosten & Pflegekräfte ansehen' }}
+          titel="Was kostet 24-Stunden-Pflege? Kosten und Zuschüsse 2026"
+          einleitung={<>24-Stunden-Pflege kostet bei Primundus <strong className="text-pm-ink">ab 2.150 € im Monat</strong> für eine Person, ab 2.600 € für ein Ehepaar. Pflegegeld, Entlastungsbudget und Steuerermäßigung senken den Betrag, den Sie selbst tragen: bei Pflegegrad 3 auf <strong className="text-pm-ink">ab ca. 923 € im Monat</strong>. Hier stehen alle Preisfaktoren, alles, was dazukommt, und wer welchen Teil zahlt.</>}
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
           aktualisiert={AKTUALISIERT.sichtbar}
-          lesezeit="7 Min."
+          lesezeit="12 Min."
           blick={[
-            'Preis: ab 2.150 € im Monat für eine Person',
-            'Pflegegeld: 347–990 € im Monat je nach Pflegegrad',
-            'Entlastungsbudget: 3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege',
-            'Steuer: 20 % der Kosten absetzbar, bis 4.000 € Ersparnis im Jahr',
+            'Preis: ab 2.150 € im Monat für eine Person, ab 2.600 € für ein Ehepaar',
             'Dazu: An- und Abreise 125 € je Strecke; Kost und Logis stellen Sie',
+            'Pflegegeld: 347 bis 990 € im Monat je nach Pflegegrad',
+            'Entlastungsbudget: 3.539 € im Jahr, anteilig 295 € im Monat',
+            'Steuer: 20 % der Kosten, bis 4.000 € Ersparnis im Jahr',
             'Pflegeheim zum Vergleich: Eigenanteil Ø 3.364 € im Monat',
           ]}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="kosten-uebersicht" titel="Was kostet 24h-Pflege bei Primundus?">
-            <Text>Der Grundpreis von 2.150 € im Monat gilt für die Betreuung einer Person. Mehr kostet es, wenn einer dieser Punkte zutrifft:</Text>
-            <Liste
-              punkte={[
-                'Ein Ehepaar wird betreut',
-                'Weitere Personen leben im Haushalt',
-                'Der Pflegebedürftige ist auf den Rollstuhl angewiesen oder bettlägerig',
-                'Die Betreuungskraft wird nachts gebraucht: gelegentlich, täglich oder mehrmals',
-                'Bessere Deutschkenntnisse der Betreuungskraft',
-                'Die Betreuungskraft soll einen Führerschein haben',
-                'Sie wünschen eine Betreuerin',
-                'Pflegegrad 5',
-              ]}
-            />
+          <Abschnitt id="kosten-uebersicht" titel="Was kostet 24-Stunden-Pflege bei Primundus?">
             <Text>
-              Dazu kommen An- und Abreise der Betreuungskraft mit 125 € je Strecke, auch bei einem Wechsel der Kraft.
-              Kost und Logis stellen Sie: ein eigenes Zimmer und Verpflegung. Ihren genauen Preis berechnet
-              der <a href={RECHNER} className={QUELLE}>Kostenrechner</a> in unter 2 Minuten.
+              Die Kosten der 24-Stunden-Pflege bestehen aus dem Monatspreis, der An- und Abreise und Kost und Logis. Der
+              Grundpreis liegt bei 2.150 € im Monat. Er gilt für eine Person, die noch mobil ist oder mit Rollator geht.
+              Nachts braucht sie keine Hilfe, und es gibt keine besonderen Wünsche an die Betreuungskraft. Im Preis
+              enthalten sind Lohn und Sozialabgaben der Betreuungskraft, die Organisation der Einsätze, der Ersatz bei
+              Krankheit und Ihre Ansprechpartnerin in Deutschland. Eine Vermittlungsgebühr oder Anzahlung gibt es nicht.
+            </Text>
+            <Text>
+              Der Preis ist ein Bruttopreis, in ganz Deutschland gleich, ob in München, Berlin oder auf dem Land. Was die
+              Pflegekasse und das Finanzamt beisteuern, ziehen Sie davon ab. So sieht das bei Pflegegrad 3 aus:
             </Text>
             <Tabelle
               titel="Beispiel: eine Person, Pflegegrad 3"
@@ -146,47 +199,69 @@ export default function Kosten() {
                 [<strong key="s">Selbst zu tragen im Monat</strong>, <strong key="w">ab ca. 923 €</strong>],
               ]}
               betont={1}
-              fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke"
+              fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke · Budget-Anteil setzt voraus, dass Ihre Kasse den Einsatz als Verhinderungspflege anerkennt"
             />
+            <Text>
+              Abgerechnet wird taggenau: Der Monatspreis geteilt durch 30 ergibt den Tagessatz, beim Grundpreis rund 72 €.
+              Sie zahlen erst, wenn die Betreuungskraft da ist, und nur für die Tage, an denen sie da ist. Der Vertrag ist
+              täglich kündbar.
+            </Text>
+            <RechnerKasten src="apex-kosten" />
           </Abschnitt>
 
-          <Abschnitt id="kassenzuschuesse" titel="Kassenzuschüsse 2026 — was zahlt die Pflegekasse?">
+          <Abschnitt id="preisfaktoren" titel="Was den Preis bewegt: alle Preisfaktoren">
             <Text>
-              Die Pflegekasse zahlt nicht direkt die Betreuungskraft — aber mehrere Leistungen lassen sich gezielt
-              kombinieren, um den Eigenanteil zu senken.
+              Der Kostenrechner stellt Ihnen ein paar Fragen zur Pflegesituation. Jede Antwort hat einen festen Aufschlag,
+              den wir hier offenlegen. Es gibt keine versteckten Posten, und die Antworten, die den Preis nicht ändern,
+              sehen Sie auch: Pflegegrad 1 bis 4, die Erfahrung der Betreuungskraft und ein Rollator.
             </Text>
-            <Tabelle
-              titel="Pflegegeld 2026 — alle Pflegegrade"
-              kopf={['Pflegegrad', 'Pflegegeld je Monat']}
-              zeilen={[
-                ['Pflegegrad 2', '347 €'],
-                ['Pflegegrad 3', '599 €'],
-                ['Pflegegrad 4', '800 €'],
-                ['Pflegegrad 5', '990 €'],
+            <Preisfaktoren />
+            <Punkte
+              punkte={[
+                { title: 'Nachts Hilfe', desc: 'Braucht Ihr Angehöriger nachts regelmäßig Hilfe, etwa bei Demenz oder beim Gang zur Toilette, kostet das mehr. Gelegentlich sind es 50 €, einmal pro Nacht 100 €, mehrmals pro Nacht 300 €. Die Betreuungskraft hat dann tagsüber mehr Ruhezeit.' },
+                { title: 'Deutschkenntnisse', desc: 'Grundlegende Kenntnisse sind im Grundpreis enthalten. Eine Betreuungskraft, die sich flüssig unterhält („kommunikativ“), kostet 250 € mehr, gute Deutschkenntnisse 450 €. Bei Demenz ist das oft wichtiger als bei rein körperlichem Hilfebedarf.' },
+                { title: 'Zwei Personen', desc: 'Ein Ehepaar kostet 450 € mehr als eine Person. Leben weitere Personen im Haushalt, für die die Betreuungskraft mitkocht und mitwäscht, sind es 200 € mehr.' },
+                { title: 'Mobilität', desc: 'Ist Ihr Angehöriger auf den Rollstuhl angewiesen oder bettlägerig, kostet die Betreuung 100 € mehr, weil Umlagern und Transfers Zeit und Kraft brauchen.' },
+                { title: 'Wünsche', desc: 'Ein Führerschein kostet 100 € mehr, der ausdrückliche Wunsch nach einer Frau ebenfalls 100 €. Pflegegrad 5 kostet 50 € mehr.' },
               ]}
-              betont={1}
-              fuss="Quelle: GKV-Spitzenverband · Stand 2026 · Keine Erhöhung für 2026, nächste Dynamisierung frühestens Jan. 2028"
             />
-            <Kasten augenbraue="Neu ab Juli 2025 — Entlastungsbudget" titel="3.539 € pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
+            <Text>
+              Ein Beispiel: Eine Person mit Pflegegrad 4, bettlägerig, einmal pro Nacht Hilfe, Betreuungskraft mit
+              kommunikativem Deutsch. Der Preis liegt bei 2.150 + 100 + 100 + 250 = 2.600 € im Monat. Nach 800 € Pflegegeld,
+              295 € Entlastungsbudget und 333 € Steuerermäßigung bleiben ab ca. 1.172 € selbst zu tragen.
+            </Text>
+          </Abschnitt>
+
+          <Abschnitt id="nebenkosten" titel="Was dazukommt, und was nicht">
+            <Text>
+              Der Monatspreis ist der Preis. Drei Posten kommen dazu, alle stehen so im Vertrag, den Sie vor der Entscheidung
+              lesen können:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'An- und Abreise', desc: 'Die Betreuungskraft wird zu Ihnen gebracht und wieder abgeholt. Das kostet 125 € je Strecke. Beim Wechsel alle 6 bis 8 Wochen fallen also 250 € an. Am Wechseltag berechnen wir den Tagessatz für beide Betreuungskräfte, weil An- und Abreisetag Arbeitstage sind.' },
+                { title: 'Kost und Logis', desc: 'Die Betreuungskraft wohnt bei Ihnen: ein eigenes Zimmer, Verpflegung, Küche und Bad zur Mitbenutzung, Internet. Das stellen Sie, wie bei einem Mitbewohner.' },
+                { title: 'Feiertage', desc: 'An neun gesetzlichen Feiertagen im Jahr gilt der doppelte Tagessatz. Welche das sind, steht im Vertrag.' },
+              ]}
+            />
+            <Kasten augenbraue="Nicht im Preis, aber auch nicht Ihr Problem" titel="Was wir nicht berechnen">
               <HakenListe
                 punkte={[
-                  'Für PG 2–5 · ersetzt getrennte Verhinderungs- und Kurzzeitpflegebudgets',
-                  'Flexibel aufteilbar — max. 8 Wochen pro Leistungsart',
-                  'Vorpflegezeit entfällt — kein 6-Monats-Warten mehr',
-                  '2026: erstes volles Jahr ohne Übergangsregelungen',
-                  'Achtung: Nicht genutztes Budget verfällt am 31. Dezember',
+                  'Keine Vermittlungsgebühr, keine Anzahlung, keine Aufnahmegebühr',
+                  'Keine Krankheitstage: Fällt die Betreuungskraft aus, zahlen Sie für diese Tage nichts',
+                  'Keine Mindestlaufzeit und keine Kündigungsfrist: täglich kündbar',
+                  'Kein Aufpreis für die Organisation des Wechsels oder für Ihre Ansprechpartnerin',
                 ]}
               />
+              <MehrDazu label="Alles im Wortlaut:" links={[{ href: MUSTERVERTRAG, text: 'Mustervertrag als PDF' }, { href: '/leistungen', text: 'Was die Betreuungskraft übernimmt' }]} />
             </Kasten>
-            <MehrDazu label="Alle Zuschüsse kombinieren:" links={[{ href: '/finanzierung', text: 'Finanzierung der 24h-Pflege — vollständige Übersicht' }]} />
-            <MehrDazu label="Pflegegeld im Detail:" links={[{ href: '/pflegegeld', text: 'Pflegegeld 2026 — Beträge & Anspruch' }]} />
           </Abschnitt>
 
           <Abschnitt id="pflegegrad-kosten" titel="Was kostet 24-Stunden-Pflege nach Pflegegrad?">
             <Text>
-              Der Preis der Betreuung hängt kaum vom Pflegegrad ab, nur Pflegegrad 5 kostet 50 € mehr. Ihr Eigenanteil
-              dagegen sinkt deutlich, denn mit dem Pflegegrad steigen die Kassenleistungen. Beim Grundpreis für eine
-              Person bleibt nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung:
+              Der Preis der Betreuung hängt kaum vom Pflegegrad ab, nur Pflegegrad 5 kostet 50 € mehr. Ihr Eigenanteil dagegen
+              sinkt mit jedem Pflegegrad, denn das Pflegegeld steigt. Beim Grundpreis für eine Person bleibt nach Pflegegeld,
+              anteiligem Entlastungsbudget und Steuerermäßigung:
             </Text>
             <Tabelle
               kopf={['Pflegegrad', 'Betreuung', 'Pflegegeld', 'Entlastungsbudget', 'Steuer', 'Selbst zu tragen']}
@@ -197,7 +272,15 @@ export default function Kosten() {
                 ['Pflegegrad 5', 'ab 2.200 €', '− 990 €', '− 295 €', '− 333 €', 'ab ca. 582 €'],
               ]}
               betont={5}
-              fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke · Budget-Anteil setzt anerkannte Verhinderungspflege-Nutzung voraus"
+              fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke · Budget-Anteil setzt anerkannte Verhinderungspflege voraus"
+            />
+            <KostenAufteilung />
+            <Punkte
+              punkte={[
+                { title: 'Ohne Pflegegrad', desc: 'Die Betreuung ist auch ohne Pflegegrad möglich, es gibt dann aber kein Pflegegeld und kein Entlastungsbudget. Beantragen Sie den Pflegegrad parallel; er wird ab dem Antragsmonat gezahlt.' },
+                { title: 'Pflegegrad 1', desc: 'Kein Pflegegeld und kein Entlastungsbudget. Der Entlastungsbetrag von 131 € im Monat gilt für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft. Ab Pflegegrad 2 lohnt sich die Betreuung finanziell deutlich mehr.' },
+                { title: 'Pflegegrad 2 bis 5', desc: 'Pflegegeld und Entlastungsbudget kommen direkt zu Ihrem Angehörigen; der Preis für die Betreuung bleibt gleich. Wer zu niedrig eingestuft ist, verschenkt jeden Monat Geld: Ein Widerspruch oder ein Antrag auf Höherstufung lohnt sich.' },
+              ]}
             />
             <Text>
               Quellen:{' '}
@@ -207,65 +290,154 @@ export default function Kosten() {
               <a href="https://www.bundesgesundheitsministerium.de/themen/pflege/online-ratgeber-pflege/leistungen-der-pflegeversicherung/leistungen-im-ueberblick" target="_blank" rel="noopener noreferrer" className={QUELLE}>BMG-Leistungsübersicht</a>{' · '}
               Stand: September 2026
             </Text>
-            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis samt Zuschüssen in 2 Minuten im Kostenrechner' }]} />
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/pflegegrade', text: 'Alle Pflegegrade 2026' }, { href: '/pflegegrad-beantragen', text: 'Pflegegrad beantragen' }, { href: '/pflegegrad-erhoehen', text: 'Pflegegrad erhöhen' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="zwei-personen" titel="Was kostet 24-Stunden-Pflege für zwei Personen?">
+            <Text>
+              Werden beide Partner betreut, kostet die Betreuung ab 2.600 € im Monat, also 450 € mehr als für eine Person.
+              Eine Betreuungskraft versorgt beide. Dafür hat jeder Partner mit Pflegegrad seinen eigenen Anspruch auf
+              Pflegegeld und Entlastungsbudget; die Steuerermäßigung gibt es einmal je Haushalt.
+            </Text>
+            <Tabelle
+              titel="Beispiel: Ehepaar, Pflegegrad 3 und Pflegegrad 2"
+              zeilen={[
+                ['Betreuung im Monat (Ehepaar)', 'ab 2.600 €'],
+                ['Pflegegeld (599 € + 347 €)', '− 946 €'],
+                ['Entlastungsbudget (2 × 295 €)', '− 590 €'],
+                ['Steuerermäßigung (einmal je Haushalt)', '− 333 €'],
+                [<strong key="s">Selbst zu tragen im Monat</strong>, <strong key="w">ab ca. 731 €</strong>],
+              ]}
+              betont={1}
+              fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke · Budget-Anteil setzt anerkannte Verhinderungspflege für beide voraus"
+            />
+            <Text>
+              Für zwei Personen ist die Betreuung zu Hause damit oft weniger als ein Viertel dessen, was zwei Heimplätze
+              kosten würden. Braucht einer der beiden nachts Hilfe oder ist bettlägerig, gelten die Aufschläge von oben.
+            </Text>
+          </Abschnitt>
+
+          <Abschnitt id="wer-zahlt" titel="Wer zahlt die 24-Stunden-Pflege? Pflegekasse, Krankenkasse, Steuer, Sozialamt">
+            <Text>
+              Die Pflegekasse zahlt die Betreuungskraft nicht direkt. Sie zahlt Leistungen an Ihren Angehörigen, die Sie
+              für die Betreuung einsetzen. Das Finanzamt beteiligt sich über die Steuer. Die Krankenkasse zahlt nichts,
+              und das Sozialamt nur, wenn das Geld nicht reicht.
+            </Text>
+            <Punkte
+              punkte={[
+                { title: 'Pflegekasse: Pflegegeld', desc: 'Ab Pflegegrad 2, monatlich 347 € (Pflegegrad 2), 599 € (3), 800 € (4) oder 990 € (5). Es wird an den Pflegebedürftigen gezahlt, wenn die Pflege zu Hause selbst organisiert ist, mit Angehörigen oder einer Betreuungskraft.' },
+                { title: 'Pflegekasse: Entlastungsbudget', desc: '3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege, ab Pflegegrad 2. Sie können es für die Betreuungskraft einsetzen, wenn Ihre Kasse den Einsatz als Verhinderungspflege anerkennt; anteilig sind das 295 € im Monat. Fragen Sie vorher bei Ihrer Kasse nach.' },
+                { title: 'Pflegekasse: Pflegehilfsmittel', desc: '42 € im Monat für Verbrauchsmittel wie Handschuhe und Desinfektionsmittel, ab Pflegegrad 1. Der Entlastungsbetrag von 131 € im Monat gilt für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
+                { title: 'Krankenkasse', desc: 'Zahlt für die Betreuung nichts. Sie zahlt medizinische Behandlungspflege durch einen ambulanten Pflegedienst, etwa Spritzen, Verbände oder das Stellen von Medikamenten. Beides lässt sich gut kombinieren.' },
+                { title: 'Finanzamt', desc: '20 % der Kosten als haushaltsnahe Dienstleistung, höchstens 4.000 € Ersparnis im Jahr. Schon beim Grundpreis erreichen Sie den Höchstbetrag. Eintragen in der Anlage Haushaltsnahe Aufwendungen der Steuererklärung.' },
+                { title: 'Sozialamt', desc: 'Reichen Rente, Einkommen und Vermögen nicht, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch zu Hause. Kinder werden erst ab einem Bruttoeinkommen von 100.000 € im Jahr herangezogen.' },
+              ]}
+            />
+            <Kasten augenbraue="Entlastungsbudget" titel="3.539 € im Jahr, flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
+              <HakenListe
+                punkte={[
+                  'Ab Pflegegrad 2, seit Juli 2025 ein gemeinsamer Jahresbetrag statt zwei getrennter Budgets',
+                  'Frei aufteilbar, höchstens acht Wochen je Leistungsart',
+                  'Keine Vorpflegezeit mehr: Anspruch ab dem ersten Tag mit Pflegegrad 2',
+                  '2026 ist das erste volle Jahr ohne Übergangsregelungen',
+                  'Nicht genutztes Budget verfällt am 31. Dezember',
+                ]}
+              />
+            </Kasten>
+            <Text>
+              Ob AOK, TK, Barmer, DAK oder eine private Pflegeversicherung: Die Leistungen der Pflegekasse sind gesetzlich
+              gleich, nur die Formulare unterscheiden sich. Landeszuschüsse kommen dazu, zum Beispiel das Bayerische
+              Landespflegegeld von 500 € im Jahr ab Pflegegrad 2.
+            </Text>
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/finanzierung', text: 'Alle Zuschüsse 2026 im Überblick' }, { href: '/pflegegeld', text: 'Pflegegeld 2026' }, { href: '/verhinderungspflege', text: 'Verhinderungspflege und Entlastungsbudget' }, { href: '/sozialhilfe-bei-pflegebedarf', text: 'Sozialhilfe bei Pflegebedarf' }]} />
           </Abschnitt>
 
           <Abschnitt id="polnische-pflegekraft" titel="Was kostet eine polnische Pflegekraft?">
             <Text>
-              Unsere Betreuungskräfte kommen überwiegend aus Polen — der Preis ab 2.150 € im Monat ist derselbe.
-              Darin enthalten: Lohn und Sozialabgaben der Betreuungskraft, die Organisation der Einsätze und Ersatz bei
-              Ausfall. Die Kraft ist bei Primundus angestellt und wird legal über das Entsendemodell mit
-              A1-Bescheinigung beschäftigt.
+              Unsere Betreuungskräfte kommen aus Polen, und der Preis ab 2.150 € im Monat gilt für sie. Darin enthalten sind
+              Lohn und Sozialabgaben: Die Betreuungskraft ist bei uns angestellt und in Polen sozialversichert, für jeden
+              Einsatz liegt eine A1-Bescheinigung vor. Sie werden nicht Arbeitgeber und zahlen weder Lohnsteuer noch
+              Sozialabgaben.
             </Text>
-            <MehrDazu label="Alles über Kosten, Rechtliches und Ablauf:" links={[{ href: '/pflegekraft-aus-polen', text: 'Pflegekraft aus Polen — der große Ratgeber' }]} />
+            <Text>
+              Wer bei „polnische Pflegekraft“ einen Preis unter 2.000 € liest, sollte fragen, wer der Arbeitgeber ist. Bei
+              selbstständigen Kräften gilt die Familie in der Regel als Arbeitgeber, mit Nachforderungen der
+              Sozialversicherung für bis zu vier Jahre. Bei Pflegegrad 3 bleiben bei uns nach den Zuschüssen ab ca. 923 €
+              im Monat, bei Pflegegrad 4 ab ca. 722 €.
+            </Text>
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/pflegekraft-aus-polen', text: 'Pflegekraft aus Polen: Ablauf, Recht, Kosten' }, { href: '/rechtssicher', text: 'Entsendemodell und A1-Bescheinigung' }]} />
           </Abschnitt>
 
-          <Abschnitt id="vergleich" titel="24h-Pflege vs. Pflegeheim — was ist günstiger?">
+          <Abschnitt id="vergleich" titel="24-Stunden-Pflege oder Pflegeheim: Was ist günstiger?">
             <Text>
-              Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit <strong>3.364 Euro pro Monat</strong>{' '}
-              (Quelle: vdek-Auswertung, Stand 1. Juli 2026). Bei der 24-Stunden-Pflege zuhause bleiben bei Pflegegrad 3
-              nach Kassenzuschüssen und Steuerermäßigung ab ca. 923 € im Monat. Und der Pflegebedürftige bleibt in seiner
-              vertrauten Umgebung.
+              Der durchschnittliche Eigenanteil im Pflegeheim beträgt 2026 bundesweit 3.364 € im Monat im ersten Jahr
+              (vdek-Auswertung, Stand 1. Juli 2026). Bei der 24-Stunden-Pflege zu Hause bleiben bei Pflegegrad 3 nach
+              Kassenzuschüssen und Steuerermäßigung ab ca. 923 € im Monat. Und Ihr Angehöriger bleibt in seiner Wohnung,
+              mit einer Betreuungskraft für sich allein.
             </Text>
+            <HeimVsZuhause />
             <Tabelle
               kopf={['', '24-Stunden-Pflege', 'Pflegeheim']}
               zeilen={[
                 ['Selbst zu tragen im Monat', 'ab ca. 923 €', 'Ø 3.364 €'],
-                ['Betreuung', '1:1-Betreuung', 'Pflegepersonal für mehrere Bewohner'],
+                ['Betreuung', '1:1, bei Bedarf auch nachts', 'Pflegepersonal für mehrere Bewohner'],
                 ['Wohnen', 'im eigenen Zuhause', 'Umzug ins Heim'],
+                ['Kündigung', 'täglich', 'mit Frist zum Monatsende'],
               ]}
               betont={1}
-              fuss="24-Stunden-Pflege: eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim: bundesweiter Durchschnitt, vdek-Auswertung, Stand 1. Juli 2026"
+              fuss="24-Stunden-Pflege: eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner, zzgl. An- und Abreise · Pflegeheim: bundesweiter Durchschnitt, vdek-Auswertung, Stand 1. Juli 2026"
             />
-            <MehrDazu label="Vollständiger Vergleich:" links={[{ href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026' }]} />
+            <MehrDazu label="Vollständiger Vergleich:" links={[{ href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege gegen Pflegeheim: Kostenvergleich 2026' }, { href: '/pflegeheim-kosten-deutschland', text: 'Pflegeheim-Kosten nach Bundesland' }]} />
           </Abschnitt>
 
-          <Abschnitt id="eigenanteil" titel="Eigenanteil senken — alle Möglichkeiten">
+          <Abschnitt id="eigenanteil" titel="Eigenanteil senken: alle Möglichkeiten">
             <Text>
-              Mit der richtigen Kombination aller verfügbaren Leistungen lässt sich der monatliche Eigenanteil deutlich
-              senken. Das sind die wichtigsten Stellschrauben:
+              Mit der richtigen Kombination aller Leistungen sinkt der Betrag, den Sie selbst tragen, um mehrere hundert
+              Euro im Monat. Das sind die Stellschrauben:
             </Text>
             <Punkte
               punkte={[
-                { title: '1. Pflegegrad korrekt beantragen', desc: <>Jede Pflegegrad-Stufe bedeutet hunderte Euro mehr Kassenzuschuss pro Monat. Wer zu niedrig eingestuft ist, verschenkt Geld. Im Zweifel: Widerspruch einlegen. <a href="/pflegegrad-beantragen" className={QUELLE}>Pflegegrad beantragen</a></> },
-                { title: '2. Entlastungsbudget voll ausschöpfen', desc: <>3.539 €/Jahr verfallen, wenn sie nicht genutzt werden. Belege rechtzeitig einreichen, Pflegekasse nach anerkannten Anbietern fragen. <a href="/verhinderungspflege" className={QUELLE}>Verhinderungspflege & Entlastungsbudget</a></> },
-                { title: '3. Steuerlich absetzen', desc: <>20 % der Betreuungskosten als haushaltsnahe Dienstleistung — max. 4.000 € Steuerersparnis pro Jahr. In der Steuererklärung in der Anlage Haushaltsnahe Aufwendungen eintragen. <a href="/pflege-steuerlich-absetzen" className={QUELLE}>Pflege steuerlich absetzen</a></> },
-                { title: '4. Pflegehilfsmittel nutzen', desc: '42 €/Monat für Verbrauchsmittel (Handschuhe, Desinfektionsmittel) — direkt zur Pflegekasse beantragen, werden nach Hause geliefert.' },
-                { title: '5. Wohnraumanpassung fördern lassen', desc: <>Bis 4.180 € je Maßnahme für Umbaumaßnahmen — Treppenlift, Badumbau, Türverbreiterung. Mehrfach nutzbar bei mehreren Maßnahmen. <a href="/wohnraumanpassung-foerderung" className={QUELLE}>Wohnraumanpassung Förderung</a></> },
+                { title: '1. Pflegegrad richtig beantragen', desc: <>Jede Stufe bedeutet hunderte Euro mehr Pflegegeld im Monat. Wer zu niedrig eingestuft ist, verschenkt Geld. Im Zweifel Widerspruch einlegen. <a href="/pflegegrad-beantragen" className={QUELLE}>Pflegegrad beantragen</a></> },
+                { title: '2. Entlastungsbudget ausschöpfen', desc: <>3.539 € im Jahr verfallen, wenn sie nicht genutzt werden. Klären Sie mit Ihrer Kasse vorab, dass der Einsatz als Verhinderungspflege gilt, und reichen Sie die Rechnungen ein. <a href="/verhinderungspflege" className={QUELLE}>Verhinderungspflege und Entlastungsbudget</a></> },
+                { title: '3. Steuerermäßigung nutzen', desc: <>20 % der Betreuungskosten, höchstens 4.000 € im Jahr. Die Rechnungen per Überweisung bezahlen, nicht bar, sonst erkennt das Finanzamt sie nicht an. <a href="/pflege-steuerlich-absetzen" className={QUELLE}>Pflege steuerlich absetzen</a></> },
+                { title: '4. Pflegehilfsmittel beantragen', desc: '42 € im Monat für Verbrauchsmittel, direkt bei der Pflegekasse. Sie werden nach Hause geliefert.' },
+                { title: '5. Wohnraumanpassung fördern lassen', desc: <>Bis 4.180 € je Maßnahme für Umbauten wie Badumbau oder Treppenlift, bei mehreren Maßnahmen mehrfach. <a href="/wohnraumanpassung-foerderung" className={QUELLE}>Wohnraumanpassung: Förderung</a></> },
+                { title: '6. Landeszuschüsse prüfen', desc: <>Bayern zahlt 500 € Landespflegegeld im Jahr ab Pflegegrad 2, andere Länder haben eigene Programme. <a href="/foerderungen-nach-bundesland" className={QUELLE}>Förderungen nach Bundesland</a></> },
               ]}
             />
-            <MehrDazu label="Alle Tipps kompakt:" links={[{ href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken — alle Möglichkeiten 2026' }]} />
+            <MehrDazu label="Alle Tipps:" links={[{ href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken: alle Möglichkeiten 2026' }]} />
           </Abschnitt>
 
-          <Abschnitt id="faq" titel="Häufige Fragen zu den Kosten der 24h-Pflege">
+          <Abschnitt id="guenstiger" titel="Günstiger geht es nur auf eigenes Risiko">
+            <Text>
+              Angebote unter 2.000 € im Monat gibt es, meist von „selbstständigen“ Betreuungskräften oder über private
+              Vermittlung. Wer im Haushalt wohnt, weisungsgebunden arbeitet und nur einen Auftraggeber hat, ist in der Regel
+              scheinselbstständig. Dann gelten Sie als Arbeitgeber: Sozialversicherungsbeiträge können für bis zu vier
+              Jahre nachgefordert werden, dazu Bußgelder. Der Preisvorteil ist dann schnell aufgebraucht.
+            </Text>
+            <Text>
+              Auch die oft zitierten 1.850 € der Caritas gibt es so nicht. Beim Modell CariFair sind Sie selbst Arbeitgeber.
+              Nach Angaben von{' '}
+              <a href="https://carifair.de/fuer-pflegebeduerftigeund-angehoerige/kosten" target="_blank" rel="noopener noreferrer" className={QUELLE}>CariFair</a>{' '}
+              zahlen Sie dort rund 2.730 € Bruttogehalt, dazu etwa 600 € Sozialabgaben und 170 € Koordination im Monat.
+              Die Betreuungskraft arbeitet dafür 38,5 Stunden in der Woche. Bei den großen Anbietern beginnen die Preise
+              2026 zwischen rund 2.500 und 3.000 € im Monat. Wir liegen mit 2.150 € darunter, weil unsere Betreuungskräfte
+              bei uns angestellt sind und keine Vermittlungsgebühr anfällt. Dazu kommt die Bestpreisgarantie: nie mehr als
+              für ein vergleichbares Angebot.
+            </Text>
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/scheinselbststaendigkeit-pflege-vermeiden', text: 'Scheinselbstständigkeit vermeiden' }, { href: '/anbieter-vergleich', text: 'Anbieter im Vergleich: Preise, Gebühren, Vertragsbindung' }]} />
+          </Abschnitt>
+
+          <Abschnitt id="faq" titel="Häufige Fragen zu den Kosten der 24-Stunden-Pflege">
             <Fragen fragen={FRAGEN} />
+            <MehrDazu label="Ihr Preis:" links={[{ href: RECHNER, text: 'Preis und passende Pflegekräfte in 2 Minuten' }]} />
           </Abschnitt>
 
           <Abschnitt id="weitere-themen" titel="Alle Artikel zu Kosten und Finanzierung">
-            <MehrDazu label="Zuschüsse & Leistungen:" links={[
+            <MehrDazu label="Zuschüsse und Leistungen:" links={[
               { href: '/pflegegeld', text: 'Pflegegeld 2026' },
               { href: '/entlastungsbetrag', text: 'Entlastungsbetrag' },
-              { href: '/verhinderungspflege', text: 'Verhinderungspflege & Entlastungsbudget' },
+              { href: '/verhinderungspflege', text: 'Verhinderungspflege und Entlastungsbudget' },
               { href: '/pflegesachleistungen', text: 'Pflegesachleistungen' },
             ]} />
             <MehrDazu label="Eigenanteil senken:" links={[
@@ -283,7 +455,7 @@ export default function Kosten() {
             <MehrDazu label="Vergleiche:" links={[
               { href: '/pflegeheim-kosten-deutschland', text: 'Pflegeheim-Kosten Deutschland' },
               { href: '/pflegeheim-kostenvergleich', text: 'Pflegeheim-Kostenvergleich' },
-              { href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege vs. Pflegeheim: Kosten' },
+              { href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege gegen Pflegeheim: Kosten' },
             ]} />
           </Abschnitt>
         </RatgeberRumpf>

@@ -206,3 +206,41 @@ export function ZuhauseQuote() {
     </GrafikRahmen>
   )
 }
+
+/** Was den Preis bewegt: die Aufschläge des Kostenrechners auf den Grundpreis, je Faktor ein Balken. Werte aus der
+ * Preiskonfiguration des Rechners (pricing_config), gelesen am 20.09.2026. */
+export function Preisfaktoren() {
+  const grund = 2150
+  const faktoren: { was: string; wert: number; hinweis?: string }[] = [
+    { was: 'Ehepaar statt einer Person', wert: 450 },
+    { was: 'Deutschkenntnisse „gut“', wert: 450, hinweis: '„kommunikativ“: +250 €, „grundlegend“: ohne Aufschlag' },
+    { was: 'Mehrmals nachts Hilfe nötig', wert: 300, hinweis: 'einmal pro Nacht: +100 €, gelegentlich: +50 €' },
+    { was: 'Weitere Personen im Haushalt', wert: 200 },
+    { was: 'Rollstuhl oder bettlägerig', wert: 100 },
+    { was: 'Führerschein gewünscht', wert: 100 },
+    { was: 'Betreuerin gewünscht (statt egal)', wert: 100 },
+    { was: 'Pflegegrad 5', wert: 50 },
+  ]
+  const max = Math.max(...faktoren.map((f) => f.wert))
+  return (
+    <GrafikRahmen
+      titel={<>Was den Preis bewegt: Aufschläge auf den Grundpreis von {euro(grund)} im Monat</>}
+      quelle="Preise aus unserem Kostenrechner, Stand September 2026. Pflegegrad 1 bis 4, Erfahrung der Betreuungskraft und Mobilität mit Rollator ändern den Preis nicht. Die Aufschläge addieren sich; Ihren Preis zeigt der Rechner nach ein paar Fragen."
+    >
+      <ul className="grid gap-3.5">
+        {faktoren.map((f) => (
+          <li key={f.was} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1 sm:grid-cols-[13rem_minmax(0,1fr)_5.5rem]">
+            <span className="text-[15.5px] font-semibold leading-[1.35] text-pm-ink sm:text-[16px]">
+              {f.was}
+              {f.hinweis && <span className="block text-[13.5px] font-normal leading-[1.4] text-pm-mute">{f.hinweis}</span>}
+            </span>
+            <span className="order-3 col-span-2 h-4 overflow-hidden rounded-[6px] bg-pm-shell sm:order-none sm:col-span-1 sm:h-5" role="img" aria-label={`${f.was}: plus ${euro(f.wert)} im Monat`}>
+              <span className="block h-full rounded-[6px] bg-pm-taupe" style={{ width: `${(f.wert / max) * 100}%` }} />
+            </span>
+            <span className="text-right text-[16px] font-bold text-pm-ink [font-variant-numeric:tabular-nums]">+{euro(f.wert)}</span>
+          </li>
+        ))}
+      </ul>
+    </GrafikRahmen>
+  )
+}
