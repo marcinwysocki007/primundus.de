@@ -21,7 +21,7 @@ import { TAGESPFLEGE } from '@/lib/pflegegrad-inhalte'
 // pflege-betreuer.de 3.600 Wörter). Jede Regel steht mit Paragraf im Text; alle Beträge kommen aus lib/fakten. Neu: Kombinations-Rechner
 // nach § 38, Eigenanteil je Pflegegrad mit Betreuungskraft, Auszahlung, Krankenhaus (acht Wochen, § 34), Pflichten, Angehörige, 2028.
 
-const AKTUALISIERT = aktualisiertAm('pflegegeld', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('pflegegeld', '20. September 2026')
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 const euroCent = (n: number) => n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'
 const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
