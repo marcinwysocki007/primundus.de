@@ -42,7 +42,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege Kosten 2026: ab 2.150 €, alle Zuschüsse',
   description:
-    '24-Stunden-Pflege Kosten 2026: ab 2.150 € im Monat, alle Preisfaktoren offen. Was Pflegekasse, Steuer und Sozialamt zahlen und was Ihnen bei Pflegegrad 2 bis 5 bleibt.',
+    '24-Stunden-Pflege Kosten 2026: ab 2.150 € im Monat, alle Preisfaktoren offen. Was Pflegekasse, Steuer und Sozialamt zahlen, was bei Pflegegrad 2 bis 5 bleibt.',
   alternates: { canonical: 'https://primundus.de/kosten' },
   openGraph: {
     title: '24-Stunden-Pflege Kosten 2026: ab 2.150 € im Monat',
