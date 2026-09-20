@@ -297,3 +297,54 @@ export function PflegegradSkala({ punkte, kind = false, ohneRahmen = false }: { 
     </GrafikRahmen>
   )
 }
+
+/** Demenz-Verlauf in drei Phasen: was sich verändert, wie lange die Person allein bleiben kann, welche Hilfe passt. */
+export function DemenzPhasen() {
+  const phasen = [
+    {
+      name: 'Frühe Phase',
+      dauer: 'leichte Demenz',
+      zeichen: 'Vergesslichkeit, Wortfindung, Unsicherheit an fremden Orten, Zahlen und Termine geraten durcheinander.',
+      allein: 'Stundenweise allein möglich, mit Erinnerungshilfen und sicherem Herd.',
+      hilfe: 'Angehörige, stundenweise Betreuung, Tagespflege; Pflegegrad beantragen.',
+      farbe: 'bg-pm-taupe-light',
+    },
+    {
+      name: 'Mittlere Phase',
+      dauer: 'mittelschwere Demenz',
+      zeichen: 'Orientierung auch zu Hause gestört, Anleitung bei Waschen und Anziehen, Weglaufen, unruhige Nächte.',
+      allein: 'Nicht mehr für längere Zeit allein; nachts jemand in Rufweite.',
+      hilfe: 'Präsenz tagsüber: Betreuungskraft im Haus oder Angehörige mit Tagespflege und Pflegedienst.',
+      farbe: 'bg-pm-taupe',
+    },
+    {
+      name: 'Späte Phase',
+      dauer: 'schwere Demenz',
+      zeichen: 'Kaum noch Sprache, Angehörige werden nicht erkannt, Inkontinenz, Schluckstörungen, oft bettlägerig.',
+      allein: 'Nie allein; vollständige Pflege und Betreuung.',
+      hilfe: 'Betreuungskraft im Haus plus Pflegedienst für die Behandlungspflege, oder Pflegeheim, wenn die medizinische Versorgung zu Hause nicht reicht.',
+      farbe: 'bg-pm-coral',
+    },
+  ]
+  return (
+    <GrafikRahmen
+      titel="Demenz-Verlauf: Was sich verändert und welche Hilfe in welcher Phase passt"
+      quelle="Einteilung in leichte, mittelschwere und schwere Demenz wie in der ärztlichen Diagnostik; die Phasen gehen ineinander über und dauern bei jedem Menschen unterschiedlich lang. Hilfe-Empfehlung: unsere Erfahrung aus der Betreuung zu Hause."
+    >
+      <ol className="grid gap-4 md:grid-cols-3">
+        {phasen.map((p, i) => (
+          <li key={p.name} className="flex flex-col rounded-[14px] border border-pm-line-soft bg-pm-paper p-4">
+            <div className={`h-2 rounded-full ${p.farbe}`} aria-hidden="true" style={{ width: `${40 + i * 30}%` }} />
+            <p className="mt-3 text-[17px] font-bold leading-[1.3] text-pm-ink">{p.name}</p>
+            <p className="text-[13.5px] text-pm-mute">{p.dauer}</p>
+            <dl className="mt-3 grid gap-2.5 text-[14.5px] leading-[1.5]">
+              <div><dt className="font-semibold text-pm-ink">Was sich zeigt</dt><dd className="text-pm-body">{p.zeichen}</dd></div>
+              <div><dt className="font-semibold text-pm-ink">Allein zu Hause?</dt><dd className="text-pm-body">{p.allein}</dd></div>
+              <div><dt className="font-semibold text-pm-ink">Passende Hilfe</dt><dd className="text-pm-body">{p.hilfe}</dd></div>
+            </dl>
+          </li>
+        ))}
+      </ol>
+    </GrafikRahmen>
+  )
+}

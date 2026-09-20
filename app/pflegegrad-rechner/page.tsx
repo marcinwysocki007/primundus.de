@@ -39,7 +39,7 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad-Rechner 2026: Pflegegrad berechnen, sofort & anonym',
+  title: 'Pflegegrad-Rechner 2026: Pflegegrad berechnen, ohne E-Mail',
   description:
     'Pflegegrad-Rechner mit den 64 Fragen des Medizinischen Dienstes: sechs Module, amtliche Punkte, Ergebnis sofort. Kostenlos, ohne Anmeldung, auch für Kinder.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-rechner' },
@@ -222,8 +222,8 @@ export default function PflegegradRechnerSeite() {
 
           <Abschnitt id="punkte-tabelle" titel="Pflegegrad-Tabelle: ab wie vielen Punkten welcher Pflegegrad">
             <Text>
-              Die Gesamtpunkte liegen zwischen 0 und 100. Die Grenzen stehen in § 15 Abs. 3 SGB XI; Kinder bis 18 Monate werden nach Abs. 7 mit denselben
-              Punkten eine Stufe höher eingestuft.
+              Die Gesamtpunkte liegen zwischen 0 und 100. Die Grenzen stehen in § 15 Abs. 3 SGB XI. Kinder bis 18 Monate werden nach Abs. 7 eine Stufe höher
+              eingestuft, bei denselben Punkten.
             </Text>
             <PflegegradSkala />
             <Tabelle
@@ -249,7 +249,7 @@ export default function PflegegradRechnerSeite() {
           <Abschnitt id="leistungen" titel="Was Sie mit welchem Pflegegrad bekommen (2026)">
             <Text>
               Mit dem Pflegegrad stehen die Leistungen der Pflegekasse fest. Pflegegeld gibt es ab Pflegegrad 2, wenn Angehörige oder eine Betreuungskraft
-              zu Hause pflegen; Pflegesachleistungen zahlt die Kasse nur an zugelassene Pflegedienste. Der Entlastungsbetrag steht schon ab Pflegegrad 1 zu.
+              zu Hause pflegen. Pflegesachleistungen zahlt die Kasse nur an zugelassene Pflegedienste. Der Entlastungsbetrag steht schon ab Pflegegrad 1 zu.
             </Text>
             <Tabelle
               titel="Leistungen je Pflegegrad, Stand 2026"
@@ -294,8 +294,8 @@ export default function PflegegradRechnerSeite() {
               ]}
             />
             <Text>
-              Wählen Sie im Rechner „Kind ab 18 Monaten" oder „Kind bis 18 Monate"; dann erscheint das Kriterium 5.K für Besuche der Frühförderung, und die
-              Pflegegrade werden nach den Kinder-Regeln berechnet.
+              Wählen Sie im Rechner „Kind ab 18 Monaten" oder „Kind bis 18 Monate". Dann erscheint das Kriterium 5.K für Besuche der Frühförderung, und der
+              Pflegegrad folgt den Kinder-Regeln.
             </Text>
           </Abschnitt>
 
