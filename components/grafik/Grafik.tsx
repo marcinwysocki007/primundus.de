@@ -206,3 +206,94 @@ export function ZuhauseQuote() {
     </GrafikRahmen>
   )
 }
+
+/** Die sechs Module des Begutachtungsinstruments mit ihrer Gewichtung nach § 15 Abs. 2 SGB XI (Module 2 und 3 teilen sich 15 %). */
+export function ModulGewichte() {
+  const module = [
+    { nr: '1', name: 'Mobilität', prozent: 10, was: 'Aufstehen, Umsetzen, Gehen, Treppen' },
+    { nr: '2 + 3', name: 'Kognitive und kommunikative Fähigkeiten; Verhaltensweisen und psychische Problemlagen', prozent: 15, was: 'Erinnern, Orientierung, Verstehen; nächtliche Unruhe, Ängste, Abwehr. Nur das höhere Modul zählt.' },
+    { nr: '4', name: 'Selbstversorgung', prozent: 40, was: 'Waschen, Anziehen, Essen, Trinken, Toilette' },
+    { nr: '5', name: 'Umgang mit Krankheit und Therapie', prozent: 20, was: 'Medikamente, Spritzen, Verbände, Arztbesuche, Diät' },
+    { nr: '6', name: 'Alltagsleben und soziale Kontakte', prozent: 15, was: 'Tagesablauf, Schlaf, Beschäftigung, Kontakte' },
+  ]
+  return (
+    <GrafikRahmen
+      titel="Sechs Module, 100 Punkte: Was bei der Begutachtung wie stark zählt"
+      quelle="§ 15 Abs. 2 SGB XI mit Anlage 2. Die Module 7 (außerhäusliche Aktivitäten) und 8 (Haushaltsführung) werden erfasst, aber nicht gewertet."
+    >
+      <ul className="grid gap-4">
+        {module.map((m) => (
+          <li key={m.nr}>
+            <div className="flex items-baseline justify-between gap-4">
+              <span className="text-[16px] font-bold leading-[1.3] text-pm-ink">
+                <span className="text-pm-taupe">Modul {m.nr}</span> · {m.name}
+              </span>
+              <span className="text-[18px] font-extrabold text-pm-ink [font-variant-numeric:tabular-nums]">{m.prozent} %</span>
+            </div>
+            <div className="mt-2 h-4 w-full overflow-hidden rounded-[6px] bg-pm-line-soft" role="img" aria-label={`Modul ${m.nr}, ${m.name}: ${m.prozent} Prozent`}>
+              <div className={`h-full rounded-[6px] ${m.prozent >= 40 ? 'bg-pm-coral' : 'bg-pm-taupe'}`} style={{ width: `${m.prozent}%` }} />
+            </div>
+            <p className="mt-1.5 text-[14px] leading-[1.5] text-pm-mute">{m.was}</p>
+          </li>
+        ))}
+      </ul>
+    </GrafikRahmen>
+  )
+}
+
+/** Skala von 0 bis 100 Punkten mit den fünf Pflegegraden; mit „punkte" wird die erreichte Stelle markiert (Rechner-Ergebnis). */
+export function PflegegradSkala({ punkte, kind = false, ohneRahmen = false }: { punkte?: number; kind?: boolean; ohneRahmen?: boolean }) {
+  const grenzen = [0, 12.5, 27, 47.5, 70, 90, 100]
+  const namen = kind ? ['kein Pflegegrad', 'PG 2', 'PG 3', 'PG 4', 'PG 5', 'PG 5'] : ['kein Pflegegrad', 'PG 1', 'PG 2', 'PG 3', 'PG 4', 'PG 5']
+  const farben = ['bg-pm-line', 'bg-pm-taupe-light', 'bg-pm-taupe', 'bg-pm-taupe-deep', 'bg-pm-coral', 'bg-pm-coral-deep']
+  const skala = (
+    <div>
+      <div className="relative">
+        <div className="flex h-12 w-full overflow-hidden rounded-[10px]" role="img" aria-label={`Punkteskala von 0 bis 100: ${namen.map((n, i) => `${n} ab ${grenzen[i].toLocaleString('de-DE')}`).join(', ')}`}>
+          {namen.map((n, i) => (
+            <span
+              key={n + i}
+              className={`flex h-full items-center justify-center overflow-hidden text-[12px] font-bold ${i === 0 ? 'text-pm-mute' : 'text-white'} ${farben[i]} ${i > 0 ? 'border-l border-white/60' : ''}`}
+              style={{ width: `${grenzen[i + 1] - grenzen[i]}%` }}
+              aria-hidden="true"
+            >
+              <span className={i === 0 || i === 5 ? 'hidden sm:inline' : ''}>{i === 0 ? '0' : n}</span>
+            </span>
+          ))}
+        </div>
+        {typeof punkte === 'number' && (
+          <div className="absolute -top-2 h-16 w-1 -translate-x-1/2 rounded-full bg-pm-ink" style={{ left: `${Math.min(100, Math.max(0, punkte))}%` }} aria-hidden="true">
+            <span className="absolute left-1/2 top-[-26px] -translate-x-1/2 whitespace-nowrap rounded-[6px] bg-pm-ink px-2 py-0.5 text-[13px] font-bold text-white [font-variant-numeric:tabular-nums]">
+              {punkte.toLocaleString('de-DE', { maximumFractionDigits: 2 })}
+            </span>
+          </div>
+        )}
+      </div>
+      <ul className="mt-2 flex text-[12px] text-pm-mute [font-variant-numeric:tabular-nums]" aria-hidden="true">
+        {grenzen.slice(0, 6).map((g, i) => (
+          <li key={g} style={{ width: `${grenzen[i + 1] - grenzen[i]}%` }}>{g.toLocaleString('de-DE')}</li>
+        ))}
+      </ul>
+      <ul className="mt-4 grid gap-1.5 text-[15px] text-pm-body sm:grid-cols-2 [font-variant-numeric:tabular-nums]">
+        {(kind
+          ? [['unter 12,5', 'kein Pflegegrad'], ['12,5 bis unter 27', 'Pflegegrad 2'], ['27 bis unter 47,5', 'Pflegegrad 3'], ['47,5 bis unter 70', 'Pflegegrad 4'], ['70 bis 100', 'Pflegegrad 5']]
+          : [['unter 12,5', 'kein Pflegegrad'], ['12,5 bis unter 27', 'Pflegegrad 1'], ['27 bis unter 47,5', 'Pflegegrad 2'], ['47,5 bis unter 70', 'Pflegegrad 3'], ['70 bis unter 90', 'Pflegegrad 4'], ['90 bis 100', 'Pflegegrad 5']]
+        ).map(([p, g]) => (
+          <li key={g} className="flex justify-between gap-4 border-b border-pm-line-soft pb-1.5">
+            <span>{p} Punkte</span>
+            <strong className="text-pm-ink">{g}</strong>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+  if (ohneRahmen) return skala
+  return (
+    <GrafikRahmen
+      titel="Pflegegrad-Tabelle: Welche Punktzahl welchen Pflegegrad ergibt"
+      quelle={kind ? '§ 15 Abs. 7 SGB XI: Kinder bis 18 Monate werden eine Stufe höher eingestuft.' : '§ 15 Abs. 3 SGB XI. Gesamtpunkte aus den gewichteten Punkten der sechs Module.'}
+    >
+      {skala}
+    </GrafikRahmen>
+  )
+}
