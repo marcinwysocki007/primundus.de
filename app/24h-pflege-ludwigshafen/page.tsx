@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Ludwigshafen & Rhein-Pfalz-Kreis',
-  description: 'Eine Betreuungskraft zieht in Ludwigshafen & Rhein-Pfalz-Kreis bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
+  description: '1:1-Betreuung zu Hause statt Heim: Betreuungskraft zieht in Ludwigshafen & Rhein-Pfalz-Kreis ein, entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-ludwigshafen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

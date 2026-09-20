@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in in Landshut und im Landkreis',
-  description: 'Eine Betreuungskraft zieht in in Landshut und im Landkreis bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
+  title: '24-Stunden-Pflege in in Landshut und im Landkreis ab 2.150 €',
+  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in in Landshut und im Landkreis ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-landshut' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

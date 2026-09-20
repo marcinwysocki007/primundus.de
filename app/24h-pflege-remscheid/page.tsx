@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Remscheid: Kräfte vorher ansehen',
-  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Remscheid bei Ihnen ein. Sie wählen sie vorher selbst aus.',
+  title: '24-Stunden-Pflege in Remscheid ab 2.150 €: 1:1 zu Hause',
+  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Eine Betreuungskraft zieht in Remscheid ein und entlastet die Familie. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-remscheid' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

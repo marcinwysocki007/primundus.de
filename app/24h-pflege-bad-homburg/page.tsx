@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bad Homburg & Hochtaunuskreis',
-  description: 'Eine Betreuungskraft zieht in Bad Homburg & Hochtaunuskreis bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
+  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Bad Homburg & Hochtaunuskreis ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-homburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

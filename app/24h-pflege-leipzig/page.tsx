@@ -25,8 +25,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Leipzig: erst ansehen, dann entscheiden',
-  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Leipzig bei Ihnen ein. Sie wählen sie vorher selbst aus.',
+  title: '24-Stunden-Pflege in Leipzig ab 2.150 €: 1:1 zu Hause',
+  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Eine Betreuungskraft zieht in Leipzig ein und entlastet die Familie. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-leipzig' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

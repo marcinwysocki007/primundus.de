@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Mönchengladbach-Rheydt',
-  description: 'Eine Betreuungskraft zieht in Mönchengladbach-Rheydt bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
+  title: '24-Stunden-Pflege in Mönchengladbach-Rheydt ab 2.150 €',
+  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Mönchengladbach-Rheydt ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-moenchengladbach-rheydt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Gera: Kräfte ansehen, dann entscheiden',
-  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Gera bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie vorher.',
+  title: '24-Stunden-Pflege in Gera ab 2.150 €: 1:1 zu Hause',
+  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Eine Betreuungskraft zieht in Gera ein und entlastet die Familie. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-gera' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

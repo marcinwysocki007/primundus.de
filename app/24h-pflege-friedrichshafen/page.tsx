@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Friedrichshafen: Kräfte vorher ansehen',
-  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Friedrichshafen bei Ihnen ein. Sie wählen sie vorher selbst aus.',
+  title: '24-Stunden-Pflege Friedrichshafen ab 2.150 €: 1:1 zu Hause',
+  description: '1:1-Betreuung zu Hause statt Heimplatz: Eine Betreuungskraft zieht in Friedrichshafen ein und entlastet die Angehörigen. Ab 2.150 € im Monat, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-friedrichshafen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

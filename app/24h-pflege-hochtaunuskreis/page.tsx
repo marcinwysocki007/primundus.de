@@ -28,9 +28,9 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Hochtaunuskreis: Kräfte vorher ansehen',
+  title: '24-Stunden-Pflege Hochtaunuskreis ab 2.150 €: 1:1 zu Hause',
   description:
-    'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Hochtaunuskreis bei Ihnen ein. Sie wählen sie vorher selbst aus.',
+    '1:1-Betreuung zu Hause statt Heimplatz: Eine Betreuungskraft zieht in Hochtaunuskreis ein und entlastet die Angehörigen. Ab 2.150 € im Monat, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hochtaunuskreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

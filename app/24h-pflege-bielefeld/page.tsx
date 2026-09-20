@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bielefeld: Kräfte vorher ansehen',
-  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Bielefeld bei Ihnen ein. Sie wählen sie vorher selbst aus.',
+  title: '24-Stunden-Pflege in Bielefeld ab 2.150 €: 1:1 zu Hause',
+  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Eine Betreuungskraft zieht in Bielefeld ein und entlastet die Familie. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bielefeld' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

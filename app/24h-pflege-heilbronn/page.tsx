@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Heilbronn — Stadt- und Landkreis',
-  description: 'Eine Betreuungskraft zieht in Heilbronn — Stadt- und Landkreis bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
+  description: '1:1-Betreuung zu Hause statt Heim: Betreuungskraft zieht in Heilbronn — Stadt- und Landkreis ein, entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-heilbronn' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

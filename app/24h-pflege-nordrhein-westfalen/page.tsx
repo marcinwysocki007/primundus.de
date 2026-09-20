@@ -27,8 +27,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Nordrhein-Westfalen',
-  description: 'Muss nicht das Heim sein: Eine Betreuungskraft zieht in Nordrhein-Westfalen bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie, bevor Sie sich entscheiden.',
+  title: '24-Stunden-Pflege in Nordrhein-Westfalen ab 2.150 € im Monat',
+  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Nordrhein-Westfalen ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-nordrhein-westfalen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

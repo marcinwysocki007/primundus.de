@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Garmisch-Partenkirchen',
-  description: 'Eine Betreuungskraft zieht in Garmisch-Partenkirchen bei Ihnen ein, statt Heimplatz. Sie wählen sie vorher selbst aus, mit Foto und Erfahrung.',
+  title: '24-Stunden-Pflege in Garmisch-Partenkirchen ab 2.150 €',
+  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Garmisch-Partenkirchen ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-garmisch-partenkirchen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

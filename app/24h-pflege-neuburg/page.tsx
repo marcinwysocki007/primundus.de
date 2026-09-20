@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Neuburg an der Donau',
-  description: 'Muss nicht das Heim sein: Eine Betreuungskraft zieht in Neuburg an der Donau bei Ihnen ein. Foto, Erfahrung und Deutsch sehen Sie, bevor Sie sich entscheiden.',
+  title: '24-Stunden-Pflege in Neuburg an der Donau ab 2.150 €',
+  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Neuburg an der Donau ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-neuburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

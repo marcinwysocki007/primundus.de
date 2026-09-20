@@ -27,8 +27,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Baden-Württemberg',
-  description: 'Wenn es allein nicht mehr geht, muss es nicht das Heim sein: Eine Betreuungskraft zieht in Baden-Württemberg bei Ihnen ein. Sie wählen sie vorher selbst aus.',
+  title: '24-Stunden-Pflege Baden-Württemberg ab 2.150 €: 1:1 zu Hause',
+  description: '1:1-Betreuung zu Hause statt Heim: Eine Betreuungskraft zieht in Baden-Württemberg ein und entlastet die Angehörigen. Ab 2.150 €, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-baden-wuerttemberg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
