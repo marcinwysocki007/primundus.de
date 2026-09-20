@@ -215,7 +215,6 @@ export default function DemenzPflegeZuhause() {
               links={[
                 { href: '/tagesstruktur-demenz', text: 'Tagesstruktur bei Demenz' },
                 { href: '/kommunikation-mit-demenzkranken', text: 'Kommunikation mit Demenzkranken' },
-                { href: '/beschaeftigung-senioren-zuhause', text: 'Beschäftigung zu Hause' },
               ]}
             />
           </Abschnitt>

@@ -225,8 +225,8 @@ export default function SchlaganfallPflegeZuhause() {
             <MehrDazu
               label="Weiter:"
               links={[
-                { href: '/pflegehilfsmittel-beantragen', text: 'Pflegehilfsmittel beantragen' },
-                { href: '/wohnraumanpassung-foerderung', text: 'Wohnung anpassen: Zuschuss der Pflegekasse' },
+                { href: '/hilfsmittel-rollstuhl-beantragen', text: 'Rollstuhl und Hilfsmittel beantragen' },
+                { href: '/pflegegrad-begutachtung-vorbereiten', text: 'Begutachtung vorbereiten' },
               ]}
             />
           </Abschnitt>
