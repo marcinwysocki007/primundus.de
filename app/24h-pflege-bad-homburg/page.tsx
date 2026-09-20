@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bad Homburg & Hochtaunuskreis',
-  description: 'Zu Hause bleiben statt ins Heim: In Bad Homburg & Hochtaunuskreis zieht eine Betreuungskraft ein und hilft im Alltag. Ab 2.150 € im Monat.',
+  description: 'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-homburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

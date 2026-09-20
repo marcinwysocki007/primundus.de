@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Unterschleissheim ab 2.150 € im Monat',
-  description: 'Zu Hause bleiben statt ins Heim: In Unterschleissheim zieht eine Betreuungskraft ein, hilft im Alltag und ist bei Bedarf auch nachts da. Ab 2.150 € im Monat.',
+  title: '24-Stunden-Pflege in Unterschleissheim: zu Hause statt Heim',
+  description: 'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-unterschleissheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

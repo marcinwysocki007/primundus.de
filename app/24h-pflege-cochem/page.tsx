@@ -29,8 +29,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Cochem an der Mosel ab 2.150 € im Monat',
-  description: 'Zu Hause bleiben statt ins Heim: In Cochem an der Mosel zieht eine Betreuungskraft ein und hilft im Alltag, bei Bedarf auch nachts. Ab 2.150 € im Monat.',
+  title: '24-Stunden-Pflege in Cochem an der Mosel',
+  description: 'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-cochem' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
