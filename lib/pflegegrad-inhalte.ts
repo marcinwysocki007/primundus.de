@@ -39,7 +39,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
     punkte: '12,5 bis unter 27',
     name: 'geringe Beeinträchtigungen der Selbständigkeit',
     titel: 'Pflegegrad 1: Leistungen 2026, Punkte, Beispiel',
-    beschreibung: `Pflegegrad 1: 12,5 bis unter 27 Punkte, kein Pflegegeld, aber ${euro(ENTLASTUNGSBETRAG)} Entlastungsbetrag, Hilfsmittel, Wohnumfeld. Beispiel aus dem Rechner, Antrag, Weg zu Pflegegrad 2.`,
+    beschreibung: `Pflegegrad 1: 12,5 bis unter 27 Punkte, kein Pflegegeld, aber ${euro(ENTLASTUNGSBETRAG)} Entlastungsbetrag, Hilfsmittel, Wohnumfeld. Beispiel, Antrag, Weg zu Pflegegrad 2.`,
     h1: 'Pflegegrad 1: Was er bedeutet, was Sie 2026 bekommen und wie es weitergeht',
     einleitung: `Pflegegrad 1 ist die Einstiegsstufe: Die Person schafft den Alltag noch weitgehend allein, braucht aber an einigen Stellen Hilfe. Pflegegeld gibt es noch nicht; dafür ${euro(ENTLASTUNGSBETRAG)} im Monat für Alltagshilfen, Zuschüsse für Hilfsmittel und den Umbau der Wohnung und der Anspruch auf Beratung. Wer den Pflegegrad 1 hat, sollte die nächste Begutachtung früh vorbereiten: Die Grenze zu Pflegegrad 2 liegt bei 27 Punkten.`,
     blick: [
