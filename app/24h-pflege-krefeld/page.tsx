@@ -42,6 +42,19 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Krefeld?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Krefeld starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Krefeld rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie viele ältere Menschen leben in Krefeld?', a: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Warum ist die Pflegequote in Krefeld so hoch?', a: 'Am Alter liegt es nicht — das ist das Bemerkenswerte. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent der Einwohner sind über 65 (NRW 22,0), 7,2 Prozent über 80 (NRW 6,9). Trotzdem ist mit 10,1 Prozent die zweithöchste Pflegequote Nordrhein-Westfalens erreicht, 23.169 Menschen. Auffällig ist vor allem, wie sie versorgt werden: 15.936 Menschen — 68,8 Prozent — werden ausschließlich von Angehörigen gepflegt, gegenüber 59,0 Prozent im Land. Ambulante Dienste kommen seltener ins Haus (14,6 gegen 17,3 Prozent), und der Anteil von Pflegegrad 1 ist mit 6,9 Prozent auffällig niedrig (Land 11,5) — es geht hier also überwiegend nicht um leichte Fälle.' },
+  { q: 'Welches Einzugsgebiet wird in Krefeld bedient?', a: 'Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach' },
+  { q: 'Ist in einer Wohnung in Krefeld Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Krefeld hat im Schnitt 85,2 m², 28,3 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 71,2 % der Gebäude in Krefeld sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.657 € Unterschied im Monat, 31.884 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -65,69 +78,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Krefeld?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Krefeld starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Krefeld rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Krefeld?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Krefeld ist bekannt: Die durchschnittliche Wohnung misst 85,2 Quadratmeter, 28,3 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 36,0 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie viele ältere Menschen leben in Krefeld?',
-        acceptedAnswer: { '@type': 'Answer', text: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Warum ist die Pflegequote in Krefeld so hoch?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Am Alter liegt es nicht — das ist das Bemerkenswerte. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent der Einwohner sind über 65 (NRW 22,0), 7,2 Prozent über 80 (NRW 6,9). Trotzdem ist mit 10,1 Prozent die zweithöchste Pflegequote Nordrhein-Westfalens erreicht, 23.169 Menschen. Auffällig ist vor allem, wie sie versorgt werden: 15.936 Menschen — 68,8 Prozent — werden ausschließlich von Angehörigen gepflegt, gegenüber 59,0 Prozent im Land. Ambulante Dienste kommen seltener ins Haus (14,6 gegen 17,3 Prozent), und der Anteil von Pflegegrad 1 ist mit 6,9 Prozent auffällig niedrig (Land 11,5) — es geht hier also überwiegend nicht um leichte Fälle.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Krefeld bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Krefeld?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Krefeld starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Krefeld rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Krefeld?', a: 'Das hängt am Grundriss, und die Ausgangslage in Krefeld ist bekannt: Die durchschnittliche Wohnung misst 85,2 Quadratmeter, 28,3 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 36,0 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-  { q: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent sind Reihenhäuser. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Wie viele ältere Menschen leben in Krefeld?', a: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Warum ist die Pflegequote in Krefeld so hoch?', a: 'Am Alter liegt es nicht — das ist das Bemerkenswerte. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent der Einwohner sind über 65 (NRW 22,0), 7,2 Prozent über 80 (NRW 6,9). Trotzdem ist mit 10,1 Prozent die zweithöchste Pflegequote Nordrhein-Westfalens erreicht, 23.169 Menschen. Auffällig ist vor allem, wie sie versorgt werden: 15.936 Menschen — 68,8 Prozent — werden ausschließlich von Angehörigen gepflegt, gegenüber 59,0 Prozent im Land. Ambulante Dienste kommen seltener ins Haus (14,6 gegen 17,3 Prozent), und der Anteil von Pflegegrad 1 ist mit 6,9 Prozent auffällig niedrig (Land 11,5) — es geht hier also überwiegend nicht um leichte Fälle.' },
-  { q: 'Welches Einzugsgebiet wird in Krefeld bedient?', a: 'Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach' },
-  { q: 'Ist in einer Wohnung in Krefeld Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Krefeld hat im Schnitt 85,2 m², 28,3 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 71,2 % der Gebäude in Krefeld sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.657 € Unterschied im Monat, 31.884 € im Jahr.' },
-]
 
 export default function Page() {
   return (

@@ -43,6 +43,18 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Grevenbroich?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Grevenbroich starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Grevenbroich rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie viele ältere Menschen leben in Grevenbroich?', a: '6.888 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie wohnt man in Grevenbroich — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Grevenbroich im Schnitt 1,8 Wohnungen, in Nordrhein-Westfalen 2,3. 34,2 Prozent der Gebäude stehen frei, 37,7 Prozent sind Reihenhäuser. 42,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Grevenbroich ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Welches Einzugsgebiet wird in Grevenbroich bedient?', a: 'Grevenbroich und Rhein-Kreis Neuss Mitte: Jüchen, Korschenbroich, Rommerskirchen und alle Gemeinden im mittleren Rhein-Kreis Neuss' },
+  { q: 'Ist in einer Wohnung in Grevenbroich Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Grevenbroich hat im Schnitt 99,5 m², 14,3 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 84,3 % der Gebäude in Grevenbroich sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.657 € Unterschied im Monat, 31.884 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -66,63 +78,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Grevenbroich?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Grevenbroich starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Grevenbroich rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Grevenbroich?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Grevenbroich ist bekannt: Die durchschnittliche Wohnung misst 99,5 Quadratmeter, 14,3 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 49,7 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie viele ältere Menschen leben in Grevenbroich?',
-        acceptedAnswer: { '@type': 'Answer', text: '6.888 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie wohnt man in Grevenbroich — Haus oder Geschosswohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Grevenbroich im Schnitt 1,8 Wohnungen, in Nordrhein-Westfalen 2,3. 34,2 Prozent der Gebäude stehen frei, 37,7 Prozent sind Reihenhäuser. 42,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Grevenbroich ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Grevenbroich bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Grevenbroich und Rhein-Kreis Neuss Mitte: Jüchen, Korschenbroich, Rommerskirchen und alle Gemeinden im mittleren Rhein-Kreis Neuss' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Grevenbroich?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Grevenbroich starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Grevenbroich rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Grevenbroich?', a: 'Das hängt am Grundriss, und die Ausgangslage in Grevenbroich ist bekannt: Die durchschnittliche Wohnung misst 99,5 Quadratmeter, 14,3 Prozent liegen unter 60 Quadratmetern (Nordrhein-Westfalen: 22,4 Prozent), und 49,7 Prozent der Haushalte wohnen im Eigentum (Nordrhein-Westfalen: 40,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den meisten Fällen ist der Platz da; was Ihre Wohnung hergibt, klären wir trotzdem vorab am Telefon.' },
-  { q: 'Wie viele ältere Menschen leben in Grevenbroich?', a: '6.888 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Wie wohnt man in Grevenbroich — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Grevenbroich im Schnitt 1,8 Wohnungen, in Nordrhein-Westfalen 2,3. 34,2 Prozent der Gebäude stehen frei, 37,7 Prozent sind Reihenhäuser. 42,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Grevenbroich ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Welches Einzugsgebiet wird in Grevenbroich bedient?', a: 'Grevenbroich und Rhein-Kreis Neuss Mitte: Jüchen, Korschenbroich, Rommerskirchen und alle Gemeinden im mittleren Rhein-Kreis Neuss' },
-  { q: 'Ist in einer Wohnung in Grevenbroich Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Grevenbroich hat im Schnitt 99,5 m², 14,3 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 84,3 % der Gebäude in Grevenbroich sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.657 € Unterschied im Monat, 31.884 € im Jahr.' },
-]
 
 export default function Page() {
   return (

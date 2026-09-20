@@ -43,6 +43,19 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Bad Kissingen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
+  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Kissingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Bad Kissingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Warum ist 24-Stunden-Pflege in Bad Kissingen so häufig ein Thema?', a: 'Weil hier besonders viele hochbetagte Menschen allein leben. Bad Kissingen ist nach dem Landesamt für Statistik die zweitälteste Gemeinde Unterfrankens: Jeder achte Einwohner ist über 80, in Bayern nur jeder fünfzehnte. Dazu kommt, dass fast die Hälfte aller Haushalte Einpersonenhaushalte sind. Wenn dann jemand nach einem Klinikaufenthalt nach Hause kommt, ist niemand da — genau diese Lücke schließt eine Betreuungskraft, die mit einzieht.' },
+  { q: 'Es gibt doch so viele Kliniken in Bad Kissingen — reicht das nicht?', a: 'Für die Behandlung ja, für den Alltag danach nicht. Über ein Dutzend Reha-Kliniken und ein Krankenhaus mit eigener Akutgeriatrie sorgen dafür, dass im Landkreis mehr als jeder vierte Beschäftigte in der Gesundheitswirtschaft arbeitet — der höchste Anteil aller bayerischen Kreise. Nur endet all das an der eigenen Wohnungstür. Die Kliniken decken die Wochen ab, in denen behandelt wird, nicht die Monate danach.' },
+  { q: 'Welches Einzugsgebiet wird in Bad Kissingen bedient?', a: 'Bad Kissingen und Landkreis Bad Kissingen: Hammelburg, Münnerstadt, Bad Brückenau und alle Gemeinden im Landkreis Bad Kissingen' },
+  { q: 'Ist in einer Wohnung in Bad Kissingen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Bad Kissingen hat im Schnitt 93,1 m², 22,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 75,0 % der Gebäude in Bad Kissingen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.277 € Unterschied im Monat, 27.324 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -66,58 +79,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Bad Kissingen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Bad Kissingen starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Bad Kissingen rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Warum ist 24-Stunden-Pflege in Bad Kissingen so häufig ein Thema?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Weil hier besonders viele hochbetagte Menschen allein leben. Bad Kissingen ist nach dem Landesamt für Statistik die zweitälteste Gemeinde Unterfrankens: Jeder achte Einwohner ist über 80, in Bayern nur jeder fünfzehnte. Dazu kommt, dass fast die Hälfte aller Haushalte Einpersonenhaushalte sind. Wenn dann jemand nach einem Klinikaufenthalt nach Hause kommt, ist niemand da — genau diese Lücke schließt eine Betreuungskraft, die mit einzieht.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Es gibt doch so viele Kliniken in Bad Kissingen — reicht das nicht?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Für die Behandlung ja, für den Alltag danach nicht. Über ein Dutzend Reha-Kliniken und ein Krankenhaus mit eigener Akutgeriatrie sorgen dafür, dass im Landkreis mehr als jeder vierte Beschäftigte in der Gesundheitswirtschaft arbeitet — der höchste Anteil aller bayerischen Kreise. Nur endet all das an der eigenen Wohnungstür. Die Kliniken decken die Wochen ab, in denen behandelt wird, nicht die Monate danach.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Bad Kissingen bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Bad Kissingen und Landkreis Bad Kissingen: Hammelburg, Münnerstadt, Bad Brückenau und alle Gemeinden im Landkreis Bad Kissingen' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Bad Kissingen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Kissingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Bad Kissingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Warum ist 24-Stunden-Pflege in Bad Kissingen so häufig ein Thema?', a: 'Weil hier besonders viele hochbetagte Menschen allein leben. Bad Kissingen ist nach dem Landesamt für Statistik die zweitälteste Gemeinde Unterfrankens: Jeder achte Einwohner ist über 80, in Bayern nur jeder fünfzehnte. Dazu kommt, dass fast die Hälfte aller Haushalte Einpersonenhaushalte sind. Wenn dann jemand nach einem Klinikaufenthalt nach Hause kommt, ist niemand da — genau diese Lücke schließt eine Betreuungskraft, die mit einzieht.' },
-  { q: 'Es gibt doch so viele Kliniken in Bad Kissingen — reicht das nicht?', a: 'Für die Behandlung ja, für den Alltag danach nicht. Über ein Dutzend Reha-Kliniken und ein Krankenhaus mit eigener Akutgeriatrie sorgen dafür, dass im Landkreis mehr als jeder vierte Beschäftigte in der Gesundheitswirtschaft arbeitet — der höchste Anteil aller bayerischen Kreise. Nur endet all das an der eigenen Wohnungstür. Die Kliniken decken die Wochen ab, in denen behandelt wird, nicht die Monate danach.' },
-  { q: 'Welches Einzugsgebiet wird in Bad Kissingen bedient?', a: 'Bad Kissingen und Landkreis Bad Kissingen: Hammelburg, Münnerstadt, Bad Brückenau und alle Gemeinden im Landkreis Bad Kissingen' },
-  { q: 'Ist in einer Wohnung in Bad Kissingen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Bad Kissingen hat im Schnitt 93,1 m², 22,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 75,0 % der Gebäude in Bad Kissingen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.277 € Unterschied im Monat, 27.324 € im Jahr.' },
-]
 
 export default function Page() {
   return (

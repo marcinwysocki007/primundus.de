@@ -42,6 +42,19 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Düsseldorf?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Düsseldorf starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Düsseldorf rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Gibt es in Düsseldorf genug Heimplätze als Alternative?', a: 'Weniger als im Landesdurchschnitt. Düsseldorf hat 40 vollstationäre Heimplätze je 1.000 Einwohner über 65, in Nordrhein-Westfalen sind es 46. Beide Kennzahlen zeigen dabei in dieselbe Richtung: Auch der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2 Prozent. Bei 40.248 Pflegebedürftigen in der Stadt bedeutet das eine spürbar längere Suche. Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich kurzfristig umsetzen lässt.' },
+  { q: 'Funktioniert 24-Stunden-Betreuung in einer Düsseldorfer Nachkriegswohnung?', a: 'Häufig ja — es ist hier sogar der Normalfall. 43,3 Prozent aller Düsseldorfer Wohnungen stammen aus den Jahren 1950 bis 1969, allein 87.521 aus den Fünfzigern; in NRW sind es 33,6 Prozent. Auf ein Gebäude kommen 4,7 Wohnungen. Die typische Ausgangslage ist also eine Mietwohnung im Obergeschoss eines Wiederaufbaus. Gerade wenn die Treppe zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Notwendig ist ein eigenes, abschließbares Zimmer — die durchschnittliche Wohnung misst 77,6 Quadratmeter, gut jede dritte liegt unter 60.' },
+  { q: 'Wie wird in Düsseldorf gepflegt — eher familiär oder professionell?', a: 'Deutlich professioneller als im Land. Nur 56,9 Prozent der Düsseldorfer Pflegebedürftigen beziehen ausschließlich Pflegegeld, versorgen sich also rein familiär; in Nordrhein-Westfalen sind es 59,0 Prozent. Dafür nehmen 21,0 Prozent einen ambulanten Dienst in Anspruch gegenüber 17,3 Prozent im Land. Eine Betreuungskraft im Haushalt setzt diesen Weg fort: nicht ein Besuch dreimal täglich, sondern durchgehend jemand vor Ort — auch nachts.' },
+  { q: 'Welches Einzugsgebiet wird in Düsseldorf bedient?', a: 'Düsseldorf und Umland: Ratingen, Mettmann, Neuss, Krefeld, Meerbusch, Langenfeld, Hilden, Erkrath und alle Gemeinden im Rhein-Kreis Neuss und Kreis Mettmann' },
+  { q: 'Ist in einer Wohnung in Düsseldorf Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Düsseldorf hat im Schnitt 77,6 m², 36,1 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. In Düsseldorf liegen 49,9 % der Wohnungen in Ein- oder Zweifamilienhäusern, der Rest sind Geschosswohnungen — dann zählt, welches Stockwerk und ob es einen Aufzug gibt.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.657 € Unterschied im Monat, 31.884 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -65,63 +78,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Düsseldorf?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Düsseldorf starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Düsseldorf rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Gibt es in Düsseldorf genug Heimplätze als Alternative?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Weniger als im Landesdurchschnitt. Düsseldorf hat 40 vollstationäre Heimplätze je 1.000 Einwohner über 65, in Nordrhein-Westfalen sind es 46. Beide Kennzahlen zeigen dabei in dieselbe Richtung: Auch der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2 Prozent. Bei 40.248 Pflegebedürftigen in der Stadt bedeutet das eine spürbar längere Suche. Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich kurzfristig umsetzen lässt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Funktioniert 24-Stunden-Betreuung in einer Düsseldorfer Nachkriegswohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Häufig ja — es ist hier sogar der Normalfall. 43,3 Prozent aller Düsseldorfer Wohnungen stammen aus den Jahren 1950 bis 1969, allein 87.521 aus den Fünfzigern; in NRW sind es 33,6 Prozent. Auf ein Gebäude kommen 4,7 Wohnungen. Die typische Ausgangslage ist also eine Mietwohnung im Obergeschoss eines Wiederaufbaus. Gerade wenn die Treppe zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Notwendig ist ein eigenes, abschließbares Zimmer — die durchschnittliche Wohnung misst 77,6 Quadratmeter, gut jede dritte liegt unter 60.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie wird in Düsseldorf gepflegt — eher familiär oder professionell?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Deutlich professioneller als im Land. Nur 56,9 Prozent der Düsseldorfer Pflegebedürftigen beziehen ausschließlich Pflegegeld, versorgen sich also rein familiär; in Nordrhein-Westfalen sind es 59,0 Prozent. Dafür nehmen 21,0 Prozent einen ambulanten Dienst in Anspruch gegenüber 17,3 Prozent im Land. Eine Betreuungskraft im Haushalt setzt diesen Weg fort: nicht ein Besuch dreimal täglich, sondern durchgehend jemand vor Ort — auch nachts.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Düsseldorf bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Düsseldorf und Umland: Ratingen, Mettmann, Neuss, Krefeld, Meerbusch, Langenfeld, Hilden, Erkrath und alle Gemeinden im Rhein-Kreis Neuss und Kreis Mettmann' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Düsseldorf?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Düsseldorf starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Düsseldorf rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Gibt es in Düsseldorf genug Heimplätze als Alternative?', a: 'Weniger als im Landesdurchschnitt. Düsseldorf hat 40 vollstationäre Heimplätze je 1.000 Einwohner über 65, in Nordrhein-Westfalen sind es 46. Beide Kennzahlen zeigen dabei in dieselbe Richtung: Auch der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2 Prozent. Bei 40.248 Pflegebedürftigen in der Stadt bedeutet das eine spürbar längere Suche. Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich kurzfristig umsetzen lässt.' },
-  { q: 'Funktioniert 24-Stunden-Betreuung in einer Düsseldorfer Nachkriegswohnung?', a: 'Häufig ja — es ist hier sogar der Normalfall. 43,3 Prozent aller Düsseldorfer Wohnungen stammen aus den Jahren 1950 bis 1969, allein 87.521 aus den Fünfzigern; in NRW sind es 33,6 Prozent. Auf ein Gebäude kommen 4,7 Wohnungen. Die typische Ausgangslage ist also eine Mietwohnung im Obergeschoss eines Wiederaufbaus. Gerade wenn die Treppe zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Notwendig ist ein eigenes, abschließbares Zimmer — die durchschnittliche Wohnung misst 77,6 Quadratmeter, gut jede dritte liegt unter 60.' },
-  { q: 'Wie wird in Düsseldorf gepflegt — eher familiär oder professionell?', a: 'Deutlich professioneller als im Land. Nur 56,9 Prozent der Düsseldorfer Pflegebedürftigen beziehen ausschließlich Pflegegeld, versorgen sich also rein familiär; in Nordrhein-Westfalen sind es 59,0 Prozent. Dafür nehmen 21,0 Prozent einen ambulanten Dienst in Anspruch gegenüber 17,3 Prozent im Land. Eine Betreuungskraft im Haushalt setzt diesen Weg fort: nicht ein Besuch dreimal täglich, sondern durchgehend jemand vor Ort — auch nachts.' },
-  { q: 'Welches Einzugsgebiet wird in Düsseldorf bedient?', a: 'Düsseldorf und Umland: Ratingen, Mettmann, Neuss, Krefeld, Meerbusch, Langenfeld, Hilden, Erkrath und alle Gemeinden im Rhein-Kreis Neuss und Kreis Mettmann' },
-  { q: 'Ist in einer Wohnung in Düsseldorf Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Düsseldorf hat im Schnitt 77,6 m², 36,1 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. In Düsseldorf liegen 49,9 % der Wohnungen in Ein- oder Zweifamilienhäusern, der Rest sind Geschosswohnungen — dann zählt, welches Stockwerk und ob es einen Aufzug gibt.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.657 € Unterschied im Monat, 31.884 € im Jahr.' },
-]
 
 export default function Page() {
   return (

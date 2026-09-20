@@ -42,6 +42,19 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Augsburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
+  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Augsburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Augsburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie ist die Pflegesituation in Augsburg?', a: 'Stärker professionalisiert als im übrigen Bayern. Von den 14.208 Pflegebedürftigen der Stadt werden nur 45,4 Prozent ausschließlich von Angehörigen versorgt, in Bayern sind es 48,5 Prozent. Ambulante Dienste (22,1 gegen 20,0 Prozent) und Heimpflege (18,2 gegen 17,6) liegen entsprechend darüber. Heimplätze sind reichlich vorhanden: 49 je 1.000 Einwohner über 65 gegenüber 44 in Bayern, bei durchschnittlich 71 Plätzen je Einrichtung statt 58. Eine Betreuung zu Hause tritt hier also nicht gegen einen Mangel an, sondern gegen ein gut ausgebautes stationäres Angebot.' },
+  { q: 'Ich habe Pflegegrad 1 — lohnt sich das Thema für mich schon?', a: 'Gerade dann lohnt sich das Nachdenken. In Augsburg haben 2.009 Menschen Pflegegrad 1, beziehen aber keine regulären Pflegeleistungen — 14,1 Prozent aller Pflegebedürftigen der Stadt und mehr als im bayerischen Durchschnitt (13,9 Prozent). Das sind über zweitausend Haushalte mit anerkanntem Unterstützungsbedarf, in denen bislang nichts organisiert ist. Bei Pflegegrad 1 stehen Entlastungsbetrag und Hilfsmittel zur Verfügung; wer früh plant, muss später nicht unter Zeitdruck entscheiden. Welche Leistungen Ihnen zustehen, rechnet der Pflegegrad-Rechner durch.' },
+  { q: 'Welches Einzugsgebiet wird in Augsburg bedient?', a: 'Augsburg und Umland: Friedberg, Neusäß, Königsbrunn, Gersthofen, Stadtbergen und alle Gemeinden im Landkreis Augsburg' },
+  { q: 'Ist in einer Wohnung in Augsburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Augsburg hat im Schnitt 76,4 m², 37,6 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 62,8 % der Gebäude in Augsburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.277 € Unterschied im Monat, 27.324 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -65,69 +78,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Augsburg?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Gibt es in Bayern besondere Pflegeförderungen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Augsburg starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Augsburg rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Passt eine Betreuungskraft in eine Augsburger Wohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Das muss man in Augsburg genauer prüfen als anderswo in Bayern. Im Freistaat kommen auf ein Gebäude 2,1 Wohnungen, in Augsburg 4,1; die durchschnittliche Wohnung misst hier 76,4 statt 100,5 Quadratmeter, und gut jede dritte liegt unter 60 — in Bayern jede fünfte. Im Eigentum wohnen 32,5 Prozent der Haushalte gegenüber 49,3 im Land. Augsburg ist eine Großstadt mit Großstadtgrundrissen. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft; ob Ihre Wohnung das hergibt, klären wir vorab am Telefon.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie ist die Pflegesituation in Augsburg?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Stärker professionalisiert als im übrigen Bayern. Von den 14.208 Pflegebedürftigen der Stadt werden nur 45,4 Prozent ausschließlich von Angehörigen versorgt, in Bayern sind es 48,5 Prozent. Ambulante Dienste (22,1 gegen 20,0 Prozent) und Heimpflege (18,2 gegen 17,6) liegen entsprechend darüber. Heimplätze sind reichlich vorhanden: 49 je 1.000 Einwohner über 65 gegenüber 44 in Bayern, bei durchschnittlich 71 Plätzen je Einrichtung statt 58. Eine Betreuung zu Hause tritt hier also nicht gegen einen Mangel an, sondern gegen ein gut ausgebautes stationäres Angebot.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ich habe Pflegegrad 1 — lohnt sich das Thema für mich schon?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Gerade dann lohnt sich das Nachdenken. In Augsburg haben 2.009 Menschen Pflegegrad 1, beziehen aber keine regulären Pflegeleistungen — 14,1 Prozent aller Pflegebedürftigen der Stadt und mehr als im bayerischen Durchschnitt (13,9 Prozent). Das sind über zweitausend Haushalte mit anerkanntem Unterstützungsbedarf, in denen bislang nichts organisiert ist. Bei Pflegegrad 1 stehen Entlastungsbetrag und Hilfsmittel zur Verfügung; wer früh plant, muss später nicht unter Zeitdruck entscheiden. Welche Leistungen Ihnen zustehen, rechnet der Pflegegrad-Rechner durch.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Augsburg bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Augsburg und Umland: Friedberg, Neusäß, Königsbrunn, Gersthofen, Stadtbergen und alle Gemeinden im Landkreis Augsburg' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Augsburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
-  { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Augsburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Augsburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Passt eine Betreuungskraft in eine Augsburger Wohnung?', a: 'Das muss man in Augsburg genauer prüfen als anderswo in Bayern. Im Freistaat kommen auf ein Gebäude 2,1 Wohnungen, in Augsburg 4,1; die durchschnittliche Wohnung misst hier 76,4 statt 100,5 Quadratmeter, und gut jede dritte liegt unter 60 — in Bayern jede fünfte. Im Eigentum wohnen 32,5 Prozent der Haushalte gegenüber 49,3 im Land. Augsburg ist eine Großstadt mit Großstadtgrundrissen. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft; ob Ihre Wohnung das hergibt, klären wir vorab am Telefon.' },
-  { q: 'Wie ist die Pflegesituation in Augsburg?', a: 'Stärker professionalisiert als im übrigen Bayern. Von den 14.208 Pflegebedürftigen der Stadt werden nur 45,4 Prozent ausschließlich von Angehörigen versorgt, in Bayern sind es 48,5 Prozent. Ambulante Dienste (22,1 gegen 20,0 Prozent) und Heimpflege (18,2 gegen 17,6) liegen entsprechend darüber. Heimplätze sind reichlich vorhanden: 49 je 1.000 Einwohner über 65 gegenüber 44 in Bayern, bei durchschnittlich 71 Plätzen je Einrichtung statt 58. Eine Betreuung zu Hause tritt hier also nicht gegen einen Mangel an, sondern gegen ein gut ausgebautes stationäres Angebot.' },
-  { q: 'Ich habe Pflegegrad 1 — lohnt sich das Thema für mich schon?', a: 'Gerade dann lohnt sich das Nachdenken. In Augsburg haben 2.009 Menschen Pflegegrad 1, beziehen aber keine regulären Pflegeleistungen — 14,1 Prozent aller Pflegebedürftigen der Stadt und mehr als im bayerischen Durchschnitt (13,9 Prozent). Das sind über zweitausend Haushalte mit anerkanntem Unterstützungsbedarf, in denen bislang nichts organisiert ist. Bei Pflegegrad 1 stehen Entlastungsbetrag und Hilfsmittel zur Verfügung; wer früh plant, muss später nicht unter Zeitdruck entscheiden. Welche Leistungen Ihnen zustehen, rechnet der Pflegegrad-Rechner durch.' },
-  { q: 'Welches Einzugsgebiet wird in Augsburg bedient?', a: 'Augsburg und Umland: Friedberg, Neusäß, Königsbrunn, Gersthofen, Stadtbergen und alle Gemeinden im Landkreis Augsburg' },
-  { q: 'Ist in einer Wohnung in Augsburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Augsburg hat im Schnitt 76,4 m², 37,6 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 62,8 % der Gebäude in Augsburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.277 € Unterschied im Monat, 27.324 € im Jahr.' },
-]
 
 export default function Page() {
   return (

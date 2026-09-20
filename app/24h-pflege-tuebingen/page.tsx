@@ -43,6 +43,18 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Tübingen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Tübingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Tübingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Ist eine Betreuung in der Tübinger Altstadt überhaupt praktikabel?', a: 'Ja, und sie ist dort oft besonders sinnvoll. Kopfsteinpflaster, enge Gassen und die Hanglage machen jeden Weg nach draußen anstrengend — selbst die offizielle Stadtführung für Rollstuhlfahrer braucht eine eigens ausgesuchte Route. Wer hier seit Jahrzehnten wohnt, will deshalb nicht wegziehen. Eine Betreuungskraft, die mit einzieht, übernimmt genau die Wege, die schwierig geworden sind, und macht das Wohnenbleiben damit erst möglich.' },
+  { q: 'Kommt eine Betreuungskraft auch in die Tübinger Teilorte und in den Landkreis?', a: 'Ja. Hagelloch, Bebenhausen, Unterjesingen und Kilchberg sind klein, und im Landkreis Tübingen haben neun von fünfzehn Gemeinden weniger als 10.000 Einwohner. Dort fahren ambulante Dienste längere Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft im Haus ist davon unabhängig — in Rottenburg, Mössingen oder Ammerbuch genauso wie in der Stadt, zum selben Preis und ohne Anfahrtskosten.' },
+  { q: 'Welches Einzugsgebiet wird in Tübingen bedient?', a: 'Tübingen und Landkreis Tübingen: Rottenburg am Neckar, Mössingen, Ammerbuch und alle Gemeinden im Landkreis Tübingen' },
+  { q: 'Ist in einer Wohnung in Tübingen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Tübingen hat im Schnitt 87,3 m², 34,9 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 66,0 % der Gebäude in Tübingen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.737 € Unterschied im Monat, 32.844 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -66,57 +78,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Tübingen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Tübingen starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Tübingen rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist eine Betreuung in der Tübinger Altstadt überhaupt praktikabel?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und sie ist dort oft besonders sinnvoll. Kopfsteinpflaster, enge Gassen und die Hanglage machen jeden Weg nach draußen anstrengend — selbst die offizielle Stadtführung für Rollstuhlfahrer braucht eine eigens ausgesuchte Route. Wer hier seit Jahrzehnten wohnt, will deshalb nicht wegziehen. Eine Betreuungskraft, die mit einzieht, übernimmt genau die Wege, die schwierig geworden sind, und macht das Wohnenbleiben damit erst möglich.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Kommt eine Betreuungskraft auch in die Tübinger Teilorte und in den Landkreis?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja. Hagelloch, Bebenhausen, Unterjesingen und Kilchberg sind klein, und im Landkreis Tübingen haben neun von fünfzehn Gemeinden weniger als 10.000 Einwohner. Dort fahren ambulante Dienste längere Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft im Haus ist davon unabhängig — in Rottenburg, Mössingen oder Ammerbuch genauso wie in der Stadt, zum selben Preis und ohne Anfahrtskosten.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Tübingen bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Tübingen und Landkreis Tübingen: Rottenburg am Neckar, Mössingen, Ammerbuch und alle Gemeinden im Landkreis Tübingen' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Tübingen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Tübingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Tübingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Ist eine Betreuung in der Tübinger Altstadt überhaupt praktikabel?', a: 'Ja, und sie ist dort oft besonders sinnvoll. Kopfsteinpflaster, enge Gassen und die Hanglage machen jeden Weg nach draußen anstrengend — selbst die offizielle Stadtführung für Rollstuhlfahrer braucht eine eigens ausgesuchte Route. Wer hier seit Jahrzehnten wohnt, will deshalb nicht wegziehen. Eine Betreuungskraft, die mit einzieht, übernimmt genau die Wege, die schwierig geworden sind, und macht das Wohnenbleiben damit erst möglich.' },
-  { q: 'Kommt eine Betreuungskraft auch in die Tübinger Teilorte und in den Landkreis?', a: 'Ja. Hagelloch, Bebenhausen, Unterjesingen und Kilchberg sind klein, und im Landkreis Tübingen haben neun von fünfzehn Gemeinden weniger als 10.000 Einwohner. Dort fahren ambulante Dienste längere Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft im Haus ist davon unabhängig — in Rottenburg, Mössingen oder Ammerbuch genauso wie in der Stadt, zum selben Preis und ohne Anfahrtskosten.' },
-  { q: 'Welches Einzugsgebiet wird in Tübingen bedient?', a: 'Tübingen und Landkreis Tübingen: Rottenburg am Neckar, Mössingen, Ammerbuch und alle Gemeinden im Landkreis Tübingen' },
-  { q: 'Ist in einer Wohnung in Tübingen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Tübingen hat im Schnitt 87,3 m², 34,9 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 66,0 % der Gebäude in Tübingen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.737 € Unterschied im Monat, 32.844 € im Jahr.' },
-]
 
 export default function Page() {
   return (

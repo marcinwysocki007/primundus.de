@@ -42,6 +42,18 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Potsdam?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Potsdam starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Potsdam rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie ist die Pflegesituation in Potsdam?', a: 'Institutioneller als im übrigen Brandenburg. Von den 10.087 Pflegebedürftigen der Stadt werden 5.091 allein von Angehörigen versorgt — 50,5 Prozent gegenüber 54,5 Prozent im Land. Dafür lebt mit 16,4 Prozent rund jeder sechste Pflegebedürftige im Heim, im Land nur jeder neunte (10,9 Prozent). Das ist kein Effekt der jüngeren Stadtbevölkerung: Auch gemessen an der Zahl der über 65-Jährigen stehen in Potsdam mehr Heimplätze bereit als im Landesdurchschnitt. In der Stadt leben 37.970 Menschen über 65, davon 13.706 über 80.' },
+  { q: 'Warum ist Tagespflege in Potsdam so schwer zu bekommen?', a: 'Weil es sie kaum gibt. Nur 2,6 Prozent der Leistungsempfänger in Potsdam nutzen Tagespflege, im Land Brandenburg sind es 4,1 Prozent. Von 1.943 Pflegeplätzen der Stadt entfallen gerade einmal 134 auf Tages- und Nachtpflege. Für Angehörige, die tagsüber arbeiten und abends pflegen, fehlt damit die naheliegendste Entlastung. Eine Betreuungskraft, die im Haushalt lebt, deckt genau diese Lücke — sie ist auch dann da, wenn niemand sonst kann.' },
+  { q: 'Welches Einzugsgebiet wird in Potsdam bedient?', a: 'Potsdam und Umland: Werder, Brandenburg an der Havel, Teltow, Kleinmachnow und alle Gemeinden im Landkreis Potsdam-Mittelmark und Havelland' },
+  { q: 'Ist in einer Wohnung in Potsdam Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Potsdam hat im Schnitt 75,8 m², 37,9 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 63,8 % der Gebäude in Potsdam sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Brandenburg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.020 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.097 € Unterschied im Monat, 25.164 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -65,63 +77,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Potsdam?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Potsdam starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Potsdam rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie ist die Pflegesituation in Potsdam?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Institutioneller als im übrigen Brandenburg. Von den 10.087 Pflegebedürftigen der Stadt werden 5.091 allein von Angehörigen versorgt — 50,5 Prozent gegenüber 54,5 Prozent im Land. Dafür lebt mit 16,4 Prozent rund jeder sechste Pflegebedürftige im Heim, im Land nur jeder neunte (10,9 Prozent). Das ist kein Effekt der jüngeren Stadtbevölkerung: Auch gemessen an der Zahl der über 65-Jährigen stehen in Potsdam mehr Heimplätze bereit als im Landesdurchschnitt. In der Stadt leben 37.970 Menschen über 65, davon 13.706 über 80.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Warum ist Tagespflege in Potsdam so schwer zu bekommen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Weil es sie kaum gibt. Nur 2,6 Prozent der Leistungsempfänger in Potsdam nutzen Tagespflege, im Land Brandenburg sind es 4,1 Prozent. Von 1.943 Pflegeplätzen der Stadt entfallen gerade einmal 134 auf Tages- und Nachtpflege. Für Angehörige, die tagsüber arbeiten und abends pflegen, fehlt damit die naheliegendste Entlastung. Eine Betreuungskraft, die im Haushalt lebt, deckt genau diese Lücke — sie ist auch dann da, wenn niemand sonst kann.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Passt eine Betreuungskraft in eine Potsdamer Wohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Das ist die Frage, die vorab geklärt gehört. Auf ein Potsdamer Gebäude kommen im Schnitt 4,3 Wohnungen, die durchschnittliche Wohnung misst 75,8 Quadratmeter, und fast vier von zehn liegen unter 60. Nur 17,6 Prozent der Haushalte wohnen im Eigentum, in Brandenburg sind es 45,6. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Ob Ihre Wohnung das hergibt, klären wir am Telefon, bevor irgendetwas entschieden wird.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Potsdam bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Potsdam und Umland: Werder, Brandenburg an der Havel, Teltow, Kleinmachnow und alle Gemeinden im Landkreis Potsdam-Mittelmark und Havelland' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Potsdam?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Potsdam starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Potsdam rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie ist die Pflegesituation in Potsdam?', a: 'Institutioneller als im übrigen Brandenburg. Von den 10.087 Pflegebedürftigen der Stadt werden 5.091 allein von Angehörigen versorgt — 50,5 Prozent gegenüber 54,5 Prozent im Land. Dafür lebt mit 16,4 Prozent rund jeder sechste Pflegebedürftige im Heim, im Land nur jeder neunte (10,9 Prozent). Das ist kein Effekt der jüngeren Stadtbevölkerung: Auch gemessen an der Zahl der über 65-Jährigen stehen in Potsdam mehr Heimplätze bereit als im Landesdurchschnitt. In der Stadt leben 37.970 Menschen über 65, davon 13.706 über 80.' },
-  { q: 'Warum ist Tagespflege in Potsdam so schwer zu bekommen?', a: 'Weil es sie kaum gibt. Nur 2,6 Prozent der Leistungsempfänger in Potsdam nutzen Tagespflege, im Land Brandenburg sind es 4,1 Prozent. Von 1.943 Pflegeplätzen der Stadt entfallen gerade einmal 134 auf Tages- und Nachtpflege. Für Angehörige, die tagsüber arbeiten und abends pflegen, fehlt damit die naheliegendste Entlastung. Eine Betreuungskraft, die im Haushalt lebt, deckt genau diese Lücke — sie ist auch dann da, wenn niemand sonst kann.' },
-  { q: 'Passt eine Betreuungskraft in eine Potsdamer Wohnung?', a: 'Das ist die Frage, die vorab geklärt gehört. Auf ein Potsdamer Gebäude kommen im Schnitt 4,3 Wohnungen, die durchschnittliche Wohnung misst 75,8 Quadratmeter, und fast vier von zehn liegen unter 60. Nur 17,6 Prozent der Haushalte wohnen im Eigentum, in Brandenburg sind es 45,6. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Ob Ihre Wohnung das hergibt, klären wir am Telefon, bevor irgendetwas entschieden wird.' },
-  { q: 'Welches Einzugsgebiet wird in Potsdam bedient?', a: 'Potsdam und Umland: Werder, Brandenburg an der Havel, Teltow, Kleinmachnow und alle Gemeinden im Landkreis Potsdam-Mittelmark und Havelland' },
-  { q: 'Ist in einer Wohnung in Potsdam Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Potsdam hat im Schnitt 75,8 m², 37,9 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 63,8 % der Gebäude in Potsdam sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Brandenburg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.020 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.097 € Unterschied im Monat, 25.164 € im Jahr.' },
-]
 
 export default function Page() {
   return (

@@ -43,6 +43,20 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Speyer?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Rheinland-Pfalz (Eigenanteil rund 3.220 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Speyer starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Speyer rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent sind Reihenhäuser. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie viele ältere Menschen leben in Speyer?', a: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie gut ist die ambulante Versorgung in Speyer?', a: 'Dünner als im Landesdurchschnitt. Nur 16,3 Prozent der Speyerer Pflegebedürftigen werden von einem ambulanten Dienst betreut, in Rheinland-Pfalz sind es 18,3 Prozent — und in der ganzen Stadt gibt es nur 15 solcher Dienste. Umgekehrt ist das Heimangebot außergewöhnlich dicht: 96,8 vollstationäre Plätze je 1.000 Einwohner über 70 gegenüber 63,1 im Land, schon 2021 der Spitzenwert aller 36 Verwaltungsbezirke in Rheinland-Pfalz. Speyer ist also stark auf stationäre Versorgung ausgerichtet. Wer zu Hause bleiben möchte, findet weniger Unterstützung von außen als in vergleichbaren Städten — eine Betreuungskraft, die im Haushalt lebt, ist hier oft die einzige durchgehende Lösung.' },
+  { q: 'Wie gut ist die häusliche Pflege in Speyer aufgestellt?', a: 'Ehrlich gesagt: dünner als das Heimangebot. Speyer hat mit 97 vollstationären Plätzen je 1.000 Einwohner über 70 die höchste Heimplatzdichte in Rheinland-Pfalz (Land: 63) — 2021 war es der Spitzenwert aller 36 Verwaltungsbezirke. Ambulant sieht es anders aus: Nur 16,3 Prozent der 3.653 Pflegebedürftigen werden von einem Pflegedienst betreut, im Land 18,3 Prozent, und es gibt in der ganzen Stadt lediglich 15 Dienste. Wer zu Hause bleiben möchte, hat also weniger Auswahl und sollte früher planen. Eine Betreuungskraft, die im Haushalt lebt, ist von dieser Knappheit nicht betroffen — sie ist durchgehend da, nicht nach Tourenplan.' },
+  { q: 'Welches Einzugsgebiet wird in Speyer bedient?', a: 'Speyer und Rhein-Pfalz-Kreis: Schifferstadt, Römerberg, Dudenhofen und alle Gemeinden im Rhein-Pfalz-Kreis nördlich von Landau' },
+  { q: 'Ist in einer Wohnung in Speyer Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Speyer hat im Schnitt 92,9 m², 20,2 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 72,7 % der Gebäude in Speyer sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.297 € Unterschied im Monat, 27.564 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -66,75 +80,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Speyer?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Rheinland-Pfalz (Eigenanteil rund 3.220 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Speyer starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Speyer rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Speyer?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Speyer ist bekannt: Die durchschnittliche Wohnung misst 92,9 Quadratmeter, 20,2 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 41,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent sind Reihenhäuser. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie viele ältere Menschen leben in Speyer?',
-        acceptedAnswer: { '@type': 'Answer', text: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie gut ist die ambulante Versorgung in Speyer?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Dünner als im Landesdurchschnitt. Nur 16,3 Prozent der Speyerer Pflegebedürftigen werden von einem ambulanten Dienst betreut, in Rheinland-Pfalz sind es 18,3 Prozent — und in der ganzen Stadt gibt es nur 15 solcher Dienste. Umgekehrt ist das Heimangebot außergewöhnlich dicht: 96,8 vollstationäre Plätze je 1.000 Einwohner über 70 gegenüber 63,1 im Land, schon 2021 der Spitzenwert aller 36 Verwaltungsbezirke in Rheinland-Pfalz. Speyer ist also stark auf stationäre Versorgung ausgerichtet. Wer zu Hause bleiben möchte, findet weniger Unterstützung von außen als in vergleichbaren Städten — eine Betreuungskraft, die im Haushalt lebt, ist hier oft die einzige durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie gut ist die häusliche Pflege in Speyer aufgestellt?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ehrlich gesagt: dünner als das Heimangebot. Speyer hat mit 97 vollstationären Plätzen je 1.000 Einwohner über 70 die höchste Heimplatzdichte in Rheinland-Pfalz (Land: 63) — 2021 war es der Spitzenwert aller 36 Verwaltungsbezirke. Ambulant sieht es anders aus: Nur 16,3 Prozent der 3.653 Pflegebedürftigen werden von einem Pflegedienst betreut, im Land 18,3 Prozent, und es gibt in der ganzen Stadt lediglich 15 Dienste. Wer zu Hause bleiben möchte, hat also weniger Auswahl und sollte früher planen. Eine Betreuungskraft, die im Haushalt lebt, ist von dieser Knappheit nicht betroffen — sie ist durchgehend da, nicht nach Tourenplan.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Speyer bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Speyer und Rhein-Pfalz-Kreis: Schifferstadt, Römerberg, Dudenhofen und alle Gemeinden im Rhein-Pfalz-Kreis nördlich von Landau' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Speyer?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Rheinland-Pfalz (Eigenanteil rund 3.220 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Speyer starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Speyer rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Speyer?', a: 'Das hängt am Grundriss, und die Ausgangslage in Speyer ist bekannt: Die durchschnittliche Wohnung misst 92,9 Quadratmeter, 20,2 Prozent liegen unter 60 Quadratmetern (Rheinland-Pfalz: 15,4 Prozent), und 41,3 Prozent der Haushalte wohnen im Eigentum (Rheinland-Pfalz: 54,4 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-  { q: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent sind Reihenhäuser. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Wie viele ältere Menschen leben in Speyer?', a: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Wie gut ist die ambulante Versorgung in Speyer?', a: 'Dünner als im Landesdurchschnitt. Nur 16,3 Prozent der Speyerer Pflegebedürftigen werden von einem ambulanten Dienst betreut, in Rheinland-Pfalz sind es 18,3 Prozent — und in der ganzen Stadt gibt es nur 15 solcher Dienste. Umgekehrt ist das Heimangebot außergewöhnlich dicht: 96,8 vollstationäre Plätze je 1.000 Einwohner über 70 gegenüber 63,1 im Land, schon 2021 der Spitzenwert aller 36 Verwaltungsbezirke in Rheinland-Pfalz. Speyer ist also stark auf stationäre Versorgung ausgerichtet. Wer zu Hause bleiben möchte, findet weniger Unterstützung von außen als in vergleichbaren Städten — eine Betreuungskraft, die im Haushalt lebt, ist hier oft die einzige durchgehende Lösung.' },
-  { q: 'Wie gut ist die häusliche Pflege in Speyer aufgestellt?', a: 'Ehrlich gesagt: dünner als das Heimangebot. Speyer hat mit 97 vollstationären Plätzen je 1.000 Einwohner über 70 die höchste Heimplatzdichte in Rheinland-Pfalz (Land: 63) — 2021 war es der Spitzenwert aller 36 Verwaltungsbezirke. Ambulant sieht es anders aus: Nur 16,3 Prozent der 3.653 Pflegebedürftigen werden von einem Pflegedienst betreut, im Land 18,3 Prozent, und es gibt in der ganzen Stadt lediglich 15 Dienste. Wer zu Hause bleiben möchte, hat also weniger Auswahl und sollte früher planen. Eine Betreuungskraft, die im Haushalt lebt, ist von dieser Knappheit nicht betroffen — sie ist durchgehend da, nicht nach Tourenplan.' },
-  { q: 'Welches Einzugsgebiet wird in Speyer bedient?', a: 'Speyer und Rhein-Pfalz-Kreis: Schifferstadt, Römerberg, Dudenhofen und alle Gemeinden im Rhein-Pfalz-Kreis nördlich von Landau' },
-  { q: 'Ist in einer Wohnung in Speyer Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Speyer hat im Schnitt 92,9 m², 20,2 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 72,7 % der Gebäude in Speyer sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.297 € Unterschied im Monat, 27.564 € im Jahr.' },
-]
 
 export default function Page() {
   return (

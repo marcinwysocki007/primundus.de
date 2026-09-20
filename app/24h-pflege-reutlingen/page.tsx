@@ -43,6 +43,18 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Reutlingen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Reutlingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Reutlingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Kommt eine Betreuungskraft auch nach Gönningen oder Bronnweiler?', a: 'Ja, und gerade dort lohnt es sich besonders. Zwischen den bewohnten Ortskernen Reutlingens liegen rund 215 Höhenmeter — Mittelstadt am Neckar auf 320, Gönningen am Fuß des Albtraufs auf 521 Metern. Gönningen ist flächenmäßig gut halb so groß wie die gesamte Kernstadt, hat aber nur 3.902 Einwohner. Für ambulante Dienste bedeutet das lange Fahrwege zwischen wenigen Terminen; für eine Betreuungskraft, die im Haus lebt, spielt die Entfernung schlicht keine Rolle. Anreise und Preis sind in allen zwölf Stadtbezirken gleich.' },
+  { q: 'Wie ist die Pflegesituation in Reutlingen und Umgebung?', a: 'Auffällig familiär. Von den 16.341 Pflegebedürftigen im Landkreis Reutlingen werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent gegenüber 55,9 Prozent in Baden-Württemberg. Ambulante Dienste (13,6 statt 16,4 Prozent) und Heimplätze (12,9 statt 14,9 Prozent) liegen entsprechend unter dem Landeswert. Seit 2021 ist die Zahl der Pflegebedürftigen um 16,7 Prozent gestiegen. Die Statistik wird nur auf Kreisebene erhoben, für die Stadt allein gibt es keine eigenen Zahlen.' },
+  { q: 'Welches Einzugsgebiet wird in Reutlingen bedient?', a: 'Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen' },
+  { q: 'Ist in einer Wohnung in Reutlingen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Reutlingen hat im Schnitt 92,1 m², 22,2 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 79,2 % der Gebäude in Reutlingen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.737 € Unterschied im Monat, 32.844 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -66,63 +78,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Reutlingen?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Reutlingen starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Reutlingen rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Kommt eine Betreuungskraft auch nach Gönningen oder Bronnweiler?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja, und gerade dort lohnt es sich besonders. Zwischen den bewohnten Ortskernen Reutlingens liegen rund 215 Höhenmeter — Mittelstadt am Neckar auf 320, Gönningen am Fuß des Albtraufs auf 521 Metern. Gönningen ist flächenmäßig gut halb so groß wie die gesamte Kernstadt, hat aber nur 3.902 Einwohner. Für ambulante Dienste bedeutet das lange Fahrwege zwischen wenigen Terminen; für eine Betreuungskraft, die im Haus lebt, spielt die Entfernung schlicht keine Rolle. Anreise und Preis sind in allen zwölf Stadtbezirken gleich.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie ist die Pflegesituation in Reutlingen und Umgebung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Auffällig familiär. Von den 16.341 Pflegebedürftigen im Landkreis Reutlingen werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent gegenüber 55,9 Prozent in Baden-Württemberg. Ambulante Dienste (13,6 statt 16,4 Prozent) und Heimplätze (12,9 statt 14,9 Prozent) liegen entsprechend unter dem Landeswert. Seit 2021 ist die Zahl der Pflegebedürftigen um 16,7 Prozent gestiegen. Die Statistik wird nur auf Kreisebene erhoben, für die Stadt allein gibt es keine eigenen Zahlen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Passt eine Betreuungskraft in eine Reutlinger Wohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'In den Stadtbezirken meist ohne Weiteres: Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), überwiegend in Ein- und Zweifamilienhäusern, das Zimmer ist oft schon da. In der Kernstadt kommt es auf den Grundriss an — ein Drittel der Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter, im Schnitt sind es 92. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Alles andere klären wir vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Reutlingen bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Reutlingen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Reutlingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Reutlingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Kommt eine Betreuungskraft auch nach Gönningen oder Bronnweiler?', a: 'Ja, und gerade dort lohnt es sich besonders. Zwischen den bewohnten Ortskernen Reutlingens liegen rund 215 Höhenmeter — Mittelstadt am Neckar auf 320, Gönningen am Fuß des Albtraufs auf 521 Metern. Gönningen ist flächenmäßig gut halb so groß wie die gesamte Kernstadt, hat aber nur 3.902 Einwohner. Für ambulante Dienste bedeutet das lange Fahrwege zwischen wenigen Terminen; für eine Betreuungskraft, die im Haus lebt, spielt die Entfernung schlicht keine Rolle. Anreise und Preis sind in allen zwölf Stadtbezirken gleich.' },
-  { q: 'Wie ist die Pflegesituation in Reutlingen und Umgebung?', a: 'Auffällig familiär. Von den 16.341 Pflegebedürftigen im Landkreis Reutlingen werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent gegenüber 55,9 Prozent in Baden-Württemberg. Ambulante Dienste (13,6 statt 16,4 Prozent) und Heimplätze (12,9 statt 14,9 Prozent) liegen entsprechend unter dem Landeswert. Seit 2021 ist die Zahl der Pflegebedürftigen um 16,7 Prozent gestiegen. Die Statistik wird nur auf Kreisebene erhoben, für die Stadt allein gibt es keine eigenen Zahlen.' },
-  { q: 'Passt eine Betreuungskraft in eine Reutlinger Wohnung?', a: 'In den Stadtbezirken meist ohne Weiteres: Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), überwiegend in Ein- und Zweifamilienhäusern, das Zimmer ist oft schon da. In der Kernstadt kommt es auf den Grundriss an — ein Drittel der Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter, im Schnitt sind es 92. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Alles andere klären wir vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-  { q: 'Welches Einzugsgebiet wird in Reutlingen bedient?', a: 'Reutlingen und Landkreis Reutlingen: Tübingen, Metzingen, Bad Urach, Münsingen und alle Gemeinden im Landkreis Reutlingen und Tübingen' },
-  { q: 'Ist in einer Wohnung in Reutlingen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Reutlingen hat im Schnitt 92,1 m², 22,2 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 79,2 % der Gebäude in Reutlingen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.737 € Unterschied im Monat, 32.844 € im Jahr.' },
-]
 
 export default function Page() {
   return (

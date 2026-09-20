@@ -43,6 +43,19 @@ export const metadata: Metadata = {
   },
 }
 
+const FRAGEN = [
+  { q: 'Was kostet eine 24h-Pflegekraft in Marburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Hessen (Eigenanteil rund 3.230 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Marburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Ist 24h-Pflege über Primundus in Marburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie wohnt man in Marburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Marburg im Schnitt 3,1 Wohnungen, in Hessen 2,2. 71,5 Prozent der Gebäude stehen frei, 13,2 Prozent sind Reihenhäuser. 53,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Marburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie viele ältere Menschen leben in Marburg?', a: '6.145 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,4 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 17,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Gelten die Marburger Pflegezahlen für die Stadt oder für den Landkreis?', a: 'Für den Landkreis — in Hessen wird die Pflegestatistik nicht auf Gemeindeebene veröffentlicht. Das ist wichtig, weil Stadt und Kreis hier weit auseinanderliegen: Die Stadt Marburg ist mit einem Durchschnittsalter von 40,5 Jahren und 17,1 Prozent Einwohnern über 65 sehr jung, der Landkreis Marburg-Biedenkopf hat dagegen mit 88 Pflegebedürftigen je 1.000 Einwohner eine der höchsten Pflegequoten Hessens (Land: 67). Im Kreis werden 14.777 von 21.538 Pflegebedürftigen ausschließlich von Angehörigen versorgt — 68,6 Prozent gegenüber 58,6 Prozent im Land. Wer für die Stadt mit Kreiszahlen rechnet, überschätzt das Alter der Stadtbevölkerung deutlich.' },
+  { q: 'Welches Einzugsgebiet wird in Marburg bedient?', a: 'Marburg und Landkreis Marburg-Biedenkopf: Biedenkopf, Stadtallendorf, Kirchhain und alle Gemeinden im Landkreis Marburg-Biedenkopf' },
+  { q: 'Ist in einer Wohnung in Marburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Marburg hat im Schnitt 84,8 m², 37,3 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 68,7 % der Gebäude in Marburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.230 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.307 € Unterschied im Monat, 27.684 € im Jahr.' },
+]
+
 const schemaMarkup = [
   {
     '@context': 'https://schema.org',
@@ -66,69 +79,15 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was kostet eine 24h-Pflegekraft in Marburg?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Hessen (Eigenanteil rund 3.230 €/Monat, vdek 07/2026).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie schnell kann eine 24h-Pflegekraft in Marburg starten?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist 24h-Pflege über Primundus in Marburg rechtssicher?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Marburg?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Das hängt am Grundriss, und die Ausgangslage in Marburg ist bekannt: Die durchschnittliche Wohnung misst 84,8 Quadratmeter, 37,3 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 29,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie wohnt man in Marburg — Haus oder Geschosswohnung?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Auf ein Gebäude kommen in Marburg im Schnitt 3,1 Wohnungen, in Hessen 2,2. 71,5 Prozent der Gebäude stehen frei, 13,2 Prozent sind Reihenhäuser. 53,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Marburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie viele ältere Menschen leben in Marburg?',
-        acceptedAnswer: { '@type': 'Answer', text: '6.145 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,4 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 17,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Gelten die Marburger Pflegezahlen für die Stadt oder für den Landkreis?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Für den Landkreis — in Hessen wird die Pflegestatistik nicht auf Gemeindeebene veröffentlicht. Das ist wichtig, weil Stadt und Kreis hier weit auseinanderliegen: Die Stadt Marburg ist mit einem Durchschnittsalter von 40,5 Jahren und 17,1 Prozent Einwohnern über 65 sehr jung, der Landkreis Marburg-Biedenkopf hat dagegen mit 88 Pflegebedürftigen je 1.000 Einwohner eine der höchsten Pflegequoten Hessens (Land: 67). Im Kreis werden 14.777 von 21.538 Pflegebedürftigen ausschließlich von Angehörigen versorgt — 68,6 Prozent gegenüber 58,6 Prozent im Land. Wer für die Stadt mit Kreiszahlen rechnet, überschätzt das Alter der Stadtbevölkerung deutlich.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Welches Einzugsgebiet wird in Marburg bedient?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Marburg und Landkreis Marburg-Biedenkopf: Biedenkopf, Stadtallendorf, Kirchhain und alle Gemeinden im Landkreis Marburg-Biedenkopf' },
-      },
-    ],
+    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
+    mainEntity: FRAGEN.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
-const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Marburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Hessen (Eigenanteil rund 3.230 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Marburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
-  { q: 'Ist 24h-Pflege über Primundus in Marburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Passt eine Betreuungskraft überhaupt in eine Wohnung in Marburg?', a: 'Das hängt am Grundriss, und die Ausgangslage in Marburg ist bekannt: Die durchschnittliche Wohnung misst 84,8 Quadratmeter, 37,3 Prozent liegen unter 60 Quadratmetern (Hessen: 20,4 Prozent), und 29,4 Prozent der Haushalte wohnen im Eigentum (Hessen: 46,6 Prozent). Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. In den kleineren Wohnungen wird das eng — deshalb klären wir es vorab am Telefon, damit es hinterher keine Überraschung gibt.' },
-  { q: 'Wie wohnt man in Marburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Marburg im Schnitt 3,1 Wohnungen, in Hessen 2,2. 71,5 Prozent der Gebäude stehen frei, 13,2 Prozent sind Reihenhäuser. 53,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Marburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Wie viele ältere Menschen leben in Marburg?', a: '6.145 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 8,4 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 17,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Gelten die Marburger Pflegezahlen für die Stadt oder für den Landkreis?', a: 'Für den Landkreis — in Hessen wird die Pflegestatistik nicht auf Gemeindeebene veröffentlicht. Das ist wichtig, weil Stadt und Kreis hier weit auseinanderliegen: Die Stadt Marburg ist mit einem Durchschnittsalter von 40,5 Jahren und 17,1 Prozent Einwohnern über 65 sehr jung, der Landkreis Marburg-Biedenkopf hat dagegen mit 88 Pflegebedürftigen je 1.000 Einwohner eine der höchsten Pflegequoten Hessens (Land: 67). Im Kreis werden 14.777 von 21.538 Pflegebedürftigen ausschließlich von Angehörigen versorgt — 68,6 Prozent gegenüber 58,6 Prozent im Land. Wer für die Stadt mit Kreiszahlen rechnet, überschätzt das Alter der Stadtbevölkerung deutlich.' },
-  { q: 'Welches Einzugsgebiet wird in Marburg bedient?', a: 'Marburg und Landkreis Marburg-Biedenkopf: Biedenkopf, Stadtallendorf, Kirchhain und alle Gemeinden im Landkreis Marburg-Biedenkopf' },
-  { q: 'Ist in einer Wohnung in Marburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Marburg hat im Schnitt 84,8 m², 37,3 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 68,7 % der Gebäude in Marburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.230 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.307 € Unterschied im Monat, 27.684 € im Jahr.' },
-]
 
 export default function Page() {
   return (
