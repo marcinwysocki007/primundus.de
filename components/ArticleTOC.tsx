@@ -1,5 +1,7 @@
 'use client'
 
+import { Sicher } from '@/components/Sicher'
+
 import { useEffect, useState, useRef } from 'react'
 
 export interface TocSection {
@@ -11,7 +13,7 @@ interface ArticleTOCProps {
   sections: TocSection[]
 }
 
-export function ArticleTOC({ sections }: ArticleTOCProps) {
+function ArticleTOCInnen({ sections }: ArticleTOCProps) {
   const [activeId, setActiveId] = useState<string>(sections[0]?.id ?? '')
   const [open, setOpen] = useState(false)
   const [visible, setVisible] = useState(false)
@@ -120,5 +122,13 @@ export function ArticleTOC({ sections }: ArticleTOCProps) {
         </div>
       )}
     </div>
+  )
+}
+
+export function ArticleTOC({ sections }: ArticleTOCProps) {
+  return (
+    <Sicher name="Inhaltspille">
+      <ArticleTOCInnen sections={sections} />
+    </Sicher>
   )
 }

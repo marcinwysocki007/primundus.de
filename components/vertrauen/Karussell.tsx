@@ -1,11 +1,12 @@
 'use client'
 
 import { useRef, type ReactNode } from 'react'
+import { Sicher } from '@/components/Sicher'
 
 // Waagerecht wischbare Kartenreihe (Bewertungen). Am Handy wischen, am Computer zusätzlich zwei Pfeile.
 // Martin 17.09.2026: „die Testimonials müssen als fester Teil mit hier rein - so schön und horizontal scrollbar".
 // dunkel = auf dem dunklen Band der Partnerseite; rand = wie weit die Reihe über den Seitenrand hinausläuft.
-export function Karussell({
+function KarussellInnen({
   kopf,
   label,
   children,
@@ -60,5 +61,14 @@ export function Karussell({
         {children}
       </ul>
     </>
+  )
+}
+
+export function Karussell(props: { kopf: ReactNode; label: string; children: ReactNode; dunkel?: boolean; rand?: string }) {
+  // Fällt das Wischen aus, bleiben Kopf und Karten als einfache Reihe stehen
+  return (
+    <Sicher name="Karussell" fallback={<><div>{props.kopf}</div><ul className="mt-9 flex flex-col gap-4">{props.children}</ul></>}>
+      <KarussellInnen {...props} />
+    </Sicher>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { FAQSection } from '@/components/home/FAQSection'
+import { Sicher } from '@/components/Sicher'
 import { SchlussAufruf, Stimmen, VertrauensKarten } from '@/components/vertrauen/Vertrauen'
 import {
   BekanntAus, HeimVergleich, RundumVersorgt, SoFunktionierts, StartKopf, Voraussetzungen, WasIst,
@@ -213,7 +214,7 @@ export default function Page() {
         </section>
 
         {/* ── FAQ ─────────────────────────────────────────────────────────── */}
-        <FAQSection />
+        <Sicher name="FAQ"><FAQSection /></Sicher>
 
         {/* ── SCHLUSSBAND ─────────────────────────────────────────────────── */}
         <SchlussAufruf src="apex-startseite" bild="team" />

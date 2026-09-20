@@ -1,5 +1,7 @@
 'use client'
 
+import { Sicher } from '@/components/Sicher'
+
 import { useState, useEffect, useRef } from 'react'
 
 export interface StadtEntry {
@@ -20,7 +22,7 @@ function capitalizeCity(s: string): string {
   return s.trim().replace(/\S+/g, w => w.charAt(0).toUpperCase() + w.slice(1))
 }
 
-export function RegionenSearch(_props: Props) {
+function RegionenSearchInnen(_props: Props) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<StadtEntry[]>([])
   const [loading, setLoading] = useState(false)
@@ -245,5 +247,13 @@ function DirectCTA({ query, className }: { query: string; className?: string }) 
         Preis ansehen →
       </a>
     </div>
+  )
+}
+
+export function RegionenSearch(props: Props) {
+  return (
+    <Sicher name="Ortssuche">
+      <RegionenSearchInnen {...props} />
+    </Sicher>
   )
 }

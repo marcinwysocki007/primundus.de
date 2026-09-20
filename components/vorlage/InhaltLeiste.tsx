@@ -1,10 +1,12 @@
 'use client'
 
+import { Sicher } from '@/components/Sicher'
+
 import { useEffect, useState } from 'react'
 
 // Inhaltsverzeichnis in der rechten Spalte der Ratgeber-Vorlage (nur ab 1024 px).
 // Auf dem Handy bleibt die schwebende Pille aus ArticleTOC.
-export function InhaltLeiste({ abschnitte }: { abschnitte: { id: string; title: string }[] }) {
+function InhaltLeisteInnen({ abschnitte }: { abschnitte: { id: string; title: string }[] }) {
   const [aktiv, setAktiv] = useState(abschnitte[0]?.id ?? '')
 
   useEffect(() => {
@@ -44,5 +46,13 @@ export function InhaltLeiste({ abschnitte }: { abschnitte: { id: string; title: 
         ))}
       </ul>
     </nav>
+  )
+}
+
+export function InhaltLeiste({ abschnitte }: { abschnitte: { id: string; title: string }[] }) {
+  return (
+    <Sicher name="Inhaltsleiste">
+      <InhaltLeisteInnen abschnitte={abschnitte} />
+    </Sicher>
   )
 }
