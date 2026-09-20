@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bad Homburg & Hochtaunuskreis',
-  description: '24-Stunden-Pflege in Bad Homburg & Hochtaunuskreis: Preis und passende Betreuungskräfte in 2 Minuten sehen. Keine Vermittlungsgebühr, täglich kündbar.',
+  description: 'In Bad Homburg & Hochtaunuskreis zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-homburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

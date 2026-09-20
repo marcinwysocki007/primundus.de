@@ -29,7 +29,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Krefeld: Preis und Kräfte sofort sehen',
-  description: '24-Stunden-Pflege in Krefeld: Ihren Preis und die passenden Betreuungskräfte sehen Sie in 2 Minuten — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
+  description: 'In Krefeld zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Willich und Tönisvorst. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-krefeld' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

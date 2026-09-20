@@ -27,7 +27,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Halle (Saale): Preis sofort sehen',
-  description: '24-Stunden-Pflege in Halle (Saale): Preis und passende Betreuungskräfte in 2 Minuten sehen — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
+  description: 'In Halle (Saale) zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-halle-saale' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

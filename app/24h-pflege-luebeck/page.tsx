@@ -29,7 +29,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Lübeck: Preis und Kräfte sofort sehen',
-  description: '24-Stunden-Pflege in Lübeck: Ihren Preis und die passenden Betreuungskräfte sehen Sie in 2 Minuten — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
+  description: 'In Lübeck zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Bad Oldesloe und Ratzeburg. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-luebeck' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

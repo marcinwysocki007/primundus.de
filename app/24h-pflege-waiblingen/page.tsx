@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Waiblingen: Preis sofort sehen',
-  description: '24-Stunden-Pflege in Waiblingen: Preis und passende Betreuungskräfte in 2 Minuten sehen — mit Foto, Erfahrung und Deutschniveau. Täglich kündbar.',
+  description: 'In Waiblingen zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Im Einsatz in Winnenden und Backnang. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-waiblingen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

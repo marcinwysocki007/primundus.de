@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Speyer & Rhein-Pfalz-Kreis',
-  description: '24-Stunden-Pflege in Speyer & Rhein-Pfalz-Kreis: Preis und passende Betreuungskräfte in 2 Minuten sehen. Keine Vermittlungsgebühr, täglich kündbar.',
+  description: 'In Speyer & Rhein-Pfalz-Kreis zieht die Betreuungskraft bei Ihnen ein: Haushalt, Körperpflege, nachts bei Bedarf. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-speyer' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

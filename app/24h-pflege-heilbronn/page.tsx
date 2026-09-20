@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Heilbronn — Stadt- und Landkreis',
-  description: '24-Stunden-Pflege in Heilbronn — Stadt- und Landkreis: Preis und passende Betreuungskräfte in 2 Minuten sehen. Keine Vermittlungsgebühr, täglich kündbar.',
+  description: 'In Heilbronn — Stadt- und Landkreis zieht die Betreuungskraft bei Ihnen ein und führt den Haushalt. Keine Vermittlungsgebühr, täglich kündbar.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-heilbronn' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
