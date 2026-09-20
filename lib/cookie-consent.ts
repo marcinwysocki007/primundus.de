@@ -9,7 +9,11 @@ const STORAGE_KEY = 'cookie-consent';
 export const cookieConsent = {
   hasConsent(): boolean {
     if (typeof window === 'undefined') return false;
-    return !!localStorage.getItem(STORAGE_KEY);
+    try {
+      return !!localStorage.getItem(STORAGE_KEY);
+    } catch {
+      return false;
+    }
   },
 
   getConsent(): ConsentState | null {
@@ -32,12 +36,20 @@ export const cookieConsent = {
 
   saveConsent(state: ConsentState) {
     if (typeof window === 'undefined') return;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch {
+      // Speicher gesperrt (privater Modus, blockierte Cookies): Zustimmung gilt für diese Seite
+    }
     window.dispatchEvent(new CustomEvent('cookie-consent-changed', { detail: state }));
   },
 
   revokeConsent() {
     if (typeof window === 'undefined') return;
-    localStorage.removeItem(STORAGE_KEY);
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // siehe saveConsent
+    }
   },
 };

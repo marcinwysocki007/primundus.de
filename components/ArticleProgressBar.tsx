@@ -1,8 +1,10 @@
 'use client'
 
+import { Sicher } from '@/components/Sicher'
+
 import { useEffect, useState } from 'react'
 
-export function ArticleProgressBar() {
+function ArticleProgressBarInnen() {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
@@ -22,5 +24,13 @@ export function ArticleProgressBar() {
         style={{ width: `${progress}%` }}
       />
     </div>
+  )
+}
+
+export function ArticleProgressBar() {
+  return (
+    <Sicher name="Lesebalken">
+      <ArticleProgressBarInnen  />
+    </Sicher>
   )
 }
