@@ -30,7 +30,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Pforzheim & Enzkreis ab 2.150 €',
-  description: '1:1-Betreuung zu Hause statt Heim: Betreuungskraft zieht in Pforzheim & Enzkreis ein, entlastet die Familie. Ab 2.150 €, Bestpreisgarantie, täglich kündbar.',
+  description: 'Zu Hause bleiben statt ins Heim: In Pforzheim & Enzkreis zieht eine Betreuungskraft ein und hilft im Alltag, bei Bedarf auch nachts. Ab 2.150 € im Monat.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-pforzheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Karlsruhe ab 2.150 €: 1:1 zu Hause',
-  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Betreuungskraft zieht in Karlsruhe ein, entlastet die Familie. Ab 2.150 €, Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Karlsruhe ab 2.150 € im Monat',
+  description: 'Zu Hause bleiben statt ins Pflegeheim: In Karlsruhe zieht eine Betreuungskraft ein, hilft im Alltag und ist bei Bedarf auch nachts da. Ab 2.150 € im Monat.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-karlsruhe' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -30,7 +30,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Rheinisch-Bergischer Kreis ab 2.150 €',
   description:
-    '1:1-Betreuung zu Hause statt Heim: Betreuungskraft zieht in Rheinisch-Bergischer Kreis ein. Ab 2.150 €, Bestpreisgarantie, täglich kündbar.',
+    'Zu Hause bleiben statt ins Heim: In Rheinisch-Bergischer Kreis zieht eine Betreuungskraft ein und hilft im Alltag. Ab 2.150 € im Monat.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

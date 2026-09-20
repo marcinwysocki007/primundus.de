@@ -27,8 +27,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Rheinland-Pfalz ab 2.150 €: 1:1 zu Hause',
-  description: '1:1-Betreuung in den eigenen vier Wänden statt Heimplatz: Betreuungskraft zieht in Rheinland-Pfalz ein, entlastet die Familie. Ab 2.150 €, Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Rheinland-Pfalz ab 2.150 € im Monat',
+  description: 'Zu Hause bleiben statt ins Heim: In Rheinland-Pfalz zieht eine Betreuungskraft ein, hilft im Alltag und ist bei Bedarf auch nachts da. Ab 2.150 € im Monat.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinland-pfalz' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
