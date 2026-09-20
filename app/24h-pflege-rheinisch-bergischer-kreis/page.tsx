@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -21,6 +23,7 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rheinisch-Bergischer Kreis ausmacht" },
   { id: 'einzugsgebiet-rheinisch-bergischer-kreis', title: "Einzugsgebiet Rheinisch-Bergischer Kreis" },
   { id: 'werkzeuge', title: "Was es in Rheinisch-Bergischer Kreis kostet, und was die Pflegekasse dazugibt" },
+  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
   { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Kreis" },
 ]
 
@@ -173,6 +176,22 @@ export default function Page() {
           </Abschnitt>
 
           <OrtWerkzeuge ort={'Rheinisch-Bergischer Kreis'} land={'Nordrhein-Westfalen'} altbau={42.2} miete={7.49} />
+
+
+          <OrtStimmen
+
+
+            ort={'Rheinisch-Bergischer Kreis'}
+
+
+            herkunft="umgebung"
+
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
+
+
+          />
+
 
 
           <Abschnitt id="haeufige-fragen-aus-dem" titel="Häufige Fragen aus dem Kreis">

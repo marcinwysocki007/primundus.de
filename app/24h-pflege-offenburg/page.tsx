@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -22,6 +24,7 @@ const SECTIONS = [
   { id: 'einzugsgebiet-offenburg', title: "Einzugsgebiet Offenburg" },
   { id: 'werkzeuge', title: "Was es in Offenburg kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'stimmen-vor-ort', title: "Familien aus Offenburg über uns" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Offenburg" },
 ]
 
@@ -262,6 +265,17 @@ export default function Page() {
               ]}
             />
           </Abschnitt>
+
+          <OrtStimmen
+
+            ort={'Offenburg'}
+
+            herkunft="ort"
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250117-brigitte'].includes(b.id))}
+
+          />
+
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Offenburg">
             <Fragen fragen={FRAGEN} />

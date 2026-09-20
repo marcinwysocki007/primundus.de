@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -21,6 +23,7 @@ const SECTIONS = [
   { id: 'einzugsgebiet-hannover', title: "Einzugsgebiet Hannover" },
   { id: 'werkzeuge', title: "Was es in Hannover kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'stimmen-vor-ort', title: "Familien aus Hannover über uns" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hannover" },
 ]
 
@@ -262,6 +265,17 @@ export default function Page() {
               ]}
             />
           </Abschnitt>
+
+          <OrtStimmen
+
+            ort={'Hannover'}
+
+            herkunft="ort"
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260706-stefan', 'k-20260403-heike', 'k-20241013-henning'].includes(b.id))}
+
+          />
+
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Hannover">
             <Fragen fragen={FRAGEN} />

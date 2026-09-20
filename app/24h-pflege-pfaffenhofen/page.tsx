@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -22,6 +24,7 @@ const SECTIONS = [
   { id: 'einzugsgebiet-pfaffenhofen-an-der', title: "Einzugsgebiet Pfaffenhofen an der Ilm" },
   { id: 'werkzeuge', title: "Was es in Pfaffenhofen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Pfaffenhofen an der Ilm" },
 ]
 
@@ -260,6 +263,17 @@ export default function Page() {
               ]}
             />
           </Abschnitt>
+
+          <OrtStimmen
+
+            ort={'Pfaffenhofen'}
+
+            herkunft="umgebung"
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260823-michael', 'k-20260416-barbara'].includes(b.id))}
+
+          />
+
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Pfaffenhofen an der Ilm">
             <Fragen fragen={FRAGEN} />

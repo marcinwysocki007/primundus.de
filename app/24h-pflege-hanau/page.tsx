@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -22,6 +24,7 @@ const SECTIONS = [
   { id: 'einzugsgebiet-hanau', title: "Einzugsgebiet Hanau" },
   { id: 'werkzeuge', title: "Was es in Hanau kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'stimmen-vor-ort', title: "Familien aus Hanau über uns" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hanau" },
 ]
 
@@ -263,6 +266,17 @@ export default function Page() {
               ]}
             />
           </Abschnitt>
+
+          <OrtStimmen
+
+            ort={'Hanau'}
+
+            herkunft="ort"
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250222-simone'].includes(b.id))}
+
+          />
+
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Hanau">
             <Fragen fragen={FRAGEN} />

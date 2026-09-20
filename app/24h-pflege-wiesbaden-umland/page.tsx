@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -22,6 +24,7 @@ const SECTIONS = [
   { id: 'einzugsgebiet-taunusstein', title: "Einzugsgebiet Taunusstein" },
   { id: 'werkzeuge', title: "Was es in Wiesbaden & Umland kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Taunusstein" },
 ]
 
@@ -263,6 +266,17 @@ export default function Page() {
               ]}
             />
           </Abschnitt>
+
+          <OrtStimmen
+
+            ort={'Wiesbaden & Umland'}
+
+            herkunft="umgebung"
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
+
+          />
+
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Taunusstein">
             <Fragen fragen={FRAGEN} />

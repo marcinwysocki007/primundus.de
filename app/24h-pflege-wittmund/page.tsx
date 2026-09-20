@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -21,6 +23,7 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wittmund ausmacht" },
   { id: 'einzugsgebiet-landkreis-wittmund', title: "Einzugsgebiet Landkreis Wittmund" },
   { id: 'werkzeuge', title: "Was es in Wittmund kostet, und was die Pflegekasse dazugibt" },
+  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
   { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Harlingerland" },
 ]
 
@@ -172,6 +175,22 @@ export default function Page() {
           </Abschnitt>
 
           <OrtWerkzeuge ort={'Wittmund'} land={'Niedersachsen'} altbau={40.3} miete={6.35} />
+
+
+          <OrtStimmen
+
+
+            ort={'Wittmund'}
+
+
+            herkunft="umgebung"
+
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260706-stefan', 'k-20260403-heike'].includes(b.id))}
+
+
+          />
+
 
 
           <Abschnitt id="haeufige-fragen-aus-dem" titel="Häufige Fragen aus dem Harlingerland">

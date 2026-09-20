@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -21,6 +23,7 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hochtaunuskreis ausmacht" },
   { id: 'einzugsgebiet-hochtaunuskreis', title: "Einzugsgebiet Hochtaunuskreis" },
   { id: 'werkzeuge', title: "Was es in Hochtaunuskreis kostet, und was die Pflegekasse dazugibt" },
+  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -173,6 +176,22 @@ export default function Page() {
           </Abschnitt>
 
           <OrtWerkzeuge ort={'Hochtaunuskreis'} land={'Hessen'} altbau={41.8} miete={9.23} />
+
+
+          <OrtStimmen
+
+
+            ort={'Hochtaunuskreis'}
+
+
+            herkunft="umgebung"
+
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
+
+
+          />
+
 
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">

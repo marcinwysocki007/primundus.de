@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -22,6 +24,7 @@ const SECTIONS = [
   { id: 'einzugsgebiet-erlangen', title: "Einzugsgebiet Erlangen" },
   { id: 'werkzeuge', title: "Was es in Erlangen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'stimmen-vor-ort', title: "Familien aus Erlangen über uns" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Erlangen" },
 ]
 
@@ -268,6 +271,17 @@ export default function Page() {
               ]}
             />
           </Abschnitt>
+
+          <OrtStimmen
+
+            ort={'Erlangen'}
+
+            herkunft="ort"
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20241225-henrik'].includes(b.id))}
+
+          />
+
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Erlangen">
             <Fragen fragen={FRAGEN} />

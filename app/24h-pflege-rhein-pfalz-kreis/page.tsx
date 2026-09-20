@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
@@ -21,6 +23,7 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rhein-Pfalz-Kreis ausmacht" },
   { id: 'einzugsgebiet-rhein-pfalz-kreis', title: "Einzugsgebiet Rhein-Pfalz-Kreis" },
   { id: 'werkzeuge', title: "Was es in Rhein-Pfalz-Kreis kostet, und was die Pflegekasse dazugibt" },
+  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -173,6 +176,22 @@ export default function Page() {
           </Abschnitt>
 
           <OrtWerkzeuge ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} altbau={39.8} miete={6.91} />
+
+
+          <OrtStimmen
+
+
+            ort={'Rhein-Pfalz-Kreis'}
+
+
+            herkunft="umgebung"
+
+
+            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260802-karin', 'k-20251031-martina'].includes(b.id))}
+
+
+          />
+
 
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">
