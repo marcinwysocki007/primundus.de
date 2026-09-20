@@ -101,3 +101,10 @@ html {
     animation-play-state: paused;
   }
 }
+
+/* Pflegegrad-Rechner: „Ergebnis drucken oder als PDF sichern" druckt nur das Ergebnis samt Antworten */
+@media print {
+  html.pgr-druck body * { visibility: hidden; }
+  html.pgr-druck #pgr-druck, html.pgr-druck #pgr-druck * { visibility: visible; }
+  html.pgr-druck #pgr-druck { position: absolute; left: 0; top: 0; width: 100%; padding: 16px; }
+}
