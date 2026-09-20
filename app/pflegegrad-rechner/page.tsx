@@ -312,7 +312,7 @@ export default function PflegegradRechnerSeite() {
                 { title: 'Schlaganfall', desc: <>Mobilität und Selbstversorgung bei Lähmungen, Modul 2 bei Sprach- und Verständnisstörungen, Modul 5 bei Therapien zu Hause. Mehr dazu: {l('/pflegegrad-nach-schlaganfall', 'Pflegegrad nach Schlaganfall')}.</> },
                 { title: 'Krebs', desc: 'Während Chemotherapie oder Bestrahlung oft Modul 5 (Injektionen, Port, ausgedehnte Behandlungsbesuche, Diät), bei Schwäche Modul 1 und 4. Antrag stellen, sobald der Alltag auf Dauer eingeschränkt ist; im Krankenhaus oder Hospiz gelten verkürzte Fristen.' },
                 { title: 'Rheuma, Arthrose, COPD, Herzschwäche', desc: 'Mobilität (Treppen, Aufstehen), Selbstversorgung (Waschen, Anziehen, Schuhe) und Modul 5 (Medikamente, Spritzen, Sauerstoff, Messungen, Arztbesuche).' },
-                { title: 'Depression und andere psychische Erkrankungen', desc: <>Modul 3 (Antriebslosigkeit, Ängste, Abwehr), Modul 6 (Tagesablauf, Kontakte) und Modul 4, wenn Körperpflege und Essen ohne Anstoß unterbleiben. Auch {l('/pflegegrad-ohne-diagnose', 'ohne klare Diagnose')} ist ein Pflegegrad möglich.</> },
+                { title: 'Depression und andere psychische Erkrankungen', desc: <>Modul 3 (Antriebslosigkeit, Ängste, Abwehr), Modul 6 (Tagesablauf, Kontakte) und Modul 4, wenn Körperpflege und Essen ohne Anstoß unterbleiben. Auch ohne klare Diagnose ist ein Pflegegrad möglich.</> },
               ]}
             />
           </Abschnitt>
@@ -349,9 +349,9 @@ export default function PflegegradRechnerSeite() {
             </Text>
             <Punkte
               punkte={[
-                { title: 'Widerspruch innerhalb eines Monats', desc: <>Schriftlich bei der Pflegekasse, zunächst ohne Begründung, damit die Frist gewahrt ist. Fordern Sie das Gutachten an und vergleichen Sie es Kriterium für Kriterium mit Ihrem Pflegetagebuch und dem Ergebnis des Rechners. {l('/pflegegrad-widerspruch-einlegen', 'So legen Sie Widerspruch ein')}.</> },
+                { title: 'Widerspruch innerhalb eines Monats', desc: <>Schriftlich bei der Pflegekasse, zunächst ohne Begründung, damit die Frist gewahrt ist. Fordern Sie das Gutachten an und vergleichen Sie es Kriterium für Kriterium mit Ihrem Pflegetagebuch und dem Ergebnis des Rechners. {l('/widerspruch-pflegekasse-einlegen', 'So legen Sie Widerspruch ein')}.</> },
                 { title: 'Höherstufung bei Verschlechterung', desc: <>Braucht die Person mehr Hilfe als beim letzten Gutachten, stellen Sie einen Antrag auf Höherstufung; der Rechner zeigt vorher, ob die Punkte reichen. {l('/pflegegrad-erhoehen', 'Pflegegrad erhöhen')}.</> },
-                { title: 'Änderungen melden', desc: <>Ein Krankenhausaufenthalt, ein Umzug ins Heim oder eine neue Pflegeperson: {l('/pflegegrad-aenderung-melden', 'was Sie der Pflegekasse melden müssen')}.</> },
+                { title: 'Änderungen melden', desc: 'Ein Krankenhausaufenthalt, ein Umzug ins Heim oder eine neue Pflegeperson: Melden Sie das der Pflegekasse, damit Pflegegeld und Zuschüsse stimmen und nichts zurückgefordert wird.' },
               ]}
             />
           </Abschnitt>
