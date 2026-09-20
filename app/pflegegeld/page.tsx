@@ -414,17 +414,13 @@ export default function Pflegegeld() {
               Die neuen Beträge gibt das Bundesgesundheitsministerium im Bundesanzeiger bekannt. Was darüber hinaus politisch diskutiert wird,
               ist Stand September 2026 nicht Gesetz; wir aktualisieren diese Seite, sobald sich etwas ändert.
             </Text>
-            <Tabelle
-              titel="Pflegegeld seit 2017"
-              kopf={['Pflegegrad', 'bis 2023', '2024', 'seit 2025']}
-              zeilen={[
-                ['Pflegegrad 2', '316 €', '332 €', euro(PFLEGEGELD[2])],
-                ['Pflegegrad 3', '545 €', '573 €', euro(PFLEGEGELD[3])],
-                ['Pflegegrad 4', '728 €', '765 €', euro(PFLEGEGELD[4])],
-                ['Pflegegrad 5', '901 €', '947 €', euro(PFLEGEGELD[5])],
+            <Punkte
+              punkte={[
+                { title: '1. Januar 2024', desc: 'plus 5 Prozent auf alle Pflegegeld-Beträge (Pflegeunterstützungs- und -entlastungsgesetz).' },
+                { title: '1. Januar 2025', desc: <>plus 4,5 Prozent, seitdem gelten {euro(PFLEGEGELD[2])} bis {euro(PFLEGEGELD[5])} (§ 30 Abs. 1 SGB XI).</> },
+                { title: '2026 und 2027', desc: 'keine Erhöhung im Gesetz; die Beträge bleiben, wie sie sind.' },
+                { title: '1. Januar 2028', desc: 'nächste Anpassung nach der Kerninflation der drei Vorjahre, höchstens im Umfang der Lohnentwicklung. Die Höhe steht erst kurz vorher fest.' },
               ]}
-              betont={3}
-              fuss="2024: plus 5 % (Pflegeunterstützungs- und -entlastungsgesetz). 2025: plus 4,5 % (§ 30 SGB XI)."
             />
           </Abschnitt>
 
