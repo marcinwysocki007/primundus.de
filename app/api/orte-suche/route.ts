@@ -63,6 +63,24 @@ const KNOWN_SLUGS = new Set([
 ])
 
 /**
+ * Umlautfrei vergleichen: Wer „Muenchen", „koeln" oder „Bad Toelz" eintippt, soll dieselben Treffer bekommen
+ * wie mit Umlaut (Martin 20.09.2026: „kann ich bei der Suche nach jedem Ort suchen?").
+ */
+function ohneUmlaut(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+}
+
+/** Umgekehrte Schreibweise für die Abfrage bei openplzapi.org, die nur echte Ortsnamen kennt („Muenchen" → „München"). */
+function mitUmlaut(s: string): string {
+  return s.replace(/ae/g, 'ä').replace(/oe/g, 'ö').replace(/ue/g, 'ü').replace(/Ae/g, 'Ä').replace(/Oe/g, 'Ö').replace(/Ue/g, 'Ü')
+}
+
+/**
  * Normalise a city name to a URL slug.
  * ä→ae, ö→oe, ü→ue, ß→ss, spaces→hyphens, lowercase.
  */
@@ -178,13 +196,13 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ results: nearby })
   }
 
-  // Name search — case-insensitive substring, starts-with first
-  const ql = q.toLowerCase()
+  // Name search — ohne Rücksicht auf Groß-/Kleinschreibung und Umlaute, Treffer am Wortanfang zuerst
+  const ql = ohneUmlaut(q)
   const matched = ORTE
-    .filter(([, name]) => name.toLowerCase().includes(ql))
+    .filter(([, name]) => ohneUmlaut(name).includes(ql))
     .sort(([, a], [, b]) => {
-      const aStarts = a.toLowerCase().startsWith(ql)
-      const bStarts = b.toLowerCase().startsWith(ql)
+      const aStarts = ohneUmlaut(a).startsWith(ql)
+      const bStarts = ohneUmlaut(b).startsWith(ql)
       if (aStarts && !bStarts) return -1
       if (!aStarts && bStarts) return 1
       return a.localeCompare(b, 'de')
@@ -199,7 +217,14 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ results: matched })
   }
 
-  // Nothing in local DB — fallback to OpenPLZ API
+  // Nichts in der eigenen Liste — openplzapi.org fragen, bei Bedarf mit zurückgesetzten Umlauten
   const apiResults = await openPlzFallback(q, false, false)
-  return NextResponse.json({ results: apiResults })
+  if (apiResults.length > 0) {
+    return NextResponse.json({ results: apiResults })
+  }
+  const variante = mitUmlaut(q)
+  if (variante !== q) {
+    return NextResponse.json({ results: await openPlzFallback(variante, false, false) })
+  }
+  return NextResponse.json({ results: [] })
 }

@@ -118,7 +118,7 @@ export function RegionenSearch(_props: Props) {
       {showNearby && (
         <div className="mt-2">
           <p className="text-[12px] text-pm-mute px-1 mb-2">
-            Keine eigene Seite für diese PLZ — Städte in Ihrer Nähe:
+            Für diese Postleitzahl haben wir keine eigene Seite. Orte in der Nähe:
           </p>
           <div className="space-y-2">
             {nearbyResults.map(s => (
@@ -132,18 +132,18 @@ export function RegionenSearch(_props: Props) {
       {/* Fehler */}
       {error && (
         <div className="mt-2 bg-white border border-pm-line rounded-xl px-5 py-5 shadow-sm">
-          <p className="text-[14px] font-bold text-pm-ink mb-1">Suche nicht verfügbar</p>
+          <p className="text-[14px] font-bold text-pm-ink mb-1">Suche gerade nicht erreichbar</p>
           <p className="text-[13px] text-pm-mute mb-4">
-            Kein Problem — starten Sie direkt eine Anfrage oder rufen Sie uns an.
+            Ihren Preis können Sie trotzdem sofort berechnen, oder Sie rufen uns an.
           </p>
           <div className="flex flex-col sm:flex-row gap-2">
             <a
-              href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
+              href={rechnerLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-2.5 px-5 rounded-full transition-colors"
             >
-              Jetzt Anfrage starten →
+              Preis & Pflegekräfte ansehen →
             </a>
             <a
               href="tel:+4989200000830"
@@ -159,19 +159,19 @@ export function RegionenSearch(_props: Props) {
       {showNoResults && (
         <div className="mt-2 bg-white border border-pm-line rounded-xl px-5 py-5 shadow-sm">
           <p className="text-[14px] font-bold text-pm-ink mb-1">
-            Keine eigene Seite für „{capitalizeCity(query)}" — wir vermitteln trotzdem dort
+            Für „{capitalizeCity(query)}" haben wir keine eigene Seite
           </p>
           <p className="text-[13px] text-pm-mute mb-4">
-            Primundus ist in ganz Deutschland tätig. Starten Sie direkt eine Anfrage — wir finden die passende Betreuungskraft für Ihre Region.
+            Unsere Betreuungskräfte sind trotzdem dort im Einsatz. Ihren Preis und passende Pflegekräfte sehen Sie in 2 Minuten, ohne Kontaktdaten.
           </p>
           <div className="flex flex-col sm:flex-row gap-2">
             <a
-              href={`https://kostenrechner.primundus.de?ort=${encodeURIComponent(capitalizeCity(query))}`}
+              href={rechnerLink(capitalizeCity(query))}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[14px] py-2.5 px-5 rounded-full transition-colors"
             >
-              Anfrage für {capitalizeCity(query)} starten →
+              Preis für {capitalizeCity(query)} ansehen →
             </a>
             <a
               href="tel:+4989200000830"
@@ -190,7 +190,7 @@ export function RegionenSearch(_props: Props) {
 
 function ResultCard({ stadt, query, isNearby }: { stadt: StadtEntry; query: string; isNearby?: boolean }) {
   const hasDedicatedPage = stadt.hasPage === true
-  const ctaHref = `https://kostenrechner.primundus.de?ort=${encodeURIComponent(stadt.name)}`
+  const ctaHref = rechnerLink(stadt.name)
 
   return (
     <div className="bg-white border border-pm-line rounded-xl px-5 py-4 flex items-center justify-between gap-4 shadow-sm">
@@ -216,11 +216,17 @@ function ResultCard({ stadt, query, isNearby }: { stadt: StadtEntry; query: stri
           rel="noopener noreferrer"
           className="text-[13px] font-bold bg-pm-coral hover:bg-pm-coral-deep text-white rounded-full px-3 py-2 transition-colors whitespace-nowrap"
         >
-          Anfrage starten
+          Preis ansehen
         </a>
       </div>
     </div>
   )
+}
+
+/** Rechner-Link mit Ort, Start und eigener Quelle, damit wir sehen, was die Ortssuche bringt. */
+function rechnerLink(ort?: string): string {
+  const basis = 'https://kostenrechner.primundus.de/?start=1&src=apex-regionen'
+  return ort ? `${basis}&ort=${encodeURIComponent(ort)}` : basis
 }
 
 function DirectCTA({ query, className }: { query: string; className?: string }) {
@@ -228,15 +234,15 @@ function DirectCTA({ query, className }: { query: string; className?: string }) 
   return (
     <div className={`bg-pm-paper border border-pm-line rounded-xl px-5 py-4 ${className ?? ''}`}>
       <p className="text-[13px] text-pm-body mb-3">
-        Ihre genaue Adresse ist kein Problem — wir vermitteln überall in Deutschland.
+        Unsere Betreuungskräfte sind in ganz Deutschland im Einsatz, auch bei Ihnen.
       </p>
       <a
-        href={`https://kostenrechner.primundus.de?ort=${encodeURIComponent(city)}`}
+        href={rechnerLink(city)}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[13px] py-2 px-4 rounded-full transition-colors"
       >
-        Direkte Anfrage starten →
+        Preis ansehen →
       </a>
     </div>
   )
