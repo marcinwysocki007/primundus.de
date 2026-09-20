@@ -139,7 +139,7 @@ export default function TestsiegerPage() {
 
           <Abschnitt id="familie" titel="Was heißt das für Sie als Familie?">
             <Text>
-              Wenn Sie eine Betreuungskraft für Ihre Eltern oder Ihren Partner suchen, wollen Sie sich auf Ihren Anbieter
+              Wenn Sie eine Betreuungskraft für einen Angehörigen suchen, wollen Sie sich auf Ihren Anbieter
               verlassen können. In der Service-Studie 2021 bewerteten Familien Primundus besser als alle anderen
               untersuchten Anbieter der Kategorie. Dazu kommen diese Leistungen:
             </Text>

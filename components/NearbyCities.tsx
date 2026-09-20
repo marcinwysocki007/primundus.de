@@ -37,8 +37,8 @@ export function NearbyCities({ current }: { current: string }) {
         Auch in Ihrer Nähe
       </p>
       <p className="text-[15px] leading-relaxed text-pm-body mb-4">
-        Unsere Betreuungskräfte sind bundesweit im Einsatz — auch dort, wo Ihre Eltern wirklich
-        wohnen. Vielleicht ist einer dieser Orte näher dran:
+        Unsere Betreuungskräfte sind bundesweit im Einsatz — auch dort, wo die Person wohnt, um die es
+        geht. Vielleicht ist einer dieser Orte näher dran:
       </p>
       <div className="flex flex-wrap gap-2">
         {[...ausRegion, ...ueberGrenze].map((s) => (
