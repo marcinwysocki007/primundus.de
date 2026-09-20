@@ -26,7 +26,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Kontakt: Primundus täglich 8–20 Uhr erreichen',
   description:
-    'Primundus erreichen: 089 200 000 830 täglich 8–20 Uhr, WhatsApp, info@primundus.de. Büro Landsberger Str. 155, München. Preis und Pflegekräfte auch ohne Anruf im Kostenrechner.',
+    'Primundus erreichen: 089 200 000 830, täglich 8 bis 20 Uhr, WhatsApp, info@primundus.de. Preis und Pflegekräfte sehen Sie auch ohne Anruf im Kostenrechner.',
   alternates: { canonical: 'https://primundus.de/kontakt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

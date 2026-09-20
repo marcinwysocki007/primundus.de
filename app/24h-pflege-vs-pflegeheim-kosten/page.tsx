@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import dynamic from 'next/dynamic'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
@@ -28,7 +29,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
-  description: 'Pflegeheim: Ø 3.364 €/Monat Eigenanteil. 24h-Pflege: bei Pflegegrad 3 ab ca. 923 €/Monat nach Zuschüssen und Steuer. Vollständiger Kostenvergleich mit allen Zahlen für 2026.',
+  description: 'Pflegeheim: im Schnitt 3.364 € Eigenanteil im Monat. Zu Hause bei Pflegegrad 3 ab ca. 923 € nach Zuschüssen und Steuer. Der Vergleich mit allen Zahlen 2026.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten' },
   openGraph: {
     title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
@@ -130,7 +131,9 @@ export default function VsKosten() {
             <Text>
               Der entscheidende Vergleich ist nicht Brutto gegen Brutto — sondern der tatsächliche Eigenanteil nach allen Kassenzuschüssen. Und dabei schneidet die 24h-Pflege zuhause in den meisten Fällen besser ab.
             </Text>
-            <GrafikKostenvergleich />
+            <Sicher name="Grafik Kostenvergleich">
+              <GrafikKostenvergleich />
+            </Sicher>
           </Abschnitt>
 
           <Abschnitt id="pflegeheim" titel="Was das Pflegeheim wirklich kostet">

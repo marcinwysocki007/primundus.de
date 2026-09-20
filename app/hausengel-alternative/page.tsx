@@ -8,7 +8,7 @@ const PH = ANBIETER.find((a) => a.slug === 'hausengel')!
 export const metadata: Metadata = {
   title: 'Hausengel-Alternative? Primundus im direkten Vergleich',
   description:
-    'Hausengel oder Primundus: angestellte Betreuungskräfte statt selbstständiger, Preis sofort online statt nach Beratung, Auswahl vor dem Vertrag. Der Faktenvergleich, Stand August 2026.',
+    'Hausengel oder Primundus: angestellte Betreuungskräfte statt selbstständiger, Preis sofort online statt nach Beratung, Auswahl vor dem Vertrag. Der Vergleich.',
   alternates: { canonical: 'https://primundus.de/hausengel-alternative' },
   openGraph: {
     title: 'Hausengel oder Primundus? Der direkte Vergleich',

@@ -69,8 +69,7 @@ export default function Krankheiten() {
           <Abschnitt id="demenzerkrankungen" titel="Demenzerkrankungen">
             <Punkte
               punkte={[
-                { title: l('/demenz-pflege-zuhause', 'Demenz — Pflege zuhause'), desc: 'Was möglich ist, wie man den Alltag gestaltet und ab wann eine 24h-Kraft nötig wird.' },
-                { title: l('/alzheimer-betreuung-zuhause', 'Alzheimer — Betreuung zuhause'), desc: 'Alzheimer je nach Stadium pflegen — Alltagstipps, Sicherheit und 24h-Betreuung.' },
+                { title: l('/demenz-pflege-zuhause', 'Demenz und Alzheimer: Pflege zu Hause'), desc: 'Wie lange häusliche Pflege möglich ist, was sie kostet, wann eine Betreuungskraft nötig wird und wann das Heim.' },
                 { title: l('/pflegegrad-bei-demenz', 'Pflegegrad bei Demenz'), desc: 'Welcher Pflegegrad bei welchem Stadium — und wie man die Begutachtung vorbereitet.' },
                 { title: l('/tagesstruktur-demenz', 'Tagesstruktur bei Demenz'), desc: 'Feste Routinen als wichtigstes Werkzeug — Muster-Tagesplan und konkrete Tipps.' },
                 { title: l('/kommunikation-mit-demenzkranken', 'Kommunikation mit Demenzkranken'), desc: '5 Grundprinzipien und wie man schwierige Situationen meistert.' },

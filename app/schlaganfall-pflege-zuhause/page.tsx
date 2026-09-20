@@ -198,7 +198,7 @@ export default function SchlaganfallPflegeZuhause() {
               label="Weiter:"
               links={[
                 { href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege oder Pflegeheim: Kosten' },
-                { href: '/pflegeheim-kostenvergleich', text: 'Pflegeheim-Kostenvergleich' },
+                { href: '/pflegeheim-kosten-deutschland', text: 'Pflegeheim-Kosten je Bundesland' },
               ]}
             />
           </Abschnitt>

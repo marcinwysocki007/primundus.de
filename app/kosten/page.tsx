@@ -454,7 +454,7 @@ export default function Kosten() {
             ]} />
             <MehrDazu label="Vergleiche:" links={[
               { href: '/pflegeheim-kosten-deutschland', text: 'Pflegeheim-Kosten Deutschland' },
-              { href: '/pflegeheim-kostenvergleich', text: 'Pflegeheim-Kostenvergleich' },
+              { href: '/pflegeheim-kosten-deutschland', text: 'Pflegeheim-Kosten je Bundesland' },
               { href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege gegen Pflegeheim: Kosten' },
             ]} />
           </Abschnitt>

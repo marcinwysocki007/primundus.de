@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import dynamic from 'next/dynamic'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
@@ -220,7 +221,9 @@ export default function WasIst24StundenPflege() {
               ]}
               fuss="Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2024"
             />
-            <GrafikPflegestatistik />
+            <Sicher name="Grafik Pflegestatistik">
+              <GrafikPflegestatistik />
+            </Sicher>
           </Abschnitt>
 
           <Abschnitt id="kosten" titel="Was kostet 24-Stunden-Pflege — und was zahlt die Kasse 2026?">
@@ -231,7 +234,9 @@ export default function WasIst24StundenPflege() {
               label="Vollständiger Kostenvergleich:"
               links={[{ href: "/24h-pflege-vs-pflegeheim-kosten", text: "24h-Pflege vs. Pflegeheim — was ist günstiger?" }]}
             />
-            <GrafikKostenvergleich />
+            <Sicher name="Grafik Kostenvergleich">
+              <GrafikKostenvergleich />
+            </Sicher>
             <Kasten augenbraue="Neu 2026 — Entlastungsbudget" titel="3.539 Euro pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
               <HakenListe punkte={[
                 'Ein Budget statt zwei — flexibel für Verhinderungs- und Kurzzeitpflege nutzbar',

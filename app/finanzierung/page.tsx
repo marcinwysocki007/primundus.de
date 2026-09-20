@@ -26,7 +26,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: '24h-Pflege finanzieren: alle Kassenzuschüsse 2026',
   description:
-    '24-Stunden-Pflege finanzieren: Pflegegeld bis 990 € im Monat, Entlastungsbudget 3.539 € im Jahr, Steuerermäßigung bis 4.000 €. Alle Zuschüsse 2026 und was bei Pflegegrad 2 bis 5 selbst zu tragen bleibt.',
+    '24-Stunden-Pflege finanzieren: Pflegegeld bis 990 € im Monat, Entlastungsbudget 3.539 € im Jahr, Steuerermäßigung bis 4.000 €. Was selbst zu tragen bleibt.',
   alternates: { canonical: 'https://primundus.de/finanzierung' },
   openGraph: {
     title: '24h-Pflege finanzieren: alle Kassenzuschüsse 2026',

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import { ZuschussRechnerClient } from './ZuschussRechnerClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
@@ -132,7 +133,9 @@ export default function ZuschussRechnerPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <ZuschussRechnerClient />
+      <Sicher name="Zuschuss-Rechner" fallback={<p className="text-[16px] leading-[1.6] text-pm-body">Der Rechner lädt gerade nicht. Laden Sie die Seite neu.</p>}>
+        <ZuschussRechnerClient />
+      </Sicher>
 
       {/* SEO Content Section */}
       <div className="bg-pm-paper">
@@ -191,7 +194,7 @@ export default function ZuschussRechnerPage() {
               {[
                 { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf in 3 Minuten einschätzen' },
                 { href: 'https://kostenrechner.primundus.de/?start=1&src=apex-zuschuss-rechner', label: '24h-Kosten berechnen', desc: 'Eigenanteil individuell berechnen', external: true },
-                { href: '/pflegeheim-kostenvergleich', label: 'Pflegeheim-Vergleich', desc: 'Pflegeheim vs. 24h-Pflege im Vergleich' },
+                { href: '/pflegeheim-kosten-deutschland', label: 'Pflegeheim-Kosten', desc: 'Eigenanteil je Bundesland, daneben die Kosten zu Hause' },
                 { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
               ].map((item) => (
                 <a

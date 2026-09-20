@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import PflegevertragClient from './PflegevertragClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
@@ -113,7 +114,9 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <PflegevertragClient />
+      <Sicher name="Vertrags-Generator" fallback={<p className="text-[16px] leading-[1.6] text-pm-body">Der Generator lädt gerade nicht. Laden Sie die Seite neu.</p>}>
+        <PflegevertragClient />
+      </Sicher>
 
       {/* SEO Content Section */}
       <div className="bg-pm-paper">

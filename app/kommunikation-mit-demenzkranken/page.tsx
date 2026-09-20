@@ -176,7 +176,7 @@ export default function KommunikationMitDemenzkranken() {
           >
             <MehrDazu
               label="Mehr:"
-              links={[{ href: "/demenz-pflege-zuhause", text: "Demenzpflege zuhause" }, { href: "/tagesstruktur-demenz", text: "Tagesstruktur bei Demenz" }, { href: "/alzheimer-betreuung-zuhause", text: "Alzheimer zuhause betreuen" }]}
+              links={[{ href: "/demenz-pflege-zuhause", text: "Demenzpflege zuhause" }, { href: "/tagesstruktur-demenz", text: "Tagesstruktur bei Demenz" }]}
             />
           </DunklerAbschnitt>
 

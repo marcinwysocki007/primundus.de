@@ -21,6 +21,14 @@ const nextConfig = {
       // auch die URL"). Alte Links (Tests, Uebergaben) landen auf der neuen Adresse, Query bleibt.
       { source: '/partner-werden', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
       { source: '/partner-werden/agb', destination: '/pflegekraefte-fuer-vermittler/agb', permanent: true },
+      // 20.09.2026 (Martins Freigabe „go fuer das Ersetzen der alten Versionen"): zwei Seiten, die dasselbe
+      // Thema schwaecher abdecken, gehen in die neue Fassung. /alzheimer-betreuung-zuhause hatte 310
+      // Impressionen auf Position 72,9 und keinen Klick, /demenz-pflege-zuhause 2.676 auf 29,1;
+      // /pflegeheim-kostenvergleich (alter Rechner, 0 Impressionen) geht in die neue Bundesland-Seite.
+      { source: '/alzheimer-betreuung-zuhause', destination: '/demenz-pflege-zuhause', permanent: true },
+      { source: '/alzheimer-betreuung-zuhause/', destination: '/demenz-pflege-zuhause/', permanent: true },
+      { source: '/pflegeheim-kostenvergleich', destination: '/pflegeheim-kosten-deutschland', permanent: true },
+      { source: '/pflegeheim-kostenvergleich/', destination: '/pflegeheim-kosten-deutschland/', permanent: true },
       // 03.09.2026: Jahres-URL in die Evergreen-Seite (3 gegen 49 Impressionen,
       // kein eigener Inhalt; Jahreszahl gehoert in den Titel, nicht in den Slug)
       { source: '/pflegegrade-2025', destination: '/pflegegrade', permanent: true },

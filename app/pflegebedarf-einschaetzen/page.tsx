@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import { PflegebedarfClient } from './PflegebedarfClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
@@ -118,7 +119,9 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <PflegebedarfClient />
+      <Sicher name="Pflegebedarf-Fragebogen" fallback={<p className="text-[16px] leading-[1.6] text-pm-body">Der Fragebogen lädt gerade nicht. Laden Sie die Seite neu.</p>}>
+        <PflegebedarfClient />
+      </Sicher>
 
       <div className="bg-pm-paper">
         <div className="max-w-[720px] mx-auto px-5 pb-16">

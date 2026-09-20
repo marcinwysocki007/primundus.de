@@ -35,7 +35,7 @@ const serviceLinks = [
   // hier im Footer steht, rankt (Vollmacht-Generator Position 6,5,
   // Anbieter-Vergleich 10,1); was nur unter /tools hängt, findet niemand.
   { label: 'Zuschuss-Rechner', href: '/zuschuss-rechner' },
-  { label: 'Pflegeheim-Kostenvergleich', href: '/pflegeheim-kostenvergleich' },
+  { label: 'Pflegeheim-Kosten je Bundesland', href: '/pflegeheim-kosten-deutschland' },
   { label: 'Checkliste Pflegeübernahme', href: '/checkliste-pflegeuebernahme' },
   { label: 'Beratungsgespräch', href: '/beratungsgespraech' },
   { label: 'Kontakt', href: '/kontakt' },

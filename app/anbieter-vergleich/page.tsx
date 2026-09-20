@@ -5,7 +5,7 @@ import { ANBIETER, PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND, type Anbieter, type W
 export const metadata: Metadata = {
   title: 'Anbieter-Vergleich 2026: Pflegehelden, Promedica24 & Co.',
   description:
-    'Pflegehelden, Promedica24, Hausengel, marta, Linara und Primundus im Vergleich: Preise, Gebühren, Vertragsbindung und wann Sie die Betreuungskraft auswählen. Stand August 2026.',
+    'Pflegehelden, Promedica24, Hausengel, marta, Linara und Primundus: Preise, Gebühren, Vertragsbindung und wann Sie die Betreuungskraft selbst auswählen.',
   alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
     title: '24h-Pflege-Anbieter im Vergleich 2026 | Primundus',

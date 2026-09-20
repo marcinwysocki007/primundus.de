@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import VollmachtClient from './VollmachtClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
@@ -128,7 +129,9 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <VollmachtClient />
+      <Sicher name="Vollmacht-Generator" fallback={<p className="text-[16px] leading-[1.6] text-pm-body">Der Generator lädt gerade nicht. Laden Sie die Seite neu.</p>}>
+        <VollmachtClient />
+      </Sicher>
 
       {/* SEO Content Section */}
       <div className="bg-pm-paper">

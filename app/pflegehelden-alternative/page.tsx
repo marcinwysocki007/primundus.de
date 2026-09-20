@@ -8,7 +8,7 @@ const PH = ANBIETER.find((a) => a.slug === 'pflegehelden')!
 export const metadata: Metadata = {
   title: 'Pflegehelden-Alternative? Primundus im direkten Vergleich',
   description:
-    'Pflegehelden oder Primundus: Preis sofort online statt Angebot nach Fragebogen, Betreuungskräfte vor dem Vertrag auswählen, keine Mindestlaufzeit. Der Faktenvergleich, Stand August 2026.',
+    'Pflegehelden oder Primundus: Preis sofort online statt Angebot nach Fragebogen, Betreuungskräfte vor dem Vertrag auswählen, keine Mindestlaufzeit.',
   alternates: { canonical: 'https://primundus.de/pflegehelden-alternative' },
   openGraph: {
     title: 'Pflegehelden oder Primundus? Der direkte Vergleich',

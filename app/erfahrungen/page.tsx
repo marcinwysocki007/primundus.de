@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import type { ReactNode } from 'react'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { Fragen, MehrDazu, Punkte } from '@/components/vorlage/Ratgeber'
@@ -317,7 +318,9 @@ export default async function ErfahrungenPage() {
             </p>
           </div>
           <div className="mt-8">
-            <BewertungsListe bewertungen={alle} />
+            <Sicher name="Bewertungsliste">
+              <BewertungsListe bewertungen={alle} />
+            </Sicher>
           </div>
 
           {KUNDENSTIMMEN.length > 0 && (
@@ -386,7 +389,9 @@ export default async function ErfahrungenPage() {
               </p>
             </div>
             <div className="min-w-0">
-              <BewertungsFormular />
+              <Sicher name="Bewertungsformular" fallback={<p className="text-[16px] leading-[1.6] text-pm-body">Das Formular lädt gerade nicht. Schreiben Sie uns gern an info@primundus.de.</p>}>
+                <BewertungsFormular />
+              </Sicher>
             </div>
           </div>
         </section>

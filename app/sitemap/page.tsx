@@ -90,7 +90,6 @@ const sections = [
     links: [
       { label: 'Krankheiten & Pflege im Überblick', href: '/krankheiten' },
       { label: 'Demenz-Pflege zuhause', href: '/demenz-pflege-zuhause' },
-      { label: 'Alzheimer-Betreuung zuhause', href: '/alzheimer-betreuung-zuhause' },
       { label: 'Parkinson-Pflege zuhause', href: '/parkinson-pflege-zuhause' },
       { label: 'Schlaganfall-Pflege zuhause', href: '/schlaganfall-pflege-zuhause' },
       { label: 'Palliativpflege zuhause', href: '/palliativpflege-zuhause' },

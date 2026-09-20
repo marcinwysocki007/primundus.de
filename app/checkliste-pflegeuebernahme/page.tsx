@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import { ChecklisteClient } from './ChecklisteClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
@@ -117,7 +118,9 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaMarkup }}
       />
-      <ChecklisteClient />
+      <Sicher name="Checkliste" fallback={<p className="text-[16px] leading-[1.6] text-pm-body">Die Checkliste lädt gerade nicht. Laden Sie die Seite neu; die Punkte stehen auch im Text darüber.</p>}>
+        <ChecklisteClient />
+      </Sicher>
 
       <div className="bg-pm-paper">
         <div className="max-w-[720px] mx-auto px-5 pb-16">

@@ -84,7 +84,7 @@ export default function Vergleiche() {
             <Punkte
               punkte={[
                 { title: l('/pflegeheim-kosten-deutschland', 'Pflegeheim Kosten in Deutschland'), desc: 'Was ein Pflegeheim kostet, regionale Unterschiede und warum 24h-Pflege oft günstiger ist.' },
-                { title: l('/pflegeheim-kostenvergleich', 'Pflegeheim Kostenvergleich'), desc: 'Interaktiver Vergleich: Was zahlen Sie im Pflegeheim vs. 24h-Pflege zuhause?' },
+                { title: l('/pflegeheim-kosten-deutschland', 'Pflegeheim-Kosten je Bundesland'), desc: 'Eigenanteil im Heim nach Bundesland, Pflegegrad und Heimjahr, daneben die Kosten zu Hause.' },
                 { title: l('/eigenanteil-24h-pflege-senken', 'Eigenanteil bei 24h-Pflege senken'), desc: 'Alle Möglichkeiten 2026 um den monatlichen Eigenanteil zu reduzieren.' },
                 { title: l('/kosten', 'Was kostet 24h-Pflege?'), desc: 'Vollständige Kostenübersicht mit allen Zuschüssen und realistischen Eigenanteilen.' },
               ]}

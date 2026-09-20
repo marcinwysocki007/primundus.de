@@ -8,7 +8,7 @@ const PH = ANBIETER.find((a) => a.slug === 'promedica24')!
 export const metadata: Metadata = {
   title: 'Promedica24-Alternative? Primundus im direkten Vergleich',
   description:
-    'Promedica24 oder Primundus: Preis sofort online statt erst nach Beratung, Betreuungskräfte selbst auswählen statt Zuteilung aus dem Pool. Der Faktenvergleich, Stand August 2026.',
+    'Promedica24 oder Primundus: Preis sofort online statt erst nach Beratung, Betreuungskräfte selbst auswählen statt Zuteilung aus dem Pool. Der Vergleich.',
   alternates: { canonical: 'https://primundus.de/promedica24-alternative' },
   openGraph: {
     title: 'Promedica24 oder Primundus? Der direkte Vergleich',

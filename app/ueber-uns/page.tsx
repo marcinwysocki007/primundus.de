@@ -31,7 +31,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Über Primundus: seit 2006 in der 24-Stunden-Pflege zu Hause',
   description:
-    'Wer hinter Primundus steht: Firmengruppe seit 2006 in der 24-Stunden-Pflege, über 60.000 Betreuungen, 6× Testsieger DIE WELT, Betreuungskräfte bei uns angestellt, Büro in München.',
+    'Wer hinter Primundus steht: seit 2006 in der 24-Stunden-Pflege, über 60.000 Betreuungen, 6× Testsieger DIE WELT, eigene Betreuungskräfte, Büro in München.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

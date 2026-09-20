@@ -98,7 +98,7 @@ export default function ToolsPage() {
                 { title: l(RECHNER, 'Kostenrechner 24-Stunden-Pflege'), desc: 'Ihr Monatspreis in 2 Minuten, dazu was nach Zuschüssen bleibt und welche Pflegekräfte passen.' },
                 { title: l('/pflegegrad-rechner', 'Pflegegrad-Rechner'), desc: 'Pflegebedarf selbst einschätzen: ein erster Hinweis auf den Pflegegrad vor der Begutachtung.' },
                 { title: l('/zuschuss-rechner', 'Zuschüsse und Förderung 2026'), desc: 'Pflegegrad wählen und alle Leistungen sehen: Pflegegeld, Entlastungsbudget, Steuerermäßigung.' },
-                { title: l('/pflegeheim-kostenvergleich', 'Pflegeheim-Kostenvergleich'), desc: 'Pflegeheim und 24-Stunden-Pflege zu Hause im Kostenvergleich.' },
+                { title: l('/pflegeheim-kosten-deutschland', 'Pflegeheim-Kosten-Rechner'), desc: 'Eigenanteil im Heim je Bundesland, Pflegegrad und Heimjahr, daneben die Kosten zu Hause.' },
                 { title: l('/pflegebedarf-einschaetzen', 'Pflegebedarf einschätzen'), desc: 'Selbsttest für Angehörige: wie viel Unterstützung nötig ist und welche Betreuungsform passt.' },
                 { title: l('/checkliste-pflegeuebernahme', 'Checkliste Pflegeübernahme'), desc: 'Alle Anträge, Fristen und Aufgaben für den Start in die Pflege zum Abhaken.' },
                 { title: l('/pflegevertrag-generator', 'Pflegevertrag-Generator'), desc: 'Einen Pflegevertrag erstellen, anpassen und herunterladen.' },

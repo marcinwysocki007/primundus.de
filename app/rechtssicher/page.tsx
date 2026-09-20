@@ -28,7 +28,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Rechtssichere 24-Stunden-Pflege: Entsendemodell mit A1',
   description:
-    '24-Stunden-Pflege legal organisieren: Betreuungskraft bei Primundus angestellt, A1-Bescheinigung für jeden Einsatz, Sie werden nicht Arbeitgeber. Was bei einer Kontrolle zählt und warum „selbstständige“ Kräfte riskant sind.',
+    '24-Stunden-Pflege legal: Betreuungskraft bei uns angestellt, A1-Bescheinigung für jeden Einsatz, Sie werden nicht Arbeitgeber. Was bei einer Kontrolle zählt.',
   alternates: { canonical: 'https://primundus.de/rechtssicher' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

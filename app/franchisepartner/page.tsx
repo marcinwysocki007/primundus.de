@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Sicher } from '@/components/Sicher'
 import Image from 'next/image'
 import FranchiseFormClient from './FranchiseFormClient'
 
@@ -471,7 +472,9 @@ export default function FranchisePage() {
       </section>
 
       {/* ─── FORM ─── */}
-      <FranchiseFormClient />
+      <Sicher name="Franchise-Formular" fallback={<p className="text-[16px] leading-[1.6] text-pm-body">Das Formular lädt gerade nicht. Schreiben Sie uns an info@primundus.de oder rufen Sie an: 089 200 000 830.</p>}>
+        <FranchiseFormClient />
+      </Sicher>
     </>
   )
 }

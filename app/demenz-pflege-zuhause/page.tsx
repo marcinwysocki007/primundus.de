@@ -154,7 +154,6 @@ export default function DemenzPflegeZuhause() {
             <MehrDazu
               label="Mehr dazu:"
               links={[
-                { href: '/alzheimer-betreuung-zuhause', text: 'Alzheimer-Betreuung zu Hause' },
                 { href: '/pflegegrad-bei-demenz', text: 'Pflegegrad bei Demenz' },
                 { href: '/vollmacht-generator', text: 'Vorsorgevollmacht erstellen' },
               ]}
@@ -344,7 +343,7 @@ export default function DemenzPflegeZuhause() {
             <MehrDazu
               label="Zahlen im Detail:"
               links={[
-                { href: '/pflegeheim-kostenvergleich', text: '24h-Pflege und Pflegeheim im Kostenvergleich' },
+                { href: '/pflegeheim-kosten-deutschland', text: 'Pflegeheim-Kosten je Bundesland' },
                 { href: '/24h-pflege-vs-pflegeheim-kosten', text: '24h-Pflege oder Pflegeheim: was ist besser?' },
               ]}
             />
