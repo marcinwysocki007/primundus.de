@@ -4,14 +4,15 @@ import { Abschnitt, Punkte, RatgeberKopf, RatgeberRumpf, Text } from '@/componen
 import { MartaBand } from '@/components/vertrauen/Vertrauen'
 import { RegionenSearch } from '@/components/RegionenSearch'
 import { AllRegionsIndex } from '@/components/CityIndex'
+import { STAEDTE } from '@/lib/staedte'
 import { ArticleTOC } from '@/components/ArticleTOC'
 
 // Regionen-Übersicht in der Seitenvorlage (20.09.2026). Die Seite ist ein Ziel der Anzeigen-Sitelinks: URL und Zweck bleiben.
-// Raus: die A–Z-Liste der Städte. Sie war eine zweite Liste derselben Orte (alle 176 Städte mit eigener Seite stehen auch im
-// Index nach Bundesland, der zusätzlich die Landesseiten verlinkt) und hat die Seite unnötig schwer gemacht. Die Suche bleibt,
-// der Kasten „Ihre Stadt nicht dabei?" mit eigenem Nummern-Knopf wird der Standard-Kontakt (Marta-Band).
-// Ebenfalls raus: die 225 Orte als Datenliste in der Seite. Die Suche holt ihre Treffer seit Langem über /api/orte-suche;
-// der Prop wurde ignoriert, die Liste wurde nur mitgeliefert (Seitengewicht).
+// Die Liste A–Z bleibt (Martin 20.09.: „nicht wegnehmen, weil das SEO relevant sein kann"), kommt jetzt aber aus lib/staedte.ts,
+// derselben Quelle wie der Index nach Bundesland; damit sind es 194 statt 176 Orte und die Daten stehen nur einmal im Code.
+// Raus: die 225 Orte als Datenliste in der Seite. Die Suche holt ihre Treffer seit Langem über /api/orte-suche; der Prop wurde
+// ignoriert, die Liste wurde nur mitgeliefert (Seitengewicht). Der Kasten „Ihre Stadt nicht dabei?" mit eigenem Nummern-Knopf
+// wird der Standard-Kontakt (Marta-Band).
 
 export const metadata: Metadata = {
   title: '24h-Pflege in Ihrer Region — alle Städte & Bundesländer',
@@ -63,10 +64,14 @@ const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underli
 const l = (href: string, text: string) => <a href={href} className={LINK}>{text}</a>
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-regionen'
 
+const staedteAlpha = [...STAEDTE].sort((a, b) => a.name.localeCompare(b.name, 'de'))
+const buchstaben = Array.from(new Set(staedteAlpha.map((s) => s.name[0].toUpperCase()))).sort((a, b) => a.localeCompare(b, 'de'))
+
 const SECTIONS = [
   { id: 'suche', title: 'Ort oder Postleitzahl' },
   { id: 'bundeslaender', title: 'Nach Bundesland' },
-  { id: 'orte', title: 'Alle Einsatzorte' },
+  { id: 'staedte', title: 'Städte A–Z' },
+  { id: 'orte', title: 'Nach Bundesland sortiert' },
   { id: 'nicht-dabei', title: 'Stadt nicht dabei?' },
 ]
 
@@ -118,7 +123,30 @@ export default function RegionenHub() {
             />
           </Abschnitt>
 
-          <Abschnitt id="orte" titel="Alle Einsatzorte im Überblick">
+          <Abschnitt id="staedte" titel="Alle Städte von A bis Z">
+            <Text>{staedteAlpha.length} Orte mit eigener Seite, alphabetisch sortiert.</Text>
+            <div className="grid gap-5">
+              {buchstaben.map((buchstabe) => (
+                <div key={buchstabe}>
+                  <div className="flex items-center gap-3">
+                    <span className="w-6 text-[15px] font-bold text-pm-taupe">{buchstabe}</span>
+                    <span aria-hidden="true" className="h-px flex-1 bg-pm-line" />
+                  </div>
+                  <div className="mt-2 grid grid-cols-2 gap-x-6 gap-y-1 md:grid-cols-3">
+                    {staedteAlpha
+                      .filter((s) => s.name[0].toUpperCase() === buchstabe)
+                      .map((s) => (
+                        <a key={s.slug} href={`/24h-pflege-${s.slug}`} className="py-1 text-[16px] leading-[1.5] text-pm-body hover:text-pm-taupe-ink">
+                          {s.name}
+                        </a>
+                      ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Abschnitt>
+
+          <Abschnitt id="orte" titel="Alle Einsatzorte nach Bundesland">
             <Text>
               Klicken Sie Ihren Ort an: Dort stehen Preise, Ablauf und die Ansprechpartnerin für Ihre Region.
             </Text>
