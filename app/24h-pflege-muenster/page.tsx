@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-muenster', title: "Polnische Betreuungskräfte in Münster" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Münster ausmacht" },
   { id: 'einzugsgebiet-muenster', title: "Einzugsgebiet Münster" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Münster durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Münster kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Münster" },
 ]

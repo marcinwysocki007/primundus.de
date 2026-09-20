@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-essen', title: "Polnische Betreuungskräfte in Essen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Essen ausmacht" },
   { id: 'einzugsgebiet-essen', title: "Einzugsgebiet Essen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Essen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Essen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Essen" },
 ]

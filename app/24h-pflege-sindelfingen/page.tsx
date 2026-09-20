@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Böblingen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Sindelfingen ausmacht" },
   { id: 'einzugsgebiet-sindelfingen', title: "Einzugsgebiet Sindelfingen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Sindelfingen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Sindelfingen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Sindelfingen" },
 ]

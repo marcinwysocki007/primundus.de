@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-nordrhein', title: "Polnische Betreuungskräfte in Nordrhein-Westfalen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Nordrhein-Westfalen ausmacht" },
   { id: 'einzugsgebiet-nordrhein-westfalen', title: "Einzugsgebiet Nordrhein-Westfalen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Nordrhein-Westfalen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Nordrhein-Westfalen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Nordrhein-Westfalen" },
 ]

@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-troisdorf', title: "Polnische Betreuungskräfte in Troisdorf" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Troisdorf ausmacht" },
   { id: 'einzugsgebiet-troisdorf', title: "Einzugsgebiet Troisdorf" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Troisdorf durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Troisdorf kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Troisdorf" },
 ]

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Neumarkt in der Oberpfalz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Neumarkt ausmacht" },
   { id: 'einzugsgebiet-neumarkt-in-der', title: "Einzugsgebiet Neumarkt in der Oberpfalz" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Neumarkt i.d.OPf. durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Neumarkt i.d.OPf. kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Neumarkt in der Oberpfalz" },
 ]

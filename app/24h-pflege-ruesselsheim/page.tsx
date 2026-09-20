@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Kreis Groß-Gerau" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rüsselsheim ausmacht" },
   { id: 'einzugsgebiet-ruesselsheim-am-main', title: "Einzugsgebiet Rüsselsheim am Main" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Rüsselsheim durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Rüsselsheim kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rüsselsheim am Main" },
 ]

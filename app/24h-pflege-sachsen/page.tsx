@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-sachsen', title: "Polnische Betreuungskräfte in Sachsen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Sachsen ausmacht" },
   { id: 'einzugsgebiet-sachsen', title: "Einzugsgebiet Sachsen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Sachsen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Sachsen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Sachsen" },
 ]

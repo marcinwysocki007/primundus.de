@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-wuppertal', title: "Polnische Betreuungskräfte in Wuppertal" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wuppertal ausmacht" },
   { id: 'einzugsgebiet-wuppertal', title: "Einzugsgebiet Wuppertal" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Wuppertal durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Wuppertal kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Wuppertal" },
 ]

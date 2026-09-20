@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-sachsen', title: "Polnische Betreuungskräfte in Sachsen-Anhalt" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Sachsen-Anhalt ausmacht" },
   { id: 'einzugsgebiet-sachsen-anhalt', title: "Einzugsgebiet Sachsen-Anhalt" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Sachsen-Anhalt durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Sachsen-Anhalt kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Sachsen-Anhalt" },
 ]

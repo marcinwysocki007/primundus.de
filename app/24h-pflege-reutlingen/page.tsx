@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Reutlingen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Reutlingen ausmacht" },
   { id: 'einzugsgebiet-reutlingen', title: "Einzugsgebiet Reutlingen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Reutlingen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Reutlingen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Reutlingen" },
 ]

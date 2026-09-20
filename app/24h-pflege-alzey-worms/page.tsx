@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-kreis', title: "Polnische Betreuungskräfte im Kreis Alzey-Worms" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kreis Alzey-Worms ausmacht" },
   { id: 'einzugsgebiet-landkreis-alzey-worms', title: "Einzugsgebiet Landkreis Alzey-Worms" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Kreis Alzey-Worms durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Kreis Alzey-Worms kostet" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 

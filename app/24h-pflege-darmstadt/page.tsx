@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Darmstadt-Dieburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Darmstadt ausmacht" },
   { id: 'einzugsgebiet-darmstadt', title: "Einzugsgebiet Darmstadt" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Darmstadt durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Darmstadt kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Darmstadt" },
 ]

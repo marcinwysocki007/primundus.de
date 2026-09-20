@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-rheinisch', title: "Polnische Betreuungskräfte im Rheinisch-Bergischen Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rheinisch-Bergischer Kreis ausmacht" },
   { id: 'einzugsgebiet-rheinisch-bergischer-kreis', title: "Einzugsgebiet Rheinisch-Bergischer Kreis" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Rheinisch-Bergischer Kreis durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Rheinisch-Bergischer Kreis kostet" },
   { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Kreis" },
 ]
 

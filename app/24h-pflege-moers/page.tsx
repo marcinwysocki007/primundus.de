@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-moers', title: "Polnische Betreuungskräfte in Moers" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Moers ausmacht" },
   { id: 'einzugsgebiet-moers', title: "Einzugsgebiet Moers" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Moers durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Moers kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Moers" },
 ]

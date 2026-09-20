@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Rhein-Pfalz-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Speyer ausmacht" },
   { id: 'einzugsgebiet-speyer', title: "Einzugsgebiet Speyer" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Speyer durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Speyer kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Speyer" },
 ]

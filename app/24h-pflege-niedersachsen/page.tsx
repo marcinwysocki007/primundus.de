@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-niedersachsen', title: "Polnische Betreuungskräfte in Niedersachsen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Niedersachsen ausmacht" },
   { id: 'einzugsgebiet-niedersachsen', title: "Einzugsgebiet Niedersachsen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Niedersachsen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Niedersachsen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Niedersachsen" },
 ]

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Ahrweiler" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Neuenahr ausmacht" },
   { id: 'einzugsgebiet-bad-neuenahr-ahrweiler', title: "Einzugsgebiet Bad Neuenahr-Ahrweiler" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Bad Neuenahr durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bad Neuenahr kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Neuenahr-Ahrweiler" },
 ]

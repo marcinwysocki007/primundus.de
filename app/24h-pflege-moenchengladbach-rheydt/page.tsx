@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-moenchengladbach', title: "Polnische Betreuungskräfte in Mönchengladbach-Rheydt" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mönchengladbach-Rheydt ausmacht" },
   { id: 'einzugsgebiet-rheydt', title: "Einzugsgebiet Rheydt" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Mönchengladbach-Rheydt durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mönchengladbach-Rheydt kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rheydt" },
 ]

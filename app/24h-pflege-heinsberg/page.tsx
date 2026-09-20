@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Kreis Heinsberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Heinsberg ausmacht" },
   { id: 'einzugsgebiet-heinsberg', title: "Einzugsgebiet Heinsberg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Heinsberg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Heinsberg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Heinsberg" },
 ]

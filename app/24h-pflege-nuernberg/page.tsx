@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-nuernberg', title: "Polnische Betreuungskräfte in Nürnberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Nürnberg ausmacht" },
   { id: 'einzugsgebiet-nuernberg', title: "Einzugsgebiet Nürnberg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Nürnberg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Nürnberg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Nürnberg" },
 ]

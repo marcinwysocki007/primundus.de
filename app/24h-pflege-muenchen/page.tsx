@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-muenchen', title: "Polnische Betreuungskräfte in München" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in München ausmacht" },
   { id: 'einzugsgebiet-muenchen', title: "Einzugsgebiet München" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für München durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in München kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in München" },
 ]

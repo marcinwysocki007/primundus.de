@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-muelheim', title: "Polnische Betreuungskräfte in Mülheim an der Ruhr" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mülheim an der Ruhr ausmacht" },
   { id: 'einzugsgebiet-muelheim-an-der', title: "Einzugsgebiet Mülheim an der Ruhr" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Mülheim an der Ruhr durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mülheim an der Ruhr kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Mülheim an der Ruhr" },
 ]

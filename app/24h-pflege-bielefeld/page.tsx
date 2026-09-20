@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-bielefeld', title: "Polnische Betreuungskräfte in Bielefeld" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bielefeld ausmacht" },
   { id: 'einzugsgebiet-bielefeld', title: "Einzugsgebiet Bielefeld" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Bielefeld durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bielefeld kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bielefeld" },
 ]

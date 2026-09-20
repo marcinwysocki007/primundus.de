@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in Charlottenburg-Wilmersdorf und im Berliner Westen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Berlin-Charlottenburg ausmacht" },
   { id: 'einzugsgebiet-berlin-charlottenburg', title: "Einzugsgebiet Berlin-Charlottenburg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Berlin-Charlottenburg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Berlin-Charlottenburg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Berlin-Charlottenburg" },
 ]

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Rheinisch-Bergischen Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bergisch Gladbach ausmacht" },
   { id: 'einzugsgebiet-bergisch-gladbach', title: "Einzugsgebiet Bergisch Gladbach" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Bergisch Gladbach durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bergisch Gladbach kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bergisch Gladbach" },
 ]

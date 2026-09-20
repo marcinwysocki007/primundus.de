@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-dortmund', title: "Polnische Betreuungskräfte in Dortmund" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Dortmund ausmacht" },
   { id: 'einzugsgebiet-dortmund', title: "Einzugsgebiet Dortmund" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Dortmund durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Dortmund kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Dortmund" },
 ]

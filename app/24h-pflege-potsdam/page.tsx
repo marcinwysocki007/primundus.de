@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-potsdam', title: "Polnische Betreuungskräfte in Potsdam" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Potsdam ausmacht" },
   { id: 'einzugsgebiet-potsdam', title: "Einzugsgebiet Potsdam" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Potsdam durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Potsdam kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Potsdam" },
 ]

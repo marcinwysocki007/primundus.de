@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Bodenseekreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Friedrichshafen ausmacht" },
   { id: 'einzugsgebiet-friedrichshafen', title: "Einzugsgebiet Friedrichshafen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Friedrichshafen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Friedrichshafen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Friedrichshafen" },
 ]

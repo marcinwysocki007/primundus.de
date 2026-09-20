@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der Südlichen Weinstraße" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Neustadt an der Weinstraße ausmacht" },
   { id: 'einzugsgebiet-neustadt-an-der', title: "Einzugsgebiet Neustadt an der Weinstraße" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Neustadt an der Weinstraße durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Neustadt an der Weinstraße kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Neustadt an der Weinstraße" },
 ]

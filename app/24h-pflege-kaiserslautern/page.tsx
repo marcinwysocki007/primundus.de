@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der Westpfalz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kaiserslautern ausmacht" },
   { id: 'einzugsgebiet-kaiserslautern', title: "Einzugsgebiet Kaiserslautern" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Kaiserslautern durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Kaiserslautern kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Kaiserslautern" },
 ]

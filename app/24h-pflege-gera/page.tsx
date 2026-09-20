@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Greiz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Gera ausmacht" },
   { id: 'einzugsgebiet-gera', title: "Einzugsgebiet Gera" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Gera durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Gera kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Gera" },
 ]

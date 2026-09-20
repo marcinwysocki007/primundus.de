@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Alb-Donau-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Ulm ausmacht" },
   { id: 'einzugsgebiet-ulm', title: "Einzugsgebiet Ulm" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Ulm durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Ulm kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Ulm" },
 ]

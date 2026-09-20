@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Cochem-Zell" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Cochem an der Mosel ausmacht" },
   { id: 'einzugsgebiet-cochem', title: "Einzugsgebiet Cochem" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Cochem an der Mosel durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Cochem an der Mosel kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Cochem" },
 ]

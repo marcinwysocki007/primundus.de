@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Mühldorf" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mühldorf am Inn ausmacht" },
   { id: 'einzugsgebiet-muehldorf-am-inn', title: "Einzugsgebiet Mühldorf am Inn" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Mühldorf am Inn durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mühldorf am Inn kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Mühldorf am Inn" },
 ]

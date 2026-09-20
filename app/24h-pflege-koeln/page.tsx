@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-koeln', title: "Polnische Betreuungskräfte in Köln" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Köln ausmacht" },
   { id: 'einzugsgebiet-koeln', title: "Einzugsgebiet Köln" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Köln durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Köln kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Köln" },
 ]

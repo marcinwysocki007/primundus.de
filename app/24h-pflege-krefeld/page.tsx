@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-krefeld', title: "Polnische Betreuungskräfte in Krefeld" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Krefeld ausmacht" },
   { id: 'einzugsgebiet-krefeld', title: "Einzugsgebiet Krefeld" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Krefeld durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Krefeld kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Krefeld" },
 ]

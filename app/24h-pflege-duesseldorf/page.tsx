@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-duesseldorf', title: "Polnische Betreuungskräfte in Düsseldorf" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Düsseldorf ausmacht" },
   { id: 'einzugsgebiet-duesseldorf', title: "Einzugsgebiet Düsseldorf" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Düsseldorf durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Düsseldorf kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Düsseldorf" },
 ]

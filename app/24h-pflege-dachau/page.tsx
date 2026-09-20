@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Dachau" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Dachau ausmacht" },
   { id: 'einzugsgebiet-dachau', title: "Einzugsgebiet Dachau" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Dachau durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Dachau kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Dachau" },
 ]

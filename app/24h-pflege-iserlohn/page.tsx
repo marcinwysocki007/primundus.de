@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Märkischen Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Iserlohn ausmacht" },
   { id: 'einzugsgebiet-iserlohn', title: "Einzugsgebiet Iserlohn" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Iserlohn durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Iserlohn kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Iserlohn" },
 ]

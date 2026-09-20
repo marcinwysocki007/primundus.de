@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in allen Hamburger Bezirken" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hamburg ausmacht" },
   { id: 'einzugsgebiet-hamburg', title: "Einzugsgebiet Hamburg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Hamburg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hamburg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hamburg" },
 ]

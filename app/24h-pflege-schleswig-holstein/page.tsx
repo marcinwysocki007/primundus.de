@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-schleswig', title: "Polnische Betreuungskräfte in Schleswig-Holstein" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Schleswig-Holstein ausmacht" },
   { id: 'einzugsgebiet-schleswig-holstein', title: "Einzugsgebiet Schleswig-Holstein" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Schleswig-Holstein durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Schleswig-Holstein kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Schleswig-Holstein" },
 ]

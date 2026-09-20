@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-kiel', title: "Polnische Betreuungskräfte in Kiel" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kiel ausmacht" },
   { id: 'einzugsgebiet-kiel', title: "Einzugsgebiet Kiel" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Kiel durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Kiel kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Kiel" },
 ]

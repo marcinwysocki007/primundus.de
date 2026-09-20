@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-augsburg', title: "Polnische Betreuungskräfte in Augsburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Augsburg ausmacht" },
   { id: 'einzugsgebiet-augsburg', title: "Einzugsgebiet Augsburg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Augsburg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Augsburg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Augsburg" },
 ]

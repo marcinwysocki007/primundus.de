@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Garmisch-Partenkirchen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Garmisch-Partenkirchen ausmacht" },
   { id: 'einzugsgebiet-garmisch-partenkirchen', title: "Einzugsgebiet Garmisch-Partenkirchen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Garmisch-Partenkirchen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Garmisch-Partenkirchen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Garmisch-Partenkirchen" },
 ]

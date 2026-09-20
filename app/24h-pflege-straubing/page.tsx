@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-straubing', title: "Polnische Betreuungskräfte in Straubing" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Straubing ausmacht" },
   { id: 'einzugsgebiet-straubing', title: "Einzugsgebiet Straubing" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Straubing durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Straubing kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Straubing" },
 ]

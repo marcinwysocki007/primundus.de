@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-baden', title: "Polnische Betreuungskräfte in Baden-Württemberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Baden-Württemberg ausmacht" },
   { id: 'einzugsgebiet-baden-wuerttemberg', title: "Einzugsgebiet Baden-Württemberg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Baden-Württemberg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Baden-Württemberg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Baden-Württemberg" },
 ]

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Erding" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Erding ausmacht" },
   { id: 'einzugsgebiet-erding', title: "Einzugsgebiet Erding" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Erding durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Erding kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Erding" },
 ]

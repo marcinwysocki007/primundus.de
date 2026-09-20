@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Bamberg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bamberg ausmacht" },
   { id: 'einzugsgebiet-bamberg', title: "Einzugsgebiet Bamberg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Bamberg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bamberg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bamberg" },
 ]

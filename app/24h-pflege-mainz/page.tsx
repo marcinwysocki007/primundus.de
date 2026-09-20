@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-mainz', title: "Polnische Betreuungskräfte in Mainz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mainz ausmacht" },
   { id: 'einzugsgebiet-mainz', title: "Einzugsgebiet Mainz" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Mainz durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mainz kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Mainz" },
 ]

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Offenbach" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Offenbach ausmacht" },
   { id: 'einzugsgebiet-offenbach-am-main', title: "Einzugsgebiet Offenbach am Main" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Offenbach durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Offenbach kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Offenbach am Main" },
 ]

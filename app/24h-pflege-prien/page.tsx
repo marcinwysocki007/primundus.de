@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Rosenheim West" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Prien am Chiemsee ausmacht" },
   { id: 'einzugsgebiet-prien-am-chiemsee', title: "Einzugsgebiet Prien am Chiemsee" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Prien am Chiemsee durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Prien am Chiemsee kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Prien am Chiemsee" },
 ]

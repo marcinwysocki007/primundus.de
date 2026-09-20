@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-hamm', title: "Polnische Betreuungskräfte in Hamm" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hamm ausmacht" },
   { id: 'einzugsgebiet-hamm', title: "Einzugsgebiet Hamm" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Hamm durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hamm kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hamm" },
 ]

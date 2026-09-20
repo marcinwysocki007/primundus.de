@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Schwarzwald-Baar-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Villingen-Schwenningen ausmacht" },
   { id: 'einzugsgebiet-villingen-schwenningen', title: "Einzugsgebiet Villingen-Schwenningen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Villingen-Schwenningen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Villingen-Schwenningen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Villingen-Schwenningen" },
 ]

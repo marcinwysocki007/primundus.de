@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im östlichen Landkreis München" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Vaterstetten ausmacht" },
   { id: 'einzugsgebiet-vaterstetten', title: "Einzugsgebiet Vaterstetten" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Vaterstetten durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Vaterstetten kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Vaterstetten" },
 ]

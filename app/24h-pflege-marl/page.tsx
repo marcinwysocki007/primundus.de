@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-marl', title: "Polnische Betreuungskräfte in Marl" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Marl ausmacht" },
   { id: 'einzugsgebiet-marl', title: "Einzugsgebiet Marl" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Marl durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Marl kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Marl" },
 ]

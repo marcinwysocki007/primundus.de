@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-hagen', title: "Polnische Betreuungskräfte in Hagen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hagen ausmacht" },
   { id: 'einzugsgebiet-hagen', title: "Einzugsgebiet Hagen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Hagen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hagen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hagen" },
 ]

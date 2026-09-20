@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Spree-Neiße" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Cottbus ausmacht" },
   { id: 'einzugsgebiet-cottbus', title: "Einzugsgebiet Cottbus" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Cottbus durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Cottbus kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Cottbus" },
 ]

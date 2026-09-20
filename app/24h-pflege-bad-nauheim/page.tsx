@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Wetteraukreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Nauheim ausmacht" },
   { id: 'einzugsgebiet-bad-nauheim', title: "Einzugsgebiet Bad Nauheim" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Bad Nauheim durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bad Nauheim kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Nauheim" },
 ]

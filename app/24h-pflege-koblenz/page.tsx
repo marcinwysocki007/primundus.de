@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-am', title: "24-Stunden-Pflege am Mittelrhein" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Koblenz ausmacht" },
   { id: 'einzugsgebiet-koblenz', title: "Einzugsgebiet Koblenz" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Koblenz durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Koblenz kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Koblenz" },
 ]

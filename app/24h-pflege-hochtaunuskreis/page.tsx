@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-hochtaunuskreis', title: "Polnische Betreuungskräfte im Hochtaunuskreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hochtaunuskreis ausmacht" },
   { id: 'einzugsgebiet-hochtaunuskreis', title: "Einzugsgebiet Hochtaunuskreis" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Hochtaunuskreis durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Hochtaunuskreis kostet" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 

@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-leverkusen', title: "Polnische Betreuungskräfte in Leverkusen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Leverkusen ausmacht" },
   { id: 'einzugsgebiet-leverkusen', title: "Einzugsgebiet Leverkusen" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Leverkusen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Leverkusen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Leverkusen" },
 ]

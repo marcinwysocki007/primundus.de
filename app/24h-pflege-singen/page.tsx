@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im westlichen Landkreis Konstanz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Singen ausmacht" },
   { id: 'einzugsgebiet-singen-am-hohentwiel', title: "Einzugsgebiet Singen am Hohentwiel" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Singen durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Singen kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Singen am Hohentwiel" },
 ]

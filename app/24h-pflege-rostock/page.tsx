@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-rostock', title: "Polnische Betreuungskräfte in Rostock" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rostock ausmacht" },
   { id: 'einzugsgebiet-rostock', title: "Einzugsgebiet Rostock" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Rostock durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Rostock kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rostock" },
 ]

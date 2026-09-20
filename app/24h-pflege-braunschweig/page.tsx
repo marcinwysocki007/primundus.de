@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-braunschweig', title: "Polnische Betreuungskräfte in Braunschweig" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Braunschweig ausmacht" },
   { id: 'einzugsgebiet-braunschweig', title: "Einzugsgebiet Braunschweig" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Braunschweig durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Braunschweig kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Braunschweig" },
 ]

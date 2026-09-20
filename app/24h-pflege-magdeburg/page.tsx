@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-magdeburg', title: "Polnische Betreuungskräfte in Magdeburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Magdeburg ausmacht" },
   { id: 'einzugsgebiet-magdeburg', title: "Einzugsgebiet Magdeburg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Magdeburg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Magdeburg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Magdeburg" },
 ]

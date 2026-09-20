@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Bergischen Land" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Remscheid ausmacht" },
   { id: 'einzugsgebiet-remscheid', title: "Einzugsgebiet Remscheid" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Remscheid durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Remscheid kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Remscheid" },
 ]

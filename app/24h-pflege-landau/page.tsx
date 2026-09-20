@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der Südlichen Weinstraße" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Landau ausmacht" },
   { id: 'einzugsgebiet-landau-in-der', title: "Einzugsgebiet Landau in der Pfalz" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Landau durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Landau kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Landau in der Pfalz" },
 ]

@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-rhein', title: "Polnische Betreuungskräfte im Rhein-Pfalz-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rhein-Pfalz-Kreis ausmacht" },
   { id: 'einzugsgebiet-rhein-pfalz-kreis', title: "Einzugsgebiet Rhein-Pfalz-Kreis" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Rhein-Pfalz-Kreis durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Rhein-Pfalz-Kreis kostet" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 

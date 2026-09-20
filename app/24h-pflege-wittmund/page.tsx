@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-wittmund', title: "Polnische Betreuungskräfte in Wittmund" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wittmund ausmacht" },
   { id: 'einzugsgebiet-landkreis-wittmund', title: "Einzugsgebiet Landkreis Wittmund" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Wittmund durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Wittmund kostet" },
   { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Harlingerland" },
 ]
 

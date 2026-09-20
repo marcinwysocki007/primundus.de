@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in der Mecklenburgischen Seenplatte" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Neubrandenburg ausmacht" },
   { id: 'einzugsgebiet-neubrandenburg', title: "Einzugsgebiet Neubrandenburg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Neubrandenburg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Neubrandenburg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Neubrandenburg" },
 ]

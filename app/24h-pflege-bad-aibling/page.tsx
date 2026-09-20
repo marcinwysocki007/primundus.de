@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im südlichen Landkreis Rosenheim" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Aibling ausmacht" },
   { id: 'einzugsgebiet-bad-aibling', title: "Einzugsgebiet Bad Aibling" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Bad Aibling durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Bad Aibling kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Aibling" },
 ]

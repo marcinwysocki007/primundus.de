@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-mecklenburg', title: "Polnische Betreuungskräfte in Mecklenburg-Vorpommern" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Mecklenburg-Vorpommern ausmacht" },
   { id: 'einzugsgebiet-mecklenburg-vorpommern', title: "Einzugsgebiet Mecklenburg-Vorpommern" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Mecklenburg-Vorpommern durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Mecklenburg-Vorpommern kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Mecklenburg-Vorpommern" },
 ]

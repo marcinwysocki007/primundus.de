@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-wolfsburg', title: "Polnische Betreuungskräfte in Wolfsburg" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wolfsburg ausmacht" },
   { id: 'einzugsgebiet-wolfsburg', title: "Einzugsgebiet Wolfsburg" },
-  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Wolfsburg durch" },
+  { id: 'werkzeuge', title: "Was es für Ihre Eltern in Wolfsburg kostet" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Wolfsburg" },
 ]
