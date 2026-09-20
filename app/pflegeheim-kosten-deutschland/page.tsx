@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
+import { Sicher } from '@/components/Sicher'
 import {
-  Abschnitt, Fragen, Gegenueber, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Tabelle, Text, Zwischentitel,
+  Abschnitt, Fragen, Gegenueber, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Tabelle, Text, Zwischentitel,
 } from '@/components/vorlage/Ratgeber'
 import { HeimVsZuhause, KostenAufteilung } from '@/components/grafik/Grafik'
 import { HeimRechner } from '@/components/werkzeuge/HeimRechner'
@@ -139,7 +140,9 @@ export default function PflegeheimKosten() {
               Der Rechner zeigt den Eigenanteil im Pflegeheim nach den Zahlen des Verbands der Ersatzkassen und daneben, was bei einer
               Betreuungskraft im eigenen Haus selbst zu tragen bleibt. Beides sind Monatsbeträge nach Abzug der Pflegekasse.
             </Text>
-            <HeimRechner />
+            <Sicher name="Pflegeheim-Rechner" fallback={<Kasten><Text>Der Rechner lädt gerade nicht. Die Zahlen je Bundesland stehen in der Tabelle unten.</Text></Kasten>}>
+              <HeimRechner />
+            </Sicher>
           </Abschnitt>
 
           <Abschnitt id="zusammensetzung" titel="Woraus die Pflegeheim-Kosten bestehen">

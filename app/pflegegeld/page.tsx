@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
+import { Sicher } from '@/components/Sicher'
 import {
   Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
   Zwischentitel,
@@ -270,7 +271,9 @@ export default function Pflegegeld() {
               Kommt ein Pflegedienst zum Beispiel morgens zum Waschen, rechnet er mit der Kasse über die Sachleistungen ab. Das Pflegegeld sinkt
               dann um genau den Prozentsatz, zu dem Sie die Sachleistungen nutzen (§ 38 SGB XI). Der Rechner zeigt, was bleibt.
             </Text>
-            <KombinationsRechner />
+            <Sicher name="Kombinations-Rechner" fallback={<Kasten><Text>Der Rechner lädt gerade nicht. Die Beispieltabelle unten zeigt die Kombination bei halber Sachleistung.</Text></Kasten>}>
+              <KombinationsRechner />
+            </Sicher>
             <Zwischentitel>Beispiel: halbe Sachleistung, halbes Pflegegeld</Zwischentitel>
             <Tabelle
               titel="Beispiel: die Hälfte der Sachleistungen über den Pflegedienst"
