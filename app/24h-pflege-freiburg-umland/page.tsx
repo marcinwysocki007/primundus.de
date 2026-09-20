@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -13,14 +14,13 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?" },
-  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
-  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
+  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Freiburg & Umland bedeutet" },
   { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Breisach am Rhein 2026" },
   { id: 'polnische-betreuungskraefte-in-freiburg', title: "Polnische Betreuungskräfte in Freiburg & Umland" },
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im westlichen Breisgau-Hochschwarzwald" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Freiburg und im Umland ausmacht" },
   { id: 'einzugsgebiet-breisach-am-rhein', title: "Einzugsgebiet Breisach am Rhein" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Freiburg & Umland durch" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Breisach am Rhein" },
 ]
@@ -117,6 +117,8 @@ const FRAGEN = [
   { q: 'Wäre ein Umzug in eine altersgerechte Wohnung nicht einfacher?', a: 'In Freiburg leider selten. Die Stadt hat mit gut zwei Prozent die niedrigste Leerstandsquote aller 44 Stadt- und Landkreise Baden-Württembergs und gehört zu den vier teuersten Großstädten Deutschlands. Wer hier eine bezahlbare, barrierearme Wohnung sucht, sucht lange — und muss meist das gewohnte Viertel verlassen. Deshalb ist die praktikablere Frage in der Regel, wie das Leben in der vorhandenen Wohnung weitergehen kann.' },
   { q: 'Kommt eine Betreuungskraft auch in die Gemeinden im Schwarzwald?', a: 'Ja, und dort ist der Unterschied besonders groß. Zwischen der Rheinebene und dem Hochschwarzwald liegen über 1.300 Höhenmeter. Ein ambulanter Dienst, der Gemeinden am Berg anfährt, plant im Winter anders als im Sommer, und die Termine richten sich nach der Tour. Eine Betreuungskraft, die im Haus wohnt, ist davon unabhängig. Anfahrtskosten berechnen wir nicht, der Preis ist im Umland derselbe wie in der Stadt.' },
   { q: 'Welches Einzugsgebiet wird in Breisach am Rhein bedient?', a: 'Breisach und westlicher Breisgau-Hochschwarzwald: Freiburg-Umland, Vogtsburg, Ihringen, Kaiserstuhl und alle Gemeinden im westlichen Landkreis Breisgau-Hochschwarzwald' },
+  { q: 'Ist in einer Wohnung in Freiburg & Umland Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Freiburg & Umland hat im Schnitt 80,8 m², 35,0 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 55,1 % der Wohnungen in Freiburg & Umland liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.737 € Unterschied im Monat, 32.844 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -151,43 +153,20 @@ export default function Page() {
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?">
-            <Text>Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Freiburg & Umland heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.</Text>
-            <Punkte
-              punkte={[
-                { title: 'Eigenes Zuhause', desc: 'Vertraute Umgebung bleibt — kein Heimumzug' },
-                { title: '1:1-Betreuung', desc: 'Eine Kraft, ein Mensch — keine wechselnden Gesichter' },
-                { title: 'Nachts im Haus', desc: 'Da, wenn nachts Hilfe gebraucht wird' },
+          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Freiburg & Umland bedeutet">
+            <Text>
+              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
+              Heim, wo der Umzug ansteht. Das Zuhause in Freiburg & Umland bleibt, der gewohnte Tagesablauf auch.
+            </Text>
+            <MehrDazu
+              label="Ausführlich auf den Themenseiten:"
+              links={[
+                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
+                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
+                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
               ]}
             />
-          </Abschnitt>
-
-          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
-            <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
-            <Punkte
-              punkte={[
-                { title: 'Selbstständigkeit lässt nach', desc: 'Alltägliches gelingt nicht mehr zuverlässig alleine — Anziehen, Kochen, Waschen, Orientierung' },
-                { title: 'Familie kann nicht immer da sein', desc: 'Beruf, eigene Kinder, Entfernung — Angehörige wollen helfen, aber nicht rund um die Uhr' },
-                { title: 'Pflegeheim ist keine Option', desc: 'Das eigene Zuhause, die gewohnten Möbel, der Garten — das soll bleiben' },
-                { title: 'Nächtliche Unsicherheit', desc: 'Stürze, Toilettengänge, Orientierungslosigkeit — nachts ist niemand da' },
-                { title: 'Demenz oder Orientierungsprobleme', desc: 'Vertraute Ansprechpartnerin nötig — keine wechselnden Gesichter' },
-                { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
-              ]}
-            />
-            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
-              <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
-            </Kasten>
-            <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
-            <Gegenueber
-              seiten={[
-                { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Körperpflege — Waschen, Ankleiden, Zahnpflege', 'Kochen — frisch, nach Vorlieben und Diät', 'Haushalt — Putzen, Einkaufen, Wäsche', 'Mobilisierung, Spaziergänge, Begleitung', 'Gesellschaft und Begleitung im Alltag', 'Medikamentenerinnerung', 'Arzt- und Therapietermine begleiten', 'Nachts im Haus — da, wenn Hilfe gebraucht wird'] },
-                { titel: 'Ambulanter Pflegedienst ergänzt', ton: 'taupe', punkte: ['Injektionen (Insulin, Blutverdünner)', 'Verbandswechsel, Wundversorgung', 'Katheterversorgung', 'Ernährung über Magensonde', 'Beatmungspflege', 'Komplexe medizinische Versorgung'] },
-              ]}
-            />
-            <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
           </Abschnitt>
 
           <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Breisach am Rhein 2026">
@@ -244,6 +223,9 @@ export default function Page() {
             <Text>Breisach und westlicher Breisgau-Hochschwarzwald: Freiburg-Umland, Vogtsburg, Ihringen, Kaiserstuhl und alle Gemeinden im westlichen Landkreis Breisgau-Hochschwarzwald</Text>
             <NearbyCities current="freiburg-umland" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Freiburg & Umland'} land={'Baden-Württemberg'} />
+
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
             <Punkte

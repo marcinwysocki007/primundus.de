@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
@@ -19,6 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-rheinisch', title: "Polnische Betreuungskräfte im Rheinisch-Bergischen Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rheinisch-Bergischer Kreis ausmacht" },
   { id: 'einzugsgebiet-rheinisch-bergischer-kreis', title: "Einzugsgebiet Rheinisch-Bergischer Kreis" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Rheinisch-Bergischer Kreis durch" },
   { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Kreis" },
 ]
 
@@ -94,6 +96,8 @@ const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Rheinisch-Bergischen Kreis?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen — in der Regel weniger als ein Heimplatz im Rheinland.' },
   { q: 'Welche Orte im Rheinisch-Bergischen Kreis deckt Primundus ab?', a: 'Den ganzen Kreis: Bergisch Gladbach, Wermelskirchen, Overath, Rösrath, Leichlingen, Burscheid, Odenthal und Kürten — von der Kölner Stadtgrenze bis ins Bergische Land.' },
   { q: 'Wie schnell kann die Betreuung im Bergischen starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
+  { q: 'Ist in einer Wohnung in Rheinisch-Bergischer Kreis Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Rheinisch-Bergischer Kreis hat im Schnitt 103,7 m², 15,3 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 84,3 % der Wohnungen in Rheinisch-Bergischer Kreis liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.657 € Unterschied im Monat, 31.884 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -167,6 +171,9 @@ export default function Page() {
           <Abschnitt id="einzugsgebiet-rheinisch-bergischer-kreis" titel="Einzugsgebiet Rheinisch-Bergischer Kreis">
             <NearbyCities current="rheinisch-bergischer-kreis" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Rheinisch-Bergischer Kreis'} land={'Nordrhein-Westfalen'} />
+
 
           <Abschnitt id="haeufige-fragen-aus-dem" titel="Häufige Fragen aus dem Kreis">
             <Fragen fragen={FRAGEN} />

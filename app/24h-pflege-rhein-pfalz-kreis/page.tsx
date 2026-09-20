@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
@@ -19,6 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-rhein', title: "Polnische Betreuungskräfte im Rhein-Pfalz-Kreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rhein-Pfalz-Kreis ausmacht" },
   { id: 'einzugsgebiet-rhein-pfalz-kreis', title: "Einzugsgebiet Rhein-Pfalz-Kreis" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Rhein-Pfalz-Kreis durch" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -94,6 +96,8 @@ const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Rhein-Pfalz-Kreis?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.' },
   { q: 'Welche Orte im Rhein-Pfalz-Kreis deckt Primundus ab?', a: 'Den ganzen Kreis rund um Ludwigshafen: Schifferstadt, Limburgerhof, Mutterstadt, Maxdorf, Böhl-Iggelheim, Dudenhofen, Römerberg, Altrip und alle weiteren Gemeinden der Vorderpfalz.' },
   { q: 'Wie schnell kann die Betreuung in der Vorderpfalz starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
+  { q: 'Ist in einer Wohnung in Rhein-Pfalz-Kreis Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Rhein-Pfalz-Kreis hat im Schnitt 115,1 m², 8,6 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 90,0 % der Wohnungen in Rhein-Pfalz-Kreis liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.297 € Unterschied im Monat, 27.564 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -167,6 +171,9 @@ export default function Page() {
           <Abschnitt id="einzugsgebiet-rhein-pfalz-kreis" titel="Einzugsgebiet Rhein-Pfalz-Kreis">
             <NearbyCities current="rhein-pfalz-kreis" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} />
+
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">
             <Fragen fragen={FRAGEN} />

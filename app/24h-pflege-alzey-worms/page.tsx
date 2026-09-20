@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
@@ -19,6 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-kreis', title: "Polnische Betreuungskräfte im Kreis Alzey-Worms" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Kreis Alzey-Worms ausmacht" },
   { id: 'einzugsgebiet-landkreis-alzey-worms', title: "Einzugsgebiet Landkreis Alzey-Worms" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Kreis Alzey-Worms durch" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -94,6 +96,8 @@ const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Kreis Alzey-Worms?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen — deutlich weniger als ein Heimplatz in Rheinhessen.' },
   { q: 'In welchen Orten des Kreises Alzey-Worms ist Primundus tätig?', a: 'Im gesamten Landkreis — unter anderem in Alzey, Wörrstadt, Osthofen, Westhofen, Gau-Odernheim, Wonsheim und allen umliegenden Gemeinden. Auch Worms und Mainz sind über eigene Seiten abgedeckt.' },
   { q: 'Wie schnell kann die Betreuung in Alzey-Worms starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
+  { q: 'Ist in einer Wohnung in Kreis Alzey-Worms Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Kreis Alzey-Worms hat im Schnitt 117,4 m², 9,2 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 92,0 % der Wohnungen in Kreis Alzey-Worms liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.297 € Unterschied im Monat, 27.564 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -167,6 +171,9 @@ export default function Page() {
           <Abschnitt id="einzugsgebiet-landkreis-alzey-worms" titel="Einzugsgebiet Landkreis Alzey-Worms">
             <NearbyCities current="alzey-worms" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Kreis Alzey-Worms'} land={'Rheinland-Pfalz'} />
+
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">
             <Fragen fragen={FRAGEN} />

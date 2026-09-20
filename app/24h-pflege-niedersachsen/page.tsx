@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
 import {
@@ -20,6 +21,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-niedersachsen', title: "Polnische Betreuungskräfte in Niedersachsen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Niedersachsen ausmacht" },
   { id: 'einzugsgebiet-niedersachsen', title: "Einzugsgebiet Niedersachsen" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Niedersachsen durch" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Niedersachsen" },
 ]
@@ -92,6 +94,8 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Niedersachsen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Niedersachsen — auch in ländlichen Regionen.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
   { q: 'Ist 24h-Pflege über Primundus in Niedersachsen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Ist in einer Wohnung in Niedersachsen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Niedersachsen hat im Schnitt 104,4 m², 17,1 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 87,3 % der Wohnungen in Niedersachsen liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Deutschland insgesamt zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.364 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.441 € Unterschied im Monat, 29.292 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -215,6 +219,9 @@ export default function Page() {
             <Text>Hannover, Braunschweig, Osnabrück, Oldenburg, Göttingen, Wolfsburg, Salzgitter, Hildesheim, Lüneburg, Celle und alle weiteren Städte und Gemeinden in Niedersachsen</Text>
             <CitiesOfRegion region="niedersachsen" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Niedersachsen'} land={'Deutschland insgesamt'} />
+
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
             <Punkte

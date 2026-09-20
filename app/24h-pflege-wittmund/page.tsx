@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
@@ -19,6 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-in-wittmund', title: "Polnische Betreuungskräfte in Wittmund" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Wittmund ausmacht" },
   { id: 'einzugsgebiet-landkreis-wittmund', title: "Einzugsgebiet Landkreis Wittmund" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Wittmund durch" },
   { id: 'haeufige-fragen-aus-dem', title: "Häufige Fragen aus dem Harlingerland" },
 ]
 
@@ -94,6 +96,8 @@ const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Wittmund?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.' },
   { q: 'Welche Orte im Kreis Wittmund deckt Primundus ab?', a: 'Das ganze Harlingerland: Wittmund, Esens, Carolinensiel, Harlesiel, Neuharlingersiel, Westerholt, Friedeburg und alle Dörfer dazwischen — bis an die Küste.' },
   { q: 'Lohnt sich 24h-Pflege auch auf dem Land in Ostfriesland?', a: 'Gerade dort: Heimplätze sind rar und weit entfernt, ambulante Dienste haben lange Anfahrten. Eine Betreuungskraft, die mit im Haus wohnt, macht Wege überflüssig — und das Zuhause bleibt erhalten.' },
+  { q: 'Ist in einer Wohnung in Wittmund Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Wittmund hat im Schnitt 106,9 m², 15,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 90,3 % der Wohnungen in Wittmund liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Niedersachsen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.010 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.087 € Unterschied im Monat, 25.044 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -166,6 +170,9 @@ export default function Page() {
           <Abschnitt id="einzugsgebiet-landkreis-wittmund" titel="Einzugsgebiet Landkreis Wittmund">
             <NearbyCities current="wittmund" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Wittmund'} land={'Niedersachsen'} />
+
 
           <Abschnitt id="haeufige-fragen-aus-dem" titel="Häufige Fragen aus dem Harlingerland">
             <Fragen fragen={FRAGEN} />

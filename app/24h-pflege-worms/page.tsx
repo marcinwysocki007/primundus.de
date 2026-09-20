@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -13,14 +14,13 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?" },
-  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
-  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
+  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Worms bedeutet" },
   { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Worms 2026" },
   { id: 'polnische-betreuungskraefte-in-worms', title: "Polnische Betreuungskräfte in Worms" },
   { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Alzey-Worms" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Worms ausmacht" },
   { id: 'einzugsgebiet-worms', title: "Einzugsgebiet Worms" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Worms durch" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Worms" },
 ]
@@ -111,6 +111,8 @@ const FRAGEN = [
   { q: 'Wie ist die Pflege-Versorgung in Worms im Vergleich?', a: 'Angespannt. Auf jeden der elf ambulanten Pflegedienste in Worms kommen im Schnitt rund 110 Pflegebedürftige, landesweit sind es 82. Gleichzeitig wird in Worms deutlich häufiger ambulant gepflegt als im Landesschnitt. Der Bedarf ist also hoch und die Kapazität knapp — das merken Familien vor allem dann, wenn sie kurzfristig etwas brauchen. Eine Betreuungskraft, die im Haus lebt, hängt an keiner Tourenplanung.' },
   { q: 'Sind Wormser Innenstadtwohnungen für Pflege zu Hause geeignet?', a: 'Meist ja, barrierefrei sind sie aber selten. Im Februar und März 1945 wurde gut ein Drittel des Wormser Gebäudebestands vollständig zerstört; die Innenstadt entstand danach neu, ein großer Teil der Wohnungen stammt aus den fünfziger Jahren. Solide gebaut, aber zu einer Zeit, als niemand an Aufzüge oder bodengleiche Duschen dachte. Für eine Betreuungskraft genügt ein eigenes Zimmer.' },
   { q: 'Welches Einzugsgebiet wird in Worms bedient?', a: 'Worms und Landkreis Alzey-Worms: Alzey, Osthofen, Monsheim und alle Gemeinden im Landkreis Alzey-Worms' },
+  { q: 'Ist in einer Wohnung in Worms Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Worms hat im Schnitt 92,3 m², 22,6 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 78,4 % der Wohnungen in Worms liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.297 € Unterschied im Monat, 27.564 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -145,43 +147,20 @@ export default function Page() {
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?">
-            <Text>Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Worms heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.</Text>
-            <Punkte
-              punkte={[
-                { title: 'Eigenes Zuhause', desc: 'Vertraute Umgebung bleibt — kein Heimumzug' },
-                { title: '1:1-Betreuung', desc: 'Eine Kraft, ein Mensch — keine wechselnden Gesichter' },
-                { title: 'Nachts im Haus', desc: 'Da, wenn nachts Hilfe gebraucht wird' },
+          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Worms bedeutet">
+            <Text>
+              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
+              Heim, wo der Umzug ansteht. Das Zuhause in Worms bleibt, der gewohnte Tagesablauf auch.
+            </Text>
+            <MehrDazu
+              label="Ausführlich auf den Themenseiten:"
+              links={[
+                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
+                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
+                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
               ]}
             />
-          </Abschnitt>
-
-          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
-            <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
-            <Punkte
-              punkte={[
-                { title: 'Selbstständigkeit lässt nach', desc: 'Alltägliches gelingt nicht mehr zuverlässig alleine — Anziehen, Kochen, Waschen, Orientierung' },
-                { title: 'Familie kann nicht immer da sein', desc: 'Beruf, eigene Kinder, Entfernung — Angehörige wollen helfen, aber nicht rund um die Uhr' },
-                { title: 'Pflegeheim ist keine Option', desc: 'Das eigene Zuhause, die gewohnten Möbel, der Garten — das soll bleiben' },
-                { title: 'Nächtliche Unsicherheit', desc: 'Stürze, Toilettengänge, Orientierungslosigkeit — nachts ist niemand da' },
-                { title: 'Demenz oder Orientierungsprobleme', desc: 'Vertraute Ansprechpartnerin nötig — keine wechselnden Gesichter' },
-                { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
-              ]}
-            />
-            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
-              <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
-            </Kasten>
-            <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
-            <Gegenueber
-              seiten={[
-                { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Körperpflege — Waschen, Ankleiden, Zahnpflege', 'Kochen — frisch, nach Vorlieben und Diät', 'Haushalt — Putzen, Einkaufen, Wäsche', 'Mobilisierung, Spaziergänge, Begleitung', 'Gesellschaft und Begleitung im Alltag', 'Medikamentenerinnerung', 'Arzt- und Therapietermine begleiten', 'Nachts im Haus — da, wenn Hilfe gebraucht wird'] },
-                { titel: 'Ambulanter Pflegedienst ergänzt', ton: 'taupe', punkte: ['Injektionen (Insulin, Blutverdünner)', 'Verbandswechsel, Wundversorgung', 'Katheterversorgung', 'Ernährung über Magensonde', 'Beatmungspflege', 'Komplexe medizinische Versorgung'] },
-              ]}
-            />
-            <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
           </Abschnitt>
 
           <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Worms 2026">
@@ -238,6 +217,9 @@ export default function Page() {
             <Text>Worms und Landkreis Alzey-Worms: Alzey, Osthofen, Monsheim und alle Gemeinden im Landkreis Alzey-Worms</Text>
             <NearbyCities current="worms" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Worms'} land={'Rheinland-Pfalz'} />
+
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
             <Punkte

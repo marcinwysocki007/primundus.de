@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -13,13 +14,12 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?" },
-  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
-  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
+  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Leipzig bedeutet" },
   { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Leipzig 2026" },
   { id: 'polnische-betreuungskraefte-in-leipzig', title: "Polnische Betreuungskräfte in Leipzig" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Leipzig ausmacht" },
   { id: 'einzugsgebiet-leipzig', title: "Einzugsgebiet Leipzig" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Leipzig durch" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Leipzig" },
 ]
@@ -116,6 +116,8 @@ const FRAGEN = [
   { q: 'Funktioniert 24-Stunden-Pflege in einer Leipziger Altbauwohnung?', a: 'Ja — und in Leipzig ist das der Normalfall. Rund ein Drittel aller Wohnungen stammt aus der Zeit vor 1919, knapp 90 Prozent liegen in Mehrfamilienhäusern, und nur gut 13 Prozent der Leipziger wohnen im Eigentum. Die typische Ausgangslage ist also: Mietwohnung im Gründerzeithaus, oft im zweiten oder dritten Stock. Für die Betreuungskraft braucht es ein eigenes Zimmer; alles Weitere richtet sich nach dem Alltag. Gerade wenn die Treppe zur Hürde wird, ist jemand im Haus oft die einzige Alternative zum Umzug.' },
   { q: 'Wie ist die ambulante Versorgung in Leipzig?', a: 'Angespannt, und zwar zunehmend. Die Zahl der Pflegebedürftigen in Leipzig hat sich seit 2013 mehr als verdoppelt, die stationären Plätze wuchsen im selben Zeitraum nur um gut ein Zehntel — der gesamte Zuwachs ist in die eigene Wohnung gegangen. Auf einen ambulanten Dienst kamen 2013 rund 43 Pflegebedürftige, heute sind es 81. Dazu kommen die Kosten: Die Zuzahlungen für ambulante Pflege stiegen in Sachsen seit 2015 um gut die Hälfte, ein Heimplatz verteuerte sich um mehr als das Doppelte.' },
   { q: 'Welches Einzugsgebiet wird in Leipzig bedient?', a: 'Leipzig und Umland: Markkleeberg, Schkeuditz, Taucha, Wurzen, Grimma und alle Gemeinden im Landkreis Leipzig und Nordsachsen' },
+  { q: 'Ist in einer Wohnung in Leipzig Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Leipzig hat im Schnitt 72,1 m², 40,0 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. In Leipzig liegen 54,0 % der Wohnungen in Ein- oder Zweifamilienhäusern, der Rest sind Geschosswohnungen — dann zählt, welches Stockwerk und ob es einen Aufzug gibt.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Sachsen zahlen Heimbewohner im ersten Jahr im Schnitt rund 2.990 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.067 € Unterschied im Monat, 24.804 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -150,43 +152,20 @@ export default function Page() {
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was ist 24-Stunden-Betreuung — und was unterscheidet sie von allem anderen?">
-            <Text>Bei der 24-Stunden-Betreuung lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Seniorenbetreuung zu Hause in Leipzig heißt: Das eigene Zuhause bleibt erhalten, der gewohnte Alltag auch.</Text>
-            <Punkte
-              punkte={[
-                { title: 'Eigenes Zuhause', desc: 'Vertraute Umgebung bleibt — kein Heimumzug' },
-                { title: '1:1-Betreuung', desc: 'Eine Kraft, ein Mensch — keine wechselnden Gesichter' },
-                { title: 'Nachts im Haus', desc: 'Da, wenn nachts Hilfe gebraucht wird' },
+          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Leipzig bedeutet">
+            <Text>
+              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
+              Heim, wo der Umzug ansteht. Das Zuhause in Leipzig bleibt, der gewohnte Tagesablauf auch.
+            </Text>
+            <MehrDazu
+              label="Ausführlich auf den Themenseiten:"
+              links={[
+                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
+                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
+                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
               ]}
             />
-          </Abschnitt>
-
-          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
-            <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
-            <Punkte
-              punkte={[
-                { title: 'Selbstständigkeit lässt nach', desc: 'Alltägliches gelingt nicht mehr zuverlässig alleine — Anziehen, Kochen, Waschen, Orientierung' },
-                { title: 'Familie kann nicht immer da sein', desc: 'Beruf, eigene Kinder, Entfernung — Angehörige wollen helfen, aber nicht rund um die Uhr' },
-                { title: 'Pflegeheim ist keine Option', desc: 'Das eigene Zuhause, die gewohnten Möbel, der Garten — das soll bleiben' },
-                { title: 'Nächtliche Unsicherheit', desc: 'Stürze, Toilettengänge, Orientierungslosigkeit — nachts ist niemand da' },
-                { title: 'Demenz oder Orientierungsprobleme', desc: 'Vertraute Ansprechpartnerin nötig — keine wechselnden Gesichter' },
-                { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
-              ]}
-            />
-            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
-              <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
-            </Kasten>
-            <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
-            <Gegenueber
-              seiten={[
-                { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Körperpflege — Waschen, Ankleiden, Zahnpflege', 'Kochen — frisch, nach Vorlieben und Diät', 'Haushalt — Putzen, Einkaufen, Wäsche', 'Mobilisierung, Spaziergänge, Begleitung', 'Gesellschaft und Begleitung im Alltag', 'Medikamentenerinnerung', 'Arzt- und Therapietermine begleiten', 'Nachts im Haus — da, wenn Hilfe gebraucht wird'] },
-                { titel: 'Ambulanter Pflegedienst ergänzt', ton: 'taupe', punkte: ['Injektionen (Insulin, Blutverdünner)', 'Verbandswechsel, Wundversorgung', 'Katheterversorgung', 'Ernährung über Magensonde', 'Beatmungspflege', 'Komplexe medizinische Versorgung'] },
-              ]}
-            />
-            <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
           </Abschnitt>
 
           <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Leipzig 2026">
@@ -239,6 +218,9 @@ export default function Page() {
             <Text>Leipzig und Umland: Markkleeberg, Schkeuditz, Taucha, Wurzen, Grimma und alle Gemeinden im Landkreis Leipzig und Nordsachsen</Text>
             <NearbyCities current="leipzig" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Leipzig'} land={'Sachsen'} />
+
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
             <Punkte

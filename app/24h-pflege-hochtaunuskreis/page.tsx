@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
@@ -19,6 +20,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-hochtaunuskreis', title: "Polnische Betreuungskräfte im Hochtaunuskreis" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hochtaunuskreis ausmacht" },
   { id: 'einzugsgebiet-hochtaunuskreis', title: "Einzugsgebiet Hochtaunuskreis" },
+  { id: 'werkzeuge', title: "Rechnen Sie Ihren Fall für Hochtaunuskreis durch" },
   { id: 'haeufige-fragen-aus-der', title: "Häufige Fragen aus der Region" },
 ]
 
@@ -94,6 +96,8 @@ const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft im Hochtaunuskreis?', a: 'Ab 2.150 Euro im Monat — und damit oft weniger als ein Heimplatz im Taunus, wo die Eigenanteile zu den höchsten in Hessen gehören. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.' },
   { q: 'Welche Orte im Hochtaunuskreis deckt Primundus ab?', a: 'Den ganzen Kreis: Bad Homburg, Oberursel, Königstein, Kronberg, Friedrichsdorf, Steinbach, Schmitten, Usingen, Neu-Anspach, Wehrheim und alle Gemeinden im Usinger Land.' },
   { q: 'Wie schnell kann eine Betreuungskraft im Taunus starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
+  { q: 'Ist in einer Wohnung in Hochtaunuskreis Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Hochtaunuskreis hat im Schnitt 106,2 m², 17,9 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 82,2 % der Wohnungen in Hochtaunuskreis liegen in Ein- oder Zweifamilienhäusern; dort bietet sich oft eine ganze Etage an.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.230 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.307 € Unterschied im Monat, 27.684 € im Jahr.' },
 ]
 
 export default function Page() {
@@ -167,6 +171,9 @@ export default function Page() {
           <Abschnitt id="einzugsgebiet-hochtaunuskreis" titel="Einzugsgebiet Hochtaunuskreis">
             <NearbyCities current="hochtaunuskreis" />
           </Abschnitt>
+
+          <OrtWerkzeuge ort={'Hochtaunuskreis'} land={'Hessen'} />
+
 
           <Abschnitt id="haeufige-fragen-aus-der" titel="Häufige Fragen aus der Region">
             <Fragen fragen={FRAGEN} />
