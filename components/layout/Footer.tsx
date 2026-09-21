@@ -39,7 +39,7 @@ const serviceLinks = [
   { label: 'Checkliste Pflegeübernahme', href: '/checkliste-pflegeuebernahme' },
   { label: 'Beratungsgespräch', href: '/beratungsgespraech' },
   { label: 'Kontakt', href: '/kontakt' },
-  { label: '24h-Pflege', href: '/24-stunden-pflege' },
+  { label: '24-Stunden-Pflege', href: '/24-stunden-pflege' },
   { label: 'Kosten', href: '/kosten' },
   // 27.08.2026 ergänzt: /leistungen und /ablauf waren weder im Header noch im
   // Footer verlinkt — die einzigen beiden Kernseiten ganz ohne sitewide Link.

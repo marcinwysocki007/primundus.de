@@ -7,7 +7,12 @@ import { Phone, Menu, X, MessageSquare, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 
 const nav = [
-  { label: '24h-Pflege', href: '/24-stunden-pflege' },
+  // 21.09.2026: Label war „24h-Pflege". Gemessen am selben Tag: Diese Seite bekommt 917
+  // interne Verweise, davon 720 mit genau diesem Ankertext — zwei Zeilen Code, mal 360
+  // Seiten. Wir haben Google also 720-mal gesagt, die Seite handle von der Abkürzung,
+  // während der gesuchte Begriff „24-Stunden-Pflege" ist. Platz ist da: Navigationsleiste
+  // 1.264 px, alle sechs Links zusammen 326 px, der volle Begriff kostet rund 48 px mehr.
+  { label: '24-Stunden-Pflege', href: '/24-stunden-pflege' },
   { label: 'Kosten', href: '/kosten' },
   { label: 'Ratgeber', href: '/ratgeber' },
   { label: 'Tools', href: '/tools' },
