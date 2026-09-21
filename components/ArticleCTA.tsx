@@ -176,15 +176,16 @@ export function AnsprechpartnerinGross({ ort }: { ort: string }) {
           hineingestellt. marta-kapcio-portrait.jpg ist auf das Motiv beschnitten (252 × 378) und
           füllt die Breite. Das runde Miniaturbild nutzt weiter das Original. */}
       <Image
-        src="/images/marta-kapcio.jpg"
+        src="/images/marta-kapcio-gross.jpg"
         alt={`Marta Kapcio, Ansprechpartnerin für 24-Stunden-Pflege in ${ort}`}
-        width={320}
-        height={480}
+        width={800}
+        height={1200}
         priority
         sizes="(min-width: 1024px) 360px, 100vw"
-        // Martin 21.09.: „unscharf, etwas rauszoomen". Es gibt in keinem Repo eine größere Datei als
-        // 320 × 480. Deshalb das Original statt des engen Zuschnitts, Kopf bis zu den Armen, und die
-        // Spalte auf 360 px — dann wird das Bild nur um 12 % vergrößert statt um 60 %.
+        // Eigene Datei für die große Karte (Martin, 21.09.: Foto in 1066 × 1600 geliefert). Auf das
+        // Motiv beschnitten und auf 800 × 1200 gebracht — bei 360 px Kartenbreite auf Retina exakt
+        // die nötige Auflösung, 143 KB. next.config liefert Bilder unverändert aus, deshalb bleibt
+        // marta-kapcio.jpg (320 × 480, 45 KB) für die Rundbilder in Kopfzeile und Schlussband.
         className="w-full h-[280px] sm:h-[300px] object-cover object-top"
       />
       <div className="p-6 md:p-7 flex-none">
