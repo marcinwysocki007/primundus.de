@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Ludwigshafen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Ludwigshafen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Ludwigshafen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-ludwigshafen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Ludwigshafen am Rhein — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Ludwigshafen am Rhein. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Ludwigshafen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Ludwigshafen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-ludwigshafen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Ludwigshafen am Rhein starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Ludwigshafen am Rhein rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Ludwigshafen?', a: '16.798 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,7 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Ludwigshafen?', a: '16.798 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,7 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Ludwigshafen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Ludwigshafen im Schnitt 3,1 Wohnungen, in Rheinland-Pfalz 1,7. 31,0 Prozent der Gebäude stehen frei, 45,6 Prozent stehen in geschlossener Reihe. 60,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Ludwigshafen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Spricht die Betreuungskraft die Sprache, die zu Hause gesprochen wird?', a: 'In Ludwigshafen ist das eine der häufigsten Fragen, und die Zahlen erklären warum: 15,1 Prozent der Einwohner über 65 haben keine deutsche Staatsangehörigkeit — in Rheinland-Pfalz sind es 5,1 Prozent. Beides sind Höchstwerte im Land. In Nord-Hemshof sind sogar 41,8 Prozent der über 75-Jährigen Ausländer. Unsere Betreuungskräfte kommen aus Polen. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto. Bei anderen Herkunftssprachen sagen wir Ihnen ehrlich, was wir leisten können und was nicht.' },
   { q: 'Welches Einzugsgebiet wird in Ludwigshafen am Rhein bedient?', a: 'Ludwigshafen und Rhein-Pfalz-Kreis: Frankenthal, Speyer, Neustadt an der Weinstraße, Landau und alle Gemeinden im Rhein-Pfalz-Kreis' },
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Der Blick auf zwanzig Jahre macht deutlich, wie es dazu kam:{' '} <strong className="text-pm-ink font-semibold">Zwischen 2001 und 2021 stieg die Zahl der Pflegebedürftigen um 238 Prozent, die Zahl der Heimplätze nur um 52 Prozent.</strong>{' '} Der stationäre Anteil brach von 30,7 auf 13,2 Prozent ein. Praktisch der gesamte Zuwachs landete bei den Angehörigen.</Text>
             <Text>Ein zweiter Befund ist für Ludwigshafen besonders wichtig.{' '} <strong className="text-pm-ink font-semibold">15,1 Prozent der Einwohner über 65 haben keine deutsche Staatsangehörigkeit — in Rheinland-Pfalz sind es 5,1 Prozent, also ein Drittel davon.</strong> Beides sind Höchstwerte im Land. Kleinräumig ist das extrem konzentriert: In Nord-Hemshof sind 41,8 Prozent der über 75-Jährigen Ausländer, in Edigheim 4,5. Sprache und Gewohnheiten sind bei einer Betreuungskraft, die im Haushalt lebt, deshalb keine Nebenfrage. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto.</Text>
             <Text>Auch beim Alter zerfällt die Stadt. Insgesamt ist Ludwigshafen jung — 18,8 Prozent über 65 gegenüber 22,8 Prozent im Land. Zwischen den Stadtteilen liegt beim Anteil der über 75-Jährigen aber der Faktor drei: In West sind es 4,0 Prozent, in der Gartenstadt 13,0. Das Durchschnittsalter reicht von 36,3 Jahren in West bis 46,5 in Edigheim.</Text>
-            <Text>Geriatrisch ist die Stadt versorgt: Das St. Marien- und St. Annastiftskrankenhaus führt eine Klinik für Geriatrie mit Alterstraumatologischem Zentrum und war nach eigenen Angaben die erste geriatrische Klinik in Rheinland-Pfalz mit dem Qualitätssiegel Geriatrie; dazu kommt das Krankenhaus zum Guten Hirten in Oggersheim. Für Beratung gibt es in Ludwigshafen fünf Pflegestützpunkte, jeweils für bestimmte Stadtteile zuständig — die Beratung dort ist kostenlos und trägerunabhängig (§ 7a SGB XI).</Text>
+            <Text>Geriatrisch ist die Stadt versorgt: Das St. Marien- und St. Annastiftskrankenhaus führt eine Klinik für Geriatrie mit Alterstraumatologischem Zentrum und war nach eigenen Angaben die erste geriatrische Klinik in Rheinland-Pfalz mit dem Qualitätssiegel Geriatrie; dazu kommt das Krankenhaus zum Guten Hirten in Oggersheim. Für Beratung gibt es in Ludwigshafen fünf Pflegestützpunkte, jeweils für bestimmte Stadtteile zuständig — die Beratung dort ist kostenlos und neutral (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-ludwigshafen-am-rhein" titel="Einzugsgebiet Ludwigshafen am Rhein">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Ludwigshafen'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260802-karin', 'k-20251031-martina'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

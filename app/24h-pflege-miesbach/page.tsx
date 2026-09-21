@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Miesbach | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Miesbach | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Miesbach und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-miesbach' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Miesbach — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Miesbach. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Miesbach | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Miesbach und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-miesbach',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -49,7 +49,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Miesbach starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Miesbach rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Miesbach?', a: '1.360 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,2 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Miesbach?', a: '1.360 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,2 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Miesbach — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Miesbach im Schnitt 2,0 Wohnungen, in Bayern 2,1. 50,4 Prozent der Gebäude stehen frei, 19,4 Prozent stehen in geschlossener Reihe. 43,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Miesbach ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Miesbach bedient?', a: 'Miesbach und Landkreis Miesbach: Holzkirchen, Wolfratshausen, Bad Tölz, Tegernsee und alle Gemeinden im Landkreis Miesbach und Bad Tölz-Wolfratshausen' },
   { q: 'Ist in einer Wohnung in Miesbach Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Miesbach hat im Schnitt 99,7 m², 19,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 80,6 % der Gebäude in Miesbach sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -189,7 +189,7 @@ export default function Page() {
             <Text>Nur 50,4 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. 21,7 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Bayern 15,1 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.</Text>
             <Text>Miesbach ist älter als das Land: 12,2 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.360 Menschen, in Bayern sind es 10,4 Prozent.</Text>
             <Text>In Zahlen: 1.360 Menschen in Miesbach sind 75 Jahre oder älter, und es gibt 5.285 Wohnungen in 2.651 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -241,8 +241,6 @@ export default function Page() {
 
             ort={'Miesbach'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260823-michael', 'k-20260416-barbara'].includes(b.id))}
 
           />
@@ -254,7 +252,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

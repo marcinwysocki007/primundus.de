@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Memmingen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Memmingen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Memmingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-memmingen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Memmingen — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Memmingen. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Memmingen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Memmingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-memmingen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -188,7 +188,7 @@ export default function Page() {
             <Text>Versorgt werden sie ganz überwiegend zu Hause: 50,8 Prozent allein durch Angehörige (Bayern 48,5), weitere 22,3 Prozent mit einem ambulanten Dienst (Bayern 20,0). Nur 13,9 Prozent leben im Heim, im Freistaat 17,6. Das heißt aber nicht, dass Memmingen heimarm wäre — gemessen an der Zahl der über 65-Jährigen stehen hier 47 Plätze je 1.000 bereit, in Bayern 44. Die Plätze gäbe es also; sie werden nur seltener gebraucht, weil mehr Menschen zu Hause bleiben.</Text>
             <Text>Auffällig ist, wer in Memmingen mit wem zusammenlebt.{' '} <strong className="text-pm-ink font-semibold">In 26,1 Prozent aller Haushalte leben ausschließlich Menschen ab 65</strong> — in Bayern sind es 23,0 Prozent. In gut jedem vierten Haushalt der Stadt ist also niemand da, der nachts einspringen könnte, wenn etwas passiert. Genau für diese Konstellation ist eine Betreuungskraft gedacht, die im Haushalt wohnt.</Text>
             <Text>Räumlich steht Memmingen besser da als die großen Städte: 79,6 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser, die durchschnittliche Wohnung misst 90 Quadratmeter, und mit 6,51 Euro Nettokaltmiete je Quadratmeter ist Wohnen hier vergleichsweise günstig (Bayern 8,74). Ein Zimmer für die Betreuungskraft ist also oft schon vorhanden. Eine Einschränkung bleibt: Ein Drittel der Wohnungen stammt aus den Jahren 1950 bis 1969, und knapp jede vierte hat weniger als 60 Quadratmeter. Dort wird es eng.</Text>
-            <Text>Ein Punkt, den man kennen sollte: Das Klinikum Memmingen führt seit 2016 eine anerkannte Akutgeriatrie. Eine geriatrische Tagesklinik oder eine geriatrische Rehabilitation gibt es in der Stadt dagegen nicht — in ganz Schwaben findet sich keine akutgeriatrische Tagesklinik. Nach einem Krankenhausaufenthalt geht es hier also meist direkt nach Hause, ohne den Zwischenschritt einer Reha. Umso wichtiger ist, dass zu Hause jemand da ist. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen.</Text>
+            <Text>Ein Punkt, den man kennen sollte: Das Klinikum Memmingen führt seit 2016 eine anerkannte Akutgeriatrie. Eine geriatrische Tagesklinik oder eine geriatrische Rehabilitation gibt es in der Stadt dagegen nicht — in ganz Schwaben findet sich keine akutgeriatrische Tagesklinik. Nach einem Krankenhausaufenthalt geht es hier also meist direkt nach Hause, ohne den Zwischenschritt einer Reha. Umso wichtiger ist, dass zu Hause jemand da ist. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-memmingen" titel="Einzugsgebiet Memmingen">
@@ -239,8 +239,6 @@ export default function Page() {
 
             ort={'Memmingen'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260823-michael', 'k-20260416-barbara'].includes(b.id))}
 
           />
@@ -252,7 +250,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

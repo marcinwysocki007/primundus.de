@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Witten | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Witten | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Witten und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-witten' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Witten — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Witten. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Witten | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Witten und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-witten',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Anders als in vielen Ruhrgebietsstädten ist hier auch das Gelände ein Faktor. Zwischen der Ruhr und den Höhen des Ardeygebirges liegen rund 190 Höhenmeter, und diese Höhen sind bewohnt: Gut ein Viertel aller Wittener Adressen liegt oberhalb von 150 Metern. Bemerkenswert ist, wie das mit dem Alter zusammenfällt. <strong className="text-pm-ink font-semibold"> In Bommern ist fast jeder Zehnte über 80, in Witten-Mitte nur gut jeder Fünfzehnte</strong> — und Bommern gehört zu den Stadtteilen mit der größten Höhenspanne. Wer dort wohnt, hat den Berg jeden Tag vor der Haustür, auch auf dem Weg zur Bushaltestelle.</Text>
             <Text>Beim Wohnen ist Witten keine Einfamilienhausstadt: Nur gut ein Viertel aller Wohnungen liegt in Ein- oder Zweifamilienhäusern, deutlich weniger als im Land, und nur knapp ein Drittel der Wohnungen wird von den Eigentümern selbst bewohnt. Der Bestand ist entsprechend alt — <strong className="text-pm-ink font-semibold">gut drei Viertel aller Wittener Wohnungen stammen aus der Zeit vor 1980</strong>. Am 19. März 1945 wurde die Innenstadt in etwa zwanzig Minuten zu rund 80 Prozent zerstört, rund 18.000 Menschen wurden obdachlos; die Außenstadtteile blieben dagegen weitgehend stehen. Deshalb steht in Bommern, Herbede oder Heven bis heute mehr Vorkriegsbausubstanz als im Landesdurchschnitt — schön, aber mit Treppen.</Text>
             <Text>Für die Versorgung ist der Ennepe-Ruhr-Kreis vergleichsweise gut aufgestellt: Auf einen ambulanten Pflegedienst kommen hier rund 68 Pflegebedürftige, weniger als im Land. Was ein Dienst trotzdem nicht leisten kann, ist Anwesenheit. Er kommt zu festen Zeiten und geht wieder. Eine Betreuungskraft, die mit einzieht, ist auch nachts da, übernimmt die Wege den Berg hinunter und führt den Haushalt mit — in Bommern und Herbede ebenso wie in Annen, Heven oder Stockum.</Text>
-            <Text>Ein Vorteil vor Ort: Das Evangelische Krankenhaus Witten hat eine eigene Klinik für Geriatrie samt geriatrischer Tagesklinik — das ist keineswegs selbstverständlich, viele vergleichbare Städte haben keine. Für die Beratung im Vorfeld gilt: Die Pflegeberatung im Ennepe-Ruhr-Kreis ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
+            <Text>Ein Vorteil vor Ort: Das Evangelische Krankenhaus Witten hat eine eigene Klinik für Geriatrie samt geriatrischer Tagesklinik — das ist keineswegs selbstverständlich, viele vergleichbare Städte haben keine. Für die Beratung im Vorfeld gilt: Die Pflegeberatung im Ennepe-Ruhr-Kreis ist kostenlos, neutral und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-witten" titel="Einzugsgebiet Witten">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Witten'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

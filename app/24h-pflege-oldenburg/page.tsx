@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Oldenburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Oldenburg | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Oldenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-oldenburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Oldenburg — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Oldenburg. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Oldenburg | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Oldenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-oldenburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -178,7 +178,7 @@ export default function Page() {
             <Text>Oldenburg kam durch den Krieg nahezu unbeschadet — 1,4 Prozent der Stadt wurden zerstört, 130 Wohnhäuser, die Innenstadt blieb stehen. Trotzdem hat Oldenburg heute weniger alte Wohnungen als Städte, die in Trümmern lagen: 16,0 Prozent stammen aus der Zeit vor 1950. Der Grund ist ein anderer. 1946 überschritt die Stadt durch den Zuzug von Flüchtlingen und Vertriebenen erstmals die 100.000-Einwohner-Marke, und was danach gebaut wurde, überwiegt den alten Bestand bei Weitem. Für die Pflege zu Hause ist das eine gute Nachricht: <strong className="text-pm-ink font-semibold">81 Prozent der Gebäude sind Ein- oder Zweifamilienhäuser, 69 Prozent stehen frei.</strong> Ein Zimmer für eine Betreuungskraft ist hier häufiger vorhanden als anderswo.</Text>
             <Text>Das gilt allerdings nicht für die ganze Stadt. Oldenburg ist mit rund 1.714 Einwohnern je Quadratkilometer dichter besiedelt, als das Bild der Einfamilienhäuser vermuten lässt, und zwischen den neun Stadtbezirken liegen Welten: Im Bezirk Ziegelhof/Ehnern leben 44,8 Menschen je Hektar, im Bezirk Neuenwege/Kloster Blankenburg 2,0 — knapp 2.000 Einwohner auf fast zehn Quadratkilometern, also Landkreis-Verhältnisse innerhalb der Stadtgrenze. Rund 27 Prozent der Wohnungen haben unter 60 Quadratmeter, und nur 36,3 Prozent der Haushalte wohnen im Eigentum, deutlich weniger als in Niedersachsen mit 51,1. Ob eine Betreuungskraft einziehen kann, hängt also auch hier am konkreten Grundriss.</Text>
             <Text>Die Pflegezahlen halten eine Überraschung bereit. In Oldenburg leben 10.606 Menschen mit Pflegebedarf. Der Anteil derer, die vollstationär im Heim versorgt werden, liegt mit 13,3 Prozent <em>unter</em> dem niedersächsischen Wert von 14,5 — und deutlich unter dem Landkreis Oldenburg mit 16,6 Prozent. Der sonst übliche Effekt, dass eine Stadt die Heimversorgung fürs Umland mitträgt, zeigt sich hier also nicht. Die häusliche Pflege entspricht mit 56,0 Prozent reinem Pflegegeld ziemlich genau dem Landesschnitt (55,4). Ein Hinweis zur Einordnung: Die niedrige Pflegequote der Stadt (61 je 1.000 Einwohner gegenüber 76 im Land) bedeutet keinen geringeren Bedarf — Oldenburg ist Universitätsstadt mit jüngerer Bevölkerung. 35.882 Menschen hier sind über 65.</Text>
-            <Text>Medizinisch ist Oldenburg gut aufgestellt: Die Universitätsklinik für Geriatrie am Klinikum Oldenburg deckt die Akutversorgung ab, und mit der geriatrischen Rehabilitation im Reha-Zentrum gibt es die Anschlussbehandlung am selben Ort. Was nach der Entlassung kommt, ist trotzdem die Frage, an der es meistens hängt. Eine Betreuungskraft, die mit einzieht, ist nachts da, führt den Haushalt und macht es möglich, dass jemand in seinem eigenen Haus bleibt — auch draußen in Bornhorst oder Neuenwege, wo ein ambulanter Dienst weite Wege für wenige Termine fahren müsste. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Medizinisch ist Oldenburg gut aufgestellt: Die Universitätsklinik für Geriatrie am Klinikum Oldenburg deckt die Akutversorgung ab, und mit der geriatrischen Rehabilitation im Reha-Zentrum gibt es die Anschlussbehandlung am selben Ort. Was nach der Entlassung kommt, ist trotzdem die Frage, an der es meistens hängt. Eine Betreuungskraft, die mit einzieht, ist nachts da, führt den Haushalt und macht es möglich, dass jemand in seinem eigenen Haus bleibt — auch draußen in Bornhorst oder Neuenwege, wo ein ambulanter Dienst weite Wege für wenige Termine fahren müsste. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-oldenburg" titel="Einzugsgebiet Oldenburg">
@@ -229,8 +229,6 @@ export default function Page() {
 
             ort={'Oldenburg'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260105-sven'].includes(b.id))}
 
           />
@@ -242,7 +240,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

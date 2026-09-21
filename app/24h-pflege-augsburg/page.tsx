@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Augsburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Augsburg | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Augsburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-augsburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Augsburg — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Augsburg. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Augsburg | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Augsburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-augsburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -185,7 +185,7 @@ export default function Page() {
             <Text>Bei der Pflege selbst fällt ein Wert besonders auf.{' '} <strong className="text-pm-ink font-semibold">Nur 45,4 Prozent der 14.208 Augsburger Pflegebedürftigen werden ausschließlich von Angehörigen versorgt</strong> — in Bayern sind es 48,5 Prozent. Dafür liegen beide professionellen Formen darüber: ambulante Dienste bei 22,1 statt 20,0 Prozent, Heimpflege bei 18,2 statt 17,6. Augsburg ist eine Stadt, in der Pflege früher aus der Hand gegeben wird als im übrigen Bayern. Das hat nichts mit fehlender Zuwendung zu tun, sondern mit Wohnungsgrößen, Erwerbstätigkeit und Wegen.</Text>
             <Text>Heimplätze sind in Augsburg reichlich vorhanden — 49 je 1.000 Einwohner über 65 gegenüber 44 in Bayern, und mit durchschnittlich 71 Plätzen je Haus sind die Einrichtungen größer als im Land (58). Auch hier zeigen Anteil und Platzangebot in dieselbe Richtung. Eine Betreuung zu Hause tritt in dieser Stadt also nicht gegen einen Mangel an, sondern gegen ein gut ausgebautes stationäres Angebot. Der Unterschied liegt woanders: darin, dass jemand in der eigenen Wohnung bleibt, in der vertrauten Umgebung, mit einer festen Bezugsperson statt wechselnden Schichten.</Text>
             <Text>Eine Gruppe wird dabei regelmäßig übersehen. In Augsburg haben{' '} <strong className="text-pm-ink font-semibold">2.009 Menschen Pflegegrad 1, beziehen aber keine regulären Pflegeleistungen</strong> — 14,1 Prozent aller Pflegebedürftigen der Stadt und damit mehr als in Bayern (13,9 Prozent). Das sind über zweitausend Haushalte mit anerkanntem Unterstützungsbedarf, in denen bisher nichts organisiert ist. Wer hier früh handelt, muss später nicht unter Zeitdruck entscheiden.</Text>
-            <Text>Zur medizinischen Lage gehören zwei Punkte. Mit der geriatrischen Rehaklinik der Hessing Stiftung hat Augsburg eine der größten Einrichtungen ihrer Art in Deutschland, rund zweitausend Patienten im Jahr, und das erklärte Ziel ist die Rückkehr nach Hause. Eine akutgeriatrische Tagesklinik gibt es in ganz Schwaben dagegen nicht. Beides zusammen heißt: Der Übergang von der Klinik zurück in die eigene Wohnung muss zu Hause aufgefangen werden. Genau dafür zieht eine Betreuungskraft mit ein — auch in Bergheim, Inningen oder der Firnhaberau, wo ein Dienst weite Wege für kurze Einsätze hätte. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Zur medizinischen Lage gehören zwei Punkte. Mit der geriatrischen Rehaklinik der Hessing Stiftung hat Augsburg eine der größten Einrichtungen ihrer Art in Deutschland, rund zweitausend Patienten im Jahr, und das erklärte Ziel ist die Rückkehr nach Hause. Eine akutgeriatrische Tagesklinik gibt es in ganz Schwaben dagegen nicht. Beides zusammen heißt: Der Übergang von der Klinik zurück in die eigene Wohnung muss zu Hause aufgefangen werden. Genau dafür zieht eine Betreuungskraft mit ein — auch in Bergheim, Inningen oder der Firnhaberau, wo ein Dienst weite Wege für kurze Einsätze hätte. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-augsburg" titel="Einzugsgebiet Augsburg">
@@ -236,8 +236,6 @@ export default function Page() {
 
             ort={'Augsburg'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260508-robert', 'k-20250929-sandra', 'k-20241130-gerhard'].includes(b.id))}
 
           />
@@ -249,7 +247,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

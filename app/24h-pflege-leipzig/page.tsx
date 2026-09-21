@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
@@ -20,18 +21,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Leipzig ausmacht" },
   { id: 'einzugsgebiet-leipzig', title: "Einzugsgebiet Leipzig" },
   { id: 'werkzeuge', title: "Was es in Leipzig kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Leipzig" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Leipzig | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Leipzig | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Leipzig und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-leipzig' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Leipzig — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Leipzig. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Leipzig | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Leipzig und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-leipzig',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -178,7 +180,7 @@ export default function Page() {
             <Text>Dazu kommt, wie in Leipzig gewohnt wird. <strong className="text-pm-ink font-semibold"> Mehr als die Hälfte aller Haushalte sind Einpersonenhaushalte</strong>, und knapp 90 Prozent der Wohnungen liegen in Mehrfamilienhäusern. Nur gut 13 Prozent der Leipziger wohnen im Eigentum, der niedrigste Wert in ganz Sachsen. Das heißt in der Praxis: sehr viele ältere Menschen leben allein in einer Mietwohnung im Geschossbau — oft in einem Gründerzeithaus, denn rund ein Drittel aller Wohnungen stammt aus der Zeit vor 1919. Schöne Altbauten, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren.</Text>
             <Text>Die Pflegestatistik zeigt, wohin sich das entwickelt hat. Die Zahl der Pflegebedürftigen in Leipzig hat sich seit 2013 mehr als verdoppelt, die stationäre Kapazität ist im selben Zeitraum aber nur um gut ein Zehntel gewachsen. Der gesamte Zuwachs ist also in die eigene Wohnung gegangen. Entsprechend belastet sind die Dienste: Kamen 2013 auf einen ambulanten Pflegedienst noch rund 43 Pflegebedürftige, sind es heute 81. Und die Kosten laufen mit — die Zuzahlungen für ambulante Pflege stiegen in Sachsen seit 2015 um gut die Hälfte, ein Heimplatz verteuerte sich um mehr als das Doppelte.</Text>
             <Text>Für die Pflege ist Leipzig zudem nicht eine Stadt, sondern viele. Zwischen dem ältesten und dem jüngsten Ortsteil liegen mehr als zwanzig Jahre Durchschnittsalter: In der Grünauer Siedlung und in Heiterblick sind die Menschen im Schnitt über 54, in Volkmarsdorf und Lindenau Mitte dreißig. Wer in Grünau, Lößnig oder Großzschocher alt wird, lebt in einer Umgebung, die selbst gealtert ist — Grünau hat seit den achtziger Jahren fast die Hälfte seiner Bewohner verloren. Geografisch ist die Stadt dagegen unproblematisch: Sie ist flach, die einzigen nennenswerten Erhebungen sind aufgeschüttete Trümmer- und Deponieberge und damit Ausflugsziele, keine Alltagswege.</Text>
-            <Text>Eine Betreuungskraft, die mit einzieht, löst genau die Kombination, die in Leipzig so häufig ist: allein lebend, im Obergeschoss, ohne Angehörige um die Ecke. Bevor Sie entscheiden, lassen Sie sich unabhängig beraten — die Pflegeberatung in Leipzig ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
+            <Text>Eine Betreuungskraft, die mit einzieht, löst genau die Kombination, die in Leipzig so häufig ist: allein lebend, im Obergeschoss, ohne Angehörige um die Ecke. Bevor Sie entscheiden, lassen Sie sich unabhängig beraten — die Pflegeberatung in Leipzig ist kostenlos, neutral und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-leipzig" titel="Einzugsgebiet Leipzig">
@@ -225,13 +227,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Leipzig'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Leipzig">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

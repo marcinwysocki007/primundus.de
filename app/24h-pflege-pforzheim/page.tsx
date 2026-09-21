@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Pforzheim & Enzkreis | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  description: 'Liebevolle Betreuung in Pforzheim & Enzkreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-pforzheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Pforzheim — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Pforzheim. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Pforzheim & Enzkreis | 6× Testsieger',
+    description: 'Liebevolle Betreuung in Pforzheim & Enzkreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-pforzheim',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -235,8 +235,6 @@ export default function Page() {
 
             ort={'Pforzheim'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250118-sebastian'].includes(b.id))}
 
           />
@@ -248,7 +246,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

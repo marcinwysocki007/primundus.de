@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Nürtingen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Nürtingen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Nürtingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-nuertingen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Nürtingen — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Nürtingen. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Nürtingen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Nürtingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-nuertingen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Nürtingen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Nürtingen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Nürtingen?', a: '4.567 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,4 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Nürtingen?', a: '4.567 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,4 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Nürtingen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Nürtingen im Schnitt 2,0 Wohnungen, in Baden-Württemberg 2,1. 51,9 Prozent der Gebäude stehen frei, 20,0 Prozent stehen in geschlossener Reihe. 42,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Nürtingen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Nürtingen bedient?', a: 'Nürtingen und Landkreis Esslingen: Kirchheim unter Teck, Wendlingen, Neckartenzlingen, Bempflingen, Owen und alle Gemeinden im südlichen Landkreis Esslingen' },
   { q: 'Ist in einer Wohnung in Nürtingen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Nürtingen hat im Schnitt 97,3 m², 19,7 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 82,5 % der Gebäude in Nürtingen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -183,7 +183,7 @@ export default function Page() {
           <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Nürtingen ausmacht">
             <Text>Nürtingen liegt beim Wohnen dicht am Schnitt von Baden-Württemberg — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 97,3 Quadratmeter, auf ein Gebäude kommen 2,0 Wohnungen, und 56,4 Prozent der Haushalte wohnen im Eigentum.</Text>
             <Text>11,4 Prozent der Einwohner sind 75 Jahre oder älter, das sind 4.567 Menschen. In 25,5 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -235,8 +235,6 @@ export default function Page() {
 
             ort={'Nürtingen'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260829-sabine', 'k-20260318-thomas'].includes(b.id))}
 
           />
@@ -248,7 +246,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

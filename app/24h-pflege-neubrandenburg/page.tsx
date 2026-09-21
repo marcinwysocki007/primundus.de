@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Neubrandenburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  description: 'Liebevolle Betreuung in Neubrandenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-neubrandenburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Neubrandenburg — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Neubrandenburg. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Neubrandenburg | 6× Testsieger',
+    description: 'Liebevolle Betreuung in Neubrandenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-neubrandenburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Neubrandenburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Neubrandenburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Neubrandenburg?', a: '8.291 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 13,9 Prozent — in Mecklenburg-Vorpommern 12,6 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 30,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Mecklenburg-Vorpommern: 28,5 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Neubrandenburg?', a: '8.291 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 13,9 Prozent — in Mecklenburg-Vorpommern 12,6 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 30,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Mecklenburg-Vorpommern: 28,5 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Neubrandenburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Neubrandenburg im Schnitt 4,4 Wohnungen, in Mecklenburg-Vorpommern 2,2. 43,0 Prozent der Gebäude stehen frei, 41,2 Prozent stehen in geschlossener Reihe. 25,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Neubrandenburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Neubrandenburg bedient?', a: 'Neubrandenburg und Mecklenburgische Seenplatte: Waren, Demmin, Altentreptow und alle Gemeinden im Landkreis Mecklenburgische Seenplatte' },
   { q: 'Ist in einer Wohnung in Neubrandenburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Neubrandenburg hat im Schnitt 69,7 m², 37,7 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 64,0 % der Gebäude in Neubrandenburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -185,7 +185,7 @@ export default function Page() {
             <Text>Altbau vor 1950 macht in Neubrandenburg 7,5 Prozent des Bestands aus, in Mecklenburg-Vorpommern 27,8 Prozent. In Neubrandenburg wohnen nur 20,0 Prozent der Haushalte im Eigentum, in Mecklenburg-Vorpommern 39,5 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
             <Text>Gut zwei von fünf Gebäuden in Neubrandenburg ist ein Reihenhaus — in Mecklenburg-Vorpommern 17,6 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Die durchschnittliche Wohnung misst 69,7 Quadratmeter gegenüber 82,5 in Mecklenburg-Vorpommern — rund 13 Quadratmeter weniger. Nur 43,0 Prozent der Gebäude stehen frei, in Mecklenburg-Vorpommern sind es 63,6 Prozent.</Text>
             <Text>In Zahlen: 8.291 Menschen in Neubrandenburg sind 75 Jahre oder älter, und es gibt 37.419 Wohnungen in 8.555 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Neubrandenburg'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250221-klaus'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

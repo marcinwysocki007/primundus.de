@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Aalen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Aalen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Aalen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-aalen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Aalen — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Aalen. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Aalen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Aalen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-aalen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Aalen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Aalen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Aalen?', a: '7.427 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Aalen?', a: '7.427 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Aalen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Aalen im Schnitt 2,0 Wohnungen, in Baden-Württemberg 2,1. 72,7 Prozent der Gebäude stehen frei, 10,8 Prozent stehen in geschlossener Reihe. 44,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Aalen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Was ist mit Kurzzeitpflege in Aalen, wenn ich selbst ausfalle?', a: 'Das ist in Aalen der wundeste Punkt. Die Zahl der Kurzzeitpflegeplätze in der Stadt ist von 40 im Jahr 2022 auf 22 im Jahr 2024 gefallen, also fast halbiert. Genau diese Plätze braucht man aber, wenn die pflegende Tochter selbst operiert wird oder zwei Wochen wegmuss. Bei einer Betreuung im Haushalt stellt sich die Frage anders: Fällt Ihre Betreuungskraft aus, stellen wir Ersatz, ohne dass für den Wechsel selbst etwas berechnet wird — es fallen lediglich die An- und Abreisekosten der neuen Kraft an. Ein Heimplatz muss dafür nicht gesucht werden.' },
   { q: 'Welches Einzugsgebiet wird in Aalen bedient?', a: 'Aalen und Ostalbkreis: Schwäbisch Gmünd, Ellwangen, Bopfingen, Heidenheim und alle Gemeinden im Ostalbkreis' },
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Aalen'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260829-sabine', 'k-20260318-thomas'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
@@ -21,18 +22,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Halle (Saale) ausmacht" },
   { id: 'einzugsgebiet-halle-saale', title: "Einzugsgebiet Halle (Saale)" },
   { id: 'werkzeuge', title: "Was es in Halle (Saale) kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Halle (Saale)" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Halle (Saale) | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Halle (Saale) | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Halle (Saale) und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-halle-saale' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Halle (Saale) — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Halle (Saale). Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Halle (Saale) | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Halle (Saale) und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-halle-saale',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -45,7 +47,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Halle (Saale) starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Halle (Saale) rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Halle (Saale)?', a: '30.293 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 13,4 Prozent — in Sachsen-Anhalt 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 27,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen-Anhalt: 29,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Halle (Saale)?', a: '30.293 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 13,4 Prozent — in Sachsen-Anhalt 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 27,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen-Anhalt: 29,4 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Halle (Saale) — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Halle (Saale) im Schnitt 4,7 Wohnungen, in Sachsen-Anhalt 2,1. 34,5 Prozent der Gebäude stehen frei, 48,5 Prozent stehen in geschlossener Reihe. 55,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Halle (Saale) ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Halle (Saale) bedient?', a: 'Halle und Saalekreis: Merseburg, Querfurt, Weißenfels und alle Gemeinden im Saalekreis und Burgenlandkreis' },
   { q: 'Ist in einer Wohnung in Halle (Saale) Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Halle (Saale) hat im Schnitt 70,4 m², 47,8 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 55,9 % der Gebäude in Halle (Saale) sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -182,7 +184,7 @@ export default function Page() {
             <Text>Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Halle (Saale) häufiger als anderswo. Knapp jede zweite Wohnung ist kleiner als 60 Quadratmeter — in Sachsen-Anhalt sind es 31,3 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. Knapp jedes zweite Gebäude in Halle (Saale) ist ein Reihenhaus — in Sachsen-Anhalt 22,5 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
             <Text>Nur 34,5 Prozent der Gebäude stehen frei, in Sachsen-Anhalt sind es 58,6 Prozent. Die durchschnittliche Wohnung misst 70,4 Quadratmeter gegenüber 84,0 in Sachsen-Anhalt — rund 14 Quadratmeter weniger. 54,9 Prozent aller Haushalte in Halle (Saale) bestehen aus einer einzigen Person, in Sachsen-Anhalt sind es 44,7 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.</Text>
             <Text>In Zahlen: 30.293 Menschen in Halle (Saale) sind 75 Jahre oder älter, und es gibt 143.824 Wohnungen in 30.389 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -230,13 +232,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Halle (Saale)'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Halle (Saale)">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

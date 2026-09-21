@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Speyer | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Speyer | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Speyer und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-speyer' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Speyer — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Speyer. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Speyer | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Speyer und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-speyer',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -49,7 +49,7 @@ const FRAGEN = [
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Speyer rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie wohnt man in Speyer — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Speyer im Schnitt 2,5 Wohnungen, in Rheinland-Pfalz 1,7. 35,8 Prozent der Gebäude stehen frei, 42,5 Prozent stehen in geschlossener Reihe. 49,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Speyer ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Wie viele ältere Menschen leben in Speyer?', a: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Speyer?', a: '5.707 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie gut ist die ambulante Versorgung in Speyer?', a: 'Dünner als im Landesdurchschnitt. Nur 16,3 Prozent der Speyerer Pflegebedürftigen werden von einem ambulanten Dienst betreut, in Rheinland-Pfalz sind es 18,3 Prozent — und in der ganzen Stadt gibt es nur 15 solcher Dienste. Umgekehrt ist das Heimangebot außergewöhnlich dicht: 96,8 vollstationäre Plätze je 1.000 Einwohner über 70 gegenüber 63,1 im Land, schon 2021 der Spitzenwert aller 36 Verwaltungsbezirke in Rheinland-Pfalz. Speyer ist also stark auf stationäre Versorgung ausgerichtet. Wer zu Hause bleiben möchte, findet weniger Unterstützung von außen als in vergleichbaren Städten — eine Betreuungskraft, die im Haushalt lebt, ist hier oft die einzige durchgehende Lösung.' },
   { q: 'Wie gut ist die häusliche Pflege in Speyer aufgestellt?', a: 'Ehrlich gesagt: dünner als das Heimangebot. Speyer hat mit 97 vollstationären Plätzen je 1.000 Einwohner über 70 die höchste Heimplatzdichte in Rheinland-Pfalz (Land: 63) — 2021 war es der Spitzenwert aller 36 Verwaltungsbezirke. Ambulant sieht es anders aus: Nur 16,3 Prozent der 3.653 Pflegebedürftigen werden von einem Pflegedienst betreut, im Land 18,3 Prozent, und es gibt in der ganzen Stadt lediglich 15 Dienste. Wer zu Hause bleiben möchte, hat also weniger Auswahl und sollte früher planen. Eine Betreuungskraft, die im Haushalt lebt, ist von dieser Knappheit nicht betroffen — sie ist durchgehend da, nicht nach Tourenplan.' },
   { q: 'Welches Einzugsgebiet wird in Speyer bedient?', a: 'Speyer und Rhein-Pfalz-Kreis: Schifferstadt, Römerberg, Dudenhofen und alle Gemeinden im Rhein-Pfalz-Kreis nördlich von Landau' },
@@ -187,7 +187,7 @@ export default function Page() {
             <Text>Die Kehrseite betrifft genau die Familien, die zu Hause bleiben wollen: Das ambulante Netz ist dünner als anderswo. Nur 16,3 Prozent der 3.653 Pflegebedürftigen werden von einem Pflegedienst betreut, im Land 18,3 Prozent — und es gibt in der ganzen Stadt lediglich 15 solche Dienste. Wer hier eine Versorgung zu Hause organisiert, hat weniger Auswahl und muss früher planen.</Text>
             <Text>Der Druck wächst dabei, denn Speyer ist alt.{' '} <strong className="text-pm-ink font-semibold">Mit einem Medianalter von 47 Jahren ist es die älteste kreisfreie Stadt in Rheinland-Pfalz</strong> (Land: 45). 24,8 Prozent der Einwohner sind über 65, 7,8 Prozent über 80 — beides deutlich über dem Landesschnitt von 23,3 und 6,9 Prozent.</Text>
             <Text>Topografisch nimmt Speyer den Bewohnern nichts ab, aber es macht auch nichts schwerer: Die Stadt liegt in der Oberrheinebene, zwischen der Rheinniederung und der Hochterrasse liegen über das gesamte Stadtgebiet rund 20 Höhenmeter. Was im Volksmund „Buckel" heißt — Museumsbuckel, Brauereibuckel, Schützenbuckel —, sind kurze Rampen, keine Hanglagen. Der Rhein bildet nur die Ostgrenze und zerschneidet die Stadt nicht. Die reale Barriere ist eine andere, und die Stadt benennt sie selbst: Speyer-Süd ist durch die B 39 vom Zentrum abgehängt.</Text>
-            <Text>Medizinisch ist die Stadt stark: Das Diakonissen-Stiftungs-Krankenhaus führt eine geriatrische Fachabteilung mit 1.297 stationären Fällen im Jahr — die größte, die uns bei diesen Recherchen begegnet ist — dazu ein Geriatrisches Zentrum mit 16 Tagesklinikplätzen. Ein Hinweis, weil derselbe Träger auch das Evangelische Krankenhaus in Bad Dürkheim betreibt: Die Geriatrie sitzt in Speyer, Paul-Egell-Straße. Eine eigenständige geriatrische Reha gibt es hier nicht, die Anschlussbehandlung findet auswärts statt. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Medizinisch ist die Stadt stark: Das Diakonissen-Stiftungs-Krankenhaus führt eine geriatrische Fachabteilung mit 1.297 stationären Fällen im Jahr — die größte, die uns bei diesen Recherchen begegnet ist — dazu ein Geriatrisches Zentrum mit 16 Tagesklinikplätzen. Ein Hinweis, weil derselbe Träger auch das Evangelische Krankenhaus in Bad Dürkheim betreibt: Die Geriatrie sitzt in Speyer, Paul-Egell-Straße. Eine eigenständige geriatrische Reha gibt es hier nicht, die Anschlussbehandlung findet auswärts statt. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-speyer" titel="Einzugsgebiet Speyer">
@@ -238,8 +238,6 @@ export default function Page() {
 
             ort={'Speyer'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250418-roswitha'].includes(b.id))}
 
           />
@@ -251,7 +249,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

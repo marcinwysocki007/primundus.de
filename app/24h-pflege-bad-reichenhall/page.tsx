@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bad Reichenhall | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  description: 'Liebevolle Betreuung in Bad Reichenhall und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-reichenhall' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Bad Reichenhall — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Bad Reichenhall. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Bad Reichenhall | 6× Testsieger',
+    description: 'Liebevolle Betreuung in Bad Reichenhall und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bad-reichenhall',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -49,7 +49,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Reichenhall starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Bad Reichenhall rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Bad Reichenhall?', a: '3.170 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 17,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Bad Reichenhall?', a: '3.170 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 17,6 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 34,3 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Bad Reichenhall — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Reichenhall im Schnitt 3,6 Wohnungen, in Bayern 2,1. 52,7 Prozent der Gebäude stehen frei, 28,1 Prozent stehen in geschlossener Reihe. 45,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Reichenhall ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Gibt es in Bad Reichenhall eine Akutgeriatrie?', a: 'Nein — und das zu wissen erspart Angehörigen Fahrerei. Die Kreisklinik Bad Reichenhall hat 16 Fachabteilungen, aber keine Akutgeriatrie. Die Akutgeriatrie desselben Trägers sitzt an der Kreisklinik Trostberg, einem anderen Landkreis rund 55 Kilometer entfernt. Am Ort gibt es dafür eine geriatrische Rehaklinik, die Rehaklinik Prinzregent Luitpold. Von den übrigen Kurkliniken der Stadt arbeitet keine geriatrisch — sie behandeln Atemwege, Orthopädie und Onkologie. Bad Reichenhall ist mit 29,2 Prozent Einwohnern über 65 zugleich eine der ältesten Städte Bayerns (Freistaat: 21,6 Prozent).' },
   { q: 'Welches Einzugsgebiet wird in Bad Reichenhall bedient?', a: 'Bad Reichenhall und Berchtesgadener Land Nord: Piding, Bayerisch Gmain, Ainring und alle Gemeinden im nördlichen Landkreis Berchtesgadener Land' },
@@ -191,7 +191,7 @@ export default function Page() {
             <Text>Umso überraschender ist eine zweite Zahl: Die Pflegequote im Landkreis Berchtesgadener Land liegt mit 44 Pflegebedürftigen je 1.000 Einwohner{' '} <em>unter</em> dem bayerischen Wert von 47 — obwohl der Kreis deutlich älter ist als das Land. Was dagegen auffällt, ist die Versorgungsform:{' '} <strong className="text-pm-ink font-semibold">Nur 43,0 Prozent der Pflegebedürftigen werden allein von Angehörigen versorgt, in Bayern sind es 48,5 Prozent</strong> — und 21,6 Prozent leben im Heim gegenüber 17,6 im Freistaat. Hier wird Pflege früher aus der Hand gegeben als anderswo in Bayern.</Text>
             <Text>Dass mehr Menschen im Heim leben, heißt allerdings nicht, dass es besonders viele Plätze gäbe. Gemessen an der Zahl der über 65-Jährigen stehen 46 Plätze je 1.000 bereit, in Bayern 44 — ein Vorsprung von rund vier Prozent, während der Heimanteil um 23 Prozent über dem Landeswert liegt. Der Unterschied erklärt sich aus dem Nenner: Der Kreis ist eben alt. Für Familien heißt das, dass ein Heimplatz hier keineswegs leichter zu bekommen ist, als die Anteilszahl vermuten lässt.</Text>
             <Text>Die Alpenlage wird beim Thema Pflege gern bemüht, meist mit den falschen Zahlen. Die oft zitierte Spanne von 470 bis 1.750 Metern ist für den Alltag bedeutungslos: Der Predigtstuhl trägt eine Bergstation, das Reichenhaller Haus eine Alpenvereinshütte — dort wohnt niemand. Alltagsrelevant ist etwas anderes:{' '} <strong className="text-pm-ink font-semibold">Der bewohnte Ortsteil Nonn erstreckt sich über rund 170 Höhenmeter</strong>, vom Unterland auf 474 Metern bis zum Oberland auf über 600. Wer dort oben wohnt, kennt die Anfahrt im Winter.</Text>
-            <Text>Ein Punkt, der Angehörigen viel Fahrerei erspart: Die Kreisklinik Bad Reichenhall hat 16 Fachabteilungen, aber{' '} <strong className="text-pm-ink font-semibold">keine Akutgeriatrie</strong>. Die Akutgeriatrie desselben Trägers sitzt an der Kreisklinik Trostberg — anderer Landkreis, rund 55 Kilometer entfernt. Am Ort gibt es dafür eine geriatrische Rehaklinik, die Rehaklinik Prinzregent Luitpold. Von den übrigen Kurkliniken der Stadt arbeitet keine geriatrisch; sie behandeln Atemwege, Orthopädie und Onkologie. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Ein Punkt, der Angehörigen viel Fahrerei erspart: Die Kreisklinik Bad Reichenhall hat 16 Fachabteilungen, aber{' '} <strong className="text-pm-ink font-semibold">keine Akutgeriatrie</strong>. Die Akutgeriatrie desselben Trägers sitzt an der Kreisklinik Trostberg — anderer Landkreis, rund 55 Kilometer entfernt. Am Ort gibt es dafür eine geriatrische Rehaklinik, die Rehaklinik Prinzregent Luitpold. Von den übrigen Kurkliniken der Stadt arbeitet keine geriatrisch; sie behandeln Atemwege, Orthopädie und Onkologie. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bad-reichenhall" titel="Einzugsgebiet Bad Reichenhall">
@@ -242,8 +242,6 @@ export default function Page() {
 
             ort={'Bad Reichenhall'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260823-michael', 'k-20260416-barbara'].includes(b.id))}
 
           />
@@ -255,7 +253,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

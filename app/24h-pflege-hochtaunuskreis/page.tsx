@@ -28,14 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Hochtaunuskreis | 6× Testsieger',
-  description:
-    'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
+  title: '24-Stunden-Pflege im Hochtaunuskreis | 6× Testsieger',
+  description: 'Liebevolle Betreuung im Hochtaunuskreis und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hochtaunuskreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege im Hochtaunuskreis — Betreuung zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft im Hochtaunuskreis. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege im Hochtaunuskreis | 6× Testsieger',
+    description: 'Liebevolle Betreuung im Hochtaunuskreis und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-hochtaunuskreis',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -150,7 +149,7 @@ export default function Page() {
             <Text>Hochtaunuskreis ist älter als das Land: 12,6 Prozent der Einwohner sind 75 Jahre oder älter — das sind 30.010 Menschen, in Hessen sind es 10,5 Prozent. Die durchschnittliche Wohnung misst 106,2 Quadratmeter und damit rund 8 Quadratmeter mehr als im Schnitt von Hessen (98,3).</Text>
             <Text>Altbau vor 1950 macht in Hochtaunuskreis 13,9 Prozent des Bestands aus, in Hessen 20,4 Prozent. Mit 9,23 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Hochtaunuskreis teurer als im Schnitt von Hessen (8,21 Euro).</Text>
             <Text>In Zahlen: 30.010 Menschen in Hochtaunuskreis sind 75 Jahre oder älter, und es gibt 116.461 Wohnungen in 55.882 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -166,10 +165,6 @@ export default function Page() {
 
             ort={'Hochtaunuskreis'}
 
-
-            herkunft="umgebung"
-
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
 
 
@@ -183,7 +178,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

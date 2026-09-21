@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
@@ -22,18 +23,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Niedersachsen ausmacht" },
   { id: 'einzugsgebiet-niedersachsen', title: "Einzugsgebiet Niedersachsen" },
   { id: 'werkzeuge', title: "Was es in Niedersachsen kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Niedersachsen" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Niedersachsen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Niedersachsen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Niedersachsen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-niedersachsen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Niedersachsen | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Niedersachsen. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Niedersachsen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Niedersachsen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-niedersachsen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -246,13 +248,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Niedersachsen'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Niedersachsen">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

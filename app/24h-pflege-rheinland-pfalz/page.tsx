@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
@@ -22,18 +23,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rheinland-Pfalz ausmacht" },
   { id: 'einzugsgebiet-rheinland-pfalz', title: "Einzugsgebiet Rheinland-Pfalz" },
   { id: 'werkzeuge', title: "Was es in Rheinland-Pfalz kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rheinland-Pfalz" },
 ]
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Rheinland-Pfalz | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  description: 'Liebevolle Betreuung in Rheinland-Pfalz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinland-pfalz' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Rheinland-Pfalz | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Rheinland-Pfalz. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Rheinland-Pfalz | 6× Testsieger',
+    description: 'Liebevolle Betreuung in Rheinland-Pfalz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-rheinland-pfalz',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -246,13 +248,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Rheinland-Pfalz'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Rheinland-Pfalz">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Hannover | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Hannover | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Hannover und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hannover' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Hannover — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Hannover. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Hannover | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Hannover und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-hannover',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -47,7 +47,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Hannover starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Hannover rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Hannover?', a: '51.876 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,1 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Hannover?', a: '51.876 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,1 Prozent — in Niedersachsen 11,3 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Niedersachsen: 25,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Hannover — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Hannover im Schnitt 4,3 Wohnungen, in Niedersachsen 1,7. 28,9 Prozent der Gebäude stehen frei, 53,9 Prozent stehen in geschlossener Reihe. 67,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Hannover ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Warum leben in Hannover immer weniger Pflegebedürftige im Heim?', a: 'Nicht, weil es weniger Bedarf gäbe. Der Anteil fiel von 26,4 Prozent im Jahr 2017 auf 16,6 Prozent 2023, während der Anteil der allein von Angehörigen versorgten Menschen von 43,3 auf 58,6 Prozent stieg. Die Stadt nennt in ihrer eigenen Auswertung die Gründe: Die Zahl der stationären Plätze ist gesunken — fehlende Arbeitskräfte, gesunkene Investitionsbereitschaft — und es gibt wochenlange Wartezeiten bei Kurzzeit-, Verhinderungs- und Dauerpflege. Die Last hat sich also zu den Familien verschoben. Von den über 85-jährigen Hannoveranern sind 69,0 Prozent pflegebedürftig.' },
   { q: 'Welches Einzugsgebiet wird in Hannover bedient?', a: 'Hannover und Region: Garbsen, Langenhagen, Burgdorf, Lehrte, Sehnde, Pattensen und alle Gemeinden in der Region Hannover' },
@@ -180,7 +180,7 @@ export default function Page() {
             <Text>In Hannover hat sich in sechs Jahren verschoben, wer die Pflege trägt — und zwar dramatisch.{' '} <strong className="text-pm-ink font-semibold">2017 lebten noch 26,4 Prozent der Pflegebedürftigen im Heim, 2023 waren es 16,6 Prozent.</strong> Im selben Zeitraum stieg der Anteil derer, die zu Hause allein von Angehörigen versorgt werden, von 43,3 auf 58,6 Prozent. Das ist keine Verlagerung aus Überzeugung: Die Stadt schreibt in ihrer eigenen Auswertung, die Zahl der stationären Plätze sei gesunken — wegen fehlender Arbeitskräfte und gesunkener Investitionsbereitschaft — und es gebe wochenlange Wartezeiten bei Kurzzeit-, Verhinderungs- und Dauerpflege.</Text>
             <Text>Von den 38.149 Pflegebedürftigen der Stadt nutzen 24,8 Prozent zusätzlich einen ambulanten Dienst. Wie steil der Bedarf mit dem Alter steigt, zeigt eine Zahlenreihe, die man kennen sollte: Von den 60- bis 74-Jährigen sind 9,2 Prozent pflegebedürftig, von den 75- bis 84-Jährigen 28,6 Prozent —{' '} <strong className="text-pm-ink font-semibold">und von den über 85-Jährigen 69,0 Prozent.</strong></Text>
             <Text>Innerhalb der Stadt verteilt sich das Alter sehr ungleich. Im Heideviertel sind 20,3 Prozent der Einwohner über 75, in der Nordstadt 5,3 Prozent — der Faktor 3,8. Bei den über 65-Jährigen liegt zwischen Heideviertel (31,4 Prozent) und Nordstadt (11,8) noch immer der Faktor 2,7. Eine Einschränkung, die wir dazusagen: Pflegedaten gibt es in Hannover nur für die Gesamtstadt, nicht je Stadtteil — die Stadt weist ausdrücklich darauf hin. Alterskarte und Pflegekarte lassen sich also nicht übereinanderlegen.</Text>
-            <Text>Geriatrisch ist Hannover gut ausgestattet, aber die Adressen sind heikel. Das größte Angebot führt das DIAKOVERE Henriettenstift mit 92 Reha-Betten und 24 Tagesklinikplätzen —{' '} <strong className="text-pm-ink font-semibold">allerdings nicht am Haupthaus, sondern rund sieben Kilometer entfernt in Kirchrode.</strong> Dazu kommen die Klinik für Altersmedizin am KRH Klinikum Nordstadt und eine Akutgeriatrie am Klinikum Siloah. Nicht in Hannover, aber unter demselben Verbundnamen geführt: die geriatrischen Abteilungen in Langenhagen, Gehrden und Neustadt am Rübenberge. Und die geriatrische Reha wird gerade zwischen den Trägern neu verteilt — wer heute recherchiert, trifft womöglich auf ein auslaufendes Angebot. Fragen Sie vorher nach. Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Geriatrisch ist Hannover gut ausgestattet, aber die Adressen sind heikel. Das größte Angebot führt das DIAKOVERE Henriettenstift mit 92 Reha-Betten und 24 Tagesklinikplätzen —{' '} <strong className="text-pm-ink font-semibold">allerdings nicht am Haupthaus, sondern rund sieben Kilometer entfernt in Kirchrode.</strong> Dazu kommen die Klinik für Altersmedizin am KRH Klinikum Nordstadt und eine Akutgeriatrie am Klinikum Siloah. Nicht in Hannover, aber unter demselben Verbundnamen geführt: die geriatrischen Abteilungen in Langenhagen, Gehrden und Neustadt am Rübenberge. Und die geriatrische Reha wird gerade zwischen den Trägern neu verteilt — wer heute recherchiert, trifft womöglich auf ein auslaufendes Angebot. Fragen Sie vorher nach. Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-hannover" titel="Einzugsgebiet Hannover">
@@ -231,8 +231,6 @@ export default function Page() {
 
             ort={'Hannover'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260706-stefan', 'k-20260403-heike', 'k-20241013-henning'].includes(b.id))}
 
           />
@@ -244,7 +242,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

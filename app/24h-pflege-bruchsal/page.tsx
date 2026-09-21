@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bruchsal | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Bruchsal | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Bruchsal und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bruchsal' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Bruchsal — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Bruchsal. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Bruchsal | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Bruchsal und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bruchsal',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,9 +48,9 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Bruchsal starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Bruchsal rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Bruchsal?', a: '4.599 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Bruchsal?', a: '4.599 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Bruchsal — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bruchsal im Schnitt 2,1 Wohnungen, in Baden-Württemberg 2,1. 50,4 Prozent der Gebäude stehen frei, 29,3 Prozent stehen in geschlossener Reihe. 48,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bruchsal ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Gibt es in Bruchsal eine geriatrische Klinik?', a: 'Nein. Die Fürst-Stirum-Klinik hat rund 400 Betten, aber keine geriatrische Fachabteilung — auch wenn einzelne Klinikverzeichnisse eine listen; das ist falsch. Die nächsten geriatrischen Angebote liegen außerhalb: die ViDia Kliniken in Karlsruhe und die Sankt Rochus Kliniken in Bad Schönborn. Nach einem Krankenhausaufenthalt führt der Weg zur Anschlussbehandlung also aus der Stadt heraus. Beratung gibt es dagegen vor Ort: Der Pflegestützpunkt des Landkreises Karlsruhe hat eine Anlaufstelle in Bruchsal, kostenlos und trägerunabhängig.' },
+  { q: 'Gibt es in Bruchsal eine geriatrische Klinik?', a: 'Nein. Die Fürst-Stirum-Klinik hat rund 400 Betten, aber keine geriatrische Fachabteilung — auch wenn einzelne Klinikverzeichnisse eine listen; das ist falsch. Die nächsten geriatrischen Angebote liegen außerhalb: die ViDia Kliniken in Karlsruhe und die Sankt Rochus Kliniken in Bad Schönborn. Nach einem Krankenhausaufenthalt führt der Weg zur Anschlussbehandlung also aus der Stadt heraus. Beratung gibt es dagegen vor Ort: Der Pflegestützpunkt des Landkreises Karlsruhe hat eine Anlaufstelle in Bruchsal, kostenlos und neutral.' },
   { q: 'Welches Einzugsgebiet wird in Bruchsal bedient?', a: 'Bruchsal und Landkreis Karlsruhe Nord: Philippsburg, Kraichtal, Bretten und alle Gemeinden im nördlichen Landkreis Karlsruhe' },
   { q: 'Ist in einer Wohnung in Bruchsal Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Bruchsal hat im Schnitt 100,0 m², 16,7 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 78,0 % der Gebäude in Bruchsal sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.737 € Unterschied im Monat, 32.844 € im Jahr.' },
@@ -185,7 +185,7 @@ export default function Page() {
             <Text>Eines vorweg, weil es Wege spart:{' '} <strong className="text-pm-ink font-semibold">In Bruchsal gibt es keine geriatrische Fachabteilung.</strong> Die Fürst-Stirum-Klinik hat rund 400 Betten, aber keine Altersmedizin — auch wenn manche Klinikverzeichnisse eine listen. Die nächsten geriatrischen Angebote liegen außerhalb: die ViDia Kliniken in Karlsruhe und die Sankt Rochus Kliniken in Bad Schönborn. Nach einem Krankenhausaufenthalt führt der Weg zur Anschlussbehandlung also aus der Stadt heraus. Umso wichtiger ist, was danach zu Hause passiert.</Text>
             <Text>Die Pflegestatistik gibt es in Baden-Württemberg nur für den Landkreis. Im Landkreis Karlsruhe sind 27.562 Menschen pflegebedürftig — eine Pflegequote von 6,1 Prozent gegenüber 5,6 Prozent im Land, und ein Zuwachs von 20 Prozent gegenüber 2021. 58,4 Prozent werden allein von Angehörigen versorgt (Land: 55,9), ambulante Dienste kommen mit 15,4 Prozent seltener zum Einsatz als landesweit (16,4).</Text>
             <Text>Ein Zahlenfallstrick sei dabei ausgeräumt. Der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 14,5 Prozent leicht unter dem Landeswert von 14,9 — daraus liest sich leicht ein knappes Angebot heraus.{' '} <strong className="text-pm-ink font-semibold">Gemessen an der Einwohnerzahl ist die Heimversorgung im Kreis aber dichter als im Land</strong>, weil hier insgesamt mehr Menschen pflegebedürftig sind. Anteil und Dichte zeigen in entgegengesetzte Richtungen — wer nur den Anteil liest, unterschätzt das Angebot.</Text>
-            <Text>Räumlich ist Bruchsal für die meisten unkompliziert: Rund 28.400 der 47.382 Einwohner leben in der Kernstadt, und die liegt flach in der Oberrheinebene auf 114 Metern. Der Michaelsberg bei Untergrombach ragt zwar 155 Meter darüber auf, ist aber Kapelle, Weinberg und Streuobstwiese — kein Wohngebiet. In der Stadt leben 9.968 Menschen über 65, das sind 21,0 Prozent. Der Pflegestützpunkt des Landkreises hat eine Anlaufstelle in Bruchsal; die Beratung dort ist kostenlos und trägerunabhängig (§ 7a SGB XI).</Text>
+            <Text>Räumlich ist Bruchsal für die meisten unkompliziert: Rund 28.400 der 47.382 Einwohner leben in der Kernstadt, und die liegt flach in der Oberrheinebene auf 114 Metern. Der Michaelsberg bei Untergrombach ragt zwar 155 Meter darüber auf, ist aber Kapelle, Weinberg und Streuobstwiese — kein Wohngebiet. In der Stadt leben 9.968 Menschen über 65, das sind 21,0 Prozent. Der Pflegestützpunkt des Landkreises hat eine Anlaufstelle in Bruchsal; die Beratung dort ist kostenlos und neutral (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bruchsal" titel="Einzugsgebiet Bruchsal">
@@ -236,8 +236,6 @@ export default function Page() {
 
             ort={'Bruchsal'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260829-sabine', 'k-20260318-thomas'].includes(b.id))}
 
           />
@@ -249,7 +247,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

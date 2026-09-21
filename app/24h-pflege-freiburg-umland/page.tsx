@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Freiburg & Umland | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  description: 'Liebevolle Betreuung in Freiburg & Umland und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-freiburg-umland' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Breisach am Rhein — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Breisach am Rhein. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Freiburg & Umland | 6× Testsieger',
+    description: 'Liebevolle Betreuung in Freiburg & Umland und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-freiburg-umland',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Umziehen ist dabei keine echte Option. Freiburg hat mit gut zwei Prozent die <strong className="text-pm-ink font-semibold"> niedrigste Leerstandsquote aller 44 Stadt- und Landkreise Baden-Württembergs</strong> und gehört zu den vier teuersten Großstädten Deutschlands. Wer hier eine bezahlbare, altersgerechte Wohnung sucht, sucht lange. Deshalb ist die Frage meist nicht, wohin jemand zieht, sondern wie das Leben in der vorhandenen Wohnung weitergehen kann.</Text>
             <Text>Das Umland ist in fast jedem Punkt das Gegenteil. In Breisgau-Hochschwarzwald und Emmendingen sind die Wohnungen mit gut 103 Quadratmetern deutlich größer, mehr als die Hälfte der Menschen wohnt im Eigentum, und in beiden Kreisen ist knapp die Hälfte aller Gebäude ein Ein- oder Zweifamilienhaus. Dort ist selten der Platz das Problem, sondern die Treppe ins Obergeschoss — und die Entfernung. Zwischen der Rheinebene und dem Hochschwarzwald liegen über 1.300 Höhenmeter; ein ambulanter Dienst, der Gemeinden am Berg anfährt, plant im Winter anders als im Sommer.</Text>
             <Text>Eine Zahl sollten Familien kennen, bevor es eilt: In Freiburg gibt es nur rund zwei Dutzend Kurzzeitpflegeplätze — für eine Stadt mit über 230.000 Einwohnern. Wer nach einem Krankenhausaufenthalt kurzfristig eine Überbrückung braucht, findet sie also selten. Eine Betreuungskraft, die mit einzieht, lässt sich dagegen in wenigen Tagen organisieren und ist von Anfang an eine dauerhafte Lösung, keine Überbrückung.</Text>
-            <Text>Bevor Sie entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Baden-Württemberg beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich geregelt (§ 7a SGB XI) und gilt unabhängig davon, wofür Sie sich am Ende entscheiden.</Text>
+            <Text>Bevor Sie entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Baden-Württemberg beraten kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich geregelt (§ 7a SGB XI) und gilt unabhängig davon, wofür Sie sich am Ende entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-breisach-am-rhein" titel="Einzugsgebiet Breisach am Rhein">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Freiburg & Umland'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260829-sabine', 'k-20260318-thomas'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

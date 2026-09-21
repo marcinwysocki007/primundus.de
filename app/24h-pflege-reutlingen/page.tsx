@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Reutlingen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Reutlingen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Reutlingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-reutlingen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Reutlingen — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Reutlingen. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Reutlingen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Reutlingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-reutlingen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -185,7 +185,7 @@ export default function Page() {
             <Text>Die Pflegestatistik gibt es nur für den Landkreis, nicht für die Stadt allein. Sie zeigt aber etwas, das kaum jemand erwartet: <strong className="text-pm-ink font-semibold">Von den 16.341 Pflegebedürftigen im Kreis werden 9.895 ausschließlich von Angehörigen versorgt — 60,6 Prozent, ganz ohne Pflegedienst.</strong> In Baden-Württemberg sind es 55,9 Prozent. Beide professionellen Formen liegen entsprechend darunter: ambulant 13,6 statt 16,4 Prozent, vollstationär 12,9 statt 14,9. Hier wird also häufiger als sonst im Land allein gepflegt — von Töchtern, Söhnen und Ehepartnern, die das über Jahre neben Beruf und eigenem Haushalt stemmen. Dass die Zahl der Pflegebedürftigen seit 2021 um 16,7 Prozent gestiegen ist, macht die Sache nicht leichter.</Text>
             <Text>Beim Wohnen spielt Reutlingen der 24-Stunden-Betreuung in die Hände — allerdings nicht überall. Knapp die Hälfte der Haushalte wohnt im Eigentum (49,3 Prozent), und in den zwölf Stadtbezirken stehen überwiegend Ein- und Zweifamilienhäuser. Da ist das Gästezimmer meist schon vorhanden. In der Kernstadt sieht es anders aus: Ein Drittel aller Wohnungen liegt in Häusern mit sieben oder mehr Parteien, gut jede fünfte hat unter 60 Quadratmeter. Die durchschnittliche Reutlinger Wohnung misst 92 Quadratmeter und damit sieben weniger als der Landesschnitt. Ob eine Betreuungskraft einziehen kann, entscheidet sich also nicht an der Stadt, sondern am Stadtbezirk.</Text>
             <Text>Eine gute Nachricht gibt es seit Kurzem: Die akutgeriatrischen Betten liegen erst seit Mai 2023 im Klinikum am Steinenberg in der Stadt selbst — vorher musste man dafür in die Ermstalklinik nach Bad Urach. Wer nach einem Sturz oder Schlaganfall aus der Altersmedizin entlassen wird, steht damit zwar näher an zu Hause, aber vor derselben Frage: Wie geht es in der eigenen Wohnung weiter, wenn die Familie schon am Limit ist?</Text>
-            <Text>Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einziehen kann: Sie ist nachts da, führt den Haushalt und nimmt den Angehörigen die Dauerverantwortung ab — ohne dass jemand aus Gönningen oder Bronnweiler wegziehen muss. Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten. Die Pflegeberatung ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause (§ 7a SGB XI).</Text>
+            <Text>Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einziehen kann: Sie ist nachts da, führt den Haushalt und nimmt den Angehörigen die Dauerverantwortung ab — ohne dass jemand aus Gönningen oder Bronnweiler wegziehen muss. Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten. Die Pflegeberatung ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-reutlingen" titel="Einzugsgebiet Reutlingen">
@@ -236,8 +236,6 @@ export default function Page() {
 
             ort={'Reutlingen'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250905-christine'].includes(b.id))}
 
           />
@@ -249,7 +247,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

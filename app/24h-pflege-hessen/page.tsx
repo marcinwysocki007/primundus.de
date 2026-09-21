@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
@@ -22,18 +23,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hessen ausmacht" },
   { id: 'einzugsgebiet-hessen', title: "Einzugsgebiet Hessen" },
   { id: 'werkzeuge', title: "Was es in Hessen kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hessen" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Hessen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Hessen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Hessen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hessen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Hessen | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Hessen. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Hessen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Hessen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-hessen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -247,13 +249,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Hessen'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Hessen">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

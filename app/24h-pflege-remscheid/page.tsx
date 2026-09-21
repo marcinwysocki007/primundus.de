@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Remscheid | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Remscheid | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Remscheid und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-remscheid' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Remscheid — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Remscheid. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Remscheid | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Remscheid und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-remscheid',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -49,7 +49,7 @@ const FRAGEN = [
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Remscheid rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie wohnt man in Remscheid — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Remscheid im Schnitt 2,8 Wohnungen, in Nordrhein-Westfalen 2,3. 46,0 Prozent der Gebäude stehen frei, 32,9 Prozent stehen in geschlossener Reihe. 64,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Remscheid ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Wie viele ältere Menschen leben in Remscheid?', a: '12.814 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Remscheid?', a: '12.814 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Bekommt man in Remscheid schwer einen Heimplatz?', a: 'Nein, und das wird oft falsch gelesen. Zwar leben nur 11,4 Prozent der Remscheider Pflegebedürftigen im Heim gegenüber 12,2 Prozent in Nordrhein-Westfalen — gemessen an der Zahl der über 65-Jährigen stehen hier aber 47 vollstationäre Plätze je 1.000 bereit, im Land 46. Es gibt also eher etwas mehr Plätze als anderswo, sie werden nur seltener genutzt. Die Stadt selbst begründet das in ihrer Pflegeplanung mit dem sehr großen privaten und ambulanten Pflegepotential und rechnet deshalb sogar einen Abschlag beim künftigen Platzbedarf ein. Nach eigenen Angaben werden 85,5 Prozent aller Remscheider Pflegebedürftigen ambulant versorgt.' },
   { q: 'Welches Einzugsgebiet wird in Remscheid bedient?', a: 'Remscheid und Bergisches Land: Wuppertal-Süd, Solingen, Radevormwald, Hückeswagen und alle Gemeinden im Oberbergischen Kreis' },
   { q: 'Ist in einer Wohnung in Remscheid Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Remscheid hat im Schnitt 85,5 m², 26,7 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 68,5 % der Gebäude in Remscheid sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Ein verbreiteter Fehlschluss sei hier ausdrücklich ausgeräumt. Nur 11,4 Prozent der Pflegebedürftigen leben im Heim, im Land 12,2 Prozent — daraus liest sich leicht ein Platzmangel heraus. Das Gegenteil stimmt:{' '} <strong className="text-pm-ink font-semibold">Gemessen an der Zahl der über 65-Jährigen stehen in Remscheid 47 vollstationäre Plätze je 1.000 bereit, in Nordrhein-Westfalen 46.</strong> Die Stadt selbst begründet das in ihrer Pflegeplanung mit dem „sehr großen privaten und ambulanten Pflegepotential" und rechnet deshalb sogar einen Abschlag beim künftigen Platzbedarf ein. Wer in Remscheid zu Hause bleibt, tut das nicht mangels Alternative, sondern weil die Familien es tragen.</Text>
             <Text>Beim Alter geht die Stadt weit auseinander. Der Stadtbezirk Lennep ist durchgängig der älteste — 24,4 Prozent über 65, 8,5 Prozent über 80 —, und im Stadtteil Stadtgarten sind es sogar 16,1 Prozent über 80. Am anderen Ende steht der Honsberg mit 3,3 Prozent. Zur oft zitierten Höhenlage eine ehrliche Einordnung: Zwischen dem tiefsten Punkt an der Wupper (96 Meter) und dem Brodtberg (379 Meter) liegen fast 283 Meter, aber die tief eingeschnittenen Täler sind überwiegend Wald und Talsperre. Die Wohnquartiere liegen fast durchweg auf den Hochflächen. Was im Alltag zählt, sind die Hanglagen innerhalb der Viertel — etwa vom Honsberg, aus Vieringhausen oder Kremenholl hinunter zum Morsbachtal.</Text>
             <Text>Zur Stadt gehört noch etwas: 21,2 Prozent der Einwohner haben eine ausländische Staatsangehörigkeit — Remscheid gibt seinen „Ratgeber Pflege" deshalb in sieben Sprachen heraus. Wenn Sprache in Ihrer Familie ein Thema ist, sprechen Sie es an. Das Deutschniveau jeder Betreuungskraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto.</Text>
-            <Text>Geriatrisch ist Remscheid versorgt, aber die Adresse ist wichtig: Die geriatrische Fachabteilung mit 558 stationären Fällen und die Tagesklinik mit zwölf Plätzen sitzen in der <strong className="text-pm-ink font-semibold">Sana Fabricius-Klinik in der Brüderstraße</strong> — nicht im Sana-Klinikum an der Burger Straße. Das sind zwei verschiedene Häuser desselben Trägers, die regelmäßig verwechselt werden. Die Geriatrie bietet dort auch kostenlose Kurse für pflegende Angehörige an. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Geriatrisch ist Remscheid versorgt, aber die Adresse ist wichtig: Die geriatrische Fachabteilung mit 558 stationären Fällen und die Tagesklinik mit zwölf Plätzen sitzen in der <strong className="text-pm-ink font-semibold">Sana Fabricius-Klinik in der Brüderstraße</strong> — nicht im Sana-Klinikum an der Burger Straße. Das sind zwei verschiedene Häuser desselben Trägers, die regelmäßig verwechselt werden. Die Geriatrie bietet dort auch kostenlose Kurse für pflegende Angehörige an. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-remscheid" titel="Einzugsgebiet Remscheid">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Remscheid'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

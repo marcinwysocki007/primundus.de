@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Erfurt | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Erfurt | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Erfurt und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-erfurt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Erfurt — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Erfurt. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Erfurt | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Erfurt und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-erfurt',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -181,7 +181,7 @@ export default function Page() {
             <Text>Die eigentliche Besonderheit steckt aber im Wohnen. Nur <strong className="text-pm-ink font-semibold"> gut ein Fünftel der Erfurter wohnt im Eigentum</strong> — in Thüringen ist es knapp die Hälfte. Zwei Drittel aller Wohnungen liegen in Häusern mit sieben und mehr Parteien. Und der Wohnraum ist knapp: Mit gut 40 Quadratmetern je Einwohner hat Erfurt den niedrigsten Wert aller zweiundzwanzig Thüringer Kreise. Für Pflege zu Hause ist das der entscheidende Punkt, denn ein Pflegebett, Hilfsmittel und ein eigenes Zimmer für die Betreuungskraft brauchen Platz. Wer eine 74-Quadratmeter-Wohnung im vierten Stock hat, muss anders planen als jemand mit einem Haus.</Text>
             <Text>Ein verbreiteter Reflex trifft in Erfurt übrigens nicht zu. Man erwartet, dass die großen Plattenbausiedlungen mit ihren Erstbeziehern besonders schnell altern — am Berliner Platz, im Rieth, am Roten Berg, in Melchendorf oder am Wiesenhügel. Die Vorausberechnung der Stadt sagt das Gegenteil: In der Großwohnsiedlung Nord geht die Zahl der über 65-Jährigen bis 2045 zurück, während sie in der östlichen Innenstadt und in den Dörfern am Stadtrand kräftig zunimmt. Der Pflegebedarf wandert also eher in die Altbauviertel und in die eingemeindeten Dörfer.</Text>
             <Text>Geografisch ist Erfurt für ältere Menschen günstig. Die Stadt reicht zwar von etwa 160 bis 430 Metern, aber die Höhen sind Wald: Der Steigerwald ist seit Jahrzehnten Erholungsgebiet, der Petersberg ist Festung und Park. Gewohnt wird überwiegend im flachen Teil; nur die Bergdörfer im Süden wie Egstedt liegen wirklich hoch. Auch beim Nahverkehr steht Erfurt gut da — nahezu alle Stadtbahnhaltestellen sind barrierefrei ausgebaut, bei den Bushaltestellen knapp sechzig Prozent.</Text>
-            <Text>Wenn es ernst wird, gibt es in Erfurt echte Altersmedizin: Das Helios Klinikum führt ein eigenes Zentrum für Geriatrie mit ausgeprägt alterstraumatologischem Schwerpunkt — die häufigsten Diagnosen sind Oberschenkel- und Schenkelhalsbrüche, also genau die Stürze, nach denen zu Hause nichts mehr wie vorher ist. Für die Zeit danach lohnt sich frühe Beratung: Die Pflegeberatung in Erfurt ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
+            <Text>Wenn es ernst wird, gibt es in Erfurt echte Altersmedizin: Das Helios Klinikum führt ein eigenes Zentrum für Geriatrie mit ausgeprägt alterstraumatologischem Schwerpunkt — die häufigsten Diagnosen sind Oberschenkel- und Schenkelhalsbrüche, also genau die Stürze, nach denen zu Hause nichts mehr wie vorher ist. Für die Zeit danach lohnt sich frühe Beratung: Die Pflegeberatung in Erfurt ist kostenlos, neutral und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-erfurt" titel="Einzugsgebiet Erfurt">
@@ -232,8 +232,6 @@ export default function Page() {
 
             ort={'Erfurt'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250918-cornelia'].includes(b.id))}
 
           />
@@ -245,7 +243,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Berlin | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Berlin | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Berlin und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-berlin' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Berlin | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Berlin. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Berlin | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Berlin und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-berlin',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Berlin?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Brandenburg (Eigenanteil rund 3.020 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Berlin starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Berlin — auch in ländlichen Regionen.' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Berlin?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Berlin (Eigenanteil rund 3.100 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Berlin starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Berlin und im Umland.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Funktioniert 24-Stunden-Pflege auch in einer Berliner Altbauwohnung?', a: 'Ja — und in Vierteln wie Prenzlauer Berg, wo zwei Drittel der Wohnungen aus der Zeit zwischen 1871 und 1914 stammen, ist sie oft die Lösung, die das Wohnenbleiben überhaupt erlaubt. Die Betreuungskraft braucht ein eigenes Zimmer; ansonsten stellt der Altbau keine besonderen Anforderungen. Entscheidend ist, dass jemand die Wege nach draußen übernimmt, sobald das Treppenhaus zur Hürde wird.' },
   { q: 'Gilt das Angebot in allen Berliner Bezirken?', a: 'Ja, in allen zwölf — und das ist wichtiger, als es klingt. Für die Pflege ist Berlin nicht eine Stadt, sondern zwölf sehr verschiedene: Der Altbau in Prenzlauer Berg, die Großsiedlung in Marzahn und das Einfamilienhaus in Kaulsdorf stellen ganz unterschiedliche Anforderungen an den Alltag. Rund 715.000 Berlinerinnen und Berliner sind über 65, viele davon leben allein. Der Preis ist in jedem Bezirk derselbe, Anfahrtskosten berechnen wir nicht.' },
@@ -112,7 +112,7 @@ export default function Page() {
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
-            'Pflegeheim in Brandenburg: Eigenanteil rund 3.020 €/Monat (vdek, 07/2026)',
+            'Pflegeheim in Berlin: Eigenanteil rund 3.100 €/Monat (vdek, 07/2026)',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
           ]}
@@ -148,7 +148,7 @@ export default function Page() {
                 [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Pflegeheim in Brandenburg: Eigenanteil rund 3.020 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
+              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Pflegeheim in Berlin: Eigenanteil rund 3.100 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -183,7 +183,7 @@ export default function Page() {
             <Text>Für die Pflege ist Berlin keine Stadt, sondern zwölf sehr verschiedene. Wer in Prenzlauer Berg alt wird, wohnt mit hoher Wahrscheinlichkeit im Altbau: Zwei Drittel der Wohnungen dort stammen aus der Zeit zwischen 1871 und 1914, meist fünfgeschossige Häuser mit dreißig bis vierzig Parteien. Wer in Marzahn oder der Gropiusstadt wohnt, lebt in einer Großsiedlung mit ganz anderen Wegen. Und in Kaulsdorf oder Mahlsdorf steht das Einfamilienhaus mit Garten und Treppe ins Obergeschoss.</Text>
             <Text>Was alle drei gemeinsam haben: Irgendwann entscheidet nicht mehr die Wohnung, sondern die Frage, ob jemand da ist. Berlin gilt als junge Stadt — dabei leben hier rund 715.000 Menschen, die 65 oder älter sind. Viele von ihnen wohnen allein, oft seit Jahrzehnten in derselben Wohnung, und die Kinder sind über die Stadt verteilt oder längst weggezogen.</Text>
             <Text>Ambulante Dienste gibt es in Berlin viele, und die Wege sind kurz — die Stadt liegt im Urstromtal und ist überwiegend flach. Das Problem ist ein anderes: Ein Dienst kommt zu festen Zeiten und bleibt zwanzig Minuten. Er ist nicht da, wenn nachts jemand aufsteht und sich nicht mehr zurechtfindet, und er kocht nicht mit. Eine Betreuungskraft, die im Haushalt lebt, deckt genau die Stunden ab, die dazwischenliegen — in Pankow so wie in Spandau oder Köpenick.</Text>
-            <Text>Bevor Sie sich festlegen, nutzen Sie die kostenlose Beratung: Die Pflegestützpunkte in Berlin beraten trägerunabhängig, in jedem Bezirk und auf Wunsch bei Ihnen zu Hause. Der Anspruch darauf ist gesetzlich geregelt (§ 7a SGB XI) und unabhängig davon, für welchen Anbieter Sie sich danach entscheiden.</Text>
+            <Text>Bevor Sie sich festlegen, nutzen Sie die kostenlose Beratung: Die Pflegestützpunkte in Berlin beraten neutral, in jedem Bezirk und auf Wunsch bei Ihnen zu Hause. Der Anspruch darauf ist gesetzlich geregelt (§ 7a SGB XI) und unabhängig davon, für welchen Anbieter Sie sich danach entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-berlin" titel="Einzugsgebiet Berlin">
@@ -234,8 +234,6 @@ export default function Page() {
 
             ort={'Berlin'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260210-rainer'].includes(b.id))}
 
           />
@@ -247,7 +245,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

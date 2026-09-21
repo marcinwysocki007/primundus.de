@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
@@ -20,18 +21,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Saarbrücken ausmacht" },
   { id: 'einzugsgebiet-saarbruecken', title: "Einzugsgebiet Saarbrücken" },
   { id: 'werkzeuge', title: "Was es in Saarbrücken kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Saarbrücken" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Saarbrücken | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Saarbrücken | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Saarbrücken und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-saarbruecken' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Saarbrücken — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Saarbrücken. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Saarbrücken | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Saarbrücken und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-saarbruecken',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -176,7 +178,7 @@ export default function Page() {
             <Text>Saarbrücken liegt im Tal, aber gewohnt wird auch weit darüber. Die Stadtmitte liegt auf rund 230 Metern, der Eschberg auf 340 — gut zwei Kilometer Luftlinie, gut hundert Meter Höhenunterschied. Wer dort oben wohnt oder in einer der Hanglagen über der Saar, merkt das jeden Tag ein bisschen deutlicher, sobald die Puste nachlässt. Selbst das Klinikum steht auf dem Winterberg.</Text>
             <Text>Dazu kommt der Wohnungsbestand. Im Nauwieser Viertel und in den gewachsenen Straßen von St. Johann stehen viele Häuser aus der Zeit zwischen 1860 und 1920 — schöne Altbauten mit hohen Decken, aber eben auch mit Treppenhäusern, die für einen Rollator nie gedacht waren. Eine Wohnung im dritten Stock ohne Aufzug ist jahrzehntelang kein Thema und dann plötzlich das größte.</Text>
             <Text>Anders als in vielen ländlichen Kreisen liegt es hier nicht an weiten Wegen: Der Regionalverband Saarbrücken ist dicht besiedelt, ambulante Dienste sind erreichbar. Was sie nicht leisten können, ist Anwesenheit. Zweimal zwanzig Minuten am Tag helfen beim Waschen — aber nicht nachts um drei, und nicht an dem langen Nachmittag, an dem sonst niemand kommt. Genau diese Lücke schließt eine Betreuungskraft, die mit einzieht. Das gilt in Saarbrücken ebenso wie in Völklingen, Sulzbach oder Riegelsberg.</Text>
-            <Text>Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte im Saarland beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — ganz gleich, für welchen Anbieter Sie sich danach entscheiden.</Text>
+            <Text>Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte im Saarland beraten kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — ganz gleich, für welchen Anbieter Sie sich danach entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-saarbruecken" titel="Einzugsgebiet Saarbrücken">
@@ -223,13 +225,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Saarbrücken'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Saarbrücken">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

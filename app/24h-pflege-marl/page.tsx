@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Marl | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Marl | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Marl und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-marl' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Marl — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Marl. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Marl | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Marl und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-marl',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -47,7 +47,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Marl starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Marl rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Marl?', a: '9.493 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Marl?', a: '9.493 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,1 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Marl — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Marl im Schnitt 2,2 Wohnungen, in Nordrhein-Westfalen 2,3. 31,8 Prozent der Gebäude stehen frei, 35,1 Prozent stehen in geschlossener Reihe. 57,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Marl ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Wie viele Heimplätze sind in Marl frei?', a: 'Fast keine. Von den 1.014 Pflegeplätzen in Marl waren im Frühjahr 2023 sieben frei — 0,7 Prozent. Kreisweit standen nominell 483 Plätze leer, tatsächlich belegbar waren davon 47; der Rest hing an Umbauten, Doppelzimmerabbau und Belegungsstopps. Der Kreis Recklinghausen hat mit 85,5 Pflegebedürftigen je 1.000 Einwohner die höchste Pflegequote aller achtzehn Kreise in Westfalen-Lippe, und die Kreisplanung erwartet für Marl bis 2040 eine Lücke von rund 111 Plätzen. Wer heute plant, sollte nicht mit einem kurzfristig verfügbaren Heimplatz rechnen.' },
   { q: 'Welches Einzugsgebiet wird in Marl bedient?', a: 'Marl und Umland: Recklinghausen, Haltern am See, Oer-Erkenschwick, Datteln, Dorsten und alle Gemeinden im Kreis Recklinghausen' },
@@ -232,8 +232,6 @@ export default function Page() {
 
             ort={'Marl'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -245,7 +243,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Regensburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Regensburg | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Regensburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-regensburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Regensburg — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Regensburg. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Regensburg | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Regensburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-regensburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -188,7 +188,7 @@ export default function Page() {
             <Text>Eine zweite Zahl wird dagegen regelmäßig falsch gelesen. In Regensburg bestehen 58,6 Prozent aller Haushalte aus einer einzigen Person — der höchste Wert weit und breit. Das ist <em>kein</em> Signal für viele alleinlebende Ältere, sondern für Studierende. Die Kennzahl, auf die es ankommt, sind Haushalte, in denen ausschließlich Menschen ab 65 leben: Die liegen mit 17,7 Prozent deutlich <em>unter</em> dem bayerischen Wert von 23,0 Prozent.</Text>
             <Text>Regensburg ist tatsächlich jung. 17,4 Prozent der Einwohner sind über 65, in Bayern 21,6 Prozent; über 80 sind es 5,6 gegen 6,7 Prozent. Entsprechend niedrig ist die Pflegequote mit 42 Pflegebedürftigen je 1.000 Einwohner (Bayern 47). Was daraus folgt, ist trotzdem nicht weniger Bedarf, sondern ein anderer: Nur 43,8 Prozent der 6.622 Pflegebedürftigen werden rein familiär versorgt, in Bayern 48,5 Prozent. In einer Stadt, in der viele Kinder zum Studium kommen und die Eltern anderswo wohnen, ist die Familie oft schlicht nicht um die Ecke.</Text>
             <Text>Heimplätze gibt es dafür reichlich — und zwar nach beiden Maßstäben. Der Anteil der Pflegebedürftigen im Heim liegt mit 21,6 Prozent über dem Landeswert von 17,6, und gemessen an der Zahl der über 65-Jährigen stehen{' '} <strong className="text-pm-ink font-semibold">61 Plätze je 1.000 bereit, in Bayern 44</strong>. Das sind knapp 40 Prozent mehr. Eine Betreuung zu Hause tritt hier also nicht gegen einen Mangel an, sondern gegen ein sehr gut ausgebautes Angebot. Der Unterschied liegt woanders: in der vertrauten Wohnung, mit einer festen Bezugsperson statt wechselnder Schichten.</Text>
-            <Text>Medizinisch ist Regensburg außergewöhnlich gut versorgt: drei anerkannte Akutgeriatrien, eine geriatrische Tagesklinik mit 20 Plätzen und eine geriatrische Rehabilitation — die vollständige Kette an einem Ort, was in Bayern selten ist. Der Übergang vom Krankenhaus nach Hause ist damit gut abgefedert; die häusliche Betreuung setzt meist erst nach der Reha ein. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen.</Text>
+            <Text>Medizinisch ist Regensburg außergewöhnlich gut versorgt: drei anerkannte Akutgeriatrien, eine geriatrische Tagesklinik mit 20 Plätzen und eine geriatrische Rehabilitation — die vollständige Kette an einem Ort, was in Bayern selten ist. Der Übergang vom Krankenhaus nach Hause ist damit gut abgefedert; die häusliche Betreuung setzt meist erst nach der Reha ein. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-regensburg" titel="Einzugsgebiet Regensburg">
@@ -239,8 +239,6 @@ export default function Page() {
 
             ort={'Regensburg'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260221-anke', 'k-20241123-hildegard'].includes(b.id))}
 
           />
@@ -252,7 +250,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

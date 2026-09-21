@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Dormagen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Dormagen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Dormagen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-dormagen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Dormagen — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Dormagen. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Dormagen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Dormagen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-dormagen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -184,7 +184,7 @@ export default function Page() {
             <Text>In Dormagen pflegen die Familien besonders oft selbst. Im Rhein-Kreis Neuss beziehen rund <strong className="text-pm-ink font-semibold">63 Prozent aller Pflegebedürftigen Pflegegeld</strong> — in Nordrhein-Westfalen sind es 59, bundesweit 55 Prozent. Pflegegeld bekommt, wer zu Hause von Angehörigen versorgt wird. Hinter dieser Zahl stehen also sehr viele Töchter, Söhne und Ehepartner, die das seit Jahren stemmen. Genau bei ihnen melden sich irgendwann die Grenzen: wenn der eigene Rücken nicht mehr mitmacht, wenn Nächte durchwacht werden, wenn der Urlaub seit Jahren ausfällt.</Text>
             <Text>Eine Betreuungskraft, die mit einzieht, ersetzt die Familie nicht — sie entlastet sie. Die Angehörigen bleiben Tochter oder Sohn, statt rund um die Uhr Pflegekraft zu sein. Und weil Pflegegeld und Betreuung sich kombinieren lassen, muss dafür niemand den bisherigen Weg komplett aufgeben.</Text>
             <Text>Beim Wohnen ist Dormagen anders, als man es einer Industriestadt zutrauen würde: Gründerzeit-Altbau gibt es hier kaum, nur etwa sieben Prozent der Wohnungen stammen aus der Zeit vor 1950. Gut zwei Drittel der Gebäude sind Einfamilienhäuser — die Barriere ist dort meist die eigene Treppe ins Obergeschoss. In Horrem, das zu großen Teilen als Werkssiedlung für das Chemiewerk entstand, kommt eine andere hinzu: Bei den Zeilenbauten der sechziger und siebziger Jahre liegt schon das Erdgeschoss zwei bis sechs Stufen über dem Außengelände, und einen Aufzug haben nur wenige Häuser. Ebenerdig ist die Stadt zwar — sie liegt flach am Rhein —, aber bis zur Wohnungstür hilft das nicht.</Text>
-            <Text>Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte im Rhein-Kreis Neuss beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — und er gilt unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
+            <Text>Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte im Rhein-Kreis Neuss beraten kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — und er gilt unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-dormagen" titel="Einzugsgebiet Dormagen">
@@ -235,8 +235,6 @@ export default function Page() {
 
             ort={'Dormagen'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -248,7 +246,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

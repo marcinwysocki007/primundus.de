@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rosenheim | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Rosenheim | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Rosenheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rosenheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Rosenheim — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Rosenheim. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Rosenheim | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Rosenheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-rosenheim',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -49,7 +49,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Rosenheim starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Rosenheim rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Rosenheim?', a: '6.751 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,7 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Rosenheim?', a: '6.751 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,7 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Rosenheim — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Rosenheim im Schnitt 3,1 Wohnungen, in Bayern 2,1. 47,2 Prozent der Gebäude stehen frei, 25,9 Prozent stehen in geschlossener Reihe. 38,4 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Rosenheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Gibt es in Rosenheim eine geriatrische Klinik?', a: 'In der Stadt Rosenheim nicht. Das RoMed Klinikum führt 19 Fachabteilungen, Altersmedizin ist nicht darunter. Das „Zentrum für Akutgeriatrie und Alterstraumatologie der RoMed Kliniken" nennt keinen Ort im Namen und sitzt in Bad Aibling, also im Landkreis; die geriatrische Rehabilitation ebenfalls. Eine Klinik in Bad Aibling bezeichnet sich sogar selbst als „Spezialklinik bei Rosenheim" — verständlich als Werbung, aber irreführend, wenn man einen Weg planen muss. Für eine geriatrische Behandlung geht es also aus der Stadt hinaus. Für die Betreuung zu Hause spielt das keine Rolle, für die Zeit davor schon.' },
   { q: 'Welches Einzugsgebiet wird in Rosenheim bedient?', a: 'Rosenheim und Landkreis Rosenheim: Bad Aibling, Wasserburg, Prien am Chiemsee und alle Gemeinden im Landkreis Rosenheim und Miesbach' },
@@ -190,7 +190,7 @@ export default function Page() {
             <Text>Die Stadt Rosenheim ist kreisfrei — ihre Zahlen haben mit denen des gleichnamigen Landkreises nichts zu tun, und der Unterschied ist gewaltig.{' '} <strong className="text-pm-ink font-semibold">In der Stadt leben 15,1 Prozent der Pflegebedürftigen im Heim, im Landkreis 26,5 Prozent — fast doppelt so viele.</strong>{' '} Bei den Plätzen dasselbe Bild: 32 je 1.000 Einwohner über 65 in der Stadt gegen 57 im Landkreis und 44 in ganz Bayern. Wer über „Rosenheim" liest, sollte deshalb immer prüfen, welches Rosenheim gemeint ist.</Text>
             <Text>Die Entwicklung der letzten Jahre ist in der Stadt besonders scharf.{' '} <strong className="text-pm-ink font-semibold">Zwischen 2019 und 2023 stieg die Zahl der Pflegebedürftigen um 31,6 Prozent — von 1.818 auf 2.393. Im selben Zeitraum sank die Zahl der Heimplätze von 463 auf 421, und die Zahl der ambulanten Dienste ging von 13 auf 11 zurück.</strong> Die ambulanten Dienste versorgten 2023 exakt so viele Menschen wie 2019: 461 gegen 458. Bei 575 zusätzlichen Pflegebedürftigen. Aufgefangen haben das die Familien — das reine Pflegegeld stieg um 40,4 Prozent.</Text>
             <Text>Eine Bewegung geht in die Gegenrichtung: Die Tagespflegeplätze wuchsen von 19 auf 47. Das ist mehr als eine Verdoppelung, bleibt aber eine kleine Zahl gegen 2.393 Pflegebedürftige — und Tagespflege ersetzt keine Nacht.</Text>
-            <Text>Zur Altersmedizin ein Hinweis, der überrascht:{' '} <strong className="text-pm-ink font-semibold">In der Stadt Rosenheim gibt es keine geriatrische Fachabteilung.</strong> Das RoMed Klinikum in der Pettenkoferstraße führt 19 Fachabteilungen, Altersmedizin ist nicht darunter. Das „Zentrum für Akutgeriatrie und Alterstraumatologie der RoMed Kliniken" trägt keinen Ortsnamen im Titel und sitzt in Bad Aibling, also im Landkreis; die geriatrische Rehabilitation ebenfalls. Besonders irreführend ist eine Klinik in Bad Aibling, die sich selbst als „Spezialklinik bei Rosenheim" bezeichnet. Für Angehörige heißt das schlicht: Für eine geriatrische Behandlung geht es aus der Stadt hinaus. Lassen Sie sich vorher unabhängig beraten — die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Zur Altersmedizin ein Hinweis, der überrascht:{' '} <strong className="text-pm-ink font-semibold">In der Stadt Rosenheim gibt es keine geriatrische Fachabteilung.</strong> Das RoMed Klinikum in der Pettenkoferstraße führt 19 Fachabteilungen, Altersmedizin ist nicht darunter. Das „Zentrum für Akutgeriatrie und Alterstraumatologie der RoMed Kliniken" trägt keinen Ortsnamen im Titel und sitzt in Bad Aibling, also im Landkreis; die geriatrische Rehabilitation ebenfalls. Besonders irreführend ist eine Klinik in Bad Aibling, die sich selbst als „Spezialklinik bei Rosenheim" bezeichnet. Für Angehörige heißt das schlicht: Für eine geriatrische Behandlung geht es aus der Stadt hinaus. Lassen Sie sich vorher unabhängig beraten — die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-rosenheim" titel="Einzugsgebiet Rosenheim">
@@ -241,8 +241,6 @@ export default function Page() {
 
             ort={'Rosenheim'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20251228-michael', 'k-20250524-iris'].includes(b.id))}
 
           />
@@ -254,7 +252,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

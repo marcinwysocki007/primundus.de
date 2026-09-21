@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Singen | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Singen | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Singen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-singen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Singen am Hohentwiel — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Singen am Hohentwiel. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Singen | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Singen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-singen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Singen am Hohentwiel starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Singen am Hohentwiel rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Singen?', a: '5.226 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,2 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Singen?', a: '5.226 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,2 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Singen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Singen im Schnitt 2,9 Wohnungen, in Baden-Württemberg 2,1. 55,0 Prozent der Gebäude stehen frei, 22,1 Prozent stehen in geschlossener Reihe. 53,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Singen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Hat das Klinikum Singen eine Altersmedizin?', a: 'Nein — und das wird häufig verwechselt. Die Klinik für Altersmedizin des Gesundheitsverbunds Landkreis Konstanz sitzt am Klinikum Konstanz, nicht am Hegau-Bodensee-Klinikum in Singen. Weil der Verbund den Fachbereich zentral führt und dabei teilweise die Singener Verbandsadresse angibt, ordnen Verzeichnisse die Geriatrie fälschlich Singen zu. Das Singener Haus führt 16 Fachabteilungen, Altersmedizin ist keine davon. Für eine geriatrische Behandlung geht es nach Konstanz.' },
   { q: 'Welches Einzugsgebiet wird in Singen am Hohentwiel bedient?', a: 'Singen und westlicher Landkreis Konstanz: Radolfzell, Stockach, Engen und alle Gemeinden im westlichen Landkreis Konstanz' },
@@ -185,7 +185,7 @@ export default function Page() {
             <Text>Eine Verwechslung vorweg, die Angehörige regelmäßig in die falsche Stadt schickt:{' '} <strong className="text-pm-ink font-semibold">Die Klinik für Altersmedizin des Gesundheitsverbunds sitzt in Konstanz, nicht in Singen.</strong> Weil der Verbund den Fachbereich zentral führt und dabei teilweise die Singener Verbandsadresse angibt, ordnen Verzeichnisse die Geriatrie fälschlich dem Hegau-Bodensee-Klinikum zu. Das Haus in Singen hat 16 Fachabteilungen — Altersmedizin ist keine davon. Wer nach einer geriatrischen Behandlung sucht, muss nach Konstanz.</Text>
             <Text>Beim Blick auf den Landkreis Konstanz fällt ein Muster auf, das für die häusliche Pflege zählt.{' '} <strong className="text-pm-ink font-semibold">Nur 13,1 Prozent der 16.193 Pflegebedürftigen werden von einem ambulanten Dienst versorgt — in Baden-Württemberg sind es 16,4 Prozent.</strong> Gleichzeitig liegt der Heimanteil mit 16,9 Prozent über dem Landeswert von 14,9. Und hier zeigen Anteil und Dichte ausnahmsweise in dieselbe Richtung: Der Kreis ist tatsächlich heimlastig und tatsächlich ambulant dünn versorgt, nicht nur rechnerisch. Dazu kommt, dass die Zahl der Beschäftigten in der Pflege im Kreis gesunken ist, während sie landesweit gewachsen ist.</Text>
             <Text>In Singen selbst stehen sieben stationäre Pflegeeinrichtungen bei rund 48.000 Einwohnern — passend zum heimlastigen Muster des Kreises. Für Familien, die zu Hause bleiben wollen, heißt die Kombination aus dünnem ambulantem Netz und schrumpfendem Personal vor allem eines: früh planen. Eine Betreuungskraft, die im Haushalt lebt, ist von Tourenplänen und Personalengpässen nicht betroffen — sie ist durchgehend da.</Text>
-            <Text>Topografisch ist Singen unkompliziert, auch wenn der Hohentwiel etwas anderes vermuten lässt. Der Berg ragt 267 Meter über die Stadt, ist aber Naturschutzgebiet mit einer Festungsruine und unbewohnt — für den Pflegealltag ohne Bedeutung. Rund 85 Prozent der Singener leben in der flachen Kernstadt im Hegau-Becken. 21,7 Prozent der Einwohner sind über 65, 7,6 Prozent über 80. Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig; der Pflegestützpunkt des Landkreises unterhält eine Nebenstelle in Singen.</Text>
+            <Text>Topografisch ist Singen unkompliziert, auch wenn der Hohentwiel etwas anderes vermuten lässt. Der Berg ragt 267 Meter über die Stadt, ist aber Naturschutzgebiet mit einer Festungsruine und unbewohnt — für den Pflegealltag ohne Bedeutung. Rund 85 Prozent der Singener leben in der flachen Kernstadt im Hegau-Becken. 21,7 Prozent der Einwohner sind über 65, 7,6 Prozent über 80. Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral; der Pflegestützpunkt des Landkreises unterhält eine Nebenstelle in Singen.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-singen-am-hohentwiel" titel="Einzugsgebiet Singen am Hohentwiel">
@@ -236,8 +236,6 @@ export default function Page() {
 
             ort={'Singen'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260829-sabine', 'k-20260318-thomas'].includes(b.id))}
 
           />
@@ -249,7 +247,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

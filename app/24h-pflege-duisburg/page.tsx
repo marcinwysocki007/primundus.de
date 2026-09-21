@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Duisburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Duisburg | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Duisburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-duisburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Duisburg — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Duisburg. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Duisburg | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Duisburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-duisburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -178,7 +178,7 @@ export default function Page() {
             <Text>Das Bemerkenswerte daran: Es liegt nicht am Alter. Duisburg ist <em>jünger</em> als Nordrhein-Westfalen — 20,7 Prozent der Einwohner sind über 65, im Land 22,5 Prozent; bei den über 80-Jährigen 6,3 gegen 6,7 Prozent. Trotzdem liegt die Pflegequote mit 8,9 Prozent deutlich über dem Landeswert von 7,6. Die Stadt hat also nicht mehr alte Menschen, sondern mehr pflegebedürftige — und die werden überwiegend zu Hause versorgt, von Töchtern, Söhnen und Ehepartnern.</Text>
             <Text>Wie in Duisburg gewohnt wird, macht das nicht leichter.{' '} <strong className="text-pm-ink font-semibold">52,5 Prozent aller Gebäude stehen in geschlossener Reihe</strong> — in Nordrhein-Westfalen 27,2 Prozent. Das sind die Zechen- und Werkssiedlungen: schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss. Freistehend ist nur jedes fünfte Gebäude, im Land jedes zweite. Dazu kommt das Alter des Bestands: 70,3 Prozent aller Wohnungen stammen von vor 1970, gerade 2,3 Prozent von 2010 oder später. Wenn die Treppe zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
             <Text>Ein Punkt spricht dabei für Duisburg: Die durchschnittliche Wohnung misst 77,6 Quadratmeter und knapp ein Drittel liegt unter 60 — aber mit 5,84 Euro Nettokaltmiete je Quadratmeter ist Wohnraum hier so günstig wie in kaum einer anderen Großstadt. Wo ein Zimmer fehlt, ist etwas Größeres eher erreichbar als anderswo. Und Heimplätze sind trotz des niedrigen Heimanteils vorhanden: 51 je 1.000 Einwohner über 65 gegenüber 46 im Land. Duisburg ist also nicht heimarm — hier wird bewusst zu Hause gepflegt.</Text>
-            <Text>Medizinisch ist die Stadt gut aufgestellt: vier Krankenhäuser mit eigener geriatrischer Abteilung, zusammen 225 Betten, dazu eine geriatrische Tagesklinik und eine Reha-Klinik am Ort. Die klinische Versorgung ist da. Was sie nicht abnimmt, ist der Alltag danach — und genau dort setzt eine Betreuungskraft an, die mit einzieht und die Dauerverantwortung von den Angehörigen nimmt. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Medizinisch ist die Stadt gut aufgestellt: vier Krankenhäuser mit eigener geriatrischer Abteilung, zusammen 225 Betten, dazu eine geriatrische Tagesklinik und eine Reha-Klinik am Ort. Die klinische Versorgung ist da. Was sie nicht abnimmt, ist der Alltag danach — und genau dort setzt eine Betreuungskraft an, die mit einzieht und die Dauerverantwortung von den Angehörigen nimmt. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-duisburg" titel="Einzugsgebiet Duisburg">
@@ -229,8 +229,6 @@ export default function Page() {
 
             ort={'Duisburg'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -242,7 +240,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

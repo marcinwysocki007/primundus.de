@@ -1,4 +1,9 @@
 import type { Metadata } from 'next'
+import { OrtBeratung } from '@/components/orte/OrtBeratung'
+import { OrtErsteTage } from '@/components/orte/OrtErsteTage'
+import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtWasBedeutet } from '@/components/orte/OrtGrundlagen'
+import { OrtWohnen } from '@/components/orte/OrtWohnen'
+import { OrtWannSinnvoll } from '@/components/orte/OrtWannSinnvoll'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
@@ -15,27 +20,34 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
+const QUELLE = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
 const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Hamburg bedeutet" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Hamburg 2026" },
-  { id: 'polnische-betreuungskraefte-in-hamburg', title: "Polnische Betreuungskräfte in Hamburg" },
-  { id: '24-stunden-pflege-in', title: "24-Stunden-Pflege in allen Hamburger Bezirken" },
-  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hamburg ausmacht" },
-  { id: 'einzugsgebiet-hamburg', title: "Einzugsgebiet Hamburg" },
-  { id: 'werkzeuge', title: "Was es in Hamburg kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'was-bedeutet', title: "Was 24-Stunden-Pflege in Hamburg bedeutet" },
+  { id: 'wann-sinnvoll', title: "Wann Betreuung zu Hause sinnvoll ist" },
+  { id: 'wohnen', title: "Wohnen in Hamburg: was das für die Betreuung heißt" },
+  { id: 'aufgaben', title: "Was eine Betreuungskraft übernimmt — und was der Pflegedienst" },
+  { id: 'ablauf', title: "So läuft die Betreuung ab" },
+  { id: 'voraussetzungen', title: "Was Sie zu Hause brauchen" },
+  { id: 'kosten', title: "Was 24-Stunden-Pflege in Hamburg kostet" },
+  { id: 'werkzeuge', title: "Zuschüsse und Rechner: was die Pflegekasse dazugibt" },
+  { id: 'passende-kraft', title: "Wie Sie die passende Betreuungskraft finden" },
+  { id: 'warum-primundus', title: "Warum Familien in Hamburg Primundus wählen" },
+  { id: 'erste-tage', title: "Die ersten Tage: worauf es ankommt" },
   { id: 'stimmen-vor-ort', title: "Familien aus Hamburg über uns" },
+  { id: 'einzugsgebiet-hamburg', title: "Einzugsgebiet Hamburg" },
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hamburg" },
+  { id: 'beratung-hamburg', title: "Wo Sie sich in Hamburg unabhängig beraten lassen" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Hamburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Hamburg | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Hamburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hamburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Hamburg | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Hamburg. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Hamburg | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Hamburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-hamburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -44,12 +56,11 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Hamburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Schleswig-Holstein (Eigenanteil rund 3.040 €/Monat, vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Hamburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Hamburg — auch in ländlichen Regionen.' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Hamburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Hamburg (Eigenanteil rund 3.500 €/Monat, vdek 07/2026).' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Hamburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Hamburg und im Umland.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Hamburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Ist das Altenpflege, Seniorenbetreuung oder 24-Stunden-Pflege?', a: 'Gemeint ist meist dasselbe: Eine Betreuungskraft zieht in die Wohnung ein, hilft bei Körperpflege, Haushalt und Alltag und ist bei Bedarf auch nachts da. „Altenpflege" und „Seniorenbetreuung" sind die Wörter, mit denen viele Hamburger Familien suchen; medizinische Behandlungspflege wie Spritzen oder Verbände übernimmt weiterhin der ambulante Pflegedienst, den Sie zusätzlich behalten.' },
-  { q: 'Ist in einer Wohnung in Hamburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Hamburg hat im Schnitt 76,6 m², 37,6 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 66,8 % der Gebäude in Hamburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hamburg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.500 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.577 € Unterschied im Monat, 30.924 € im Jahr.' },
 ]
 
@@ -62,8 +73,23 @@ const schemaMarkup = [
     serviceType: '24-Stunden-Betreuung zu Hause',
     description: '24h-Betreuungskräfte in Hamburg. Rechtssicher, täglich kündbar, startklar.',
     url: 'https://primundus.de/24h-pflege-hamburg',
-    provider: { '@id': 'https://primundus.de/#organization' },
     areaServed: { '@type': 'State', name: 'Hamburg' },
+    // Echte Niederlassung mit eigener Nummer (Branchenbuch hamburg.de, Gelbe Seiten; Martin 21.09.).
+    // Adresse wie in lib/bewertungen.ts, wo auch das Google-Unternehmensprofil hinterlegt ist.
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Primundus 24-Stunden-Pflege Hamburg',
+      telephone: '+49 40 468951181',
+      email: 'hamburg@primundus.de',
+      url: 'https://primundus.de/24h-pflege-hamburg',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Baumwall 7',
+        postalCode: '20459',
+        addressLocality: 'Hamburg',
+        addressCountry: 'DE',
+      },
+    },
     },
   {
     '@context': 'https://schema.org',
@@ -104,39 +130,68 @@ export default function Page() {
             { label: 'Hamburg' },
           ]}
           augenbraue="24-Stunden-Pflege in Hamburg"
-          titel="24-Stunden-Pflege und Betreuung in Hamburg"
-          einleitung={<>Eppendorf, Barmbek, Blankenese oder die Walddörfer: Hamburger bleiben in ihrem Viertel — zwischen Alster, Elbe und dem Bäcker, der einen seit 30 Jahren kennt. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="27. August 2026"
-          lesezeit="6 Min."
-          blick={[
-            'Preis bei Primundus: ab 2.150 €/Monat',
-            'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
-            'Pflegeheim in Schleswig-Holstein: Eigenanteil rund 3.040 €/Monat (vdek, 07/2026)',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
+          titel="24-Stunden-Pflege in Hamburg: So funktioniert Betreuung zu Hause"
+          einleitung={<>Eine Betreuungskraft lebt mit im Haushalt und unterstützt im Alltag — bei Körperpflege, Essen, Haushalt und Begleitung. Hier erfahren Sie, wie die Betreuung abläuft, was sie kostet und worauf Sie achten sollten.</>}
+          aktualisiert="21. September 2026"
+          lesezeit="8 Min."
+          sprung={[
+            { id: 'ablauf', label: 'Ablauf' },
+            { id: 'aufgaben', label: 'Aufgaben' },
+            { id: 'kosten', label: 'Kosten' },
+            { id: 'voraussetzungen', label: 'Voraussetzungen' },
+            { id: 'passende-kraft', label: 'Betreuungskraft finden' },
           ]}
-          blickTitel="Hamburg auf einen Blick"
-          person={<AnsprechpartnerinGross ort="Hamburg" />}
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hamburg', text: 'Preis & verfügbare Betreuungskräfte ansehen' }}
+          knopfSchlicht
+          person={
+            <AnsprechpartnerinGross
+              ort="Hamburg"
+              telefon="+4940468951181"
+              telefonAnzeige="040 468 951 181"
+              adresse="Baumwall 7, 20459 Hamburg"
+            />
+          }
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Hamburg bedeutet">
+          <OrtWasBedeutet ort="Hamburg" />
+
+          <OrtWannSinnvoll slug="hamburg" ort="Hamburg" />
+          <OrtWohnen slug="hamburg" ort="Hamburg" />
+
+          <OrtAufgaben />
+
+          <OrtAblauf />
+
+          <Abschnitt id="voraussetzungen" titel="Was Sie zu Hause brauchen">
             <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
-              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
-              Heim, wo der Umzug ansteht. Das Zuhause in Hamburg bleibt, der gewohnte Tagesablauf auch.
+              Die Betreuungskraft braucht ein eigenes, abschließbares Zimmer; Bad und Küche werden in der Regel geteilt.
+              Meist wird es das ehemalige Kinder- oder Arbeitszimmer. Unterkunft und Verpflegung stellt die Familie — sie
+              lebt ja mit im Haushalt und isst mit.
             </Text>
-            <MehrDazu
-              label="Ausführlich auf den Themenseiten:"
-              links={[
-                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
-                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
-                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
-              ]}
-            />
+            <Text>
+              In Hamburg ist das oft die eigentliche Frage. Eine Wohnung misst hier im Schnitt 76,6 Quadratmeter, bundesweit
+              sind es 94,4 — fast 18 Quadratmeter weniger. 37,6 Prozent der Wohnungen sind kleiner als 60 Quadratmeter, im
+              Bundesschnitt 23,2 Prozent. Und nur 21,6 Prozent der Haushalte wohnen im Eigentum, bundesweit 44,3 Prozent: Die
+              meisten Hamburger können nicht einfach in eine größere Wohnung ziehen, es muss in der vorhandenen gehen.
+            </Text>
+            <Text>
+              Dazu kommt das Baujahr. 62,1 Prozent aller Wohnungen in Hamburg stammen aus der Zeit vor 1970 — der Altbau in
+              Eimsbüttel, die Nachkriegsbauten in Barmbek und Dulsberg. In diesem Bestand fehlt häufiger ein Aufzug, das Bad
+              ist klein und die Treppe steil. Genau das sind die Punkte, an denen Alleinleben scheitert und jemand im Haus den
+              Unterschied macht. Ob Ihre Wohnung ein Zimmer hergibt, entscheidet sich nicht an der Statistik, sondern an Ihrem
+              Grundriss — das klären wir vorab am Telefon, damit es hinterher keine Überraschung gibt.
+            </Text>
+            <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Hamburg 2026">
+          <Abschnitt id="kosten" titel="Was 24-Stunden-Pflege in Hamburg kostet">
+            <Text>
+              Der Preis richtet sich danach, wie viel Hilfe nötig ist und was Sie von der Betreuungskraft erwarten: wie gut sie
+              Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob nachts jemand aufstehen muss, ob eine oder zwei Personen
+              versorgt werden. Bei Primundus beginnt er bei 2.150 € im Monat, dazu kommen An- und Abreise mit 125 € je Strecke.
+              Von diesem Preis geht ab, was die Pflegekasse zahlt — das Beispiel zeigt, wie viel.
+            </Text>
             <Tabelle
               titel="Kostenbeispiel — Pflegegrad 3 in Hamburg"
               zeilen={[
@@ -147,7 +202,7 @@ export default function Page() {
                 [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Pflegeheim in Schleswig-Holstein: Eigenanteil rund 3.040 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
+              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Zum Vergleich: Ein Heimplatz in Hamburg kostet im ersten Jahr rund 3.500 €/Monat Eigenanteil (vdek, 07/2026)"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -161,45 +216,23 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
+            <Kasten titel="Bei Primundus warten Sie nicht auf ein Angebot">
+              <Text>Nach wenigen Angaben zur Pflegesituation sehen Sie Ihren konkreten Preis — und die Betreuungskräfte, die dafür in Frage kommen.</Text>
+            </Kasten>
             <RechnerKasten src="ort-hamburg" />
           </Abschnitt>
 
-          <Abschnitt id="polnische-betreuungskraefte-in-hamburg" titel="Polnische Betreuungskräfte in Hamburg">
-            <Text>Wer in Hamburg nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Sie kommen aus Polen und sind in Hamburg und im gesamten Umland im Einsatz.</Text>
-            <Kasten titel="Angestellt statt vermittelt">
-              <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
-            </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet:</strong> ab 2.150 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil — deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.040 Euro im Monat kostet.</Text>
-            <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Betreuungskräfte — das Entsendemodell erklärt</a>.</Text>
-          </Abschnitt>
+          <OrtWerkzeuge ohneWohnen ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
-          <Abschnitt id="24-stunden-pflege-in" titel="24-Stunden-Pflege in allen Hamburger Bezirken">
-            <Text>Unsere Betreuungskräfte ziehen in ganz Hamburg ein — in Wandsbek und Volksdorf ebenso wie in Altona, Eimsbüttel, Hamburg-Nord, Bergedorf oder Harburg. Auch im Umland sind wir da: in Quickborn, Norderstedt und Pinneberg, in Ahrensburg und im Kreis Stormarn. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</Text>
-          </Abschnitt>
+          <OrtPassendeKraft />
 
-          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Hamburg ausmacht">
-            <Text>Hamburg liegt beim Wohnen dicht am Schnitt von Hamburg — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 76,6 Quadratmeter, auf ein Gebäude kommen 3,8 Wohnungen, und 21,6 Prozent der Haushalte wohnen im Eigentum.</Text>
-            <Text>9,7 Prozent der Einwohner sind 75 Jahre oder älter, das sind 174.919 Menschen. In 20,9 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
-            <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
-          </Abschnitt>
-
-          <Abschnitt id="einzugsgebiet-hamburg" titel="Einzugsgebiet Hamburg">
-            <Text>Alle Hamburger Bezirke: Altona, Eimsbüttel, Hamburg-Mitte, Hamburg-Nord, Harburg, Bergedorf, Wandsbek sowie angrenzende Landkreise Pinneberg, Stormarn, Harburg und Lüneburg</Text>
-            <NearbyCities current="hamburg" />
-          </Abschnitt>
-
-          <OrtWerkzeuge ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} />
-
-
-          <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
+          <Abschnitt id="warum-primundus" titel="Warum Familien in Hamburg Primundus wählen">
             <Punkte
               punkte={[
-                { title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
-                { title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
-                { title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
-                { title: 'Persönlicher Ansprechpartner', desc: '7 Tage/Woche für Sie da' },
+                { title: 'Eigene Betreuungskräfte', desc: 'Angestellt bei uns, entsandt mit A1-Bescheinigung. Alle Arbeitgeberpflichten liegen bei uns, Ihr Vertrag läuft mit Primundus.' },
+                { title: 'Täglich kündbar, tagesgenau abgerechnet', desc: 'Kosten entstehen erst mit der Anreise der Betreuungskraft. Keine Vorauszahlung, keine Vermittlungsgebühr.' },
+                { title: '6× Testsieger bei DIE WELT', desc: 'Sechs Jahre in Folge in der Kundenbefragung von DIE WELT und ServiceValue ausgezeichnet — für Preis und Qualität.' },
+                { title: 'Ein Büro in Hamburg', desc: 'Baumwall 7 in der Neustadt, mit eigener Hamburger Durchwahl: 040 468 951 181.' },
               ]}
             />
             <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
@@ -220,33 +253,73 @@ export default function Page() {
                 <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
               </p>
             </div>
-            <Schritte
-              schritte={[
-                { title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
-                { title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', tag: 'Ihr Zugang kommt auch per E-Mail', tagTon: 'gruen' },
-                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
-              ]}
-            />
           </Abschnitt>
 
+          <OrtErsteTage ort="Hamburg" />
+
           <OrtStimmen
-
             ort={'Hamburg'}
-
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260909-petra', 'k-20251029-rainer', 'k-20241129-melanie'].includes(b.id))}
-
           />
 
+          <Abschnitt id="einzugsgebiet-hamburg" titel="Einzugsgebiet Hamburg">
+            <Text>
+              Alle sieben Bezirke: Hamburg-Mitte, Altona, Eimsbüttel, Hamburg-Nord, Wandsbek, Bergedorf und Harburg — von
+              Blankenese bis Bergedorf, von Volksdorf bis Wilhelmsburg. Dazu das Umland: Norderstedt, Quickborn, Pinneberg,
+              Ahrensburg, Reinbek, Buxtehude und die Kreise Pinneberg, Stormarn, Segeberg und Harburg.
+            </Text>
+            <NearbyCities current="hamburg" />
+          </Abschnitt>
 
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Hamburg">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
+
+          <OrtBeratung
+            slug="hamburg"
+            ort="Hamburg"
+            id="beratung-hamburg"
+            eigene={
+              <>
+            <Punkte
+              punkte={[
+                {
+                  title: (
+                    <a href="https://www.hamburg.de/politik-und-verwaltung/behoerden/sozialbehoerde/themen/pflege/beratung/pflegenottelefon" target="_blank" rel="noopener noreferrer" className={QUELLE}>Pflegenottelefon Hamburg — 040 428 99 1000</a>
+                  ),
+                  desc: 'Bei akuter Pflegenot jeden Tag zu jeder Zeit erreichbar. Wenn es heute eilt und Sie nicht wissen, wen Sie anrufen sollen: diese Nummer.',
+                },
+                {
+                  title: (
+                    <a href="https://www.hamburg.de/politik-und-verwaltung/behoerden/sozialbehoerde/themen/pflege/beratung/pflegestuetzpunkte" target="_blank" rel="noopener noreferrer" className={QUELLE}>Die acht Pflegestützpunkte</a>
+                  ),
+                  desc: 'Einer in jedem Bezirk, zwei in Wandsbek. Beratung ohne Anmeldung, auf Wunsch bei Ihnen zu Hause — unabhängig von Kasse und Versicherungsstatus.',
+                },
+                {
+                  title: (
+                    <a href="https://www.hamburg.de/pflege/" target="_blank" rel="noopener noreferrer" className={QUELLE}>Pflege in Hamburg — Übersicht der Sozialbehörde</a>
+                  ),
+                  desc: 'Was die Stadt an Beratung, Entlastung und Angeboten für pflegende Angehörige bereithält.',
+                },
+                {
+                  title: (
+                    <a href="https://www.alzheimer-hamburg.de/" target="_blank" rel="noopener noreferrer" className={QUELLE}>Alzheimer Gesellschaft Hamburg</a>
+                  ),
+                  desc: 'Beratung, Gesprächsgruppen und Schulungen für Angehörige von Menschen mit Demenz.',
+                },
+              ]}
+            />
+            <p className="text-[15px] leading-[1.6] text-pm-body/70">
+              Die vier Adressen haben wir am 21. September 2026 geprüft. Wir bekommen für diese Verweise nichts, und die
+              Stellen wissen nichts von uns.
+            </p>
+              </>
+            }
+          />
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

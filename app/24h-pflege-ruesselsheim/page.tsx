@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rüsselsheim | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Rüsselsheim | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Rüsselsheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-ruesselsheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Rüsselsheim am Main — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Rüsselsheim am Main. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Rüsselsheim | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Rüsselsheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-ruesselsheim',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Rüsselsheim am Main starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Rüsselsheim am Main rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Rüsselsheim?', a: '6.362 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Rüsselsheim?', a: '6.362 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Rüsselsheim — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Rüsselsheim im Schnitt 2,8 Wohnungen, in Hessen 2,2. 65,7 Prozent der Gebäude stehen frei, 16,9 Prozent stehen in geschlossener Reihe. 54,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Rüsselsheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Wie schwer ist es, in Rüsselsheim einen Heimplatz zu bekommen?', a: 'Schwerer als fast überall sonst in Hessen. Der Kreis Groß-Gerau hat 36 vollstationäre Heimplätze je 1.000 Einwohner über 65 — in Hessen sind es 47, also fast ein Viertel mehr. Nur zwei Kreise im Regierungsbezirk Darmstadt liegen darunter. Dazu passt, dass hier 63,9 Prozent aller Pflegebedürftigen ausschließlich von Angehörigen versorgt werden (Hessen: 58,6 Prozent) und ambulante Dienste mit 12,9 Prozent deutlich seltener zum Einsatz kommen als landesweit (17,6 Prozent). Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich planen lässt.' },
   { q: 'Welches Einzugsgebiet wird in Rüsselsheim am Main bedient?', a: 'Rüsselsheim und Groß-Gerau: Groß-Gerau, Mörfelden-Walldorf, Gernsheim und alle Gemeinden im Kreis Groß-Gerau' },
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Das ist keine freie Entscheidung, sondern hat auch mit dem Angebot zu tun. Der Kreis hat{' '} <strong className="text-pm-ink font-semibold">36 Heimplätze je 1.000 Einwohner über 65, in Hessen sind es 47</strong> — fast ein Viertel weniger. Nur zwei Kreise im Regierungsbezirk Darmstadt liegen darunter. Anteil und Platzdichte zeigen hier in dieselbe Richtung, aber die Dichte ist der härtere Engpass. Wer in Rüsselsheim einen Heimplatz sucht, sucht in einem der knappsten Märkte Hessens.</Text>
             <Text>Rüsselsheim selbst ist dabei jung: 12.865 Einwohner sind über 65, das sind 18,4 Prozent gegenüber 21,3 Prozent in Hessen; das Durchschnittsalter liegt bei 42,1 Jahren. Aber der Durchschnitt verdeckt hier besonders viel.{' '} <strong className="text-pm-ink font-semibold">Zwischen den Stadtbezirken liegt beim Anteil der über 60-Jährigen der Faktor drei</strong> — in Alt-Bauschheim sind es 35,8 Prozent, im Wohngebiet Blauer See II 11,4. Das Muster ist deutlich: Die eingemeindeten Dörfer Bauschheim, Königstädten und Haßloch sind alt, die Großsiedlungen der Kernstadt und die Neubaugebiete sind jung.</Text>
             <Text>Ein zweiter Punkt gehört dazu: 32,5 Prozent der Rüsselsheimer haben keine deutsche Staatsangehörigkeit — in einem Kreis, dessen Pflege zu fast zwei Dritteln über Angehörige läuft. Sprache und Gewohnheiten sind bei einer Betreuungskraft, die im Haushalt lebt, deshalb kein Nebenthema. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto.</Text>
-            <Text>Topografisch ist Rüsselsheim ohne Bedeutung für den Pflegealltag — zwischen dem höchsten und dem tiefsten Punkt des Stadtgebiets liegen 22 Meter. Geriatrisch ist die Stadt versorgt: Das GPR Klinikum führt eine eigenständige Geriatrische Klinik mit 40 Betten. Ein Hinweis, weil Verzeichnisse dem Haus hinterherhinken: Es hieß früher Stadtkrankenhaus Rüsselsheim — dieselbe Einrichtung, nicht ein zweites Haus. Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Topografisch ist Rüsselsheim ohne Bedeutung für den Pflegealltag — zwischen dem höchsten und dem tiefsten Punkt des Stadtgebiets liegen 22 Meter. Geriatrisch ist die Stadt versorgt: Das GPR Klinikum führt eine eigenständige Geriatrische Klinik mit 40 Betten. Ein Hinweis, weil Verzeichnisse dem Haus hinterherhinken: Es hieß früher Stadtkrankenhaus Rüsselsheim — dieselbe Einrichtung, nicht ein zweites Haus. Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-ruesselsheim-am-main" titel="Einzugsgebiet Rüsselsheim am Main">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Rüsselsheim'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
@@ -22,18 +23,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Brandenburg ausmacht" },
   { id: 'einzugsgebiet-brandenburg', title: "Einzugsgebiet Brandenburg" },
   { id: 'werkzeuge', title: "Was es in Brandenburg kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Brandenburg" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Brandenburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Brandenburg | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Brandenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-brandenburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Brandenburg | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Brandenburg. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Brandenburg | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Brandenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-brandenburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -249,13 +251,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Brandenburg'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Brandenburg">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

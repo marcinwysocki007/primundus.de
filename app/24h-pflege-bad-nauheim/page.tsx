@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bad Nauheim | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Bad Nauheim | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Bad Nauheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-nauheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Bad Nauheim — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Bad Nauheim. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Bad Nauheim | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Bad Nauheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bad-nauheim',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Das hat eine Folge, die im Alltag wiegt: <strong className="text-pm-ink font-semibold">Fast jeder fünfte Haushalt in Bad Nauheim ist ein Mensch über 65, der allein lebt.</strong> Wer zugezogen ist, hat die Kinder oft nicht in der Nähe — und alte Freundschaften auch nicht. Wenn dann etwas passiert, ein Sturz, ein Krankenhausaufenthalt, fehlt genau das, was anderswo selbstverständlich ist: jemand, der nach dem Rechten sieht.</Text>
             <Text>Im Wetteraukreis zeigt die Pflegestatistik ein klares Muster. 60 Prozent aller Pflegebedürftigen beziehen ausschließlich Pflegegeld, werden also von Angehörigen versorgt — mehr als in Hessen. Zugleich nutzen nur 14 Prozent einen ambulanten Dienst, der niedrigste Wert im weiten Umkreis. Dafür hält der Kreis <strong className="text-pm-ink font-semibold"> 60 Heimplätze je 1.000 Einwohner über 65 bereit, fast ein Drittel mehr als Hessen im Schnitt</strong>. Viel Angehörigenpflege, viel Heim — und dazwischen wenig. Die Betreuung im eigenen Zuhause ist genau dieser fehlende Mittelweg.</Text>
             <Text>Praktisch spricht vieles dafür, hier zu bleiben. Bad Nauheim ist kompakt gebaut, die Stadt liegt im flachen Talgrund der Wetterau, und die Wege sind kurz: Bis zum Hausarzt sind es im Schnitt gut 500 Meter, halb so weit wie im Bundesdurchschnitt. Was fehlt, ist selten die Infrastruktur — es ist die Person im Haus. Genau die bringt eine Betreuungskraft mit: morgens beim Aufstehen, nachts, und an den Nachmittagen, an denen sonst niemand vorbeikommt.</Text>
-            <Text>Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Hessen beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI) und gilt unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
+            <Text>Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Hessen beraten kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI) und gilt unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bad-nauheim" titel="Einzugsgebiet Bad Nauheim">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Bad Nauheim'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

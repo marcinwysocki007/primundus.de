@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Iserlohn | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Iserlohn | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Iserlohn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-iserlohn' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Iserlohn — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Iserlohn. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Iserlohn | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Iserlohn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-iserlohn',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Beim Wohnen unterscheidet sich Iserlohn deutlich von den meisten Städten der Region: Die Stadt blieb im Zweiten Weltkrieg weitgehend verschont — sie wurde Mitte April 1945 kampflos übergeben. Wo andernorts der Wiederaufbau der fünfziger Jahre das Straßenbild prägt, steht in Iserlohn viel gewachsene alte Bausubstanz. Schön, aber eben auch: enge Treppenhäuser, hohe Stufen, selten ein Aufzug. Genau diese Häuser wollen die Menschen nicht verlassen, wenn sie älter werden.</Text>
             <Text>Dazu kommt die demografische Entwicklung. Iserlohn ist die größte Stadt des Märkischen Kreises und des gesamten Sauerlandes, aber die Einwohnerzahl geht seit dem Höchststand um die Jahrtausendwende zurück — von knapp 99.500 im Jahr 1999 auf rund 92.000 heute. Wenn eine Stadt schrumpft, sind es meist die Jüngeren, die gehen. Zurück bleiben Eltern und Großeltern, deren Kinder in Dortmund, Hagen oder weiter entfernt arbeiten. Hilfe am Wochenende ist dann möglich; Hilfe am Dienstagmorgen um sieben nicht.</Text>
             <Text>Eine Betreuungskraft, die mit einzieht, schließt genau diese Lücke. Sie ist morgens da, nachts, und an den langen Nachmittagen, an denen sonst niemand vorbeikommt. Sie übernimmt die Wege, die durch die Hanglage schwierig geworden sind, und führt den Haushalt mit. Das gilt in Letmathe, dem mit Abstand größten Stadtteil, ebenso wie in Hennen, Kesbern oder Sümmern — und ebenso in den Nachbarstädten Hemer, Menden und Altena. Anfahrtskosten berechnen wir nicht, der Preis ist überall derselbe.</Text>
-            <Text>Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten: Die Pflegeberatung im Märkischen Kreis ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
+            <Text>Bevor Sie sich festlegen, lassen Sie sich unabhängig beraten: Die Pflegeberatung im Märkischen Kreis ist kostenlos, neutral und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-iserlohn" titel="Einzugsgebiet Iserlohn">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Iserlohn'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

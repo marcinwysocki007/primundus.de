@@ -28,14 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Kreis Alzey-Worms | 6× Testsieger',
-  description:
-    'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
+  title: '24-Stunden-Pflege im Kreis Alzey-Worms | 6× Testsieger',
+  description: 'Liebevolle Betreuung im Kreis Alzey-Worms und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-alzey-worms' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege im Kreis Alzey-Worms — Betreuung zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Alzey-Worms. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege im Kreis Alzey-Worms | 6× Testsieger',
+    description: 'Liebevolle Betreuung im Kreis Alzey-Worms und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-alzey-worms',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -150,7 +149,7 @@ export default function Page() {
             <Text>Nur 16,9 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Rheinland-Pfalz sind es 25,9 Prozent. 33,8 Prozent der Haushalte bestehen aus einer Person, in Rheinland-Pfalz 40,4 Prozent.</Text>
             <Text>Beim Platz steht Kreis Alzey-Worms besser da als das Land: Nur 9,2 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Rheinland-Pfalz sind es 15,4 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden. Gemessen am Landesschnitt ist Kreis Alzey-Worms jünger — 9,2 Prozent der Einwohner sind 75 oder älter — das sind 11.945 Menschen, in Rheinland-Pfalz 10,7 Prozent. Das heißt nicht, dass weniger Pflege gebraucht wird: Der Anteil ist niedrig, die absolute Zahl bleibt.</Text>
             <Text>In Zahlen: 11.945 Menschen in Kreis Alzey-Worms sind 75 Jahre oder älter, und es gibt 61.870 Wohnungen in 43.077 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -166,10 +165,6 @@ export default function Page() {
 
             ort={'Kreis Alzey-Worms'}
 
-
-            herkunft="umgebung"
-
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260802-karin', 'k-20251031-martina'].includes(b.id))}
 
 
@@ -183,7 +178,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

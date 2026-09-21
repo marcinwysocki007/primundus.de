@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Mainz | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Mainz | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Mainz und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-mainz' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Mainz — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Mainz. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Mainz | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Mainz und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-mainz',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -47,7 +47,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Mainz starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Mainz rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Mainz?', a: '20.287 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,2 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 18,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Mainz?', a: '20.287 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,2 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 18,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Mainz — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Mainz im Schnitt 3,6 Wohnungen, in Rheinland-Pfalz 1,7. 41,6 Prozent der Gebäude stehen frei, 39,4 Prozent stehen in geschlossener Reihe. 47,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Mainz ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'In welchen Mainzer Stadtteilen leben die meisten älteren Menschen?', a: 'Der Unterschied ist groß: In Drais sind 16,3 Prozent der Einwohner über 75, in der Neustadt 5,1 Prozent — der Faktor drei. Dahinter folgen Lerchenberg (13,4 Prozent), Finthen und Laubenheim (je 11,9). Besonders auffällig ist der Lerchenberg: Dort überwiegen die Hochaltrigen deutlich gegenüber den 65- bis 75-Jährigen — das Muster einer Großwohnsiedlung, deren Erstbezieher gemeinsam alt geworden sind. Unsere Betreuungskräfte kommen in jeden Stadtteil; Anreise und Preis sind überall gleich.' },
   { q: 'Welches Einzugsgebiet wird in Mainz bedient?', a: 'Mainz und Umland: Wiesbaden, Bingen, Bad Kreuznach, Ingelheim und alle Gemeinden im Landkreis Mainz-Bingen' },
@@ -181,7 +181,7 @@ export default function Page() {
             <Text>Ein Stadtteil fällt dabei besonders auf. Am Lerchenberg sind 13,4 Prozent über 75, aber nur 9,4 Prozent zwischen 65 und 75 — die Hochaltrigen überwiegen deutlich. Das ist das Muster einer Großwohnsiedlung, deren Erstbezieher gemeinsam alt geworden sind. Dort konzentriert sich Pflegebedarf auf engem Raum, während er in der Neustadt kaum vorkommt.</Text>
             <Text>Was Familien in Mainz zu schaffen macht, ist eine andere Entwicklung: Das Angebot schrumpft.{' '} <strong className="text-pm-ink font-semibold">Von 27 ambulanten Pflegediensten sind noch 23 übrig, von 21 Pflegeheimen noch 19</strong>, und bei der Tagespflege fielen 29 Plätze weg. Gleichzeitig ist der Anteil der Heimversorgung leicht gestiegen. Beides zusammen heißt: Es konkurrieren mehr Menschen um weniger Angebot. Wer sich auf einen ambulanten Dienst verlassen will, sollte das früh klären.</Text>
             <Text>Ein Hinweis zu Zahlen, die kursieren: Die häufig genannten 7.871 Pflegebedürftigen für Mainz enthalten die Gruppe mit Pflegegrad 1 ohne reguläre Leistungen nicht — 2021 waren das allein rund 1.180 Menschen. Wer mit 7.871 rechnet, unterschätzt die tatsächliche Zahl also. Von diesen 7.871 werden 60,5 Prozent allein von Angehörigen versorgt, 19,1 Prozent von einem ambulanten Dienst, 20,4 Prozent leben im Heim.</Text>
-            <Text>Medizinisch ist Mainz gut versorgt: Das Marienhaus Klinikum An der Goldgrube führt eine Akutgeriatrie mit 59 Betten und seit August 2023 zusätzlich eine geriatrische Rehabilitation mit 50 Betten im selben Haus. Ein praktischer Hinweis, weil ältere Verweise noch kursieren: Die Akutgeriatrie saß bis 2017 am St. Hildegardis-Krankenhaus und ist seither An der Goldgrube. Lassen Sie sich vorher unabhängig beraten — die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Medizinisch ist Mainz gut versorgt: Das Marienhaus Klinikum An der Goldgrube führt eine Akutgeriatrie mit 59 Betten und seit August 2023 zusätzlich eine geriatrische Rehabilitation mit 50 Betten im selben Haus. Ein praktischer Hinweis, weil ältere Verweise noch kursieren: Die Akutgeriatrie saß bis 2017 am St. Hildegardis-Krankenhaus und ist seither An der Goldgrube. Lassen Sie sich vorher unabhängig beraten — die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-mainz" titel="Einzugsgebiet Mainz">
@@ -232,8 +232,6 @@ export default function Page() {
 
             ort={'Mainz'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260802-karin', 'k-20251031-martina', 'k-20241121-sonja'].includes(b.id))}
 
           />
@@ -245,7 +243,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

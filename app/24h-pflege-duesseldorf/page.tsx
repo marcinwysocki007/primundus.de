@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Düsseldorf | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Düsseldorf | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Düsseldorf und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-duesseldorf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Düsseldorf — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Düsseldorf. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Düsseldorf | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Düsseldorf und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-duesseldorf',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -181,7 +181,7 @@ export default function Page() {
             <Text>Die zweite Zahl, die man kennen sollte, betrifft die Alternative.{' '} <strong className="text-pm-ink font-semibold">Düsseldorf hat 40 vollstationäre Heimplätze je 1.000 Einwohner über 65 — Nordrhein-Westfalen 46.</strong> Und das ist keine Frage der Betrachtungsweise: Auch der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2. Beide Kennzahlen zeigen in dieselbe Richtung. Bei 40.248 Pflegebedürftigen in der Stadt heißt das schlicht: Der Heimplatz ist hier knapper als anderswo in NRW. Für viele Familien ist die häusliche Lösung nicht die zweitbeste, sondern die einzige, die kurzfristig verfügbar ist.</Text>
             <Text>Auffällig ist auch, wie in Düsseldorf gepflegt wird. Nur 56,9 Prozent beziehen ausschließlich Pflegegeld, versorgen sich also rein familiär — in NRW sind es 59,0 Prozent. Dafür nehmen 21,0 Prozent einen ambulanten Dienst in Anspruch, gegenüber 17,3 im Land. Düsseldorfer Familien kaufen professionelle Unterstützung eher ein, als alles allein zu tragen. Eine Betreuungskraft im Haushalt ist die konsequente Fortsetzung dieses Wegs: nicht dreimal täglich ein Besuch, sondern durchgehend jemand da.</Text>
             <Text>Beim Platz wird es allerdings eng. Die durchschnittliche Düsseldorfer Wohnung misst 77,6 Quadratmeter gegenüber 92,7 im Land, gut jede dritte liegt unter 60, und nur 22,1 Prozent der Haushalte wohnen im Eigentum. Bei 9,24 Euro Nettokaltmiete je Quadratmeter ist der Umzug in etwas Größeres für die meisten keine Option. Ob ein eigenes Zimmer für die Betreuungskraft frei wird, entscheidet sich deshalb sehr konkret — und diese Frage klären wir vorher, nicht hinterher.</Text>
-            <Text>Dazu kommt, dass Düsseldorf zwei sehr verschiedene Städte ist. In Friedrichstadt leben gut 20.000 Menschen je Quadratkilometer, in Hubbelrath 130. Innenstadtlagen wie Pempelfort oder Unterbilk haben alles fußläufig; in Kalkum, Angermund oder Himmelgeist geht ohne Auto wenig. Für eine Kraft, die im Haus wohnt, spielt das keine Rolle. Medizinisch ist die Stadt gut aufgestellt — St. Martinus in Bilk und das Krankenhaus Elbroich führen beide eine eigene geriatrische Klinik, St. Martinus zusätzlich eine Tagesklinik. Bevor Sie entscheiden, lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt zu Ihnen.</Text>
+            <Text>Dazu kommt, dass Düsseldorf zwei sehr verschiedene Städte ist. In Friedrichstadt leben gut 20.000 Menschen je Quadratkilometer, in Hubbelrath 130. Innenstadtlagen wie Pempelfort oder Unterbilk haben alles fußläufig; in Kalkum, Angermund oder Himmelgeist geht ohne Auto wenig. Für eine Kraft, die im Haus wohnt, spielt das keine Rolle. Medizinisch ist die Stadt gut aufgestellt — St. Martinus in Bilk und das Krankenhaus Elbroich führen beide eine eigene geriatrische Klinik, St. Martinus zusätzlich eine Tagesklinik. Bevor Sie entscheiden, lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt zu Ihnen.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-duesseldorf" titel="Einzugsgebiet Düsseldorf">
@@ -232,8 +232,6 @@ export default function Page() {
 
             ort={'Düsseldorf'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260814-andrea', 'k-20260311-claudia', 'k-20241120-oliver'].includes(b.id))}
 
           />
@@ -245,7 +243,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

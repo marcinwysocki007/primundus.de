@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bielefeld | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Bielefeld | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Bielefeld und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bielefeld' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Bielefeld — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Bielefeld. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Bielefeld | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Bielefeld und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bielefeld',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -47,7 +47,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Bielefeld starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Bielefeld rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Bielefeld?', a: '34.515 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,5 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Bielefeld?', a: '34.515 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,5 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Bielefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bielefeld im Schnitt 2,7 Wohnungen, in Nordrhein-Westfalen 2,3. 54,6 Prozent der Gebäude stehen frei, 27,5 Prozent stehen in geschlossener Reihe. 55,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bielefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'In welchen Bielefelder Stadtbezirken fehlen Heimplätze?', a: 'Die Stadt benennt es in ihrer Bedarfsplanung selbst: Unterversorgt sind Jöllenbeck, Heepen, Dornberg und Senne; ein Überangebot gibt es in Schildesche, Sennestadt und Gadderbaum. Bemerkenswert ist die Richtung — Jöllenbeck ist mit 8,2 Prozent Einwohnern über 80 der älteste Stadtbezirk und hat mit rund 51 Plätzen je 1.000 Hochbetagten zugleich das dünnste Angebot; in Sennestadt sind es 234. Über die ganze Stadt gerechnet reichen die 2.622 Plätze dagegen aus. Bielefeld hat also kein Mengen-, sondern ein Verteilungsproblem. Eine Betreuungskraft, die zu Ihnen kommt, löst genau das — sie ist dort, wo Sie wohnen.' },
   { q: 'Welches Einzugsgebiet wird in Bielefeld bedient?', a: 'Bielefeld und Umland: Gütersloh, Herford, Detmold, Paderborn, Minden und alle Gemeinden im Kreis Gütersloh und Herford' },
@@ -181,7 +181,7 @@ export default function Page() {
             <Text>Konkret heißt das: Jöllenbeck ist mit 8,2 Prozent Einwohnern über 80 der älteste Stadtbezirk und hat mit 51 Plätzen je 1.000 Hochbetagten zugleich das dünnste Angebot. In Sennestadt, altersmäßig unauffällig, sind es 234. Die Stadt benennt das selbst: Unterversorgung in Jöllenbeck, Heepen, Dornberg und Senne, Überangebot in Schildesche, Sennestadt und Gadderbaum. Wer in Jöllenbeck einen Heimplatz sucht, sucht ihn also außerhalb des eigenen Viertels — oder bleibt zu Hause.</Text>
             <Text>Eine Zahl macht die Dringlichkeit deutlich:{' '} <strong className="text-pm-ink font-semibold">Von den Bielefeldern über 80 sind 49,7 Prozent pflegebedürftig</strong> — fast jeder zweite. Bei den 65- bis 79-Jährigen sind es 11,3 Prozent. Insgesamt zählt die Stadt 22.590 Pflegebedürftige, von denen 66,1 Prozent zu Hause ohne Pflegedienst versorgt werden und 22,1 Prozent mit einem Dienst. Nur 11,8 Prozent leben stationär, deutlich weniger als im Bund.</Text>
             <Text>Eine Entwicklung sollte man dabei kennen: Die Zahl der über 80-Jährigen{' '} <em>sinkt</em> in Bielefeld bis 2027 um rund 2.000 — die geburtenschwachen Jahrgänge der Kriegsjahre erreichen jetzt dieses Alter. Ab 2034 steigt sie dann deutlich an. Die heutige Entspannung ist also eine Atempause, keine Trendwende.</Text>
-            <Text>Zur Geriatrie der wichtigste praktische Hinweis dieser Seite:{' '} <strong className="text-pm-ink font-semibold">Die Geriatrie des Evangelischen Klinikums Bethel liegt nicht in Bethel.</strong> Sie sitzt im Johannesstift an der Schildescher Straße in Bielefeld-Schildesche — rund fünf Kilometer und einen Stadtbezirk vom Bethel-Campus in Gadderbaum entfernt. Wer zu Bethel fährt, ist am falschen Ort. Vier Bielefelder Häuser haben eine geriatrische Leistungsgruppe; die Klinik an der Rosenhöhe heißt inzwischen Universitätsklinik für Geriatrie und hat seit Juli 2025 eine neue Leitung — viele Verzeichnisse führen noch den alten Namen. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Zur Geriatrie der wichtigste praktische Hinweis dieser Seite:{' '} <strong className="text-pm-ink font-semibold">Die Geriatrie des Evangelischen Klinikums Bethel liegt nicht in Bethel.</strong> Sie sitzt im Johannesstift an der Schildescher Straße in Bielefeld-Schildesche — rund fünf Kilometer und einen Stadtbezirk vom Bethel-Campus in Gadderbaum entfernt. Wer zu Bethel fährt, ist am falschen Ort. Vier Bielefelder Häuser haben eine geriatrische Leistungsgruppe; die Klinik an der Rosenhöhe heißt inzwischen Universitätsklinik für Geriatrie und hat seit Juli 2025 eine neue Leitung — viele Verzeichnisse führen noch den alten Namen. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bielefeld" titel="Einzugsgebiet Bielefeld">
@@ -232,8 +232,6 @@ export default function Page() {
 
             ort={'Bielefeld'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -245,7 +243,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

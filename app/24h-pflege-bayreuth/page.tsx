@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bayreuth | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Bayreuth | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Bayreuth und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bayreuth' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Bayreuth — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Bayreuth. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Bayreuth | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Bayreuth und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bayreuth',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -191,7 +191,7 @@ export default function Page() {
             <Text>Beim Blick in die Pflegestatistik trennen sich Stadt und Landkreis dann deutlich. In der Stadt Bayreuth leben <strong className="text-pm-ink font-semibold">26,8 Prozent aller Pflegebedürftigen im Heim</strong> — in Bayern sind es 17,6 Prozent. Auf 1.000 Einwohner über 65 kommen hier 82 Heimplätze, im Land nur 44. Bayreuth ist damit eine der am stärksten heimgeprägten Städte Bayerns. Im Landkreis ist es genau umgekehrt: Dort werden fast die Hälfte der Menschen mit Pflegegrad 5 zu Hause versorgt statt stationär. Dahinter stehen Familien, die das über Jahre allein stemmen.</Text>
             <Text>Dass das so ist, hat auch mit den Entfernungen zu tun. Die Stadt Bayreuth kommt auf gut 1.000 Einwohner je Quadratkilometer, der Landkreis auf 81 — er ist einer der am dünnsten besiedelten Bayerns. Ein ambulanter Dienst, der Pegnitz, Bad Berneck und die Dörfer dazwischen bedienen soll, fährt lange Touren, und die Termine richten sich nach der Route. Dazu kommt: Die Wohnungen im Landkreis sind mit durchschnittlich 114 Quadratmetern deutlich größer als in der Stadt mit 78 — meist Einfamilienhäuser mit Treppe, Garten und allem, was gepflegt werden will.</Text>
             <Text>Genau an dieser Stelle setzt eine Betreuungskraft an, die mit einzieht. Sie ersetzt die Angehörigen nicht, sondern nimmt ihnen die Dauerbelastung ab: nachts, an Wochenenden und in den Stunden, in denen sonst niemand da wäre. Sie ist von keiner Tourenplanung abhängig, weil sie im Haus wohnt. Und sie führt den Haushalt mit — was gerade in einem großen Haus den Unterschied macht.</Text>
-            <Text>Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten. In Bayreuth gibt es seit Juli 2025 einen eigenen Pflegestützpunkt, getragen von Stadt, Bezirk und den Pflegekassen; die Beratung ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI). Für pflegende Angehörige gibt es zusätzlich eine eigene Fachstelle. Und in Bayern kommt das Landespflegegeld hinzu: 500 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
+            <Text>Bevor Sie etwas entscheiden, lassen Sie sich unabhängig beraten. In Bayreuth gibt es seit Juli 2025 einen eigenen Pflegestützpunkt, getragen von Stadt, Bezirk und den Pflegekassen; die Beratung ist kostenlos, neutral und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI). Für pflegende Angehörige gibt es zusätzlich eine eigene Fachstelle. Und in Bayern kommt das Landespflegegeld hinzu: 500 Euro im Jahr ab Pflegegrad 2, unabhängig davon, wer die Pflege übernimmt.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bayreuth" titel="Einzugsgebiet Bayreuth">
@@ -242,8 +242,6 @@ export default function Page() {
 
             ort={'Bayreuth'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250708-helga'].includes(b.id))}
 
           />
@@ -255,7 +253,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -35,14 +35,24 @@ import {
 // Beobachtung laeuft: Basiswerte in seo-reports/startseite-basis.json,
 // Nachkontrolle fruehestens drei Wochen nach dem Neu-Crawl.
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege vom 6× Testsieger — Preis & Kräfte sofort sehen',
-  description: 'Kosten und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Polnische Pflegekräfte, legal und ohne Vertrag vor Ihrer Wahl.',
+  // Snippet der Startseite, 21.09.2026 — Wortlaut von Martin. Gemessen in Googles
+  // Darstellungsgrößen (Arial, Titel 20px/580px, Beschreibung 14px/920px):
+  //   Titel alt 605 px — wurde abgeschnitten. Titel neu 496 px, 84 px Luft.
+  //   Beschreibung alt 1.024 px — abgeschnitten. Martins Wortlaut 997 px — ebenfalls, und
+  //   zwar mitten in „Bestpreisga…".
+  // Gekürzt wurde deshalb um genau ein Wort: „verfügbare". Ein erster Versuch hatte
+  // stattdessen „im vertrauten" gestrichen — das ist der emotionale Kern des Satzes und
+  // wiegt schwerer als ein Adjektiv. 922 px liegen 2 px über der Faustregel; betroffen wäre
+  // allenfalls der Schlusspunkt, und 920 px sind keine harte Kante.
+  // In openGraph steht der volle Wortlaut, weil soziale Netze mehr Platz zeigen.
+  title: '24-Stunden-Pflege zuhause | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung im vertrauten Zuhause und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
-    title: '24-Stunden-Pflege vom 6× Testsieger — Preis & Kräfte sofort sehen',
-    description: 'Kosten und passende Betreuungskräfte sofort online sehen — mit Foto, Erfahrung und Deutschniveau. Polnische Pflegekräfte, legal und ohne Vertrag vor Ihrer Wahl.',
+    title: '24-Stunden-Pflege zuhause | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung im vertrauten Zuhause und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',

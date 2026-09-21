@@ -28,14 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rheinisch-Bergischer Kreis | 6× Testsieger',
-  description:
-    'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
+  title: '24-Stunden-Pflege im Rheinisch-Bergischen Kreis | 6× Testsieger',
+  description: 'Liebevolle Betreuung im Rheinisch-Bergischen Kreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege im Rheinisch-Bergischen Kreis | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft im Rheinisch-Bergischen Kreis. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege im Rheinisch-Bergischen Kreis | 6× Testsieger',
+    description: 'Liebevolle Betreuung im Rheinisch-Bergischen Kreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-rheinisch-bergischer-kreis',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -150,7 +149,7 @@ export default function Page() {
             <Text>Beim Platz steht Rheinisch-Bergischer Kreis besser da als das Land: Nur 15,3 Prozent der Wohnungen liegen unter 60 Quadratmetern, in Nordrhein-Westfalen sind es 22,4 Prozent. Das Zimmer für eine Betreuungskraft ist hier meist schon vorhanden. Altbau vor 1950 macht in Rheinisch-Bergischer Kreis 13,3 Prozent des Bestands aus, in Nordrhein-Westfalen 19,7 Prozent.</Text>
             <Text>Gebäude in geschlossener Reihe sind in Rheinisch-Bergischer Kreis mit 17,1 Prozent seltener als in Nordrhein-Westfalen (27,2 Prozent). Rheinisch-Bergischer Kreis ist älter als das Land: 12,5 Prozent der Einwohner sind 75 Jahre oder älter — das sind 35.199 Menschen, in Nordrhein-Westfalen sind es 10,7 Prozent. Gut jeder vierte Haushalt in Rheinisch-Bergischer Kreis besteht nur aus Menschen ab 65 — in Nordrhein-Westfalen 24,2 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
             <Text>In Zahlen: 35.199 Menschen in Rheinisch-Bergischer Kreis sind 75 Jahre oder älter, und es gibt 140.815 Wohnungen in 75.548 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -166,10 +165,6 @@ export default function Page() {
 
             ort={'Rheinisch-Bergischer Kreis'}
 
-
-            herkunft="umgebung"
-
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
 
@@ -183,7 +178,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

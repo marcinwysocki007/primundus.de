@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Eschborn | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Eschborn | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Eschborn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-eschborn' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Eschborn — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Eschborn. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Eschborn | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Eschborn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-eschborn',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Eschborn starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Eschborn rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Eschborn?', a: '2.122 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Eschborn?', a: '2.122 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,8 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,2 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Eschborn — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Eschborn im Schnitt 2,8 Wohnungen, in Hessen 2,2. 40,0 Prozent der Gebäude stehen frei, 34,7 Prozent stehen in geschlossener Reihe. 42,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Eschborn ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Wie ist die Heimplatz-Lage rund um Eschborn?', a: 'Sehr knapp. Der Main-Taunus-Kreis hat mit 31 vollstationären Plätzen je 1.000 Einwohner über 65 die dünnste Heimplatzdecke aller 26 hessischen Kreise — im Land sind es 47. In Eschborn selbst gibt es zwei Pflegeheime mit zusammen 97 Plätzen. Entsprechend leben im Kreis nur 10,9 Prozent der Pflegebedürftigen im Heim (Hessen: 13,5 Prozent), während 20,6 Prozent einen ambulanten Dienst nutzen (Hessen: 17,6). Die stärkere ambulante Versorgung ist hier keine Vorliebe, sondern eine Folge der Knappheit. Ein Krankenhaus und damit eine Geriatrie hat Eschborn nicht.' },
   { q: 'Welches Einzugsgebiet wird in Eschborn bedient?', a: 'Eschborn und Main-Taunus-Kreis: Sulzbach, Kelkheim, Hattersheim, Hofheim am Taunus und alle Gemeinden im Main-Taunus-Kreis' },
@@ -185,7 +185,7 @@ export default function Page() {
             <Text>Der Main-Taunus-Kreis hat{' '} <strong className="text-pm-ink font-semibold">die dünnste Heimplatzdecke aller 26 hessischen Kreise: 31 Plätze je 1.000 Einwohner über 65, im Land sind es 47.</strong>{' '} Das ist kein Randbefund, sondern der Kern der Lage. Entsprechend leben hier nur 10,9 Prozent der Pflegebedürftigen im Heim gegenüber 13,5 Prozent in Hessen — aber der Rückstand beim Angebot ist fast doppelt so groß wie der beim Anteil. Wer hier einen Heimplatz sucht, sucht in dem knappsten Markt des Landes.</Text>
             <Text>Die ambulante Versorgung fängt das teilweise auf: 20,6 Prozent der 13.683 Pflegebedürftigen im Kreis nutzen einen Pflegedienst, in Hessen sind es 17,6 Prozent. Das ist allerdings keine Präferenz, sondern eine Folge der Knappheit. In Eschborn selbst gibt es zwei Pflegeheime mit zusammen 97 Plätzen, sieben ambulante Dienste und zwei Tagespflegen — für gut 22.000 Einwohner.</Text>
             <Text>Eschborn ist dabei jünger als sein Umfeld: 42,9 Jahre Durchschnittsalter gegenüber 44,7 im Kreis und 44,3 in Hessen. Das hat mit dem Arbeitsmarkt zu tun — in der Stadt gibt es{' '} <strong className="text-pm-ink font-semibold">rund 43.600 sozialversicherungspflichtige Arbeitsplätze bei gut 22.000 Einwohnern</strong>, fast doppelt so viele Stellen wie Bewohner. Ein niedriger Altersdurchschnitt heißt aber nicht weniger Bedarf, sondern nur: Er verteilt sich auf weniger Menschen.</Text>
-            <Text>Ein Krankenhaus hat Eschborn nicht, und damit auch keine Geriatrie. Die drei nächsten geriatrischen Kliniken gehören alle demselben Träger — in Bad Soden, Hofheim und Frankfurt-Höchst. Hier ist Vorsicht geboten: Bad Soden und Hofheim werden von derselben Chefärztin geführt und sind unter derselben Rufnummer erreichbar, und ein Umstrukturierungskonzept sieht vor, die Geriatrie ganz nach Hofheim zu verlagern. Welcher Standort heute welchen Betrieb führt, ließ sich aus den öffentlichen Quellen nicht eindeutig klären — rufen Sie vorher an, bevor Sie fahren. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Ein Krankenhaus hat Eschborn nicht, und damit auch keine Geriatrie. Die drei nächsten geriatrischen Kliniken gehören alle demselben Träger — in Bad Soden, Hofheim und Frankfurt-Höchst. Hier ist Vorsicht geboten: Bad Soden und Hofheim werden von derselben Chefärztin geführt und sind unter derselben Rufnummer erreichbar, und ein Umstrukturierungskonzept sieht vor, die Geriatrie ganz nach Hofheim zu verlagern. Welcher Standort heute welchen Betrieb führt, ließ sich aus den öffentlichen Quellen nicht eindeutig klären — rufen Sie vorher an, bevor Sie fahren. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-eschborn" titel="Einzugsgebiet Eschborn">
@@ -236,8 +236,6 @@ export default function Page() {
 
             ort={'Eschborn'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
 
           />
@@ -249,7 +247,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

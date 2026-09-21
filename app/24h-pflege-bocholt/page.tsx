@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bocholt | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Bocholt | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Bocholt und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bocholt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Bocholt — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Bocholt. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Bocholt | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Bocholt und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bocholt',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -187,7 +187,7 @@ export default function Page() {
             <Text>Beim Wohnen prägt bis heute der 22. März 1945. In fünfundzwanzig Minuten wurde Bocholt zu rund 85 Prozent zerstört; in der Altstadt blieben drei Häuser unversehrt, und die Einwohnerzahl fiel von 35.000 auf etwa 8.000. In der Statistik zeigt sich das weniger an einem Übergewicht der fünfziger Jahre als am fehlenden Vorkriegsbestand: Nur knapp fünf Prozent der Bocholter Wohnungen stammen aus der Zeit vor 1919, in Nordrhein-Westfalen sind es gut zehn. Dafür ist der Bestand ungewöhnlich großzügig — fast 60 Prozent der Wohnungen liegen in Ein- oder Zweifamilienhäusern, die Eigentümerquote liegt bei über 50 Prozent, und eine Wohnung misst im Schnitt 103 Quadratmeter. Das heißt in der Praxis meist: eigenes Haus, eigene Treppe ins Obergeschoss, viel Fläche, die gepflegt werden will.</Text>
             <Text>Rundherum wird es schnell ländlich. Bocholt ist zwar die größte Stadt im Kreis Borken, aber nicht die Kreisstadt — das ist Borken selbst. Wer in einer der Bauerschaften wohnt, in Barlo, Stenern, Biemenhorst oder Richtung Isselburg und Rhede, kennt die längeren Wege: Ein ambulanter Dienst fährt hier Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft, die im Haus wohnt, ist davon unabhängig. Anfahrtskosten berechnen wir nicht, der Preis ist überall derselbe.</Text>
             <Text>Ein Punkt, der im Ernstfall zählt: Eine geriatrische Fachabteilung gibt es am Bocholter Krankenhaus nicht. Wer nach einem Sturz oder Schlaganfall Altersmedizin braucht, wird nach Borken, Ahaus oder Gronau verlegt. Für die Zeit danach heißt das: Die Versorgung zu Hause sollte früh geklärt sein, nicht erst am Entlassungstag.</Text>
-            <Text>Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung im Kreis Borken ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
+            <Text>Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung im Kreis Borken ist kostenlos, neutral und auf Wunsch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Weg Sie sich danach entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bocholt" titel="Einzugsgebiet Bocholt">
@@ -238,8 +238,6 @@ export default function Page() {
 
             ort={'Bocholt'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -251,7 +249,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

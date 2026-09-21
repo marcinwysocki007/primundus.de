@@ -28,14 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rhein-Pfalz-Kreis | 6× Testsieger',
-  description:
-    'Körperpflege, Kochen, Einkäufe, Begleitung, nachts jemand im Haus: Eine Betreuungskraft übernimmt das, was Angehörige allein nicht mehr schaffen.',
+  title: '24-Stunden-Pflege im Rhein-Pfalz-Kreis | 6× Testsieger',
+  description: 'Liebevolle Betreuung im Rhein-Pfalz-Kreis und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege im Rhein-Pfalz-Kreis | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft im Rhein-Pfalz-Kreis. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege im Rhein-Pfalz-Kreis | 6× Testsieger',
+    description: 'Liebevolle Betreuung im Rhein-Pfalz-Kreis und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-rhein-pfalz-kreis',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -150,7 +149,7 @@ export default function Page() {
             <Text>Die durchschnittliche Wohnung misst 115,1 Quadratmeter und damit rund 7 Quadratmeter mehr als im Schnitt von Rheinland-Pfalz (107,7). 34,3 Prozent der Haushalte bestehen aus einer Person, in Rheinland-Pfalz 40,4 Prozent.</Text>
             <Text>Altbau vor 1950 macht in Rhein-Pfalz-Kreis 15,6 Prozent des Bestands aus, in Rheinland-Pfalz 21,5 Prozent.</Text>
             <Text>In Zahlen: 17.908 Menschen in Rhein-Pfalz-Kreis sind 75 Jahre oder älter, und es gibt 74.069 Wohnungen in 48.337 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
-            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>
+            <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
             <p className="text-[15px] leading-[1.6] text-pm-body/70">Zahlen zu Wohnen und Haushalten: Zensus 2022, Statistische Ämter des Bundes und der Länder, Stichtag 15. Mai 2022.</p>
           </Abschnitt>
 
@@ -166,10 +165,6 @@ export default function Page() {
 
             ort={'Rhein-Pfalz-Kreis'}
 
-
-            herkunft="umgebung"
-
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260802-karin', 'k-20251031-martina'].includes(b.id))}
 
 
@@ -183,7 +178,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

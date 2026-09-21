@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Trier | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Trier | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Trier und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-trier' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Trier — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Trier. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Trier | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Trier und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-trier',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -48,7 +48,7 @@ const FRAGEN = [
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Trier rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie wohnt man in Trier — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Trier im Schnitt 3,0 Wohnungen, in Rheinland-Pfalz 1,7. 32,5 Prozent der Gebäude stehen frei, 51,3 Prozent stehen in geschlossener Reihe. 53,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Trier ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Wie viele ältere Menschen leben in Trier?', a: '9.646 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,4 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Trier?', a: '9.646 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,4 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Warum leben in Trier so viele Pflegebedürftige im Heim?', a: 'Weil in Trier deutlich seltener zu Hause gepflegt wird als im übrigen Rheinland-Pfalz: Nur 46,6 Prozent der 4.782 Pflegebedürftigen werden allein von Angehörigen versorgt, im Land sind es 55,4 Prozent. Entsprechend leben 20,3 Prozent vollstationär gegenüber 13,7 Prozent im Land — es gibt hier sogar mehr Heimbewohner (969) als ambulant versorgte Menschen (832), landesweit ist das umgekehrt. Ein Teil erklärt sich daraus, dass Trier Oberzentrum für den Landkreis Trier-Saarburg ist und die Statistik Heimbewohner dem Standort der Einrichtung zuordnet, nicht dem Wohnort. Wer zu Hause bleiben möchte, ist in Trier also eher die Ausnahme — möglich ist es trotzdem.' },
   { q: 'Welches Einzugsgebiet wird in Trier bedient?', a: 'Trier und Region Trier: Konz, Saarburg, Bitburg, Prüm und alle Gemeinden in der Region Trier' },
   { q: 'Ist in einer Wohnung in Trier Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Trier hat im Schnitt 85,3 m², 31,2 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 65,5 % der Gebäude in Trier sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -180,7 +180,7 @@ export default function Page() {
             <Text>Trier fällt in der rheinland-pfälzischen Pflegestatistik doppelt auf. Zum einen ist die Stadt jung: Das Medianalter liegt bei 40 Jahren gegenüber 45 im Land, 19,6 Prozent der Einwohner sind über 65 statt 23,3 Prozent — Universität und Hochschule prägen das. Die Pflegequote ist entsprechend niedrig, 4,2 gegen 6,5 Prozent, die zweitniedrigste aller 24 kreisfreien Städte des Landes. Zum anderen wird hier ungewöhnlich selten zu Hause gepflegt:{' '} <strong className="text-pm-ink font-semibold">Nur 46,6 Prozent der 4.782 Pflegebedürftigen werden allein von Angehörigen versorgt, in Rheinland-Pfalz sind es 55,4 Prozent</strong> — fast neun Punkte Unterschied.</Text>
             <Text>Das Gegenstück dazu ist das Heim. In Trier leben 20,3 Prozent der Pflegebedürftigen vollstationär, im Land 13,7 Prozent — und anders als in manchen Städten ist das kein Rechenartefakt: Auch gemessen an der Zahl der über 70-Jährigen stehen hier 74 Plätze je 1.000 bereit gegenüber 63 im Land. Beide Kennzahlen zeigen in dieselbe Richtung. Bemerkenswert ist die Folge:{' '} <strong className="text-pm-ink font-semibold">In Trier leben mehr Menschen im Heim (969) als von ambulanten Diensten versorgt werden (832)</strong> — landesweit ist das Verhältnis umgekehrt. Ein Teil davon geht auf das Umland zurück, denn Trier ist Oberzentrum für den Landkreis Trier-Saarburg und die Statistik ordnet Heimbewohner dem Standort der Einrichtung zu.</Text>
             <Text>Wer in Trier alt wird, merkt außerdem die Lage. Zwischen der Talstadt am Hauptmarkt auf 137 Metern und dem Höhenstadtteil Tarforst auf 293 Metern liegen rund 150 Höhenmeter — und beide sind bewohnt, Tarforst mit 6.487 Menschen. Dazu kommen Filsch, Kernscheid, Irsch und Mariahof auf den Höhen sowie die Mosel, die die Stadt teilt: Euren und West/Pallien liegen auf der linken Seite. Der älteste Ortsbezirk ist ausgerechnet Kernscheid — 9,7 Prozent über 80, 28,1 Prozent über 65 — und zugleich der kleinste, oben am Stadtrand gelegen. Kurze Wege gibt es dort nicht.</Text>
-            <Text>Medizinisch ist Trier gut ausgestattet: eine eigene geriatrische Fachabteilung am Klinikum Mutterhaus mit 750 stationären Fällen, eine geriatrische Rehabilitationsklinik mit 80 Betten (St. Irminen) samt Tagesklinik und ein zertifiziertes AltersTraumaZentrum. Die Frage bleibt trotzdem dieselbe wie überall: Was passiert nach der Entlassung? Eine Betreuungskraft, die mit einzieht, ist nachts da und macht den Weg zurück in die eigene Wohnung möglich — auch in Tarforst oder Kernscheid, wo ein Dienst weite Anfahrten hätte. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Medizinisch ist Trier gut ausgestattet: eine eigene geriatrische Fachabteilung am Klinikum Mutterhaus mit 750 stationären Fällen, eine geriatrische Rehabilitationsklinik mit 80 Betten (St. Irminen) samt Tagesklinik und ein zertifiziertes AltersTraumaZentrum. Die Frage bleibt trotzdem dieselbe wie überall: Was passiert nach der Entlassung? Eine Betreuungskraft, die mit einzieht, ist nachts da und macht den Weg zurück in die eigene Wohnung möglich — auch in Tarforst oder Kernscheid, wo ein Dienst weite Anfahrten hätte. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-trier" titel="Einzugsgebiet Trier">
@@ -231,8 +231,6 @@ export default function Page() {
 
             ort={'Trier'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250913-matthias'].includes(b.id))}
 
           />
@@ -244,7 +242,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
+import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
   MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
@@ -21,18 +22,19 @@ const SECTIONS = [
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Chemnitz ausmacht" },
   { id: 'einzugsgebiet-chemnitz', title: "Einzugsgebiet Chemnitz" },
   { id: 'werkzeuge', title: "Was es in Chemnitz kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
+  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
+
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Chemnitz" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Chemnitz | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Chemnitz | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Chemnitz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-chemnitz' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Chemnitz — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Chemnitz. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Chemnitz | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Chemnitz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-chemnitz',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -46,7 +48,7 @@ const FRAGEN = [
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Chemnitz rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie wohnt man in Chemnitz — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Chemnitz im Schnitt 4,5 Wohnungen, in Sachsen 2,7. 50,8 Prozent der Gebäude stehen frei, 32,1 Prozent stehen in geschlossener Reihe. 57,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Chemnitz ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Wie viele ältere Menschen leben in Chemnitz?', a: '36.485 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,2 Prozent — in Sachsen 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen: 29,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Chemnitz?', a: '36.485 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 15,2 Prozent — in Sachsen 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 31,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen: 29,1 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'In welchen Chemnitzer Stadtteilen wird Pflege am häufigsten gebraucht?', a: 'In den Plattenbausiedlungen der siebziger und achtziger Jahre. Sie wurden damals von jungen Familien bezogen, die geblieben und gemeinsam alt geworden sind. Im Yorckgebiet leben heute mehr Menschen über 65 als im erwerbsfähigen Alter; Markersdorf, Helbersdorf, Kapellenberg, Morgenleite und Hutholz liegen kaum darunter. Im Lutherviertel und im Zentrum ist der Anteil rund ein Fünftel davon. Chemnitz insgesamt ist mit 27,7 Prozent über 65 und 10,2 Prozent über 80 eine der ältesten Großstädte Deutschlands. Unsere Betreuungskräfte kommen in jeden Stadtteil, auch in die eingemeindeten Dörfer am Rand — Anreise und Preis sind überall gleich.' },
   { q: 'Welches Einzugsgebiet wird in Chemnitz bedient?', a: 'Chemnitz und Erzgebirgskreis: Stollberg, Annaberg-Buchholz, Aue-Bad Schlema und alle Gemeinden im Erzgebirgskreis und Landkreis Mittelsachsen' },
   { q: 'Ist in einer Wohnung in Chemnitz Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Chemnitz hat im Schnitt 71,3 m², 43,1 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 59,7 % der Gebäude in Chemnitz sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -183,7 +185,7 @@ export default function Page() {
             <Text>Das Bemerkenswerte an Chemnitz ist aber nicht der Durchschnitt, sondern wie ungleich das Alter verteilt ist — und zwar auf eine sehr spezifische Weise. Die Plattenbausiedlungen der siebziger und achtziger Jahre wurden damals von jungen Familien bezogen, die dort geblieben und gemeinsam alt geworden sind. Im{' '} <strong className="text-pm-ink font-semibold">Yorckgebiet leben heute mehr Menschen über 65 als im erwerbsfähigen Alter</strong>; Markersdorf, Helbersdorf, Kapellenberg, Morgenleite und Hutholz liegen kaum darunter. Im Lutherviertel und im Zentrum ist der Anteil ein Fünftel davon. Für die häusliche Pflege heißt das: sehr hohe Fallzahlen in wenigen, baulich einheitlichen Quartieren — und Stadtteile fast ohne Bedarf.</Text>
             <Text>Bei der Versorgung fällt auf, dass in Chemnitz häufiger allein durch Angehörige gepflegt wird als im Land: 51,1 gegen 48,5 Prozent. Ambulante Dienste kommen dagegen seltener zum Einsatz, 21,1 gegen 24,4 Prozent. Heimplätze sind reichlich vorhanden — 17,2 je 1.000 Einwohner gegenüber 15,7 in Sachsen. Der Anteil der Pflegebedürftigen, die tatsächlich im Heim leben, ist mit 13,8 Prozent dagegen völlig unauffällig. Das ist kein Widerspruch, sondern eine Frage des Nenners: Die Zahl der Pflegebedürftigen ist hier so groß, dass hinter einem durchschnittlichen Anteil eine sehr große absolute Zahl steckt.</Text>
             <Text>Topografisch ist Chemnitz unkompliziert — die Stadt liegt in einer breiten Beckenlage am Nordrand des Erzgebirges, das bebaute Gebiet ist weitgehend flach. Räumlich zieht sich die Stadt dafür weit: Zwischen dem dichtesten Stadtteil Kaßberg mit 9.262 Einwohnern je Quadratkilometer und dem dünnsten, Euba mit 159, liegt der Faktor 58. In den eingemeindeten Dörfern am Rand hat ein ambulanter Dienst lange Wege für kurze Einsätze; für jemanden, der im Haus wohnt, spielt die Entfernung keine Rolle.</Text>
-            <Text>Geriatrisch ist die Stadt gut versorgt: zwei Krankenhäuser mit eigener geriatrischer Fachabteilung — das Geriatriezentrum am Klinikum Chemnitz und die Klinik für Geriatrie am DRK-Krankenhaus Rabenstein — dazu eine geriatrische Rehabilitationsklinik mit 80 Betten. Eine Lücke gibt es allerdings: Die geriatrische Tagesklinik ist derzeit außer Betrieb. Umso mehr zählt, wer nach der Entlassung zu Hause da ist. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Geriatrisch ist die Stadt gut versorgt: zwei Krankenhäuser mit eigener geriatrischer Fachabteilung — das Geriatriezentrum am Klinikum Chemnitz und die Klinik für Geriatrie am DRK-Krankenhaus Rabenstein — dazu eine geriatrische Rehabilitationsklinik mit 80 Betten. Eine Lücke gibt es allerdings: Die geriatrische Tagesklinik ist derzeit außer Betrieb. Umso mehr zählt, wer nach der Entlassung zu Hause da ist. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-chemnitz" titel="Einzugsgebiet Chemnitz">
@@ -230,13 +232,16 @@ export default function Page() {
             />
           </Abschnitt>
 
+          <OrtStimmen ort={'Chemnitz'} />
+
+
           <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Chemnitz">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

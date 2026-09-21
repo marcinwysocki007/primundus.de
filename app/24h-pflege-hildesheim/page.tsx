@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Hildesheim | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Hildesheim | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Hildesheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hildesheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Hildesheim — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Hildesheim. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Hildesheim | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Hildesheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-hildesheim',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -184,7 +184,7 @@ export default function Page() {
             <Text>Hildesheim ist eine Stadt mit vielen Treppen. Rund um den Dom, am Moritzberg und in den gewachsenen Vierteln liegen die Wohnungen oft im zweiten oder dritten Stock, und ein Aufzug ist die Ausnahme. Solange jemand die Stufen schafft, denkt niemand darüber nach. Wenn es nicht mehr geht, ändert sich der Alltag schlagartig: Der Arzttermin wird zur Tagesaufgabe, der Einkauf um die Ecke ist unerreichbar, und Besuch kommt seltener.</Text>
             <Text>An diesem Punkt melden sich die meisten Familien bei uns. Meistens geht es gar nicht um medizinische Pflege im engeren Sinn, sondern um den Alltag: aufstehen, waschen, anziehen, kochen — und jemanden im Haus haben, der zuhört. Ein ambulanter Dienst kommt dafür zweimal am Tag für zwanzig Minuten. Eine Betreuungskraft, die mit einzieht, ist auch da, wenn nachts jemand aufsteht oder nachmittags die Unruhe kommt.</Text>
             <Text>Im Landkreis stellt sich die Frage anders. Wer in Bad Salzdetfurth, Alfeld oder Elze wohnt, hat den nächsten ambulanten Dienst selten um die Ecke, und in den Dörfern der Börde wird jede Fahrt zur Rechnung. Gerade dort, wo die Versorgung dünn ist, spielt die 24-Stunden-Betreuung ihre Stärke aus: Sie ist auf keine Anfahrt angewiesen, weil sie schon da ist.</Text>
-            <Text>Wenn Sie sich unabhängig beraten lassen möchten, bevor Sie sich entscheiden: Der Senioren- und Pflegestützpunkt des Landkreises Hildesheim berät kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Anbieter Sie sich am Ende entscheiden.</Text>
+            <Text>Wenn Sie sich unabhängig beraten lassen möchten, bevor Sie sich entscheiden: Der Senioren- und Pflegestützpunkt des Landkreises Hildesheim berät kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Anbieter Sie sich am Ende entscheiden.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-hildesheim" titel="Einzugsgebiet Hildesheim">
@@ -235,8 +235,6 @@ export default function Page() {
 
             ort={'Hildesheim'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250623-jan'].includes(b.id))}
 
           />
@@ -248,7 +246,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

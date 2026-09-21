@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Troisdorf | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Troisdorf | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Troisdorf und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-troisdorf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Troisdorf — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Troisdorf. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Troisdorf | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Troisdorf und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-troisdorf',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -47,7 +47,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Troisdorf starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Troisdorf rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in Troisdorf?', a: '7.546 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,0 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
+  { q: 'Wie viele ältere Menschen leben in Troisdorf?', a: '7.546 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,0 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Troisdorf — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Troisdorf im Schnitt 2,2 Wohnungen, in Nordrhein-Westfalen 2,3. 39,3 Prozent der Gebäude stehen frei, 34,3 Prozent stehen in geschlossener Reihe. 40,3 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Troisdorf ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Wo ist die Geriatrie in Troisdorf?', a: 'Seit März 2024 im St. Johannes Krankenhaus in Sieglar, Wilhelm-Busch-Straße — vorher war sie im St. Josef Hospital. Beide Häuser gehören demselben Träger und stehen in derselben Stadt, weshalb ältere Flyer und Wegbeschreibungen Angehörige regelmäßig zum falschen führen. Die Abteilung hat 40 Betten und ist vom Bundesverband Geriatrie zertifiziert; im gesamten Rhein-Sieg-Kreis gibt es nur zwei Häuser mit geriatrischer Leistungsgruppe. Eine geriatrische Tagesklinik oder Reha in Troisdorf ist uns nicht bekannt.' },
   { q: 'Welches Einzugsgebiet wird in Troisdorf bedient?', a: 'Troisdorf und Rhein-Sieg-Kreis Norden: Sankt Augustin, Niederkassel, Lohmar und alle Gemeinden im nördlichen Rhein-Sieg-Kreis' },
@@ -181,7 +181,7 @@ export default function Page() {
             <Text>Noch deutlicher wird die Stadt bei der ambulanten Versorgung: Die 13 Pflegedienste mit Sitz in Troisdorf seien{' '} <strong className="text-pm-ink font-semibold">nicht mehr in der Lage, die Nachfrage im Stadtgebiet zu decken.</strong> Das ist keine Prognose, sondern eine Feststellung aus der laufenden Pflegeplanung. Für Familien heißt das: Wer sich auf einen ambulanten Dienst verlassen möchte, sollte früh anfragen und einen Plan B haben.</Text>
             <Text>Der Rhein-Sieg-Kreis pflegt dabei ohnehin ungewöhnlich häuslich:{' '} <strong className="text-pm-ink font-semibold">66 Prozent aller Pflegebedürftigen beziehen ausschließlich Pflegegeld</strong>, werden also allein von Angehörigen versorgt — in Nordrhein-Westfalen sind es 59 Prozent, bundesweit 54. Ambulante Dienste kommen mit 14 Prozent seltener zum Einsatz als im Land (17 Prozent). Troisdorf liegt laut Kreis nahe an diesen Durchschnittswerten.</Text>
             <Text>Und der Druck wächst schneller als anderswo im Kreis: Die Zahl der über 80-Jährigen in Troisdorf steigt bis 2040 um fast 35 Prozent, im Kreisschnitt um 27. Auf 100 Menschen zwischen 65 und 79 kommen dann 48 Hochbetagte. Topografisch ist die Stadt dabei unproblematisch — der höchste Punkt liegt in der Wahner Heide und ist unbewohnt, die Wohngebiete liegen in der Rheinebene.</Text>
-            <Text>Ein Hinweis, der Angehörigen eine vergebliche Fahrt erspart:{' '} <strong className="text-pm-ink font-semibold">Die Geriatrie ist im März 2024 innerhalb Troisdorfs umgezogen</strong> — vom St. Josef Hospital ins St. Johannes Krankenhaus in Sieglar, Wilhelm-Busch-Straße. Beide Häuser gehören demselben Träger und stehen in derselben Stadt; jeder Flyer und jede Wegbeschreibung von vor 2024 führt zum falschen. Die Abteilung hat 40 Betten und ist vom Bundesverband Geriatrie zertifiziert. Im gesamten Rhein-Sieg-Kreis gibt es nur zwei Häuser mit geriatrischer Leistungsgruppe. Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und trägerunabhängig.</Text>
+            <Text>Ein Hinweis, der Angehörigen eine vergebliche Fahrt erspart:{' '} <strong className="text-pm-ink font-semibold">Die Geriatrie ist im März 2024 innerhalb Troisdorfs umgezogen</strong> — vom St. Josef Hospital ins St. Johannes Krankenhaus in Sieglar, Wilhelm-Busch-Straße. Beide Häuser gehören demselben Träger und stehen in derselben Stadt; jeder Flyer und jede Wegbeschreibung von vor 2024 führt zum falschen. Die Abteilung hat 40 Betten und ist vom Bundesverband Geriatrie zertifiziert. Im gesamten Rhein-Sieg-Kreis gibt es nur zwei Häuser mit geriatrischer Leistungsgruppe. Lassen Sie sich vor einer Entscheidung unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-troisdorf" titel="Einzugsgebiet Troisdorf">
@@ -232,8 +232,6 @@ export default function Page() {
 
             ort={'Troisdorf'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260905-thomas', 'k-20260427-andreas'].includes(b.id))}
 
           />
@@ -245,7 +243,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

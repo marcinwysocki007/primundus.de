@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Bad Homburg | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Bad Homburg | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Bad Homburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-homburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Bad Homburg vor der Höhe — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Bad Homburg vor der Höhe. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Bad Homburg | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Bad Homburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bad-homburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Im Hochtaunuskreis zeigt die Pflegestatistik ein klares Muster: <strong className="text-pm-ink font-semibold"> 61,7 Prozent aller Pflegebedürftigen beziehen ausschließlich Pflegegeld</strong>, werden also von Angehörigen versorgt — in Hessen sind es 58,6 Prozent. Gleichzeitig nehmen nur 15,2 Prozent einen ambulanten Dienst in Anspruch, weniger als im Land. Die mittlere Lösung, bei der regelmäßig jemand ins Haus kommt, ist hier also schwächer ausgeprägt als anderswo. Viele Familien stehen damit vor einem Entweder-oder: alles selbst machen oder ins Heim.</Text>
             <Text>Beim Wohnen räumt ein Blick in die Zahlen mit einem Klischee auf. Bad Homburg gilt als wohlhabend, und der Kaufkraftindex bestätigt das. Trotzdem wohnen sechs von zehn Haushalten zur Miete, die Eigentümerquote liegt mit 41 Prozent unter dem hessischen Schnitt. Und: Zwar sind drei Viertel der Gebäude Ein- oder Zweifamilienhäuser, aber <strong className="text-pm-ink font-semibold"> zwei Drittel aller Wohnungen liegen in Mehrfamilienhäusern</strong>. Knapp die Hälfte des Bestands stammt aus den Jahren 1949 bis 1978 — solide gebaut, aber lange vor jedem Gedanken an Barrierefreiheit.</Text>
             <Text>Zur Lage noch ein weit verbreiteter Irrtum: Bad Homburg heißt „vor der Höhe", weil es am Fuß des Taunus liegt — die Höhen darüber gehören zwar zur Gemarkung, sind aber Wald. Gewohnt wird zwischen 137 und 250 Metern. Die Wege in der Stadt sind also meist machbar; anders sieht es in den Ortsteilen aus, die ihren dörflichen Charakter behalten haben, etwa in Ober-Erlenbach oder Dornholzhausen. Und im Kreis wird es schnell ländlich: Während Bad Homburg auf über 1.100 Einwohner je Quadratkilometer kommt, sind es rund um Usingen keine 300.</Text>
-            <Text>Eine Betreuungskraft, die mit einzieht, füllt genau die Lücke zwischen „allein zurechtkommen" und „ins Heim ziehen". Sie ist nachts da, führt den Haushalt und begleitet zu Terminen. Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Hessen beraten kostenlos und trägerunabhängig, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI).</Text>
+            <Text>Eine Betreuungskraft, die mit einzieht, füllt genau die Lücke zwischen „allein zurechtkommen" und „ins Heim ziehen". Sie ist nachts da, führt den Haushalt und begleitet zu Terminen. Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Hessen beraten kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-bad-homburg-vor" titel="Einzugsgebiet Bad Homburg vor der Höhe">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Bad Homburg'}
 
-            herkunft="umgebung"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

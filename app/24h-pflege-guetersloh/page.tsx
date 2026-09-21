@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Gütersloh | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Gütersloh | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Gütersloh und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-guetersloh' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Gütersloh — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Gütersloh. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Gütersloh | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Gütersloh und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-guetersloh',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Dabei kommt die Welle nicht gleichmäßig. Die Gruppe der über 80-Jährigen wächst bis 2030 praktisch gar nicht — das sind die geburtenschwachen Kriegsjahrgänge. Danach steigt sie bis 2040 um mehr als ein Drittel. Wer heute plant, sollte also nicht von der Gegenwart auf die kommenden Jahre schließen.</Text>
             <Text>Bemerkenswert ist, wie im Kreis Gütersloh gepflegt wird. Nur <strong className="text-pm-ink font-semibold"> 10,7 Prozent aller Pflegebedürftigen leben im Heim</strong> — deutlich weniger als in Nordrhein-Westfalen und im Bund. Der Kreis hat stattdessen eine Besonderheit entwickelt: rund 84 Haus- und Pflegewohngemeinschaften, in denen ambulante Dienste rund um die Uhr betreuen. Über tausend Menschen leben dort. Die klassischen Heime sind entsprechend nur zu gut 83 Prozent ausgelastet, während die Wohngemeinschaften über 90 Prozent erreichen. Anders gesagt: Hier ist man offen für Lösungen jenseits des Heims — und die Betreuung im eigenen Zuhause ist die konsequenteste davon.</Text>
             <Text>Beim Wohnen kommt Gütersloh der häuslichen Pflege entgegen und stellt sie zugleich vor eine Hürde. Die Stadt liegt in der Emssandebene, also flach — Steigungen sind hier kein Thema. Dafür ist der Bestand ungewöhnlich großzügig: Nur 16,5 Prozent der Wohnungen liegen in größeren Mehrfamilienhäusern, in Nordrhein-Westfalen sind es fast doppelt so viele; gut vier von zehn Wohnungen haben über 100 Quadratmeter. Das heißt in der Praxis: eigenes Haus, eigene Treppe, viel Fläche, die gepflegt werden will. Genau dafür ist eine Betreuungskraft im Haus gemacht — sie führt den Haushalt mit und ist nachts da. Das gilt in Isselhorst und Avenwedde ebenso wie in Verl, Rheda-Wiedenbrück oder Harsewinkel.</Text>
-            <Text>Ein praktischer Hinweis für den Ernstfall: Eine geriatrische Akutabteilung im somatischen Krankenhaus gibt es in Gütersloh selbst nicht — die nächstgelegenen liegen in Harsewinkel, Rheda-Wiedenbrück und Halle. Für die Beratung im Vorfeld gilt: Die Pflegeberatung im Kreis Gütersloh ist kostenlos, trägerunabhängig und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
+            <Text>Ein praktischer Hinweis für den Ernstfall: Eine geriatrische Akutabteilung im somatischen Krankenhaus gibt es in Gütersloh selbst nicht — die nächstgelegenen liegen in Harsewinkel, Rheda-Wiedenbrück und Halle. Für die Beratung im Vorfeld gilt: Die Pflegeberatung im Kreis Gütersloh ist kostenlos, neutral und auf Wunsch bei Ihnen zu Hause (§ 7a SGB XI).</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-guetersloh" titel="Einzugsgebiet Gütersloh">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Gütersloh'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250601-marion'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

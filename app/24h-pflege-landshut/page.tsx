@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Landshut und im Landkreis | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  description: 'Liebevolle Betreuung in Landshut und im Landkreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-landshut' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Landshut — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Landshut. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Landshut und im Landkreis | 6× Testsieger',
+    description: 'Liebevolle Betreuung in Landshut und im Landkreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-landshut',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -240,8 +240,6 @@ export default function Page() {
 
             ort={'Landshut'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250713-margit'].includes(b.id))}
 
           />
@@ -253,7 +251,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

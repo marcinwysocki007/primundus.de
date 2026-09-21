@@ -1,4 +1,9 @@
 import type { Metadata } from 'next'
+import { OrtBeratung } from '@/components/orte/OrtBeratung'
+import { OrtErsteTage } from '@/components/orte/OrtErsteTage'
+import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtWasBedeutet } from '@/components/orte/OrtGrundlagen'
+import { OrtWohnen } from '@/components/orte/OrtWohnen'
+import { OrtWannSinnvoll } from '@/components/orte/OrtWannSinnvoll'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
@@ -37,6 +42,7 @@ const QUELLE = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-off
 const SECTIONS = [
   { id: 'was-bedeutet', title: "Was 24-Stunden-Pflege in München bedeutet" },
   { id: 'wann-sinnvoll', title: "Wann Betreuung zu Hause sinnvoll ist" },
+  { id: 'wohnen', title: "Wohnen in München: was das für die Betreuung heißt" },
   { id: 'aufgaben', title: "Was eine Betreuungskraft übernimmt — und was der Pflegedienst" },
   { id: 'ablauf', title: "So läuft die Betreuung ab" },
   { id: 'voraussetzungen', title: "Was Sie zu Hause brauchen" },
@@ -52,13 +58,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in München | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in München | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in München und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muenchen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege München — polnische Pflegekräfte & Betreuung zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in München. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in München | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in München und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-muenchen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -72,11 +78,9 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in München starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in München rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
-  { q: 'Wie viele ältere Menschen leben in München?', a: '137.429 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Wie wohnt man in München — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in München im Schnitt 5,6 Wohnungen, in Bayern 2,1. 33,9 Prozent der Gebäude stehen frei, 44,4 Prozent stehen in geschlossener Reihe. 51,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in München ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie viele ältere Menschen leben in München?', a: '137.429 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Welches Einzugsgebiet wird in München bedient?', a: 'Schwabing, Bogenhausen, Solln, Pullach, Grünwald, Unterhaching, Ottobrunn, Haar, Dachau, Freising, Starnberg, Germering, Gauting, Weilheim, Landsberg am Lech und alle Gemeinden im Landkreis München' },
   { q: 'Heißt das Altenpflege, Seniorenbetreuung oder 24-Stunden-Pflege?', a: 'In München fragen Familien nach allen drei Begriffen und meinen dasselbe: eine Betreuungskraft, die mit einzieht, den Haushalt führt, bei Körperpflege und Alltag hilft und bei Bedarf auch nachts da ist. Spritzen, Verbände und andere Behandlungspflege bleiben beim ambulanten Pflegedienst, der weiterhin vorbeikommt.' },
-  { q: 'Ist in einer Wohnung in München Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in München hat im Schnitt 73,5 m², 40,8 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 56,4 % der Gebäude in München sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.277 € Unterschied im Monat, 27.324 € im Jahr.' },
 ]
 
@@ -148,109 +152,14 @@ export default function Page() {
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-bedeutet" titel="Was 24-Stunden-Pflege in München bedeutet">
-            <Text>
-              Eine Betreuungskraft zieht in den Haushalt ein und hilft über den Tag verteilt bei dem, was anfällt: beim
-              Aufstehen und Waschen, beim Essen, beim Einkauf, bei Wegen zum Arzt. Sie leistet Gesellschaft und ist bei Bedarf
-              auch nachts da. Sie kommt als Betreuungskraft mit Erfahrung im Alltag mit pflegebedürftigen Menschen; die
-              Behandlungspflege — Spritzen, Verbände, Katheter — bleibt beim ambulanten Pflegedienst, den der Arzt verordnet
-              und die Krankenkasse bezahlt.
-            </Text>
-            <Text>
-              Häufig wird in München nach einer „polnischen Pflegekraft" gesucht. Gemeint ist genau das: eine Betreuungskraft,
-              die mit im Haushalt lebt. Unsere Betreuungskräfte kommen aus{' '}
-              <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polen</a> und sind bei
-              uns angestellt — die Arbeitgeberpflichten liegen bei uns, Ihr Vertrag läuft mit Primundus. Jede Kraft wird nach
-              ihrem Deutsch eingestuft; das Niveau steht im Profil, zusammen mit Erfahrung und Foto.
-            </Text>
-            <Text>
-              „24-Stunden-Pflege" heißt: Jemand lebt im Haushalt und ist da. Gearbeitet wird in geregelten Zeiten mit Pausen und
-              Ruhezeiten; in ihrer freien Zeit kann die Betreuungskraft das Haus verlassen, und ihre Nachtruhe braucht sie wie
-              jeder andere auch. Wenn nachts regelmäßig mehrfach Hilfe nötig ist, gehört das in die Angaben im Kostenrechner —
-              dann passen Preis und Auswahl dazu.
-            </Text>
-            <MehrDazu
-              label="Ausführlich auf den Themenseiten:"
-              links={[
-                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
-                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
-                { href: '/pflegekraft-aus-polen', text: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf' },
-              ]}
-            />
-          </Abschnitt>
+          <OrtWasBedeutet ort="München" />
 
-          <Abschnitt id="wann-sinnvoll" titel="Wann Betreuung zu Hause sinnvoll ist">
-            <Punkte
-              punkte={[
-                {
-                  title: 'Wenn das Alleinleben unsicher wird',
-                  desc: 'Ein Sturz, vergessene Medikamente, nachts allein in der Wohnung. Jemand im Haus nimmt genau diese Sorge.',
-                },
-                {
-                  title: 'Bei Demenz',
-                  desc: 'Gewohnte Umgebung, gewohnte Abläufe und über Wochen dieselbe Bezugsperson — das hilft mehr als jede neue Einrichtung.',
-                },
-                {
-                  title: 'Nach einem Krankenhausaufenthalt',
-                  desc: 'Die Entlassung kommt oft schneller als die Versorgung. Eine Betreuungskraft kann in wenigen Tagen da sein.',
-                },
-                {
-                  title: 'Wenn Angehörige an ihre Grenze kommen',
-                  desc: 'Pflege neben Beruf und eigener Familie geht eine Weile gut. Eine Betreuungskraft gibt Ihnen den Alltag zurück, ohne dass jemand ausziehen muss.',
-                },
-              ]}
-            />
-            <Text>
-              Manchmal reicht ein ambulanter Pflegedienst, manchmal eine Tagespflege. Wenn das so ist, sagen wir es Ihnen am
-              Telefon — dann sparen Sie sich die Betreuungskraft, und wir haben Ihnen trotzdem geholfen.
-            </Text>
-          </Abschnitt>
+          <OrtWannSinnvoll slug="muenchen" ort="München" />
+          <OrtWohnen slug="muenchen" ort="München" />
 
-          <Abschnitt id="aufgaben" titel="Was eine Betreuungskraft übernimmt — und was der Pflegedienst">
-            <Gegenueber
-              seiten={[
-                {
-                  titel: 'Die Betreuungskraft, die im Haushalt lebt',
-                  ton: 'gruen',
-                  punkte: [
-                    'Körperpflege, Aufstehen, Anziehen, Essen',
-                    'Kochen, Einkäufe, Wäsche, Ordnung in den Räumen',
-                    'Gesellschaft, Spaziergänge, Begleitung zum Arzt',
-                    'Über Wochen dieselbe Person — bei Bedarf auch nachts da',
-                  ],
-                },
-                {
-                  titel: 'Der ambulante Pflegedienst',
-                  ton: 'taupe',
-                  punkte: [
-                    'Spritzen, Verbände, Katheter — vom Arzt verordnet',
-                    'Kommt zu festen Zeiten, ein- bis dreimal am Tag',
-                    'Behandlungspflege zahlt die Krankenkasse',
-                    'Arbeitet mit der Betreuungskraft Hand in Hand',
-                  ],
-                },
-              ]}
-            />
-            <Text>
-              Beides lässt sich verbinden: Kommt zusätzlich ein Pflegedienst, rechnet die Pflegekasse Pflegegeld und
-              Sachleistung anteilig ab — Kombinationsleistung nach{' '}
-              <a href="https://www.gesetze-im-internet.de/sgb_11/__38.html" target="_blank" rel="noopener noreferrer" className={QUELLE}>§ 38 SGB XI</a>.
-              Wie ein Tag mit Betreuungskraft aussieht, steht auf der Seite{' '}
-              <a href="/leistungen" className="text-pm-taupe font-semibold hover:underline">Leistungen</a>.
-            </Text>
-          </Abschnitt>
+          <OrtAufgaben />
 
-          <Abschnitt id="ablauf" titel="So läuft die Betreuung ab">
-            <Schritte
-              schritte={[
-                { title: 'Bedarf klären', desc: 'Ein paar Fragen zur Pflegesituation: Pflegegrad, Hilfe in der Nacht, gewünschte Deutschkenntnisse, Erfahrung mit Demenz. Danach sehen Sie Ihren Preis.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
-                { title: 'Betreuungskraft auswählen', desc: 'Sie sehen, wer in Frage kommt — mit Foto, Erfahrung und Deutschniveau — und entscheiden in Ruhe. Erst nach Ihrer Auswahl gibt es einen Vertrag.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
-                { title: 'Anreise', desc: 'Wenn es eilt, etwa nach einer Krankenhausentlassung, ist eine Anreise in drei Tagen möglich. Bewerbungen kommen am selben Werktag.', tag: 'Anreise in 3 Tagen möglich', tagTon: 'gruen' },
-                { title: 'Betreuung zu Hause', desc: 'Die Betreuungskraft zieht ein. Die ersten ein bis zwei Wochen brauchen beide Seiten, um einen gemeinsamen Rhythmus zu finden — das ist normal.' },
-                { title: 'Wechsel alle 6 bis 8 Wochen', desc: 'Die Betreuungskräfte wechseln sich ab. Jeden Wechsel organisieren wir; die nächste Kraft wählen Sie selbst aus. Fällt jemand aus, ist Ersatz in der Regel innerhalb von drei Tagen da.' },
-              ]}
-            />
-          </Abschnitt>
+          <OrtAblauf />
 
           <Abschnitt id="voraussetzungen" titel="Was Sie zu Hause brauchen">
             <Text>
@@ -314,18 +223,9 @@ export default function Page() {
             <RechnerKasten src="ort-muenchen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
+          <OrtWerkzeuge ohneWohnen ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
-          <Abschnitt id="passende-kraft" titel="Wie Sie die passende Betreuungskraft finden">
-            <Text>
-              Worauf es ankommt: Wie gut spricht sie Deutsch — reicht es für ein Gespräch, für den Anruf beim Arzt, für das
-              Vorlesen? Hat sie Erfahrung mit Demenz, mit Rollstuhl, mit Nächten? Und passt sie zu dem Menschen, um den es geht:
-              eher ruhig oder lebhaft, eher praktisch oder gesellig? Auf dem Papier lässt sich das schlecht beurteilen.
-            </Text>
-            <Kasten ton="gruen" titel="Bei Primundus sehen Sie die Betreuungskräfte vor Ihrer Entscheidung">
-              <Text>Mit Foto, Erfahrung und Deutschniveau. Sie wählen aus, wer zu Ihrer Situation passt — einen Vertrag gibt es erst danach. Brauchen Sie eine andere Person, wechseln wir: Ersatz ist in der Regel innerhalb von drei Tagen da, ohne Gebühr — nur An- und Abreise fallen an.</Text>
-            </Kasten>
-          </Abschnitt>
+          <OrtPassendeKraft />
 
           <Abschnitt id="warum-primundus" titel="Warum Familien in München Primundus wählen">
             <Punkte
@@ -356,33 +256,10 @@ export default function Page() {
             </div>
           </Abschnitt>
 
-          <Abschnitt id="erste-tage" titel="Die ersten Tage: worauf es ankommt">
-            <Text>
-              Vier Familien aus München haben uns bewertet, eine davon mit drei Sternen. Ihre Rückmeldungen stehen gleich
-              darunter im Wortlaut, und sie zeigen dasselbe Muster: Die ersten Tage entscheiden. Deshalb hier, was am Anfang
-              zählt und wie wir Sie dabei begleiten.
-            </Text>
-            <Punkte
-              punkte={[
-                {
-                  title: 'Die Uhrzeit der Anreise',
-                  desc: 'Der Tag steht früh fest, die Uhrzeit oft erst kurz vorher. Liegt sie am Vortag noch nicht vor, melden Sie sich kurz — Ihre Ansprechpartnerin ist auch am Wochenende erreichbar.',
-                },
-                {
-                  title: 'Ein gemeinsamer Rhythmus',
-                  desc: 'Zwei Menschen teilen sich plötzlich eine Wohnung: Wo steht was, wann wird gegessen, wie viel Nähe ist recht? Rechnen Sie mit ein bis zwei Wochen, bis sich das eingespielt hat — das ist normal.',
-                },
-                {
-                  title: 'Wenn es nicht passt',
-                  desc: 'Je schwerer der Pflegebedarf, desto wichtiger die richtige Person. Sagen Sie es früh: Den Ersatz organisieren wir in der Regel innerhalb von drei Tagen, ohne Gebühr — nur An- und Abreise fallen an. Und Sie bleiben frei: täglich kündbar.',
-                },
-              ]}
-            />
-          </Abschnitt>
+          <OrtErsteTage ort="München" />
 
           <OrtStimmen
             ort={'München'}
-            herkunft="ort"
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260823-michael', 'k-20260416-barbara', 'k-20251020-christine', 'k-20241106-verena'].includes(b.id))}
           />
 
@@ -395,12 +272,12 @@ export default function Page() {
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
 
-          <Abschnitt id="beratung-muenchen" titel="Wo Sie sich in München unabhängig beraten lassen">
-            <Text>
-              Bevor Sie sich für irgendetwas entscheiden, auch gegen uns: Die Pflegeberatung nach § 7a SGB XI ist kostenlos,
-              trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause. In München gibt es dafür feste Anlaufstellen, und es
-              lohnt sich, eine davon anzurufen — auch wegen der Zuschüsse, die häufig ungenutzt bleiben.
-            </Text>
+          <OrtBeratung
+            slug="muenchen"
+            ort="München"
+            id="beratung-muenchen"
+            eigene={
+              <>
             <Punkte
               punkte={[
                 {
@@ -433,11 +310,13 @@ export default function Page() {
               Die vier Adressen haben wir am 20. September 2026 geprüft. Wir bekommen für diese Verweise nichts, und die
               Stellen wissen nichts von uns.
             </p>
-          </Abschnitt>
+              </>
+            }
+          />
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

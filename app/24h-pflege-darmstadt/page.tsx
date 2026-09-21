@@ -29,13 +29,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Darmstadt | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Darmstadt | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Darmstadt und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-darmstadt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Darmstadt — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Darmstadt. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Darmstadt | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Darmstadt und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-darmstadt',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -186,7 +186,7 @@ export default function Page() {
             <Text>Wir sagen das offen, weil es der ehrlichere Weg ist: Darmstadt ist für eine Betreuungskraft im Haushalt räumlich die anspruchsvollste Stadt der Region. Nur 29,5 Prozent der Haushalte wohnen im Eigentum — in Hessen sind es 46,6. Wer hier über eine 24-Stunden-Betreuung nachdenkt, sollte als Erstes klären, ob ein eigenes Zimmer für die Kraft frei wird. Wo es das gibt, funktioniert es genauso gut wie überall sonst. Wo nicht, sagen wir das lieber vorher als hinterher.</Text>
             <Text>Bei den Pflegezahlen ist Darmstadt ein Sonderfall — und wird deshalb leicht falsch gelesen. Mit 48 Pflegebedürftigen je 1.000 Einwohner hat die Stadt die niedrigste Pflegequote aller 26 hessischen Kreise (Land: 67). Das liegt an der jungen Universitätsstadt, nicht an weniger Bedarf: 7.587 Menschen sind pflegebedürftig, 29.645 sind über 65. Auffällig ist etwas anderes — in Darmstadt wird seltener rein familiär gepflegt als im Umland. 54,5 Prozent beziehen nur Pflegegeld, im Landkreis Darmstadt-Dieburg sind es 62,1. Dafür ist die ambulante Versorgung mit 19,4 Prozent besser als im Land (17,6), und ein ambulanter Dienst betreut hier im Schnitt 46 Menschen statt 70 wie im Landkreis.</Text>
             <Text>Ein verbreiteter Irrtum sei gleich mit ausgeräumt: Dass der Anteil der Heimbewohner in Darmstadt mit 14,4 Prozent über dem hessischen Wert von 13,0 liegt, heißt nicht, dass es hier viele Heimplätze gäbe. Gemessen an der Zahl der über 65-Jährigen sind es{' '} <strong className="text-pm-ink font-semibold">43 Plätze je 1.000 — weniger als die 47 im Land.</strong> Die ganze Region ist heimplatzarm; der Landkreis liegt mit 34 noch deutlich darunter. Wer einen Platz sucht, sucht hier länger.</Text>
-            <Text>Dazu kommt, wie unterschiedlich die Stadtteile sind. Zwischen Darmstadt-Mitte und Wixhausen liegt beim Bevölkerungsdruck der Faktor 33 — 93 gegen 2,8 Einwohner je Hektar. Wixhausen und Eberstadt sind eigene Welten mit eigenen Wegen. Eine Betreuungskraft, die im Haushalt lebt, macht diesen Unterschied bedeutungslos: Sie ist da, unabhängig davon, wie weit der nächste Dienst fahren müsste. Die Akutgeriatrie der Stadt sitzt im AGAPLESION Elisabethenstift, das auch eine geriatrische Tagesklinik führt. Und bevor Sie entscheiden: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen.</Text>
+            <Text>Dazu kommt, wie unterschiedlich die Stadtteile sind. Zwischen Darmstadt-Mitte und Wixhausen liegt beim Bevölkerungsdruck der Faktor 33 — 93 gegen 2,8 Einwohner je Hektar. Wixhausen und Eberstadt sind eigene Welten mit eigenen Wegen. Eine Betreuungskraft, die im Haushalt lebt, macht diesen Unterschied bedeutungslos: Sie ist da, unabhängig davon, wie weit der nächste Dienst fahren müsste. Die Akutgeriatrie der Stadt sitzt im AGAPLESION Elisabethenstift, das auch eine geriatrische Tagesklinik führt. Und bevor Sie entscheiden: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-darmstadt" titel="Einzugsgebiet Darmstadt">
@@ -237,8 +237,6 @@ export default function Page() {
 
             ort={'Darmstadt'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250906-alexander'].includes(b.id))}
 
           />
@@ -250,7 +248,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }

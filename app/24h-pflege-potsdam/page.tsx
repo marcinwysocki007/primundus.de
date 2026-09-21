@@ -28,13 +28,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Potsdam | 6× Testsieger',
-  description: 'Betreuung zu Hause durch geprüfte Kräfte, die Sie vorab sehen – und Entlastung für Angehörige. Ihren Preis sehen Sie sofort online, mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Potsdam | 6× Testsieger | Primundus',
+  description: 'Liebevolle Betreuung in Potsdam und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-potsdam' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Potsdam — Betreuungskraft zuhause | Primundus',
-    description: 'Geprüfte 24h-Betreuungskraft in Potsdam. Täglich kündbar, rechtssicher, startklar.',
+    title: '24-Stunden-Pflege in Potsdam | 6× Testsieger | Primundus',
+    description: 'Liebevolle Betreuung in Potsdam und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-potsdam',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -180,7 +180,7 @@ export default function Page() {
             <Text>Eine Lücke fällt dabei besonders auf: <strong className="text-pm-ink font-semibold">Nur 2,6 Prozent der Leistungsempfänger nutzen Tagespflege</strong> — im Land sind es 4,1 Prozent. Von 1.943 Pflegeplätzen in Potsdam entfallen gerade 134 auf Tages- und Nachtpflege. Für Angehörige, die tagsüber arbeiten und abends pflegen, gibt es in dieser Stadt also kaum die klassische Entlastung. Genau diese Konstellation — jemand muss tagsüber da sein, aber der Alltag lässt es nicht zu — löst eine Betreuungskraft, die im Haushalt wohnt.</Text>
             <Text>Beim Wohnen wird es dafür eng. Auf ein Potsdamer Gebäude kommen im Schnitt 4,3 Wohnungen, die durchschnittliche Wohnung misst 75,8 Quadratmeter, und fast vier von zehn liegen unter 60. Nur 17,6 Prozent der Haushalte wohnen im Eigentum — der niedrigste Wert aller Städte, für die wir das geprüft haben, und weit unter Brandenburg mit 45,6 Prozent. Der Bestand ist dabei jung: 30 Prozent der Wohnungen stammen aus den siebziger und achtziger Jahren, also aus dem Plattenbau in Schlaatz, Waldstadt II, Stern und Drewitz, weitere 16 Prozent wurden nach 2010 gebaut. Ein separates Zimmer für die Betreuungskraft ist hier die entscheidende Frage — nicht das Baujahr.</Text>
             <Text>Und Potsdam ist räumlich keine kompakte Stadt. Zwischen dem dichtesten und dem dünnsten Ortsteil liegt der Faktor 700: In Waldstadt II leben gut 10.000 Menschen je Quadratkilometer, in Sacrow 14. Havel und Seenkette zerschneiden das Stadtgebiet, Uetz-Paaren, Satzkorn und Grube liegen weit draußen. Für einen ambulanten Dienst bedeutet das lange Anfahrten für kurze Einsätze. Für jemanden, der im Haus wohnt, spielt die Lage keine Rolle.</Text>
-            <Text>Medizinisch ist die Stadt gut versorgt: Das Klinikum Ernst von Bergmann führt eine eigene Klinik für Geriatrie, und mit dem Evangelischen Zentrum für Altersmedizin gibt es ein eigenes geriatrisches Fachkrankenhaus samt Tagesklinik. Die Frage stellt sich, wie fast immer, erst danach — wenn es zurück in die eigenen vier Wände geht. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen.</Text>
+            <Text>Medizinisch ist die Stadt gut versorgt: Das Klinikum Ernst von Bergmann führt eine eigene Klinik für Geriatrie, und mit dem Evangelischen Zentrum für Altersmedizin gibt es ein eigenes geriatrisches Fachkrankenhaus samt Tagesklinik. Die Frage stellt sich, wie fast immer, erst danach — wenn es zurück in die eigenen vier Wände geht. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen.</Text>
           </Abschnitt>
 
           <Abschnitt id="einzugsgebiet-potsdam" titel="Einzugsgebiet Potsdam">
@@ -231,8 +231,6 @@ export default function Page() {
 
             ort={'Potsdam'}
 
-            herkunft="ort"
-
             stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260413-silke', 'k-20250925-holger'].includes(b.id))}
 
           />
@@ -244,7 +242,7 @@ export default function Page() {
         </RatgeberRumpf>
       </div>
 
-      <KontaktBand />
+      <KontaktBand ohneBewertungen />
     </>
   )
 }
