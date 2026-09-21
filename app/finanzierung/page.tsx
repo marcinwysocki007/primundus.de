@@ -117,7 +117,7 @@ export default function FinanzierungPage() {
               bekommen Sie daneben.
             </Text>
             <KostenAufteilung />
-            <MehrDazu label="Mehr dazu:" links={[{ href: '/kosten', text: 'Alle Kosten im Detail' }, { href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken' }]} />
+            <MehrDazu label="Mehr dazu:" links={[{ href: '/kosten', text: 'Alle Kosten der 24-Stunden-Pflege im Detail' }, { href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken' }]} />
           </Abschnitt>
 
           <Abschnitt id="pflegegeld" titel="Pflegegeld und Kassenleistungen">

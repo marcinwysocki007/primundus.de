@@ -340,7 +340,7 @@ export default function VierUndZwanzigStundenPflege() {
             <MehrDazu
               label="Mehr dazu:"
               links={[
-                { href: '/kosten', text: 'Alle Kosten im Detail' },
+                { href: '/kosten', text: 'Alle Kosten der 24-Stunden-Pflege im Detail' },
                 { href: '/finanzierung', text: 'Alle Kassenzuschüsse 2026' },
                 { href: '/pflegegeld-und-24h-pflege-kombinieren', text: 'Pflegegeld und 24h-Pflege kombinieren' },
               ]}

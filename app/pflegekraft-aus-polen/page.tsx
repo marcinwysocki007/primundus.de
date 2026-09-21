@@ -157,6 +157,10 @@ export default function PflegekraftAusPolen() {
                 nie mehr als für ein vergleichbares Angebot. Angebote deutlich unter 2.000 € funktionieren fast immer über Scheinselbstständigkeit.
               </Text>
             </Kasten>
+            <MehrDazu
+              label="Alle Preise und Zuschüsse:"
+              links={[{ href: '/kosten', text: '24-Stunden-Pflege Kosten 2026: Tabelle nach Pflegegrad' }]}
+            />
             <RechnerKasten src="apex-polen" />
           </Abschnitt>
 

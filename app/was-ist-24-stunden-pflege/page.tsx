@@ -231,6 +231,10 @@ export default function WasIst24StundenPflege() {
               24-Stunden-Pflege kostet bei Primundus ab 2.150 Euro im Monat — je nach Pflegesituation und Deutschkenntnissen der Betreuungskraft. Das Pflegeheim kostet im Vergleich durchschnittlich <strong>3.364 Euro Eigenanteil pro Monat</strong> — ohne persönliche Eins-zu-eins-Betreuung und ohne die vertraute Umgebung.
             </Text>
             <MehrDazu
+              label="Alle Preise und Zuschüsse:"
+              links={[{ href: "/kosten", text: "Was 24-Stunden-Pflege kostet: Preise, Zuschüsse und Eigenanteil" }]}
+            />
+            <MehrDazu
               label="Vollständiger Kostenvergleich:"
               links={[{ href: "/24h-pflege-vs-pflegeheim-kosten", text: "24h-Pflege vs. Pflegeheim — was ist günstiger?" }]}
             />
