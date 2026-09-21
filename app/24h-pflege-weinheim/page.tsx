@@ -72,7 +72,8 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Weinheim', item: 'https://primundus.de/24h-pflege-weinheim' },
+      { '@type': 'ListItem', position: 2, name: 'Regionen', item: 'https://primundus.de/regionen' },
+      { '@type': 'ListItem', position: 3, name: 'Weinheim', item: 'https://primundus.de/24h-pflege-weinheim' },
     ],
   },
   {

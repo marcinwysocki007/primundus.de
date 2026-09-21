@@ -71,7 +71,8 @@ const schemaMarkup = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: '24h-Pflege Mülheim an der Ruhr', item: 'https://primundus.de/24h-pflege-muelheim-ruhr' },
+      { '@type': 'ListItem', position: 2, name: 'Regionen', item: 'https://primundus.de/regionen' },
+      { '@type': 'ListItem', position: 3, name: 'Mülheim an der Ruhr', item: 'https://primundus.de/24h-pflege-muelheim-ruhr' },
     ],
   },
   {
