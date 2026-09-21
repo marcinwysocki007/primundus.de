@@ -24,6 +24,7 @@ export function OrtWerkzeuge({
   altbau,
   miete,
   titel,
+  ohneWohnen = false,
 }: {
   ort: string
   land: string
@@ -33,6 +34,9 @@ export function OrtWerkzeuge({
   miete?: number
   /** Eigene Überschrift, wenn die Seite davor schon einen Kosten-Abschnitt hat (München seit 21.09.) */
   titel?: string
+  /** Seiten mit eigenem Abschnitt „Wohnen in <Ort>" (Muster seit 21.09.) zeigen die
+   *  Baujahr- und Mietzahlen dort — hier würden sie ein zweites Mal stehen. */
+  ohneWohnen?: boolean
 }) {
   const heim = HEIM_EIGENANTEIL[land] ?? HEIM_EIGENANTEIL_BUND
   const bayern = land === 'Bayern'
@@ -51,7 +55,7 @@ export function OrtWerkzeuge({
         Heimplatz in {land} kostet rund {euro(heim)} Eigenanteil im Monat, und der hängt nicht vom Pflegegrad ab.
         {bayern ? ' Wer in Bayern wohnt, bekommt ab Pflegegrad 2 zusätzlich 500 € Landespflegegeld im Jahr.' : ''}
       </Text>
-      {altbau !== undefined && (
+      {altbau !== undefined && !ohneWohnen && (
         <Text>
           Was in {ort} dazukommt: {prozent(altbau)} der Wohnungen stammen aus der Zeit vor 1970.{' '}
           {altbau >= 60

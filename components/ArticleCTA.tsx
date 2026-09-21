@@ -167,7 +167,24 @@ export function Ansprechpartnerin({ karte = false, ort, titel }: { karte?: boole
 //
 // Dieselben Daten und Ziele wie überall (Rufnummer, WhatsApp-Text, Foto) — nur die Darstellung
 // ist eine andere. Nichts wird hier neu erfunden, deshalb steht es in derselben Datei.
-export function AnsprechpartnerinGross({ ort }: { ort: string }) {
+export function AnsprechpartnerinGross({
+  ort,
+  telefon,
+  telefonAnzeige,
+  adresse,
+}: {
+  ort: string
+  /** Eigene Rufnummer für diesen Ort (E.164), sonst die zentrale 089. */
+  telefon?: string
+  /** Wie die Nummer geschrieben wird. */
+  telefonAnzeige?: string
+  /** Niederlassung, die zu dieser Nummer gehört — nur setzen, wo es sie wirklich gibt. */
+  adresse?: string
+}) {
+  // Hamburg hat eine eigene Niederlassung mit eigener Nummer (Martin 21.09.: „in Hamburg kannst du
+  // die HH-Nummer machen und die Adresse"). Wo keine gesetzt ist, bleibt es bei der zentralen.
+  const tel = telefon ?? '+4989200000830'
+  const telText = telefonAnzeige ?? '089 200 000 830'
   return (
     <div className="bg-white rounded-[20px] shadow-lift overflow-hidden flex flex-col">
       {/* Eigener Zuschnitt (Martin 20.09.: „mit dem Bild so hinkriegen, dass das bündig ist, links
@@ -202,14 +219,14 @@ export function AnsprechpartnerinGross({ ort }: { ort: string }) {
           <span className={nw}>täglich von 8 bis 20 Uhr.</span>
         </p>
         <a
-          href="tel:+4989200000830"
+          href={`tel:${tel}`}
           className={`mt-4 block text-[26px] md:text-[28px] font-extrabold leading-none tracking-[-0.02em] text-pm-ink hover:text-pm-taupe-ink transition-colors ${nw}`}
         >
-          089 200 000 830
+          {telText}
         </a>
         <div className="mt-5 flex gap-2.5">
           <a
-            href="tel:+4989200000830"
+            href={`tel:${tel}`}
             className="flex-1 min-h-[48px] px-4 rounded-full bg-pm-ink hover:bg-pm-taupe-ink text-white font-bold text-[16px] flex items-center justify-center gap-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
           >
             <Phone className="w-[18px] h-[18px]" aria-hidden="true" />
@@ -232,6 +249,14 @@ export function AnsprechpartnerinGross({ ort }: { ort: string }) {
         <p className="mt-4 text-[14px] leading-[1.45] text-pm-body/65">
           Von der ersten Frage bis zum Start Ihrer Betreuung.
         </p>
+        {/* Eigener Block mit Trennlinie: Die Adresse gehört zum Büro, nicht zu Marta — sonst liest
+            es sich, als säße sie dort (OpenAI-Prüfung 21.09.). */}
+        {adresse ? (
+          <p className="mt-4 pt-4 border-t border-pm-line text-[14px] leading-[1.45] text-pm-body/65">
+            <span className="font-semibold text-pm-ink">Büro {ort}</span><br />
+            {adresse}
+          </p>
+        ) : null}
       </div>
     </div>
   )
