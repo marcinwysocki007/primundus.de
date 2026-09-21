@@ -1,0 +1,1865 @@
+{
+ "24h-pflege-aachen": {
+  "ort": "Aachen",
+  "titel": "24-Stunden-Pflege in Aachen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Aachen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 509,
+  "dPx": 919
+ },
+ "24h-pflege-aalen": {
+  "ort": "Aalen",
+  "titel": "24-Stunden-Pflege in Aalen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Aalen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 492,
+  "dPx": 907
+ },
+ "24h-pflege-alzey-worms": {
+  "ort": "Kreis Alzey-Worms",
+  "titel": "24-Stunden-Pflege im Kreis Alzey-Worms | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung im Kreis Alzey-Worms und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 504,
+  "dPx": 920
+ },
+ "24h-pflege-amberg": {
+  "ort": "Amberg",
+  "titel": "24-Stunden-Pflege in Amberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Amberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 511,
+  "dPx": 846
+ },
+ "24h-pflege-aschaffenburg": {
+  "ort": "Aschaffenburg",
+  "titel": "24-Stunden-Pflege in Aschaffenburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Aschaffenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 570,
+  "dPx": 887
+ },
+ "24h-pflege-augsburg": {
+  "ort": "Augsburg",
+  "titel": "24-Stunden-Pflege in Augsburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Augsburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 527,
+  "dPx": 857
+ },
+ "24h-pflege-bad-aibling": {
+  "ort": "Bad Aibling",
+  "titel": "24-Stunden-Pflege in Bad Aibling | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Aibling und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 542,
+  "dPx": 868
+ },
+ "24h-pflege-bad-duerkheim": {
+  "ort": "Bad Dürkheim",
+  "titel": "24-Stunden-Pflege in Bad Dürkheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Dürkheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 568,
+  "dPx": 886
+ },
+ "24h-pflege-bad-homburg": {
+  "ort": "Bad Homburg",
+  "titel": "24-Stunden-Pflege in Bad Homburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Homburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 565,
+  "dPx": 883
+ },
+ "24h-pflege-bad-kissingen": {
+  "ort": "Bad Kissingen",
+  "titel": "24-Stunden-Pflege in Bad Kissingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Kissingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 569,
+  "dPx": 886
+ },
+ "24h-pflege-bad-kreuznach": {
+  "ort": "Bad Kreuznach",
+  "titel": "24-Stunden-Pflege in Bad Kreuznach | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Kreuznach und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 578,
+  "dPx": 893
+ },
+ "24h-pflege-bad-nauheim": {
+  "ort": "Bad Nauheim",
+  "titel": "24-Stunden-Pflege in Bad Nauheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Nauheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 562,
+  "dPx": 882
+ },
+ "24h-pflege-bad-neuenahr": {
+  "ort": "Bad Neuenahr",
+  "titel": "24-Stunden-Pflege in Bad Neuenahr | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Neuenahr und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 570,
+  "dPx": 887
+ },
+ "24h-pflege-bad-reichenhall": {
+  "ort": "Bad Reichenhall",
+  "titel": "24-Stunden-Pflege in Bad Reichenhall | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Bad Reichenhall und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 475,
+  "dPx": 899
+ },
+ "24h-pflege-bad-toelz": {
+  "ort": "Bad Tölz",
+  "titel": "24-Stunden-Pflege in Bad Tölz | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Tölz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 520,
+  "dPx": 852
+ },
+ "24h-pflege-bad-vilbel": {
+  "ort": "Bad Vilbel",
+  "titel": "24-Stunden-Pflege in Bad Vilbel | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bad Vilbel und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 531,
+  "dPx": 860
+ },
+ "24h-pflege-baden-wuerttemberg": {
+  "ort": "Baden-Württemberg",
+  "titel": "24-Stunden-Pflege in Baden-Württemberg | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Baden-Württemberg und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 509,
+  "dPx": 854
+ },
+ "24h-pflege-bamberg": {
+  "ort": "Bamberg",
+  "titel": "24-Stunden-Pflege in Bamberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bamberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 522,
+  "dPx": 854
+ },
+ "24h-pflege-bayern": {
+  "ort": "Bayern",
+  "titel": "24-Stunden-Pflege in Bayern | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bayern und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 505,
+  "dPx": 916
+ },
+ "24h-pflege-bayreuth": {
+  "ort": "Bayreuth",
+  "titel": "24-Stunden-Pflege in Bayreuth | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bayreuth und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 521,
+  "dPx": 853
+ },
+ "24h-pflege-bensheim": {
+  "ort": "Bensheim",
+  "titel": "24-Stunden-Pflege in Bensheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bensheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 530,
+  "dPx": 859
+ },
+ "24h-pflege-berchtesgaden": {
+  "ort": "Berchtesgaden",
+  "titel": "24-Stunden-Pflege in Berchtesgaden | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Berchtesgaden und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 576,
+  "dPx": 891
+ },
+ "24h-pflege-bergisch-gladbach": {
+  "ort": "Bergisch Gladbach",
+  "titel": "24-Stunden-Pflege in Bergisch Gladbach | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Bergisch Gladbach und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 498,
+  "dPx": 915
+ },
+ "24h-pflege-berlin": {
+  "ort": "Berlin",
+  "titel": "24-Stunden-Pflege in Berlin | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Berlin und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 492,
+  "dPx": 907
+ },
+ "24h-pflege-bielefeld": {
+  "ort": "Bielefeld",
+  "titel": "24-Stunden-Pflege in Bielefeld | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bielefeld und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 518,
+  "dPx": 851
+ },
+ "24h-pflege-bietigheim-bissingen": {
+  "ort": "Bietigheim-Bissingen",
+  "titel": "24-Stunden-Pflege in Bietigheim-Bissingen | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Bietigheim-Bissingen und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 516,
+  "dPx": 858
+ },
+ "24h-pflege-bocholt": {
+  "ort": "Bocholt",
+  "titel": "24-Stunden-Pflege in Bocholt | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bocholt und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 508,
+  "dPx": 918
+ },
+ "24h-pflege-bochum": {
+  "ort": "Bochum",
+  "titel": "24-Stunden-Pflege in Bochum | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bochum und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 515,
+  "dPx": 848
+ },
+ "24h-pflege-bonn": {
+  "ort": "Bonn",
+  "titel": "24-Stunden-Pflege in Bonn | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bonn und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 488,
+  "dPx": 904
+ },
+ "24h-pflege-bottrop": {
+  "ort": "Bottrop",
+  "titel": "24-Stunden-Pflege in Bottrop | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bottrop und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 506,
+  "dPx": 917
+ },
+ "24h-pflege-brandenburg": {
+  "ort": "Brandenburg",
+  "titel": "24-Stunden-Pflege in Brandenburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Brandenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 557,
+  "dPx": 878
+ },
+ "24h-pflege-braunschweig": {
+  "ort": "Braunschweig",
+  "titel": "24-Stunden-Pflege in Braunschweig | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Braunschweig und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 567,
+  "dPx": 885
+ },
+ "24h-pflege-bremen": {
+  "ort": "Bremen",
+  "titel": "24-Stunden-Pflege in Bremen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bremen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 511,
+  "dPx": 846
+ },
+ "24h-pflege-bremerhaven": {
+  "ort": "Bremerhaven",
+  "titel": "24-Stunden-Pflege in Bremerhaven | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bremerhaven und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 561,
+  "dPx": 881
+ },
+ "24h-pflege-bruchsal": {
+  "ort": "Bruchsal",
+  "titel": "24-Stunden-Pflege in Bruchsal | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Bruchsal und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 519,
+  "dPx": 851
+ },
+ "24h-pflege-charlottenburg": {
+  "ort": "Berlin-Charlottenburg",
+  "titel": "24-Stunden-Pflege in Berlin-Charlottenburg | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Berlin-Charlottenburg und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 519,
+  "dPx": 861
+ },
+ "24h-pflege-chemnitz": {
+  "ort": "Chemnitz",
+  "titel": "24-Stunden-Pflege in Chemnitz | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Chemnitz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 526,
+  "dPx": 856
+ },
+ "24h-pflege-cochem": {
+  "ort": "Cochem an der Mosel",
+  "titel": "24-Stunden-Pflege in Cochem an der Mosel | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Cochem an der Mosel und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 525,
+  "dPx": 865
+ },
+ "24h-pflege-cottbus": {
+  "ort": "Cottbus",
+  "titel": "24-Stunden-Pflege in Cottbus | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Cottbus und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 510,
+  "dPx": 920
+ },
+ "24h-pflege-dachau": {
+  "ort": "Dachau",
+  "titel": "24-Stunden-Pflege in Dachau | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Dachau und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 510,
+  "dPx": 920
+ },
+ "24h-pflege-darmstadt": {
+  "ort": "Darmstadt",
+  "titel": "24-Stunden-Pflege in Darmstadt | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Darmstadt und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 533,
+  "dPx": 861
+ },
+ "24h-pflege-deggendorf": {
+  "ort": "Deggendorf",
+  "titel": "24-Stunden-Pflege in Deggendorf | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Deggendorf und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 546,
+  "dPx": 870
+ },
+ "24h-pflege-dessau": {
+  "ort": "Dessau-Roßlau",
+  "titel": "24-Stunden-Pflege in Dessau-Roßlau | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Dessau-Roßlau und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 580,
+  "dPx": 894
+ },
+ "24h-pflege-dormagen": {
+  "ort": "Dormagen",
+  "titel": "24-Stunden-Pflege in Dormagen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Dormagen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 535,
+  "dPx": 862
+ },
+ "24h-pflege-dortmund": {
+  "ort": "Dortmund",
+  "titel": "24-Stunden-Pflege in Dortmund | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Dortmund und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 529,
+  "dPx": 858
+ },
+ "24h-pflege-dresden": {
+  "ort": "Dresden",
+  "titel": "24-Stunden-Pflege in Dresden | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Dresden und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 517,
+  "dPx": 850
+ },
+ "24h-pflege-dueren": {
+  "ort": "Düren",
+  "titel": "24-Stunden-Pflege in Düren | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Düren und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 496,
+  "dPx": 910
+ },
+ "24h-pflege-duesseldorf": {
+  "ort": "Düsseldorf",
+  "titel": "24-Stunden-Pflege in Düsseldorf | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Düsseldorf und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 537,
+  "dPx": 864
+ },
+ "24h-pflege-duisburg": {
+  "ort": "Duisburg",
+  "titel": "24-Stunden-Pflege in Duisburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Duisburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 521,
+  "dPx": 853
+ },
+ "24h-pflege-ebersberg": {
+  "ort": "Ebersberg",
+  "titel": "24-Stunden-Pflege in Ebersberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Ebersberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 533,
+  "dPx": 862
+ },
+ "24h-pflege-erding": {
+  "ort": "Erding",
+  "titel": "24-Stunden-Pflege in Erding | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Erding und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 499,
+  "dPx": 912
+ },
+ "24h-pflege-erfurt": {
+  "ort": "Erfurt",
+  "titel": "24-Stunden-Pflege in Erfurt | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Erfurt und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 490,
+  "dPx": 906
+ },
+ "24h-pflege-erlangen": {
+  "ort": "Erlangen",
+  "titel": "24-Stunden-Pflege in Erlangen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Erlangen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 521,
+  "dPx": 853
+ },
+ "24h-pflege-eschborn": {
+  "ort": "Eschborn",
+  "titel": "24-Stunden-Pflege in Eschborn | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Eschborn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 526,
+  "dPx": 856
+ },
+ "24h-pflege-essen": {
+  "ort": "Essen",
+  "titel": "24-Stunden-Pflege in Essen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Essen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 497,
+  "dPx": 911
+ },
+ "24h-pflege-flensburg": {
+  "ort": "Flensburg",
+  "titel": "24-Stunden-Pflege in Flensburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Flensburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 530,
+  "dPx": 859
+ },
+ "24h-pflege-frankfurt": {
+  "ort": "Frankfurt",
+  "titel": "24-Stunden-Pflege in Frankfurt | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Frankfurt und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 521,
+  "dPx": 853
+ },
+ "24h-pflege-freiburg-umland": {
+  "ort": "Freiburg & Umland",
+  "titel": "24-Stunden-Pflege in Freiburg & Umland | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Freiburg & Umland und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 497,
+  "dPx": 914
+ },
+ "24h-pflege-freiburg": {
+  "ort": "Freiburg",
+  "titel": "24-Stunden-Pflege in Freiburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Freiburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 516,
+  "dPx": 849
+ },
+ "24h-pflege-freising": {
+  "ort": "Freising",
+  "titel": "24-Stunden-Pflege in Freising | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Freising und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 512,
+  "dPx": 847
+ },
+ "24h-pflege-friedrichshafen": {
+  "ort": "Friedrichshafen",
+  "titel": "24-Stunden-Pflege in Friedrichshafen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Friedrichshafen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 579,
+  "dPx": 893
+ },
+ "24h-pflege-fuerth": {
+  "ort": "Fürth",
+  "titel": "24-Stunden-Pflege in Fürth | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Fürth und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 488,
+  "dPx": 904
+ },
+ "24h-pflege-gaertringen": {
+  "ort": "Gärtringen",
+  "titel": "24-Stunden-Pflege in Gärtringen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Gärtringen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 536,
+  "dPx": 863
+ },
+ "24h-pflege-garmisch-partenkirchen": {
+  "ort": "Garmisch-Partenkirchen",
+  "titel": "24-Stunden-Pflege in Garmisch-Partenkirchen | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Garmisch-Partenkirchen und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 545,
+  "dPx": 879
+ },
+ "24h-pflege-gauting": {
+  "ort": "Gauting",
+  "titel": "24-Stunden-Pflege in Gauting | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Gauting und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 511,
+  "dPx": 846
+ },
+ "24h-pflege-gelsenkirchen": {
+  "ort": "Gelsenkirchen",
+  "titel": "24-Stunden-Pflege in Gelsenkirchen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Gelsenkirchen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 569,
+  "dPx": 886
+ },
+ "24h-pflege-gera": {
+  "ort": "Gera",
+  "titel": "24-Stunden-Pflege in Gera | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Gera und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 486,
+  "dPx": 903
+ },
+ "24h-pflege-germering": {
+  "ort": "Germering",
+  "titel": "24-Stunden-Pflege in Germering | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Germering und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 536,
+  "dPx": 863
+ },
+ "24h-pflege-germersheim": {
+  "ort": "Germersheim",
+  "titel": "24-Stunden-Pflege in Germersheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Germersheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 562,
+  "dPx": 882
+ },
+ "24h-pflege-giessen": {
+  "ort": "Giessen",
+  "titel": "24-Stunden-Pflege in Giessen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Giessen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 515,
+  "dPx": 848
+ },
+ "24h-pflege-gilching": {
+  "ort": "Gilching",
+  "titel": "24-Stunden-Pflege in Gilching | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Gilching und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 513,
+  "dPx": 847
+ },
+ "24h-pflege-goeppingen": {
+  "ort": "Göppingen",
+  "titel": "24-Stunden-Pflege in Göppingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Göppingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 539,
+  "dPx": 865
+ },
+ "24h-pflege-goettingen": {
+  "ort": "Göttingen",
+  "titel": "24-Stunden-Pflege in Göttingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Göttingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 528,
+  "dPx": 858
+ },
+ "24h-pflege-greifswald": {
+  "ort": "Greifswald",
+  "titel": "24-Stunden-Pflege in Greifswald | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Greifswald und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 536,
+  "dPx": 863
+ },
+ "24h-pflege-grevenbroich": {
+  "ort": "Grevenbroich",
+  "titel": "24-Stunden-Pflege in Grevenbroich | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Grevenbroich und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 561,
+  "dPx": 881
+ },
+ "24h-pflege-guetersloh": {
+  "ort": "Gütersloh",
+  "titel": "24-Stunden-Pflege in Gütersloh | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Gütersloh und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 528,
+  "dPx": 858
+ },
+ "24h-pflege-hagen": {
+  "ort": "Hagen",
+  "titel": "24-Stunden-Pflege in Hagen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hagen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 500,
+  "dPx": 913
+ },
+ "24h-pflege-halle-saale": {
+  "ort": "Halle (Saale)",
+  "titel": "24-Stunden-Pflege in Halle (Saale) | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Halle (Saale) und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 557,
+  "dPx": 878
+ },
+ "24h-pflege-hamburg": {
+  "ort": "Hamburg",
+  "titel": "24-Stunden-Pflege in Hamburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hamburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 523,
+  "dPx": 854
+ },
+ "24h-pflege-hameln": {
+  "ort": "Hameln",
+  "titel": "24-Stunden-Pflege in Hameln | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hameln und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 510,
+  "dPx": 920
+ },
+ "24h-pflege-hamm": {
+  "ort": "Hamm",
+  "titel": "24-Stunden-Pflege in Hamm | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hamm und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 500,
+  "dPx": 913
+ },
+ "24h-pflege-hanau": {
+  "ort": "Hanau",
+  "titel": "24-Stunden-Pflege in Hanau | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hanau und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 500,
+  "dPx": 913
+ },
+ "24h-pflege-hannover": {
+  "ort": "Hannover",
+  "titel": "24-Stunden-Pflege in Hannover | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hannover und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 528,
+  "dPx": 858
+ },
+ "24h-pflege-heidelberg": {
+  "ort": "Heidelberg",
+  "titel": "24-Stunden-Pflege in Heidelberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Heidelberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 538,
+  "dPx": 865
+ },
+ "24h-pflege-heilbronn": {
+  "ort": "Heilbronn",
+  "titel": "24-Stunden-Pflege in Heilbronn | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Heilbronn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 527,
+  "dPx": 857
+ },
+ "24h-pflege-heinsberg": {
+  "ort": "Heinsberg",
+  "titel": "24-Stunden-Pflege in Heinsberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Heinsberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 532,
+  "dPx": 861
+ },
+ "24h-pflege-herne": {
+  "ort": "Herne",
+  "titel": "24-Stunden-Pflege in Herne | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Herne und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 496,
+  "dPx": 910
+ },
+ "24h-pflege-hessen": {
+  "ort": "Hessen",
+  "titel": "24-Stunden-Pflege in Hessen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hessen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 509,
+  "dPx": 919
+ },
+ "24h-pflege-hildesheim": {
+  "ort": "Hildesheim",
+  "titel": "24-Stunden-Pflege in Hildesheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Hildesheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 540,
+  "dPx": 866
+ },
+ "24h-pflege-hochtaunuskreis": {
+  "ort": "Hochtaunuskreis",
+  "titel": "24-Stunden-Pflege im Hochtaunuskreis | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung im Hochtaunuskreis und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 484,
+  "dPx": 905
+ },
+ "24h-pflege-holzkirchen": {
+  "ort": "Holzkirchen",
+  "titel": "24-Stunden-Pflege in Holzkirchen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Holzkirchen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 546,
+  "dPx": 870
+ },
+ "24h-pflege-ingolstadt": {
+  "ort": "Ingolstadt",
+  "titel": "24-Stunden-Pflege in Ingolstadt | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Ingolstadt und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 528,
+  "dPx": 858
+ },
+ "24h-pflege-iserlohn": {
+  "ort": "Iserlohn",
+  "titel": "24-Stunden-Pflege in Iserlohn | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Iserlohn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 512,
+  "dPx": 847
+ },
+ "24h-pflege-jena": {
+  "ort": "Jena",
+  "titel": "24-Stunden-Pflege in Jena | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Jena und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 485,
+  "dPx": 902
+ },
+ "24h-pflege-kaiserslautern": {
+  "ort": "Kaiserslautern",
+  "titel": "24-Stunden-Pflege in Kaiserslautern | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Kaiserslautern und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 569,
+  "dPx": 886
+ },
+ "24h-pflege-karlsruhe": {
+  "ort": "Karlsruhe",
+  "titel": "24-Stunden-Pflege in Karlsruhe | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Karlsruhe und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 527,
+  "dPx": 857
+ },
+ "24h-pflege-kassel": {
+  "ort": "Kassel",
+  "titel": "24-Stunden-Pflege in Kassel | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Kassel und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 501,
+  "dPx": 914
+ },
+ "24h-pflege-kaufbeuren": {
+  "ort": "Kaufbeuren",
+  "titel": "24-Stunden-Pflege in Kaufbeuren | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Kaufbeuren und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 545,
+  "dPx": 869
+ },
+ "24h-pflege-kempten": {
+  "ort": "Kempten",
+  "titel": "24-Stunden-Pflege in Kempten | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Kempten und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 521,
+  "dPx": 853
+ },
+ "24h-pflege-kiel": {
+  "ort": "Kiel",
+  "titel": "24-Stunden-Pflege in Kiel | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Kiel und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 475,
+  "dPx": 895
+ },
+ "24h-pflege-koblenz": {
+  "ort": "Koblenz",
+  "titel": "24-Stunden-Pflege in Koblenz | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Koblenz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 513,
+  "dPx": 848
+ },
+ "24h-pflege-koeln": {
+  "ort": "Köln",
+  "titel": "24-Stunden-Pflege in Köln | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Köln und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 481,
+  "dPx": 900
+ },
+ "24h-pflege-konstanz": {
+  "ort": "Konstanz",
+  "titel": "24-Stunden-Pflege in Konstanz | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Konstanz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 525,
+  "dPx": 855
+ },
+ "24h-pflege-krefeld": {
+  "ort": "Krefeld",
+  "titel": "24-Stunden-Pflege in Krefeld | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Krefeld und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 505,
+  "dPx": 916
+ },
+ "24h-pflege-landau": {
+  "ort": "Landau",
+  "titel": "24-Stunden-Pflege in Landau | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Landau und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 508,
+  "dPx": 918
+ },
+ "24h-pflege-landsberg": {
+  "ort": "Landsberg",
+  "titel": "24-Stunden-Pflege in Landsberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Landsberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 536,
+  "dPx": 863
+ },
+ "24h-pflege-landshut": {
+  "ort": "Landshut und im Landkreis",
+  "titel": "24-Stunden-Pflege in Landshut und im Landkreis | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Landshut und im Landkreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 569,
+  "dPx": 896
+ },
+ "24h-pflege-leipzig": {
+  "ort": "Leipzig",
+  "titel": "24-Stunden-Pflege in Leipzig | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Leipzig und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 505,
+  "dPx": 916
+ },
+ "24h-pflege-leverkusen": {
+  "ort": "Leverkusen",
+  "titel": "24-Stunden-Pflege in Leverkusen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Leverkusen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 545,
+  "dPx": 869
+ },
+ "24h-pflege-ludwigsburg": {
+  "ort": "Ludwigsburg",
+  "titel": "24-Stunden-Pflege in Ludwigsburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Ludwigsburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 555,
+  "dPx": 876
+ },
+ "24h-pflege-ludwigshafen": {
+  "ort": "Ludwigshafen",
+  "titel": "24-Stunden-Pflege in Ludwigshafen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Ludwigshafen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 565,
+  "dPx": 883
+ },
+ "24h-pflege-luebeck": {
+  "ort": "Lübeck",
+  "titel": "24-Stunden-Pflege in Lübeck | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Lübeck und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 506,
+  "dPx": 917
+ },
+ "24h-pflege-luedenscheid": {
+  "ort": "Lüdenscheid",
+  "titel": "24-Stunden-Pflege in Lüdenscheid | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Lüdenscheid und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 555,
+  "dPx": 876
+ },
+ "24h-pflege-luenen": {
+  "ort": "Lünen",
+  "titel": "24-Stunden-Pflege in Lünen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Lünen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 497,
+  "dPx": 911
+ },
+ "24h-pflege-magdeburg": {
+  "ort": "Magdeburg",
+  "titel": "24-Stunden-Pflege in Magdeburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Magdeburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 542,
+  "dPx": 868
+ },
+ "24h-pflege-mainz": {
+  "ort": "Mainz",
+  "titel": "24-Stunden-Pflege in Mainz | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Mainz und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 495,
+  "dPx": 909
+ },
+ "24h-pflege-mannheim": {
+  "ort": "Mannheim",
+  "titel": "24-Stunden-Pflege in Mannheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Mannheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 535,
+  "dPx": 862
+ },
+ "24h-pflege-marburg": {
+  "ort": "Marburg",
+  "titel": "24-Stunden-Pflege in Marburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Marburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 516,
+  "dPx": 849
+ },
+ "24h-pflege-marl": {
+  "ort": "Marl",
+  "titel": "24-Stunden-Pflege in Marl | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Marl und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 480,
+  "dPx": 899
+ },
+ "24h-pflege-mecklenburg-vorpommern": {
+  "ort": "Mecklenburg-Vorpommern",
+  "titel": "24-Stunden-Pflege in Mecklenburg-Vorpommern | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Mecklenburg-Vorpommern und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 565,
+  "dPx": 893
+ },
+ "24h-pflege-memmingen": {
+  "ort": "Memmingen",
+  "titel": "24-Stunden-Pflege in Memmingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Memmingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 551,
+  "dPx": 874
+ },
+ "24h-pflege-miesbach": {
+  "ort": "Miesbach",
+  "titel": "24-Stunden-Pflege in Miesbach | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Miesbach und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 527,
+  "dPx": 857
+ },
+ "24h-pflege-minden": {
+  "ort": "Minden",
+  "titel": "24-Stunden-Pflege in Minden | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Minden und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 507,
+  "dPx": 918
+ },
+ "24h-pflege-moenchengladbach-rheydt": {
+  "ort": "Mönchengladbach-Rheydt",
+  "titel": "24-Stunden-Pflege in Mönchengladbach-Rheydt | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Mönchengladbach-Rheydt und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 563,
+  "dPx": 891
+ },
+ "24h-pflege-moenchengladbach": {
+  "ort": "Mönchengladbach",
+  "titel": "24-Stunden-Pflege in Mönchengladbach | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Mönchengladbach und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 493,
+  "dPx": 911
+ },
+ "24h-pflege-moers": {
+  "ort": "Moers",
+  "titel": "24-Stunden-Pflege in Moers | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Moers und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 497,
+  "dPx": 911
+ },
+ "24h-pflege-muehldorf": {
+  "ort": "Mühldorf am Inn",
+  "titel": "24-Stunden-Pflege in Mühldorf am Inn | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Mühldorf am Inn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 474,
+  "dPx": 898
+ },
+ "24h-pflege-muelheim-ruhr": {
+  "ort": "Mülheim an der Ruhr",
+  "titel": "24-Stunden-Pflege in Mülheim an der Ruhr | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Mülheim an der Ruhr und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 516,
+  "dPx": 858
+ },
+ "24h-pflege-muenchen": {
+  "ort": "München",
+  "titel": "24-Stunden-Pflege in München | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in München und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 523,
+  "dPx": 855
+ },
+ "24h-pflege-muenster": {
+  "ort": "Münster",
+  "titel": "24-Stunden-Pflege in Münster | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Münster und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 513,
+  "dPx": 847
+ },
+ "24h-pflege-neubrandenburg": {
+  "ort": "Neubrandenburg",
+  "titel": "24-Stunden-Pflege in Neubrandenburg | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Neubrandenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 479,
+  "dPx": 902
+ },
+ "24h-pflege-neuburg": {
+  "ort": "Neuburg an der Donau",
+  "titel": "24-Stunden-Pflege in Neuburg an der Donau | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Neuburg an der Donau und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 533,
+  "dPx": 870
+ },
+ "24h-pflege-neumarkt": {
+  "ort": "Neumarkt i.d.OPf.",
+  "titel": "24-Stunden-Pflege in Neumarkt i.d.OPf. | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Neumarkt i.d.OPf. und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 488,
+  "dPx": 908
+ },
+ "24h-pflege-neuss": {
+  "ort": "Neuss",
+  "titel": "24-Stunden-Pflege in Neuss | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Neuss und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 498,
+  "dPx": 911
+ },
+ "24h-pflege-neustadt-weinstrasse": {
+  "ort": "Neustadt an der Weinstraße",
+  "titel": "24-Stunden-Pflege in Neustadt an der Weinstraße | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Neustadt an der Weinstraße und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 579,
+  "dPx": 902
+ },
+ "24h-pflege-niedersachsen": {
+  "ort": "Niedersachsen",
+  "titel": "24-Stunden-Pflege in Niedersachsen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Niedersachsen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 575,
+  "dPx": 890
+ },
+ "24h-pflege-nordrhein-westfalen": {
+  "ort": "Nordrhein-Westfalen",
+  "titel": "24-Stunden-Pflege in Nordrhein-Westfalen | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Nordrhein-Westfalen und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 512,
+  "dPx": 856
+ },
+ "24h-pflege-nuernberg": {
+  "ort": "Nürnberg",
+  "titel": "24-Stunden-Pflege in Nürnberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Nürnberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 525,
+  "dPx": 855
+ },
+ "24h-pflege-nuertingen": {
+  "ort": "Nürtingen",
+  "titel": "24-Stunden-Pflege in Nürtingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Nürtingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 528,
+  "dPx": 858
+ },
+ "24h-pflege-oberhausen": {
+  "ort": "Oberhausen",
+  "titel": "24-Stunden-Pflege in Oberhausen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Oberhausen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 551,
+  "dPx": 874
+ },
+ "24h-pflege-offenbach": {
+  "ort": "Offenbach",
+  "titel": "24-Stunden-Pflege in Offenbach | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Offenbach und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 533,
+  "dPx": 861
+ },
+ "24h-pflege-offenburg": {
+  "ort": "Offenburg",
+  "titel": "24-Stunden-Pflege in Offenburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Offenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 530,
+  "dPx": 859
+ },
+ "24h-pflege-oldenburg": {
+  "ort": "Oldenburg",
+  "titel": "24-Stunden-Pflege in Oldenburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Oldenburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 535,
+  "dPx": 862
+ },
+ "24h-pflege-osnabrueck": {
+  "ort": "Osnabrück",
+  "titel": "24-Stunden-Pflege in Osnabrück | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Osnabrück und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 538,
+  "dPx": 865
+ },
+ "24h-pflege-paderborn": {
+  "ort": "Paderborn",
+  "titel": "24-Stunden-Pflege in Paderborn | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Paderborn und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 535,
+  "dPx": 862
+ },
+ "24h-pflege-passau": {
+  "ort": "Passau",
+  "titel": "24-Stunden-Pflege in Passau | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Passau und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 508,
+  "dPx": 918
+ },
+ "24h-pflege-pfaffenhofen": {
+  "ort": "Pfaffenhofen",
+  "titel": "24-Stunden-Pflege in Pfaffenhofen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Pfaffenhofen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 554,
+  "dPx": 876
+ },
+ "24h-pflege-pforzheim": {
+  "ort": "Pforzheim & Enzkreis",
+  "titel": "24-Stunden-Pflege in Pforzheim & Enzkreis | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Pforzheim & Enzkreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 520,
+  "dPx": 861
+ },
+ "24h-pflege-pirmasens": {
+  "ort": "Pirmasens",
+  "titel": "24-Stunden-Pflege in Pirmasens | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Pirmasens und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 536,
+  "dPx": 863
+ },
+ "24h-pflege-potsdam": {
+  "ort": "Potsdam",
+  "titel": "24-Stunden-Pflege in Potsdam | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Potsdam und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 520,
+  "dPx": 852
+ },
+ "24h-pflege-prien": {
+  "ort": "Prien am Chiemsee",
+  "titel": "24-Stunden-Pflege in Prien am Chiemsee | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Prien am Chiemsee und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 505,
+  "dPx": 920
+ },
+ "24h-pflege-ratingen": {
+  "ort": "Ratingen",
+  "titel": "24-Stunden-Pflege in Ratingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Ratingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 521,
+  "dPx": 853
+ },
+ "24h-pflege-ravensburg": {
+  "ort": "Ravensburg",
+  "titel": "24-Stunden-Pflege in Ravensburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Ravensburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 549,
+  "dPx": 872
+ },
+ "24h-pflege-recklinghausen": {
+  "ort": "Recklinghausen",
+  "titel": "24-Stunden-Pflege in Recklinghausen | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Recklinghausen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 472,
+  "dPx": 897
+ },
+ "24h-pflege-regensburg": {
+  "ort": "Regensburg",
+  "titel": "24-Stunden-Pflege in Regensburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Regensburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 550,
+  "dPx": 873
+ },
+ "24h-pflege-remscheid": {
+  "ort": "Remscheid",
+  "titel": "24-Stunden-Pflege in Remscheid | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Remscheid und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 541,
+  "dPx": 867
+ },
+ "24h-pflege-reutlingen": {
+  "ort": "Reutlingen",
+  "titel": "24-Stunden-Pflege in Reutlingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Reutlingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 537,
+  "dPx": 864
+ },
+ "24h-pflege-rhein-pfalz-kreis": {
+  "ort": "Rhein-Pfalz-Kreis",
+  "titel": "24-Stunden-Pflege im Rhein-Pfalz-Kreis | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung im Rhein-Pfalz-Kreis und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 490,
+  "dPx": 910
+ },
+ "24h-pflege-rheinisch-bergischer-kreis": {
+  "ort": "Rheinisch-Bergischer Kreis",
+  "titel": "24-Stunden-Pflege im Rheinisch-Bergischen Kreis | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung im Rheinisch-Bergischen Kreis und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 580,
+  "dPx": 903
+ },
+ "24h-pflege-rheinland-pfalz": {
+  "ort": "Rheinland-Pfalz",
+  "titel": "24-Stunden-Pflege in Rheinland-Pfalz | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Rheinland-Pfalz und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 470,
+  "dPx": 896
+ },
+ "24h-pflege-rosenheim": {
+  "ort": "Rosenheim",
+  "titel": "24-Stunden-Pflege in Rosenheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Rosenheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 542,
+  "dPx": 868
+ },
+ "24h-pflege-rostock": {
+  "ort": "Rostock",
+  "titel": "24-Stunden-Pflege in Rostock | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Rostock und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 513,
+  "dPx": 847
+ },
+ "24h-pflege-ruesselsheim": {
+  "ort": "Rüsselsheim",
+  "titel": "24-Stunden-Pflege in Rüsselsheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Rüsselsheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 556,
+  "dPx": 877
+ },
+ "24h-pflege-saarbruecken": {
+  "ort": "Saarbrücken",
+  "titel": "24-Stunden-Pflege in Saarbrücken | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Saarbrücken und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 555,
+  "dPx": 876
+ },
+ "24h-pflege-saarland": {
+  "ort": "Saarland",
+  "titel": "24-Stunden-Pflege im Saarland | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung im Saarland und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 527,
+  "dPx": 857
+ },
+ "24h-pflege-sachsen-anhalt": {
+  "ort": "Sachsen-Anhalt",
+  "titel": "24-Stunden-Pflege in Sachsen-Anhalt | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Sachsen-Anhalt und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 470,
+  "dPx": 896
+ },
+ "24h-pflege-sachsen": {
+  "ort": "Sachsen",
+  "titel": "24-Stunden-Pflege in Sachsen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Sachsen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 519,
+  "dPx": 851
+ },
+ "24h-pflege-salzgitter": {
+  "ort": "Salzgitter",
+  "titel": "24-Stunden-Pflege in Salzgitter | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Salzgitter und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 525,
+  "dPx": 855
+ },
+ "24h-pflege-schleswig-holstein": {
+  "ort": "Schleswig-Holstein",
+  "titel": "24-Stunden-Pflege in Schleswig-Holstein | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Schleswig-Holstein und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 498,
+  "dPx": 915
+ },
+ "24h-pflege-schweinfurt": {
+  "ort": "Schweinfurt",
+  "titel": "24-Stunden-Pflege in Schweinfurt | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Schweinfurt und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 546,
+  "dPx": 870
+ },
+ "24h-pflege-schwerin": {
+  "ort": "Schwerin",
+  "titel": "24-Stunden-Pflege in Schwerin | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Schwerin und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 523,
+  "dPx": 854
+ },
+ "24h-pflege-siegen": {
+  "ort": "Siegen",
+  "titel": "24-Stunden-Pflege in Siegen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Siegen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 503,
+  "dPx": 915
+ },
+ "24h-pflege-sindelfingen": {
+  "ort": "Sindelfingen",
+  "titel": "24-Stunden-Pflege in Sindelfingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Sindelfingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 551,
+  "dPx": 874
+ },
+ "24h-pflege-singen": {
+  "ort": "Singen",
+  "titel": "24-Stunden-Pflege in Singen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Singen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 503,
+  "dPx": 915
+ },
+ "24h-pflege-solingen": {
+  "ort": "Solingen",
+  "titel": "24-Stunden-Pflege in Solingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Solingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 519,
+  "dPx": 851
+ },
+ "24h-pflege-speyer": {
+  "ort": "Speyer",
+  "titel": "24-Stunden-Pflege in Speyer | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Speyer und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 505,
+  "dPx": 916
+ },
+ "24h-pflege-starnberg": {
+  "ort": "Starnberg",
+  "titel": "24-Stunden-Pflege in Starnberg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Starnberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 529,
+  "dPx": 858
+ },
+ "24h-pflege-stralsund": {
+  "ort": "Stralsund",
+  "titel": "24-Stunden-Pflege in Stralsund | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Stralsund und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 526,
+  "dPx": 856
+ },
+ "24h-pflege-straubing": {
+  "ort": "Straubing",
+  "titel": "24-Stunden-Pflege in Straubing | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Straubing und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 527,
+  "dPx": 857
+ },
+ "24h-pflege-stuttgart": {
+  "ort": "Stuttgart",
+  "titel": "24-Stunden-Pflege in Stuttgart | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Stuttgart und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 517,
+  "dPx": 850
+ },
+ "24h-pflege-thueringen": {
+  "ort": "Thüringen",
+  "titel": "24-Stunden-Pflege in Thüringen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Thüringen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 531,
+  "dPx": 860
+ },
+ "24h-pflege-traunstein": {
+  "ort": "Traunstein",
+  "titel": "24-Stunden-Pflege in Traunstein | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Traunstein und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 535,
+  "dPx": 863
+ },
+ "24h-pflege-trier": {
+  "ort": "Trier",
+  "titel": "24-Stunden-Pflege in Trier | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Trier und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 482,
+  "dPx": 900
+ },
+ "24h-pflege-troisdorf": {
+  "ort": "Troisdorf",
+  "titel": "24-Stunden-Pflege in Troisdorf | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Troisdorf und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 519,
+  "dPx": 852
+ },
+ "24h-pflege-tuebingen": {
+  "ort": "Tübingen",
+  "titel": "24-Stunden-Pflege in Tübingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Tübingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 525,
+  "dPx": 855
+ },
+ "24h-pflege-ulm": {
+  "ort": "Ulm",
+  "titel": "24-Stunden-Pflege in Ulm | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Ulm und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 477,
+  "dPx": 897
+ },
+ "24h-pflege-unterschleissheim": {
+  "ort": "Unterschleissheim",
+  "titel": "24-Stunden-Pflege in Unterschleissheim | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Unterschleissheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 493,
+  "dPx": 911
+ },
+ "24h-pflege-vaterstetten": {
+  "ort": "Vaterstetten",
+  "titel": "24-Stunden-Pflege in Vaterstetten | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Vaterstetten und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 548,
+  "dPx": 871
+ },
+ "24h-pflege-velbert": {
+  "ort": "Velbert",
+  "titel": "24-Stunden-Pflege in Velbert | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Velbert und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 503,
+  "dPx": 915
+ },
+ "24h-pflege-viersen": {
+  "ort": "Viersen",
+  "titel": "24-Stunden-Pflege in Viersen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Viersen und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 509,
+  "dPx": 919
+ },
+ "24h-pflege-villingen-schwenningen": {
+  "ort": "Villingen-Schwenningen",
+  "titel": "24-Stunden-Pflege in Villingen-Schwenningen | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Villingen-Schwenningen und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 542,
+  "dPx": 877
+ },
+ "24h-pflege-waiblingen": {
+  "ort": "Waiblingen",
+  "titel": "24-Stunden-Pflege in Waiblingen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Waiblingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 539,
+  "dPx": 866
+ },
+ "24h-pflege-waldshut-tiengen": {
+  "ort": "Waldshut-Tiengen",
+  "titel": "24-Stunden-Pflege in Waldshut-Tiengen | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Waldshut-Tiengen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 2,
+  "tPx": 490,
+  "dPx": 909
+ },
+ "24h-pflege-weiden": {
+  "ort": "Weiden i.d. Oberpfalz",
+  "titel": "24-Stunden-Pflege in Weiden i.d. Oberpfalz | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Weiden i.d. Oberpfalz und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 521,
+  "dPx": 862
+ },
+ "24h-pflege-weilheim-schongau": {
+  "ort": "Weilheim-Schongau",
+  "titel": "24-Stunden-Pflege in Weilheim-Schongau | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Weilheim-Schongau und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 508,
+  "dPx": 853
+ },
+ "24h-pflege-weilheim": {
+  "ort": "Weilheim",
+  "titel": "24-Stunden-Pflege in Weilheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Weilheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 523,
+  "dPx": 854
+ },
+ "24h-pflege-weinheim": {
+  "ort": "Weinheim",
+  "titel": "24-Stunden-Pflege in Weinheim | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Weinheim und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 530,
+  "dPx": 859
+ },
+ "24h-pflege-wiesbaden-umland": {
+  "ort": "Wiesbaden & Umland",
+  "titel": "24-Stunden-Pflege in Wiesbaden & Umland | 6× Testsieger",
+  "beschreibung": "Liebevolle Betreuung in Wiesbaden & Umland und Entlastung für Angehörige. Geprüfte Kräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 1,
+  "dStufe": 3,
+  "tPx": 523,
+  "dPx": 863
+ },
+ "24h-pflege-wiesbaden": {
+  "ort": "Wiesbaden",
+  "titel": "24-Stunden-Pflege in Wiesbaden | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Wiesbaden und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 541,
+  "dPx": 867
+ },
+ "24h-pflege-witten": {
+  "ort": "Witten",
+  "titel": "24-Stunden-Pflege in Witten | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Witten und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 498,
+  "dPx": 911
+ },
+ "24h-pflege-wittmund": {
+  "ort": "Wittmund",
+  "titel": "24-Stunden-Pflege in Wittmund | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Wittmund und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 526,
+  "dPx": 856
+ },
+ "24h-pflege-wolfratshausen": {
+  "ort": "Wolfratshausen",
+  "titel": "24-Stunden-Pflege in Wolfratshausen | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Wolfratshausen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 580,
+  "dPx": 894
+ },
+ "24h-pflege-wolfsburg": {
+  "ort": "Wolfsburg",
+  "titel": "24-Stunden-Pflege in Wolfsburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Wolfsburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 531,
+  "dPx": 860
+ },
+ "24h-pflege-worms": {
+  "ort": "Worms",
+  "titel": "24-Stunden-Pflege in Worms | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Worms und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 1,
+  "tPx": 504,
+  "dPx": 916
+ },
+ "24h-pflege-wuerzburg": {
+  "ort": "Würzburg",
+  "titel": "24-Stunden-Pflege in Würzburg | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Würzburg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 528,
+  "dPx": 858
+ },
+ "24h-pflege-wuppertal": {
+  "ort": "Wuppertal",
+  "titel": "24-Stunden-Pflege in Wuppertal | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Wuppertal und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 532,
+  "dPx": 860
+ },
+ "24h-pflege-zwickau": {
+  "ort": "Zwickau",
+  "titel": "24-Stunden-Pflege in Zwickau | 6× Testsieger | Primundus",
+  "beschreibung": "Liebevolle Betreuung in Zwickau und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.",
+  "tStufe": 0,
+  "dStufe": 2,
+  "tPx": 515,
+  "dPx": 848
+ }
+}

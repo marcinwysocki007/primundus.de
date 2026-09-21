@@ -11,7 +11,12 @@ const WARN_ONLY = process.argv.includes('--warn-only')
 
 // Muster: [Beschreibung, Regex, erlaubte Dateien (Regex) — z. B. dieser Check selbst]
 const STALE = [
+  // Pflegegeld seit 01.01.2025, § 37 Abs. 1 SGB XI: 347 / 599 / 800 / 990 €. Alle vier alten Werte
+  // gesperrt (Martin 21.09.: „die Pflegegeld-Beträge müssen natürlich aktuell sein und überall
+  // gleich"); geprüft am 21.09.2026: 1.026 Angaben im Bestand, null Abweichungen.
+  ['Pflegegeld PG2 alt (332 €, 2024)', /332\s*€/g],
   ['Pflegegeld PG3 alt (573 €, 2024)', /573\s*€/g],
+  ['Pflegegeld PG4 alt (765 €, 2024)', /765\s*€/g],
   ['Pflegegeld PG5 alt (947 €, 2024)', /947\s*€/g],
   ['Verhinderungspflege alt (1.612 €)', /1\.612\s*€/g],
   ['Verhinderungspflege alt (1.774 € Kurzzeit)', /1\.774\s*€/g],
@@ -33,6 +38,11 @@ const STALE = [
   // 207 Ortsseiten. Die Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien bleiben erlaubt:
   // Diese Regel trifft nur die Aufzählung, mit der wir eigene Kräfte beschreiben.
   ['Herkunft aufgezählt (nur Polen)', /(?:einige|überwiegend|teils|auch)\s+aus\s+(?:Rumänien|Bulgarien)/g],
+  // Zensus-Haushaltstyp HHTYP_SENIOR_HH__1 heißt „Haushalte mit ausschließlich Seniorinnen/Senioren",
+  // Senior = 65. Lebensjahr vollendet (Methodikblatt der Regionaltabelle Haushalte). Das Ehepaar mit 70 und
+  // 72 ist so ein Haushalt — „nachts ist niemand da" behauptet deshalb mehr, als die Zahl hergibt, und zwar
+  // zugunsten des eigenen Angebots. Stand am 21.09. auf 152 Ortsseiten (Codemod 24).
+  ['Senioren-Haushalt als „niemand da" gedeutet', /(?:ist|lebt|wohnt)\s+(?:nachts\s+)?niemand\s+(?:mehr\s+)?da[^.]{0,60}einspringen/g],
 ]
 
 const SCAN_DIRS = ['app', 'components', 'lib']
