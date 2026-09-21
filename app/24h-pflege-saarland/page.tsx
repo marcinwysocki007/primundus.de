@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
@@ -45,7 +45,7 @@ const FRAGEN = [
   { q: 'Bekomme ich im Saarland überhaupt einen ambulanten Pflegedienst?', a: 'Das ist im Saarland schwerer als in jedem anderen Bundesland. Nur 14,8 Prozent der Pflegebedürftigen werden ambulant versorgt — der niedrigste Wert aller sechzehn Länder —, und auf einen Dienst kommen rund 90 Pflegebedürftige gegenüber 71 im Bund, ebenfalls der Höchstwert. Zwischen 2021 und 2023 ist die Zahl der ambulant versorgten Menschen sogar gesunken, bei gleichzeitig 9.800 zusätzlichen Pflegebedürftigen. Am ausgeprägtesten ist das im Saarpfalz-Kreis, wo nur 10,1 Prozent einen Dienst in Anspruch nehmen. Eine Betreuungskraft im Haushalt ist deshalb im Saarland oft nicht die Ergänzung zum Pflegedienst, sondern die realistischere Alternative.' },
   { q: 'Was kostet eine 24h-Pflegekraft in Saarland?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz im Saarland (Eigenanteil rund 3.690 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Saarland starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Saarland — auch in ländlichen Regionen.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Saarland rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Ist in einer Wohnung in Saarland Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Saarland hat im Schnitt 107,1 m², 13,7 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 88,3 % der Gebäude in Saarland sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Deutschland insgesamt zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.364 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.441 € Unterschied im Monat, 29.292 € im Jahr.' },
@@ -113,7 +113,7 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Saarland auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Saarland" titel="Ihre Ansprechpartnerin für Saarland" />}
+          person={<AnsprechpartnerinGross ort="Saarland" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

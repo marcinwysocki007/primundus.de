@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Greifswald?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Mecklenburg-Vorpommern (Eigenanteil rund 3.030 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Greifswald starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Greifswald rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie viele ältere Menschen leben in Greifswald?', a: '6.370 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,5 Prozent — in Mecklenburg-Vorpommern 12,6 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 23,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Mecklenburg-Vorpommern: 28,5 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Wie wohnt man in Greifswald — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Greifswald im Schnitt 4,6 Wohnungen, in Mecklenburg-Vorpommern 2,2. 39,2 Prozent der Gebäude stehen frei, 43,8 Prozent sind Reihenhäuser. 30,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Greifswald ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie wohnt man in Greifswald — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Greifswald im Schnitt 4,6 Wohnungen, in Mecklenburg-Vorpommern 2,2. 39,2 Prozent der Gebäude stehen frei, 43,8 Prozent stehen in geschlossener Reihe. 30,1 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Greifswald ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Greifswald bedient?', a: 'Greifswald und Landkreis Vorpommern-Greifswald: Anklam, Wolgast, Usedom und alle Gemeinden im Landkreis Vorpommern-Greifswald' },
   { q: 'Ist in einer Wohnung in Greifswald Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Greifswald hat im Schnitt 66,4 m², 51,9 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 58,1 % der Gebäude in Greifswald sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Mecklenburg-Vorpommern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.030 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.107 € Unterschied im Monat, 25.284 € im Jahr.' },
@@ -117,13 +117,13 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Greifswald auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Greifswald" titel="Ihre Ansprechpartnerin für Greifswald" />}
+          person={<AnsprechpartnerinGross ort="Greifswald" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Greifswald bedeutet">
             <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
               auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
               Heim, wo der Umzug ansteht. Das Zuhause in Greifswald bleibt, der gewohnte Tagesablauf auch.
             </Text>
@@ -181,7 +181,7 @@ export default function Page() {
 
           <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Greifswald ausmacht">
             <Text>Greifswald ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 4,6 Wohnungen, in Mecklenburg-Vorpommern 2,2. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Greifswald häufiger als anderswo. Gut jede zweite Wohnung ist kleiner als 60 Quadratmeter — in Mecklenburg-Vorpommern sind es 33,3 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.</Text>
-            <Text>In Greifswald wohnen nur 18,8 Prozent der Haushalte im Eigentum, in Mecklenburg-Vorpommern 39,5 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. 43,8 Prozent der Gebäude in Greifswald sind Reihenhäuser — in Mecklenburg-Vorpommern 17,6 Prozent. Schmaler Grundriss, steile Treppe, Schlafzimmer und Bad im Obergeschoss: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
+            <Text>In Greifswald wohnen nur 18,8 Prozent der Haushalte im Eigentum, in Mecklenburg-Vorpommern 39,5 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. 43,8 Prozent der Gebäude in Greifswald stehen in geschlossener Reihe, an beiden Seiten angebaut — in Mecklenburg-Vorpommern 17,6 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
             <Text>Die durchschnittliche Wohnung misst 66,4 Quadratmeter gegenüber 82,5 in Mecklenburg-Vorpommern — rund 16 Quadratmeter weniger. 58,4 Prozent aller Haushalte in Greifswald bestehen aus einer einzigen Person, in Mecklenburg-Vorpommern sind es 46,0 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Nur 39,2 Prozent der Gebäude stehen frei, in Mecklenburg-Vorpommern sind es 63,6 Prozent.</Text>
             <Text>In Zahlen: 6.370 Menschen in Greifswald sind 75 Jahre oder älter, und es gibt 35.597 Wohnungen in 7.705 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
             <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, trägerunabhängig und kommt auf Wunsch zu Ihnen nach Hause.</Text>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -110,7 +110,7 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Rhein-Pfalz-Kreis auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Rhein-Pfalz-Kreis" titel="Ihre Ansprechpartnerin für Rhein-Pfalz-Kreis" />}
+          person={<AnsprechpartnerinGross ort="Rhein-Pfalz-Kreis" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

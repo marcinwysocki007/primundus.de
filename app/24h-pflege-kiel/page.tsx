@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -45,10 +45,10 @@ export const metadata: Metadata = {
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Kiel?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Schleswig-Holstein (Eigenanteil rund 3.040 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Kiel starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Kiel rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie viele ältere Menschen leben in Kiel?', a: '24.749 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Schleswig-Holstein 12,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 21,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Schleswig-Holstein: 26,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Wie wohnt man in Kiel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Kiel im Schnitt 3,6 Wohnungen, in Schleswig-Holstein 1,8. 32,5 Prozent der Gebäude stehen frei, 46,0 Prozent sind Reihenhäuser. 70,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Kiel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie wohnt man in Kiel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Kiel im Schnitt 3,6 Wohnungen, in Schleswig-Holstein 1,8. 32,5 Prozent der Gebäude stehen frei, 46,0 Prozent stehen in geschlossener Reihe. 70,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Kiel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Warum gibt es in Kiel so viele ambulante Pflegedienste?', a: 'Weil Heimplätze knapp sind. Kiel hat 54 ambulante Dienste bei nur 34 Pflegeheimen, und auf 1.000 Einwohner kommen 8,3 vollstationäre Plätze — im Land sind es 12,8, die dünnste Decke aller vier kreisfreien Städte Schleswig-Holsteins. Entsprechend werden hier 28,6 Prozent der Pflegebedürftigen ambulant betreut (Land: 21,3 Prozent). Kiel ist zudem der einzige Kreis in Schleswig-Holstein, in dem die ambulanten Dienste mehr Personal beschäftigen als die Heime. Zwischen 2021 und 2023 stieg die Zahl der Pflegebedürftigen um 11,9 Prozent, während 86 Heimplätze wegfielen.' },
   { q: 'Welches Einzugsgebiet wird in Kiel bedient?', a: 'Kiel und Umland: Neumünster, Rendsburg, Plön, Preetz und alle Gemeinden im Kreis Rendsburg-Eckernförde und Plön' },
   { q: 'Ist in einer Wohnung in Kiel Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Kiel hat im Schnitt 73,0 m², 42,1 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 67,0 % der Gebäude in Kiel sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -117,13 +117,13 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Kiel auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Kiel" titel="Ihre Ansprechpartnerin für Kiel" />}
+          person={<AnsprechpartnerinGross ort="Kiel" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Kiel bedeutet">
             <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
               auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
               Heim, wo der Umzug ansteht. Das Zuhause in Kiel bleibt, der gewohnte Tagesablauf auch.
             </Text>

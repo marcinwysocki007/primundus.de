@@ -42,6 +42,22 @@ function Haken() {
   )
 }
 
+function BlickKasten({ titel, punkte }: { titel: string; punkte: string[] }) {
+  return (
+    <aside aria-label="Auf einen Blick" className="bg-white rounded-[20px] shadow-lift p-6 md:p-7">
+      <p className={AUGENBRAUE}>{titel}</p>
+      <ul className="mt-4 grid gap-3.5">
+        {punkte.map((b) => (
+          <li key={b} className="flex gap-3 text-[16px] leading-[1.5] font-medium text-pm-ink">
+            <Haken />
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )
+}
+
 export function RatgeberKopf({
   pfad,
   augenbraue,
@@ -53,6 +69,8 @@ export function RatgeberKopf({
   blickTitel = 'Auf einen Blick',
   knopf,
   person,
+  sprung,
+  knopfSchlicht = false,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -78,6 +96,13 @@ export function RatgeberKopf({
    * Namen und Nummer. Auf den Ratgeberseiten bleibt der Kopf wie er ist.
    */
   person?: ReactNode
+  /**
+   * Sprungleiste unter der Einleitung — nur auf den informativen Ortsseiten (Bauplan 21.09.2026:
+   * „Ablauf · Aufgaben · Kosten · Voraussetzungen"). Signalisiert: Das ist eine Erklärseite.
+   */
+  sprung?: { id: string; label: string }[]
+  /** Knopf ohne Gesichterreihe und Sterne — „eher sekundär" (Bauplan 21.09.2026). */
+  knopfSchlicht?: boolean
 }) {
   const zweiSpalten = Boolean(blick?.length) || Boolean(person)
   return (
@@ -96,25 +121,46 @@ export function RatgeberKopf({
           ))}
         </nav>
 
-        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? `lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 ${person ? 'lg:items-start' : 'lg:items-center'}` : 'max-w-[52rem]'}`}>
-          <div className="min-w-0">
+        {/* Mit Ansprechpartnerin drei Felder mit ausdrücklicher Platzierung: Am Rechner stehen Text
+            und Fakten links untereinander, Marta rechts daneben. Auf dem Handy greift die
+            Platzierung nicht, dort zählt die Reihenfolge im Quelltext — Text, Marta, Fakten.
+            Ohne Ansprechpartnerin bleibt der Kopf wie bisher (Text links, Kasten rechts). */}
+        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? `${person && !blick?.length ? 'lg:grid-cols-[minmax(0,1fr)_360px]' : 'lg:grid-cols-[minmax(0,1fr)_400px]'} lg:gap-x-16 ${person ? 'lg:gap-y-8 lg:items-start' : 'lg:items-center'}` : 'max-w-[52rem]'}`}>
+          <div className={`min-w-0 flex flex-col ${person ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
             <p className={AUGENBRAUE}>{augenbraue}</p>
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
               {zusammenhalten(titel)}
             </h1>
-            {/* Auf dem Handy direkt unter die Überschrift (Martin 20.09.: „Marta zentral, oben im
-                Hero"). Nach der Einleitung läge sie bei 698 px und damit halb unter dem Rand eines
-                iPhone-Bildschirms; hier ist sie ganz sichtbar. Ab 1024 px steht sie rechts. */}
-            {person ? (
-              <div className="mt-7 lg:hidden bg-white rounded-[20px] shadow-lift p-6">{person}</div>
-            ) : null}
             {einleitung ? (
               <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
                 {einleitung}
               </p>
             ) : null}
-            {/* Kernseiten: Knopf, Plakette und Sterne wie im Startseiten-Kopf (Martin 18.09.); die Punkte stehen im Kasten rechts */}
-            {knopf ? (
+            {sprung?.length ? (
+              <nav aria-label="Auf dieser Seite" className="mt-6 flex flex-wrap gap-2">
+                {sprung.map((s) => (
+                  <a
+                    key={s.id}
+                    href={`#${s.id}`}
+                    className="inline-flex items-center rounded-full border border-pm-line bg-white px-3.5 py-1.5 text-[14.5px] font-medium text-pm-ink hover:border-pm-taupe hover:text-pm-taupe-ink transition-colors"
+                  >
+                    {s.label}
+                  </a>
+                ))}
+              </nav>
+            ) : null}
+            {knopf && knopfSchlicht ? (
+              <div className="mt-7">
+                <a
+                  href={knopf.href}
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className={`${KNOPF} shadow-[0_10px_24px_-10px_rgba(231,111,99,0.75)]`}
+                >
+                  {knopf.text}&nbsp;→
+                </a>
+              </div>
+            ) : null}
+            {knopf && !person && !knopfSchlicht ? (
               <div className="mt-8">
                 <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
               </div>
@@ -122,35 +168,40 @@ export function RatgeberKopf({
             {/* Ohne `person` keine Marta-Zeile im Kopf (Martin 18.09.: „ohne Button blöd, aber Button
                 wären zu viel") — dann steht sie nur in der Kopfzeile und am Seitenende. Das gilt weiter
                 für alle Seitenarten außer den Ortsseiten. */}
-            {aktualisiert && lesezeit ? (
+            {/* Auf den Ortsseiten steht die Zeile nicht zwischen Einleitung und Ansprechpartnerin,
+                sondern unter dem ganzen Kopf — dort stört sie den Verkaufsteil nicht. */}
+            {aktualisiert && lesezeit && !person ? (
               <p className="mt-7 text-[14px] leading-[1.45] text-pm-mute">
                 <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
               </p>
             ) : null}
           </div>
 
-          {person || blick?.length ? (
-          <div className="grid gap-5">
-            {/* Ansprechpartnerin über den Fakten, nicht darunter. */}
-            {person ? (
-              <div className="hidden lg:block bg-white rounded-[20px] shadow-lift p-6 md:p-7">{person}</div>
-            ) : null}
-            {blick?.length ? (
-            <aside aria-label="Auf einen Blick" className="bg-white rounded-[20px] shadow-lift p-6 md:p-7">
-              <p className={AUGENBRAUE}>{blickTitel}</p>
-              <ul className="mt-4 grid gap-3.5">
-                {blick.map((b) => (
-                  <li key={b} className="flex gap-3 text-[16px] leading-[1.5] font-medium text-pm-ink">
-                    <Haken />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </aside>
-            ) : null}
-          </div>
+          {blick?.length ? (
+            <div className={person ? 'lg:col-start-1 lg:row-start-2' : ''}>
+              <BlickKasten titel={blickTitel} punkte={blick} />
+            </div>
           ) : null}
+          {/* Der Knopf steht erst NACH den Fakten (Martin 20.09.: „dem User die Informationen geben,
+              die er braucht … und dann vielleicht erst Werbung"). Wer in einer akuten Lage sucht,
+              prüft zuerst, ob das Modell passt und was es kostet; ein Knopf davor wirkt wie Verkauf.
+              Auf Seiten ohne Ansprechpartnerin bleibt der Knopf, wo er war — unter der Einleitung. */}
+          {knopf && person && !knopfSchlicht ? (
+            <div className="lg:col-start-1 lg:row-start-3">
+              <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+            </div>
+          ) : null}
+          {/* Zuletzt im Quelltext, damit auf dem Handy erst Information (Fakten), dann Handlung
+              (Knopf) und dann das Gespräch kommt. Am Rechner setzt die Platzierung sie nach oben
+              rechts, über die volle Höhe der linken Spalte. */}
+          {person ? <div className={`lg:col-start-2 lg:row-start-1 lg:row-span-3 ${blick?.length ? 'lg:self-stretch' : 'lg:self-start'}`}>{person}</div> : null}
         </div>
+
+        {aktualisiert && lesezeit && person ? (
+          <p className="mt-8 text-[14px] leading-[1.45] text-pm-mute">
+            <span className="whitespace-nowrap">Aktualisiert am {aktualisiert}</span> · <span className="whitespace-nowrap">{lesezeit} Lesezeit</span>
+          </p>
+        ) : null}
       </div>
     </div>
   )

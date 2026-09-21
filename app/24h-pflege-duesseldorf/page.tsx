@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Düsseldorf?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Nordrhein-Westfalen (Eigenanteil rund 3.580 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Düsseldorf starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Düsseldorf rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Gibt es in Düsseldorf genug Heimplätze als Alternative?', a: 'Weniger als im Landesdurchschnitt. Düsseldorf hat 40 vollstationäre Heimplätze je 1.000 Einwohner über 65, in Nordrhein-Westfalen sind es 46. Beide Kennzahlen zeigen dabei in dieselbe Richtung: Auch der Anteil der Pflegebedürftigen, die im Heim leben, liegt mit 11,3 Prozent unter dem Landeswert von 12,2 Prozent. Bei 40.248 Pflegebedürftigen in der Stadt bedeutet das eine spürbar längere Suche. Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich kurzfristig umsetzen lässt.' },
   { q: 'Funktioniert 24-Stunden-Betreuung in einer Düsseldorfer Nachkriegswohnung?', a: 'Häufig ja — es ist hier sogar der Normalfall. 43,3 Prozent aller Düsseldorfer Wohnungen stammen aus den Jahren 1950 bis 1969, allein 87.521 aus den Fünfzigern; in NRW sind es 33,6 Prozent. Auf ein Gebäude kommen 4,7 Wohnungen. Die typische Ausgangslage ist also eine Mietwohnung im Obergeschoss eines Wiederaufbaus. Gerade wenn die Treppe zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Notwendig ist ein eigenes, abschließbares Zimmer — die durchschnittliche Wohnung misst 77,6 Quadratmeter, gut jede dritte liegt unter 60.' },
@@ -117,13 +117,13 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Düsseldorf auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Düsseldorf" titel="Ihre Ansprechpartnerin für Düsseldorf" />}
+          person={<AnsprechpartnerinGross ort="Düsseldorf" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Düsseldorf bedeutet">
             <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
               auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
               Heim, wo der Umzug ansteht. Das Zuhause in Düsseldorf bleibt, der gewohnte Tagesablauf auch.
             </Text>

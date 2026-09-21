@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
 import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Villingen-Schwenningen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Villingen-Schwenningen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Villingen-Schwenningen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie viele ältere Menschen leben in Villingen-Schwenningen?', a: '9.923 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Baden-Württemberg 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,8 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Baden-Württemberg: 23,6 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Wie wohnt man in Villingen-Schwenningen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Villingen-Schwenningen im Schnitt 2,6 Wohnungen, in Baden-Württemberg 2,1. 53,8 Prozent der Gebäude stehen frei, 21,3 Prozent sind Reihenhäuser. 51,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Villingen-Schwenningen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie wohnt man in Villingen-Schwenningen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Villingen-Schwenningen im Schnitt 2,6 Wohnungen, in Baden-Württemberg 2,1. 53,8 Prozent der Gebäude stehen frei, 21,3 Prozent stehen in geschlossener Reihe. 51,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Villingen-Schwenningen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Macht es einen Unterschied, ob ich in Villingen oder in Schwenningen wohne?', a: 'Für unsere Betreuung nicht — Anreise und Preis sind in beiden Stadtteilen und in allen zehn Ortschaften gleich. Statistisch gibt es den Unterschied aber: Villingen liegt beim Durchschnittsalter bei 44,1 Jahren, Schwenningen bei 42,1, die Ortschaften bei 45,1. Die beiden fast gleich großen Zentren (Villingen 41.136, Schwenningen 36.915 Einwohner) liegen rund fünf Kilometer auseinander und altern unterschiedlich schnell. In der Gesamtstadt leben 19.752 Menschen über 65, das sind 22,1 Prozent.' },
   { q: 'Welches Einzugsgebiet wird in Villingen-Schwenningen bedient?', a: 'Villingen-Schwenningen und Schwarzwald-Baar-Kreis: Donaueschingen, Blumberg, Triberg und alle Gemeinden im Schwarzwald-Baar-Kreis' },
   { q: 'Ist in einer Wohnung in Villingen-Schwenningen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Villingen-Schwenningen hat im Schnitt 91,9 m², 20,4 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 73,1 % der Gebäude in Villingen-Schwenningen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
@@ -118,13 +118,13 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Villingen-Schwenningen auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Villingen-Schwenningen" titel="Ihre Ansprechpartnerin für Villingen-Schwenningen" />}
+          person={<AnsprechpartnerinGross ort="Villingen-Schwenningen" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Villingen-Schwenningen bedeutet">
             <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
               auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
               Heim, wo der Umzug ansteht. Das Zuhause in Villingen-Schwenningen bleibt, der gewohnte Tagesablauf auch.
             </Text>

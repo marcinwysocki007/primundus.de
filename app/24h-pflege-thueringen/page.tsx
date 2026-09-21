@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { CitiesOfRegion } from '@/components/CityIndex'
 import {
   Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
@@ -45,7 +45,7 @@ const FRAGEN = [
   { q: 'Warum wird in Thüringen so viel zu Hause gepflegt?', a: 'Weil kaum etwas anderes übrig bleibt. Zwischen 2017 und 2023 stieg die Zahl der Pflegebedürftigen in Thüringen um 67,7 Prozent, während die Zahl der Menschen im Heim um vier Prozent sank. Der gesamte Zuwachs — rund 78.300 Menschen — landete bei den Familien. Das Land schreibt in seinem Pflegeentwicklungsplan von 2025 selbst: „In mehr als der Hälfte der Fälle betreuen die An- und Zugehörigen die Pflegebedürftigen ohne Unterstützung durch ambulante Pflege- und Betreuungsdienste.“ Erschwerend kommt hinzu, dass die Zahl der 20- bis 65-Jährigen bis 2042 um 14 Prozent sinkt — die Generation, die diese Pflege leisten soll, wird kleiner.' },
   { q: 'Was kostet eine 24h-Pflegekraft in Thüringen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Thüringen (Eigenanteil rund 3.000 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Thüringen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Thüringen — auch in ländlichen Regionen.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Thüringen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Ist in einer Wohnung in Thüringen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Thüringen hat im Schnitt 86,6 m², 27,8 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 84,1 % der Gebäude in Thüringen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Deutschland insgesamt zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.364 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.441 € Unterschied im Monat, 29.292 € im Jahr.' },
@@ -113,7 +113,7 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Thüringen auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Thüringen" titel="Ihre Ansprechpartnerin für Thüringen" />}
+          person={<AnsprechpartnerinGross ort="Thüringen" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

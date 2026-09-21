@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Ansprechpartnerin, KontaktBand } from '@/components/ArticleCTA'
+import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Dresden?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Sachsen (Eigenanteil rund 2.990 €/Monat, vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Dresden starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt 1–3 Mal täglich und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt — ist bei Bedarf auch nachts da, führt den gesamten Haushalt und bietet bei Demenz oder hohem Pflegebedarf die einzige wirklich durchgehende Lösung.' },
+  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Dresden rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Wie viele ältere Menschen leben in Dresden?', a: '69.125 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,4 Prozent — in Sachsen 13,8 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Sachsen: 29,1 Prozent). In diesen Haushalten ist nachts niemand da, der einspringen könnte — genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
-  { q: 'Wie wohnt man in Dresden — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Dresden im Schnitt 5,1 Wohnungen, in Sachsen 2,7. 52,6 Prozent der Gebäude stehen frei, 29,0 Prozent sind Reihenhäuser. 52,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Dresden ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
+  { q: 'Wie wohnt man in Dresden — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Dresden im Schnitt 5,1 Wohnungen, in Sachsen 2,7. 52,6 Prozent der Gebäude stehen frei, 29,0 Prozent stehen in geschlossener Reihe. 52,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Dresden ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'In welchen Dresdner Stadtteilen leben die meisten älteren Menschen?', a: 'Der Unterschied ist größer als in jeder anderen Stadt, die wir uns angesehen haben — Faktor sieben. In Johannstadt-Süd sind 36,3 Prozent der Einwohner über 65, in der Äußeren Neustadt 5,4 Prozent. Ebenfalls weit oben: Kleinpestitz/Mockritz mit 35,1 Prozent, Räcknitz/Zschertnitz und Hosterwitz/Pillnitz mit je 31,2 Prozent. Überraschend ist, dass die Plattenbausiedlungen nicht dazugehören: In Gorbitz und Prohlis leben weiterhin mehr Menschen im Erwerbsalter als über 65 — dort hat sich der Wandel als Wegzug ausgewirkt, nicht als Alterung. Unsere Betreuungskräfte kommen in jeden Stadtteil, Anreise und Preis sind überall gleich.' },
   { q: 'Welches Einzugsgebiet wird in Dresden bedient?', a: 'Dresden und Umland: Pirna, Freital, Radebeul, Meißen, Heidenau und alle Gemeinden im Landkreis Sächsische Schweiz-Osterzgebirge und Meißen' },
   { q: 'Ist in einer Wohnung in Dresden Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Dresden hat im Schnitt 71,2 m², 39,9 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. In Dresden liegen 54,8 % der Wohnungen in Ein- oder Zweifamilienhäusern, der Rest sind Geschosswohnungen — dann zählt, welches Stockwerk und ob es einen Aufzug gibt.' },
@@ -114,13 +114,13 @@ export default function Page() {
             'Anreise in 3 Tagen möglich',
           ]}
           blickTitel="Dresden auf einen Blick"
-          person={<Ansprechpartnerin karte ort="Dresden" titel="Ihre Ansprechpartnerin für Dresden" />}
+          person={<AnsprechpartnerinGross ort="Dresden" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Dresden bedeutet">
             <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, führt den Haushalt, hilft bei Körperpflege und Alltag und ist bei Bedarf
+              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
               auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
               Heim, wo der Umzug ansteht. Das Zuhause in Dresden bleibt, der gewohnte Tagesablauf auch.
             </Text>

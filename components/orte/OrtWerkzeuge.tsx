@@ -23,6 +23,7 @@ export function OrtWerkzeuge({
   land,
   altbau,
   miete,
+  titel,
 }: {
   ort: string
   land: string
@@ -30,15 +31,17 @@ export function OrtWerkzeuge({
   altbau?: number
   /** Nettokaltmiete je m² (Zensus 2022) */
   miete?: number
+  /** Eigene Überschrift, wenn die Seite davor schon einen Kosten-Abschnitt hat (München seit 21.09.) */
+  titel?: string
 }) {
   const heim = HEIM_EIGENANTEIL[land] ?? HEIM_EIGENANTEIL_BUND
   const bayern = land === 'Bayern'
 
   return (
-    <Abschnitt id="werkzeuge" titel={`Was es in ${ort} kostet, und was die Pflegekasse dazugibt`}>
+    <Abschnitt id="werkzeuge" titel={titel ?? `Was es in ${ort} kostet, und was die Pflegekasse dazugibt`}>
       <Text>
-        Einen festen Monatspreis gibt es nicht, und wir nennen hier bewusst keinen: Er richtet sich danach, wie viel Hilfe nötig
-        ist und was Sie von der Betreuungskraft erwarten — wie gut sie Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob
+        Ihr Monatspreis richtet sich danach, wie viel Hilfe nötig ist und was Sie von der Betreuungskraft
+        erwarten — wie gut sie Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob
         nachts jemand aufstehen muss, ob zwei Personen im Haushalt versorgt werden. Was für Sie in {ort} herauskommt, zeigt der
         Kostenrechner in zwei Minuten, zusammen mit den Betreuungskräften, die dafür in Frage kommen.
       </Text>
@@ -55,7 +58,7 @@ export function OrtWerkzeuge({
             ? 'In diesem Bestand fehlt häufiger ein Aufzug, das Bad ist klein und die Treppe steil — genau die Punkte, an denen Alleinleben scheitert und jemand im Haus den Unterschied macht.'
             : 'Ein Teil davon hat keinen Aufzug und ein kleines Bad; das ist oft der Grund, warum es allein nicht mehr geht.'}
           {miete !== undefined
-            ? ` Umziehen ist selten die Antwort: Neu vermietet wird in ${ort} für ${miete.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} € je Quadratmeter.`
+            ? ` Zu Hause bleiben ist meist auch die günstigere Wahl: Schon die Bestandsmiete liegt in ${ort} bei ${miete.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} € je Quadratmeter (Zensus 2022), bei Neuvermietung mehr.`
             : ''}
         </Text>
       )}
