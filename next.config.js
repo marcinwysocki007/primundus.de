@@ -19,6 +19,25 @@ const nextConfig = {
     return [
       // 14.09.2026: /partner-werden hiess die Seite nur einen Vormittag lang (Martin: „umbenennen,
       // auch die URL"). Alte Links (Tests, Uebergaben) landen auf der neuen Adresse, Query bleibt.
+      // 21.09.2026: Fünf alte Adressen liefern 404, obwohl Google sie weiter in den
+      // Ergebnissen zeigt — zusammen 249 Impressionen und SECHS echte Klicks, die auf
+      // einer Fehlerseite landen. Gefunden beim Durchprüfen aller 205 Seiten mit
+      // Impressionen gegen ihren Live-Status.
+      //
+      // Der wichtigste Fall ist der erste: /24-stunden-pflege/kosten-24-std-pflege rankt
+      // für „24 stunden pflege kosten" (26), „kosten 24 stunden pflege" (13), „was kostet
+      // eine 24 stunden pflege" (8) — also genau die Anfragen, die /kosten besitzen soll,
+      // während /kosten selbst in 13 Monaten keine einzige Impression hatte. Die
+      // Weiterleitung gibt dieses Signal dorthin, wo es hingehört.
+      //
+      // Risikolos, weil die Quellen 404 liefern: Es gibt nichts zu verlieren, nur etwas
+      // einzusammeln. (Die Lehre vom 03.09. — nie die stärkere in die schwächere Seite
+      // umleiten — greift hier nicht, weil die Quelle gar nicht existiert.)
+      { source: '/24-stunden-pflege/kosten-24-std-pflege', destination: '/kosten', permanent: true },
+      { source: '/24-stunden-pflege/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
+      { source: '/pflegekraft-polen-premium', destination: '/pflegekraft-aus-polen', permanent: true },
+      { source: '/vermittler-kooperation', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
+      { source: '/faqs', destination: '/ratgeber', permanent: true },
       { source: '/partner-werden', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
       { source: '/partner-werden/agb', destination: '/pflegekraefte-fuer-vermittler/agb', permanent: true },
       // 20.09.2026 (Martins Freigabe „go fuer das Ersetzen der alten Versionen"): zwei Seiten, die dasselbe
