@@ -29,12 +29,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Moers | 6× Testsieger | Primundus',
-  description: 'Liebevolle Betreuung in Moers und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte für Moers und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-moers' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Moers | 6× Testsieger | Primundus',
-    description: 'Liebevolle Betreuung in Moers und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte für Moers und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-moers',
     siteName: 'Primundus',
     locale: 'de_DE',

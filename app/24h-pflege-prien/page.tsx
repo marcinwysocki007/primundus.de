@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Prien am Chiemsee | 6× Testsieger',
-  description: 'Liebevolle Betreuung in Prien am Chiemsee und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-prien' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Prien am Chiemsee | 6× Testsieger',
-    description: 'Liebevolle Betreuung in Prien am Chiemsee und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-prien',
     siteName: 'Primundus',
     locale: 'de_DE',

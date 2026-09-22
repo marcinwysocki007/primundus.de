@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bamberg | 6× Testsieger | Primundus',
-  description: 'Liebevolle Betreuung in Bamberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte für Bamberg und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bamberg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Bamberg | 6× Testsieger | Primundus',
-    description: 'Liebevolle Betreuung in Bamberg und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte für Bamberg und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bamberg',
     siteName: 'Primundus',
     locale: 'de_DE',

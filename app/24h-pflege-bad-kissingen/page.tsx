@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bad Kissingen | 6× Testsieger | Primundus',
-  description: 'Liebevolle Betreuung in Bad Kissingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte für Bad Kissingen und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-bad-kissingen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Bad Kissingen | 6× Testsieger | Primundus',
-    description: 'Liebevolle Betreuung in Bad Kissingen und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte für Bad Kissingen und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-bad-kissingen',
     siteName: 'Primundus',
     locale: 'de_DE',
