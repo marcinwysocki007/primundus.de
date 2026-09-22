@@ -29,12 +29,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Landshut und im Landkreis | 6× Testsieger',
+  title: '24-Stunden-Pflege in Landshut und Landkreis | 6× Testsieger',
   description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Landshut in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-landshut' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Landshut und im Landkreis | 6× Testsieger',
+    title: '24-Stunden-Pflege in Landshut und Landkreis | 6× Testsieger',
     description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Landshut in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-landshut',
     siteName: 'Primundus',

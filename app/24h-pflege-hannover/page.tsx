@@ -28,12 +28,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Hannover | 6× Testsieger | Primundus',
+  title: '24-Stunden-Pflege und Betreuung in Hannover | 6× Testsieger',
   description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Hannover in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hannover' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Hannover | 6× Testsieger | Primundus',
+    title: '24-Stunden-Pflege und Betreuung in Hannover | 6× Testsieger',
     description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Hannover in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-hannover',
     siteName: 'Primundus',
