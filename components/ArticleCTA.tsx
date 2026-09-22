@@ -249,6 +249,18 @@ export function AnsprechpartnerinGross({
         <p className="mt-4 text-[14px] leading-[1.45] text-pm-body/65">
           Von der ersten Frage bis zum Start Ihrer Betreuung.
         </p>
+        {/* Bewertungssterne in den Kopf (Martin 22.09.: „und natürlich die bewertungs-sterne, wenn
+            wir optisch was zeigen"). Gemessen am selben Tag: Auf den Ortsseiten standen sie erst bei
+            86 bis 89 Prozent Scrolltiefe, unten im Schlussband — wer nicht bis zum Ende scrollt, sah
+            nie, dass 126 Familien uns mit 4,9 bewertet haben.
+            Warum hier und nicht am Knopf: 207 der 214 Ortsseiten haben gar keinen Knopf im Kopf,
+            sondern Marta (`person` ohne `knopf`); ohne Knopf kein RechnerBlock und damit keine Sterne.
+            Diese Karte ist auf allen 207 das optische Element im Kopf.
+            BewertungsZeile holt den Stand selbst und liefert `null`, wenn keine Zahl da ist —
+            ein Ersatzwert stünde sonst irgendwann veraltet auf 207 Seiten. */}
+        <div className="mt-4 pt-4 border-t border-pm-line">
+          <BewertungsZeile />
+        </div>
         {/* Eigener Block mit Trennlinie: Die Adresse gehört zum Büro, nicht zu Marta — sonst liest
             es sich, als säße sie dort (OpenAI-Prüfung 21.09.). */}
         {adresse ? (
