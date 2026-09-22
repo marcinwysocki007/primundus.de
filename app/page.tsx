@@ -6,53 +6,44 @@ import {
   BekanntAus, HeimVergleich, RundumVersorgt, SoFunktionierts, StartKopf, Voraussetzungen, WasIst,
 } from '@/components/start/Startseite'
 
-// Titel und Beschreibung geaendert am 01.09.2026, Freigabe Martin.
+// Snippet der Startseite, 22.09.2026 — Wortlaut von Martin, unveraendert uebernommen.
 //
-// Grund aus der Search Console: "24 stunden pflege testsieger" und die
-// Schreibvariante bringen zusammen 1.011 Impressionen auf Position 9 -- und
-// VIER Klicks. Es rankt die Startseite, weil die eigentlich zustaendige Seite
-// /testsieger-24-stunden-pflege nicht im Index ist. Im alten Titel kam das
-// Wort "Testsieger" nicht vor, in der Beschreibung stand es ganz am Ende.
+// Der Anlass steht in der Search Console: Die Startseite rankt fuer Polen-Anfragen weit vorn
+// und bekommt NULL Klicks. 497 Impressionen in 90 Tagen, davon 105 auf "polnische
+// pflegekraefte vermittlung muenchen" (Position 3,3) und 20 auf "polnische pflegekraft
+// muenchen" (Position 2,4). Der bisherige Titel nannte Polen nicht.
 //
-// Insgesamt zieht die Startseite 185 Anfragen und 2.349 Impressionen, liefert
-// aber nur 68 Klicks -- und 64 davon kommen von der Markensuche "primundus".
-// Fuer alles andere also 2.205 Impressionen und vier Klicks.
+// Gemessen in Googles Darstellungsgroessen (Arial, Titel 20px/580px, Beschreibung 14px/920px):
+//   Titel        473 px — 107 px Luft.
+//   Beschreibung 851 px —  69 px Luft.
+// Beides passt vollstaendig, deshalb steht in openGraph derselbe Wortlaut.
 //
-// Martins Vorgabe war "Sofortpreis und Pflegekraefte sofort ansehen beim
-// 6-fachen Testsieger". Uebernommen ist die Substanz, aber "24-Stunden-Pflege"
-// bleibt vorn: Ohne den Kopfbegriff passt der Titel nicht mehr auf die
-// Anfrage, um die es geht. 65 Zeichen, rund 485 px -- unter Googles Schnitt.
+// Zwei Punkte, die die SEITE noch schuldig bleibt (Befund 22.09., OpenAI + eigene Messung):
+//   1. Das Wort "polnisch" kommt im sichtbaren Text der Startseite genau EINMAL vor, weit
+//      unten vor den haeufigen Fragen. Wer auf "Polnische Pflegekraefte" klickt, findet das
+//      Wort ueber der Falz nicht wieder.
+//   2. "sofort ansehen" wird erst im Kostenrechner eingeloest, also einen Klick spaeter.
+//      Ueber der Falz steht das Versprechen ("welche Pflegekraefte verfuegbar sind"), nicht
+//      die Sache selbst.
+// Beides erhoeht die Wahrscheinlichkeit, dass Google den Titel umschreibt, und ist als
+// naechster Schritt bei Martin vorgelegt. Die H1 "Ihre Eltern muessen nicht ins Heim."
+// bleibt unangetastet.
 //
-// Nachtrag 03.09.2026, Martin: "Preis" bleibt im Titel, "Kosten" nur in der
-// Beschreibung. Die Daten sagen zwar 1.361 Impressionen fuer Anfragen mit
-// "kosten" gegen 10 mit "preis" -- aber die Aufteilung ist schluessig: "Preis
-// sofort sehen" ist ein Versprechen, "Kosten sehen" klingt nach schlechter
-// Nachricht. Der Suchbegriff sitzt in der Beschreibung, das Versprechen im
-// Titel. Ausserdem raus: das doppelte "6x Testsieger" (steht schon im Titel).
-// Neu drin: "Polnische Pflegekraefte" -- 1.174 Impressionen, Position 3,5 bis
-// 10,2, NULL Klicks, und das Wort kam auf der Startseite bisher nicht vor.
+// Lehre aus dem 01.09.: Damals lautete Martins Vorgabe schon einmal "Sofortpreis und
+// Pflegekraefte sofort ansehen beim 6-fachen Testsieger" — und im Code stand als Begruendung,
+// warum stattdessen "24-Stunden-Pflege" vorn blieb. Vorgegebener Wortlaut ist kein Vorschlag.
 //
-// Beobachtung laeuft: Basiswerte in seo-reports/startseite-basis.json,
-// Nachkontrolle fruehestens drei Wochen nach dem Neu-Crawl.
+// Beobachtung laeuft: Basiswerte in seo-reports/startseite-basis.json, Nachkontrolle
+// fruehestens drei Wochen nach dem Neu-Crawl.
 export const metadata: Metadata = {
-  // Snippet der Startseite, 21.09.2026 — Wortlaut von Martin. Gemessen in Googles
-  // Darstellungsgrößen (Arial, Titel 20px/580px, Beschreibung 14px/920px):
-  //   Titel alt 605 px — wurde abgeschnitten. Titel neu 496 px, 84 px Luft.
-  //   Beschreibung alt 1.024 px — abgeschnitten. Martins Wortlaut 997 px — ebenfalls, und
-  //   zwar mitten in „Bestpreisga…".
-  // Gekürzt wurde deshalb um genau ein Wort: „verfügbare". Ein erster Versuch hatte
-  // stattdessen „im vertrauten" gestrichen — das ist der emotionale Kern des Satzes und
-  // wiegt schwerer als ein Adjektiv. 922 px liegen 2 px über der Faustregel; betroffen wäre
-  // allenfalls der Schlusspunkt, und 920 px sind keine harte Kante.
-  // In openGraph steht der volle Wortlaut, weil soziale Netze mehr Platz zeigen.
-  title: '24-Stunden-Pflege zuhause | 6× Testsieger | Primundus',
-  description: 'Liebevolle Betreuung im vertrauten Zuhause und Entlastung für Angehörige. Geprüfte Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+  title: 'Polnische Pflegekräfte sofort ansehen | 6× Testsieger',
+  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Auswahl vorab, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
-    title: '24-Stunden-Pflege zuhause | 6× Testsieger | Primundus',
-    description: 'Liebevolle Betreuung im vertrauten Zuhause und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+    title: 'Polnische Pflegekräfte sofort ansehen | 6× Testsieger',
+    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Auswahl vorab, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',
