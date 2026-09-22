@@ -28,14 +28,30 @@ const SECTIONS = [
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Worms" },
 ]
 
+// Snippet neu am 22.09.2026 — die Seite steht auf Position 10,4 und bekommt NULL Klicks.
+//
+// Zwei Anfragen tragen die ganze Seite, und die staerkere nennt den KREIS:
+//   „24 stunden pflege in alzey worms“   Position  8,7   105 Impressionen   0 Klicks
+//   „24 stunden pflege in worms“         Position 12,2    96 Impressionen   0 Klicks
+// Unsere eigene Kreis-Seite /24h-pflege-alzey-worms hat in 90 Tagen null Impressionen — die
+// Stadtseite holt die Kreis-Anfrage. Deshalb steht der Kreis jetzt im Titel.
+//
+// „polnische Pflegekraefte“ in der MEHRZAHL (Martin, 22.09.): In der Mehrzahl stehen wir auf
+// Position 21,2, in der Einzahl auf 51,3. Die Einzahl hat zwar mehr Impressionen, aber auf
+// Position 51 sind die wertlos.
+//
+// Gemessen in Googles Darstellungsgroessen: Titel 555 von 580 px, Beschreibung 782 von 920 px.
+// „Auswahl vorab“ ist auf Martins Ansage gestrichen („versteht keiner“). Ein Vorschlag von
+// OpenAI, „4,9/5 (126)“ in die Beschreibung zu nehmen, wurde verworfen: Das waere eine feste
+// Zahl in der Quelldatei, die irgendwann veraltet im Suchergebnis steht.
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Worms | 6× Testsieger | Primundus',
-  description: 'Liebevolle Betreuung in Worms und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Worms und Alzey-Worms | 6× Testsieger',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-worms' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Worms | 6× Testsieger | Primundus',
-    description: 'Liebevolle Betreuung in Worms und Entlastung für Angehörige. Geprüfte, verfügbare Betreuungskräfte & Preis sofort sehen – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege in Worms und Alzey-Worms | 6× Testsieger',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-worms',
     siteName: 'Primundus',
     locale: 'de_DE',

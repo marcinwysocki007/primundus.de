@@ -15,7 +15,11 @@ import {
 //
 // Gemessen in Googles Darstellungsgroessen (Arial, Titel 20px/580px, Beschreibung 14px/920px):
 //   Titel        473 px — 107 px Luft.
-//   Beschreibung 851 px —  69 px Luft.
+//   Beschreibung 751 px — 169 px Luft.
+//
+// Nachtrag 22.09. abends, Martin: „auswahl vorab versteht keiner - kann raus.“
+// Gestrichen, ohne Ersatz. Die frei gewordenen 169 px bleiben vorerst leer — was dort
+// stehen soll, entscheidet er.
 // Beides passt vollstaendig, deshalb steht in openGraph derselbe Wortlaut.
 //
 // Zwei Punkte, die die SEITE noch schuldig bleibt (Befund 22.09., OpenAI + eigene Messung):
@@ -37,13 +41,13 @@ import {
 // fruehestens drei Wochen nach dem Neu-Crawl.
 export const metadata: Metadata = {
   title: 'Polnische Pflegekräfte sofort ansehen | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Auswahl vorab, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
     title: 'Polnische Pflegekräfte sofort ansehen | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Auswahl vorab, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
     locale: 'de_DE',
