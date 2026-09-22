@@ -62,6 +62,17 @@ const vergleichLinks = [
   // 362 interne Links und steht auf Position 12,4 bei 400 Impressionen.
   // Der Unterschied ist nicht der Inhalt, sondern die Erreichbarkeit.
   { label: 'Anbieter-Vergleich', href: '/anbieter-vergleich' },
+  // 22.09.2026 dazugenommen — derselbe Befund wie oben, nur teurer.
+  // „24 stunden pflege testsieger" ist die staerkste Nicht-Marken-Anfrage der ganzen Seite:
+  // 1.270 Impressionen in 90 Tagen, 6 Klicks. Und sie wird kannibalisiert:
+  //     Startseite        1.104 Impressionen  Position 9,4   5 Klicks
+  //     Testsieger-Seite    166 Impressionen  Position 7,1   1 Klick
+  // Die Testsieger-Seite steht BESSER und bekommt ein Zehntel der Auslieferungen. Der Grund
+  // ist wieder die Erreichbarkeit: Sie hatte 12 interne Verweise und stand in keiner
+  // Navigation, die Startseite hat 360.
+  // Der Ankertext traegt bewusst die gesuchte Wendung — die bisherigen Verweise sagten
+  // „Zur Auszeichnung" und „Die Auszeichnung im Detail", also nicht das, wonach gesucht wird.
+  { label: '24-Stunden-Pflege Testsieger', href: '/testsieger-24-stunden-pflege' },
   { label: 'Qualität & Standards', href: '/qualitaet' },
   // 17.09.2026: Bewertungsseite (Google München/Hamburg, Trustpilot, eigenes Formular)
   { label: 'Erfahrungen & Bewertungen', href: '/erfahrungen' },
