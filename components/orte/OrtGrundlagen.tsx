@@ -20,7 +20,7 @@
 //
 // Nicht angetastet: die MehrDazu-Listen. Interne Linklisten werden nie gekürzt
 // (Martins Regel vom 20.09.).
-import { Abschnitt, Gegenueber, Kasten, MehrDazu, Schritte, Text } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Gegenueber, Kasten, MehrDazu, Punkte, Schritte, Text } from '@/components/vorlage/Ratgeber'
 
 const QUELLE =
   'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
@@ -53,8 +53,56 @@ export function OrtWasBedeutet({ ort }: { ort: string }) {
           { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
           { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
           { href: '/pflegekraft-aus-polen', text: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf' },
+          // Stand 22.09.2026 dazugenommen: Die alten Ortsseiten hatten diesen Verweis in ihrer
+          // eigenen Linkliste. Ohne ihn wuerde der Umbau auf diesen Baustein 192 interne Links
+          // kappen — und interne Linklisten werden nie gekuerzt (Regel vom 20.09.).
+          { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
         ]}
       />
+    </Abschnitt>
+  )
+}
+
+// „Warum Primundus" — stand bis zum 22.09.2026 nur auf der Muenchener Seite (22.09.2026).
+//
+// Die alten Ortsseiten hatten an dieser Stelle einen Abschnitt „So arbeiten wir" mit vier
+// Punkten: keine Vertragsbindung, tagesgenaue Abrechnung, Kosten erst bei Start, persoenlicher
+// Ansprechpartner. Alle vier sind hier enthalten — zusammengefasst und um das ergaenzt, was
+// dort fehlte: die eigene Anstellung (der Unterschied, der im Alltag zaehlt), der Testsieger
+// mit Quelle statt als blosse Behauptung, und Marta mit Namen statt „Ansprechpartner".
+//
+// Es geht also beim Umbau kein Argument verloren, es kommen welche dazu. Der Ortsname steht
+// nur in der Ueberschrift — der Rest gilt ueberall gleich, und das ist ehrlich so: Diese
+// Zusagen haengen nicht am Wohnort.
+export function OrtWarumPrimundus({ ort }: { ort: string }) {
+  return (
+    <Abschnitt id="warum-primundus" titel={`Warum Familien in ${ort} Primundus wählen`}>
+      <Punkte
+        punkte={[
+          { title: 'Eigene Betreuungskräfte', desc: 'Angestellt bei uns, entsandt mit A1-Bescheinigung. Die Arbeitgeberpflichten liegen bei uns, Ihr Vertrag läuft mit Primundus.' },
+          { title: 'Täglich kündbar, tagesgenau abgerechnet', desc: 'Kosten entstehen erst mit der Anreise der Betreuungskraft. Keine Vorauszahlung, keine Vermittlungsgebühr.' },
+          { title: '6× Testsieger bei DIE WELT', desc: 'Sechs Jahre in Folge in der Kundenbefragung von DIE WELT und ServiceValue ausgezeichnet — für Preis und Qualität.' },
+          { title: 'Eine feste Ansprechpartnerin', desc: 'Marta Kapcio begleitet Sie von der ersten Frage bis zum Start der Betreuung, täglich von 8 bis 20 Uhr.' },
+        ]}
+      />
+      <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
+        <img
+          src="/images/bestpreisgarantie-siegel.webp"
+          alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
+          width={900}
+          height={256}
+          loading="lazy"
+          className="h-[64px] md:h-[72px] w-auto mb-5"
+        />
+        <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
+          Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
+        </p>
+        <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
+          Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
+          Vermittlungsgebühr anfällt.{' '}
+          <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
+        </p>
+      </div>
     </Abschnitt>
   )
 }

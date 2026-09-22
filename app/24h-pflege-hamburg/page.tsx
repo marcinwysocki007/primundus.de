@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { OrtBeratung } from '@/components/orte/OrtBeratung'
 import { OrtErsteTage } from '@/components/orte/OrtErsteTage'
-import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtWasBedeutet } from '@/components/orte/OrtGrundlagen'
+import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtWarumPrimundus, OrtWasBedeutet } from '@/components/orte/OrtGrundlagen'
 import { OrtWohnen } from '@/components/orte/OrtWohnen'
 import { OrtWannSinnvoll } from '@/components/orte/OrtWannSinnvoll'
 import { OrtStimmen } from '@/components/orte/OrtStimmen'
@@ -226,34 +226,7 @@ export default function Page() {
 
           <OrtPassendeKraft />
 
-          <Abschnitt id="warum-primundus" titel="Warum Familien in Hamburg Primundus wählen">
-            <Punkte
-              punkte={[
-                { title: 'Eigene Betreuungskräfte', desc: 'Angestellt bei uns, entsandt mit A1-Bescheinigung. Alle Arbeitgeberpflichten liegen bei uns, Ihr Vertrag läuft mit Primundus.' },
-                { title: 'Täglich kündbar, tagesgenau abgerechnet', desc: 'Kosten entstehen erst mit der Anreise der Betreuungskraft. Keine Vorauszahlung, keine Vermittlungsgebühr.' },
-                { title: '6× Testsieger bei DIE WELT', desc: 'Sechs Jahre in Folge in der Kundenbefragung von DIE WELT und ServiceValue ausgezeichnet — für Preis und Qualität.' },
-                { title: 'Ein Büro in Hamburg', desc: 'Baumwall 7 in der Neustadt, mit eigener Hamburger Durchwahl: 040 468 951 181.' },
-              ]}
-            />
-            <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
-              <img
-                src="/images/bestpreisgarantie-siegel.webp"
-                alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
-                width={900}
-                height={256}
-                loading="lazy"
-                className="h-[64px] md:h-[72px] w-auto mb-5"
-              />
-              <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
-                Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
-              </p>
-              <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
-                Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
-                Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
-              </p>
-            </div>
-          </Abschnitt>
+          <OrtWarumPrimundus ort="Hamburg" />
 
           <OrtErsteTage ort="Hamburg" />
 
