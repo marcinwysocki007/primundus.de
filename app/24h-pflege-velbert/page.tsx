@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Velbert | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare polnische Pflegekräfte für Velbert und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Velbert in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-velbert' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Velbert | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare polnische Pflegekräfte für Velbert und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Velbert in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-velbert',
     siteName: 'Primundus',
     locale: 'de_DE',

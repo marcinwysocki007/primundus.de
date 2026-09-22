@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Deggendorf | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare polnische Pflegekräfte für Deggendorf und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Deggendorf in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-deggendorf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Deggendorf | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare polnische Pflegekräfte für Deggendorf und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Deggendorf in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-deggendorf',
     siteName: 'Primundus',
     locale: 'de_DE',

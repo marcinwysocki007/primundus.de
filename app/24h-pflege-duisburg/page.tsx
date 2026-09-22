@@ -29,12 +29,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Duisburg | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare polnische Pflegekräfte für Duisburg und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Duisburg in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-duisburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Duisburg | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare polnische Pflegekräfte für Duisburg und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Anreise in Duisburg in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-duisburg',
     siteName: 'Primundus',
     locale: 'de_DE',
