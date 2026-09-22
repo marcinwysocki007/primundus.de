@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('wohnraumanpassung-planen', '30. April 2026'
 const SECTIONS = [{ id: 'erstberatung', title: 'Erstberatung' }, { id: 'massnahmen', title: 'Wichtige Maßnahmen' }, { id: 'foerderung', title: 'Förderung beantragen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Wohnraumanpassung planen — Schritt für Schritt | Primundus',
   description: 'Wie man eine Wohnraumanpassung plant: Was zu beachten ist, welche Fachleute helfen und wie man Zuschüsse bekommt.',
   alternates: { canonical: 'https://primundus.de/wohnraumanpassung-planen' },

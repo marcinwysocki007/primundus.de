@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('einsamkeit-senioren-bekaempfen', '30. April
 const SECTIONS = [{ id: 'risiken', title: 'Warum Einsamkeit gefährlich ist' }, { id: 'ursachen', title: 'Häufige Ursachen' }, { id: 'gegenmittel', title: 'Was hilft' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Einsamkeit bei Senioren — was wirklich hilft | Primundus',
   description: 'Einsamkeit im Alter ist ein Gesundheitsrisiko. Was Angehörige und Betreuungskräfte tun können und wie 24h-Pflege dagegen wirkt.',
   alternates: { canonical: 'https://primundus.de/einsamkeit-senioren-bekaempfen' },

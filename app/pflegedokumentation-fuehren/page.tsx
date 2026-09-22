@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegedokumentation-fuehren', '30. April 20
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist Pflegedokumentation?' }, { id: 'inhalt', title: 'Was wird dokumentiert?' }, { id: 'praxis', title: 'Praktisch umsetzen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegedokumentation führen — was ist Pflicht? | Primundus',
   description: 'Pflegedokumentation in der häuslichen Pflege: Was dokumentiert werden muss, wie es einfach geht und was die Betreuungskraft aufschreibt.',
   alternates: { canonical: 'https://primundus.de/pflegedokumentation-fuehren' },

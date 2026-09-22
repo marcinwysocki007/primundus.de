@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('krebspatienten-zuhause-pflegen', '30. April
 const SECTIONS = [{ id: 'beduerfnisse', title: 'Besondere Bedürfnisse' }, { id: 'aufgaben', title: 'Aufgaben der Kraft' }, { id: 'palliativ', title: 'Übergang zur Palliativpflege' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Krebspatienten zuhause pflegen — Leitfaden für Familien',
   description: 'Krebspatienten zuhause betreuen: Was die Betreuungskraft übernimmt, wie der Alltag gestaltet wird und wann Palliativpflege nötig wird.',
   alternates: { canonical: 'https://primundus.de/krebspatienten-zuhause-pflegen' },

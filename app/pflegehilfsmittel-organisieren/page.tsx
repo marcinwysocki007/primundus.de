@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegehilfsmittel-organisieren', '30. April
 const SECTIONS = [{ id: 'uebersicht', title: 'Übersicht Hilfsmittel' }, { id: 'technisch', title: 'Technische Hilfsmittel' }, { id: 'verbrauch', title: 'Verbrauchsprodukte' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegehilfsmittel organisieren & verwalten | Primundus',
   description: 'Alle Pflegehilfsmittel im Überblick: technische Hilfsmittel, Verbrauchsprodukte, wie man alles organisiert und was Betreuungskräfte brauchen.',
   alternates: { canonical: 'https://primundus.de/pflegehilfsmittel-organisieren' },

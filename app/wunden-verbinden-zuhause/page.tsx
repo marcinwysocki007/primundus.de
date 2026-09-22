@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('wunden-verbinden-zuhause', '30. April 2026'
 const SECTIONS = [{ id: 'darf-kraft', title: 'Was darf die Kraft?' }, { id: 'pflegedienst', title: 'Wann Pflegedienst?' }, { id: 'praxis', title: 'Praktisch vorgehen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Wunden verbinden zuhause — was Betreuungskräfte dürfen',
   description: 'Was bei der häuslichen Wundversorgung zu beachten ist: Was die Betreuungskraft darf, wann der Pflegedienst nötig ist.',
   alternates: { canonical: 'https://primundus.de/wunden-verbinden-zuhause' },

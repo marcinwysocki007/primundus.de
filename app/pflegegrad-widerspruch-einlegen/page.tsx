@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegegrad-widerspruch-einlegen', '30. Apri
 const SECTIONS = [{ id: 'fristen', title: 'Fristen' }, { id: 'begruendung', title: 'Begründung' }, { id: 'ablauf', title: 'Ablauf' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegegrad Widerspruch einlegen — Schritt für Schritt',
   description: 'Pflegegrad Widerspruch einlegen: Fristen, Begründung, Chancen. Wie man gegen einen zu niedrigen Bescheid vorgeht.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-widerspruch-einlegen' },

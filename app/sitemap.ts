@@ -182,6 +182,40 @@ const trust = [
   'agb',
 ]
 
+// Stillgelegt 22.09.2026 (codemods/27): Platzhaltertext statt Inhalt. Sie stehen auf
+// noindex und gehoeren deshalb nicht in die Sitemap — bleiben aber intern verlinkt.
+// Beim Wiederbeleben hier UND das robots-Feld der Seite entfernen.
+const STILLGELEGT = new Set([
+  'ambulante-vs-stationaere-pflege',
+  'beschaeftigung-senioren-zuhause',
+  'betreuungsverfuegung-erstellen',
+  'bewegung-senioren-zuhause',
+  'datenschutz-pflegesituation',
+  'depression-im-alter-pflege',
+  'einsamkeit-senioren-bekaempfen',
+  'erste-hilfe-bei-pflegenotfall',
+  'haftung-pflegehaushalt',
+  'intensivpflege-zuhause',
+  'krebspatienten-zuhause-pflegen',
+  'medikamente-senioren-verwalten',
+  'pflegeberater-finden',
+  'pflegedokumentation-fuehren',
+  'pflegegrad-aenderung-melden',
+  'pflegegrad-ohne-diagnose',
+  'pflegegrad-widerspruch-einlegen',
+  'pflegehilfsmittel-beantragen',
+  'pflegehilfsmittel-organisieren',
+  'pflegestuetzpunkte-deutschland',
+  'pflegeverantwortung-unter-geschwistern',
+  'pflegezeit-gesetz-angehoerige',
+  'schlafprobleme-senioren-loesen',
+  'sehbehinderung-blindheit-pflege',
+  'werkvertrag-pflegekraft-muster',
+  'wohnraumanpassung-foerderung',
+  'wohnraumanpassung-planen',
+  'wunden-verbinden-zuhause',
+])
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://primundus.de'
 
@@ -206,5 +240,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tools.map((s) => toEntry(s, 0.8, 'weekly')),
     ...regionen.map((s) => toEntry(s, 0.7, 'monthly')),
     ...trust.map((s) => toEntry(s, 0.4, 'monthly')),
-  ]
+  ].filter((e) => !STILLGELEGT.has(e.url.replace('https://primundus.de/', '')))
 }

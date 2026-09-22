@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('schlafprobleme-senioren-loesen', '30. April
 const SECTIONS = [{ id: 'ursachen', title: 'Häufige Ursachen' }, { id: 'massnahmen', title: 'Was hilft' }, { id: 'nacht', title: 'Nachtunruhe' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Schlafprobleme bei Senioren lösen — was hilft | Primundus',
   description: 'Schlafstörungen im Alter: Ursachen, was die Betreuungskraft tun kann und welche einfachen Maßnahmen wirklich helfen.',
   alternates: { canonical: 'https://primundus.de/schlafprobleme-senioren-loesen' },

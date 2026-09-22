@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('beschaeftigung-senioren-zuhause', '30. Apri
 const SECTIONS = [{ id: 'ideen', title: 'Praktische Ideen' }, { id: 'demenz', title: 'Bei Demenz' }, { id: 'tagesstruktur', title: 'Tagesstruktur' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Beschäftigung von Senioren zuhause — Ideen & Tipps',
   description: 'Wie Senioren zuhause aktiv und geistig fit bleiben: praktische Ideen für Beschäftigung, Tagesstruktur und soziale Teilhabe.',
   alternates: { canonical: 'https://primundus.de/beschaeftigung-senioren-zuhause' },

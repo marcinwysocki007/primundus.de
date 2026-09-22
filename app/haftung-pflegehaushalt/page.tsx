@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('haftung-pflegehaushalt', '30. April 2026')
 const SECTIONS = [{ id: 'haftung-kraft', title: 'Haftung der Kraft' }, { id: 'haftung-agentur', title: 'Haftung der Agentur' }, { id: 'versicherung', title: 'Versicherungsschutz' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Haftung im Pflegehaushalt — wer haftet wofür? | Primundus',
   description: 'Haftungsfragen in der 24h-Pflege: Was passiert wenn die Kraft einen Schaden verursacht? Wer haftet bei Unfällen? Alles Wichtige kompakt.',
   alternates: { canonical: 'https://primundus.de/haftung-pflegehaushalt' },

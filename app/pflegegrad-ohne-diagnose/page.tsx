@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegegrad-ohne-diagnose', '30. April 2026'
 const SECTIONS = [{ id: 'grundsatz', title: 'Was bewertet der MD?' }, { id: 'diagnose', title: 'Wann hilft eine Diagnose?' }, { id: 'vorgehen', title: 'Wie vorgehen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegegrad ohne Diagnose — geht das? | Primundus',
   description: 'Kann man einen Pflegegrad beantragen ohne offizielle Diagnose? Was der MD bewertet und warum eine Diagnose oft trotzdem hilfreich ist.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-ohne-diagnose' },

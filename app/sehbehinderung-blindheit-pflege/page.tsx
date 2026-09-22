@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('sehbehinderung-blindheit-pflege', '30. Apri
 const SECTIONS = [{ id: 'alltag', title: 'Alltag sicher gestalten' }, { id: 'orientierung', title: 'Orientierung im Haushalt' }, { id: 'aufgaben', title: 'Aufgaben der Kraft' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflege bei Sehbehinderung und Blindheit | Primundus',
   description: 'Wie Senioren mit Sehbehinderung oder Blindheit zuhause betreut werden: was die Kraft beachten muss und wie der Alltag gestaltet wird.',
   alternates: { canonical: 'https://primundus.de/sehbehinderung-blindheit-pflege' },

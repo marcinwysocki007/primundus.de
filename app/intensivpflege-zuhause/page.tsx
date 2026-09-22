@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('intensivpflege-zuhause', '30. April 2026')
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist Intensivpflege?' }, { id: 'moeglich', title: 'Was ist zuhause möglich?' }, { id: 'grenzen', title: 'Wo sind die Grenzen?' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Intensivpflege zuhause — wann möglich, wann nicht',
   description: 'Intensivpflege zuhause: Was ist möglich, welche Fachkräfte werden gebraucht und wann ist stationäre Versorgung nötig?',
   alternates: { canonical: 'https://primundus.de/intensivpflege-zuhause' },

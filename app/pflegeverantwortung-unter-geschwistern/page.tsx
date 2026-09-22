@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegeverantwortung-unter-geschwistern', '3
 const SECTIONS = [{ id: 'konflikte', title: 'Typische Konflikte' }, { id: 'aufteilen', title: 'Wie aufteilen?' }, { id: 'externe-hilfe', title: 'Wann externe Hilfe?' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegeverantwortung unter Geschwistern aufteilen | Primundus',
   description: 'Wenn Geschwister sich die Pflege der Eltern aufteilen müssen: wie man faire Vereinbarungen trifft und Konflikte vermeidet.',
   alternates: { canonical: 'https://primundus.de/pflegeverantwortung-unter-geschwistern' },

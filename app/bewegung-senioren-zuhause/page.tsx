@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('bewegung-senioren-zuhause', '30. April 2026
 const SECTIONS = [{ id: 'vorteile', title: 'Warum Bewegung wichtig ist' }, { id: 'uebungen', title: 'Einfache Übungen' }, { id: 'sturzpraevention', title: 'Sturzprävention' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Bewegung für Senioren zuhause — einfache Übungen & Tipps',
   description: 'Einfache Bewegungsübungen für Senioren zuhause: was geht auch bei eingeschränkter Mobilität, wie Stürze verhindert werden, was die Kraft unterstützen kann.',
   alternates: { canonical: 'https://primundus.de/bewegung-senioren-zuhause' },

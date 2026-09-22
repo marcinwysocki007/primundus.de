@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegegrad-aenderung-melden', '30. April 20
 const SECTIONS = [{ id: 'wann', title: 'Wann melden?' }, { id: 'antrag', title: 'Antrag stellen' }, { id: 'vorbereitung', title: 'Begutachtung vorbereiten' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegegrad-Änderung melden — wann und wie | Primundus',
   description: 'Wenn sich der Zustand verschlechtert: Wann und wie eine Höherstufung beantragt wird, was zu beachten ist und wie man vorgeht.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-aenderung-melden' },

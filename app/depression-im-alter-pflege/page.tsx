@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('depression-im-alter-pflege', '30. April 202
 const SECTIONS = [{ id: 'erkennen', title: 'Zeichen erkennen' }, { id: 'hilfe', title: 'Wie helfen' }, { id: 'behandlung', title: 'Behandlungsmöglichkeiten' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Depression im Alter — Erkennen, Helfen, Pflegen | Primundus',
   description: 'Depression im Alter richtig erkennen und damit umgehen: Zeichen, wie die Betreuungskraft helfen kann und wann professionelle Hilfe nötig ist.',
   alternates: { canonical: 'https://primundus.de/depression-im-alter-pflege' },

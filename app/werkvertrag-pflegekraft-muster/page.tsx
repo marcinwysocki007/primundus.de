@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('werkvertrag-pflegekraft-muster', '30. April
 const SECTIONS = [{ id: 'risiken', title: 'Risiken' }, { id: 'scheinselbstaendigkeit', title: 'Scheinselbstständigkeit' }, { id: 'alternativen', title: 'Rechtssichere Alternativen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Werkvertrag Pflegekraft — Risiken & rechtssichere Alternativen | Primundus',
   description: 'Werkvertrag mit Pflegekraft: Warum das fast immer Scheinselbstständigkeit ist und welche Alternativen rechtssicher sind.',
   alternates: { canonical: 'https://primundus.de/werkvertrag-pflegekraft-muster' },

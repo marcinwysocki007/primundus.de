@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('datenschutz-pflegesituation', '30. April 20
 const SECTIONS = [{ id: 'grundsatz', title: 'Was gilt?' }, { id: 'praxis', title: 'Praktische Regeln' }, { id: 'rechte', title: 'Rechte der Betreuten' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Datenschutz in der Pflegesituation — was Familien wissen müssen | Primundus',
   description: 'Datenschutz in der Pflege: Was darf die Kraft, was darf die Agentur, welche Rechte haben Pflegebedürftige? Praxistipps.',
   alternates: { canonical: 'https://primundus.de/datenschutz-pflegesituation' },

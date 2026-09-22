@@ -11,6 +11,10 @@ const AKTUALISIERT = aktualisiertAm('wohnraumanpassung-foerderung', '30. April 2
 const SECTIONS = [{ id: 'kasse', title: 'Pflegekasse zahlt' }, { id: 'weitere', title: 'Weitere Förderungen' }, { id: 'antrag', title: 'Antrag stellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Wohnraumanpassung Förderung 2026 — alle Zuschüsse',
   description: 'Wohnraumanpassung Förderung: Was die Pflegekasse zahlt (bis 4.000 €), welche weiteren Förderungen es gibt und wie der Antrag läuft.',
   alternates: { canonical: 'https://primundus.de/wohnraumanpassung-foerderung' },

@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('medikamente-senioren-verwalten', '30. April
 const SECTIONS = [{ id: 'risiken', title: 'Risiken' }, { id: 'organisation', title: 'Wie organisieren' }, { id: 'betreuungskraft', title: 'Was die Kraft darf' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Medikamente für Senioren verwalten — sicher und fehlerfrei',
   description: 'Wie Medikamente bei Senioren sicher verwaltet werden: Wochendosierer, Medikamentenliste, was die Betreuungskraft darf und nicht darf.',
   alternates: { canonical: 'https://primundus.de/medikamente-senioren-verwalten' },

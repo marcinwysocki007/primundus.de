@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegeberater-finden', '30. April 2026')
 const SECTIONS = [{ id: 'kostenlos', title: 'Kostenlose Beratung' }, { id: 'pflegestuetzpunkte', title: 'Pflegestützpunkte' }, { id: 'privat', title: 'Private Berater' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegeberater finden — wer hilft, was kostet es | Primundus',
   description: 'Pflegeberater in Deutschland: kostenlose Beratung durch Pflegestützpunkte, wann ein privater Berater sinnvoll ist und wie Primundus berät.',
   alternates: { canonical: 'https://primundus.de/pflegeberater-finden' },

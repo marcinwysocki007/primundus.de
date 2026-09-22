@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('betreuungsverfuegung-erstellen', '30. April
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist eine Betreuungsverfügung?' }, { id: 'unterschied', title: 'Unterschied zur Vorsorgevollmacht' }, { id: 'erstellen', title: 'Wie erstellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Betreuungsverfügung erstellen — Anleitung & Muster 2026',
   description: 'Betreuungsverfügung erstellen: was sie ist, wie sie sich von der Vorsorgevollmacht unterscheidet und was reingehört. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/betreuungsverfuegung-erstellen' },

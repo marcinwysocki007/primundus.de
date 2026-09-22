@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegestuetzpunkte-deutschland', '30. April
 const SECTIONS = [{ id: 'was-bieten', title: 'Was bieten sie?' }, { id: 'finden', title: 'Wie finden?' }, { id: 'abgrenzung', title: 'Abgrenzung zu anderen Stellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegestützpunkte in Deutschland — kostenlose Beratung',
   description: 'Pflegestützpunkte: Was sie bieten, wie man den nächsten findet und wann sie die beste Anlaufstelle sind.',
   alternates: { canonical: 'https://primundus.de/pflegestuetzpunkte-deutschland' },

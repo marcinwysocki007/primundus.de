@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('erste-hilfe-bei-pflegenotfall', '30. April 
 const SECTIONS = [{ id: 'notfallplan', title: 'Notfallplan' }, { id: 'sturz', title: 'Bei einem Sturz' }, { id: 'notruf', title: 'Notruf richtig stellen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Erste Hilfe bei Pflegenotfall — was zu tun ist | Primundus',
   description: 'Was tun bei Sturz, Bewusstlosigkeit oder Herzprobleme in der Pflegesituation? Schritt-für-Schritt-Anleitung und Notfallplan.',
   alternates: { canonical: 'https://primundus.de/erste-hilfe-bei-pflegenotfall' },

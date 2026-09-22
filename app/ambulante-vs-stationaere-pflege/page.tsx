@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('ambulante-vs-stationaere-pflege', '30. Apri
 const SECTIONS = [{ id: 'unterschied', title: 'Der Unterschied' }, { id: 'kosten', title: 'Kostenvergleich' }, { id: 'wann-was', title: 'Wann was passt' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Ambulante vs. stationäre Pflege — Unterschiede & Kosten 2026',
   description: 'Ambulante Pflege zu Hause oder stationäres Pflegeheim? Vollständiger Vergleich mit Kosten, Leistungen und Entscheidungshilfe.',
   alternates: { canonical: 'https://primundus.de/ambulante-vs-stationaere-pflege' },

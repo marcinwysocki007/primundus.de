@@ -12,6 +12,10 @@ const AKTUALISIERT = aktualisiertAm('pflegezeit-gesetz-angehoerige', '30. April 
 const SECTIONS = [{ id: 'pflegezeit', title: 'Pflegezeit' }, { id: 'familienpflegezeit', title: 'Familienpflegezeit' }, { id: 'notfall', title: 'Kurzfristige Freistellung' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
+  // Stillgelegt 22.09.2026: Platzhaltertext statt Inhalt (siehe codemods/27). Kommt
+  // zurueck, sobald die Seite echte Substanz hat. follow bleibt an, damit die
+  // internen Verweise weiter wirken.
+  robots: { index: false, follow: true },
   title: 'Pflegezeitgesetz — Auszeit für pflegende Angehörige',
   description: 'Pflegezeitgesetz und Familienpflegezeit: Was pflegende Angehörige an Rechten haben, wie Freistellung beantragt wird.',
   alternates: { canonical: 'https://primundus.de/pflegezeit-gesetz-angehoerige' },
