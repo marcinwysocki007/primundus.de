@@ -4,7 +4,7 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import {
-  RatgeberKopf, RatgeberRumpf, Abschnitt, DunklerAbschnitt, Text, Punkte, Kasten, HakenListe, Tabelle, MehrDazu, Fragen,
+  RatgeberKopf, StandardUnterzeile, RatgeberRumpf, Abschnitt, DunklerAbschnitt, Text, Punkte, Kasten, HakenListe, Tabelle, MehrDazu, Fragen,
   RechnerKasten, Zwischentitel, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Beispieltag, HeimVsZuhause, KostenAufteilung, Preisfaktoren } from '@/components/grafik/Grafik'
@@ -123,9 +123,9 @@ export default function PflegekraftAusPolen() {
           ]}
           augenbraue="Pflegekraft aus Polen 2026"
           titel="Polnische Pflegekraft: Was sie 2026 kostet, was die Kasse zahlt und wie Sie sie legal beschäftigen"
-          einleitung="Polnische Pflegekräfte sind bei uns fest angestellt und mit A1-Bescheinigung legal in Deutschland tätig — ohne Vermittlungsgebühr, und Sie werden nicht Arbeitgeber. Hier steht, was das kostet und woran Sie eine rechtssichere Anstellung erkennen."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
+          unterzeile={<StandardUnterzeile />}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
           blick={[

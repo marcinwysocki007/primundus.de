@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, HakenListe, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Tabelle, Text,
+  Abschnitt, Fragen, HakenListe, Kasten, MehrDazu, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { HeimVsZuhause, KostenAufteilung, Preisfaktoren } from '@/components/grafik/Grafik'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -165,9 +165,9 @@ export default function Kosten() {
           ]}
           augenbraue="Kosten 2026"
           titel="Was kostet 24-Stunden-Pflege? Kosten und Zuschüsse 2026"
-          einleitung="Was 24-Stunden-Pflege kostet, hängt vom Pflegebedarf ab und davon, wie gut die Betreuungskraft Deutsch spricht. Hier stehen alle Preisfaktoren, was Pflegekasse, Steuer und Sozialamt übernehmen — und was am Ende bei Ihnen bleibt."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
+          unterzeile={<StandardUnterzeile />}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="12 Min."
           blick={[

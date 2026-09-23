@@ -14,7 +14,9 @@ import { LeistenKarte, RechnerBlock } from '@/components/vertrauen/Vertrauen'
 import { InhaltLeiste } from './InhaltLeiste'
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
-const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe'
+// 14 px wie im Rechner-Kopf; vorher 11,5 px — unter der Untergrenze „nie < 14" aus dem Optik-Plan
+// (14.09.). Martin auf dem Handy, 23.09.: „die Schriftgrößen hier recht klein".
+const AUGENBRAUE = 'text-[14px] font-bold uppercase tracking-[.14em] text-pm-taupe'
 // Sprungmarken landen unter dem festen Kopf (64 px Handy, 121 px ab md)
 const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
 
@@ -58,6 +60,20 @@ function BlickKasten({ titel, punkte }: { titel: string; punkte: string[] }) {
   )
 }
 
+/**
+ * Die Unterzeile aus dem Rechner-Kopf, Wort für Wort — mit Ort in der Anreise-Zusage
+ * (Martin 22.09.: „Anreise in Worms in drei Tagen möglich … ist besser").
+ */
+export function StandardUnterzeile({ ort }: { ort?: string }) {
+  return (
+    <>
+      Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und{' '}
+      <strong className="text-pm-ink">welche Pflegekräfte verfügbar sind</strong>&nbsp;–{' '}
+      <span className="whitespace-nowrap">Anreise{ort ? ` in ${ort}` : ''} in 3 Tagen möglich.</span>
+    </>
+  )
+}
+
 export function RatgeberKopf({
   pfad,
   augenbraue,
@@ -72,6 +88,8 @@ export function RatgeberKopf({
   sprung,
   knopfSchlicht = false,
   knopfOben = false,
+  unterzeile,
+  einleitungTitel,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -119,8 +137,23 @@ export function RatgeberKopf({
    * Der Weg über die Einleitung wurde bewusst NICHT gewählt: Sie auf 210 Zeichen zu kürzen hiesse,
    * 205 örtlich geschriebene Texte anzugleichen — und Textgleichheit ist bei den Ortsseiten die
    * Leitkennzahl (69,4 % heute). Die Reihenfolge zu ändern kostet kein einziges Wort.
+   *
+   * Zweiter Anlauf am selben Tag: Der Knopf direkt unter der H1 war Martin zu weit oben
+   * („button plötzlich nach so weit oben"). Referenz ist kostenrechner.primundus.de: dort steht
+   * zwischen H1 und Knopf EINE Unterzeile („Sehen Sie in 2 Minuten, was es kostet und welche
+   * Pflegekräfte verfügbar sind – Anreise in 3 Tagen möglich."), und der Block hat die Punkte.
+   * Genau das ist `unterzeile` + `knopfOben`.
    */
   knopfOben?: boolean
+  /** Die eine Zeile zwischen H1 und Block, wie im Rechner. Für Ortsseiten <StandardUnterzeile ort="…" />. */
+  unterzeile?: ReactNode
+  /**
+   * Überschrift über der Einleitung, wenn sie hinter dem Block steht (23.09.2026). Martin auf
+   * dem Handy: „Der Text unter den Sternen, der beginnt einfach ohne irgendwie Überschrift."
+   * Mit `knopfOben` ist die Einleitung kein Vorspann zur H1 mehr, sondern ein eigener Absatz —
+   * und ein Absatz ohne Überschrift hängt in der Luft.
+   */
+  einleitungTitel?: string
 }) {
   const zweiSpalten = Boolean(blick?.length) || Boolean(person)
   return (
@@ -149,13 +182,23 @@ export function RatgeberKopf({
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
               {zusammenhalten(titel)}
             </h1>
+            {unterzeile ? (
+              <p className="mt-5 text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem]">
+                {unterzeile}
+              </p>
+            ) : null}
             {knopf && knopfOben ? (
               <div className="mt-7">
-                <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+                <RechnerBlock src={rechnerQuelle(knopf.href)} />
               </div>
             ) : null}
+            {einleitung && einleitungTitel ? (
+              <h2 className="mt-10 text-[24px] md:text-[28px] font-extrabold leading-[1.15] tracking-[-0.02em] text-pm-ink [text-wrap:balance]">
+                {einleitungTitel}
+              </h2>
+            ) : null}
             {einleitung ? (
-              <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
+              <p className={`${einleitungTitel ? 'mt-4' : 'mt-6'} text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]`}>
                 {einleitung}
               </p>
             ) : null}
