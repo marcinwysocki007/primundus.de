@@ -113,7 +113,7 @@ export default function Ablauf() {
               schritte={[
                 {
                   title: 'Sofort Angebot und Pflegekräfte einsehen',
-                  desc: 'Sie machen wenige preisrelevante Angaben und hinterlassen für die Kopie des Angebots Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte — die Kopie kommt zusätzlich per E-Mail.',
+                  desc: 'Sie machen wenige preisrelevante Angaben und hinterlassen Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte. Eine Kopie kommt zusätzlich per E-Mail.',
                   tag: 'Unter 2 Minuten',
                   tagTon: 'gruen',
                 },
