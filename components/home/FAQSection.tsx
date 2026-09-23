@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
+// answer traegt seit dem 23.09.2026 Markup statt reinem Text — Grund unten bei der Preis-Frage.
 interface FAQItem {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }
 
 export function FAQSection() {
@@ -13,7 +14,23 @@ export function FAQSection() {
   const faqs: FAQItem[] = [
     {
       question: "Was kostet eine 24-Stunden-Pflege ungefähr?",
-      answer: "Bei Primundus ab 2.150 € im Monat für eine Person, je nach Pflegebedarf und Deutschkenntnissen der Betreuungskraft. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat. Ihren genauen Preis zeigt der Online-Rechner in 2 Minuten."
+      // data-nosnippet um die Betraege (23.09.2026). Martin sah bei der Suche nach „primundus"
+      // einen Preis im Google-Ergebnis und fragte, warum. Der Text kam nicht aus unserer
+      // Meta-Description — die ist preisfrei —, sondern aus dieser FAQ-Antwort: Google ignoriert
+      // bei Markensuchen oft die Description und nimmt stattdessen Seitentext.
+      // data-nosnippet verbietet Google, den umschlossenen Text fuer ein Snippet zu verwenden.
+      // Fuer den Leser aendert sich NICHTS — die Zahlen stehen unveraendert auf der Seite.
+      // Wichtig: Das wirkt nur auf sichtbares HTML, nicht auf JSON-LD. Deshalb ist der Preis
+      // dort zusaetzlich entfernt (siehe app/page.tsx).
+      answer: (
+        <>
+          Bei Primundus <span data-nosnippet>ab 2.150 €</span> im Monat für eine Person, je nach
+          Pflegebedarf und Deutschkenntnissen der Betreuungskraft. Nach Pflegegeld,
+          Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3{' '}
+          <span data-nosnippet>ab ca. 923 €</span> im Monat. Ihren genauen Preis zeigt der
+          Online-Rechner in 2 Minuten.
+        </>
+      )
     },
     {
       question: "Wie schnell kann eine Betreuungskraft starten?",

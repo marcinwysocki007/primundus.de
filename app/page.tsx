@@ -58,6 +58,10 @@ export const metadata: Metadata = {
 
 // Organization/WebSite kommen zentral aus lib/schema.ts (Root-Layout) —
 // hier nur noch das seitenspezifische FAQ-Schema.
+// Preise aus der FAQ-Antwort entfernt (23.09.2026). Google zog bei der Suche nach „primundus"
+// genau diesen Satz als Beschreibung heran, statt unserer preisfreien Meta-Description.
+// data-nosnippet wirkt nur auf sichtbares HTML, nicht auf JSON-LD — deshalb muessen die Zahlen
+// hier ganz raus. Die sichtbare Antwort auf der Seite nennt sie unveraendert weiter.
 const schemaMarkup = JSON.stringify([
   {
     "@context": "https://schema.org",
@@ -66,7 +70,7 @@ const schemaMarkup = JSON.stringify([
       {
         "@type": "Question",
         "name": "Was kostet eine 24-Stunden-Pflege ungefähr?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Bei Primundus ab 2.150 € im Monat für eine Person, je nach Pflegebedarf und Deutschkenntnissen der Betreuungskraft. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat. Ihren genauen Preis zeigt der Online-Rechner in 2 Minuten." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Das hängt vom Pflegebedarf ab und davon, wie gut die Betreuungskraft Deutsch spricht. Ihren genauen Preis zeigt der Online-Rechner in 2 Minuten — nach Pflegegeld, Entlastungsbudget und Steuerermäßigung." }
       },
       {
         "@type": "Question",
