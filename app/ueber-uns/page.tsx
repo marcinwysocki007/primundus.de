@@ -60,7 +60,7 @@ const FRAGEN = [
   },
   {
     q: 'Ist Primundus ausgezeichnet?',
-    a: 'DIE WELT hat Primundus sechsmal in Folge ausgezeichnet. Das Original-Siegel von 2021 und die Veröffentlichung als PDF zeigen wir auf der Seite zur Auszeichnung.',
+    a: 'DIE WELT hat Primundus sechsmal in Folge ausgezeichnet: 2021, 2022, 2023, 2024, 2025 und 2026. Siegel und Veröffentlichung zeigen wir auf der Seite zur Auszeichnung.',
   },
   {
     q: 'Wie erreiche ich Primundus?',

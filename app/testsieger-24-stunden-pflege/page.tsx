@@ -4,7 +4,7 @@ import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRump
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
-import { SiegelZeile } from '@/components/vertrauen/Vertrauen'
+import { GARANTIE, SiegelZeile } from '@/components/vertrauen/Vertrauen'
 
 // Kernseite in der Seitenvorlage. 20.09.2026 umgestellt (Martin: „wir sind jetzt 6 Jahre in Folge ausgezeichnet — man muss
 // da nicht explizit auf die Siegel eingehen, weil wir sie nicht gekauft haben, aber trotzdem Sieger sind — also sinnvoll
@@ -12,6 +12,13 @@ import { SiegelZeile } from '@/components/vertrauen/Vertrauen'
 // Begriff, brachte auf Position 10 aber nur 5 Klicks. Wer so sucht, will wissen, WER auszeichnet und WIE — das steht jetzt
 // zuerst; das Siegel bleibt als Nachweis, rutscht aber nach unten. Keine Prozentzahlen, nie „Vermittler", keine Negation
 // anderer Tests. Martins Wortlaut „6× Testsieger / DIE WELT / Preis & Qualität" bleibt gültig..
+//
+// 23.09.2026 abends, Martin: „ab 2021 wurden wir jedes Jahr in Folge ausgezeichnet … nenne die Zahlen. Weil so ist das
+// nun mal." Regel: Wo ein Jahr der Auszeichnung steht, stehen alle sechs — nie „2021" allein (las sich wie EINE
+// Auszeichnung). Ausgeschrieben zweimal: im Familie-Satz (Martins Wortlaut) und in der Frage „Wie oft …"; viermal
+// wirkte aufdringlich (OpenAI-Prüfung 23.09.). Und: „dass man uns transparent sofort Preis und Pflegekräfte direkt einsehen kann … damit das immer
+// gleich ist" — die Vorteile im Abschnitt #familie stehen in der Reihenfolge der USPs und im Wortlaut von Startseite
+// und Rechner (Hero-Punkte, Ablauf, Bestpreisgarantie).
 
 const AKTUALISIERT = aktualisiertAm('testsieger-24-stunden-pflege', '23. September 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-testsieger'
@@ -52,7 +59,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Wer ist Testsieger in der 24-Stunden-Pflege?',
-    a: 'Primundus ist sechs Jahre in Folge ausgezeichnet, zuletzt 2026. Vergeben wird die Auszeichnung von DIE WELT gemeinsam mit der ServiceValue GmbH auf Grundlage von Kundenurteilen; 2021 stand primundus.de in seiner Kategorie auf Platz 1 im erlebten Kundenservice.',
+    a: 'Primundus ist sechs Jahre in Folge Testsieger bei DIE WELT, zuletzt 2026. Vergeben wird die Auszeichnung gemeinsam mit der ServiceValue GmbH, auf Grundlage von Kundenurteilen zum erlebten Kundenservice.',
   },
   {
     q: 'Wer vergibt die Auszeichnung und wie wird gemessen?',
@@ -60,7 +67,7 @@ const FRAGEN = [
   },
   {
     q: 'Wie oft wurde Primundus ausgezeichnet?',
-    a: 'Sechs Jahre in Folge, zuletzt 2026. Die Studie wird jedes Jahr neu erhoben; die Auszeichnung gilt jeweils für ein Jahr. Siegel und vollständige Veröffentlichung finden Sie auf dieser Seite.',
+    a: 'Sechs Jahre in Folge: 2021, 2022, 2023, 2024, 2025 und 2026. Die Studie wird jedes Jahr neu erhoben; die Auszeichnung gilt jeweils für ein Jahr. Siegel und vollständige Veröffentlichung finden Sie oben auf dieser Seite.',
   },
   {
     q: 'Was kostet die 24-Stunden-Pflege beim Testsieger?',
@@ -102,8 +109,8 @@ const schemaMarkup = [
 // Zurueck ist aber NICHT die alte Einleitung. Die sagte „Stellvertretend zeigen wir hier
 // das Original-Siegel von 2021" — genau der rechtfertigende Ton, den Martin kritisiert hat.
 // Die neue ist kuerzer als beide bisherigen Fassungen und nennt 2021 gar nicht: zwei Saetze,
-// wer auszeichnet und worauf es beruht. Die Jahreszahl steht dort, wo sie hingehoert — im
-// Abschnitt „Der Nachweis".
+// wer auszeichnet und worauf es beruht. Die Jahre stehen ausgeschrieben (2021 bis 2026 einzeln)
+// in „Was heißt das für Sie" und in der Frage „Wie oft wurde Primundus ausgezeichnet?".
 //
 // Die Abschnittsfolge vom 20.09. bleibt: erst wer auszeichnet und wie, dann was es fuer die
 // Familie heisst, dann der Nachweis. Das war richtig; falsch war nur der gewanderte Knopf.
@@ -137,8 +144,10 @@ export default function TestsiegerPage() {
           // da: Die Studie bewertet den erlebten Kundenservice, nicht die Konditionen.
           blickVerweise={[
             { href: '#wer', titel: 'Wer uns auszeichnet', text: 'DIE WELT, auf Grundlage von Kundenurteilen' },
-            // „Faire Konditionen" statt „Fair im Preis" (OpenAI-Prüfung 23.09.): „täglich kündbar" ist keine Preisangabe
-            { href: '#familie', titel: 'Faire Konditionen', text: 'keine Vermittlungsgebühr, täglich kündbar, taggenau abgerechnet' },
+            // „Faire Konditionen" statt „Fair im Preis" (OpenAI-Prüfung 23.09.): „täglich kündbar" ist keine Preisangabe.
+            // 23.09. abends (Martin: „transparent sofort Preis und Pflegekräfte direkt einsehen"): der Vorteil selbst ist der
+            // Titel; „Transparent und fair" war als Titel eine Floskel ohne den Text dahinter (OpenAI-Prüfung).
+            { href: '#familie', titel: 'Preis und Pflegekräfte sofort sehen', text: 'dazu keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie' },
             { href: '#vergleich', titel: 'Vergleichen Sie selbst', text: 'Gebühren, Bindung und Auswahl bei den bekannten Anbietern' },
             { href: '#faq', titel: 'Häufige Fragen', text: 'zur Auszeichnung und zu den Kosten' },
           ]}
@@ -155,8 +164,7 @@ export default function TestsiegerPage() {
             <Text>
               Gefragt wird nach dem <strong className="text-pm-ink">erlebten Kundenservice</strong>: wie erreichbar das Unternehmen war,
               wie verständlich es erklärt hat, wie zuverlässig es gehalten hat, was es versprochen hat. Ausgezeichnet wird, wer in seiner
-              Kategorie die besten Urteile bekommt. 2021 war das in unserer Kategorie primundus.de — und seither jedes Jahr wieder,
-              sechs Jahre in Folge, zuletzt 2026.
+              Kategorie die besten Urteile bekommt. In unserer Kategorie war das primundus.de, sechs Jahre in Folge.
             </Text>
             <Kasten augenbraue="Was das bedeutet" titel="Die Urteile kommen von Familien, nicht von uns" ton="gruen">
               <Text>
@@ -169,17 +177,21 @@ export default function TestsiegerPage() {
           <Abschnitt id="familie" titel="Was heißt das für Sie als Familie?">
             <Text>
               Wenn Sie eine Betreuungskraft für einen Angehörigen suchen, wollen Sie sich auf Ihren Anbieter
-              verlassen können. In der Service-Studie 2021 bewerteten Familien Primundus besser als alle anderen
-              untersuchten Anbieter der Kategorie. Dazu kommen diese Leistungen:
+              verlassen können. In den Service-Studien 2021, 2022, 2023, 2024, 2025 und 2026 bewerteten Familien Primundus besser
+              als alle anderen untersuchten Anbieter der Kategorie. Dazu kommen diese Leistungen:
             </Text>
             <Punkte
               punkte={[
+                // Reihenfolge der USPs (Memory primundus-usps); Titel wie die Hero-Punkte von Startseite und Rechner,
+                // „Kein Vertrag …" im Wortlaut von Ablauf-Schritt 3, Garantie-Satz wie Ortsseiten/Anzeigen (GARANTIE im Rechner).
+                { title: 'Preis und Pflegekräfte sofort sehen', desc: 'In 2 Minuten sehen Sie Ihren Monatspreis und passende Pflegekräfte mit Foto, Erfahrung und Deutschkenntnissen.' },
+                { title: 'Kein Vertrag vor Ihrer Auswahl', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag.' },
                 { title: 'Keine Vermittlungsgebühr', desc: 'Keine Anzahlung, keine Aufnahmegebühr. Der Monatspreis ist der Preis.' },
-                { title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, kein Risiko.' },
-                { title: 'Taggenaue Abrechnung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist.' },
+                { title: 'Täglich kündbar, taggenau abgerechnet', desc: 'Keine Mindestlaufzeit. Sie zahlen erst, wenn die Betreuungskraft da ist.' },
+                { title: 'Bestpreisgarantie', desc: <>Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot. <a href={GARANTIE} className={`font-semibold ${LINK}`}>Mehr Infos</a></> },
                 { title: 'Anreise in 3 Tagen möglich', desc: 'Auch bei dringendem Bedarf.' },
-                { title: 'Persönliche Ansprechpartnerin', desc: 'Marta Kapcio begleitet Sie von der Anfrage bis zum Start.' },
-                { title: 'Rechtssicher', desc: 'Offiziell in der EU angestellte, sozialversicherte Betreuungskräfte.' },
+                { title: 'Persönliche Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team begleiten Sie von der Anfrage bis zum Start, täglich von 8 bis 20 Uhr.' },
+                { title: 'Rechtssicher', desc: 'Die Betreuungskräfte sind bei uns angestellt und sozialversichert, jeder Einsatz läuft mit A1-Bescheinigung.' },
               ]}
             />
           </Abschnitt>
