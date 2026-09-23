@@ -173,7 +173,7 @@ export function AnsprechpartnerinGross({
   telefonAnzeige,
   adresse,
   nummer,
-  siegel = 'karte',
+  siegel = 'foto', // Abnahme 23.09.: Siegel auf dem Foto wie auf der Startseite
 }: {
   ort: string
   /** Eigene Rufnummer für diesen Ort (E.164), sonst die zentrale 089. */

@@ -75,7 +75,8 @@ function ortsZahlen(d: OrtDaten): string[] {
   return zeilen
 }
 
-export function OrtSeite({ daten: d, siegel = 'karte' }: { daten: OrtDaten; siegel?: 'foto' | 'karte' }) {
+// Siegel auf dem Foto (Martin 23.09., Abnahme Stopp 1: „mach mal Siegel auf dem Foto … das ist ganz gut")
+export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siegel?: 'foto' | 'karte' }) {
   const url = `${BASIS}/24h-pflege-${d.slug}`
   const titel = d.titel ?? `24-Stunden-Pflege und Betreuung in ${d.ort}`
   const src = `ort-${d.slug}`
