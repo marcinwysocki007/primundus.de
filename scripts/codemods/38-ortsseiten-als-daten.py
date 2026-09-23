@@ -93,6 +93,9 @@ def umwandeln(datei: Path, hand: set):
     # die niemand belegt hat. Sie werden nicht uebernommen und stehen deshalb nicht in der Fragmentliste.
     SCHABLONE = ('Was ist der Unterschied zu einem ambulanten Pflegedienst?', 'rechtssicher?')
     fragen_zeilen = [z for z in m.group(1).splitlines() if z.strip() and not any(sch in z for sch in SCHABLONE)]
+    # Pruefer 23.09.: „In dringenden Situationen geht es oft schneller." verspricht unter drei Tage ohne
+    # Beleg — die drei Tage SIND der Eilfall. Der Satz faellt aus der Schablonen-Antwort.
+    fragen_zeilen = [z.replace(' In dringenden Situationen geht es oft schneller.', '') for z in fragen_zeilen]
     fragen_block = 'const FRAGEN = [\n' + '\n'.join(fragen_zeilen) + '\n]\n'
     fragmente += fragen_zeilen
 

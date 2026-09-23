@@ -34,7 +34,8 @@ export function OrtWasBedeutet({ ort }: { ort: string }) {
     <Abschnitt id="was-bedeutet" titel={`Was 24-Stunden-Pflege in ${ort} bedeutet`}>
       <Text>
         Eine Betreuungskraft zieht in den Haushalt ein und hilft über den Tag verteilt bei dem, was anfällt — beim
-        Aufstehen und Waschen, beim Kochen, beim Einkauf, beim Gang zum Arzt; bei Bedarf ist sie auch nachts da.
+        Aufstehen und Waschen, beim Kochen, beim Einkauf, beim Gang zum Arzt; bei Bedarf ist sie auch nachts da —
+        regelmäßige nächtliche Einsätze müssen ausgeglichen werden und gehören in die Angaben im Rechner.
         Medizinische Aufgaben wie Spritzen oder Verbände übernimmt weiterhin der ambulante Pflegedienst. Unsere
         Betreuungskräfte kommen aus <a href="/pflegekraft-aus-polen" className={LINK}>Polen</a> und sind bei uns
         angestellt — Ihr Vertrag läuft mit Primundus, Sie werden nicht Arbeitgeber.
@@ -81,7 +82,7 @@ export function OrtWarumPrimundus({ ort }: { ort: string }) {
           { title: 'Täglich kündbar, taggenau abgerechnet', desc: 'Kosten erst ab Anreise, kein Vertrag vor Ihrer Auswahl.' },
           { title: 'Keine Vermittlungsgebühr', desc: 'Angestellt bei uns — Sie werden nicht Arbeitgeber.' },
           { title: '6× Testsieger bei DIE WELT', desc: 'Sechs Jahre in Folge, Kundenbefragung DIE WELT und ServiceValue — Preis und Qualität.' },
-          { title: 'Eine feste Ansprechpartnerin', desc: 'Marta Kapcio, täglich von 8 bis 20 Uhr.' },
+          { title: 'Eine feste Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team, täglich von 8 bis 20 Uhr.' },
         ]}
       />
       <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
@@ -163,7 +164,7 @@ export function OrtAblauf({ ort }: { ort: string }) {
         schritte={[
           {
             title: 'Sie beschreiben die Situation',
-            desc: 'Pflegegrad, Hilfe in der Nacht, gewünschtes Deutsch — online im Rechner oder am Telefon mit Marta Kapcio. Danach sehen Sie Ihren Preis.',
+            desc: 'Pflegegrad, Hilfe in der Nacht, gewünschtes Deutsch — online im Rechner oder am Telefon mit Marta Kapcio und ihrem Team. Danach sehen Sie Ihren Preis.',
             tag: 'Dauert 2 Minuten',
             tagTon: 'gruen',
           },
@@ -181,13 +182,13 @@ export function OrtAblauf({ ort }: { ort: string }) {
           },
           {
             title: 'Die Betreuungskraft reist an',
-            desc: `Die Anreise organisieren wir — wenn es eilt, etwa nach einer Krankenhausentlassung, in 3 Tagen.`,
+            desc: `Die Anreise organisieren wir — wenn es eilt, etwa nach einer Krankenhausentlassung, ist sie in 3 Tagen möglich.`,
             tag: `Anreise in ${ort} in 3 Tagen möglich`,
             tagTon: 'gruen',
           },
           {
             title: 'Die Betreuung beginnt — und läuft weiter',
-            desc: 'Marta Kapcio bleibt Ihre Ansprechpartnerin, täglich von 8 bis 20 Uhr. Den Wechsel alle 6 bis 8 Wochen organisieren wir; fällt jemand aus, ist Ersatz in der Regel innerhalb von drei Tagen da.',
+            desc: 'Marta Kapcio und ihr Team bleiben erreichbar, täglich von 8 bis 20 Uhr. Den Wechsel alle 6 bis 8 Wochen organisieren wir; fällt jemand aus, ist Ersatz in der Regel innerhalb von drei Tagen da.',
           },
         ]}
       />
@@ -212,8 +213,8 @@ export function OrtPassendeKraft() {
       <Kasten ton="gruen" titel="Bei Primundus sehen Sie die Betreuungskräfte vor Ihrer Entscheidung">
         <Text>
           Mit Foto, Erfahrung und Deutschniveau. Sie wählen aus, wer zu Ihrer Situation passt — einen Vertrag gibt es
-          erst danach. Brauchen Sie eine andere Person, wechseln wir: Ersatz ist in der Regel innerhalb von drei Tagen
-          da, ohne Gebühr — nur An- und Abreise fallen an.
+          erst danach. Fällt eine Kraft aus, ist Ersatz in der Regel innerhalb von drei Tagen da; wünschen Sie einen
+          Wechsel, organisieren wir ihn mit einer Woche Vorlauf.
         </Text>
       </Kasten>
     </Abschnitt>

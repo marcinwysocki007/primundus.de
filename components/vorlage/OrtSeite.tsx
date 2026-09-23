@@ -45,6 +45,7 @@ import { HEIM_EIGENANTEIL, euroFormat } from '@/lib/heimkosten'
 import { ORTE_BERATUNG } from '@/lib/orte-beratung'
 import type { OrtDaten } from '@/lib/orte-daten'
 import { ORTE_LAGE } from '@/lib/orte-lage'
+import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
 
 const BASIS = 'https://primundus.de'
 
@@ -63,7 +64,7 @@ function ortsZahlen(d: OrtDaten): string[] {
   const zeilen: string[] = []
   if (heim) zeilen.push(`Heimplatz in ${d.land}: rund ${euroFormat(heim)} € Eigenanteil im Monat (vdek, 07/2026)`)
   if (lage?.ab75) zeilen.push(`${euroFormat(lage.ab75)} Menschen in ${d.ort} sind 75 oder älter (Zensus 2022)`)
-  if (lage?.nurSeniorenAnteil) zeilen.push(`In ${lage.nurSeniorenAnteil.toLocaleString('de-DE')} % der Haushalte leben nur Seniorinnen und Senioren`)
+  if (lage?.nurSeniorenAnteil) zeilen.push(`In ${lage.nurSeniorenAnteil.toLocaleString('de-DE')} % der Haushalte leben nur Seniorinnen und Senioren (Zensus 2022)`)
   if (beratung) {
     zeilen.push(
       beratung.kreisfrei
@@ -80,18 +81,27 @@ export function OrtSeite({ daten: d, siegel = 'karte' }: { daten: OrtDaten; sieg
   const src = `ort-${d.slug}`
 
   // Abschnittsfolge = Verzeichnis (Seitenleiste am Rechner, Pille am Handy).
+  // Ehrliche Überschrift über den Stimmen: „Familien aus <Ort>" nur, wenn mindestens zwei Stimmen
+  // wirklich aus dem Ort kommen (Prüfer 23.09.: sonst steht „aus Worms" über Düsseldorf und Bonn).
+  const ausDemOrt = DIREKT_ERHALTEN.filter((b) => b.ort === d.ort).length
+  const stimmenTitel = ausDemOrt >= 2 ? `Familien aus ${d.ort} über uns` : 'Das sagen unsere Familien'
+  const ortTitel = d.kreis ? `Was in ${d.ort} und im ${d.kreis} anders ist` : `Was in ${d.ort} anders ist`
+  const faqTitel = `Häufige Fragen zur 24-Stunden-Pflege in ${d.ort}`
+
+  // Verzeichnis = genau die Überschriften der Bausteine (Prüfer 23.09.: zwei Sprungmarken liefen ins Leere).
   const sections = [
     { id: 'was-bedeutet', title: `Was 24-Stunden-Pflege in ${d.ort} bedeutet` },
+    { id: 'aufgaben', title: 'Was eine Betreuungskraft übernimmt — und was der Pflegedienst' },
     { id: 'ablauf', title: 'So läuft es ab: von der Anfrage bis zur Anreise' },
-    { id: 'passende-kraft', title: 'Wer bei Ihnen einzieht — und wie Sie auswählen' },
+    { id: 'passende-kraft', title: 'Wie Sie die passende Betreuungskraft finden' },
     { id: 'kosten-und-kassenzuschuesse-in', title: `Was es in ${d.ort} kostet und was die Kasse zahlt` },
-    { id: 'was-die-pflege-zu', title: `Was in ${d.ort} anders ist` },
+    { id: 'was-die-pflege-zu', title: ortTitel },
     { id: 'wohnen', title: `Wohnen in ${d.ort}: was das für die Betreuung heißt` },
     { id: 'wann-sinnvoll', title: 'Wann Betreuung zu Hause sinnvoll ist' },
     { id: 'warum-primundus', title: `Warum Familien in ${d.ort} Primundus wählen` },
     { id: 'beratung', title: `Wo Sie sich in ${d.ort} unabhängig beraten lassen` },
-    { id: 'stimmen-vor-ort', title: `Familien aus ${d.ort} über uns` },
-    { id: 'haeufige-fragen-24h-pflege', title: `Häufige Fragen — 24h-Pflege in ${d.ort}` },
+    { id: 'stimmen-vor-ort', title: stimmenTitel },
+    { id: 'haeufige-fragen-24h-pflege', title: faqTitel },
   ]
 
   const schema = [
@@ -165,7 +175,7 @@ export function OrtSeite({ daten: d, siegel = 'karte' }: { daten: OrtDaten; sieg
           <OrtKosten slug={d.slug} ort={d.ort} land={d.land} />
 
           {/* 5 — die Ortsprosa; der Kreis-Absatz davor, wo es einen gibt */}
-          <Abschnitt id="was-die-pflege-zu" titel={d.kreis ? `Was in ${d.ort} und im ${d.kreis} anders ist` : `Was in ${d.ort} anders ist`}>
+          <Abschnitt id="was-die-pflege-zu" titel={ortTitel}>
             {d.vorOrt.inhalt}
             {d.kreis ? (
               <Text>
@@ -186,10 +196,10 @@ export function OrtSeite({ daten: d, siegel = 'karte' }: { daten: OrtDaten; sieg
           <OrtBeratung slug={d.slug} ort={d.ort} />
 
           {/* 10 — dunkel wie überall, Stimmen aus dem Ort zuerst */}
-          <Stimmen eingebettet ort={d.ort} anzahl={3} />
+          <Stimmen eingebettet ort={d.ort} anzahl={3} titel={stimmenTitel} />
 
           {/* 11 — Fragen */}
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel={`Häufige Fragen — 24h-Pflege in ${d.ort}`}>
+          <Abschnitt id="haeufige-fragen-24h-pflege" titel={faqTitel}>
             <Fragen fragen={d.fragen} />
           </Abschnitt>
 

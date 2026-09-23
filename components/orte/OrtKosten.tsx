@@ -48,7 +48,7 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
           [<strong key="z">Zusammen</strong>, <strong key="w">bis zu ca. {eur(SUMME_PG3)}/Monat</strong>],
         ]}
         betont={1}
-        fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
+        fuss="Eine Person, Pflegegrad 3 · Pflegegeld nach § 37 SGB XI, Entlastungsbudget nach § 39 und § 45b SGB XI, Steuerermäßigung nach § 35a EStG — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
       />
       <Tabelle
         titel="Was die Pflegekasse zahlt"

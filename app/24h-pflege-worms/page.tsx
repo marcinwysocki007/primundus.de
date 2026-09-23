@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Worms?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.220 € Eigenanteil (vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Worms starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Worms starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie ist die Pflege-Versorgung in Worms im Vergleich?', a: 'Angespannt. Auf jeden der elf ambulanten Pflegedienste in Worms kommen im Schnitt rund 110 Pflegebedürftige, landesweit sind es 82. Gleichzeitig wird in Worms deutlich häufiger ambulant gepflegt als im Landesschnitt. Der Bedarf ist also hoch und die Kapazität knapp — das merken Familien vor allem dann, wenn sie kurzfristig etwas brauchen. Eine Betreuungskraft, die im Haus lebt, hängt an keiner Tourenplanung.' },
   { q: 'Sind Wormser Innenstadtwohnungen für Pflege zu Hause geeignet?', a: 'Meist ja, barrierefrei sind sie aber selten. Im Februar und März 1945 wurde gut ein Drittel des Wormser Gebäudebestands vollständig zerstört; die Innenstadt entstand danach neu, ein großer Teil der Wohnungen stammt aus den fünfziger Jahren. Solide gebaut, aber zu einer Zeit, als niemand an Aufzüge oder bodengleiche Duschen dachte. Für eine Betreuungskraft genügt ein eigenes Zimmer.' },
   { q: 'Welches Einzugsgebiet wird in Worms bedient?', a: 'Worms und Landkreis Alzey-Worms: Alzey, Osthofen, Monsheim und alle Gemeinden im Landkreis Alzey-Worms' },
@@ -56,7 +56,7 @@ const ORT: OrtDaten = {
   ort: 'Worms',
   land: 'Rheinland-Pfalz',
   art: 'hand',
-  aktualisiert: '27. August 2026',
+  aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   einleitung: <>Ob in der Innenstadt nahe dem Dom, in Pfeddersheim oder draußen in Herrnsheim: Die meisten Wormser wollen im Alter dort bleiben, wo sie ihr Leben verbracht haben. Eine Betreuungskraft von Primundus zieht mit ein und macht genau das möglich — bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
   kreis: 'Landkreis Alzey-Worms',

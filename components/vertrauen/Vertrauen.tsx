@@ -198,7 +198,7 @@ function StimmeKarte({ b, schmal }: { b: Bewertung; schmal: boolean }) {
  * „Familien aus <Ort> über uns", Anker stimmen-vor-ort. Bis dahin hatten die Ortsseiten als einzige
  * Seitenart helle Karten (OrtStimmen); Martin: „Die Kundenmeinung hatten wir doch so schön dunkel gemacht überall."
  */
-export async function Stimmen({ eingebettet = false, ort, anzahl }: { eingebettet?: boolean; ort?: string; anzahl?: number } = {}) {
+export async function Stimmen({ eingebettet = false, ort, anzahl, titel }: { eingebettet?: boolean; ort?: string; anzahl?: number; titel?: string } = {}) {
   // Mit Ort: alle laden, sonst fehlt die örtliche Stimme, wenn sie älter als die 40 neuesten ist (Worms: März 2025)
   const d = ort ? await ladeStimmen(200) : await ladeStimmen()
   if (ort) {
@@ -221,7 +221,7 @@ export async function Stimmen({ eingebettet = false, ort, anzahl }: { eingebette
           kopf={
             <>
               <p className={`${AUGENBRAUE} text-pm-taupe-light`}>Erfahrungen von Familien</p>
-              <h2 id="stimmen-titel" className={`mt-4 ${H2} text-pm-deep-ink`}>{ort ? `Familien aus ${ort} über uns` : 'Das sagen unsere Familien'}</h2>
+              <h2 id="stimmen-titel" className={`mt-4 ${H2} text-pm-deep-ink`}>{titel ?? (ort ? `Familien aus ${ort} über uns` : 'Das sagen unsere Familien')}</h2>
               <div className="mt-5">
                 <SterneLink d={d} dunkel />
               </div>
