@@ -1,33 +1,15 @@
 import type { Metadata } from 'next'
-import { OrtStimmen } from '@/components/orte/OrtStimmen'
-import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
-import { NearbyCities } from '@/components/NearbyCities'
-import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
-import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
-} from '@/components/vorlage/Ratgeber'
-import { ArticleProgressBar } from '@/components/ArticleProgressBar'
-import { ArticleTOC } from '@/components/ArticleTOC'
+import { OrtSeite } from '@/components/vorlage/OrtSeite'
+import type { OrtDaten } from '@/lib/orte-daten'
+import { Text } from '@/components/vorlage/Ratgeber'
+
+// Seit 23.09.2026 traegt diese Datei nur noch, was in Bad Homburg vor der Höhe anders ist; der feste Text steht
+// in components/vorlage/OrtSeite.tsx (Umstellung: scripts/codemods/38-ortsseiten-als-daten.py).
 
 // Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
 // mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
-
-const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Bad Homburg bedeutet" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Bad Homburg vor der Höhe 2026" },
-  { id: 'polnische-betreuungskraefte-in-bad', title: "Polnische Betreuungskräfte in Bad Homburg" },
-  { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Hochtaunuskreis" },
-  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Bad Homburg ausmacht" },
-  { id: 'einzugsgebiet-bad-homburg-vor', title: "Einzugsgebiet Bad Homburg vor der Höhe" },
-  { id: 'werkzeuge', title: "Was es in Bad Homburg kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
-  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
-  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Bad Homburg vor der Höhe" },
-]
-
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Bad Homburg | 6× Testsieger | Primundus',
   description: 'Geprüfte Betreuungskräfte und Preis direkt online sehen. Anreise in Bad Homburg vor der Höhe in 3 Tagen möglich – mit Bestpreisgarantie.',
@@ -45,9 +27,7 @@ export const metadata: Metadata = {
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Bad Homburg vor der Höhe?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Hessen kostet im Schnitt rund 3.230 € Eigenanteil (vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Homburg vor der Höhe starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
-  { q: 'Ist 24h-Pflege über Primundus in Bad Homburg vor der Höhe rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Homburg vor der Höhe starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wir pflegen bisher selbst — wann wird eine Betreuungskraft sinnvoll?', a: 'Im Hochtaunuskreis beziehen 61,7 Prozent aller Pflegebedürftigen ausschließlich Pflegegeld, werden also allein von Angehörigen versorgt; in Hessen sind es 58,6 Prozent. Gleichzeitig nutzen nur 15,2 Prozent einen ambulanten Dienst. Viele Familien hier stehen deshalb vor einem Entweder-oder. Eine Betreuungskraft, die mit einzieht, ist der Weg dazwischen: Sie übernimmt die Dauerbelastung, während Sie Angehörige bleiben. Pflegegeld und Betreuung lassen sich kombinieren.' },
   { q: 'Ist eine Bad Homburger Wohnung für Pflege zu Hause geeignet?', a: 'In aller Regel ja, barrierefrei ist sie aber meist nicht. Zwar sind drei Viertel der Gebäude in Bad Homburg Ein- oder Zweifamilienhäuser, doch zwei Drittel aller Wohnungen liegen in Mehrfamilienhäusern — und knapp die Hälfte des Bestands stammt aus den Jahren 1949 bis 1978, also aus einer Zeit vor jeder Barrierefreiheitsanforderung. Für die Betreuungskraft genügt ein eigenes Zimmer; entscheidend ist, dass jemand da ist und die Wege übernimmt.' },
   { q: 'Kommt eine Betreuungskraft auch in die Ortsteile und in den Hochtaunuskreis?', a: 'Ja. Das ist außerhalb der Kernstadt besonders wichtig, denn der Kreis ist zweigeteilt: Bad Homburg kommt auf über 1.100 Einwohner je Quadratkilometer, das Usinger Land auf keine 300. Dort fahren ambulante Dienste lange Touren, und die Termine richten sich nach der Route. Eine Betreuungskraft im Haus ist davon unabhängig — in Ober-Erlenbach und Dornholzhausen ebenso wie in Oberursel, Friedrichsdorf oder Königstein. Anfahrtskosten berechnen wir nicht.' },
@@ -56,202 +36,32 @@ const FRAGEN = [
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.230 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
-const schemaMarkup = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': 'https://primundus.de/24h-pflege-bad-homburg#service',
-    name: 'Primundus — 24h-Pflege Bad Homburg vor der Höhe',
-    serviceType: '24-Stunden-Betreuung zu Hause',
-    description: '24h-Betreuungskräfte in Bad Homburg vor der Höhe. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-bad-homburg',
-    provider: { '@id': 'https://primundus.de/#organization' },
-    areaServed: { '@type': 'City', name: 'Bad Homburg vor der Höhe' },
-    },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Regionen', item: 'https://primundus.de/regionen' },
-      { '@type': 'ListItem', position: 3, name: 'Bad Homburg vor der Höhe', item: 'https://primundus.de/24h-pflege-bad-homburg' },
-    ],
+const ORT: OrtDaten = {
+  slug: 'bad-homburg',
+  ort: 'Bad Homburg vor der Höhe',
+  land: 'Hessen',
+  art: 'hand',
+  aktualisiert: '23. September 2026',
+  lesezeit: '6 Min.',
+  titel: '24-Stunden-Pflege und Betreuung in Bad Homburg',
+  einleitung: <>Viele Bad Homburger haben ihr Berufsleben in Frankfurt verbracht — gewohnt wird aber am Kurpark, in Gonzenheim oder Kirdorf, und dort soll auch das Alter stattfinden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  kreis: 'Hochtaunuskreis',
+  vorOrt: {
+    inhalt: (
+      <>
+        <Text>In Bad Homburg ist eine Altersgruppe besonders stark vertreten: die der Hochbetagten. <strong className="text-pm-ink font-semibold"> Fast neun Prozent der Einwohner sind über 80</strong> — mehr als im Bundesschnitt und deutlich mehr als noch vor zehn Jahren. Bemerkenswert ist dabei, dass die Gruppe der 65- bis 79-Jährigen im gleichen Zeitraum kleiner geworden ist. Es sind also nicht mehr Ältere insgesamt, sondern mehr sehr alte Menschen — genau die Gruppe, bei der Alleinleben irgendwann nicht mehr trägt.</Text>
+        <Text>Im Hochtaunuskreis zeigt die Pflegestatistik ein klares Muster: <strong className="text-pm-ink font-semibold"> 61,7 Prozent aller Pflegebedürftigen beziehen ausschließlich Pflegegeld</strong>, werden also von Angehörigen versorgt — in Hessen sind es 58,6 Prozent. Gleichzeitig nehmen nur 15,2 Prozent einen ambulanten Dienst in Anspruch, weniger als im Land. Die mittlere Lösung, bei der regelmäßig jemand ins Haus kommt, ist hier also schwächer ausgeprägt als anderswo. Viele Familien stehen damit vor einem Entweder-oder: alles selbst machen oder ins Heim.</Text>
+        <Text>Beim Wohnen räumt ein Blick in die Zahlen mit einem Klischee auf. Bad Homburg gilt als wohlhabend, und der Kaufkraftindex bestätigt das. Trotzdem wohnen sechs von zehn Haushalten zur Miete, die Eigentümerquote liegt mit 41 Prozent unter dem hessischen Schnitt. Und: Zwar sind drei Viertel der Gebäude Ein- oder Zweifamilienhäuser, aber <strong className="text-pm-ink font-semibold"> zwei Drittel aller Wohnungen liegen in Mehrfamilienhäusern</strong>. Knapp die Hälfte des Bestands stammt aus den Jahren 1949 bis 1978 — solide gebaut, aber lange vor jedem Gedanken an Barrierefreiheit.</Text>
+        <Text>Zur Lage noch ein weit verbreiteter Irrtum: Bad Homburg heißt „vor der Höhe", weil es am Fuß des Taunus liegt — die Höhen darüber gehören zwar zur Gemarkung, sind aber Wald. Gewohnt wird zwischen 137 und 250 Metern. Die Wege in der Stadt sind also meist machbar; anders sieht es in den Ortsteilen aus, die ihren dörflichen Charakter behalten haben, etwa in Ober-Erlenbach oder Dornholzhausen. Und im Kreis wird es schnell ländlich: Während Bad Homburg auf über 1.100 Einwohner je Quadratkilometer kommt, sind es rund um Usingen keine 300.</Text>
+      </>
+    ),
+    beratungsabsatz: <Text>Eine Betreuungskraft, die mit einzieht, füllt genau die Lücke zwischen „allein zurechtkommen" und „ins Heim ziehen". Sie ist nachts da, führt den Haushalt und begleitet zu Terminen. Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Hessen beraten kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI).</Text>,
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
-    mainEntity: FRAGEN.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  },
-]
-
+  einzugsgebiet: 'Bad Homburg und Hochtaunuskreis: Friedrichsdorf, Oberursel, Kronberg im Taunus, Königstein im Taunus und alle Gemeinden im Hochtaunuskreis',
+  stimmen: ['k-20260605-daniel', 'k-20260327-marco'],
+  fragen: FRAGEN,
+}
 
 export default function Page() {
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
-      <ArticleProgressBar />
-      <div className="lg:hidden">
-        <ArticleTOC sections={SECTIONS} />
-      </div>
-
-      <div className="bg-pm-paper">
-        <RatgeberKopf
-          pfad={[
-            { label: 'Startseite', href: '/' },
-            { label: 'Regionen', href: '/regionen' },
-            { label: 'Bad Homburg vor der Höhe' },
-          ]}
-          augenbraue="24-Stunden-Pflege in Bad Homburg vor der Höhe"
-          titel="24-Stunden-Pflege und Betreuung in Bad Homburg"
-          einleitungTitel="Zuhause bleiben in Bad Homburg vor der Höhe"
-          einleitung={<>Viele Bad Homburger haben ihr Berufsleben in Frankfurt verbracht — gewohnt wird aber am Kurpark, in Gonzenheim oder Kirdorf, und dort soll auch das Alter stattfinden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="27. August 2026"
-          lesezeit="6 Min."
-          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-homburg', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfOben
-          unterzeile={<StandardUnterzeile ort="Bad Homburg vor der Höhe" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim in Hessen: Eigenanteil rund 3.230 €/Monat (vdek, 07/2026)',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
-          ]}
-          blickTitel="Bad Homburg vor der Höhe auf einen Blick"
-          person={<AnsprechpartnerinGross ort="Bad Homburg" />}
-        />
-
-        <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Bad Homburg bedeutet">
-            <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
-              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
-              Heim, wo der Umzug ansteht. Das Zuhause in Bad Homburg bleibt, der gewohnte Tagesablauf auch.
-            </Text>
-            <MehrDazu
-              label="Ausführlich auf den Themenseiten:"
-              links={[
-                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
-                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
-                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
-              ]}
-            />
-          </Abschnitt>
-
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Bad Homburg vor der Höhe 2026">
-            <Tabelle
-              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
-              zeilen={[
-                ['Pflegegeld PG 3', '599 €/Monat'],
-                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
-                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
-                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
-              ]}
-              betont={1}
-              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim in Hessen: Eigenanteil rund 3.230 €/Monat (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
-            />
-            <Tabelle
-              titel="Was die Pflegekasse zahlt"
-              kopf={['Pflegegrad', 'Pflegegeld je Monat', 'Entlastungsbudget je Jahr']}
-              zeilen={[
-                ['PG 2', '347 €', '3.539 €'],
-                ['PG 3', '599 €', '3.539 €'],
-                ['PG 4', '800 €', '3.539 €'],
-                ['PG 5', '990 €', '3.539 €'],
-              ]}
-              betont={1}
-              fuss="Stand 2026 · bundesweit einheitlich"
-            />
-            <RechnerKasten src="ort-bad-homburg" />
-          </Abschnitt>
-
-          <Abschnitt id="polnische-betreuungskraefte-in-bad" titel="Polnische Betreuungskräfte in Bad Homburg">
-            <Text>Wer in Bad Homburg nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Sie kommen aus Polen und sind in Bad Homburg und im gesamten Umland im Einsatz.</Text>
-            <Kasten titel="Angestellt statt vermittelt">
-              <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
-            </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet hier im Schnitt rund 3.230 Euro Eigenanteil.</Text>
-            <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="24-stunden-pflege-im" titel="24-Stunden-Pflege im Hochtaunuskreis">
-            <Text>Unsere Betreuungskräfte ziehen in Bad Homburg und im Hochtaunuskreis ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Bad Homburg ausmacht">
-            <Text>In Bad Homburg ist eine Altersgruppe besonders stark vertreten: die der Hochbetagten. <strong className="text-pm-ink font-semibold"> Fast neun Prozent der Einwohner sind über 80</strong> — mehr als im Bundesschnitt und deutlich mehr als noch vor zehn Jahren. Bemerkenswert ist dabei, dass die Gruppe der 65- bis 79-Jährigen im gleichen Zeitraum kleiner geworden ist. Es sind also nicht mehr Ältere insgesamt, sondern mehr sehr alte Menschen — genau die Gruppe, bei der Alleinleben irgendwann nicht mehr trägt.</Text>
-            <Text>Im Hochtaunuskreis zeigt die Pflegestatistik ein klares Muster: <strong className="text-pm-ink font-semibold"> 61,7 Prozent aller Pflegebedürftigen beziehen ausschließlich Pflegegeld</strong>, werden also von Angehörigen versorgt — in Hessen sind es 58,6 Prozent. Gleichzeitig nehmen nur 15,2 Prozent einen ambulanten Dienst in Anspruch, weniger als im Land. Die mittlere Lösung, bei der regelmäßig jemand ins Haus kommt, ist hier also schwächer ausgeprägt als anderswo. Viele Familien stehen damit vor einem Entweder-oder: alles selbst machen oder ins Heim.</Text>
-            <Text>Beim Wohnen räumt ein Blick in die Zahlen mit einem Klischee auf. Bad Homburg gilt als wohlhabend, und der Kaufkraftindex bestätigt das. Trotzdem wohnen sechs von zehn Haushalten zur Miete, die Eigentümerquote liegt mit 41 Prozent unter dem hessischen Schnitt. Und: Zwar sind drei Viertel der Gebäude Ein- oder Zweifamilienhäuser, aber <strong className="text-pm-ink font-semibold"> zwei Drittel aller Wohnungen liegen in Mehrfamilienhäusern</strong>. Knapp die Hälfte des Bestands stammt aus den Jahren 1949 bis 1978 — solide gebaut, aber lange vor jedem Gedanken an Barrierefreiheit.</Text>
-            <Text>Zur Lage noch ein weit verbreiteter Irrtum: Bad Homburg heißt „vor der Höhe", weil es am Fuß des Taunus liegt — die Höhen darüber gehören zwar zur Gemarkung, sind aber Wald. Gewohnt wird zwischen 137 und 250 Metern. Die Wege in der Stadt sind also meist machbar; anders sieht es in den Ortsteilen aus, die ihren dörflichen Charakter behalten haben, etwa in Ober-Erlenbach oder Dornholzhausen. Und im Kreis wird es schnell ländlich: Während Bad Homburg auf über 1.100 Einwohner je Quadratkilometer kommt, sind es rund um Usingen keine 300.</Text>
-            <Text>Eine Betreuungskraft, die mit einzieht, füllt genau die Lücke zwischen „allein zurechtkommen" und „ins Heim ziehen". Sie ist nachts da, führt den Haushalt und begleitet zu Terminen. Bevor Sie sich entscheiden, lassen Sie sich unabhängig beraten: Die Pflegestützpunkte in Hessen beraten kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI).</Text>
-          </Abschnitt>
-
-          <Abschnitt id="einzugsgebiet-bad-homburg-vor" titel="Einzugsgebiet Bad Homburg vor der Höhe">
-            <Text>Bad Homburg und Hochtaunuskreis: Friedrichsdorf, Oberursel, Kronberg im Taunus, Königstein im Taunus und alle Gemeinden im Hochtaunuskreis</Text>
-            <NearbyCities current="bad-homburg" />
-          </Abschnitt>
-
-          <OrtWerkzeuge slug="bad-homburg" ort={'Bad Homburg'} land={'Hessen'} altbau={49.6} miete={9.95} />
-
-
-          <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
-            <Punkte
-              punkte={[
-                { title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
-                { title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
-                { title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
-                { title: 'Persönlicher Ansprechpartner', desc: '7 Tage die Woche für Sie da' },
-              ]}
-            />
-            <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
-              <img
-                src="/images/bestpreisgarantie-siegel.webp"
-                alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
-                width={900}
-                height={256}
-                loading="lazy"
-                className="h-[64px] md:h-[72px] w-auto mb-5"
-              />
-              <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
-                Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
-              </p>
-              <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
-                Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
-                Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
-              </p>
-            </div>
-            <Schritte
-              schritte={[
-                { title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
-                { title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', tag: 'Ihr Zugang kommt auch per E-Mail', tagTon: 'gruen' },
-                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
-              ]}
-            />
-          </Abschnitt>
-
-          <OrtStimmen
-
-            ort={'Bad Homburg'}
-
-            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260605-daniel', 'k-20260327-marco'].includes(b.id))}
-
-          />
-
-
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Bad Homburg vor der Höhe">
-            <Fragen fragen={FRAGEN} />
-          </Abschnitt>
-        </RatgeberRumpf>
-      </div>
-
-      <KontaktBand ohneBewertungen />
-    </>
-  )
+  return <OrtSeite daten={ORT} />
 }
