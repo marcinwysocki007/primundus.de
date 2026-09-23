@@ -1,33 +1,15 @@
 import type { Metadata } from 'next'
-import { OrtStimmen } from '@/components/orte/OrtStimmen'
-import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
-import { NearbyCities } from '@/components/NearbyCities'
-import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
-import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
-} from '@/components/vorlage/Ratgeber'
-import { ArticleProgressBar } from '@/components/ArticleProgressBar'
-import { ArticleTOC } from '@/components/ArticleTOC'
+import { OrtSeite } from '@/components/vorlage/OrtSeite'
+import type { OrtDaten } from '@/lib/orte-daten'
+import { Text } from '@/components/vorlage/Ratgeber'
+
+// Seit 23.09.2026 traegt diese Datei nur noch, was in Hildesheim anders ist; der feste Text steht
+// in components/vorlage/OrtSeite.tsx (Umstellung: scripts/codemods/38-ortsseiten-als-daten.py).
 
 // Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
 // mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
-
-const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Hildesheim bedeutet" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Hildesheim 2026" },
-  { id: 'polnische-betreuungskraefte-in-hildesheim', title: "Polnische Betreuungskräfte in Hildesheim" },
-  { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Hildesheim" },
-  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Hildesheim ausmacht" },
-  { id: 'einzugsgebiet-hildesheim', title: "Einzugsgebiet Hildesheim" },
-  { id: 'werkzeuge', title: "Was es in Hildesheim kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
-  { id: 'stimmen-vor-ort', title: "Familien aus Hildesheim über uns" },
-  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Hildesheim" },
-]
-
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege und Betreuung in Hildesheim | 6× Testsieger',
   description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Hildesheim in 3 Tagen möglich – mit Bestpreisgarantie.',
@@ -45,9 +27,7 @@ export const metadata: Metadata = {
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Hildesheim?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Niedersachsen kostet im Schnitt rund 3.010 € Eigenanteil (vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Hildesheim starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
-  { q: 'Ist 24h-Pflege über Primundus in Hildesheim rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Hildesheim starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Kommt eine Betreuungskraft auch in die Dörfer im Landkreis Hildesheim?', a: 'Ja — und dort wiegt der Unterschied am schwersten. In Bad Salzdetfurth, Alfeld, Elze, Sarstedt und den Gemeinden der Börde ist der nächste ambulante Dienst selten um die Ecke; jede Fahrt geht in die Tourenplanung ein, und die Termine liegen dann, wann sie eben liegen. Eine Betreuungskraft, die im Haus wohnt, braucht keine Anfahrt. Anfahrtskosten berechnen wir nicht, der Preis ist im Landkreis derselbe wie in der Stadt.' },
   { q: 'Was tun, wenn die Wohnung im dritten Stock ohne Aufzug liegt?', a: 'Das ist in den gewachsenen Vierteln rund um den Dom und am Moritzberg häufig die Ausgangslage — und für sich genommen kein Grund auszuziehen. Solange jemand die Wohnung selbst nicht mehr verlassen kann, verlagert sich der Alltag nach innen: einkaufen, kochen, waschen, Gesellschaft. Genau das übernimmt eine Betreuungskraft, die mit einzieht. Für Arztbesuche organisieren wir gemeinsam mit Ihnen die Begleitung.' },
   { q: 'Welches Einzugsgebiet wird in Hildesheim bedient?', a: 'Hildesheim und Landkreis Hildesheim: Bad Salzdetfurth, Alfeld, Elze, Sarstedt und alle Gemeinden im Landkreis Hildesheim' },
@@ -55,201 +35,30 @@ const FRAGEN = [
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Niedersachsen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.010 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
-const schemaMarkup = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': 'https://primundus.de/24h-pflege-hildesheim#service',
-    name: 'Primundus — 24h-Pflege Hildesheim',
-    serviceType: '24-Stunden-Betreuung zu Hause',
-    description: '24h-Betreuungskräfte in Hildesheim. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-hildesheim',
-    provider: { '@id': 'https://primundus.de/#organization' },
-    areaServed: { '@type': 'City', name: 'Hildesheim' },
-    },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Regionen', item: 'https://primundus.de/regionen' },
-      { '@type': 'ListItem', position: 3, name: 'Hildesheim', item: 'https://primundus.de/24h-pflege-hildesheim' },
-    ],
+const ORT: OrtDaten = {
+  slug: 'hildesheim',
+  ort: 'Hildesheim',
+  land: 'Niedersachsen',
+  art: 'hand',
+  aktualisiert: '23. September 2026',
+  lesezeit: '6 Min.',
+  einleitung: <>Zwischen Domviertel, Moritzberg und den Dörfern der Börde: Die meisten Hildesheimer möchten im Alter genau dort wohnen bleiben, wo sie zuhause sind — auch wenn Alleinleben nicht mehr geht. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch in Sarstedt, Bad Salzdetfurth und im Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  kreis: 'Landkreis Hildesheim',
+  vorOrt: {
+    inhalt: (
+      <>
+        <Text>Hildesheim ist eine Stadt mit vielen Treppen. Rund um den Dom, am Moritzberg und in den gewachsenen Vierteln liegen die Wohnungen oft im zweiten oder dritten Stock, und ein Aufzug ist die Ausnahme. Solange jemand die Stufen schafft, denkt niemand darüber nach. Wenn es nicht mehr geht, ändert sich der Alltag schlagartig: Der Arzttermin wird zur Tagesaufgabe, der Einkauf um die Ecke ist unerreichbar, und Besuch kommt seltener.</Text>
+        <Text>An diesem Punkt melden sich die meisten Familien bei uns. Meistens geht es gar nicht um medizinische Pflege im engeren Sinn, sondern um den Alltag: aufstehen, waschen, anziehen, kochen — und jemanden im Haus haben, der zuhört. Ein ambulanter Dienst kommt dafür zweimal am Tag für zwanzig Minuten. Eine Betreuungskraft, die mit einzieht, ist auch da, wenn nachts jemand aufsteht oder nachmittags die Unruhe kommt.</Text>
+        <Text>Im Landkreis stellt sich die Frage anders. Wer in Bad Salzdetfurth, Alfeld oder Elze wohnt, hat den nächsten ambulanten Dienst selten um die Ecke, und in den Dörfern der Börde wird jede Fahrt zur Rechnung. Gerade dort, wo die Versorgung dünn ist, spielt die 24-Stunden-Betreuung ihre Stärke aus: Sie ist auf keine Anfahrt angewiesen, weil sie schon da ist.</Text>
+      </>
+    ),
+    beratungsabsatz: <Text>Wenn Sie sich unabhängig beraten lassen möchten, bevor Sie sich entscheiden: Der Senioren- und Pflegestützpunkt des Landkreises Hildesheim berät kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Anbieter Sie sich am Ende entscheiden.</Text>,
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
-    mainEntity: FRAGEN.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  },
-]
-
+  einzugsgebiet: 'Hildesheim und Landkreis Hildesheim: Bad Salzdetfurth, Alfeld, Elze, Sarstedt und alle Gemeinden im Landkreis Hildesheim',
+  stimmen: ['k-20250623-jan'],
+  fragen: FRAGEN,
+}
 
 export default function Page() {
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
-      <ArticleProgressBar />
-      <div className="lg:hidden">
-        <ArticleTOC sections={SECTIONS} />
-      </div>
-
-      <div className="bg-pm-paper">
-        <RatgeberKopf
-          pfad={[
-            { label: 'Startseite', href: '/' },
-            { label: 'Regionen', href: '/regionen' },
-            { label: 'Hildesheim' },
-          ]}
-          augenbraue="24-Stunden-Pflege in Hildesheim"
-          titel="24-Stunden-Pflege und Betreuung in Hildesheim"
-          einleitungTitel="Zuhause bleiben in Hildesheim"
-          einleitung={<>Zwischen Domviertel, Moritzberg und den Dörfern der Börde: Die meisten Hildesheimer möchten im Alter genau dort wohnen bleiben, wo sie zuhause sind — auch wenn Alleinleben nicht mehr geht. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch in Sarstedt, Bad Salzdetfurth und im Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="27. August 2026"
-          lesezeit="6 Min."
-          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hildesheim', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfOben
-          unterzeile={<StandardUnterzeile ort="Hildesheim" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim in Niedersachsen: Eigenanteil rund 3.010 €/Monat (vdek, 07/2026)',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
-          ]}
-          blickTitel="Hildesheim auf einen Blick"
-          person={<AnsprechpartnerinGross ort="Hildesheim" />}
-        />
-
-        <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Hildesheim bedeutet">
-            <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
-              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
-              Heim, wo der Umzug ansteht. Das Zuhause in Hildesheim bleibt, der gewohnte Tagesablauf auch.
-            </Text>
-            <MehrDazu
-              label="Ausführlich auf den Themenseiten:"
-              links={[
-                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
-                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
-                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
-              ]}
-            />
-          </Abschnitt>
-
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Hildesheim 2026">
-            <Tabelle
-              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
-              zeilen={[
-                ['Pflegegeld PG 3', '599 €/Monat'],
-                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
-                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
-                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
-              ]}
-              betont={1}
-              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim in Niedersachsen: Eigenanteil rund 3.010 €/Monat (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
-            />
-            <Tabelle
-              titel="Was die Pflegekasse zahlt"
-              kopf={['Pflegegrad', 'Pflegegeld je Monat', 'Entlastungsbudget je Jahr']}
-              zeilen={[
-                ['PG 2', '347 €', '3.539 €'],
-                ['PG 3', '599 €', '3.539 €'],
-                ['PG 4', '800 €', '3.539 €'],
-                ['PG 5', '990 €', '3.539 €'],
-              ]}
-              betont={1}
-              fuss="Stand 2026 · bundesweit einheitlich"
-            />
-            <RechnerKasten src="ort-hildesheim" />
-          </Abschnitt>
-
-          <Abschnitt id="polnische-betreuungskraefte-in-hildesheim" titel="Polnische Betreuungskräfte in Hildesheim">
-            <Text>Wer in Hildesheim nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Sie kommen aus Polen und sind in Hildesheim und im gesamten Umland im Einsatz.</Text>
-            <Kasten titel="Angestellt statt vermittelt">
-              <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
-            </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet hier im Schnitt rund 3.010 Euro Eigenanteil.</Text>
-            <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="24-stunden-pflege-im" titel="24-Stunden-Pflege im Landkreis Hildesheim">
-            <Text>Unsere Betreuungskräfte ziehen in Hildesheim und im Landkreis Hildesheim ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Hildesheim ausmacht">
-            <Text>Hildesheim ist eine Stadt mit vielen Treppen. Rund um den Dom, am Moritzberg und in den gewachsenen Vierteln liegen die Wohnungen oft im zweiten oder dritten Stock, und ein Aufzug ist die Ausnahme. Solange jemand die Stufen schafft, denkt niemand darüber nach. Wenn es nicht mehr geht, ändert sich der Alltag schlagartig: Der Arzttermin wird zur Tagesaufgabe, der Einkauf um die Ecke ist unerreichbar, und Besuch kommt seltener.</Text>
-            <Text>An diesem Punkt melden sich die meisten Familien bei uns. Meistens geht es gar nicht um medizinische Pflege im engeren Sinn, sondern um den Alltag: aufstehen, waschen, anziehen, kochen — und jemanden im Haus haben, der zuhört. Ein ambulanter Dienst kommt dafür zweimal am Tag für zwanzig Minuten. Eine Betreuungskraft, die mit einzieht, ist auch da, wenn nachts jemand aufsteht oder nachmittags die Unruhe kommt.</Text>
-            <Text>Im Landkreis stellt sich die Frage anders. Wer in Bad Salzdetfurth, Alfeld oder Elze wohnt, hat den nächsten ambulanten Dienst selten um die Ecke, und in den Dörfern der Börde wird jede Fahrt zur Rechnung. Gerade dort, wo die Versorgung dünn ist, spielt die 24-Stunden-Betreuung ihre Stärke aus: Sie ist auf keine Anfahrt angewiesen, weil sie schon da ist.</Text>
-            <Text>Wenn Sie sich unabhängig beraten lassen möchten, bevor Sie sich entscheiden: Der Senioren- und Pflegestützpunkt des Landkreises Hildesheim berät kostenlos und neutral, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch steht Ihnen gesetzlich zu (§ 7a SGB XI) — unabhängig davon, für welchen Anbieter Sie sich am Ende entscheiden.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="einzugsgebiet-hildesheim" titel="Einzugsgebiet Hildesheim">
-            <Text>Hildesheim und Landkreis Hildesheim: Bad Salzdetfurth, Alfeld, Elze, Sarstedt und alle Gemeinden im Landkreis Hildesheim</Text>
-            <NearbyCities current="hildesheim" />
-          </Abschnitt>
-
-          <OrtWerkzeuge slug="hildesheim" ort={'Hildesheim'} land={'Niedersachsen'} altbau={64.9} miete={6.34} />
-
-
-          <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
-            <Punkte
-              punkte={[
-                { title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
-                { title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
-                { title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
-                { title: 'Persönlicher Ansprechpartner', desc: '7 Tage/Woche für Sie da' },
-              ]}
-            />
-            <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
-              <img
-                src="/images/bestpreisgarantie-siegel.webp"
-                alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
-                width={900}
-                height={256}
-                loading="lazy"
-                className="h-[64px] md:h-[72px] w-auto mb-5"
-              />
-              <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
-                Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
-              </p>
-              <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
-                Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
-                Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
-              </p>
-            </div>
-            <Schritte
-              schritte={[
-                { title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
-                { title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', tag: 'Ihr Zugang kommt auch per E-Mail', tagTon: 'gruen' },
-                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
-              ]}
-            />
-          </Abschnitt>
-
-          <OrtStimmen
-
-            ort={'Hildesheim'}
-
-            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250623-jan'].includes(b.id))}
-
-          />
-
-
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Hildesheim">
-            <Fragen fragen={FRAGEN} />
-          </Abschnitt>
-        </RatgeberRumpf>
-      </div>
-
-      <KontaktBand ohneBewertungen />
-    </>
-  )
+  return <OrtSeite daten={ORT} />
 }
