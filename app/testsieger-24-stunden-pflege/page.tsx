@@ -55,7 +55,7 @@ const FRAGEN = [
   },
   {
     q: 'Wie oft wurde Primundus ausgezeichnet?',
-    a: 'Sechs Jahre in Folge, zuletzt 2026. Die Studie wird jedes Jahr neu erhoben, die Auszeichnung gilt jeweils für ein Jahr. Stellvertretend zeigen wir auf dieser Seite das Siegel von 2021 mit der vollständigen Veröffentlichung als PDF.',
+    a: 'Sechs Jahre in Folge, zuletzt 2026. Die Studie wird jedes Jahr neu erhoben; die Auszeichnung gilt jeweils für ein Jahr. Siegel und vollständige Veröffentlichung finden Sie auf dieser Seite.',
   },
   {
     q: 'Was kostet die 24-Stunden-Pflege beim Testsieger?',
@@ -83,6 +83,25 @@ const schemaMarkup = [
   },
 ]
 
+
+// Kopf am 23.09.2026 zurueck auf die kompakte Fassung — Martin: „Die vorherige Seite war
+// viel besser. Die Ueberschrift war kuerzer, kompakter. Besser verstaendlich. Darunter war
+// kuerzer, sodass ich auf den Button und die passenden Pflegekraefte sofort sehen konnte."
+//
+// Gemessen am 23.09. auf dem iPhone (390 x 664 px sichtbar):
+//     vor dem 20.09.  Ueberschrift 108 px (3 Zeilen), Knopf bei 552 px — SICHTBAR
+//     nach dem Umbau  Ueberschrift 144 px (4 Zeilen), Knopf bei 771 px — 107 px zu tief
+// Die laengere Ueberschrift und die auf vier Saetze gewachsene Einleitung kosteten zusammen
+// 219 px und schoben damit den Weg zur Anfrage aus dem ersten Bildschirm.
+//
+// Zurueck ist aber NICHT die alte Einleitung. Die sagte „Stellvertretend zeigen wir hier
+// das Original-Siegel von 2021" — genau der rechtfertigende Ton, den Martin kritisiert hat.
+// Die neue ist kuerzer als beide bisherigen Fassungen und nennt 2021 gar nicht: zwei Saetze,
+// wer auszeichnet und worauf es beruht. Die Jahreszahl steht dort, wo sie hingehoert — im
+// Abschnitt „Der Nachweis".
+//
+// Die Abschnittsfolge vom 20.09. bleibt: erst wer auszeichnet und wie, dann was es fuer die
+// Familie heisst, dann der Nachweis. Das war richtig; falsch war nur der gewanderte Knopf.
 export default function TestsiegerPage() {
   return (
     <>
@@ -99,8 +118,8 @@ export default function TestsiegerPage() {
             { label: 'Testsieger 24-Stunden-Pflege' },
           ]}
           augenbraue="Auszeichnung"
-          titel="Testsieger in der 24-Stunden-Pflege: sechs Jahre in Folge ausgezeichnet"
-          einleitung={<>DIE WELT hat Primundus <strong className="text-pm-ink">sechs Jahre in Folge</strong> ausgezeichnet, zuletzt 2026. Entschieden haben das die Kundinnen und Kunden: DIE WELT und die ServiceValue GmbH werten jedes Jahr Millionen Urteile darüber aus, wie Menschen den Service der Unternehmen erleben, mit denen sie zu tun hatten. 2021 stand primundus.de in seiner Kategorie auf Platz 1. Hier lesen Sie, wer da untersucht, wie das abläuft und was davon bei Ihnen zu Hause ankommt.</>}
+          titel="Testsieger in der 24-Stunden-Pflege: 6× in Folge bei DIE WELT"
+          einleitung={<>DIE WELT hat Primundus <strong className="text-pm-ink">sechs Jahre in Folge</strong> ausgezeichnet, zuletzt 2026. Entschieden haben das die Kunden — in einer der größten Service-Studien Deutschlands.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="3 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
@@ -109,7 +128,7 @@ export default function TestsiegerPage() {
             'Sechs Jahre in Folge ausgezeichnet, zuletzt 2026',
             'Grundlage: Kundenurteile aus einer der größten Service-Studien Deutschlands',
             'Untersucht von DIE WELT und der ServiceValue GmbH, jedes Jahr neu',
-            '2021: Platz 1 im erlebten Kundenservice, Siegel und Veröffentlichung auf dieser Seite',
+            'Siegel und Veröffentlichung im Original auf dieser Seite',
             'Keine Vermittlungsgebühr, täglich kündbar, taggenaue Abrechnung',
             'Anreise in 3 Tagen möglich, Ansprechpartnerin täglich 8–20 Uhr',
           ]}
@@ -168,7 +187,7 @@ export default function TestsiegerPage() {
                 <div>
                   <Text>
                     „DIE WELT Service-Champions im erlebten Kundenservice: primundus.de" (ServiceValue GmbH, Oktober 2021).
-                    Stellvertretend für die sechs Jahre zeigen wir dieses Siegel mit der vollständigen Veröffentlichung:
+                    Siegel und vollständige Veröffentlichung:
                   </Text>
                   <p className="mt-3 text-[17px]">
                     <a href={PDF} target="_blank" rel="noopener" className={`font-semibold ${LINK}`}>Veröffentlichung ansehen (PDF)</a>
