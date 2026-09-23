@@ -1,33 +1,15 @@
 import type { Metadata } from 'next'
-import { OrtStimmen } from '@/components/orte/OrtStimmen'
-import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
-import { NearbyCities } from '@/components/NearbyCities'
-import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
-import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
-} from '@/components/vorlage/Ratgeber'
-import { ArticleProgressBar } from '@/components/ArticleProgressBar'
-import { ArticleTOC } from '@/components/ArticleTOC'
+import { OrtSeite } from '@/components/vorlage/OrtSeite'
+import type { OrtDaten } from '@/lib/orte-daten'
+import { Text } from '@/components/vorlage/Ratgeber'
+
+// Seit 23.09.2026 traegt diese Datei nur noch, was in Pirmasens anders ist; der feste Text steht
+// in components/vorlage/OrtSeite.tsx (Umstellung: scripts/codemods/38-ortsseiten-als-daten.py).
 
 // Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
 // mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
-
-const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Pirmasens bedeutet" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Pirmasens 2026" },
-  { id: 'polnische-betreuungskraefte-in-pirmasens', title: "Polnische Betreuungskräfte in Pirmasens" },
-  { id: '24-stunden-pflege-im', title: "24-Stunden-Pflege im Landkreis Südwestpfalz" },
-  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Pirmasens ausmacht" },
-  { id: 'einzugsgebiet-pirmasens', title: "Einzugsgebiet Pirmasens" },
-  { id: 'werkzeuge', title: "Was es in Pirmasens kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
-  { id: 'stimmen-vor-ort', title: "Familien aus der Region über uns" },
-  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Pirmasens" },
-]
-
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Pirmasens | 6× Testsieger | Primundus',
   description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Pirmasens in 3 Tagen möglich – mit Bestpreisgarantie.',
@@ -45,9 +27,7 @@ export const metadata: Metadata = {
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Pirmasens?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.220 € Eigenanteil (vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Pirmasens starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
-  { q: 'Ist 24h-Pflege über Primundus in Pirmasens rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Pirmasens starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Kommt eine Betreuungskraft auch in die Orte im Pfälzerwald?', a: 'Ja, und genau dort ist der Unterschied am größten. In Rodalben, Hauenstein, Dahn und den kleineren Gemeinden des Landkreises Südwestpfalz fahren ambulante Dienste lange Touren — die Termine richten sich dann nach der Route, nicht nach Ihrem Tagesablauf. Eine Betreuungskraft, die im Haus wohnt, ist von Fahrplänen unabhängig. Anfahrtskosten berechnen wir nicht, der Preis ist derselbe wie in der Stadt.' },
   { q: 'Was bedeuten die Pirmasenser Steigungen für die Betreuung?', a: 'Sie sind oft der eigentliche Auslöser. Wer in einer der Hanglagen wohnt, schafft irgendwann den Weg zur Haltestelle oder zum Arzt nicht mehr allein — und bleibt dann zu Hause, obwohl gesundheitlich noch mehr möglich wäre. Eine Betreuungskraft übernimmt genau diese Wege: einkaufen, begleiten, Termine organisieren. Das hält Menschen im Alltag, statt sie in der Wohnung zu isolieren.' },
   { q: 'Welches Einzugsgebiet wird in Pirmasens bedient?', a: 'Pirmasens und Zweibrücken sowie Landkreis Südwestpfalz: Rodalben, Hauenstein, Dahn und alle Gemeinden im Landkreis Südwestpfalz' },
@@ -55,201 +35,30 @@ const FRAGEN = [
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
-const schemaMarkup = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': 'https://primundus.de/24h-pflege-pirmasens#service',
-    name: 'Primundus — 24h-Pflege Pirmasens',
-    serviceType: '24-Stunden-Betreuung zu Hause',
-    description: '24h-Betreuungskräfte in Pirmasens. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-pirmasens',
-    provider: { '@id': 'https://primundus.de/#organization' },
-    areaServed: { '@type': 'City', name: 'Pirmasens' },
-    },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Regionen', item: 'https://primundus.de/regionen' },
-      { '@type': 'ListItem', position: 3, name: 'Pirmasens', item: 'https://primundus.de/24h-pflege-pirmasens' },
-    ],
+const ORT: OrtDaten = {
+  slug: 'pirmasens',
+  ort: 'Pirmasens',
+  land: 'Rheinland-Pfalz',
+  art: 'hand',
+  aktualisiert: '23. September 2026',
+  lesezeit: '6 Min.',
+  einleitung: <>Pirmasens hat viele Menschen, die ihr Leben lang hier gearbeitet haben — oft in der Schuhindustrie — und jetzt in den eigenen vier Wänden alt werden möchten, ob in Winzeln, auf der Ruhbank oder in der Innenstadt. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  kreis: 'Landkreis Südwestpfalz',
+  vorOrt: {
+    inhalt: (
+      <>
+        <Text>Pirmasens ist auf sieben Hügeln gebaut, und das merkt man an jedem Tag, an dem das Gehen schwerer fällt. Was mit gesunden Knien ein Spaziergang ist, wird mit Rollator zur Grenze: die steilen Straßen, die Treppen zwischen den Ebenen, der Weg zur Haltestelle bergauf. Viele ältere Pirmasenser bleiben deshalb irgendwann einfach zu Hause — nicht, weil sie krank wären, sondern weil der Weg nach draußen zu anstrengend geworden ist.</Text>
+        <Text>Genau dort beginnt die Vereinsamung, und genau dort setzt eine Betreuung im eigenen Haus an. Eine Betreuungskraft, die mit einzieht, übernimmt die Wege: einkaufen, zum Arzt begleiten, den Haushalt führen. Vor allem aber ist jemand da — morgens, nachts und an dem Nachmittag, an dem sonst niemand vorbeikommt.</Text>
+        <Text>Rund um Pirmasens kommt der Pfälzerwald dazu. Wer in Rodalben, Hauenstein oder Dahn lebt, kennt die Entfernungen: Der ambulante Dienst fährt lange Strecken, und die Termine liegen dann, wann sie eben liegen. Eine Betreuungskraft im Haus ist von Touren und Fahrplänen unabhängig — sie ist da, wenn sie gebraucht wird.</Text>
+      </>
+    ),
+    beratungsabsatz: <Text>Bevor Sie sich entscheiden, lassen Sie sich neutral beraten: Die Pflegestützpunkte in Rheinland-Pfalz beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI) und gilt unabhängig davon, wofür Sie sich am Ende entscheiden.</Text>,
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
-    mainEntity: FRAGEN.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  },
-]
-
+  einzugsgebiet: 'Pirmasens und Zweibrücken sowie Landkreis Südwestpfalz: Rodalben, Hauenstein, Dahn und alle Gemeinden im Landkreis Südwestpfalz',
+  stimmen: ['k-20260802-karin', 'k-20251031-martina'],
+  fragen: FRAGEN,
+}
 
 export default function Page() {
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
-      <ArticleProgressBar />
-      <div className="lg:hidden">
-        <ArticleTOC sections={SECTIONS} />
-      </div>
-
-      <div className="bg-pm-paper">
-        <RatgeberKopf
-          pfad={[
-            { label: 'Startseite', href: '/' },
-            { label: 'Regionen', href: '/regionen' },
-            { label: 'Pirmasens' },
-          ]}
-          augenbraue="24-Stunden-Pflege in Pirmasens"
-          titel="24-Stunden-Pflege und Betreuung in Pirmasens"
-          einleitungTitel="Zuhause bleiben in Pirmasens"
-          einleitung={<>Pirmasens hat viele Menschen, die ihr Leben lang hier gearbeitet haben — oft in der Schuhindustrie — und jetzt in den eigenen vier Wänden alt werden möchten, ob in Winzeln, auf der Ruhbank oder in der Innenstadt. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="27. August 2026"
-          lesezeit="6 Min."
-          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-pirmasens', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfOben
-          unterzeile={<StandardUnterzeile ort="Pirmasens" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim in Rheinland-Pfalz: Eigenanteil rund 3.220 €/Monat (vdek, 07/2026)',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
-          ]}
-          blickTitel="Pirmasens auf einen Blick"
-          person={<AnsprechpartnerinGross ort="Pirmasens" />}
-        />
-
-        <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Pirmasens bedeutet">
-            <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
-              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
-              Heim, wo der Umzug ansteht. Das Zuhause in Pirmasens bleibt, der gewohnte Tagesablauf auch.
-            </Text>
-            <MehrDazu
-              label="Ausführlich auf den Themenseiten:"
-              links={[
-                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
-                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
-                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
-              ]}
-            />
-          </Abschnitt>
-
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Pirmasens 2026">
-            <Tabelle
-              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
-              zeilen={[
-                ['Pflegegeld PG 3', '599 €/Monat'],
-                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
-                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
-                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
-              ]}
-              betont={1}
-              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim in Rheinland-Pfalz: Eigenanteil rund 3.220 €/Monat (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
-            />
-            <Tabelle
-              titel="Was die Pflegekasse zahlt"
-              kopf={['Pflegegrad', 'Pflegegeld je Monat', 'Entlastungsbudget je Jahr']}
-              zeilen={[
-                ['PG 2', '347 €', '3.539 €'],
-                ['PG 3', '599 €', '3.539 €'],
-                ['PG 4', '800 €', '3.539 €'],
-                ['PG 5', '990 €', '3.539 €'],
-              ]}
-              betont={1}
-              fuss="Stand 2026 · bundesweit einheitlich"
-            />
-            <RechnerKasten src="ort-pirmasens" />
-          </Abschnitt>
-
-          <Abschnitt id="polnische-betreuungskraefte-in-pirmasens" titel="Polnische Betreuungskräfte in Pirmasens">
-            <Text>Wer in Pirmasens nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Sie kommen aus Polen und sind in Pirmasens und im gesamten Umland im Einsatz.</Text>
-            <Kasten titel="Angestellt statt vermittelt">
-              <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
-            </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet hier im Schnitt rund 3.220 Euro Eigenanteil.</Text>
-            <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Betreuungskräfte — das Entsendemodell erklärt</a>.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="24-stunden-pflege-im" titel="24-Stunden-Pflege im Landkreis Südwestpfalz">
-            <Text>Unsere Betreuungskräfte ziehen in Pirmasens und im Landkreis Südwestpfalz ein — auch in den kleineren Gemeinden, in denen sonst kaum jemand anbietet. Die Anreise dauert überall gleich lang, der Preis ist derselbe.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Pirmasens ausmacht">
-            <Text>Pirmasens ist auf sieben Hügeln gebaut, und das merkt man an jedem Tag, an dem das Gehen schwerer fällt. Was mit gesunden Knien ein Spaziergang ist, wird mit Rollator zur Grenze: die steilen Straßen, die Treppen zwischen den Ebenen, der Weg zur Haltestelle bergauf. Viele ältere Pirmasenser bleiben deshalb irgendwann einfach zu Hause — nicht, weil sie krank wären, sondern weil der Weg nach draußen zu anstrengend geworden ist.</Text>
-            <Text>Genau dort beginnt die Vereinsamung, und genau dort setzt eine Betreuung im eigenen Haus an. Eine Betreuungskraft, die mit einzieht, übernimmt die Wege: einkaufen, zum Arzt begleiten, den Haushalt führen. Vor allem aber ist jemand da — morgens, nachts und an dem Nachmittag, an dem sonst niemand vorbeikommt.</Text>
-            <Text>Rund um Pirmasens kommt der Pfälzerwald dazu. Wer in Rodalben, Hauenstein oder Dahn lebt, kennt die Entfernungen: Der ambulante Dienst fährt lange Strecken, und die Termine liegen dann, wann sie eben liegen. Eine Betreuungskraft im Haus ist von Touren und Fahrplänen unabhängig — sie ist da, wenn sie gebraucht wird.</Text>
-            <Text>Bevor Sie sich entscheiden, lassen Sie sich neutral beraten: Die Pflegestützpunkte in Rheinland-Pfalz beraten kostenlos und unabhängig von Anbietern, auf Wunsch auch bei Ihnen zu Hause. Dieser Anspruch ist gesetzlich verankert (§ 7a SGB XI) und gilt unabhängig davon, wofür Sie sich am Ende entscheiden.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="einzugsgebiet-pirmasens" titel="Einzugsgebiet Pirmasens">
-            <Text>Pirmasens und Zweibrücken sowie Landkreis Südwestpfalz: Rodalben, Hauenstein, Dahn und alle Gemeinden im Landkreis Südwestpfalz</Text>
-            <NearbyCities current="pirmasens" />
-          </Abschnitt>
-
-          <OrtWerkzeuge slug="pirmasens" ort={'Pirmasens'} land={'Rheinland-Pfalz'} altbau={71.9} miete={4.62} />
-
-
-          <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
-            <Punkte
-              punkte={[
-                { title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
-                { title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
-                { title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
-                { title: 'Persönlicher Ansprechpartner', desc: '7 Tage die Woche für Sie da' },
-              ]}
-            />
-            <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
-              <img
-                src="/images/bestpreisgarantie-siegel.webp"
-                alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
-                width={900}
-                height={256}
-                loading="lazy"
-                className="h-[64px] md:h-[72px] w-auto mb-5"
-              />
-              <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
-                Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
-              </p>
-              <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
-                Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
-                Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
-              </p>
-            </div>
-            <Schritte
-              schritte={[
-                { title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
-                { title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', tag: 'Ihr Zugang kommt auch per E-Mail', tagTon: 'gruen' },
-                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
-              ]}
-            />
-          </Abschnitt>
-
-          <OrtStimmen
-
-            ort={'Pirmasens'}
-
-            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20260802-karin', 'k-20251031-martina'].includes(b.id))}
-
-          />
-
-
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Pirmasens">
-            <Fragen fragen={FRAGEN} />
-          </Abschnitt>
-        </RatgeberRumpf>
-      </div>
-
-      <KontaktBand ohneBewertungen />
-    </>
-  )
+  return <OrtSeite daten={ORT} />
 }

@@ -184,8 +184,9 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
             {d.vorOrt.inhalt}
             {d.kreis ? (
               <Text>
-                Das gilt für den ganzen {d.kreis}: Unsere Betreuungskräfte ziehen auch in den kleineren Gemeinden ein, in
-                denen sonst kaum jemand anbietet — zu denselben Bedingungen wie in {d.ort}.
+                {/* „im" passt für Landkreis (der), Unterallgäu und Westmünsterland (das); „für den ganzen" passte nur für „der" */}
+                Das gilt auch im {d.kreis}: Unsere Betreuungskräfte ziehen in den kleineren Gemeinden ein, in denen sonst
+                kaum jemand anbietet — zu denselben Bedingungen wie in {d.ort}.
               </Text>
             ) : null}
           </Abschnitt>

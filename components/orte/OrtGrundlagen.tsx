@@ -37,8 +37,9 @@ export function OrtWasBedeutet({ ort }: { ort: string }) {
         Aufstehen und Waschen, beim Kochen, beim Einkauf, beim Gang zum Arzt; bei Bedarf ist sie auch nachts da —
         regelmäßige nächtliche Einsätze müssen ausgeglichen werden und gehören in die Angaben im Rechner.
         Medizinische Aufgaben wie Spritzen oder Verbände übernimmt weiterhin der ambulante Pflegedienst. Unsere
-        Betreuungskräfte kommen aus <a href="/pflegekraft-aus-polen" className={LINK}>Polen</a> und sind bei uns
-        angestellt — Ihr Vertrag läuft mit Primundus, Sie werden nicht Arbeitgeber.
+        Betreuungskräfte sind bei uns angestellt — Ihr Vertrag läuft mit Primundus, Sie werden nicht Arbeitgeber.
+        Woher sie kommen, steht auf der{' '}
+        <a href="/pflegekraft-aus-polen" className={LINK}>Seite zu unseren Betreuungskräften</a>.
       </Text>
       <MehrDazu
         label="Ausführlich auf den Themenseiten:"
