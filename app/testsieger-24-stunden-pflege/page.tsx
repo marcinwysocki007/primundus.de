@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
+import { SiegelZeile } from '@/components/vertrauen/Vertrauen'
 
 // Kernseite in der Seitenvorlage. 20.09.2026 umgestellt (Martin: „wir sind jetzt 6 Jahre in Folge ausgezeichnet — man muss
 // da nicht explizit auf die Siegel eingehen, weil wir sie nicht gekauft haben, aber trotzdem Sieger sind — also sinnvoll
@@ -13,29 +13,34 @@ import { aktualisiertAm } from '@/lib/lastmod'
 // zuerst; das Siegel bleibt als Nachweis, rutscht aber nach unten. Keine Prozentzahlen, nie „Vermittler", keine Negation
 // anderer Tests. Martins Wortlaut „6× Testsieger / DIE WELT / Preis & Qualität" bleibt gültig..
 
-const AKTUALISIERT = aktualisiertAm('testsieger-24-stunden-pflege', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('testsieger-24-stunden-pflege', '23. September 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-testsieger'
 const PDF = '/downloads/die-welt-service-champions-2021.pdf'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
+// 23.09.2026, Martin: „6x in Folge bei DIE WELT fand ich besser in den Snippets. Und sollten wir das Siegel nicht schon
+// früher zeigen — also Auf einen Blick oder ein eigener Bereich direkt darüber, so die Box wie im Kostenrechner?“
+// Titel zurück auf seinen Wortlaut vom 16.09.; das Siegel steht jetzt oben im Kasten (seine Wahl: „A ist gut“), der Abschnitt
+// „Das Siegel“ weiter unten fällt dafür weg, sonst stünde es zweimal auf der Seite.
+// Beschreibung D2 nach OpenAI-Prüfung (23.09.): stärkste Klickrate, führt in den Rechner, 106 Zeichen — am Handy vollständig
+const BESCHREIBUNG = 'Primundus ist 6× in Folge Testsieger bei DIE WELT. Preis und passende Pflegekräfte sehen Sie in 2 Minuten.'
+const PDF_LINK = <a href={PDF} target="_blank" rel="noopener" className={`font-semibold ${LINK}`}>Veröffentlichung ansehen (PDF)</a>
+
 const SECTIONS = [
   { id: 'wer', title: 'Wer auszeichnet und wie' },
   { id: 'familie', title: 'Was das für Sie heißt' },
-  { id: 'siegel', title: 'Das Siegel' },
   { id: 'vergleich', title: 'Vergleichen Sie selbst' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Testsieger: ausgezeichnet von DIE WELT',
-  description:
-    'Testsieger in der 24-Stunden-Pflege: Primundus ist sechs Jahre in Folge ausgezeichnet. Grundlage sind Kundenurteile aus der Service-Studie von DIE WELT.',
+  title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
+  description: BESCHREIBUNG,
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege Testsieger: ausgezeichnet von DIE WELT',
-    description:
-      'Sechs Jahre in Folge ausgezeichnet. Grundlage sind Kundenurteile aus der Service-Studie von DIE WELT und ServiceValue.',
+    title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
+    description: BESCHREIBUNG,
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -124,13 +129,18 @@ export default function TestsiegerPage() {
           lesezeit="3 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
           blickTitel="Auf einen Blick"
-          blick={[
-            'Sechs Jahre in Folge ausgezeichnet, zuletzt 2026',
-            'Grundlage: Kundenurteile aus einer der größten Service-Studien Deutschlands',
-            'Untersucht von DIE WELT und der ServiceValue GmbH, jedes Jahr neu',
-            'Siegel und Veröffentlichung im Original auf dieser Seite',
-            'Keine Vermittlungsgebühr, täglich kündbar, taggenaue Abrechnung',
-            'Anreise in 3 Tagen möglich, Ansprechpartnerin täglich 8–20 Uhr',
+          blickKopf={<SiegelZeile link={PDF_LINK} />}
+          // Martin 23.09.2026: „sechsmal ausgezeichnet, Grundlage, Untersuchung, keine Vermittlungsgebühr, Anreise …
+          // das passt doch irgendwie nicht zusammen … man kann sagen, warum … fair wegen keine Vermittlungsgebühr,
+          // täglich kündbar, taggenaue Abrechnung … vielleicht als eine Art Inhaltsverzeichnis". Jede Zeile ist ein
+          // Grund und springt zu dem Abschnitt, der ihn belegt. „Warum Preis-Leistungssieger" steht bewusst NICHT
+          // da: Die Studie bewertet den erlebten Kundenservice, nicht die Konditionen.
+          blickVerweise={[
+            { href: '#wer', titel: 'Wer uns auszeichnet', text: 'DIE WELT, auf Grundlage von Kundenurteilen' },
+            // „Faire Konditionen" statt „Fair im Preis" (OpenAI-Prüfung 23.09.): „täglich kündbar" ist keine Preisangabe
+            { href: '#familie', titel: 'Faire Konditionen', text: 'keine Vermittlungsgebühr, täglich kündbar, taggenau abgerechnet' },
+            { href: '#vergleich', titel: 'Vergleichen Sie selbst', text: 'Gebühren, Bindung und Auswahl bei den bekannten Anbietern' },
+            { href: '#faq', titel: 'Häufige Fragen', text: 'zur Auszeichnung und zu den Kosten' },
           ]}
         />
 
@@ -174,37 +184,6 @@ export default function TestsiegerPage() {
             />
           </Abschnitt>
 
-          {/* Siegel klein und ohne Erklaerung (23.09.2026). Martin: „Das mit dem Nachweis
-              interessiert keine Sau. Das ist schlecht geschrieben, viel zu grosses Icon. Mach doch
-              einfach, wie wir das sonst verwenden … Einfach nur Veroeffentlichung ansehen reicht.
-              Du brauchst nicht Nachweis und irgend so einen Scheiss. Dann hoert sich das an, als
-              wuerde man betruegen."
-              Vorher: Ueberschrift „Der Nachweis: Siegel und Veroeffentlichung", Siegel 160 px breit,
-              davor ein Satz mit Institut, Monat und Jahr. Jetzt: Siegel in derselben Groesse wie im
-              Hero der Startseite, die Zeile darunter wie im Rechner, und ein Link. Nichts erklaert
-              sich mehr selbst. */}
-          <Abschnitt id="siegel" titel="Das Siegel">
-            <Kasten>
-              <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-                <Image
-                  src="/images/siegel-welt-2021-352.webp"
-                  alt="Siegel DIE WELT Service-Champions: primundus.de"
-                  width={352}
-                  height={528}
-                  className="h-[110px] w-auto flex-none rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)] md:h-[130px]"
-                />
-                <div>
-                  <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">
-                    6× Testsieger bei DIE WELT
-                  </p>
-                  <p className="mt-1 text-[17px] leading-[1.5] text-pm-body">Preis &amp; Qualität</p>
-                  <p className="mt-4 text-[17px]">
-                    <a href={PDF} target="_blank" rel="noopener" className={`font-semibold ${LINK}`}>Veröffentlichung ansehen (PDF)</a>
-                  </p>
-                </div>
-              </div>
-            </Kasten>
-          </Abschnitt>
 
           <Abschnitt id="vergleich" titel="Vergleichen Sie selbst">
             <Text>
