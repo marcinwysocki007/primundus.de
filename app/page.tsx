@@ -6,47 +6,38 @@ import {
   BekanntAus, HeimVergleich, RundumVersorgt, SoFunktionierts, StartKopf, Voraussetzungen, WasIst,
 } from '@/components/start/Startseite'
 
-// Snippet der Startseite, 22.09.2026 — Wortlaut von Martin, unveraendert uebernommen.
+// Snippet der Startseite. Titel am 23.09.2026 zurueckgenommen.
 //
-// Der Anlass steht in der Search Console: Die Startseite rankt fuer Polen-Anfragen weit vorn
-// und bekommt NULL Klicks. 497 Impressionen in 90 Tagen, davon 105 auf "polnische
-// pflegekraefte vermittlung muenchen" (Position 3,3) und 20 auf "polnische pflegekraft
-// muenchen" (Position 2,4). Der bisherige Titel nannte Polen nicht.
+// Am 22.09. stand hier „Polnische Pflegekraefte sofort ansehen | 6x Testsieger" — Martins
+// Wortlaut, zeichengenau uebernommen. Am 23.09. hat er klargestellt: „ich wollte polnische
+// pflegekraefte nur bei den seite fuer polnische pflegekraefte und nicht die hauptseite."
 //
-// Gemessen in Googles Darstellungsgroessen (Arial, Titel 20px/580px, Beschreibung 14px/920px):
-//   Titel        473 px — 107 px Luft.
-//   Beschreibung 751 px — 169 px Luft.
+// Er hatte schon am 22.09. nachgefragt, ob das wirklich die Startseite betrifft. Damals wurde
+// mit Zahlen dagegen argumentiert, statt es zurueckzunehmen. Das war der Fehler — eine
+// Rueckfrage ist keine Einladung zur Verteidigung.
 //
-// Nachtrag 22.09. abends, Martin: „auswahl vorab versteht keiner - kann raus.“
-// Gestrichen, ohne Ersatz. Die frei gewordenen 169 px bleiben vorerst leer — was dort
-// stehen soll, entscheidet er.
-// Beides passt vollstaendig, deshalb steht in openGraph derselbe Wortlaut.
+// Zurueck auf seinen Wortlaut vom 21.09. Die Beschreibung bleibt, wie sie ist: Sie nennt Polen
+// nicht und traegt seine Streichung von „Auswahl vorab" vom 22.09.
 //
-// Zwei Punkte, die die SEITE noch schuldig bleibt (Befund 22.09., OpenAI + eigene Messung):
-//   1. Das Wort "polnisch" kommt im sichtbaren Text der Startseite genau EINMAL vor, weit
-//      unten vor den haeufigen Fragen. Wer auf "Polnische Pflegekraefte" klickt, findet das
-//      Wort ueber der Falz nicht wieder.
-//   2. "sofort ansehen" wird erst im Kostenrechner eingeloest, also einen Klick spaeter.
-//      Ueber der Falz steht das Versprechen ("welche Pflegekraefte verfuegbar sind"), nicht
-//      die Sache selbst.
-// Beides erhoeht die Wahrscheinlichkeit, dass Google den Titel umschreibt, und ist als
-// naechster Schritt bei Martin vorgelegt. Die H1 "Ihre Eltern muessen nicht ins Heim."
-// bleibt unangetastet.
+// Was die Daten dazu sagen, fuer die Akten: Die Startseite zieht 1.198 Testsieger-Impressionen
+// (47 Prozent ihrer Nicht-Marken-Sichtbarkeit) gegen 491 Polen-Impressionen (19 Prozent). Die
+// Anfrage „24 stunden pflege testsieger" braucht beide Woerter — mit dem Polen-Titel fehlte
+// „24-Stunden-Pflege". Die Rueckkehr ist also auch sachlich richtig.
 //
-// Lehre aus dem 01.09.: Damals lautete Martins Vorgabe schon einmal "Sofortpreis und
-// Pflegekraefte sofort ansehen beim 6-fachen Testsieger" — und im Code stand als Begruendung,
-// warum stattdessen "24-Stunden-Pflege" vorn blieb. Vorgegebener Wortlaut ist kein Vorschlag.
+// Polen gehoert auf /pflegekraft-aus-polen. Dort steht der Begriff heute in der EINZAHL im
+// Titel, obwohl wir in der Mehrzahl auf Position 21,2 stehen und in der Einzahl auf 51,3.
 //
-// Beobachtung laeuft: Basiswerte in seo-reports/startseite-basis.json, Nachkontrolle
-// fruehestens drei Wochen nach dem Neu-Crawl.
+// Gemessen (Arial, Titel 20px/580px, Beschreibung 14px/920px):
+//   Titel        496 px — 84 px Luft.
+//   Beschreibung 751 px — 169 px ungenutzt, bis entschieden ist, was dort steht.
 export const metadata: Metadata = {
-  title: 'Polnische Pflegekräfte sofort ansehen | 6× Testsieger',
+  title: '24-Stunden-Pflege zuhause | 6× Testsieger | Primundus',
   description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: {
     canonical: 'https://primundus.de/',
   },
   openGraph: {
-    title: 'Polnische Pflegekräfte sofort ansehen | 6× Testsieger',
+    title: '24-Stunden-Pflege zuhause | 6× Testsieger | Primundus',
     description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/',
     siteName: 'Primundus',
