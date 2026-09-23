@@ -97,7 +97,11 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
     { id: 'passende-kraft', title: 'Wie Sie die passende Betreuungskraft finden' },
     { id: 'kosten-und-kassenzuschuesse-in', title: `Was es in ${d.ort} kostet und was die Kasse zahlt` },
     { id: 'was-die-pflege-zu', title: ortTitel },
-    { id: 'wohnen', title: `Wohnen in ${d.ort}: was das für die Betreuung heißt` },
+    // Erzeugte Seiten (147): Ihre Ortsprosa aus vorort_text.py IST schon der Wohnungs-Text (80,4 m²,
+    // 3,3 Wohnungen je Gebäude, 28,5 % Eigentum …) — OrtWohnen würde dieselben Zensus-Zahlen ein
+    // zweites Mal erzählen (Stopp 2, Bochum). Handgeschriebene Seiten (61) haben eigene Prosa, dort
+    // bringt der Baustein die Wohnungsdaten neu dazu.
+    ...(d.art === 'hand' ? [{ id: 'wohnen', title: `Wohnen in ${d.ort}: was das für die Betreuung heißt` }] : []),
     { id: 'wann-sinnvoll', title: 'Wann Betreuung zu Hause sinnvoll ist' },
     { id: 'warum-primundus', title: `Warum Familien in ${d.ort} Primundus wählen` },
     { id: 'beratung', title: `Wo Sie sich in ${d.ort} unabhängig beraten lassen` },
@@ -186,8 +190,8 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
             ) : null}
           </Abschnitt>
 
-          {/* 6, 7 — Zensus je Ort */}
-          <OrtWohnen slug={d.slug} ort={d.ort} />
+          {/* 6, 7 — Zensus je Ort; Wohnen nur auf handgeschriebenen Seiten (siehe sections) */}
+          {d.art === 'hand' ? <OrtWohnen slug={d.slug} ort={d.ort} /> : null}
           <OrtWannSinnvoll slug={d.slug} ort={d.ort} />
 
           {/* 8 — die sechs USPs */}
