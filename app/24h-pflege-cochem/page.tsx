@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Unter der Reichsburg, in Cond oder Sehl an der Mosel: Cochemer wohnen, wo andere Urlaub machen — und bleiben, auch wenn die Kräfte nachlassen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, im ganzen Moseltal. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-cochem', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

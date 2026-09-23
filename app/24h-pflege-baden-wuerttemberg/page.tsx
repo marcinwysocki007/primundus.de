@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>Vom Bodensee bis in den Odenwald, von Stuttgarts Halbhöhenlagen bis in die Dörfer der Schwäbischen Alb: In Baden-Württemberg wird das eigene Haus oft über Generationen gehalten — und genau dort möchten die meisten auch gepflegt werden. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-baden-wuerttemberg', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

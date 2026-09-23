@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Zwischen Schloss, Oßweil und Hoheneck wohnt man in Ludwigsburg gern — und bleibt. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: 1:1-Betreuung im eigenen Zuhause, bei Bedarf auch nachts, statt Warteliste im Heim. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-ludwigsburg', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

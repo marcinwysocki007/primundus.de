@@ -106,6 +106,8 @@ export default function Page() {
           einleitung={<>Schwachhausen, Findorff oder das Viertel: Bremer bleiben ihrer Stadt treu — und ihrem Altbremer Haus erst recht. Eine Betreuungskraft von Primundus sorgt dafür, dass das Alter daran nichts ändert: Sie zieht mit ein, führt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bremen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

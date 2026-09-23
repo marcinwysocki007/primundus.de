@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Mit dem Hohenstaufen am Horizont wohnt man in Göppingen, Faurndau oder Jebenhausen bodenständig — und bleibt. Eine Betreuungskraft von Primundus sorgt dafür, dass das eigene Zuhause der Mittelpunkt bleibt: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-goeppingen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

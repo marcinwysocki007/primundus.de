@@ -105,6 +105,8 @@ export default function Page() {
           einleitung={<>Im Gemüsegarten Deutschlands wohnt man bodenständig: das Haus in Schifferstadt oder Mutterstadt, der Garten in Limburgerhof, die Felder vor der Tür. Viele haben ein Leben lang bei der BASF gearbeitet und möchten ihren Ruhestand genau hier verbringen — nicht im Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-rhein-pfalz-kreis', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',

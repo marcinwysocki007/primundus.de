@@ -108,6 +108,8 @@ export default function Page() {
           einleitung={<>In Eversten, Osternburg oder Ofenerdiek wohnt man gern mit Garten und Fahrradweg vor der Tür — und möchte genau dort auch alt werden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, im vertrauten Zuhause, auch im Ammerland und Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-oldenburg', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

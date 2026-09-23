@@ -108,6 +108,8 @@ export default function Page() {
           einleitung={<>Fachwerk in Erfurt, Plattenbau in Jena, Haus am Waldrand im Thüringer Wald: Zuhause ist in Thüringen mehr als eine Adresse. Damit es auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-thueringen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Ob in Taunusstein, Niedernhausen oder unten am Rhein in Walluf: Rund um Wiesbaden lebt man gern im eigenen Haus mit Garten — und möchte dort auch alt werden. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da, wenn allein leben nicht mehr geht. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-wiesbaden-umland', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

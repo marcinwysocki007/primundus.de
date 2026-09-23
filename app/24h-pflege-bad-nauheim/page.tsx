@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Bad Nauheim ist zum Altwerden gemacht — Kurpark, Sprudelhof, kurze Wege. Und trotzdem kommt der Moment, in dem es allein in der Wohnung am Park oder im Haus in Steinfurth nicht mehr geht. Dann zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit das Zuhause Zuhause bleibt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-nauheim', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

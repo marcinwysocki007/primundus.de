@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>Gründerzeitwohnung in Leipzig, Haus am Stadtrand von Dresden, Heimatort im Erzgebirge: Sachsen hängen an ihren vier Wänden — Treppen hin oder her. Eine Betreuungskraft von Primundus zieht mit ein, übernimmt Haushalt, Begleitung und die Nacht, und das Zuhause bleibt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-sachsen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

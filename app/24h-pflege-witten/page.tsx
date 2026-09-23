@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Zwischen Ruhr und Ardey-Wald wohnt man in Witten oft ein Leben lang — in Annen, Herbede oder Bommern, im Haus mit Garten oder der Wohnung nahe der Innenstadt. Damit das so bleiben kann, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, 1:1, im eigenen Zuhause statt im Heim. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-witten', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

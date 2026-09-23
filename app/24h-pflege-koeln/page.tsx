@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Nippes, Sülz, Ehrenfeld oder rechtsrheinisch in Deutz: Kölner verlassen ihr Veedel nicht — da können die Heim-Wartelisten der Stadt noch so lang sein. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, damit das Zuhause mit Dom-Blick oder Hinterhof-Garten genau das bleibt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-koeln', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

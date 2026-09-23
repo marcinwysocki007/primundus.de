@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>In Bensberg, Refrath oder Paffrath wohnen viele, deren Kinder täglich nach Köln pendeln — und die ihr Haus im Grünen um nichts in der Welt aufgeben wollen. Müssen sie auch nicht: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, wenn allein leben nicht mehr geht. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bergisch-gladbach', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

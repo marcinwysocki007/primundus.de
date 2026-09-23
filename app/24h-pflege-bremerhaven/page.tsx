@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>In Geestemünde, Lehe oder Wulsdorf wohnen viele, die ihr Leben lang im Hafen oder auf den Werften gearbeitet haben — und ihren Ruhestand an der Weser verbringen wollen, nicht hinter Heimtüren. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bremerhaven', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

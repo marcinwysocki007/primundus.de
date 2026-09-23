@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Ein Arbeitsleben im Werk, ein Haus in Maichingen oder Darmsheim, ein Garten für die Enkel: So sieht der Ruhestand vieler Sindelfinger aus — und so soll er bleiben. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-sindelfingen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

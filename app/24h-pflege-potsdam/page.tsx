@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Zwischen Babelsberg, Bornstedt und den Havelseen wohnt man zu schön, um fürs Alter wegzuziehen. Eine Betreuungskraft von Primundus sorgt dafür, dass niemand muss: Sie zieht mit ein, ist bei Bedarf auch nachts da und hält den vertrauten Alltag am Laufen — in Potsdam und im Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-potsdam', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

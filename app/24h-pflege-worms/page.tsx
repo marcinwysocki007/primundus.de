@@ -126,6 +126,8 @@ export default function Page() {
           einleitung={<>Ob in der Innenstadt nahe dem Dom, in Pfeddersheim oder draußen in Herrnsheim: Die meisten Wormser wollen im Alter dort bleiben, wo sie ihr Leben verbracht haben. Eine Betreuungskraft von Primundus zieht mit ein und macht genau das möglich — bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-worms', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

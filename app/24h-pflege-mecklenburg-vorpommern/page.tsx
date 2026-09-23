@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>Zwischen Ostseeküste und Seenplatte sind die Wege weit — zum nächsten Heim oft am weitesten. Gut, dass es anders geht: Eine Betreuungskraft von Primundus zieht mit ein, ob in Rostock, Schwerin oder im Dorf an der Müritz, und ist bei Bedarf auch nachts da. Das vertraute Zuhause bleibt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-mecklenburg-vorpommern', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

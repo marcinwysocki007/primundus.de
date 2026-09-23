@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Ob Jugendstilwohnung nahe der Mathildenhöhe, Haus in Bessungen oder Eberstadt: Darmstädter möchten im Alter dort bleiben, wo ihr Leben stattgefunden hat. Eine Betreuungskraft von Primundus macht das möglich — sie zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da, bis Arheilgen und ins Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-darmstadt', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

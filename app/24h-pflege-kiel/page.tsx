@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Ob in Wik mit Blick auf die Förde, in Elmschenhagen oder drüben in Kronshagen: Kieler bleiben gern, wo das Wasser nah ist. Auch mit Pflegebedarf — eine Betreuungskraft von Primundus zieht mit ein, übernimmt Haushalt, Begleitung und die Nacht, und das vertraute Zuhause bleibt erhalten. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-kiel', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Zwischen Weinbergen, Gradierbau und Kurpark wird man in Bad Dürkheim gern alt — ob stadtnah, in Seebach oder Grethen. Eine Betreuungskraft von Primundus sorgt dafür, dass das im eigenen Zuhause gelingt: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-duerkheim', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

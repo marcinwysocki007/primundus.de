@@ -108,6 +108,8 @@ export default function Page() {
           einleitung={<>Im Saarland wohnt man nah beieinander — und trotzdem können Kinder nicht rund um die Uhr bei den Eltern in Saarbrücken, Völklingen oder St. Wendel sein. Eine Betreuungskraft von Primundus schließt genau diese Lücke: Sie zieht mit ein und ist bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-saarland', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

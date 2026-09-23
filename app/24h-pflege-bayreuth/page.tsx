@@ -112,6 +112,8 @@ export default function Page() {
           einleitung={<>Ob in der Gartenstadt, in St. Georgen oder draußen in Bindlach: Wer in Bayreuth alt geworden ist, will die Festspielstadt und das eigene Zuhause nicht verlassen. Muss auch niemand — eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, in der Stadt und im ganzen Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bayreuth', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

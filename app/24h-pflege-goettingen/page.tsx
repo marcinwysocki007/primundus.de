@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Göttingen ist eine Stadt, aus der die Kinder zum Studium kommen — und die eigenen Kinder oft zum Arbeiten wegziehen. Zurück bleiben Eltern in Weende, Geismar oder Grone, die ihr Zuhause lieben. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-goettingen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

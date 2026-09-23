@@ -105,6 +105,8 @@ export default function Page() {
           einleitung={<>Zwischen Alzey und dem Rhein leben viele Familien seit Generationen im eigenen Haus — mit Garten, Weinbergen vor der Tür und Nachbarn, die man beim Namen kennt. Wenn die Eltern Hilfe brauchen, soll genau das nicht verloren gehen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da: in Alzey, Wörrstadt, Osthofen und im ganzen Landkreis. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-alzey-worms', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',

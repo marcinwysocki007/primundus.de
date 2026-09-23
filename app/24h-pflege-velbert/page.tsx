@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Neviges, Langenberg oder Mitte: Velberter Häuser stehen auf bergischen Höhen — mit Aussicht, Garten und Geschichte. Eine Betreuungskraft von Primundus sorgt dafür, dass niemand sie im Alter aufgeben muss: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-velbert', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

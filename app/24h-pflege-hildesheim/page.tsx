@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Zwischen Domviertel, Moritzberg und den Dörfern der Börde: Die meisten Hildesheimer möchten im Alter genau dort wohnen bleiben, wo sie zuhause sind — auch wenn Alleinleben nicht mehr geht. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch in Sarstedt, Bad Salzdetfurth und im Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hildesheim', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

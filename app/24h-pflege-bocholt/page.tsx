@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>In Bocholt hat man sein Haus — in Biemenhorst, Mussum oder stadtnah an der Aa — und dort soll das Leben auch im Alter weitergehen, nicht in einem Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, im ganzen Westmünsterland bis zur niederländischen Grenze. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bocholt', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

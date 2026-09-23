@@ -118,6 +118,8 @@ export default function VsKosten() {
           einleitung="Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-vs-pflegeheim-kosten', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
                 'Pflegeheim-Eigenanteil 2026: Ø 3.364 €/Monat (1. Jahr) — steigt jährlich',
                 '24h-Pflege zuhause: ab 2.150 €/Monat bei Primundus',

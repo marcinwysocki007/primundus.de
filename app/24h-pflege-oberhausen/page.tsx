@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Sterkrade, Osterfeld oder Alt-Oberhausen: Wer hier sein Haus abbezahlt hat, will es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt — sie zieht mit ein, führt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-oberhausen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

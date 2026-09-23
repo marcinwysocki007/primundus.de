@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Bornheim, Sachsenhausen, Bockenheim: Wer in Frankfurt seine Wohnung seit Jahrzehnten hält, gibt sie nicht für einen Heimplatz auf — schon gar nicht zu den Preisen der Stadt. Eine Betreuungskraft von Primundus zieht mit ein, während die Kinder im Bankenviertel oder längst in anderen Städten arbeiten, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-frankfurt', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

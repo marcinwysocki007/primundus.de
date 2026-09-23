@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Am Niederrhein gibt man sein Zuhause nicht her: das Haus in Kapellen, die Wohnung in Asberg, den Garten in Repelen. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt — sie zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-moers', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

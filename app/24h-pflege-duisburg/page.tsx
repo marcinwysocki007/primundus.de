@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>In Duisburg wohnt man bodenständig — in Buchholz, Rheinhausen oder Walsum, oft seit Jahrzehnten im selben Haus. Wenn die Kräfte nachlassen, muss das nicht enden: Eine Betreuungskraft von Primundus zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-duisburg', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Bad Kissingen kennt sich mit gutem Altwerden aus — Kurgarten, Rosengarten, kurze Wege, Kurtradition seit Generationen. Wenn es allein in der Wohnung am Kurpark oder im Haus in Garitz nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit das Zuhause bleibt, was es ist. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-kissingen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

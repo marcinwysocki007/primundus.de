@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Viele Bad Homburger haben ihr Berufsleben in Frankfurt verbracht — gewohnt wird aber am Kurpark, in Gonzenheim oder Kirdorf, und dort soll auch das Alter stattfinden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-homburg', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

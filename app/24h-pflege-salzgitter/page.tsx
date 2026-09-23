@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Lebenstedt, Salzgitter-Bad oder Thiede: Viele hier haben ihr Leben lang im Werk gearbeitet — und ihr Zuhause soll der Lohn dafür bleiben, auch im Alter. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-salzgitter', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

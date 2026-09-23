@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Hörde, Aplerbeck, Mengede oder das Kreuzviertel: Dortmunder hängen an ihrem Viertel — am Bäcker um die Ecke, am Kleingarten, an Borsigplatz-Erinnerungen. Wenn die Eltern Hilfe brauchen, muss deshalb niemand quer durch die Stadt ins Heim ziehen: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-dortmund', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Rechts oder links der Weser, in Rodenbeck oder draußen in Todtenhausen: Mindener wohnen bodenständig — oft seit Jahrzehnten im selben Haus. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein, übernimmt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-minden', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Ob am Killesberg, in Degerloch oder unten im Westen: Stuttgarter Wohnungen mit Halbhöhen-Blick gibt man nicht her — und die Staffeln, die einst selbstverständlich waren, werden im Alter zur Hürde. Eine Betreuungskraft von Primundus zieht mit ein, begleitet jeden Weg und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-stuttgart', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

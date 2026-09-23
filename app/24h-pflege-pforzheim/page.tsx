@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Die Goldstadt lässt ihre Menschen nicht los: Wer in Brötzingen, auf dem Buckenberg oder in Huchenfeld sein Haus hat, will es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da — zwischen Enz und Schwarzwaldrand, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-pforzheim', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

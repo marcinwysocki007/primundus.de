@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>Zwischen Nordsee, Ostsee und Hamburger Speckgürtel bleibt man gern, wo man verwurzelt ist — im Backsteinhaus in Kiel, in Lübeck oder im Dorf hinterm Deich. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-schleswig-holstein', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

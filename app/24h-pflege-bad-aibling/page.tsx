@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Die Kurstadt im Mangfalltal ist zum Altwerden wie gemacht — Moorbäder, kurze Wege, die Berge am Horizont. Und wenn es allein in der Wohnung oder im Haus in Harthausen nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit Bad Aibling Zuhause bleibt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-aibling', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

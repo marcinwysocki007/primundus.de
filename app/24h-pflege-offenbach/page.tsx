@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Bürgel, Bieber oder Rumpenheim am Main: Offenbacher wohnen bodenständig — oft im selben Haus, seit die Kinder klein waren. Jetzt arbeiten die in Frankfurt und können nicht täglich da sein. Eine Betreuungskraft von Primundus schließt die Lücke: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-offenbach', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Zwischen Köln und Bonn gelegen, ist Troisdorf für viele Familien der Ort, an dem die Eltern wohnen — in Spich, Sieglar oder Bergheim — während die Kinder im Rheinland pendeln. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-troisdorf', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

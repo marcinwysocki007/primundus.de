@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Pirmasens hat viele Menschen, die ihr Leben lang hier gearbeitet haben — oft in der Schuhindustrie — und jetzt in den eigenen vier Wänden alt werden möchten, ob in Winzeln, auf der Ruhbank oder in der Innenstadt. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-pirmasens', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

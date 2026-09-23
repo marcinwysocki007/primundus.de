@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Ob Altbau in Stadtamhof, Wohnung in Kumpfmühl oder Haus in Reinhausen: Regensburger geben ihren Platz an der Donau nicht her. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da — im vertrauten Zuhause statt im Heim. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-regensburg', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Uerdingen am Rhein, Bockum, Hüls: Die Samt- und Seidenstadt hält ihre Menschen — und die halten an ihrem Zuhause fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht: Sie führt den Haushalt, begleitet den Tag und ist nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-krefeld', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>Ob Altbau in Halle, Einfamilienhaus in Magdeburg oder Hof in der Altmark: In Sachsen-Anhalt sind die Wege zu Kindern und Heimen oft weit — das Zuhause aber ist nah. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, damit niemand es verlassen muss. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-sachsen-anhalt', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -105,6 +105,8 @@ export default function Page() {
           einleitung={<>Viele, die im Taunus alt geworden sind, haben ihr Haus über Jahrzehnte aufgebaut — in Oberursel, Königstein oder einem der Dörfer im Usinger Land. Wenn plötzlich Pflege nötig wird, stellt sich nicht die Frage nach dem „ob", sondern nach dem „wie": Heim — oder zuhause bleiben? Eine Betreuungskraft von Primundus zieht mit ein und macht das Zuhausebleiben möglich. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hochtaunuskreis', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',

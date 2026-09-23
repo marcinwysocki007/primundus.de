@@ -103,6 +103,8 @@ export default function VsAmbulantePflege() {
           einleitung="Ambulante Pflege oder 24h-Betreuung — das ist oft die erste Entscheidung wenn Pflege notwendig wird. Ambulante Dienste kommen mehrmals täglich für definierte Einsätze. Eine 24h-Kraft lebt im Haushalt und ist bei Bedarf auch nachts da. Wann was sinnvoll ist, hängt nicht nur von den Kosten ab — sondern vom tatsächlichen Pflegebedarf."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-vs-ambulante-pflege', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
                 'Ambulante Pflege: kommt für definierte Einsätze — außerhalb nicht vor Ort',
                 '24h-Betreuung: Kraft lebt im Haushalt — bei Bedarf auch nachts vor Ort',

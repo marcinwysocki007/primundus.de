@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>Vom Emsland bis in die Börde, von der Nordseeküste bis in den Harz: In Niedersachsen und Bremen steht das eigene Haus oft seit Generationen — und soll auch im Alter das Zuhause bleiben. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch dort, wo der nächste Pflegedienst weit fährt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-niedersachsen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

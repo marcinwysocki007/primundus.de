@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Göggingen, Pfersee, Haunstetten oder das Lechviertel: Augsburger sind ihrem Viertel treu — und dem eigenen Zuhause sowieso. Wenn Mutter oder Vater mehr Hilfe brauchen, als Besuche leisten können, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da, auch im Umland bis Königsbrunn und Friedberg. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-augsburg', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Viele Eschborner haben Jahrzehnte zwischen Hochhäusern in Frankfurt gearbeitet und wohnen gern ruhig — in Niederhöchstadt oder im alten Ortskern. Damit das Zuhause auch mit Pflegebedarf bleibt, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, 1:1-Betreuung statt Heimalltag. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-eschborn', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

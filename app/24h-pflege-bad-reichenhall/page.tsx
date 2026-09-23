@@ -112,6 +112,8 @@ export default function Page() {
           einleitung={<>Alpenkurstadt mit Salzgeschichte: In Bad Reichenhall, Kirchberg oder drüben in Bayerisch Gmain lebt man mit Bergblick — und möchte genau dort gepflegt werden, nicht hinter Heimtüren. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-reichenhall', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

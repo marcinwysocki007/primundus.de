@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Vom Kaiserstuhl bis ins Dreisamtal: Rund um Freiburg wohnt man mit Blick auf Reben und Schwarzwald — in Gundelfingen, Denzlingen, Bad Krozingen oder Kirchzarten. Damit das Zuhause auch mit Pflegebedarf bleibt, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-freiburg-umland', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

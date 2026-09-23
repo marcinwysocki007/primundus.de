@@ -105,6 +105,8 @@ export default function Page() {
           einleitung={<>Wer zwischen Wittmund, Esens und der Küste zuhause ist, hat meist ein Haus mit Geschichte — und keinen Grund, es im Alter zu verlassen. Doch Heimplätze sind hier rar, und der nächste Pflegedienst fährt weit. Die Lösung wohnt mit ein: Eine Betreuungskraft von Primundus ist bei Bedarf auch nachts da, im vertrauten Zuhause hinterm Deich. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-wittmund', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',

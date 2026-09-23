@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Marienthal, Planitz oder Eckersbach: In der Stadt, die Autos baute, hält man an seinem Zuhause fest. Eine Betreuungskraft von Primundus sorgt dafür, dass das Alter daran nichts ändert — sie zieht mit ein, übernimmt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-zwickau', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

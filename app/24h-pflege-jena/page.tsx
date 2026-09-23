@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Ob Altbau in der Innenstadt, Wohnung in Winzerla oder Haus unterm Kernberg-Hang: Jenaer bleiben ihrer Stadt an der Saale verbunden. Damit das auch mit Pflegebedarf gilt, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-jena', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

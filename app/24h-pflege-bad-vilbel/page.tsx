@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Die Quellenstadt vor den Toren Frankfurts — Heilsberg, Dortelweil oder Kernstadt — ist für viele der Ort, an dem die Eltern wohnen, während die Kinder in der Bank arbeiten. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bad-vilbel', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -110,6 +110,8 @@ export default function Page() {
           einleitung={<>Ob in Kapellen, Wevelinghoven oder mitten in der Stadt an der Erft: Grevenbroicher wollen im Alter dort bleiben, wo Haus, Garten und Nachbarn sind. Eine Betreuungskraft von Primundus macht das möglich — sie zieht mit ein, führt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-grevenbroich', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

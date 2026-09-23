@@ -107,6 +107,8 @@ export default function Page() {
           einleitung={<>Zwischen Weinbergen an der Mosel, Dörfern in der Eifel und Städten wie Mainz und Koblenz: In Rheinland-Pfalz bleibt man seinem Ort treu — oft ein Leben lang. Eine Betreuungskraft von Primundus sorgt dafür, dass das auch mit Pflegebedarf gilt: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-rheinland-pfalz', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

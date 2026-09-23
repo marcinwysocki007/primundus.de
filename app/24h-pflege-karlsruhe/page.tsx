@@ -109,6 +109,8 @@ export default function Page() {
           einleitung={<>Ob in der Weststadt, in Durlach oder Rüppurr: Karlsruher bleiben im Fächer — im vertrauten Zuhause zwischen Schloss und Turmberg. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da, auch wenn die Kinder längst woanders leben. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-karlsruhe', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

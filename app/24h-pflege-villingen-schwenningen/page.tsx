@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Zwei Städte, ein Zuhause: Ob im Villinger Zähringerviertel oder auf der Schwenninger Seite Richtung Neckarquelle — wer hier alt geworden ist, bleibt gern. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht, und ist bei Bedarf auch nachts da, auch im Umland vom Schwarzwald bis zur Baar. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-villingen-schwenningen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',

@@ -111,6 +111,8 @@ export default function Page() {
           einleitung={<>Mit dem Hohentwiel vor dem Fenster wird man ungern woanders alt: Singener bleiben in ihrem Haus, ob stadtnah oder in Rielasingen und Gottmadingen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da — im ganzen Hegau bis zum Bodensee. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-singen', text: 'Preis & Betreuungskräfte ansehen' }}
+          knopfSchlicht
           blick={[
             'Preis bei Primundus: ab 2.150 €/Monat',
             'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
