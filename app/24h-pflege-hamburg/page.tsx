@@ -142,7 +142,7 @@ export default function Page() {
             { id: 'passende-kraft', label: 'Betreuungskraft finden' },
           ]}
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hamburg', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
           person={
             <AnsprechpartnerinGross
               ort="Hamburg"

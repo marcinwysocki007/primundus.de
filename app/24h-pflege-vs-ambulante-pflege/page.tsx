@@ -104,7 +104,7 @@ export default function VsAmbulantePflege() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-vs-ambulante-pflege', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
           blick={[
                 'Ambulante Pflege: kommt für definierte Einsätze — außerhalb nicht vor Ort',
                 '24h-Betreuung: Kraft lebt im Haushalt — bei Bedarf auch nachts vor Ort',

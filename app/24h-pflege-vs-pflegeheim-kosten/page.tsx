@@ -119,7 +119,7 @@ export default function VsKosten() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-vs-pflegeheim-kosten', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
           blick={[
                 'Pflegeheim-Eigenanteil 2026: Ø 3.364 €/Monat (1. Jahr) — steigt jährlich',
                 '24h-Pflege zuhause: ab 2.150 €/Monat bei Primundus',

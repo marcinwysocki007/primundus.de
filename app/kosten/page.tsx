@@ -165,8 +165,9 @@ export default function Kosten() {
           ]}
           augenbraue="Kosten 2026"
           titel="Was kostet 24-Stunden-Pflege? Kosten und Zuschüsse 2026"
-          einleitung={<>24-Stunden-Pflege kostet bei Primundus <strong className="text-pm-ink">ab 2.150 € im Monat</strong> für eine Person, ab 2.600 € für ein Ehepaar. Pflegegeld, Entlastungsbudget und Steuerermäßigung senken den Betrag, den Sie selbst tragen: bei Pflegegrad 3 auf <strong className="text-pm-ink">ab ca. 923 € im Monat</strong>. Hier stehen alle Preisfaktoren, alles, was dazukommt, und wer welchen Teil zahlt.</>}
+          einleitung="Was 24-Stunden-Pflege kostet, hängt vom Pflegebedarf ab und davon, wie gut die Betreuungskraft Deutsch spricht. Hier stehen alle Preisfaktoren, was Pflegekasse, Steuer und Sozialamt übernehmen — und was am Ende bei Ihnen bleibt."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="12 Min."
           blick={[

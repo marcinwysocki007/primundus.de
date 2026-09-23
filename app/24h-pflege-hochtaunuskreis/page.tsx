@@ -106,7 +106,7 @@ export default function Page() {
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hochtaunuskreis', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',

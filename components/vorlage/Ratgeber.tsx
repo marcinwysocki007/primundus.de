@@ -71,6 +71,7 @@ export function RatgeberKopf({
   person,
   sprung,
   knopfSchlicht = false,
+  knopfOben = false,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -103,6 +104,23 @@ export function RatgeberKopf({
   sprung?: { id: string; label: string }[]
   /** Knopf ohne Gesichterreihe und Sterne — „eher sekundär" (Bauplan 21.09.2026). */
   knopfSchlicht?: boolean
+  /**
+   * Der volle Rechner-Block DIREKT unter der Überschrift, vor der Einleitung (23.09.2026).
+   *
+   * Martin, nachdem er die Ortsseiten auf dem Handy gesehen hat: „es fehlen teilweise Buttons
+   * und Pflegekräfte und Sterne … Wir benötigen doch Hemmnisnehmer sofort sichtbar oder?
+   * Ähnlich wie auf der Startseite."
+   *
+   * Gemessen auf dem iPhone: Steht der Block NACH der Einleitung, landet er auf den Ortsseiten
+   * bei 670 px, die Gesichterreihe bei 17.054 px und die Sterne bei 1.816 px — auf keinem
+   * iPhone im ersten Bildschirm. Über der Einleitung liegt der Knopf bei rund 340 px, wie auf
+   * der Startseite, und Gesichter und Sterne kommen mit.
+   *
+   * Der Weg über die Einleitung wurde bewusst NICHT gewählt: Sie auf 210 Zeichen zu kürzen hiesse,
+   * 205 örtlich geschriebene Texte anzugleichen — und Textgleichheit ist bei den Ortsseiten die
+   * Leitkennzahl (69,4 % heute). Die Reihenfolge zu ändern kostet kein einziges Wort.
+   */
+  knopfOben?: boolean
 }) {
   const zweiSpalten = Boolean(blick?.length) || Boolean(person)
   return (
@@ -131,6 +149,11 @@ export function RatgeberKopf({
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
               {zusammenhalten(titel)}
             </h1>
+            {knopf && knopfOben ? (
+              <div className="mt-7">
+                <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+              </div>
+            ) : null}
             {einleitung ? (
               <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
                 {einleitung}
@@ -149,7 +172,7 @@ export function RatgeberKopf({
                 ))}
               </nav>
             ) : null}
-            {knopf && knopfSchlicht ? (
+            {knopf && knopfSchlicht && !knopfOben ? (
               <div className="mt-7">
                 <a
                   href={knopf.href}
@@ -160,7 +183,7 @@ export function RatgeberKopf({
                 </a>
               </div>
             ) : null}
-            {knopf && !person && !knopfSchlicht ? (
+            {knopf && !person && !knopfSchlicht && !knopfOben ? (
               <div className="mt-8">
                 <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
               </div>
@@ -186,7 +209,7 @@ export function RatgeberKopf({
               die er braucht … und dann vielleicht erst Werbung"). Wer in einer akuten Lage sucht,
               prüft zuerst, ob das Modell passt und was es kostet; ein Knopf davor wirkt wie Verkauf.
               Auf Seiten ohne Ansprechpartnerin bleibt der Knopf, wo er war — unter der Einleitung. */}
-          {knopf && person && !knopfSchlicht ? (
+          {knopf && person && !knopfSchlicht && !knopfOben ? (
             <div className="lg:col-start-1 lg:row-start-3">
               <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
             </div>
