@@ -46,15 +46,17 @@ const GrafikKostenvergleich = dynamic(
   }
 )
 
+// Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
+// Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
   title: 'Was ist 24-Stunden-Pflege? Definition, Kosten & Ablauf',
-  description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet ab 2.150 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
+  description: 'Eine Betreuungskraft lebt im Haushalt und ist die meistgenutzte Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
   alternates: {
     canonical: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   openGraph: {
     title: 'Was ist 24-Stunden-Pflege? | Primundus',
-    description: '24h-Pflege: Eine Betreuungskraft lebt im Haushalt, kostet ab 2.150 €/Monat und ist die günstigste Alternative zum Pflegeheim. Alle Fakten 2026.',
+    description: 'Eine Betreuungskraft lebt im Haushalt und ist die meistgenutzte Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
     url: 'https://primundus.de/was-ist-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',

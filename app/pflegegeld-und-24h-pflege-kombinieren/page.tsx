@@ -23,9 +23,11 @@ const SECTIONS = [
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
+// Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
+// Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
   title: 'Pflegegeld und 24h-Pflege kombinieren — so geht es',
-  description: 'Pflegegeld gibt es auch mit 24-Stunden-Betreuungskraft, Sachleistungen nicht. Was die Kasse zahlt und was bei Pflegegrad 3 bleibt: ab ca. 923 € im Monat.',
+  description: 'Pflegegeld gibt es auch mit 24-Stunden-Betreuungskraft, Sachleistungen nicht. Was die Kasse zahlt und was als Eigenanteil bleibt.',
   alternates: { canonical: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

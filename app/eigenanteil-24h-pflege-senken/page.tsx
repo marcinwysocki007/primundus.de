@@ -20,9 +20,11 @@ const SECTIONS = [
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
+// Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
+// Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
   title: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026',
-  description: 'Eigenanteil der 24h-Pflege senken: Pflegegrad erhöhen, Entlastungsbudget nutzen, Steuerabzug, Hilfsmittel. Bei Pflegegrad 3 bleiben ab ca. 923 €/Monat.',
+  description: 'Eigenanteil der 24h-Pflege senken: Pflegegrad erhöhen, Entlastungsbudget nutzen, Steuerabzug, Hilfsmittel. Was greift, zeigt der Rechner.',
   alternates: { canonical: 'https://primundus.de/eigenanteil-24h-pflege-senken' },
   openGraph: {
     title: 'Eigenanteil 24h-Pflege senken | Primundus',
