@@ -1,32 +1,15 @@
 import type { Metadata } from 'next'
-import { OrtStimmen } from '@/components/orte/OrtStimmen'
-import { DIREKT_ERHALTEN } from '@/lib/bewertungen-direkt'
-import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
-import { NearbyCities } from '@/components/NearbyCities'
-import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
-import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
-} from '@/components/vorlage/Ratgeber'
-import { ArticleProgressBar } from '@/components/ArticleProgressBar'
-import { ArticleTOC } from '@/components/ArticleTOC'
+import { OrtSeite } from '@/components/vorlage/OrtSeite'
+import type { OrtDaten } from '@/lib/orte-daten'
+import { Text } from '@/components/vorlage/Ratgeber'
+
+// Seit 23.09.2026 traegt diese Datei nur noch, was in Krefeld anders ist; der feste Text steht
+// in components/vorlage/OrtSeite.tsx (Umstellung: scripts/codemods/38-ortsseiten-als-daten.py).
 
 // Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
 // mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
-
-const SECTIONS = [
-  { id: 'was-ist-24-stunden', title: "Was 24-Stunden-Betreuung in Krefeld bedeutet" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Krefeld 2026" },
-  { id: 'polnische-betreuungskraefte-in-krefeld', title: "Polnische Betreuungskräfte in Krefeld" },
-  { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Krefeld ausmacht" },
-  { id: 'einzugsgebiet-krefeld', title: "Einzugsgebiet Krefeld" },
-  { id: 'werkzeuge', title: "Was es in Krefeld kostet, und was die Pflegekasse dazugibt" },
-  { id: 'so-arbeiten-wir', title: "So arbeiten wir" },
-  { id: 'stimmen-vor-ort', title: "Familien aus Krefeld über uns" },
-  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Krefeld" },
-]
-
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege und Betreuung in Krefeld | 6× Testsieger',
   description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Krefeld in 3 Tagen möglich – mit Bestpreisgarantie.',
@@ -44,9 +27,7 @@ export const metadata: Metadata = {
 
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Krefeld?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Nordrhein-Westfalen kostet im Schnitt rund 3.580 € Eigenanteil (vdek 07/2026).' },
-  { q: 'Wie schnell kann eine 24h-Pflegekraft in Krefeld starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
-  { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
-  { q: 'Ist 24h-Pflege über Primundus in Krefeld rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Wie schnell kann eine 24h-Pflegekraft in Krefeld starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie wohnt man in Krefeld — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Krefeld im Schnitt 2,6 Wohnungen, in Nordrhein-Westfalen 2,3. 24,0 Prozent der Gebäude stehen frei, 50,1 Prozent stehen in geschlossener Reihe. 61,5 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Krefeld ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Wie viele ältere Menschen leben in Krefeld?', a: '25.957 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,3 Prozent — in Nordrhein-Westfalen 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 24,9 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Nordrhein-Westfalen: 24,2 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Warum ist die Pflegequote in Krefeld so hoch?', a: 'Am Alter liegt es nicht — das ist das Bemerkenswerte. Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt: 22,3 Prozent der Einwohner sind über 65 (NRW 22,0), 7,2 Prozent über 80 (NRW 6,9). Trotzdem ist mit 10,1 Prozent die zweithöchste Pflegequote Nordrhein-Westfalens erreicht, 23.169 Menschen. Auffällig ist vor allem, wie sie versorgt werden: 15.936 Menschen — 68,8 Prozent — werden ausschließlich von Angehörigen gepflegt, gegenüber 59,0 Prozent im Land. Ambulante Dienste kommen seltener ins Haus (14,6 gegen 17,3 Prozent), und der Anteil von Pflegegrad 1 ist mit 6,9 Prozent auffällig niedrig (Land 11,5) — es geht hier also überwiegend nicht um leichte Fälle.' },
@@ -55,198 +36,30 @@ const FRAGEN = [
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
-const schemaMarkup = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': 'https://primundus.de/24h-pflege-krefeld#service',
-    name: 'Primundus — 24h-Pflege Krefeld',
-    serviceType: '24-Stunden-Betreuung zu Hause',
-    description: '24h-Betreuungskräfte in Krefeld. Rechtssicher, täglich kündbar, startklar.',
-    url: 'https://primundus.de/24h-pflege-krefeld',
-    provider: { '@id': 'https://primundus.de/#organization' },
-    areaServed: { '@type': 'City', name: 'Krefeld' },
-    },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://primundus.de/' },
-      { '@type': 'ListItem', position: 2, name: 'Regionen', item: 'https://primundus.de/regionen' },
-      { '@type': 'ListItem', position: 3, name: 'Krefeld', item: 'https://primundus.de/24h-pflege-krefeld' },
-    ],
+const ORT: OrtDaten = {
+  slug: 'krefeld',
+  ort: 'Krefeld',
+  land: 'Nordrhein-Westfalen',
+  art: 'hand',
+  aktualisiert: '23. September 2026',
+  lesezeit: '6 Min.',
+  einleitung: <>Uerdingen am Rhein, Bockum, Hüls: Die Samt- und Seidenstadt hält ihre Menschen — und die halten an ihrem Zuhause fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht: Sie führt den Haushalt, begleitet den Tag und ist nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  vorOrt: {
+    inhalt: (
+      <>
+        <Text>In Krefeld pflegen Familien in einem Ausmaß, das die Statistik sonst kaum kennt.{' '} <strong className="text-pm-ink font-semibold">15.936 Menschen — 68,8 Prozent aller Pflegebedürftigen — beziehen ausschließlich Pflegegeld</strong>, werden also allein von Angehörigen versorgt. In Nordrhein-Westfalen sind es 59,0 Prozent; unter allen 53 Kreisen und kreisfreien Städten des Landes liegt Krefeld damit auf Rang sechs. Rechnerisch wird hier fast jeder fünfzehnte Einwohner zu Hause von der Familie gepflegt. Ambulante Dienste kommen dagegen unterdurchschnittlich zum Einsatz: 14,6 gegen 17,3 Prozent.</Text>
+        <Text>Dahinter steht eine Pflegequote von 10,1 Prozent — der zweithöchste Wert in ganz Nordrhein-Westfalen, wo der Landesschnitt bei 7,6 Prozent liegt. Und das Bemerkenswerte daran:{' '} <strong className="text-pm-ink font-semibold">Am Alter liegt es nicht.</strong> Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt — 22,3 Prozent über 65 gegenüber 22,0 Prozent, 7,2 Prozent über 80 gegenüber 6,9. Die um ein Drittel höhere Pflegequote lässt sich demografisch also nicht erklären. Auffällig ist auch, dass Pflegegrad 1 hier mit 6,9 Prozent viel seltener vorkommt als im Land (11,5 Prozent) — in Krefeld werden nicht mehr leichte Fälle gezählt, sondern mehr schwere zu Hause aufgefangen.</Text>
+        <Text>Ein naheliegender Fehlschluss sei ausgeräumt. Nur 9,7 Prozent der Krefelder Pflegebedürftigen leben im Heim, im Land 12,2 Prozent — daraus liest sich leicht ein Platzmangel heraus. Das Gegenteil trifft zu: Gemessen an der Zahl der über 65-Jährigen stehen 47 vollstationäre Plätze je 1.000 bereit, in Nordrhein-Westfalen 46. Der niedrige Anteil entsteht allein daraus, dass die Zahl der Pflegebedürftigen so groß ist. Wer sich für die Betreuung zu Hause entscheidet, tut das in Krefeld nicht mangels Alternative.</Text>
+        <Text>Räumlich ist Krefeld unkompliziert: Das bewohnte Stadtgebiet bewegt sich zwischen etwa 31 und 40 Metern über dem Meer — rund zehn Höhenmeter über die gesamte Kernstadt. Die drei „Berge" der Stadt sind Wald- und Naherholungsflächen, der Rhein bildet nur die Ostgrenze. Ungleich verteilt ist dagegen das Alter: In Traar-Ost sind 31,4 Prozent der Einwohner über 65, am Stephanplatz 13,2 Prozent. Die äußeren Villen- und Dorflagen — Traar, Verberg, Stadtwald, Gellep-Stratum, Königshof — sind alt, die innenstadtnahen Viertel jung.</Text>
+        <Text>Geriatrisch ist Krefeld gut ausgestattet: drei Kliniken mit eigener geriatrischer Fachabteilung, die größte am Alexianer-Krankenhaus Maria-Hilf mit 917 stationären Fällen. Bei Helios lohnt der Blick auf die Adresse — der Träger führt an zwei Standorten eine Geriatrie, die eigentliche Versorgung sitzt im Cäcilien-Hospital in Hüls (726 Fälle), rund zehn Kilometer vom Hauptstandort am Lutherplatz entfernt. Wer „Helios Geriatrie Krefeld" sucht, sollte den Standort mitlesen. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
+      </>
+    ),
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    // Aus FRAGEN erzeugt — ausgezeichnet wird genau das, was auf der Seite steht.
-    mainEntity: FRAGEN.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  },
-]
-
+  einzugsgebiet: 'Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach',
+  stimmen: ['k-20250311-michaela'],
+  fragen: FRAGEN,
+}
 
 export default function Page() {
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
-      <ArticleProgressBar />
-      <div className="lg:hidden">
-        <ArticleTOC sections={SECTIONS} />
-      </div>
-
-      <div className="bg-pm-paper">
-        <RatgeberKopf
-          pfad={[
-            { label: 'Startseite', href: '/' },
-            { label: 'Regionen', href: '/regionen' },
-            { label: 'Krefeld' },
-          ]}
-          augenbraue="24-Stunden-Pflege in Krefeld"
-          titel="24-Stunden-Pflege und Betreuung in Krefeld"
-          einleitungTitel="Zuhause bleiben in Krefeld"
-          einleitung={<>Uerdingen am Rhein, Bockum, Hüls: Die Samt- und Seidenstadt hält ihre Menschen — und die halten an ihrem Zuhause fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht: Sie führt den Haushalt, begleitet den Tag und ist nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
-          lesezeit="6 Min."
-          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-krefeld', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfOben
-          unterzeile={<StandardUnterzeile ort="Krefeld" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim in Nordrhein-Westfalen: Eigenanteil rund 3.580 €/Monat (vdek, 07/2026)',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
-          ]}
-          blickTitel="Krefeld auf einen Blick"
-          person={<AnsprechpartnerinGross ort="Krefeld" />}
-        />
-
-        <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24-stunden" titel="Was 24-Stunden-Betreuung in Krefeld bedeutet">
-            <Text>
-              Eine Betreuungskraft zieht bei Ihnen ein, hilft bei Körperpflege, beim Essen und im Alltag, versorgt den Haushalt mit und ist bei Bedarf
-              auch nachts da. Anders als beim ambulanten Dienst, der zweimal am Tag kommt und wieder geht. Und anders als im
-              Heim, wo der Umzug ansteht. Das Zuhause in Krefeld bleibt, der gewohnte Tagesablauf auch.
-            </Text>
-            <MehrDazu
-              label="Ausführlich auf den Themenseiten:"
-              links={[
-                { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
-                { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
-                { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
-              ]}
-            />
-          </Abschnitt>
-
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Krefeld 2026">
-            <Tabelle
-              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
-              zeilen={[
-                ['Pflegegeld PG 3', '599 €/Monat'],
-                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
-                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
-                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
-              ]}
-              betont={1}
-              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim in Nordrhein-Westfalen: Eigenanteil rund 3.580 €/Monat (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
-            />
-            <Tabelle
-              titel="Was die Pflegekasse zahlt"
-              kopf={['Pflegegrad', 'Pflegegeld je Monat', 'Entlastungsbudget je Jahr']}
-              zeilen={[
-                ['PG 2', '347 €', '3.539 €'],
-                ['PG 3', '599 €', '3.539 €'],
-                ['PG 4', '800 €', '3.539 €'],
-                ['PG 5', '990 €', '3.539 €'],
-              ]}
-              betont={1}
-              fuss="Stand 2026 · bundesweit einheitlich"
-            />
-            <RechnerKasten src="ort-krefeld" />
-          </Abschnitt>
-
-          <Abschnitt id="polnische-betreuungskraefte-in-krefeld" titel="Polnische Betreuungskräfte in Krefeld">
-            <Text>Wer in Krefeld nach einer polnischen Pflegekraft sucht, meint fast immer dasselbe: jemanden, der im Haushalt lebt und bei Bedarf auch nachts da ist. Genau das leisten unsere Betreuungskräfte. Sie kommen aus Polen und sind in Krefeld und im gesamten Umland im Einsatz.</Text>
-            <Kasten titel="Angestellt statt vermittelt">
-              <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
-            </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet hier im Schnitt rund 3.580 Euro Eigenanteil.</Text>
-            <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — Kosten, Recht und Ablauf</a>.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Krefeld ausmacht">
-            <Text>In Krefeld pflegen Familien in einem Ausmaß, das die Statistik sonst kaum kennt.{' '} <strong className="text-pm-ink font-semibold">15.936 Menschen — 68,8 Prozent aller Pflegebedürftigen — beziehen ausschließlich Pflegegeld</strong>, werden also allein von Angehörigen versorgt. In Nordrhein-Westfalen sind es 59,0 Prozent; unter allen 53 Kreisen und kreisfreien Städten des Landes liegt Krefeld damit auf Rang sechs. Rechnerisch wird hier fast jeder fünfzehnte Einwohner zu Hause von der Familie gepflegt. Ambulante Dienste kommen dagegen unterdurchschnittlich zum Einsatz: 14,6 gegen 17,3 Prozent.</Text>
-            <Text>Dahinter steht eine Pflegequote von 10,1 Prozent — der zweithöchste Wert in ganz Nordrhein-Westfalen, wo der Landesschnitt bei 7,6 Prozent liegt. Und das Bemerkenswerte daran:{' '} <strong className="text-pm-ink font-semibold">Am Alter liegt es nicht.</strong> Krefelds Altersstruktur entspricht fast exakt dem Landesdurchschnitt — 22,3 Prozent über 65 gegenüber 22,0 Prozent, 7,2 Prozent über 80 gegenüber 6,9. Die um ein Drittel höhere Pflegequote lässt sich demografisch also nicht erklären. Auffällig ist auch, dass Pflegegrad 1 hier mit 6,9 Prozent viel seltener vorkommt als im Land (11,5 Prozent) — in Krefeld werden nicht mehr leichte Fälle gezählt, sondern mehr schwere zu Hause aufgefangen.</Text>
-            <Text>Ein naheliegender Fehlschluss sei ausgeräumt. Nur 9,7 Prozent der Krefelder Pflegebedürftigen leben im Heim, im Land 12,2 Prozent — daraus liest sich leicht ein Platzmangel heraus. Das Gegenteil trifft zu: Gemessen an der Zahl der über 65-Jährigen stehen 47 vollstationäre Plätze je 1.000 bereit, in Nordrhein-Westfalen 46. Der niedrige Anteil entsteht allein daraus, dass die Zahl der Pflegebedürftigen so groß ist. Wer sich für die Betreuung zu Hause entscheidet, tut das in Krefeld nicht mangels Alternative.</Text>
-            <Text>Räumlich ist Krefeld unkompliziert: Das bewohnte Stadtgebiet bewegt sich zwischen etwa 31 und 40 Metern über dem Meer — rund zehn Höhenmeter über die gesamte Kernstadt. Die drei „Berge" der Stadt sind Wald- und Naherholungsflächen, der Rhein bildet nur die Ostgrenze. Ungleich verteilt ist dagegen das Alter: In Traar-Ost sind 31,4 Prozent der Einwohner über 65, am Stephanplatz 13,2 Prozent. Die äußeren Villen- und Dorflagen — Traar, Verberg, Stadtwald, Gellep-Stratum, Königshof — sind alt, die innenstadtnahen Viertel jung.</Text>
-            <Text>Geriatrisch ist Krefeld gut ausgestattet: drei Kliniken mit eigener geriatrischer Fachabteilung, die größte am Alexianer-Krankenhaus Maria-Hilf mit 917 stationären Fällen. Bei Helios lohnt der Blick auf die Adresse — der Träger führt an zwei Standorten eine Geriatrie, die eigentliche Versorgung sitzt im Cäcilien-Hospital in Hüls (726 Fälle), rund zehn Kilometer vom Hauptstandort am Lutherplatz entfernt. Wer „Helios Geriatrie Krefeld" sucht, sollte den Standort mitlesen. Lassen Sie sich vorher unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos und neutral.</Text>
-          </Abschnitt>
-
-          <Abschnitt id="einzugsgebiet-krefeld" titel="Einzugsgebiet Krefeld">
-            <Text>Krefeld und Umland: Willich, Tönisvorst, Viersen und alle Gemeinden im Kreis Viersen nördlich von Mönchengladbach</Text>
-            <NearbyCities current="krefeld" />
-          </Abschnitt>
-
-          <OrtWerkzeuge slug="krefeld" ort={'Krefeld'} land={'Nordrhein-Westfalen'} altbau={61.5} miete={6.66} />
-
-
-          <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
-            <Punkte
-              punkte={[
-                { title: 'Keine Vertragsbindung', desc: 'Täglich kündbar – maximale Flexibilität für Sie' },
-                { title: 'Tagesgenaue Abrechnung', desc: 'Kosten entstehen erst mit Anreise der Betreuungskraft' },
-                { title: 'Kosten erst bei Start – keine Vorauszahlung', desc: 'Sie zahlen nur, wenn die Betreuungskraft vor Ort arbeitet' },
-                { title: 'Persönlicher Ansprechpartner', desc: '7 Tage die Woche für Sie da' },
-              ]}
-            />
-            <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
-              <img
-                src="/images/bestpreisgarantie-siegel.webp"
-                alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
-                width={900}
-                height={256}
-                loading="lazy"
-                className="h-[64px] md:h-[72px] w-auto mb-5"
-              />
-              <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
-                Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
-              </p>
-              <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
-                Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
-                Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
-              </p>
-            </div>
-            <Schritte
-              schritte={[
-                { title: 'Ihren Preis sehen', desc: 'Wenige Fragen zur Pflegesituation und Ihre Kontaktdaten für die Angebotskopie — danach sehen Sie sofort Ihren Preis samt Zuschüssen.', tag: 'Dauert unter 2 Minuten', tagTon: 'gruen' },
-                { title: 'Betreuungskräfte ansehen', desc: 'Direkt danach sehen Sie in Ihrem Kundenportal, wer zu Ihnen kommen könnte — in Ruhe und ohne Verpflichtung.', tag: 'Ihr Zugang kommt auch per E-Mail', tagTon: 'gruen' },
-                { title: 'Auswählen und starten', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag — danach reist Ihre Betreuungskraft an, wenn nötig schon in 3 Tagen.', tag: 'Kein Vertrag vor Ihrer Auswahl', tagTon: 'gruen' },
-              ]}
-            />
-          </Abschnitt>
-
-          <OrtStimmen
-
-            ort={'Krefeld'}
-
-            stimmen={DIREKT_ERHALTEN.filter((b) => ['k-20250311-michaela'].includes(b.id))}
-
-          />
-
-
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Krefeld">
-            <Fragen fragen={FRAGEN} />
-          </Abschnitt>
-        </RatgeberRumpf>
-      </div>
-
-      <KontaktBand ohneBewertungen />
-    </>
-  )
+  return <OrtSeite daten={ORT} />
 }

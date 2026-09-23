@@ -86,7 +86,10 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
   // wirklich aus dem Ort kommen (Prüfer 23.09.: sonst steht „aus Worms" über Düsseldorf und Bonn).
   const ausDemOrt = DIREKT_ERHALTEN.filter((b) => b.ort === d.ort).length
   const stimmenTitel = ausDemOrt >= 2 ? `Familien aus ${d.ort} über uns` : 'Das sagen unsere Familien'
-  const ortTitel = d.kreis ? `Was in ${d.ort} und im ${d.kreis} anders ist` : `Was in ${d.ort} anders ist`
+  // „im Landkreis X" / „im Unterallgäu" — aber „in der StädteRegion Aachen": trägt der Kreisname seinen
+  // Artikel schon („der …"), bleibt „in", sonst „im".
+  const imKreis = d.kreis ? (d.kreis.startsWith('der ') ? `in ${d.kreis}` : `im ${d.kreis}`) : ''
+  const ortTitel = d.kreis ? `Was in ${d.ort} und ${imKreis} anders ist` : `Was in ${d.ort} anders ist`
   const faqTitel = `Häufige Fragen zur 24-Stunden-Pflege in ${d.ort}`
 
   // Verzeichnis = genau die Überschriften der Bausteine (Prüfer 23.09.: zwei Sprungmarken liefen ins Leere).
@@ -185,7 +188,7 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
             {d.kreis ? (
               <Text>
                 {/* „im" passt für Landkreis (der), Unterallgäu und Westmünsterland (das); „für den ganzen" passte nur für „der" */}
-                Das gilt auch im {d.kreis}: Unsere Betreuungskräfte ziehen in den kleineren Gemeinden ein, in denen sonst
+                Das gilt auch {imKreis}: Unsere Betreuungskräfte ziehen in den kleineren Gemeinden ein, in denen sonst
                 kaum jemand anbietet — zu denselben Bedingungen wie in {d.ort}.
               </Text>
             ) : null}
