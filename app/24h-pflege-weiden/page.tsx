@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Weiden i.d. Oberpfalz | 6× Testsieger',
-  description: 'Geprüfte polnische Pflegekräfte und Preis direkt online sehen. Anreise in Weiden in der Oberpfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Weiden in der Oberpfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-weiden' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Weiden i.d. Oberpfalz | 6× Testsieger',
-    description: 'Geprüfte polnische Pflegekräfte und Preis direkt online sehen. Anreise in Weiden in der Oberpfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Weiden in der Oberpfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-weiden',
     siteName: 'Primundus',
     locale: 'de_DE',

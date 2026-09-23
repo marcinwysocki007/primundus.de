@@ -38,7 +38,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-  description: '24h-Pflege von Primundus: Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT. Ab 2.150 €/Monat.',
+  description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege' },
   openGraph: {
     title: '24-Stunden-Pflege | Primundus — Testsieger & 20 Jahre Erfahrung',

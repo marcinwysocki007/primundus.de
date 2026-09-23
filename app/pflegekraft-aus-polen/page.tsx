@@ -60,12 +60,12 @@ const FRAGEN = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Polnische Pflegekraft: Kosten 2026 ab 2.150 €, legal, sicher',
-  description: 'Polnische Pflegekraft: ab 2.150 € im Monat ohne Vermittlungsgebühr, Kosten je Pflegegrad, was die Pflegekasse zahlt, drei legale Wege, Nächte, Wechsel.',
+  title: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf | 6× Testsieger',
+  description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Bei uns angestellt, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen' },
   openGraph: {
-    title: 'Polnische Pflegekraft: Kosten 2026 ab 2.150 €, legal beschäftigen',
-    description: 'Ab 2.150 € im Monat, Kosten je Pflegegrad, was die Pflegekasse zahlt, drei legale Wege, Zimmer, Nächte, Wechsel.',
+    title: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf | 6× Testsieger',
+    description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Bei uns angestellt, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/pflegekraft-aus-polen',
     siteName: 'Primundus',
     locale: 'de_DE',

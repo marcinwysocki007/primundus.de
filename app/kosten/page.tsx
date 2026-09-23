@@ -39,13 +39,16 @@ const SECTIONS = [
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
+// Preise aus dem Snippet entfernt (23.09.2026). Sie standen hier im Titel UND in der
+// Beschreibung, und in openGraph gleich noch einmal — die Regel „keine Preise im Snippet" war
+// nie gegen den Bestand geprueft worden. Der Betrag bleibt im Text der Seite und im Rechner.
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Kosten 2026: ab 2.150 €, alle Zuschüsse',
+  title: '24-Stunden-Pflege Kosten 2026: alle Zuschüsse im Überblick',
   description:
-    '24-Stunden-Pflege Kosten 2026: ab 2.150 € im Monat, alle Preisfaktoren offen. Was Pflegekasse, Steuer und Sozialamt zahlen, was bei Pflegegrad 2 bis 5 bleibt.',
+    'Was Pflegekasse, Steuer und Sozialamt zahlen und was bei Pflegegrad 2 bis 5 als Eigenanteil bleibt. Ihren Preis zeigt der Rechner in 2 Minuten.',
   alternates: { canonical: 'https://primundus.de/kosten' },
   openGraph: {
-    title: '24-Stunden-Pflege Kosten 2026: ab 2.150 € im Monat',
+    title: '24-Stunden-Pflege Kosten 2026: alle Zuschüsse im Überblick',
     description: 'Alle Preisfaktoren, Zuschüsse der Pflegekasse, Steuer und was bei Pflegegrad 2 bis 5 selbst zu tragen bleibt.',
     url: 'https://primundus.de/kosten',
     siteName: 'Primundus',
