@@ -8,8 +8,8 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-// Kernseite in der Seitenvorlage (17.09.2026). Ablauf wie im Kostenrechner seit „Preis zuerst" (17.09. 13:05: Preisseite,
-// dann Kontaktseite, dann Portal), Plaketten „Bewerbungen am selben Werktag" und „Anreise in 3 Tagen möglich". Wechsel und Ersatz nach dem
+// Kernseite in der Seitenvorlage (17.09.2026). Ablauf wie im Kostenrechner (seit 19.09. 10:32 wieder: Fragen, Kontaktdaten,
+// dann Preis und Pflegekräfte im Portal; „Preis zuerst" ist aus), Plaketten „Bewerbungen am selben Werktag" und „Anreise in 3 Tagen möglich". Wechsel und Ersatz nach dem
 // Mustervertrag (§ 1: Ersatz schnellstmöglich, in der Regel innerhalb von 3 Tagen; § 4: Krankheitstage ohne Honorar,
 // Reisekostenpauschale 125 € je Fahrt). Der alte Zeitplan „Tag 1–2 / Tag 2–3" war nicht belegt und ist raus.
 // Martin 17.09.: Abholung ist normalerweise nicht nötig (Kraft wird zur Adresse gebracht); Wechseltag für beide Kräfte
@@ -99,8 +99,7 @@ export default function Ablauf() {
           lesezeit="4 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Preis & Pflegekräfte ansehen' }}
           blick={[
-            'Preis in unter 2 Minuten, noch ohne Kontaktdaten',
-            'Passende Pflegekräfte direkt nach dem Speichern',
+            'Preis und passende Pflegekräfte sofort, in unter 2 Minuten',
             'Bewerbungen am selben Werktag',
             'Sie wählen selbst aus, erst dann kommt der Vertrag',
             'Anreise in 3 Tagen möglich',
@@ -113,18 +112,14 @@ export default function Ablauf() {
             <Schritte
               schritte={[
                 {
-                  title: 'Preis sofort sehen',
-                  desc: 'Sie beantworten ein paar kurze Fragen zur Pflegesituation und sehen sofort Ihren Monatspreis, auch was nach Zuschüssen bleibt. Ihre Kontaktdaten brauchen wir dafür noch nicht.',
+                  title: 'Sofort Angebot und Pflegekräfte einsehen',
+                  desc: 'Sie machen wenige preisrelevante Angaben und hinterlassen für die Kopie des Angebots Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte — die Kopie kommt zusätzlich per E-Mail.',
                   tag: 'Unter 2 Minuten',
                   tagTon: 'gruen',
                 },
                 {
-                  title: 'Speichern — passende Pflegekräfte ansehen',
-                  desc: 'Mit Namen, E-Mail und Telefonnummer speichern Sie die Berechnung. Danach sehen Sie im Kundenportal sofort die Pflegekräfte, die zu Ihren Angaben passen.',
-                },
-                {
                   title: 'Profil vervollständigen — Bewerbungen erhalten',
-                  desc: 'Ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit. Zusätzlich können Sie Pflegekräfte aus den gezeigten Profilen gezielt einladen. Wer sich beworben hat, sehen Sie jederzeit im Kundenportal.',
+                  desc: 'Passt das für Sie, ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit. Zusätzlich können Sie Pflegekräfte aus den gezeigten Profilen gezielt einladen. Wer sich beworben hat, sehen Sie jederzeit im Kundenportal.',
                   tag: 'Bewerbungen am selben Werktag',
                   tagTon: 'gruen',
                 },

@@ -351,14 +351,14 @@ export default function VierUndZwanzigStundenPflege() {
             <Schritte
               schritte={[
                 {
-                  title: 'Preis sofort sehen',
-                  desc: 'Sie beantworten ein paar kurze Fragen zur Pflegesituation und sehen sofort Ihren Monatspreis, auch was nach Zuschüssen bleibt. Ihre Kontaktdaten brauchen wir dafür noch nicht.',
+                  title: 'Sofort Angebot und Pflegekräfte einsehen',
+                  desc: 'Sie machen wenige preisrelevante Angaben und hinterlassen für die Kopie des Angebots Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte — die Kopie kommt zusätzlich per E-Mail.',
                   tag: 'Unter 2 Minuten',
                   tagTon: 'gruen',
                 },
                 {
-                  title: 'Pflegekräfte ansehen — Bewerbungen erhalten',
-                  desc: 'Mit Ihren Kontaktdaten speichern Sie die Berechnung und sehen sofort passende Pflegekräfte. Ergänzen Sie danach die Angaben zu Ihrem Angehörigen, dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit.',
+                  title: 'Profil vervollständigen — Bewerbungen erhalten',
+                  desc: 'Passt das für Sie, ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit.',
                   tag: 'Bewerbungen am selben Werktag',
                   tagTon: 'gruen',
                 },

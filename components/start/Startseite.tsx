@@ -119,10 +119,11 @@ export function BekanntAus() {
 // ── 3. Bestpreisgarantie und Testsieger: siehe VertrauensKarten in components/vertrauen/Vertrauen.tsx ─────────────
 
 // ── 4. So funktioniert's ────────────────────────────────────────────────────────────────────
-// Seit „Preis zuerst" im Rechner (17.09.2026 13:05): erst der Preis ohne Kontaktdaten, dann Speichern + Pflegekräfte.
+// Wortlaut wie im Rechner (HowItWorks.tsx). „Preis zuerst" (17.09.) ist seit 19.09. 10:32 aus: erst die Kontaktdaten,
+// dann Preis und Pflegekräfte — „Ihre Kontaktdaten brauchen wir dafür noch nicht" stimmte seitdem nicht mehr.
 const SCHRITTE = [
-  { titel: 'Preis sofort sehen', text: <>Sie beantworten ein paar kurze Fragen zur Pflegesituation und sehen sofort Ihren Monatspreis, auch was nach Zuschüssen bleibt. Ihre Kontaktdaten brauchen wir dafür noch nicht.</>, marke: 'Unter 2 Minuten' },
-  { titel: 'Pflegekräfte ansehen — Bewerbungen erhalten', text: <>Mit Ihren Kontaktdaten speichern Sie die Berechnung und sehen sofort passende Pflegekräfte. Ergänzen Sie danach die Angaben zu Ihrem Angehörigen, dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit.</>, marke: 'Bewerbungen am selben Werktag' },
+  { titel: 'Sofort Angebot und Pflegekräfte einsehen', text: <>Sie machen wenige preisrelevante Angaben und hinterlassen für die Kopie des Angebots Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte — die Kopie kommt zusätzlich per E-Mail.</>, marke: 'Unter 2 Minuten' },
+  { titel: 'Profil vervollständigen — Bewerbungen erhalten', text: <>Passt das für Sie, ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit.</>, marke: 'Bewerbungen am selben Werktag' },
   { titel: 'Aussuchen — erst dann der Vertrag', text: <>Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag — den <a href={MUSTERVERTRAG} className="font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4">Mustervertrag</a> können Sie jederzeit vorher lesen. Danach reist Ihre Betreuungskraft an.</>, marke: 'Anreise in 3 Tagen möglich' },
 ]
 

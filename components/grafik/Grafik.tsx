@@ -113,11 +113,11 @@ export function HeimVsZuhause() {
   )
 }
 
-/** Vom Preis bis zur Anreise: vier Stationen auf einer Linie, wie der Rechner seit „Preis zuerst" läuft. */
+/** Vom Preis bis zur Anreise: vier Stationen auf einer Linie, wie der Rechner läuft (seit 19.09.: Kontaktdaten vor dem Preis). */
 export function AblaufZeitstrahl() {
   const stationen = [
-    { wann: 'Heute', was: 'Preis sehen', wie: 'Ein paar Fragen, 2 Minuten, noch ohne Kontaktdaten.' },
-    { wann: 'Heute', was: 'Pflegekräfte ansehen', wie: 'Speichern, passende Pflegekräfte sehen, Bewerbungen am selben Werktag.' },
+    { wann: 'Heute', was: 'Preis und Pflegekräfte sehen', wie: 'Ein paar Fragen und Ihre Kontaktdaten, 2 Minuten.' },
+    { wann: 'Heute', was: 'Bewerbungen erhalten', wie: 'Angaben zum Angehörigen ergänzen, Bewerbungen am selben Werktag.' },
     { wann: 'Sie entscheiden', was: 'Aussuchen, dann Vertrag', wie: 'Erst nach Ihrer Auswahl kommt der Betreuungsvertrag.' },
     { wann: 'In 3 Tagen möglich', was: 'Anreise', wie: 'Die Betreuungskraft wird in der Regel direkt zu Ihnen gebracht.' },
   ]

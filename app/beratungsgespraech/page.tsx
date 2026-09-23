@@ -52,7 +52,7 @@ const FRAGEN = [
   },
   {
     q: 'Muss ich vorher den Kostenrechner benutzen?',
-    a: 'Nein, aber es hilft: Nach 2 Minuten kennen Sie Ihren Monatspreis, und im Gespräch geht es dann um Ihre Fragen statt um Zahlen. Wenn Sie die Berechnung speichern, sehen Sie außerdem sofort passende Pflegekräfte.',
+    a: 'Nein, aber es hilft: Nach 2 Minuten kennen Sie Ihren Monatspreis und sehen passende Pflegekräfte, und im Gespräch geht es dann um Ihre Fragen statt um Zahlen.',
   },
   {
     q: 'Was sollte ich zum Gespräch bereithalten?',
@@ -112,7 +112,7 @@ export default function BeratungsgespraechPage() {
           blickTitel="Auf einen Blick"
           blick={[
             'Kostenlos, ohne Termin, täglich 8–20 Uhr',
-            'Preis vorab online, ohne Kontaktdaten',
+            'Preis und Pflegekräfte vorab online, in 2 Minuten',
             'Wir fragen nach Pflegegrad, Alltag, Nacht, Wohnung und Wünschen',
             'Sie sehen Profile und wählen selbst aus',
             'Vertrag erst nach Ihrer Auswahl, täglich kündbar',
@@ -123,9 +123,9 @@ export default function BeratungsgespraechPage() {
           <Abschnitt id="vorab" titel="Vor dem Gespräch: der Preis in 2 Minuten">
             <Text>
               Früher war das Beratungsgespräch der erste Schritt zum Preis. Heute ist es umgekehrt: Sie beantworten im Kostenrechner
-              ein paar Fragen zur Pflegesituation und sehen sofort Ihren Monatspreis, dazu was nach Pflegegeld, Entlastungsbudget
-              und Steuerermäßigung selbst zu tragen bleibt. Erst wenn Sie die Berechnung speichern, geben Sie Kontaktdaten an und
-              sehen passende Pflegekräfte. Das Gespräch ist dann für die Fragen da, die ein Rechner nicht beantwortet.
+              ein paar Fragen zur Pflegesituation und hinterlassen Ihre Kontaktdaten. Sofort danach sehen Sie Ihren Monatspreis, dazu
+              was nach Pflegegeld, Entlastungsbudget und Steuerermäßigung selbst zu tragen bleibt, und passende Pflegekräfte. Das
+              Gespräch ist dann für die Fragen da, die ein Rechner nicht beantwortet.
             </Text>
             <RechnerKasten src="apex-beratungsgespraech" />
           </Abschnitt>

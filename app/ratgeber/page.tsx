@@ -111,7 +111,7 @@ export default function RatgeberPage() {
           <Abschnitt id="werkzeuge" titel="Werkzeuge">
             <Punkte
               punkte={[
-                { title: l(RECHNER, 'Kostenrechner'), desc: 'Ihr Monatspreis und passende Pflegekräfte in 2 Minuten, ohne Kontaktdaten.' },
+                { title: l(RECHNER, 'Kostenrechner'), desc: 'Ihr Monatspreis und passende Pflegekräfte in 2 Minuten.' },
                 { title: l('/pflegegrad-rechner', 'Pflegegrad-Rechner'), desc: 'Eine erste Einschätzung, welcher Pflegegrad in Frage kommt.' },
                 { title: l('/tools', 'Alle Werkzeuge'), desc: 'Rechner, Vorlagen und Checklisten für Ihre Pflegesituation.' },
               ]}
