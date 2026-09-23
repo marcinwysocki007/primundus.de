@@ -5,7 +5,7 @@ import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft im Kreis Alzey-Worms?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen — deutlich weniger als ein Heimplatz in Rheinhessen.' },
+  { q: 'Was kostet eine 24h-Pflegekraft im Kreis Alzey-Worms?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung.' },
   { q: 'In welchen Orten des Kreises Alzey-Worms ist Primundus tätig?', a: 'Im gesamten Landkreis — unter anderem in Alzey, Wörrstadt, Osthofen, Westhofen, Gau-Odernheim, Wonsheim und allen umliegenden Gemeinden. Auch Worms und Mainz sind über eigene Seiten abgedeckt.' },
   { q: 'Wie schnell kann die Betreuung in Alzey-Worms starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
   { q: 'Ist in einer Wohnung in Kreis Alzey-Worms Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Kreis Alzey-Worms hat im Schnitt 117,4 m², 9,2 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 92,0 % der Gebäude in Kreis Alzey-Worms sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.297 € Unterschied im Monat, 27.564 € im Jahr.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const schemaMarkup = [
@@ -102,11 +102,13 @@ export default function Page() {
           ]}
           augenbraue="24-Stunden-Pflege in Landkreis Alzey-Worms"
           titel="24h-Pflege im Kreis Alzey-Worms — Betreuung im eigenen Zuhause"
+          einleitungTitel="Zuhause bleiben in Landkreis Alzey-Worms"
           einleitung={<>Zwischen Alzey und dem Rhein leben viele Familien seit Generationen im eigenen Haus — mit Garten, Weinbergen vor der Tür und Nachbarn, die man beim Namen kennt. Wenn die Eltern Hilfe brauchen, soll genau das nicht verloren gehen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da: in Alzey, Wörrstadt, Osthofen und im ganzen Landkreis. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-alzey-worms', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
+          unterzeile={<StandardUnterzeile ort="Landkreis Alzey-Worms" />}
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
@@ -132,7 +134,7 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="was-kostet-das-und" titel="Was kostet das — und was zahlt die Pflegekasse dazu?">
-            <Text>Eine 24h-Betreuung kostet über Primundus <strong>ab 2.150 Euro im Monat</strong> — je nachdem, ob eine oder zwei Personen betreut werden, wie mobil Ihre Angehörigen sind und ob nachts Hilfe nötig ist. Die Pflegekasse zahlt kräftig mit: Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3{' '}<strong>ab ca. 923 Euro</strong>{' '} im Monat selbst zu tragen. Zum Vergleich: Ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.364 Euro Eigenanteil — ohne dass jemand rund um die Uhr nur für Ihre Mutter da wäre.</Text>
+            <Text>Was eine 24h-Betreuung kostet, hängt davon ab, ob eine oder zwei Personen betreut werden, wie mobil Ihre Angehörigen sind, ob nachts Hilfe nötig ist und wie gut die Betreuungskraft Deutsch spricht — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung. Zum Vergleich: Ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.364 Euro Eigenanteil.</Text>
             <RechnerKasten src="ort-alzey-worms" />
           </Abschnitt>
 
@@ -142,7 +144,7 @@ export default function Page() {
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Der Kostenvergleich fällt im Kreis Alzey-Worms deutlich aus: Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil. Ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.220 Euro im Monat — und die vertraute Wohnung bleibt dabei auf der Strecke.</Text>
+            <Text>Der Kostenvergleich fällt im Kreis Alzey-Worms deutlich aus: Ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.220 Euro Eigenanteil im Monat. Zu Hause zahlen Pflegegeld und Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung — und die vertraute Wohnung bleibt.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Pflegekraft aus Polen — Kosten, Recht und Ablauf</a>.</Text>
           </Abschnitt>
 
@@ -159,7 +161,7 @@ export default function Page() {
             <NearbyCities current="alzey-worms" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kreis Alzey-Worms'} land={'Rheinland-Pfalz'} altbau={39.6} miete={6.52} />
+          <OrtWerkzeuge slug="alzey-worms" ort={'Kreis Alzey-Worms'} land={'Rheinland-Pfalz'} altbau={39.6} miete={6.52} />
 
 
           <OrtStimmen

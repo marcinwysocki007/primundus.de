@@ -25,9 +25,12 @@ export function OrtWerkzeuge({
   miete,
   titel,
   ohneWohnen = false,
+  slug,
 }: {
   ort: string
   land: string
+  /** Seiten-Slug für die Rechner-Herkunft (ort-<slug>-kosten); ohne slug wie bisher ort-werkzeuge */
+  slug?: string
   /** Anteil der Wohnungen, die vor 1970 gebaut wurden (Zensus 2022) */
   altbau?: number
   /** Nettokaltmiete je m² (Zensus 2022) */
@@ -70,7 +73,7 @@ export function OrtWerkzeuge({
       <Punkte
         punkte={[
           {
-            title: <a href={'https://kostenrechner.primundus.de/?start=1&src=ort-werkzeuge'} referrerPolicy="no-referrer-when-downgrade" className={LINK}>Preis und Betreuungskräfte ansehen</a>,
+            title: <a href={`https://kostenrechner.primundus.de/?start=1&src=${slug ? `ort-${slug}-kosten` : 'ort-werkzeuge'}`} referrerPolicy="no-referrer-when-downgrade" className={LINK}>Preis und Betreuungskräfte ansehen</a>,
             desc: `Sie beschreiben die Situation in ${ort}, dann sehen Sie den Monatspreis und die Betreuungskräfte, die dafür in Frage kommen — mit Foto, Erfahrung und Deutschniveau.`,
           },
           {

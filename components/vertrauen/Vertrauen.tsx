@@ -51,7 +51,7 @@ function Haken({ klein = false }: { klein?: boolean }) {
 }
 
 export function Punkte({ klein = false }: { klein?: boolean }) {
-  const zeile = `flex items-center ${klein ? 'gap-3 text-[15px]' : 'gap-2.5 text-[14.5px] min-[375px]:text-[15.5px] min-[390px]:gap-3 min-[390px]:text-[16px] sm:text-[16.5px]'} font-medium leading-[1.4] text-pm-ink`
+  const zeile = `flex items-center ${klein ? 'gap-3 text-[15px]' : 'gap-2.5 text-[15px] min-[375px]:text-[15.5px] min-[390px]:gap-3 min-[390px]:text-[16.5px] min-[430px]:text-[17px] sm:text-[17px]'} font-medium leading-[1.4] text-pm-ink`
   return (
     <ul className={`grid ${klein ? 'gap-2.5' : 'gap-3'}`}>
       {PUNKTE.map((p) => (
@@ -74,7 +74,7 @@ export function Punkte({ klein = false }: { klein?: boolean }) {
 function SterneLink({ d, klein = false, dunkel = false }: { d: Stand; klein?: boolean; dunkel?: boolean }) {
   if (!d.anzahl) return null
   return (
-    <a href="/erfahrungen" className={`group inline-flex flex-wrap items-center gap-x-2 gap-y-1 sm:gap-x-2.5 ${klein ? 'text-[15px]' : 'text-[14.5px] min-[375px]:text-[15px] min-[414px]:text-[16px] sm:text-[16.5px] lg:text-[15.5px] xl:text-[16.5px] max-[374px]:[&_svg]:h-4 max-[374px]:[&_svg]:w-4 max-sm:[&_svg]:h-[18px] max-sm:[&_svg]:w-[18px]'} ${dunkel ? 'text-pm-deep-body' : 'text-pm-body'}`}>
+    <a href="/erfahrungen" className={`group inline-flex flex-wrap items-center gap-x-2 gap-y-1 sm:gap-x-2.5 ${klein ? 'text-[15px]' : 'text-[15.5px] min-[375px]:text-[16px] min-[414px]:text-[16.5px] sm:text-[16.5px] lg:text-[16px] xl:text-[16.5px] max-[374px]:[&_svg]:h-4 max-[374px]:[&_svg]:w-4 max-sm:[&_svg]:h-[18px] max-sm:[&_svg]:w-[18px]'} ${dunkel ? 'text-pm-deep-body' : 'text-pm-body'}`}>
       <Sterne wert={d.wert} groesse={klein ? 17 : 20} />
       <span>
         <strong className={dunkel ? 'text-pm-deep-ink' : 'text-pm-ink'}>{d.schnitt}</strong> von 5 aus{' '}
@@ -102,7 +102,7 @@ export async function RechnerBlock({ src, sterne = true, punkte = true }: { src:
           href={rechnerLink(src)}
           referrerPolicy="no-referrer-when-downgrade"
           aria-label="Passende Pflegekräfte sofort verfügbar — jetzt ansehen"
-          className={`flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-pm-green/25 bg-pm-mint px-3 py-[5px] text-[12px] font-medium text-pm-green-deep transition-colors hover:border-pm-green/50 min-[400px]:text-[13px] sm:gap-2.5 sm:text-[14.5px] md:gap-2 md:text-[13px] xl:gap-2.5 xl:text-[14.5px] ${FOKUS}`}
+          className={`flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-pm-green/25 bg-pm-mint px-2.5 py-[6px] text-[13px] font-medium text-pm-green-deep transition-colors hover:border-pm-green/50 min-[400px]:text-[13.5px] min-[430px]:text-[14px] sm:gap-2.5 sm:text-[14.5px] md:gap-2 md:text-[14px] xl:gap-2.5 xl:text-[14.5px] ${FOKUS}`}
         >
           <span className="flex flex-none -space-x-2">
             {KRAEFTE.map((k, i) => (
@@ -192,13 +192,24 @@ function StimmeKarte({ b, schmal }: { b: Bewertung; schmal: boolean }) {
   )
 }
 
-/** Bewertungen als wischbare Reihe auf dem dunklen Band der Partnerseite. eingebettet = in der Textspalte älterer Seiten. */
-export async function Stimmen({ eingebettet = false }: { eingebettet?: boolean } = {}) {
-  const d = await ladeStimmen()
+/**
+ * Bewertungen als wischbare Reihe auf dem dunklen Band der Partnerseite. eingebettet = in der Textspalte.
+ * ort (23.09.2026): dasselbe dunkle Band auf den Ortsseiten — Stimmen aus dem Ort zuerst, Überschrift
+ * „Familien aus <Ort> über uns", Anker stimmen-vor-ort. Bis dahin hatten die Ortsseiten als einzige
+ * Seitenart helle Karten (OrtStimmen); Martin: „Die Kundenmeinung hatten wir doch so schön dunkel gemacht überall."
+ */
+export async function Stimmen({ eingebettet = false, ort, anzahl, titel }: { eingebettet?: boolean; ort?: string; anzahl?: number; titel?: string } = {}) {
+  // Mit Ort: alle laden, sonst fehlt die örtliche Stimme, wenn sie älter als die 40 neuesten ist (Worms: März 2025)
+  const d = ort ? await ladeStimmen(200) : await ladeStimmen()
+  if (ort) {
+    const vorn = d.stimmen.filter((b) => b.ort === ort)
+    const rest = d.stimmen.filter((b) => b.ort !== ort)
+    d.stimmen = [...vorn, ...rest].slice(0, anzahl ?? 6)
+  }
   if (!d.stimmen.length) return null
   return (
     <section
-      id="kundenstimmen"
+      id={ort ? 'stimmen-vor-ort' : 'kundenstimmen'}
       aria-labelledby="stimmen-titel"
       className={eingebettet ? 'my-12 scroll-mt-24 overflow-hidden bg-pm-deep max-md:-mx-5 md:rounded-[28px]' : 'scroll-mt-24 overflow-hidden bg-pm-deep'}
     >
@@ -210,7 +221,7 @@ export async function Stimmen({ eingebettet = false }: { eingebettet?: boolean }
           kopf={
             <>
               <p className={`${AUGENBRAUE} text-pm-taupe-light`}>Erfahrungen von Familien</p>
-              <h2 id="stimmen-titel" className={`mt-4 ${H2} text-pm-deep-ink`}>Das sagen unsere Familien</h2>
+              <h2 id="stimmen-titel" className={`mt-4 ${H2} text-pm-deep-ink`}>{titel ?? (ort ? `Familien aus ${ort} über uns` : 'Das sagen unsere Familien')}</h2>
               <div className="mt-5">
                 <SterneLink d={d} dunkel />
               </div>

@@ -14,7 +14,9 @@ import { LeistenKarte, RechnerBlock } from '@/components/vertrauen/Vertrauen'
 import { InhaltLeiste } from './InhaltLeiste'
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
-const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe'
+// 14 px wie im Rechner-Kopf; vorher 11,5 px — unter der Untergrenze „nie < 14" aus dem Optik-Plan
+// (14.09.). Martin auf dem Handy, 23.09.: „die Schriftgrößen hier recht klein".
+const AUGENBRAUE = 'text-[14px] font-bold uppercase tracking-[.14em] text-pm-taupe'
 // Sprungmarken landen unter dem festen Kopf (64 px Handy, 121 px ab md)
 const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
 
@@ -58,6 +60,20 @@ function BlickKasten({ titel, punkte }: { titel: string; punkte: string[] }) {
   )
 }
 
+/**
+ * Die Unterzeile aus dem Rechner-Kopf, Wort für Wort — mit Ort in der Anreise-Zusage
+ * (Martin 22.09.: „Anreise in Worms in drei Tagen möglich … ist besser").
+ */
+export function StandardUnterzeile({ ort }: { ort?: string }) {
+  return (
+    <>
+      Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und{' '}
+      <strong className="text-pm-ink">welche Pflegekräfte verfügbar sind</strong>&nbsp;–{' '}
+      <span className="whitespace-nowrap">Anreise{ort ? ` in ${ort}` : ''} in 3 Tagen möglich.</span>
+    </>
+  )
+}
+
 export function RatgeberKopf({
   pfad,
   augenbraue,
@@ -71,6 +87,9 @@ export function RatgeberKopf({
   person,
   sprung,
   knopfSchlicht = false,
+  knopfOben = false,
+  unterzeile,
+  einleitungTitel,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -103,6 +122,38 @@ export function RatgeberKopf({
   sprung?: { id: string; label: string }[]
   /** Knopf ohne Gesichterreihe und Sterne — „eher sekundär" (Bauplan 21.09.2026). */
   knopfSchlicht?: boolean
+  /**
+   * Der volle Rechner-Block DIREKT unter der Überschrift, vor der Einleitung (23.09.2026).
+   *
+   * Martin, nachdem er die Ortsseiten auf dem Handy gesehen hat: „es fehlen teilweise Buttons
+   * und Pflegekräfte und Sterne … Wir benötigen doch Hemmnisnehmer sofort sichtbar oder?
+   * Ähnlich wie auf der Startseite."
+   *
+   * Gemessen auf dem iPhone: Steht der Block NACH der Einleitung, landet er auf den Ortsseiten
+   * bei 670 px, die Gesichterreihe bei 17.054 px und die Sterne bei 1.816 px — auf keinem
+   * iPhone im ersten Bildschirm. Über der Einleitung liegt der Knopf bei rund 340 px, wie auf
+   * der Startseite, und Gesichter und Sterne kommen mit.
+   *
+   * Der Weg über die Einleitung wurde bewusst NICHT gewählt: Sie auf 210 Zeichen zu kürzen hiesse,
+   * 205 örtlich geschriebene Texte anzugleichen — und Textgleichheit ist bei den Ortsseiten die
+   * Leitkennzahl (69,4 % heute). Die Reihenfolge zu ändern kostet kein einziges Wort.
+   *
+   * Zweiter Anlauf am selben Tag: Der Knopf direkt unter der H1 war Martin zu weit oben
+   * („button plötzlich nach so weit oben"). Referenz ist kostenrechner.primundus.de: dort steht
+   * zwischen H1 und Knopf EINE Unterzeile („Sehen Sie in 2 Minuten, was es kostet und welche
+   * Pflegekräfte verfügbar sind – Anreise in 3 Tagen möglich."), und der Block hat die Punkte.
+   * Genau das ist `unterzeile` + `knopfOben`.
+   */
+  knopfOben?: boolean
+  /** Die eine Zeile zwischen H1 und Block, wie im Rechner. Für Ortsseiten <StandardUnterzeile ort="…" />. */
+  unterzeile?: ReactNode
+  /**
+   * Überschrift über der Einleitung, wenn sie hinter dem Block steht (23.09.2026). Martin auf
+   * dem Handy: „Der Text unter den Sternen, der beginnt einfach ohne irgendwie Überschrift."
+   * Mit `knopfOben` ist die Einleitung kein Vorspann zur H1 mehr, sondern ein eigener Absatz —
+   * und ein Absatz ohne Überschrift hängt in der Luft.
+   */
+  einleitungTitel?: string
 }) {
   const zweiSpalten = Boolean(blick?.length) || Boolean(person)
   return (
@@ -131,8 +182,23 @@ export function RatgeberKopf({
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
               {zusammenhalten(titel)}
             </h1>
+            {unterzeile ? (
+              <p className="mt-5 text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem]">
+                {unterzeile}
+              </p>
+            ) : null}
+            {knopf && knopfOben ? (
+              <div className="mt-7">
+                <RechnerBlock src={mitPosition(rechnerQuelle(knopf.href), 'kopf')} />
+              </div>
+            ) : null}
+            {einleitung && einleitungTitel ? (
+              <h2 className="mt-10 text-[24px] md:text-[28px] font-extrabold leading-[1.15] tracking-[-0.02em] text-pm-ink [text-wrap:balance]">
+                {einleitungTitel}
+              </h2>
+            ) : null}
             {einleitung ? (
-              <p className="mt-6 text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]">
+              <p className={`${einleitungTitel ? 'mt-4' : 'mt-6'} text-[19px] md:text-[20px] leading-[1.6] text-pm-body max-w-[56ch] [text-wrap:pretty]`}>
                 {einleitung}
               </p>
             ) : null}
@@ -149,7 +215,7 @@ export function RatgeberKopf({
                 ))}
               </nav>
             ) : null}
-            {knopf && knopfSchlicht ? (
+            {knopf && knopfSchlicht && !knopfOben ? (
               <div className="mt-7">
                 <a
                   href={knopf.href}
@@ -160,9 +226,9 @@ export function RatgeberKopf({
                 </a>
               </div>
             ) : null}
-            {knopf && !person && !knopfSchlicht ? (
+            {knopf && !person && !knopfSchlicht && !knopfOben ? (
               <div className="mt-8">
-                <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+                <RechnerBlock src={mitPosition(rechnerQuelle(knopf.href), 'kopf')} punkte={false} />
               </div>
             ) : null}
             {/* Ohne `person` keine Marta-Zeile im Kopf (Martin 18.09.: „ohne Button blöd, aber Button
@@ -186,9 +252,9 @@ export function RatgeberKopf({
               die er braucht … und dann vielleicht erst Werbung"). Wer in einer akuten Lage sucht,
               prüft zuerst, ob das Modell passt und was es kostet; ein Knopf davor wirkt wie Verkauf.
               Auf Seiten ohne Ansprechpartnerin bleibt der Knopf, wo er war — unter der Einleitung. */}
-          {knopf && person && !knopfSchlicht ? (
+          {knopf && person && !knopfSchlicht && !knopfOben ? (
             <div className="lg:col-start-1 lg:row-start-3">
-              <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+              <RechnerBlock src={mitPosition(rechnerQuelle(knopf.href), 'kopf')} punkte={false} />
             </div>
           ) : null}
           {/* Zuletzt im Quelltext, damit auf dem Handy erst Information (Fakten), dann Handlung
@@ -207,6 +273,15 @@ export function RatgeberKopf({
   )
 }
 
+/**
+ * Knopfposition an die Quelle hängen (23.09.2026): ort-worms → ort-worms-kopf. Nur für die
+ * Ortsseiten (ort-…), damit die bestehenden Reihen website:apex-… in den Lead-Auswertungen
+ * nicht zersplittern. Der Rechner speichert src seit CAapp#738 je Sitzung und je Lead.
+ */
+export function mitPosition(src: string, position: 'kopf' | 'kosten' | 'leiste' | 'schluss'): string {
+  return src.startsWith('ort-') ? `${src}-${position}` : src
+}
+
 // src aus dem Rechner-Link der Seite (knopf.href); ohne src die allgemeine Quelle
 function rechnerQuelle(href: string): string {
   try {
@@ -217,15 +292,23 @@ function rechnerQuelle(href: string): string {
 }
 
 // Text links, rechts Inhaltsverzeichnis und Kostenknopf (beide mitlaufend, erst ab 1024 px).
-export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: string; title: string }[]; children: ReactNode }) {
+export function RatgeberRumpf({ abschnitte, children, src = 'apex-components' }: { abschnitte: { id: string; title: string }[]; children: ReactNode; src?: string }) {
   return (
     <div className="max-w-[1200px] mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
       <article className="min-w-0 max-w-[46rem]">{children}</article>
       <aside className="hidden lg:block" aria-label="Inhalt und Kosten">
-        <div className="sticky top-[152px]">
-          <InhaltLeiste abschnitte={abschnitte} />
-          <div className="mt-8">
-            <LeistenKarte src="apex-components" />
+        {/* Die Spalte darf nicht höher sein als der Bildschirm: Mit 10–15 Abschnitten war sie
+            800–1.100 px hoch, bei 900 px Viewport fehlten 90–340 px — die Rechner-Karte unten
+            war auf Laptops nie erreichbar (Martin 23.09.: „Button rechts unten wird
+            abgeschnitten"). Jetzt scrollt die Spalte selbst; der Kopf ist 121 px, 140 lässt Luft. */}
+        <div className="sticky top-[140px] flex max-h-[calc(100vh-140px)] flex-col">
+          {/* Die Liste scrollt, die Karte steht fest darunter — so ist der Rechner-Knopf auf jeder
+              Bildschirmhöhe im Bild, auch bei 15 Abschnitten (gemessen 1024×768 bis 1440×900). */}
+          <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
+            <InhaltLeiste abschnitte={abschnitte} />
+          </div>
+          <div className="mt-6 flex-none pb-6">
+            <LeistenKarte src={mitPosition(src, 'leiste')} />
           </div>
         </div>
       </aside>

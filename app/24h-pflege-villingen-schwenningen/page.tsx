@@ -5,7 +5,7 @@ import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Villingen-Schwenningen?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Baden-Württemberg (Eigenanteil rund 3.660 €/Monat, vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Villingen-Schwenningen?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Baden-Württemberg kostet im Schnitt rund 3.660 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Villingen-Schwenningen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Villingen-Schwenningen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
@@ -53,7 +53,7 @@ const FRAGEN = [
   { q: 'Macht es einen Unterschied, ob ich in Villingen oder in Schwenningen wohne?', a: 'Für unsere Betreuung nicht — Anreise und Preis sind in beiden Stadtteilen und in allen zehn Ortschaften gleich. Statistisch gibt es den Unterschied aber: Villingen liegt beim Durchschnittsalter bei 44,1 Jahren, Schwenningen bei 42,1, die Ortschaften bei 45,1. Die beiden fast gleich großen Zentren (Villingen 41.136, Schwenningen 36.915 Einwohner) liegen rund fünf Kilometer auseinander und altern unterschiedlich schnell. In der Gesamtstadt leben 19.752 Menschen über 65, das sind 22,1 Prozent.' },
   { q: 'Welches Einzugsgebiet wird in Villingen-Schwenningen bedient?', a: 'Villingen-Schwenningen und Schwarzwald-Baar-Kreis: Donaueschingen, Blumberg, Triberg und alle Gemeinden im Schwarzwald-Baar-Kreis' },
   { q: 'Ist in einer Wohnung in Villingen-Schwenningen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Villingen-Schwenningen hat im Schnitt 91,9 m², 20,4 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 73,1 % der Gebäude in Villingen-Schwenningen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.737 € Unterschied im Monat, 32.844 € im Jahr.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Baden-Württemberg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.660 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const schemaMarkup = [
@@ -108,14 +108,16 @@ export default function Page() {
           ]}
           augenbraue="24-Stunden-Pflege in Villingen-Schwenningen"
           titel="24-Stunden-Pflege und Betreuung in Villingen-Schwenningen"
+          einleitungTitel="Zuhause bleiben in Villingen-Schwenningen"
           einleitung={<>Zwei Städte, ein Zuhause: Ob im Villinger Zähringerviertel oder auf der Schwenninger Seite Richtung Neckarquelle — wer hier alt geworden ist, bleibt gern. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht, und ist bei Bedarf auch nachts da, auch im Umland vom Schwarzwald bis zur Baar. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-villingen-schwenningen', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
+          unterzeile={<StandardUnterzeile ort="Villingen-Schwenningen" />}
           blick={[
-            'Preis bei Primundus: ab 2.150 €/Monat',
-            'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
+            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
+            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
             'Pflegeheim in Baden-Württemberg: Eigenanteil rund 3.660 €/Monat (vdek, 07/2026)',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
@@ -143,16 +145,15 @@ export default function Page() {
 
           <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Villingen-Schwenningen 2026">
             <Tabelle
-              titel="Kostenbeispiel — Pflegegrad 3 in Villingen-Schwenningen"
+              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
-                ['Kosten Primundus', 'ab 2.150 €/Monat'],
-                ['− Pflegegeld PG 3', '− 599 €/Monat'],
-                ['− Entlastungsbudget (anteilig)', '− ca. 295 €/Monat'],
-                ['− Steuerermäßigung (20 %, bis 4.000 €/Jahr)', '− ca. 333 €/Monat'],
-                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
+                ['Pflegegeld PG 3', '599 €/Monat'],
+                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
+                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
+                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Pflegeheim in Baden-Württemberg: Eigenanteil rund 3.660 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim in Baden-Württemberg: Eigenanteil rund 3.660 €/Monat (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -174,7 +175,7 @@ export default function Page() {
             <Kasten titel="Angestellt statt vermittelt">
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet:</strong> ab 2.150 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil — deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.660 Euro im Monat kostet.</Text>
+            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet hier im Schnitt rund 3.660 Euro Eigenanteil.</Text>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Betreuungskräfte — das Entsendemodell erklärt</a>.</Text>
           </Abschnitt>
@@ -195,7 +196,7 @@ export default function Page() {
             <NearbyCities current="villingen-schwenningen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Villingen-Schwenningen'} land={'Baden-Württemberg'} altbau={51.8} miete={7.12} />
+          <OrtWerkzeuge slug="villingen-schwenningen" ort={'Villingen-Schwenningen'} land={'Baden-Württemberg'} altbau={51.8} miete={7.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

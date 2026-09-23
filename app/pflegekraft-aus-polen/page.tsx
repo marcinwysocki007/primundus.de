@@ -4,7 +4,7 @@ import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import {
-  RatgeberKopf, RatgeberRumpf, Abschnitt, DunklerAbschnitt, Text, Punkte, Kasten, HakenListe, Tabelle, MehrDazu, Fragen,
+  RatgeberKopf, StandardUnterzeile, RatgeberRumpf, Abschnitt, DunklerAbschnitt, Text, Punkte, Kasten, HakenListe, Tabelle, MehrDazu, Fragen,
   RechnerKasten, Zwischentitel, Werte,
 } from '@/components/vorlage/Ratgeber'
 import { Beispieltag, HeimVsZuhause, KostenAufteilung, Preisfaktoren } from '@/components/grafik/Grafik'
@@ -123,8 +123,9 @@ export default function PflegekraftAusPolen() {
           ]}
           augenbraue="Pflegekraft aus Polen 2026"
           titel="Polnische Pflegekraft: Was sie 2026 kostet, was die Kasse zahlt und wie Sie sie legal beschäftigen"
-          einleitung={<>Eine polnische Pflegekraft kostet bei Primundus ab 2.150 € im Monat, ohne Vermittlungsgebühr. Sie ist bei uns angestellt und mit A1-Bescheinigung legal in Deutschland tätig; Sie werden nicht Arbeitgeber. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat. Ihren Preis und die Betreuungskräfte, die dafür in Frage kommen, zeigt der <a href={RECHNER} className={QUELLE}>Kostenrechner in 2 Minuten</a>.</>}
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
           blick={[

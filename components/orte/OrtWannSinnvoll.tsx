@@ -36,26 +36,22 @@ export function OrtWannSinnvoll({ slug, ort }: { slug: string; ort: string }) {
         punkte={[
           {
             title: 'Wenn das Alleinleben unsicher wird',
-            desc: 'Ein Sturz, vergessene Medikamente, nachts allein in der Wohnung. Jemand im Haus nimmt Ihnen genau diese Sorge.',
+            desc: 'Ein Sturz, vergessene Medikamente, nachts allein.',
           },
           {
             title: 'Bei Demenz',
-            desc: 'Gewohnte Umgebung, gewohnte Abläufe und über Wochen dieselbe Bezugsperson. Ein Umzug nimmt bei Demenz genau die Orientierung, die noch trägt.',
+            desc: 'Gewohnte Umgebung, über Wochen dieselbe Bezugsperson.',
           },
           {
             title: 'Nach einem Krankenhausaufenthalt',
-            desc: 'Die Entlassung kommt oft schneller als die Versorgung. Eine Betreuungskraft kann in wenigen Tagen da sein.',
+            desc: 'Die Entlassung kommt oft schneller als die Versorgung.',
           },
           {
             title: 'Wenn Angehörige an ihre Grenze kommen',
-            desc: 'Pflege neben Beruf und eigener Familie geht eine Weile gut. Eine Betreuungskraft gibt Ihnen viel vom Alltag zurück, ohne dass jemand ausziehen muss.',
+            desc: 'Pflege neben Beruf und Familie geht eine Weile gut — nicht für immer.',
           },
         ]}
       />
-      <Text>
-        Manchmal reicht ein ambulanter Pflegedienst, manchmal eine Tagespflege. Wenn das so ist, sagen wir es Ihnen am
-        Telefon — dann sparen Sie sich die Betreuungskraft, und wir haben Ihnen trotzdem geholfen.
-      </Text>
     </Abschnitt>
   )
 }

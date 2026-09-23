@@ -5,7 +5,7 @@ import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Neubrandenburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Mecklenburg-Vorpommern (Eigenanteil rund 3.030 €/Monat, vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Neubrandenburg?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Mecklenburg-Vorpommern kostet im Schnitt rund 3.030 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Neubrandenburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Neubrandenburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
@@ -52,7 +52,7 @@ const FRAGEN = [
   { q: 'Wie wohnt man in Neubrandenburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Neubrandenburg im Schnitt 4,4 Wohnungen, in Mecklenburg-Vorpommern 2,2. 43,0 Prozent der Gebäude stehen frei, 41,2 Prozent stehen in geschlossener Reihe. 25,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Neubrandenburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Neubrandenburg bedient?', a: 'Neubrandenburg und Mecklenburgische Seenplatte: Waren, Demmin, Altentreptow und alle Gemeinden im Landkreis Mecklenburgische Seenplatte' },
   { q: 'Ist in einer Wohnung in Neubrandenburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Neubrandenburg hat im Schnitt 69,7 m², 37,7 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 64,0 % der Gebäude in Neubrandenburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Mecklenburg-Vorpommern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.030 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.107 € Unterschied im Monat, 25.284 € im Jahr.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Mecklenburg-Vorpommern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.030 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const schemaMarkup = [
@@ -107,14 +107,16 @@ export default function Page() {
           ]}
           augenbraue="24-Stunden-Pflege in Neubrandenburg"
           titel="24-Stunden-Pflege und Betreuung in Neubrandenburg"
+          einleitungTitel="Zuhause bleiben in Neubrandenburg"
           einleitung={<>Hinter den vier Toren oder draußen am Tollensesee: Neubrandenburger bleiben, wo sie verwurzelt sind. Eine Betreuungskraft von Primundus zieht mit ein, wenn Mutter oder Vater Hilfe brauchen, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-neubrandenburg', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
+          unterzeile={<StandardUnterzeile ort="Neubrandenburg" />}
           blick={[
-            'Preis bei Primundus: ab 2.150 €/Monat',
-            'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
+            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
+            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
             'Pflegeheim in Mecklenburg-Vorpommern: Eigenanteil rund 3.030 €/Monat (vdek, 07/2026)',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
@@ -142,16 +144,15 @@ export default function Page() {
 
           <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Neubrandenburg 2026">
             <Tabelle
-              titel="Kostenbeispiel — Pflegegrad 3 in Neubrandenburg"
+              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
-                ['Kosten Primundus', 'ab 2.150 €/Monat'],
-                ['− Pflegegeld PG 3', '− 599 €/Monat'],
-                ['− Entlastungsbudget (anteilig)', '− ca. 295 €/Monat'],
-                ['− Steuerermäßigung (20 %, bis 4.000 €/Jahr)', '− ca. 333 €/Monat'],
-                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
+                ['Pflegegeld PG 3', '599 €/Monat'],
+                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
+                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
+                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Pflegeheim in Mecklenburg-Vorpommern: Eigenanteil rund 3.030 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim in Mecklenburg-Vorpommern: Eigenanteil rund 3.030 €/Monat (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -173,7 +174,7 @@ export default function Page() {
             <Kasten titel="Angestellt statt vermittelt">
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet:</strong> ab 2.150 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil — deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.030 Euro im Monat kostet.</Text>
+            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet hier im Schnitt rund 3.030 Euro Eigenanteil.</Text>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Betreuungskräfte — das Entsendemodell erklärt</a>.</Text>
           </Abschnitt>
@@ -196,7 +197,7 @@ export default function Page() {
             <NearbyCities current="neubrandenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neubrandenburg'} land={'Mecklenburg-Vorpommern'} altbau={25.9} miete={5.49} />
+          <OrtWerkzeuge slug="neubrandenburg" ort={'Neubrandenburg'} land={'Mecklenburg-Vorpommern'} altbau={25.9} miete={5.49} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

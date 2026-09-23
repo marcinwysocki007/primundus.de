@@ -10,7 +10,7 @@ import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -56,12 +56,12 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Hamburg?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Hamburg (Eigenanteil rund 3.500 €/Monat, vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Hamburg?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Hamburg kostet im Schnitt rund 3.500 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Hamburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Hamburg und im Umland.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Ist 24h-Pflege über Primundus in Hamburg rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Ist das Altenpflege, Seniorenbetreuung oder 24-Stunden-Pflege?', a: 'Gemeint ist meist dasselbe: Eine Betreuungskraft zieht in die Wohnung ein, hilft bei Körperpflege, Haushalt und Alltag und ist bei Bedarf auch nachts da. „Altenpflege" und „Seniorenbetreuung" sind die Wörter, mit denen viele Hamburger Familien suchen; medizinische Behandlungspflege wie Spritzen oder Verbände übernimmt weiterhin der ambulante Pflegedienst, den Sie zusätzlich behalten.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hamburg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.500 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.577 € Unterschied im Monat, 30.924 € im Jahr.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hamburg zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.500 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const schemaMarkup = [
@@ -131,6 +131,7 @@ export default function Page() {
           ]}
           augenbraue="24-Stunden-Pflege in Hamburg"
           titel="24-Stunden-Pflege in Hamburg: So funktioniert Betreuung zu Hause"
+          einleitungTitel="Zuhause bleiben in Hamburg"
           einleitung={<>Eine Betreuungskraft lebt mit im Haushalt und unterstützt im Alltag — bei Körperpflege, Essen, Haushalt und Begleitung. Hier erfahren Sie, wie die Betreuung abläuft, was sie kostet und worauf Sie achten sollten.</>}
           aktualisiert="21. September 2026"
           lesezeit="8 Min."
@@ -142,7 +143,8 @@ export default function Page() {
             { id: 'passende-kraft', label: 'Betreuungskraft finden' },
           ]}
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hamburg', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
+          unterzeile={<StandardUnterzeile ort="Hamburg" />}
           person={
             <AnsprechpartnerinGross
               ort="Hamburg"
@@ -161,7 +163,7 @@ export default function Page() {
 
           <OrtAufgaben />
 
-          <OrtAblauf />
+          <OrtAblauf ort="Hamburg" />
 
           <Abschnitt id="voraussetzungen" titel="Was Sie zu Hause brauchen">
             <Text>
@@ -189,20 +191,19 @@ export default function Page() {
             <Text>
               Der Preis richtet sich danach, wie viel Hilfe nötig ist und was Sie von der Betreuungskraft erwarten: wie gut sie
               Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob nachts jemand aufstehen muss, ob eine oder zwei Personen
-              versorgt werden. Bei Primundus beginnt er bei 2.150 € im Monat, dazu kommen An- und Abreise mit 125 € je Strecke.
-              Von diesem Preis geht ab, was die Pflegekasse zahlt — das Beispiel zeigt, wie viel.
+              versorgt werden. Ihren Preis zeigt der Kostenrechner in 2 Minuten.
+              Was Pflegekasse und Finanzamt beisteuern, zeigt das Beispiel.
             </Text>
             <Tabelle
-              titel="Kostenbeispiel — Pflegegrad 3 in Hamburg"
+              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
-                ['Kosten Primundus', 'ab 2.150 €/Monat'],
-                ['− Pflegegeld PG 3', '− 599 €/Monat'],
-                ['− Entlastungsbudget (anteilig)', '− ca. 295 €/Monat'],
-                ['− Steuerermäßigung (20 %, bis 4.000 €/Jahr)', '− ca. 333 €/Monat'],
-                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
+                ['Pflegegeld PG 3', '599 €/Monat'],
+                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
+                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
+                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Zum Vergleich: Ein Heimplatz in Hamburg kostet im ersten Jahr rund 3.500 €/Monat Eigenanteil (vdek, 07/2026)"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Zum Vergleich: Ein Heimplatz in Hamburg kostet im ersten Jahr rund 3.500 €/Monat Eigenanteil (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -222,7 +223,7 @@ export default function Page() {
             <RechnerKasten src="ort-hamburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ohneWohnen ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
+          <OrtWerkzeuge slug="hamburg" ohneWohnen ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
           <OrtPassendeKraft />
 

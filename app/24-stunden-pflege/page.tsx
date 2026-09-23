@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Gegenueber, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { AblaufZeitstrahl, Beispieltag, HeimVsZuhause, KostenAufteilung, ZuhauseQuote } from '@/components/grafik/Grafik'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -149,10 +149,11 @@ export default function VierUndZwanzigStundenPflege() {
           ]}
           augenbraue="6× Testsieger DIE WELT"
           titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
-          einleitung={<>Eine Betreuungskraft zieht bei Ihrem Angehörigen ein, hilft im Alltag und ist bei Bedarf auch nachts da. Unsere Betreuungskräfte sind bei uns angestellt, der Vertrag ist täglich kündbar, und eine Anreise ist in 3 Tagen möglich. Die Betreuung kostet ab 2.150&nbsp;€ im Monat; bei Pflegegrad 3 bleiben davon nach Kassenleistungen und Steuerermäßigung ab ca. 923&nbsp;€ selbst zu tragen.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Kosten & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
           blickTitel="Warum Primundus"
           blick={[
             '6× Testsieger DIE WELT',

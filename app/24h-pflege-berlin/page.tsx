@@ -5,7 +5,7 @@ import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Berlin?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — oft günstiger als ein Heimplatz in Berlin (Eigenanteil rund 3.100 €/Monat, vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Berlin?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Berlin kostet im Schnitt rund 3.100 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Berlin starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Berlin und im Umland.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
   { q: 'Funktioniert 24-Stunden-Pflege auch in einer Berliner Altbauwohnung?', a: 'Ja — und in Vierteln wie Prenzlauer Berg, wo zwei Drittel der Wohnungen aus der Zeit zwischen 1871 und 1914 stammen, ist sie oft die Lösung, die das Wohnenbleiben überhaupt erlaubt. Die Betreuungskraft braucht ein eigenes Zimmer; ansonsten stellt der Altbau keine besonderen Anforderungen. Entscheidend ist, dass jemand die Wege nach draußen übernimmt, sobald das Treppenhaus zur Hürde wird.' },
   { q: 'Gilt das Angebot in allen Berliner Bezirken?', a: 'Ja, in allen zwölf — und das ist wichtiger, als es klingt. Für die Pflege ist Berlin nicht eine Stadt, sondern zwölf sehr verschiedene: Der Altbau in Prenzlauer Berg, die Großsiedlung in Marzahn und das Einfamilienhaus in Kaulsdorf stellen ganz unterschiedliche Anforderungen an den Alltag. Rund 715.000 Berlinerinnen und Berliner sind über 65, viele davon leben allein. Der Preis ist in jedem Bezirk derselbe, Anfahrtskosten berechnen wir nicht.' },
   { q: 'Ist 24h-Pflege über Primundus in Berlin rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
   { q: 'Ist in einer Wohnung in Berlin Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Berlin hat im Schnitt 73,2 m², 39,3 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 56,1 % der Gebäude in Berlin sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Berlin zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.100 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.177 € Unterschied im Monat, 26.124 € im Jahr.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Berlin zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.100 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const schemaMarkup = [
@@ -106,14 +106,16 @@ export default function Page() {
           ]}
           augenbraue="24-Stunden-Pflege in Berlin"
           titel="24-Stunden-Pflege und Betreuung in Berlin"
+          einleitungTitel="Zuhause bleiben in Berlin"
           einleitung={<>Die Wohnung in Charlottenburg seit 40 Jahren, das Reihenhaus in Pankow, der Garten in Spandau: Berliner geben ihr Zuhause nicht auf — und Heimplätze mit kurzer Warteliste sind in der Stadt ohnehin rar. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist bei Bedarf auch nachts da, von Steglitz bis Weißensee. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="27. August 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-berlin', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
+          unterzeile={<StandardUnterzeile ort="Berlin" />}
           blick={[
-            'Preis bei Primundus: ab 2.150 €/Monat',
-            'Ihr Eigenanteil bei Pflegegrad 3: ab ca. 923 €/Monat',
+            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
+            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
             'Pflegeheim in Berlin: Eigenanteil rund 3.100 €/Monat (vdek, 07/2026)',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
@@ -141,16 +143,15 @@ export default function Page() {
 
           <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Berlin 2026">
             <Tabelle
-              titel="Kostenbeispiel — Pflegegrad 3 in Berlin"
+              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
-                ['Kosten Primundus', 'ab 2.150 €/Monat'],
-                ['− Pflegegeld PG 3', '− 599 €/Monat'],
-                ['− Entlastungsbudget (anteilig)', '− ca. 295 €/Monat'],
-                ['− Steuerermäßigung (20 %, bis 4.000 €/Jahr)', '− ca. 333 €/Monat'],
-                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
+                ['Pflegegeld PG 3', '599 €/Monat'],
+                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
+                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
+                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Pflegeheim in Berlin: Eigenanteil rund 3.100 €/Monat (vdek, 07/2026) — 24h-Pflege zuhause ist oft günstiger und erhält das Zuhause"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim in Berlin: Eigenanteil rund 3.100 €/Monat (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -172,7 +173,7 @@ export default function Page() {
             <Kasten titel="Angestellt statt vermittelt">
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet:</strong> ab 2.150 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen. Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil — deutlich weniger als ein Heimplatz, der hier im Schnitt rund 3.020 Euro im Monat kostet.</Text>
+            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet hier im Schnitt rund 3.020 Euro Eigenanteil.</Text>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Betreuungskräfte — das Entsendemodell erklärt</a>.</Text>
           </Abschnitt>
@@ -193,7 +194,7 @@ export default function Page() {
             <NearbyCities current="berlin" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Berlin'} land={'Berlin'} altbau={61.9} miete={7.67} />
+          <OrtWerkzeuge slug="berlin" ort={'Berlin'} land={'Berlin'} altbau={61.9} miete={7.67} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

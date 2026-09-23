@@ -5,7 +5,7 @@ import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft im Rhein-Pfalz-Kreis?', a: 'Ab 2.150 Euro im Monat, je nach Pflegesituation. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro selbst zu tragen.' },
+  { q: 'Was kostet eine 24h-Pflegekraft im Rhein-Pfalz-Kreis?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung.' },
   { q: 'Welche Orte im Rhein-Pfalz-Kreis deckt Primundus ab?', a: 'Den ganzen Kreis rund um Ludwigshafen: Schifferstadt, Limburgerhof, Mutterstadt, Maxdorf, Böhl-Iggelheim, Dudenhofen, Römerberg, Altrip und alle weiteren Gemeinden der Vorderpfalz.' },
   { q: 'Wie schnell kann die Betreuung in der Vorderpfalz starten?', a: 'Eine Anreise ist in 3 Tagen möglich. Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag.' },
   { q: 'Ist in einer Wohnung in Rhein-Pfalz-Kreis Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Rhein-Pfalz-Kreis hat im Schnitt 115,1 m², 8,6 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 90,0 % der Gebäude in Rhein-Pfalz-Kreis sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.297 € Unterschied im Monat, 27.564 € im Jahr.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const schemaMarkup = [
@@ -102,11 +102,13 @@ export default function Page() {
           ]}
           augenbraue="24-Stunden-Pflege in Rhein-Pfalz-Kreis"
           titel="24h-Pflege im Rhein-Pfalz-Kreis — Betreuung im eigenen Zuhause"
+          einleitungTitel="Zuhause bleiben in Rhein-Pfalz-Kreis"
           einleitung={<>Im Gemüsegarten Deutschlands wohnt man bodenständig: das Haus in Schifferstadt oder Mutterstadt, der Garten in Limburgerhof, die Felder vor der Tür. Viele haben ein Leben lang bei der BASF gearbeitet und möchten ihren Ruhestand genau hier verbringen — nicht im Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="28. August 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-rhein-pfalz-kreis', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
+          knopfOben
+          unterzeile={<StandardUnterzeile ort="Rhein-Pfalz-Kreis" />}
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
@@ -132,7 +134,7 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="was-kostet-das-und" titel="Was kostet das — und was zahlt die Pflegekasse dazu?">
-            <Text>Eine 24h-Betreuung kostet über Primundus <strong>ab 2.150 Euro im Monat</strong>. Die Pflegekasse zahlt kräftig mit: Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3{' '}<strong>ab ca. 923 Euro</strong> im Monat selbst zu tragen. Ihren genauen Preis für Ihre Situation zeigt der Kostenrechner in 2 Minuten.</Text>
+            <Text>Was eine 24h-Betreuung kostet, hängt davon ab, ob eine oder zwei Personen betreut werden, wie mobil Ihre Angehörigen sind, ob nachts Hilfe nötig ist und wie gut die Betreuungskraft Deutsch spricht — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung.</Text>
             <RechnerKasten src="ort-rhein-pfalz-kreis" />
           </Abschnitt>
 
@@ -142,7 +144,7 @@ export default function Page() {
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
-            <Text>Der Kostenvergleich fällt im Rhein-Pfalz-Kreis deutlich aus: Bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro Eigenanteil. Ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.220 Euro im Monat — und die vertraute Wohnung bleibt dabei auf der Strecke.</Text>
+            <Text>Der Kostenvergleich fällt im Rhein-Pfalz-Kreis deutlich aus: Ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.220 Euro Eigenanteil im Monat. Zu Hause zahlen Pflegegeld und Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung — und die vertraute Wohnung bleibt.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — was sie kosten und wie es rechtlich läuft</a>.</Text>
           </Abschnitt>
 
@@ -159,7 +161,7 @@ export default function Page() {
             <NearbyCities current="rhein-pfalz-kreis" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} altbau={39.8} miete={6.91} />
+          <OrtWerkzeuge slug="rhein-pfalz-kreis" ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} altbau={39.8} miete={6.91} />
 
 
           <OrtStimmen

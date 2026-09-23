@@ -10,7 +10,7 @@ import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtWerkzeuge } from '@/components/orte/OrtWerkzeuge'
 import {
-  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  MehrDazu, Abschnitt, Fragen, Gegenueber, Kasten, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in München?', a: 'Ab 2.150 €/Monat über Primundus, dazu An- und Abreise mit 125 € je Strecke. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat — deutlich günstiger als ein Heimplatz in Bayern (Eigenanteil rund 3.200 €/Monat, vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in München?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.200 € Eigenanteil (vdek 07/2026).' },
   { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in München starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
@@ -81,7 +81,7 @@ const FRAGEN = [
   { q: 'Wie viele ältere Menschen leben in München?', a: '137.429 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,3 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,5 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Welches Einzugsgebiet wird in München bedient?', a: 'Schwabing, Bogenhausen, Solln, Pullach, Grünwald, Unterhaching, Ottobrunn, Haar, Dachau, Freising, Starnberg, Germering, Gauting, Weilheim, Landsberg am Lech und alle Gemeinden im Landkreis München' },
   { q: 'Heißt das Altenpflege, Seniorenbetreuung oder 24-Stunden-Pflege?', a: 'In München fragen Familien nach allen drei Begriffen und meinen dasselbe: eine Betreuungskraft, die mit einzieht, den Haushalt führt, bei Körperpflege und Alltag hilft und bei Bedarf auch nachts da ist. Spritzen, Verbände und andere Behandlungspflege bleiben beim ambulanten Pflegedienst, der weiterhin vorbeikommt.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause bleiben bei Pflegegrad 3 ab ca. 923 € — nach Pflegegeld, anteiligem Entlastungsbudget und Steuerermäßigung. Das sind rund 2.277 € Unterschied im Monat, 27.324 € im Jahr.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const schemaMarkup = [
@@ -136,6 +136,7 @@ export default function Page() {
           ]}
           augenbraue="24-Stunden-Pflege in München"
           titel="24-Stunden-Pflege in München: So funktioniert Betreuung zu Hause"
+          einleitungTitel="Zuhause bleiben in München"
           einleitung={<>Eine Betreuungskraft lebt mit im Haushalt und unterstützt im Alltag — bei Körperpflege, Essen, Haushalt und Begleitung. Hier erfahren Sie, wie die Betreuung abläuft, was sie kostet und worauf Sie achten sollten.</>}
           aktualisiert="21. September 2026"
           lesezeit="8 Min."
@@ -147,8 +148,9 @@ export default function Page() {
             { id: 'passende-kraft', label: 'Betreuungskraft finden' },
           ]}
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-muenchen', text: 'Preis & Betreuungskräfte ansehen' }}
-          knopfSchlicht
-          person={<AnsprechpartnerinGross ort="München" />}
+          knopfOben
+          unterzeile={<StandardUnterzeile ort="München" />}
+          person={<AnsprechpartnerinGross ort="München" nummer />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
@@ -159,7 +161,7 @@ export default function Page() {
 
           <OrtAufgaben />
 
-          <OrtAblauf />
+          <OrtAblauf ort="München" />
 
           <Abschnitt id="voraussetzungen" titel="Was Sie zu Hause brauchen">
             <Text>
@@ -187,20 +189,19 @@ export default function Page() {
             <Text>
               Der Preis richtet sich danach, wie viel Hilfe nötig ist und was Sie von der Betreuungskraft erwarten: wie gut sie
               Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob nachts jemand aufstehen muss, ob eine oder zwei Personen
-              versorgt werden. Bei Primundus beginnt er bei 2.150 € im Monat, dazu kommen An- und Abreise mit 125 € je Strecke.
-              Von diesem Preis geht ab, was die Pflegekasse zahlt — das Beispiel zeigt, wie viel.
+              versorgt werden. Ihren Preis zeigt der Kostenrechner in 2 Minuten.
+              Was Pflegekasse und Finanzamt beisteuern, zeigt das Beispiel.
             </Text>
             <Tabelle
-              titel="Kostenbeispiel — Pflegegrad 3 in München"
+              titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
-                ['Kosten Primundus', 'ab 2.150 €/Monat'],
-                ['− Pflegegeld PG 3', '− 599 €/Monat'],
-                ['− Entlastungsbudget (anteilig)', '− ca. 295 €/Monat'],
-                ['− Steuerermäßigung (20 %, bis 4.000 €/Jahr)', '− ca. 333 €/Monat'],
-                [<strong key="e">Ihr Eigenanteil</strong>, <strong key="w">ab ca. 923 €/Monat</strong>],
+                ['Pflegegeld PG 3', '599 €/Monat'],
+                ['Entlastungsbudget (anteilig)', 'ca. 295 €/Monat'],
+                ['Steuerermäßigung (20 %, bis 4.000 €/Jahr)', 'bis 333 €/Monat'],
+                [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Werte aus unserem Kostenrechner, zzgl. An- und Abreise 125 € je Strecke · Zum Vergleich: Ein Heimplatz in Bayern kostet im ersten Jahr rund 3.200 €/Monat Eigenanteil (vdek, 07/2026)"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Zum Vergleich: Ein Heimplatz in Bayern kostet im ersten Jahr rund 3.200 €/Monat Eigenanteil (vdek, 07/2026) — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -223,7 +224,7 @@ export default function Page() {
             <RechnerKasten src="ort-muenchen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ohneWohnen ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
+          <OrtWerkzeuge slug="muenchen" ohneWohnen ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
           <OrtPassendeKraft />
 
