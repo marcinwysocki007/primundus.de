@@ -38,5 +38,5 @@ export const TELEFON_E164 = '+4989200000830'
 export const MODELL_KURZ = 'Eigene, bei der Unternehmensgruppe angestellte Betreuungskräfte — Einsatz über das Entsendemodell mit A1-Bescheinigung'
 
 /** Auszeichnung — Wortlaut wie im Rechner (Martin 15.09.2026); Siegel und Veröffentlichung 10/2021 */
-export const AWARD = '6× Testsieger DIE WELT; Service-Champion bei DIE WELT & ServiceValue (10/2021)'
+export const AWARD = '6× Testsieger DIE WELT (2021, 2022, 2023, 2024, 2025, 2026); Service-Champion bei DIE WELT & ServiceValue'
 export const AWARD_BELEG = 'https://primundus.de/testsieger-24-stunden-pflege'

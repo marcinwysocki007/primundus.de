@@ -164,7 +164,7 @@ function RegionenSearchInnen(_props: Props) {
             Für „{capitalizeCity(query)}" haben wir keine eigene Seite
           </p>
           <p className="text-[13px] text-pm-mute mb-4">
-            Unsere Betreuungskräfte sind trotzdem dort im Einsatz. Ihren Preis und passende Pflegekräfte sehen Sie in 2 Minuten, ohne Kontaktdaten.
+            Unsere Betreuungskräfte sind trotzdem dort im Einsatz. Ihren Preis und passende Pflegekräfte sehen Sie in 2 Minuten.
           </p>
           <div className="flex flex-col sm:flex-row gap-2">
             <a

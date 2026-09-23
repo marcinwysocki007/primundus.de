@@ -398,6 +398,21 @@ function VertrauensKarte({
   )
 }
 
+/** Siegel als Kopfzeile im Kasten „Auf einen Blick“ — Testsieger-Seite (Martin 23.09.2026: „sollten wir das Siegel nicht schon früher zeigen“) */
+export function SiegelZeile({ link }: { link: ReactNode }) {
+  return (
+    <div className="mb-5 flex items-center gap-4 border-b border-pm-line pb-5">
+      <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions: primundus.de" width={352} height={528} className="h-[96px] w-auto flex-none rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)]" />
+      <div className="min-w-0">
+        <p className="text-[20px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink">6× Testsieger</p>
+        <p className="mt-0.5 text-[16px] font-bold tracking-[0.02em] text-pm-taupe">DIE WELT</p>
+        <p className="text-[15px] text-pm-body/70">Preis &amp; Qualität</p>
+        <div className="mt-2 text-[14px]">{link}</div>
+      </div>
+    </div>
+  )
+}
+
 /** eingebettet: dieselben zwei Karten untereinander in der Textspalte einer Vorlagen-Seite (z. B. /ueber-uns) */
 export function VertrauensKarten({ eingebettet = false }: { eingebettet?: boolean }) {
   const pille = 'absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em]'

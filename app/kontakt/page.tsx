@@ -9,7 +9,7 @@ import { aktualisiertAm } from '@/lib/lastmod'
 // Kernseite in der Seitenvorlage (Paket 3, 19.09.2026). Vorher: alte Optik mit Symbol-Kästen, Taupe-Hinweis, Bewertungs-Auszug.
 // Jetzt: Kopf der Vorlage, Kontakt mit dem Standard-Baustein MartaBand (Martin 19.09.: „Wir haben doch einen Button für
 // Anrufen, für WhatsApp … fang nicht an, Dinge zu entwickeln“), Nummer und E-Mail als Zeilen, Anschrift, was nach der Anfrage passiert (wie
-// Rechner und Kundenportal seit „Preis zuerst"), Fragen, Seitenende wie überall. Raus: „Kein Callcenter, kein Warteschleife",
+// Rechner und Kundenportal; seit 19.09. wieder Kontaktdaten vor dem Preis), Fragen, Seitenende wie überall. Raus: „Kein Callcenter, kein Warteschleife",
 // „Keine Anfrage zu groß oder zu klein" (Floskeln ohne Inhalt).
 
 const AKTUALISIERT = aktualisiertAm('kontakt', '19. September 2026')
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Muss ich anrufen, um den Preis zu erfahren?',
-    a: 'Nein. Im Kostenrechner beantworten Sie ein paar Fragen zur Pflegesituation und sehen nach 2 Minuten Ihren Monatspreis, noch ohne Kontaktdaten. Anrufen können Sie, wenn Sie Fragen haben.',
+    a: 'Nein. Im Kostenrechner beantworten Sie ein paar Fragen zur Pflegesituation und sehen nach 2 Minuten Ihren Monatspreis und passende Pflegekräfte. Anrufen können Sie, wenn Sie Fragen haben.',
   },
   {
     q: 'Wann erreiche ich jemanden bei Primundus?',
@@ -92,7 +92,7 @@ export default function KontaktPage() {
           ]}
           augenbraue="Kontakt"
           titel="Kontakt: Marta Kapcio und ihr Team erreichen Sie täglich von 8 bis 20 Uhr"
-          einleitung={<>Rufen Sie an oder schreiben Sie per WhatsApp oder E-Mail, auch am Wochenende. Ihren Preis und passende Betreuungskräfte sehen Sie auch ohne Anruf: im Kostenrechner, in <strong className="text-pm-ink">2 Minuten</strong>, ohne Kontaktdaten.</>}
+          einleitung={<>Rufen Sie an oder schreiben Sie per WhatsApp oder E-Mail, auch am Wochenende. Ihren Preis und passende Betreuungskräfte sehen Sie auch ohne Anruf: im Kostenrechner, in <strong className="text-pm-ink">2 Minuten</strong>.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="2 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
@@ -102,7 +102,7 @@ export default function KontaktPage() {
             'WhatsApp an dieselbe Nummer',
             'E-Mail info@primundus.de',
             'Büro: Landsberger Str. 155, 80687 München',
-            'Preis und Pflegekräfte online, ohne Kontaktdaten',
+            'Preis und Pflegekräfte online, ohne Anruf',
           ]}
         />
 
@@ -132,8 +132,8 @@ export default function KontaktPage() {
           <Abschnitt id="danach" titel="Was nach Ihrer Anfrage passiert">
             <Schritte
               schritte={[
-                { title: 'Preis sehen', desc: 'Im Kostenrechner oder am Telefon: Sie beantworten ein paar Fragen zur Pflegesituation und kennen Ihren Monatspreis, auch was nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleibt.', tag: 'Unter 2 Minuten' },
-                { title: 'Pflegekräfte ansehen', desc: 'Mit Ihren Kontaktdaten speichern Sie die Berechnung und sehen passende Pflegekräfte mit Foto, Erfahrung und Deutschkenntnissen. Bewerbungen kommen am selben Werktag.', tag: 'Bewerbungen am selben Werktag' },
+                { title: 'Preis und Pflegekräfte sehen', desc: 'Im Kostenrechner oder am Telefon: Sie beantworten ein paar Fragen zur Pflegesituation, hinterlassen Ihre Kontaktdaten und kennen Ihren Monatspreis, auch was nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleibt. Dazu sehen Sie passende Pflegekräfte mit Foto, Erfahrung und Deutschkenntnissen.', tag: 'Unter 2 Minuten' },
+                { title: 'Bewerbungen erhalten', desc: 'Ergänzen Sie die Angaben zu Ihrem Angehörigen, dann bewerben sich Pflegekräfte bei Ihnen. Bewerbungen kommen am selben Werktag.', tag: 'Bewerbungen am selben Werktag' },
                 { title: 'Aussuchen, dann Vertrag', desc: 'Sie entscheiden, wer kommt. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag; den Mustervertrag können Sie vorher lesen. Danach reist die Betreuungskraft an.', tag: 'Anreise in 3 Tagen möglich' },
               ]}
             />

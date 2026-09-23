@@ -60,11 +60,11 @@ const FRAGEN = [
   },
   {
     q: 'Ist Primundus ausgezeichnet?',
-    a: 'DIE WELT hat Primundus sechsmal in Folge ausgezeichnet. Das Original-Siegel von 2021 und die Veröffentlichung als PDF zeigen wir auf der Seite zur Auszeichnung.',
+    a: 'DIE WELT hat Primundus sechsmal in Folge ausgezeichnet: 2021, 2022, 2023, 2024, 2025 und 2026. Siegel und Veröffentlichung zeigen wir auf der Seite zur Auszeichnung.',
   },
   {
     q: 'Wie erreiche ich Primundus?',
-    a: 'Täglich von 8 bis 20 Uhr unter 089 200 000 830, per WhatsApp oder per E-Mail an info@primundus.de. Ihren Preis und passende Betreuungskräfte sehen Sie jederzeit im Kostenrechner, ohne Kontaktdaten.',
+    a: 'Täglich von 8 bis 20 Uhr unter 089 200 000 830, per WhatsApp oder per E-Mail an info@primundus.de. Ihren Preis und passende Betreuungskräfte sehen Sie jederzeit im Kostenrechner, ohne Anruf.',
   },
 ]
 
@@ -166,7 +166,7 @@ export default function UeberUnsPage() {
           <Abschnitt id="arbeitsweise" titel="Wie wir arbeiten">
             <Punkte
               punkte={[
-                { title: 'Preis vor dem Kontakt', desc: 'Ein paar Fragen im Kostenrechner, und Sie sehen Ihren Monatspreis, noch ohne Kontaktdaten. Das dauert 2 Minuten.' },
+                { title: 'Preis und Pflegekräfte sofort', desc: 'Ein paar Fragen im Kostenrechner, und Sie sehen Ihren Monatspreis und passende Pflegekräfte. Das dauert 2 Minuten.' },
                 { title: 'Sie wählen aus', desc: 'Sie sehen Profile mit Foto, Erfahrung, Einsätzen über Primundus und Deutschkenntnissen. Bewerbungen kommen am selben Werktag, den Vertrag gibt es erst nach Ihrer Auswahl.' },
                 { title: 'Angestellt, nicht vermittelt', desc: 'Die Betreuungskräfte sind bei uns angestellt, jeder Einsatz läuft mit A1-Bescheinigung. Eine Vermittlungsgebühr gibt es nicht.' },
                 { title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, taggenaue Abrechnung. Sie zahlen erst, wenn die Betreuungskraft da ist.' },

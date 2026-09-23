@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { KontaktBand } from '@/components/ArticleCTA'
 import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
+import { GARANTIE, SiegelZeile } from '@/components/vertrauen/Vertrauen'
 
 // Kernseite in der Seitenvorlage. 20.09.2026 umgestellt (Martin: „wir sind jetzt 6 Jahre in Folge ausgezeichnet — man muss
 // da nicht explizit auf die Siegel eingehen, weil wir sie nicht gekauft haben, aber trotzdem Sieger sind — also sinnvoll
@@ -12,30 +12,42 @@ import { aktualisiertAm } from '@/lib/lastmod'
 // Begriff, brachte auf Position 10 aber nur 5 Klicks. Wer so sucht, will wissen, WER auszeichnet und WIE — das steht jetzt
 // zuerst; das Siegel bleibt als Nachweis, rutscht aber nach unten. Keine Prozentzahlen, nie „Vermittler", keine Negation
 // anderer Tests. Martins Wortlaut „6× Testsieger / DIE WELT / Preis & Qualität" bleibt gültig..
+//
+// 23.09.2026 abends, Martin: „ab 2021 wurden wir jedes Jahr in Folge ausgezeichnet … nenne die Zahlen. Weil so ist das
+// nun mal." Regel: Wo ein Jahr der Auszeichnung steht, stehen alle sechs — nie „2021" allein (las sich wie EINE
+// Auszeichnung). Ausgeschrieben zweimal: im Familie-Satz (Martins Wortlaut) und in der Frage „Wie oft …"; viermal
+// wirkte aufdringlich (OpenAI-Prüfung 23.09.). Und: „dass man uns transparent sofort Preis und Pflegekräfte direkt einsehen kann … damit das immer
+// gleich ist" — die Vorteile im Abschnitt #familie stehen in der Reihenfolge der USPs und im Wortlaut von Startseite
+// und Rechner (Hero-Punkte, Ablauf, Bestpreisgarantie).
 
-const AKTUALISIERT = aktualisiertAm('testsieger-24-stunden-pflege', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('testsieger-24-stunden-pflege', '23. September 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-testsieger'
 const PDF = '/downloads/die-welt-service-champions-2021.pdf'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
+// 23.09.2026, Martin: „6x in Folge bei DIE WELT fand ich besser in den Snippets. Und sollten wir das Siegel nicht schon
+// früher zeigen — also Auf einen Blick oder ein eigener Bereich direkt darüber, so die Box wie im Kostenrechner?“
+// Titel zurück auf seinen Wortlaut vom 16.09.; das Siegel steht jetzt oben im Kasten (seine Wahl: „A ist gut“), der Abschnitt
+// „Das Siegel“ weiter unten fällt dafür weg, sonst stünde es zweimal auf der Seite.
+// Beschreibung D2 nach OpenAI-Prüfung (23.09.): stärkste Klickrate, führt in den Rechner, 106 Zeichen — am Handy vollständig
+const BESCHREIBUNG = 'Primundus ist 6× in Folge Testsieger bei DIE WELT. Preis und passende Pflegekräfte sehen Sie in 2 Minuten.'
+const PDF_LINK = <a href={PDF} target="_blank" rel="noopener" className={`font-semibold ${LINK}`}>Veröffentlichung ansehen (PDF)</a>
+
 const SECTIONS = [
   { id: 'wer', title: 'Wer auszeichnet und wie' },
   { id: 'familie', title: 'Was das für Sie heißt' },
-  { id: 'siegel', title: 'Das Siegel' },
   { id: 'vergleich', title: 'Vergleichen Sie selbst' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Testsieger: ausgezeichnet von DIE WELT',
-  description:
-    'Testsieger in der 24-Stunden-Pflege: Primundus ist sechs Jahre in Folge ausgezeichnet. Grundlage sind Kundenurteile aus der Service-Studie von DIE WELT.',
+  title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
+  description: BESCHREIBUNG,
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege Testsieger: ausgezeichnet von DIE WELT',
-    description:
-      'Sechs Jahre in Folge ausgezeichnet. Grundlage sind Kundenurteile aus der Service-Studie von DIE WELT und ServiceValue.',
+    title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
+    description: BESCHREIBUNG,
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -47,7 +59,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Wer ist Testsieger in der 24-Stunden-Pflege?',
-    a: 'Primundus ist sechs Jahre in Folge ausgezeichnet, zuletzt 2026. Vergeben wird die Auszeichnung von DIE WELT gemeinsam mit der ServiceValue GmbH auf Grundlage von Kundenurteilen; 2021 stand primundus.de in seiner Kategorie auf Platz 1 im erlebten Kundenservice.',
+    a: 'Primundus ist sechs Jahre in Folge Testsieger bei DIE WELT, zuletzt 2026. Vergeben wird die Auszeichnung gemeinsam mit der ServiceValue GmbH, auf Grundlage von Kundenurteilen zum erlebten Kundenservice.',
   },
   {
     q: 'Wer vergibt die Auszeichnung und wie wird gemessen?',
@@ -55,7 +67,7 @@ const FRAGEN = [
   },
   {
     q: 'Wie oft wurde Primundus ausgezeichnet?',
-    a: 'Sechs Jahre in Folge, zuletzt 2026. Die Studie wird jedes Jahr neu erhoben; die Auszeichnung gilt jeweils für ein Jahr. Siegel und vollständige Veröffentlichung finden Sie auf dieser Seite.',
+    a: 'Sechs Jahre in Folge: 2021, 2022, 2023, 2024, 2025 und 2026. Die Studie wird jedes Jahr neu erhoben; die Auszeichnung gilt jeweils für ein Jahr. Siegel und vollständige Veröffentlichung finden Sie oben auf dieser Seite.',
   },
   {
     q: 'Was kostet die 24-Stunden-Pflege beim Testsieger?',
@@ -97,8 +109,8 @@ const schemaMarkup = [
 // Zurueck ist aber NICHT die alte Einleitung. Die sagte „Stellvertretend zeigen wir hier
 // das Original-Siegel von 2021" — genau der rechtfertigende Ton, den Martin kritisiert hat.
 // Die neue ist kuerzer als beide bisherigen Fassungen und nennt 2021 gar nicht: zwei Saetze,
-// wer auszeichnet und worauf es beruht. Die Jahreszahl steht dort, wo sie hingehoert — im
-// Abschnitt „Der Nachweis".
+// wer auszeichnet und worauf es beruht. Die Jahre stehen ausgeschrieben (2021 bis 2026 einzeln)
+// in „Was heißt das für Sie" und in der Frage „Wie oft wurde Primundus ausgezeichnet?".
 //
 // Die Abschnittsfolge vom 20.09. bleibt: erst wer auszeichnet und wie, dann was es fuer die
 // Familie heisst, dann der Nachweis. Das war richtig; falsch war nur der gewanderte Knopf.
@@ -124,13 +136,20 @@ export default function TestsiegerPage() {
           lesezeit="3 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
           blickTitel="Auf einen Blick"
-          blick={[
-            'Sechs Jahre in Folge ausgezeichnet, zuletzt 2026',
-            'Grundlage: Kundenurteile aus einer der größten Service-Studien Deutschlands',
-            'Untersucht von DIE WELT und der ServiceValue GmbH, jedes Jahr neu',
-            'Siegel und Veröffentlichung im Original auf dieser Seite',
-            'Keine Vermittlungsgebühr, täglich kündbar, taggenaue Abrechnung',
-            'Anreise in 3 Tagen möglich, Ansprechpartnerin täglich 8–20 Uhr',
+          blickKopf={<SiegelZeile link={PDF_LINK} />}
+          // Martin 23.09.2026: „sechsmal ausgezeichnet, Grundlage, Untersuchung, keine Vermittlungsgebühr, Anreise …
+          // das passt doch irgendwie nicht zusammen … man kann sagen, warum … fair wegen keine Vermittlungsgebühr,
+          // täglich kündbar, taggenaue Abrechnung … vielleicht als eine Art Inhaltsverzeichnis". Jede Zeile ist ein
+          // Grund und springt zu dem Abschnitt, der ihn belegt. „Warum Preis-Leistungssieger" steht bewusst NICHT
+          // da: Die Studie bewertet den erlebten Kundenservice, nicht die Konditionen.
+          blickVerweise={[
+            { href: '#wer', titel: 'Wer uns auszeichnet', text: 'DIE WELT, auf Grundlage von Kundenurteilen' },
+            // „Faire Konditionen" statt „Fair im Preis" (OpenAI-Prüfung 23.09.): „täglich kündbar" ist keine Preisangabe.
+            // 23.09. abends (Martin: „transparent sofort Preis und Pflegekräfte direkt einsehen"): der Vorteil selbst ist der
+            // Titel; „Transparent und fair" war als Titel eine Floskel ohne den Text dahinter (OpenAI-Prüfung).
+            { href: '#familie', titel: 'Preis und Pflegekräfte sofort sehen', text: 'dazu keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie' },
+            { href: '#vergleich', titel: 'Vergleichen Sie selbst', text: 'Gebühren, Bindung und Auswahl bei den bekannten Anbietern' },
+            { href: '#faq', titel: 'Häufige Fragen', text: 'zur Auszeichnung und zu den Kosten' },
           ]}
         />
 
@@ -145,8 +164,7 @@ export default function TestsiegerPage() {
             <Text>
               Gefragt wird nach dem <strong className="text-pm-ink">erlebten Kundenservice</strong>: wie erreichbar das Unternehmen war,
               wie verständlich es erklärt hat, wie zuverlässig es gehalten hat, was es versprochen hat. Ausgezeichnet wird, wer in seiner
-              Kategorie die besten Urteile bekommt. 2021 war das in unserer Kategorie primundus.de — und seither jedes Jahr wieder,
-              sechs Jahre in Folge, zuletzt 2026.
+              Kategorie die besten Urteile bekommt. In unserer Kategorie war das primundus.de, sechs Jahre in Folge.
             </Text>
             <Kasten augenbraue="Was das bedeutet" titel="Die Urteile kommen von Familien, nicht von uns" ton="gruen">
               <Text>
@@ -159,52 +177,25 @@ export default function TestsiegerPage() {
           <Abschnitt id="familie" titel="Was heißt das für Sie als Familie?">
             <Text>
               Wenn Sie eine Betreuungskraft für einen Angehörigen suchen, wollen Sie sich auf Ihren Anbieter
-              verlassen können. In der Service-Studie 2021 bewerteten Familien Primundus besser als alle anderen
-              untersuchten Anbieter der Kategorie. Dazu kommen diese Leistungen:
+              verlassen können. In den Service-Studien 2021, 2022, 2023, 2024, 2025 und 2026 bewerteten Familien Primundus besser
+              als alle anderen untersuchten Anbieter der Kategorie. Dazu kommen diese Leistungen:
             </Text>
             <Punkte
               punkte={[
+                // Reihenfolge der USPs (Memory primundus-usps); Titel wie die Hero-Punkte von Startseite und Rechner,
+                // „Kein Vertrag …" im Wortlaut von Ablauf-Schritt 3, Garantie-Satz wie Ortsseiten/Anzeigen (GARANTIE im Rechner).
+                { title: 'Preis und Pflegekräfte sofort sehen', desc: 'In 2 Minuten sehen Sie Ihren Monatspreis und passende Pflegekräfte mit Foto, Erfahrung und Deutschkenntnissen.' },
+                { title: 'Kein Vertrag vor Ihrer Auswahl', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag.' },
                 { title: 'Keine Vermittlungsgebühr', desc: 'Keine Anzahlung, keine Aufnahmegebühr. Der Monatspreis ist der Preis.' },
-                { title: 'Täglich kündbar', desc: 'Keine Mindestlaufzeit, kein Risiko.' },
-                { title: 'Taggenaue Abrechnung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist.' },
+                { title: 'Täglich kündbar, taggenau abgerechnet', desc: 'Keine Mindestlaufzeit. Sie zahlen erst, wenn die Betreuungskraft da ist.' },
+                { title: 'Bestpreisgarantie', desc: <>Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot. <a href={GARANTIE} className={`font-semibold ${LINK}`}>Mehr Infos</a></> },
                 { title: 'Anreise in 3 Tagen möglich', desc: 'Auch bei dringendem Bedarf.' },
-                { title: 'Persönliche Ansprechpartnerin', desc: 'Marta Kapcio begleitet Sie von der Anfrage bis zum Start.' },
-                { title: 'Rechtssicher', desc: 'Offiziell in der EU angestellte, sozialversicherte Betreuungskräfte.' },
+                { title: 'Persönliche Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team begleiten Sie von der Anfrage bis zum Start, täglich von 8 bis 20 Uhr.' },
+                { title: 'Rechtssicher', desc: 'Die Betreuungskräfte sind bei uns angestellt und sozialversichert, jeder Einsatz läuft mit A1-Bescheinigung.' },
               ]}
             />
           </Abschnitt>
 
-          {/* Siegel klein und ohne Erklaerung (23.09.2026). Martin: „Das mit dem Nachweis
-              interessiert keine Sau. Das ist schlecht geschrieben, viel zu grosses Icon. Mach doch
-              einfach, wie wir das sonst verwenden … Einfach nur Veroeffentlichung ansehen reicht.
-              Du brauchst nicht Nachweis und irgend so einen Scheiss. Dann hoert sich das an, als
-              wuerde man betruegen."
-              Vorher: Ueberschrift „Der Nachweis: Siegel und Veroeffentlichung", Siegel 160 px breit,
-              davor ein Satz mit Institut, Monat und Jahr. Jetzt: Siegel in derselben Groesse wie im
-              Hero der Startseite, die Zeile darunter wie im Rechner, und ein Link. Nichts erklaert
-              sich mehr selbst. */}
-          <Abschnitt id="siegel" titel="Das Siegel">
-            <Kasten>
-              <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-                <Image
-                  src="/images/siegel-welt-2021-352.webp"
-                  alt="Siegel DIE WELT Service-Champions: primundus.de"
-                  width={352}
-                  height={528}
-                  className="h-[110px] w-auto flex-none rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)] md:h-[130px]"
-                />
-                <div>
-                  <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">
-                    6× Testsieger bei DIE WELT
-                  </p>
-                  <p className="mt-1 text-[17px] leading-[1.5] text-pm-body">Preis &amp; Qualität</p>
-                  <p className="mt-4 text-[17px]">
-                    <a href={PDF} target="_blank" rel="noopener" className={`font-semibold ${LINK}`}>Veröffentlichung ansehen (PDF)</a>
-                  </p>
-                </div>
-              </div>
-            </Kasten>
-          </Abschnitt>
 
           <Abschnitt id="vergleich" titel="Vergleichen Sie selbst">
             <Text>

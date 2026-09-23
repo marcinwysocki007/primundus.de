@@ -44,18 +44,38 @@ function Haken() {
   )
 }
 
-function BlickKasten({ titel, punkte }: { titel: string; punkte: string[] }) {
+/** Ein Eintrag im Kasten als Sprungverweis: Stichwort fett, dahinter der Grund in einem Halbsatz */
+export type BlickVerweis = { href: string; titel: string; text: string }
+
+function BlickKasten({ titel, punkte = [], kopf, verweise }: { titel: string; punkte?: string[]; kopf?: ReactNode; verweise?: BlickVerweis[] }) {
   return (
     <aside aria-label="Auf einen Blick" className="bg-white rounded-[20px] shadow-lift p-6 md:p-7">
+      {kopf}
       <p className={AUGENBRAUE}>{titel}</p>
-      <ul className="mt-4 grid gap-3.5">
-        {punkte.map((b) => (
-          <li key={b} className="flex gap-3 text-[16px] leading-[1.5] font-medium text-pm-ink">
-            <Haken />
-            <span>{b}</span>
-          </li>
-        ))}
-      </ul>
+      {verweise?.length ? (
+        // Inhaltsverzeichnis mit Begründung (Testsieger-Seite, Martin 23.09.2026: „das muss schon irgendwie
+        // dazu passen und vielleicht als eine Art Inhaltsverzeichnis"): jede Zeile sagt, WARUM, und springt
+        // zu dem Abschnitt, der es erklärt.
+        <ul className="mt-3 divide-y divide-pm-line">
+          {verweise.map((v) => (
+            <li key={v.href}>
+              <a href={v.href} className="group flex items-start gap-3 py-3 text-[16px] leading-[1.45] text-pm-body">
+                <span aria-hidden="true" className="mt-[3px] flex h-5 w-5 flex-none items-center justify-center rounded-full bg-pm-shell text-[12px] text-pm-taupe-ink transition-colors group-hover:bg-pm-taupe group-hover:text-white">↓</span>
+                <span><strong className="font-semibold text-pm-ink underline decoration-pm-taupe/30 underline-offset-4 group-hover:decoration-pm-taupe-ink">{v.titel}</strong> — {v.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <ul className="mt-4 grid gap-3.5">
+          {punkte.map((b) => (
+            <li key={b} className="flex gap-3 text-[16px] leading-[1.5] font-medium text-pm-ink">
+              <Haken />
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </aside>
   )
 }
@@ -90,6 +110,8 @@ export function RatgeberKopf({
   knopfOben = false,
   unterzeile,
   einleitungTitel,
+  blickKopf,
+  blickVerweise,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -154,8 +176,14 @@ export function RatgeberKopf({
    * und ein Absatz ohne Überschrift hängt in der Luft.
    */
   einleitungTitel?: string
+  /** Kopfzeile IM Kasten „Auf einen Blick“ (z. B. das Siegel auf der Testsieger-Seite) */
+  blickKopf?: ReactNode
+  /** Kasten als Inhaltsverzeichnis: Sprungverweise statt Häkchen-Punkten (Testsieger-Seite, 23.09.2026) */
+  blickVerweise?: BlickVerweis[]
 }) {
-  const zweiSpalten = Boolean(blick?.length) || Boolean(person)
+  // Kasten gibt es mit Häkchen-Punkten ODER mit Sprungverweisen — für die Anordnung zählt nur, ob er da ist
+  const hatBlick = Boolean(blick?.length) || Boolean(blickVerweise?.length)
+  const zweiSpalten = hatBlick || Boolean(person)
   return (
     <div className="bg-pm-shell">
       <div className="max-w-[1200px] mx-auto px-5 pt-6 pb-12 md:pt-8 md:pb-16">
@@ -176,7 +204,7 @@ export function RatgeberKopf({
             und Fakten links untereinander, Marta rechts daneben. Auf dem Handy greift die
             Platzierung nicht, dort zählt die Reihenfolge im Quelltext — Text, Marta, Fakten.
             Ohne Ansprechpartnerin bleibt der Kopf wie bisher (Text links, Kasten rechts). */}
-        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? `${person && !blick?.length ? 'lg:grid-cols-[minmax(0,1fr)_360px]' : 'lg:grid-cols-[minmax(0,1fr)_400px]'} lg:gap-x-16 ${person ? 'lg:gap-y-8 lg:items-start' : 'lg:items-center'}` : 'max-w-[52rem]'}`}>
+        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? `${person && !hatBlick ? 'lg:grid-cols-[minmax(0,1fr)_360px]' : 'lg:grid-cols-[minmax(0,1fr)_400px]'} lg:gap-x-16 ${person ? 'lg:gap-y-8 lg:items-start' : 'lg:items-center'}` : 'max-w-[52rem]'}`}>
           <div className={`min-w-0 flex flex-col ${person ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
             <p className={AUGENBRAUE}>{augenbraue}</p>
             <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
@@ -243,9 +271,9 @@ export function RatgeberKopf({
             ) : null}
           </div>
 
-          {blick?.length ? (
+          {hatBlick ? (
             <div className={person ? 'lg:col-start-1 lg:row-start-2' : ''}>
-              <BlickKasten titel={blickTitel} punkte={blick} />
+              <BlickKasten titel={blickTitel} punkte={blick} kopf={blickKopf} verweise={blickVerweise} />
             </div>
           ) : null}
           {/* Der Knopf steht erst NACH den Fakten (Martin 20.09.: „dem User die Informationen geben,
@@ -260,7 +288,7 @@ export function RatgeberKopf({
           {/* Zuletzt im Quelltext, damit auf dem Handy erst Information (Fakten), dann Handlung
               (Knopf) und dann das Gespräch kommt. Am Rechner setzt die Platzierung sie nach oben
               rechts, über die volle Höhe der linken Spalte. */}
-          {person ? <div className={`lg:col-start-2 lg:row-start-1 lg:row-span-3 ${blick?.length ? 'lg:self-stretch' : 'lg:self-start'}`}>{person}</div> : null}
+          {person ? <div className={`lg:col-start-2 lg:row-start-1 lg:row-span-3 ${hatBlick ? 'lg:self-stretch' : 'lg:self-start'}`}>{person}</div> : null}
         </div>
 
         {aktualisiert && lesezeit && person ? (
