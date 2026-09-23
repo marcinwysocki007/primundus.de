@@ -21,7 +21,7 @@ const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offse
 const SECTIONS = [
   { id: 'wer', title: 'Wer auszeichnet und wie' },
   { id: 'familie', title: 'Was das für Sie heißt' },
-  { id: 'siegel', title: 'Der Nachweis' },
+  { id: 'siegel', title: 'Das Siegel' },
   { id: 'vergleich', title: 'Vergleichen Sie selbst' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
@@ -174,22 +174,31 @@ export default function TestsiegerPage() {
             />
           </Abschnitt>
 
-          <Abschnitt id="siegel" titel="Der Nachweis: Siegel und Veröffentlichung">
+          {/* Siegel klein und ohne Erklaerung (23.09.2026). Martin: „Das mit dem Nachweis
+              interessiert keine Sau. Das ist schlecht geschrieben, viel zu grosses Icon. Mach doch
+              einfach, wie wir das sonst verwenden … Einfach nur Veroeffentlichung ansehen reicht.
+              Du brauchst nicht Nachweis und irgend so einen Scheiss. Dann hoert sich das an, als
+              wuerde man betruegen."
+              Vorher: Ueberschrift „Der Nachweis: Siegel und Veroeffentlichung", Siegel 160 px breit,
+              davor ein Satz mit Institut, Monat und Jahr. Jetzt: Siegel in derselben Groesse wie im
+              Hero der Startseite, die Zeile darunter wie im Rechner, und ein Link. Nichts erklaert
+              sich mehr selbst. */}
+          <Abschnitt id="siegel" titel="Das Siegel">
             <Kasten>
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
+              <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
                 <Image
                   src="/images/siegel-welt-2021-352.webp"
-                  alt="Siegel DIE WELT Service-Champions 2021: primundus.de"
+                  alt="Siegel DIE WELT Service-Champions: primundus.de"
                   width={352}
                   height={528}
-                  className="h-auto w-40 flex-none rounded-[6px] shadow-[0_2px_10px_rgba(0,0,0,0.2)] sm:w-44"
+                  className="h-[110px] w-auto flex-none rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)] md:h-[130px]"
                 />
                 <div>
-                  <Text>
-                    „DIE WELT Service-Champions im erlebten Kundenservice: primundus.de" (ServiceValue GmbH, Oktober 2021).
-                    Siegel und vollständige Veröffentlichung:
-                  </Text>
-                  <p className="mt-3 text-[17px]">
+                  <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">
+                    6× Testsieger bei DIE WELT
+                  </p>
+                  <p className="mt-1 text-[17px] leading-[1.5] text-pm-body">Preis &amp; Qualität</p>
+                  <p className="mt-4 text-[17px]">
                     <a href={PDF} target="_blank" rel="noopener" className={`font-semibold ${LINK}`}>Veröffentlichung ansehen (PDF)</a>
                   </p>
                 </div>
