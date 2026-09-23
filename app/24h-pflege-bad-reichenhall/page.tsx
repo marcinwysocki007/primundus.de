@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="bad-reichenhall" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Reichenhall'} land={'Bayern'} altbau={45.6} miete={7.74} />
+          <OrtWerkzeuge slug="bad-reichenhall" ort={'Bad Reichenhall'} land={'Bayern'} altbau={45.6} miete={7.74} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

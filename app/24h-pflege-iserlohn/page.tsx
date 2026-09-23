@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="iserlohn" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Iserlohn'} land={'Nordrhein-Westfalen'} altbau={59.8} miete={5.69} />
+          <OrtWerkzeuge slug="iserlohn" ort={'Iserlohn'} land={'Nordrhein-Westfalen'} altbau={59.8} miete={5.69} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

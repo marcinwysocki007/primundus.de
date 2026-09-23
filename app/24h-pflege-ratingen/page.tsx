@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="ratingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ratingen'} land={'Nordrhein-Westfalen'} altbau={39.6} miete={7.78} />
+          <OrtWerkzeuge slug="ratingen" ort={'Ratingen'} land={'Nordrhein-Westfalen'} altbau={39.6} miete={7.78} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

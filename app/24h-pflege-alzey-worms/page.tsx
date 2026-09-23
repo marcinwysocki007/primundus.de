@@ -161,7 +161,7 @@ export default function Page() {
             <NearbyCities current="alzey-worms" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kreis Alzey-Worms'} land={'Rheinland-Pfalz'} altbau={39.6} miete={6.52} />
+          <OrtWerkzeuge slug="alzey-worms" ort={'Kreis Alzey-Worms'} land={'Rheinland-Pfalz'} altbau={39.6} miete={6.52} />
 
 
           <OrtStimmen

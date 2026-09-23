@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="flensburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Flensburg'} land={'Schleswig-Holstein'} altbau={60.7} miete={6.96} />
+          <OrtWerkzeuge slug="flensburg" ort={'Flensburg'} land={'Schleswig-Holstein'} altbau={60.7} miete={6.96} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

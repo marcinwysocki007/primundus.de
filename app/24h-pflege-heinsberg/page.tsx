@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="heinsberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Heinsberg'} land={'Nordrhein-Westfalen'} altbau={43.1} miete={6.13} />
+          <OrtWerkzeuge slug="heinsberg" ort={'Heinsberg'} land={'Nordrhein-Westfalen'} altbau={43.1} miete={6.13} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

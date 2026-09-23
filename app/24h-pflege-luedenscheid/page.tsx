@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="luedenscheid" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Lüdenscheid'} land={'Nordrhein-Westfalen'} altbau={64.3} miete={5.72} />
+          <OrtWerkzeuge slug="luedenscheid" ort={'Lüdenscheid'} land={'Nordrhein-Westfalen'} altbau={64.3} miete={5.72} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

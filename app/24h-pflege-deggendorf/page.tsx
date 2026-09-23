@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="deggendorf" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Deggendorf'} land={'Bayern'} altbau={32.1} miete={7.04} />
+          <OrtWerkzeuge slug="deggendorf" ort={'Deggendorf'} land={'Bayern'} altbau={32.1} miete={7.04} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

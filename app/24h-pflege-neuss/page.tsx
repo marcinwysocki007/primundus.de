@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="neuss" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neuss'} land={'Nordrhein-Westfalen'} altbau={47.0} miete={7.35} />
+          <OrtWerkzeuge slug="neuss" ort={'Neuss'} land={'Nordrhein-Westfalen'} altbau={47.0} miete={7.35} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

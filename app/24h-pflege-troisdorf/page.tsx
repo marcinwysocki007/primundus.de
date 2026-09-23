@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="troisdorf" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Troisdorf'} land={'Nordrhein-Westfalen'} altbau={40.3} miete={7.01} />
+          <OrtWerkzeuge slug="troisdorf" ort={'Troisdorf'} land={'Nordrhein-Westfalen'} altbau={40.3} miete={7.01} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

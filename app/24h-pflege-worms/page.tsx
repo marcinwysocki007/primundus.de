@@ -212,7 +212,7 @@ export default function Page() {
             <NearbyCities current="worms" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Worms'} land={'Rheinland-Pfalz'} altbau={54.8} miete={6.91} />
+          <OrtWerkzeuge slug="worms" ort={'Worms'} land={'Rheinland-Pfalz'} altbau={54.8} miete={6.91} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

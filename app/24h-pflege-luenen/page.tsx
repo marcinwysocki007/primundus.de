@@ -191,7 +191,7 @@ export default function Page() {
             <NearbyCities current="luenen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Lünen'} land={'Nordrhein-Westfalen'} altbau={59.9} miete={5.67} />
+          <OrtWerkzeuge slug="luenen" ort={'Lünen'} land={'Nordrhein-Westfalen'} altbau={59.9} miete={5.67} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

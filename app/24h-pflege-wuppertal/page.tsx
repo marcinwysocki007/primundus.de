@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="wuppertal" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wuppertal'} land={'Nordrhein-Westfalen'} altbau={68.4} miete={6.1} />
+          <OrtWerkzeuge slug="wuppertal" ort={'Wuppertal'} land={'Nordrhein-Westfalen'} altbau={68.4} miete={6.1} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

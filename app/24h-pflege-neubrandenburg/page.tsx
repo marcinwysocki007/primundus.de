@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="neubrandenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neubrandenburg'} land={'Mecklenburg-Vorpommern'} altbau={25.9} miete={5.49} />
+          <OrtWerkzeuge slug="neubrandenburg" ort={'Neubrandenburg'} land={'Mecklenburg-Vorpommern'} altbau={25.9} miete={5.49} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

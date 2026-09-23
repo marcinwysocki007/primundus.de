@@ -201,7 +201,7 @@ export default function Page() {
             <NearbyCities current="miesbach" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Miesbach'} land={'Bayern'} altbau={43.1} miete={8.88} />
+          <OrtWerkzeuge slug="miesbach" ort={'Miesbach'} land={'Bayern'} altbau={43.1} miete={8.88} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

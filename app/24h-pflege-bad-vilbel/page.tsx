@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="bad-vilbel" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Vilbel'} land={'Hessen'} altbau={38.7} miete={9.77} />
+          <OrtWerkzeuge slug="bad-vilbel" ort={'Bad Vilbel'} land={'Hessen'} altbau={38.7} miete={9.77} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

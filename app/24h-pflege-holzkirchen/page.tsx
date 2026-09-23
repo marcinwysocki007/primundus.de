@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="holzkirchen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Holzkirchen'} land={'Bayern'} altbau={26.6} miete={10.38} />
+          <OrtWerkzeuge slug="holzkirchen" ort={'Holzkirchen'} land={'Bayern'} altbau={26.6} miete={10.38} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

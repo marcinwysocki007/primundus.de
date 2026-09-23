@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="hanau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hanau'} land={'Hessen'} altbau={58.6} miete={7.82} />
+          <OrtWerkzeuge slug="hanau" ort={'Hanau'} land={'Hessen'} altbau={58.6} miete={7.82} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

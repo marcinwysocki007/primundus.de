@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="kaufbeuren" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kaufbeuren'} land={'Bayern'} altbau={54.9} miete={6.85} />
+          <OrtWerkzeuge slug="kaufbeuren" ort={'Kaufbeuren'} land={'Bayern'} altbau={54.9} miete={6.85} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

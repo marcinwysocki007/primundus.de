@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="landau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Landau'} land={'Rheinland-Pfalz'} altbau={50.8} miete={7.8} />
+          <OrtWerkzeuge slug="landau" ort={'Landau'} land={'Rheinland-Pfalz'} altbau={50.8} miete={7.8} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

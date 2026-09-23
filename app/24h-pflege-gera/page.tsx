@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="gera" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Gera'} land={'Thüringen'} altbau={48.1} miete={5.13} />
+          <OrtWerkzeuge slug="gera" ort={'Gera'} land={'Thüringen'} altbau={48.1} miete={5.13} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

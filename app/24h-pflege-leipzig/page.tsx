@@ -191,7 +191,7 @@ export default function Page() {
             <NearbyCities current="leipzig" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Leipzig'} land={'Sachsen'} altbau={59.2} miete={6.44} />
+          <OrtWerkzeuge slug="leipzig" ort={'Leipzig'} land={'Sachsen'} altbau={59.2} miete={6.44} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

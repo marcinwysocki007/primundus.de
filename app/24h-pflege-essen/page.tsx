@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="essen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Essen'} land={'Nordrhein-Westfalen'} altbau={70.8} miete={6.72} />
+          <OrtWerkzeuge slug="essen" ort={'Essen'} land={'Nordrhein-Westfalen'} altbau={70.8} miete={6.72} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="waiblingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Waiblingen'} land={'Baden-Württemberg'} altbau={42.3} miete={8.68} />
+          <OrtWerkzeuge slug="waiblingen" ort={'Waiblingen'} land={'Baden-Württemberg'} altbau={42.3} miete={8.68} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

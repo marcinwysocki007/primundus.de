@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="hildesheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hildesheim'} land={'Niedersachsen'} altbau={64.9} miete={6.34} />
+          <OrtWerkzeuge slug="hildesheim" ort={'Hildesheim'} land={'Niedersachsen'} altbau={64.9} miete={6.34} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

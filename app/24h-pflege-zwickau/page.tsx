@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="zwickau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Zwickau'} land={'Sachsen'} altbau={62.9} miete={5.2} />
+          <OrtWerkzeuge slug="zwickau" ort={'Zwickau'} land={'Sachsen'} altbau={62.9} miete={5.2} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="landsberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Landsberg'} land={'Bayern'} altbau={32.5} miete={8.64} />
+          <OrtWerkzeuge slug="landsberg" ort={'Landsberg'} land={'Bayern'} altbau={32.5} miete={8.64} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

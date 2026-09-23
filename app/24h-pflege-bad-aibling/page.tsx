@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="bad-aibling" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Aibling'} land={'Bayern'} altbau={29.1} miete={9.21} />
+          <OrtWerkzeuge slug="bad-aibling" ort={'Bad Aibling'} land={'Bayern'} altbau={29.1} miete={9.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

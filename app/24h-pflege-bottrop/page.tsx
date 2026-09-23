@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="bottrop" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bottrop'} land={'Nordrhein-Westfalen'} altbau={55.0} miete={6.1} />
+          <OrtWerkzeuge slug="bottrop" ort={'Bottrop'} land={'Nordrhein-Westfalen'} altbau={55.0} miete={6.1} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

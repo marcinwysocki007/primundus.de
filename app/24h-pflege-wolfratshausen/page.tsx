@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="wolfratshausen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wolfratshausen'} land={'Bayern'} altbau={33.9} miete={10.02} />
+          <OrtWerkzeuge slug="wolfratshausen" ort={'Wolfratshausen'} land={'Bayern'} altbau={33.9} miete={10.02} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

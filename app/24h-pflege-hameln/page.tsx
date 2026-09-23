@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="hameln" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hameln'} land={'Niedersachsen'} altbau={60.7} miete={5.5} />
+          <OrtWerkzeuge slug="hameln" ort={'Hameln'} land={'Niedersachsen'} altbau={60.7} miete={5.5} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

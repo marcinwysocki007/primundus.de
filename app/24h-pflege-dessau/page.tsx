@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="dessau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Dessau-Roßlau'} land={'Sachsen-Anhalt'} altbau={57.0} miete={5.48} />
+          <OrtWerkzeuge slug="dessau" ort={'Dessau-Roßlau'} land={'Sachsen-Anhalt'} altbau={57.0} miete={5.48} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

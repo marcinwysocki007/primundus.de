@@ -198,7 +198,7 @@ export default function Page() {
             <NearbyCities current="speyer" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Speyer'} land={'Rheinland-Pfalz'} altbau={49.1} miete={7.2} />
+          <OrtWerkzeuge slug="speyer" ort={'Speyer'} land={'Rheinland-Pfalz'} altbau={49.1} miete={7.2} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

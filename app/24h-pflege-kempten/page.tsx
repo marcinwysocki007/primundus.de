@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="kempten" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kempten'} land={'Bayern'} altbau={46.4} miete={7.18} />
+          <OrtWerkzeuge slug="kempten" ort={'Kempten'} land={'Bayern'} altbau={46.4} miete={7.18} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="bad-nauheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Nauheim'} land={'Hessen'} altbau={49.7} miete={8.22} />
+          <OrtWerkzeuge slug="bad-nauheim" ort={'Bad Nauheim'} land={'Hessen'} altbau={49.7} miete={8.22} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

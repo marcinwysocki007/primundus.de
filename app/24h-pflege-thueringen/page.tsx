@@ -215,7 +215,7 @@ export default function Page() {
             <CitiesOfRegion region="thueringen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Thüringen'} land={'Deutschland insgesamt'} altbau={55.7} miete={5.65} />
+          <OrtWerkzeuge slug="thueringen" ort={'Thüringen'} land={'Deutschland insgesamt'} altbau={55.7} miete={5.65} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

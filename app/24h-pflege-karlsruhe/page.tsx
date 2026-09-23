@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="karlsruhe" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Karlsruhe'} land={'Baden-Württemberg'} altbau={62.7} miete={8.46} />
+          <OrtWerkzeuge slug="karlsruhe" ort={'Karlsruhe'} land={'Baden-Württemberg'} altbau={62.7} miete={8.46} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

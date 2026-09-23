@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="stuttgart" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Stuttgart'} land={'Baden-Württemberg'} altbau={62.0} miete={10.39} />
+          <OrtWerkzeuge slug="stuttgart" ort={'Stuttgart'} land={'Baden-Württemberg'} altbau={62.0} miete={10.39} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

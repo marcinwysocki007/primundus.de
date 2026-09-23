@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="bruchsal" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bruchsal'} land={'Baden-Württemberg'} altbau={48.4} miete={7.48} />
+          <OrtWerkzeuge slug="bruchsal" ort={'Bruchsal'} land={'Baden-Württemberg'} altbau={48.4} miete={7.48} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

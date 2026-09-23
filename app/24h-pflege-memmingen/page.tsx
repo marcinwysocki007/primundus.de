@@ -199,7 +199,7 @@ export default function Page() {
             <NearbyCities current="memmingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Memmingen'} land={'Bayern'} altbau={48.0} miete={6.51} />
+          <OrtWerkzeuge slug="memmingen" ort={'Memmingen'} land={'Bayern'} altbau={48.0} miete={6.51} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

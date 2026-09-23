@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="kiel" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kiel'} land={'Schleswig-Holstein'} altbau={70.6} miete={7.64} />
+          <OrtWerkzeuge slug="kiel" ort={'Kiel'} land={'Schleswig-Holstein'} altbau={70.6} miete={7.64} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

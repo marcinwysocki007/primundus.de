@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="bensheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bensheim'} land={'Hessen'} altbau={40.3} miete={8.22} />
+          <OrtWerkzeuge slug="bensheim" ort={'Bensheim'} land={'Hessen'} altbau={40.3} miete={8.22} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

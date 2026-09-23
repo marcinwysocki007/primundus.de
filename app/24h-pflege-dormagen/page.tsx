@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="dormagen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Dormagen'} land={'Nordrhein-Westfalen'} altbau={38.7} miete={7.35} />
+          <OrtWerkzeuge slug="dormagen" ort={'Dormagen'} land={'Nordrhein-Westfalen'} altbau={38.7} miete={7.35} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

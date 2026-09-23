@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="straubing" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Straubing'} land={'Bayern'} altbau={44.1} miete={6.64} />
+          <OrtWerkzeuge slug="straubing" ort={'Straubing'} land={'Bayern'} altbau={44.1} miete={6.64} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

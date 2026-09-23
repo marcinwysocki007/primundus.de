@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="pforzheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Pforzheim'} land={'Baden-Württemberg'} altbau={50.9} miete={7.36} />
+          <OrtWerkzeuge slug="pforzheim" ort={'Pforzheim'} land={'Baden-Württemberg'} altbau={50.9} miete={7.36} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

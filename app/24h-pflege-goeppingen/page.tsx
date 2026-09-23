@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="goeppingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Göppingen'} land={'Baden-Württemberg'} altbau={55.8} miete={7.51} />
+          <OrtWerkzeuge slug="goeppingen" ort={'Göppingen'} land={'Baden-Württemberg'} altbau={55.8} miete={7.51} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

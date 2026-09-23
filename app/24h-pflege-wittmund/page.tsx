@@ -160,7 +160,7 @@ export default function Page() {
             <NearbyCities current="wittmund" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wittmund'} land={'Niedersachsen'} altbau={40.3} miete={6.35} />
+          <OrtWerkzeuge slug="wittmund" ort={'Wittmund'} land={'Niedersachsen'} altbau={40.3} miete={6.35} />
 
 
           <OrtStimmen

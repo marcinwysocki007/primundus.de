@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="rostock" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rostock'} land={'Mecklenburg-Vorpommern'} altbau={40.6} miete={6.7} />
+          <OrtWerkzeuge slug="rostock" ort={'Rostock'} land={'Mecklenburg-Vorpommern'} altbau={40.6} miete={6.7} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

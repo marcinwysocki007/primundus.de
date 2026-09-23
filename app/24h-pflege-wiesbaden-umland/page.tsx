@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="wiesbaden-umland" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wiesbaden & Umland'} land={'Hessen'} altbau={58.7} miete={9.21} />
+          <OrtWerkzeuge slug="wiesbaden-umland" ort={'Wiesbaden & Umland'} land={'Hessen'} altbau={58.7} miete={9.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

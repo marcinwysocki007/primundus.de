@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="gauting" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Gauting'} land={'Bayern'} altbau={37.9} miete={11.19} />
+          <OrtWerkzeuge slug="gauting" ort={'Gauting'} land={'Bayern'} altbau={37.9} miete={11.19} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

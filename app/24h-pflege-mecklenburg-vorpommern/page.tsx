@@ -213,7 +213,7 @@ export default function Page() {
             <CitiesOfRegion region="mecklenburg-vorpommern" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mecklenburg-Vorpommern'} land={'Deutschland insgesamt'} altbau={44.6} miete={5.91} />
+          <OrtWerkzeuge slug="mecklenburg-vorpommern" ort={'Mecklenburg-Vorpommern'} land={'Deutschland insgesamt'} altbau={44.6} miete={5.91} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

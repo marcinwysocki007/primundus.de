@@ -191,7 +191,7 @@ export default function Page() {
             <NearbyCities current="hannover" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hannover'} land={'Niedersachsen'} altbau={67.9} miete={7.61} />
+          <OrtWerkzeuge slug="hannover" ort={'Hannover'} land={'Niedersachsen'} altbau={67.9} miete={7.61} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

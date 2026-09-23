@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="singen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Singen'} land={'Baden-Württemberg'} altbau={53.0} miete={7.81} />
+          <OrtWerkzeuge slug="singen" ort={'Singen'} land={'Baden-Württemberg'} altbau={53.0} miete={7.81} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="krefeld" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Krefeld'} land={'Nordrhein-Westfalen'} altbau={61.5} miete={6.66} />
+          <OrtWerkzeuge slug="krefeld" ort={'Krefeld'} land={'Nordrhein-Westfalen'} altbau={61.5} miete={6.66} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

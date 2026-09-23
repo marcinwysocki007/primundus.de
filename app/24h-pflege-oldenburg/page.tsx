@@ -189,7 +189,7 @@ export default function Page() {
             <NearbyCities current="oldenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Oldenburg'} land={'Niedersachsen'} altbau={41.0} miete={7.79} />
+          <OrtWerkzeuge slug="oldenburg" ort={'Oldenburg'} land={'Niedersachsen'} altbau={41.0} miete={7.79} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

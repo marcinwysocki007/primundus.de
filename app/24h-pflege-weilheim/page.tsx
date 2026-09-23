@@ -201,7 +201,7 @@ export default function Page() {
             <NearbyCities current="weilheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Weilheim'} land={'Bayern'} altbau={34.2} miete={8.91} />
+          <OrtWerkzeuge slug="weilheim" ort={'Weilheim'} land={'Bayern'} altbau={34.2} miete={8.91} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

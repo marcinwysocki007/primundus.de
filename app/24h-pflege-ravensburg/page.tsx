@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="ravensburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ravensburg'} land={'Baden-Württemberg'} altbau={44.7} miete={8.64} />
+          <OrtWerkzeuge slug="ravensburg" ort={'Ravensburg'} land={'Baden-Württemberg'} altbau={44.7} miete={8.64} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

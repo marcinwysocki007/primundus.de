@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="aalen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Aalen'} land={'Baden-Württemberg'} altbau={44.5} miete={7.55} />
+          <OrtWerkzeuge slug="aalen" ort={'Aalen'} land={'Baden-Württemberg'} altbau={44.5} miete={7.55} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

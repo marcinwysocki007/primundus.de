@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="chemnitz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Chemnitz'} land={'Sachsen'} altbau={57.6} miete={5.26} />
+          <OrtWerkzeuge slug="chemnitz" ort={'Chemnitz'} land={'Sachsen'} altbau={57.6} miete={5.26} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

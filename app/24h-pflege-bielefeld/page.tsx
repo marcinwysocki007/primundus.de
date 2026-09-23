@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="bielefeld" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bielefeld'} land={'Nordrhein-Westfalen'} altbau={55.7} miete={7.12} />
+          <OrtWerkzeuge slug="bielefeld" ort={'Bielefeld'} land={'Nordrhein-Westfalen'} altbau={55.7} miete={7.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

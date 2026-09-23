@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="bad-duerkheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Dürkheim'} land={'Rheinland-Pfalz'} altbau={45.7} miete={7.5} />
+          <OrtWerkzeuge slug="bad-duerkheim" ort={'Bad Dürkheim'} land={'Rheinland-Pfalz'} altbau={45.7} miete={7.5} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

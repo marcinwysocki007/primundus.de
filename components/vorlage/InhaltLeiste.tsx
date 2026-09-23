@@ -25,16 +25,26 @@ function InhaltLeisteInnen({ abschnitte }: { abschnitte: { id: string; title: st
     return () => beobachter.disconnect()
   }, [abschnitte])
 
+  // Die Spalte scrollt seit 23.09.2026 selbst (max-h + overflow in RatgeberRumpf), damit die
+  // Rechner-Karte unter der Liste auch auf Laptops erreichbar ist. Damit der aktive Eintrag
+  // dabei nicht aus dem Bild wandert, wird er nachgeführt — „nearest": kein Sprung, nur so
+  // viel Bewegung wie nötig.
+  useEffect(() => {
+    if (!aktiv) return
+    const el = document.querySelector<HTMLAnchorElement>(`nav[aria-label="Inhalt"] a[href="#${aktiv}"]`)
+    el?.scrollIntoView({ block: 'nearest' })
+  }, [aktiv])
+
   return (
     <nav aria-label="Inhalt">
-      <p className="text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe">Inhalt</p>
-      <ul className="mt-4 border-l border-pm-line">
+      <p className="text-[12px] font-bold uppercase tracking-[.14em] text-pm-taupe">Inhalt</p>
+      <ul className="mt-3 border-l border-pm-line">
         {abschnitte.map((a) => (
           <li key={a.id}>
             <a
               href={`#${a.id}`}
               aria-current={aktiv === a.id ? 'location' : undefined}
-              className={`-ml-px block border-l-2 py-1.5 pl-4 text-[15px] leading-[1.4] transition-colors ${
+              className={`-ml-px block border-l-2 py-1 pl-4 text-[14.5px] leading-[1.35] transition-colors ${
                 aktiv === a.id
                   ? 'border-pm-coral font-semibold text-pm-ink'
                   : 'border-transparent text-pm-mute hover:text-pm-ink'

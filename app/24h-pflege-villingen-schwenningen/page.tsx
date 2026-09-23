@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="villingen-schwenningen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Villingen-Schwenningen'} land={'Baden-Württemberg'} altbau={51.8} miete={7.12} />
+          <OrtWerkzeuge slug="villingen-schwenningen" ort={'Villingen-Schwenningen'} land={'Baden-Württemberg'} altbau={51.8} miete={7.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="leverkusen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Leverkusen'} land={'Nordrhein-Westfalen'} altbau={58.5} miete={7.03} />
+          <OrtWerkzeuge slug="leverkusen" ort={'Leverkusen'} land={'Nordrhein-Westfalen'} altbau={58.5} miete={7.03} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

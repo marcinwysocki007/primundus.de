@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="freising" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Freising'} land={'Bayern'} altbau={31.5} miete={10.72} />
+          <OrtWerkzeuge slug="freising" ort={'Freising'} land={'Bayern'} altbau={31.5} miete={10.72} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

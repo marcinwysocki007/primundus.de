@@ -218,7 +218,7 @@ export default function Page() {
             <CitiesOfRegion region="bayern" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bayern'} land={'Deutschland insgesamt'} altbau={41.1} miete={8.74} />
+          <OrtWerkzeuge slug="bayern" ort={'Bayern'} land={'Deutschland insgesamt'} altbau={41.1} miete={8.74} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -191,7 +191,7 @@ export default function Page() {
             <NearbyCities current="viersen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Viersen'} land={'Nordrhein-Westfalen'} altbau={56.5} miete={6.11} />
+          <OrtWerkzeuge slug="viersen" ort={'Viersen'} land={'Nordrhein-Westfalen'} altbau={56.5} miete={6.11} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

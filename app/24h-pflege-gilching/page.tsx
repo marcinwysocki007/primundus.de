@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="gilching" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Gilching'} land={'Bayern'} altbau={20.8} miete={10.87} />
+          <OrtWerkzeuge slug="gilching" ort={'Gilching'} land={'Bayern'} altbau={20.8} miete={10.87} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

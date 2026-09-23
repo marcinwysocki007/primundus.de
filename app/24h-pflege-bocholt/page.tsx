@@ -198,7 +198,7 @@ export default function Page() {
             <NearbyCities current="bocholt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bocholt'} land={'Nordrhein-Westfalen'} altbau={43.9} miete={6.57} />
+          <OrtWerkzeuge slug="bocholt" ort={'Bocholt'} land={'Nordrhein-Westfalen'} altbau={43.9} miete={6.57} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="cottbus" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Cottbus'} land={'Brandenburg'} altbau={39.4} miete={5.58} />
+          <OrtWerkzeuge slug="cottbus" ort={'Cottbus'} land={'Brandenburg'} altbau={39.4} miete={5.58} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

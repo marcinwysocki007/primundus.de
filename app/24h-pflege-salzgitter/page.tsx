@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="salzgitter" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Salzgitter'} land={'Niedersachsen'} altbau={66.7} miete={5.6} />
+          <OrtWerkzeuge slug="salzgitter" ort={'Salzgitter'} land={'Niedersachsen'} altbau={66.7} miete={5.6} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

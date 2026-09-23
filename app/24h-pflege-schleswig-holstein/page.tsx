@@ -213,7 +213,7 @@ export default function Page() {
             <CitiesOfRegion region="schleswig-holstein" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Schleswig-Holstein'} land={'Deutschland insgesamt'} altbau={48.9} miete={7.41} />
+          <OrtWerkzeuge slug="schleswig-holstein" ort={'Schleswig-Holstein'} land={'Deutschland insgesamt'} altbau={48.9} miete={7.41} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

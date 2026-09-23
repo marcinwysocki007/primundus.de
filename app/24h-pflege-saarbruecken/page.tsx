@@ -189,7 +189,7 @@ export default function Page() {
             <NearbyCities current="saarbruecken" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Saarbrücken'} land={'Saarland'} altbau={67.2} miete={6.71} />
+          <OrtWerkzeuge slug="saarbruecken" ort={'Saarbrücken'} land={'Saarland'} altbau={67.2} miete={6.71} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

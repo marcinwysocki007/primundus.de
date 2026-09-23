@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="aschaffenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Aschaffenburg'} land={'Bayern'} altbau={48.6} miete={7.75} />
+          <OrtWerkzeuge slug="aschaffenburg" ort={'Aschaffenburg'} land={'Bayern'} altbau={48.6} miete={7.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

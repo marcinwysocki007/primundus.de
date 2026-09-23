@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="germersheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Germersheim'} land={'Rheinland-Pfalz'} altbau={32.3} miete={7.66} />
+          <OrtWerkzeuge slug="germersheim" ort={'Germersheim'} land={'Rheinland-Pfalz'} altbau={32.3} miete={7.66} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

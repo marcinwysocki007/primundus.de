@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="guetersloh" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Gütersloh'} land={'Nordrhein-Westfalen'} altbau={40.5} miete={6.47} />
+          <OrtWerkzeuge slug="guetersloh" ort={'Gütersloh'} land={'Nordrhein-Westfalen'} altbau={40.5} miete={6.47} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="grevenbroich" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Grevenbroich'} land={'Nordrhein-Westfalen'} altbau={42.8} miete={6.73} />
+          <OrtWerkzeuge slug="grevenbroich" ort={'Grevenbroich'} land={'Nordrhein-Westfalen'} altbau={42.8} miete={6.73} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

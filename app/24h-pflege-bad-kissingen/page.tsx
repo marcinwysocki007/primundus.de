@@ -200,7 +200,7 @@ export default function Page() {
             <NearbyCities current="bad-kissingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Kissingen'} land={'Bayern'} altbau={47.0} miete={6.3} />
+          <OrtWerkzeuge slug="bad-kissingen" ort={'Bad Kissingen'} land={'Bayern'} altbau={47.0} miete={6.3} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

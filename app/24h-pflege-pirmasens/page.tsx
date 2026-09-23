@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="pirmasens" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Pirmasens'} land={'Rheinland-Pfalz'} altbau={71.9} miete={4.62} />
+          <OrtWerkzeuge slug="pirmasens" ort={'Pirmasens'} land={'Rheinland-Pfalz'} altbau={71.9} miete={4.62} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -187,7 +187,7 @@ export default function Page() {
             <NearbyCities current="bremen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bremen'} land={'Bremen'} altbau={65.4} miete={7.75} />
+          <OrtWerkzeuge slug="bremen" ort={'Bremen'} land={'Bremen'} altbau={65.4} miete={7.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

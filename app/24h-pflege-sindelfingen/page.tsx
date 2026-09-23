@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="sindelfingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Sindelfingen'} land={'Baden-Württemberg'} altbau={41.8} miete={8.91} />
+          <OrtWerkzeuge slug="sindelfingen" ort={'Sindelfingen'} land={'Baden-Württemberg'} altbau={41.8} miete={8.91} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

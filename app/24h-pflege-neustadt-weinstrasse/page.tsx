@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="neustadt-weinstrasse" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neustadt an der Weinstraße'} land={'Rheinland-Pfalz'} altbau={55.6} miete={6.85} />
+          <OrtWerkzeuge slug="neustadt-weinstrasse" ort={'Neustadt an der Weinstraße'} land={'Rheinland-Pfalz'} altbau={55.6} miete={6.85} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

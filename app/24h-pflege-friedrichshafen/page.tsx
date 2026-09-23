@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="friedrichshafen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Friedrichshafen'} land={'Baden-Württemberg'} altbau={45.1} miete={8.53} />
+          <OrtWerkzeuge slug="friedrichshafen" ort={'Friedrichshafen'} land={'Baden-Württemberg'} altbau={45.1} miete={8.53} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

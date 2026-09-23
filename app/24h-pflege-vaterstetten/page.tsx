@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="vaterstetten" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Vaterstetten'} land={'Bayern'} altbau={22.9} miete={12.13} />
+          <OrtWerkzeuge slug="vaterstetten" ort={'Vaterstetten'} land={'Bayern'} altbau={22.9} miete={12.13} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

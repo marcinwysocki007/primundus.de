@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="weiden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Weiden i.d. Oberpfalz'} land={'Bayern'} altbau={54.7} miete={5.95} />
+          <OrtWerkzeuge slug="weiden" ort={'Weiden i.d. Oberpfalz'} land={'Bayern'} altbau={54.7} miete={5.95} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

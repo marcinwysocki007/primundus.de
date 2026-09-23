@@ -189,7 +189,7 @@ export function RatgeberKopf({
             ) : null}
             {knopf && knopfOben ? (
               <div className="mt-7">
-                <RechnerBlock src={rechnerQuelle(knopf.href)} />
+                <RechnerBlock src={mitPosition(rechnerQuelle(knopf.href), 'kopf')} />
               </div>
             ) : null}
             {einleitung && einleitungTitel ? (
@@ -228,7 +228,7 @@ export function RatgeberKopf({
             ) : null}
             {knopf && !person && !knopfSchlicht && !knopfOben ? (
               <div className="mt-8">
-                <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+                <RechnerBlock src={mitPosition(rechnerQuelle(knopf.href), 'kopf')} punkte={false} />
               </div>
             ) : null}
             {/* Ohne `person` keine Marta-Zeile im Kopf (Martin 18.09.: „ohne Button blöd, aber Button
@@ -254,7 +254,7 @@ export function RatgeberKopf({
               Auf Seiten ohne Ansprechpartnerin bleibt der Knopf, wo er war — unter der Einleitung. */}
           {knopf && person && !knopfSchlicht && !knopfOben ? (
             <div className="lg:col-start-1 lg:row-start-3">
-              <RechnerBlock src={rechnerQuelle(knopf.href)} punkte={false} />
+              <RechnerBlock src={mitPosition(rechnerQuelle(knopf.href), 'kopf')} punkte={false} />
             </div>
           ) : null}
           {/* Zuletzt im Quelltext, damit auf dem Handy erst Information (Fakten), dann Handlung
@@ -273,6 +273,15 @@ export function RatgeberKopf({
   )
 }
 
+/**
+ * Knopfposition an die Quelle hängen (23.09.2026): ort-worms → ort-worms-kopf. Nur für die
+ * Ortsseiten (ort-…), damit die bestehenden Reihen website:apex-… in den Lead-Auswertungen
+ * nicht zersplittern. Der Rechner speichert src seit CAapp#738 je Sitzung und je Lead.
+ */
+export function mitPosition(src: string, position: 'kopf' | 'kosten' | 'leiste' | 'schluss'): string {
+  return src.startsWith('ort-') ? `${src}-${position}` : src
+}
+
 // src aus dem Rechner-Link der Seite (knopf.href); ohne src die allgemeine Quelle
 function rechnerQuelle(href: string): string {
   try {
@@ -283,15 +292,23 @@ function rechnerQuelle(href: string): string {
 }
 
 // Text links, rechts Inhaltsverzeichnis und Kostenknopf (beide mitlaufend, erst ab 1024 px).
-export function RatgeberRumpf({ abschnitte, children }: { abschnitte: { id: string; title: string }[]; children: ReactNode }) {
+export function RatgeberRumpf({ abschnitte, children, src = 'apex-components' }: { abschnitte: { id: string; title: string }[]; children: ReactNode; src?: string }) {
   return (
     <div className="max-w-[1200px] mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
       <article className="min-w-0 max-w-[46rem]">{children}</article>
       <aside className="hidden lg:block" aria-label="Inhalt und Kosten">
-        <div className="sticky top-[152px]">
-          <InhaltLeiste abschnitte={abschnitte} />
-          <div className="mt-8">
-            <LeistenKarte src="apex-components" />
+        {/* Die Spalte darf nicht höher sein als der Bildschirm: Mit 10–15 Abschnitten war sie
+            800–1.100 px hoch, bei 900 px Viewport fehlten 90–340 px — die Rechner-Karte unten
+            war auf Laptops nie erreichbar (Martin 23.09.: „Button rechts unten wird
+            abgeschnitten"). Jetzt scrollt die Spalte selbst; der Kopf ist 121 px, 140 lässt Luft. */}
+        <div className="sticky top-[140px] flex max-h-[calc(100vh-140px)] flex-col">
+          {/* Die Liste scrollt, die Karte steht fest darunter — so ist der Rechner-Knopf auf jeder
+              Bildschirmhöhe im Bild, auch bei 15 Abschnitten (gemessen 1024×768 bis 1440×900). */}
+          <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
+            <InhaltLeiste abschnitte={abschnitte} />
+          </div>
+          <div className="mt-6 flex-none pb-6">
+            <LeistenKarte src={mitPosition(src, 'leiste')} />
           </div>
         </div>
       </aside>

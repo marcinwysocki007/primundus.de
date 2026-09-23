@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="erlangen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Erlangen'} land={'Bayern'} altbau={45.7} miete={9.2} />
+          <OrtWerkzeuge slug="erlangen" ort={'Erlangen'} land={'Bayern'} altbau={45.7} miete={9.2} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

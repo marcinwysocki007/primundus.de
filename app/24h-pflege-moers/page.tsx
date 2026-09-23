@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="moers" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Moers'} land={'Nordrhein-Westfalen'} altbau={54.4} miete={6.26} />
+          <OrtWerkzeuge slug="moers" ort={'Moers'} land={'Nordrhein-Westfalen'} altbau={54.4} miete={6.26} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

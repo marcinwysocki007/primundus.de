@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="bergisch-gladbach" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bergisch Gladbach'} land={'Nordrhein-Westfalen'} altbau={42.3} miete={8.12} />
+          <OrtWerkzeuge slug="bergisch-gladbach" ort={'Bergisch Gladbach'} land={'Nordrhein-Westfalen'} altbau={42.3} miete={8.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

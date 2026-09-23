@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="bremerhaven" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bremerhaven'} land={'Bremen'} altbau={71.6} miete={5.58} />
+          <OrtWerkzeuge slug="bremerhaven" ort={'Bremerhaven'} land={'Bremen'} altbau={71.6} miete={5.58} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

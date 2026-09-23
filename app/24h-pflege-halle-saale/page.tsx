@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="halle-saale" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Halle (Saale)'} land={'Sachsen-Anhalt'} altbau={55.3} miete={5.92} />
+          <OrtWerkzeuge slug="halle-saale" ort={'Halle (Saale)'} land={'Sachsen-Anhalt'} altbau={55.3} miete={5.92} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="greifswald" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Greifswald'} land={'Mecklenburg-Vorpommern'} altbau={30.1} miete={6.41} />
+          <OrtWerkzeuge slug="greifswald" ort={'Greifswald'} land={'Mecklenburg-Vorpommern'} altbau={30.1} miete={6.41} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

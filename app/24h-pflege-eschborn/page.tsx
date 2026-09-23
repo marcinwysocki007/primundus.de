@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="eschborn" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Eschborn'} land={'Hessen'} altbau={42.8} miete={10.14} />
+          <OrtWerkzeuge slug="eschborn" ort={'Eschborn'} land={'Hessen'} altbau={42.8} miete={10.14} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

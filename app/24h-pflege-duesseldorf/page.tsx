@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="duesseldorf" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Düsseldorf'} land={'Nordrhein-Westfalen'} altbau={65.4} miete={9.24} />
+          <OrtWerkzeuge slug="duesseldorf" ort={'Düsseldorf'} land={'Nordrhein-Westfalen'} altbau={65.4} miete={9.24} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

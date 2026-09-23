@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="luebeck" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Lübeck'} land={'Schleswig-Holstein'} altbau={65.8} miete={7.47} />
+          <OrtWerkzeuge slug="luebeck" ort={'Lübeck'} land={'Schleswig-Holstein'} altbau={65.8} miete={7.47} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

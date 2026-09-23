@@ -200,7 +200,7 @@ export default function Page() {
             <NearbyCities current="pfaffenhofen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Pfaffenhofen'} land={'Bayern'} altbau={23.0} miete={8.69} />
+          <OrtWerkzeuge slug="pfaffenhofen" ort={'Pfaffenhofen'} land={'Bayern'} altbau={23.0} miete={8.69} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

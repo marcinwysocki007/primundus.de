@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="ebersberg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ebersberg'} land={'Bayern'} altbau={28.3} miete={9.72} />
+          <OrtWerkzeuge slug="ebersberg" ort={'Ebersberg'} land={'Bayern'} altbau={28.3} miete={9.72} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

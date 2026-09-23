@@ -224,7 +224,7 @@ export default function Page() {
             <RechnerKasten src="ort-muenchen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ohneWohnen ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
+          <OrtWerkzeuge slug="muenchen" ohneWohnen ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
           <OrtPassendeKraft />
 

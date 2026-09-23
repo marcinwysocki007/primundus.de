@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="unterschleissheim" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Unterschleissheim'} land={'Bayern'} altbau={10.7} miete={11.86} />
+          <OrtWerkzeuge slug="unterschleissheim" ort={'Unterschleissheim'} land={'Bayern'} altbau={10.7} miete={11.86} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

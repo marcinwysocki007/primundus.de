@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="passau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Passau'} land={'Bayern'} altbau={40.5} miete={8.03} />
+          <OrtWerkzeuge slug="passau" ort={'Passau'} land={'Bayern'} altbau={40.5} miete={8.03} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

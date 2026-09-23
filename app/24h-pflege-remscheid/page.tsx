@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="remscheid" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Remscheid'} land={'Nordrhein-Westfalen'} altbau={64.3} miete={5.78} />
+          <OrtWerkzeuge slug="remscheid" ort={'Remscheid'} land={'Nordrhein-Westfalen'} altbau={64.3} miete={5.78} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

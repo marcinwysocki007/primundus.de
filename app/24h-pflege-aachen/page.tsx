@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="aachen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Aachen'} land={'Nordrhein-Westfalen'} altbau={56.3} miete={8.04} />
+          <OrtWerkzeuge slug="aachen" ort={'Aachen'} land={'Nordrhein-Westfalen'} altbau={56.3} miete={8.04} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

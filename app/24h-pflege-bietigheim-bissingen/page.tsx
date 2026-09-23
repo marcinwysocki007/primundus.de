@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="bietigheim-bissingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bietigheim-Bissingen'} land={'Baden-Württemberg'} altbau={40.4} miete={8.95} />
+          <OrtWerkzeuge slug="bietigheim-bissingen" ort={'Bietigheim-Bissingen'} land={'Baden-Württemberg'} altbau={40.4} miete={8.95} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

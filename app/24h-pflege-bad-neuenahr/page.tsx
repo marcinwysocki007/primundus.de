@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="bad-neuenahr" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Neuenahr'} land={'Rheinland-Pfalz'} altbau={44.0} miete={7.27} />
+          <OrtWerkzeuge slug="bad-neuenahr" ort={'Bad Neuenahr'} land={'Rheinland-Pfalz'} altbau={44.0} miete={7.27} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="wiesbaden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wiesbaden'} land={'Hessen'} altbau={58.7} miete={9.21} />
+          <OrtWerkzeuge slug="wiesbaden" ort={'Wiesbaden'} land={'Hessen'} altbau={58.7} miete={9.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

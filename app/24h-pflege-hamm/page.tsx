@@ -190,7 +190,7 @@ export default function Page() {
             <NearbyCities current="hamm" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hamm'} land={'Nordrhein-Westfalen'} altbau={56.7} miete={5.75} />
+          <OrtWerkzeuge slug="hamm" ort={'Hamm'} land={'Nordrhein-Westfalen'} altbau={56.7} miete={5.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

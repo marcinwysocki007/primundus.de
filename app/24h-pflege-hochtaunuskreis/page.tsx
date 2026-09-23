@@ -161,7 +161,7 @@ export default function Page() {
             <NearbyCities current="hochtaunuskreis" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hochtaunuskreis'} land={'Hessen'} altbau={41.8} miete={9.23} />
+          <OrtWerkzeuge slug="hochtaunuskreis" ort={'Hochtaunuskreis'} land={'Hessen'} altbau={41.8} miete={9.23} />
 
 
           <OrtStimmen

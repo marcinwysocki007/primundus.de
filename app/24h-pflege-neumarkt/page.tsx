@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="neumarkt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Neumarkt i.d.OPf.'} land={'Bayern'} altbau={30.1} miete={7.32} />
+          <OrtWerkzeuge slug="neumarkt" ort={'Neumarkt i.d.OPf.'} land={'Bayern'} altbau={30.1} miete={7.32} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

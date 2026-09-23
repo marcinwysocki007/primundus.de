@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="aalen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Waldshut-Tiengen'} land={'Baden-Württemberg'} altbau={48.1} miete={7.27} />
+          <OrtWerkzeuge slug="waldshut-tiengen" ort={'Waldshut-Tiengen'} land={'Baden-Württemberg'} altbau={48.1} miete={7.27} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

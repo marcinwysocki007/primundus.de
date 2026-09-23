@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="braunschweig" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Braunschweig'} land={'Niedersachsen'} altbau={67.1} miete={7.27} />
+          <OrtWerkzeuge slug="braunschweig" ort={'Braunschweig'} land={'Niedersachsen'} altbau={67.1} miete={7.27} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

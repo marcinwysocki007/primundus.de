@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="schweinfurt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Schweinfurt'} land={'Bayern'} altbau={61.9} miete={6.23} />
+          <OrtWerkzeuge slug="schweinfurt" ort={'Schweinfurt'} land={'Bayern'} altbau={61.9} miete={6.23} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

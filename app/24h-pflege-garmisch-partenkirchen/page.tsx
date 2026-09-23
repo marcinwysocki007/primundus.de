@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="garmisch-partenkirchen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Garmisch-Partenkirchen'} land={'Bayern'} altbau={48.9} miete={9.12} />
+          <OrtWerkzeuge slug="garmisch-partenkirchen" ort={'Garmisch-Partenkirchen'} land={'Bayern'} altbau={48.9} miete={9.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

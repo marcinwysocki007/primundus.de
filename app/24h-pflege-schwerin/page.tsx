@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="schwerin" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Schwerin'} land={'Mecklenburg-Vorpommern'} altbau={40.2} miete={6.06} />
+          <OrtWerkzeuge slug="schwerin" ort={'Schwerin'} land={'Mecklenburg-Vorpommern'} altbau={40.2} miete={6.06} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

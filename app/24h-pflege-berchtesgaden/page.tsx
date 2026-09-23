@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="berchtesgaden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Berchtesgaden'} land={'Bayern'} altbau={59.3} miete={6.94} />
+          <OrtWerkzeuge slug="berchtesgaden" ort={'Berchtesgaden'} land={'Bayern'} altbau={59.3} miete={6.94} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

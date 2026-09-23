@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="prien" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Prien am Chiemsee'} land={'Bayern'} altbau={33.0} miete={8.92} />
+          <OrtWerkzeuge slug="prien" ort={'Prien am Chiemsee'} land={'Bayern'} altbau={33.0} miete={8.92} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

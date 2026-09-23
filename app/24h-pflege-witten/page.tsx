@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="witten" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Witten'} land={'Nordrhein-Westfalen'} altbau={65.1} miete={5.88} />
+          <OrtWerkzeuge slug="witten" ort={'Witten'} land={'Nordrhein-Westfalen'} altbau={65.1} miete={5.88} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -161,7 +161,7 @@ export default function Page() {
             <NearbyCities current="rhein-pfalz-kreis" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} altbau={39.8} miete={6.91} />
+          <OrtWerkzeuge slug="rhein-pfalz-kreis" ort={'Rhein-Pfalz-Kreis'} land={'Rheinland-Pfalz'} altbau={39.8} miete={6.91} />
 
 
           <OrtStimmen

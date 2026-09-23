@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="fuerth" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Fürth'} land={'Bayern'} altbau={50.8} miete={7.71} />
+          <OrtWerkzeuge slug="fuerth" ort={'Fürth'} land={'Bayern'} altbau={50.8} miete={7.71} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

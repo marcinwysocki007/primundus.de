@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="jena" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Jena'} land={'Thüringen'} altbau={47.6} miete={7.04} />
+          <OrtWerkzeuge slug="jena" ort={'Jena'} land={'Thüringen'} altbau={47.6} miete={7.04} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="minden" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Minden'} land={'Nordrhein-Westfalen'} altbau={57.7} miete={6.14} />
+          <OrtWerkzeuge slug="minden" ort={'Minden'} land={'Nordrhein-Westfalen'} altbau={57.7} miete={6.14} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

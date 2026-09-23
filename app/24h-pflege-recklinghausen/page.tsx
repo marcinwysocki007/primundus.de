@@ -196,7 +196,7 @@ export default function Page() {
             <NearbyCities current="recklinghausen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Recklinghausen'} land={'Nordrhein-Westfalen'} altbau={61.8} miete={5.85} />
+          <OrtWerkzeuge slug="recklinghausen" ort={'Recklinghausen'} land={'Nordrhein-Westfalen'} altbau={61.8} miete={5.85} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -161,7 +161,7 @@ export default function Page() {
             <NearbyCities current="rheinisch-bergischer-kreis" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rheinisch-Bergischer Kreis'} land={'Nordrhein-Westfalen'} altbau={42.2} miete={7.49} />
+          <OrtWerkzeuge slug="rheinisch-bergischer-kreis" ort={'Rheinisch-Bergischer Kreis'} land={'Nordrhein-Westfalen'} altbau={42.2} miete={7.49} />
 
 
           <OrtStimmen

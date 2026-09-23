@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="offenbach" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Offenbach'} land={'Hessen'} altbau={60.5} miete={8.76} />
+          <OrtWerkzeuge slug="offenbach" ort={'Offenbach'} land={'Hessen'} altbau={60.5} miete={8.76} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

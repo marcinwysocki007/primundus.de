@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="oberhausen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Oberhausen'} land={'Nordrhein-Westfalen'} altbau={65.0} miete={5.73} />
+          <OrtWerkzeuge slug="oberhausen" ort={'Oberhausen'} land={'Nordrhein-Westfalen'} altbau={65.0} miete={5.73} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="dachau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Dachau'} land={'Bayern'} altbau={36.0} miete={10.34} />
+          <OrtWerkzeuge slug="dachau" ort={'Dachau'} land={'Bayern'} altbau={36.0} miete={10.34} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

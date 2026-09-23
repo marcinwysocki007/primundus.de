@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="koblenz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Koblenz'} land={'Rheinland-Pfalz'} altbau={59.6} miete={7.45} />
+          <OrtWerkzeuge slug="koblenz" ort={'Koblenz'} land={'Rheinland-Pfalz'} altbau={59.6} miete={7.45} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

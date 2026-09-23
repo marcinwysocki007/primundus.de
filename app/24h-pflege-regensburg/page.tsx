@@ -199,7 +199,7 @@ export default function Page() {
             <NearbyCities current="regensburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Regensburg'} land={'Bayern'} altbau={42.7} miete={9.38} />
+          <OrtWerkzeuge slug="regensburg" ort={'Regensburg'} land={'Bayern'} altbau={42.7} miete={9.38} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="erfurt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Erfurt'} land={'Thüringen'} altbau={49.1} miete={6.48} />
+          <OrtWerkzeuge slug="erfurt" ort={'Erfurt'} land={'Thüringen'} altbau={49.1} miete={6.48} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

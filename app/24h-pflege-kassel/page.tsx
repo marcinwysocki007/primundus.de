@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="kassel" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kassel'} land={'Hessen'} altbau={67.4} miete={6.77} />
+          <OrtWerkzeuge slug="kassel" ort={'Kassel'} land={'Hessen'} altbau={67.4} miete={6.77} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

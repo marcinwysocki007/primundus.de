@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="bad-kreuznach" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Kreuznach'} land={'Rheinland-Pfalz'} altbau={50.7} miete={6.56} />
+          <OrtWerkzeuge slug="bad-kreuznach" ort={'Bad Kreuznach'} land={'Rheinland-Pfalz'} altbau={50.7} miete={6.56} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

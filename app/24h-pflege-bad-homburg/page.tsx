@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="bad-homburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Homburg'} land={'Hessen'} altbau={49.6} miete={9.95} />
+          <OrtWerkzeuge slug="bad-homburg" ort={'Bad Homburg'} land={'Hessen'} altbau={49.6} miete={9.95} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

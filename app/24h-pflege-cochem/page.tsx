@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="cochem" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Cochem an der Mosel'} land={'Rheinland-Pfalz'} altbau={57.9} miete={5.85} />
+          <OrtWerkzeuge slug="cochem" ort={'Cochem an der Mosel'} land={'Rheinland-Pfalz'} altbau={57.9} miete={5.85} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

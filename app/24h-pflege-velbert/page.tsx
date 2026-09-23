@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="velbert" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Velbert'} land={'Nordrhein-Westfalen'} altbau={61.1} miete={6.08} />
+          <OrtWerkzeuge slug="velbert" ort={'Velbert'} land={'Nordrhein-Westfalen'} altbau={61.1} miete={6.08} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="paderborn" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Paderborn'} land={'Nordrhein-Westfalen'} altbau={34.6} miete={6.69} />
+          <OrtWerkzeuge slug="paderborn" ort={'Paderborn'} land={'Nordrhein-Westfalen'} altbau={34.6} miete={6.69} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

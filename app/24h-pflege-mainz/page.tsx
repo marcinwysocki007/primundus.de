@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="mainz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mainz'} land={'Rheinland-Pfalz'} altbau={47.0} miete={9.73} />
+          <OrtWerkzeuge slug="mainz" ort={'Mainz'} land={'Rheinland-Pfalz'} altbau={47.0} miete={9.73} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

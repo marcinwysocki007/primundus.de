@@ -200,7 +200,7 @@ export default function Page() {
             <NearbyCities current="weilheim-schongau" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Weilheim-Schongau'} land={'Bayern'} altbau={35.5} miete={8.06} />
+          <OrtWerkzeuge slug="weilheim-schongau" ort={'Weilheim-Schongau'} land={'Bayern'} altbau={35.5} miete={8.06} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

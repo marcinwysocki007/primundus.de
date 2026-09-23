@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="bad-toelz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bad Tölz'} land={'Bayern'} altbau={49.5} miete={9.29} />
+          <OrtWerkzeuge slug="bad-toelz" ort={'Bad Tölz'} land={'Bayern'} altbau={49.5} miete={9.29} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="hagen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Hagen'} land={'Nordrhein-Westfalen'} altbau={67.9} miete={5.39} />
+          <OrtWerkzeuge slug="hagen" ort={'Hagen'} land={'Nordrhein-Westfalen'} altbau={67.9} miete={5.39} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

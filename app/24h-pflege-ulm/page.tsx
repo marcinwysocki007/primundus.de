@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="ulm" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Ulm'} land={'Baden-Württemberg'} altbau={47.3} miete={8.48} />
+          <OrtWerkzeuge slug="ulm" ort={'Ulm'} land={'Baden-Württemberg'} altbau={47.3} miete={8.48} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

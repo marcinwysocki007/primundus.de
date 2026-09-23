@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="marl" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Marl'} land={'Nordrhein-Westfalen'} altbau={57.1} miete={6.09} />
+          <OrtWerkzeuge slug="marl" ort={'Marl'} land={'Nordrhein-Westfalen'} altbau={57.1} miete={6.09} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

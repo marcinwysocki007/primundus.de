@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="bochum" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bochum'} land={'Nordrhein-Westfalen'} altbau={65.8} miete={6.25} />
+          <OrtWerkzeuge slug="bochum" ort={'Bochum'} land={'Nordrhein-Westfalen'} altbau={65.8} miete={6.25} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

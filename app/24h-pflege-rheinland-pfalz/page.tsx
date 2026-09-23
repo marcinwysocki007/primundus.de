@@ -212,7 +212,7 @@ export default function Page() {
             <CitiesOfRegion region="rheinland-pfalz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Rheinland-Pfalz'} land={'Deutschland insgesamt'} altbau={47.4} miete={6.75} />
+          <OrtWerkzeuge slug="rheinland-pfalz" ort={'Rheinland-Pfalz'} land={'Deutschland insgesamt'} altbau={47.4} miete={6.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

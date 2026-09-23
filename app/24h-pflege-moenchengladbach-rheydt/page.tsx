@@ -191,7 +191,7 @@ export default function Page() {
             <NearbyCities current="moenchengladbach-rheydt" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mönchengladbach-Rheydt'} land={'Nordrhein-Westfalen'} altbau={54.9} miete={6.41} />
+          <OrtWerkzeuge slug="moenchengladbach-rheydt" ort={'Mönchengladbach-Rheydt'} land={'Nordrhein-Westfalen'} altbau={54.9} miete={6.41} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

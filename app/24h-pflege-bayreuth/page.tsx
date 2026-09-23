@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="bayreuth" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Bayreuth'} land={'Bayern'} altbau={46.2} miete={7.11} />
+          <OrtWerkzeuge slug="bayreuth" ort={'Bayreuth'} land={'Bayern'} altbau={46.2} miete={7.11} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

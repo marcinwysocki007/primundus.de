@@ -202,7 +202,7 @@ export default function Page() {
             <NearbyCities current="erding" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Erding'} land={'Bayern'} altbau={28.6} miete={9.77} />
+          <OrtWerkzeuge slug="erding" ort={'Erding'} land={'Bayern'} altbau={28.6} miete={9.77} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

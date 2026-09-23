@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="freiburg-umland" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Freiburg & Umland'} land={'Baden-Württemberg'} altbau={48.1} miete={9.74} />
+          <OrtWerkzeuge slug="freiburg-umland" ort={'Freiburg & Umland'} land={'Baden-Württemberg'} altbau={48.1} miete={9.74} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

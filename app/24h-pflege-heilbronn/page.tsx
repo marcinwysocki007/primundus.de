@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="heilbronn" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Heilbronn'} land={'Baden-Württemberg'} altbau={51.9} miete={8.49} />
+          <OrtWerkzeuge slug="heilbronn" ort={'Heilbronn'} land={'Baden-Württemberg'} altbau={51.9} miete={8.49} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

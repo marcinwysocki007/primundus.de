@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="kaiserslautern" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Kaiserslautern'} land={'Rheinland-Pfalz'} altbau={54.5} miete={6.52} />
+          <OrtWerkzeuge slug="kaiserslautern" ort={'Kaiserslautern'} land={'Rheinland-Pfalz'} altbau={54.5} miete={6.52} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

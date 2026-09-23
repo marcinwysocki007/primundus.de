@@ -197,7 +197,7 @@ export default function Page() {
             <NearbyCities current="konstanz" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Konstanz'} land={'Baden-Württemberg'} altbau={47.8} miete={9.93} />
+          <OrtWerkzeuge slug="konstanz" ort={'Konstanz'} land={'Baden-Württemberg'} altbau={47.8} miete={9.93} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="wolfsburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Wolfsburg'} land={'Niedersachsen'} altbau={54.5} miete={7.21} />
+          <OrtWerkzeuge slug="wolfsburg" ort={'Wolfsburg'} land={'Niedersachsen'} altbau={54.5} miete={7.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

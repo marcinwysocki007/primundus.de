@@ -223,7 +223,7 @@ export default function Page() {
             <RechnerKasten src="ort-hamburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge ohneWohnen ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
+          <OrtWerkzeuge slug="hamburg" ohneWohnen ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
           <OrtPassendeKraft />
 

@@ -195,7 +195,7 @@ export default function Page() {
             <NearbyCities current="tuebingen" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Tübingen'} land={'Baden-Württemberg'} altbau={43.6} miete={10.3} />
+          <OrtWerkzeuge slug="tuebingen" ort={'Tübingen'} land={'Baden-Württemberg'} altbau={43.6} miete={10.3} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

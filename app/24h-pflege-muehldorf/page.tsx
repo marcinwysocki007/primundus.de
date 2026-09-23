@@ -201,7 +201,7 @@ export default function Page() {
             <NearbyCities current="muehldorf" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Mühldorf am Inn'} land={'Bayern'} altbau={34.0} miete={7.31} />
+          <OrtWerkzeuge slug="muehldorf" ort={'Mühldorf am Inn'} land={'Bayern'} altbau={34.0} miete={7.31} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

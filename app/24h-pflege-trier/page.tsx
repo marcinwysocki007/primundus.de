@@ -191,7 +191,7 @@ export default function Page() {
             <NearbyCities current="trier" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Trier'} land={'Rheinland-Pfalz'} altbau={53.2} miete={7.92} />
+          <OrtWerkzeuge slug="trier" ort={'Trier'} land={'Rheinland-Pfalz'} altbau={53.2} miete={7.92} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

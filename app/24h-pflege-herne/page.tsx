@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="herne" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Herne'} land={'Nordrhein-Westfalen'} altbau={71.3} miete={5.71} />
+          <OrtWerkzeuge slug="herne" ort={'Herne'} land={'Nordrhein-Westfalen'} altbau={71.3} miete={5.71} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

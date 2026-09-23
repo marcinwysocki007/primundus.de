@@ -192,7 +192,7 @@ export default function Page() {
             <NearbyCities current="stralsund" />
           </Abschnitt>
 
-          <OrtWerkzeuge ort={'Stralsund'} land={'Mecklenburg-Vorpommern'} altbau={49.1} miete={5.83} />
+          <OrtWerkzeuge slug="stralsund" ort={'Stralsund'} land={'Mecklenburg-Vorpommern'} altbau={49.1} miete={5.83} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
