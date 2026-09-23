@@ -192,13 +192,24 @@ function StimmeKarte({ b, schmal }: { b: Bewertung; schmal: boolean }) {
   )
 }
 
-/** Bewertungen als wischbare Reihe auf dem dunklen Band der Partnerseite. eingebettet = in der Textspalte älterer Seiten. */
-export async function Stimmen({ eingebettet = false }: { eingebettet?: boolean } = {}) {
-  const d = await ladeStimmen()
+/**
+ * Bewertungen als wischbare Reihe auf dem dunklen Band der Partnerseite. eingebettet = in der Textspalte.
+ * ort (23.09.2026): dasselbe dunkle Band auf den Ortsseiten — Stimmen aus dem Ort zuerst, Überschrift
+ * „Familien aus <Ort> über uns", Anker stimmen-vor-ort. Bis dahin hatten die Ortsseiten als einzige
+ * Seitenart helle Karten (OrtStimmen); Martin: „Die Kundenmeinung hatten wir doch so schön dunkel gemacht überall."
+ */
+export async function Stimmen({ eingebettet = false, ort, anzahl }: { eingebettet?: boolean; ort?: string; anzahl?: number } = {}) {
+  // Mit Ort: alle laden, sonst fehlt die örtliche Stimme, wenn sie älter als die 40 neuesten ist (Worms: März 2025)
+  const d = ort ? await ladeStimmen(200) : await ladeStimmen()
+  if (ort) {
+    const vorn = d.stimmen.filter((b) => b.ort === ort)
+    const rest = d.stimmen.filter((b) => b.ort !== ort)
+    d.stimmen = [...vorn, ...rest].slice(0, anzahl ?? 6)
+  }
   if (!d.stimmen.length) return null
   return (
     <section
-      id="kundenstimmen"
+      id={ort ? 'stimmen-vor-ort' : 'kundenstimmen'}
       aria-labelledby="stimmen-titel"
       className={eingebettet ? 'my-12 scroll-mt-24 overflow-hidden bg-pm-deep max-md:-mx-5 md:rounded-[28px]' : 'scroll-mt-24 overflow-hidden bg-pm-deep'}
     >
@@ -210,7 +221,7 @@ export async function Stimmen({ eingebettet = false }: { eingebettet?: boolean }
           kopf={
             <>
               <p className={`${AUGENBRAUE} text-pm-taupe-light`}>Erfahrungen von Familien</p>
-              <h2 id="stimmen-titel" className={`mt-4 ${H2} text-pm-deep-ink`}>Das sagen unsere Familien</h2>
+              <h2 id="stimmen-titel" className={`mt-4 ${H2} text-pm-deep-ink`}>{ort ? `Familien aus ${ort} über uns` : 'Das sagen unsere Familien'}</h2>
               <div className="mt-5">
                 <SterneLink d={d} dunkel />
               </div>

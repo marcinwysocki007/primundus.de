@@ -150,7 +150,7 @@ export default function Page() {
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-muenchen', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort="München" />}
-          person={<AnsprechpartnerinGross ort="München" />}
+          person={<AnsprechpartnerinGross ort="München" nummer />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
@@ -161,7 +161,7 @@ export default function Page() {
 
           <OrtAufgaben />
 
-          <OrtAblauf />
+          <OrtAblauf ort="München" />
 
           <Abschnitt id="voraussetzungen" titel="Was Sie zu Hause brauchen">
             <Text>

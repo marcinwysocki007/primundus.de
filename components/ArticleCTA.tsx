@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { BewertungsZeile } from '@/components/bewertungen/BewertungsAuszug'
-import { Schluss, SchlussKasten, Stimmen } from '@/components/vertrauen/Vertrauen'
+import { GARANTIE, Schluss, SchlussKasten, Stimmen } from '@/components/vertrauen/Vertrauen'
 import { Phone } from 'lucide-react'
 
 // Kontaktbereich auf allen Ratgeber- und Vergleichsseiten (345 Seiten).
@@ -172,6 +172,8 @@ export function AnsprechpartnerinGross({
   telefon,
   telefonAnzeige,
   adresse,
+  nummer,
+  siegel = 'karte',
 }: {
   ort: string
   /** Eigene Rufnummer für diesen Ort (E.164), sonst die zentrale 089. */
@@ -180,11 +182,20 @@ export function AnsprechpartnerinGross({
   telefonAnzeige?: string
   /** Niederlassung, die zu dieser Nummer gehört — nur setzen, wo es sie wirklich gibt. */
   adresse?: string
+  /** Nummer als Text zeigen (Muenchner Umland); Hamburg zeigt sie ueber telefon automatisch */
+  nummer?: boolean
+  /** Wo das Testsiegel steht: auf dem Foto (wie Startseite) oder in der Karte unter den Knoepfen */
+  siegel?: 'foto' | 'karte'
 }) {
   // Hamburg hat eine eigene Niederlassung mit eigener Nummer (Martin 21.09.: „in Hamburg kannst du
   // die HH-Nummer machen und die Adresse"). Wo keine gesetzt ist, bleibt es bei der zentralen.
   const tel = telefon ?? '+4989200000830'
   const telText = telefonAnzeige ?? '089 200 000 830'
+  // Die Nummer steht nur, wo sie zum Ort gehoert (Martin 23.09.: „nur in Hamburg die Hamburger,
+  // in Muenchen oder in der Umgebung die Muenchner, ansonsten blenden wir die Nummer aus, da sind
+  // nur die Buttons"). Hamburg bringt seine eigene Nummer mit (telefon), das Muenchner Umland
+  // setzt nummer, alle anderen zeigen nur Anrufen und WhatsApp — die Knoepfe waehlen weiter.
+  const nummerZeigen = nummer ?? Boolean(telefon)
   return (
     <div className="bg-white rounded-[20px] shadow-lift overflow-hidden flex flex-col">
       {/* Eigener Zuschnitt (Martin 20.09.: „mit dem Bild so hinkriegen, dass das bündig ist, links
@@ -205,9 +216,25 @@ export function AnsprechpartnerinGross({
         // marta-kapcio.jpg (320 × 480, 45 KB) für die Rundbilder in Kopfzeile und Schlussband.
         className="w-full h-[280px] sm:h-[300px] object-cover object-top"
       />
+      {/* Siegel und Bestpreis-Plakette auf dem Foto, wie auf dem Heldenbild der Startseite
+          (Martin 23.09.: „Unser Testsiegel ist nirgendwo zu sehen … bei Marta im Bild"). Die
+          Karte ist 360 px breit, das Heldenbild 560 — deshalb 72/84 px statt 92/118. Das Foto
+          bleibt unverändert, die Plaketten liegen als eigene Ebene darauf. */}
+      {siegel === 'foto' ? (
+      <div className="relative">
+        <div className="absolute bottom-3 left-3 flex items-end gap-2 md:bottom-4 md:left-4">
+          <a href="/testsieger-24-stunden-pflege" aria-label="6× Testsieger DIE WELT — zur Auszeichnung">
+            <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions" width={352} height={528} className="h-[72px] w-auto rounded-[4px] shadow-[0_4px_14px_rgba(0,0,0,0.25)] md:h-[84px]" />
+          </a>
+          <a href={GARANTIE} aria-label="Bestpreisgarantie — mehr Infos" className="rounded-full bg-white/95 px-2 py-1 shadow-[0_4px_14px_rgba(0,0,0,0.18)]">
+            <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[30px] w-auto md:h-[34px]" />
+          </a>
+        </div>
+      </div>
+      ) : null}
       <div className="p-6 md:p-7 flex-none">
-        <p className="text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe">
-          Ihre persönliche Ansprechpartnerin für {ort}
+        <p className="text-[12px] font-bold uppercase tracking-[.14em] text-pm-taupe">
+          Ihre Ansprechpartnerin für {ort}
         </p>
         <p className="mt-2.5 text-[23px] md:text-[25px] font-extrabold leading-[1.15] tracking-[-0.02em] text-pm-ink">
           Marta Kapcio
@@ -218,13 +245,15 @@ export function AnsprechpartnerinGross({
           Sie haben Fragen zur Betreuung zu Hause? Marta hilft Ihnen persönlich weiter —{' '}
           <span className={nw}>täglich von 8 bis 20 Uhr.</span>
         </p>
-        <a
-          href={`tel:${tel}`}
-          className={`mt-4 block text-[26px] md:text-[28px] font-extrabold leading-none tracking-[-0.02em] text-pm-ink hover:text-pm-taupe-ink transition-colors ${nw}`}
-        >
-          {telText}
-        </a>
-        <div className="mt-5 flex gap-2.5">
+        {nummerZeigen ? (
+          <a
+            href={`tel:${tel}`}
+            className={`mt-4 block text-[26px] md:text-[28px] font-extrabold leading-none tracking-[-0.02em] text-pm-ink hover:text-pm-taupe-ink transition-colors ${nw}`}
+          >
+            {telText}
+          </a>
+        ) : null}
+        <div className={`${nummerZeigen ? 'mt-5' : 'mt-4'} flex gap-2.5`}>
           <a
             href={`tel:${tel}`}
             className="flex-1 min-h-[48px] px-4 rounded-full bg-pm-ink hover:bg-pm-taupe-ink text-white font-bold text-[16px] flex items-center justify-center gap-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
@@ -249,6 +278,13 @@ export function AnsprechpartnerinGross({
         <p className="mt-4 text-[14px] leading-[1.45] text-pm-body/65">
           Von der ersten Frage bis zum Start Ihrer Betreuung.
         </p>
+        {/* Testsiegel in der Karte (Martin 23.09.: „das Testsiegel platzieren … weiter unten, muss aber
+            passen") — dieselben drei Zeilen wie im Rechner und in den Mails. */}
+        {siegel === 'karte' ? (
+          <div className="mt-4 pt-4 border-t border-pm-line">
+            <Siegel klein />
+          </div>
+        ) : null}
         {/* Bewertungssterne in den Kopf (Martin 22.09.: „und natürlich die bewertungs-sterne, wenn
             wir optisch was zeigen"). Gemessen am selben Tag: Auf den Ortsseiten standen sie erst bei
             86 bis 89 Prozent Scrolltiefe, unten im Schlussband — wer nicht bis zum Ende scrollt, sah
@@ -314,8 +350,9 @@ function MartaVertrauen() {
 // Vorschlag 2 vom 17.09.2026 (Martin: „vereinheitliche es", „so schön und horizontal scrollbar", „cooles Design
 // wie auf den anderen"): Seitenende = Bewertungen zum Wischen + Aufruf mit Punkten, Siegel und Marta (Telefon, WhatsApp).
 // ohneBewertungen: auf /erfahrungen stehen die Bewertungen schon vollständig darüber
-export function KontaktBand({ ohneBewertungen = false }: { ohneBewertungen?: boolean } = {}) {
-  return <Schluss src="apex-components" ohneStimmen={ohneBewertungen} />
+export function KontaktBand({ ohneBewertungen = false, src = 'apex-components' }: { ohneBewertungen?: boolean; src?: string } = {}) {
+  // src je Seite (Ortsseiten: ort-<slug>-schluss), sonst die allgemeine Quelle wie bisher
+  return <Schluss src={src} ohneStimmen={ohneBewertungen} />
 }
 
 export function ArticleCTA() {
