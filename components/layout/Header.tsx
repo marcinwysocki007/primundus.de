@@ -73,7 +73,7 @@ export function SiteHeader() {
               href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
               className="hidden md:inline-flex items-center gap-2 px-4 py-2.5 bg-pm-coral hover:bg-pm-coral-deep text-white font-semibold text-[14px] rounded-full transition-all duration-200 shadow-sm"
             >
-              Kosten & Pflegekräfte ansehen
+              Preis & Pflegekräfte ansehen
               <ChevronRight className="w-4 h-4" />
             </a>
 
@@ -90,7 +90,7 @@ export function SiteHeader() {
             <a
               href="https://kostenrechner.primundus.de/?start=1&src=apex-components"
               className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-pm-coral hover:bg-pm-coral-deep transition-all"
-              aria-label="Kosten & Pflegekräfte ansehen"
+              aria-label="Preis & Pflegekräfte ansehen"
             >
               <MessageSquare className="w-4 h-4 text-white" />
             </a>
@@ -180,7 +180,7 @@ export function SiteHeader() {
                   className="flex items-center justify-center gap-1.5 py-2.5 bg-pm-coral hover:bg-pm-coral-deep rounded-full text-[13px] font-bold text-white transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
-                  Kosten & Pflegekräfte ansehen
+                  Preis & Pflegekräfte ansehen
                   <ChevronRight className="w-3.5 h-3.5" />
                 </a>
                 <div className="flex gap-2">

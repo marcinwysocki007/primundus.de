@@ -108,7 +108,7 @@ export function HeimRechner() {
         Zu Hause: Preise aus unserem Kostenrechner, Stand September 2026; Entlastungsbudget, wenn die Kasse den Einsatz als Verhinderungspflege anerkennt.
       </p>
       <a href={RECHNER} referrerPolicy="no-referrer-when-downgrade" className={`${KNOPF} mt-5`}>
-        Preis berechnen
+        Preis &amp; Pflegekräfte ansehen
       </a>
     </div>
   )

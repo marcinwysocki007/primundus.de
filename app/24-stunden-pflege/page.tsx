@@ -151,7 +151,7 @@ export default function VierUndZwanzigStundenPflege() {
           titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
-          knopf={{ href: RECHNER_SEITE, text: 'Kosten & Pflegekräfte ansehen' }}
+          knopf={{ href: RECHNER_SEITE, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile />}
           blickTitel="Warum Primundus"

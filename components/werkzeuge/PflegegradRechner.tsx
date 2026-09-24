@@ -590,7 +590,7 @@ export function PflegegradRechner() {
             und Steuerermäßigung). Ihren Preis und passende Betreuungskräfte sehen Sie in 2 Minuten.
           </p>
           <a href={RECHNER} referrerPolicy="no-referrer-when-downgrade" className={`${KNOPF} mt-4`}>
-            Preis berechnen
+            Preis &amp; Pflegekräfte ansehen
           </a>
         </div>
       )}

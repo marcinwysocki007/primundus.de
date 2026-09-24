@@ -46,7 +46,7 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
           referrerPolicy="no-referrer-when-downgrade"
           className="flex min-h-[56px] items-center justify-center rounded-full bg-pm-coral px-5 text-center text-[16.5px] font-bold text-white shadow-[0_10px_24px_-10px_rgba(231,111,99,0.75)] transition-colors hover:bg-pm-coral-deep sm:self-start sm:px-7"
         >
-          Preis sofort berechnen&nbsp;→
+          Preis &amp; Pflegekräfte ansehen&nbsp;→
         </a>
       </Kasten>
       {/* Die örtliche Vergleichszahl direkt dahinter (Martin 24.09.: „Haben wir im Vergleich Zahlen, was das
@@ -89,7 +89,7 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
       <MehrDazu
         label="Rechnen und prüfen:"
         links={[
-          { href: `https://kostenrechner.primundus.de/?start=1&src=ort-${slug}-kosten`, text: 'Preis und Betreuungskräfte ansehen' },
+          { href: `https://kostenrechner.primundus.de/?start=1&src=ort-${slug}-kosten`, text: 'Preis & Pflegekräfte ansehen' },
           { href: '/pflegegrad-rechner', text: 'Pflegegrad-Rechner' },
           { href: '/zuschuss-rechner', text: 'Zuschuss-Rechner' },
           { href: '/pflegeheim-kosten-deutschland', text: 'Pflegeheim-Kosten-Rechner' },

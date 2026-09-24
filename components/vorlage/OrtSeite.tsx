@@ -157,7 +157,7 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
           einleitung={<OrtWasBedeutetText />}
           aktualisiert={d.aktualisiert}
           lesezeit={d.lesezeit ?? '6 Min.'}
-          knopf={{ href: `https://kostenrechner.primundus.de/?start=1&src=${src}`, text: 'Preis & Betreuungskräfte ansehen' }}
+          knopf={{ href: `https://kostenrechner.primundus.de/?start=1&src=${src}`, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort={d.ort} />}
           person={<AnsprechpartnerinGross ort={d.ort} nummer={MUENCHNER_UMLAND.has(d.slug)} siegel={siegel} />}

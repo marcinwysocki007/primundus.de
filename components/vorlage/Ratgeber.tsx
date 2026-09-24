@@ -547,7 +547,7 @@ export function RechnerKasten({ src }: { src: string }) {
         referrerPolicy="no-referrer-when-downgrade"
         className={`${KNOPF} sm:self-start`}
       >
-        Preis berechnen
+        Preis &amp; Pflegekräfte ansehen
       </a>
     </Kasten>
   )
