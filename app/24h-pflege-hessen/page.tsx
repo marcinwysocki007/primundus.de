@@ -186,7 +186,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-hessen" />
+            <RechnerKasten src="ort-hessen" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-hessen" titel="Polnische Betreuungskräfte in Hessen">

@@ -186,7 +186,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-niedersachsen" />
+            <RechnerKasten src="ort-niedersachsen" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-niedersachsen" titel="Polnische Betreuungskräfte in Niedersachsen">

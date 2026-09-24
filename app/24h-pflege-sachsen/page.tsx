@@ -186,7 +186,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-sachsen" />
+            <RechnerKasten src="ort-sachsen" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-sachsen" titel="Polnische Betreuungskräfte in Sachsen">

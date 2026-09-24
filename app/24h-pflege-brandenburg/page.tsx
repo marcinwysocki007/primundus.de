@@ -187,7 +187,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-brandenburg" />
+            <RechnerKasten src="ort-brandenburg" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-brandenburg" titel="Polnische Betreuungskräfte in Brandenburg">

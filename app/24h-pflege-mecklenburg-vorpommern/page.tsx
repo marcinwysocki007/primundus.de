@@ -186,7 +186,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-mecklenburg-vorpommern" />
+            <RechnerKasten src="ort-mecklenburg-vorpommern" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-mecklenburg" titel="Polnische Betreuungskräfte in Mecklenburg-Vorpommern">
