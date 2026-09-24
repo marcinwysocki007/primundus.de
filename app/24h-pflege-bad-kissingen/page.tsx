@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Bad Kissingen kennt sich mit gutem Altwerden aus — Kurgarten, Rosengarten, kurze Wege, Kurtradition seit Generationen. Wenn es allein in der Wohnung am Kurpark oder im Haus in Garitz nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit das Zuhause bleibt, was es ist. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Bad Kissingen kennt sich mit gutem Altwerden aus — Kurgarten, Rosengarten, kurze Wege, Kurtradition seit Generationen. Wenn es allein in der Wohnung am Kurpark oder im Haus in Garitz nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit das Zuhause bleibt, was es ist.</>,
   kreis: 'Landkreis Bad Kissingen',
   vorOrt: {
     inhalt: (

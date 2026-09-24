@@ -6,6 +6,7 @@
 import Image from 'next/image'
 import { RechnerBlock } from '@/components/vertrauen/Vertrauen'
 import { ABLAUF_SCHRITTE } from '@/components/vertrauen/Ablauf'
+import { VORAUSSETZUNGEN } from '@/components/vertrauen/Voraussetzungen'
 
 export const RECHNER_START = 'https://kostenrechner.primundus.de/?start=1&src=apex-startseite'
 const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
@@ -183,12 +184,7 @@ export function WasIst() {
 }
 
 // ── 6. Voraussetzungen ──────────────────────────────────────────────────────────────────────
-const VORAUSSETZUNGEN = [
-  { titel: 'Eigenes Zimmer', text: 'Die Betreuungskraft benötigt ein eigenes, abschließbares Zimmer mit Bett.' },
-  { titel: 'Grundausstattung', text: 'Küche, Bad/WC und Internetanschluss sollten vorhanden sein.' },
-  { titel: 'Mobilität', text: 'Ihr Angehöriger sollte noch eine gewisse Grundmobilität haben, z. B. mit Unterstützung gehen können.' },
-  { titel: 'Keine Intensivpflege', text: 'Medizinische Behandlungspflege übernimmt ein ambulanter Pflegedienst.' },
-]
+// Wortlaut seit 24.09. aus components/vertrauen/Voraussetzungen.tsx — dieselbe Quelle wie die Ortsseiten.
 
 export function Voraussetzungen() {
   return (

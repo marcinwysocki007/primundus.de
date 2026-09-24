@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Wohnung in der Andreasvorstadt, das Haus in Hochheim, der Garten vor der Stadt: Erfurter bleiben gern, wo Dom und Krämerbrücke zum Alltag gehören. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Wohnung in der Andreasvorstadt, das Haus in Hochheim, der Garten vor der Stadt: Erfurter bleiben gern, wo Dom und Krämerbrücke zum Alltag gehören. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, im vertrauten Zuhause.</>,
   vorOrt: {
     inhalt: (
       <>

@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>In Tübingen leben viele Eltern, deren Kinder längst in München, Hamburg oder im Ausland arbeiten — und die trotzdem in ihrer Wohnung an der Neckarfront, in Lustnau oder Derendingen bleiben möchten. Eine Betreuungskraft von Primundus macht das möglich: Sie wohnt mit im Haushalt und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>In Tübingen leben viele Eltern, deren Kinder längst in München, Hamburg oder im Ausland arbeiten — und die trotzdem in ihrer Wohnung an der Neckarfront, in Lustnau oder Derendingen bleiben möchten. Eine Betreuungskraft von Primundus macht das möglich: Sie wohnt mit im Haushalt und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Tübingen',
   vorOrt: {
     inhalt: (

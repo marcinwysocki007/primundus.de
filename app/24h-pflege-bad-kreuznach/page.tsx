@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Kurstadt an der Nahe mit ihren Brückenhäusern ist zum Bleiben gebaut — ob stadtnah oder in Planig. Eine Betreuungskraft von Primundus sorgt dafür, dass das Zuhause auch mit Pflegebedarf Zuhause bleibt: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Kurstadt an der Nahe mit ihren Brückenhäusern ist zum Bleiben gebaut — ob stadtnah oder in Planig. Eine Betreuungskraft von Primundus sorgt dafür, dass das Zuhause auch mit Pflegebedarf Zuhause bleibt: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Bad Kreuznach',
   vorOrt: {
     inhalt: (

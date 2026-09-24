@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Viele Dormagener Familien kennen das: Die Kinder arbeiten in Köln oder Düsseldorf, die Eltern wohnen in Nievenheim, Hackenbroich oder bei der alten Zollfeste in Zons — und brauchen plötzlich mehr Hilfe, als sich mit Besuchen am Wochenende leisten lässt. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Viele Dormagener Familien kennen das: Die Kinder arbeiten in Köln oder Düsseldorf, die Eltern wohnen in Nievenheim, Hackenbroich oder bei der alten Zollfeste in Zons — und brauchen plötzlich mehr Hilfe, als sich mit Besuchen am Wochenende leisten lässt. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Rhein-Kreis Neuss',
   vorOrt: {
     inhalt: (

@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Schildesche, Brackwede oder am Hang zum Teutoburger Wald: Bielefelder wohnen solide — oft seit Jahrzehnten im selben Haus. Wenn Mutter oder Vater mehr Hilfe brauchen, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da, mit Blick auf die Sparrenburg statt auf eine Warteliste. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Schildesche, Brackwede oder am Hang zum Teutoburger Wald: Bielefelder wohnen solide — oft seit Jahrzehnten im selben Haus. Wenn Mutter oder Vater mehr Hilfe brauchen, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da, mit Blick auf die Sparrenburg statt auf eine Warteliste.</>,
   vorOrt: {
     inhalt: (
       <>

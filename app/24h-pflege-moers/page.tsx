@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Am Niederrhein gibt man sein Zuhause nicht her: das Haus in Kapellen, die Wohnung in Asberg, den Garten in Repelen. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt — sie zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Am Niederrhein gibt man sein Zuhause nicht her: das Haus in Kapellen, die Wohnung in Asberg, den Garten in Repelen. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt — sie zieht mit ein, übernimmt Haushalt und Pflegealltag und ist auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

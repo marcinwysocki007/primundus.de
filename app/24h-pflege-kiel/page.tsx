@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ob in Wik mit Blick auf die Förde, in Elmschenhagen oder drüben in Kronshagen: Kieler bleiben gern, wo das Wasser nah ist. Auch mit Pflegebedarf — eine Betreuungskraft von Primundus zieht mit ein, übernimmt Haushalt, Begleitung und die Nacht, und das vertraute Zuhause bleibt erhalten. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob in Wik mit Blick auf die Förde, in Elmschenhagen oder drüben in Kronshagen: Kieler bleiben gern, wo das Wasser nah ist. Auch mit Pflegebedarf — eine Betreuungskraft von Primundus zieht mit ein, übernimmt Haushalt, Begleitung und die Nacht, und das vertraute Zuhause bleibt erhalten.</>,
   vorOrt: {
     inhalt: (
       <>

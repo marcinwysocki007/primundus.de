@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Wohnung in der List, das Haus in Kirchrode oder Linden mit seinen Kneipen von früher: Hannoveraner haben ihr Viertel — und wollen es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, vom Maschsee bis Herrenhausen. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Wohnung in der List, das Haus in Kirchrode oder Linden mit seinen Kneipen von früher: Hannoveraner haben ihr Viertel — und wollen es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, vom Maschsee bis Herrenhausen.</>,
   vorOrt: {
     inhalt: (
       <>

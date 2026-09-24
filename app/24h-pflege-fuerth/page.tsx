@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Südstadt, Ronhof oder Vach: Fürther bleiben ihrer Stadt treu — und ihrer Wohnung erst recht. Eine Betreuungskraft von Primundus zieht mit ein, wenn Mutter oder Vater Hilfe brauchen, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Südstadt, Ronhof oder Vach: Fürther bleiben ihrer Stadt treu — und ihrer Wohnung erst recht. Eine Betreuungskraft von Primundus zieht mit ein, wenn Mutter oder Vater Hilfe brauchen, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Fürth',
   vorOrt: {
     inhalt: (

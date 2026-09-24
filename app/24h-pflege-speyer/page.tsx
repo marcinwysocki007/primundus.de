@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Mit dem Dom vor Augen alt werden: In Speyer-West, im Vogelgesang oder in der Altstadt wohnen viele seit Jahrzehnten — und bleiben am liebsten genau dort. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Mit dem Dom vor Augen alt werden: In Speyer-West, im Vogelgesang oder in der Altstadt wohnen viele seit Jahrzehnten — und bleiben am liebsten genau dort. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Rhein-Pfalz-Kreis',
   vorOrt: {
     inhalt: (

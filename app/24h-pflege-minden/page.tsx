@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Rechts oder links der Weser, in Rodenbeck oder draußen in Todtenhausen: Mindener wohnen bodenständig — oft seit Jahrzehnten im selben Haus. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein, übernimmt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Rechts oder links der Weser, in Rodenbeck oder draußen in Todtenhausen: Mindener wohnen bodenständig — oft seit Jahrzehnten im selben Haus. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein, übernimmt den Haushalt und ist auch nachts da.</>,
   kreis: 'Kreis Minden-Lübbecke',
   vorOrt: {
     inhalt: (

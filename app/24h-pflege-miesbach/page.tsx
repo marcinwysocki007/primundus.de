@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Kreisstadt im Oberland, Parsberg oder das Umland Richtung Schliersee: Miesbacher geben ihr Zuhause nicht her. Eine Betreuungskraft von Primundus sorgt dafür, dass es so bleibt — sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Kreisstadt im Oberland, Parsberg oder das Umland Richtung Schliersee: Miesbacher geben ihr Zuhause nicht her. Eine Betreuungskraft von Primundus sorgt dafür, dass es so bleibt — sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Miesbach',
   vorOrt: {
     inhalt: (

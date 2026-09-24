@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>In der Wüste, in Schinkel oder Haste: Osnabrücker wohnen gern dort, wo alles vertraut ist — der Markt, die Nachbarn, der eigene Garten. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>In der Wüste, in Schinkel oder Haste: Osnabrücker wohnen gern dort, wo alles vertraut ist — der Markt, die Nachbarn, der eigene Garten. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Osnabrück',
   vorOrt: {
     inhalt: (

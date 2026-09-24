@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Kirchhellen, Eigen oder Boy: In Bottrop hat man sein Haus — und behält es. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein, führt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Kirchhellen, Eigen oder Boy: In Bottrop hat man sein Haus — und behält es. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein, führt den Haushalt und ist auch nachts da.</>,
   kreis: 'nördlichen Ruhrgebiet',
   vorOrt: {
     inhalt: (

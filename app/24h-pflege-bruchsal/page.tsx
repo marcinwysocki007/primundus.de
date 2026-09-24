@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Zwischen Kraichgau-Hügeln und Spargelfeldern wohnt man in Bruchsal, Heidelsheim oder Untergrombach gern im eigenen Haus — und möchte dort auch alt werden. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Kraichgau-Hügeln und Spargelfeldern wohnt man in Bruchsal, Heidelsheim oder Untergrombach gern im eigenen Haus — und möchte dort auch alt werden. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Karlsruhe Nord',
   vorOrt: {
     inhalt: (

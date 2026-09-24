@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Zwischen Ehrenfeld, Wiemelhausen und Langendreer wohnt man in Bochum bodenständig — und bleibt, wo man verwurzelt ist. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie stemmen kann, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Ehrenfeld, Wiemelhausen und Langendreer wohnt man in Bochum bodenständig — und bleibt, wo man verwurzelt ist. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie stemmen kann, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

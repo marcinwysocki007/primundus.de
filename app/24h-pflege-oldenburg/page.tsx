@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>In Eversten, Osternburg oder Ofenerdiek wohnt man gern mit Garten und Fahrradweg vor der Tür — und möchte genau dort auch alt werden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, im vertrauten Zuhause, auch im Ammerland und Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>In Eversten, Osternburg oder Ofenerdiek wohnt man gern mit Garten und Fahrradweg vor der Tür — und möchte genau dort auch alt werden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, im vertrauten Zuhause, auch im Ammerland und Umland.</>,
   vorOrt: {
     inhalt: (
       <>

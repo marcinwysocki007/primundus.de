@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Furth, Weckhoven oder Norf: Neusser wohnen bodenständig am Rhein — oft seit Jahrzehnten im selben Haus. Wenn Mutter oder Vater mehr Hilfe brauchen, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Furth, Weckhoven oder Norf: Neusser wohnen bodenständig am Rhein — oft seit Jahrzehnten im selben Haus. Wenn Mutter oder Vater mehr Hilfe brauchen, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Rhein-Kreis Neuss',
   vorOrt: {
     inhalt: (

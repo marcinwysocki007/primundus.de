@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Hörde, Aplerbeck, Mengede oder das Kreuzviertel: Dortmunder hängen an ihrem Viertel — am Bäcker um die Ecke, am Kleingarten, an Borsigplatz-Erinnerungen. Wenn die Eltern Hilfe brauchen, muss deshalb niemand quer durch die Stadt ins Heim ziehen: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Hörde, Aplerbeck, Mengede oder das Kreuzviertel: Dortmunder hängen an ihrem Viertel — am Bäcker um die Ecke, am Kleingarten, an Borsigplatz-Erinnerungen. Wenn die Eltern Hilfe brauchen, muss deshalb niemand quer durch die Stadt ins Heim ziehen: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

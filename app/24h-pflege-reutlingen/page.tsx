@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Am Fuß der Achalm bleibt man verwurzelt: das Haus in Betzingen, die Wohnung in Sondelfingen, der Blick auf die Alb. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da — 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Am Fuß der Achalm bleibt man verwurzelt: das Haus in Betzingen, die Wohnung in Sondelfingen, der Blick auf die Alb. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da — 1:1, ohne Heimumzug.</>,
   kreis: 'Landkreis Reutlingen',
   vorOrt: {
     inhalt: (

@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Göggingen, Pfersee, Haunstetten oder das Lechviertel: Augsburger sind ihrem Viertel treu — und dem eigenen Zuhause sowieso. Wenn Mutter oder Vater mehr Hilfe brauchen, als Besuche leisten können, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da, auch im Umland bis Königsbrunn und Friedberg. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Göggingen, Pfersee, Haunstetten oder das Lechviertel: Augsburger sind ihrem Viertel treu — und dem eigenen Zuhause sowieso. Wenn Mutter oder Vater mehr Hilfe brauchen, als Besuche leisten können, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da, auch im Umland bis Königsbrunn und Friedberg.</>,
   vorOrt: {
     inhalt: (
       <>

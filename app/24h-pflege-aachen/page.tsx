@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ob in Burtscheid, Brand oder Laurensberg: Aachener bleiben ihrer Stadt im Dreiländereck treu — und ihrem Zuhause erst recht. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie leisten kann, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob in Burtscheid, Brand oder Laurensberg: Aachener bleiben ihrer Stadt im Dreiländereck treu — und ihrem Zuhause erst recht. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie leisten kann, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'der StädteRegion Aachen',
   vorOrt: {
     inhalt: (

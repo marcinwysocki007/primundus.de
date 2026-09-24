@@ -47,7 +47,7 @@ function Haken() {
 /** Ein Eintrag im Kasten als Sprungverweis: Stichwort fett, dahinter der Grund in einem Halbsatz */
 export type BlickVerweis = { href: string; titel: string; text: string }
 
-function BlickKasten({ titel, punkte = [], kopf, verweise }: { titel: string; punkte?: string[]; kopf?: ReactNode; verweise?: BlickVerweis[] }) {
+export function BlickKasten({ titel, punkte = [], kopf, verweise }: { titel: string; punkte?: string[]; kopf?: ReactNode; verweise?: BlickVerweis[] }) {
   return (
     <aside aria-label="Auf einen Blick" className="bg-white rounded-[20px] shadow-lift p-6 md:p-7">
       {kopf}
@@ -306,7 +306,7 @@ export function RatgeberKopf({
  * Ortsseiten (ort-…), damit die bestehenden Reihen website:apex-… in den Lead-Auswertungen
  * nicht zersplittern. Der Rechner speichert src seit CAapp#738 je Sitzung und je Lead.
  */
-export function mitPosition(src: string, position: 'kopf' | 'ablauf' | 'kosten' | 'stoerer' | 'leiste' | 'schluss'): string {
+export function mitPosition(src: string, position: 'kopf' | 'ablauf' | 'kraefte' | 'kosten' | 'stoerer' | 'leiste' | 'schluss'): string {
   return src.startsWith('ort-') ? `${src}-${position}` : src
 }
 

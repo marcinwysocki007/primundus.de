@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>In Bensberg, Refrath oder Paffrath wohnen viele, deren Kinder täglich nach Köln pendeln — und die ihr Haus im Grünen um nichts in der Welt aufgeben wollen. Müssen sie auch nicht: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, wenn allein leben nicht mehr geht. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>In Bensberg, Refrath oder Paffrath wohnen viele, deren Kinder täglich nach Köln pendeln — und die ihr Haus im Grünen um nichts in der Welt aufgeben wollen. Müssen sie auch nicht: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, wenn allein leben nicht mehr geht.</>,
   kreis: 'Rheinisch-Bergischen Kreis',
   vorOrt: {
     inhalt: (

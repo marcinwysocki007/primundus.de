@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ob in der Gartenstadt, in St. Georgen oder draußen in Bindlach: Wer in Bayreuth alt geworden ist, will die Festspielstadt und das eigene Zuhause nicht verlassen. Muss auch niemand — eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, in der Stadt und im ganzen Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob in der Gartenstadt, in St. Georgen oder draußen in Bindlach: Wer in Bayreuth alt geworden ist, will die Festspielstadt und das eigene Zuhause nicht verlassen. Muss auch niemand — eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, in der Stadt und im ganzen Umland.</>,
   kreis: 'Landkreis Bayreuth',
   vorOrt: {
     inhalt: (

@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Deutschlands älteste Stadt ist zum Bleiben gebaut: die Wohnung in Trier-Süd, das Haus in Ehrang oder Heiligkreuz, die Mosel vor der Tür. Eine Betreuungskraft von Primundus sorgt dafür, dass das Zuhause auch mit Pflegebedarf Zuhause bleibt — sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Deutschlands älteste Stadt ist zum Bleiben gebaut: die Wohnung in Trier-Süd, das Haus in Ehrang oder Heiligkreuz, die Mosel vor der Tür. Eine Betreuungskraft von Primundus sorgt dafür, dass das Zuhause auch mit Pflegebedarf Zuhause bleibt — sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

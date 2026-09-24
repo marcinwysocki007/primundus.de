@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ringsee, Friedrichshofen oder Mailing: Ein Arbeitsleben bei Audi, ein Haus an der Donau — und der feste Wunsch, genau dort zu bleiben. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ringsee, Friedrichshofen oder Mailing: Ein Arbeitsleben bei Audi, ein Haus an der Donau — und der feste Wunsch, genau dort zu bleiben. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

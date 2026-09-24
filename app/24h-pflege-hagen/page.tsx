@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Zwischen Hohenlimburg, Haspe und dem Rand des Sauerlands wohnt man in Hagen oft im eigenen Haus am Hang — seit Jahrzehnten. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein, führt den Haushalt und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Hohenlimburg, Haspe und dem Rand des Sauerlands wohnt man in Hagen oft im eigenen Haus am Hang — seit Jahrzehnten. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein, führt den Haushalt und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

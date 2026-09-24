@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Goldstadt lässt ihre Menschen nicht los: Wer in Brötzingen, auf dem Buckenberg oder in Huchenfeld sein Haus hat, will es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da — zwischen Enz und Schwarzwaldrand, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Goldstadt lässt ihre Menschen nicht los: Wer in Brötzingen, auf dem Buckenberg oder in Huchenfeld sein Haus hat, will es im Alter nicht gegen ein Heimzimmer tauschen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da — zwischen Enz und Schwarzwaldrand, im vertrauten Zuhause.</>,
   kreis: 'Enzkreis',
   vorOrt: {
     inhalt: (

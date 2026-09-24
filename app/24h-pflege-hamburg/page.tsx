@@ -161,7 +161,7 @@ export default function Page() {
           <OrtWannSinnvoll slug="hamburg" ort="Hamburg" />
           <OrtWohnen slug="hamburg" ort="Hamburg" />
 
-          <OrtAufgaben />
+          <OrtAufgaben ohneLinks />
 
           <OrtAblauf ort="Hamburg" src="ort-hamburg-ablauf" />
 
@@ -225,7 +225,7 @@ export default function Page() {
 
           <OrtWerkzeuge slug="hamburg" ohneWohnen ort={'Hamburg'} land={'Hamburg'} altbau={62.1} miete={9.16} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
-          <OrtPassendeKraft />
+          <OrtPassendeKraft src="ort-hamburg-kraefte" />
 
           <OrtWarumPrimundus ort="Hamburg" />
 

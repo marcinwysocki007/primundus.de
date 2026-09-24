@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>St. Gertrud, St. Jürgen oder draußen in Travemünde: Lübecker geben ihre Stadt zwischen Altstadtinsel und Ostsee nicht her — und ihr Zuhause schon gar nicht. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>St. Gertrud, St. Jürgen oder draußen in Travemünde: Lübecker geben ihre Stadt zwischen Altstadtinsel und Ostsee nicht her — und ihr Zuhause schon gar nicht. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

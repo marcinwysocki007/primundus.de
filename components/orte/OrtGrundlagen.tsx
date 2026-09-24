@@ -22,7 +22,9 @@
 // (Martins Regel vom 20.09.).
 import { AblaufListe } from '@/components/vertrauen/Ablauf'
 import { CtaStoerer } from '@/components/vertrauen/Stoerer'
-import { VertrauensKarten } from '@/components/vertrauen/Vertrauen'
+import { ProduktBuehne } from '@/components/vertrauen/ProduktBuehne'
+import { GARANTIE, VertrauensKarten, rechnerLink } from '@/components/vertrauen/Vertrauen'
+import { VoraussetzungenListe } from '@/components/vertrauen/Voraussetzungen'
 import { Abschnitt, Gegenueber, Kasten, MehrDazu, Punkte, Text } from '@/components/vorlage/Ratgeber'
 
 const QUELLE =
@@ -32,45 +34,62 @@ const LINK = 'text-pm-taupe font-semibold hover:underline'
 // Kurz mit Absicht (23.09.2026): Der feste Text steht auf 187 Seiten; jeder Satz hier zaehlt in
 // der Textgleichheit 187-fach. Gemessen mit der langen Fassung: Worms↔Bochum 77 % statt 67.
 // Drei Saetze sagen, was es ist und was nicht — die Tiefe liegt auf den verlinkten Themenseiten.
+/** Der Absatz unter „Was 24-Stunden-Pflege in <Ort> bedeutet" — seit 24.09. im Kopf der Ortsseite, direkt unter
+ * Knopf und Sternen (Martin: „Zuhause bleiben in Worms klingt blöd … wäre nicht ‚was 24-Stunden-Pflege in Worms
+ * bedeutet' sinnvoller?"). Die Ortsprosa, die vorher dort stand, steht jetzt im Abschnitt „Was in <Ort> anders ist". */
+export function OrtWasBedeutetText() {
+  return (
+    <>
+      Eine Betreuungskraft zieht in den Haushalt ein und hilft über den Tag verteilt bei dem, was anfällt — beim
+      Aufstehen und Waschen, beim Kochen, beim Einkauf, beim Gang zum Arzt; bei Bedarf ist sie auch nachts da —
+      regelmäßige nächtliche Einsätze müssen ausgeglichen werden und gehören in die Angaben im Rechner.
+      Medizinische Aufgaben wie Spritzen oder Verbände übernimmt weiterhin der ambulante Pflegedienst. Unsere
+      Betreuungskräfte sind bei uns angestellt — Ihr Vertrag läuft mit Primundus, Sie werden nicht Arbeitgeber.
+      Woher sie kommen, steht auf der{' '}
+      <a href="/pflegekraft-aus-polen" className={LINK}>Seite zu unseren Betreuungskräften</a>.
+    </>
+  )
+}
+
+/** Die vier Verweise, die bis zum 24.09. unter der Definition standen — Linklisten werden nie gekürzt (Regel 20.09.);
+ * jetzt am Ende von „Was eine Betreuungskraft übernimmt". */
+const GRUNDLAGEN_LINKS = [
+  { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
+  { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
+  { href: '/pflegekraft-aus-polen', text: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf' },
+  // Stand 22.09.2026 dazugenommen: Die alten Ortsseiten hatten diesen Verweis in ihrer
+  // eigenen Linkliste. Ohne ihn wuerde der Umbau auf diesen Baustein 192 interne Links
+  // kappen — und interne Linklisten werden nie gekuerzt (Regel vom 20.09.).
+  { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
+]
+
+/** Die Definition als eigener Abschnitt — nur noch auf den Musterseiten München und Hamburg (eigener Aufbau);
+ * die Vorlage OrtSeite zeigt den Text im Kopf. */
 export function OrtWasBedeutet({ ort }: { ort: string }) {
   return (
     <Abschnitt id="was-bedeutet" titel={`Was 24-Stunden-Pflege in ${ort} bedeutet`}>
       <Text>
-        Eine Betreuungskraft zieht in den Haushalt ein und hilft über den Tag verteilt bei dem, was anfällt — beim
-        Aufstehen und Waschen, beim Kochen, beim Einkauf, beim Gang zum Arzt; bei Bedarf ist sie auch nachts da —
-        regelmäßige nächtliche Einsätze müssen ausgeglichen werden und gehören in die Angaben im Rechner.
-        Medizinische Aufgaben wie Spritzen oder Verbände übernimmt weiterhin der ambulante Pflegedienst. Unsere
-        Betreuungskräfte sind bei uns angestellt — Ihr Vertrag läuft mit Primundus, Sie werden nicht Arbeitgeber.
-        Woher sie kommen, steht auf der{' '}
-        <a href="/pflegekraft-aus-polen" className={LINK}>Seite zu unseren Betreuungskräften</a>.
+        <OrtWasBedeutetText />
       </Text>
-      <MehrDazu
-        label="Ausführlich auf den Themenseiten:"
-        links={[
-          { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
-          { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
-          { href: '/pflegekraft-aus-polen', text: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf' },
-          // Stand 22.09.2026 dazugenommen: Die alten Ortsseiten hatten diesen Verweis in ihrer
-          // eigenen Linkliste. Ohne ihn wuerde der Umbau auf diesen Baustein 192 interne Links
-          // kappen — und interne Linklisten werden nie gekuerzt (Regel vom 20.09.).
-          { href: '/pflegedienst-oder-24h-kraft', text: 'Betreuungskraft oder ambulanter Pflegedienst?' },
-        ]}
-      />
+      <MehrDazu label="Ausführlich auf den Themenseiten:" links={GRUNDLAGEN_LINKS} />
     </Abschnitt>
   )
 }
 
-// „Warum Primundus" — stand bis zum 22.09.2026 nur auf der Muenchener Seite (22.09.2026).
-//
-// Die alten Ortsseiten hatten an dieser Stelle einen Abschnitt „So arbeiten wir" mit vier
-// Punkten: keine Vertragsbindung, tagesgenaue Abrechnung, Kosten erst bei Start, persoenlicher
-// Ansprechpartner. Alle vier sind hier enthalten — zusammengefasst und um das ergaenzt, was
-// dort fehlte: die eigene Anstellung (der Unterschied, der im Alltag zaehlt), der Testsieger
-// mit Quelle statt als blosse Behauptung, und Marta mit Namen statt „Ansprechpartner".
-//
-// Es geht also beim Umbau kein Argument verloren, es kommen welche dazu. Der Ortsname steht
-// nur in der Ueberschrift — der Rest gilt ueberall gleich, und das ist ehrlich so: Diese
-// Zusagen haengen nicht am Wohnort.
+/** „Ist 24-Stunden-Pflege für Sie geeignet?" — die vier Voraussetzungen wie auf der Startseite und im Rechner
+ * (Martin 24.09.: „Welche Voraussetzungen gibt es?" — fehlte auf der Ortsseite). */
+export function OrtVoraussetzungen() {
+  return (
+    <Abschnitt id="voraussetzungen" titel="Ist 24-Stunden-Pflege für Sie geeignet?">
+      <Text>
+        Die meisten Familien erfüllen die Voraussetzungen problemlos. Prüfen Sie selbst, ob die 24-Stunden-Betreuung
+        für Ihre Situation passt:
+      </Text>
+      <VoraussetzungenListe />
+    </Abschnitt>
+  )
+}
+
 export function OrtWarumPrimundus({ ort }: { ort: string }) {
   // Die sechs Zusagen, die uns ausmachen (Martin 22./23.09.): Pflegekräfte sofort sehen,
   // Angebot sofort sehen, täglich kündbar, keine Vermittlungsgebühr, Bestpreisgarantie,
@@ -97,7 +116,8 @@ export function OrtWarumPrimundus({ ort }: { ort: string }) {
   )
 }
 
-export function OrtAufgaben() {
+/** ohneLinks: München/Hamburg zeigen die vier Verweise schon unter ihrer Definition (OrtWasBedeutet) */
+export function OrtAufgaben({ ohneLinks = false }: { ohneLinks?: boolean } = {}) {
   return (
     <Abschnitt id="aufgaben" titel="Was eine Betreuungskraft übernimmt — und was der Pflegedienst">
       <Gegenueber
@@ -138,6 +158,7 @@ export function OrtAufgaben() {
         . Wie ein Tag mit Betreuungskraft aussieht, steht auf der Seite{' '}
         <a href="/leistungen" className={LINK}>Leistungen</a>.
       </Text>
+      {!ohneLinks && <MehrDazu label="Ausführlich auf den Themenseiten:" links={GRUNDLAGEN_LINKS} />}
     </Abschnitt>
   )
 }
@@ -166,20 +187,40 @@ export function OrtAblauf({ ort, src }: { ort: string; src: string }) {
   )
 }
 
-export function OrtPassendeKraft() {
+export function OrtPassendeKraft({ src }: { src: string }) {
+  // Martin 24.09.: „Wie Sie die passende Pflegekraft finden — ganz nett, dass da ein Text steht, aber warum ist da
+  // nicht ein Screenshot vom Portal wie auf der Partnerseite: reingehen, Pflegekräfte sehen, was es kostet, da ist
+  // der Button, so sieht das aus." Deshalb die Bühne aus dem Schlussaufruf (Beispielprofile, wie das Kundenportal
+  // sie zeigt) hier im Abschnitt, daneben die Zusage und der Knopf mit eigener Position (src …-kraefte).
   return (
     <Abschnitt id="passende-kraft" titel="Wie Sie die passende Betreuungskraft finden">
       <Text>
         Deutsch, Erfahrung mit Demenz oder Rollstuhl, Nachtbereitschaft — und ob der Mensch zu dem Menschen passt, um
-        den es geht. Auf dem Papier lässt sich das schlecht beurteilen.
+        den es geht. Auf dem Papier lässt sich das schlecht beurteilen. Deshalb sehen Sie bei uns die Betreuungskräfte,
+        bevor Sie sich entscheiden — so, wie das Kundenportal sie zeigt:
       </Text>
-      <Kasten ton="gruen" titel="Bei Primundus sehen Sie die Betreuungskräfte vor Ihrer Entscheidung">
-        <Text>
-          Mit Foto, Erfahrung und Deutschniveau. Sie wählen aus, wer zu Ihrer Situation passt — einen Vertrag gibt es
-          erst danach. Fällt eine Kraft aus, ist Ersatz in der Regel innerhalb von drei Tagen da; wünschen Sie einen
-          Wechsel, organisieren wir ihn mit einer Woche Vorlauf.
-        </Text>
-      </Kasten>
+      {/* Am Handy zuerst das Bild, dann Zusage und Knopf; ab md Text links, Gerät rechts wie auf der Partnerseite */}
+      <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-8">
+        <div className="md:order-last">
+          <ProduktBuehne garantie={GARANTIE} kompakt />
+        </div>
+        <div className="min-w-0">
+          <Kasten ton="gruen" titel="Bei Primundus sehen Sie die Betreuungskräfte vor Ihrer Entscheidung">
+            <Text>
+              Mit Foto, Erfahrung und Deutschniveau. Sie wählen aus, wer zu Ihrer Situation passt — einen Vertrag gibt es
+              erst danach. Fällt eine Kraft aus, ist Ersatz in der Regel innerhalb von drei Tagen da; wünschen Sie einen
+              Wechsel, organisieren wir ihn mit einer Woche Vorlauf.
+            </Text>
+            <a
+              href={rechnerLink(src)}
+              referrerPolicy="no-referrer-when-downgrade"
+              className="flex min-h-[56px] items-center justify-center rounded-full bg-pm-coral px-5 text-center text-[16.5px] font-bold text-white shadow-[0_10px_24px_-10px_rgba(231,111,99,0.75)] transition-colors hover:bg-pm-coral-deep sm:self-start sm:px-7"
+            >
+              Preis &amp; Pflegekräfte ansehen&nbsp;→
+            </a>
+          </Kasten>
+        </div>
+      </div>
     </Abschnitt>
   )
 }

@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Zwischen Domviertel, Moritzberg und den Dörfern der Börde: Die meisten Hildesheimer möchten im Alter genau dort wohnen bleiben, wo sie zuhause sind — auch wenn Alleinleben nicht mehr geht. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch in Sarstedt, Bad Salzdetfurth und im Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Domviertel, Moritzberg und den Dörfern der Börde: Die meisten Hildesheimer möchten im Alter genau dort wohnen bleiben, wo sie zuhause sind — auch wenn Alleinleben nicht mehr geht. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch in Sarstedt, Bad Salzdetfurth und im Umland.</>,
   kreis: 'Landkreis Hildesheim',
   vorOrt: {
     inhalt: (

@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Zwischen Babelsberg, Bornstedt und den Havelseen wohnt man zu schön, um fürs Alter wegzuziehen. Eine Betreuungskraft von Primundus sorgt dafür, dass niemand muss: Sie zieht mit ein, ist bei Bedarf auch nachts da und hält den vertrauten Alltag am Laufen — in Potsdam und im Umland. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Babelsberg, Bornstedt und den Havelseen wohnt man zu schön, um fürs Alter wegzuziehen. Eine Betreuungskraft von Primundus sorgt dafür, dass niemand muss: Sie zieht mit ein, ist bei Bedarf auch nachts da und hält den vertrauten Alltag am Laufen — in Potsdam und im Umland.</>,
   vorOrt: {
     inhalt: (
       <>

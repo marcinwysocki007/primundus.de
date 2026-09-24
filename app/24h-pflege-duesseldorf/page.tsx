@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Wohnung in Oberkassel, das Haus in Gerresheim, der Garten in Kaiserswerth: Düsseldorfer geben ihr Zuhause ungern auf — schon gar nicht für einen Heimplatz mit Wartezeit. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist bei Bedarf auch nachts da, von Benrath bis Wittlaer. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Wohnung in Oberkassel, das Haus in Gerresheim, der Garten in Kaiserswerth: Düsseldorfer geben ihr Zuhause ungern auf — schon gar nicht für einen Heimplatz mit Wartezeit. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist bei Bedarf auch nachts da, von Benrath bis Wittlaer.</>,
   vorOrt: {
     inhalt: (
       <>

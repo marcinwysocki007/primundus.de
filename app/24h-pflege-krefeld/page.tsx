@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Uerdingen am Rhein, Bockum, Hüls: Die Samt- und Seidenstadt hält ihre Menschen — und die halten an ihrem Zuhause fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht: Sie führt den Haushalt, begleitet den Tag und ist nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Uerdingen am Rhein, Bockum, Hüls: Die Samt- und Seidenstadt hält ihre Menschen — und die halten an ihrem Zuhause fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn es allein nicht mehr geht: Sie führt den Haushalt, begleitet den Tag und ist nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

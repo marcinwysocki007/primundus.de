@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ob Altbau in der Innenstadt, Wohnung in Winzerla oder Haus unterm Kernberg-Hang: Jenaer bleiben ihrer Stadt an der Saale verbunden. Damit das auch mit Pflegebedarf gilt, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob Altbau in der Innenstadt, Wohnung in Winzerla oder Haus unterm Kernberg-Hang: Jenaer bleiben ihrer Stadt an der Saale verbunden. Damit das auch mit Pflegebedarf gilt, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, 1:1, ohne Heimumzug.</>,
   kreis: 'Saale-Holzland-Kreis',
   vorOrt: {
     inhalt: (

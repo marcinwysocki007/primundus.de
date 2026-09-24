@@ -159,7 +159,7 @@ export default function Page() {
           <OrtWannSinnvoll slug="muenchen" ort="München" />
           <OrtWohnen slug="muenchen" ort="München" />
 
-          <OrtAufgaben />
+          <OrtAufgaben ohneLinks />
 
           <OrtAblauf ort="München" src="ort-muenchen-ablauf" />
 
@@ -226,7 +226,7 @@ export default function Page() {
 
           <OrtWerkzeuge slug="muenchen" ohneWohnen ort={'München'} land={'Bayern'} altbau={51.6} miete={12.89} titel="Zuschüsse und Rechner: was die Pflegekasse dazugibt" />
 
-          <OrtPassendeKraft />
+          <OrtPassendeKraft src="ort-muenchen-kraefte" />
 
           <OrtWarumPrimundus ort="München" />
 

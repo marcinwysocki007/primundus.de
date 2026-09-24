@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Baldham, Vaterstetten, Parsdorf: Wer hier wohnt, hat oft ein Berufsleben in München hinter sich — und ein Zuhause im Grünen, das er nicht mehr hergibt. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Baldham, Vaterstetten, Parsdorf: Wer hier wohnt, hat oft ein Berufsleben in München hinter sich — und ein Zuhause im Grünen, das er nicht mehr hergibt. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   kreis: 'östlichen Landkreis München',
   vorOrt: {
     inhalt: (

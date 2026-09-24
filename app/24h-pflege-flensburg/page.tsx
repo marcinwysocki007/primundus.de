@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>An der Förde bleibt man gern: ob in Mürwik, Weiche oder drüben in Glücksburg und Harrislee. Wenn die Kräfte nachlassen, muss deshalb niemand ins Heim — eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>An der Förde bleibt man gern: ob in Mürwik, Weiche oder drüben in Glücksburg und Harrislee. Wenn die Kräfte nachlassen, muss deshalb niemand ins Heim — eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, im vertrauten Zuhause.</>,
   kreis: 'Kreis Schleswig-Flensburg',
   vorOrt: {
     inhalt: (

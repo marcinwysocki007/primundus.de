@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Viele Eschborner haben Jahrzehnte zwischen Hochhäusern in Frankfurt gearbeitet und wohnen gern ruhig — in Niederhöchstadt oder im alten Ortskern. Damit das Zuhause auch mit Pflegebedarf bleibt, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, 1:1-Betreuung statt Heimalltag. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Viele Eschborner haben Jahrzehnte zwischen Hochhäusern in Frankfurt gearbeitet und wohnen gern ruhig — in Niederhöchstadt oder im alten Ortskern. Damit das Zuhause auch mit Pflegebedarf bleibt, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, 1:1-Betreuung statt Heimalltag.</>,
   kreis: 'Main-Taunus-Kreis',
   vorOrt: {
     inhalt: (

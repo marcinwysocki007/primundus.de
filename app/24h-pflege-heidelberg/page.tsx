@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Handschuhsheim, Neuenheim oder Rohrbach: Heidelberger Wohnungen mit Blick auf Schloss oder Neckar gibt man nicht auf — auch nicht, wenn die Kinder längst woanders forschen und arbeiten. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Handschuhsheim, Neuenheim oder Rohrbach: Heidelberger Wohnungen mit Blick auf Schloss oder Neckar gibt man nicht auf — auch nicht, wenn die Kinder längst woanders forschen und arbeiten. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Rhein-Neckar-Kreis',
   vorOrt: {
     inhalt: (

@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Hüls, Brassert oder Sinsen: Viele Marler haben ihr Arbeitsleben im Chemiepark verbracht — der Ruhestand gehört ins eigene Haus, nicht ins Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Hüls, Brassert oder Sinsen: Viele Marler haben ihr Arbeitsleben im Chemiepark verbracht — der Ruhestand gehört ins eigene Haus, nicht ins Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

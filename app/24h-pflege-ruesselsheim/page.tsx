@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Rüsselsheim',
-  einleitung: <>Ein Arbeitsleben bei Opel, ein Zuhause in Königstädten oder Bauschheim: Rüsselsheimer wissen, was sie sich erarbeitet haben — und bleiben. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ein Arbeitsleben bei Opel, ein Zuhause in Königstädten oder Bauschheim: Rüsselsheimer wissen, was sie sich erarbeitet haben — und bleiben. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Kreis Groß-Gerau',
   vorOrt: {
     inhalt: (

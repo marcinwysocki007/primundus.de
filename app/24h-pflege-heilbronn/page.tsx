@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Das Haus mit Blick auf die Weinberge am Wartberg, die Wohnung in Böckingen oder Sontheim: Heilbronner geben ihr Zuhause nicht leichtfertig auf — schon gar nicht für ein Pflegeheim mit Warteliste. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist bei Bedarf auch nachts da, auch im ganzen Landkreis. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Das Haus mit Blick auf die Weinberge am Wartberg, die Wohnung in Böckingen oder Sontheim: Heilbronner geben ihr Zuhause nicht leichtfertig auf — schon gar nicht für ein Pflegeheim mit Warteliste. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist bei Bedarf auch nachts da, auch im ganzen Landkreis.</>,
   kreis: 'Landkreis Heilbronn',
   vorOrt: {
     inhalt: (

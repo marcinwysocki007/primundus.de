@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ohligs, Wald oder Gräfrath: Solinger Häuser stehen an bergischen Hängen — mit Treppen, Aussicht und Geschichte. Ins Heim muss deshalb niemand: Eine Betreuungskraft von Primundus zieht mit ein, begleitet jeden Weg und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ohligs, Wald oder Gräfrath: Solinger Häuser stehen an bergischen Hängen — mit Treppen, Aussicht und Geschichte. Ins Heim muss deshalb niemand: Eine Betreuungskraft von Primundus zieht mit ein, begleitet jeden Weg und ist bei Bedarf auch nachts da.</>,
   kreis: 'Bergischen Land',
   vorOrt: {
     inhalt: (

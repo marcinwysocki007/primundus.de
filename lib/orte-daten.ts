@@ -24,7 +24,9 @@ export interface OrtDaten {
   lesezeit?: string
   /** H1, falls sie vom Standard „24-Stunden-Pflege und Betreuung in <Ort>" abweicht */
   titel?: string
-  /** Der örtliche Absatz unter „Zuhause bleiben in <Ort>" — wörtlich aus der alten einleitung */
+  /** Der örtliche Einstiegsabsatz — bis 24.09. im Kopf unter „Zuhause bleiben in <Ort>", seit 24.09. der erste
+   * Absatz von „Was in <Ort> anders ist" (Martin: der Kopf erklärt, was 24-Stunden-Pflege ist; das Örtliche
+   * steht beim Örtlichen). Ohne den alten Schlusssatz „Täglich kündbar, rechtssicher, Anreise …" (84 Seiten). */
   einleitung: ReactNode
   /**
    * Der Landkreis, wo die Seite einen nannte (131 Seiten): „Landkreis Alzey-Worms". Er steht in der

@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Pirmasens hat viele Menschen, die ihr Leben lang hier gearbeitet haben — oft in der Schuhindustrie — und jetzt in den eigenen vier Wänden alt werden möchten, ob in Winzeln, auf der Ruhbank oder in der Innenstadt. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Pirmasens hat viele Menschen, die ihr Leben lang hier gearbeitet haben — oft in der Schuhindustrie — und jetzt in den eigenen vier Wänden alt werden möchten, ob in Winzeln, auf der Ruhbank oder in der Innenstadt. Eine Betreuungskraft von Primundus macht das möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Südwestpfalz',
   vorOrt: {
     inhalt: (

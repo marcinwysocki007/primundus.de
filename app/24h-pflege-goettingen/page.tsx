@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Göttingen ist eine Stadt, aus der die Kinder zum Studium kommen — und die eigenen Kinder oft zum Arbeiten wegziehen. Zurück bleiben Eltern in Weende, Geismar oder Grone, die ihr Zuhause lieben. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Göttingen ist eine Stadt, aus der die Kinder zum Studium kommen — und die eigenen Kinder oft zum Arbeiten wegziehen. Zurück bleiben Eltern in Weende, Geismar oder Grone, die ihr Zuhause lieben. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Göttingen',
   vorOrt: {
     inhalt: (

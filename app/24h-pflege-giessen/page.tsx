@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Giessen',
-  einleitung: <>Ob in Wieseck, Klein-Linden oder stadtnah an der Lahn: Gießener bleiben, wo sie verwurzelt sind. Wenn Mutter oder Vater mehr Hilfe brauchen, als Besuche leisten können, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob in Wieseck, Klein-Linden oder stadtnah an der Lahn: Gießener bleiben, wo sie verwurzelt sind. Wenn Mutter oder Vater mehr Hilfe brauchen, als Besuche leisten können, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Gießen',
   vorOrt: {
     inhalt: (

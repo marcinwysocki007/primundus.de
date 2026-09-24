@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Von St. Johann über Dudweiler bis Burbach: Saarbrücker bleiben ihrem Viertel treu — oft ein Leben lang. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, im vertrauten Zuhause statt im Heim, auch im Umland bis Völklingen und Sulzbach. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Von St. Johann über Dudweiler bis Burbach: Saarbrücker bleiben ihrem Viertel treu — oft ein Leben lang. Damit das auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, im vertrauten Zuhause statt im Heim, auch im Umland bis Völklingen und Sulzbach.</>,
   vorOrt: {
     inhalt: (
       <>

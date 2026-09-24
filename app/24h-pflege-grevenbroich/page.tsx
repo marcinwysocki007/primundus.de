@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ob in Kapellen, Wevelinghoven oder mitten in der Stadt an der Erft: Grevenbroicher wollen im Alter dort bleiben, wo Haus, Garten und Nachbarn sind. Eine Betreuungskraft von Primundus macht das möglich — sie zieht mit ein, führt den Haushalt und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob in Kapellen, Wevelinghoven oder mitten in der Stadt an der Erft: Grevenbroicher wollen im Alter dort bleiben, wo Haus, Garten und Nachbarn sind. Eine Betreuungskraft von Primundus macht das möglich — sie zieht mit ein, führt den Haushalt und ist auch nachts da.</>,
   kreis: 'Rhein-Kreis Neuss',
   vorOrt: {
     inhalt: (

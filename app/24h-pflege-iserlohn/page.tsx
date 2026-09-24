@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Waldstadt lässt man nicht gern los: das eigene Haus in Letmathe oder Hennen, der Blick ins Grüne am Seilersee, die Nachbarn von nebenan. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie leisten kann, zieht eine Betreuungskraft von Primundus mit ein — und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Waldstadt lässt man nicht gern los: das eigene Haus in Letmathe oder Hennen, der Blick ins Grüne am Seilersee, die Nachbarn von nebenan. Wenn Mutter oder Vater mehr Hilfe brauchen, als die Familie leisten kann, zieht eine Betreuungskraft von Primundus mit ein — und ist bei Bedarf auch nachts da.</>,
   kreis: 'Märkischen Kreis',
   vorOrt: {
     inhalt: (

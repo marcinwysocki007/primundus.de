@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ein Arbeitsleben im Werk, ein Haus in Maichingen oder Darmsheim, ein Garten für die Enkel: So sieht der Ruhestand vieler Sindelfinger aus — und so soll er bleiben. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ein Arbeitsleben im Werk, ein Haus in Maichingen oder Darmsheim, ein Garten für die Enkel: So sieht der Ruhestand vieler Sindelfinger aus — und so soll er bleiben. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Böblingen',
   vorOrt: {
     inhalt: (

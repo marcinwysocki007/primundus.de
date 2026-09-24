@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ob Altbau in Stadtamhof, Wohnung in Kumpfmühl oder Haus in Reinhausen: Regensburger geben ihren Platz an der Donau nicht her. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da — im vertrauten Zuhause statt im Heim. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob Altbau in Stadtamhof, Wohnung in Kumpfmühl oder Haus in Reinhausen: Regensburger geben ihren Platz an der Donau nicht her. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da — im vertrauten Zuhause statt im Heim.</>,
   kreis: 'Landkreis Regensburg',
   vorOrt: {
     inhalt: (

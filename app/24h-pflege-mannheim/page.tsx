@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Zwischen Quadraten, Lindenhof und Feudenheim: Mannheimer wohnen praktisch — und bleiben, wo alles vertraut ist. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein, übernimmt den Alltag und ist auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Quadraten, Lindenhof und Feudenheim: Mannheimer wohnen praktisch — und bleiben, wo alles vertraut ist. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein, übernimmt den Alltag und ist auch nachts da.</>,
   kreis: 'der Metropolregion Rhein-Neckar',
   vorOrt: {
     inhalt: (

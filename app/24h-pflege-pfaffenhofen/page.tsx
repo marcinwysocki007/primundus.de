@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Pfaffenhofen',
-  einleitung: <>Zwischen Hopfengärten der Hallertau, der Ilm und den Dörfern Richtung Wolnzach und Scheyern: Rund um Pfaffenhofen bleibt man auf dem eigenen Grund — auch wenn München und Ingolstadt nah sind, das Zuhause ist näher. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Hopfengärten der Hallertau, der Ilm und den Dörfern Richtung Wolnzach und Scheyern: Rund um Pfaffenhofen bleibt man auf dem eigenen Grund — auch wenn München und Ingolstadt nah sind, das Zuhause ist näher. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Pfaffenhofen',
   vorOrt: {
     inhalt: (

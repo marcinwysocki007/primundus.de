@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Lebenstedt, Salzgitter-Bad oder Thiede: Viele hier haben ihr Leben lang im Werk gearbeitet — und ihr Zuhause soll der Lohn dafür bleiben, auch im Alter. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Lebenstedt, Salzgitter-Bad oder Thiede: Viele hier haben ihr Leben lang im Werk gearbeitet — und ihr Zuhause soll der Lohn dafür bleiben, auch im Alter. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

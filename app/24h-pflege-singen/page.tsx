@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Singen',
-  einleitung: <>Mit dem Hohentwiel vor dem Fenster wird man ungern woanders alt: Singener bleiben in ihrem Haus, ob stadtnah oder in Rielasingen und Gottmadingen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da — im ganzen Hegau bis zum Bodensee. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Mit dem Hohentwiel vor dem Fenster wird man ungern woanders alt: Singener bleiben in ihrem Haus, ob stadtnah oder in Rielasingen und Gottmadingen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da — im ganzen Hegau bis zum Bodensee.</>,
   kreis: 'westlichen Landkreis Konstanz',
   vorOrt: {
     inhalt: (

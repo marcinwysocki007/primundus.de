@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Mönchengladbach-Rheydt',
-  einleitung: <>Rheydt hat sein eigenes Zentrum, seinen eigenen Markt — und Menschen, die genau hier zuhause sind, ob in Odenkirchen, Giesenkirchen oder rund um den Rheydter Ring. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Rheydt hat sein eigenes Zentrum, seinen eigenen Markt — und Menschen, die genau hier zuhause sind, ob in Odenkirchen, Giesenkirchen oder rund um den Rheydter Ring. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Auerbach mit dem Fürstenlager, Schönberg oder die Innenstadt: An der Bergstraße blüht es früh — und man bleibt lang. Eine Betreuungskraft von Primundus macht das Altwerden im eigenen Zuhause möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Auerbach mit dem Fürstenlager, Schönberg oder die Innenstadt: An der Bergstraße blüht es früh — und man bleibt lang. Eine Betreuungskraft von Primundus macht das Altwerden im eigenen Zuhause möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Kreis Bergstraße',
   vorOrt: {
     inhalt: (

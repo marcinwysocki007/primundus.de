@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Bad Nauheim ist zum Altwerden gemacht — Kurpark, Sprudelhof, kurze Wege. Und trotzdem kommt der Moment, in dem es allein in der Wohnung am Park oder im Haus in Steinfurth nicht mehr geht. Dann zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit das Zuhause Zuhause bleibt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Bad Nauheim ist zum Altwerden gemacht — Kurpark, Sprudelhof, kurze Wege. Und trotzdem kommt der Moment, in dem es allein in der Wohnung am Park oder im Haus in Steinfurth nicht mehr geht. Dann zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit das Zuhause Zuhause bleibt.</>,
   kreis: 'Wetteraukreis',
   vorOrt: {
     inhalt: (

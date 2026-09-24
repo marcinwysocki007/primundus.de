@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Villa in Blasewitz, der Altbau in Striesen, das Häuschen am Elbhang in Loschwitz: Dresdner Zuhause sind zum Bleiben gebaut. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, mit Blick auf die Elbe statt auf Heimflure. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Villa in Blasewitz, der Altbau in Striesen, das Häuschen am Elbhang in Loschwitz: Dresdner Zuhause sind zum Bleiben gebaut. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, mit Blick auf die Elbe statt auf Heimflure.</>,
   vorOrt: {
     inhalt: (
       <>

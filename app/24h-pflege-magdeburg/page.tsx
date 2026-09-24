@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Die Gründerzeitwohnung in Stadtfeld, das Haus in Cracau, der Garten an der Elbe: Magdeburger bleiben, wo sie verwurzelt sind — auch wenn die Kinder in Hannover oder Berlin arbeiten. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Die Gründerzeitwohnung in Stadtfeld, das Haus in Cracau, der Garten an der Elbe: Magdeburger bleiben, wo sie verwurzelt sind — auch wenn die Kinder in Hannover oder Berlin arbeiten. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Bad Homburg',
-  einleitung: <>Viele Bad Homburger haben ihr Berufsleben in Frankfurt verbracht — gewohnt wird aber am Kurpark, in Gonzenheim oder Kirdorf, und dort soll auch das Alter stattfinden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Viele Bad Homburger haben ihr Berufsleben in Frankfurt verbracht — gewohnt wird aber am Kurpark, in Gonzenheim oder Kirdorf, und dort soll auch das Alter stattfinden. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Hochtaunuskreis',
   vorOrt: {
     inhalt: (

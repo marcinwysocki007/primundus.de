@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Fachwerk-Altstadt, Buch oder Untermberg an Enz und Metter: Bietigheimer bleiben ihrem Zuhause treu. Eine Betreuungskraft von Primundus zieht mit ein, wenn Mutter oder Vater Hilfe brauchen, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Fachwerk-Altstadt, Buch oder Untermberg an Enz und Metter: Bietigheimer bleiben ihrem Zuhause treu. Eine Betreuungskraft von Primundus zieht mit ein, wenn Mutter oder Vater Hilfe brauchen, und ist bei Bedarf auch nachts da.</>,
   kreis: 'nördlichen Landkreis Ludwigsburg',
   vorOrt: {
     inhalt: (

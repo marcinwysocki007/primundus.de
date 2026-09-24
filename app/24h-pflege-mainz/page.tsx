@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Ob in Gonsenheim, Bretzenheim oder der Oberstadt: Meenzer bleiben ihrer Stadt treu — dem Wochenmarkt, der Fastnacht, dem Blick über den Rhein. Auch mit Pflegebedarf muss das nicht enden: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ob in Gonsenheim, Bretzenheim oder der Oberstadt: Meenzer bleiben ihrer Stadt treu — dem Wochenmarkt, der Fastnacht, dem Blick über den Rhein. Auch mit Pflegebedarf muss das nicht enden: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>

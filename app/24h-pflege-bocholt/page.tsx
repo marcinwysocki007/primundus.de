@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>In Bocholt hat man sein Haus — in Biemenhorst, Mussum oder stadtnah an der Aa — und dort soll das Leben auch im Alter weitergehen, nicht in einem Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, im ganzen Westmünsterland bis zur niederländischen Grenze. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>In Bocholt hat man sein Haus — in Biemenhorst, Mussum oder stadtnah an der Aa — und dort soll das Leben auch im Alter weitergehen, nicht in einem Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, im ganzen Westmünsterland bis zur niederländischen Grenze.</>,
   kreis: 'Westmünsterland',
   vorOrt: {
     inhalt: (

@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Ludwigshafen',
-  einleitung: <>Ein Arbeitsleben bei der BASF, ein Zuhause in Friesenheim, Oggersheim oder der Gartenstadt: Ludwigshafener wissen, was sie sich aufgebaut haben — und wollen es im Alter nicht verlassen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Ein Arbeitsleben bei der BASF, ein Zuhause in Friesenheim, Oggersheim oder der Gartenstadt: Ludwigshafener wissen, was sie sich aufgebaut haben — und wollen es im Alter nicht verlassen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Rhein-Pfalz-Kreis',
   vorOrt: {
     inhalt: (

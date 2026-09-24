@@ -44,7 +44,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Mit den Bergen vor der Tür und dem Inn durch die Stadt ist Rosenheim ein Zuhause, das man nicht freiwillig verlässt — ob in Happing, Aising oder Westerndorf. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Mit den Bergen vor der Tür und dem Inn durch die Stadt ist Rosenheim ein Zuhause, das man nicht freiwillig verlässt — ob in Happing, Aising oder Westerndorf. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Rosenheim',
   vorOrt: {
     inhalt: (

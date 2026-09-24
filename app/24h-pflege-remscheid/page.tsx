@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   art: 'hand',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>In Lennep mit seiner Altstadt, in Lüttringhausen oder oben im Bergischen: Remscheider Häuser stehen oft seit Generationen in Familienhand. Eine Betreuungskraft von Primundus sorgt dafür, dass niemand sie im Alter verlassen muss — sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>In Lennep mit seiner Altstadt, in Lüttringhausen oder oben im Bergischen: Remscheider Häuser stehen oft seit Generationen in Familienhand. Eine Betreuungskraft von Primundus sorgt dafür, dass niemand sie im Alter verlassen muss — sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Bergischen Land',
   vorOrt: {
     inhalt: (

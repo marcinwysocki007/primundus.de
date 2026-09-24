@@ -35,13 +35,13 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtBeratung } from '@/components/orte/OrtBeratung'
-import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtWarumPrimundus, OrtWasBedeutet } from '@/components/orte/OrtGrundlagen'
+import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtVoraussetzungen, OrtWarumPrimundus, OrtWasBedeutetText } from '@/components/orte/OrtGrundlagen'
 import { OrtKosten } from '@/components/orte/OrtKosten'
 import { OrtWannSinnvoll } from '@/components/orte/OrtWannSinnvoll'
 import { OrtWohnen } from '@/components/orte/OrtWohnen'
 import { CtaStoerer } from '@/components/vertrauen/Stoerer'
 import { Stimmen } from '@/components/vertrauen/Vertrauen'
-import { Abschnitt, Fragen, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Text, mitPosition } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, BlickKasten, Fragen, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Text, mitPosition } from '@/components/vorlage/Ratgeber'
 import { HEIM_EIGENANTEIL, euroFormat } from '@/lib/heimkosten'
 import { ORTE_BERATUNG } from '@/lib/orte-beratung'
 import type { OrtDaten } from '@/lib/orte-daten'
@@ -95,8 +95,10 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
 
   // Verzeichnis = genau die Überschriften der Bausteine (Prüfer 23.09.: zwei Sprungmarken liefen ins Leere).
   const sections = [
-    { id: 'was-bedeutet', title: `Was 24-Stunden-Pflege in ${d.ort} bedeutet` },
+    // „Was 24-Stunden-Pflege in <Ort> bedeutet" steht seit 24.09. im Kopf (Martin: statt „Zuhause bleiben in Worms"),
+    // deshalb kein eigener Abschnitt mehr; die Voraussetzungen sind neu (Martin: „Welche Voraussetzungen gibt es?").
     { id: 'aufgaben', title: 'Was eine Betreuungskraft übernimmt — und was der Pflegedienst' },
+    { id: 'voraussetzungen', title: 'Ist 24-Stunden-Pflege für Sie geeignet?' },
     { id: 'ablauf', title: 'So läuft es ab: von der Anfrage bis zur Anreise' },
     { id: 'passende-kraft', title: 'Wie Sie die passende Betreuungskraft finden' },
     { id: 'kosten-und-kassenzuschuesse-in', title: `Was es in ${d.ort} kostet und was die Kasse zahlt` },
@@ -157,36 +159,41 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
           pfad={[{ label: 'Startseite', href: '/' }, { label: 'Regionen', href: '/regionen' }, { label: d.ort }]}
           augenbraue="6× Testsieger DIE WELT"
           titel={titel}
-          einleitungTitel={`Zuhause bleiben in ${d.ort}`}
-          einleitung={d.einleitung}
+          // Martin 24.09.: „Zuhause bleiben in Worms klingt blöd — und warum brauche ich die Info da oben? Wäre nicht
+          // ‚was 24-Stunden-Pflege in Worms bedeutet' sinnvoller?" Deshalb hier die Definition; die Ortsprosa
+          // (d.einleitung) und „<Ort> in Zahlen" stehen jetzt im Abschnitt „Was in <Ort> anders ist".
+          einleitungTitel={`Was 24-Stunden-Pflege in ${d.ort} bedeutet`}
+          einleitung={<OrtWasBedeutetText />}
           aktualisiert={d.aktualisiert}
           lesezeit={d.lesezeit ?? '6 Min.'}
           knopf={{ href: `https://kostenrechner.primundus.de/?start=1&src=${src}`, text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort={d.ort} />}
-          blick={zahlen.length ? zahlen : undefined}
-          blickTitel={`${d.ort} in Zahlen`}
           person={<AnsprechpartnerinGross ort={d.ort} nummer={MUENCHNER_UMLAND.has(d.slug)} siegel={siegel} />}
         />
 
         <RatgeberRumpf abschnitte={sections} src={src}>
-          {/* 1 — was das ist, und was nicht */}
-          <OrtWasBedeutet ort={d.ort} />
+          {/* 1 — wer was macht (die Definition steht im Kopf) */}
           <OrtAufgaben />
 
-          {/* 2 — der Ablauf: die drei Rechner-Schritte, darunter der erste Störer (Position „ablauf") */}
+          {/* 2 — passt das zu uns? Die vier Voraussetzungen wie im Rechner */}
+          <OrtVoraussetzungen />
+
+          {/* 3 — der Ablauf: die drei Rechner-Schritte, darunter der erste Störer (Position „ablauf") */}
           <OrtAblauf ort={d.ort} src={mitPosition(src, 'ablauf')} />
 
-          {/* 3 — wer kommt, wie man auswählt */}
-          <OrtPassendeKraft />
+          {/* 4 — wer kommt, wie man auswählt: mit dem Portal-Mockup und eigenem Knopf (Position „kraefte") */}
+          <OrtPassendeKraft src={mitPosition(src, 'kraefte')} />
 
           {/* 4 — Kosten, Kasse, Heim-Eigenanteil im Land; danach der zweite Störer (Position „stoerer") —
               wer bis hier gelesen hat, will wissen, was es bei ihm kostet */}
           <OrtKosten slug={d.slug} ort={d.ort} land={d.land} />
           <CtaStoerer src={mitPosition(src, 'stoerer')} ort={d.ort} />
 
-          {/* 5 — die Ortsprosa; der Kreis-Absatz davor, wo es einen gibt */}
+          {/* 6 — das Örtliche: erst der Absatz, der bis 24.09. im Kopf stand, dann die Ortsprosa, der Kreis-Satz
+              und „<Ort> in Zahlen" (bis 24.09. der Kasten im Kopf) */}
           <Abschnitt id="was-die-pflege-zu" titel={ortTitel}>
+            <Text>{d.einleitung}</Text>
             {d.vorOrt.inhalt}
             {d.kreis ? (
               <Text>
@@ -195,6 +202,7 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
                 kaum jemand anbietet — zu denselben Bedingungen wie in {d.ort}.
               </Text>
             ) : null}
+            {zahlen.length ? <BlickKasten titel={`${d.ort} in Zahlen`} punkte={zahlen} /> : null}
           </Abschnitt>
 
           {/* 6, 7 — Zensus je Ort; Wohnen nur auf handgeschriebenen Seiten (siehe sections) */}

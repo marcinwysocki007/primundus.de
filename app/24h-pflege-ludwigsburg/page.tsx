@@ -42,7 +42,7 @@ const ORT: OrtDaten = {
   art: 'erzeugt',
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
-  einleitung: <>Zwischen Schloss, Oßweil und Hoheneck wohnt man in Ludwigsburg gern — und bleibt. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: 1:1-Betreuung im eigenen Zuhause, bei Bedarf auch nachts, statt Warteliste im Heim. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Zwischen Schloss, Oßweil und Hoheneck wohnt man in Ludwigsburg gern — und bleibt. Wenn allein leben nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: 1:1-Betreuung im eigenen Zuhause, bei Bedarf auch nachts, statt Warteliste im Heim.</>,
   kreis: 'Landkreis Ludwigsburg',
   vorOrt: {
     inhalt: (

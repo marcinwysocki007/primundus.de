@@ -45,7 +45,7 @@ const ORT: OrtDaten = {
   aktualisiert: '23. September 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Neumarkt i.d.OPf.',
-  einleitung: <>Wer in Neumarkt alt geworden ist — in der Altstadt, in Woffenbach oder draußen Richtung Berg und Berngau — möchte den Blick auf den Jura und den eigenen Garten nicht gegen ein Pflegeheim tauschen. Muss auch niemand: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>,
+  einleitung: <>Wer in Neumarkt alt geworden ist — in der Altstadt, in Woffenbach oder draußen Richtung Berg und Berngau — möchte den Blick auf den Jura und den eigenen Garten nicht gegen ein Pflegeheim tauschen. Muss auch niemand: Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Neumarkt in der Oberpfalz',
   vorOrt: {
     inhalt: (
