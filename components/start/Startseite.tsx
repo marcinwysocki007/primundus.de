@@ -5,10 +5,10 @@
 // auch nachts" statt „rund um die Uhr", Auszeichnung ohne „Vermittler", Sterne aus echten Bewertungen.
 import Image from 'next/image'
 import { RechnerBlock } from '@/components/vertrauen/Vertrauen'
+import { ABLAUF_SCHRITTE } from '@/components/vertrauen/Ablauf'
 
 export const RECHNER_START = 'https://kostenrechner.primundus.de/?start=1&src=apex-startseite'
 const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
-const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
 const KNOPF =
   'inline-flex items-center justify-center gap-2 min-h-[58px] px-8 rounded-2xl bg-pm-coral hover:bg-pm-coral-deep text-white text-[18px] md:text-[19px] font-bold shadow-lift transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe'
@@ -119,15 +119,9 @@ export function BekanntAus() {
 // ── 3. Bestpreisgarantie und Testsieger: siehe VertrauensKarten in components/vertrauen/Vertrauen.tsx ─────────────
 
 // ── 4. So funktioniert's ────────────────────────────────────────────────────────────────────
-// Wortlaut wie im Rechner (HowItWorks.tsx). „Preis zuerst" (17.09.) ist seit 19.09. 10:32 aus: erst die Kontaktdaten,
-// dann Preis und Pflegekräfte — „Ihre Kontaktdaten brauchen wir dafür noch nicht" stimmte seitdem nicht mehr.
-// 23.09. (Martin „alles auf ja", OpenAI-Prüfung): „für die Kopie des Angebots" war vorgeschoben — die Kontaktdaten sind
-// die Voraussetzung für Preis und Pflegekräfte, die Kopie per Mail ist ein Zusatz. Gleicher Satz im Rechner (HowItWorks.tsx).
-const SCHRITTE = [
-  { titel: 'Sofort Angebot und Pflegekräfte einsehen', text: <>Sie machen wenige preisrelevante Angaben und hinterlassen Ihre Kontaktdaten. Sofort danach sehen Sie Ihr Angebot samt Zuschüssen und Steuervorteilen sowie die passenden Pflegekräfte. Eine Kopie kommt zusätzlich per E-Mail.</>, marke: 'Unter 2 Minuten' },
-  { titel: 'Profil vervollständigen — Bewerbungen erhalten', text: <>Passt das für Sie, ergänzen Sie die Angaben zu Ihrem Angehörigen. Dann bewerben sich Pflegekräfte bei Ihnen — mit Foto, Erfahrung und Verfügbarkeit.</>, marke: 'Bewerbungen am selben Werktag' },
-  { titel: 'Aussuchen — erst dann der Vertrag', text: <>Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag — den <a href={MUSTERVERTRAG} className="font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4">Mustervertrag</a> können Sie jederzeit vorher lesen. Danach reist Ihre Betreuungskraft an.</>, marke: 'Anreise in 3 Tagen möglich' },
-]
+// Wortlaut wie im Rechner (HowItWorks.tsx) — seit 24.09. aus components/vertrauen/Ablauf.tsx, dieselbe Quelle wie
+// die Ortsseiten (Martin 24.09.: „Ablauf ist der alte" — dort stand noch die Fassung vor „Kontakt zuerst").
+const SCHRITTE = ABLAUF_SCHRITTE
 
 export function SoFunktionierts() {
   return (

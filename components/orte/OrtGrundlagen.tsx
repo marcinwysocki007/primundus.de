@@ -20,7 +20,10 @@
 //
 // Nicht angetastet: die MehrDazu-Listen. Interne Linklisten werden nie gekürzt
 // (Martins Regel vom 20.09.).
-import { Abschnitt, Gegenueber, Kasten, MehrDazu, Punkte, Schritte, Text } from '@/components/vorlage/Ratgeber'
+import { AblaufListe } from '@/components/vertrauen/Ablauf'
+import { CtaStoerer } from '@/components/vertrauen/Stoerer'
+import { VertrauensKarten } from '@/components/vertrauen/Vertrauen'
+import { Abschnitt, Gegenueber, Kasten, MehrDazu, Punkte, Text } from '@/components/vorlage/Ratgeber'
 
 const QUELLE =
   'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
@@ -86,24 +89,10 @@ export function OrtWarumPrimundus({ ort }: { ort: string }) {
           { title: 'Eine feste Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team, täglich von 8 bis 20 Uhr.' },
         ]}
       />
-      <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
-        <img
-          src="/images/bestpreisgarantie-siegel.webp"
-          alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
-          width={900}
-          height={256}
-          loading="lazy"
-          className="h-[64px] md:h-[72px] w-auto mb-5"
-        />
-        <p className="text-[19px] md:text-[21px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">
-          Bestpreisgarantie: Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.
-        </p>
-        <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
-          Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
-          Vermittlungsgebühr anfällt.{' '}
-          <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
-        </p>
-      </div>
+      {/* Die zwei Kästen wie im Rechner und auf der Startseite (Martin 24.09.: „Mir fehlen die beiden Boxen:
+          Testsieger und Bestpreisgarantie wie auf dem Kostenrechner"). Der eigene Bestpreis-Kasten von hier ist
+          darin aufgegangen — derselbe Wortlaut, dazu die Auszeichnung mit Siegel. */}
+      <VertrauensKarten eingebettet />
     </Abschnitt>
   )
 }
@@ -158,41 +147,13 @@ export function OrtAufgaben() {
 // auf Rechner und primundus.de), Auswahl vor Vertrag, Anreise in 3 Tagen möglich, Wechsel alle
 // 6 bis 8 Wochen, Ersatz in der Regel innerhalb von drei Tagen (Mustervertrag), Marta täglich
 // 8 bis 20 Uhr. Der Ortsname steht in der Anreise-Zusage (Martins Regel vom 22.09.).
-export function OrtAblauf({ ort }: { ort: string }) {
+export function OrtAblauf({ ort, src }: { ort: string; src: string }) {
+  // Die drei Schritte des Rechners (components/vertrauen/Ablauf.tsx) — dieselbe Quelle wie die Startseite.
+  // Bis zum 24.09. standen hier fünf eigene Schritte aus der Zeit vor „Kontakt zuerst" („Danach sehen Sie
+  // Ihren Preis" vor den Kontaktdaten); Martin 24.09.: „Ablauf ist der alte." Der Ort steht im Störer darunter.
   return (
     <Abschnitt id="ablauf" titel="So läuft es ab: von der Anfrage bis zur Anreise">
-      <Schritte
-        schritte={[
-          {
-            title: 'Sie beschreiben die Situation',
-            desc: 'Pflegegrad, Hilfe in der Nacht, gewünschtes Deutsch — online im Rechner oder am Telefon mit Marta Kapcio und ihrem Team. Danach sehen Sie Ihren Preis.',
-            tag: 'Dauert 2 Minuten',
-            tagTon: 'gruen',
-          },
-          {
-            title: 'Sie sehen, wer in Frage kommt',
-            desc: 'Betreuungskräfte mit Foto, Erfahrung und Deutschniveau — Bewerbungen kommen am selben Werktag.',
-            tag: 'Bewerbungen am selben Werktag',
-            tagTon: 'gruen',
-          },
-          {
-            title: 'Sie wählen aus — dann erst der Vertrag',
-            desc: 'Sie entscheiden, wer passt. Vorher kein Vertrag, danach täglich kündbar.',
-            tag: 'Kein Vertrag vor Ihrer Auswahl',
-            tagTon: 'gruen',
-          },
-          {
-            title: 'Die Betreuungskraft reist an',
-            desc: `Die Anreise organisieren wir — wenn es eilt, etwa nach einer Krankenhausentlassung, ist sie in 3 Tagen möglich.`,
-            tag: `Anreise in ${ort} in 3 Tagen möglich`,
-            tagTon: 'gruen',
-          },
-          {
-            title: 'Die Betreuung beginnt — und läuft weiter',
-            desc: 'Marta Kapcio und ihr Team bleiben erreichbar, täglich von 8 bis 20 Uhr. Den Wechsel alle 6 bis 8 Wochen organisieren wir; fällt jemand aus, ist Ersatz in der Regel innerhalb von drei Tagen da.',
-          },
-        ]}
-      />
+      <AblaufListe />
       <MehrDazu
         label="Jeder Schritt im Einzelnen:"
         links={[
@@ -200,6 +161,7 @@ export function OrtAblauf({ ort }: { ort: string }) {
           { href: '/ablauf', text: 'Von der Anfrage bis zur Anreise' },
         ]}
       />
+      <CtaStoerer src={src} ort={ort} />
     </Abschnitt>
   )
 }

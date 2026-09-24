@@ -163,7 +163,7 @@ export default function Page() {
 
           <OrtAufgaben />
 
-          <OrtAblauf ort="Hamburg" />
+          <OrtAblauf ort="Hamburg" src="ort-hamburg-ablauf" />
 
           <Abschnitt id="voraussetzungen" titel="Was Sie zu Hause brauchen">
             <Text>

@@ -86,7 +86,7 @@ function SterneLink({ d, klein = false, dunkel = false }: { d: Stand; klein?: bo
 
 /** Der Aufruf, überall gleich: Knopf und Plakette gleich breit, darunter die vier Punkte und die Sterne.
  * punkte=false im Kopf der Kernseiten (Martin 18.09.: Plakette und Sterne unter den Knopf; die Punkte stehen dort im Kasten rechts). */
-export async function RechnerBlock({ src, sterne = true, punkte = true }: { src: string; sterne?: boolean; punkte?: boolean }) {
+export async function RechnerBlock({ src, sterne = true, punkte = true, dunkel = false }: { src: string; sterne?: boolean; punkte?: boolean; dunkel?: boolean }) {
   const d = sterne ? await ladeStimmen(0) : null
   return (
     <div>
@@ -120,7 +120,7 @@ export async function RechnerBlock({ src, sterne = true, punkte = true }: { src:
       )}
       {d && d.anzahl > 0 && (
         <div className={punkte ? 'mt-6' : 'mt-5'}>
-          <SterneLink d={d} />
+          <SterneLink d={d} dunkel={dunkel} />
         </div>
       )}
     </div>
@@ -298,9 +298,9 @@ export function MartaBand({ eingebettet = false }: { eingebettet?: boolean }) {
   )
 }
 
-const AUFRUF_TITEL = 'In 2 Minuten wissen\u00A0Sie, was es kostet und wer zu Ihnen passt.'
+export const AUFRUF_TITEL = 'In 2 Minuten wissen\u00A0Sie, was es kostet und wer zu Ihnen passt.'
 // Text wie im bisherigen Kontaktbereich (live, freigegeben), ohne den letzten Satz — „Kein Vertrag vor Ihrer Auswahl" steht als Punkt darunter
-const AUFRUF_TEXT = 'Sie beantworten ein paar Fragen zur Pflegesituation. Danach sehen Sie den Monatspreis und die Betreuungskräfte, die dafür in Frage kommen, mit Foto, Erfahrung und Deutschniveau.'
+export const AUFRUF_TEXT = 'Sie beantworten ein paar Fragen zur Pflegesituation. Danach sehen Sie den Monatspreis und die Betreuungskräfte, die dafür in Frage kommen, mit Foto, Erfahrung und Deutschniveau.'
 
 /** Links der Aufruf, rechts das Produktbild: passende Pflegekräfte, wie das Kundenportal sie zeigt. Darunter Marta. */
 export function SchlussAufruf({ src, titelId = 'schluss-titel' }: { src: string; titelId?: string; bild?: string }) {

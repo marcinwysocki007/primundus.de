@@ -39,8 +39,9 @@ import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtWarumPrimundus, OrtWasBede
 import { OrtKosten } from '@/components/orte/OrtKosten'
 import { OrtWannSinnvoll } from '@/components/orte/OrtWannSinnvoll'
 import { OrtWohnen } from '@/components/orte/OrtWohnen'
+import { CtaStoerer } from '@/components/vertrauen/Stoerer'
 import { Stimmen } from '@/components/vertrauen/Vertrauen'
-import { Abschnitt, Fragen, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Text } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Text, mitPosition } from '@/components/vorlage/Ratgeber'
 import { HEIM_EIGENANTEIL, euroFormat } from '@/lib/heimkosten'
 import { ORTE_BERATUNG } from '@/lib/orte-beratung'
 import type { OrtDaten } from '@/lib/orte-daten'
@@ -173,14 +174,16 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
           <OrtWasBedeutet ort={d.ort} />
           <OrtAufgaben />
 
-          {/* 2 — der Ablauf */}
-          <OrtAblauf ort={d.ort} />
+          {/* 2 — der Ablauf: die drei Rechner-Schritte, darunter der erste Störer (Position „ablauf") */}
+          <OrtAblauf ort={d.ort} src={mitPosition(src, 'ablauf')} />
 
           {/* 3 — wer kommt, wie man auswählt */}
           <OrtPassendeKraft />
 
-          {/* 4 — Kosten, Kasse, Heim-Eigenanteil im Land */}
+          {/* 4 — Kosten, Kasse, Heim-Eigenanteil im Land; danach der zweite Störer (Position „stoerer") —
+              wer bis hier gelesen hat, will wissen, was es bei ihm kostet */}
           <OrtKosten slug={d.slug} ort={d.ort} land={d.land} />
+          <CtaStoerer src={mitPosition(src, 'stoerer')} ort={d.ort} />
 
           {/* 5 — die Ortsprosa; der Kreis-Absatz davor, wo es einen gibt */}
           <Abschnitt id="was-die-pflege-zu" titel={ortTitel}>

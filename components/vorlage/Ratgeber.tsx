@@ -306,7 +306,7 @@ export function RatgeberKopf({
  * Ortsseiten (ort-…), damit die bestehenden Reihen website:apex-… in den Lead-Auswertungen
  * nicht zersplittern. Der Rechner speichert src seit CAapp#738 je Sitzung und je Lead.
  */
-export function mitPosition(src: string, position: 'kopf' | 'kosten' | 'leiste' | 'schluss'): string {
+export function mitPosition(src: string, position: 'kopf' | 'ablauf' | 'kosten' | 'stoerer' | 'leiste' | 'schluss'): string {
   return src.startsWith('ort-') ? `${src}-${position}` : src
 }
 

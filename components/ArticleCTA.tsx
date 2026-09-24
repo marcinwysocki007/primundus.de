@@ -214,7 +214,11 @@ export function AnsprechpartnerinGross({
         // Motiv beschnitten und auf 800 × 1200 gebracht — bei 360 px Kartenbreite auf Retina exakt
         // die nötige Auflösung, 143 KB. next.config liefert Bilder unverändert aus, deshalb bleibt
         // marta-kapcio.jpg (320 × 480, 45 KB) für die Rundbilder in Kopfzeile und Schlussband.
-        className="w-full h-[280px] sm:h-[300px] object-cover object-top"
+        // Höhe aus der Breite statt fest (24.09., Martin: „Martas Gesicht etwas rauszoomen, damit das nicht im
+        // Gesicht stört"): Mit fester Höhe wurde der Ausschnitt umso enger, je breiter die Karte — auf dem Handy
+        // blieb nur das Gesicht, und das Siegel lag am Kinn. Quadratisch zeigt das Foto bis zum Revers, das Siegel
+        // sitzt auf der Jacke; ab lg ergibt 6:5 bei 360 px Kartenbreite die bisherigen 300 px.
+        className="w-full aspect-square sm:aspect-[5/4] lg:aspect-[6/5] object-cover object-top"
       />
       {/* Siegel und Bestpreis-Plakette auf dem Foto, wie auf dem Heldenbild der Startseite
           (Martin 23.09.: „Unser Testsiegel ist nirgendwo zu sehen … bei Marta im Bild"). Die
