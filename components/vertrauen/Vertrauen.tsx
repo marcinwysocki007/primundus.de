@@ -454,6 +454,54 @@ export function AuszeichnungsJahre({ link }: { link: ReactNode }) {
   )
 }
 
+// Die sechs wichtigsten Vorteile als Kasten (24.09.2026, Martin zur Testsieger-Seite: „das ist doch der Vorteil … auf weißem
+// Hintergrund … ein bisschen schöner … unsere wichtigsten Punkte kompakter und nicht wie so eine ewig lange Liste").
+// Titel 2–4 sind die Punkte unter dem Rechner-Knopf (PUNKTE), damit der Wortlaut überall gleich bleibt; der Garantie-Satz
+// ist der Wortlaut aus GARANTIE im Rechner. Je Vorteil ein kurzer Satz, der ihn belegt.
+const VORTEILE: { titel: string; text: string; garantie?: boolean }[] = [
+  { titel: 'Preis und Pflegekräfte sofort sehen', text: 'In 2 Minuten, mit Foto, Erfahrung und Deutschkenntnissen.' },
+  { titel: PUNKTE[1], text: 'Sie entscheiden, wer es wird.' },
+  { titel: PUNKTE[0], text: 'Keine Anzahlung. Der Monatspreis ist der Preis.' },
+  { titel: PUNKTE[2], text: 'Keine Mindestlaufzeit, keine Vorauszahlung.' },
+  { titel: 'Bestpreisgarantie', text: 'Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot.', garantie: true },
+  { titel: 'Anreise in 3 Tagen möglich', text: 'Auch bei dringendem Bedarf.' },
+]
+
+// Ohne eigenen Knopf (Martin 24.09.: „ohne Knopf") — die Seite hat ihn oben und im Kontaktbereich am Ende.
+export function VorteileKasten() {
+  return (
+    <div className="rounded-[20px] bg-white p-6 shadow-lift md:p-8">
+      <p className="text-[13px] font-bold uppercase tracking-[.14em] text-pm-taupe">Ihre Vorteile</p>
+      <ul className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+        {VORTEILE.map((v) => (
+          <li key={v.titel} className="flex items-start gap-3">
+            <span className="mt-[3px]"><Haken /></span>
+            <div className="min-w-0">
+              <p className="text-[16.5px] font-bold leading-[1.3] tracking-[-0.01em] text-pm-ink">{v.titel}</p>
+              <p className="mt-1 text-[15px] leading-[1.45] text-pm-body/80">
+                {v.text}
+                {v.garantie ? (
+                  <>
+                    {' '}
+                    <a href={GARANTIE} className="whitespace-nowrap font-semibold text-pm-green-deep underline decoration-pm-green/40 underline-offset-4 hover:decoration-pm-green-deep">Mehr Infos</a>
+                  </>
+                ) : null}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      {/* „Rechtssicher" als eine Zeile statt siebter Kachel (OpenAI-Prüfung 24.09.: in akuter Lage ist die Sorge vor
+          Schwarzarbeit groß — nicht ganz streichen, aber die Liste nicht wieder verlängern). */}
+      <p className="mt-6 border-t border-pm-line pt-5 text-[15px] leading-[1.5] text-pm-body/80">
+        <strong className="font-bold text-pm-ink">Rechtssicher:</strong> Die Betreuungskräfte sind bei uns angestellt, jeder Einsatz läuft mit{' '}
+        <span className="whitespace-nowrap">A1-Bescheinigung.</span>{' '}
+        <a href="/rechtssicher" className="whitespace-nowrap font-semibold text-pm-green-deep underline decoration-pm-green/40 underline-offset-4 hover:decoration-pm-green-deep">Mehr Infos</a>
+      </p>
+    </div>
+  )
+}
+
 /** eingebettet: dieselben zwei Karten untereinander in der Textspalte einer Vorlagen-Seite (z. B. /ueber-uns) */
 export function VertrauensKarten({ eingebettet = false }: { eingebettet?: boolean }) {
   const pille = 'absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em]'
