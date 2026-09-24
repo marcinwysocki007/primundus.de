@@ -9,8 +9,10 @@ import { partnerBestaetigung } from '@/lib/partner-mail'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
+// Eigenes Postfach partner@primundus.de (IONOS), deshalb eigene Namen: die SMTP_*-Eintraege,
+// die auf dem Render-Dienst schon standen, bleiben unberuehrt (Martin 24.09.).
 const AN = process.env.ANFRAGE_AN || ''
-const VON = process.env.SMTP_FROM || ''
+const VON = process.env.PARTNER_SMTP_FROM || ''
 
 // Die Felder, die das Formular schickt. Reihenfolge = Reihenfolge in der Mail an uns.
 const FELDER = [
@@ -37,7 +39,7 @@ function istMail(wert: string): boolean {
 }
 
 export async function POST(req: NextRequest) {
-  if (!AN || !VON || !process.env.SMTP_HOST) {
+  if (!AN || !VON || !process.env.PARTNER_SMTP_HOST) {
     console.error('vermittler-anfrage: SMTP nicht konfiguriert')
     return NextResponse.json({ fehler: 'nicht konfiguriert' }, { status: 500 })
   }
@@ -76,10 +78,10 @@ export async function POST(req: NextRequest) {
   if (utm) zeilen.push(`Kampagne: ${utm}`)
 
   const transport = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || 587),
-    secure: Number(process.env.SMTP_PORT || 587) === 465,
-    auth: { user: process.env.SMTP_USER || '', pass: process.env.SMTP_PASS || '' },
+    host: process.env.PARTNER_SMTP_HOST,
+    port: Number(process.env.PARTNER_SMTP_PORT || 587),
+    secure: Number(process.env.PARTNER_SMTP_PORT || 587) === 465,
+    auth: { user: process.env.PARTNER_SMTP_USER || '', pass: process.env.PARTNER_SMTP_PASS || '' },
   })
 
   // Die Anfrage an uns. Geht sie nicht raus, sieht der Partner den Fehlerhinweis
