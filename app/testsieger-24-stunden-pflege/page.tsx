@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Text } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
-import { AuszeichnungsJahre, GARANTIE, SiegelZeile } from '@/components/vertrauen/Vertrauen'
+import { AuszeichnungsJahre, SiegelZeile, VorteileKasten } from '@/components/vertrauen/Vertrauen'
 
 // Kernseite in der Seitenvorlage. 20.09.2026 umgestellt (Martin: „wir sind jetzt 6 Jahre in Folge ausgezeichnet — man muss
 // da nicht explizit auf die Siegel eingehen, weil wir sie nicht gekauft haben, aber trotzdem Sieger sind — also sinnvoll
@@ -182,20 +182,10 @@ export default function TestsiegerPage() {
               verlassen können. In den Service-Studien 2021, 2022, 2023, 2024, 2025 und 2026 bewerteten Familien Primundus besser
               als alle anderen untersuchten Anbieter der Kategorie. Dazu kommen diese Leistungen:
             </Text>
-            <Punkte
-              punkte={[
-                // Reihenfolge der USPs (Memory primundus-usps); Titel wie die Hero-Punkte von Startseite und Rechner,
-                // „Kein Vertrag …" im Wortlaut von Ablauf-Schritt 3, Garantie-Satz wie Ortsseiten/Anzeigen (GARANTIE im Rechner).
-                { title: 'Preis und Pflegekräfte sofort sehen', desc: 'In 2 Minuten sehen Sie Ihren Monatspreis und passende Pflegekräfte mit Foto, Erfahrung und Deutschkenntnissen.' },
-                { title: 'Kein Vertrag vor Ihrer Auswahl', desc: 'Sie entscheiden, wer es wird. Erst nach Ihrer Auswahl kommt der Betreuungsvertrag.' },
-                { title: 'Keine Vermittlungsgebühr', desc: 'Keine Anzahlung, keine Aufnahmegebühr. Der Monatspreis ist der Preis.' },
-                { title: 'Täglich kündbar, taggenau abgerechnet', desc: 'Keine Mindestlaufzeit. Sie zahlen erst, wenn die Betreuungskraft da ist.' },
-                { title: 'Bestpreisgarantie', desc: <>Bei uns zahlen Sie nie mehr als für ein vergleichbares Angebot. <a href={GARANTIE} className={`font-semibold ${LINK}`}>Mehr Infos</a></> },
-                { title: 'Anreise in 3 Tagen möglich', desc: 'Auch bei dringendem Bedarf.' },
-                { title: 'Persönliche Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team begleiten Sie von der Anfrage bis zum Start, täglich von 8 bis 20 Uhr.' },
-                { title: 'Rechtssicher', desc: 'Die Betreuungskräfte sind bei uns angestellt und sozialversichert, jeder Einsatz läuft mit A1-Bescheinigung.' },
-              ]}
-            />
+            {/* 24.09.2026, Martin: „das ist doch der Vorteil … kompakter und nicht wie so eine ewig lange Liste" — die sechs
+                wichtigsten Vorteile im weißen Kasten (Wortlaut aus Vertrauen.tsx, wie unter dem Rechner-Knopf). Ansprechpartnerin
+                steht im Kontaktbereich am Seitenende; „Rechtssicher" hat /rechtssicher. */}
+            <VorteileKasten />
           </Abschnitt>
 
 
