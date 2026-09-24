@@ -57,7 +57,7 @@ export function StartKopf() {
             height={941}
             priority
             sizes="(min-width: 1024px) 560px, 100vw"
-            className="w-full h-auto max-lg:max-h-[440px] object-cover lg:rounded-[24px]"
+            className="w-full h-auto max-lg:aspect-[8/5] max-lg:max-h-[440px] max-lg:object-[50%_32%] object-cover lg:rounded-[24px]"
           />
           <div className="absolute left-4 bottom-4 md:left-5 md:bottom-5 flex items-end gap-3">
             <a href="/testsieger-24-stunden-pflege" aria-label="6× Testsieger DIE WELT — zur Auszeichnung">
@@ -72,10 +72,13 @@ export function StartKopf() {
         <div className="px-5 pt-7 pb-10 lg:p-0 lg:order-1">
           {/* Augenbraue gehört zur H1: „24-Stunden-Pflege" bleibt Teil der Hauptüberschrift */}
           <h1>
-            <span className="block text-[13px] md:text-[14px] font-bold uppercase tracking-[0.14em] text-pm-coral-ink">24-Stunden-Pflege vom Testsieger</span>
+            {/* Wie im Kostenrechner (Martin 24.09.: „warum … in der falschen Farbe und nicht wie im Kostenrechner?“):
+                helle Koralle, 14 px halbfett, am Computer 18 px — dieselben Werte wie app/page.tsx im Rechner */}
+            <span className="block text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.07em] lg:tracking-[0.06em] text-pm-coral">24-Stunden-Pflege vom Testsieger</span>
             <span className="sr-only">: </span>
-            <span className="mt-3 block text-[36px] md:text-[50px] lg:text-[56px] font-extrabold leading-[1.04] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">Ihre Eltern müssen nicht ins Heim.</span>
+            <span className="mt-2.5 lg:mt-3 block text-[36px] md:text-[50px] lg:text-[56px] font-extrabold leading-[1.04] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">Ihre Eltern müssen nicht ins Heim.</span>
           </h1>
+          {/* Die Unterzeile bleibt ÜBER dem Knopf (Martin 24.09.: „der Knopf soll doch nicht über den Untertext“) */}
           <p className="mt-5 text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem]">
             Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und <strong className="text-pm-ink">welche Pflegekräfte verfügbar sind</strong>&nbsp;– <span className="whitespace-nowrap">Anreise in 3 Tagen möglich.</span>
           </p>
