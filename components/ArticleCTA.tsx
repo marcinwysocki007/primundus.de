@@ -217,8 +217,10 @@ export function AnsprechpartnerinGross({
         // Höhe aus der Breite statt fest (24.09., Martin: „Martas Gesicht etwas rauszoomen, damit das nicht im
         // Gesicht stört"): Mit fester Höhe wurde der Ausschnitt umso enger, je breiter die Karte — auf dem Handy
         // blieb nur das Gesicht, und das Siegel lag am Kinn. Quadratisch zeigt das Foto bis zum Revers, das Siegel
-        // sitzt auf der Jacke; ab lg ergibt 6:5 bei 360 px Kartenbreite die bisherigen 300 px.
-        className="w-full aspect-square sm:aspect-[5/4] lg:aspect-[6/5] object-cover object-top"
+        // sitzt auf der Jacke. Am Rechner (360 px Spalte) zuerst 6:5 = die alten 300 px belassen — dort lag die
+        // Plakette am Hals (Martin 24.09., 09:10: „wieder herangezoomt und von den Siegeln überschrieben") —
+        // deshalb auch ab lg quadratisch; nur die breiten Tablet-Karten (640–1023 px) bleiben bei 5:4.
+        className="w-full aspect-square sm:aspect-[5/4] lg:aspect-square object-cover object-top"
       />
       {/* Siegel und Bestpreis-Plakette auf dem Foto, wie auf dem Heldenbild der Startseite
           (Martin 23.09.: „Unser Testsiegel ist nirgendwo zu sehen … bei Marta im Bild"). Die
