@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { X, Settings, Cookie } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Cookie } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -15,6 +15,11 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { cookieConsent, ConsentState } from "@/lib/cookie-consent";
 
+// Schmale Leiste wie im Kostenrechner (dort seit 15.08.2026: 307 → 75 px). Vorschlag 24.09.2026: Der alte Hinweis
+// bedeckte am Handy ca. 300 px — auf der Startseite genau die Überschrift und den Rechner-Knopf, bei jedem Erstbesuch
+// auf jeder Seite. „Nur notwendige" steht jetzt gleichwertig auf der ersten Ebene (vorher nur „Einstellungen" und
+// „Alle akzeptieren"). Kein Neuladen nach der Zustimmung: GA hört auf 'cookie-consent-changed' (app/layout.tsx).
+// Die Höhe der Leiste steht als CSS-Variable --cookie-leiste bereit, damit der WhatsApp-Knopf darüber sitzt.
 export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -23,19 +28,33 @@ export function CookieConsent() {
     analytics: false,
     marketing: false,
   });
+  const leiste = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const hasConsent = cookieConsent.hasConsent();
-    if (!hasConsent) {
-      const timer = setTimeout(() => setShowBanner(true), 1000);
-      return () => clearTimeout(timer);
-    }
+    // sofort statt nach 1 s: Die Leiste soll nicht erscheinen, wenn der Besucher gerade zu lesen begonnen hat
+    if (!cookieConsent.hasConsent()) setShowBanner(true);
   }, []);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const el = leiste.current;
+    if (!showBanner || !el) {
+      root.style.removeProperty("--cookie-leiste");
+      return;
+    }
+    const setzen = () => root.style.setProperty("--cookie-leiste", `${el.offsetHeight}px`);
+    setzen();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(setzen) : null;
+    ro?.observe(el);
+    return () => {
+      ro?.disconnect();
+      root.style.removeProperty("--cookie-leiste");
+    };
+  }, [showBanner]);
 
   const handleAcceptAll = () => {
     cookieConsent.acceptAll();
     setShowBanner(false);
-    window.location.reload();
   };
 
   const handleAcceptNecessary = () => {
@@ -55,62 +74,72 @@ export function CookieConsent() {
     cookieConsent.saveConsent(preferences);
     setShowSettings(false);
     setShowBanner(false);
-    window.location.reload();
   };
 
-  if (!showBanner) return null;
+  // Widerruf jederzeit (Art. 7 Abs. 3 DSGVO): Der Link „Cookie-Einstellungen" in der Fußzeile öffnet denselben Dialog,
+  // auch wenn die Leiste längst weg ist.
+  useEffect(() => {
+    const oeffnen = () => handleOpenSettings();
+    window.addEventListener("cookie-einstellungen-oeffnen", oeffnen);
+    return () => window.removeEventListener("cookie-einstellungen-oeffnen", oeffnen);
+  }, []);
+
+  if (!showBanner && !showSettings) return null;
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-2xl animate-in slide-in-from-bottom duration-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <div className="flex-shrink-0">
-              <div className="w-10 h-10 bg-[#708A95]/10 rounded-full flex items-center justify-center">
-                <Cookie className="w-5 h-5 text-[#708A95]" />
-              </div>
-            </div>
+      {showBanner && (
+      <div
+        ref={leiste}
+        id="cookie-consent"
+        role="region"
+        aria-label="Cookie-Hinweis"
+        className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-pm-line shadow-[0_-8px_24px_rgba(0,0,0,0.08)] pb-[env(safe-area-inset-bottom)]"
+      >
+        <div className="max-w-wide mx-auto px-4 sm:px-5 py-2.5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5">
+          {/* Wortlaut nach OpenAI-Prüfung 24.09.: „Alle akzeptieren" schließt Marketing ein, also steht es in der Zeile;
+              „Einstellungen" als Wort statt Zahnrad (Zielgruppe 60+); beide Knöpfe gleich gestaltet (Ablehnen so leicht
+              wie Zustimmen, kein Schubsen). */}
+          <p className="sm:flex-1 min-w-0 text-[14px] leading-snug text-pm-body">
+            <span className="font-semibold text-pm-ink">Cookies:</span> Funktion, Analyse &amp; Marketing.{" "}
+            <button
+              type="button"
+              onClick={handleOpenSettings}
+              className="font-medium text-pm-taupe-ink underline underline-offset-2 hover:text-pm-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-pm-taupe"
+            >
+              Einstellungen
+            </button>
+            <span aria-hidden="true"> · </span>
+            <a
+              href="/datenschutz"
+              className="font-medium text-pm-taupe-ink underline underline-offset-2 hover:text-pm-ink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Datenschutz
+            </a>
+          </p>
 
-            <div className="flex-1 min-w-0">
-              <h3 className="text-sm font-semibold text-gray-900 mb-1">
-                Cookies & Datenschutz
-              </h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten.
-                Notwendige Cookies sind für die Funktion der Website erforderlich. Analytics-Cookies helfen
-                uns, die Nutzung zu verstehen und unseren Service zu verbessern.{" "}
-                <a
-                  href="/datenschutz"
-                  className="text-[#708A95] hover:underline font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Mehr erfahren
-                </a>
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleOpenSettings}
-                className="text-xs border-gray-300 hover:bg-gray-50"
-              >
-                <Settings className="w-3.5 h-3.5 mr-1.5" />
-                Einstellungen
-              </Button>
-              <Button
-                size="sm"
-                onClick={handleAcceptAll}
-                className="text-xs bg-[#708A95] hover:bg-[#62808A] text-white"
-              >
-                Alle akzeptieren
-              </Button>
-            </div>
+          {/* Knopffarbe wie im Kostenrechner (Martin 24.09.), beide Knöpfe gleich */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-none gap-2">
+            <button
+              type="button"
+              onClick={handleAcceptNecessary}
+              className="h-11 sm:px-5 rounded-lg bg-pm-slate text-[14px] font-semibold text-white hover:bg-pm-slate-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
+            >
+              Nur notwendige
+            </button>
+            <button
+              type="button"
+              onClick={handleAcceptAll}
+              className="h-11 sm:px-5 rounded-lg bg-pm-slate text-[14px] font-semibold text-white hover:bg-pm-slate-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
+            >
+              Alle akzeptieren
+            </button>
           </div>
         </div>
       </div>
+      )}
 
       <Dialog open={showSettings} onOpenChange={setShowSettings}>
         <DialogContent className="sm:max-w-[500px]">
