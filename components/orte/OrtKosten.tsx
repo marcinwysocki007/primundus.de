@@ -60,6 +60,15 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
           Steuerermäßigung. Was Kasse und Finanzamt beisteuern, zeigt das Beispiel.
         </Text>
       </Kasten>
+      <KassenTabellen slug={slug} land={land} />
+    </Abschnitt>
+  )
+}
+
+/** Die zwei Kassen-Tabellen, der Bayern-Kasten und die Rechner-Links — für Artikel- und Landingpage-Form */
+export function KassenTabellen({ slug, land }: { slug: string; land: string }) {
+  return (
+    <>
       <Tabelle
         titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
         zeilen={[
@@ -105,6 +114,8 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
           { href: '/finanzierung', text: 'Finanzierung: was die Kasse zahlt' },
         ]}
       />
-    </Abschnitt>
+    </>
   )
 }
+
+export const KOSTEN_ZAHLEN = { budgetMonat: BUDGET_MONAT, steuerMonat: STEUER_MONAT, summePg3: SUMME_PG3, eur }

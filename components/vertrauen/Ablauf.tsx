@@ -54,6 +54,33 @@ export const ABLAUF_SCHRITTE: { titel: string; text: ReactNode; marke: string }[
  * nächsten Schritt, Titel, Text, grüne Marke. Für die Textspalte der Vorlagen-Seiten (Ortsseiten); die Startseite
  * setzt dieselben Schritte in drei Spalten (SoFunktionierts).
  */
+/**
+ * Die drei Schritte in drei Spalten (ab md), je Spalte Zahl, Titel, Text, Marke und darunter das Gerät mit dem
+ * Bildschirm zu diesem Schritt — die Form des Rechners und der Startseite (SoFunktionierts), am Handy untereinander.
+ * Für die Landingpage-Form der Ortsseiten (24.09.).
+ */
+export function AblaufSpalten() {
+  return (
+    <ol className="grid gap-10 md:grid-cols-3 md:gap-6 lg:gap-10">
+      {ABLAUF_SCHRITTE.map((s, i) => (
+        <li key={s.titel} className="flex flex-col">
+          <div className="flex gap-5 md:block">
+            <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-pm-cocoa text-[20px] font-bold text-white md:h-14 md:w-14">{i + 1}</span>
+            <div className="md:mt-5">
+              <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">{s.titel}</p>
+              <p className="mt-2 text-[16.5px] leading-[1.6] text-pm-body">{s.text}</p>
+              <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-pm-mint px-3 py-1 text-[13.5px] font-semibold text-pm-green-deep">✓ {s.marke}</span>
+            </div>
+          </div>
+          <div className="mt-6 md:mt-auto md:pt-6">
+            <AblaufBild schritt={i as 0 | 1 | 2} />
+          </div>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
 export function AblaufListe({ mitBildern = false }: { mitBildern?: boolean }) {
   return (
     <ol className="mt-2">

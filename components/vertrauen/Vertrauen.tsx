@@ -503,12 +503,13 @@ export function VorteileKasten() {
 }
 
 /** eingebettet: dieselben zwei Karten untereinander in der Textspalte einer Vorlagen-Seite (z. B. /ueber-uns) */
-export function VertrauensKarten({ eingebettet = false }: { eingebettet?: boolean }) {
+export function VertrauensKarten({ eingebettet = false, raster = false }: { eingebettet?: boolean; raster?: boolean }) {
   const pille = 'absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em]'
-  const Huelle = eingebettet ? 'div' : 'section'
+  // raster: nur die zwei Karten nebeneinander, ohne eigene Sektion — für Sektionen der Landingpage-Form (24.09.)
+  const Huelle = eingebettet || raster ? 'div' : 'section'
   return (
-    <Huelle className={eingebettet ? 'pt-3' : 'bg-pm-paper px-5 pb-16 lg:pb-20'}>
-      <div className={eingebettet ? 'grid gap-8' : 'mx-auto grid max-w-[1200px] gap-6 md:grid-cols-2'}>
+    <Huelle className={eingebettet ? 'pt-3' : raster ? 'pt-3' : 'bg-pm-paper px-5 pb-16 lg:pb-20'}>
+      <div className={eingebettet ? 'grid gap-8' : raster ? 'grid gap-6 md:grid-cols-2' : 'mx-auto grid max-w-[1200px] gap-6 md:grid-cols-2'}>
         <VertrauensKarte
           rahmen="border-pm-green/60"
           reihe="flex-col items-start gap-4 lg:flex-row lg:items-center lg:gap-6"

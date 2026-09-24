@@ -23,7 +23,7 @@ const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
 // Überschriften sollen nicht bei „24h-" umbrechen („Wann braucht es 24h- / Pflege").
 // Kurze Bindestrich-Wörter bleiben zusammen; lange wie „24-Stunden-Pflege" dürfen
 // weiter trennen, sonst ragen sie auf 320-px-Handys in 34 px aus dem Rand.
-function zusammenhalten(titel: ReactNode): ReactNode {
+export function zusammenhalten(titel: ReactNode): ReactNode {
   if (typeof titel !== 'string') return titel
   return titel.split(/(\S+-\S+)/).map((teil, i) =>
     i % 2 === 1 && teil.length <= 14 ? (
@@ -306,7 +306,7 @@ export function RatgeberKopf({
  * Ortsseiten (ort-…), damit die bestehenden Reihen website:apex-… in den Lead-Auswertungen
  * nicht zersplittern. Der Rechner speichert src seit CAapp#738 je Sitzung und je Lead.
  */
-export function mitPosition(src: string, position: 'kopf' | 'ablauf' | 'kraefte' | 'kosten' | 'stoerer' | 'leiste' | 'schluss'): string {
+export function mitPosition(src: string, position: 'kopf' | 'ablauf' | 'kraefte' | 'kosten' | 'passt' | 'stoerer' | 'leiste' | 'schluss'): string {
   return src.startsWith('ort-') ? `${src}-${position}` : src
 }
 

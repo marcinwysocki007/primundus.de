@@ -51,7 +51,7 @@ export function OrtWasBedeutetText() {
 
 /** Die vier Verweise, die bis zum 24.09. unter der Definition standen — Linklisten werden nie gekürzt (Regel 20.09.);
  * jetzt am Ende von „Was eine Betreuungskraft übernimmt". */
-const GRUNDLAGEN_LINKS = [
+export const GRUNDLAGEN_LINKS = [
   { href: '/24-stunden-pflege', text: 'Was 24-Stunden-Pflege ist und für wen sie passt' },
   { href: '/leistungen', text: 'Was eine Betreuungskraft übernimmt' },
   { href: '/pflegekraft-aus-polen', text: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf' },
@@ -88,6 +88,16 @@ export function OrtVoraussetzungen() {
   )
 }
 
+/** Die sechs Zusagen (Martin 22./23.09.) — eine Liste für Artikel- und Landingpage-Form */
+export const ZUSAGEN = [
+  { title: 'Pflegekräfte sofort sehen', desc: 'Mit Foto, Erfahrung und Deutschniveau — vor Ihrer Entscheidung.' },
+  { title: 'Angebot sofort sehen', desc: 'Ihren Preis zeigt der Rechner in 2 Minuten.' },
+  { title: 'Täglich kündbar, taggenau abgerechnet', desc: 'Kosten erst ab Anreise, kein Vertrag vor Ihrer Auswahl.' },
+  { title: 'Keine Vermittlungsgebühr', desc: 'Angestellt bei uns — Sie werden nicht Arbeitgeber.' },
+  { title: '6× Testsieger bei DIE WELT', desc: 'Sechs Jahre in Folge, Kundenbefragung DIE WELT und ServiceValue — Preis und Qualität.' },
+  { title: 'Eine feste Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team, täglich von 8 bis 20 Uhr.' },
+]
+
 export function OrtWarumPrimundus({ ort, src, mitKraeften = false }: { ort: string; src?: string; mitKraeften?: boolean }) {
   // Die sechs Zusagen, die uns ausmachen (Martin 22./23.09.): Pflegekräfte sofort sehen,
   // Angebot sofort sehen, täglich kündbar, keine Vermittlungsgebühr, Bestpreisgarantie,
@@ -102,16 +112,7 @@ export function OrtWarumPrimundus({ ort, src, mitKraeften = false }: { ort: stri
   return (
     <Abschnitt id="warum-primundus" titel={`Warum Familien in ${ort} Primundus wählen`}>
       {mitKraeften && src ? <KraefteBlock src={src} /> : null}
-      <Punkte
-        punkte={[
-          { title: 'Pflegekräfte sofort sehen', desc: 'Mit Foto, Erfahrung und Deutschniveau — vor Ihrer Entscheidung.' },
-          { title: 'Angebot sofort sehen', desc: 'Ihren Preis zeigt der Rechner in 2 Minuten.' },
-          { title: 'Täglich kündbar, taggenau abgerechnet', desc: 'Kosten erst ab Anreise, kein Vertrag vor Ihrer Auswahl.' },
-          { title: 'Keine Vermittlungsgebühr', desc: 'Angestellt bei uns — Sie werden nicht Arbeitgeber.' },
-          { title: '6× Testsieger bei DIE WELT', desc: 'Sechs Jahre in Folge, Kundenbefragung DIE WELT und ServiceValue — Preis und Qualität.' },
-          { title: 'Eine feste Ansprechpartnerin', desc: 'Marta Kapcio und ihr Team, täglich von 8 bis 20 Uhr.' },
-        ]}
-      />
+      <Punkte punkte={ZUSAGEN} />
       {/* Die zwei Kästen wie im Rechner und auf der Startseite (Martin 24.09.: „Mir fehlen die beiden Boxen:
           Testsieger und Bestpreisgarantie wie auf dem Kostenrechner"). Der eigene Bestpreis-Kasten von hier ist
           darin aufgegangen — derselbe Wortlaut, dazu die Auszeichnung mit Siegel. */}
@@ -120,6 +121,14 @@ export function OrtWarumPrimundus({ ort, src, mitKraeften = false }: { ort: stri
   )
 }
 
+/** Was die Betreuungskraft tut — die vier Punkte (Martin 24.09.: „was die Pflegekräfte übernehmen, finde ich gut") */
+export const AUFGABEN_PUNKTE = [
+  { title: 'Körperpflege und Alltag', desc: 'Aufstehen, Waschen, Anziehen, Essen — Hilfe bei dem, was jeden Tag anfällt.' },
+  { title: 'Haushalt', desc: 'Kochen, Einkäufe, Wäsche, Ordnung in den Räumen.' },
+  { title: 'Gesellschaft und Begleitung', desc: 'Gespräche, Spaziergänge, Begleitung zum Arzt.' },
+  { title: 'Über Wochen dieselbe Person', desc: 'Sie lebt im Haushalt — bei Bedarf ist sie auch nachts da.' },
+]
+
 /** ohneLinks: München/Hamburg zeigen die vier Verweise schon unter ihrer Definition (OrtWasBedeutet) */
 export function OrtAufgaben({ ohneLinks = false }: { ohneLinks?: boolean } = {}) {
   // 24.09. (Martin): „Was die Pflegekräfte übernehmen, finde ich gut" — die Spalte „Der ambulante Pflegedienst"
@@ -127,14 +136,7 @@ export function OrtAufgaben({ ohneLinks = false }: { ohneLinks?: boolean } = {})
   // Verbände beim Pflegedienst bleiben. Hier nur noch, was die Betreuungskraft tut.
   return (
     <Abschnitt id="aufgaben" titel="Was eine Betreuungskraft bei Ihnen übernimmt">
-      <Punkte
-        punkte={[
-          { title: 'Körperpflege und Alltag', desc: 'Aufstehen, Waschen, Anziehen, Essen — Hilfe bei dem, was jeden Tag anfällt.' },
-          { title: 'Haushalt', desc: 'Kochen, Einkäufe, Wäsche, Ordnung in den Räumen.' },
-          { title: 'Gesellschaft und Begleitung', desc: 'Gespräche, Spaziergänge, Begleitung zum Arzt.' },
-          { title: 'Über Wochen dieselbe Person', desc: 'Sie lebt im Haushalt — bei Bedarf ist sie auch nachts da.' },
-        ]}
-      />
+      <Punkte punkte={AUFGABEN_PUNKTE} />
       <Text>
         Wie ein Tag mit Betreuungskraft aussieht, steht auf der Seite{' '}
         <a href="/leistungen" className={LINK}>Leistungen</a>.
@@ -170,7 +172,7 @@ export function OrtAblauf({ ort, src }: { ort: string; src: string }) {
 
 /** Portal-Mockup, Zusage und Knopf — der Beleg für „Pflegekräfte sofort sehen" (Martin 24.09.: „warum ist da
  * nicht ein Screenshot vom Portal wie auf der Partnerseite … da ist der Button, so sieht das aus"). */
-function KraefteBlock({ src }: { src: string }) {
+export function KraefteBlock({ src, ohneGeraet = false }: { src: string; ohneGeraet?: boolean }) {
   return (
     <>
       <Text>
@@ -178,11 +180,14 @@ function KraefteBlock({ src }: { src: string }) {
         den es geht. Auf dem Papier lässt sich das schlecht beurteilen. Deshalb sehen Sie bei uns die Betreuungskräfte,
         bevor Sie sich entscheiden — so, wie das Kundenportal sie zeigt:
       </Text>
-      {/* Am Handy zuerst das Bild, dann Zusage und Knopf; ab md Text links, Gerät rechts wie auf der Partnerseite */}
-      <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-8">
-        <div className="md:order-last">
-          <ProduktBuehne garantie={GARANTIE} kompakt />
-        </div>
+      {/* Am Handy zuerst das Bild, dann Zusage und Knopf; ab md Text links, Gerät rechts wie auf der Partnerseite.
+          ohneGeraet (Landingpage-Form): das Gerät steht dort schon dreimal im Ablauf und einmal am Schluss. */}
+      <div className={`grid gap-6 ${ohneGeraet ? '' : 'md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-8'}`}>
+        {ohneGeraet ? null : (
+          <div className="md:order-last">
+            <ProduktBuehne garantie={GARANTIE} kompakt />
+          </div>
+        )}
         <div className="min-w-0">
           <Kasten ton="gruen" titel="Bei Primundus sehen Sie die Betreuungskräfte vor Ihrer Entscheidung">
             <Text>
