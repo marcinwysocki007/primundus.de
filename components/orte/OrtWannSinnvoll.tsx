@@ -16,16 +16,18 @@
 // Kein Bundesvergleich. Wer sich die Kennzahl passend zum Ort aussucht — mal der Vergleich,
 // wenn er günstig ausfällt, mal keiner — schreibt Werbung. Dieselbe Kennzahl überall, in
 // derselben Form, ist Information.
+import { VoraussetzungenListe } from '@/components/vertrauen/Voraussetzungen'
 import { Abschnitt, Punkte, Text } from '@/components/vorlage/Ratgeber'
 import { ORTE_LAGE } from '@/lib/orte-lage'
 
 const de = (n: number) => n.toLocaleString('de-DE')
+const H3 = 'text-[22px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink [text-wrap:balance] md:text-[24px]'
 
-export function OrtWannSinnvoll({ slug, ort }: { slug: string; ort: string }) {
+/** Der Haushaltssatz und die vier Situationen — ohne Abschnitt, für „Passt 24-Stunden-Pflege zu Ihrer Situation?" */
+export function WannSinnvollInhalt({ slug, ort }: { slug: string; ort: string }) {
   const lage = ORTE_LAGE[slug]
-
   return (
-    <Abschnitt id="wann-sinnvoll" titel="Wann Betreuung zu Hause sinnvoll ist">
+    <>
       {lage ? (
         <Text>
           In {ort} gibt es {de(lage.nurSeniorenHaushalte)} Haushalte, in denen niemand unter 65 lebt (Zensus 2022).
@@ -52,6 +54,34 @@ export function OrtWannSinnvoll({ slug, ort }: { slug: string; ort: string }) {
           },
         ]}
       />
+    </>
+  )
+}
+
+/** Eigener Abschnitt — nur noch auf den Musterseiten München und Hamburg. */
+export function OrtWannSinnvoll({ slug, ort }: { slug: string; ort: string }) {
+  return (
+    <Abschnitt id="wann-sinnvoll" titel="Wann Betreuung zu Hause sinnvoll ist">
+      <WannSinnvollInhalt slug={slug} ort={ort} />
+    </Abschnitt>
+  )
+}
+
+/**
+ * „Passt 24-Stunden-Pflege zu Ihrer Situation?" (24.09., Martin: „Wann Betreuung sinnvoll ist und die
+ * Voraussetzungen würde ich kombinieren") — erst die Situationen, dann, was das Zuhause braucht.
+ */
+export function OrtPasstZuIhnen({ slug, ort }: { slug: string; ort: string }) {
+  return (
+    <Abschnitt id="passt-zu-ihnen" titel="Passt 24-Stunden-Pflege zu Ihrer Situation?">
+      <Text>
+        Vier Situationen, in denen Familien sich für Betreuung zu Hause entscheiden — und vier Dinge, die das Zuhause
+        dafür braucht.
+      </Text>
+      <h3 className={H3}>Wann Betreuung zu Hause sinnvoll ist</h3>
+      <WannSinnvollInhalt slug={slug} ort={ort} />
+      <h3 className={`${H3} mt-2`}>Was das Zuhause dafür braucht</h3>
+      <VoraussetzungenListe />
     </Abschnitt>
   )
 }

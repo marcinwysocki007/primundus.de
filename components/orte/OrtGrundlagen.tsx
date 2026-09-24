@@ -25,10 +25,8 @@ import { CtaStoerer } from '@/components/vertrauen/Stoerer'
 import { ProduktBuehne } from '@/components/vertrauen/ProduktBuehne'
 import { GARANTIE, VertrauensKarten, rechnerLink } from '@/components/vertrauen/Vertrauen'
 import { VoraussetzungenListe } from '@/components/vertrauen/Voraussetzungen'
-import { Abschnitt, Gegenueber, Kasten, MehrDazu, Punkte, Text } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Kasten, MehrDazu, Punkte, Text } from '@/components/vorlage/Ratgeber'
 
-const QUELLE =
-  'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 const LINK = 'text-pm-taupe font-semibold hover:underline'
 
 // Kurz mit Absicht (23.09.2026): Der feste Text steht auf 187 Seiten; jeder Satz hier zaehlt in
@@ -90,14 +88,20 @@ export function OrtVoraussetzungen() {
   )
 }
 
-export function OrtWarumPrimundus({ ort }: { ort: string }) {
+export function OrtWarumPrimundus({ ort, src, mitKraeften = false }: { ort: string; src?: string; mitKraeften?: boolean }) {
   // Die sechs Zusagen, die uns ausmachen (Martin 22./23.09.): Pflegekräfte sofort sehen,
   // Angebot sofort sehen, täglich kündbar, keine Vermittlungsgebühr, Bestpreisgarantie,
   // 6× Testsieger — in genau dieser Zahl, dazu Marta mit Namen. Bis zum 23.09. stand hier
   // eine andere Liste („keine Vertragsbindung, tagesgenaue Abrechnung, Kosten erst bei Start,
   // persönlicher Ansprechpartner") — Martin: „Unsere Vorteile da unten stimmen nicht."
+  //
+  // mitKraeften (Vorlage seit 24.09.): zuerst der Beleg für die erste Zusage — das Portal-Mockup mit
+  // dem Kasten „Sie sehen die Betreuungskräfte vor Ihrer Entscheidung" und dem Knopf (src …-kraefte).
+  // Bis 24.09. war das ein eigener Abschnitt „Wie Sie die passende Betreuungskraft finden" —
+  // Martin: kannibalisiert sich mit dem Ablauf. München/Hamburg zeigen den Block weiter als Abschnitt.
   return (
     <Abschnitt id="warum-primundus" titel={`Warum Familien in ${ort} Primundus wählen`}>
+      {mitKraeften && src ? <KraefteBlock src={src} /> : null}
       <Punkte
         punkte={[
           { title: 'Pflegekräfte sofort sehen', desc: 'Mit Foto, Erfahrung und Deutschniveau — vor Ihrer Entscheidung.' },
@@ -118,44 +122,21 @@ export function OrtWarumPrimundus({ ort }: { ort: string }) {
 
 /** ohneLinks: München/Hamburg zeigen die vier Verweise schon unter ihrer Definition (OrtWasBedeutet) */
 export function OrtAufgaben({ ohneLinks = false }: { ohneLinks?: boolean } = {}) {
+  // 24.09. (Martin): „Was die Pflegekräfte übernehmen, finde ich gut" — die Spalte „Der ambulante Pflegedienst"
+  // und der § 38-Satz verstand er nicht („kann sofort raus"). Die Definition im Kopf sagt schon, dass Spritzen und
+  // Verbände beim Pflegedienst bleiben. Hier nur noch, was die Betreuungskraft tut.
   return (
-    <Abschnitt id="aufgaben" titel="Was eine Betreuungskraft übernimmt — und was der Pflegedienst">
-      <Gegenueber
-        seiten={[
-          {
-            titel: 'Die Betreuungskraft, die im Haushalt lebt',
-            ton: 'gruen',
-            punkte: [
-              'Körperpflege, Aufstehen, Anziehen, Essen',
-              'Kochen, Einkäufe, Wäsche, Ordnung in den Räumen',
-              'Gesellschaft, Spaziergänge, Begleitung zum Arzt',
-              'Über Wochen dieselbe Person — bei Bedarf auch nachts da',
-            ],
-          },
-          {
-            titel: 'Der ambulante Pflegedienst',
-            ton: 'taupe',
-            punkte: [
-              'Spritzen, Verbände, Katheter — vom Arzt verordnet',
-              'Kommt zu festen Zeiten, ein- bis dreimal am Tag',
-              'Behandlungspflege zahlt die Krankenkasse',
-              'Arbeitet mit der Betreuungskraft Hand in Hand',
-            ],
-          },
+    <Abschnitt id="aufgaben" titel="Was eine Betreuungskraft bei Ihnen übernimmt">
+      <Punkte
+        punkte={[
+          { title: 'Körperpflege und Alltag', desc: 'Aufstehen, Waschen, Anziehen, Essen — Hilfe bei dem, was jeden Tag anfällt.' },
+          { title: 'Haushalt', desc: 'Kochen, Einkäufe, Wäsche, Ordnung in den Räumen.' },
+          { title: 'Gesellschaft und Begleitung', desc: 'Gespräche, Spaziergänge, Begleitung zum Arzt.' },
+          { title: 'Über Wochen dieselbe Person', desc: 'Sie lebt im Haushalt — bei Bedarf ist sie auch nachts da.' },
         ]}
       />
       <Text>
-        Beides lässt sich verbinden: Kommt zusätzlich ein Pflegedienst, teilt die Pflegekasse Pflegegeld und
-        Sachleistung anteilig auf — die Kombinationsleistung nach{' '}
-        <a
-          href="https://www.gesetze-im-internet.de/sgb_11/__38.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={QUELLE}
-        >
-          § 38 SGB XI
-        </a>
-        . Wie ein Tag mit Betreuungskraft aussieht, steht auf der Seite{' '}
+        Wie ein Tag mit Betreuungskraft aussieht, steht auf der Seite{' '}
         <a href="/leistungen" className={LINK}>Leistungen</a>.
       </Text>
       {!ohneLinks && <MehrDazu label="Ausführlich auf den Themenseiten:" links={GRUNDLAGEN_LINKS} />}
@@ -187,13 +168,11 @@ export function OrtAblauf({ ort, src }: { ort: string; src: string }) {
   )
 }
 
-export function OrtPassendeKraft({ src }: { src: string }) {
-  // Martin 24.09.: „Wie Sie die passende Pflegekraft finden — ganz nett, dass da ein Text steht, aber warum ist da
-  // nicht ein Screenshot vom Portal wie auf der Partnerseite: reingehen, Pflegekräfte sehen, was es kostet, da ist
-  // der Button, so sieht das aus." Deshalb die Bühne aus dem Schlussaufruf (Beispielprofile, wie das Kundenportal
-  // sie zeigt) hier im Abschnitt, daneben die Zusage und der Knopf mit eigener Position (src …-kraefte).
+/** Portal-Mockup, Zusage und Knopf — der Beleg für „Pflegekräfte sofort sehen" (Martin 24.09.: „warum ist da
+ * nicht ein Screenshot vom Portal wie auf der Partnerseite … da ist der Button, so sieht das aus"). */
+function KraefteBlock({ src }: { src: string }) {
   return (
-    <Abschnitt id="passende-kraft" titel="Wie Sie die passende Betreuungskraft finden">
+    <>
       <Text>
         Deutsch, Erfahrung mit Demenz oder Rollstuhl, Nachtbereitschaft — und ob der Mensch zu dem Menschen passt, um
         den es geht. Auf dem Papier lässt sich das schlecht beurteilen. Deshalb sehen Sie bei uns die Betreuungskräfte,
@@ -221,6 +200,15 @@ export function OrtPassendeKraft({ src }: { src: string }) {
           </Kasten>
         </div>
       </div>
+    </>
+  )
+}
+
+/** Eigener Abschnitt — nur noch auf den Musterseiten München und Hamburg; die Vorlage zeigt den Block in „Warum". */
+export function OrtPassendeKraft({ src }: { src: string }) {
+  return (
+    <Abschnitt id="passende-kraft" titel="Wie Sie die passende Betreuungskraft finden">
+      <KraefteBlock src={src} />
     </Abschnitt>
   )
 }

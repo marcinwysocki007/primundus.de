@@ -39,7 +39,7 @@ function anteil(p: number, was: string): { text: string; verb: string } {
   return { text: `${z(p)} Prozent der ${was}en`, verb: 'sind' }
 }
 
-export function OrtWohnen({ slug, ort }: { slug: string; ort: string }) {
+export function OrtWohnen({ slug, ort, als = 'h2' }: { slug: string; ort: string; als?: 'h2' | 'h3' }) {
   const lage = ORTE_LAGE[slug]
   if (!lage) return null
   const { wohnen: w, landWohnen: lw, land } = lage
@@ -132,7 +132,7 @@ export function OrtWohnen({ slug, ort }: { slug: string; ort: string }) {
   if (!erste.length && !zweite.length) return null
 
   return (
-    <Abschnitt id="wohnen" titel={`Wohnen in ${ort}: was das für die Betreuung heißt`}>
+    <Abschnitt id="wohnen" als={als} titel={als === 'h3' ? `Wohnen in ${ort}` : `Wohnen in ${ort}: was das für die Betreuung heißt`}>
       {erste.length ? <Text>{erste.join(' ')}</Text> : null}
       {zweite.length ? <Text>{zweite.join(' ')}</Text> : null}
       <Text>

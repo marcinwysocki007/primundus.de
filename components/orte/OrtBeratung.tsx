@@ -49,9 +49,12 @@ export function OrtBeratung({
   ort,
   id = 'beratung',
   eigene,
+  als = 'h2',
 }: {
   slug: string
   ort: string
+  /** h3 = Unterabschnitt von „Pflege vor Ort" (Vorlage seit 24.09.; Martin: „Wo beraten lassen finde ich nicht gut" als eigener Abschnitt) */
+  als?: 'h2' | 'h3'
   /** Abweichende Sprungmarke für Seiten, die schon eine haben. */
   id?: string
   /**
@@ -74,7 +77,7 @@ export function OrtBeratung({
     b.land === 'Schleswig-Holstein' ? `${SH_KREIS_URL}${shSlug(b.kreis)}` : null
 
   return (
-    <Abschnitt id={id} titel={`Wo Sie sich in ${ort} unabhängig beraten lassen`}>
+    <Abschnitt id={id} als={als} titel={als === 'h3' ? `Unabhängige Beratung in ${ort}` : `Wo Sie sich in ${ort} unabhängig beraten lassen`}>
       <Text>
         Bevor Sie sich für irgendetwas entscheiden, auch gegen uns: Die Pflegeberatung nach § 7a SGB XI ist kostenlos
         und kommt auf Wunsch zu Ihnen nach Hause. Das Gesetz verlangt ausdrücklich, dass sie neutral und unabhängig ist.

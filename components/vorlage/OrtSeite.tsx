@@ -1,32 +1,29 @@
-// Die Vorlage der Standard-Ortsseiten (23.09.2026).
+// Die Vorlage der Standard-Ortsseiten (23.09.2026, Struktur vom 24.09.2026).
 //
-// Martin, nach dem Blick auf Worms: „Nicht der Inhalt, den ich erwarte: Wie läuft das ab? Wie
-// funktioniert das? Was ist 24-Stunden-Pflege? Kein roter Faden." Die Reihenfolge hier ist die
-// Reihenfolge der Fragen einer Tochter, deren Mutter nächste Woche aus dem Krankenhaus kommt
-// (OpenAI-Kritik 23.09., abgestimmt mit dem abgenommenen München-Muster):
+// Martin 23.09.: „Nicht der Inhalt, den ich erwarte: Wie läuft das ab? Was ist 24-Stunden-Pflege?
+// Kein roter Faden." Und 24.09., nach drei Umbauten mit zwölf Abschnitten: „Kein roter Faden — teils
+// sinnlos, teils Zusammengehöriges getrennt. Roter Faden: was das ist, wie es abläuft, was es kostet,
+// welche Voraussetzungen, warum Primundus." Genau diese Reihenfolge (OpenAI-Plan 24.09. kam auf dieselbe):
 //
-//   Kopf      Augenbraue „6× Testsieger DIE WELT" · H1 · Unterzeile wie im Rechner · Knopf,
-//             Gesichter, Punkte, Sterne · „Zuhause bleiben in <Ort>" + örtlicher Absatz ·
-//             „<Ort> in Zahlen" (nur örtliche Fakten) · Marta mit Siegel auf dem Foto
-//   1  Was 24-Stunden-Pflege ist — und was nicht          [FEST]     OrtWasBedeutet + OrtAufgaben
-//   2  So läuft es ab: von der Anfrage bis zur Anreise     [FEST]     OrtAblauf
-//   3  Wer bei Ihnen einzieht — und wie Sie auswählen      [FEST]     OrtPassendeKraft
-//   4  Was es in <Ort> kostet und was die Kasse zahlt      [ORT-Daten] OrtKosten (Heim-Eigenanteil je Land)
-//   5  Was in <Ort> anders ist                             [ORT]      Ortsprosa (+ Kreis-Absatz)
-//   6  Wohnen in <Ort>                                     [ORT-Daten] OrtWohnen (Zensus)
-//   7  Wann Betreuung zu Hause sinnvoll ist                [ORT-Daten] OrtWannSinnvoll
-//   8  Warum Familien in <Ort> Primundus wählen            [FEST]     OrtWarumPrimundus (die sechs USPs)
-//   9  Wo Sie sich in <Ort> unabhängig beraten lassen      [ORT-Daten] OrtBeratung
-//  10  Familien aus <Ort> über uns                         [ORT]      Stimmen (dunkel, Ort zuerst)
-//  11  Häufige Fragen                                      [ORT+FEST] Fragen
+//   Kopf   Augenbraue „6× Testsieger DIE WELT" · H1 · Unterzeile wie im Rechner · Knopf, Gesichter,
+//          Punkte, Sterne · „Was 24-Stunden-Pflege in <Ort> bedeutet" (Definition) · Marta mit Siegel
+//   1  Was eine Betreuungskraft bei Ihnen übernimmt        [FEST]      OrtAufgaben (+ 4 Themen-Links)
+//   2  So läuft es ab: von der Anfrage bis zur Anreise     [FEST]      OrtAblauf (Rechner-Schritte mit Bild) + Störer 1
+//   3  Was es in <Ort> kostet und was die Kasse zahlt      [ORT-Daten] OrtKosten (Preis-Frage, Heim-Eigenanteil je Land)
+//   4  Passt 24-Stunden-Pflege zu Ihrer Situation?         [ORT-Daten] OrtPasstZuIhnen (Situationen + Voraussetzungen)
+//   5  Warum Familien in <Ort> Primundus wählen            [FEST]      OrtWarumPrimundus (Portal-Mockup + Knopf, sechs USPs, zwei Kästen) + Störer 2
+//   6  Familien aus <Ort> über uns                         [ORT]       Stimmen (dunkel, Ort zuerst)
+//   7  Pflege vor Ort in <Ort>                             [ORT]       Einstiegsabsatz, Ortsprosa, Kreis-Satz,
+//                                                                       H3 Wohnen (Handprosa), „<Ort> in Zahlen", H3 Beratung
+//   8  Häufige Fragen                                      [ORT+FEST]  Fragen
 //      Auch in Ihrer Nähe (Nachbarorte, eine Zeile)                    NearbyCities
 //      Schluss                                                          KontaktBand
 //
-// FEST-Text steht einmal — in den Bausteinen. Was je Ort anders ist, kommt aus OrtDaten
-// (lib/orte-daten.ts). Gefallen sind gegenüber der alten Vorlage: „Werkzeuge" (Links jetzt im
-// Kosten-Abschnitt, vollständig), „So arbeiten wir" (falsche Vorteile; jetzt Ablauf + die sechs
-// USPs), „Einzugsgebiet" als Abschnitt (jetzt eine Zeile), „24-Stunden-Pflege im Landkreis" als
-// Abschnitt (jetzt ein Absatz in 5). Kein eigener Preis auf der Seite.
+// FEST-Text steht einmal — in den Bausteinen; Ablauf und Voraussetzungen teilen sich den Wortlaut mit der
+// Startseite (components/vertrauen/Ablauf.tsx, Voraussetzungen.tsx). Was je Ort anders ist, kommt aus
+// OrtDaten (lib/orte-daten.ts). Kein eigener Preis auf der Seite. Gefallen am 24.09.: die Spalte „ambulanter
+// Pflegedienst" und der § 38-Satz, „Wie Sie die passende Betreuungskraft finden" als Abschnitt (jetzt in 5),
+// „Wann sinnvoll" und „Voraussetzungen" als zwei Abschnitte (jetzt 4), „Wohnen" und „Beratung" als H2 (jetzt H3 in 7).
 //
 // SECTIONS für Seitenleiste und Handy-Pille werden aus derselben Liste abgeleitet, damit
 // Verzeichnis und Anker nie auseinanderlaufen.
@@ -35,9 +32,9 @@ import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtBeratung } from '@/components/orte/OrtBeratung'
-import { OrtAblauf, OrtAufgaben, OrtPassendeKraft, OrtVoraussetzungen, OrtWarumPrimundus, OrtWasBedeutetText } from '@/components/orte/OrtGrundlagen'
+import { OrtAblauf, OrtAufgaben, OrtWarumPrimundus, OrtWasBedeutetText } from '@/components/orte/OrtGrundlagen'
 import { OrtKosten } from '@/components/orte/OrtKosten'
-import { OrtWannSinnvoll } from '@/components/orte/OrtWannSinnvoll'
+import { OrtPasstZuIhnen } from '@/components/orte/OrtWannSinnvoll'
 import { OrtWohnen } from '@/components/orte/OrtWohnen'
 import { CtaStoerer } from '@/components/vertrauen/Stoerer'
 import { Stimmen } from '@/components/vertrauen/Vertrauen'
@@ -90,28 +87,22 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
   // „im Landkreis X" / „im Unterallgäu" — aber „in der StädteRegion Aachen": trägt der Kreisname seinen
   // Artikel schon („der …"), bleibt „in", sonst „im".
   const imKreis = d.kreis ? (d.kreis.startsWith('der ') ? `in ${d.kreis}` : `im ${d.kreis}`) : ''
-  const ortTitel = d.kreis ? `Was in ${d.ort} und ${imKreis} anders ist` : `Was in ${d.ort} anders ist`
+  // 24.09. (Martin): „Was in Worms und im Landkreis anders ist — was ist das für ein Satz?" → „Pflege vor Ort in …"
+  const ortTitel = d.kreis ? `Pflege vor Ort in ${d.ort} und ${imKreis}` : `Pflege vor Ort in ${d.ort}`
   const faqTitel = `Häufige Fragen zur 24-Stunden-Pflege in ${d.ort}`
 
   // Verzeichnis = genau die Überschriften der Bausteine (Prüfer 23.09.: zwei Sprungmarken liefen ins Leere).
+  // Acht Abschnitte in der Reihenfolge der Fragen einer Tochter (Martin 24.09.: „was das ist, wie es abläuft,
+  // was es kostet, welche Voraussetzungen, warum Primundus"). Die Definition steht im Kopf; Wohnen und
+  // Beratung sind Unterabschnitte von „Pflege vor Ort" und stehen deshalb nicht im Verzeichnis.
   const sections = [
-    // „Was 24-Stunden-Pflege in <Ort> bedeutet" steht seit 24.09. im Kopf (Martin: statt „Zuhause bleiben in Worms"),
-    // deshalb kein eigener Abschnitt mehr; die Voraussetzungen sind neu (Martin: „Welche Voraussetzungen gibt es?").
-    { id: 'aufgaben', title: 'Was eine Betreuungskraft übernimmt — und was der Pflegedienst' },
-    { id: 'voraussetzungen', title: 'Ist 24-Stunden-Pflege für Sie geeignet?' },
+    { id: 'aufgaben', title: 'Was eine Betreuungskraft bei Ihnen übernimmt' },
     { id: 'ablauf', title: 'So läuft es ab: von der Anfrage bis zur Anreise' },
-    { id: 'passende-kraft', title: 'Wie Sie die passende Betreuungskraft finden' },
     { id: 'kosten-und-kassenzuschuesse-in', title: `Was es in ${d.ort} kostet und was die Kasse zahlt` },
-    { id: 'was-die-pflege-zu', title: ortTitel },
-    // Erzeugte Seiten (147): Ihre Ortsprosa aus vorort_text.py IST schon der Wohnungs-Text (80,4 m²,
-    // 3,3 Wohnungen je Gebäude, 28,5 % Eigentum …) — OrtWohnen würde dieselben Zensus-Zahlen ein
-    // zweites Mal erzählen (Stopp 2, Bochum). Handgeschriebene Seiten (61) haben eigene Prosa, dort
-    // bringt der Baustein die Wohnungsdaten neu dazu.
-    ...(d.art === 'hand' ? [{ id: 'wohnen', title: `Wohnen in ${d.ort}: was das für die Betreuung heißt` }] : []),
-    { id: 'wann-sinnvoll', title: 'Wann Betreuung zu Hause sinnvoll ist' },
+    { id: 'passt-zu-ihnen', title: 'Passt 24-Stunden-Pflege zu Ihrer Situation?' },
     { id: 'warum-primundus', title: `Warum Familien in ${d.ort} Primundus wählen` },
-    { id: 'beratung', title: `Wo Sie sich in ${d.ort} unabhängig beraten lassen` },
     { id: 'stimmen-vor-ort', title: stimmenTitel },
+    { id: 'was-die-pflege-zu', title: ortTitel },
     { id: 'haeufige-fragen-24h-pflege', title: faqTitel },
   ]
 
@@ -173,25 +164,28 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
         />
 
         <RatgeberRumpf abschnitte={sections} src={src}>
-          {/* 1 — wer was macht (die Definition steht im Kopf) */}
+          {/* 1 — was sie tut (die Definition steht im Kopf) */}
           <OrtAufgaben />
 
-          {/* 2 — passt das zu uns? Die vier Voraussetzungen wie im Rechner */}
-          <OrtVoraussetzungen />
-
-          {/* 3 — der Ablauf: die drei Rechner-Schritte, darunter der erste Störer (Position „ablauf") */}
+          {/* 2 — der Ablauf: die drei Rechner-Schritte mit Bild, darunter der erste Störer (Position „ablauf") */}
           <OrtAblauf ort={d.ort} src={mitPosition(src, 'ablauf')} />
 
-          {/* 4 — wer kommt, wie man auswählt: mit dem Portal-Mockup und eigenem Knopf (Position „kraefte") */}
-          <OrtPassendeKraft src={mitPosition(src, 'kraefte')} />
-
-          {/* 4 — Kosten, Kasse, Heim-Eigenanteil im Land; danach der zweite Störer (Position „stoerer") —
-              wer bis hier gelesen hat, will wissen, was es bei ihm kostet */}
+          {/* 3 — Kosten: Preis-Frage mit Knopf, Heim-Eigenanteil im Land, Kasse */}
           <OrtKosten slug={d.slug} ort={d.ort} land={d.land} />
+
+          {/* 4 — passt das? Situationen + Voraussetzungen */}
+          <OrtPasstZuIhnen slug={d.slug} ort={d.ort} />
+
+          {/* 5 — warum wir: Portal-Mockup mit Knopf (Position „kraefte"), sechs Zusagen, zwei Kästen; danach der
+              zweite Störer (Position „stoerer") — nach den Kosten steht schon der eigene Preis-Knopf */}
+          <OrtWarumPrimundus ort={d.ort} src={mitPosition(src, 'kraefte')} mitKraeften />
           <CtaStoerer src={mitPosition(src, 'stoerer')} ort={d.ort} />
 
-          {/* 6 — das Örtliche: erst der Absatz, der bis 24.09. im Kopf stand, dann die Ortsprosa, der Kreis-Satz
-              und „<Ort> in Zahlen" (bis 24.09. der Kasten im Kopf) */}
+          {/* 6 — dunkel wie überall, Stimmen aus dem Ort zuerst */}
+          <Stimmen eingebettet ort={d.ort} anzahl={3} titel={stimmenTitel} />
+
+          {/* 7 — das Örtliche: der Absatz, der bis 24.09. im Kopf stand, die Ortsprosa, der Kreis-Satz, dann
+              (Handprosa) „Wohnen in <Ort>" als H3, „<Ort> in Zahlen", zuletzt die unabhängige Beratung als H3 */}
           <Abschnitt id="was-die-pflege-zu" titel={ortTitel}>
             <Text>{d.einleitung}</Text>
             {d.vorOrt.inhalt}
@@ -202,23 +196,12 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
                 kaum jemand anbietet — zu denselben Bedingungen wie in {d.ort}.
               </Text>
             ) : null}
+            {d.art === 'hand' ? <OrtWohnen slug={d.slug} ort={d.ort} als="h3" /> : null}
             {zahlen.length ? <BlickKasten titel={`${d.ort} in Zahlen`} punkte={zahlen} /> : null}
+            <OrtBeratung slug={d.slug} ort={d.ort} als="h3" />
           </Abschnitt>
 
-          {/* 6, 7 — Zensus je Ort; Wohnen nur auf handgeschriebenen Seiten (siehe sections) */}
-          {d.art === 'hand' ? <OrtWohnen slug={d.slug} ort={d.ort} /> : null}
-          <OrtWannSinnvoll slug={d.slug} ort={d.ort} />
-
-          {/* 8 — die sechs USPs */}
-          <OrtWarumPrimundus ort={d.ort} />
-
-          {/* 9 — unabhängige Beratung, Kreis und Landesportal */}
-          <OrtBeratung slug={d.slug} ort={d.ort} />
-
-          {/* 10 — dunkel wie überall, Stimmen aus dem Ort zuerst */}
-          <Stimmen eingebettet ort={d.ort} anzahl={3} titel={stimmenTitel} />
-
-          {/* 11 — Fragen */}
+          {/* 8 — Fragen */}
           <Abschnitt id="haeufige-fragen-24h-pflege" titel={faqTitel}>
             <Fragen fragen={d.fragen} />
           </Abschnitt>

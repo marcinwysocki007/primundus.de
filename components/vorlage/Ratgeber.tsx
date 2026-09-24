@@ -349,7 +349,17 @@ export function Vorspann({ children }: { children: ReactNode }) {
   return <div className="flex flex-col gap-6 pb-4">{children}</div>
 }
 
-export function Abschnitt({ id, titel, children }: { id: string; titel: ReactNode; children: ReactNode }) {
+export function Abschnitt({ id, titel, children, als = 'h2' }: { id: string; titel: ReactNode; children: ReactNode; als?: 'h2' | 'h3' }) {
+  // als="h3": Unterabschnitt innerhalb eines Abschnitts (24.09., Ortsseiten: „Wohnen in <Ort>" und
+  // „Unabhängige Beratung in <Ort>" unter „Pflege vor Ort") — kleinerer Titel, kein Verzeichnis-Eintrag.
+  if (als === 'h3') {
+    return (
+      <section id={id} className={`${SPRUNG} pt-4`}>
+        <h3 className="text-[22px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink [text-wrap:balance] md:text-[24px]">{zusammenhalten(titel)}</h3>
+        <div className="mt-4 flex flex-col gap-5">{children}</div>
+      </section>
+    )
+  }
   return (
     <section id={id} className={`${SPRUNG} pt-16 md:pt-20 first:pt-0`}>
       <h2 className={`${H2} text-pm-ink`}>{zusammenhalten(titel)}</h2>
