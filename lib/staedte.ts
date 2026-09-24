@@ -239,6 +239,9 @@ export const STAEDTE: Stadt[] = [
  * Sonst haetten die kleinen Laender nur ausgehende Links bekommen — und genau
  * die eingehenden fehlen ihnen.
  */
+// 24.09.2026: alzey-worms, charlottenburg, hochtaunuskreis, rhein-pfalz-kreis und rheinisch-bergischer-kreis
+// sind aus der Liste raus — tote Kreis-/Bezirksseiten (0 Impressionen in 180 Tagen), per 301 auf die Stadtseite
+// (next.config.js). Wer sie hier wieder einträgt, erzeugt Links auf Weiterleitungen.
 export const GRENZNACHBARN: Record<string, string[]> = {
   saarbruecken: ['pirmasens', 'kaiserslautern', 'trier'],
   'halle-saale': ['leipzig', 'jena'],
