@@ -25,7 +25,7 @@ export function Sektion({
   einleitung,
   ton = 'papier',
   breite = 'mittel',
-  ausrichtung = 'mitte',
+  ausrichtung = 'links',
   children,
 }: {
   id: string
@@ -35,7 +35,7 @@ export function Sektion({
   einleitung?: ReactNode
   ton?: keyof typeof TON
   breite?: keyof typeof BREITE
-  /** lese-Sektionen (Ortsprosa) setzen die Überschrift links wie den Text */
+  /** Martin 24.09.: „zu viel zentriert — linksbündig wie in der alten Version sieht aufgeräumter aus“: links ist Standard */
   ausrichtung?: 'mitte' | 'links'
   children: ReactNode
 }) {

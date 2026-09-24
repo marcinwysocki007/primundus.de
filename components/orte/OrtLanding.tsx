@@ -8,14 +8,15 @@
 import Image from 'next/image'
 import { AblaufSpalten } from '@/components/vertrauen/Ablauf'
 import { CtaStoerer } from '@/components/vertrauen/Stoerer'
-import { VertrauensKarten, WHATSAPP, rechnerLink } from '@/components/vertrauen/Vertrauen'
+import { ProduktBuehne } from '@/components/vertrauen/ProduktBuehne'
+import { GARANTIE, MartaBand, VertrauensKarten, rechnerLink } from '@/components/vertrauen/Vertrauen'
 import { VoraussetzungenListe } from '@/components/vertrauen/Voraussetzungen'
 import { MehrDazu } from '@/components/vorlage/Ratgeber'
 import { SEKTION_H3, SEKTION_KNOPF, Sektion } from '@/components/vorlage/Sektion'
 import { HEIM_EIGENANTEIL, HEIM_EIGENANTEIL_BUND } from '@/lib/heimkosten'
 import { PFLEGEGELD } from '@/lib/fakten'
 import { ORTE_LAGE } from '@/lib/orte-lage'
-import { AUFGABEN_PUNKTE, GRUNDLAGEN_LINKS, KraefteBlock, ZUSAGEN } from './OrtGrundlagen'
+import { AUFGABEN_PUNKTE, GRUNDLAGEN_LINKS, ZUSAGEN } from './OrtGrundlagen'
 import { KOSTEN_ZAHLEN, KassenTabellen } from './OrtKosten'
 
 const LINK = 'text-pm-taupe font-semibold hover:underline'
@@ -59,13 +60,13 @@ export function OrtKostenLanding({ slug, ort, land, src }: { slug: string; ort: 
     >
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-[20px] border-2 border-pm-line bg-pm-paper p-7">
-          <p className="text-center text-[22px] font-bold text-pm-ink">Pflegeheim {heimWo}</p>
+          <p className="text-[22px] font-bold text-pm-ink">Pflegeheim {heimWo}</p>
           <ul className="mt-5 grid gap-2.5">
             {['Umzug in eine fremde Umgebung', 'Doppelzimmer möglich', 'Abläufe nach Dienstplan', 'Pflegepersonal für viele Bewohner'].map((p) => (
               <li key={p} className="flex gap-3 text-[16.5px] text-pm-body"><Kreuz /><span>{p}</span></li>
             ))}
           </ul>
-          <div className="mt-6 border-t-2 border-pm-line pt-5 text-center">
+          <div className="mt-6 border-t-2 border-pm-line pt-5">
             {/* OpenAI-Prüfung 24.09.: Eigenanteil (was man zahlt) und Zuschuss (was man bekommt) sind verschiedene
                 Größen — deshalb beide Zahlen ausdrücklich so beschriftet, nicht als zwei „Preise" nebeneinander. */}
             <p className="text-[15px] text-pm-body">Das zahlen Sie selbst — im Schnitt pro Monat</p>
@@ -75,30 +76,30 @@ export function OrtKostenLanding({ slug, ort, land, src }: { slug: string; ort: 
         </div>
         <div className="relative rounded-[20px] border-2 border-pm-green/60 bg-pm-mint p-7">
           <span className="absolute -top-3.5 right-6 rounded-full bg-pm-green px-4 py-1 text-[12.5px] font-bold uppercase tracking-[0.08em] text-white">Zu Hause</span>
-          <p className="text-center text-[22px] font-bold text-pm-ink">24-Stunden-Pflege zu Hause</p>
+          <p className="text-[22px] font-bold text-pm-ink">24-Stunden-Pflege zu Hause</p>
           <ul className="mt-5 grid gap-2.5">
             {['Im gewohnten Zuhause bleiben', '1:1-Betreuung, bei Bedarf auch nachts', 'Familie bleibt in der Nähe', 'Individuelle Tagesgestaltung'].map((p) => (
               <li key={p} className="flex gap-3 text-[16.5px] text-pm-ink"><Haken /><span>{p}</span></li>
             ))}
           </ul>
-          <div className="mt-6 border-t-2 border-pm-green/30 pt-5 text-center">
+          <div className="mt-6 border-t-2 border-pm-green/30 pt-5">
             <p className="text-[15px] text-pm-body">Das bekommen Sie dazu — Zuschüsse bei Pflegegrad 3</p>
             <p className="mt-1 text-[40px] font-extrabold tracking-[-0.02em] text-pm-green-deep">bis zu ca. {eur(summePg3)}</p>
             <p className="text-[14px] text-pm-mute">im Monat von Pflegekasse und Finanzamt</p>
             <p className="mt-2 text-[15px] font-semibold text-pm-green-deep">Ihren Monatspreis sehen Sie sofort im Rechner</p>
           </div>
-          <div className="mt-6 text-center">
+          <div className="mt-6">
             <Knopf src={src} className="w-full sm:w-auto" />
           </div>
         </div>
       </div>
-      <p className="mx-auto mt-6 max-w-[44rem] text-center text-[14.5px] leading-[1.6] text-pm-mute">
+      <p className="mt-6 max-w-[44rem] text-[14.5px] leading-[1.6] text-pm-mute">
         Pflegeheim: Eigenanteil im ersten Heimjahr {heimWo}, vdek, Stand 1. Juli 2026. Zuschüsse zu Hause: Pflegegeld {eur(PFLEGEGELD[3])} nach
         § 37 SGB XI, Entlastungsbudget anteilig ca. {eur(KOSTEN_ZAHLEN.budgetMonat)} nach § 39 und § 45b SGB XI, Steuerermäßigung bis {eur(KOSTEN_ZAHLEN.steuerMonat)} nach
         § 35a EStG — eine Person, Pflegegrad 3. Der Eigenanteil im Heim und die Zuschüsse zu Hause sind verschiedene Größen:
         Was zu Hause nach Zuschüssen bei Ihnen bleibt, zeigt der Kostenrechner.
       </p>
-      <div className="mx-auto mt-12 flex max-w-[46rem] flex-col gap-6">
+      <div className="mt-12 flex max-w-[46rem] flex-col gap-6">
         <KassenTabellen slug={slug} land={land} />
       </div>
     </Sektion>
@@ -184,9 +185,9 @@ export function OrtPasstLanding({ slug, ort, src }: { slug: string; ort: string;
       einleitung="Vier Situationen, in denen Familien sich für Betreuung zu Hause entscheiden — und vier Dinge, die das Zuhause dafür braucht."
       ton="weiss"
     >
-      <h3 className={`${SEKTION_H3} text-center`}>Wann Betreuung zu Hause sinnvoll ist</h3>
+      <h3 className={SEKTION_H3}>Wann Betreuung zu Hause sinnvoll ist</h3>
       {lage ? (
-        <p className="mx-auto mt-3 max-w-[44rem] text-center text-[16.5px] leading-[1.6] text-pm-body">
+        <p className="mt-3 max-w-[44rem] text-[16.5px] leading-[1.6] text-pm-body">
           In {ort} gibt es {de(lage.nurSeniorenHaushalte)} Haushalte, in denen niemand unter 65 lebt (Zensus 2022). In den meisten davon ist
           Betreuung kein Thema. Zum Thema wird sie in diesen vier Situationen:
         </p>
@@ -199,36 +200,44 @@ export function OrtPasstLanding({ slug, ort, src }: { slug: string; ort: string;
           </li>
         ))}
       </ul>
-      <h3 className={`${SEKTION_H3} mt-12 text-center`}>Was das Zuhause dafür braucht</h3>
+      <h3 className={`${SEKTION_H3} mt-12`}>Was das Zuhause dafür braucht</h3>
       <div className="mt-6">
         <VoraussetzungenListe />
       </div>
-      {/* Wie der Kasten der Startseite, aber ohne Nummer: Ortsseiten zeigen sie nur in Hamburg und im Münchner
-          Umland (23.09.) — Anrufen und WhatsApp wählen trotzdem. */}
-      <div className="mt-8 rounded-[20px] bg-pm-mint p-7 text-center md:p-9">
+      {/* Wie der Kasten der Startseite, dann Marta wie überall (MartaBand-Standard; Martin 24.09.: „bei der Frage, ob
+          man helfen kann, fehlt Marta mit Bild wie sonst auch immer") — eingebettet zeigt keine Nummer. */}
+      <div className="mt-8 rounded-[20px] bg-pm-mint p-7 md:p-9">
         <p className="text-[22px] font-bold text-pm-ink">Sie sind unsicher?</p>
-        <p className="mx-auto mt-2 max-w-[36rem] text-[17px] leading-[1.6] text-pm-body">
+        <p className="mt-2 max-w-[36rem] text-[17px] leading-[1.6] text-pm-body">
           Wir beraten Sie kostenlos und unverbindlich, ob die 24-Stunden-Betreuung für Ihre Situation die richtige Lösung ist.
         </p>
         <Knopf src={src} className="mt-6 w-full sm:w-auto" />
-        <p className="mt-5 text-[16px] text-pm-body">Lieber sprechen? Marta Kapcio und ihr Team, täglich von 8 bis 20 Uhr.</p>
-        <div className="mt-3 flex flex-wrap justify-center gap-3">
-          <a href="tel:+4989200000830" className="inline-flex min-h-[46px] items-center justify-center rounded-full bg-pm-ink px-6 text-[15.5px] font-bold text-white">Anrufen</a>
-          <a href={WHATSAPP} target="_blank" rel="noopener" className="inline-flex min-h-[46px] items-center justify-center rounded-full bg-[#25D366] px-6 text-[15.5px] font-bold text-white">WhatsApp</a>
-        </div>
+      </div>
+      <div className="mt-6">
+        <MartaBand eingebettet />
       </div>
     </Sektion>
   )
 }
 
-/** 6 · Warum wir: der Kräfte-Kasten mit Knopf (ohne Gerät), die sechs Zusagen als Karten, die zwei Kästen */
+/** 6 · Warum wir: drei Sätze, das Gerät daneben, die sechs Zusagen als Karten, die zwei Kästen.
+ * Martin 24.09.: „Da muss stehen: Primundus ist ein Direktanbieter, 6× in Folge ausgezeichnet, Pflegekräfte und Preis
+ * direkt online sehen — nicht dieser unnötige Text am Anfang, der auch noch doppelt ist." */
 export function OrtWarumLanding({ ort, src }: { ort: string; src: string }) {
   return (
     <Sektion id="warum-primundus" augenbraue="Warum Primundus" titel={`Warum Familien in ${ort} Primundus wählen`} ton="papier" breite="wide">
-      <div className="mx-auto max-w-[46rem]">
-        <div className="flex flex-col gap-6">
-          <KraefteBlock src={src} ohneGeraet />
+      <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-12">
+        <div className="min-w-0">
+          <p className="max-w-[40rem] text-[19px] leading-[1.6] text-pm-ink md:text-[21px]">
+            Primundus ist ein Direktanbieter: Die Betreuungskräfte sind bei uns angestellt. DIE WELT hat uns sechsmal in Folge
+            als Testsieger ausgezeichnet. Pflegekräfte und Preis sehen Sie direkt online — bevor Sie einen Vertrag
+            unterschreiben.
+          </p>
+          <div className="mt-7">
+            <Knopf src={src} className="w-full sm:w-auto" />
+          </div>
         </div>
+        <ProduktBuehne garantie={GARANTIE} kompakt />
       </div>
       <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {ZUSAGEN.map((z) => (
