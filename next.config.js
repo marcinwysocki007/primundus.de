@@ -33,6 +33,14 @@ const nextConfig = {
       // Risikolos, weil die Quellen 404 liefern: Es gibt nichts zu verlieren, nur etwas
       // einzusammeln. (Die Lehre vom 03.09. — nie die stärkere in die schwächere Seite
       // umleiten — greift hier nicht, weil die Quelle gar nicht existiert.)
+      // Tote Kreis-/Bezirksseiten auf die Stadtseite (24.09.2026, Martin „go"): null Impressionen in 180 Tagen,
+      // während die Kreis-Anfrage auf der Stadtseite landet (Memory landkreise-auf-stadtseiten; Charlottenburg
+      // 96 Impressionen auf /24h-pflege-berlin). Seiten gelöscht, STAEDTE bereinigt, Nachbarorte-Links folgen.
+      { source: '/24h-pflege-alzey-worms', destination: '/24h-pflege-worms', permanent: true },
+      { source: '/24h-pflege-charlottenburg', destination: '/24h-pflege-berlin', permanent: true },
+      { source: '/24h-pflege-hochtaunuskreis', destination: '/24h-pflege-bad-homburg', permanent: true },
+      { source: '/24h-pflege-rhein-pfalz-kreis', destination: '/24h-pflege-ludwigshafen', permanent: true },
+      { source: '/24h-pflege-rheinisch-bergischer-kreis', destination: '/24h-pflege-bergisch-gladbach', permanent: true },
       { source: '/24-stunden-pflege/kosten-24-std-pflege', destination: '/kosten', permanent: true },
       { source: '/24-stunden-pflege/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
       { source: '/pflegekraft-polen-premium', destination: '/pflegekraft-aus-polen', permanent: true },

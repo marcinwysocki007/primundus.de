@@ -15,7 +15,7 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Zwei Anfragen tragen die ganze Seite, und die staerkere nennt den KREIS:
 //   „24 stunden pflege in alzey worms“   Position  8,7   105 Impressionen   0 Klicks
 //   „24 stunden pflege in worms“         Position 12,2    96 Impressionen   0 Klicks
-// Unsere eigene Kreis-Seite /24h-pflege-alzey-worms hat in 90 Tagen null Impressionen — die
+// Unsere eigene Kreis-Seite /24h-pflege-alzey-worms hatte in 90 Tagen null Impressionen (seit 24.09. per 301 hierher) — die
 // Stadtseite holt die Kreis-Anfrage. Deshalb steht der Kreis jetzt im Titel.
 //
 // „polnische Pflegekraefte“ in der MEHRZAHL (Martin, 22.09.): In der Mehrzahl stehen wir auf
