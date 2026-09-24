@@ -136,7 +136,13 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
           knopf={{ href: `https://kostenrechner.primundus.de/?start=1&src=${src}`, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort={d.ort} />}
-          person={<AnsprechpartnerinGross ort={d.ort} nummer={MUENCHNER_UMLAND.has(d.slug)} siegel={siegel} />}
+          person={
+            d.telefon ? (
+              <AnsprechpartnerinGross ort={d.ort} telefon={d.telefon.nummer} telefonAnzeige={d.telefon.anzeige} adresse={d.telefon.adresse} siegel={siegel} />
+            ) : (
+              <AnsprechpartnerinGross ort={d.ort} nummer={MUENCHNER_UMLAND.has(d.slug)} siegel={siegel} />
+            )
+          }
         />
 
       </div>
@@ -165,9 +171,9 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
               kaum jemand anbietet — zu denselben Bedingungen wie in {d.ort}.
             </Text>
           ) : null}
-          {d.art === 'hand' ? <OrtWohnen slug={d.slug} ort={d.ort} als="h3" /> : null}
+          {(d.wohnenBaustein ?? d.art === 'hand') ? <OrtWohnen slug={d.slug} ort={d.ort} als="h3" /> : null}
           {zahlen.length ? <BlickKasten titel={`${d.ort} in Zahlen`} punkte={zahlen} /> : null}
-          <OrtBeratung slug={d.slug} ort={d.ort} als="h3" />
+          <OrtBeratung slug={d.slug} ort={d.ort} als="h3" eigene={d.beratungEigene} />
         </div>
       </Sektion>
 

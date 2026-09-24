@@ -45,6 +45,12 @@ export interface OrtDaten {
   einzugsgebiet?: string
   /** Bewertungs-IDs, die vorn stehen sollen; ohne Angabe sucht die Vorlage nach ort */
   stimmen?: string[]
+  /** false, wenn die Ortsprosa die Zensus-Wohnungsdaten schon erzählt (München, Hamburg) — sonst nach `art` */
+  wohnenBaustein?: boolean
+  /** Von Hand geprüfte örtliche Anlaufstellen (München, Hamburg) — stehen in der Beratung vor den Landesverweisen */
+  beratungEigene?: ReactNode
+  /** Eigene Nummer in Martas Karte (Hamburg: Büro Baumwall) — sonst gilt die Regel „Nummer nur im Münchner Umland" */
+  telefon?: { nummer: string; anzeige: string; adresse?: string }
   /** Häufige Fragen — auch das FAQ-Markup wird daraus erzeugt */
   fragen: { q: string; a: string }[]
 }
