@@ -187,7 +187,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-saarland" />
+            <RechnerKasten src="ort-saarland" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-im-saarland" titel="Polnische Betreuungskräfte im Saarland">

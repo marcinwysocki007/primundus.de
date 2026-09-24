@@ -191,7 +191,7 @@ export default function Page() {
             <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld +500 €/Jahr">
               <Text>Bayern zahlt zusätzlich 500 €/Jahr (ca. 42 €/Monat) ab Pflegegrad 2, wenn der Hauptwohnsitz in Bayern liegt (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern) — kumulierbar mit allen Pflegekasse-Zuschüssen.</Text>
             </Kasten>
-            <RechnerKasten src="land-bayern" />
+            <RechnerKasten src="ort-bayern" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-bayern" titel="Polnische Betreuungskräfte in Bayern">

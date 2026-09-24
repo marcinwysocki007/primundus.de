@@ -17,7 +17,9 @@ export function WhatsAppFloat() {
   }, []);
 
   return (
-    <div className="md:hidden fixed bottom-5 right-4 z-50 flex flex-col items-end gap-2">
+    // Über der Cookie-Leiste, solange sie offen ist (--cookie-leiste setzt CookieConsent) — vorher lag der Knopf
+    // auf „Alle akzeptieren".
+    <div className="md:hidden fixed right-4 z-50 flex flex-col items-end gap-2" style={{ bottom: 'calc(20px + var(--cookie-leiste, 0px))' }}>
       <style>{`
         @keyframes waFadeInUp {
           from { opacity: 0; transform: translateY(6px); }

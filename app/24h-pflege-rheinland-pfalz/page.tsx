@@ -186,7 +186,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-rheinland-pfalz" />
+            <RechnerKasten src="ort-rheinland-pfalz" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-rheinland" titel="Polnische Betreuungskräfte in Rheinland-Pfalz">

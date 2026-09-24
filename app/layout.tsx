@@ -34,6 +34,49 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="de">
       <body className={inter.className}>
         <JsonLd data={siteGraph()} />
+        {/* Consent Mode (24.09.2026, Martin: „mach … so, dass es für uns bestmöglich ist"): VOR dem Tag Manager steht die
+            Grundeinstellung „abgelehnt". Die Google-Tags im Container (GA4, Ads, Conversion-Verknüpfung) setzen dann ohne
+            Zustimmung keine Cookies; Clarity bekommt dieselbe Wahl über seine Consent-Schnittstelle (consentv2) — ohne
+            Zustimmung ohne Cookies. Den gemeinsamen Container fassen wir dafür nicht an. Die Wahl aus der Cookie-Leiste kommt als
+            Update — sofort aus dem Speicher und später über das Ereignis cookie-consent-changed (lib/cookie-consent.ts).
+            Der frühere eigene GA-Lader ist weg: Der Tag Manager lädt G-W2QEQ18EE7 selbst, zwei Lader zählten doppelt.
+            Der Rechner (kostenrechner.primundus.de) nutzt denselben Container, setzt aber keine Grundeinstellung — dort gilt
+            „nicht gesetzt" als erteilt, die Messung dort bleibt unverändert. */}
+        <Script
+          id="consent-default"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+function primundusConsent(c) {
+  return {
+    analytics_storage: c && c.analytics ? 'granted' : 'denied',
+    ad_storage: c && c.marketing ? 'granted' : 'denied',
+    ad_user_data: c && c.marketing ? 'granted' : 'denied',
+    ad_personalization: c && c.marketing ? 'granted' : 'denied'
+  };
+}
+window.clarity = window.clarity || function(){(window.clarity.q = window.clarity.q || []).push(arguments);};
+function primundusClarity(c) {
+  try {
+    window.clarity('consentv2', {
+      ad_Storage: c && c.marketing ? 'granted' : 'denied',
+      analytics_Storage: c && c.analytics ? 'granted' : 'denied'
+    });
+  } catch (e) {}
+}
+var gespeichert = null;
+try { gespeichert = JSON.parse(localStorage.getItem('cookie-consent') || 'null'); } catch (e) {}
+gtag('consent', 'default', primundusConsent(null));
+if (gespeichert) gtag('consent', 'update', primundusConsent(gespeichert));
+primundusClarity(gespeichert);
+window.addEventListener('cookie-consent-changed', function (e) {
+  gtag('consent', 'update', primundusConsent(e && e.detail));
+  primundusClarity(e && e.detail);
+});`,
+          }}
+        />
         {/* Google Tag Manager */}
         <Script
           id="gtm"
@@ -44,35 +87,6 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-59V6N7RC');`,
-          }}
-        />
-        {/* GA4 with cookie consent */}
-        <Script
-          id="ga-consent"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-(function() {
-  function loadGA() {
-    if (window.gaLoaded) return;
-    window.gaLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-W2QEQ18EE7';
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-W2QEQ18EE7');
-  }
-  try {
-    var c = localStorage.getItem('cookie-consent');
-    if (c && JSON.parse(c).analytics) loadGA();
-  } catch(e) {}
-  window.addEventListener('cookie-consent-changed', function(e) {
-    if (e.detail && e.detail.analytics) loadGA();
-  });
-})();`,
           }}
         />
         <noscript>

@@ -187,7 +187,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-thueringen" />
+            <RechnerKasten src="ort-thueringen" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-thueringen" titel="Polnische Betreuungskräfte in Thüringen">

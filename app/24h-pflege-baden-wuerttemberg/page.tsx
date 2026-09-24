@@ -186,7 +186,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-baden-wuerttemberg" />
+            <RechnerKasten src="ort-baden-wuerttemberg" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-baden" titel="Polnische Betreuungskräfte in Baden-Württemberg">

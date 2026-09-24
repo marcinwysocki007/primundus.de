@@ -267,6 +267,14 @@ export function SiteFooter() {
               >
                 Impressum
               </Link>
+              {/* Widerruf der Einwilligung jederzeit (Art. 7 Abs. 3 DSGVO) — öffnet den Dialog aus CookieConsent */}
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new Event('cookie-einstellungen-oeffnen'))}
+                className="text-sm text-gray-400 hover:text-white transition-colors"
+              >
+                Cookie-Einstellungen
+              </button>
             </div>
           </div>
         </div>

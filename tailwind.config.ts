@@ -49,6 +49,8 @@ const config: Config = {
           coral: { DEFAULT: '#E76F63', deep: '#D45F53', tint: '#FDF0EE', ink: '#8B3E2F' },
           cocoa: '#3D2314',
           gold: '#D4A843',
+          // Knopffarbe der Cookie-Leiste, wie im Kostenrechner (Martin 24.09.2026: „die buttonfarbe wie die andere")
+          slate: { DEFAULT: '#708A95', deep: '#62808A' },
           // Dunkles Band der Partnerseite (/pflegekraefte-fuer-vermittler), Vorlage seit 14.09.2026
           deep: { DEFAULT: '#191715', 2: '#221F1C', ink: '#F2EDE5', body: '#A9A199', line: '#34302B' },
         },

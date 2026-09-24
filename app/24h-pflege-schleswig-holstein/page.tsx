@@ -186,7 +186,7 @@ export default function Page() {
               betont={1}
               fuss="Stand 2026 · bundesweit einheitlich"
             />
-            <RechnerKasten src="land-schleswig-holstein" />
+            <RechnerKasten src="ort-schleswig-holstein" />
           </Abschnitt>
 
           <Abschnitt id="polnische-betreuungskraefte-in-schleswig" titel="Polnische Betreuungskräfte in Schleswig-Holstein">
