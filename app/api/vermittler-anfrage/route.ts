@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 
 // Eigenes Postfach partner@primundus.de (IONOS), deshalb eigene Namen: die SMTP_*-Eintraege,
 // die auf dem Render-Dienst schon standen, bleiben unberuehrt (Martin 24.09.).
-const AN = process.env.ANFRAGE_AN || ''
+const AN = process.env.PARTNER_ANFRAGE_AN || process.env.ANFRAGE_AN || ''
 const VON = process.env.PARTNER_SMTP_FROM || ''
 
 // Die Felder, die das Formular schickt. Reihenfolge = Reihenfolge in der Mail an uns.
