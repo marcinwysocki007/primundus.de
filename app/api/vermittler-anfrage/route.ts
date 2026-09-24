@@ -4,6 +4,7 @@
 // Kein Zugangslink in der Bestaetigung — wir melden uns selbst.
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { partnerBestaetigung } from '@/lib/partner-mail'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -96,28 +97,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ fehler: 'versand' }, { status: 502 })
   }
 
-  // Bestaetigung an den Partner: kein Zugangslink, solange der Zugang nicht laeuft.
+  // Bestaetigung an den Partner: Vorlage 20 aus dem Design-Workspace, ohne Zugangslink.
   // Scheitert sie, ist die Anfrage trotzdem bei uns — deshalb kein Fehler nach aussen.
   try {
+    const mail = partnerBestaetigung({
+      anrede: d.anrede,
+      nachname: d.nachname,
+      firma: d.firma,
+      email: d.email,
+    })
     await transport.sendMail({
       from: VON,
       to: `${d.vorname} ${d.nachname} <${d.email}>`,
-      subject: 'Ihre Anfrage bei Primundus',
-      text: [
-        `${d.anrede === 'Frau' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'} ${d.nachname},`,
-        '',
-        'Ihre Anfrage für den Partnerbereich ist bei uns eingegangen.',
-        '',
-        'Ich richte Ihren Zugang ein und melde mich innerhalb eines Werktags bei Ihnen',
-        `unter ${d.telefon}. Vorher brauchen Sie nichts weiter zu tun.`,
-        '',
-        'Wenn Sie Fragen haben, erreichen Sie mich direkt:',
-        '089 200 000 831',
-        '',
-        'Herzliche Grüße',
-        'Magdalena Gorska',
-        'Primundus',
-      ].join('\n'),
+      subject: mail.betreff,
+      text: mail.text,
+      html: mail.html,
     })
   } catch (e) {
     console.error('vermittler-anfrage: Bestaetigung an Partner fehlgeschlagen', e)
