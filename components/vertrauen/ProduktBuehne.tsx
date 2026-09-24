@@ -3,11 +3,12 @@
 // Aufbau und Maße vom Gerät der Partnerseite (/pflegekraefte-fuer-vermittler, .dev--ios): dieselben Beispielprofile,
 // dieselbe Karte. Kein Preis im Bild (Martin 14.09.: „beim CTA-Bereich keinen Preis nennen — zeigen wir doch gleich").
 import Image from 'next/image'
+import type { ReactNode } from 'react'
 
 // Martin 24.09.: „Das Foto in dem kleinen Screenshot würde ich ändern — eine Frau, die professioneller aussieht."
 // Die Namen sind Beispielnamen (in keinem System hinterlegt), die Fotos echte Betreuungskräfte; die erste Karte
 // ist die einzige, die im kompakten Gerät ganz zu sehen ist — deshalb dort das Porträt pk-3 (getauscht mit pk-1).
-const PROFILE = [
+export const PROFILE = [
   { foto: '/images/caregivers/pk-3.jpg', name: 'Krystyna N.', alter: 62, deutsch: 'Gut', stufe: 3, rang: 'Elite', fakten: '6 J. Erfahrung · 14 Einsätze', interesse: true },
   { foto: '/images/caregivers/pk-2.jpg', name: 'Ewa L.', alter: 65, deutsch: 'Gut', stufe: 3, rang: 'Elite', fakten: '12 J. Erfahrung · 35 Einsätze' },
   { foto: '/images/caregivers/pk-1.jpg', name: 'Helena W.', alter: 54, deutsch: 'Mittel', stufe: 2, rang: 'Stammkraft', fakten: '4 J. Erfahrung · 9 Einsätze' },
@@ -24,7 +25,7 @@ function Stufe({ n }: { n: number }) {
   )
 }
 
-function Karte({ p }: { p: (typeof PROFILE)[number] }) {
+export function ProfilKarte({ p }: { p: (typeof PROFILE)[number] }) {
   const interesse = 'interesse' in p && p.interesse
   return (
     <div className={`overflow-hidden rounded-[16px] border bg-white ${interesse ? 'border-pm-coral' : 'border-[#D4D4D8]'}`}>
@@ -59,8 +60,9 @@ function Karte({ p }: { p: (typeof PROFILE)[number] }) {
   )
 }
 
-/** iPhone-Rahmen der Partnerseite: Inhalt 393 px breit gesetzt und auf die Gerätebreite skaliert. */
-function Handy({ kopfImGeraet }: { kopfImGeraet: string }) {
+/** iPhone-Rahmen der Partnerseite: Inhalt 393 px breit gesetzt und auf die Gerätebreite skaliert. Seit 24.09.
+ * mit beliebigem Bildschirminhalt (children), damit die Ortsseiten je Ablauf-Schritt ein anderes Bild zeigen. */
+export function Geraet({ children }: { children: ReactNode }) {
   return (
     <div className="relative w-[var(--geraet)] rounded-[calc(var(--geraet)*0.138)] bg-[#1B1917] p-[calc(var(--geraet)*0.0315)] shadow-[0_0_0_1px_rgba(0,0,0,.35),0_26px_54px_-22px_rgba(28,28,28,.5)]">
       <div className="relative h-[calc(var(--sicht)*2.168)] w-[var(--sicht)] overflow-hidden rounded-[calc(var(--geraet)*0.118)] bg-pm-paper">
@@ -83,6 +85,20 @@ function Handy({ kopfImGeraet }: { kopfImGeraet: string }) {
             <Image src="/images/primundus_logo_header.webp" alt="" width={300} height={53} className="h-[26px] w-auto mix-blend-multiply" />
             <span className="rounded-full border border-pm-line px-[15px] py-1.5 text-[14px] font-semibold text-[#71717A]">Hilfe</span>
           </div>
+          {children}
+        </div>
+        {/* weicher Auslauf unten, wie auf der Partnerseite */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[13%] bg-gradient-to-b from-pm-paper/0 to-pm-paper" />
+      </div>
+    </div>
+  )
+}
+
+
+/** Die Bildschirme des Kundenportals, so wie die Bühne sie zeigt: „Ihr Preis ist berechnet" und die passenden Kräfte. */
+function Handy({ kopfImGeraet }: { kopfImGeraet: string }) {
+  return (
+    <Geraet>
           {/* „Ihr Preis ist berechnet" — der grüne Kopf des Rechners */}
           <div className={`flex flex-none items-center gap-3 rounded-[16px] bg-pm-mint px-4 py-3.5 ${kopfImGeraet}`}>
             <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-pm-green text-white">
@@ -96,14 +112,10 @@ function Handy({ kopfImGeraet }: { kopfImGeraet: string }) {
           <p className="flex-none px-0.5 pt-1 text-[19px] font-bold tracking-[-0.02em] text-[#18181B]">Passende Pflegekräfte</p>
           {PROFILE.map((p) => (
             <div key={p.name} className="flex-none">
-              <Karte p={p} />
+              <ProfilKarte p={p} />
             </div>
           ))}
-        </div>
-        {/* weicher Auslauf unten, wie auf der Partnerseite */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[13%] bg-gradient-to-b from-pm-paper/0 to-pm-paper" />
-      </div>
-    </div>
+    </Geraet>
   )
 }
 

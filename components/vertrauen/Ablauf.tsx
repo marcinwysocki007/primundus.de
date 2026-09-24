@@ -9,6 +9,7 @@
 // Fassung (fünf Schritte, „Danach sehen Sie Ihren Preis" vor den Kontaktdaten). Martin 24.09.: „Ablauf ist der
 // alte." Ändert sich der Rechner, ändert sich hier ein Array — und jede Seite folgt (Memory ablauf-texte-folgen-rechner).
 import type { ReactNode } from 'react'
+import { AblaufBild } from './AblaufBilder'
 
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
@@ -53,7 +54,7 @@ export const ABLAUF_SCHRITTE: { titel: string; text: ReactNode; marke: string }[
  * nächsten Schritt, Titel, Text, grüne Marke. Für die Textspalte der Vorlagen-Seiten (Ortsseiten); die Startseite
  * setzt dieselben Schritte in drei Spalten (SoFunktionierts).
  */
-export function AblaufListe() {
+export function AblaufListe({ mitBildern = false }: { mitBildern?: boolean }) {
   return (
     <ol className="mt-2">
       {ABLAUF_SCHRITTE.map((s, i) => {
@@ -66,12 +67,17 @@ export function AblaufListe() {
               </span>
               {!letzter && <span aria-hidden="true" className="mt-1.5 w-0.5 flex-1 bg-pm-line" />}
             </div>
-            <div className={`min-w-0 pt-2 md:pt-3 ${letzter ? '' : 'pb-9'}`}>
-              <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">{s.titel}</p>
-              <p className="mt-2 text-[16.5px] leading-[1.6] text-pm-body">{s.text}</p>
-              <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-pm-mint px-3 py-1 text-[13.5px] font-semibold text-pm-green-deep">
-                ✓ {s.marke}
-              </span>
+            {/* mitBildern: rechts (ab md) bzw. darunter das Gerät mit dem Bildschirm zu diesem Schritt — wie die
+                Partnerseite zu jedem Schritt das Portal zeigt (Martin 24.09.) */}
+            <div className={`grid min-w-0 flex-1 gap-5 pt-2 md:pt-3 ${letzter ? '' : 'pb-9'} ${mitBildern ? 'md:grid-cols-[minmax(0,1fr)_236px] md:items-start' : ''}`}>
+              <div className="min-w-0">
+                <p className="text-[19px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink">{s.titel}</p>
+                <p className="mt-2 text-[16.5px] leading-[1.6] text-pm-body">{s.text}</p>
+                <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-pm-mint px-3 py-1 text-[13.5px] font-semibold text-pm-green-deep">
+                  ✓ {s.marke}
+                </span>
+              </div>
+              {mitBildern && <AblaufBild schritt={i as 0 | 1 | 2} />}
             </div>
           </li>
         )

@@ -174,7 +174,7 @@ export function OrtAblauf({ ort, src }: { ort: string; src: string }) {
   // Ihren Preis" vor den Kontaktdaten); Martin 24.09.: „Ablauf ist der alte." Der Ort steht im Störer darunter.
   return (
     <Abschnitt id="ablauf" titel="So läuft es ab: von der Anfrage bis zur Anreise">
-      <AblaufListe />
+      <AblaufListe mitBildern />
       <MehrDazu
         label="Jeder Schritt im Einzelnen:"
         links={[
