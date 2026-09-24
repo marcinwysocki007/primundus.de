@@ -27,12 +27,22 @@ function InhaltLeisteInnen({ abschnitte }: { abschnitte: { id: string; title: st
 
   // Die Spalte scrollt seit 23.09.2026 selbst (max-h + overflow in RatgeberRumpf), damit die
   // Rechner-Karte unter der Liste auch auf Laptops erreichbar ist. Damit der aktive Eintrag
-  // dabei nicht aus dem Bild wandert, wird er nachgeführt — „nearest": kein Sprung, nur so
-  // viel Bewegung wie nötig.
+  // dabei nicht aus dem Bild wandert, wird er nachgeführt — aber NUR innerhalb der Spalte.
+  // scrollIntoView() war es vom 23. bis 24.09.: Es scrollt jeden Vorfahren mit, auch das
+  // Fenster. Beim Laden lag die Leiste unter der Falz, also sprang jede der 213 Seiten beim
+  // Öffnen nach unten (Martin 24.09.: „alle Seiten öffnen nicht oben"). Deshalb hier von Hand:
+  // nur scrollTop des nächsten scrollenden Vorfahren, das Fenster bleibt, wo es ist.
   useEffect(() => {
     if (!aktiv) return
     const el = document.querySelector<HTMLAnchorElement>(`nav[aria-label="Inhalt"] a[href="#${aktiv}"]`)
-    el?.scrollIntoView({ block: 'nearest' })
+    if (!el) return
+    let box: HTMLElement | null = el.parentElement
+    while (box && !/(auto|scroll)/.test(getComputedStyle(box).overflowY)) box = box.parentElement
+    if (!box || box.scrollHeight <= box.clientHeight) return
+    const b = box.getBoundingClientRect()
+    const r = el.getBoundingClientRect()
+    if (r.top < b.top) box.scrollTop -= b.top - r.top
+    else if (r.bottom > b.bottom) box.scrollTop += r.bottom - b.bottom
   }, [aktiv])
 
   return (
