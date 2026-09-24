@@ -4,7 +4,7 @@ import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRump
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
-import { GARANTIE, SiegelZeile } from '@/components/vertrauen/Vertrauen'
+import { AuszeichnungsJahre, GARANTIE, SiegelZeile } from '@/components/vertrauen/Vertrauen'
 
 // Kernseite in der Seitenvorlage. 20.09.2026 umgestellt (Martin: „wir sind jetzt 6 Jahre in Folge ausgezeichnet — man muss
 // da nicht explizit auf die Siegel eingehen, weil wir sie nicht gekauft haben, aber trotzdem Sieger sind — also sinnvoll
@@ -155,6 +155,8 @@ export default function TestsiegerPage() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="wer" titel="Wer auszeichnet und wie">
+            {/* 24.09.2026: die sechs Jahre direkt unter der Abschnitts-Überschrift (Martin: „6× in Folge ausgezeichnet" muss oben stehen). */}
+            <AuszeichnungsJahre link={PDF_LINK} />
             <Text>
               Hinter der Auszeichnung steht die <strong className="text-pm-ink">Service-Studie von DIE WELT und der ServiceValue GmbH</strong>,
               einem Kölner Analyse-Institut. Sie läuft jedes Jahr neu und ist eine der größten Kundenbefragungen des Landes: mehr als
