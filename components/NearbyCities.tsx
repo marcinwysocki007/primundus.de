@@ -1,5 +1,8 @@
 import { grenznachbarn, REGION_NAMEN, STAEDTE } from '@/lib/staedte'
 
+// 24.09.2026: Ankertext „24-Stunden-Pflege <Stadt>" statt „24h-Pflege <Stadt>" — der Suchbegriff heißt
+// „24-Stunden-Pflege"; 189 × 6 interne Links auf genau die Seiten, die dafür ranken sollen (Befund 21.09.:
+// 720 Anker sagten „24h-Pflege").
 // "In Ihrer Nähe"-Block für Städteseiten (SEO 14.08.2026): löst das
 // Orphan-Problem — vorher verlinkte keine einzige Seite auf die 187
 // Städteseiten. Deterministisch: 6 Städte derselben Region, alphabetisch
@@ -47,7 +50,7 @@ export function NearbyCities({ current }: { current: string }) {
             href={`/24h-pflege-${s.slug}`}
             className="text-[13px] font-semibold text-pm-taupe bg-pm-paper hover:bg-pm-shell rounded-full px-4 py-2 transition-colors"
           >
-            24h-Pflege {s.name}
+            24-Stunden-Pflege {s.name}
           </a>
         ))}
         <a

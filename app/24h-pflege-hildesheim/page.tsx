@@ -11,12 +11,12 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege und Betreuung in Hildesheim | 6× Testsieger',
+  title: '24-Stunden-Betreuung und Pflege in Hildesheim | 6× Testsieger',
   description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Hildesheim in 3 Tagen möglich – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-hildesheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege und Betreuung in Hildesheim | 6× Testsieger',
+    title: '24-Stunden-Betreuung und Pflege in Hildesheim | 6× Testsieger',
     description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Hildesheim in 3 Tagen möglich – mit Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-hildesheim',
     siteName: 'Primundus',
