@@ -4,10 +4,13 @@
 // dieselbe Karte. Kein Preis im Bild (Martin 14.09.: „beim CTA-Bereich keinen Preis nennen — zeigen wir doch gleich").
 import Image from 'next/image'
 
+// Martin 24.09.: „Das Foto in dem kleinen Screenshot würde ich ändern — eine Frau, die professioneller aussieht."
+// Die Namen sind Beispielnamen (in keinem System hinterlegt), die Fotos echte Betreuungskräfte; die erste Karte
+// ist die einzige, die im kompakten Gerät ganz zu sehen ist — deshalb dort das Porträt pk-3 (getauscht mit pk-1).
 const PROFILE = [
-  { foto: '/images/caregivers/pk-1.jpg', name: 'Krystyna N.', alter: 62, deutsch: 'Gut', stufe: 3, rang: 'Elite', fakten: '6 J. Erfahrung · 14 Einsätze', interesse: true },
+  { foto: '/images/caregivers/pk-3.jpg', name: 'Krystyna N.', alter: 62, deutsch: 'Gut', stufe: 3, rang: 'Elite', fakten: '6 J. Erfahrung · 14 Einsätze', interesse: true },
   { foto: '/images/caregivers/pk-2.jpg', name: 'Ewa L.', alter: 65, deutsch: 'Gut', stufe: 3, rang: 'Elite', fakten: '12 J. Erfahrung · 35 Einsätze' },
-  { foto: '/images/caregivers/pk-3.jpg', name: 'Helena W.', alter: 54, deutsch: 'Mittel', stufe: 2, rang: 'Stammkraft', fakten: '4 J. Erfahrung · 9 Einsätze' },
+  { foto: '/images/caregivers/pk-1.jpg', name: 'Helena W.', alter: 54, deutsch: 'Mittel', stufe: 2, rang: 'Stammkraft', fakten: '4 J. Erfahrung · 9 Einsätze' },
   { foto: '/images/caregivers/pk-4.jpg', name: 'Anna N.', alter: 58, deutsch: 'Gut', stufe: 3, rang: 'Elite', fakten: '8 J. Erfahrung · 22 Einsätze' },
 ] as const
 

@@ -20,7 +20,6 @@ import { HEIM_EIGENANTEIL, HEIM_EIGENANTEIL_BUND, euroFormat } from '@/lib/heimk
 // Betrag und Zeichen nie auf zwei Zeilen fallen (Martin sah 599 / EUR/Monat umgebrochen).
 const eur = (betrag: number) => `${euroFormat(betrag)}\u00a0€`
 
-const LINK = 'text-pm-taupe font-semibold hover:underline'
 
 // Entlastungsbudget anteilig je Monat und der Deckel der Steuerermäßigung je Monat — dieselbe
 // Rechnung wie im Kostenrechner (3.539 / 12 = ca. 295; 4.000 / 12 = 333).
@@ -33,12 +32,34 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
   const heimWo = HEIM_EIGENANTEIL[land] ? `in ${land}` : 'in Deutschland'
   return (
     <Abschnitt id="kosten-und-kassenzuschuesse-in" titel={`Was es in ${ort} kostet und was die Kasse zahlt`}>
-      <Text>
-        Der Monatspreis hängt vom Pflegebedarf ab und davon, wie gut die Betreuungskraft Deutsch spricht — Ihren Preis
-        zeigt der{' '}
-        <a href={`https://kostenrechner.primundus.de/?start=1&src=ort-${slug}-kosten`} referrerPolicy="no-referrer-when-downgrade" className={LINK}>Kostenrechner in 2 Minuten</a>.
-        Was Kasse und Finanzamt beisteuern, zeigt das Beispiel.
-      </Text>
+      {/* Martin 24.09.: „Mir fehlt der Preis — was kostet 24-Stunden-Pflege in Worms? Berechnen Sie, sehen Sie
+          sofort; Zuschüsse und Steuervorteil benennen." Kein eigener Betrag (Entscheidung 23.09.), aber die
+          Frage, die Antwort in 2 Minuten und der Knopf — zuerst im Abschnitt, vor den Tabellen. */}
+      <Kasten ton="gruen" augenbraue={`Was kostet 24-Stunden-Pflege in ${ort}?`} titel="Ihren Preis sehen Sie sofort — mit Zuschüssen und Steuervorteil">
+        <Text>
+          Der Monatspreis hängt vom Pflegebedarf ab und davon, wie gut die Betreuungskraft Deutsch spricht. Der
+          Kostenrechner zeigt ihn Ihnen in 2 Minuten — samt Zuschüssen der Pflegekasse und Steuervorteil, dazu die
+          Betreuungskräfte, die dafür in Frage kommen.
+        </Text>
+        <a
+          href={`https://kostenrechner.primundus.de/?start=1&src=ort-${slug}-kosten`}
+          referrerPolicy="no-referrer-when-downgrade"
+          className="flex min-h-[56px] items-center justify-center rounded-full bg-pm-coral px-5 text-center text-[16.5px] font-bold text-white shadow-[0_10px_24px_-10px_rgba(231,111,99,0.75)] transition-colors hover:bg-pm-coral-deep sm:self-start sm:px-7"
+        >
+          Preis sofort berechnen&nbsp;→
+        </a>
+      </Kasten>
+      {/* Die örtliche Vergleichszahl direkt dahinter (Martin 24.09.: „Haben wir im Vergleich Zahlen, was das
+          Pflegeheim kostet?"): der Eigenanteil im Heim, je Bundesland (vdek, 1. Heimjahr, 07/2026) — der Verband
+          veröffentlicht ihn je Land, nicht je Stadt. */}
+      <Kasten titel={`Zum Vergleich: ein Heimplatz ${heimWo} — rund ${eur(heim)} Eigenanteil im Monat`}>
+        <Text>
+          So viel kostet ein Heimplatz {heimWo} im ersten Jahr im Schnitt (vdek, 07/2026) — nach allen Kassenleistungen,
+          und die Wohnung bleibt dabei auf der Strecke. Zu Hause zahlen Pflegegeld und Entlastungsbudget bei Pflegegrad 3
+          zusammen bis zu ca. {eur(PFLEGEGELD[3] + BUDGET_MONAT)} im Monat, dazu kommen bis zu {eur(STEUER_MONAT)}{' '}
+          Steuerermäßigung. Was Kasse und Finanzamt beisteuern, zeigt das Beispiel.
+        </Text>
+      </Kasten>
       <Tabelle
         titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
         zeilen={[
@@ -57,15 +78,6 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
         betont={1}
         fuss="Stand 2026 · bundesweit einheitlich"
       />
-      {/* Die örtliche Vergleichszahl: der Eigenanteil im Heim, je Bundesland (vdek, 1. Heimjahr, 07/2026). */}
-      <Kasten titel={`Zum Vergleich: ein Heimplatz ${heimWo}`}>
-        <Text>
-          Ein Heimplatz {heimWo} kostet im ersten Jahr im Schnitt rund <strong className="text-pm-ink">{eur(heim)} Eigenanteil im Monat</strong>{' '}
-          (vdek, 07/2026) — nach allen Kassenleistungen, und die Wohnung bleibt dabei auf der Strecke. Zu Hause zahlen
-          Pflegegeld und Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. {eur(PFLEGEGELD[3] + BUDGET_MONAT)} im Monat,
-          dazu kommen bis zu {eur(STEUER_MONAT)} Steuerermäßigung.
-        </Text>
-      </Kasten>
       {land === 'Bayern' && (
         <Kasten ton="gruen" titel="Bayern-Vorteil: Landespflegegeld 500 €/Jahr">
           <Text>
