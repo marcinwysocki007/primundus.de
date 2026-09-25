@@ -25,8 +25,9 @@ export type PflegegradInhalt = {
   typisch: { title: string; desc: string }[]
   beispiel: { titel: string; person: string; zeilen: BeispielZeile[]; gesamt: string; fazit: string }
   versorgung: { title: string; desc: string }[]
+  /** null = kein Beispiel mit Preis (Pflegegrad 5: Preisregel 25.09., der Aufschlag wird nicht beziffert) */
   eigenanteil: number | null
-  preis: number
+  preis: number | null
   naechster: { grad: Grad; fehlen: string; mehr: string } | null
   fragen: { q: string; a: string }[]
 }
@@ -210,7 +211,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       `Pflegegeld ${euro(PFLEGEGELD[4])} im Monat, Sachleistungen ${euro(PFLEGESACHLEISTUNGEN[4])} für den Pflegedienst`,
       `Entlastungsbudget ${euro(ENTLASTUNGSBUDGET)} im Jahr, Tagespflege bis ${euro(TAGESPFLEGE[4])} zusätzlich, Entlastungsbetrag ${euro(ENTLASTUNGSBETRAG)}`,
       'Beispiel aus dem Rechner: 87,5 Punkte, 2,5 Punkte bis Pflegegrad 5',
-      'Betreuungskraft im Haus: ab 2.150 € (Rollstuhl oder bettlägerig +100 €), selbst zu tragen ab ca. 722 €',
+      'Betreuungskraft im Haus: ab 2.150 €, selbst zu tragen ab ca. 722 € (Rollstuhl oder bettlägerig: Aufschlag, im Rechner)',
       `Pflegeheim: Kasse zahlt ${euro(HEIM_LEISTUNG[4])}, Eigenanteil im Schnitt 3.364 €`,
     ],
     typisch: [
@@ -292,8 +293,8 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       { title: 'Hilfsmittel, die die Pflege tragen', desc: 'Pflegebett mit Wechseldruckmatratze, Lifter, Pflegerollstuhl, Duschliege: verordnet der Arzt, zahlt die Krankenkasse. Pflegehilfsmittel zum Verbrauch 42 € im Monat, Umbau bis 4.180 € je Maßnahme.' },
       { title: 'Pflegeheim', desc: `Die Kasse zahlt ${euro(HEIM_LEISTUNG[5])} an das Heim; der Eigenanteil ist derselbe wie bei Pflegegrad 2, im Schnitt 3.364 € im ersten Jahr. Bei Pflegegrad 5 ist der Unterschied zum Eigenanteil zu Hause am größten.` },
     ],
-    eigenanteil: 2200 - PFLEGEGELD[5] - 295 - 333,
-    preis: 2200,
+    eigenanteil: null,
+    preis: null,
     naechster: null,
     fragen: [
       { q: 'Was bekommt man bei Pflegegrad 5?', a: `${euro(PFLEGEGELD[5])} Pflegegeld im Monat oder ${euro(PFLEGESACHLEISTUNGEN[5])} Sachleistungen für den Pflegedienst, wahlweise kombiniert. Dazu ${euro(ENTLASTUNGSBETRAG)} Entlastungsbetrag, ${euro(ENTLASTUNGSBUDGET)} im Jahr für Verhinderungs- und Kurzzeitpflege, Tagespflege bis ${euro(TAGESPFLEGE[5])}, Hilfsmittel 42 € im Monat, bis 4.180 € für den Umbau, Beratungsbesuche vierteljährlich.` },

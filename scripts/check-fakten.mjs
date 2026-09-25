@@ -43,6 +43,17 @@ const STALE = [
   // 72 ist so ein Haushalt — „nachts ist niemand da" behauptet deshalb mehr, als die Zahl hergibt, und zwar
   // zugunsten des eigenen Angebots. Stand am 21.09. auf 152 Ortsseiten (Codemod 24).
   ['Senioren-Haushalt als „niemand da" gedeutet', /(?:ist|lebt|wohnt)\s+(?:nachts\s+)?niemand\s+(?:mehr\s+)?da[^.]{0,60}einspringen/g],
+  // Preisregel (Martin 25.09.2026, schon am 17.09. so gemeint und am 20.09. beim Ausbau von /kosten gebrochen):
+  // Genannt wird der Grundpreis ab 2.150 € und eine Beispielrechnung; die Aufschläge des Rechners (Nächte, Deutsch,
+  // Ehepaar, weitere Personen, Mobilität, Führerschein, Frau, Pflegegrad 5) werden benannt, aber nicht beziffert.
+  // Deshalb sind Aufschlagsbeträge, der Ehepaar-Preis und die Pflegegrad-5-/Rollstuhl-Preise im Text gesperrt.
+  // Die zwei Schätzrechner rechnen weiter mit ihren Werten (ALLOW_FILES).
+  ['Preisregel: Aufschlag beziffert (+50/100/200/250/300/450 €)', /\+\s?(?:50|100|200|250|300|450)\s*€/g],
+  ['Preisregel: Aufschlag beziffert („… € mehr")', /\b(?:50|100|200|250|300|450)\s*€\s*(?:im\s+Monat\s+)?mehr\b/g],
+  ['Preisregel: Nacht-Aufschlag beziffert', /(?:pro\s+Nacht|Nachteins[aä]tze?)[^.]{0,40}\b(?:50|100|300)\s*€/g],
+  ['Preisregel: Nacht-Aufschlag als Spanne (50 bis 300 €)', /N[aä]cht[^.]{0,60}\+?50\s*(?:bis|–|-)\s*\+?300\s*€/g],
+  ['Preisregel: Ehepaar-Preis (2.600 €)', /2\.600\s*€/g],
+  ['Preisregel: Pflegegrad-5-/Rollstuhl-Preis (2.200 / 2.250 / 2.300 €)', /2\.(?:200|250|300)\s*€/g],
 ]
 
 const SCAN_DIRS = ['app', 'components', 'lib']
@@ -51,7 +62,12 @@ const SELF = path.join('scripts', 'check-fakten.mjs')
 
 // Erlaubte Vorkommen: historische Vorher/Nachher-Darstellung der Pflegereform
 // (dort sind die Altwerte 1.612/1.774/3.224 € bewusst und korrekt als "bis Juni 2025" benannt).
-const ALLOW_FILES = new Set([path.join('app', 'pflegereform-2025', 'page.tsx')])
+const ALLOW_FILES = new Set([
+  path.join('app', 'pflegereform-2025', 'page.tsx'),
+  // Schätzrechner: rechnen für Pflegegrad 5 mit 2.200 € und zeigen es im Ergebnis (Preisregel 25.09., Entscheidung 4)
+  path.join('components', 'werkzeuge', 'HeimRechner.tsx'),
+  path.join('components', 'werkzeuge', 'PflegegradRechner.tsx'),
+])
 
 const findings = []
 function scanFile(file) {

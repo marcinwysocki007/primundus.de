@@ -14,9 +14,8 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // („24 stunden pflege kosten" 1.300, „… kostenübernahme krankenkasse" 1.600, „was kostet …" 590, „kosten polnische
 // pflegekraft pflegegrad 3" 720, „24 stunden pflege zu hause kosten" 480 im Monat), Google-Fragen („Wer übernimmt die
 // Kosten?", „Was ist billiger, Heim oder 24-Stunden-Pflege?", „für 2 Personen", „Pflegegrad 3/4/5", „Rechner") und die
-// Seiten auf Platz 1–5 (1.350–4.400 Wörter). Alle Preise aus der Preiskonfiguration des Kostenrechners (pricing_config,
-// gelesen 20.09.): Grundpreis 2.150 €, Ehepaar +450, Deutsch kommunikativ +250 / gut +450, Nächte +50/+100/+300,
-// Rollstuhl/bettlägerig +100, weitere Personen +200, Führerschein +100, Betreuerin gewünscht +100, Pflegegrad 5 +50.
+// Seiten auf Platz 1–5 (1.350–4.400 Wörter). Grundpreis 2.150 € aus der Preiskonfiguration des Kostenrechners
+// (pricing_config, gelesen 20.09.); die Aufschläge stehen dort und im Memory, nicht hier (Preisregel unten).
 // Eigenanteil = Preis − Pflegegeld − Entlastungsbudget/12 − Steuerermäßigung (Martin 14.09.); Entlastungsbetrag (131 €)
 // nie abziehen; Kost und Logis nicht beziffern; An- und Abreise 125 € je Strecke, Wechseltag für beide Kräfte, neun
 // Feiertage doppelt, Krankheitstage nicht berechnet (Mustervertrag, Martin 17.09.). CariFair-Zahlen von carifair.de.

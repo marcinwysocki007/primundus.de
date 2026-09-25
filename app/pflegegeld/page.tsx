@@ -25,9 +25,10 @@ const AKTUALISIERT = aktualisiertAm('pflegegeld', '20. September 2026')
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 const euroCent = (n: number) => n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'
 const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
-const GRADE = [2, 3, 4, 5] as const
-const PREIS = { 2: 2150, 3: 2150, 4: 2150, 5: 2200 } as const
-const eigen = (g: 2 | 3 | 4 | 5) => PREIS[g] - PFLEGEGELD[g] - 295 - 333
+// Preisregel 25.09. (Martin): nur der Grundpreis; Pflegegrad 5 hat einen Aufschlag, der nicht beziffert wird — deshalb nicht in der Tabelle
+const GRADE = [2, 3, 4] as const
+const PREIS = 2150
+const eigen = (g: 2 | 3 | 4) => PREIS - PFLEGEGELD[g] - 295 - 333
 const halb = (g: 2 | 3 | 4 | 5) => anteiligesPflegegeld(g, PFLEGESACHLEISTUNGEN[g] / 2).pflegegeld
 
 const SECTIONS = [
@@ -249,9 +250,9 @@ export default function Pflegegeld() {
             <Tabelle
               titel="Betreuungskraft im Haus: eine Person, Grundpreis, Stand September 2026"
               kopf={['Pflegegrad', 'Betreuung ab', 'Pflegegeld', 'Entlastungsbudget, anteilig', 'Steuerermäßigung, bis zu', 'Selbst zu tragen ab ca.']}
-              zeilen={GRADE.map((g) => [`Pflegegrad ${g}`, euro(PREIS[g]), `− ${euro(PFLEGEGELD[g])}`, '− 295 €', '− 333 €', euro(eigen(g))])}
+              zeilen={GRADE.map((g) => [`Pflegegrad ${g}`, euro(PREIS), `− ${euro(PFLEGEGELD[g])}`, '− 295 €', '− 333 €', euro(eigen(g))])}
               betont={5}
-              fuss="Preise aus unserem Kostenrechner. Entlastungsbudget 3.539 € durch zwölf Monate. Dazu An- und Abreise 125 € je Strecke; Zimmer, Kost und Logis stellen Sie. Rollstuhl oder Bettlägerigkeit +100 €, Nächte nach Bedarf +50 bis +300 €."
+              fuss={`Grundpreis aus unserem Kostenrechner. Entlastungsbudget 3.539 € durch zwölf Monate. Dazu An- und Abreise 125 € je Strecke; Zimmer, Kost und Logis stellen Sie. Bei Pflegegrad 5 ist das Pflegegeld mit ${euro(PFLEGEGELD[5])} am höchsten, die Betreuung kostet etwas mehr als der Grundpreis; Rollstuhl, Bettlägerigkeit und Nächte kosten einen Aufschlag — Ihren Preis zeigt der Rechner.`}
             />
             <Zwischentitel>Wer zahlt was: der Monatspreis aufgeteilt</Zwischentitel>
             <KostenAufteilung />

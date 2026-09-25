@@ -277,7 +277,7 @@ export default function SchlaganfallPflegeZuhause() {
             <Text>
               Im Pflegeheim liegt der Eigenanteil bundesweit bei durchschnittlich 3.364 € im Monat (vdek, Juli 2026). Eine Betreuungskraft im Haus
               kostet bei Primundus ab 2.150 €; bei Pflegegrad 3 bleiben nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 €.
-              Der Preis steigt, wenn nachts Hilfe nötig ist oder die Person auf den Rollstuhl angewiesen oder bettlägerig ist (+100 €); alle
+              Der Preis steigt, wenn nachts Hilfe nötig ist oder die Person auf den Rollstuhl angewiesen oder bettlägerig ist; alle
               Preisfaktoren stehen auf der {l('/kosten', 'Kostenseite')}.
             </Text>
             <RechnerKasten src="apex-schlaganfall" />

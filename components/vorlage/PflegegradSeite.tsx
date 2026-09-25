@@ -171,7 +171,21 @@ export function PflegegradSeite({ grad }: { grad: Grad }) {
 
           <Abschnitt id="versorgung" titel={`Versorgung bei Pflegegrad ${grad}: was passt, was es kostet`}>
             <Punkte punkte={i.versorgung} />
-            {i.eigenanteil !== null && (
+            {i.preis === null && grad >= 2 && (
+              /* Preisregel 25.09.: Pflegegrad 5 hat einen Aufschlag, der nicht beziffert wird — deshalb die Zuschüsse statt der Beispielrechnung */
+              <Tabelle
+                titel={`Zuschüsse bei Pflegegrad ${grad}: was Kasse und Finanzamt beisteuern`}
+                zeilen={[
+                  ['Pflegegeld', euro(PFLEGEGELD[g])],
+                  ['Entlastungsbudget, anteilig', '295 €'],
+                  ['Steuerermäßigung, bis zu', '333 €'],
+                  ['Zuschüsse zusammen im Monat', `bis zu ${euro(PFLEGEGELD[g] + 295 + 333)}`],
+                ]}
+                betont={1}
+                fuss={`Stand September 2026. Entlastungsbudget, wenn die Kasse den Einsatz als Verhinderungspflege anerkennt. Die Betreuung kostet bei Pflegegrad ${grad} etwas mehr als der Grundpreis von 2.150 €; Ihren Preis und Eigenanteil zeigt der Rechner.`}
+              />
+            )}
+            {i.eigenanteil !== null && i.preis !== null && (
               <Tabelle
                 titel={`Betreuungskraft im Haus bei Pflegegrad ${grad}: eine Person, Grundpreis`}
                 zeilen={[
