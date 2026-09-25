@@ -228,8 +228,8 @@ export default function Kosten() {
             <Preisfaktoren />
             <Punkte
               punkte={[
-                { title: 'Nachts Hilfe', desc: 'Braucht Ihr Angehöriger nachts regelmäßig Hilfe, etwa bei Demenz oder beim Gang zur Toilette, kostet das mehr, gestaffelt nach gelegentlich, einmal pro Nacht und mehrmals pro Nacht. Die Betreuungskraft hat dann tagsüber mehr Ruhezeit.' },
-                { title: 'Deutschkenntnisse', desc: 'Grundlegende Kenntnisse sind im Grundpreis enthalten. Eine Betreuungskraft, die sich fließend unterhält („kommunikativ“), kostet mehr, gute Deutschkenntnisse noch einmal mehr. Bei Demenz ist das oft wichtiger als bei rein körperlichem Hilfebedarf.' },
+                { title: 'Nachts Hilfe', desc: 'Braucht Ihr Angehöriger nachts regelmäßig Hilfe, etwa bei Demenz oder beim Gang zur Toilette, kostet das mehr: gelegentlich oder einmal pro Nacht einen kleinen Aufschlag, mehrmals pro Nacht einen großen. Die Betreuungskraft hat dann tagsüber mehr Ruhezeit.' },
+                { title: 'Deutschkenntnisse', desc: 'Grundlegende Kenntnisse sind im Grundpreis enthalten. Eine Betreuungskraft, die sich fließend unterhält („kommunikativ“), kostet einen mittleren Aufschlag, gute Deutschkenntnisse einen großen. Bei Demenz ist das oft wichtiger als bei rein körperlichem Hilfebedarf.' },
                 { title: 'Zwei Personen', desc: 'Ein Ehepaar kostet mehr als eine Person, weil eine Betreuungskraft zwei Menschen versorgt. Leben weitere Personen im Haushalt, für die sie mitkocht und mitwäscht, kommt ein kleinerer Aufschlag dazu.' },
                 { title: 'Mobilität', desc: 'Ist Ihr Angehöriger auf den Rollstuhl angewiesen oder bettlägerig, kostet die Betreuung etwas mehr, weil Umlagern und Transfers Zeit und Kraft brauchen.' },
                 { title: 'Wünsche', desc: 'Ein Führerschein, der ausdrückliche Wunsch nach einer Frau und Pflegegrad 5 kosten jeweils einen kleinen Aufschlag.' },

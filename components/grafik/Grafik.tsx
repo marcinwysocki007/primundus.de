@@ -354,11 +354,15 @@ export function DemenzPhasen() {
 export function Preisfaktoren() {
   // Preisregel 25.09.2026 (Martin): Die Faktoren werden benannt und gewichtet, nicht beziffert — den Betrag zeigt der
   // Rechner. Die Balken tragen das Gewicht aus der Preiskonfiguration (pricing_config), ohne Zahl daneben.
+  // Martin 25.09.: „bei den Sprachkenntnissen musst du differenzieren: kommunikativ ist mittel, gut ist groß“ — deshalb
+  // je Stufe eine Zeile; Nächte genauso (mehrmals = groß, einmal oder gelegentlich = klein).
   const faktoren: { was: string; gewicht: number; hinweis?: string }[] = [
     { was: 'Ehepaar statt einer Person', gewicht: 450 },
-    { was: 'Deutschkenntnisse „gut“', gewicht: 450, hinweis: '„kommunikativ“: kleinerer Aufschlag, „grundlegend“: im Grundpreis' },
-    { was: 'Mehrmals nachts Hilfe nötig', gewicht: 300, hinweis: 'einmal pro Nacht: kleinerer Aufschlag, gelegentlich: der kleinste' },
+    { was: 'Deutschkenntnisse „gut“', gewicht: 450, hinweis: 'fließend, auch bei Fachbegriffen' },
+    { was: 'Mehrmals pro Nacht Hilfe nötig', gewicht: 300 },
+    { was: 'Deutschkenntnisse „kommunikativ“', gewicht: 250, hinweis: 'unterhält sich fließend; „grundlegend“ ist im Grundpreis' },
     { was: 'Weitere Personen im Haushalt', gewicht: 200 },
+    { was: 'Einmal pro Nacht oder gelegentlich Hilfe nötig', gewicht: 100, hinweis: 'gelegentlich: noch etwas weniger' },
     { was: 'Rollstuhl oder bettlägerig', gewicht: 100 },
     { was: 'Führerschein gewünscht', gewicht: 100 },
     { was: 'Betreuerin gewünscht (statt egal)', gewicht: 100 },
