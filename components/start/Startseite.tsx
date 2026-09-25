@@ -48,7 +48,10 @@ export function StartKopf() {
   return (
     <section className="bg-pm-paper">
       <div className="max-w-wide mx-auto lg:px-5 lg:pt-12 lg:pb-14 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] lg:gap-14 lg:items-center">
-        {/* Bild: am Handy zuerst, am Computer rechts (wie im Rechner) */}
+        {/* Bild: am Handy zuerst, am Computer rechts (wie im Rechner). Am Handy 12:5 (Martin 25.09.: „a ist gut“), damit
+            der Knopf schon beim Erstbesuch über der Cookie-Leiste steht — iPhone 13: Knopf 485–545 px, Leiste ab 553 px;
+            mit 8:5 lag er darunter. Das Testsieger-Siegel bleibt in Originalgröße („soll nicht kleiner“), die Bestpreis-Plakette
+            ist am Handy 26 statt 34 px hoch („bestpreis ist mir etwas zu groß“). */}
         <div className="relative lg:order-2">
           <Image
             src="/images/PM-Header-Shooting_hero-v3.webp"
@@ -57,19 +60,19 @@ export function StartKopf() {
             height={941}
             priority
             sizes="(min-width: 1024px) 560px, 100vw"
-            className="w-full h-auto max-lg:aspect-[8/5] max-lg:max-h-[440px] max-lg:object-[50%_32%] object-cover lg:rounded-[24px]"
+            className="w-full h-auto max-lg:aspect-[12/5] max-lg:max-h-[440px] max-lg:object-[50%_30%] object-cover lg:rounded-[24px]"
           />
           <div className="absolute left-4 bottom-4 md:left-5 md:bottom-5 flex items-end gap-3">
             <a href="/testsieger-24-stunden-pflege" aria-label="6× Testsieger DIE WELT — zur Auszeichnung">
               <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className="h-[92px] md:h-[118px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)]" />
             </a>
             <a href={GARANTIE} aria-label="Bestpreisgarantie — mehr Infos" className="bg-white/95 rounded-full px-2.5 py-1.5 shadow-[0_4px_14px_rgba(0,0,0,0.18)]">
-              <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[34px] md:h-[40px] w-auto" />
+              <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[26px] md:h-[40px] w-auto" />
             </a>
           </div>
         </div>
 
-        <div className="px-5 pt-7 pb-10 lg:p-0 lg:order-1">
+        <div className="px-5 pt-5 pb-10 lg:p-0 lg:order-1">
           {/* Augenbraue gehört zur H1: „24-Stunden-Pflege" bleibt Teil der Hauptüberschrift */}
           <h1>
             {/* Wie im Kostenrechner (Martin 24.09.: „warum … in der falschen Farbe und nicht wie im Kostenrechner?“):

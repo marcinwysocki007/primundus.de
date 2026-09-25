@@ -1,25 +1,72 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { cookieConsent } from '@/lib/cookie-consent';
 
 const WA_URL = `https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A`;
 
+// Ein Knopf zur Zeit (25.09.2026, gemessen am iPhone 13): Der schwebende Knopf lag auf dem Rechner-Knopf — beim Erstbesuch
+// über die Cookie-Leiste gehoben auf Unterzeile oder Knopf (1–12 % des Knopfs auf neun von zehn Zubringern), nach der
+// Cookie-Wahl auf dessen Pfeil (Startseite, /ablauf, /kontakt); wer dort tippte, landete bei WhatsApp statt im Rechner.
+// Deshalb erscheint er erst, wenn die Cookie-Wahl getroffen ist UND der erste Rechner-Knopf der Seite nicht mehr im Bild ist.
+// Seiten ohne Rechner-Knopf zeigen ihn nach der Cookie-Wahl sofort.
+const RECHNER_KNOPF = 'main a[href*="kostenrechner.primundus.de/?"]';
+
 export function WhatsAppFloat() {
+  const pfad = usePathname();
+  const [gewaehlt, setGewaehlt] = useState(false);
+  const [knopfImBild, setKnopfImBild] = useState(true);
+  const [tippStart, setTippStart] = useState(false);
   const [tooltipPhase, setTooltipPhase] = useState<0 | 1 | 2>(0);
   const [fadingOut, setFadingOut] = useState(false);
+  const sichtbar = gewaehlt && !knopfImBild;
+
+  // Cookie-Wahl: aus dem Speicher und über das Ereignis — ist der Speicher gesperrt, gilt die Wahl nur für diese Seite
+  useEffect(() => {
+    setGewaehlt(cookieConsent.hasConsent());
+    const gewaehltJetzt = () => setGewaehlt(true);
+    window.addEventListener('cookie-consent-changed', gewaehltJetzt);
+    return () => window.removeEventListener('cookie-consent-changed', gewaehltJetzt);
+  }, []);
+
+  // Je Seite neu: Seitenwechsel ohne Neuladen tauschen den Inhalt von <main>, der Baustein bleibt stehen
+  useEffect(() => {
+    let io: IntersectionObserver | null = null;
+    const bild = requestAnimationFrame(() => {
+      const knopf = Array.from(document.querySelectorAll<HTMLElement>(RECHNER_KNOPF)).find((a) => a.getBoundingClientRect().height > 0);
+      if (!knopf || typeof IntersectionObserver === 'undefined') {
+        setKnopfImBild(false);
+        return;
+      }
+      io = new IntersectionObserver(([eintrag]) => setKnopfImBild(eintrag.isIntersecting));
+      io.observe(knopf);
+    });
+    return () => {
+      cancelAnimationFrame(bild);
+      io?.disconnect();
+    };
+  }, [pfad]);
+
+  // Die Hinweise laufen ab dem ersten Erscheinen, nicht ab dem Laden der Seite
+  useEffect(() => {
+    if (sichtbar) setTippStart(true);
+  }, [sichtbar]);
 
   useEffect(() => {
+    if (!tippStart) return;
     const t1 = setTimeout(() => { setFadingOut(false); setTooltipPhase(1); }, 10000);
     const t2 = setTimeout(() => { setFadingOut(false); setTooltipPhase(2); }, 13500);
     const t3 = setTimeout(() => setFadingOut(true), 16500);
     const t4 = setTimeout(() => setTooltipPhase(0), 17200);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
-  }, []);
+  }, [tippStart]);
 
   return (
-    // Über der Cookie-Leiste, solange sie offen ist (--cookie-leiste setzt CookieConsent) — vorher lag der Knopf
-    // auf „Alle akzeptieren".
-    <div className="md:hidden fixed right-4 z-50 flex flex-col items-end gap-2" style={{ bottom: 'calc(20px + var(--cookie-leiste, 0px))' }}>
+    <div
+      aria-hidden={!sichtbar}
+      className={`md:hidden fixed right-4 bottom-5 z-50 flex flex-col items-end gap-2 transition-[opacity,transform] duration-200 motion-reduce:transition-none ${sichtbar ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'}`}
+    >
       <style>{`
         @keyframes waFadeInUp {
           from { opacity: 0; transform: translateY(6px); }
@@ -46,6 +93,7 @@ export function WhatsAppFloat() {
         href={WA_URL}
         target="_blank"
         rel="noopener noreferrer"
+        tabIndex={sichtbar ? undefined : -1}
         className="relative flex w-14 h-14 items-center justify-center bg-[#25D366] hover:bg-[#20C05A] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95"
         aria-label="WhatsApp Beratung"
       >

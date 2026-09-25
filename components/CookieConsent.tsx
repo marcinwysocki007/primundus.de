@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Cookie } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,7 +19,7 @@ import { cookieConsent, ConsentState } from "@/lib/cookie-consent";
 // bedeckte am Handy ca. 300 px — auf der Startseite genau die Überschrift und den Rechner-Knopf, bei jedem Erstbesuch
 // auf jeder Seite. „Nur notwendige" steht jetzt gleichwertig auf der ersten Ebene (vorher nur „Einstellungen" und
 // „Alle akzeptieren"). Kein Neuladen nach der Zustimmung: GA hört auf 'cookie-consent-changed' (app/layout.tsx).
-// Die Höhe der Leiste steht als CSS-Variable --cookie-leiste bereit, damit der WhatsApp-Knopf darüber sitzt.
+// Solange die Leiste offen ist, bleibt der WhatsApp-Knopf ausgeblendet (components/WhatsAppFloat.tsx, 25.09.).
 export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -28,29 +28,11 @@ export function CookieConsent() {
     analytics: false,
     marketing: false,
   });
-  const leiste = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // sofort statt nach 1 s: Die Leiste soll nicht erscheinen, wenn der Besucher gerade zu lesen begonnen hat
     if (!cookieConsent.hasConsent()) setShowBanner(true);
   }, []);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    const el = leiste.current;
-    if (!showBanner || !el) {
-      root.style.removeProperty("--cookie-leiste");
-      return;
-    }
-    const setzen = () => root.style.setProperty("--cookie-leiste", `${el.offsetHeight}px`);
-    setzen();
-    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(setzen) : null;
-    ro?.observe(el);
-    return () => {
-      ro?.disconnect();
-      root.style.removeProperty("--cookie-leiste");
-    };
-  }, [showBanner]);
 
   const handleAcceptAll = () => {
     cookieConsent.acceptAll();
@@ -90,7 +72,6 @@ export function CookieConsent() {
     <>
       {showBanner && (
       <div
-        ref={leiste}
         id="cookie-consent"
         role="region"
         aria-label="Cookie-Hinweis"
