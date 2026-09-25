@@ -228,7 +228,7 @@ export default function DemenzPflegeZuhause() {
                 { title: 'Den Tag so gestalten, dass die Nacht ruhig wird', desc: 'Tageslicht am Vormittag, Bewegung, kein Mittagsschlaf über 30 Minuten, abends kein Kaffee und keine großen Mahlzeiten, ein festes Abendritual mit gedämpftem Licht.' },
                 { title: 'Die Nacht sicher machen', desc: 'Nachtlicht zum Bad, Bewegungsmelder am Bett, Haustür gesichert, Straßenkleidung außer Sicht. Wer aufsteht, wird ruhig begleitet und nicht diskutiert.' },
                 { title: 'Ärztlich abklären', desc: 'Schmerzen, Harndrang, Schlafapnoe oder Medikamente können die Ursache sein. Beruhigungsmittel sind das letzte Mittel und erhöhen die Sturzgefahr.' },
-                { title: 'Jemand im Haus', desc: 'Eine Betreuungskraft, die mit im Haus wohnt, ist bei Bedarf auch nachts da. Gelegentliche Nachteinsätze kosten 50 € im Monat mehr, einmal pro Nacht 100 €, mehrmals pro Nacht 300 €.' },
+                { title: 'Jemand im Haus', desc: 'Eine Betreuungskraft, die mit im Haus wohnt, ist bei Bedarf auch nachts da. Nachteinsätze kosten mehr, gestaffelt nach gelegentlich, einmal pro Nacht und mehrmals pro Nacht; den Preis zeigt der Rechner.' },
               ]}
             />
           </Abschnitt>

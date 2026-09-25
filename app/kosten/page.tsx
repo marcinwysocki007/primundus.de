@@ -20,6 +20,13 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // Eigenanteil = Preis − Pflegegeld − Entlastungsbudget/12 − Steuerermäßigung (Martin 14.09.); Entlastungsbetrag (131 €)
 // nie abziehen; Kost und Logis nicht beziffern; An- und Abreise 125 € je Strecke, Wechseltag für beide Kräfte, neun
 // Feiertage doppelt, Krankheitstage nicht berechnet (Mustervertrag, Martin 17.09.). CariFair-Zahlen von carifair.de.
+//
+// Preisregel seit 25.09.2026 (Martin: „Warum präsentieren wir hier unsere exakten Kosten? Eine Beispielrechnung ist ok,
+// aber die ganze Bewegung der Kosten exakt zu beziffern ist zu viel — schreiben und die Grafik zeigen, ohne konkrete
+// Zahlen"): Genannt wird EIN Preis, der Grundpreis ab 2.150 €, dazu EINE Beispielrechnung (Pflegegrad 3) und die
+// Eigenanteile beim Grundpreis je Pflegegrad 2–4. Alles, was den Preis bewegt (Nächte, Deutsch, Ehepaar, weitere
+// Personen, Mobilität, Wünsche, Pflegegrad 5), wird benannt und gewichtet, aber nicht beziffert — den Betrag zeigt der
+// Rechner. Zuschüsse (Pflegegeld, Entlastungsbudget, Steuer) bleiben exakt, das sind Gesetzeszahlen.
 
 const AKTUALISIERT = aktualisiertAm('kosten', '20. September 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-kosten'
@@ -62,7 +69,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Was kostet 24-Stunden-Pflege im Monat?',
-    a: 'Bei Primundus ab 2.150 € im Monat für eine Person, bei einem Ehepaar ab 2.600 €. Der genaue Preis hängt davon ab, ob nachts Hilfe nötig ist, wie gut die Betreuungskraft Deutsch spricht und ob Sie weitere Wünsche haben. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat selbst zu tragen.',
+    a: 'Bei Primundus ab 2.150 € im Monat für eine Person. Der genaue Preis hängt davon ab, ob nachts Hilfe nötig ist, wie gut die Betreuungskraft Deutsch spricht, ob zwei Personen betreut werden und ob Sie weitere Wünsche haben; der Rechner zeigt ihn nach ein paar Fragen. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat selbst zu tragen.',
   },
   {
     q: 'Was kostet 24-Stunden-Pflege pro Tag?',
@@ -74,11 +81,11 @@ const FRAGEN = [
   },
   {
     q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 4 und 5?',
-    a: 'Bei Pflegegrad 4 bleiben nach Pflegegeld (800 €), Entlastungsbudget (295 €) und Steuerermäßigung (333 €) ab ca. 722 € im Monat. Bei Pflegegrad 5 kostet die Betreuung ab 2.200 €; nach 990 € Pflegegeld, 295 € Budget und 333 € Steuer bleiben ab ca. 582 €.',
+    a: 'Bei Pflegegrad 4 bleiben beim Grundpreis nach Pflegegeld (800 €), Entlastungsbudget (295 €) und Steuerermäßigung (333 €) ab ca. 722 € im Monat. Bei Pflegegrad 5 ist das Pflegegeld mit 990 € am höchsten, die Betreuung kostet etwas mehr als der Grundpreis; Ihren Eigenanteil zeigt der Rechner.',
   },
   {
     q: 'Was kostet 24-Stunden-Pflege für 2 Personen?',
-    a: 'Für ein Ehepaar kostet die Betreuung ab 2.600 € im Monat, 450 € mehr als für eine Person. Dafür bekommen beide Partner ihr eigenes Pflegegeld und ihr eigenes Entlastungsbudget. Bei Pflegegrad 3 und 2 bleiben so ab ca. 731 € im Monat selbst zu tragen.',
+    a: 'Eine Betreuungskraft versorgt beide Partner. Der Preis liegt über dem für eine Person, aber weit unter dem Doppelten. Dafür bekommen beide Partner ihr eigenes Pflegegeld und ihr eigenes Entlastungsbudget; bei Pflegegrad 3 und 2 sind das zusammen mit der Steuerermäßigung bis zu 1.869 € Zuschüsse im Monat. Der Eigenanteil ist deshalb oft niedriger als bei einer Person; den Preis für Ihre Situation zeigt der Rechner.',
   },
   {
     q: 'Wer übernimmt die Kosten für eine 24-Stunden-Pflege?',
@@ -171,7 +178,7 @@ export default function Kosten() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="12 Min."
           blick={[
-            'Preis: ab 2.150 € im Monat für eine Person, ab 2.600 € für ein Ehepaar',
+            'Preis: ab 2.150 € im Monat, bundesweit gleich; Ihren Preis zeigt der Rechner in 2 Minuten',
             'Dazu: An- und Abreise 125 € je Strecke; Kost und Logis stellen Sie',
             'Pflegegeld: 347 bis 990 € im Monat je nach Pflegegrad',
             'Entlastungsbudget: 3.539 € im Jahr, anteilig 295 € im Monat',
@@ -216,23 +223,22 @@ export default function Kosten() {
           <Abschnitt id="preisfaktoren" titel="Was den Preis bewegt: alle Preisfaktoren">
             <Text>
               Der Kostenrechner stellt Ihnen ein paar Fragen zur Pflegesituation. Jede Antwort hat einen festen Aufschlag,
-              den wir hier offenlegen. Es gibt keine versteckten Posten, und die Antworten, die den Preis nicht ändern,
-              sehen Sie auch: Pflegegrad 1 bis 4, die Erfahrung der Betreuungskraft und ein Rollator.
+              es gibt keine versteckten Posten. Welche Antworten den Preis bewegen und wie stark, zeigt die Grafik; was ihn
+              nicht ändert, sehen Sie auch: Pflegegrad 1 bis 4, die Erfahrung der Betreuungskraft und ein Rollator.
             </Text>
             <Preisfaktoren />
             <Punkte
               punkte={[
-                { title: 'Nachts Hilfe', desc: 'Braucht Ihr Angehöriger nachts regelmäßig Hilfe, etwa bei Demenz oder beim Gang zur Toilette, kostet das mehr. Gelegentlich sind es 50 €, einmal pro Nacht 100 €, mehrmals pro Nacht 300 €. Die Betreuungskraft hat dann tagsüber mehr Ruhezeit.' },
-                { title: 'Deutschkenntnisse', desc: 'Grundlegende Kenntnisse sind im Grundpreis enthalten. Eine Betreuungskraft, die sich flüssig unterhält („kommunikativ“), kostet 250 € mehr, gute Deutschkenntnisse 450 €. Bei Demenz ist das oft wichtiger als bei rein körperlichem Hilfebedarf.' },
-                { title: 'Zwei Personen', desc: 'Ein Ehepaar kostet 450 € mehr als eine Person. Leben weitere Personen im Haushalt, für die die Betreuungskraft mitkocht und mitwäscht, sind es 200 € mehr.' },
-                { title: 'Mobilität', desc: 'Ist Ihr Angehöriger auf den Rollstuhl angewiesen oder bettlägerig, kostet die Betreuung 100 € mehr, weil Umlagern und Transfers Zeit und Kraft brauchen.' },
-                { title: 'Wünsche', desc: 'Ein Führerschein kostet 100 € mehr, der ausdrückliche Wunsch nach einer Frau ebenfalls 100 €. Pflegegrad 5 kostet 50 € mehr.' },
+                { title: 'Nachts Hilfe', desc: 'Braucht Ihr Angehöriger nachts regelmäßig Hilfe, etwa bei Demenz oder beim Gang zur Toilette, kostet das mehr, gestaffelt nach gelegentlich, einmal pro Nacht und mehrmals pro Nacht. Die Betreuungskraft hat dann tagsüber mehr Ruhezeit.' },
+                { title: 'Deutschkenntnisse', desc: 'Grundlegende Kenntnisse sind im Grundpreis enthalten. Eine Betreuungskraft, die sich fließend unterhält („kommunikativ“), kostet mehr, gute Deutschkenntnisse noch einmal mehr. Bei Demenz ist das oft wichtiger als bei rein körperlichem Hilfebedarf.' },
+                { title: 'Zwei Personen', desc: 'Ein Ehepaar kostet mehr als eine Person, weil eine Betreuungskraft zwei Menschen versorgt. Leben weitere Personen im Haushalt, für die sie mitkocht und mitwäscht, kommt ein kleinerer Aufschlag dazu.' },
+                { title: 'Mobilität', desc: 'Ist Ihr Angehöriger auf den Rollstuhl angewiesen oder bettlägerig, kostet die Betreuung etwas mehr, weil Umlagern und Transfers Zeit und Kraft brauchen.' },
+                { title: 'Wünsche', desc: 'Ein Führerschein, der ausdrückliche Wunsch nach einer Frau und Pflegegrad 5 kosten jeweils einen kleinen Aufschlag.' },
               ]}
             />
             <Text>
-              Ein Beispiel: Eine Person mit Pflegegrad 4, bettlägerig, einmal pro Nacht Hilfe, Betreuungskraft mit
-              kommunikativem Deutsch. Der Preis liegt bei 2.150 + 100 + 100 + 250 = 2.600 € im Monat. Nach 800 € Pflegegeld,
-              295 € Entlastungsbudget und 333 € Steuerermäßigung bleiben ab ca. 1.172 € selbst zu tragen.
+              Wie viel bei Ihnen dazukommt, sehen Sie im Kostenrechner: ein paar Fragen, dann der Preis für Ihre
+              Situation, mit Pflegegeld, Entlastungsbudget und Steuerermäßigung schon abgezogen.
             </Text>
           </Abschnitt>
 
@@ -263,9 +269,9 @@ export default function Kosten() {
 
           <Abschnitt id="pflegegrad-kosten" titel="Was kostet 24-Stunden-Pflege nach Pflegegrad?">
             <Text>
-              Der Preis der Betreuung hängt kaum vom Pflegegrad ab, nur Pflegegrad 5 kostet 50 € mehr. Ihr Eigenanteil dagegen
-              sinkt mit jedem Pflegegrad, denn das Pflegegeld steigt. Beim Grundpreis für eine Person bleibt nach Pflegegeld,
-              anteiligem Entlastungsbudget und Steuerermäßigung:
+              Der Preis der Betreuung hängt kaum vom Pflegegrad ab. Ihr Eigenanteil dagegen sinkt mit jedem Pflegegrad, denn
+              das Pflegegeld steigt. Beim Grundpreis für eine Person bleibt nach Pflegegeld, anteiligem Entlastungsbudget und
+              Steuerermäßigung:
             </Text>
             <Tabelle
               kopf={['Pflegegrad', 'Betreuung', 'Pflegegeld', 'Entlastungsbudget', 'Steuer', 'Selbst zu tragen']}
@@ -273,11 +279,14 @@ export default function Kosten() {
                 ['Pflegegrad 2', 'ab 2.150 €', '− 347 €', '− 295 €', '− 333 €', 'ab ca. 1.175 €'],
                 ['Pflegegrad 3', 'ab 2.150 €', '− 599 €', '− 295 €', '− 333 €', 'ab ca. 923 €'],
                 ['Pflegegrad 4', 'ab 2.150 €', '− 800 €', '− 295 €', '− 333 €', 'ab ca. 722 €'],
-                ['Pflegegrad 5', 'ab 2.200 €', '− 990 €', '− 295 €', '− 333 €', 'ab ca. 582 €'],
               ]}
               betont={5}
               fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke · Budget-Anteil setzt anerkannte Verhinderungspflege voraus"
             />
+            <Text>
+              Pflegegrad 5 hat das höchste Pflegegeld (990 €); die Betreuung kostet dort etwas mehr als der Grundpreis, weil
+              die Pflege aufwendiger ist. Ihren Eigenanteil zeigt der Rechner.
+            </Text>
             <KostenAufteilung />
             <Punkte
               punkte={[
@@ -299,25 +308,25 @@ export default function Kosten() {
 
           <Abschnitt id="zwei-personen" titel="Was kostet 24-Stunden-Pflege für zwei Personen?">
             <Text>
-              Werden beide Partner betreut, kostet die Betreuung ab 2.600 € im Monat, also 450 € mehr als für eine Person.
-              Eine Betreuungskraft versorgt beide. Dafür hat jeder Partner mit Pflegegrad seinen eigenen Anspruch auf
-              Pflegegeld und Entlastungsbudget; die Steuerermäßigung gibt es einmal je Haushalt.
+              Werden beide Partner betreut, versorgt eine Betreuungskraft beide. Der Preis liegt über dem für eine Person,
+              aber weit unter dem Doppelten. Dafür hat jeder Partner mit Pflegegrad seinen eigenen Anspruch auf Pflegegeld
+              und Entlastungsbudget; die Steuerermäßigung gibt es einmal je Haushalt.
             </Text>
             <Tabelle
-              titel="Beispiel: Ehepaar, Pflegegrad 3 und Pflegegrad 2"
+              titel="Zuschüsse für ein Ehepaar: Pflegegrad 3 und Pflegegrad 2"
               zeilen={[
-                ['Betreuung im Monat (Ehepaar)', 'ab 2.600 €'],
-                ['Pflegegeld (599 € + 347 €)', '− 946 €'],
-                ['Entlastungsbudget (2 × 295 €)', '− 590 €'],
-                ['Steuerermäßigung (einmal je Haushalt)', '− 333 €'],
-                [<strong key="s">Selbst zu tragen im Monat</strong>, <strong key="w">ab ca. 731 €</strong>],
+                ['Pflegegeld (599 € + 347 €)', '946 €'],
+                ['Entlastungsbudget (2 × 295 €)', '590 €'],
+                ['Steuerermäßigung (einmal je Haushalt)', '333 €'],
+                [<strong key="s">Zuschüsse zusammen im Monat</strong>, <strong key="w">bis zu 1.869 €</strong>],
               ]}
               betont={1}
-              fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke · Budget-Anteil setzt anerkannte Verhinderungspflege für beide voraus"
+              fuss="Stand September 2026 · Budget-Anteil setzt anerkannte Verhinderungspflege für beide voraus · Steuerermäßigung 20 % der Kosten, höchstens 4.000 € im Jahr"
             />
             <Text>
-              Für zwei Personen ist die Betreuung zu Hause damit oft weniger als ein Viertel dessen, was zwei Heimplätze
-              kosten würden. Braucht einer der beiden nachts Hilfe oder ist bettlägerig, gelten die Aufschläge von oben.
+              Der Eigenanteil für zwei ist damit oft niedriger als für eine Person allein. Zum Vergleich: Zwei Heimplätze
+              kosten im Bundesdurchschnitt über 6.700 € Eigenanteil im Monat. Braucht einer der beiden nachts Hilfe oder ist
+              bettlägerig, gelten die Faktoren von oben; den Preis für Ihre Situation zeigt der Rechner.
             </Text>
           </Abschnitt>
 

@@ -28,7 +28,6 @@ export function KostenAufteilung() {
     { grad: 'Pflegegrad 2', preis: 2150, pflegegeld: 347 },
     { grad: 'Pflegegrad 3', preis: 2150, pflegegeld: 599 },
     { grad: 'Pflegegrad 4', preis: 2150, pflegegeld: 800 },
-    { grad: 'Pflegegrad 5', preis: 2200, pflegegeld: 990 },
   ].map((z) => ({ ...z, eigen: z.preis - z.pflegegeld - budget - steuer }))
   const max = Math.max(...zeilen.map((z) => z.preis))
   const teile = (z: (typeof zeilen)[number]) => [
@@ -39,8 +38,8 @@ export function KostenAufteilung() {
   ]
   return (
     <GrafikRahmen
-      titel="Wer zahlt was: der Monatspreis für eine Person, aufgeteilt nach Pflegegrad"
-      quelle="Preis ab 2.150 € (Pflegegrad 5: ab 2.200 €) aus unserem Kostenrechner, Stand September 2026. Pflegegeld nach § 37 SGB XI. Entlastungsbudget 3.539 € im Jahr, anteilig 295 € im Monat. Steuerermäßigung 20 %, höchstens 4.000 € im Jahr, anteilig 333 € im Monat. Zzgl. An- und Abreise 125 € je Strecke."
+      titel="Wer zahlt was: der Grundpreis für eine Person, aufgeteilt nach Pflegegrad"
+      quelle="Grundpreis ab 2.150 € aus unserem Kostenrechner, Stand September 2026; Pflegegrad 5 mit 990 € Pflegegeld zeigt der Rechner. Pflegegeld nach § 37 SGB XI. Entlastungsbudget 3.539 € im Jahr, anteilig 295 € im Monat. Steuerermäßigung 20 %, höchstens 4.000 € im Jahr, anteilig 333 € im Monat. Zzgl. An- und Abreise 125 € je Strecke."
     >
       <ul className="grid gap-5">
         {zeilen.map((z) => (
@@ -353,34 +352,36 @@ export function DemenzPhasen() {
 /** Was den Preis bewegt: die Aufschläge des Kostenrechners auf den Grundpreis, je Faktor ein Balken. Werte aus der
  * Preiskonfiguration des Rechners (pricing_config), gelesen am 20.09.2026. */
 export function Preisfaktoren() {
-  const grund = 2150
-  const faktoren: { was: string; wert: number; hinweis?: string }[] = [
-    { was: 'Ehepaar statt einer Person', wert: 450 },
-    { was: 'Deutschkenntnisse „gut“', wert: 450, hinweis: '„kommunikativ“: +250 €, „grundlegend“: ohne Aufschlag' },
-    { was: 'Mehrmals nachts Hilfe nötig', wert: 300, hinweis: 'einmal pro Nacht: +100 €, gelegentlich: +50 €' },
-    { was: 'Weitere Personen im Haushalt', wert: 200 },
-    { was: 'Rollstuhl oder bettlägerig', wert: 100 },
-    { was: 'Führerschein gewünscht', wert: 100 },
-    { was: 'Betreuerin gewünscht (statt egal)', wert: 100 },
-    { was: 'Pflegegrad 5', wert: 50 },
+  // Preisregel 25.09.2026 (Martin): Die Faktoren werden benannt und gewichtet, nicht beziffert — den Betrag zeigt der
+  // Rechner. Die Balken tragen das Gewicht aus der Preiskonfiguration (pricing_config), ohne Zahl daneben.
+  const faktoren: { was: string; gewicht: number; hinweis?: string }[] = [
+    { was: 'Ehepaar statt einer Person', gewicht: 450 },
+    { was: 'Deutschkenntnisse „gut“', gewicht: 450, hinweis: '„kommunikativ“: kleinerer Aufschlag, „grundlegend“: im Grundpreis' },
+    { was: 'Mehrmals nachts Hilfe nötig', gewicht: 300, hinweis: 'einmal pro Nacht: kleinerer Aufschlag, gelegentlich: der kleinste' },
+    { was: 'Weitere Personen im Haushalt', gewicht: 200 },
+    { was: 'Rollstuhl oder bettlägerig', gewicht: 100 },
+    { was: 'Führerschein gewünscht', gewicht: 100 },
+    { was: 'Betreuerin gewünscht (statt egal)', gewicht: 100 },
+    { was: 'Pflegegrad 5', gewicht: 50 },
   ]
-  const max = Math.max(...faktoren.map((f) => f.wert))
+  const max = Math.max(...faktoren.map((f) => f.gewicht))
+  const stufe = (g: number) => (g >= 300 ? 'groß' : g >= 200 ? 'mittel' : 'klein')
   return (
     <GrafikRahmen
-      titel={<>Was den Preis bewegt: Aufschläge auf den Grundpreis von {euro(grund)} im Monat</>}
-      quelle="Preise aus unserem Kostenrechner, Stand September 2026. Pflegegrad 1 bis 4, Erfahrung der Betreuungskraft und Mobilität mit Rollator ändern den Preis nicht. Die Aufschläge addieren sich; Ihren Preis zeigt der Rechner nach ein paar Fragen."
+      titel="Was den Preis bewegt: die Faktoren im Vergleich"
+      quelle="Preiskonfiguration unseres Kostenrechners, Stand September 2026. Die Balken zeigen, wie stark ein Faktor im Vergleich zu den anderen wiegt; die Aufschläge addieren sich auf den Grundpreis von 2.150 €. Pflegegrad 1 bis 4, Erfahrung der Betreuungskraft und Mobilität mit Rollator ändern den Preis nicht. Ihren Preis zeigt der Rechner nach ein paar Fragen."
     >
       <ul className="grid gap-3.5">
         {faktoren.map((f) => (
-          <li key={f.was} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1 sm:grid-cols-[13rem_minmax(0,1fr)_5.5rem]">
+          <li key={f.was} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1 sm:grid-cols-[13rem_minmax(0,1fr)_7rem]">
             <span className="text-[15.5px] font-semibold leading-[1.35] text-pm-ink sm:text-[16px]">
               {f.was}
               {f.hinweis && <span className="block text-[13.5px] font-normal leading-[1.4] text-pm-mute">{f.hinweis}</span>}
             </span>
-            <span className="order-3 col-span-2 h-4 overflow-hidden rounded-[6px] bg-pm-shell sm:order-none sm:col-span-1 sm:h-5" role="img" aria-label={`${f.was}: plus ${euro(f.wert)} im Monat`}>
-              <span className="block h-full rounded-[6px] bg-pm-taupe" style={{ width: `${(f.wert / max) * 100}%` }} />
+            <span className="order-3 col-span-2 h-4 overflow-hidden rounded-[6px] bg-pm-shell sm:order-none sm:col-span-1 sm:h-5" role="img" aria-label={`${f.was}: Aufschlag ${stufe(f.gewicht)}`}>
+              <span className="block h-full rounded-[6px] bg-pm-taupe" style={{ width: `${(f.gewicht / max) * 100}%` }} />
             </span>
-            <span className="text-right text-[16px] font-bold text-pm-ink [font-variant-numeric:tabular-nums]">+{euro(f.wert)}</span>
+            <span className="text-right text-[13.5px] font-semibold text-pm-mute">{stufe(f.gewicht)}</span>
           </li>
         ))}
       </ul>

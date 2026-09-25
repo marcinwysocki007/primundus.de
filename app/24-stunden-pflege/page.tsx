@@ -315,11 +315,14 @@ export default function VierUndZwanzigStundenPflege() {
                 ['Pflegegrad 2', 'ab 2.150 €', '− 347 €', '− 295 €', '− 333 €', 'ab ca. 1.175 €'],
                 ['Pflegegrad 3', 'ab 2.150 €', '− 599 €', '− 295 €', '− 333 €', 'ab ca. 923 €'],
                 ['Pflegegrad 4', 'ab 2.150 €', '− 800 €', '− 295 €', '− 333 €', 'ab ca. 722 €'],
-                ['Pflegegrad 5', 'ab 2.200 €', '− 990 €', '− 295 €', '− 333 €', 'ab ca. 582 €'],
               ]}
               betont={5}
               fuss="Entlastungsbudget: 3.539 € im Jahr, anteilig je Monat · Steuerermäßigung: 20 %, bis 4.000 € im Jahr · zzgl. An- und Abreise 125 € je Strecke · Kost und Logis stellen Sie · Stand September 2026, Werte aus unserem Kostenrechner"
             />
+            <Text>
+              Bei Pflegegrad 5 ist das Pflegegeld mit 990 € am höchsten; die Betreuung kostet dann etwas mehr als der
+              Grundpreis. Ihren Eigenanteil zeigt der Rechner.
+            </Text>
             <KostenAufteilung />
             <Kasten augenbraue="Was zahlt wer" titel="Pflegekasse ja, Krankenkasse nein">
               <Text>

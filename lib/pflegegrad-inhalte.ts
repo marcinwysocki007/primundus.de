@@ -1,8 +1,9 @@
 // lib/pflegegrad-inhalte.ts — Inhalte der fünf Pflegegrad-Seiten (20.09.2026). Beträge aus lib/fakten.ts und den Paragrafen des
 // SGB XI (§ 15 Punktbereiche, § 36, § 37, § 41 Tages-/Nachtpflege 721/1.357/1.685/2.085 €, § 42a, § 43, § 45b), Rechner-Beispiele mit
 // lib/begutachtung.ts nachgerechnet (Ergebnisse 21,25 / 35 / 66,25 / 87,5 / 95 Punkte). Eigenanteil zu Hause wie auf /kosten:
-// Preis ab 2.150 € (Pflegegrad 5 ab 2.200 €) minus Pflegegeld, anteiliges Entlastungsbudget 295 € (ab Pflegegrad 2) und
-// Steuerermäßigung bis 333 €; Entlastungsbetrag nie eingerechnet.
+// Preis ab 2.150 € minus Pflegegeld, anteiliges Entlastungsbudget 295 € (ab Pflegegrad 2) und Steuerermäßigung bis 333 €;
+// Entlastungsbetrag nie eingerechnet. Preisregel 25.09. (Martin): Aufschläge (Pflegegrad 5, bettlägerig, Nächte) werden
+// benannt, nicht beziffert — deshalb bei Pflegegrad 5 kein Preis und kein Eigenanteil, sondern die Zuschüsse und der Rechner.
 import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN } from '@/lib/fakten'
 import { HEIM_LEISTUNG } from '@/lib/heimkosten'
 
@@ -232,7 +233,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       fazit: 'Bis Pflegegrad 5 fehlen 2,5 Punkte. Geht die Sprache weiter verloren oder wird das Trinken unselbständig, ist die Grenze überschritten.',
     },
     versorgung: [
-      { title: 'Betreuungskraft im Haus plus Pflegedienst', desc: 'Die Betreuungskraft übernimmt Körperpflege, Umsetzen, Essen anreichen, Haushalt und ist bei Bedarf nachts da; der Pflegedienst kommt für Verbände, Spritzen und Katheter. Preis ab 2.150 €, bei Rollstuhl oder Bettlägerigkeit plus 100 €, bei Nachteinsätzen plus 50 bis 300 €. Nach 800 € Pflegegeld, 295 € Budget und 333 € Steuer bleiben ab ca. 722 € selbst zu tragen.' },
+      { title: 'Betreuungskraft im Haus plus Pflegedienst', desc: 'Die Betreuungskraft übernimmt Körperpflege, Umsetzen, Essen anreichen, Haushalt und ist bei Bedarf nachts da; der Pflegedienst kommt für Verbände, Spritzen und Katheter. Preis ab 2.150 €; bei Rollstuhl, Bettlägerigkeit und Nachteinsätzen kommen Aufschläge dazu, den Preis zeigt der Rechner. Beim Grundpreis bleiben nach 800 € Pflegegeld, 295 € Budget und 333 € Steuer ab ca. 722 € selbst zu tragen.' },
       { title: 'Hilfsmittel und Umbau zuerst', desc: 'Pflegebett, Lifter, Rollstuhl und Duschliege verordnet der Arzt, die Krankenkasse zahlt; Badumbau und Rampe bezuschusst die Pflegekasse mit bis zu 4.180 € je Maßnahme. Ohne beides ist die Pflege zu Hause für alle Beteiligten zu schwer.' },
       { title: 'Angehörige mit Tagespflege und Pflegedienst', desc: `Bis ${euro(TAGESPFLEGE[4])} im Monat Tagespflege zusätzlich zum Pflegegeld; wer die Nächte selbst übernimmt, braucht das Entlastungsbudget für Auszeiten. Bei Pflegegrad 4 ist die Grenze für Angehörige allein meist erreicht.` },
       { title: 'Pflegeheim', desc: `Die Kasse zahlt ${euro(HEIM_LEISTUNG[4])} an das Heim; der Eigenanteil ist derselbe wie bei Pflegegrad 2, im Schnitt 3.364 € im ersten Jahr. Nötig wird das Heim, wenn Behandlungspflege rund um die Uhr durch Fachkräfte gebraucht wird.` },
@@ -244,7 +245,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       { q: 'Was bekommt man bei Pflegegrad 4?', a: `${euro(PFLEGEGELD[4])} Pflegegeld im Monat oder ${euro(PFLEGESACHLEISTUNGEN[4])} Sachleistungen für den Pflegedienst, wahlweise kombiniert. Dazu ${euro(ENTLASTUNGSBETRAG)} Entlastungsbetrag, ${euro(ENTLASTUNGSBUDGET)} im Jahr für Verhinderungs- und Kurzzeitpflege, Tagespflege bis ${euro(TAGESPFLEGE[4])}, Hilfsmittel 42 € im Monat, bis 4.180 € für den Umbau. Beratungsbesuche können Sie vierteljährlich abrufen.` },
       { q: 'Wie viele Punkte braucht man für Pflegegrad 4?', a: '70 bis unter 90 Punkte. Im Beispiel oben bringen Rollstuhl, fast vollständige Übernahme der Selbstversorgung, Inkontinenz, vier Maßnahmen am Tag und ein Alltag, der ohne Hilfe nicht mehr stattfindet, 87,5 Punkte.' },
       { q: 'Was bedeutet Pflegegrad 4 im Alltag?', a: 'Schwerste Beeinträchtigungen der Selbständigkeit: Bei fast allem ist Hilfe nötig, die Person kann nicht allein bleiben, und nachts braucht sie oft jemanden. Zu Hause geht das mit einer Betreuungskraft im Haus und einem Pflegedienst; Angehörige allein schaffen es selten.' },
-      { q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 4?', a: `Bei Primundus ab 2.150 € im Monat, bei Rollstuhl oder Bettlägerigkeit ab 2.250 €. Nach ${euro(PFLEGEGELD[4])} Pflegegeld, 295 € anteiligem Entlastungsbudget und bis zu 333 € Steuerermäßigung bleiben ab ca. 722 € selbst zu tragen, mit Rollstuhl ab ca. 822 €. Nachteinsätze kosten 50 bis 300 € mehr.` },
+      { q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 4?', a: `Bei Primundus ab 2.150 € im Monat; bei Rollstuhl, Bettlägerigkeit und Nachteinsätzen kommen Aufschläge dazu, den Preis für Ihre Situation zeigt der Rechner. Beim Grundpreis bleiben nach ${euro(PFLEGEGELD[4])} Pflegegeld, 295 € anteiligem Entlastungsbudget und bis zu 333 € Steuerermäßigung ab ca. 722 € selbst zu tragen.` },
       { q: 'Wie hoch ist der Eigenanteil im Pflegeheim bei Pflegegrad 4?', a: `Wie bei jedem Pflegegrad ab 2: bundesweit durchschnittlich 3.364 € im Monat im ersten Jahr (vdek, Juli 2026). Die Kasse zahlt ${euro(HEIM_LEISTUNG[4])} an das Heim.` },
       { q: 'Wann gibt es Pflegegrad 5 statt 4?', a: 'Ab 90 Punkten oder bei einer besonderen Bedarfskonstellation: Sind beide Arme und beide Beine gebrauchsunfähig, gilt Pflegegrad 5 unabhängig von den Punkten (§ 15 Abs. 4 SGB XI). Im Beispiel oben fehlen 2,5 Punkte.' },
       { q: 'Wie oft muss der Beratungsbesuch bei Pflegegrad 4 sein?', a: 'Wer Pflegegeld bezieht, muss alle sechs Monate eine Beratung zu Hause abrufen; bei Pflegegrad 4 und 5 können Sie sie vierteljährlich nutzen (§ 37 Abs. 3 SGB XI). Versäumte Besuche können das Pflegegeld kürzen.' },
@@ -263,7 +264,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       `Pflegegeld ${euro(PFLEGEGELD[5])} im Monat, Sachleistungen ${euro(PFLEGESACHLEISTUNGEN[5])} für den Pflegedienst`,
       `Entlastungsbudget ${euro(ENTLASTUNGSBUDGET)} im Jahr, Tagespflege bis ${euro(TAGESPFLEGE[5])} zusätzlich, Entlastungsbetrag ${euro(ENTLASTUNGSBETRAG)}`,
       'Beispiel aus dem Rechner: 95 Punkte',
-      'Betreuungskraft im Haus: ab 2.200 €, selbst zu tragen ab ca. 582 € im Monat',
+      'Betreuungskraft im Haus: Preis etwas über dem Grundpreis von 2.150 €, Zuschüsse bis zu 1.618 € im Monat',
       `Pflegeheim: Kasse zahlt ${euro(HEIM_LEISTUNG[5])}, Eigenanteil im Schnitt 3.364 €`,
     ],
     typisch: [
@@ -286,7 +287,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       fazit: 'Pflegegrad 5 gibt es auch unter 90 Punkten, wenn beide Arme und beide Beine gebrauchsunfähig sind (§ 15 Abs. 4 SGB XI, besondere Bedarfskonstellation).',
     },
     versorgung: [
-      { title: 'Betreuungskraft im Haus plus Pflegedienst', desc: 'Die Betreuungskraft übernimmt Grundpflege, Lagerung, Essen anreichen, Haushalt und ist nachts da; Wundversorgung, Sonde, Katheter und Spritzen bleiben beim Pflegedienst. Preis ab 2.200 € (Pflegegrad 5), bettlägerig plus 100 €, Nächte plus 50 bis 300 €. Nach 990 € Pflegegeld, 295 € Budget und 333 € Steuer bleiben ab ca. 582 € selbst zu tragen.' },
+      { title: 'Betreuungskraft im Haus plus Pflegedienst', desc: 'Die Betreuungskraft übernimmt Grundpflege, Lagerung, Essen anreichen, Haushalt und ist nachts da; Wundversorgung, Sonde, Katheter und Spritzen bleiben beim Pflegedienst. Der Preis liegt bei Pflegegrad 5 etwas über dem Grundpreis von 2.150 €; bettlägerig und mit Nachteinsätzen kommen Aufschläge dazu. Dagegen stehen 990 € Pflegegeld, 295 € anteiliges Entlastungsbudget und bis zu 333 € Steuerermäßigung, zusammen bis zu 1.618 € im Monat. Ihren Eigenanteil zeigt der Rechner.' },
       { title: 'Wo die Grenze liegt', desc: 'Beatmung, Trachealkanüle oder ständige Überwachung sind außerklinische Intensivpflege nach § 37c SGB V durch Pflegefachkräfte, organisiert von der Krankenkasse. Das leistet keine Betreuungskraft. Alles andere ist zu Hause möglich.' },
       { title: 'Hilfsmittel, die die Pflege tragen', desc: 'Pflegebett mit Wechseldruckmatratze, Lifter, Pflegerollstuhl, Duschliege: verordnet der Arzt, zahlt die Krankenkasse. Pflegehilfsmittel zum Verbrauch 42 € im Monat, Umbau bis 4.180 € je Maßnahme.' },
       { title: 'Pflegeheim', desc: `Die Kasse zahlt ${euro(HEIM_LEISTUNG[5])} an das Heim; der Eigenanteil ist derselbe wie bei Pflegegrad 2, im Schnitt 3.364 € im ersten Jahr. Bei Pflegegrad 5 ist der Unterschied zum Eigenanteil zu Hause am größten.` },
@@ -299,7 +300,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       { q: 'Wie viele Punkte braucht man für Pflegegrad 5?', a: '90 bis 100 Punkte. Oder eine besondere Bedarfskonstellation: Sind beide Arme und beide Beine gebrauchsunfähig, gilt Pflegegrad 5 auch mit weniger Punkten (§ 15 Abs. 4 SGB XI).' },
       { q: 'Was bedeutet Pflegegrad 5 im Alltag?', a: 'Schwerste Beeinträchtigungen mit besonderen Anforderungen an die Pflege: Die Person braucht bei allem Hilfe, Tag und Nacht, meist ist sie bettlägerig oder vollständig auf den Rollstuhl angewiesen und kann sich kaum noch verständigen.' },
       { q: 'Kann man mit Pflegegrad 5 zu Hause bleiben?', a: 'Ja, mit einer Betreuungskraft im Haus für Grundpflege und Betreuung und einem Pflegedienst für die Behandlungspflege. Die Grenze ist die außerklinische Intensivpflege, etwa bei Beatmung; die organisiert die Krankenkasse mit Pflegefachkräften.' },
-      { q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 5?', a: `Bei Primundus ab 2.200 € im Monat, bettlägerig ab 2.300 €. Nach ${euro(PFLEGEGELD[5])} Pflegegeld, 295 € anteiligem Entlastungsbudget und bis zu 333 € Steuerermäßigung bleiben ab ca. 582 € selbst zu tragen, bettlägerig ab ca. 682 €. Nachteinsätze kosten 50 bis 300 € mehr.` },
+      { q: 'Was kostet 24-Stunden-Pflege bei Pflegegrad 5?', a: `Bei Primundus etwas über dem Grundpreis von 2.150 € im Monat; bettlägerig und bei Nachteinsätzen kommen Aufschläge dazu, den Preis für Ihre Situation zeigt der Rechner. Dagegen stehen ${euro(PFLEGEGELD[5])} Pflegegeld, 295 € anteiliges Entlastungsbudget und bis zu 333 € Steuerermäßigung, zusammen bis zu 1.618 € im Monat.` },
       { q: 'Wie hoch ist der Eigenanteil im Pflegeheim bei Pflegegrad 5?', a: `Bundesweit durchschnittlich 3.364 € im Monat im ersten Jahr (vdek, Juli 2026), gleich hoch wie bei Pflegegrad 2 bis 4. Die Kasse zahlt ${euro(HEIM_LEISTUNG[5])} an das Heim.` },
       { q: 'Gibt es bei Pflegegrad 5 mehr Beratung oder Kurzzeitpflege?', a: `Die Beratung zu Hause können Sie vierteljährlich abrufen. Das Entlastungsbudget von ${euro(ENTLASTUNGSBUDGET)} im Jahr ist bei allen Pflegegraden ab 2 gleich; Kurzzeitpflege gibt es bis zu acht Wochen im Jahr.` },
     ],

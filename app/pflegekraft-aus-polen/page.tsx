@@ -45,7 +45,7 @@ const SECTIONS = [
 
 // Sichtbare Fragen = Daten für Google (eine Quelle)
 const FRAGEN = [
-  { q: 'Was kostet eine polnische Pflegekraft im Monat?', a: 'Bei Primundus ab 2.150 € im Monat für eine Person, ohne Vermittlungsgebühr; für ein Ehepaar ab 2.600 €. Mehr kostet es, wenn nachts Hilfe nötig ist, die Betreuungskraft besser Deutsch sprechen soll oder weitere Wünsche dazukommen. Dazu kommen An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat.' },
+  { q: 'Was kostet eine polnische Pflegekraft im Monat?', a: 'Bei Primundus ab 2.150 € im Monat für eine Person, ohne Vermittlungsgebühr. Mehr kostet es, wenn zwei Personen betreut werden, nachts Hilfe nötig ist, die Betreuungskraft besser Deutsch sprechen soll oder weitere Wünsche dazukommen; den Preis für Ihre Situation zeigt der Rechner. Dazu kommen An- und Abreise mit 125 € je Strecke; Kost und Logis stellen Sie. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € im Monat.' },
   { q: 'Was kostet eine polnische Pflegekraft bei Pflegegrad 3?', a: 'Die Betreuung kostet ab 2.150 € im Monat. Davon gehen 599 € Pflegegeld ab, 295 € aus dem Entlastungsbudget (wenn die Kasse den Einsatz als Verhinderungspflege anerkennt) und bis zu 333 € Steuerermäßigung. Selbst zu tragen bleiben ab ca. 923 € im Monat. Bei Pflegegrad 2 sind es ab ca. 1.175 €, bei Pflegegrad 4 ab ca. 722 €, bei Pflegegrad 5 ab ca. 582 €.' },
   { q: 'Was zahlt die Pflegekasse für eine polnische Pflegekraft?', a: 'Die Pflegekasse zahlt die Betreuungskraft nicht direkt, aber Sie setzen ihre Leistungen dafür ein: das Pflegegeld (347 € bis 990 € im Monat ab Pflegegrad 2), das Entlastungsbudget von 3.539 € im Jahr für Verhinderungspflege, wenn die Kasse die Rechnung anerkennt, und Pflegehilfsmittel. Pflegesachleistungen gibt es nur für zugelassene Pflegedienste.' },
   { q: 'Wer darf den Entlastungsbetrag von 131 € abrechnen?', a: 'Nur Anbieter, die das Bundesland anerkannt hat: Tages- und Kurzzeitpflege, ambulante Pflegedienste und anerkannte Alltagshilfen. Eine Betreuungskraft, die mit im Haus wohnt, gehört in der Regel nicht dazu. Rechnen Sie den Entlastungsbetrag deshalb nicht in Ihren Eigenanteil ein.' },
@@ -54,7 +54,7 @@ const FRAGEN = [
   { q: 'Kann ich eine polnische Pflegekraft privat anstellen?', a: 'Ja. Sie werden dann Arbeitgeber: Anmeldung bei Sozialversicherung und Finanzamt, Lohn nach deutschem Recht, Urlaub, Lohnfortzahlung bei Krankheit, Ersatz bei Ausfall organisieren Sie selbst. Das passt, wenn Sie eine Betreuungskraft schon kennen und die Verwaltung nicht scheuen. Über uns entfällt das alles; der Preis ist trotzdem niedriger als bei den großen Anbietern.' },
   { q: 'Was kostet eine polnische Pflegekraft ohne Agentur?', a: 'Ohne Anbieter zahlen Sie den Lohn plus Sozialabgaben und tragen Ausfall, Urlaub und Ersatz selbst; seriös liegt das nicht unter dem Preis über einen Anbieter, der die Betreuungskraft angestellt hat. Angebote deutlich unter 2.000 € im Monat funktionieren fast immer über Scheinselbstständigkeit; das Risiko liegt bei Ihnen.' },
   { q: 'Welches Zimmer braucht eine polnische Pflegekraft?', a: 'Ein eigenes Zimmer mit Bett, Schrank, Tisch und Tür, die Mitbenutzung von Bad und Küche, Verpflegung, WLAN und einen Schlüssel. Das Zimmer muss nicht groß sein, aber abschließbar und beheizt. Pflegebett und Hilfsmittel für die betreute Person beantragen Sie bei der Pflegekasse.' },
-  { q: 'Hilft eine polnische Pflegekraft auch nachts?', a: 'Ja, weil sie mit im Haus wohnt, ist sie bei Bedarf auch nachts da. Gelegentliche Nachteinsätze kosten 50 € im Monat mehr, einmal pro Nacht 100 €, mehrmals pro Nacht 300 €. Sie braucht wie jeder Mensch ihre Nachtruhe; wer jede Nacht mehrfach Hilfe braucht, sagt das im Kostenrechner an, dann passen Preis und Auswahl.' },
+  { q: 'Hilft eine polnische Pflegekraft auch nachts?', a: 'Ja, weil sie mit im Haus wohnt, ist sie bei Bedarf auch nachts da. Nachteinsätze kosten mehr, gestaffelt nach gelegentlich, einmal pro Nacht und mehrmals pro Nacht. Sie braucht wie jeder Mensch ihre Nachtruhe; wer jede Nacht mehrfach Hilfe braucht, sagt das im Kostenrechner an, dann passen Preis und Auswahl.' },
   { q: 'Kann ich die Kosten steuerlich absetzen?', a: 'Ja, als haushaltsnahe Dienstleistung nach § 35a EStG: 20 Prozent der Kosten, bis zu 4.000 € im Jahr, also bis zu 333 € im Monat. Voraussetzung: Rechnung und Überweisung, keine Barzahlung. Die Ermäßigung zieht das Finanzamt direkt von der Steuer ab.' },
   { q: 'Zahlt das Sozialamt eine polnische Pflegekraft?', a: 'Reichen Rente, Einkommen und Vermögen nicht, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch zu Hause; ob es eine Betreuungskraft übernimmt, entscheidet es im Einzelfall. Kinder werden erst ab einem Bruttoeinkommen von 100.000 € im Jahr herangezogen. Stellen Sie den Antrag, bevor die Betreuung beginnt.' },
 ]
@@ -129,7 +129,7 @@ export default function PflegekraftAusPolen() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
           blick={[
-            'Preis: ab 2.150 € im Monat für eine Person, ab 2.600 € für ein Ehepaar, keine Vermittlungsgebühr',
+            'Preis: ab 2.150 € im Monat für eine Person, keine Vermittlungsgebühr; Ihren Preis zeigt der Rechner in 2 Minuten',
             'Selbst zu tragen bei Pflegegrad 3: ab ca. 923 € nach Pflegegeld, Entlastungsbudget und Steuer',
             'Legal: bei uns angestellt, Entsendung mit A1-Bescheinigung, Vertrag mit Primundus',
             'Sie sehen vorab, wer kommt: Profil mit Foto, Deutschkenntnissen und Erfahrung',
@@ -167,27 +167,29 @@ export default function PflegekraftAusPolen() {
 
           <Abschnitt id="pflegegrad" titel="Kosten nach Pflegegrad 2, 3, 4 und 5">
             <Text>
-              Der Pflegegrad ändert den Preis kaum (nur Pflegegrad 5 kostet 50 € mehr), aber er bestimmt, was die Pflegekasse dazugibt. Die
+              Der Pflegegrad ändert den Preis kaum, aber er bestimmt, was die Pflegekasse dazugibt. Die
               Tabelle rechnet mit dem Grundpreis, dem Pflegegeld, dem anteiligen Entlastungsbudget und der Steuerermäßigung. Der Entlastungsbetrag
               von {euro(ENTLASTUNGSBETRAG)} fehlt bewusst: Die Kasse zahlt ihn in der Regel nicht für die Betreuungskraft.
             </Text>
             <Tabelle
               titel="Eine Person, Grundpreis, Stand 2026"
-              kopf={['', 'PG 2', 'PG 3', 'PG 4', 'PG 5']}
+              kopf={['', 'PG 2', 'PG 3', 'PG 4']}
               zeilen={[
-                ['Betreuung ab', '2.150 €', '2.150 €', '2.150 €', '2.200 €'],
-                ['Pflegegeld', `− ${euro(PFLEGEGELD[2])}`, `− ${euro(PFLEGEGELD[3])}`, `− ${euro(PFLEGEGELD[4])}`, `− ${euro(PFLEGEGELD[5])}`],
-                ['Entlastungsbudget, anteilig', '− 295 €', '− 295 €', '− 295 €', '− 295 €'],
-                ['Steuerermäßigung, bis zu', '− 333 €', '− 333 €', '− 333 €', '− 333 €'],
-                ['Selbst zu tragen ab ca.', '1.175 €', '923 €', '722 €', '582 €'],
+                ['Betreuung ab', '2.150 €', '2.150 €', '2.150 €'],
+                ['Pflegegeld', `− ${euro(PFLEGEGELD[2])}`, `− ${euro(PFLEGEGELD[3])}`, `− ${euro(PFLEGEGELD[4])}`],
+                ['Entlastungsbudget, anteilig', '− 295 €', '− 295 €', '− 295 €'],
+                ['Steuerermäßigung, bis zu', '− 333 €', '− 333 €', '− 333 €'],
+                ['Selbst zu tragen ab ca.', '1.175 €', '923 €', '722 €'],
               ]}
-              betont={[1, 2, 3, 4]}
+              betont={[1, 2, 3]}
               fuss={`Pflegegeld § 37 SGB XI. Entlastungsbudget ${euro(ENTLASTUNGSBUDGET)} im Jahr (§ 42a), anteilig 295 € im Monat, wenn die Kasse den Einsatz als Verhinderungspflege anerkennt. Steuerermäßigung § 35a EStG: 20 %, höchstens 4.000 € im Jahr. Dazu An- und Abreise 125 € je Strecke.`}
             />
             <KostenAufteilung />
             <Text>
-              Für ein Ehepaar kostet die Betreuung ab 2.600 €. Beide Partner bekommen ihr eigenes Pflegegeld und ihr eigenes Entlastungsbudget;
-              bei Pflegegrad 3 und 2 bleiben so ab ca. 731 € im Monat. Alle Rechenwege stehen auf der {l('/kosten', 'Kostenseite')}.
+              Bei Pflegegrad 5 ist das Pflegegeld mit {euro(PFLEGEGELD[5])} am höchsten; die Betreuung kostet dann etwas mehr als der Grundpreis, Ihren
+              Eigenanteil zeigt der Rechner. Für ein Ehepaar liegt der Preis über dem für eine Person, aber weit unter dem Doppelten; beide
+              Partner bekommen ihr eigenes Pflegegeld und ihr eigenes Entlastungsbudget, der Eigenanteil ist deshalb oft niedriger als für
+              eine Person allein. Alle Rechenwege stehen auf der {l('/kosten', 'Kostenseite')}.
             </Text>
           </Abschnitt>
 
@@ -297,8 +299,8 @@ export default function PflegekraftAusPolen() {
             />
             <Kasten augenbraue="Nachts" titel="Hilfe in der Nacht">
               <Text>
-                Weil die Betreuungskraft im Haus wohnt, ist sie bei Bedarf auch nachts da. Gelegentliche Nachteinsätze kosten 50 € im Monat mehr,
-                einmal pro Nacht 100 €, mehrmals pro Nacht 300 €. Wer jede Nacht mehrfach Hilfe braucht, gibt das im Kostenrechner an; dann
+                Weil die Betreuungskraft im Haus wohnt, ist sie bei Bedarf auch nachts da. Nachteinsätze kosten mehr, gestaffelt nach
+                gelegentlich, einmal pro Nacht und mehrmals pro Nacht. Wer jede Nacht mehrfach Hilfe braucht, gibt das im Kostenrechner an; dann
                 stimmen Preis und Auswahl, und die Betreuungskraft weiß vorher, was auf sie zukommt.
               </Text>
             </Kasten>
@@ -308,7 +310,7 @@ export default function PflegekraftAusPolen() {
             <Punkte
               punkte={[
                 { title: 'Sie sehen vorab, wer kommt', desc: 'Foto, Alter, Deutschkenntnisse, Jahre Erfahrung und die Zahl der Einsätze über Primundus stehen im Profil jeder Betreuungskraft, die sich bei Ihnen bewirbt. Bewerbungen kommen am selben Werktag.' },
-                { title: 'Deutschkenntnisse in drei Stufen', desc: 'Grundlegend (im Grundpreis), kommunikativ (+250 €) oder gut (+450 €). Für Demenz und Alleinlebende lohnt sich mindestens „kommunikativ".' },
+                { title: 'Deutschkenntnisse in drei Stufen', desc: 'Grundlegend (im Grundpreis), kommunikativ oder gut, jede Stufe mit eigenem Aufschlag. Für Demenz und Alleinlebende lohnt sich mindestens „kommunikativ".' },
                 { title: 'Anreise in 3 Tagen möglich', desc: 'Nach Ihrer Auswahl reist die Betreuungskraft an; wir organisieren Fahrt und Übergabe. Sie zahlen erst ab dem ersten Tag im Haus.' },
                 { title: 'Wechsel alle 6 bis 8 Wochen', desc: 'Die nächste Betreuungskraft wählen Sie wieder selbst; die Übergabe läuft am Wechseltag im Haus. Der Wechsel kostet nichts extra, nur die An- und Abreise.' },
                 { title: 'Ersatz und Kündigung', desc: 'Fällt eine Betreuungskraft aus, stellen wir Ersatz in der Regel innerhalb von 3 Tagen. Sie kündigen täglich, ohne Mindestlaufzeit; abgerechnet wird taggenau.' },
