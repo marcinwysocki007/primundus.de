@@ -10,6 +10,7 @@
 // dunkles Band, weiße Kästen mit weichem Schatten. Keine Symbol-Kacheln.
 import { Fragment, type ReactNode } from 'react'
 import { KNOPF } from '@/components/ArticleCTA'
+import { BekanntAus } from '@/components/vertrauen/BekanntAus'
 import { LeistenKarte, RechnerBlock } from '@/components/vertrauen/Vertrauen'
 import { InhaltLeiste } from './InhaltLeiste'
 
@@ -112,6 +113,7 @@ export function RatgeberKopf({
   einleitungTitel,
   blickKopf,
   blickVerweise,
+  logos = true,
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -180,11 +182,19 @@ export function RatgeberKopf({
   blickKopf?: ReactNode
   /** Kasten als Inhaltsverzeichnis: Sprungverweise statt Häkchen-Punkten (Testsieger-Seite, 23.09.2026) */
   blickVerweise?: BlickVerweis[]
+  /**
+   * Medienlogos „Bekannt aus" direkt unter dem Kopf (25.09.2026). Martin: „verwenden wir auch auf allen
+   * Ortsseiten etc. die Medialogos als Trust-Signal?" — bis dahin nur Startseite und Ortsseiten, nicht auf
+   * den 113 Seiten mit diesem Kopf (Kernseiten, Länder, Themen, Ratgeber). Die Ortsseiten-Vorlage setzt
+   * den Kasten selbst (auf Papier, vor der Kosten-Sektion) und schaltet ihn hier aus.
+   */
+  logos?: boolean
 }) {
   // Kasten gibt es mit Häkchen-Punkten ODER mit Sprungverweisen — für die Anordnung zählt nur, ob er da ist
   const hatBlick = Boolean(blick?.length) || Boolean(blickVerweise?.length)
   const zweiSpalten = hatBlick || Boolean(person)
   return (
+    <>
     <div className="bg-pm-shell">
       <div className="max-w-[1200px] mx-auto px-5 pt-6 pb-12 md:pt-8 md:pb-16">
         <nav aria-label="Brotkrumen" className="text-[14px] text-pm-mute flex items-center gap-2 flex-wrap">
@@ -298,6 +308,8 @@ export function RatgeberKopf({
         ) : null}
       </div>
     </div>
+    {logos ? <BekanntAus ton="shell" /> : null}
+    </>
   )
 }
 

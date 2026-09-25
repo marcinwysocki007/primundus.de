@@ -28,7 +28,7 @@ import { NearbyCities } from '@/components/NearbyCities'
 import { OrtBeratung } from '@/components/orte/OrtBeratung'
 import { OrtWasBedeutetText } from '@/components/orte/OrtGrundlagen'
 import { OrtAblaufLanding, OrtAufgabenLanding, OrtKostenLanding, OrtPasstLanding, OrtWarumLanding } from '@/components/orte/OrtLanding'
-import { BekanntAus } from '@/components/start/Startseite'
+import { BekanntAus } from '@/components/vertrauen/BekanntAus'
 import { OrtWohnen } from '@/components/orte/OrtWohnen'
 import { Stimmen } from '@/components/vertrauen/Vertrauen'
 import { BlickKasten, Fragen, RatgeberKopf, StandardUnterzeile, Text, mitPosition } from '@/components/vorlage/Ratgeber'
@@ -135,6 +135,7 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
           lesezeit={d.lesezeit ?? '6 Min.'}
           knopf={{ href: `https://kostenrechner.primundus.de/?start=1&src=${src}`, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
+          logos={false}
           unterzeile={<StandardUnterzeile ort={d.ort} />}
           person={
             d.telefon ? (
