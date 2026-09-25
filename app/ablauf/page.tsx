@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Liste, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
+  Abschnitt, Fragen, Liste, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, StandardUnterzeile, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -94,7 +94,14 @@ export default function Ablauf() {
           ]}
           augenbraue="So funktioniert es"
           titel="Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start"
-          einleitung="In 2 Minuten sehen Sie Ihren Preis, gleich danach passende Pflegekräfte. Dann bewerben sich Betreuungskräfte bei Ihnen, Sie wählen selbst aus, und erst dann kommt der Vertrag. Eine Anreise ist in 3 Tagen möglich."
+          // Knopf direkt unter die Überschrift mit der Unterzeile der Startseite (25.09.2026, Martin: „nehme all deine Vorschläge“):
+          // Beim Erstbesuch lag er am iPhone 13 bei 561–621 px unter der Cookie-Leiste (ab 553 px). Die alte Einleitung
+          // wiederholte danach Preis in 2 Minuten und Anreise in 3 Tagen; Zwischenüberschrift und Einleitung nach zwei
+          // OpenAI-Runden (Doppelungen mit Unterzeile, Punkten und „Auf einen Blick“ raus).
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Sie sehen vorab, wer kommt"
+          einleitung="Das Profil der Betreuungskraft zeigt Foto, Deutschkenntnisse und Erfahrung. Sie entscheiden, wer zu Ihnen passt."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Preis & Pflegekräfte ansehen' }}

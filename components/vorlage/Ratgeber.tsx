@@ -9,9 +9,10 @@
 // in Stärke 800 mit enger Laufweite, Fließtext 18 px, Linien statt Karten, ein
 // dunkles Band, weiße Kästen mit weichem Schatten. Keine Symbol-Kacheln.
 import { Fragment, type ReactNode } from 'react'
+import Image from 'next/image'
 import { KNOPF } from '@/components/ArticleCTA'
 import { BekanntAus } from '@/components/vertrauen/BekanntAus'
-import { LeistenKarte, RechnerBlock } from '@/components/vertrauen/Vertrauen'
+import { LeistenKarte, RechnerBlock, SiegelZeile } from '@/components/vertrauen/Vertrauen'
 import { InhaltLeiste } from './InhaltLeiste'
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]'
@@ -24,15 +25,28 @@ const SPRUNG = 'scroll-mt-[88px] md:scroll-mt-[150px]'
 // Überschriften sollen nicht bei „24h-" umbrechen („Wann braucht es 24h- / Pflege").
 // Kurze Bindestrich-Wörter bleiben zusammen; lange wie „24-Stunden-Pflege" dürfen
 // weiter trennen, sonst ragen sie auf 320-px-Handys in 34 px aus dem Rand.
-export function zusammenhalten(titel: ReactNode): ReactNode {
+export function zusammenhalten(titel: ReactNode, bis = 14): ReactNode {
   if (typeof titel !== 'string') return titel
   return titel.split(/(\S+-\S+)/).map((teil, i) =>
-    i % 2 === 1 && teil.length <= 14 ? (
+    i % 2 === 1 && teil.length <= bis ? (
       <span key={i} className="whitespace-nowrap">{teil}</span>
     ) : (
       teil
     ),
   )
+}
+
+/**
+ * Lange Überschriften am Handy zweistufig (25.09.2026, Martin: „mobile sieht das überladen aus, wenn der fette titel so
+ * viele zeilen hat“; Variante D nach zwei OpenAI-Runden): bis zum ersten Doppelpunkt oder Gedankenstrich fett, der Rest
+ * als ruhigere zweite Zeile. Die H1 behält jedes Wort und den Trenner (am Handy nur optisch ausgeblendet); ab Tablet
+ * steht sie unverändert in einem Stück.
+ */
+export function titelTeilen(titel: ReactNode): { kopf: string; trenner: string; rest: string } | null {
+  if (typeof titel !== 'string') return null
+  const m = titel.match(/^(.+?)(:\s+|\s+[—–]\s+)(.+)$/)
+  if (!m || m[1].length > 70 || m[3].length < 6) return null
+  return { kopf: m[1], trenner: m[2], rest: m[3] }
 }
 
 function Haken() {
@@ -82,6 +96,23 @@ export function BlickKasten({ titel, punkte = [], kopf, verweise }: { titel: str
 }
 
 /**
+ * Siegel-Zeile der Testsieger-Seite („6× Testsieger · DIE WELT · Preis & Qualität“) als Link — am Computer im Kasten
+ * „Auf einen Blick“ oder als eigene Karte rechts (25.09.2026, Martin zum Siegel in der Ecke: „Lose, klein, da oben an
+ * der Ecke. Das musst du schöner machen.“). Am Handy steht das Siegel oben rechts im Kopf.
+ */
+function SiegelKopf({ ziel, karte = false }: { ziel: string; karte?: boolean }) {
+  return (
+    <a
+      href={ziel}
+      aria-label="6× Testsieger DIE WELT — zur Auszeichnung"
+      className={`block transition-opacity hover:opacity-90 ${karte ? 'bg-white rounded-[20px] shadow-lift p-6 [&>div]:mb-0 [&>div]:border-0 [&>div]:pb-0' : ''}`}
+    >
+      <SiegelZeile />
+    </a>
+  )
+}
+
+/**
  * Die Unterzeile aus dem Rechner-Kopf, Wort für Wort — mit Ort in der Anreise-Zusage
  * (Martin 22.09.: „Anreise in Worms in drei Tagen möglich … ist besser").
  */
@@ -114,6 +145,9 @@ export function RatgeberKopf({
   blickKopf,
   blickVerweise,
   logos = true,
+  nachTitel,
+  siegel = true,
+  siegelZiel = '/testsieger-24-stunden-pflege',
 }: {
   pfad: { label: string; href?: string }[]
   augenbraue: string
@@ -189,37 +223,85 @@ export function RatgeberKopf({
    * den Kasten selbst (auf Papier, vor der Kosten-Sektion) und schaltet ihn hier aus.
    */
   logos?: boolean
+  /**
+   * Block direkt unter der H1, vor Unterzeile und Einleitung (25.09.2026). Auf /kontakt steht dort Marta mit „Anrufen“
+   * und „WhatsApp“: Wer die Kontaktseite öffnet, will jemanden erreichen — vorher kam „Anrufen“ am iPhone erst bei
+   * 1.423 px, und der Rechner-Knopf lag beim Erstbesuch unter der Cookie-Leiste (Martin: „zw. a und b kannst du entscheiden“).
+   */
+  nachTitel?: ReactNode
+  /**
+   * Testsieger-Siegel DIE WELT (25.09.2026, Martin zur Vorschau der Unterseiten: „ist gut, aber mir fehlt einfach oben
+   * das testsieger siegel“). Handy und Tablet: oben rechts neben Brotkrumen und Augenbraue, endet über der H1, damit der
+   * Knopf nicht wieder unter die Cookie-Leiste rutscht. Computer („Lose, klein, da oben an der Ecke“): als Siegel-Zeile
+   * der Testsieger-Seite im Kasten „Auf einen Blick“, ohne Kasten als eigene Karte rechts; mit Ansprechpartnerin steht es
+   * schon auf Martas Foto, auf der Testsieger-Seite im Kasten (`blickKopf`). Dort führt es zu „Wer auszeichnet und wie“.
+   */
+  siegel?: boolean
+  /** Ziel des Siegels, Standard die Testsieger-Seite */
+  siegelZiel?: string
 }) {
   // Kasten gibt es mit Häkchen-Punkten ODER mit Sprungverweisen — für die Anordnung zählt nur, ob er da ist
   const hatBlick = Boolean(blick?.length) || Boolean(blickVerweise?.length)
-  const zweiSpalten = hatBlick || Boolean(person)
+  // Am Computer ohne Kasten und ohne Ansprechpartnerin: rechts eine eigene Karte mit dem Siegel
+  const siegelSpalte = siegel && !hatBlick && !person
+  const teile = titelTeilen(titel)
+  const zweiSpalten = hatBlick || Boolean(person) || siegelSpalte
   return (
     <>
     <div className="bg-pm-shell">
-      <div className="max-w-[1200px] mx-auto px-5 pt-6 pb-12 md:pt-8 md:pb-16">
-        <nav aria-label="Brotkrumen" className="text-[14px] text-pm-mute flex items-center gap-2 flex-wrap">
-          {pfad.map((p, i) => (
-            <span key={p.label} className="flex items-center gap-2">
-              {i > 0 && <span aria-hidden="true">›</span>}
-              {p.href ? (
-                <a href={p.href} className="hover:text-pm-ink transition-colors">{p.label}</a>
-              ) : (
-                <span className="text-pm-body">{p.label}</span>
-              )}
-            </span>
-          ))}
+      {/* Am Handy kompakter (25.09.2026, Martin: „nehme all deine Vorschläge“): Beim Erstbesuch beginnt die Cookie-Leiste
+          am iPhone 13 bei 553 px, und auf /pflegekraft-aus-polen lag der Rechner-Knopf halb darunter. Oben 16 statt 24 px,
+          Brotkrumen in EINER Zeile (die letzte wird bei Platzmangel mit … gekürzt, der Text im Quelltext bleibt ganz), bis
+          zur Augenbraue 20 statt 32 px — der Knopf rückt so ca. 20 px höher, bei zweizeiligen Brotkrumen ca. 50 px.
+          Ab Tablet-Breite unverändert. */}
+      <div className="relative max-w-[1200px] mx-auto px-5 pt-4 pb-12 md:pt-8 md:pb-16">
+        {siegel ? (
+          // Nur Handy und Tablet — am Computer steht das Siegel im Kasten, in einer eigenen Karte oder auf Martas Foto
+          <a href={siegelZiel} aria-label="6× Testsieger DIE WELT — zur Auszeichnung" className="absolute right-5 top-2 z-[1] lg:hidden">
+            <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} priority className="h-[76px] md:h-[88px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)]" />
+          </a>
+        ) : null}
+        <nav aria-label="Brotkrumen" className={`text-[14px] text-pm-mute flex items-center gap-2 max-md:whitespace-nowrap max-md:overflow-hidden md:flex-wrap ${siegel ? 'pr-16 md:pr-20 lg:pr-0' : ''}`}>
+          {pfad.map((p, i) => {
+            const letzte = i === pfad.length - 1
+            return (
+              <span key={p.label} className={`flex items-center gap-2 ${letzte ? 'min-w-0' : 'flex-none'}`}>
+                {i > 0 && <span aria-hidden="true">›</span>}
+                {p.href ? (
+                  <a href={p.href} className={`hover:text-pm-ink transition-colors ${letzte ? 'min-w-0 max-md:truncate' : ''}`}>{p.label}</a>
+                ) : (
+                  <span className={`text-pm-body ${letzte ? 'min-w-0 max-md:truncate' : ''}`}>{p.label}</span>
+                )}
+              </span>
+            )
+          })}
         </nav>
 
         {/* Mit Ansprechpartnerin drei Felder mit ausdrücklicher Platzierung: Am Rechner stehen Text
             und Fakten links untereinander, Marta rechts daneben. Auf dem Handy greift die
             Platzierung nicht, dort zählt die Reihenfolge im Quelltext — Text, Marta, Fakten.
             Ohne Ansprechpartnerin bleibt der Kopf wie bisher (Text links, Kasten rechts). */}
-        <div className={`mt-8 md:mt-12 grid gap-10 ${zweiSpalten ? `${person && !hatBlick ? 'lg:grid-cols-[minmax(0,1fr)_360px]' : 'lg:grid-cols-[minmax(0,1fr)_400px]'} lg:gap-x-16 ${person ? 'lg:gap-y-8 lg:items-start' : 'lg:items-center'}` : 'max-w-[52rem]'}`}>
+        <div className={`mt-5 md:mt-12 grid gap-10 ${zweiSpalten ? `${siegelSpalte ? 'max-lg:max-w-[52rem] lg:grid-cols-[minmax(0,1fr)_320px]' : person && !hatBlick ? 'lg:grid-cols-[minmax(0,1fr)_360px]' : 'lg:grid-cols-[minmax(0,1fr)_400px]'} lg:gap-x-16 lg:items-start ${person ? 'lg:gap-y-8' : ''}` : 'max-w-[52rem]'}`}>
+          {/* Text und Kasten oben bündig (25.09.2026): Mittig rückte die Überschrift neben einem höheren Kasten nach unten
+              (mit der Siegel-Zeile auf 35 Ratgeber-Seiten bis zu 69 px), und ein kürzerer Kasten hing tiefer als der Text
+              (Martin: „sieht das irgendwie so komisch aus, wenn das so irgendwie hängt“). */}
           <div className={`min-w-0 flex flex-col ${person ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-            <p className={AUGENBRAUE}>{augenbraue}</p>
-            <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
-              {zusammenhalten(titel)}
+            <p className={`${AUGENBRAUE} ${siegel ? 'max-md:pr-16' : ''}`}>{augenbraue}</p>
+            <h1 className="mt-4 text-[clamp(34px,4.4vw,50px)] max-md:text-[30px] font-extrabold leading-[1.06] max-md:leading-[1.1] tracking-[-0.035em] text-pm-ink [text-wrap:balance] max-sm:hyphens-auto [overflow-wrap:break-word]">
+              {teile ? (
+                <>
+                  {/* „24-Stunden-Pflege“ (17 Zeichen) bleibt zusammen — sonst stand „24-Stunden-“ allein in der ersten Zeile */}
+                  <span className="max-md:block">{zusammenhalten(teile.kopf, 18)}</span>
+                  <span className="max-md:sr-only">{teile.trenner}</span>
+                  <span className="max-md:mt-2 max-md:block max-md:text-[21px] max-md:font-medium max-md:leading-[1.3] max-md:tracking-[-0.01em] max-md:text-pm-ink/75 max-md:[hyphens:manual] max-md:first-letter:uppercase">
+                    {zusammenhalten(teile.rest)}
+                  </span>
+                </>
+              ) : (
+                zusammenhalten(titel)
+              )}
             </h1>
+            {nachTitel ? <div className="mt-6">{nachTitel}</div> : null}
             {unterzeile ? (
               <p className="mt-5 text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem]">
                 {unterzeile}
@@ -283,7 +365,12 @@ export function RatgeberKopf({
 
           {hatBlick ? (
             <div className={person ? 'lg:col-start-1 lg:row-start-2' : ''}>
-              <BlickKasten titel={blickTitel} punkte={blick} kopf={blickKopf} verweise={blickVerweise} />
+              <BlickKasten
+                titel={blickTitel}
+                punkte={blick}
+                kopf={blickKopf ?? (siegel && !person ? <div className="hidden lg:block"><SiegelKopf ziel={siegelZiel} /></div> : undefined)}
+                verweise={blickVerweise}
+              />
             </div>
           ) : null}
           {/* Der Knopf steht erst NACH den Fakten (Martin 20.09.: „dem User die Informationen geben,
@@ -299,6 +386,7 @@ export function RatgeberKopf({
               (Knopf) und dann das Gespräch kommt. Am Rechner setzt die Platzierung sie nach oben
               rechts, über die volle Höhe der linken Spalte. */}
           {person ? <div className={`lg:col-start-2 lg:row-start-1 lg:row-span-3 ${hatBlick ? 'lg:self-stretch' : 'lg:self-start'}`}>{person}</div> : null}
+          {siegelSpalte ? <div className="hidden lg:block"><SiegelKopf ziel={siegelZiel} karte /></div> : null}
         </div>
 
         {aktualisiert && lesezeit && person ? (

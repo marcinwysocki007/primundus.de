@@ -92,6 +92,10 @@ export default function KontaktPage() {
           ]}
           augenbraue="Kontakt"
           titel="Kontakt: Marta Kapcio und ihr Team erreichen Sie täglich von 8 bis 20 Uhr"
+          // Marta mit „Anrufen“ und „WhatsApp“ direkt unter der Überschrift (25.09.2026): vorher kam „Anrufen“ am iPhone erst
+          // bei 1.423 px. Der Rechner-Knopf folgt nach der Einleitung. Im Abschnitt „So erreichen Sie uns“ steht der Baustein
+          // deshalb nicht noch einmal.
+          nachTitel={<MartaBand eingebettet />}
           einleitung={<>Rufen Sie an oder schreiben Sie per WhatsApp oder E-Mail, auch am Wochenende. Ihren Preis und passende Betreuungskräfte sehen Sie auch ohne Anruf: im Kostenrechner, in <strong className="text-pm-ink">2 Minuten</strong>.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="2 Min."
@@ -108,7 +112,6 @@ export default function KontaktPage() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="wege" titel="So erreichen Sie uns">
-            <MartaBand eingebettet />
             <Werte
               zeilen={[
                 ['Telefon', <><a href="tel:+4989200000830" className={LINK}>089 200 000 830</a>, täglich 8–20 Uhr, auch am Wochenende</>],

@@ -125,6 +125,7 @@ export default function TestsiegerPage() {
 
       <div className="bg-pm-paper">
         <RatgeberKopf
+          siegelZiel="#wer"
           pfad={[
             { label: 'Startseite', href: '/' },
             { label: 'Testsieger 24-Stunden-Pflege' },
