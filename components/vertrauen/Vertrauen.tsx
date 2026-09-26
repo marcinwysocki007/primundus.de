@@ -113,14 +113,17 @@ export async function RechnerBlock({ src, sterne = true, punkte = true, dunkel =
           <span className="hidden max-[359px]:inline">Passende Pflegekräfte verfügbar</span>
         </a>
       </div>
-      {punkte && (
-        <div className="mt-7">
-          <Punkte />
+      {/* Sterne VOR den Vorteilen (Martin 26.09.: „die Sterne vor die Vorteile habe ich auch schon überlegt"): Am iPhone 13
+          lagen sie nach den vier Punkten auf fast allen Kernseiten knapp unter dem ersten Bildschirm (680–810 px); jetzt kommen
+          Knopf, Gesichter und Bewertung zusammen ins Bild, die Vorteile folgen. */}
+      {d && d.anzahl > 0 && (
+        <div className="mt-5">
+          <SterneLink d={d} dunkel={dunkel} />
         </div>
       )}
-      {d && d.anzahl > 0 && (
-        <div className={punkte ? 'mt-6' : 'mt-5'}>
-          <SterneLink d={d} dunkel={dunkel} />
+      {punkte && (
+        <div className={d && d.anzahl > 0 ? 'mt-5' : 'mt-7'}>
+          <Punkte />
         </div>
       )}
     </div>
