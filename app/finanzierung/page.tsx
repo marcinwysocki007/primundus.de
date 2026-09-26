@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Tabelle, Text } from '@/components/vorlage/Ratgeber'
 import { KostenAufteilung } from '@/components/grafik/Grafik'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -96,6 +96,9 @@ export default function FinanzierungPage() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Was die Zuschüsse bewirken"
           blickTitel="Alle Zuschüsse 2026"
           blick={[
             'Pflegegeld: 347 bis 990 € im Monat je nach Pflegegrad (ab Pflegegrad 2)',
