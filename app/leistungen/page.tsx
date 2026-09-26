@@ -24,7 +24,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht',
-  description: 'Was eine Betreuungskraft übernimmt: Körperpflege, Haushalt, Gesellschaft, bei Bedarf nachts. Was inbegriffen ist, was der Pflegedienst macht.',
+  description: 'Leistungen der 24h-Pflege: Körperpflege, Haushalt, Gesellschaft, bei Bedarf nachts. Was inbegriffen ist und was der Pflegedienst macht.',
   alternates: { canonical: 'https://primundus.de/leistungen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -27,7 +27,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Beratungsgespräch zur 24-Stunden-Pflege: so läuft es ab',
   description:
-    'Was wir im Gespräch fragen, was Sie fragen sollten und was danach passiert. Kostenlos, täglich 8 bis 20 Uhr, den Preis sehen Sie vorher.',
+    'Beratungsgespräch zur 24-Stunden-Pflege: unsere Fragen, Ihre Fragen, was danach kommt. Kostenlos, täglich 8–20 Uhr, Preis vorher online.',
   alternates: { canonical: 'https://primundus.de/beratungsgespraech' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

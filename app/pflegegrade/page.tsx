@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Tabelle } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle } from '@/components/vorlage/Ratgeber'
 import { ArticleTOC } from '@/components/ArticleTOC'
 
 // Übersicht Pflegegrade in der Seitenvorlage (19.09.2026, Muster /finanzierung). Die drei Fragen standen bisher nur in den
@@ -86,9 +86,6 @@ export default function Pflegegrade() {
           titel="Pflegegrade 2026"
           einleitung="Alle 5 Pflegegrade: wie viele Punkte es braucht, welches Pflegegeld es gibt, wie Sie den Antrag stellen und die Begutachtung vorbereiten."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegegrade', text: 'Preis & Pflegekräfte ansehen' }}
-          knopfOben
-          unterzeile={<StandardUnterzeile />}
-          einleitungTitel="Pflegegrad in Kürze"
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

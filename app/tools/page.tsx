@@ -10,7 +10,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 
 export const metadata: Metadata = {
   title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige',
-  description: 'Pflegegrad-Rechner, Zuschuss-Rechner, Vollmacht- und Pflegevertrag-Generator: kostenlos, anonym, ohne Anmeldung.',
+  description: 'Pflege-Tools 2026: Pflegegrad-Rechner, Zuschuss-Rechner, Vollmacht- und Pflegevertrag-Generator. Kostenlos, anonym, ohne Anmeldung.',
   alternates: {
     canonical: 'https://primundus.de/tools',
   },

@@ -28,7 +28,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Rechtssichere 24-Stunden-Pflege: Entsendemodell mit A1',
   description:
-    'Betreuungskraft bei uns angestellt, A1-Bescheinigung für jeden Einsatz, Sie werden nicht Arbeitgeber. Was bei einer Kontrolle zählt.',
+    'Rechtssichere 24-Stunden-Pflege: bei uns angestellt, A1-Bescheinigung je Einsatz, Sie werden nicht Arbeitgeber. Was bei einer Kontrolle zählt.',
   alternates: { canonical: 'https://primundus.de/rechtssicher' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

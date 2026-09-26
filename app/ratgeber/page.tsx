@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf } from '@/components/vorlage/Ratgeber'
 import { ArticleTOC } from '@/components/ArticleTOC'
 
 // Ratgeber-Übersicht in der Seitenvorlage (19.09.2026, Muster /finanzierung). Sieben Themen mit je drei Artikeln wie bisher,
@@ -92,9 +92,6 @@ export default function RatgeberPage() {
           titel="Ratgeber 24-Stunden-Pflege"
           einleitung="Antworten auf die Fragen, die Familien vor und während einer 24-Stunden-Pflege stellen: Pflegegrade, Finanzierung, Organisation, Krankheiten, Alltag und Recht."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
-          knopfOben
-          unterzeile={<StandardUnterzeile />}
-          einleitungTitel="Was Sie hier finden"
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
