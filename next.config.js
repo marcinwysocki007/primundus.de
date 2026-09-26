@@ -7,6 +7,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: { unoptimized: true },
+  // 26.09.2026: Render brach den Build ab — „Ran out of memory (used over 8GB) while building your code" (Deploy 8a9ddf4,
+  // 12:16). Next startet für die statische Seitenerzeugung je CPU-Kern einen Worker; auf Renders Build-Maschine sind das
+  // viele, jeder hält das ganze Bündel plus die Ortsdaten im Speicher — 364 Seiten × viele Worker sprengen 8 GB. Lokal
+  // (12 Kerne, Node 18) lag die Spitze bei 3,2 GB. Vier Worker reichen; der Build dauert dafür ein paar Minuten länger.
+  experimental: { cpus: 4 },
   // 14.09.2026: Landingpage fuer Vermittler als eigenstaendiges HTML (eigener Kopf und Fuss
   // fuer Partner, kein Kunden-Header). Quelle: public/pflegekraefte-fuer-vermittler/.
   async rewrites() {
