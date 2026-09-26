@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Werte } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Schritte, Text, Werte } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
@@ -28,8 +28,8 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Qualität der 24h-Pflege bei Primundus — wie wir Betreuungskräfte auswählen | Primundus',
-  description: 'Wie Primundus Betreuungskräfte auswählt: bei uns angestellt, Profil mit Foto, Erfahrung und Deutschkenntnissen vorab, Sie wählen selbst, täglich kündbar.',
+  title: 'Qualität der 24h-Pflege: So wählt Primundus Pflegekräfte aus',
+  description: 'Bei uns angestellt, Profil mit Foto, Erfahrung und Deutschkenntnissen vorab, Sie wählen selbst, täglich kündbar. So sichern wir Qualität.',
   alternates: { canonical: 'https://primundus.de/qualitaet' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -109,6 +109,9 @@ export default function Qualitaet() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Was Qualität bei uns heißt"
           blickTitel="Auf einen Blick"
           blick={[
             'Betreuungskräfte bei uns angestellt, Einsatz mit A1-Bescheinigung',

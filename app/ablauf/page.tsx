@@ -28,7 +28,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Ablauf der 24h-Pflege mit Primundus — von Anfrage bis Start',
-  description: 'So läuft die 24h-Pflege mit Primundus ab: Preis und Pflegekräfte sofort sehen, Bewerbungen erhalten, selbst auswählen, dann der Vertrag. Anreise in 3 Tagen möglich.',
+  description: 'Der Ablauf: Preis und Pflegekräfte in 2 Minuten sehen, Bewerbungen erhalten, selbst auswählen, dann der Vertrag. Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/ablauf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

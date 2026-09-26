@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
-import { ArticleCTA } from '@/components/ArticleCTA'
+import { KontaktBand } from '@/components/ArticleCTA'
+import { Fragen, RatgeberKopf, StandardUnterzeile } from '@/components/vorlage/Ratgeber'
 import { ANBIETER, PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND, type Anbieter, type Wertung } from '@/lib/anbieterVergleich'
 
 export const metadata: Metadata = {
   title: 'Anbieter-Vergleich 2026: Pflegehelden, Promedica24 & Co.',
   description:
-    'Pflegehelden, Promedica24, Hausengel, marta, Linara und Primundus: Preise, Gebühren, Vertragsbindung und wann Sie die Betreuungskraft selbst auswählen.',
+    'Pflegehelden, Promedica24, Hausengel, marta, Linara, Primundus: Wer nennt den Preis online, wer verlangt Gebühren, wer bindet wie lange?',
   alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
-    title: '24h-Pflege-Anbieter im Vergleich 2026 | Primundus',
+    title: 'Anbieter-Vergleich 2026: Pflegehelden, Promedica24 & Co.',
     description:
       'Sechs bekannte Anbieter und Primundus im Faktenvergleich: Preise, Gebühren, Vertragsbindung, Auswahl der Betreuungskraft.',
     url: 'https://primundus.de/anbieter-vergleich',
@@ -18,6 +19,8 @@ export const metadata: Metadata = {
     images: [{ url: '/images/primundus_logo_header.webp' }],
   },
 }
+
+const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-anbieter-vergleich'
 
 const faqs = [
   {
@@ -76,41 +79,26 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-      <div className="min-h-screen bg-pm-paper">
+      {/* Kernseiten-Rahmen seit 26.09. (Prüfung aller Kernseiten): Ratgeber-Kopf mit Knopf-Block, „Bekannt aus", Standard-Schluss.
+          Vorher eigener Kopf ohne Testsieger, ohne Knopf im ersten Bildschirm und mit unserem Preis im ersten Absatz. */}
+      <div className="bg-pm-paper">
+        <RatgeberKopf
+          pfad={[{ label: 'Startseite', href: '/' }, { label: 'Tools & Rechner', href: '/tools' }, { label: 'Anbieter-Vergleich' }]}
+          augenbraue={`Anbieter-Vergleich · Stand ${STAND}`}
+          titel="24h-Pflege-Anbieter im Vergleich: Wer bietet was?"
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Worum es in diesem Vergleich geht"
+          einleitung={<>Pflegehelden, Promedica24, Hausengel, marta, Linara, Deutsche Seniorenbetreuung und Primundus: Wann sehen Sie den Preis, wann die Betreuungskraft, welche Gebühren fallen an, wie lange binden Sie sich? Die Antworten stehen auf den Websites der Anbieter; hier stehen sie nebeneinander, mit Quelle je Angabe (Stand {STAND}). Primundus steht selbst in der Tabelle. Kein Anspruch auf Vollständigkeit, Konditionen können sich ändern.</>}
+        />
+      </div>
+      <div className="bg-pm-paper">
         <div className="max-w-wide mx-auto px-5 py-10 md:py-16">
 
-          {/* Breadcrumb */}
-          <nav className="min-h-[24px] text-sm text-pm-mute mb-6 flex items-center gap-2 flex-wrap" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-pm-taupe transition-colors">Startseite</a>
-            <span aria-hidden="true">›</span>
-            <a href="/tools" className="hover:text-pm-taupe transition-colors">Tools & Rechner</a>
-            <span aria-hidden="true">›</span>
-            <span className="text-pm-ink">Anbieter-Vergleich</span>
-          </nav>
-
-          {/* Header */}
-          <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
-            Anbieter-Vergleich · Stand {STAND}
-          </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            24h-Pflege-Anbieter im Vergleich: Wer bietet was?
-          </h1>
-          <p className="text-[16px] text-pm-body leading-relaxed mb-4 max-w-[720px]">
-            Pflegehelden, Promedica24, Hausengel, marta, Linara, Deutsche Seniorenbetreuung — und Primundus:
-            Hier sehen Sie die Unterschiede, die im Alltag wirklich zählen. Wann sehen Sie den Preis?
-            Wann die Betreuungskraft? Was kostet der Einstieg, und wie lange binden Sie sich?
-            Primundus geht dabei bewusst den direkteren, moderneren Weg: Preis und Betreuungskräfte
-            sofort online, Vertrag erst nach Ihrer Auswahl, keine Vermittlungsgebühr, keine
-            Mindestlaufzeit — ab 2.150 €/Monat.
-          </p>
-          <p className="text-[13px] text-pm-mute leading-relaxed mb-10 max-w-[720px]">
-            Alle Angaben zu anderen Anbietern stammen von deren eigenen Websites (Stand {STAND}) und sind
-            als solche gekennzeichnet. Kein Anspruch auf Vollständigkeit — Konditionen können sich ändern.
-          </p>
-
+          <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
           {/* ── Vergleichstabelle (Desktop) ── */}
-          <section className="mb-6 hidden md:block">
-            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
+          <section className="mb-6 hidden md:block" aria-label="Vergleichstabelle">
             <div className="bg-white border border-pm-line rounded-2xl overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[1040px]">
@@ -171,8 +159,7 @@ export default function Page() {
           </section>
 
           {/* ── Vergleich als Karten (Mobil) ── */}
-          <section className="mb-6 md:hidden">
-            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
+          <section className="mb-6 md:hidden" aria-label="Vergleich je Anbieter">
             <div className="space-y-4">
               {ALLE.map((a) => (
                 <div key={a.slug} className={`bg-white border rounded-2xl overflow-hidden ${a.slug === 'primundus' ? 'border-pm-taupe' : 'border-pm-line'}`}>
@@ -255,23 +242,10 @@ export default function Page() {
             </div>
           </section>
 
-          {/* CTA */}
-          <ArticleCTA />
-
           {/* FAQ */}
-          <section className="mt-14 mb-14">
-            <h2 className="text-[22px] font-bold text-pm-ink mb-6">Häufige Fragen</h2>
-            <div className="space-y-3">
-              {faqs.map((f) => (
-                <details key={f.q} className="bg-white border border-pm-line rounded-xl px-5 py-4 group">
-                  <summary className="cursor-pointer list-none flex items-start justify-between gap-3">
-                    <h3 className="text-[15px] font-semibold text-pm-ink pr-2">{f.q}</h3>
-                    <span className="text-pm-taupe font-bold text-[18px] leading-none group-open:rotate-45 transition-transform">+</span>
-                  </summary>
-                  <p className="text-[14px] text-pm-body leading-relaxed mt-3">{f.a}</p>
-                </details>
-              ))}
-            </div>
+          <section className="mt-14 mb-14" id="faq">
+            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Häufige Fragen zum Anbieter-Vergleich</h2>
+            <Fragen fragen={faqs} />
           </section>
 
           {/* Korrektur-Hinweis */}
@@ -283,6 +257,8 @@ export default function Page() {
 
         </div>
       </div>
+
+      <KontaktBand />
     </>
   )
 }

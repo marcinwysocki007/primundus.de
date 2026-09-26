@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT – mit Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege' },
   openGraph: {
-    title: '24-Stunden-Pflege | Primundus — Testsieger & 20 Jahre Erfahrung',
+    title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
     description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT.',
     url: 'https://primundus.de/24-stunden-pflege',
     siteName: 'Primundus',

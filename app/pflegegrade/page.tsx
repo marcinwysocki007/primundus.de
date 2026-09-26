@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Tabelle } from '@/components/vorlage/Ratgeber'
 import { ArticleTOC } from '@/components/ArticleTOC'
 
 // Übersicht Pflegegrade in der Seitenvorlage (19.09.2026, Muster /finanzierung). Die drei Fragen standen bisher nur in den
@@ -9,10 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 
 export const metadata: Metadata = {
   title: 'Pflegegrade — alle 5 Grade, Beträge & Leistungen 2026',
-  description: 'Pflegegrade 2026: Alle 5 Pflegegrade erklärt — Voraussetzungen, Pflegegeld (347–990 €/Monat), Sachleistungen und wie man richtig eingestuft wird.',
+  description: 'Alle 5 Pflegegrade: Punkte, Pflegegeld 347 bis 990 € im Monat, Sachleistungen, Antrag und Begutachtung. Stand 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegrade' },
   openGraph: {
-    title: 'Pflegegrade 2026 — alle 5 Grade im Überblick | Primundus',
+    title: 'Pflegegrade — alle 5 Grade, Beträge & Leistungen 2026',
     description: 'Pflegegrade 1–5: Voraussetzungen, Pflegegeld, Sachleistungen und Beantragung. Alles erklärt.',
     url: 'https://primundus.de/pflegegrade',
     siteName: 'Primundus',
@@ -85,6 +85,10 @@ export default function Pflegegrade() {
           augenbraue="Ratgeber"
           titel="Pflegegrade 2026"
           einleitung="Alle 5 Pflegegrade: wie viele Punkte es braucht, welches Pflegegeld es gibt, wie Sie den Antrag stellen und die Begutachtung vorbereiten."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegegrade', text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Pflegegrad in Kürze"
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

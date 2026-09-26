@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Text, Werte } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Text, Werte } from '@/components/vorlage/Ratgeber'
 import { VertrauensKarten } from '@/components/vertrauen/Vertrauen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -31,7 +31,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Über Primundus: seit 2006 in der 24-Stunden-Pflege zu Hause',
   description:
-    'Wer hinter Primundus steht: seit 2006 in der 24-Stunden-Pflege, über 60.000 Betreuungen, 6× Testsieger DIE WELT, eigene Betreuungskräfte, Büro in München.',
+    'Seit 2006 in der 24-Stunden-Pflege, über 60.000 Betreuungen, 6× Testsieger bei DIE WELT, eigene Betreuungskräfte, Büro in München.',
   alternates: { canonical: 'https://primundus.de/ueber-uns' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -118,6 +118,9 @@ export default function UeberUnsPage() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Primundus in einem Absatz"
           blickTitel="Auf einen Blick"
           blick={[
             'Erfahrung in der häuslichen 24-Stunden-Pflege seit 2006',

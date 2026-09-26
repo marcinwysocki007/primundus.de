@@ -16,7 +16,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 
 export const metadata: Metadata = {
   title: '24h-Pflege in Ihrer Region — alle Städte & Bundesländer',
-  description: 'Primundus ist mit eigenen 24h-Betreuungskräften in ganz Deutschland im Einsatz. PLZ oder Ort eingeben — sofort passende Informationen und Anfrage starten.',
+  description: 'Eigene Betreuungskräfte in ganz Deutschland: Ort oder Postleitzahl eingeben und die Seite für Ihre Stadt öffnen. Alle Städte und Bundesländer.',
   alternates: { canonical: 'https://primundus.de/regionen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],

@@ -10,12 +10,12 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 
 export const metadata: Metadata = {
   title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige',
-  description: 'Kostenloser Pflegegrad-Rechner, Zuschuss-Rechner und 24h-Pflegekostenrechner — alle Tools für Ihre Pflegeplanung 2026. Anonym, kostenlos, sofort nutzbar.',
+  description: 'Pflegegrad-Rechner, Zuschuss-Rechner, Vollmacht- und Pflegevertrag-Generator: kostenlos, anonym, ohne Anmeldung.',
   alternates: {
     canonical: 'https://primundus.de/tools',
   },
   openGraph: {
-    title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige | Primundus',
+    title: 'Kostenlose Pflege-Tools & Rechner 2026 für Angehörige',
     description: 'Pflegegrad einschätzen, Zuschüsse berechnen, Kosten vergleichen — alle Werkzeuge für Ihre Pflegeplanung.',
     url: 'https://primundus.de/tools',
     siteName: 'Primundus',

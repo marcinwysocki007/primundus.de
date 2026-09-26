@@ -42,10 +42,10 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Pflegegrad-Rechner 2026: Pflegegrad berechnen, ohne E-Mail',
   description:
-    'Pflegegrad-Rechner mit den 64 Fragen des Medizinischen Dienstes: sechs Module, amtliche Punkte, Ergebnis sofort. Kostenlos, ohne Anmeldung, auch für Kinder.',
+    'Die 64 Fragen des Medizinischen Dienstes, sechs Module, amtliche Punkte, Ergebnis sofort. Kostenlos, ohne Anmeldung, auch für Kinder.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-rechner' },
   openGraph: {
-    title: 'Pflegegrad-Rechner 2026: Pflegegrad berechnen wie der Medizinische Dienst',
+    title: 'Pflegegrad-Rechner 2026: Pflegegrad berechnen, ohne E-Mail',
     description: 'Alle 64 Fragen der Begutachtung, amtliche Punkte, Ergebnis sofort. Kostenlos, ohne Anmeldung, auch für Kinder.',
     url: 'https://primundus.de/pflegegrad-rechner',
     siteName: 'Primundus',

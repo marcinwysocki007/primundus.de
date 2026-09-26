@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile } from '@/components/vorlage/Ratgeber'
 import { ArticleTOC } from '@/components/ArticleTOC'
 
 // Ratgeber-Übersicht in der Seitenvorlage (19.09.2026, Muster /finanzierung). Sieben Themen mit je drei Artikeln wie bisher,
@@ -9,12 +9,12 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 
 export const metadata: Metadata = {
   title: 'Ratgeber 24h-Pflege 2026 — alle Themen für Angehörige',
-  description: 'Alle Themen rund um 24-Stunden-Pflege: Pflegegrade, Finanzierung, Kosten, Rechtliches und Unterstützung für pflegende Angehörige. Aktuell 2026.',
+  description: 'Pflegegrade, Finanzierung, Kosten, Recht und Alltag: alle Ratgeber zur 24-Stunden-Pflege für Angehörige, Stand 2026.',
   alternates: {
     canonical: 'https://primundus.de/ratgeber',
   },
   openGraph: {
-    title: 'Ratgeber 24h-Pflege | Primundus',
+    title: 'Ratgeber 24h-Pflege 2026 — alle Themen für Angehörige',
     description: 'Alle Themen rund um 24-Stunden-Pflege: Pflegegrade, Finanzierung, Organisation, Krankheiten, Alltag, Rechtliches und Unterstützung für Angehörige.',
     url: 'https://primundus.de/ratgeber',
     siteName: 'Primundus',
@@ -91,6 +91,10 @@ export default function RatgeberPage() {
           augenbraue="Ratgeber"
           titel="Ratgeber 24-Stunden-Pflege"
           einleitung="Antworten auf die Fragen, die Familien vor und während einer 24-Stunden-Pflege stellen: Pflegegrade, Finanzierung, Organisation, Krankheiten, Alltag und Recht."
+          knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Was Sie hier finden"
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>

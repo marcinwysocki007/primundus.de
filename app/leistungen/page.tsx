@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Gegenueber, Gruppen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Text,
+  Abschnitt, Fragen, Gegenueber, Gruppen, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, RechnerKasten, Text,
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
@@ -24,7 +24,7 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht',
-  description: 'Was macht eine 24h-Betreuungskraft? Körperpflege, Haushalt, Begleitung und bei Bedarf Hilfe in der Nacht. Was inbegriffen ist und was ein Pflegedienst übernimmt.',
+  description: 'Was eine Betreuungskraft übernimmt: Körperpflege, Haushalt, Gesellschaft, bei Bedarf nachts. Was inbegriffen ist, was der Pflegedienst macht.',
   alternates: { canonical: 'https://primundus.de/leistungen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -92,6 +92,10 @@ export default function Leistungen() {
           einleitung="Eine Betreuungskraft von Primundus zieht bei Ihrem Angehörigen ein. Sie führt den Haushalt, hilft bei der Körperpflege, leistet Gesellschaft und ist bei Bedarf auch nachts da. Behandlungspflege wie Spritzen oder Verbände übernimmt ein ambulanter Pflegedienst."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
+          knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=apex-leistungen', text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="So arbeitet eine Betreuungskraft bei Ihnen"
           blickTitel="Alle Leistungen auf einen Blick"
           blick={[
             'Körperpflege: Waschen, Duschen, Zahnpflege',

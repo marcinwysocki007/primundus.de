@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text } from '@/components/vorlage/Ratgeber'
+import { Abschnitt, Fragen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, StandardUnterzeile, Schritte, Text } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
@@ -28,7 +28,7 @@ const SECTIONS = [
 export const metadata: Metadata = {
   title: 'Rechtssichere 24-Stunden-Pflege: Entsendemodell mit A1',
   description:
-    '24-Stunden-Pflege legal: Betreuungskraft bei uns angestellt, A1-Bescheinigung für jeden Einsatz, Sie werden nicht Arbeitgeber. Was bei einer Kontrolle zählt.',
+    'Betreuungskraft bei uns angestellt, A1-Bescheinigung für jeden Einsatz, Sie werden nicht Arbeitgeber. Was bei einer Kontrolle zählt.',
   alternates: { canonical: 'https://primundus.de/rechtssicher' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -108,6 +108,9 @@ export default function RechtssicherPage() {
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
+          knopfOben
+          unterzeile={<StandardUnterzeile />}
+          einleitungTitel="Kurz gesagt: das Entsendemodell"
           blickTitel="Auf einen Blick"
           blick={[
             'A1-Bescheinigung für jeden Einsatz, kein Einsatz ohne',
