@@ -68,6 +68,13 @@ function primundusClarity(c) {
 }
 var gespeichert = null;
 try { gespeichert = JSON.parse(localStorage.getItem('cookie-consent') || 'null'); } catch (e) {}
+// Zweite Quelle (27.09.): das Cookie pm_consent auf .primundus.de — gesetzt hier oder im Kostenrechner (lib/cookie-consent.ts)
+if (!gespeichert) {
+  try {
+    var m = document.cookie.match(/(?:^|; )pm_consent=([^;]*)/);
+    if (m) { var c = JSON.parse(decodeURIComponent(m[1])); if (c && typeof c.necessary === 'boolean') gespeichert = c; }
+  } catch (e) {}
+}
 gtag('consent', 'default', primundusConsent(null));
 if (gespeichert) gtag('consent', 'update', primundusConsent(gespeichert));
 primundusClarity(gespeichert);

@@ -60,12 +60,12 @@ const FRAGEN = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf | 6× Testsieger',
-  description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Bei uns angestellt, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: 'Polnische Pflegekraft: Kosten 2026, legal, sicher | 6× Testsieger',
+  description: 'Was eine polnische Pflegekraft 2026 kostet, was die Kasse zahlt, wie Sie sie legal beschäftigen. Bei uns angestellt, Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-aus-polen' },
   openGraph: {
-    title: 'Polnische Pflegekräfte: Kosten, Recht und Ablauf | 6× Testsieger',
-    description: 'Geprüfte, verfügbare polnische Pflegekräfte und Preis direkt online sehen. Bei uns angestellt, Anreise in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: 'Polnische Pflegekraft: Kosten 2026, legal, sicher | 6× Testsieger',
+    description: 'Was eine polnische Pflegekraft 2026 kostet, was die Kasse zahlt, wie Sie sie legal beschäftigen. Bei uns angestellt, Anreise in 3 Tagen möglich.',
     url: 'https://primundus.de/pflegekraft-aus-polen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -165,7 +165,7 @@ export default function PflegekraftAusPolen() {
             <RechnerKasten src="apex-polen" />
           </Abschnitt>
 
-          <Abschnitt id="pflegegrad" titel="Kosten nach Pflegegrad 2, 3, 4 und 5">
+          <Abschnitt id="pflegegrad" titel="Kosten polnische Pflegekraft nach Pflegegrad 2, 3, 4 und 5">
             <Text>
               Der Pflegegrad ändert den Preis kaum, aber er bestimmt, was die Pflegekasse dazugibt. Die
               Tabelle rechnet mit dem Grundpreis, dem Pflegegeld, dem anteiligen Entlastungsbudget und der Steuerermäßigung. Der Entlastungsbetrag
