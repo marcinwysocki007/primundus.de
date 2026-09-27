@@ -4,7 +4,7 @@
 // Referenz-Look: Ratgeber-Linie (paper-Canvas, article-Breite, ink/body).
 import type { ReactNode } from 'react'
 
-const BREITEN = { narrow: 'max-w-narrow', article: 'max-w-article', wide: 'max-w-wide' } as const
+const BREITEN = { narrow: 'max-w-narrow', article: 'max-w-article', wide: 'max-w-seite' } as const
 
 export function PageShell({
   width = 'article',

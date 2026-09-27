@@ -216,7 +216,7 @@ export async function Stimmen({ eingebettet = false, ort, anzahl, titel }: { ein
       aria-labelledby="stimmen-titel"
       className={eingebettet ? 'my-12 scroll-mt-24 overflow-hidden bg-pm-deep max-md:-mx-5 md:rounded-[28px]' : 'scroll-mt-24 overflow-hidden bg-pm-deep'}
     >
-      <div className={eingebettet ? 'px-5 py-12 md:px-10 md:py-14' : 'mx-auto max-w-[1200px] px-5 py-16 md:py-24'}>
+      <div className={eingebettet ? 'px-5 py-12 md:px-10 md:py-14' : 'mx-auto max-w-seite px-5 py-16 md:py-24'}>
         <Karussell
           dunkel
           rand={eingebettet ? '-mx-5 px-5 scroll-px-5 md:-mx-10 md:px-10 md:scroll-px-10' : '-mx-5 px-5 scroll-px-5 min-[1200px]:mr-[calc((1200px-100vw)/2-20px)] min-[1200px]:pr-[calc((100vw-1200px)/2+20px)]'}
@@ -270,7 +270,7 @@ export function MartaBand({ eingebettet = false }: { eingebettet?: boolean }) {
         className={`flex flex-col gap-6 ${
           eingebettet
             ? 'bg-pm-shell px-5 py-8 md:rounded-[24px] md:px-8 md:py-7 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between'
-            : 'mx-auto max-w-[1200px] px-5 py-10 md:py-12 lg:flex-row lg:items-center lg:justify-between lg:gap-10'
+            : 'mx-auto max-w-seite px-5 py-10 md:py-12 lg:flex-row lg:items-center lg:justify-between lg:gap-10'
         }`}
       >
         {/* Eingebettet: Knöpfe rutschen in die zweite Zeile, wenn die Spalte schmal ist (Vorlage mit Inhaltsleiste: Band 604–736 px;
@@ -310,7 +310,7 @@ export function SchlussAufruf({ src, titelId = 'schluss-titel' }: { src: string;
   return (
     <aside aria-labelledby={titelId}>
       <div className="bg-white">
-        <div className="mx-auto grid max-w-[1200px] gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-10 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)] xl:gap-16">
+        <div className="mx-auto grid max-w-seite gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-10 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)] xl:gap-16">
           <div className="min-w-0">
             <p className={`${AUGENBRAUE} text-pm-taupe`}>Kostenlos und unverbindlich</p>
             <h2 id={titelId} className="mt-4 text-[clamp(30px,4vw,48px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">
@@ -512,7 +512,7 @@ export function VertrauensKarten({ eingebettet = false, raster = false }: { eing
   const Huelle = eingebettet || raster ? 'div' : 'section'
   return (
     <Huelle className={eingebettet ? 'pt-3' : raster ? 'pt-3' : 'bg-pm-paper px-5 pb-16 lg:pb-20'}>
-      <div className={eingebettet ? 'grid gap-8' : raster ? 'grid gap-6 md:grid-cols-2' : 'mx-auto grid max-w-[1200px] gap-6 md:grid-cols-2'}>
+      <div className={eingebettet ? 'grid gap-8' : raster ? 'grid gap-6 md:grid-cols-2' : 'mx-auto grid max-w-wide gap-6 md:grid-cols-2'}>
         <VertrauensKarte
           rahmen="border-pm-green/60"
           reihe="flex-col items-start gap-4 lg:flex-row lg:items-center lg:gap-6"

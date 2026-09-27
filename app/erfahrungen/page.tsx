@@ -225,7 +225,7 @@ export default async function ErfahrungenPage() {
       <div className="bg-pm-paper">
         {/* ── Kopf ─────────────────────────────────────────────────────── */}
         <div className="bg-pm-shell">
-          <div className="max-w-[1200px] mx-auto px-5 pt-6 pb-14 md:pt-8 md:pb-20">
+          <div className="max-w-seite mx-auto px-5 pt-6 pb-14 md:pt-8 md:pb-20">
             <nav aria-label="Brotkrumen" className="text-[14px] text-pm-mute flex items-center gap-2 flex-wrap">
               <a href="/" className="hover:text-pm-ink transition-colors">Startseite</a>
               <span aria-hidden="true">›</span>
@@ -310,7 +310,7 @@ export default async function ErfahrungenPage() {
         </div>
 
         {/* ── Alle Bewertungen ─────────────────────────────────────────── */}
-        <section id="bewertungen" className={`${SPRUNG} max-w-[1200px] mx-auto px-5 pt-16 md:pt-24`}>
+        <section id="bewertungen" className={`${SPRUNG} max-w-seite mx-auto px-5 pt-16 md:pt-24`}>
           <div className="max-w-[46rem]">
             <h2 className={H2}>Was Familien über Primundus schreiben</h2>
             <p className="mt-5 text-[18px] leading-[1.7] text-pm-body [text-wrap:pretty]">
@@ -352,7 +352,7 @@ export default async function ErfahrungenPage() {
 
         {/* ── Bewertung schreiben ──────────────────────────────────────── */}
         <section id="bewerten" className={`${SPRUNG} mt-16 md:mt-24 bg-pm-shell`}>
-          <div className="max-w-[1200px] mx-auto px-5 py-16 md:py-24 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,640px)] lg:gap-16">
+          <div className="max-w-seite mx-auto px-5 py-16 md:py-24 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,640px)] lg:gap-16">
             <div className="min-w-0">
               <p className={AUGENBRAUE}>Für Kunden</p>
               <h2 className={`mt-4 ${H2}`}>Wie war Ihre Erfahrung mit Primundus?</h2>
@@ -397,7 +397,7 @@ export default async function ErfahrungenPage() {
         </section>
 
         {/* ── Prüfung (§ 5b Abs. 3 UWG) ────────────────────────────────── */}
-        <section id="pruefung" className={`${SPRUNG} max-w-[1200px] mx-auto px-5 pt-16 md:pt-24`}>
+        <section id="pruefung" className={`${SPRUNG} max-w-seite mx-auto px-5 pt-16 md:pt-24`}>
           <div className="max-w-[46rem]">
             <h2 className={H2}>So prüfen wir Bewertungen</h2>
             <p className="mt-5 text-[18px] leading-[1.7] text-pm-body">
@@ -439,7 +439,7 @@ export default async function ErfahrungenPage() {
         </section>
 
         {/* ── Häufige Fragen ───────────────────────────────────────────── */}
-        <section id="faq" className={`${SPRUNG} max-w-[1200px] mx-auto px-5 pt-16 md:pt-24 pb-20 md:pb-24`}>
+        <section id="faq" className={`${SPRUNG} max-w-seite mx-auto px-5 pt-16 md:pt-24 pb-20 md:pb-24`}>
           <div className="max-w-[46rem]">
             <h2 className={H2}>Häufige Fragen</h2>
             <div className="mt-8">

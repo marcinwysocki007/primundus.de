@@ -27,7 +27,7 @@ export function SiteHeader() {
 
   return (
     <header className="w-full border-b border-pm-line bg-white sticky top-0 z-50 shadow-sm">
-      <div className="max-w-[1200px] mx-auto px-5">
+      <div className="max-w-seite mx-auto px-5">
         {/* Top bar: Logo + Buttons */}
         <div className="h-16 md:h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center flex-shrink-0">
@@ -135,7 +135,7 @@ export function SiteHeader() {
       {/* Mobile navigation dropdown */}
       {mobileOpen && (
         <div className="md:hidden border-t border-pm-line bg-white">
-          <nav className="max-w-[1200px] mx-auto px-5 py-4 flex flex-col gap-1">
+          <nav className="max-w-seite mx-auto px-5 py-4 flex flex-col gap-1">
             {nav.map((item) => {
               const norm = (p: string) => p.replace(/\/$/, '')
             const active = norm(pathname) === norm(item.href) || norm(pathname).startsWith(norm(item.href) + '/')

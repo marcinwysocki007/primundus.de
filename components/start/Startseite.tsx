@@ -47,7 +47,7 @@ function RechnerKnopf({ className = '' }: { className?: string }) {
 export function StartKopf() {
   return (
     <section className="bg-pm-paper">
-      <div className="max-w-wide mx-auto lg:px-5 lg:pt-12 lg:pb-14 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] lg:gap-14 lg:items-center">
+      <div className="max-w-seite mx-auto lg:px-5 lg:pt-12 lg:pb-14 lg:grid lg:grid-cols-[46fr_54fr] lg:gap-12 xl:gap-16 lg:items-center">
         {/* Bild: am Handy zuerst, am Computer rechts (wie im Rechner). Am Handy wieder das volle Foto wie am 21.09. (Martin
             27.09.: „natürlich zurück und nicht noch eine weitere Variante“). Der 12:5-Streifen vom 25.09. schnitt beiden Frauen
             die Köpfe ab, um den Knopf über die Cookie-Leiste zu heben; seitdem kam von 9 Website-Besuchern im Rechner kein Lead,
@@ -59,7 +59,7 @@ export function StartKopf() {
             width={1100}
             height={941}
             priority
-            sizes="(min-width: 1024px) 560px, 100vw"
+            sizes="(min-width: 1024px) 660px, 100vw"
             className="w-full h-auto max-lg:max-h-[440px] object-cover lg:rounded-[24px]"
           />
           <div className="absolute left-4 bottom-4 md:left-5 md:bottom-5 flex items-end gap-3">

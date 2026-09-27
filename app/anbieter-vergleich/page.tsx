@@ -94,7 +94,7 @@ export default function Page() {
         />
       </div>
       <div className="bg-pm-paper">
-        <div className="max-w-wide mx-auto px-5 py-10 md:py-16">
+        <div className="max-w-seite mx-auto px-5 py-10 md:py-16">
 
           <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Der direkte Vergleich</h2>
           {/* ── Vergleichstabelle (Desktop) ── */}

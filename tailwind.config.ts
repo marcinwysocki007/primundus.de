@@ -23,7 +23,12 @@ const config: Config = {
       maxWidth: {
         narrow: '720px',
         article: '860px',
-        wide: '1100px',
+        // Eine Seitenbreite für primundus.de UND den Kostenrechner (Martin 27.09.2026: „warum ist
+        // primundus.de so viel schmaler als der Kostenrechner … wäre geil, wenn das Logo mit der
+        // Breite abschließen würde“). Inhalt 1216 px wie der Rechner-Hero; `seite` = Behälter mit
+        // eigenem px-5 (1216 + 2 × 20), `wide` = Inhalt in Sektionen, die selbst px-5 tragen.
+        wide: '1216px',
+        seite: '1256px',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

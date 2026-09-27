@@ -93,7 +93,7 @@ export async function BewertungsAuszug({ variante = 'band' }: { variante?: 'band
 
   return (
     <aside aria-labelledby="bewertungsauszug-titel" className="bg-pm-shell border-t border-pm-line">
-      <div className="max-w-[1200px] mx-auto px-5 py-14 md:py-16">
+      <div className="max-w-seite mx-auto px-5 py-14 md:py-16">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
             <p className="text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe">Erfahrungen von Familien</p>

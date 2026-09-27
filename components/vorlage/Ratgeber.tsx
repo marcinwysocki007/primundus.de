@@ -254,7 +254,7 @@ export function RatgeberKopf({
           Brotkrumen in EINER Zeile (die letzte wird bei Platzmangel mit … gekürzt, der Text im Quelltext bleibt ganz), bis
           zur Augenbraue 20 statt 32 px — der Knopf rückt so ca. 20 px höher, bei zweizeiligen Brotkrumen ca. 50 px.
           Ab Tablet-Breite unverändert. */}
-      <div className="relative max-w-[1200px] mx-auto px-5 pt-4 pb-12 md:pt-8 md:pb-16">
+      <div className="relative max-w-seite mx-auto px-5 pt-4 pb-12 md:pt-8 md:pb-16">
         {siegel ? (
           // Nur Handy und Tablet — am Computer steht das Siegel im Kasten, in einer eigenen Karte oder auf Martas Foto
           <a href={siegelZiel} aria-label="6× Testsieger DIE WELT — zur Auszeichnung" className="absolute right-5 top-2 z-[1] lg:hidden">
@@ -422,7 +422,7 @@ function rechnerQuelle(href: string): string {
 // Text links, rechts Inhaltsverzeichnis und Kostenknopf (beide mitlaufend, erst ab 1024 px).
 export function RatgeberRumpf({ abschnitte, children, src = 'apex-components' }: { abschnitte: { id: string; title: string }[]; children: ReactNode; src?: string }) {
   return (
-    <div className="max-w-[1200px] mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
+    <div className="max-w-seite mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
       <article className="min-w-0 max-w-[46rem]">{children}</article>
       <aside className="hidden lg:block" aria-label="Inhalt und Kosten">
         {/* Die Spalte darf nicht höher sein als der Bildschirm: Mit 10–15 Abschnitten war sie

@@ -77,7 +77,7 @@ export function CookieConsent() {
         aria-label="Cookie-Hinweis"
         className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-pm-line shadow-[0_-8px_24px_rgba(0,0,0,0.08)] pb-[env(safe-area-inset-bottom)]"
       >
-        <div className="max-w-wide mx-auto px-4 sm:px-5 py-2.5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5">
+        <div className="max-w-seite mx-auto px-4 sm:px-5 py-2.5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5">
           {/* Wortlaut nach OpenAI-Prüfung 24.09.: „Alle akzeptieren" schließt Marketing ein, also steht es in der Zeile;
               „Einstellungen" als Wort statt Zahnrad (Zielgruppe 60+); beide Knöpfe gleich gestaltet (Ablehnen so leicht
               wie Zustimmen, kein Schubsen). */}

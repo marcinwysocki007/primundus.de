@@ -92,7 +92,7 @@ const rechtlichLinks = [
 export function SiteFooter() {
   return (
     <footer className="bg-pm-ink text-white">
-      <div className="max-w-[1200px] mx-auto px-5 py-14">
+      <div className="max-w-seite mx-auto px-5 py-14">
         {/* Top section */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-12 gap-8">
           <div className="max-w-sm">

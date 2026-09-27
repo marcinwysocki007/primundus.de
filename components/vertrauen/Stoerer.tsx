@@ -12,7 +12,7 @@ export function CtaStoerer({ src, ort, titel, band = false }: { src: string; ort
   return (
     // band: das eine dunkle Band der Landingpage-Form — volle Breite ohne Rundung, Inhalt in der Seitenbreite (24.09.)
     <aside aria-label="Preis und Betreuungskräfte ansehen" className={band ? 'bg-pm-deep' : 'my-12 overflow-hidden bg-pm-deep max-md:-mx-5 md:my-14 md:rounded-[28px]'}>
-      <div className={band ? 'mx-auto max-w-wide px-5 py-14 lg:py-20' : 'px-5 py-10 md:px-10 md:py-12'}>
+      <div className={band ? 'mx-auto max-w-seite px-5 py-14 lg:py-20' : 'px-5 py-10 md:px-10 md:py-12'}>
         <p className="text-[12px] font-bold uppercase tracking-[.14em] text-pm-deep-body">Kostenlos und unverbindlich</p>
         <p className="mt-3 text-[26px] font-extrabold leading-[1.1] tracking-[-0.03em] text-pm-deep-ink [text-wrap:balance] md:text-[30px]">{kopf}</p>
         <p className="mt-4 max-w-[52ch] text-[17px] leading-[1.6] text-pm-deep-body">{AUFRUF_TEXT}</p>
