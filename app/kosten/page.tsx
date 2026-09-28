@@ -430,20 +430,21 @@ export default function Kosten() {
               mit „24 stunden pflege kosten"). Nur dieser Teil war dort einzigartig; Beispielrechnung und Nebenkosten
               stehen hier schon. Die sieben Fragen an jeden Anbieter stehen jetzt im Anbieter-Vergleich. Texte mit
               GPT-5 geprüft: keine fremden Beispielpreise neben unseren, kein „täuschen" (Herabsetzung). */}
-          <Abschnitt id="preise-vergleichen" titel="Warum manche Angebote günstiger wirken">
+          <Abschnitt id="preise-vergleichen" titel="Tagespreis, Ab-Preis, Eigenanteil: so vergleichen Sie richtig">
             <Text>
               Beim Vergleichen sehen Sie Preise pro Tag, Ab-Preise und Eigenanteile. Hinter allen dreien kann derselbe
               Monatspreis stecken.
             </Text>
             {/* Zweiter Gegencheck 28.09. (GPT-5 als Gegenspieler, Prüfer-Agent, stop-slop): Rechenbeispiel 100 € statt der
                 105 € aus der Wettbewerbsanalyse vom 14.08. (kein zuordenbarer Fremdpreis). Der Grundpreis gilt laut Rechner auch
-                nur ohne Wunsch nach Betreuerin und ohne Führerschein — das steht jetzt dabei, sonst tappt der eigene Satz in die
+                nur ohne Wunsch nach Betreuerin, Führerschein und bessere Deutschkenntnisse — das steht jetzt dabei, gewichtet wie
+                die Grafik „Was den Preis bewegt“ (Deutsch mittel bis groß, Prüfer-Agent Runde 2), sonst tappt der eigene Satz in die
                 Ab-Preis-Falle, vor der er warnt (benannt, nicht beziffert: Preisregel 25.09.). Eigenanteil als eigener Punkt mit
                 Rechengrundlage. Nebenkosten ohne Aussage über andere Anbieter („bei jeder …" war zu absolut). */}
             <Punkte
               punkte={[
                 { title: '1. Der Tagespreis', desc: '„100 € am Tag“ klingt nach wenig. Im Monat sind das 3.000 €. Rechnen Sie Tagespreise mal 30, bevor Sie vergleichen.' },
-                { title: '2. Der Ab-Preis', desc: <>Ein Ab-Preis gilt für den einfachsten Fall: Ihr Angehöriger ist noch mobil, braucht nachts keine Hilfe, und Sie haben keine besonderen Wünsche an die Betreuungskraft. So ist auch unser Grundpreis von 2.150 € gerechnet. Der Wunsch nach einer Betreuerin, nach besseren Deutschkenntnissen oder nach einem Führerschein kostet bei uns etwas mehr. Ihren Preis zeigt der <a href={RECHNER} className={QUELLE}>Rechner in 2 Minuten</a>.</> },
+                { title: '2. Der Ab-Preis', desc: <>Ein Ab-Preis gilt für den einfachsten Fall: Ihr Angehöriger ist noch mobil, braucht nachts keine Hilfe, und Sie haben keine besonderen Wünsche an die Betreuungskraft. So ist auch unser Grundpreis von 2.150 € gerechnet. Eine Betreuerin oder ein Führerschein kostet bei uns etwas mehr, bessere Deutschkenntnisse kosten je nach Stufe spürbar bis deutlich mehr. Ihren Preis zeigt der <a href={RECHNER} className={QUELLE}>Rechner in 2 Minuten</a>.</> },
                 { title: '3. Der Eigenanteil', desc: <>Steht beim Preis „Eigenanteil“, hat der Anbieter die Zuschüsse schon abgezogen. Fragen Sie, welche Zuschüsse und welcher Pflegegrad dahinterstehen. Bei uns bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 € im Monat (<a href="#kosten-uebersicht" className={QUELLE}>Rechnung oben</a>).</> },
                 { title: '4. Die Nebenkosten', desc: <>Fragen Sie vor dem Vertrag, was An- und Abreise, Feiertage und der Tag eines Wechsels kosten. Unsere Preise dafür stehen oben unter <a href="#nebenkosten" className={QUELLE}>Was dazukommt</a>.</> },
               ]}

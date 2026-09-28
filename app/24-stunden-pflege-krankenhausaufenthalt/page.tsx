@@ -182,8 +182,10 @@ export default function KrankenhausPage() {
                 { title: "Muss ich die 24-Stunden-Pflege weiterzahlen, wenn meine Mutter ins Krankenhaus kommt?", desc: "Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter; dauert der Aufenthalt länger als 7 Tage, ruht der Vertrag ab dem 8. Tag kostenlos, bis die Betreuung weitergeht. Soll sie abreisen, zahlen Sie nur noch bis zur Abreise, höchstens 3 Tage. Zusätzlich zahlt die Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu vier Wochen weiter." },
                 { title: "Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?", desc: "Primundus stellt eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Tage, an denen die Betreuungskraft krank ist, berechnen wir nicht; für den Ersatz fallen nur die An- und Abreisekosten an." },
                 { title: "Kostet ein Wechsel der Betreuungskraft etwas?", desc: "Ob regulär alle 6–8 Wochen oder weil die Chemie nicht stimmt: Sie zahlen An- und Abreise mit 125 Euro je Strecke, und weil An- und Abreisetag Arbeitstage sind, berechnen wir am Wechseltag den Tagessatz für beide Betreuungskräfte. Eine Gebühr für den Wechsel gibt es nicht." },
-                { title: "Wie hoch sind die Feiertagszuschläge?", desc: <>An neun Feiertagen gilt der doppelte Tagessatz, beim Grundpreis von 2.150 Euro rund
-                72 Euro Aufschlag je Feiertag. Alle Posten neben dem Monatspreis:{' '}
+                { title: "Wie hoch sind die Feiertagszuschläge?", desc: <>Bei Primundus gilt an neun Feiertagen der doppelte Tagessatz: Karfreitag, Ostersonntag,
+                Ostermontag, 1. Mai, Heiligabend, 1. und 2. Weihnachtstag, Silvester und Neujahr. Beim Grundpreis von 2.150 Euro im Monat beträgt
+                der Tagessatz rund 72 Euro, ein Feiertag kostet also rund 72 Euro Aufschlag, alle neun zusammen rund 645 Euro im Jahr. Alle Posten
+                neben dem Monatspreis:{' '}
                 <a href="/kosten#nebenkosten" className="text-pm-taupe underline underline-offset-2">Kosten der 24-Stunden-Pflege</a>.</> },
               ]}
             />

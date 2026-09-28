@@ -33,9 +33,9 @@ const SIEBEN_FRAGEN: { frage: string; antwort: ReactNode }[] = [
   { frage: 'Was muss ich für Kost und Logis der Betreuungskraft stellen?', antwort: 'ein eigenes Zimmer und Verpflegung.' },
   { frage: 'Was kosten An- und Abreise, auch bei jedem Wechsel der Betreuungskraft?', antwort: '125 € je Strecke, auch bei jedem Wechsel.' },
   { frage: 'Wie hoch sind die Zuschläge an Feiertagen?', antwort: 'der doppelte Tagessatz an neun Feiertagen.' },
-  { frage: 'Wie schnell kann ich kündigen, und kostet ein Wechsel der Betreuungskraft etwas?', antwort: 'täglich kündbar, ohne Mindestlaufzeit. Beim Wechsel zahlen Sie die An- und Abreise und am Wechseltag den Tagessatz für beide Betreuungskräfte.' },
+  { frage: 'Wie schnell kann ich kündigen, und kostet ein Wechsel der Betreuungskraft etwas?', antwort: 'täglich kündbar, ohne Mindestlaufzeit. Beim regulären Wechsel zahlen Sie am Wechseltag den Tagessatz für beide Betreuungskräfte. Ist eine Betreuungskraft krank, berechnen wir diese Tage nicht, und für den Ersatz zahlen Sie nur die An- und Abreise.' },
   { frage: 'Gibt es eine Vermittlungsgebühr oder Anzahlung?', antwort: 'nein. Abgerechnet wird taggenau ab Anreise.' },
-  { frage: 'Kann ich die Betreuungskraft vor dem Vertrag sehen und selbst auswählen?', antwort: 'ja. Sie sehen Profile mit Foto, Deutschkenntnissen und Erfahrung und wählen aus, bevor Sie einen Vertrag unterschreiben.' },
+  { frage: 'Kann ich die Betreuungskraft vor dem Vertrag sehen und selbst auswählen?', antwort: 'ja. Sie sehen die Profile passender Betreuungskräfte im Kundenportal und wählen aus, bevor Sie einen Vertrag unterschreiben.' },
 ]
 
 const faqs = [
@@ -264,7 +264,7 @@ export default function Page() {
               seriöse anbieter". Frage und Antwort untereinander statt nummerierter Schritte (Schritte nur für echte
               Reihenfolgen). Feiertag ohne Eurobetrag (Preisregel), Texte mit GPT-5 geprüft. */}
           <section className="mb-14 scroll-mt-[88px] md:scroll-mt-[150px]" id="sieben-fragen">
-            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-4">Diese 7 Fragen stellen Sie jedem Anbieter</h2>
+            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-4">7 Fragen vor dem Vertrag, mit unseren Antworten</h2>
             {/* Zweiter Gegencheck 28.09.: Auf dieser Seite stehen die Wettbewerber mit Namen, und die FAQ sagen, dass vier von
                 ihnen ein verbindliches Angebot erst nach Fragebogen oder Gespräch geben. „Ein seriöser Anbieter beantwortet
                 … sofort … Ausweichende Antworten sind ein Warnsignal" hätte sie damit als unseriös hingestellt (§ 4 Nr. 1
