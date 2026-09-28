@@ -42,7 +42,7 @@ const SECTIONS = [
   { id: 'vergleich', title: 'Vergleich mit dem Pflegeheim' },
   { id: 'eigenanteil', title: 'Eigenanteil senken' },
   { id: 'preise-vergleichen', title: 'Preise richtig vergleichen' },
-  { id: 'guenstiger', title: 'Unter 2.000 €: die Risiken' },
+  { id: 'guenstiger', title: 'Preise unter 2.000 €: die Risiken' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
@@ -454,10 +454,12 @@ export default function Kosten() {
 
           {/* 28.09.2026, eigene Entscheidung 6 der Abnahme (Prüfer-Agent und GPT-5 unabhängig): „Günstiger geht es nur auf
               eigenes Risiko" war absolut und hieß: legal nicht billiger als bei uns. Der Text darunter spricht von Angeboten
-              unter 2.000 € und „meist"; die Überschrift sagt jetzt dasselbe. Anker #guenstiger bleibt. */}
-          <Abschnitt id="guenstiger" titel="Unter 2.000 € im Monat: meist auf eigenes Risiko">
+              unter 2.000 €; die Überschrift sagt jetzt dasselbe. Runde 2 des Prüfers: „oft" statt „meist" (für eine Mehrheit
+              gibt es keine Quelle; Preismessung 20.09.: kein gemessener Anbieter unter 2.150 €), „Monatspreis", damit niemand
+              „unter 2.000 €" auf den Eigenanteil bezieht. Anker #guenstiger bleibt. */}
+          <Abschnitt id="guenstiger" titel="Monatspreis unter 2.000 €: oft auf eigenes Risiko">
             <Text>
-              Angebote unter 2.000 € im Monat gibt es, meist von „selbstständigen“ Betreuungskräften oder über private
+              Angebote unter 2.000 € im Monat gibt es, oft von „selbstständigen“ Betreuungskräften oder über private
               Vermittlung. Wer im Haushalt wohnt, weisungsgebunden arbeitet und nur einen Auftraggeber hat, ist in der Regel
               scheinselbstständig. Dann gelten Sie als Arbeitgeber: Sozialversicherungsbeiträge können für bis zu vier
               Jahre nachgefordert werden, dazu Bußgelder. Der Preisvorteil ist dann schnell aufgebraucht.
