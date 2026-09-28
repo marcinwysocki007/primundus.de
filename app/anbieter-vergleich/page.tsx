@@ -24,14 +24,18 @@ export const metadata: Metadata = {
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-anbieter-vergleich'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
+// Zweiter Gegencheck 28.09. (Prüfer-Agent FAIL, GPT-5 als Gegenspieler): „Vorauszahlung" raus — der Vertrag stellt die
+// Rechnung monatlich zum 15. aus, „keine Vorauszahlung" ist nicht belegt. Frage 7 „Ist Ihre Auszeichnung belegt?" raus:
+// Sie unterstellte den genannten Wettbewerbern unbelegte Siegel und lenkte den Blick auf unseren schwächsten Beleg
+// (Urkunde 2021; Martin 14.09.: „Beleg klingt so schuldig"). Dafür die Auswahl vor dem Vertrag (USP, steht auch in den FAQ).
 const SIEBEN_FRAGEN: { frage: string; antwort: ReactNode }[] = [
-  { frage: 'Was kostet meine Situation im Monat, nicht pro Tag?', antwort: <>ab 2.150 € im Monat für eine Person. Bei Pflegegrad 3 selbst zu tragen ab ca. 923 €. Den Preis für Ihre Situation zeigt der <a href={RECHNER} className={LINK}>Kostenrechner in 2 Minuten</a>.</> },
-  { frage: 'Was müssen Sie für Kost und Logis der Betreuungskraft stellen?', antwort: 'ein eigenes Zimmer und Verpflegung.' },
+  { frage: 'Was kostet meine Situation im Monat, nicht pro Tag?', antwort: <>ab 2.150 € im Monat für eine Person. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 € selbst zu tragen. Den Preis für Ihre Situation zeigt der <a href={RECHNER} className={LINK}>Kostenrechner in 2 Minuten</a>.</> },
+  { frage: 'Was muss ich für Kost und Logis der Betreuungskraft stellen?', antwort: 'ein eigenes Zimmer und Verpflegung.' },
   { frage: 'Was kosten An- und Abreise, auch bei jedem Wechsel der Betreuungskraft?', antwort: '125 € je Strecke, auch bei jedem Wechsel.' },
   { frage: 'Wie hoch sind die Zuschläge an Feiertagen?', antwort: 'der doppelte Tagessatz an neun Feiertagen.' },
   { frage: 'Wie schnell kann ich kündigen, und kostet ein Wechsel der Betreuungskraft etwas?', antwort: 'täglich kündbar, ohne Mindestlaufzeit. Beim Wechsel zahlen Sie die An- und Abreise und am Wechseltag den Tagessatz für beide Betreuungskräfte.' },
-  { frage: 'Gibt es eine Vermittlungsgebühr, Anzahlung oder Vorauszahlung?', antwort: 'nein. Abgerechnet wird taggenau ab Anreise.' },
-  { frage: 'Ist Ihre Auszeichnung belegt, mit Link oder Dokument?', antwort: <><a href="/testsieger-24-stunden-pflege" className={LINK}>sechsmal in Folge Testsieger bei DIE WELT</a>, mit Original-Siegel und Veröffentlichung.</> },
+  { frage: 'Gibt es eine Vermittlungsgebühr oder Anzahlung?', antwort: 'nein. Abgerechnet wird taggenau ab Anreise.' },
+  { frage: 'Kann ich die Betreuungskraft vor dem Vertrag sehen und selbst auswählen?', antwort: 'ja. Sie sehen Profile mit Foto, Deutschkenntnissen und Erfahrung und wählen aus, bevor Sie einen Vertrag unterschreiben.' },
 ]
 
 const faqs = [
@@ -261,9 +265,13 @@ export default function Page() {
               Reihenfolgen). Feiertag ohne Eurobetrag (Preisregel), Texte mit GPT-5 geprüft. */}
           <section className="mb-14 scroll-mt-[88px] md:scroll-mt-[150px]" id="sieben-fragen">
             <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-4">Diese 7 Fragen stellen Sie jedem Anbieter</h2>
+            {/* Zweiter Gegencheck 28.09.: Auf dieser Seite stehen die Wettbewerber mit Namen, und die FAQ sagen, dass vier von
+                ihnen ein verbindliches Angebot erst nach Fragebogen oder Gespräch geben. „Ein seriöser Anbieter beantwortet
+                … sofort … Ausweichende Antworten sind ein Warnsignal" hätte sie damit als unseriös hingestellt (§ 4 Nr. 1
+                UWG, GPT-5 als Gegenspieler: hohes Risiko). Jetzt ohne Wertung, nur die Handlung. */}
             <p className="text-[17px] leading-[1.65] text-pm-body mb-6">
-              Egal, bei wem Sie anfragen, auch bei uns: Ein seriöser Anbieter beantwortet alle sieben Fragen sofort und
-              konkret. Ausweichende Antworten sind ein Warnsignal.
+              Egal, bei wem Sie anfragen: Lassen Sie sich diese sieben Fragen vor dem Vertrag schriftlich beantworten,
+              auch von uns.
             </p>
             <ol className="border-t border-pm-line">
               {SIEBEN_FRAGEN.map((f, i) => (
