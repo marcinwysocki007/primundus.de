@@ -288,8 +288,12 @@ export function ausApi(b: ApiBewertung): Bewertung | null {
   }
 }
 
-/** Direkt abgegebene Bewertungen laden (nur wenn BEWERTUNGEN_ONLINE). Fehler → leere Liste. */
-export async function ladeDirekteBewertungen(neuLadenSekunden = 300): Promise<Bewertung[]> {
+/** Direkt abgegebene Bewertungen laden (nur wenn BEWERTUNGEN_ONLINE). Fehler → leere Liste.
+ *  `neuLadenSekunden = false` (Standard): nur beim Build abrufen, die Seite bleibt fest gebaut. Seit 28.09.2026 (Martin:
+ *  „alle 3 machen“): Jede Seite mit einem zeitgesteuerten Abruf wird stündlich neu erzeugt (ISR) und läuft in Next 13.5.1
+ *  in den Fehler „304 ohne Inhalt“ (vercel/next.js#56018) — so war /tools am 28.09. eine weiße Seite, mit den Sternen
+ *  auf fast allen Seiten waren 318 von 322 Adressen betroffen. Eine Zahl nur für Schnittstellen (api/bewertungen-stand). */
+export async function ladeDirekteBewertungen(neuLadenSekunden: number | false = false): Promise<Bewertung[]> {
   if (!BEWERTUNGEN_ONLINE) return []
   try {
     const res = await fetch(BEWERTUNG_API, { next: { revalidate: neuLadenSekunden } })

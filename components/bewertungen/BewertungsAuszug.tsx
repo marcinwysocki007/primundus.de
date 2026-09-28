@@ -4,7 +4,8 @@
 //
 // Drei echte Bewertungen, je eine zu den häufigsten Bedenken vor einer 24-Stunden-Betreuung:
 //   fremde Person im Haus · was, wenn es nicht passt (4 Sterne, Wechsel) · erreicht man jemanden
-// Schnitt und Anzahl wie auf /erfahrungen (Google live, Backend stündlich). Kein Sterne-Markup
+// Schnitt und Anzahl wie auf /erfahrungen, Stand des letzten Deploys (seit 28.09.2026 nur beim Build abgerufen, sonst
+// würde jede Seite stündlich neu erzeugt, siehe lib/bewertungen.ts). Kein Sterne-Markup
 // hier: das steht nur auf /erfahrungen, wo alle Bewertungen sichtbar sind.
 import { alleBewertungen, anzahlText, ladeDirekteBewertungen, schnitt, schnittText, type Bewertung } from '@/lib/bewertungen'
 import { ladeGoogleDaten } from '@/lib/google-bewertungen'
@@ -14,7 +15,7 @@ const AUSZUG = ['k-20260814-andrea', 'k-20260624-ralf', 'k-20260208-andrea']
 const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
 
 export async function ladeBewertungsStand() {
-  const [backend, google] = await Promise.all([ladeDirekteBewertungen(60 * 60), ladeGoogleDaten()])
+  const [backend, google] = await Promise.all([ladeDirekteBewertungen(), ladeGoogleDaten()])
   const alle = alleBewertungen(google.bewertungen, backend)
   const auszug = AUSZUG.map((id) => alle.find((b) => b.id === id)).filter((b): b is Bewertung => Boolean(b))
   return { schnitt: schnittText(schnitt(alle)), wert: schnitt(alle), anzahl: alle.length, auszug }

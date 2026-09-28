@@ -29,7 +29,9 @@ const VORNE = ['k-20260814-andrea', 'k-20260624-ralf', 'k-20260208-andrea']
 const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
 
 export async function ladeStimmen(max = 9) {
-  const [backend, google] = await Promise.all([ladeDirekteBewertungen(60 * 60), ladeGoogleDaten()])
+  // Nur beim Build (28.09.2026): ein zeitgesteuerter Abruf machte jede Seite mit Sternen zur stündlich neu erzeugten
+  // Seite und damit anfällig für „304 ohne Inhalt“ (lib/bewertungen.ts). Die Sterne gehen mit jedem Deploy mit.
+  const [backend, google] = await Promise.all([ladeDirekteBewertungen(), ladeGoogleDaten()])
   const alle = alleBewertungen(google.bewertungen, backend)
   const vorne = VORNE.map((id) => alle.find((b) => b.id === id)).filter((b): b is Bewertung => Boolean(b))
   const rest = alle

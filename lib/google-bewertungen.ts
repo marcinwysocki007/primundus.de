@@ -17,8 +17,9 @@ export const GOOGLE_ORTE = {
 } as const
 export type GoogleOrt = keyof typeof GOOGLE_ORTE
 
-/** Alle 6 Stunden neu abfragen (2 Abrufe je Lauf) */
-const NEU_LADEN_SEKUNDEN = 6 * 60 * 60
+/** Nur für die Schnittstelle api/bewertungen-stand: alle 6 Stunden neu abfragen (2 Abrufe je Lauf). Seiten rufen seit
+ *  28.09.2026 nur beim Build ab (Standard `false`), sonst werden sie stündlich neu erzeugt — siehe lib/bewertungen.ts. */
+export const GOOGLE_NEU_LADEN_SEKUNDEN = 6 * 60 * 60
 
 export interface GoogleProfilStand {
   schnitt: number
@@ -84,13 +85,13 @@ export function zusammenfuehren(fest: Bewertung[], api: Bewertung[]): Bewertung[
   return [...api, ...rest].sort((a, b) => b.sortierDatum.localeCompare(a.sortierDatum))
 }
 
-async function ladeOrt(ort: GoogleOrt, schluessel: string): Promise<{ bewertungen: Bewertung[]; stand: GoogleProfilStand }> {
+async function ladeOrt(ort: GoogleOrt, schluessel: string, neuLadenSekunden: number | false): Promise<{ bewertungen: Bewertung[]; stand: GoogleProfilStand }> {
   const fest = festeEintraege(ort)
   const ersatz = { bewertungen: fest, stand: { schnitt: schnitt(fest), anzahl: fest.length, live: false } }
   try {
     const res = await fetch(`https://places.googleapis.com/v1/places/${GOOGLE_ORTE[ort]}?languageCode=de`, {
       headers: { 'X-Goog-Api-Key': schluessel, 'X-Goog-FieldMask': 'rating,userRatingCount,reviews' },
-      next: { revalidate: NEU_LADEN_SEKUNDEN },
+      next: { revalidate: neuLadenSekunden },
     })
     if (!res.ok) {
       console.error(`[google-bewertungen] ${ort}: HTTP ${res.status}`)
@@ -113,7 +114,7 @@ async function ladeOrt(ort: GoogleOrt, schluessel: string): Promise<{ bewertunge
   }
 }
 
-export async function ladeGoogleDaten(): Promise<GoogleDaten> {
+export async function ladeGoogleDaten(neuLadenSekunden: number | false = false): Promise<GoogleDaten> {
   const schluessel = process.env.GOOGLE_PLACES_API_KEY ?? ''
   const orte = Object.keys(GOOGLE_ORTE) as GoogleOrt[]
   if (!schluessel) {
@@ -125,7 +126,7 @@ export async function ladeGoogleDaten(): Promise<GoogleDaten> {
     ) as Record<GoogleOrt, GoogleProfilStand>
     return { bewertungen: orte.flatMap(festeEintraege), profile, live: false }
   }
-  const ergebnisse = await Promise.all(orte.map((o) => ladeOrt(o, schluessel)))
+  const ergebnisse = await Promise.all(orte.map((o) => ladeOrt(o, schluessel, neuLadenSekunden)))
   return {
     bewertungen: ergebnisse.flatMap((e) => e.bewertungen),
     profile: Object.fromEntries(orte.map((o, i) => [o, ergebnisse[i].stand])) as Record<GoogleOrt, GoogleProfilStand>,

@@ -27,8 +27,8 @@ import { ORG_ID, WEBSITE_ID } from '@/lib/schema'
 const SEITE_URL = 'https://primundus.de/erfahrungen'
 const AKTUALISIERT = aktualisiertAm('erfahrungen', '17. September 2026')
 
-// Direkt abgegebene Bewertungen neu laden, sobald das Backend live ist (lib/bewertungen.ts)
-export const revalidate = 300
+// Kein `revalidate` mehr (28.09.2026): Stündlich/alle 5 Min. neu erzeugte Seiten liefern in Next 13.5.1 zeitweise
+// „304 ohne Inhalt“ (lib/bewertungen.ts). Neue Bewertungen erscheinen mit dem nächsten Deploy.
 
 const H2 = 'text-[clamp(27px,3.2vw,38px)] font-extrabold leading-[1.1] tracking-[-0.032em] text-pm-ink [text-wrap:balance]'
 const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe'
@@ -43,8 +43,8 @@ function aufzaehlung(teile: string[]): string {
   return teile.length < 2 ? teile.join('') : `${teile.slice(0, -1).join(', ')} und ${teile[teile.length - 1]}`
 }
 
-// Alles, was sich ohne Deploy ändert: Google (Places API, alle 6 Std.) und Backend
-// (Formular und Admin-Einträge, alle 5 Min.). fetch-Ergebnisse teilen sich Metadaten und Seite.
+// Google (Places API) und Backend (Formular und Admin-Einträge), abgerufen beim Build.
+// fetch-Ergebnisse teilen sich Metadaten und Seite.
 async function laden() {
   const [backend, google] = await Promise.all([ladeDirekteBewertungen(), ladeGoogleDaten()])
   const alle = alleBewertungen(google.bewertungen, backend)

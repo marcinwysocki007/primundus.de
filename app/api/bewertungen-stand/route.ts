@@ -3,12 +3,14 @@
 // Gleiche Rechnung wie auf /erfahrungen. Stündlich neu, darf von überall gelesen werden.
 import { NextResponse } from 'next/server'
 import { alleBewertungen, ladeDirekteBewertungen, schnitt, schnittText } from '@/lib/bewertungen'
-import { ladeGoogleDaten } from '@/lib/google-bewertungen'
+import { GOOGLE_NEU_LADEN_SEKUNDEN, ladeGoogleDaten } from '@/lib/google-bewertungen'
 
+// Bleibt zeitgesteuert (Schnittstelle, keine Seite): Rechner und Mails lesen hier den aktuellen Stand. Die Seiten rufen
+// seit 28.09.2026 nur beim Build ab (lib/bewertungen.ts), deshalb die Abstände hier ausdrücklich.
 export const revalidate = 3600
 
 export async function GET() {
-  const [backend, google] = await Promise.all([ladeDirekteBewertungen(60 * 60), ladeGoogleDaten()])
+  const [backend, google] = await Promise.all([ladeDirekteBewertungen(60 * 60), ladeGoogleDaten(GOOGLE_NEU_LADEN_SEKUNDEN)])
   const alle = alleBewertungen(google.bewertungen, backend)
   const wert = schnitt(alle)
   return NextResponse.json(
