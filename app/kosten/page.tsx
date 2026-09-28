@@ -41,6 +41,7 @@ const SECTIONS = [
   { id: 'polnische-pflegekraft', title: 'Polnische Pflegekraft' },
   { id: 'vergleich', title: 'Vergleich mit dem Pflegeheim' },
   { id: 'eigenanteil', title: 'Eigenanteil senken' },
+  { id: 'preise-vergleichen', title: 'Preise richtig vergleichen' },
   { id: 'guenstiger', title: 'Günstiger nur mit Risiko' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
@@ -250,7 +251,10 @@ export default function Kosten() {
               punkte={[
                 { title: 'An- und Abreise', desc: 'Die Betreuungskraft wird zu Ihnen gebracht und wieder abgeholt. Das kostet 125 € je Strecke. Beim Wechsel alle 6 bis 8 Wochen fallen also 250 € an. Am Wechseltag berechnen wir den Tagessatz für beide Betreuungskräfte, weil An- und Abreisetag Arbeitstage sind.' },
                 { title: 'Kost und Logis', desc: 'Die Betreuungskraft wohnt bei Ihnen: ein eigenes Zimmer, Verpflegung, Küche und Bad zur Mitbenutzung, Internet. Das stellen Sie, wie bei einem Mitbewohner.' },
-                { title: 'Feiertage', desc: 'An neun gesetzlichen Feiertagen im Jahr gilt der doppelte Tagessatz. Welche das sind, steht im Vertrag.' },
+                // 28.09.2026: „gesetzlichen" gestrichen. Der Vertrag zählt die neun Tage seit 21.08. einzeln auf
+                // (CAapp lib/vertrag-content.ts § 4), Heiligabend und Silvester sind keine gesetzlichen Feiertage.
+                // Die Liste stand bisher nur auf /24-stunden-pflege-wirkliche-kosten, die in dieser Seite aufgeht.
+                { title: 'Feiertage', desc: 'An neun Feiertagen im Jahr gilt der doppelte Tagessatz: Karfreitag, Ostersonntag, Ostermontag, 1. Mai, Heiligabend, 1. und 2. Weihnachtstag, Silvester und Neujahr.' },
               ]}
             />
             <Kasten augenbraue="Nicht im Preis, aber auch nicht Ihr Problem" titel="Was wir nicht berechnen">
@@ -418,6 +422,27 @@ export default function Kosten() {
               ]}
             />
             <MehrDazu label="Alle Tipps:" links={[{ href: '/eigenanteil-24h-pflege-senken', text: 'Eigenanteil senken: alle Möglichkeiten 2026' }]} />
+          </Abschnitt>
+
+          {/* 28.09.2026 (Martin: „bei 2 sehr vorsichtig sein, ggf. Inhalt ausbauen, verbessern als stumpf umleiten"):
+              Übernommen aus /24-stunden-pflege-wirkliche-kosten, die Google nie abgerufen hat und deren Titel dieselbe
+              Frage besetzte wie diese Seite (Google-Treffer für „was kostet 24 stunden pflege wirklich" zu 8 von 9 gleich
+              mit „24 stunden pflege kosten"). Nur dieser Teil war dort einzigartig; Beispielrechnung und Nebenkosten
+              stehen hier schon. Die sieben Fragen an jeden Anbieter stehen jetzt im Anbieter-Vergleich. Texte mit
+              GPT-5 geprüft: keine fremden Beispielpreise neben unseren, kein „täuschen" (Herabsetzung). */}
+          <Abschnitt id="preise-vergleichen" titel="Warum manche Angebote günstiger wirken">
+            <Text>
+              Beim Vergleichen sehen Sie Preise pro Tag, Ab-Preise und Eigenanteile. Alle drei können am Ende derselbe
+              Monatsbetrag sein. Diese drei Darstellungen sollten Sie kennen:
+            </Text>
+            <Punkte
+              punkte={[
+                { title: '1. Der Tagespreis', desc: '„105 € am Tag“ klingt nach wenig. Im Monat sind das 3.150 €. Rechnen Sie Tagespreise mal 30, bevor Sie vergleichen.' },
+                { title: '2. Der Ab-Preis', desc: <>Ein Ab-Preis gilt für den einfachsten Fall: eine Person, die noch mobil ist, keine Hilfe in der Nacht, einfache Deutschkenntnisse der Betreuungskraft. Das gilt auch für unseren Grundpreis von 2.150 €. Fragen Sie deshalb nach dem Preis für Ihre Situation; bei uns zeigt ihn der <a href={RECHNER} className={QUELLE}>Rechner in 2 Minuten</a>. Steht beim Ab-Preis „Eigenanteil“, sind die Zuschüsse schon abgezogen. Vergleichen Sie ihn dann mit unserem Eigenanteil: bei Pflegegrad 3 ab ca. 923 € im Monat.</> },
+                { title: '3. Nebenkosten ohne Betrag', desc: <>An- und Abreise, Feiertage, der Tag eines Wechsels: Diese Posten gibt es bei jeder 24-Stunden-Pflege. Nicht jeder Anbieter nennt vor dem Vertrag einen Betrag dafür. Unsere stehen oben unter <a href="#nebenkosten" className={QUELLE}>Was dazukommt</a>.</> },
+              ]}
+            />
+            <MehrDazu label="Vor dem Vertrag:" links={[{ href: '/anbieter-vergleich#sieben-fragen', text: '7 Fragen, die Sie jedem Anbieter stellen' }]} />
           </Abschnitt>
 
           <Abschnitt id="guenstiger" titel="Günstiger geht es nur auf eigenes Risiko">

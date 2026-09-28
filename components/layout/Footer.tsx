@@ -40,7 +40,10 @@ const serviceLinks = [
   { label: 'Beratungsgespräch', href: '/beratungsgespraech' },
   { label: 'Kontakt', href: '/kontakt' },
   { label: '24-Stunden-Pflege', href: '/24-stunden-pflege' },
-  { label: 'Kosten', href: '/kosten' },
+  // 28.09.2026: war „Kosten". Kopf und Fuß verlinkten /kosten auf jeder Seite nur mit diesem einen Wort — dasselbe
+  // Muster wie „24h-Pflege" (21.09., siehe Header.tsx). Im Kopf bleibt „Kosten", weil es dort direkt neben
+  // „24-Stunden-Pflege" steht; hier trägt der Link den gesuchten Begriff (Martin „mach 1 und 2", GPT-5 geprüft).
+  { label: 'Kosten der 24-Stunden-Pflege', href: '/kosten' },
   // 27.08.2026 ergänzt: /leistungen und /ablauf waren weder im Header noch im
   // Footer verlinkt — die einzigen beiden Kernseiten ganz ohne sitewide Link.
   // Beide stehen bei Google als „Duplikat" und wurden seit Juli nicht gecrawlt.
@@ -51,6 +54,14 @@ const serviceLinks = [
   // 14.09.2026: Landingpage fuer Vermittler (statisch unter public/pflegekraefte-fuer-vermittler).
   { label: 'Pflegekräfte für Vermittler', href: '/pflegekraefte-fuer-vermittler' },
 ]
+
+// Am Handy (zwei Spalten) brach „Kosten der 24-Stunden-Pflege" nach „24-" um. Der Begriff bleibt zusammen,
+// der Linktext im Quelltext unverändert (28.09.2026).
+function begriffZusammen(label: string) {
+  const teile = label.split('24-Stunden-Pflege')
+  if (teile.length === 1) return label
+  return teile.flatMap((t, i) => (i === 0 ? [t] : [<span key={i} className="whitespace-nowrap">24-Stunden-Pflege</span>, t]))
+}
 
 const vergleichLinks = [
   // 28.08.2026 ergaenzt. Befund aus der internen Link-Pruefung: /qualitaet,
@@ -178,7 +189,7 @@ export function SiteFooter() {
                       href={l.href}
                       className="text-[14px] text-gray-300 hover:text-white transition-colors"
                     >
-                      {l.label}
+                      {begriffZusammen(l.label)}
                     </Link>
                   )}
                 </li>

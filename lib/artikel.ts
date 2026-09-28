@@ -9,7 +9,6 @@ export interface Artikel {
 export const ARTIKEL: Artikel[] = [
   { slug: '24-stunden-pflege-kostenuebernahme', titel: "Kostenübernahme 24-Stunden-Pflege", rubrik: 'finanzierung' },
   { slug: '24-stunden-pflege-krankenhausaufenthalt', titel: "Krankenhaus, Ausfall, Wechsel", rubrik: 'organisation' },
-  { slug: '24-stunden-pflege-wirkliche-kosten', titel: "Die ehrliche Gesamtrechnung", rubrik: 'finanzierung' },
   { slug: '24h-pflege-checkliste', titel: "24h-Pflege Checkliste", rubrik: 'ratgeber' },
   { slug: '24h-pflege-fuer-angehoerige', titel: "24h-Pflege für Angehörige", rubrik: 'ratgeber' },
   { slug: '24h-pflege-organisieren', titel: "24h-Pflege organisieren", rubrik: 'organisation' },

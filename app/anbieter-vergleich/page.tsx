@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
-import { Fragen, RatgeberKopf, StandardUnterzeile } from '@/components/vorlage/Ratgeber'
+import type { ReactNode } from 'react'
+import { Fragen, MehrDazu, RatgeberKopf, StandardUnterzeile } from '@/components/vorlage/Ratgeber'
 import { ANBIETER, PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND, type Anbieter, type Wertung } from '@/lib/anbieterVergleich'
 
 export const metadata: Metadata = {
@@ -21,6 +22,17 @@ export const metadata: Metadata = {
 }
 
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-anbieter-vergleich'
+const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
+const SIEBEN_FRAGEN: { frage: string; antwort: ReactNode }[] = [
+  { frage: 'Was kostet meine Situation im Monat, nicht pro Tag?', antwort: <>ab 2.150 € im Monat für eine Person. Bei Pflegegrad 3 selbst zu tragen ab ca. 923 €. Den Preis für Ihre Situation zeigt der <a href={RECHNER} className={LINK}>Kostenrechner in 2 Minuten</a>.</> },
+  { frage: 'Was müssen Sie für Kost und Logis der Betreuungskraft stellen?', antwort: 'ein eigenes Zimmer und Verpflegung.' },
+  { frage: 'Was kosten An- und Abreise, auch bei jedem Wechsel der Betreuungskraft?', antwort: '125 € je Strecke, auch bei jedem Wechsel.' },
+  { frage: 'Wie hoch sind die Zuschläge an Feiertagen?', antwort: 'der doppelte Tagessatz an neun Feiertagen.' },
+  { frage: 'Wie schnell kann ich kündigen, und kostet ein Wechsel der Betreuungskraft etwas?', antwort: 'täglich kündbar, ohne Mindestlaufzeit. Beim Wechsel zahlen Sie die An- und Abreise und am Wechseltag den Tagessatz für beide Betreuungskräfte.' },
+  { frage: 'Gibt es eine Vermittlungsgebühr, Anzahlung oder Vorauszahlung?', antwort: 'nein. Abgerechnet wird taggenau ab Anreise.' },
+  { frage: 'Ist Ihre Auszeichnung belegt, mit Link oder Dokument?', antwort: <><a href="/testsieger-24-stunden-pflege" className={LINK}>sechsmal in Folge Testsieger bei DIE WELT</a>, mit Original-Siegel und Veröffentlichung.</> },
+]
 
 const faqs = [
   {
@@ -239,6 +251,30 @@ export default function Page() {
                   )}
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* Sieben Fragen — 28.09.2026 übernommen aus /24-stunden-pflege-wirkliche-kosten (Google nie bekannt, Titel
+              besetzte dieselbe Frage wie /kosten). Hier passt die Liste zur Absicht: Diese Seite steht schon für
+              „wie vergleiche ich die kosten für pflege bei verschiedenen anbietern?" (Pos. 9,9) und „24-stunden-pflege
+              seriöse anbieter". Frage und Antwort untereinander statt nummerierter Schritte (Schritte nur für echte
+              Reihenfolgen). Feiertag ohne Eurobetrag (Preisregel), Texte mit GPT-5 geprüft. */}
+          <section className="mb-14 scroll-mt-[88px] md:scroll-mt-[150px]" id="sieben-fragen">
+            <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-4">Diese 7 Fragen stellen Sie jedem Anbieter</h2>
+            <p className="text-[17px] leading-[1.65] text-pm-body mb-6">
+              Egal, bei wem Sie anfragen, auch bei uns: Ein seriöser Anbieter beantwortet alle sieben Fragen sofort und
+              konkret. Ausweichende Antworten sind ein Warnsignal.
+            </p>
+            <ol className="border-t border-pm-line">
+              {SIEBEN_FRAGEN.map((f, i) => (
+                <li key={f.frage} className="py-5 border-b border-pm-line">
+                  <h3 className="text-[18px] font-bold leading-[1.35] tracking-[-0.015em] text-pm-ink">{i + 1}. {f.frage}</h3>
+                  <p className="mt-1.5 text-[17px] leading-[1.65] text-pm-body"><span className="font-semibold text-pm-ink">Bei uns:</span> {f.antwort}</p>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-6">
+              <MehrDazu label="Mehr dazu:" links={[{ href: '/kosten', text: 'Kosten der 24-Stunden-Pflege 2026' }]} />
             </div>
           </section>
 

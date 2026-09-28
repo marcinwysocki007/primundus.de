@@ -67,7 +67,6 @@ const artikel = [
   'pflegegeld-und-24h-pflege-kombinieren',
   'eigenanteil-24h-pflege-senken',
   '24-stunden-pflege-kostenuebernahme',
-  '24-stunden-pflege-wirkliche-kosten',
   '24-stunden-pflege-krankenhausaufenthalt',
   'pflegereform-2025',
   'foerderungen-nach-bundesland',

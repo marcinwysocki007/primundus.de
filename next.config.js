@@ -47,6 +47,12 @@ const nextConfig = {
       { source: '/24h-pflege-rhein-pfalz-kreis', destination: '/24h-pflege-ludwigshafen', permanent: true },
       { source: '/24h-pflege-rheinisch-bergischer-kreis', destination: '/24h-pflege-bergisch-gladbach', permanent: true },
       { source: '/24-stunden-pflege/kosten-24-std-pflege', destination: '/kosten', permanent: true },
+      // 28.09.2026 (Martin „mach 1 und 2 … Inhalt ausbauen, verbessern als stumpf umleiten"): Die Seite
+      // „Was kostet 24-Stunden-Pflege wirklich?" war Google nie bekannt und besetzte dieselbe Frage wie /kosten
+      // (Treffer zu 8 von 9 gleich). Ihr eigener Inhalt zog mit um: Preisdarstellungen nach /kosten#preise-vergleichen,
+      // die sieben Fragen nach /anbieter-vergleich#sieben-fragen, die Feiertagsliste nach /kosten#nebenkosten.
+      { source: '/24-stunden-pflege-wirkliche-kosten', destination: '/kosten#preise-vergleichen', permanent: true },
+      { source: '/24-stunden-pflege-wirkliche-kosten/', destination: '/kosten#preise-vergleichen', permanent: true },
       { source: '/24-stunden-pflege/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
       { source: '/pflegekraft-polen-premium', destination: '/pflegekraft-aus-polen', permanent: true },
       { source: '/vermittler-kooperation', destination: '/pflegekraefte-fuer-vermittler', permanent: true },

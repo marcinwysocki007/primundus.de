@@ -183,14 +183,14 @@ export default function KrankenhausPage() {
                 { title: "Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?", desc: "Primundus stellt eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Tage, an denen die Betreuungskraft krank ist, berechnen wir nicht; für den Ersatz fallen nur die An- und Abreisekosten an." },
                 { title: "Kostet ein Wechsel der Betreuungskraft etwas?", desc: "Ob regulär alle 6–8 Wochen oder weil die Chemie nicht stimmt: Sie zahlen An- und Abreise mit 125 Euro je Strecke, und weil An- und Abreisetag Arbeitstage sind, berechnen wir am Wechseltag den Tagessatz für beide Betreuungskräfte. Eine Gebühr für den Wechsel gibt es nicht." },
                 { title: "Wie hoch sind die Feiertagszuschläge?", desc: <>An neun Feiertagen gilt der doppelte Tagessatz, beim Grundpreis von 2.150 Euro rund
-                72 Euro Aufschlag je Feiertag. Mehr zu ehrlichen Gesamtkosten:{' '}
-                <a href="/24-stunden-pflege-wirkliche-kosten" className="text-pm-taupe underline underline-offset-2">Die ehrliche Gesamtrechnung</a>.</> },
+                72 Euro Aufschlag je Feiertag. Alle Posten neben dem Monatspreis:{' '}
+                <a href="/kosten#nebenkosten" className="text-pm-taupe underline underline-offset-2">Kosten der 24-Stunden-Pflege</a>.</> },
               ]}
             />
             <MehrDazu
               label="Weiterlesen:"
               links={[
-                { href: '/24-stunden-pflege-wirkliche-kosten', text: 'Die ehrliche Gesamtrechnung' },
+                { href: '/kosten#nebenkosten', text: 'Was zum Monatspreis dazukommt' },
                 { href: '/24-stunden-pflege-kostenuebernahme', text: 'Wer übernimmt die Kosten?' },
                 { href: '/pflegekraft-wechseln', text: 'Pflegekraft wechseln' },
                 { href: '/erste-hilfe-bei-pflegenotfall', text: 'Erste Hilfe im Pflegenotfall' },

@@ -433,7 +433,7 @@ export default function VierUndZwanzigStundenPflege() {
               links={[
                 { href: '/nachteile-24h-pflege', text: 'Nachteile ehrlich betrachtet' },
                 { href: '/anbieter-vergleich', text: '24h-Pflege-Anbieter im Vergleich 2026' },
-                { href: '/24-stunden-pflege-wirkliche-kosten', text: 'Die ehrliche Gesamtrechnung' },
+                { href: '/anbieter-vergleich#sieben-fragen', text: '7 Fragen, die Sie jedem Anbieter stellen' },
               ]}
             />
           </Abschnitt>

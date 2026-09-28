@@ -1,6 +1,5 @@
 app/24-stunden-pflege-kostenuebernahme/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
 app/24-stunden-pflege-krankenhausaufenthalt/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
-app/24-stunden-pflege-wirkliche-kosten/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
 app/24h-pflege-aachen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
 app/24h-pflege-aalen/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
 app/24h-pflege-alzey-worms/page.tsx: error TS2322: Type '{ headline: string; subline: string; }' is not assignable to type 'IntrinsicAttributes'.
