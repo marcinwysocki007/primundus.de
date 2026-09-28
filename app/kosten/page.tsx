@@ -42,7 +42,7 @@ const SECTIONS = [
   { id: 'vergleich', title: 'Vergleich mit dem Pflegeheim' },
   { id: 'eigenanteil', title: 'Eigenanteil senken' },
   { id: 'preise-vergleichen', title: 'Preise richtig vergleichen' },
-  { id: 'guenstiger', title: 'Günstiger nur mit Risiko' },
+  { id: 'guenstiger', title: 'Unter 2.000 €: die Risiken' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
@@ -451,7 +451,10 @@ export default function Kosten() {
             <MehrDazu label="Vor dem Vertrag:" links={[{ href: '/anbieter-vergleich#sieben-fragen', text: '7 Fragen, die Sie jedem Anbieter stellen' }]} />
           </Abschnitt>
 
-          <Abschnitt id="guenstiger" titel="Günstiger geht es nur auf eigenes Risiko">
+          {/* 28.09.2026, eigene Entscheidung 6 der Abnahme (Prüfer-Agent und GPT-5 unabhängig): „Günstiger geht es nur auf
+              eigenes Risiko" war absolut und hieß: legal nicht billiger als bei uns. Der Text darunter spricht von Angeboten
+              unter 2.000 € und „meist"; die Überschrift sagt jetzt dasselbe. Anker #guenstiger bleibt. */}
+          <Abschnitt id="guenstiger" titel="Unter 2.000 € im Monat: meist auf eigenes Risiko">
             <Text>
               Angebote unter 2.000 € im Monat gibt es, meist von „selbstständigen“ Betreuungskräften oder über private
               Vermittlung. Wer im Haushalt wohnt, weisungsgebunden arbeitet und nur einen Auftraggeber hat, ist in der Regel
