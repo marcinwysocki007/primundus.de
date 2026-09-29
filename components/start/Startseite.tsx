@@ -59,6 +59,7 @@ export function StartKopf() {
             width={1100}
             height={941}
             priority
+            fetchPriority="high"
             sizes="(min-width: 1024px) 660px, 100vw"
             className="w-full h-auto max-lg:max-h-[440px] object-cover lg:rounded-[24px]"
           />

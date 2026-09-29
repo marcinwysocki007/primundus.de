@@ -209,6 +209,7 @@ export function AnsprechpartnerinGross({
         width={800}
         height={1200}
         priority
+        fetchPriority="high"
         sizes="(min-width: 1024px) 360px, 100vw"
         // Eigene Datei für die große Karte (Martin, 21.09.: Foto in 1066 × 1600 geliefert). Auf das
         // Motiv beschnitten und auf 800 × 1200 gebracht — bei 360 px Kartenbreite auf Retina exakt

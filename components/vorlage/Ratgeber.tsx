@@ -258,7 +258,7 @@ export function RatgeberKopf({
         {siegel ? (
           // Nur Handy und Tablet — am Computer steht das Siegel im Kasten, in einer eigenen Karte oder auf Martas Foto
           <a href={siegelZiel} aria-label="6× Testsieger DIE WELT — zur Auszeichnung" className="absolute right-5 top-2 z-[1] lg:hidden">
-            <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} priority className="h-[76px] md:h-[88px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)]" />
+            <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} priority fetchPriority="high" className="h-[76px] md:h-[88px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)]" />
           </a>
         ) : null}
         <nav aria-label="Brotkrumen" className={`text-[14px] text-pm-mute flex items-center gap-2 max-md:whitespace-nowrap max-md:overflow-hidden md:flex-wrap ${siegel ? 'pr-16 md:pr-20 lg:pr-0' : ''}`}>
