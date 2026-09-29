@@ -39,7 +39,7 @@ const schemaMarkup = JSON.stringify([
         "name": "Brauche ich einen Pflegevertrag?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ein schriftlicher Pflegevertrag zwischen Pflegebedürftigen und pflegenden Angehörigen ist wichtig für die steuerliche Anerkennung der Pflegekosten und das Pflegegeld. Er regelt Leistungen, Vergütung und Kündigung transparent."
+          "text": "Für das Pflegegeld brauchen Sie keinen: Die Pflegekasse zahlt es an die pflegebedürftige Person, auch ohne Vertrag. Sinnvoll ist ein schriftlicher Vertrag, wenn Angehörige für die Pflege Geld bekommen. Er hält Leistungen, Vergütung und Kündigung fest und hilft, die Zahlungen gegenüber dem Finanzamt nachzuweisen."
         }
       },
       {
@@ -88,7 +88,7 @@ const infoCards = [
 const faqs = [
   {
     q: 'Brauche ich einen Pflegevertrag?',
-    a: 'Ein schriftlicher Pflegevertrag zwischen Pflegebedürftigen und pflegenden Angehörigen ist wichtig für die steuerliche Anerkennung der Pflegekosten und das Pflegegeld. Er regelt Leistungen, Vergütung und Kündigung transparent.',
+    a: 'Für das Pflegegeld brauchen Sie keinen: Die Pflegekasse zahlt es an die pflegebedürftige Person, auch ohne Vertrag. Sinnvoll ist ein schriftlicher Vertrag, wenn Angehörige für die Pflege Geld bekommen. Er hält Leistungen, Vergütung und Kündigung fest und hilft, die Zahlungen gegenüber dem Finanzamt nachzuweisen.',
   },
   {
     q: 'Kann ich den Pflegevertrag selbst erstellen?',
@@ -128,10 +128,9 @@ export default function Page() {
               Was gehört in einen Pflegevertrag?
             </h2>
             <p className="text-[15px] text-pm-body leading-relaxed mb-6">
-              Ein rechtssicherer Pflegevertrag zwischen Angehörigen regelt alle wesentlichen Punkte
-              der Pflegebeziehung schriftlich. Das schützt beide Seiten und ist Voraussetzung für
-              die steuerliche Anerkennung der Pflegekosten. Diese fünf Elemente sollte jeder
-              Pflegevertrag enthalten:
+              Ein Pflegevertrag zwischen Angehörigen hält die wesentlichen Punkte der Pflege
+              schriftlich fest. Das schützt beide Seiten und hilft, Zahlungen gegenüber dem
+              Finanzamt nachzuweisen. Diese fünf Elemente sollte jeder Pflegevertrag enthalten:
             </p>
             <div className="flex flex-col gap-3">
               {infoCards.map((card) => (
