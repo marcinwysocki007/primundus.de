@@ -196,7 +196,7 @@ export function ZuschussRechnerClient() {
           <div className="bg-white border border-pm-line rounded-2xl p-6 shadow-sm">
             <p className="text-[15px] font-bold text-pm-ink mb-2">Pflegegrad noch nicht bekannt?</p>
             <p className="text-[14px] text-pm-body mb-5">
-              Unser Pflegegrad-Rechner gibt in 3 Minuten eine erste Einschätzung.
+              Unser Pflegegrad-Rechner stellt dieselben 64 Fragen wie der Gutachter und zeigt nach etwa zehn Minuten, welcher Pflegegrad in Frage kommt.
             </p>
             <a
               href="/pflegegrad-rechner"
