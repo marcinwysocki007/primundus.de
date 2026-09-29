@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Sicher } from '@/components/Sicher'
 import Image from 'next/image'
 import FranchiseFormClient from './FranchiseFormClient'
+import { bild } from '@/lib/bild'
 
 export const metadata: Metadata = {
   title: 'Franchisepartner werden — 24h-Pflege | Primundus',
@@ -128,7 +129,7 @@ export default function FranchisePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
             <div className="bg-white border-2 border-pm-gold rounded-2xl p-6 flex flex-col items-center text-center">
               <Image
-                src="/images/primundus_testsieger-2021.webp"
+                src={bild('/images/primundus_testsieger-2021.webp')}
                 alt="Primundus Testsieger DIE WELT"
                 width={96}
                 height={96}
@@ -166,7 +167,7 @@ export default function FranchisePage() {
               className="group flex items-center gap-5 p-6 rounded-2xl border border-pm-line hover:border-pm-taupe transition-colors bg-white"
             >
               <div className="flex-shrink-0 flex items-center gap-3">
-                <Image src="/images/partner-pflegebund.png" alt="Pflegebund" width={44} height={44} className="object-contain" />
+                <Image src={bild('/images/partner-pflegebund.png')} alt="Pflegebund" width={44} height={44} className="object-contain" />
                 <span className="text-[17px] font-bold text-[#1A3A5C]">pflegebund<span className="text-pm-mute font-medium">.eu</span></span>
               </div>
               <div className="border-l border-pm-line pl-5">
@@ -180,7 +181,7 @@ export default function FranchisePage() {
               className="group flex items-center gap-5 p-6 rounded-2xl border border-pm-line hover:border-pm-taupe transition-colors bg-white"
             >
               <div className="flex-shrink-0">
-                <Image src="/images/partner-mamamia.png" alt="mamamia" width={140} height={41} className="object-contain" />
+                <Image src={bild('/images/partner-mamamia.png')} alt="mamamia" width={140} height={41} className="object-contain" />
               </div>
               <div className="border-l border-pm-line pl-5">
                 <p className="text-small text-pm-mute leading-snug">Digitale Pflegeplattform<br />Gemeinsames Ökosystem für Familien & Partner</p>
@@ -257,7 +258,7 @@ export default function FranchisePage() {
           <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-12 items-start">
             <div className="relative">
               <Image
-                src="/images/team-primundus-deutschland.webp"
+                src={bild('/images/team-primundus-deutschland.webp')}
                 alt="Das Team von Primundus"
                 width={260}
                 height={300}
@@ -265,7 +266,7 @@ export default function FranchisePage() {
               />
               <div className="absolute -bottom-3 -right-3 bg-white border border-pm-line rounded-xl p-2.5 shadow-sm">
                 <Image
-                  src="/images/primundus_testsieger-2021.webp"
+                  src={bild('/images/primundus_testsieger-2021.webp')}
                   alt="Testsieger DIE WELT"
                   width={56}
                   height={56}

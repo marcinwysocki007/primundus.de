@@ -8,6 +8,7 @@ import {
 } from '@/components/vorlage/Ratgeber'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
+import { bild } from '@/lib/bild'
 
 // Ortsseite in der Seitenvorlage (16.09.2026): Kopf mit „Auf einen Blick", Seitenleiste
 // mit Inhaltsverzeichnis, Flächen statt Kästen, keine Emoji, Fließtext 17 px.
@@ -226,7 +227,7 @@ export default function Page() {
             />
             <div className="bg-white rounded-[20px] shadow-lift p-6 md:p-8">
               <img
-                src="/images/bestpreisgarantie-siegel.webp"
+                src={bild('/images/bestpreisgarantie-siegel.webp')}
                 alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger"
                 width={900}
                 height={256}

@@ -7,6 +7,7 @@ import { VertrauensKarten } from '@/components/vertrauen/Vertrauen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
 import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
+import { bild } from '@/lib/bild'
 
 // Kernseite in der Seitenvorlage (Paket 3, 19.09.2026; Martin: „warum ist die Über-uns-Seite noch alt"). Vorher: alte Optik,
 // eigener Siegelkasten mit Goldrahmen, Bewertungs-Auszug und Kontaktkasten in Taupe. Jetzt: Kopf der Vorlage, Siegelkarten wie
@@ -136,7 +137,7 @@ export default function UeberUnsPage() {
           <Abschnitt id="wer" titel="Wer wir sind">
             <figure className="overflow-hidden rounded-[20px] bg-white shadow-lift">
               <Image
-                src="/images/team-primundus-deutschland.webp"
+                src={bild('/images/team-primundus-deutschland.webp')}
                 alt="Marta Kapcio und Karolina Jakubowska von Primundus"
                 width={1448}
                 height={1086}

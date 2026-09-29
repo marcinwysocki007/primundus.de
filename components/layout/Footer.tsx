@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { bild } from '@/lib/bild'
 
 const ratgeberLinks = [
   { label: 'Pflegegrade', href: '/pflegegrade' },
@@ -127,7 +128,7 @@ export function SiteFooter() {
                 <li className="text-[13px] text-gray-400 pt-1">Mo – So 8 – 20 Uhr</li>
               </ul>
               <Image
-                src="/images/primundus_testsieger-2021.webp"
+                src={bild('/images/primundus_testsieger-2021.webp')}
                 alt="Testsieger DIE WELT"
                 width={72}
                 height={86}
@@ -235,7 +236,7 @@ export function SiteFooter() {
             className="inline-flex items-center gap-3 group"
           >
             <img
-              src="/images/google-bevorzugte-quelle.png"
+              src={bild('/images/google-bevorzugte-quelle.png')}
               alt="Primundus bei Google als bevorzugte Quelle hinzufügen"
               width={169}
               height={53}

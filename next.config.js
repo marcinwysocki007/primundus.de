@@ -121,6 +121,14 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'geolocation=(), camera=(), microphone=()' },
         ],
       },
+      {
+        // Bilder mit Inhalts-Prüfsumme (?v=…, lib/bild.ts) darf der Browser ein Jahr behalten: Ändert sich die Datei,
+        // ändert sich die Adresse. Ohne ?v bleibt es beim Standard (max-age=0, jedes Mal nachfragen) — so kann ein
+        // unter gleichem Namen ersetztes Bild nie veraltet angezeigt werden.
+        source: '/images/:pfad*',
+        has: [{ type: 'query', key: 'v' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
     ]
   },
 };

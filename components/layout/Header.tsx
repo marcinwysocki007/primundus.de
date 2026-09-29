@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Phone, Menu, X, MessageSquare, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
+import { bild } from '@/lib/bild'
 
 const nav = [
   // 21.09.2026: Label war „24h-Pflege". Gemessen am selben Tag: Diese Seite bekommt 917
@@ -32,7 +33,7 @@ export function SiteHeader() {
         <div className="h-16 md:h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="/images/primundus_logo_header.webp"
+              src={bild('/images/primundus_logo_header.webp')}
               alt="Primundus"
               width={160}
               height={40}
@@ -50,7 +51,7 @@ export function SiteHeader() {
               className="hidden md:flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full bg-pm-paper hover:bg-pm-taupe hover:text-white transition-all duration-200 group"
             >
               <Image
-                src="/images/marta-kapcio-gesicht.jpg"
+                src={bild('/images/marta-kapcio-gesicht.jpg')}
                 alt="Marta Kapcio"
                 width={40}
                 height={40}
@@ -160,7 +161,7 @@ export function SiteHeader() {
               <div className="flex items-center gap-3 px-4 py-3 border-b border-pm-line">
                 <div className="relative flex-shrink-0">
                   <Image
-                    src="/images/marta-kapcio-gesicht.jpg"
+                    src={bild('/images/marta-kapcio-gesicht.jpg')}
                     alt="Marta Kapcio"
                     width={44}
                     height={44}

@@ -12,6 +12,7 @@ import { Karussell } from '@/components/vertrauen/Karussell'
 import { ProduktBuehne } from '@/components/vertrauen/ProduktBuehne'
 import { alleBewertungen, anzahlText, ladeDirekteBewertungen, schnitt, schnittText, type Bewertung } from '@/lib/bewertungen'
 import { ladeGoogleDaten } from '@/lib/google-bewertungen'
+import { bild } from '@/lib/bild'
 
 export const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
 export const WHATSAPP = 'https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A'
@@ -278,7 +279,7 @@ export function MartaBand({ eingebettet = false }: { eingebettet?: boolean }) {
         {/* Eingebettet: Knöpfe rutschen in die zweite Zeile, wenn die Spalte schmal ist (Vorlage mit Inhaltsleiste: Band 604–736 px;
             Martin 19.09.: „der eine Button klemmt“). Grundbreite = Foto + Überschrift, damit breite Spalten (820 px) einzeilig bleiben. */}
         <div className={`flex items-center gap-4 md:gap-5 ${eingebettet ? 'lg:grow lg:basis-[356px]' : ''}`}>
-          <Image src="/images/marta-kapcio-gesicht.jpg" alt="Marta Kapcio" width={88} height={88} className="h-[68px] w-[68px] flex-none rounded-full object-cover md:h-[88px] md:w-[88px]" />
+          <Image src={bild('/images/marta-kapcio-gesicht.jpg')} alt="Marta Kapcio" width={88} height={88} className="h-[68px] w-[68px] flex-none rounded-full object-cover md:h-[88px] md:w-[88px]" />
           <div className="min-w-0">
             <p className={`whitespace-nowrap text-[20px] font-extrabold leading-[1.15] tracking-[-0.025em] text-pm-ink min-[390px]:text-[22px] ${eingebettet ? 'md:text-[24px]' : 'md:text-[28px]'}`}>Lieber erst sprechen?</p>
             <p className="mt-1.5 text-[15.5px] leading-[1.45] text-pm-body min-[390px]:text-[16px] md:text-[17px]">
@@ -407,7 +408,7 @@ function VertrauensKarte({
 export function SiegelZeile({ link }: { link?: ReactNode }) {
   return (
     <div className="mb-5 flex items-center gap-4 border-b border-pm-line pb-5">
-      <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions: primundus.de" width={352} height={528} className="h-[96px] w-auto flex-none rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)]" />
+      <Image src={bild('/images/siegel-welt-2021-352.webp')} alt="Siegel DIE WELT Service-Champions: primundus.de" width={352} height={528} className="h-[96px] w-auto flex-none rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)]" />
       <div className="min-w-0">
         <p className="text-[20px] font-extrabold leading-[1.2] tracking-[-0.02em] text-pm-ink">6× Testsieger</p>
         <p className="mt-0.5 text-[16px] font-bold tracking-[0.02em] text-pm-taupe">DIE WELT</p>
@@ -430,7 +431,7 @@ export function AuszeichnungsJahre({ link }: { link: ReactNode }) {
   return (
     <div className="rounded-[20px] bg-white p-6 shadow-lift md:p-8">
       <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-4 gap-y-6 sm:gap-x-8">
-        <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions: primundus.de" width={352} height={528} className="h-[104px] w-auto rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)] sm:row-span-2 sm:h-[156px]" />
+        <Image src={bild('/images/siegel-welt-2021-352.webp')} alt="Siegel DIE WELT Service-Champions: primundus.de" width={352} height={528} className="h-[104px] w-auto rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)] sm:row-span-2 sm:h-[156px]" />
         <div className="min-w-0">
           <p className="text-[13px] font-bold uppercase tracking-[.14em] text-pm-taupe">DIE&nbsp;WELT · Testsieger</p>
           <p className="mt-1.5 text-[26px] font-extrabold leading-[1.1] tracking-[-0.03em] text-pm-ink sm:text-[30px] md:text-[34px] [text-wrap:balance]">
@@ -521,7 +522,7 @@ export function VertrauensKarten({ eingebettet = false, raster = false }: { eing
           pille={<span className={`${pille} bg-pm-green text-white`}>★ 100 % Sorgenfrei</span>}
           siegel={
             <a href={GARANTIE} aria-label="Bestpreisgarantie — mehr Infos" className="flex-none">
-              <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[62px] w-auto lg:h-[52px] xl:h-[62px]" />
+              <Image src={bild('/images/bestpreisgarantie-siegel.webp')} alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[62px] w-auto lg:h-[52px] xl:h-[62px]" />
             </a>
           }
           zeilen={['Bestpreisgarantie', '100 % Sorgenfrei', '6× Preis-Leistungssieger']}
@@ -534,7 +535,7 @@ export function VertrauensKarten({ eingebettet = false, raster = false }: { eing
           pille={<span className={`${pille} bg-pm-gold text-pm-ink`}>★ Testsieger · 6× in Folge</span>}
           siegel={
             <a href="/testsieger-24-stunden-pflege" aria-label="Zur Auszeichnung" className="flex-none">
-              <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className="h-[116px] w-auto rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)]" />
+              <Image src={bild('/images/siegel-welt-2021-352.webp')} alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className="h-[116px] w-auto rounded-[5px] shadow-[0_2px_10px_rgba(0,0,0,0.2)]" />
             </a>
           }
           zeilen={['6× Testsieger', 'DIE WELT', 'Preis & Qualität']}

@@ -4,6 +4,7 @@
 // dieselbe Karte. Kein Preis im Bild (Martin 14.09.: „beim CTA-Bereich keinen Preis nennen — zeigen wir doch gleich").
 import Image from 'next/image'
 import type { ReactNode } from 'react'
+import { bild } from '@/lib/bild'
 
 // Martin 24.09.: „Das Foto in dem kleinen Screenshot würde ich ändern — eine Frau, die professioneller aussieht."
 // Die Namen sind Beispielnamen (in keinem System hinterlegt), die Fotos echte Betreuungskräfte; die erste Karte
@@ -82,7 +83,7 @@ export function Geraet({ children }: { children: ReactNode }) {
           </div>
           {/* Kopf des Portals */}
           <div className="mt-3 flex flex-none items-center justify-between px-0.5">
-            <Image src="/images/primundus_logo_header.webp" alt="" width={300} height={53} className="h-[26px] w-auto mix-blend-multiply" />
+            <Image src={bild('/images/primundus_logo_header.webp')} alt="" width={300} height={53} className="h-[26px] w-auto mix-blend-multiply" />
             <span className="rounded-full border border-pm-line px-[15px] py-1.5 text-[14px] font-semibold text-[#71717A]">Hilfe</span>
           </div>
           {children}
@@ -123,10 +124,10 @@ function Siegel({ garantie, gross }: { garantie: string; gross: boolean }) {
   return (
     <div className="flex items-end gap-3">
       <a href="/testsieger-24-stunden-pflege" aria-label="6× Testsieger DIE WELT — zur Auszeichnung">
-        <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className={`h-[84px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)] ${gross ? 'lg:h-[112px]' : ''}`} />
+        <Image src={bild('/images/siegel-welt-2021-352.webp')} alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className={`h-[84px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)] ${gross ? 'lg:h-[112px]' : ''}`} />
       </a>
       <a href={garantie} aria-label="Bestpreisgarantie — mehr Infos" className={`rounded-full bg-white px-2.5 py-1.5 shadow-[0_4px_14px_rgba(0,0,0,0.16)] ${gross ? 'lg:hidden' : ''}`}>
-        <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[32px] w-auto" />
+        <Image src={bild('/images/bestpreisgarantie-siegel.webp')} alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[32px] w-auto" />
       </a>
     </div>
   )
@@ -165,7 +166,7 @@ export function ProduktBuehne({ garantie, kompakt = false }: { garantie: string;
           <p className="mt-2 text-[14px] leading-[1.45] text-pm-mute">Inkl. Steuern, Gebühren und Sozialabgaben.</p>
           {/* wie auf der Preisseite des Rechners: das Garantie-Siegel unter dem Preis */}
           <div className="mt-4 border-t border-pm-line-soft pt-3.5">
-            <Image src="/images/bestpreisgarantie-siegel.webp" alt="" width={900} height={256} className="h-[34px] w-auto" />
+            <Image src={bild('/images/bestpreisgarantie-siegel.webp')} alt="" width={900} height={256} className="h-[34px] w-auto" />
           </div>
         </div>
       )}

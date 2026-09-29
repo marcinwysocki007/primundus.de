@@ -18,6 +18,7 @@ import { PFLEGEGELD } from '@/lib/fakten'
 import { ORTE_LAGE } from '@/lib/orte-lage'
 import { AUFGABEN_PUNKTE, GRUNDLAGEN_LINKS, ZUSAGEN } from './OrtGrundlagen'
 import { KOSTEN_ZAHLEN, KassenTabellen } from './OrtKosten'
+import { bild } from '@/lib/bild'
 
 const LINK = 'text-pm-taupe font-semibold hover:underline'
 
@@ -133,7 +134,7 @@ export function OrtAufgabenLanding() {
     <Sektion id="aufgaben" augenbraue="Das Betreuungskonzept" titel="Was eine Betreuungskraft bei Ihnen übernimmt" ton="papier" breite="wide">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
         <Image
-          src="/images/primundus_haeusliche_betreuung.webp"
+          src={bild('/images/primundus_haeusliche_betreuung.webp')}
           alt="Häusliche Betreuung bei Primundus"
           width={1536}
           height={1024}

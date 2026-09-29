@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { BewertungsZeile } from '@/components/bewertungen/BewertungsAuszug'
 import { GARANTIE, Schluss, SchlussKasten, Stimmen } from '@/components/vertrauen/Vertrauen'
 import { Phone } from 'lucide-react'
+import { bild } from '@/lib/bild'
 
 // Kontaktbereich auf allen Ratgeber- und Vergleichsseiten (345 Seiten).
 // Neu nach dem Optik-Plan vom 14.09.2026, Stufe 1 (Martin: „rest kannst du machen"):
@@ -76,7 +77,7 @@ export function Ansprechpartnerin({ karte = false, ort, titel }: { karte?: boole
   )
   const foto = (groesse: number) => (
     <Image
-      src="/images/marta-kapcio.jpg"
+      src={bild('/images/marta-kapcio.jpg')}
       alt={alt}
       width={groesse}
       height={groesse}
@@ -92,7 +93,7 @@ export function Ansprechpartnerin({ karte = false, ort, titel }: { karte?: boole
         <p className="text-[15px] font-semibold leading-[1.4] text-pm-ink">{titel ?? 'Lieber erst sprechen?'}</p>
         <div className="mt-4 flex items-center gap-2.5 sm:gap-3.5">
           <Image
-            src="/images/marta-kapcio.jpg"
+            src={bild('/images/marta-kapcio.jpg')}
             alt={alt}
             width={52}
             height={52}
@@ -204,7 +205,7 @@ export function AnsprechpartnerinGross({
           hineingestellt. marta-kapcio-portrait.jpg ist auf das Motiv beschnitten (252 × 378) und
           füllt die Breite. Das runde Miniaturbild nutzt weiter das Original. */}
       <Image
-        src="/images/marta-kapcio-gross.jpg"
+        src={bild('/images/marta-kapcio-gross.jpg')}
         alt={`Marta Kapcio, Ansprechpartnerin für 24-Stunden-Pflege in ${ort}`}
         width={800}
         height={1200}
@@ -230,10 +231,10 @@ export function AnsprechpartnerinGross({
       <div className="relative">
         <div className="absolute bottom-3 left-3 flex items-end gap-2 md:bottom-4 md:left-4">
           <a href="/testsieger-24-stunden-pflege" aria-label="6× Testsieger DIE WELT — zur Auszeichnung">
-            <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions" width={352} height={528} className="h-[72px] w-auto rounded-[4px] shadow-[0_4px_14px_rgba(0,0,0,0.25)] md:h-[84px]" />
+            <Image src={bild('/images/siegel-welt-2021-352.webp')} alt="Siegel DIE WELT Service-Champions" width={352} height={528} className="h-[72px] w-auto rounded-[4px] shadow-[0_4px_14px_rgba(0,0,0,0.25)] md:h-[84px]" />
           </a>
           <a href={GARANTIE} aria-label="Bestpreisgarantie — mehr Infos" className="rounded-full bg-white/95 px-2 py-1 shadow-[0_4px_14px_rgba(0,0,0,0.18)]">
-            <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[30px] w-auto md:h-[34px]" />
+            <Image src={bild('/images/bestpreisgarantie-siegel.webp')} alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[30px] w-auto md:h-[34px]" />
           </a>
         </div>
       </div>
@@ -326,7 +327,7 @@ function Siegel({ klein = false }: { klein?: boolean }) {
   return (
     <a href="/testsieger-24-stunden-pflege" className={`group inline-flex items-center ${klein ? 'gap-3' : 'gap-4'}`} aria-label={`${AUSZEICHNUNG.join(', ')} — mehr zur Auszeichnung`}>
       <Image
-        src="/images/siegel-welt-2021-160.webp"
+        src={bild('/images/siegel-welt-2021-160.webp')}
         alt="Siegel DIE WELT Service-Champions 2021"
         width={48}
         height={72}

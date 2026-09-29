@@ -2,14 +2,15 @@
 // im Ratgeber-Kopf (Kernseiten, Länder, Themen, Ratgeber) seit 25.09. (Martin: „verwenden wir auch auf allen
 // Ortsseiten etc. die Medialogos als Trust-Signal?" — bis dahin nur Startseite und Ortsseiten).
 import Image from 'next/image'
+import { bild } from '@/lib/bild'
 
 const MEDIEN = [
-  { src: '/images/media/ard.webp', alt: 'ARD', w: 608, h: 226 },
-  { src: '/images/media/ndr.webp', alt: 'NDR', w: 1472, h: 972 },
-  { src: '/images/media/sat1.webp', alt: 'SAT.1', w: 458, h: 142 },
-  { src: '/images/media/die-welt.webp', alt: 'Die Welt', w: 696, h: 144 },
-  { src: '/images/media/bild-der-frau.webp', alt: 'Bild der Frau', w: 394, h: 450 },
-  { src: '/images/media/frankfurter-allgemeine.webp', alt: 'Frankfurter Allgemeine', w: 1236, h: 168 },
+  { src: bild('/images/media/ard.webp'), alt: 'ARD', w: 608, h: 226 },
+  { src: bild('/images/media/ndr.webp'), alt: 'NDR', w: 1472, h: 972 },
+  { src: bild('/images/media/sat1.webp'), alt: 'SAT.1', w: 458, h: 142 },
+  { src: bild('/images/media/die-welt.webp'), alt: 'Die Welt', w: 696, h: 144 },
+  { src: bild('/images/media/bild-der-frau.webp'), alt: 'Bild der Frau', w: 394, h: 450 },
+  { src: bild('/images/media/frankfurter-allgemeine.webp'), alt: 'Frankfurter Allgemeine', w: 1236, h: 168 },
 ]
 
 // Weißer Kasten, weil die Logos weiße Bildhintergründe haben (Martin 18.09.: „die Medienlogos müssen auf weißem Hintergrund sein")

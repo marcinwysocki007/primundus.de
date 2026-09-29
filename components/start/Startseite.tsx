@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { RechnerBlock } from '@/components/vertrauen/Vertrauen'
 import { ABLAUF_SCHRITTE } from '@/components/vertrauen/Ablauf'
 import { VORAUSSETZUNGEN } from '@/components/vertrauen/Voraussetzungen'
+import { bild } from '@/lib/bild'
 
 export const RECHNER_START = 'https://kostenrechner.primundus.de/?start=1&src=apex-startseite'
 const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
@@ -54,7 +55,7 @@ export function StartKopf() {
             vorher 12 aus 21. Der Knopf steht damit wieder knapp unter dem ersten Bildschirm (iPhone 13 ca. 665 px). */}
         <div className="relative lg:order-2">
           <Image
-            src="/images/PM-Header-Shooting_hero-v3.webp"
+            src={bild('/images/PM-Header-Shooting_hero-v3.webp')}
             alt="Betreuungskraft und Seniorin zu Hause im Wohnzimmer"
             width={1100}
             height={941}
@@ -64,10 +65,10 @@ export function StartKopf() {
           />
           <div className="absolute left-4 bottom-4 md:left-5 md:bottom-5 flex items-end gap-3">
             <a href="/testsieger-24-stunden-pflege" aria-label="6× Testsieger DIE WELT — zur Auszeichnung">
-              <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className="h-[92px] md:h-[118px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)]" />
+              <Image src={bild('/images/siegel-welt-2021-352.webp')} alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className="h-[92px] md:h-[118px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)]" />
             </a>
             <a href={GARANTIE} aria-label="Bestpreisgarantie — mehr Infos" className="bg-white/95 rounded-full px-2.5 py-1.5 shadow-[0_4px_14px_rgba(0,0,0,0.18)]">
-              <Image src="/images/bestpreisgarantie-siegel.webp" alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[34px] md:h-[40px] w-auto" />
+              <Image src={bild('/images/bestpreisgarantie-siegel.webp')} alt="Primundus Bestpreisgarantie – 6× Preis-Leistungssieger" width={900} height={256} className="h-[34px] md:h-[40px] w-auto" />
             </a>
           </div>
         </div>
@@ -264,7 +265,7 @@ export function RundumVersorgt() {
       <div className="max-w-wide mx-auto">
         <h2 className={`${H2} text-center`}>Rundum versorgt – zu Hause, im gewohnten Alltag</h2>
         <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
-          <Image src="/images/primundus_haeusliche_betreuung.webp" alt="Häusliche Betreuung bei Primundus" width={1536} height={1024} sizes="(min-width: 1024px) 560px, 100vw" className="w-full h-auto rounded-[20px] object-cover" />
+          <Image src={bild('/images/primundus_haeusliche_betreuung.webp')} alt="Häusliche Betreuung bei Primundus" width={1536} height={1024} sizes="(min-width: 1024px) 560px, 100vw" className="w-full h-auto rounded-[20px] object-cover" />
           <div>
             <p className="text-[18px] leading-[1.65] text-pm-body">Ihre Betreuungskraft ist täglich für Ihren Angehörigen da – nicht nur für die Pflege, sondern für den ganzen Alltag:</p>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
