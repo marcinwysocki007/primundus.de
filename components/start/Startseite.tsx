@@ -52,16 +52,25 @@ export function StartKopf() {
             27.09.: „natürlich zurück und nicht noch eine weitere Variante“). Der 12:5-Streifen vom 25.09. schnitt beiden Frauen
             die Köpfe ab, um den Knopf über die Cookie-Leiste zu heben; seitdem kam von 9 Website-Besuchern im Rechner kein Lead,
             vorher 12 aus 21. Der Knopf steht damit wieder knapp unter dem ersten Bildschirm (iPhone 13 ca. 665 px). */}
+        {/* Startbild als AVIF (PageSpeed 29.09.): dieselben 1100 × 941 px wie die WebP-Datei, 120 statt 157 KB, im Browser
+            nicht zu unterscheiden (SSIM ≥ 0,99 auf fünf Pixeldichten). Kleinere Größen haben wir getestet und verworfen: Der
+            Browser verkleinert eine nur wenig größere Datei weich (Moto G, Windows-Laptops). WebP bleibt Rückfall.
+            Kein Preload-Link: Das Bild steht in den ersten 5 KB des HTML, fetchPriority hebt es an; ein Preload der
+            WebP-Datei würde neben der AVIF-Datei doppelt laden. Die Siegel bleiben wie sie sind: Dieselben Dateien stehen
+            weiter unten größer auf der Seite und werden ohnehin geladen, kleinere Fassungen kämen nur dazu. */}
         <div className="relative lg:order-2">
-          <Image
-            src="/images/PM-Header-Shooting_hero-v3.webp"
-            alt="Betreuungskraft und Seniorin zu Hause im Wohnzimmer"
-            width={1100}
-            height={941}
-            priority
-            sizes="(min-width: 1024px) 660px, 100vw"
-            className="w-full h-auto max-lg:max-h-[440px] object-cover lg:rounded-[24px]"
-          />
+          <picture className="block">
+            <source type="image/avif" srcSet="/images/PM-Header-Shooting_hero-v3.avif" />
+            <img
+              src="/images/PM-Header-Shooting_hero-v3.webp"
+              alt="Betreuungskraft und Seniorin zu Hause im Wohnzimmer"
+              width={1100}
+              height={941}
+              fetchPriority="high"
+              className="w-full h-auto max-lg:max-h-[440px] object-cover lg:rounded-[24px]"
+              style={{ color: 'transparent' }}
+            />
+          </picture>
           <div className="absolute left-4 bottom-4 md:left-5 md:bottom-5 flex items-end gap-3">
             <a href="/testsieger-24-stunden-pflege" aria-label="6× Testsieger DIE WELT — zur Auszeichnung">
               <Image src="/images/siegel-welt-2021-352.webp" alt="Siegel DIE WELT Service-Champions 2021" width={352} height={528} className="h-[92px] md:h-[118px] w-auto rounded-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.25)]" />
