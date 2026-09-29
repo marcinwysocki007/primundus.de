@@ -13,9 +13,9 @@ const eslintConfig = defineConfig([
     rules: {
       // 81: Anführungszeichen und Apostrophe im Fließtext. React gibt sie unverändert aus, Maskieren änderte nur den Quelltext.
       'react/no-unescaped-entities': 'off',
-      // 44: interne Links als <a>, also volle Seitenladung. <Link> würde sichtbare Links vorladen (auf /regionen über 200
-      // Ortsseiten). Das wäre eine Verhaltensänderung und gehört nicht zum Framework-Upgrade.
-      '@next/next/no-html-link-for-pages': 'off',
+      // 44: interne Links als <a>, also volle Seitenladung. Eine Umstellung auf <Link> wechselt zur Navigation ohne Neuladen
+      // (anders gezählte Seitenaufrufe, Vorladen) und gehört nicht zum Framework-Upgrade. Als Warnung sichtbar (29.09.2026).
+      '@next/next/no-html-link-for-pages': 'warn',
       // 15: Bilder bewusst als <img> in festen WebP-Größen, ohne Next-Bildoptimierung (`images.unoptimized`).
       '@next/next/no-img-element': 'off',
       // 2: lokale Variable `module` (Begutachtungsmodule) innerhalb einer Funktion, kein Zugriff auf das CommonJS-Objekt.
