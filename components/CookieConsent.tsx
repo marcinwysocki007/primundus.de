@@ -75,7 +75,10 @@ export function CookieConsent() {
         id="cookie-consent"
         role="region"
         aria-label="Cookie-Hinweis"
-        className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-pm-line shadow-[0_-8px_24px_rgba(0,0,0,0.08)] pb-[env(safe-area-inset-bottom)]"
+        // Am Handy oben statt unten (29.09.2026, Vorschlag A): Unten verdeckte die Leiste beim ersten Besuch den Hauptknopf der
+        // Startseite (Android) bzw. die Unterzeile (iPhone). Oben verdeckt sie bis zur Wahl nur die Kopfzeile und einen Streifen
+        // des Fotos, keine Gesichter. Ab sm (Tablet, Computer) bleibt sie unten. Wortlaut und Knöpfe unverändert.
+        className="fixed top-0 sm:top-auto sm:bottom-0 left-0 right-0 z-50 bg-white border-b sm:border-b-0 sm:border-t border-pm-line shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:shadow-[0_-8px_24px_rgba(0,0,0,0.08)] pt-[env(safe-area-inset-top)] sm:pt-0 sm:pb-[env(safe-area-inset-bottom)]"
       >
         <div className="max-w-seite mx-auto px-4 sm:px-5 py-2.5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5">
           {/* Wortlaut nach OpenAI-Prüfung 24.09.: „Alle akzeptieren" schließt Marketing ein, also steht es in der Zeile;
