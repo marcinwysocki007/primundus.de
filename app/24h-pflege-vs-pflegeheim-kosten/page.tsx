@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Sicher } from '@/components/Sicher'
-import dynamic from 'next/dynamic'
+import { GrafikKostenvergleich } from '@/components/charts/GrafikenNurImBrowser'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
   Abschnitt, DunklerAbschnitt, Fragen, Kasten, MehrDazu, RatgeberKopf, RatgeberRumpf, Tabelle, Text,
@@ -13,10 +13,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 
 const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim-kosten', '25. April 2026')
 
-const GrafikKostenvergleich = dynamic(
-  () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),
-  { loading: () => <div className="my-10 h-[420px] bg-pm-paper rounded-2xl border border-pm-line animate-pulse" />, ssr: false }
-)
+// Diagramm nur im Browser: components/charts/GrafikenNurImBrowser.tsx
 
 const SECTIONS = [
   { id: 'kosten', title: 'Die Kosten im direkten Vergleich' },

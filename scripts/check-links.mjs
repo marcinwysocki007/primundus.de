@@ -59,8 +59,9 @@ for (const f of htmlFiles) {
   const html = fs.readFileSync(f, 'utf8')
   const relName = '/' + path.relative(APP_OUT, f).replace(/\\/g, '/').replace(/\.html$/, '').replace(/^index$/, '')
 
-  // og:image im head?
-  if (!/property="og:image"/.test(html)) noOgImage.push(relName || '/')
+  // og:image im head? `_global-error` erzeugt Next seit Version 16 selbst: die Notfall-Fehlerseite ohne unser Layout,
+  // nur bei einem Absturz des Layouts ausgeliefert, nie eine Seite für Suchmaschinen.
+  if (!/property="og:image"/.test(html) && relName !== '/_global-error') noOgImage.push(relName || '/')
 
   let m
   while ((m = HREF_RE.exec(html))) {

@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // `eslint.ignoreDuringBuilds` entfällt mit Next 16: `next build` prüft ESLint nicht mehr (29.09.2026, Upgrade 13.5.1 → 16).
   typescript: {
     ignoreBuildErrors: true,
   },

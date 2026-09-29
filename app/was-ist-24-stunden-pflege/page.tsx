@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Sicher } from '@/components/Sicher'
-import dynamic from 'next/dynamic'
+import { GrafikPflegestatistik, GrafikKostenvergleich } from '@/components/charts/GrafikenNurImBrowser'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
   Abschnitt, DunklerAbschnitt, Fragen, HakenListe, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, Tabelle, Text, Vorspann,
@@ -26,25 +26,7 @@ const SECTIONS = [
 // Links in den „Wann"-Punkten wie die Links der MehrDazu-Zeilen der Vorlage
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
-const GrafikPflegestatistik = dynamic(
-  () => import('@/components/charts/GrafikPflegestatistik').then(m => ({ default: m.GrafikPflegestatistik })),
-  {
-    loading: () => (
-      <div className="my-10 h-[480px] bg-pm-paper rounded-2xl border border-pm-line animate-pulse" />
-    ),
-    ssr: false,
-  }
-)
-
-const GrafikKostenvergleich = dynamic(
-  () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),
-  {
-    loading: () => (
-      <div className="my-10 h-[420px] bg-pm-paper rounded-2xl border border-pm-line animate-pulse" />
-    ),
-    ssr: false,
-  }
-)
+// Diagramme nur im Browser: components/charts/GrafikenNurImBrowser.tsx
 
 // Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
 // Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
