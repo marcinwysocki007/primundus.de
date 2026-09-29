@@ -13,8 +13,8 @@ export interface StadtEntry {
   isNearby?: boolean
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface Props {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   staedte?: any[] // kept for backwards compat with page.tsx; ignored — data comes from API
 }
 

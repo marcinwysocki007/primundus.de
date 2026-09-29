@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "verify": "npm run build && npm run verify:nobuild",
     "verify:nobuild": "node scripts/check-links.mjs && node scripts/check-jsonld.mjs && node scripts/check-sitemap.mjs && node scripts/check-fakten.mjs && node scripts/check-snippets.mjs && node scripts/check-quelltext-im-text.mjs && node scripts/check-tsc.mjs",
@@ -51,8 +51,8 @@
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.3.0",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.5.1",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.7",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.446.0",
     "next": "16.3.7",
@@ -76,6 +76,6 @@
     "@types/nodemailer": "^8.0.2"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": "24.x"
   }
 }
