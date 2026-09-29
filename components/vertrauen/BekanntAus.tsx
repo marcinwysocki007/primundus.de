@@ -3,13 +3,16 @@
 // Ortsseiten etc. die Medialogos als Trust-Signal?" — bis dahin nur Startseite und Ortsseiten).
 import Image from 'next/image'
 
+// Dateien seit 29.09. (PageSpeed) in Anzeigegröße: höchstens 28 px hoch, also 84 px für dreifache Pixeldichte, im exakt
+// gleichen Seitenverhältnis wie das Original (w/h unten = Original, damit die Breite auf den Bruchteil gleich bleibt).
+// Vorher bis zu 1.472 px breit, zusammen 97 KB; jetzt 37 KB. SAT.1 war schon klein und bleibt.
 const MEDIEN = [
-  { src: '/images/media/ard.webp', alt: 'ARD', w: 608, h: 226 },
-  { src: '/images/media/ndr.webp', alt: 'NDR', w: 1472, h: 972 },
+  { src: '/images/media/ard-304.webp', alt: 'ARD', w: 608, h: 226 },
+  { src: '/images/media/ndr-368.webp', alt: 'NDR', w: 1472, h: 972 },
   { src: '/images/media/sat1.webp', alt: 'SAT.1', w: 458, h: 142 },
-  { src: '/images/media/die-welt.webp', alt: 'Die Welt', w: 696, h: 144 },
-  { src: '/images/media/bild-der-frau.webp', alt: 'Bild der Frau', w: 394, h: 450 },
-  { src: '/images/media/frankfurter-allgemeine.webp', alt: 'Frankfurter Allgemeine', w: 1236, h: 168 },
+  { src: '/images/media/die-welt-406.webp', alt: 'Die Welt', w: 696, h: 144 },
+  { src: '/images/media/bild-der-frau-197.webp', alt: 'Bild der Frau', w: 394, h: 450 },
+  { src: '/images/media/frankfurter-allgemeine-618.webp', alt: 'Frankfurter Allgemeine', w: 1236, h: 168 },
 ]
 
 // Weißer Kasten, weil die Logos weiße Bildhintergründe haben (Martin 18.09.: „die Medienlogos müssen auf weißem Hintergrund sein")
