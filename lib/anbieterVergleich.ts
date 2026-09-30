@@ -10,12 +10,11 @@
 // 15 von 16 Feldern „k. A." waren falsch, die Anbieter nennen die Angaben auf ihrer Website.
 // Regel seitdem: gleicher Ablauf, gleiche Wertung — auch für Primundus.
 //
-// E1/E2 (Preis und Betreuungskräfte sofort sehen): Primundus steht auf ◐, weil der Rechner Preis
-// und passende Kräfte derzeit erst nach Eingabe der Kontaktdaten zeigt („Preis zuerst" ist seit
-// 19.09.2026 aus, die Kräfte-Vorschau vor dem Kontaktschritt gibt es nur mit ?kraefte=1). Gleich
-// gewertet wie Linara (Preis nach Kontaktdaten) und marta (Profile nach Registrierung).
-// E1 darf wieder ✓ werden, sobald der Rechner den Preis für alle Besucher wieder vor den
-// Kontaktdaten zeigt; E2, sobald passende Kräfte vor den Kontaktdaten sichtbar sind.
+// E1/E2 (Preis und Betreuungskräfte sofort sehen), Martin 30.09.2026: Angaben zur Kalkulation, Datenschutz und
+// Kontaktdaten sind normal; danach erscheinen bei Primundus Preis und passende Kräfte sofort. Regel für alle gleich:
+// ✓ = sofort online, auch wenn vorher Angaben zur Kalkulation, Kontaktdaten oder eine kostenlose Registrierung nötig
+// sind; ◐ = nur Beispielpreise oder Beispielrechnung. Deshalb stehen auch Linara (Preis nach Kontaktdaten) und
+// marta (Profile nach Registrierung) auf ✓.
 // Dann Kurzwert und Text mitziehen und die Fragen auf /anbieter-vergleich angleichen.
 
 export type Wertung = 'ja' | 'teils' | 'nein' | 'ka';
@@ -31,7 +30,7 @@ export interface Anbieter {
   name: string;
   kurz: string;                 // Einordnung in einem Satz
   preisAb: string;              // Bruttopreis ab (E3: einheitlich brutto, kein Eigenanteil)
-  sofortpreis: Kriterium;       // Preis online sehen, ohne Kontakt (✓ ohne Kontaktdaten, ◐ nach Kontaktdaten oder nur Beispiele)
+  sofortpreis: Kriterium;       // Preis sofort online (✓ auch nach Angaben/Kontaktdaten/Registrierung, ◐ nur Beispiele)
   kraefteSofort: Kriterium;     // passende Kräfte sofort sehen & vergleichen
   auswahlVorVertrag: Kriterium; // erst Kraft auswählen, dann Vertrag
   gebuehr: Kriterium;           // Vermittlungs-/Aufnahme-/Pauschalgebühren
@@ -50,10 +49,10 @@ export const STAND = '30. September 2026';
 export const PRIMUNDUS: Anbieter = {
   slug: 'primundus',
   name: 'Primundus',
-  kurz: 'Eigenes Betreuungspersonal; Preis und Kräfte online, nach Eingabe der Kontaktdaten',
+  kurz: 'Eigenes Betreuungspersonal; Preis und passende Kräfte sofort online, nach den Angaben zur Kalkulation',
   preisAb: 'ab 2.150 €/Monat (zzgl. An- und Abreise 125 € je Strecke)',
-  sofortpreis: { wertung: 'teils', kurz: 'Teils — nach Kontaktdaten, in 2 Minuten', text: 'Preis in 2 Minuten online, direkt nach Eingabe der Kontaktdaten; ohne Rückruf, ohne Termin' },
-  kraefteSofort: { wertung: 'teils', kurz: 'Teils — nach Kontaktdaten, mit dem Angebot', text: 'Direkt mit dem Angebot, nach Eingabe der Kontaktdaten: passende Betreuungskräfte mit Erfahrung und Sprachkenntnissen einsehen und vergleichen' },
+  sofortpreis: { wertung: 'ja', kurz: 'Ja — sofort nach den Angaben, in 2 Minuten', text: 'Preis in 2 Minuten online, sofort nach den Angaben zur Kalkulation und den Kontaktdaten; ohne Rückruf, ohne Termin' },
+  kraefteSofort: { wertung: 'ja', kurz: 'Ja — sofort mit dem Angebot', text: 'Direkt mit dem Angebot, sofort nach den Angaben zur Kalkulation und den Kontaktdaten: passende Betreuungskräfte mit Erfahrung und Sprachkenntnissen einsehen und vergleichen' },
   auswahlVorVertrag: { wertung: 'ja', kurz: 'Ja', text: 'Erst wählen Sie Ihre Betreuungskraft aus — dann erst kommt der Vertrag' },
   gebuehr: { wertung: 'ja', kurz: 'Keine', text: 'Keine Vermittlungsgebühr, keine Aufnahme- oder Bearbeitungspauschale' },
   bindung: { wertung: 'ja', kurz: 'Keine — täglich kündbar', text: 'Keine Mindestlaufzeit — täglich kündbar' },
@@ -73,7 +72,7 @@ export const ANBIETER: Anbieter[] = [
     kurz: 'Franchise-System mit regionalen Partnern, seit 2005',
     preisAb: 'ab 2.850 €/Monat (eigene Angabe)',
     sofortpreis: { wertung: 'teils', kurz: 'Teils — Beispielpreise³', text: 'Beispielpreise online (drei Betreuungssituationen ab 95 € pro Tag, ab 2.850 €/Monat); individuelles Angebot innerhalb eines Tages nach Anfrage' },
-    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine offen einsehbaren Profile; Vorschläge kommen im Vermittlungsprozess' },
+    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine Profile im Online-Ablauf; Vorschläge kommen im Vermittlungsprozess' },
     auswahlVorVertrag: { wertung: 'nein', kurz: 'Nein — erst Vermittlungsvertrag¹', text: 'Erst die Entscheidung für die Zusammenarbeit (Vermittlungsvertrag), danach die Auswahl aus den Personalvorschlägen' },
     gebuehr: { wertung: 'teils', kurz: 'Einkalkuliert²', text: 'Keine separate Gebühr ausgewiesen — „Agenturgebühren einkalkuliert"' },
     bindung: { wertung: 'ja', kurz: '„Jederzeit kündbar“', text: '„Jederzeit kündbar" (eigene Angabe); konkrete Frist nicht genannt — die AGB sind nicht öffentlich einsehbar' },
@@ -91,7 +90,7 @@ export const ANBIETER: Anbieter[] = [
     kurz: 'Entsende-Anbieter mit Franchise-Partnern (Promedica Plus)',
     preisAb: 'ab 105 €/Tag laut Preisliste, inkl. Fahrtkosten (eigene Angabe; bei 30 Tagen 3.150 €)',
     sofortpreis: { wertung: 'ja', kurz: 'Ja — Preisliste⁸', text: 'Preispakete mit Tagespreisen ab 105 € online; ein preisliches Angebot laut FAQ nach individueller Beratung' },
-    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Zentrale in Warschau wählt aus dem eigenen Pool aus — keine offenen Profile' },
+    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Zentrale in Warschau wählt aus dem eigenen Pool aus — keine Profile im Online-Ablauf' },
     auswahlVorVertrag: { wertung: 'teils', kurz: 'Teils⁸', text: 'Landingpage: Auswahl der Betreuungskraft gemeinsam mit dem Berater vor dem unverbindlichen Angebot; Startseite: Mitarbeiter der Hauptstelle in Warschau suchen die Kraft aus' },
     gebuehr: { wertung: 'teils', kurz: 'Im Tagespreis enthalten⁸', text: 'Laut Preisseite umfasst der Tagespreis Betreuungs- und Vermittlungsgebühren; keine separate Vermittlungsgebühr' },
     bindung: { wertung: 'nein', kurz: '2 Monate Mindestlaufzeit laut Franchise-FAQ⁸', text: 'Laut Franchise-FAQ beträgt die Mindestvertragslaufzeit 2 Monate; eine Kündigungsfrist nennt die Website nicht' },
@@ -109,7 +108,7 @@ export const ANBIETER: Anbieter[] = [
     kurz: 'Vermittlung selbstständiger Betreuungskräfte',
     preisAb: 'ab 2.500 €/Monat (eigene Angabe)',
     sofortpreis: { wertung: 'teils', kurz: 'Teils — Beispielrechnung⁹', text: 'Beispielrechnung online (Gesamtbelastung 3.010 €/Monat); verbindlicher Preis nach Beratungsgespräch' },
-    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine offen einsehbaren Profile' },
+    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine Profile im Online-Ablauf' },
     auswahlVorVertrag: { wertung: 'ja', kurz: 'Ja⁴', text: 'Telefonisches Kennenlernen der vorgeschlagenen Betreuungskräfte, danach Entscheidung über die Auftragsvergabe' },
     gebuehr: { wertung: 'teils', kurz: 'Vermittlung 220 € + Franchise ca. 490 €/Monat⁹', text: 'Beispielrechnung: Vermittlungstätigkeit 220 € und Franchisegebühr ca. 490 € pro Monat; Vermittlung laut Hausengel in der Regel über die Pflegekasse erstattungsfähig' },
     bindung: { wertung: 'teils', kurz: '1 Monat Kündigungsfrist⁹', text: 'Muster-Dienstleistungsvertrag § 7: Kündigung mit einer Frist von einem Monat' },
@@ -127,7 +126,7 @@ export const ANBIETER: Anbieter[] = [
     kurz: 'Online-Plattform, Familien wählen aus Profilen',
     preisAb: 'ab 2.299 €/Monat (eigene Angabe; Planübersicht ab 2.799 €)',
     sofortpreis: { wertung: 'ja', kurz: 'Ja — Preistabellen', text: 'Preistabellen offen auf der Website' },
-    kraefteSofort: { wertung: 'teils', kurz: 'Nach Registrierung', text: 'Profile einsehbar — nach kostenloser Registrierung mit Fragebogen' },
+    kraefteSofort: { wertung: 'ja', kurz: 'Ja — nach kostenloser Registrierung', text: 'Profile einsehbar — nach kostenloser Registrierung mit Fragebogen' },
     auswahlVorVertrag: { wertung: 'ja', kurz: 'Ja', text: 'Familie wählt das Profil aus, Kennenlernen vorab möglich' },
     gebuehr: { wertung: 'nein', kurz: '0–999 € + Plattformgebühr⁶', text: 'Aufnahmegebühr je nach Plan 0 € (12 Monate), 499 € (3 Monate) oder 999 € (Notfallbetreuung); dazu laut Nutzungsbedingungen eine wiederkehrende Plattformnutzungsgebühr, die nicht erhoben wird, solange eine Betreuungskraft vor Ort tätig ist' },
     bindung: { wertung: 'nein', kurz: '3–12 Monate + 1 Monat Frist⁶', text: 'Pläne mit 3 bzw. 12 Monaten Mindestlaufzeit, danach automatische Verlängerung mit einem Monat Kündigungsfrist; Notfallbetreuung ohne Mindestlaufzeit' },
@@ -144,8 +143,8 @@ export const ANBIETER: Anbieter[] = [
     name: 'Linara',
     kurz: 'Vermittlung selbstständiger Betreuungspersonen, seit 2008',
     preisAb: 'ab ca. 2.800 €/Monat (eigene Angabe)',
-    sofortpreis: { wertung: 'teils', kurz: 'Teils — Rechner nach Kontaktdaten¹⁰', text: 'Online-Preisrechner: voraussichtliche Monatskosten sofort nach Eingabe der Kontaktdaten; dazu Beispielrechnungen ab 104 €/Tag' },
-    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine offen einsehbaren Profile' },
+    sofortpreis: { wertung: 'ja', kurz: 'Ja — Rechner, sofort nach den Angaben¹⁰', text: 'Online-Preisrechner: voraussichtliche Monatskosten sofort nach Eingabe der Kontaktdaten; dazu Beispielrechnungen ab 104 €/Tag' },
+    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine Profile im Online-Ablauf' },
     auswahlVorVertrag: { wertung: 'ka', kurz: 'k. A.', text: 'Betreuungsvorschlag nach Bedarfsanalyse, Anreise nach der Entscheidung der Familie; Zeitpunkt des Vertrags nicht beschrieben' },
     gebuehr: { wertung: 'nein', kurz: '418 € Pauschale', text: 'Erstaufnahmepauschale 418 € (eigene Angabe, mit Geld-zurück-Zusage)' },
     bindung: { wertung: 'teils', kurz: '14 Tage Kündigungsfrist¹⁰', text: 'Laut FAQ schriftliche Kündigung mit einer Frist von 14 Tagen, im Todesfall 7 Tage' },
@@ -163,7 +162,7 @@ export const ANBIETER: Anbieter[] = [
     kurz: 'Vermittlungsnetzwerk mit regionalen Partnern',
     preisAb: 'ab 2.990 €/Monat (eigene Angabe)',
     sofortpreis: { wertung: 'ja', kurz: 'Ja — Rechner (Schätzung), ohne Kontaktdaten⁵', text: 'Online-Kostenrechner ohne Kontaktdaten als unverbindliche Schätzung; verbindliches Angebot nach Telefonberatung' },
-    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine offen einsehbaren Profile' },
+    kraefteSofort: { wertung: 'nein', kurz: 'Nein', text: 'Keine Profile im Online-Ablauf' },
     auswahlVorVertrag: { wertung: 'ja', kurz: 'Ja — Vermittlung erst nach der Auswahl⁵', text: 'Auswahl aus Personalvorschlägen mit Lebenslauf und Telefonnummer; Vermittlung und Kosten erst nach der Entscheidung für eine Betreuungskraft' },
     gebuehr: { wertung: 'teils', kurz: 'ca. 17,85 €/Tag + 280 € unter 40 Tagen⁵', text: 'Vermittlungs- und Betreuungsleistung durchschnittlich 17,85 € pro Tag auf eigener Rechnung, keine Einmalgebühr; Kurzeinsatzpauschale 280 € bei Einsätzen unter 40 Tagen (eigene Angabe)' },
     bindung: { wertung: 'teils', kurz: 'Keine Mindestlaufzeit, 7 Tage Frist⁵', text: 'Keine Mindestlaufzeit, Kündigungsfrist 7 Tage, im Todesfall 3 Tage (eigene Angabe)' },
@@ -192,7 +191,7 @@ export const KRITERIEN: { key: keyof Pick<Anbieter,'sofortpreis'|'kraefteSofort'
 // gleicher Ablauf nachprüfbar gleich gewertet ist. `nein` ist das Zeichen der jeweiligen Tabelle
 // (— auf /anbieter-vergleich, ✕ auf den Duell-Seiten).
 export function wertungsRegeln(nein: string = '—'): string {
-  return `So gewertet: Preis und Betreuungskräfte sofort sehen ✓ ohne Kontaktdaten, ◐ erst nach Kontaktdaten oder Registrierung oder nur als Beispiel · Gebühren ✓ keine, ◐ laufende Vermittlungsgebühr (im Preis oder gesondert), ${nein} zusätzlich einmalige Aufnahmegebühr · Bindung ✓ jederzeit bzw. täglich kündbar, ◐ mit Kündigungsfrist, ${nein} mit Mindestlaufzeit · Erreichbarkeit ✓ an allen sieben Tagen, ◐ Geschäftszeiten, nur Notfälle oder ohne Zeitangabe · Preis ab: Bruttopreis laut Anbieter; Kost und Logis stellt die Familie; Reisekosten kommen meist hinzu, bei Promedica24 sind sie laut Preisliste im Tagespreis enthalten.`
+  return `So gewertet: Preis und Betreuungskräfte sofort sehen ✓ sofort online ohne Rückruf und ohne Beratungstermin, auch wenn vorher Angaben zur Kalkulation, Kontaktdaten oder eine kostenlose Registrierung nötig sind (Preis auch als unverbindliche Rechnerschätzung, Kräfte als Profile echter Betreuungskräfte), ◐ nur Beispielpreise oder Beispielrechnung · Gebühren ✓ keine, ◐ laufende Vermittlungsgebühr (im Preis oder gesondert), ${nein} zusätzlich einmalige Aufnahmegebühr · Bindung ✓ jederzeit bzw. täglich kündbar, ◐ mit Kündigungsfrist, ${nein} mit Mindestlaufzeit · Erreichbarkeit ✓ an allen sieben Tagen, ◐ Geschäftszeiten, nur Notfälle oder ohne Zeitangabe · Preis ab: Bruttopreis laut Anbieter; Kost und Logis stellt die Familie; Reisekosten kommen meist hinzu, bei Promedica24 sind sie laut Preisliste im Tagespreis enthalten.`
 }
 
 // Fußnoten zu den Kurzwerten in den Vergleichstabellen — die Belege von den Anbieter-Websites
