@@ -1,4 +1,4 @@
-import { PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND, type Anbieter, type Wertung } from '@/lib/anbieterVergleich'
+import { PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND, wertungsRegeln, type Anbieter, type Wertung } from '@/lib/anbieterVergleich'
 
 // Direktvergleich Primundus gegen einen Anbieter (Martin, 14.09.2026, Optik-Plan Stufe 0):
 // Am Computer eine Tabelle, auf dem Handy je Kriterium beide Anbieter untereinander.
@@ -25,9 +25,12 @@ function Wert({ w, text }: { w: Wertung; text: string }) {
 }
 
 export function VergleichDuell({ anbieter }: { anbieter: Anbieter }) {
-  const fussnoten = FUSSNOTEN.filter((f) =>
-    [anbieter.preisAb, ...KRITERIEN.map((k) => anbieter[k.key].kurz)].join(' ').includes(f.nr),
+  // Fußnoten als ganze Hochzahl-Folge vergleichen (30.09.2026): mit „¹⁰" hätte das alte includes()
+  // auch Fußnote ¹ gezeigt — dieselbe Art Fehler wie die fremden Fußnoten vom 14.09.
+  const marken = new Set(
+    [anbieter.preisAb, ...KRITERIEN.map((k) => anbieter[k.key].kurz)].join(' ').match(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g) ?? [],
   )
+  const fussnoten = FUSSNOTEN.filter((f) => marken.has(f.nr))
   return (
     <section className="mb-14">
       <h2 className="text-[26px] md:text-[30px] leading-tight font-bold text-pm-ink mb-6">Die Konditionen im Vergleich</h2>
@@ -88,8 +91,10 @@ export function VergleichDuell({ anbieter }: { anbieter: Anbieter }) {
 
         <div className="bg-pm-paper border-t border-pm-line px-5 py-4 space-y-2">
           <p className="text-[15px] leading-relaxed text-pm-mute">
-            Angaben zu {anbieter.name}: {anbieter.quelle}, Stand {STAND}. ✓ ja · ◐ teilweise · ✕ nein · ? keine Angabe.
+            Angaben zu {anbieter.name}: {anbieter.quelle}, Stand {STAND}. ✓ ja, bei Gebühren und Bindung: keine · ◐ teilweise ·
+            ✕ nein, bei Gebühren und Bindung: vorhanden · ? keine Angabe.
           </p>
+          <p className="text-[15px] leading-relaxed text-pm-mute">{wertungsRegeln('✕')}</p>
           {fussnoten.map((f) => (
             <p key={f.nr} className="text-[15px] leading-relaxed text-pm-mute">{f.nr} {f.text}</p>
           ))}

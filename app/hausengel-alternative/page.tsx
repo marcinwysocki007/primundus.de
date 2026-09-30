@@ -8,7 +8,7 @@ const PH = ANBIETER.find((a) => a.slug === 'hausengel')!
 export const metadata: Metadata = {
   title: 'Hausengel-Alternative? Primundus im direkten Vergleich',
   description:
-    'Hausengel oder Primundus: angestellte Betreuungskräfte statt selbstständiger, Preis sofort online statt nach Beratung, Auswahl vor dem Vertrag. Der Vergleich.',
+    'Hausengel oder Primundus: angestellte statt selbstständige Kräfte, Preis online nach Kontaktdaten statt nach Beratung, Gebühren und Kündigung.',
   alternates: { canonical: 'https://primundus.de/hausengel-alternative' },
   openGraph: {
     title: 'Hausengel oder Primundus? Der direkte Vergleich',
@@ -25,19 +25,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Ist Primundus eine Alternative zu Hausengel?',
-    a: 'Ja — mit einem anderen Beschäftigungsmodell: Hausengel arbeitet mit selbstständigen Betreuungskräften, bei Primundus sind die Betreuungskräfte angestellt und werden legal über das Entsendemodell mit A1-Bescheinigung eingesetzt. Dazu sehen Sie bei Primundus Preis und passende Kräfte sofort online — vor jedem Vertrag.',
+    a: 'Ja — mit einem anderen Beschäftigungsmodell: Hausengel arbeitet mit selbstständigen Betreuungskräften, bei Primundus sind die Betreuungskräfte angestellt und werden über das Entsendemodell mit A1-Bescheinigung eingesetzt. Dazu sehen Sie bei Primundus Preis und passende Kräfte online, direkt nach Eingabe der Kontaktdaten und vor jedem Vertrag.',
   },
   {
     q: 'Was ist der Unterschied zwischen selbstständigen und angestellten Betreuungskräften?',
-    a: 'Bei selbstständigen Kräften schließt die Familie den Betreuungsvertrag mit der Kraft selbst — wichtig ist dann, dass die Selbstständigkeit im Alltag sauber gelebt wird (Stichwort Scheinselbstständigkeit). Bei angestellten Kräften im Entsendemodell ist das Unternehmen der Arbeitgeber und verantwortet Sozialabgaben, Ersatz bei Ausfall und die Einsatzorganisation.',
+    a: 'Bei selbstständigen Kräften schließt die Familie den Betreuungsvertrag mit der Kraft selbst; bei Hausengel ist das laut Mustervertrag eine Franchisenehmerin oder ein Franchisenehmer der Hausengel Holding. Bei Primundus werden die Betreuungskräfte im Entsendemodell mit A1-Bescheinigung eingesetzt; den Betreuungsvertrag schließt die Familie mit Primundus.',
   },
   {
     q: 'Was kostet 24-Stunden-Pflege bei Hausengel im Vergleich?',
-    a: 'Hausengel wirbt mit „ab 945 € Eigenanteil" — das ist der Betrag nach Abzug von Kassenleistungen, kein Gesamtpreis; einen Online-Preis gibt es nicht. Primundus nennt den Gesamtpreis offen: ab 2.150 €/Monat, in 2 Minuten online berechnet — inklusive Aufstellung, was die Kasse übernimmt.',
+    a: 'Hausengel nennt Kosten ab 2.500 € im Monat und rechnet auf der Website ein Beispiel vor: Gesamtbelastung 3.010 € im Monat, darin 220 € für die Vermittlung (laut Hausengel in der Regel über die Pflegekasse erstattungsfähig) und ca. 490 € Franchisegebühr. Mit dem Eigenanteil nach Kassenleistungen wirbt Hausengel ab 945 €. Primundus beginnt bei 2.150 € im Monat; Ihren Preis berechnet der Kostenrechner in 2 Minuten, direkt nach Eingabe der Kontaktdaten, mit Aufstellung der Zuschüsse.',
   },
   {
     q: 'Gibt es bei Primundus eine Mindestvertragslaufzeit?',
-    a: 'Nein. Primundus-Verträge haben keine Mindestlaufzeit, sind täglich kündbar und werden taggenau abgerechnet. Hausengel macht zu Laufzeit und Kündigungsfristen auf der Website keine Angaben.',
+    a: 'Nein. Primundus-Verträge haben keine Mindestlaufzeit, sind täglich kündbar und werden taggenau abgerechnet. Der Muster-Dienstleistungsvertrag von Hausengel sieht eine Kündigungsfrist von einem Monat vor.',
   },
 ]
 
@@ -95,18 +95,20 @@ export default function Page() {
           <div className="bg-white border border-pm-line rounded-2xl p-5 mb-12">
             <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe mb-2">Das Wichtigste in Kürze</p>
             <p className="text-[14px] text-pm-ink leading-relaxed">
-              <strong>Hausengel</strong> arbeitet mit selbstständigen Betreuungskräften und wirbt mit
-              „ab 945 € Eigenanteil" — dem Betrag nach Kassenzuschüssen, nicht dem Gesamtpreis; ein Angebot
-              gibt es über das Beratungsgespräch. <strong>Primundus</strong> zeigt Preis <em>und</em> passende
-              Betreuungskräfte sofort online — Sie wählen Ihre Betreuungskraft aus, <em>bevor</em> ein
-              Vertrag unterschrieben wird. Ab 2.150 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
-              taggenau abgerechnet.
+              <strong>Hausengel</strong> arbeitet mit selbstständigen Betreuungskräften, nennt Kosten ab 2.500 € im
+              Monat und rechnet auf der Website ein Beispiel vor; das Angebot gibt es im Beratungsgespräch, die
+              Betreuungskraft lernen Familien vor der Auftragsvergabe telefonisch kennen.{' '}
+              <strong>Primundus</strong> zeigt Preis <em>und</em> passende Betreuungskräfte online, direkt nach
+              Eingabe der Kontaktdaten — Sie wählen Ihre Betreuungskraft aus, <em>bevor</em> ein Vertrag
+              unterschrieben wird. Ab 2.150 €/Monat zzgl. An- und Abreise 125 € je Strecke, ohne
+              Vermittlungsgebühr, ohne Mindestlaufzeit, taggenau abgerechnet.
             </p>
             <p className="text-[14px] text-pm-ink leading-relaxed mt-3">
               <strong>Kurz:</strong> Der Kernunterschied ist das Modell — selbstständige Kräfte bei Hausengel,
-              bei Primundus angestelltes Personal mit A1-Entsendung. Dazu der direkte Weg: Gesamtpreis in
-              2 Minuten online statt Beratungsgespräch, Betreuungskräfte sofort sichtbar, Vertrag erst nach
-              Ihrer Auswahl.
+              bei Primundus angestelltes Personal mit A1-Entsendung. Dazu der Weg zum Preis: bei Primundus in
+              2 Minuten online nach Eingabe der Kontaktdaten, bei Hausengel im Beratungsgespräch. Und die Kosten:
+              bei Primundus ohne Vermittlungs-, Aufnahme- oder Franchisegebühr, ohne Mindestlaufzeit und täglich
+              kündbar.
             </p>
           </div>
 
@@ -118,10 +120,12 @@ export default function Page() {
             <h2 className="text-[22px] font-bold text-pm-ink mb-4">Worin Hausengel stark ist</h2>
             <div className="bg-white border border-pm-line rounded-2xl p-5">
               <p className="text-[14px] text-pm-body leading-relaxed">
-                Hausengel ist eine bekannte Marke mit langjähriger Markterfahrung und legt Wert darauf, dass
-                Familien ihre Betreuungskraft vorab kennenlernen. Das Selbstständigen-Modell bietet Kräften
-                unternehmerische Freiheit und Familien direkten Kontakt. Wer dieses Modell bevorzugt und den
-                Weg über das persönliche Beratungsgespräch schätzt, findet dort einen etablierten Anbieter.
+                Hausengel nennt über 200.000 Vermittlungen seit 2005 und legt Wert darauf, dass Familien ihre
+                Betreuungskraft vorab kennenlernen. Im Selbstständigen-Modell schließen Familien den Vertrag direkt
+                mit der Betreuungskraft. Hausengel gibt an, rund um die Uhr erreichbar zu sein, bietet Beratung in
+                der Region und veröffentlicht einen Mustervertrag und eine Beispielrechnung mit allen Kosten. Für
+                Familien, die dieses Modell und den Weg über ein persönliches Beratungsgespräch bevorzugen, kann
+                Hausengel passen.
               </p>
             </div>
           </section>
@@ -131,12 +135,11 @@ export default function Page() {
             <h2 className="text-[22px] font-bold text-pm-ink mb-4">Worin Primundus anders ist</h2>
             <div className="grid md:grid-cols-2 gap-3">
               {[
-                { t: 'Preis in 2 Minuten', d: 'Sie beantworten wenige Fragen zur Pflegesituation und sehen sofort Ihren Preis samt Zuschüssen — ohne Rückruf, ohne Termin.' },
-                { t: 'Betreuungskräfte sofort sehen', d: 'Direkt mit dem Angebot sehen Sie passende Betreuungskräfte mit Erfahrung und Sprachkenntnissen — und können vergleichen.' },
-                { t: 'Erst auswählen, dann Vertrag', d: 'Sie entscheiden, wer zu Ihnen kommt. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag.' },
-                { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt — ein Ansprechpartner für alles, 7 Tage die Woche.' },
-                { t: 'Keine Gebühren, keine Bindung', d: 'Keine Vermittlungs- oder Aufnahmegebühr, keine Mindestlaufzeit — täglich kündbar, taggenau abgerechnet.' },
-                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.150 €/Monat.' },
+                { t: 'Preis in 2 Minuten', d: 'Sie beantworten wenige Fragen zur Pflegesituation, geben Ihre Kontaktdaten ein und sehen sofort Ihren Preis samt Zuschüssen — ohne Rückruf, ohne Termin.' },
+                { t: 'Betreuungskräfte mit dem Angebot', d: 'Direkt mit dem Angebot sehen Sie passende Betreuungskräfte mit Erfahrung und Sprachkenntnissen online — und können vergleichen.' },
+                { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt; Ihr Vertrag läuft mit Primundus, nicht mit der einzelnen Kraft.' },
+                { t: 'Keine Vermittlungsgebühr, täglich kündbar', d: 'Keine Vermittlungs-, Aufnahme- oder Franchisegebühr, keine Mindestlaufzeit — täglich kündbar, taggenau abgerechnet. An- und Abreise werden mit 125 € je Strecke gesondert berechnet.' },
+                { t: 'Testsieger 6× in Folge', d: 'DIE WELT hat Primundus sechsmal in Folge ausgezeichnet. Betreuung ab 2.150 €/Monat, zzgl. An- und Abreise 125 € je Strecke.' },
               ].map((x) => (
                 <div key={x.t} className="bg-white border border-pm-line rounded-2xl p-4">
                   <p className="text-[14px] font-bold text-pm-ink mb-1">{x.t}</p>
@@ -157,7 +160,7 @@ export default function Page() {
                 <p className="text-[13px] font-bold text-pm-taupe mb-3">Primundus</p>
                 <ol className="space-y-2.5">
                   {[
-                    'Preis online berechnen — dauert unter 2 Minuten',
+                    'Fragen beantworten, Kontaktdaten eingeben: Preis in unter 2 Minuten',
                     'Passende Betreuungskräfte im Kundenportal ansehen und vergleichen',
                     'Auswählen — erst dann Vertrag; Anreise in 3 Tagen möglich',
                   ].map((s, i) => (
@@ -172,10 +175,10 @@ export default function Page() {
                 <p className="text-[13px] font-bold text-pm-ink mb-3">Hausengel (eigene Darstellung)</p>
                 <ol className="space-y-2.5">
                   {[
-                    'Kostenloses Beratungsgespräch zur Pflegesituation',
-                    'Vorschlag einer passenden selbstständigen Betreuungskraft',
-                    'Kennenlernen der Betreuungskraft vorab',
-                    'Vertrag und Betreuungsstart',
+                    'Kontaktaufnahme und Bedarfsanalyse im Beratungsgespräch',
+                    'Angebote passender selbstständiger Betreuungskräfte',
+                    'Telefonisches Kennenlernen, dann Ihre Entscheidung',
+                    'Vertrag und Anreise zum Vertragsbeginn',
                   ].map((s, i) => (
                     <li key={s} className="flex gap-2.5 text-[13px] text-pm-body leading-relaxed">
                       <span className="w-5 h-5 rounded-full bg-pm-line text-pm-body text-[11px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
@@ -209,7 +212,8 @@ export default function Page() {
           {/* Rechtlicher Hinweis */}
           <p className="text-[12px] text-pm-mute leading-relaxed">
             Hausengel ist eine Marke der Hausengel-Gruppe; Primundus steht in keiner Verbindung zu
-            Hausengel. Alle Angaben zu Hausengel stammen von hausengel.de (Stand {STAND}) —
+            Hausengel. Alle Angaben zu Hausengel stammen von hausengel.de einschließlich des dort
+            veröffentlichten Muster-Dienstleistungsvertrags (Stand {STAND}) —
             Konditionen können sich ändern. Sollte eine Angabe nicht mehr aktuell sein, korrigieren wir sie
             umgehend: <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a>.
           </p>

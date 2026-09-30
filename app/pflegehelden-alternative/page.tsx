@@ -8,12 +8,12 @@ const PH = ANBIETER.find((a) => a.slug === 'pflegehelden')!
 export const metadata: Metadata = {
   title: 'Pflegehelden-Alternative? Primundus im direkten Vergleich',
   description:
-    'Pflegehelden oder Primundus: Preis sofort online statt Angebot nach Fragebogen, Betreuungskräfte vor dem Vertrag auswählen, keine Mindestlaufzeit.',
+    'Pflegehelden oder Primundus: Preis online nach Kontaktdaten oder Angebot innerhalb eines Tages, Auswahl der Betreuungskraft im Ablaufvergleich.',
   alternates: { canonical: 'https://primundus.de/pflegehelden-alternative' },
   openGraph: {
     title: 'Pflegehelden oder Primundus? Der direkte Vergleich',
     description:
-      'Zwei Wege zur 24-Stunden-Pflege: regionales Franchise-System oder Preis und Betreuungskräfte sofort online. Der Faktenvergleich.',
+      'Zwei Wege zur 24-Stunden-Pflege: regionales Franchise-System oder Preis und Kräfte online nach Eingabe der Kontaktdaten.',
     url: 'https://primundus.de/pflegehelden-alternative',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Ist Primundus eine Alternative zu Pflegehelden?',
-    a: 'Ja — mit einem anderen Modell: Primundus beschäftigt eigenes Betreuungspersonal und zeigt Preis und passende Betreuungskräfte sofort online. Bei Pflegehelden erstellt ein regionaler Franchise-Partner nach einem Fragebogen ein Angebot, die Pflegekraft wird im Vermittlungsprozess ausgewählt (eigene Angaben, Stand August 2026).',
+    a: `Ja — mit einem anderen Modell: Primundus beschäftigt eigenes Betreuungspersonal und zeigt Preis und passende Betreuungskräfte online, direkt nach Eingabe der Kontaktdaten. Bei Pflegehelden erstellt ein regionaler Franchise-Partner nach einem Fragebogen innerhalb eines Tages ein Angebot; die Personalvorschläge folgen nach der Annahme des Angebots (eigene Angaben, Stand ${STAND}).`,
   },
   {
     q: 'Was kostet 24-Stunden-Pflege bei Primundus im Vergleich zu Pflegehelden?',
-    a: 'Primundus beginnt ab 2.150 €/Monat, Pflegehelden nach eigener Angabe ab 2.850 €/Monat. Bei beiden hängt der Preis von Pflegesituation und Sprachkenntnissen ab. Den Primundus-Preis sehen Sie in 2 Minuten online — ohne Rückruf.',
+    a: 'Primundus beginnt ab 2.150 €/Monat zzgl. An- und Abreise 125 € je Strecke, Pflegehelden nach eigener Angabe ab 2.850 €/Monat zzgl. einmalig 125 € für An- und Abreise und zeigt dazu drei Beispielsituationen mit Tagespreisen. Bei beiden hängt der Preis von Pflegesituation und Sprachkenntnissen ab. Den Primundus-Preis sehen Sie in 2 Minuten online, direkt nach Eingabe der Kontaktdaten und ohne Rückruf.',
   },
   {
     q: 'Muss ich einen Vertrag unterschreiben, bevor ich die Betreuungskraft kenne?',
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: 'Gibt es bei Primundus eine Mindestvertragslaufzeit?',
-    a: 'Nein. Primundus-Verträge haben keine Mindestlaufzeit, sind täglich kündbar und werden taggenau abgerechnet. Pflegehelden gibt an, jederzeit kündbar zu sein; eine konkrete Frist nennt die Website nicht.',
+    a: 'Nein. Primundus-Verträge haben keine Mindestlaufzeit, sind täglich kündbar und werden taggenau abgerechnet. Pflegehelden gibt an, jederzeit kündbar zu sein, und nennt in seiner Infobroschüre ebenfalls eine taggenaue Abrechnung; eine konkrete Kündigungsfrist nennt die Website nicht.',
   },
 ]
 
@@ -96,17 +96,19 @@ export default function Page() {
             <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-pm-taupe mb-2">Das Wichtigste in Kürze</p>
             <p className="text-[14px] text-pm-ink leading-relaxed">
               <strong>Pflegehelden</strong> (seit 2005) arbeitet als Franchise-System mit persönlichen
-              Ansprechpartnern vor Ort; ein Angebot gibt es nach eigener Angabe innerhalb eines Tages nach
-              Anfrage, ab 2.850 €/Monat. <strong>Primundus</strong> zeigt Preis <em>und</em> passende
-              Betreuungskräfte sofort online — Sie wählen Ihre Betreuungskraft aus, <em>bevor</em> ein
-              Vertrag unterschrieben wird. Ab 2.150 €/Monat, ohne Vermittlungsgebühr, ohne Mindestlaufzeit,
-              taggenau abgerechnet.
+              Ansprechpartnern vor Ort; die Website zeigt Beispielpreise, ein individuelles Angebot gibt es nach
+              eigener Angabe innerhalb eines Tages nach Anfrage, ab 2.850 €/Monat. <strong>Primundus</strong> zeigt
+              Preis <em>und</em> passende Betreuungskräfte online, direkt nach Eingabe der Kontaktdaten — Sie
+              wählen Ihre Betreuungskraft aus, <em>bevor</em> ein Vertrag unterschrieben wird. Ab 2.150 €/Monat
+              zzgl. An- und Abreise 125 € je Strecke, ohne Vermittlungsgebühr, ohne Mindestlaufzeit, taggenau
+              abgerechnet.
             </p>
             <p className="text-[14px] text-pm-ink leading-relaxed mt-3">
-              <strong>Kurz:</strong> Pflegehelden ist der klassische Weg über die persönliche Beratung vor Ort —
-              Primundus der direkte, moderne Weg: schneller beim Preis (2 Minuten statt Angebot nach Anfrage),
-              schneller bei der Auswahl (Betreuungskräfte sofort sichtbar) und mit niedrigerem Einstiegspreis
-              (ab 2.150 € gegenüber ab 2.850 €).
+              <strong>Kurz:</strong> Pflegehelden setzt auf die persönliche Beratung vor Ort. Bei Primundus wird der
+              individuelle Preis nach Eingabe der Kontaktdaten online angezeigt, bei Pflegehelden kommt das
+              individuelle Angebot innerhalb eines Tages nach Anfrage. Die passenden Betreuungskräfte sehen Sie bei
+              Primundus mit dem Angebot, bei Pflegehelden nach der Angebotsannahme. Der Einstiegspreis liegt bei
+              2.150 € gegenüber 2.850 € im Monat, bei beiden zuzüglich An- und Abreise.
             </p>
           </div>
 
@@ -120,9 +122,9 @@ export default function Page() {
               <p className="text-[14px] text-pm-body leading-relaxed">
                 Pflegehelden ist seit 2005 am Markt und arbeitet mit Franchise-Partnern in allen Bundesländern —
                 wer einen persönlichen Ansprechpartner in der eigenen Region möchte, der auch vorbeikommen kann,
-                findet dort ein dichtes Netz. Das Unternehmen wirbt mit „jederzeit kündbar" und voller
-                Kostentransparenz. Für Familien, die den klassischen Weg über ein persönliches Beratungsgespräch
-                bevorzugen, ist das ein stimmiges Modell.
+                findet dort über 100 Standorte. Das Unternehmen wirbt mit „jederzeit kündbar" und voller
+                Kostentransparenz, zeigt Beispielpreise online und rechnet laut Infobroschüre taggenau ab. Für
+                Familien, die den Weg über ein persönliches Beratungsgespräch bevorzugen, kann dieses Modell passen.
               </p>
             </div>
           </section>
@@ -132,12 +134,12 @@ export default function Page() {
             <h2 className="text-[22px] font-bold text-pm-ink mb-4">Worin Primundus anders ist</h2>
             <div className="grid md:grid-cols-2 gap-3">
               {[
-                { t: 'Preis in 2 Minuten', d: 'Sie beantworten wenige Fragen zur Pflegesituation und sehen sofort Ihren Preis samt Zuschüssen — ohne Rückruf, ohne Termin.' },
-                { t: 'Betreuungskräfte sofort sehen', d: 'Direkt mit dem Angebot sehen Sie passende Betreuungskräfte mit Erfahrung und Sprachkenntnissen — und können vergleichen.' },
+                { t: 'Preis in 2 Minuten', d: 'Sie beantworten wenige Fragen zur Pflegesituation, geben Ihre Kontaktdaten ein und sehen sofort Ihren Preis samt Zuschüssen — ohne Rückruf, ohne Termin.' },
+                { t: 'Betreuungskräfte mit dem Angebot', d: 'Direkt mit dem Angebot sehen Sie passende Betreuungskräfte mit Erfahrung und Sprachkenntnissen — und können vergleichen.' },
                 { t: 'Erst auswählen, dann Vertrag', d: 'Sie entscheiden, wer zu Ihnen kommt. Erst nach Ihrer Auswahl unterschreiben Sie den Vertrag.' },
-                { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt — ein Ansprechpartner für alles, 7 Tage die Woche.' },
-                { t: 'Keine Gebühren, keine Bindung', d: 'Keine Vermittlungs- oder Aufnahmegebühr, keine Mindestlaufzeit — täglich kündbar, taggenau abgerechnet.' },
-                { t: 'Testsieger 6× in Folge', d: 'Ausgezeichnete Qualität zu einem Preis ab 2.150 €/Monat.' },
+                { t: 'Eigenes Personal', d: 'Unsere Betreuungskräfte sind bei Primundus beschäftigt — ein Ansprechpartner für alles, täglich 8–20 Uhr.' },
+                { t: 'Keine Vermittlungsgebühr', d: 'Keine Vermittlungs- oder Aufnahmegebühr. Der Monatspreis umfasst Betreuung und Organisation; An- und Abreise werden mit 125 € je Strecke gesondert berechnet.' },
+                { t: 'Testsieger 6× in Folge', d: 'DIE WELT hat Primundus sechsmal in Folge ausgezeichnet. Betreuung ab 2.150 €/Monat, zzgl. An- und Abreise 125 € je Strecke.' },
               ].map((x) => (
                 <div key={x.t} className="bg-white border border-pm-line rounded-2xl p-4">
                   <p className="text-[14px] font-bold text-pm-ink mb-1">{x.t}</p>
@@ -158,7 +160,7 @@ export default function Page() {
                 <p className="text-[13px] font-bold text-pm-taupe mb-3">Primundus</p>
                 <ol className="space-y-2.5">
                   {[
-                    'Preis online berechnen — dauert unter 2 Minuten',
+                    'Fragen beantworten, Kontaktdaten eingeben: Preis in unter 2 Minuten',
                     'Passende Betreuungskräfte im Kundenportal ansehen und vergleichen',
                     'Auswählen — erst dann Vertrag; Anreise in 3 Tagen möglich',
                   ].map((s, i) => (
@@ -176,7 +178,7 @@ export default function Page() {
                     'Situation schildern und Wünsche an die Pflegekraft beschreiben',
                     'Unverbindliches Angebot innerhalb eines Tages',
                     'Vermittlungsvertrag, danach Auswahl aus den Personalvorschlägen',
-                    'Betreuungsstart — Vermittlung innerhalb von sieben Werktagen',
+                    'Betreuungsstart — nach eigener Angabe bei Bedarf innerhalb von 5 bis 7 Werktagen',
                   ].map((s, i) => (
                     <li key={s} className="flex gap-2.5 text-[13px] text-pm-body leading-relaxed">
                       <span className="w-5 h-5 rounded-full bg-pm-line text-pm-body text-[11px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
@@ -210,7 +212,8 @@ export default function Page() {
           {/* Rechtlicher Hinweis */}
           <p className="text-[12px] text-pm-mute leading-relaxed">
             Pflegehelden ist eine Marke der Pflegehelden Franchise GmbH; Primundus steht in keiner Verbindung
-            zu Pflegehelden. Alle Angaben zu Pflegehelden stammen von pflegehelden.de (Stand {STAND}) —
+            zu Pflegehelden. Alle Angaben zu Pflegehelden stammen von pflegehelden.de einschließlich der dort
+            veröffentlichten Infobroschüre (Stand {STAND}) —
             Konditionen können sich ändern. Sollte eine Angabe nicht mehr aktuell sein, korrigieren wir sie
             umgehend: <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a>.
           </p>
