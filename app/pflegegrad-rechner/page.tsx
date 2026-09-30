@@ -71,7 +71,7 @@ const FRAGEN = [
   },
   {
     q: 'Wie berechnet man den Pflegegrad für ein Kind mit ADHS?',
-    a: 'Mit demselben Rechner, aber im Vergleich zu einem gesunden Kind gleichen Alters: Es zählt nur, was Gleichaltrige schon allein können. Bei ADHS liegen die Punkte meist in Modul 2 (mehrschrittige Handlungen steuern, Gefahren erkennen), Modul 3 (motorische Unruhe, Abwehr, sozial unpassendes Verhalten) und Modul 6 (Tagesablauf, Beschäftigung, Kontakte). Wählen Sie im Rechner „Kind ab 18 Monaten".',
+    a: 'Mit demselben Rechner, aber im Vergleich zu einem gesunden Kind gleichen Alters: Es zählt nur, was Gleichaltrige schon allein können. Bei ADHS liegen die Punkte meist in Modul 2 (mehrschrittige Handlungen steuern, Gefahren erkennen), Modul 3 (motorische Unruhe, Abwehr, sozial unpassendes Verhalten) und Modul 6 (Tagesablauf, Beschäftigung, Kontakte). Wählen Sie im Rechner „Kind über 18 Monate".',
   },
   {
     q: 'Wie viel Geld gibt es bei Pflegegrad 1 bis 5?',
@@ -297,7 +297,7 @@ export default function PflegegradRechnerSeite() {
               ]}
             />
             <Text>
-              Wählen Sie im Rechner „Kind ab 18 Monaten" oder „Kind bis 18 Monate". Dann erscheint das Kriterium 5.K für Besuche der Frühförderung, und der
+              Wählen Sie im Rechner „Kind über 18 Monate" oder „Kind bis 18 Monate". Dann erscheint das Kriterium 5.K für Besuche der Frühförderung, und der
               Pflegegrad folgt den Kinder-Regeln.
             </Text>
           </Abschnitt>
