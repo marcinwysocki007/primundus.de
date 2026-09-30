@@ -467,6 +467,15 @@ function Step4({
         <p className="text-[12px] text-pm-taupe-light mt-1.5">
           0 € für ehrenamtliche Pflege durch Angehörige möglich
         </p>
+        {/* § 33b Abs. 6 EStG: Wer für die Pflege Geld bekommt, verliert in der Regel den Pflege-Pauschbetrag (OpenAI-geprüft 29.09.2026) */}
+        <p className="text-[12px] text-pm-mute leading-relaxed mt-2">
+          Gut zu wissen: Bekommt die pflegende Person eine Vergütung oder weitergegebenes Pflegegeld, kann sie den
+          Pflege-Pauschbetrag in der Regel nicht mehr geltend machen (§ 33b Abs. 6 EStG). Er beträgt im Jahr 600 € bei
+          Pflegegrad 2, 1.100 € bei Pflegegrad 3 und 1.800 € bei Pflegegrad 4 oder 5. Ausnahme: Eltern, die Pflegegeld für
+          ihr Kind mit Behinderung erhalten. Einnahmen von Angehörigen für Pflege, Betreuung oder Hilfe im Haushalt sind bis
+          zur Höhe des Pflegegeldes steuerfrei, bei Pflegegrad 1 bis zur Höhe des Entlastungsbetrags (§ 3 Nr. 36 EStG).
+          Höhere Beträge können steuerpflichtig sein und Folgen für die Sozialversicherung haben.
+        </p>
       </Field>
 
       <Field label="Zahlungstag (1–28)">
@@ -1038,11 +1047,11 @@ export default function PflegevertragClient() {
             Pflegevertrag-Generator
           </h1>
           <p className="text-[15px] text-pm-body leading-relaxed mb-3">
-            Erstellen Sie in 5 Minuten einen rechtssicheren Pflegevertrag — kostenlos, individuell anpassbar, sofort druckfertig.
+            Erstellen Sie in 5 Minuten einen schriftlichen Pflegevertrag: kostenlos, individuell anpassbar, sofort druckfertig.
           </p>
           <p className="text-[15px] text-pm-body leading-relaxed">
-            Wenn Angehörige die Pflege übernehmen und dafür Pflegegeld beziehen, sollte die Vereinbarung schriftlich festgehalten sein —
-            das schützt beide Seiten und ist Voraussetzung für die steuerliche Anerkennung der Pflegekosten.
+            Wenn Angehörige die Pflege übernehmen und dafür Geld bekommen, etwa das weitergegebene Pflegegeld, sollte die
+            Vereinbarung schriftlich festgehalten sein. Das schützt beide Seiten und hilft beim Nachweis gegenüber dem Finanzamt.
           </p>
         </div>
 

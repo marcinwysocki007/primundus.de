@@ -178,7 +178,7 @@ export default function Page() {
                 { href: '/pflegegrad-beantragen', label: 'Pflegegrad beantragen', desc: 'Schritt für Schritt zum Bescheid' },
                 { href: '/burnout-pflegende-angehoerige', label: 'Burnout vermeiden', desc: 'Strategien für pflegende Angehörige' },
                 { href: '/pflegekraft-finden', label: 'Pflegekraft finden', desc: 'Die richtige Betreuungskraft auswählen' },
-                { href: '/pflegevertrag-generator', label: 'Pflegevertrag erstellen', desc: 'Rechtssichere Vorlage' },
+                { href: '/pflegevertrag-generator', label: 'Pflegevertrag erstellen', desc: 'Vorlage zum Ausfüllen und Drucken' },
               ].map((item) => (
                 <a
                   key={item.href}

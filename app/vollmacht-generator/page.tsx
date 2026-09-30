@@ -188,8 +188,8 @@ export default function Page() {
             <h2 className="text-[18px] font-bold text-pm-ink mb-4">Weitere hilfreiche Tools & Ratgeber</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegebedarf selbst einschätzen — in 3 Minuten' },
-                { href: '/pflegevertrag-generator', label: 'Pflegevertrag-Generator', desc: 'Rechtssicheren Pflegevertrag kostenlos erstellen' },
+                { href: '/pflegegrad-rechner', label: 'Pflegegrad-Rechner', desc: 'Pflegegrad mit den Fragen des Gutachters einschätzen' },
+                { href: '/pflegevertrag-generator', label: 'Pflegevertrag-Generator', desc: 'Pflegevertrag kostenlos erstellen' },
                 { href: 'https://kostenrechner.primundus.de/?start=1&src=apex-vollmacht-generator', label: '24h-Kosten berechnen', desc: 'Eigenanteil für 24h-Pflege sofort sehen', external: true },
                 { href: '/pflegegeld', label: 'Pflegegeld-Übersicht', desc: 'Alle Beträge 2026 auf einen Blick' },
               ].map((item) => (

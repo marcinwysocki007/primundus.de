@@ -36,7 +36,8 @@ export default function Page() {
               <p>80687 München</p>
               <p className="pt-2">Primundus ist eine Marke von:</p>
               <p>PRIMUNDUS Sp. z o.o. · Poznańska 21/48 · 00-685 Warszawa</p>
-              <p>NIP 7011172300 · REGON 526823071</p>
+              {/* 30.09.2026: NIP/REGON waren falsch; laut KRS-Register (Stand 11.08.2026) wie im Impressum */}
+              <p>KRS 0001259402 · NIP 7011326714</p>
               <p className="pt-2">
                 Telefon:{' '}
                 <a href="tel:+4989200000830" className="text-pm-taupe hover:underline">+49 89 200 000 830</a>
@@ -91,6 +92,15 @@ export default function Page() {
             </p>
             <p className="text-[15px] text-pm-body leading-[1.7]">
               Auf derselben Seite zeigen wir Rezensionen aus unseren Google-Unternehmensprofilen so, wie sie bei Google veröffentlicht sind, mit Link zur Quelle. Diese Rezensionen ruft unser Server bei Google ab; beim Besuch der Seite überträgt Ihr Browser dafür keine Daten an Google.
+            </p>
+
+            {/* 30.09.2026: Kontaktaufnahme wegen Verlinkungen (Art. 14 DSGVO); Entwurf von OpenAI geprüft, Freigabe Martin */}
+            <h3 id="kontaktaufnahme" className="text-[15px] font-semibold text-pm-ink mb-2 mt-5">2.4 Wenn wir Sie wegen einer Verlinkung ansprechen</h3>
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
+              Wenn wir Sie wegen einer Linkliste, eines Beitrags oder einer ausdrücklich eröffneten Kontaktmöglichkeit ansprechen, verarbeiten wir Ihren Namen, Ihre geschäftliche E-Mail-Adresse und Telefonnummer, gegebenenfalls Ihre Funktion, Website und Anschrift sowie den Inhalt unserer Kommunikation. Die Daten stammen aus Ihrem Impressum, Ihrem Beitrag oder aus der von Ihnen ausdrücklich eröffneten Kontaktmöglichkeit.
+            </p>
+            <p className="text-[15px] text-pm-body leading-[1.7]">
+              Zweck ist die einmalige Anfrage zu einer möglichen Verlinkung und die Bearbeitung Ihrer Antwort. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in fachbezogener Öffentlichkeitsarbeit. Sie können dieser Verarbeitung nach Art. 21 DSGVO jederzeit widersprechen, zum Beispiel per E-Mail an <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a>. Ohne Antwort löschen wir Ihre Kontaktdaten spätestens nach sechs Monaten, nach Abschluss der Kommunikation spätestens nach zwölf Monaten, soweit keine gesetzliche Pflicht entgegensteht. Wünschen Sie keine weitere Kontaktaufnahme, speichern wir Ihre E-Mail-Adresse und, soweit erforderlich, Ihre Telefonnummer auf einer Sperrliste, damit wir Ihren Widerspruch dauerhaft beachten.
             </p>
           </div>
 

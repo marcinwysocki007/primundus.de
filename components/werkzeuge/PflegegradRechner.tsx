@@ -195,7 +195,7 @@ export function PflegegradRechner() {
           {(
             [
               ['erwachsen', 'Erwachsener', 'ab 18 Jahren'],
-              ['kind', 'Kind ab 18 Monaten', 'Vergleich mit gleichaltrigen Kindern'],
+              ['kind', 'Kind über 18 Monate', 'Vergleich mit gleichaltrigen Kindern'],
               ['saeugling', 'Kind bis 18 Monate', 'eine Stufe höher, § 15 Abs. 7'],
             ] as [Person, string, string][]
           ).map(([wert, titel, hinweis]) => (
