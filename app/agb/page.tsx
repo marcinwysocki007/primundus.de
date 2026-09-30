@@ -23,7 +23,7 @@ export default function Page() {
           Allgemeine Geschäftsbedingungen
         </h1>
         <p className="text-[15px] text-pm-mute mb-10">
-          Stand: 3. September 2026 · Primundus — ein Angebot der PRIMUNDUS Sp. z o.o.
+          Stand: 30. September 2026 · Primundus — ein Angebot der PRIMUNDUS Sp. z o.o.
         </p>
 
         <div className="space-y-8 text-[15px] text-pm-body leading-[1.75]">
@@ -37,8 +37,10 @@ export default function Page() {
               aus der Europäischen Union zur häuslichen Betreuung pflegebedürftiger Personen in Deutschland.
             </p>
             <p className="mb-3">
-              (2) Primundus erbringt die häusliche Betreuung durch eigene, bei der Unternehmensgruppe angestellte
-              Betreuungskräfte (Entsendung mit A1-Bescheinigung). Vertragsgegenstand sind Betreuung, Grundpflege
+              {/* 30.09.2026 Martin: „angestellt“ bleibt, dazu „in Polen sozialversichert, mit A1 entsandt“; Rest unverändert */}
+              (2) Primundus erbringt die häusliche Betreuung durch eigene, bei der Unternehmensgruppe angestellte und
+              in Polen sozialversicherte Betreuungskräfte, die mit A1-Bescheinigung nach Deutschland entsandt werden.
+              Vertragsgegenstand sind Betreuung, Grundpflege
               und hauswirtschaftliche Versorgung im Haushalt des Kunden sowie Auswahl, Anreise und Wechsel der
               Betreuungskraft. Behandlungspflege und medizinische Leistungen sind nicht Vertragsgegenstand; sie
               bleiben einem zugelassenen Pflegedienst vorbehalten.
