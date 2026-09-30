@@ -1047,7 +1047,7 @@ export default function PflegevertragClient() {
             Pflegevertrag-Generator
           </h1>
           <p className="text-[15px] text-pm-body leading-relaxed mb-3">
-            Erstellen Sie in 5 Minuten einen rechtssicheren Pflegevertrag — kostenlos, individuell anpassbar, sofort druckfertig.
+            Erstellen Sie in 5 Minuten einen schriftlichen Pflegevertrag: kostenlos, individuell anpassbar, sofort druckfertig.
           </p>
           <p className="text-[15px] text-pm-body leading-relaxed">
             Wenn Angehörige die Pflege übernehmen und dafür Geld bekommen, etwa das weitergegebene Pflegegeld, sollte die
