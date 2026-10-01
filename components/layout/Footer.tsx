@@ -89,6 +89,16 @@ const rechtlichLinks = [
   { label: 'Sitemap', href: '/sitemap' },
 ]
 
+// Exakter Host statt startsWith (OpenAI-Gegenprüfung 01.10.2026).
+function istRechnerLink(href: string) {
+  try {
+    const url = new URL(href)
+    return url.protocol === 'https:' && url.hostname === 'kostenrechner.primundus.de'
+  } catch {
+    return false
+  }
+}
+
 export function SiteFooter() {
   return (
     <footer className="bg-pm-ink text-white">
@@ -168,7 +178,10 @@ export function SiteFooter() {
                     <a
                       href={l.href}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      // Rechner-Link ohne noreferrer: Der Rechner bekommt dann nach der globalen Policy nur die Origin
+                      // „primundus.de" (kein Pfad, keine Query) und zählt den Besuch als Website-Besuch. Fremde Seiten
+                      // behalten noreferrer.
+                      rel={istRechnerLink(l.href) ? 'noopener' : 'noopener noreferrer'}
                       className="text-[14px] text-gray-300 hover:text-white transition-colors"
                     >
                       {l.label}
