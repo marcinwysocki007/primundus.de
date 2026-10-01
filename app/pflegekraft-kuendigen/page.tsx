@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-kuendigen', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+const AKTUALISIERT = aktualisiertAm('pflegekraft-kuendigen', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'modell', title: 'Kündigung je nach Beschäftigungsmodell' },
@@ -85,7 +88,7 @@ export default function PflegekraftKuendigen() {
               titel=""
               kopf={['Modell', 'Kündigung durch Familie', 'Frist', 'Ersatz']}
               zeilen={[
-                ['Entsendemodell (Primundus)', 'Kündigung des Agenturvertrags', 'Täglich kündbar', 'Primundus stellt sofort Ersatz'],
+                ['Entsendemodell (Primundus)', 'Kündigung des Betreuungsvertrags', 'Täglich kündbar', 'Primundus stellt sofort Ersatz'],
                 ['Direktanstellung', 'Arbeitgeberkündigung an Kraft', 'Probezeit: 2 Wo · danach: 4 Wo', 'Familie muss selbst organisieren'],
               ]}
               betont={2}
@@ -145,7 +148,7 @@ export default function PflegekraftKuendigen() {
               fragen={[
                 { q: 'Wie kündige ich eine Pflegekraft beim Entsendemodell?', a: 'Primundus anrufen (089 200 000 830) — fertig. Täglich kündbar, kein Formular, keine Fristen.' },
                 { q: 'Was sind die Kündigungsfristen bei Direktanstellung?', a: 'Probezeit: 2 Wochen. Nach Probezeit bis 2 Jahre: 4 Wochen zum 15. oder Monatsende. Ab 2 Jahren: 1 Monat zum Monatsende.' },
-                { q: 'Muss die Kündigung schriftlich sein?', a: 'Bei Direktanstellung: Ja — Schriftform ist Pflicht. Beim Entsendemodell über Primundus: Kündigung des Agenturvertrags genügt, formlos per Telefon.' },
+                { q: 'Muss die Kündigung schriftlich sein?', a: 'Bei Direktanstellung: Ja — Schriftform ist Pflicht. Beim Entsendemodell über Primundus: Kündigung des Betreuungsvertrags genügt, formlos per Telefon.' },
                 { q: 'Was wenn die Kraft sofort gehen soll?', a: 'Beim Entsendemodell: Primundus anrufen, sofortige Beendigung möglich. Bei Direktanstellung: nur bei wichtigem Grund (fristlose Kündigung) oder gegen Zahlung einer Abfindung.' },
               ]}
             />

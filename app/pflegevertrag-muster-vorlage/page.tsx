@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegevertrag-muster-vorlage', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+const AKTUALISIERT = aktualisiertAm('pflegevertrag-muster-vorlage', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-muss-rein', title: 'Was muss in den Pflegevertrag?' },
@@ -89,7 +92,7 @@ export default function PflegevertragMusterVorlage() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
             <Kasten titel="Wichtiger Hinweis" ton="koralle">
-              <Text>Diese Vorlage gilt für die Direktanstellung einer Pflegekraft durch die Familie (deutsches Arbeitsverhältnis). Beim Entsendemodell über Primundus schließt die Familie nur einen Vertrag mit Primundus als Agentur — kein eigener Arbeitsvertrag mit der Kraft notwendig. Die Vorlage hier dient als Orientierung und ersetzt keine Rechtsberatung.</Text>
+              <Text>Diese Vorlage gilt für die Direktanstellung einer Pflegekraft durch die Familie (deutsches Arbeitsverhältnis). Beim Entsendemodell über Primundus schließt die Familie nur einen Betreuungsvertrag mit der PRIMUNDUS Sp. z o.o., bei der die Betreuungskräfte angestellt sind. Einen eigenen Arbeitsvertrag mit der Kraft braucht die Familie nicht. Die Vorlage hier dient als Orientierung und ersetzt keine Rechtsberatung.</Text>
             </Kasten>
           </Vorspann>
 

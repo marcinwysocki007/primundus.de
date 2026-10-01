@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('eu-pflegekraft-rechte-pflichten', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+const AKTUALISIERT = aktualisiertAm('eu-pflegekraft-rechte-pflichten', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'entsendemodell', title: 'Das Entsendemodell erklärt' },
@@ -87,8 +90,7 @@ export default function EuPflegekraftRechtenPflichten() {
             <Punkte
               punkte={[
                 { title: 'Betreuungskraft', desc: 'Angestellt beim EU-Unternehmen im Heimatland. Dort sozialversichert (Rente, Kranken-, Pflegeversicherung). A1-Bescheinigung belegt den legalen Entsendestatus in Deutschland.' },
-                { title: 'EU-Unternehmen (Entsendefirma)', desc: 'Arbeitgeber der Betreuungskraft. Zahlt Lohn, stellt A1-Bescheinigung aus, ist verantwortlich für Sozialversicherungsbeiträge im Heimatland.' },
-                { title: 'Deutsche Agentur (Primundus)', desc: 'Vermittelt und koordiniert. Ist Vertragspartner der deutschen Familie. Schnittstelle zwischen Familie, EU-Unternehmen und Betreuungskraft.' },
+                { title: 'EU-Unternehmen (Entsendefirma)', desc: 'Arbeitgeber der Betreuungskraft. Zahlt den Lohn, beantragt die A1-Bescheinigung und führt die Sozialversicherungsbeiträge im Heimatland ab. Bei Primundus ist das die PRIMUNDUS Sp. z o.o. mit Sitz in Warschau, zugleich Vertragspartner der Familie; das Büro in Deutschland ist in München.' },
                 { title: 'Familie', desc: 'Kein eigenes Arbeitsverhältnis mit der Kraft. Vertrag nur mit Primundus. Keine deutschen Sozialabgaben. A1-Bescheinigung bei Kontrollen vorzeigen.' },
               ]}
             />
@@ -145,7 +147,7 @@ export default function EuPflegekraftRechtenPflichten() {
               fragen={[
                 { q: 'Welche Rechte hat eine EU-Pflegekraft in Deutschland?', a: 'Anspruch auf deutschen Mindestlohn, eigenes Zimmer, Ruhezeiten (min. 11 Std./Tag), anteiligen Urlaub, Krankenversicherung über EHIC und würdevollen Umgang.' },
                 { q: 'Muss die Familie soziale Abgaben für die EU-Pflegekraft zahlen?', a: 'Nein — beim Entsendemodell über Primundus zahlt die Familie keine deutschen Sozialabgaben. Die Kraft ist im EU-Heimatland sozialversichert.' },
-                { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Das EU-Unternehmen ist verantwortlicher Arbeitgeber. Primundus organisiert sofort Ersatzkraft.' },
+                { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Verantwortlicher Arbeitgeber ist das entsendende Unternehmen, bei Primundus die PRIMUNDUS Sp. z o.o. Primundus organisiert sofort Ersatzkraft.' },
                 { q: 'Darf die Familie der Pflegekraft Anweisungen geben?', a: 'Im Rahmen des vereinbarten Leistungsumfangs: Ja. Aber die Kraft ist kein "Personal auf Abruf" — Grundpflicht ist die vertraglich vereinbarte Tätigkeit, nicht unbegrenzte Verfügbarkeit für beliebige Aufgaben.' },
               ]}
             />

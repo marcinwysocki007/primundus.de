@@ -54,7 +54,16 @@ const STALE = [
   ['Preisregel: Nacht-Aufschlag als Spanne (50 bis 300 €)', /N[aä]cht[^.]{0,60}\+?50\s*(?:bis|–|-)\s*\+?300\s*€/g],
   ['Preisregel: Ehepaar-Preis (2.600 €)', /2\.600\s*€/g],
   ['Preisregel: Pflegegrad-5-/Rollstuhl-Preis (2.200 / 2.250 / 2.300 €)', /2\.(?:200|250|300)\s*€/g],
+  // Vertragspartner (Martin 12.09. und 30.09.2026, Mustervertrag): Die Familie schließt den Vertrag mit der PRIMUNDUS
+  // Sp. z o.o., bei der die Betreuungskräfte angestellt sind. Am 01.10. nannten fünf Ratgeber Primundus noch eine
+  // „deutsche Agentur“, sprachen vom „Agenturvertrag“ oder schrieben „Primundus prüft und vermittelt“, während /ueber-uns
+  // „Angestellt, nicht vermittelt“ sagt. Kommentarzeilen zählen nicht (dort steht der alte Wortlaut als Beleg).
+  ['Primundus als deutsche Agentur/Vermittler (Vertragspartner ist die PRIMUNDUS Sp. z o.o.)',
+    /[Dd]eutsche[nmr]?\s+(?:Vermittlungs)?[Aa]gentur|Agenturvertrag|Primundus\s+(?:prüft\s+und\s+)?vermittelt/g, { ohneKommentare: true }],
 ]
+
+// Zeilen, die nur Kommentar sind (// …, * … in Blockkommentaren, {/* … in JSX)
+const KOMMENTARZEILE = /^\s*(?:\/\/|\/?\*|\{\/\*)/
 
 const SCAN_DIRS = ['app', 'components', 'lib']
 const SCAN_FILES = ['public/llms.txt']
@@ -74,11 +83,13 @@ function scanFile(file) {
   const rel = path.relative(ROOT, file)
   if (rel === SELF || ALLOW_FILES.has(rel)) return
   const text = fs.readFileSync(file, 'utf8')
-  for (const [desc, re] of STALE) {
+  const zeilen = text.split('\n')
+  for (const [desc, re, optionen] of STALE) {
     re.lastIndex = 0
     let m
     while ((m = re.exec(text))) {
       const line = text.slice(0, m.index).split('\n').length
+      if (optionen?.ohneKommentare && KOMMENTARZEILE.test(zeilen[line - 1])) continue
       findings.push(`${rel}:${line}  ${desc}`)
     }
   }

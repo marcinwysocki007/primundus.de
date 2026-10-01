@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('scheinselbststaendigkeit-pflege-vermeiden', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+const AKTUALISIERT = aktualisiertAm('scheinselbststaendigkeit-pflege-vermeiden', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist Scheinselbstständigkeit?' },
@@ -134,7 +137,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             </Text>
             <Punkte
               punkte={[
-                { title: 'Entsendemodell (empfohlen)', desc: 'Die Betreuungskraft ist bei einem EU-Unternehmen (z.B. in Polen, Bulgarien, Rumänien) angestellt und wird mit A1-Bescheinigung nach Deutschland entsandt. Die Familie schließt nur einen Vertrag mit der deutschen Agentur (z.B. Primundus). Kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben, vollständig rechtssicher.' },
+                { title: 'Entsendemodell (empfohlen)', desc: 'Die Betreuungskraft ist bei einem EU-Unternehmen (z.B. in Polen, Bulgarien, Rumänien) angestellt und wird mit A1-Bescheinigung nach Deutschland entsandt. Die Familie schließt nur einen Betreuungsvertrag mit dem entsendenden Unternehmen, bei Primundus mit der PRIMUNDUS Sp. z o.o. Kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben, vollständig rechtssicher.' },
                 { title: 'Direktanstellung', desc: 'Die Familie stellt die Pflegekraft direkt an — mit deutschem Arbeitsvertrag, Anmeldung bei Sozialversicherungsträgern, Lohnabrechnung, Urlaubsplanung. Rechtssicher, aber erheblicher Verwaltungsaufwand. Auch im Krankheitsfall muss die Familie selbst für Ersatz sorgen.' },
               ]}
             />

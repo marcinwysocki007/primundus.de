@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflege-aus-der-ferne-koordinieren', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+const AKTUALISIERT = aktualisiertAm('pflege-aus-der-ferne-koordinieren', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'herausforderung', title: 'Die Herausforderung der Fernbetreuung' },
@@ -92,7 +95,7 @@ export default function PflegeAusDerFerneKoordinieren() {
                 { title: 'Keine direkte Kontrolle', desc: 'Man sieht nicht wie es wirklich geht. Regelmäßige Videotelefonate und kurze tägliche Check-ins mit der Betreuungskraft schaffen Sichtbarkeit.' },
                 { title: 'Koordinationsaufwand', desc: 'Arzttermine, Pflegedienst, Apotheke, Hausnotruf — alles muss aus der Ferne koordiniert werden. Mit Primundus als Ansprechpartner fällt ein Großteil dieses Aufwands weg.' },
                 { title: 'Notfallmanagement', desc: 'Was wenn etwas passiert und man nicht sofort vor Ort sein kann? Klarer Notfallplan mit lokalen Kontakten ist essenziell.' },
-                { title: 'Vertrauen in die Pflegekraft', desc: 'Man kann die Kraft nicht täglich sehen. Regelmäßige Kommunikation und Vertrauen in die Agentur (Primundus prüft und vermittelt) sind die Antwort.' },
+                { title: 'Vertrauen in die Pflegekraft', desc: 'Man kann die Kraft nicht täglich sehen. Es hilft, regelmäßig mit ihr zu sprechen. Bei Primundus ist sie angestellt, und Sie sehen ihr Profil, bevor Sie sich entscheiden.' },
               ]}
             />
           </Abschnitt>
