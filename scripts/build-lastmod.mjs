@@ -37,7 +37,26 @@ function gitDatum(datei) {
   }
 }
 
+function flacherKlon() {
+  try {
+    return execFileSync('git', ['rev-parse', '--is-shallow-repository'], {
+      cwd: wurzel,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim() === 'true'
+  } catch {
+    return false
+  }
+}
+
 function main() {
+  // Flacher Klon (Render baut mit --depth): git log liefert dort fuer jede Datei den
+  // Deploy-Commit, also stuende in der Sitemap bei 228 Seiten das Deploy-Datum
+  // (Befund 28.09.2026). Dann die eingecheckte Datei mit den echten Daten behalten.
+  if (flacherKlon()) {
+    console.log('build-lastmod: flacher Git-Klon, eingecheckte Datei bleibt.')
+    return
+  }
   // Erst pruefen, ob Git ueberhaupt nutzbar ist — sonst die bestehende Datei behalten.
   if (!gitDatum(path.join(appDir, 'page.tsx'))) {
     console.log('build-lastmod: keine Git-Historie verfuegbar, vorhandene Datei bleibt.')
