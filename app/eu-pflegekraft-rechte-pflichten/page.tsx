@@ -12,6 +12,9 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
 // angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
 // „Agenturvertrag“, „Primundus vermittelt“.
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
 const AKTUALISIERT = aktualisiertAm('eu-pflegekraft-rechte-pflichten', '1. Oktober 2026')
 
 const SECTIONS = [
@@ -147,7 +150,7 @@ export default function EuPflegekraftRechtenPflichten() {
               fragen={[
                 { q: 'Welche Rechte hat eine EU-Pflegekraft in Deutschland?', a: 'Anspruch auf deutschen Mindestlohn, eigenes Zimmer, Ruhezeiten (min. 11 Std./Tag), anteiligen Urlaub, Krankenversicherung über EHIC und würdevollen Umgang.' },
                 { q: 'Muss die Familie soziale Abgaben für die EU-Pflegekraft zahlen?', a: 'Nein — beim Entsendemodell über Primundus zahlt die Familie keine deutschen Sozialabgaben. Die Kraft ist im EU-Heimatland sozialversichert.' },
-                { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Verantwortlicher Arbeitgeber ist das entsendende Unternehmen, bei Primundus die PRIMUNDUS Sp. z o.o. Primundus organisiert sofort Ersatzkraft.' },
+                { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Verantwortlicher Arbeitgeber ist das entsendende Unternehmen, bei Primundus die PRIMUNDUS Sp. z o.o. Primundus stellt schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen, und berechnet die Krankheitstage nicht.' },
                 { q: 'Darf die Familie der Pflegekraft Anweisungen geben?', a: 'Im Rahmen des vereinbarten Leistungsumfangs: Ja. Aber die Kraft ist kein "Personal auf Abruf" — Grundpflicht ist die vertraglich vereinbarte Tätigkeit, nicht unbegrenzte Verfügbarkeit für beliebige Aufgaben.' },
               ]}
             />

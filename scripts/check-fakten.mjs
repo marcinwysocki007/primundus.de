@@ -60,6 +60,13 @@ const STALE = [
   // „Angestellt, nicht vermittelt“ sagt. Kommentarzeilen zählen nicht (dort steht der alte Wortlaut als Beleg).
   ['Primundus als deutsche Agentur/Vermittler (Vertragspartner ist die PRIMUNDUS Sp. z o.o.)',
     /[Dd]eutsche[nmr]?\s+(?:Vermittlungs)?[Aa]gentur|Agenturvertrag|Primundus\s+(?:prüft\s+und\s+)?vermittelt/g, { ohneKommentare: true }],
+  // Ersatz „schnellstmöglich (in der Regel innerhalb von 3 Tagen)“ (Mustervertrag § 1 Nr. 4; Martin 01.10.: „ist auch richtig“).
+  // Am 01.10. versprachen zehn Seiten „sofort“ oder „unverzüglich“ Ersatz,
+  // „sofortige Ablösung“, einen „unmittelbaren Wechsel“ oder Ersatz „ohne Vorlaufzeit“, während /ueber-uns „in der Regel
+  // innerhalb von 3 Tagen“ sagt.
+  ['Ersatz „sofort“/„unverzüglich“ (Mustervertrag § 1 Nr. 4: in der Regel innerhalb von 3 Tagen)',
+    /(?:sofort(?:ig(?:e[rnms]?)?)?|unverzüglich|unmittelbar(?:e[rnms]?)?)\s+(?:eine\s+)?(?:Ersatz|Ablösung|Wechsel)|Ersatz(?:kraft)?\s+sofort|sofortige[nmrs]?\s+Ersatzorganisation|ohne\s+Vorlaufzeit/gi,
+    { ohneKommentare: true }],
 ]
 
 // Zeilen, die nur Kommentar sind (// …, * … in Blockkommentaren, {/* … in JSX)

@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('checkliste-pflegekraft-einstellen', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('checkliste-pflegekraft-einstellen', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'vor-der-auswahl', title: 'Vor der Auswahl' },
@@ -163,7 +166,7 @@ export default function ChecklistePflegekraftEinstellen() {
               fragen={[
                 { q: 'Wie wähle ich die richtige Betreuungskraft aus?', a: 'Erfahrung mit der spezifischen Diagnose, aktive Deutschkenntnisse, Persönlichkeit die passt. Telefonat vorab nutzen. Bei Primundus Profil anfordern, Referenzen prüfen.' },
                 { q: 'Was sind die wichtigsten Fragen im Auswahlgespräch?', a: 'Erfahrung mit der Diagnose, Kochkenntnisse, Umgang mit schwierigen Situationen (Verweigerung, Aggression), Deutschkenntnisse selbst beurteilen durch das Gespräch.' },
-                { q: 'Was wenn die Kraft in der ersten Woche nicht passt?', a: 'Täglich kündbar bei Primundus. Einfach mitteilen — Primundus stellt sofort Ersatz. Keine langen Kündigungsfristen, kein Risiko.' },
+                { q: 'Was wenn die Kraft in der ersten Woche nicht passt?', a: 'Sagen Sie Primundus, was nicht passt. Primundus stellt schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen. Der Vertrag ist außerdem täglich kündbar, ohne Mindestlaufzeit.' },
                 { q: 'Muss ich bei Primundus selbst die Kraft auswählen?', a: 'Nein — Primundus wählt die passende Kraft aus und schlägt sie vor. Auf Wunsch ist ein Telefonat vorab möglich. Die Auswahl kann aber auch komplett Primundus überlassen werden.' },
               ]}
             />

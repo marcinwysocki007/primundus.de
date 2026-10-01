@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-finden', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('pflegekraft-finden', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'wege', title: 'Wege zur Pflegekraft' },
@@ -114,7 +117,7 @@ export default function PflegekraftFinden() {
             punkte={[
               { title: 'Geprüfte Qualifikation', desc: 'Pflegeerfahrung, Deutschkenntnisse, Referenzen — alles wird vor dem Einsatz geprüft. Kein Risiko mit ungeprüften Personen.' },
               { title: 'Rechtliche Absicherung', desc: 'Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher. Die Familie hat kein eigenes Arbeitsverhältnis.' },
-              { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank oder muss wechseln — Primundus stellt sofort eine Ersatzkraft. Kein Versorgungsausfall.' },
+              { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank, stellt Primundus schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnet Primundus nicht.' },
               { title: 'Nahtlose Rotation', desc: 'Wechsel der Kraft alle 6–8 Wochen ist organisiert und wird von Primundus koordiniert — Familie muss sich nicht selbst darum kümmern.' },
               { title: 'Persönliche Beratung', desc: 'Marta Kapcio und das Primundus-Team begleiten die Familie — von der ersten Anfrage bis zur laufenden Betreuung.' },
             ]}
@@ -154,7 +157,7 @@ export default function PflegekraftFinden() {
                 { q: 'Worauf sollte man bei der Auswahl achten?', a: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung und Referenzen prüfen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen auf Spezialerfahrung achten.' },
                 { q: 'Wie schnell findet Primundus eine Pflegekraft?', a: 'Eine Anreise ist schon 3 Tage nach dem ersten Beratungsgespräch möglich. Wann genau, richtet sich nach Ihrem Wunschtermin.' },
                 { q: 'Kann ich vor dem Einsatz mit der Pflegekraft sprechen?', a: 'Ja — Primundus ermöglicht ein Telefonat vorab. So kann die Familie einen ersten Eindruck gewinnen bevor die Kraft anreist.' },
-                { q: 'Was passiert wenn die Pflegekraft nicht passt?', a: 'Bei Primundus ist der Vertrag täglich kündbar. Primundus findet unverzüglich eine Ersatzkraft — kein Versorgungsausfall.' },
+                { q: 'Was passiert wenn die Pflegekraft nicht passt?', a: 'Sagen Sie Primundus, was nicht passt. Primundus stellt schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen. Der Vertrag ist außerdem täglich kündbar.' },
               ]}
             />
           </Abschnitt>

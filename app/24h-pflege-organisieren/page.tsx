@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24h-pflege-organisieren', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('24h-pflege-organisieren', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'schritt-fuer-schritt', title: 'Schritt-für-Schritt-Planung' },
@@ -136,7 +139,7 @@ export default function PflegeOrganisieren() {
                 { q: 'Was muss ich vor dem Start der 24h-Pflege organisieren?', a: 'Pflegekasse-Antrag stellen, Beschäftigungsmodell wählen, Kraft auswählen, Zimmer vorbereiten, Schlüssel bereitstellen, Hausarzt informieren, Medikamentenliste bereithalten, Vorsorgevollmacht prüfen.' },
                 { q: 'Muss die Betreuungskraft ein eigenes Zimmer haben?', a: 'Ja — eigenes Zimmer mit Privatsphäre ist Pflichtvoraussetzung. Kost und Logis werden auf die Vergütung angerechnet (ca. 300–400 €/Monat).' },
                 { q: 'Wie oft wechselt die Betreuungskraft?', a: 'In der Regel alle 6–8 Wochen. Primundus organisiert jeden Wechsel nahtlos — die Familie muss sich darum nicht kümmern.' },
-                { q: 'Was passiert wenn die Kraft krank wird?', a: 'Primundus stellt unverzüglich eine Ersatzkraft. Die Familie bleibt nie ohne Versorgung.' },
+                { q: 'Was passiert wenn die Kraft krank wird?', a: 'Primundus stellt schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnet Primundus nicht.' },
               ]}
             />
           </Abschnitt>

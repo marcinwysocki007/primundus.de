@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegemangel-melden-beschwerden', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('pflegemangel-melden-beschwerden', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'wann-melden', title: 'Wann eine Beschwerde sinnvoll ist' },
@@ -108,7 +111,7 @@ export default function PflegemangelMeldenBeschwerden() {
             <Kasten augenbraue="Erste Anlaufstelle">
               <Gruppen
                 gruppen={[
-                  { title: 'Primundus (bei häuslicher Pflege)', zusatz: '089 200 000 830 · info@primundus.de', punkte: ['Erste Anlaufstelle bei allen Problemen mit der Betreuungskraft. Primundus reagiert sofort — Gespräch mit Kraft, und wenn nötig unmittelbarer Wechsel. Täglich kündbar.'] },
+                  { title: 'Primundus (bei häuslicher Pflege)', zusatz: '089 200 000 830 · info@primundus.de', punkte: ['Erste Anlaufstelle bei allen Problemen mit der Betreuungskraft. Primundus spricht mit der Kraft und organisiert, wenn nötig, einen Wechsel. Täglich kündbar.'] },
                 ]}
               />
             </Kasten>
@@ -148,7 +151,7 @@ export default function PflegemangelMeldenBeschwerden() {
             <Fragen
               fragen={[
                 { q: 'Wo kann man Pflegemängel melden?', a: 'Bei häuslicher Pflege: zunächst direkt bei der Agentur (Primundus: 089 200 000 830), dann bei der Pflegekasse. Bei Pflegeheimen: Heimaufsicht des Bundeslandes und Medizinischer Dienst. Für Beratung: Pflegestützpunkt kostenlos und unabhängig.' },
-                { q: 'Kann ich die Betreuungskraft sofort abberufen?', a: 'Ja — bei Primundus täglich kündbar. Bei akuten Problemen sofort anrufen: 089 200 000 830. Primundus stellt unverzüglich Ersatz.' },
+                { q: 'Kann ich die Betreuungskraft sofort abberufen?', a: 'Ja, bei Primundus täglich kündbar. Bei akuten Problemen rufen Sie sofort an: 089 200 000 830. Primundus stellt schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen.' },
                 { q: 'Was tun wenn jemand in einem Pflegeheim vernachlässigt wird?', a: 'Vorfälle dokumentieren, mit Heimleitung sprechen. Wenn ohne Ergebnis: Heimaufsicht des Bundeslandes einschalten. Bei akuter Gefahr: Polizei (110) und Pflegekasse informieren.' },
                 { q: 'Ist eine Beschwerde beim MD kostenlos?', a: 'Ja — der Medizinische Dienst nimmt Beschwerden kostenlos entgegen. Auch Pflegestützpunkte beraten kostenlos.' },
               ]}

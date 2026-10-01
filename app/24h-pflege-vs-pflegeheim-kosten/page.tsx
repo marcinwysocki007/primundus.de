@@ -11,7 +11,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim-kosten', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim-kosten', '1. Oktober 2026')
 
 const GrafikKostenvergleich = dynamic(
   () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),
@@ -196,7 +199,7 @@ export default function VsKosten() {
                 ['Angehörige', 'Täglich einbindbar', 'Besuchszeiten'],
                 ['Demenz-Verlauf', 'Mehr Halt durch Vertrautheit', 'Häufig Verschlechterung durch Umzug'],
                 ['Flexibilität', 'Täglich kündbar', 'Meist Kündigungsfristen'],
-                ['Ersatz bei Ausfall', 'Primundus stellt sofort Ersatz', 'Immer Personal vorhanden'],
+                ['Ersatz bei Ausfall', 'Primundus stellt Ersatz, in der Regel innerhalb von 3 Tagen', 'Immer Personal vorhanden'],
               ]}
               betont={1}
             />

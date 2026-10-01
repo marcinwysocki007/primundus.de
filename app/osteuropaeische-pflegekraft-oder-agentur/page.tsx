@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('osteuropaeische-pflegekraft-oder-agentur', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('osteuropaeische-pflegekraft-oder-agentur', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'direkt-vs-agentur', title: 'Direkt vs. Agentur' },
@@ -87,7 +90,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               zeilen={[
                 ['Rechtssicherheit', 'Eigenverantwortung — Scheinselbstständigkeitsrisiko', 'A1-Bescheinigung, Entsendemodell rechtssicher'],
                 ['Prüfung der Kraft', 'Selbst durchführen — ohne Referenzen', 'Primundus prüft Erfahrung, Deutsch, Referenzen'],
-                ['Ersatz bei Ausfall', 'Familie organisiert selbst — oft Versorgungslücke', 'Primundus stellt sofort Ersatz'],
+                ['Ersatz bei Ausfall', 'Familie organisiert selbst — oft Versorgungslücke', 'Primundus stellt Ersatz, in der Regel innerhalb von 3 Tagen'],
                 ['Zeitaufwand', 'Erheblich — Suche, Verhandlung, Verträge', 'Minimal — Primundus übernimmt alles'],
                 ['Kraftwechsel', 'Familie muss neu suchen', 'Primundus organisiert nahtlos'],
                 ['Startzeitraum', 'Wochen bis Monate', 'ab 3 Tagen'],
@@ -103,7 +106,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               punkte={[
                 { title: 'Rechtssicherheit ohne eigene Expertise', desc: 'Das Entsendemodell mit A1-Bescheinigung ist komplex. Wer es falsch macht riskiert Scheinselbstständigkeit. Eine seriöse Agentur stellt die Rechtssicherheit vollständig her — die Familie muss sich nicht damit befassen.' },
                 { title: 'Geprüfte Kräfte aus einem Pool', desc: 'Primundus prüft Deutschkenntnisse aktiv, prüft Referenzen, wählt nach Erfahrung und Diagnose aus. Wer selbst sucht — auf Facebook, Anzeigenmärkten — hat keine verlässliche Grundlage für die Qualitätsbewertung.' },
-                { title: 'Ersatz ohne Lücke', desc: 'Was passiert wenn die direkt gesuchte Kraft krank wird, kündigt oder nach Hause möchte? Die Familie muss von vorne anfangen — während die Versorgung nicht gesichert ist. Bei Primundus gibt es sofort Ersatz.' },
+                { title: 'Ersatz bei Ausfall', desc: 'Was passiert wenn die direkt gesuchte Kraft krank wird, kündigt oder nach Hause möchte? Die Familie muss von vorne anfangen — während die Versorgung nicht gesichert ist. Primundus stellt Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen.' },
                 { title: 'Kraftwechsel ohne Aufwand', desc: 'Alle 6–8 Wochen wechselt die Kraft. Primundus kündigt rechtzeitig an, stellt die neue Kraft vor, organisiert die Übergabe. Die Familie muss sich nicht darum kümmern.' },
                 { title: 'Schneller Start', desc: 'Anreise schon 3 Tage nach der Anfrage möglich. Wer selbst sucht, braucht Wochen bis Monate.' },
               ]}
@@ -130,7 +133,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               'Täglich kündbar — ohne Mindestlaufzeit',
               'Transparente Preise: ab 2.150 €/Monat, alle Kosten vorab genannt',
               'Aktive Qualitätsprüfung aller Kräfte (Deutsch, Erfahrung, Referenzen)',
-              'Sofortiger Ersatz bei Ausfall — keine Versorgungslücke',
+              'Ersatz bei Ausfall in der Regel innerhalb von 3 Tagen',
               'Laufende Betreuung durch Primundus als Ansprechpartner',
               'Anreise schon 3 Tage nach dem Erstgespräch möglich',
             ]} />
@@ -142,7 +145,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
                 { q: 'Ist Direktsuche einer Pflegekraft günstiger?', a: 'Evtl. auf dem Papier — aber dann muss die Familie selbst Rechtssicherheit herstellen, selbst prüfen, selbst Ersatz organisieren. Der versteckte Aufwand und das rechtliche Risiko werden selten einkalkuliert.' },
                 { q: 'Kann ich eine Pflegekraft direkt aus Polen suchen?', a: 'Technisch ja — aber die Rechtssicherheit herzustellen ist komplex (Entsendemodell, A1-Bescheinigung) und das Scheinselbstständigkeitsrisiko ist hoch. Seriöse Agenturen nehmen dieses Risiko ab.' },
                 { q: 'Wie erkenne ich eine seriöse Pflegeagentur?', a: 'Entsendemodell mit A1-Bescheinigung, transparente Preise, tägliche Kündbarkeit, aktive Qualitätsprüfung, langjährige Erfahrung, unabhängige Bewertungen.' },
-                { q: 'Was passiert wenn die Kraft direkt kündigt?', a: 'Bei Direktsuche: Die Familie muss sofort neu suchen — Wochen bis Monate bis zur nächsten Kraft. Bei Primundus: Sofortiger Ersatz, keine Versorgungslücke.' },
+                { q: 'Was passiert wenn die Kraft direkt kündigt?', a: 'Bei Direktsuche: Die Familie muss sofort neu suchen — Wochen bis Monate bis zur nächsten Kraft. Bei Primundus: Ersatz laut Vertrag in der Regel innerhalb von 3 Tagen.' },
               ]}
             />
           </Abschnitt>

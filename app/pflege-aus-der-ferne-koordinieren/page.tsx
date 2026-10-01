@@ -12,6 +12,9 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
 // angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
 // „Agenturvertrag“, „Primundus vermittelt“.
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
 const AKTUALISIERT = aktualisiertAm('pflege-aus-der-ferne-koordinieren', '1. Oktober 2026')
 
 const SECTIONS = [
@@ -85,7 +88,7 @@ export default function PflegeAusDerFerneKoordinieren() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
             <Kasten titel="Die beste Antwort auf Fernbetreuung: 24h-Kraft + Primundus als Ansprechpartner" ton="gruen">
-              <Text>Mit einer 24h-Betreuungskraft ist die Versorgung durchgehend gesichert — ohne Lücken, ohne Koordinationsaufwand für die Familie. Primundus bleibt laufender Ansprechpartner für alle organisatorischen Fragen. Angehörige können aus der Ferne loslassen ohne sich um die Versorgung sorgen zu müssen.</Text>
+              <Text>Eine 24h-Betreuungskraft wohnt mit im Haus und kennt den Alltag. Fällt sie aus, stellt Primundus schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen. Für alle organisatorischen Fragen bleibt Primundus Ihr Ansprechpartner.</Text>
             </Kasten>
           </Vorspann>
 
@@ -147,7 +150,7 @@ export default function PflegeAusDerFerneKoordinieren() {
                 { q: 'Wie koordiniert man Pflege aus der Ferne?', a: 'Täglicher Kurzkontakt mit der Kraft, wöchentliches Videotelefon, klares Eskalationsprotokoll, Familien-Gruppe für Kommunikation, lokale Vertrauensperson als Backup. Primundus als laufender Ansprechpartner.' },
                 { q: 'Welche digitalen Hilfsmittel helfen bei der Fernbetreuung?', a: 'Videotelefonie (Tablet), Hausnotruf mit GPS, smarte Türklingel, geteilter Familienkalender, digitale Medikamentenerinnerung.' },
                 { q: 'Was tun wenn man aus der Ferne nicht sicher ist ob alles gut läuft?', a: 'Lokale Vertrauensperson (Nachbar, Freund) bitten vorbeizuschauen. Primundus ansprechen. Video-Hausbesuch vereinbaren. Im Zweifel selbst hinfahren.' },
-                { q: 'Erleichtert eine 24h-Betreuungskraft die Fernbetreuung?', a: 'Enorm — weil die Versorgung durchgehend gesichert ist, ohne Lücken. Statt ständiger Koordination (ambulanter Dienst, Angehörige, Nachbarn) hat man eine Ansprechpartnerin die alles kennt und immer da ist.' },
+                { q: 'Erleichtert eine 24h-Betreuungskraft die Fernbetreuung?', a: 'Ja. Statt vieler Termine von Pflegedienst, Angehörigen und Nachbarn haben Sie eine Ansprechpartnerin, die im Haus wohnt und den Alltag kennt. Fällt sie aus, stellt Primundus Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen.' },
               ]}
             />
           </Abschnitt>
