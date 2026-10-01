@@ -76,6 +76,33 @@ for (const lm of lastmods) {
 if (lastmods.length > 10 && new Set(lastmods).size === 1)
   warnings.push(`Alle ${lastmods.length} lastmod-Werte identisch (${lastmods[0]}) — Build-Zeitstempel, kein echtes Änderungsdatum (Fix = B4)`)
 
+// Wächter zu Fix-Vorschlag Nr. 4 (28.09.2026): Render baut aus einem flachen Klon. Kippt der Schutz in
+// build-lastmod.mjs, tragen wieder viele URLs das Build-Datum. Mehr als 50 URLs mit dem heutigen Datum = Warnung.
+const heute = now.toISOString().slice(0, 10)
+const mitHeute = lastmods.filter((lm) => lm.slice(0, 10) === heute).length
+if (mitHeute > 50)
+  warnings.push(`${mitHeute} URLs tragen das heutige Datum ${heute} als lastmod — bitte prüfen: Build-Datum statt Änderungsdatum (flacher Klon?) oder echte Massenänderung`)
+
+// lib/lastmod-git.json: prebuild erzeugt sie lokal neu. Weicht sie vom Commit ab, kennt Render (flacher Klon,
+// nimmt die eingecheckte Datei) die neuen Daten nicht. Regel: nur auf dem Release-Commit nach dem Rebase
+// mitcommitten, in Feature-Zweigen nicht. Feature-Zweig: Warnung. main oder RELEASE_CHECK=1: Abbruch.
+try {
+  const { execFileSync } = await import('node:child_process')
+  const eingecheckt = JSON.parse(execFileSync('git', ['show', 'HEAD:lib/lastmod-git.json'], { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }))
+  const aktuell = JSON.parse(fs.readFileSync(path.join(ROOT, 'lib', 'lastmod-git.json'), 'utf8'))
+  const abweichend = Object.keys({ ...eingecheckt, ...aktuell }).filter((k) => eingecheckt[k] !== aktuell[k])
+  // Auf main oder mit RELEASE_CHECK=1 harter Abbruch (OpenAI-Gegenprüfung 01.10.: eine Warnung wird beim Release übersehen).
+  const zweig = execFileSync('git', ['rev-parse', '--abbrev-ref', 'HEAD'], { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
+  const release = zweig === 'main' || process.env.RELEASE_CHECK === '1'
+  if (abweichend.length) {
+    const text = `lib/lastmod-git.json weicht vom Commit ab (${abweichend.length} Seiten, z. B. ${abweichend.slice(0, 3).join(', ') || '/'}) — nach dem Rebase \`node scripts/build-lastmod.mjs\` und mitcommitten, sonst zeigt die Live-Sitemap alte Daten`
+    if (release) errors.push(text)
+    else warnings.push(text)
+  }
+} catch {
+  // ohne Git (z. B. Render) nichts prüfen
+}
+
 // Von Hand geschriebene Vor-Ort-Abschnitte brauchen ein TAGGENAUES Datum.
 //
 // Der Hintergrund ist ein Fehler, der lange unbemerkt lief: Alle Ortsseiten
