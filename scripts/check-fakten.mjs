@@ -67,6 +67,12 @@ const STALE = [
   ['Ersatz „sofort“/„unverzüglich“ (Mustervertrag § 1 Nr. 4: in der Regel innerhalb von 3 Tagen)',
     /(?:sofort(?:ig(?:e[rnms]?)?)?|unverzüglich|unmittelbar(?:e[rnms]?)?)\s+(?:eine\s+)?(?:Ersatz|Ablösung|Wechsel)|Ersatz(?:kraft)?\s+sofort|sofortige[nmrs]?\s+Ersatzorganisation|ohne\s+Vorlaufzeit/gi,
     { ohneKommentare: true }],
+  // Verhinderungspflege-Frist: Sachfehler auf /verhinderungspflege, behoben in 038df3df (01.10.2026, Quellen und Wortlaut
+  // dort und in der Fakten-Memory pflege-leistungsfakten-2026). Die 30.-Juni-Regel gilt nur für den Entlastungsbetrag (§ 45b).
+  ['Verhinderungspflege: Belege „vor dem 31. Dezember“ (Antrag bis Ende des Folgejahres, § 39 Abs. 1)',
+    /Belege\s+(?:bis\s+)?(?:vor\s+dem|zum|spätestens\s+(?:am|zum)|bis\s+zum)\s+(?:31\.\s*Dezember|31\.\s*12\.|Jahresende)/gi, { ohneKommentare: true }],
+  ['Verhinderungspflege „keine eigenständige“ (Leistung besteht weiter, § 42a)',
+    /keine\s+eigenst[aä]ndige\s+Verhinderungspflege/gi, { ohneKommentare: true }],
 ]
 
 // Zeilen, die nur Kommentar sind (// …, * … in Blockkommentaren, {/* … in JSX)
