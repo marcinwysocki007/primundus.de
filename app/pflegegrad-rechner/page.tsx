@@ -23,8 +23,11 @@ import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN 
 // Krebserkrankung?", „Welche Pflegegrade gibt es bei Rheuma?") und die Autovervollständigung (ohne Anmeldung, ohne E-Mail, sofort,
 // Kinder, Höherstufung, ausdrucken/PDF, mit Erklärung, Module, Punkte). Die Seiten auf Platz 1–8 haben 50–930 Wörter Text; dort
 // gewinnt das Werkzeug. Leistungsbeträge aus lib/fakten.ts; Fristen nach § 18c und § 33 SGB XI (gelesen 20.09.2026).
+// 02.10.2026 (Werkzeug-Prüfung vor Linkanfragen): Kinder nach den Begutachtungs-Richtlinien vom 26.08.2026 (in Kraft seit 01.10.2026),
+// Ausnahmen zu den 70 € (§ 18c Abs. 5), verkürzte Fristen (§ 18a Abs. 5), Gutachten liegt dem Bescheid bei (§ 18c Abs. 2),
+// aufschiebende Wirkung des Widerspruchs (§ 86a SGG), Gemeinsamer Jahresbetrag seit 1. Juli 2025 (§ 42a).
 
-const AKTUALISIERT = aktualisiertAm('pflegegrad-rechner', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('pflegegrad-rechner', '2. Oktober 2026')
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 
 const SECTIONS = [
@@ -59,7 +62,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Wie viele Punkte brauche ich für welchen Pflegegrad?',
-    a: 'Die Begutachtung ergibt 0 bis 100 Punkte. Ab 12,5 Punkten gibt es Pflegegrad 1, ab 27 Pflegegrad 2, ab 47,5 Pflegegrad 3, ab 70 Pflegegrad 4 und ab 90 Punkten Pflegegrad 5. Unter 12,5 Punkten wird kein Pflegegrad anerkannt. Kinder bis 18 Monate werden mit denselben Punkten eine Stufe höher eingestuft.',
+    a: 'Die Begutachtung ergibt 0 bis 100 Punkte. Ab 12,5 Punkten gibt es Pflegegrad 1, ab 27 Pflegegrad 2, ab 47,5 Pflegegrad 3, ab 70 Pflegegrad 4 und ab 90 Punkten Pflegegrad 5. Unter 12,5 Punkten wird kein Pflegegrad anerkannt. Kinder bis 18 Monate werden mit denselben Punkten eine Stufe höher eingestuft; bei ihnen zählen nur Modul 3, Modul 5, eine Frage zur Nahrungsaufnahme und die Frage, ob beide Arme und beide Beine gebrauchsunfähig sind.',
   },
   {
     q: 'Kann ich den Pflegegrad selbst berechnen?',
@@ -71,7 +74,7 @@ const FRAGEN = [
   },
   {
     q: 'Wie berechnet man den Pflegegrad für ein Kind mit ADHS?',
-    a: 'Mit demselben Rechner, aber im Vergleich zu einem gesunden Kind gleichen Alters: Es zählt nur, was Gleichaltrige schon allein können. Bei ADHS liegen die Punkte meist in Modul 2 (mehrschrittige Handlungen steuern, Gefahren erkennen), Modul 3 (motorische Unruhe, Abwehr, sozial unpassendes Verhalten) und Modul 6 (Tagesablauf, Beschäftigung, Kontakte). Wählen Sie im Rechner „Kind über 18 Monate".',
+    a: 'Mit demselben Rechner: Wählen Sie „Kind über 18 Monate" und geben Sie das Alter an. Der Rechner vergleicht jede Antwort mit einem gesund entwickelten Kind gleichen Alters und zählt nur den Abstand, so wie es die Begutachtungs-Richtlinien des Medizinischen Dienstes vorgeben. Bei ADHS können Punkte je nach Ausprägung vor allem in Modul 3 (motorische Unruhe, Abwehr, sozial unpassendes Verhalten) und Modul 6 (Tagesablauf, Beschäftigung, Kontakte) entstehen, teilweise auch in Modul 2 (mehrschrittige Handlungen steuern, Gefahren erkennen). Normale Trotzphase, Pubertät und reine Erziehungsfragen zählen nicht.',
   },
   {
     q: 'Wie viel Geld gibt es bei Pflegegrad 1 bis 5?',
@@ -79,7 +82,7 @@ const FRAGEN = [
   },
   {
     q: 'Wann sollte man bei einer Krebserkrankung den Pflegegrad beantragen?',
-    a: 'Sobald die Erkrankung oder die Behandlung den Alltag auf Dauer einschränkt, voraussichtlich für mindestens sechs Monate. Stellen Sie den Antrag früh: Leistungen gibt es ab dem Monat der Antragstellung, nicht erst ab dem Bescheid. Im Krankenhaus oder Hospiz gelten verkürzte Begutachtungsfristen.',
+    a: 'Sobald die Erkrankung oder die Behandlung den Alltag auf Dauer einschränkt, voraussichtlich für mindestens sechs Monate. Stellen Sie den Antrag früh: Leistungen gibt es ab dem Monat der Antragstellung, nicht erst ab dem Bescheid. Liegt die Person im Hospiz, wird sie ambulant palliativ versorgt oder muss vor der Entlassung aus Krankenhaus oder Reha-Klinik die weitere Versorgung geklärt werden, findet die Begutachtung spätestens am fünften Arbeitstag nach Eingang des Antrags bei der Pflegekasse statt (§ 18a Abs. 5 SGB XI).',
   },
   {
     q: 'Welchen Pflegegrad gibt es bei Rheuma?',
@@ -95,7 +98,7 @@ const FRAGEN = [
   },
   {
     q: 'Wie beantrage ich den Pflegegrad?',
-    a: 'Formlos bei der Pflegekasse, die zu Ihrer Krankenkasse gehört, schriftlich oder telefonisch. Die Kasse beauftragt den Medizinischen Dienst (gesetzlich Versicherte) oder Medicproof (privat Versicherte) mit der Begutachtung und muss spätestens 25 Arbeitstage nach dem Antrag entscheiden. Bei Verzögerung stehen Ihnen 70 € je angefangene Woche zu.',
+    a: 'Formlos bei der Pflegekasse, die zu Ihrer Krankenkasse gehört, schriftlich oder telefonisch. Die Kasse beauftragt den Medizinischen Dienst (gesetzlich Versicherte) oder Medicproof (privat Versicherte) mit der Begutachtung und muss spätestens 25 Arbeitstage nach dem Antrag entscheiden. Entscheidet sie später, zahlt sie 70 € für jede begonnene Woche der Fristüberschreitung. Das gilt nicht, wenn die Kasse die Verzögerung nicht zu vertreten hat, etwa wenn die Begutachtung auf Wunsch der antragstellenden Person oder ihrer Vertreter verschoben wurde, oder wenn die Person vollstationär im Heim lebt und schon mindestens Pflegegrad 2 hat (§ 18c Abs. 5 SGB XI).',
   },
   {
     q: 'Gilt der Pflegegrad rückwirkend?',
@@ -103,7 +106,7 @@ const FRAGEN = [
   },
   {
     q: 'Was tun, wenn der Bescheid einen niedrigeren Pflegegrad nennt?',
-    a: 'Innerhalb eines Monats schriftlich Widerspruch einlegen und das Gutachten anfordern. Vergleichen Sie das Gutachten Punkt für Punkt mit Ihrem Pflegetagebuch und dem Ergebnis dieses Rechners, und begründen Sie den Widerspruch mit konkreten Situationen. Der Bescheid gilt bis zur Entscheidung weiter.',
+    a: 'Gesetzlich Versicherte legen innerhalb eines Monats nach Bekanntgabe des Bescheids Widerspruch bei der Pflegekasse ein, schriftlich, elektronisch oder zur Niederschrift (§ 84 SGG). Ein Bescheid per Post gilt am vierten Tag nach der Aufgabe zur Post als bekanntgegeben; kommt er später an, zählt der spätere Zugang (§ 37 Abs. 2 SGB X). Das Gutachten wird mit dem Bescheid übersandt, wenn Sie dem nicht widersprochen haben (§ 18c Abs. 2 SGB XI); fehlt es, fordern Sie es an. Vergleichen Sie es Punkt für Punkt mit Ihrem Pflegetagebuch und dem Ergebnis dieses Rechners, und begründen Sie den Widerspruch mit konkreten Situationen. Bewilligt die Kasse einen niedrigeren Pflegegrad als beantragt, zahlt sie bis zur Entscheidung nach dem bewilligten; lehnt sie ganz ab, gibt es bis dahin keine Leistungen. Wird ein bestehender Pflegegrad herabgesetzt, hat der Widerspruch in der Regel aufschiebende Wirkung: Bis zur Entscheidung bleibt es beim bisherigen (§ 86a SGG). Privat Versicherte wenden sich mit Einwänden an ihr Versicherungsunternehmen; bei Streit entscheidet das Sozialgericht (§ 51 Abs. 2 SGG).',
   },
   {
     q: 'Was ist der Unterschied zwischen Pflegestufe und Pflegegrad?',
@@ -266,7 +269,7 @@ export default function PflegegradRechnerSeite() {
                 ['Wohnumfeld je Maßnahme', '4.180 €', '4.180 €', '4.180 €', '4.180 €', '4.180 €'],
               ]}
               betont={[2, 3, 4, 5]}
-              fuss="§§ 36, 37, 40, 42a, 45b SGB XI. Das Entlastungsbudget fasst seit Juli 2025 Verhinderungs- und Kurzzeitpflege zusammen."
+              fuss="§§ 36, 37, 40, 42a, 45b SGB XI. Seit 1. Juli 2025 teilen sich Verhinderungs- und Kurzzeitpflege einen Gemeinsamen Jahresbetrag, oft Entlastungsbudget genannt (§ 42a SGB XI)."
             />
             <MehrDazu
               label="Mehr zu den Pflegegraden:"
@@ -286,19 +289,22 @@ export default function PflegegradRechnerSeite() {
           <Abschnitt id="kinder" titel="Pflegegrad bei Kindern: ADHS, Autismus, Frühgeborene">
             <Text>
               Kinder werden mit demselben Instrument begutachtet, aber im Vergleich zu gesund entwickelten Kindern gleichen Alters (§ 15 Abs. 6 SGB XI).
-              Es zählt nur die Hilfe, die ein gleichaltriges Kind nicht mehr bräuchte. Ein Dreijähriger, der sich nicht allein anzieht, bekommt dafür keine
-              Punkte; ein Zehnjähriger schon.
+              Die Begutachtungs-Richtlinien des Medizinischen Dienstes legen für jedes Kriterium fest, ab welchem Alter Kinder etwas überwiegend oder ganz
+              allein schaffen. Punkte gibt es nur für den Abstand: Braucht ein Dreijähriger beim Anziehen so viel Hilfe wie Gleichaltrige, gibt es dafür keine
+              Punkte; Punkte gibt es erst für Hilfe, die darüber hinausgeht. Bei einem Achtjährigen zählt dieselbe Hilfe voll. Ab elf Jahren gilt die Rechnung
+              der Erwachsenen.
             </Text>
             <Punkte
               punkte={[
-                { title: 'Kinder bis 18 Monate', desc: 'Statt der 13 Kriterien zur Selbstversorgung gibt es eine Frage: Bestehen gravierende Probleme bei der Nahrungsaufnahme (20 Punkte)? Die Gesamtpunkte ergeben einen Pflegegrad höher als bei Erwachsenen: ab 12,5 Punkten Pflegegrad 2, ab 70 Punkten Pflegegrad 5 (§ 15 Abs. 7).' },
-                { title: 'ADHS und Autismus', desc: 'Die Punkte entstehen meist in Modul 2 (mehrschrittige Handlungen steuern, Gefahren erkennen, Aufforderungen verstehen), Modul 3 (motorische Unruhe, Abwehr, sozial unpassendes Verhalten, Ängste) und Modul 6 (Tagesablauf, Beschäftigung, Kontakte). Auch Frühförderung und Therapiebesuche zählen in Modul 5.' },
+                { title: 'Kinder bis 18 Monate', desc: 'Bewertet werden nur Modul 3 (Verhalten), Modul 5 (Krankheit und Therapie) und eine Frage zur Ernährung: Bestehen gravierende Probleme bei der Nahrungsaufnahme (20 Punkte)? Mobilität (Modul 1), kognitive und kommunikative Fähigkeiten (Modul 2) und Alltagsleben (Modul 6) werden nicht bewertet, weil jedes Kind in diesem Alter dabei Hilfe braucht. Mit derselben Punktzahl werden Kinder in diesem Alter eine Stufe höher eingestuft als Erwachsene, ab 12,5 Punkten in Pflegegrad 2 (§ 15 Abs. 7 SGB XI). Über die Punkte ist höchstens Pflegegrad 4 möglich; Pflegegrad 5 gibt es in diesem Alter, wenn beide Arme und beide Beine gebrauchsunfähig sind (besondere Bedarfskonstellation nach den Begutachtungs-Richtlinien).' },
+                { title: 'ADHS und Autismus', desc: 'Punkte können je nach Ausprägung in Modul 3 (motorische Unruhe, Abwehr, sozial unpassendes Verhalten, Ängste), Modul 6 (Tagesablauf, Beschäftigung, Kontakte) und Modul 2 (mehrschrittige Handlungen steuern, Gefahren erkennen, Aufforderungen verstehen) entstehen. Auch Frühförderung und Therapiebesuche zählen in Modul 5. Normale Trotzphase, Pubertät und reine Erziehungsfragen zählen nicht.' },
                 { title: 'Chronisch kranke Kinder', desc: 'Diabetes, Epilepsie, Mukoviszidose oder Herzfehler bringen Punkte vor allem in Modul 5: Medikamente, Messungen, Injektionen, Therapien und Diät, die das Kind nicht selbst übernehmen kann.' },
               ]}
             />
             <Text>
-              Wählen Sie im Rechner „Kind über 18 Monate" oder „Kind bis 18 Monate". Dann erscheint das Kriterium 5.K für Besuche der Frühförderung, und der
-              Pflegegrad folgt den Kinder-Regeln.
+              Wählen Sie im Rechner „Kind über 18 Monate" und geben Sie das Alter an, oder wählen Sie „Kind bis 18 Monate". Der Rechner fragt dann nur, was in
+              diesem Alter bewertet wird, zeigt bei jeder Frage, was gesund entwickelte Kinder gleichen Alters können, und fragt nach Besuchen der
+              Frühförderung (5.K).
             </Text>
           </Abschnitt>
 
@@ -313,7 +319,7 @@ export default function PflegegradRechnerSeite() {
                 { title: 'Demenz und Alzheimer', desc: <>Modul 2 und 3 (Orientierung, Erinnern, nächtliche Unruhe, Abwehr) und Modul 4, weil Waschen und Anziehen ohne Anleitung nicht mehr zuverlässig stattfinden. Mehr dazu: {l('/pflegegrad-bei-demenz', 'Pflegegrad bei Demenz')}.</> },
                 { title: 'Parkinson', desc: <>Mobilität (Aufstehen, Umsetzen, Gehen), Selbstversorgung (Knöpfe, Essen schneiden, Essen) und Modul 5 (Medikamente zu festen Zeiten, Therapien). Mehr dazu: {l('/pflegegrad-bei-parkinson', 'Pflegegrad bei Parkinson')}.</> },
                 { title: 'Schlaganfall', desc: <>Mobilität und Selbstversorgung bei Lähmungen, Modul 2 bei Sprach- und Verständnisstörungen, Modul 5 bei Therapien zu Hause. Mehr dazu: {l('/pflegegrad-nach-schlaganfall', 'Pflegegrad nach Schlaganfall')}.</> },
-                { title: 'Krebs', desc: 'Während Chemotherapie oder Bestrahlung oft Modul 5 (Injektionen, Port, ausgedehnte Behandlungsbesuche, Diät), bei Schwäche Modul 1 und 4. Antrag stellen, sobald der Alltag auf Dauer eingeschränkt ist; im Krankenhaus oder Hospiz gelten verkürzte Fristen.' },
+                { title: 'Krebs', desc: 'Während Chemotherapie oder Bestrahlung oft Modul 5 (Injektionen, Port, ausgedehnte Behandlungsbesuche, Diät), bei Schwäche Modul 1 und 4. Antrag stellen, sobald der Alltag auf Dauer eingeschränkt ist. Im Hospiz, bei ambulanter Palliativversorgung oder wenn vor der Entlassung aus Krankenhaus oder Reha-Klinik die weitere Versorgung geklärt werden muss, wird spätestens am fünften Arbeitstag nach Eingang des Antrags begutachtet (§ 18a Abs. 5 SGB XI).' },
                 { title: 'Rheuma, Arthrose, COPD, Herzschwäche', desc: 'Mobilität (Treppen, Aufstehen), Selbstversorgung (Waschen, Anziehen, Schuhe) und Modul 5 (Medikamente, Spritzen, Sauerstoff, Messungen, Arztbesuche).' },
                 { title: 'Depression und andere psychische Erkrankungen', desc: <>Modul 3 (Antriebslosigkeit, Ängste, Abwehr), Modul 6 (Tagesablauf, Kontakte) und Modul 4, wenn Körperpflege und Essen ohne Anstoß unterbleiben. Auch ohne klare Diagnose ist ein Pflegegrad möglich.</> },
               ]}
@@ -347,12 +353,14 @@ export default function PflegegradRechnerSeite() {
 
           <Abschnitt id="bescheid" titel="Bescheid zu niedrig? Widerspruch und Höherstufung">
             <Text>
-              Die Pflegekasse muss spätestens 25 Arbeitstage nach dem Antrag entscheiden; sonst stehen Ihnen 70 € für jede angefangene Woche Verzögerung zu
-              (§ 18c SGB XI). Fällt der Pflegegrad niedriger aus als erwartet, haben Sie einen Monat Zeit für den Widerspruch.
+              Die Pflegekasse muss spätestens 25 Arbeitstage nach dem Antrag entscheiden. Sonst zahlt sie 70 € für jede begonnene Woche der Fristüberschreitung,
+              außer sie hat die Verzögerung nicht zu vertreten oder die Person lebt vollstationär im Heim und hat schon mindestens Pflegegrad 2 (§ 18c Abs. 5
+              SGB XI). Fällt der Pflegegrad niedriger aus als erwartet, haben gesetzlich Versicherte ab Bekanntgabe des Bescheids einen Monat Zeit für den
+              Widerspruch (§ 84 SGG). Privat Versicherte wenden sich an ihr Versicherungsunternehmen; bei Streit entscheidet das Sozialgericht.
             </Text>
             <Punkte
               punkte={[
-                { title: 'Widerspruch innerhalb eines Monats', desc: <>Schriftlich bei der Pflegekasse, zunächst ohne Begründung, damit die Frist gewahrt ist. Fordern Sie das Gutachten an und vergleichen Sie es Kriterium für Kriterium mit Ihrem Pflegetagebuch und dem Ergebnis des Rechners. {l('/widerspruch-pflegekasse-einlegen', 'So legen Sie Widerspruch ein')}.</> },
+                { title: 'Widerspruch innerhalb eines Monats', desc: <>Schriftlich, elektronisch oder zur Niederschrift bei der Pflegekasse, zunächst ohne Begründung, damit die Frist gewahrt ist. Das Gutachten kommt mit dem Bescheid (sonst anfordern); vergleichen Sie es Kriterium für Kriterium mit Ihrem Pflegetagebuch und dem Ergebnis des Rechners. {l('/widerspruch-pflegekasse-einlegen', 'So legen Sie Widerspruch ein')}.</> },
                 { title: 'Höherstufung bei Verschlechterung', desc: <>Braucht die Person mehr Hilfe als beim letzten Gutachten, stellen Sie einen Antrag auf Höherstufung; der Rechner zeigt vorher, ob die Punkte reichen. {l('/pflegegrad-erhoehen', 'Pflegegrad erhöhen')}.</> },
                 { title: 'Änderungen melden', desc: 'Ein Krankenhausaufenthalt, ein Umzug ins Heim oder eine neue Pflegeperson: Melden Sie das der Pflegekasse, damit Pflegegeld und Zuschüsse stimmen und nichts zurückgefordert wird.' },
               ]}
@@ -365,8 +373,12 @@ export default function PflegegradRechnerSeite() {
             <Text>
               Rechtsgrundlagen: <a href="https://www.gesetze-im-internet.de/sgb_11/__15.html" className={QUELLE} rel="noopener" target="_blank">§ 15 SGB XI</a> mit{' '}
               <a href="https://www.gesetze-im-internet.de/sgb_11/anlage_1.html" className={QUELLE} rel="noopener" target="_blank">Anlage 1</a> und{' '}
-              <a href="https://www.gesetze-im-internet.de/sgb_11/anlage_2.html" className={QUELLE} rel="noopener" target="_blank">Anlage 2</a>, §§ 14, 18c, 33, 36, 37, 42a, 45b SGB XI,
-              gelesen am 20. September 2026.
+              <a href="https://www.gesetze-im-internet.de/sgb_11/anlage_2.html" className={QUELLE} rel="noopener" target="_blank">Anlage 2</a>, §§ 14, 18a, 18c, 33, 36, 37, 42a, 45b SGB XI,
+              §§ 51, 84, 86a SGG, § 37 SGB X und die{' '}
+              <a href="https://md-bund.de/fileadmin/dokumente/Publikationen/SPV/Begutachtungsgrundlagen/BRi_Pflege_26_08_2026.pdf" className={QUELLE} rel="noopener" target="_blank">
+                Begutachtungs-Richtlinien des Medizinischen Dienstes Bund
+              </a>{' '}
+              (Fassung vom 26. August 2026, in Kraft seit 1. Oktober 2026), gelesen am 2. Oktober 2026.
             </Text>
             <MehrDazu
               label="Weitere Werkzeuge:"

@@ -75,6 +75,25 @@ const initialFormData: FormData = {
 }
 
 // ─── generateAndPrint ─────────────────────────────────────────────────────────
+// Rechtsprüfung 02.10.2026 (vor Linkanfragen): Wortlaut für die Maßnahmen nach § 1820 Abs. 2 BGB nach dem Formular
+// „Vollmacht“ des Bundesministeriums der Justiz (Stand Januar 2023) und BGH, Beschluss vom 6. Juli 2016, XII ZB 61/16:
+// Die Vollmacht muss die Maßnahme ausdrücklich nennen und bei § 1829 deutlich machen, dass die Entscheidung mit der
+// begründeten Gefahr des Todes oder eines schweren und länger dauernden gesundheitlichen Schadens verbunden sein kann.
+// Nur der angekreuzte Baustein bekommt diesen Wortlaut. Formhinweise (§ 29 GBO, § 492 Abs. 4 BGB, Konto-/Depotvollmacht)
+// stehen im Hinweis unter dem Dokument, nicht im Vollmachtstext.
+
+/** Eingaben landen als Text im Dokument, nie als HTML */
+const esc = (s: string | undefined) =>
+  (s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+
+/** Datumsfeld liefert JJJJ-MM-TT; im Dokument steht TT.MM.JJJJ */
+const datumDE = (iso: string | undefined) => {
+  const m = (iso ?? '').match(/^(\d{4})-(\d{2})-(\d{2})$/)
+  return m ? `${m[3]}.${m[2]}.${m[1]}` : esc(iso)
+}
+
+const GEFAHR_TOD =
+  'die begründete Gefahr besteht, dass ich sterbe oder einen schweren und länger dauernden gesundheitlichen Schaden erleide'
 
 function generateAndPrint(data: FormData) {
   const vg = data.vollmachtgeber
@@ -88,27 +107,47 @@ function generateAndPrint(data: FormData) {
   if (data.bereiche.vermögenssorge) bereicheList.push('Vermögenssorge')
   if (data.bereiche.bankgeschaefte) bereicheList.push('Bankgeschäfte')
   if (data.bereiche.wohnungsangelegenheiten) bereicheList.push('Wohnungsangelegenheiten')
-  if (data.bereiche.behoerdenangelegenheiten) bereicheList.push('Behördenangelegenheiten')
+  if (data.bereiche.behoerdenangelegenheiten) bereicheList.push('Behördenangelegenheiten und Post')
 
-  const gesundheitsSection = data.bereiche.gesundheitssorge ? `
-    <div class="section">
-      <h2>III.1 Gesundheitssorge — Einzelbefugnisse</h2>
-      <p>Im Bereich der Gesundheitssorge umfasst die Vollmacht insbesondere folgende Befugnisse:</p>
-      <ul>
-        ${data.gesundheitsDetails.medizinischeBehandlungen ? '<li>Einwilligung in medizinische Behandlungen, Untersuchungen, Operationen und sonstige ärztliche Maßnahmen sowie deren Ablehnung oder Widerruf</li>' : ''}
-        ${data.gesundheitsDetails.ablehnenLebenserhaltend ? '<li>Ablehnung und Abbruch lebenserhaltender Maßnahmen, wenn nach ärztlichem Urteil die Behandlung medizinisch aussichtslos ist und nur dazu dient, den Sterbeprozess zu verlängern</li>' : ''}
-        ${data.gesundheitsDetails.intensivmedizin ? '<li>Entscheidung über Maßnahmen der Intensivmedizin, künstliche Beatmung, Reanimation, parenterale Ernährung und künstliche Flüssigkeitszufuhr</li>' : ''}
-        ${data.gesundheitsDetails.krankentransporte ? '<li>Veranlassung und Organisation von Krankentransporten, Notfalltransporten und Begleitfahrten</li>' : ''}
-        ${data.gesundheitsDetails.patientenakten ? '<li>Einsicht in sämtliche Patientenakten, Krankenunterlagen und Behandlungsdokumentationen sowie Entbindung aller behandelnden Ärzte, Therapeuten und medizinischer Einrichtungen von ihrer Schweigepflicht gegenüber dem Bevollmächtigten</li>' : ''}
-      </ul>
-    </div>
-  ` : ''
+  const g = data.gesundheitsDetails
+  const einzelbefugnisse = [
+    g.medizinischeBehandlungen
+      ? 'die Einwilligung in Untersuchungen des Gesundheitszustands, Heilbehandlungen, Operationen und sonstige ärztliche Eingriffe, auch wenn die begründete Gefahr besteht, dass ich aufgrund der Maßnahme sterbe oder einen schweren und länger dauernden gesundheitlichen Schaden erleide (§ 1829 Absatz 1 BGB)'
+      : '',
+    // Baustein 2 behält die gewählte Einschränkung; sind 2 und 3 angekreuzt, gilt 2 nur für die in 3 nicht genannten Maßnahmen
+    // (OpenAI-Gegenprüfung 02.10.2026, A2.1: sonst Auslegungsstreit, welche Regel für Beatmung oder künstliche Ernährung gilt)
+    g.ablehnenLebenserhaltend
+      ? `die Ablehnung ${g.intensivmedizin ? 'sonstiger lebenserhaltender Maßnahmen, die nicht unter den folgenden Punkt (Intensivmedizin, Beatmung, Wiederbelebung, künstliche Ernährung und Flüssigkeitszufuhr) fallen' : 'lebenserhaltender Maßnahmen'}, den Widerruf einer Einwilligung in solche Maßnahmen und ihren Abbruch, auch wenn wegen des Unterbleibens oder des Abbruchs der Maßnahme ${GEFAHR_TOD} (§ 1829 Absatz 2 BGB); diese Befugnis ist auf Fälle beschränkt, in denen die Behandlung nach ärztlichem Urteil medizinisch aussichtslos ist und nur dazu dient, den Sterbeprozess zu verlängern`
+      : '',
+    g.intensivmedizin
+      ? `die Entscheidung über Maßnahmen der Intensivmedizin, künstliche Beatmung, Wiederbelebung (Reanimation), künstliche Ernährung (parenteral oder über eine Sonde) und künstliche Flüssigkeitszufuhr: Der Bevollmächtigte darf in diese Maßnahmen einwilligen, die Einwilligung verweigern oder eine Einwilligung widerrufen, auch wenn mit der Vornahme, dem Unterlassen oder dem Abbruch der Maßnahme ${GEFAHR_TOD} (§ 1829 Absatz 1 und 2 BGB)`
+      : '',
+    g.krankentransporte ? 'die Veranlassung und Organisation von Krankentransporten, Notfalltransporten und Begleitfahrten' : '',
+    g.patientenakten
+      ? 'die Einsicht in sämtliche Patientenakten, Krankenunterlagen und Behandlungsdokumentationen sowie die Entbindung aller behandelnden Ärzte, Therapeuten und medizinischen Einrichtungen von ihrer Schweigepflicht gegenüber dem Bevollmächtigten'
+      : '',
+  ].filter(Boolean)
+
+  const formHinweise = [
+    data.bereiche.vermögenssorge
+      ? '<li><strong>Grundstücke:</strong> Das Grundbuchamt erkennt die Vollmacht nur an, wenn Ihre Unterschrift unter der Vollmacht öffentlich beglaubigt ist (§ 29 Grundbuchordnung). Das übernimmt ein Notar oder die Betreuungsbehörde (§ 7 Betreuungsorganisationsgesetz). Der Kaufvertrag über eine Immobilie wird ohnehin notariell beurkundet (§ 311b BGB). Ob auch die Vollmacht für einen Immobilienkauf oder -verkauf notariell beurkundet sein muss, ist rechtlich umstritten. Lassen Sie sich dazu vor der Unterschrift beraten.</li>'
+      : '',
+    data.bereiche.bankgeschaefte
+      ? '<li><strong>Banken:</strong> Viele Banken und Sparkassen verlangen zusätzlich ihre eigene Konto- und Depotvollmacht. Unterschreiben Sie diese am besten gemeinsam mit der bevollmächtigten Person in Ihrer Bank. Einen Verbraucherkredit kann der Bevollmächtigte mit dieser Vollmacht nur aufnehmen, wenn sie notariell beurkundet ist (§ 492 Absatz 4 BGB).</li>'
+      : '',
+    data.geltung === 'vorsorgefall'
+      ? '<li><strong>Geltung erst im Vorsorgefall:</strong> Banken, Behörden und Ärzte können einen Nachweis verlangen, dass der Vorsorgefall eingetreten ist. Dem Grundbuchamt genügt ein ärztliches Attest nicht (§ 29 Grundbuchordnung). Das Bundesministerium der Justiz rät deshalb von Bedingungen in der Vollmacht ab.</li>'
+      : '',
+    data.bereiche.gesundheitssorge || data.bereiche.aufenthaltsbestimmung
+      ? '<li><strong>Nicht enthalten</strong> sind freiheitsentziehende Maßnahmen in Heim oder Krankenhaus wie Bettgitter, Gurte oder ruhigstellende Medikamente (§ 1831 Absatz 4 BGB) und ärztliche Zwangsmaßnahmen (§ 1832 BGB). Dafür muss eine Vollmacht diese Maßnahmen ausdrücklich nennen (§ 1820 Absatz 2 BGB), etwa im Formular „Vollmacht“ des Bundesministeriums der Justiz.</li>'
+      : '',
+  ].filter(Boolean)
 
   const html = `<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Vorsorgevollmacht — ${vg.vorname} ${vg.nachname}</title>
+  <title>Vorsorgevollmacht — ${esc(vg.vorname)} ${esc(vg.nachname)}</title>
   <style>
     @page {
       size: A4;
@@ -232,6 +271,13 @@ function generateAndPrint(data: FormData) {
       color: #666;
       line-height: 1.5;
     }
+    .disclaimer ul {
+      margin: 0.5em 0 0 1.2em;
+      padding: 0;
+    }
+    .disclaimer li {
+      margin-bottom: 0.3em;
+    }
     footer {
       text-align: center;
       font-size: 9pt;
@@ -272,26 +318,26 @@ function generateAndPrint(data: FormData) {
   <h2>I. Vollmachtgeber</h2>
   <p>Ich, die unterzeichnende Person (nachfolgend „Vollmachtgeber"), erteile hiermit Vorsorgevollmacht:</p>
   <div class="person-block">
-    <div class="person-name">${vg.vorname} ${vg.nachname}</div>
-    <div class="person-detail">${vg.strasse} ${vg.hausnummer}, ${vg.plz} ${vg.ort}</div>
-    ${vg.geburtsdatum ? `<div class="person-detail">Geboren am: ${vg.geburtsdatum}${vg.geburtsort ? ` in ${vg.geburtsort}` : ''}</div>` : ''}
+    <div class="person-name">${esc(vg.vorname)} ${esc(vg.nachname)}</div>
+    <div class="person-detail">${esc(vg.strasse)} ${esc(vg.hausnummer)}, ${esc(vg.plz)} ${esc(vg.ort)}</div>
+    ${vg.geburtsdatum ? `<div class="person-detail">Geboren am: ${datumDE(vg.geburtsdatum)}${vg.geburtsort ? ` in ${esc(vg.geburtsort)}` : ''}</div>` : ''}
   </div>
 </div>
 
 <div class="section">
   <h2>II. Bevollmächtigte Person</h2>
-  <p>Ich bevollmächtige folgende Person, in meinem Namen und für mein Wohl zu handeln:</p>
+  <p>Ich bevollmächtige folgende Person, in meinem Namen zu handeln und dabei meine Wünsche und meinen Willen zu beachten:</p>
   <div class="person-block">
-    <div class="person-name">${bv.vorname} ${bv.nachname}</div>
-    <div class="person-detail">${bv.strasse} ${bv.hausnummer}, ${bv.plz} ${bv.ort}</div>
-    ${bv.beziehung ? `<div class="person-detail">Beziehung: ${bv.beziehung}</div>` : ''}
+    <div class="person-name">${esc(bv.vorname)} ${esc(bv.nachname)}</div>
+    <div class="person-detail">${esc(bv.strasse)} ${esc(bv.hausnummer)}, ${esc(bv.plz)} ${esc(bv.ort)}</div>
+    ${bv.beziehung ? `<div class="person-detail">Beziehung: ${esc(bv.beziehung)}</div>` : ''}
   </div>
   ${data.hasErsatz && eb.vorname ? `
   <p style="margin-top: 1em;">Ersatzbevollmächtigte Person (für den Fall, dass die oben genannte Person nicht verfügbar oder nicht in der Lage ist, die Vollmacht wahrzunehmen):</p>
   <div class="person-block">
-    <div class="person-name">${eb.vorname} ${eb.nachname}</div>
-    <div class="person-detail">${eb.strasse} ${eb.hausnummer}, ${eb.plz} ${eb.ort}</div>
-    ${eb.beziehung ? `<div class="person-detail">Beziehung: ${eb.beziehung}</div>` : ''}
+    <div class="person-name">${esc(eb.vorname)} ${esc(eb.nachname)}</div>
+    <div class="person-detail">${esc(eb.strasse)} ${esc(eb.hausnummer)}, ${esc(eb.plz)} ${esc(eb.ort)}</div>
+    ${eb.beziehung ? `<div class="person-detail">Beziehung: ${esc(eb.beziehung)}</div>` : ''}
   </div>
   ` : ''}
 </div>
@@ -299,58 +345,60 @@ function generateAndPrint(data: FormData) {
 <div class="section">
   <h2>III. Umfang der Vollmacht</h2>
   <p>Die Vollmacht erstreckt sich auf folgende Bereiche:</p>
-  <p style="margin: 0.8em 0;">
-    ${bereicheList.map(b => `<span class="bereich-tag">${b}</span>`).join('')}
-  </p>
+  <p style="margin: 0.8em 0;"><strong>${bereicheList.join(', ')}</strong></p>
 
   ${data.bereiche.gesundheitssorge ? `
   <p style="margin-top: 1em;"><strong>III.1 Gesundheitssorge</strong><br/>
-  Der Bevollmächtigte ist berechtigt, alle Entscheidungen im Bereich der Gesundheitssorge zu treffen. Dazu gehört insbesondere die Einwilligung in oder Ablehnung von ärztlichen Untersuchungen und Behandlungen, die Entscheidung über Krankenhausaufenthalte sowie die Beauftragung von Ärzten, Therapeuten und Pflegediensten. Diese Befugnis gilt ausdrücklich auch für gefährliche medizinische Eingriffe und Maßnahmen, die mit erheblichem Risiko für Leben und Gesundheit verbunden sind.</p>
+  Der Bevollmächtigte darf in allen Angelegenheiten der Gesundheitssorge entscheiden, ebenso über alle Einzelheiten einer ambulanten oder (teil-)stationären Pflege. Dazu gehören insbesondere die Entscheidung über Krankenhausaufenthalte und die Beauftragung von Ärzten, Therapeuten und Pflegediensten. Er ist befugt, meinen in einer Patientenverfügung festgelegten Willen durchzusetzen.</p>
+  ${einzelbefugnisse.length ? `
+  <p>Ausdrücklich umfasst die Vollmacht:</p>
+  <ul>
+    ${einzelbefugnisse.map((b) => `<li>${b}</li>`).join('\n    ')}
+  </ul>
+  ` : ''}
   ` : ''}
 
   ${data.bereiche.aufenthaltsbestimmung ? `
   <p style="margin-top: 1em;"><strong>III.2 Aufenthaltsbestimmung</strong><br/>
-  Der Bevollmächtigte ist berechtigt, über den Aufenthaltsort zu entscheiden. Dies umfasst den gewöhnlichen Wohnsitz, die Aufnahme in ein Pflegeheim oder eine andere stationäre Einrichtung sowie die Entscheidung über eine freiheitsentziehende Unterbringung nach § 1831 BGB (die Genehmigung des Betreuungsgerichts bleibt vorbehalten).</p>
+  Der Bevollmächtigte darf meinen Aufenthalt bestimmen. Dazu gehört die Entscheidung über meinen Wohnsitz und über die Aufnahme in ein Pflegeheim oder eine andere stationäre Einrichtung. Solange es erforderlich ist, darf er auch über meine freiheitsentziehende Unterbringung entscheiden (§ 1831 Absatz 1 BGB). Dafür ist grundsätzlich vorher die Genehmigung des Betreuungsgerichts erforderlich (§ 1831 Absatz 2 und 5 BGB).</p>
   ` : ''}
 
   ${data.bereiche.vermögenssorge ? `
   <p style="margin-top: 1em;"><strong>III.3 Vermögenssorge</strong><br/>
-  Der Bevollmächtigte ist berechtigt, mein Vermögen zu verwalten, Verträge abzuschließen, Forderungen geltend zu machen und Verbindlichkeiten zu begleichen. Die Vermögensverwaltung umfasst sämtliches bewegliches und unbewegliches Vermögen. Für den Erwerb und die Veräußerung von Grundstücken und grundstücksgleichen Rechten ist die notarielle Beurkundung dieser Vollmacht erforderlich.</p>
+  Der Bevollmächtigte darf mein Vermögen verwalten, Verträge abschließen, Forderungen geltend machen und Verbindlichkeiten begleichen. Die Vermögensverwaltung umfasst sämtliches bewegliches und unbewegliches Vermögen.</p>
   ` : ''}
 
   ${data.bereiche.bankgeschaefte ? `
   <p style="margin-top: 1em;"><strong>III.4 Bankgeschäfte</strong><br/>
-  Der Bevollmächtigte ist berechtigt, alle Bankgeschäfte durchzuführen. Dies umfasst die Verfügung über Konten und Depots, die Erteilung und Widerrufung von Vollmachten bei Kreditinstituten, den Abschluss und die Kündigung von Bankverträgen sowie die Aufnahme von Krediten bis zu einem Betrag von 10.000 Euro je Einzelfall. Für Bankgeschäfte empfehlen wir die notarielle Beglaubigung dieser Vollmacht.</p>
+  Der Bevollmächtigte darf alle Bankgeschäfte durchführen. Dies umfasst die Verfügung über Konten und Depots, die Erteilung und den Widerruf von Vollmachten bei Kreditinstituten, den Abschluss und die Kündigung von Bankverträgen sowie die Aufnahme von Krediten bis zu einem Betrag von 10.000 Euro je Einzelfall, soweit die dafür geltenden gesetzlichen Formvorschriften eingehalten sind.</p>
   ` : ''}
 
   ${data.bereiche.wohnungsangelegenheiten ? `
   <p style="margin-top: 1em;"><strong>III.5 Wohnungsangelegenheiten</strong><br/>
-  Der Bevollmächtigte ist berechtigt, alle Angelegenheiten rund um meine Wohnung zu regeln. Dies umfasst den Abschluss, die Änderung und Kündigung von Mietverträgen, die Entgegennahme und Abgabe von Willenserklärungen gegenüber Vermietern und Hausverwaltungen sowie die Entscheidung über Haushaltsauflösungen.</p>
+  Der Bevollmächtigte ist berechtigt, alle Angelegenheiten zu regeln, die meine Wohnung betreffen. Dies umfasst den Abschluss, die Änderung und Kündigung von Mietverträgen, die Entgegennahme und Abgabe von Willenserklärungen gegenüber Vermietern und Hausverwaltungen sowie die Entscheidung über Haushaltsauflösungen.</p>
   ` : ''}
 
   ${data.bereiche.behoerdenangelegenheiten ? `
-  <p style="margin-top: 1em;"><strong>III.6 Behördenangelegenheiten</strong><br/>
-  Der Bevollmächtigte ist berechtigt, mich gegenüber Behörden, Ämtern, Gerichten, Sozialversicherungsträgern und Versicherungen zu vertreten. Dies umfasst die Stellung von Anträgen, die Entgegennahme von Bescheiden, die Einlegung von Rechtsmitteln sowie die Entgegennahme und das Öffnen meiner Post.</p>
+  <p style="margin-top: 1em;"><strong>III.6 Behördenangelegenheiten und Post</strong><br/>
+  Der Bevollmächtigte ist berechtigt, mich gegenüber Behörden, Ämtern, Sozialversicherungsträgern und Versicherungen und, soweit gesetzlich zulässig, gegenüber Gerichten zu vertreten. Dies umfasst die Stellung von Anträgen, die Entgegennahme von Bescheiden, die Einlegung von Rechtsbehelfen und Rechtsmitteln sowie die Entgegennahme und das Öffnen meiner Post.</p>
   ` : ''}
 </div>
-
-${gesundheitsSection}
 
 <div class="section">
   <h2>IV. Geltung der Vollmacht</h2>
   <div class="geltung-box">
     ${data.geltung === 'sofort'
-      ? `<strong>Sofortige Geltung (empfohlen):</strong> Diese Vollmacht gilt ab dem Datum der Unterzeichnung, unabhängig davon, ob ich selbst noch handlungsfähig bin. Damit soll sichergestellt werden, dass der Bevollmächtigte im Bedarfsfall unverzüglich handeln kann, ohne einen Nachweis über meine eingeschränkte Handlungsfähigkeit erbringen zu müssen.`
-      : `<strong>Geltung im Vorsorgefall:</strong> Diese Vollmacht tritt erst in Kraft, wenn ich aufgrund von Krankheit, Unfall oder sonstiger Umstände nicht mehr in der Lage bin, meine Angelegenheiten selbst zu regeln. Der Bevollmächtigte hat in diesem Fall einen ärztlichen Nachweis über meine eingeschränkte Handlungsfähigkeit vorzulegen.`
+      ? `<strong>Sofortige Geltung:</strong> Diese Vollmacht gilt ab ihrer Unterzeichnung, unabhängig davon, ob ich meine Angelegenheiten noch selbst regeln kann. So kann der Bevollmächtigte im Bedarfsfall sofort handeln, ohne nachweisen zu müssen, dass ich dazu nicht mehr in der Lage bin.`
+      : `<strong>Geltung im Vorsorgefall:</strong> Diese Vollmacht tritt erst in Kraft, wenn ich aufgrund einer Krankheit, eines Unfalls oder sonstiger Umstände nicht mehr in der Lage bin, meine Angelegenheiten selbst zu regeln. Der Bevollmächtigte hat dafür ein ärztliches Attest vorzulegen.`
     }
   </div>
+  <p style="margin-top: 0.8em;">Mit dieser Vollmacht soll eine gerichtlich angeordnete Betreuung vermieden werden. Die Vollmacht bleibt deshalb in Kraft, wenn ich nach ihrer Erteilung geschäftsunfähig werde.</p>
 </div>
 
 <div class="section">
   <h2>V. Allgemeine Bestimmungen</h2>
-  <p><strong>Widerruf:</strong> Diese Vollmacht kann vom Vollmachtgeber jederzeit ohne Angabe von Gründen widerrufen werden. Der Widerruf ist dem Bevollmächtigten gegenüber zu erklären. Mit dem Tod des Vollmachtgebers erlischt die Vollmacht, soweit sie nicht ausdrücklich über den Tod hinaus erteilt wurde.</p>
-  <p style="margin-top: 0.8em;"><strong>Vertrauensgrundsatz:</strong> Der Bevollmächtigte ist verpflichtet, die Vollmacht ausschließlich im Interesse des Vollmachtgebers auszuüben und dabei dessen bekannte oder mutmaßliche Wünsche zu berücksichtigen.</p>
-  <p style="margin-top: 0.8em;"><strong>Registrierung:</strong> Es wird empfohlen, diese Vollmacht beim Zentralen Vorsorgeregister der Bundesnotarkammer (www.vorsorgeregister.de) zu registrieren, damit sie im Bedarfsfall schnell auffindbar ist.</p>
+  <p><strong>Widerruf:</strong> Solange ich geschäftsfähig bin, kann ich diese Vollmacht jederzeit ohne Angabe von Gründen widerrufen, gegenüber dem Bevollmächtigten oder gegenüber denjenigen, bei denen er die Vollmacht verwendet. Nach dem Widerruf oder Erlöschen der Vollmacht hat der Bevollmächtigte die Vollmachtsurkunde zurückzugeben (§ 175 BGB). Mit meinem Tod erlischt die Vollmacht.</p>
+  <p style="margin-top: 0.8em;"><strong>Vertrauensgrundsatz:</strong> Der Bevollmächtigte ist verpflichtet, die Vollmacht ausschließlich in meinem Interesse auszuüben und dabei meine bekannten oder mutmaßlichen Wünsche zu berücksichtigen.</p>
   <p style="margin-top: 0.8em;"><strong>Untervollmacht:</strong> Der Bevollmächtigte ist berechtigt, für einzelne Angelegenheiten Untervollmachten zu erteilen, soweit dies zur ordnungsgemäßen Erledigung der übertragenen Aufgaben erforderlich ist.</p>
 </div>
 
@@ -360,14 +408,14 @@ ${gesundheitsSection}
   <div class="signature-block">
     <p><strong>Vollmachtgeber/in:</strong></p>
     <div class="signature-line">
-      Ort, Datum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift ${vg.vorname} ${vg.nachname}
+      Ort, Datum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift ${esc(vg.vorname)} ${esc(vg.nachname)}
     </div>
   </div>
 
   <div class="signature-block">
     <p><strong>Ich nehme diese Vollmacht an — Bevollmächtigte/r:</strong></p>
     <div class="signature-line">
-      Ort, Datum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift ${bv.vorname} ${bv.nachname}
+      Ort, Datum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift ${esc(bv.vorname)} ${esc(bv.nachname)}
     </div>
   </div>
 
@@ -375,14 +423,19 @@ ${gesundheitsSection}
   <div class="signature-block">
     <p><strong>Ich nehme diese Vollmacht als Ersatzbevollmächtigte/r an:</strong></p>
     <div class="signature-line">
-      Ort, Datum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift ${eb.vorname} ${eb.nachname}
+      Ort, Datum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unterschrift ${esc(eb.vorname)} ${esc(eb.nachname)}
     </div>
   </div>
   ` : ''}
 </div>
 
 <div class="disclaimer">
-  <strong>Hinweis:</strong> Dieses Dokument wurde mit dem Vorsorgevollmacht-Generator von Primundus (primundus.de) erstellt und dient als rechtliche Vorlage. Für Immobilientransaktionen und Bankgeschäfte wird eine notarielle Beglaubigung empfohlen. Für komplexe Vermögensangelegenheiten oder besondere rechtliche Situationen sollten Sie einen Rechtsanwalt oder Notar hinzuziehen. Die Vollmacht sollte handschriftlich unterzeichnet und an einem sicheren Ort aufbewahrt werden. Eine Registrierung beim Zentralen Vorsorgeregister der Bundesnotarkammer (www.vorsorgeregister.de) wird empfohlen.
+  <strong>Hinweis:</strong> Dieses Dokument wurde mit dem Vorsorgevollmacht-Generator von Primundus (primundus.de) erstellt. Es ist eine Vorlage und ersetzt keine Rechtsberatung; bei größerem Vermögen, Immobilien oder einem eigenen Unternehmen lassen Sie sich von einem Notar oder Rechtsanwalt beraten. Stand der Vorlage: Oktober 2026.
+  <ul>
+    <li>Unterschreiben Sie die Vollmacht eigenhändig mit Ort und Datum. Bewahren Sie sie so auf, dass die bevollmächtigte Person sie im Ernstfall im Original findet.</li>
+    ${formHinweise.join('\n    ')}
+    <li>Lassen Sie die Vollmacht beim Zentralen Vorsorgeregister der Bundesnotarkammer registrieren (www.vorsorgeregister.de), damit sie im Bedarfsfall schnell gefunden wird.</li>
+  </ul>
 </div>
 
 <footer>
@@ -767,9 +820,16 @@ export default function VollmachtClient() {
             Erstellen Sie in 5 Minuten eine individuelle Vorsorgevollmacht — kostenlos, verständlich erklärt, sofort druckfertig.
           </p>
           <p className="text-[15px] text-pm-body leading-relaxed">
-            Ohne Vorsorgevollmacht bestellt das Gericht einen gesetzlichen Betreuer — auch einen Fremden.
-            Mit dieser Vollmacht legen Sie selbst fest, wer für Sie entscheidet, wenn Sie es nicht mehr können:
-            bei Krankheit, Unfall oder im Alter. Für Gesundheit, Aufenthalt, Finanzen und mehr.
+            Mit dieser Vollmacht legen Sie selbst fest, wer für Sie entscheidet, wenn Sie es nicht mehr können: nach einem Unfall,
+            bei schwerer Krankheit oder im Alter. Für Gesundheit, Aufenthalt, Finanzen und mehr.
+          </p>
+          <p className="mt-3 text-[15px] text-pm-body leading-relaxed">
+            <strong className="text-pm-ink">Hinweis:</strong> Es besteht die Gefahr, dass das Betreuungsgericht einen rechtlichen Betreuer für Sie
+            bestellt, wenn Sie Ihre Angelegenheiten nicht mehr selbst regeln können und keine ausreichende Vorsorgevollmacht vorliegt, mit folgenden
+            Konsequenzen für die Familie: Ehepartner und Kinder dürfen nicht automatisch für Sie entscheiden. Ehepartner haben nur unter engen
+            Voraussetzungen ein Notvertretungsrecht in Gesundheitsfragen, höchstens für sechs Monate (§ 1358 BGB). Wer Betreuer wird, entscheidet
+            das Gericht. Es berücksichtigt Ihre Wünsche und Ihre Familie und bestellt einen Berufsbetreuer, wenn niemand Geeignetes das Amt
+            ehrenamtlich übernehmen kann (§ 1816 BGB).
           </p>
         </div>
 
@@ -866,7 +926,7 @@ export default function VollmachtClient() {
                 />
                 <BereichCard
                   label="Aufenthaltsbestimmung"
-                  description="Wohnort, Pflegeheim, Unterbringung"
+                  description="Wohnort, Pflegeheim, geschlossene Unterbringung (nur mit Genehmigung des Gerichts)"
                   selected={formData.bereiche.aufenthaltsbestimmung}
                   onToggle={() => toggleBereich('aufenthaltsbestimmung')}
                 />
@@ -878,7 +938,7 @@ export default function VollmachtClient() {
                 />
                 <BereichCard
                   label="Bankgeschäfte"
-                  description="Konten, Überweisungen, Verträge (empfiehlt notarielle Beglaubigung)"
+                  description="Konten, Überweisungen, Bankverträge. Banken verlangen oft zusätzlich ihre eigene Kontovollmacht."
                   selected={formData.bereiche.bankgeschaefte}
                   onToggle={() => toggleBereich('bankgeschaefte')}
                 />
@@ -904,7 +964,7 @@ export default function VollmachtClient() {
                       {
                         value: 'sofort' as const,
                         label: 'Sofort (empfohlen)',
-                        desc: 'Gilt ab Unterzeichnung — auch wenn Sie noch handlungsfähig sind. Einfachste Lösung, kein Nachweis nötig.',
+                        desc: 'Gilt ab der Unterschrift, auch solange Sie selbst noch entscheiden können. Die Vertrauensperson muss nicht nachweisen, dass der Vorsorgefall eingetreten ist. Wann sie die Vollmacht nutzen soll, sprechen Sie mit ihr ab.',
                       },
                       {
                         value: 'vorsorgefall' as const,
@@ -939,6 +999,14 @@ export default function VollmachtClient() {
                     </button>
                   ))}
                 </div>
+                {formData.geltung === 'vorsorgefall' && (
+                  <p className="mt-3 bg-[#FFF8EE] border border-[#F0D9A0] rounded-xl px-4 py-3 text-[13px] text-pm-body leading-relaxed">
+                    <strong className="text-pm-ink">Hinweis:</strong> Es besteht die Gefahr, dass Banken, Behörden oder das Grundbuchamt die Vollmacht
+                    zunächst nicht anerkennen, wenn sie erst im Vorsorgefall gelten soll, mit folgenden Konsequenzen für die Familie: Die Vertrauensperson
+                    muss erst ein ärztliches Attest besorgen, bevor sie handeln kann. Dem Grundbuchamt genügt ein Attest nicht; für Grundstücke kann trotz
+                    Vollmacht ein Betreuer nötig werden. Das Bundesministerium der Justiz rät deshalb von Bedingungen in der Vollmacht ab.
+                  </p>
+                )}
               </div>
             </div>
           )}
@@ -948,21 +1016,23 @@ export default function VollmachtClient() {
             <div>
               <h2 className="text-[18px] font-bold text-pm-ink mb-1">Gesundheitssorge — Details</h2>
               <p className="text-[14px] text-pm-body mb-6">
-                Für den Bereich Gesundheitssorge können Sie weitere Entscheidungen festlegen.
+                Für den Bereich Gesundheitssorge können Sie weitere Entscheidungen festlegen. Entscheidungen, bei denen die Gefahr des Todes
+                oder eines schweren, länger dauernden Gesundheitsschadens besteht, darf die Vertrauensperson nur treffen, wenn die Vollmacht sie
+                ausdrücklich nennt (§ 1820 Abs. 2 BGB). Was Sie hier ankreuzen, steht ausdrücklich im Dokument.
               </p>
               <div className="flex flex-col gap-2.5 mb-5">
                 <CheckboxItem
-                  label="Einwilligung in medizinische Behandlungen und Operationen"
+                  label="Einwilligung in Untersuchungen, Behandlungen und Operationen, auch wenn sie lebensgefährlich sind"
                   checked={formData.gesundheitsDetails.medizinischeBehandlungen}
                   onChange={() => toggleGesundheit('medizinischeBehandlungen')}
                 />
                 <CheckboxItem
-                  label="Ablehnung und Abbruch lebenserhaltender Maßnahmen (wenn ärztlich aussichtslos)"
+                  label="Ablehnung und Abbruch lebenserhaltender Maßnahmen, wenn die Behandlung ärztlich aussichtslos ist"
                   checked={formData.gesundheitsDetails.ablehnenLebenserhaltend}
                   onChange={() => toggleGesundheit('ablehnenLebenserhaltend')}
                 />
                 <CheckboxItem
-                  label="Entscheidung über Intensivmedizin und künstliche Ernährung"
+                  label="Entscheidung über Intensivmedizin, Wiederbelebung und künstliche Ernährung, auch über ihre Ablehnung oder ihren Abbruch"
                   checked={formData.gesundheitsDetails.intensivmedizin}
                   onChange={() => toggleGesundheit('intensivmedizin')}
                 />
@@ -1070,11 +1140,15 @@ export default function VollmachtClient() {
                 </div>
               </div>
 
-              {/* Primary CTA */}
+              {/* Primary CTA (ohne Bereich entstünde eine leere Vollmacht) */}
+              {selectedBereiche.length === 0 && (
+                <p className="text-[13px] text-pm-body mb-3">Wählen Sie unter „Umfang“ mindestens einen Bereich, dann können Sie die Vollmacht drucken.</p>
+              )}
               <button
                 type="button"
+                disabled={selectedBereiche.length === 0}
                 onClick={() => generateAndPrint(formData)}
-                className="w-full bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[16px] py-4 rounded-xl transition-colors mb-4 flex items-center justify-center gap-2"
+                className="w-full bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[16px] py-4 rounded-xl transition-colors mb-4 flex items-center justify-center gap-2 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="6 9 12 15 18 9" />
@@ -1085,9 +1159,10 @@ export default function VollmachtClient() {
               {/* Disclaimer */}
               <div className="bg-[#FFF8EE] border border-[#F0D9A0] rounded-xl px-4 py-3.5 mb-4">
                 <p className="text-[12px] text-pm-body leading-relaxed">
-                  <strong className="text-pm-ink">Hinweis:</strong> Diese Vollmacht dient als Vorlage und ersetzt keine Rechtsberatung.
-                  Für Immobilien und Bankgeschäfte empfehlen wir notarielle Beglaubigung.
-                  Für komplexe Situationen sollten Sie einen Rechtsanwalt hinzuziehen.
+                  <strong className="text-pm-ink">Hinweis:</strong> Diese Vollmacht ist eine Vorlage und ersetzt keine Rechtsberatung. Für Grundstücke
+                  muss Ihre Unterschrift unter der Vollmacht öffentlich beglaubigt sein, durch einen Notar oder die Betreuungsbehörde (§ 29 GBO).
+                  Einen Verbraucherkredit kann die Vertrauensperson mit dieser Vollmacht nur aufnehmen, wenn sie notariell beurkundet ist (§ 492 Abs. 4 BGB). Banken verlangen oft
+                  zusätzlich ihre eigene Kontovollmacht. Bei größerem Vermögen, Immobilien oder einem eigenen Unternehmen lassen Sie sich beraten.
                 </p>
               </div>
 
@@ -1126,8 +1201,9 @@ export default function VollmachtClient() {
             ) : (
               <button
                 type="button"
+                disabled={selectedBereiche.length === 0}
                 onClick={() => generateAndPrint(formData)}
-                className="bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors"
+                className="bg-pm-taupe hover:bg-pm-taupe-deep text-white font-bold text-[14px] px-6 py-2.5 rounded-xl transition-colors disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Jetzt erstellen →
               </button>
