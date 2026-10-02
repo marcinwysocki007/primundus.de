@@ -46,6 +46,21 @@ const nextConfig = {
       { source: '/24h-pflege-hochtaunuskreis', destination: '/24h-pflege-bad-homburg', permanent: true },
       { source: '/24h-pflege-rhein-pfalz-kreis', destination: '/24h-pflege-ludwigshafen', permanent: true },
       { source: '/24h-pflege-rheinisch-bergischer-kreis', destination: '/24h-pflege-bergisch-gladbach', permanent: true },
+      // primundus-muenchen.de gehört seit 02.10.2026 wieder uns (war frei, Martin hat sie registriert). Die
+      // IONOS-Weiterleitung schickt alles auf /24h-pflege-muenchen und hängt den alten Pfad an, z. B.
+      // /24-stunden-pflege/erding/ → /24h-pflege-muenchen/24-stunden-pflege/erding (404). Laut Internet-Archiv hatte
+      // die Domain 277 Seiten, meist Orte im Münchner Umland. Orte mit eigener Ortsseite gehen dorthin, die
+      // Grundseiten auf ihr Gegenstück, alles Übrige auf München. „oberhausen“ bleibt bei München, weil
+      // /24h-pflege-oberhausen Oberhausen in NRW meint.
+      ...['augsburg', 'bad-aibling', 'ebersberg', 'erding', 'freising', 'gauting', 'germering', 'holzkirchen',
+        'starnberg', 'unterschleissheim', 'vaterstetten', 'wolfratshausen'].map((ort) => (
+        { source: `/24h-pflege-muenchen/24-stunden-pflege/${ort}`, destination: `/24h-pflege-${ort}`, permanent: true })),
+      { source: '/24h-pflege-muenchen/kosten-24-stunden-pflege', destination: '/kosten', permanent: true },
+      { source: '/24h-pflege-muenchen/leistungen-24-stunden-pflege', destination: '/leistungen', permanent: true },
+      { source: '/24h-pflege-muenchen/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
+      { source: '/24h-pflege-muenchen/kontakt', destination: '/kontakt', permanent: true },
+      { source: '/24h-pflege-muenchen/datenschutz', destination: '/datenschutz', permanent: true },
+      { source: '/24h-pflege-muenchen/:pfad+', destination: '/24h-pflege-muenchen', permanent: true },
       { source: '/24-stunden-pflege/kosten-24-std-pflege', destination: '/kosten', permanent: true },
       { source: '/24-stunden-pflege/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
       { source: '/pflegekraft-polen-premium', destination: '/pflegekraft-aus-polen', permanent: true },
