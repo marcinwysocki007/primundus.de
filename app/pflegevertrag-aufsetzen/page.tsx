@@ -15,7 +15,10 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
 // richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
 // „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
-const AKTUALISIERT = aktualisiertAm('pflegevertrag-aufsetzen', '1. Oktober 2026')
+// 02.10.2026: Drittes Modell „Selbstständige Betreuungskraft“ mit dem Risiko der Scheinselbstständigkeit (Martin 02.10.:
+// „sollten wir hier nicht auch die Selbstständigen mitnehmen“); Inhalt wie /rechtssicher, als Hinweis statt Drohung (Martin:
+// „es besteht hier die Gefahr … Scheinselbstständigkeit, wenn …, mit folgenden Konsequenzen für die Familien, also hier Obacht“).
+const AKTUALISIERT = aktualisiertAm('pflegevertrag-aufsetzen', '2. Oktober 2026')
 
 const SECTIONS = [
   { id: 'warum', title: 'Warum ein Pflegevertrag wichtig ist' },
@@ -138,11 +141,15 @@ export default function PflegevertragAufsetzen() {
             punkte={[
               { title: 'Entsendemodell (wie bei Primundus)', desc: 'Die Familie schließt einen Betreuungsvertrag mit dem Unternehmen, bei dem die Betreuungskraft angestellt ist und das sie mit A1-Bescheinigung entsendet. Bei Primundus ist das die PRIMUNDUS Sp. z o.o. in Warschau. Die Familie wird nicht Arbeitgeberin.' },
               { title: 'Direktanstellung', desc: 'Familie ist Arbeitgeberin — schließt Arbeitsvertrag direkt mit der Betreuungskraft. Alle Arbeitgebergerechtlichen Pflichten liegen bei der Familie: Lohnabrechnung, Sozialversicherung, Urlaubsplanung.' },
+              { title: 'Selbstständige Betreuungskraft', desc: <>Die Familie beauftragt die Kraft direkt, die Kraft stellt Rechnungen. <strong>Hinweis:</strong> Es besteht die Gefahr der Scheinselbstständigkeit, wenn die Betreuungskraft im Haushalt wohnt, nach Weisung der Familie arbeitet und nur diesen einen Auftraggeber hat, mit folgenden Konsequenzen für die Familie: Sie gilt dann als Arbeitgeberin und muss Sozialversicherungsbeiträge nachzahlen; hinzu kommen Bußgelder, bei Vorsatz ein Strafverfahren.</> },
             ]}
           >
             <MehrDazu
               label="Alle Modelle erklärt:"
-              links={[{ href: "/pflegekraft-legal-beschaeftigen", text: "Pflegekraft legal beschäftigen — die 3 Wege" }]}
+              links={[
+                { href: "/pflegekraft-legal-beschaeftigen", text: "Pflegekraft legal beschäftigen — die 3 Wege" },
+                { href: "/scheinselbststaendigkeit-pflege-vermeiden", text: "Scheinselbstständigkeit vermeiden" },
+              ]}
             />
           </DunklerAbschnitt>
 
