@@ -15,6 +15,8 @@ import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN } from '@/lib/fakten'
 import { TAGESPFLEGE } from '@/lib/pflegegrad-inhalte'
+import { DEUTSCHLAND } from '@/lib/pflege-kreise'
+import { eineStelle } from '@/lib/pflege-kreise-format'
 
 // Pflegegeld-Seite neu (20.09.2026): „pflegegeld" ist mit 135.000 Suchen im Monat der größte Begriff des Themas, die Seite war mit
 // 706 Wörtern und drei falschen Regeln (Beratungsbesuch, Krankenhaus vier Wochen, „im Voraus") nicht konkurrenzfähig (pflege.de 3.800,
@@ -223,6 +225,13 @@ export default function Pflegegeld() {
                 { title: 'Die Pflege ist selbst sichergestellt', desc: 'Durch Angehörige, Nachbarn, Freunde oder eine selbst beschaffte Betreuungskraft. Wer die Pflege komplett einem zugelassenen Pflegedienst überlässt, bekommt Sachleistungen statt Pflegegeld; wer beides nutzt, die Kombinationsleistung.' },
               ]}
             />
+            {/* 02.10.2026: Bundeszahl aus der Pflegestatistik (lib/pflege-kreise.ts) und der eine Link auf den Kreisvergleich */}
+            <Text>
+              Pflegegeld allein ist die häufigste Form der Versorgung: Ende 2023 bekamen {eineStelle(DEUTSCHLAND.pg / 1e6)} Millionen
+              der {eineStelle(DEUTSCHLAND.p / 1e6)} Millionen Pflegebedürftigen nur Pflegegeld, ohne Sachleistungen eines Pflegedienstes
+              und ohne vollstationäre Pflege. Den Anteil der zu Hause Versorgten in Ihrem Kreis zeigt der Vergleich{' '}
+              <a href="/pflege-im-kreis" className={LINK}>Pflege im Kreis</a>.
+            </Text>
             <Zwischentitel>Auch Kinder, auch bei Demenz, auch ohne Diagnose</Zwischentitel>
             <Text>
               Das Pflegegeld hängt allein am Pflegegrad, nicht an der Krankheit. Menschen mit Demenz bekommen es genauso wie Menschen mit

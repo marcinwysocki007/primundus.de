@@ -146,6 +146,8 @@ const artikel = [
   'mdk-begutachtung-tipps',
   'pflegemangel-melden-beschwerden',
   'pflegegeld',
+  // 02.10.2026: Kreisvergleich aus der Pflegestatistik (Datenseite, Anker je Kreis)
+  'pflege-im-kreis',
 ]
 
 // Hinweis: 'eigenanteil-rechner' und 'kostenrechner' fehlen bewusst —

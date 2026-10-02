@@ -26,6 +26,7 @@
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtBeratung } from '@/components/orte/OrtBeratung'
+import { OrtPflegeImKreis } from '@/components/orte/OrtPflegeImKreis'
 import { OrtWasBedeutetText } from '@/components/orte/OrtGrundlagen'
 import { OrtAblaufLanding, OrtAufgabenLanding, OrtKostenLanding, OrtPasstLanding, OrtWarumLanding } from '@/components/orte/OrtLanding'
 import { BekanntAus } from '@/components/vertrauen/BekanntAus'
@@ -174,6 +175,9 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
           ) : null}
           {(d.wohnenBaustein ?? d.art === 'hand') ? <OrtWohnen slug={d.slug} ort={d.ort} als="h3" /> : null}
           {zahlen.length ? <BlickKasten titel={`${d.ort} in Zahlen`} punkte={zahlen} /> : null}
+          {/* 02.10.2026: Pflegestatistik des Kreises (kreisfreie Stadt = eigener Kreis), Link auf /pflege-im-kreis#kreis-<AGS>.
+              Nur Zahlen und ein Satz, kein Fließtext, der auf 186 Seiten gleich stünde. Offene Zuordnung = kein Kasten. */}
+          <OrtPflegeImKreis slug={d.slug} />
           <OrtBeratung slug={d.slug} ort={d.ort} als="h3" eigene={d.beratungEigene} />
         </div>
       </Sektion>
