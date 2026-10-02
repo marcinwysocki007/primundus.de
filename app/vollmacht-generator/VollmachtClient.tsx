@@ -310,7 +310,7 @@ function generateAndPrint(data: FormData) {
 
   ${data.bereiche.aufenthaltsbestimmung ? `
   <p style="margin-top: 1em;"><strong>III.2 Aufenthaltsbestimmung</strong><br/>
-  Der Bevollmächtigte ist berechtigt, über den Aufenthaltsort zu entscheiden. Dies umfasst den gewöhnlichen Wohnsitz, die Aufnahme in ein Pflegeheim oder eine andere stationäre Einrichtung sowie die Entscheidung über eine freiheitsentziehende Unterbringung nach § 1906 BGB (die Genehmigung des Betreuungsgerichts bleibt vorbehalten).</p>
+  Der Bevollmächtigte ist berechtigt, über den Aufenthaltsort zu entscheiden. Dies umfasst den gewöhnlichen Wohnsitz, die Aufnahme in ein Pflegeheim oder eine andere stationäre Einrichtung sowie die Entscheidung über eine freiheitsentziehende Unterbringung nach § 1831 BGB (die Genehmigung des Betreuungsgerichts bleibt vorbehalten).</p>
   ` : ''}
 
   ${data.bereiche.vermögenssorge ? `

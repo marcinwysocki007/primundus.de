@@ -38,6 +38,10 @@ const STALE = [
   // 207 Ortsseiten. Die Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien bleiben erlaubt:
   // Diese Regel trifft nur die Aufzählung, mit der wir eigene Kräfte beschreiben.
   ['Herkunft aufgezählt (nur Polen)', /(?:einige|überwiegend|teils|auch)\s+aus\s+(?:Rumänien|Bulgarien)/g],
+  // Betreuungsrecht seit 01.01.2023 neu nummeriert (Reform des Vormundschafts- und Betreuungsrechts). Am 02.10.2026
+  // nannte das Dokument des Vollmacht-Generators noch „§ 1906 BGB“ (heute § 1831). Gesperrt sind die aufgehobenen
+  // Fassungen: § 1896 (heute § 1814), § 1901a (§ 1827), § 1904 (§ 1829), § 1906 (§ 1831), § 1906a (§ 1832).
+  ['Betreuungsrecht alt (§ 1896/1901a/1904/1906/1906a BGB)', /§\s*(?:1896|1901\s*a|1904|1906\s*a?)\b[^.\n]{0,20}BGB/g],
   // Zensus-Haushaltstyp HHTYP_SENIOR_HH__1 heißt „Haushalte mit ausschließlich Seniorinnen/Senioren",
   // Senior = 65. Lebensjahr vollendet (Methodikblatt der Regionaltabelle Haushalte). Das Ehepaar mit 70 und
   // 72 ist so ein Haushalt — „nachts ist niemand da" behauptet deshalb mehr, als die Zahl hergibt, und zwar
