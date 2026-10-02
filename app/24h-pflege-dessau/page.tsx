@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Dessau-Roßlau',
   land: 'Sachsen-Anhalt',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Ziebigk, die Bauhaus-Siedlung Törten oder stadtnah zwischen Elbe und Mulde: Dessauer wohnen mit Geschichte — und möchten darin alt werden. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Anhalt-Bitterfeld',
@@ -48,7 +48,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>12,5 Prozent der Wohnungen stehen leer, in Sachsen-Anhalt 8,9 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Dessau-Roßlau ist älter als das Land: 17,7 Prozent der Einwohner sind 75 Jahre oder älter — das sind 13.463 Menschen, in Sachsen-Anhalt sind es 13,8 Prozent.</Text>
-        <Text>Gut jeder dritte Haushalt in Dessau-Roßlau besteht nur aus Menschen ab 65 — in Sachsen-Anhalt 29,4 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Nur 38,5 Prozent der Gebäude stehen frei, in Sachsen-Anhalt sind es 58,6 Prozent.</Text>
+        <Text>Gut jeder dritte Haushalt in Dessau-Roßlau besteht nur aus Menschen ab 65 — in Sachsen-Anhalt 29,4 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Nur 38,5 Prozent der Gebäude stehen frei, in Sachsen-Anhalt sind es 58,6 Prozent.</Text>
         <Text>Jedes dritte Gebäude in Dessau-Roßlau ist ein Reihenhaus — in Sachsen-Anhalt 22,5 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. In Dessau-Roßlau wohnen nur 34,5 Prozent der Haushalte im Eigentum, in Sachsen-Anhalt 43,0 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Dessau-Roßlau häufiger als anderswo. Knapp zwei von fünf Wohnungen sind kleiner als 60 Quadratmeter — in Sachsen-Anhalt sind es 31,3 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.</Text>
         <Text>In Zahlen: 13.463 Menschen in Dessau-Roßlau sind 75 Jahre oder älter, und es gibt 49.629 Wohnungen in 18.663 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

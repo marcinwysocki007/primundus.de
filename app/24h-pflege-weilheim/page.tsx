@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Weilheim in Oberbayern',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Weilheim',
   einleitung: <>Im Pfaffenwinkel — in Weilheim, Polling oder Wielenbach an der Ammer — wohnt man mit Blick auf die Berge und bleibt. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
@@ -50,7 +50,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>Nur 42,0 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Knapp jedes dritte Gebäude in Weilheim ist ein Reihenhaus — in Bayern 14,7 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
-        <Text>Weilheim ist älter als das Land: 12,9 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.942 Menschen, in Bayern sind es 10,4 Prozent. Gut jeder vierte Haushalt in Weilheim besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Weilheim ist älter als das Land: 12,9 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.942 Menschen, in Bayern sind es 10,4 Prozent. Gut jeder vierte Haushalt in Weilheim besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>In Zahlen: 2.942 Menschen in Weilheim sind 75 Jahre oder älter, und es gibt 11.642 Wohnungen in 5.453 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

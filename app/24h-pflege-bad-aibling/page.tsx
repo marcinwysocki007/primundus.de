@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Bad Aibling',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Die Kurstadt im Mangfalltal ist zum Altwerden wie gemacht — Moorbäder, kurze Wege, die Berge am Horizont. Und wenn es allein in der Wohnung oder im Haus in Harthausen nicht mehr geht, zieht eine Betreuungskraft von Primundus mit ein: bei Bedarf auch nachts da, damit Bad Aibling Zuhause bleibt.</>,
   kreis: 'südlichen Landkreis Rosenheim',
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>16,8 Prozent der Wohnungen wurden nach 2010 gebaut, in Bayern 9,9 Prozent — ein vergleichsweise junger Bestand. Bad Aibling ist älter als das Land: 13,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.333 Menschen, in Bayern sind es 10,4 Prozent.</Text>
-        <Text>Nur 16,4 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Bayern sind es 26,0 Prozent. Gut jeder vierte Haushalt in Bad Aibling besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Nur 16,4 Prozent der Wohnungen stammen aus den Jahren 1950 bis 1969, in Bayern sind es 26,0 Prozent. Gut jeder vierte Haushalt in Bad Aibling besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>Nur 55,3 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent.</Text>
         <Text>In Zahlen: 2.333 Menschen in Bad Aibling sind 75 Jahre oder älter, und es gibt 9.547 Wohnungen in 4.250 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

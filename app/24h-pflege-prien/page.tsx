@@ -41,14 +41,14 @@ const ORT: OrtDaten = {
   ort: 'Prien am Chiemsee',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Mit dem Chiemsee vor der Tür — in Prien, am Hafen in Stock oder Richtung Rimsting und Bernau — wird man gern alt. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Rosenheim West',
   vorOrt: {
     inhalt: (
       <>
-        <Text>Jeder dritte Haushalt in Prien am Chiemsee besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Prien am Chiemsee ist älter als das Land: 16,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.714 Menschen, in Bayern sind es 10,4 Prozent.</Text>
+        <Text>Jeder dritte Haushalt in Prien am Chiemsee besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Prien am Chiemsee ist älter als das Land: 16,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.714 Menschen, in Bayern sind es 10,4 Prozent.</Text>
         <Text>49,7 Prozent aller Haushalte in Prien am Chiemsee bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. 34,9 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Bayern 27,8 Prozent.</Text>
         <Text>In Prien am Chiemsee wohnen nur 43,0 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
         <Text>In Zahlen: 1.714 Menschen in Prien am Chiemsee sind 75 Jahre oder älter, und es gibt 6.213 Wohnungen in 2.769 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>

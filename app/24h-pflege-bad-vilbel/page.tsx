@@ -30,7 +30,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Bad Vilbel starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie viele ältere Menschen leben in Bad Vilbel?', a: '3.688 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,6 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Bad Vilbel — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Bad Vilbel im Schnitt 2,2 Wohnungen, in Hessen 2,2. 44,1 Prozent der Gebäude stehen frei, 34,1 Prozent stehen in geschlossener Reihe. 38,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Bad Vilbel ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Welches Einzugsgebiet wird in Bad Vilbel bedient?', a: 'Bad Vilbel und nördlicher Main-Kinzig-Kreis: Nidderau, Schöneck, Maintal, Hanau und alle Gemeinden im Main-Kinzig-Kreis westlich' },
+  { q: 'Welches Einzugsgebiet wird in Bad Vilbel bedient?', a: 'Bad Vilbel und Wetteraukreis: Karben, Rosbach, Friedberg, Bad Nauheim und alle Gemeinden im Wetteraukreis' },
   { q: 'Ist in einer Wohnung in Bad Vilbel Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Bad Vilbel hat im Schnitt 98,3 m², 20,6 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 77,7 % der Gebäude in Bad Vilbel sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.230 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
@@ -40,10 +40,10 @@ const ORT: OrtDaten = {
   ort: 'Bad Vilbel',
   land: 'Hessen',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Die Quellenstadt vor den Toren Frankfurts — Heilsberg, Dortelweil oder Kernstadt — ist für viele der Ort, an dem die Eltern wohnen, während die Kinder in der Bank arbeiten. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da.</>,
-  kreis: 'nördlichen Main-Kinzig-Kreis',
+  kreis: 'Wetteraukreis',
   vorOrt: {
     inhalt: (
       <>
@@ -55,7 +55,7 @@ const ORT: OrtDaten = {
       </>
     ),
   },
-  einzugsgebiet: 'Bad Vilbel und nördlicher Main-Kinzig-Kreis: Nidderau, Schöneck, Maintal, Hanau und alle Gemeinden im Main-Kinzig-Kreis westlich',
+  einzugsgebiet: 'Bad Vilbel und Wetteraukreis: Karben, Rosbach, Friedberg, Bad Nauheim und alle Gemeinden im Wetteraukreis',
   stimmen: ['k-20260605-daniel', 'k-20260327-marco'],
   fragen: FRAGEN,
 }

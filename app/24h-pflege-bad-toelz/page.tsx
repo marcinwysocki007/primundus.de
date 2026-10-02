@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Bad Tölz',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Die Marktstraße, das Kurviertel, die Isar vor der Tür: Tölzer geben ihr Stück Oberland nicht her. Eine Betreuungskraft von Primundus macht das Altwerden im eigenen Zuhause möglich — sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Bad Tölz-Wolfratshausen',
@@ -50,7 +50,7 @@ const ORT: OrtDaten = {
       <>
         <Text>Die durchschnittliche Wohnung misst 86,4 Quadratmeter gegenüber 100,5 in Bayern — rund 14 Quadratmeter weniger. In Bad Tölz wohnen nur 36,0 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
         <Text>Nur 46,7 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Bad Tölz häufiger als anderswo. Knapp jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden.</Text>
-        <Text>Gut jeder vierte Haushalt in Bad Tölz besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. 23,5 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Bayern 15,1 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Bad Tölz ist älter als das Land: 12,9 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.538 Menschen, in Bayern sind es 10,4 Prozent.</Text>
+        <Text>Gut jeder vierte Haushalt in Bad Tölz besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. 23,5 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Bayern 15,1 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Bad Tölz ist älter als das Land: 12,9 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.538 Menschen, in Bayern sind es 10,4 Prozent.</Text>
         <Text>In Zahlen: 2.538 Menschen in Bad Tölz sind 75 Jahre oder älter, und es gibt 10.188 Wohnungen in 3.574 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

@@ -40,14 +40,14 @@ const ORT: OrtDaten = {
   ort: 'Mülheim an der Ruhr',
   land: 'Nordrhein-Westfalen',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>In Saarn, Speldorf oder Broich wohnt man an der Ruhr mit Grün vor der Tür — und gibt das im Alter nicht her. Eine Betreuungskraft von Primundus sorgt dafür, dass es dabei bleibt: Sie zieht mit ein, übernimmt den Alltag und ist auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>
         <Text>Nur 31,6 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. Zwei von fünf Gebäuden in Mülheim an der Ruhr ist ein Reihenhaus — in Nordrhein-Westfalen 27,2 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
-        <Text>Gut jeder vierte Haushalt in Mülheim an der Ruhr besteht nur aus Menschen ab 65 — in Nordrhein-Westfalen 24,2 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Mülheim an der Ruhr ist älter als das Land: 12,5 Prozent der Einwohner sind 75 Jahre oder älter — das sind 21.402 Menschen, in Nordrhein-Westfalen sind es 10,7 Prozent.</Text>
+        <Text>Gut jeder vierte Haushalt in Mülheim an der Ruhr besteht nur aus Menschen ab 65 — in Nordrhein-Westfalen 24,2 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Mülheim an der Ruhr ist älter als das Land: 12,5 Prozent der Einwohner sind 75 Jahre oder älter — das sind 21.402 Menschen, in Nordrhein-Westfalen sind es 10,7 Prozent.</Text>
         <Text>Mülheim an der Ruhr ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 2,8 Wohnungen, in Nordrhein-Westfalen 2,3. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. In Mülheim an der Ruhr wohnen nur 34,2 Prozent der Haushalte im Eigentum, in Nordrhein-Westfalen 40,6 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. 40,0 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Nordrhein-Westfalen sind es 33,6 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.</Text>
         <Text>In Zahlen: 21.402 Menschen in Mülheim an der Ruhr sind 75 Jahre oder älter, und es gibt 90.500 Wohnungen in 31.841 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

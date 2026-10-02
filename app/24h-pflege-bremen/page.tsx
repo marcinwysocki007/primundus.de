@@ -37,14 +37,14 @@ const ORT: OrtDaten = {
   ort: 'Bremen',
   land: 'Bremen',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Schwachhausen, Findorff oder das Viertel: Bremer bleiben ihrer Stadt treu — und ihrem Altbremer Haus erst recht. Eine Betreuungskraft von Primundus sorgt dafür, dass das Alter daran nichts ändert: Sie zieht mit ein, führt den Haushalt und ist auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>
         <Text>Bremen liegt beim Wohnen dicht am Schnitt von Bremen — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 83,1 Quadratmeter, auf ein Gebäude kommen 2,5 Wohnungen, und 37,0 Prozent der Haushalte wohnen im Eigentum.</Text>
-        <Text>10,7 Prozent der Einwohner sind 75 Jahre oder älter, das sind 61.532 Menschen. In 24,1 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
+        <Text>10,7 Prozent der Einwohner sind 75 Jahre oder älter, das sind 61.532 Menschen. In 24,1 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort lebt niemand unter 65, der nachts einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>
     ),

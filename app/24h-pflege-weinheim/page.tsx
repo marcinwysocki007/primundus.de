@@ -40,14 +40,14 @@ const ORT: OrtDaten = {
   ort: 'Weinheim',
   land: 'Baden-Württemberg',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Unter den zwei Burgen an der Bergstraße — in Lützelsachsen, Hohensachsen oder der Altstadt — wird man gern alt. Eine Betreuungskraft von Primundus macht es im eigenen Zuhause möglich: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'nördlichen Rhein-Neckar-Kreis',
   vorOrt: {
     inhalt: (
       <>
-        <Text>Weinheim ist älter als das Land: 13,1 Prozent der Einwohner sind 75 Jahre oder älter — das sind 5.983 Menschen, in Baden-Württemberg sind es 10,5 Prozent. Gut jeder vierte Haushalt in Weinheim besteht nur aus Menschen ab 65 — in Baden-Württemberg 23,6 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Weinheim ist älter als das Land: 13,1 Prozent der Einwohner sind 75 Jahre oder älter — das sind 5.983 Menschen, in Baden-Württemberg sind es 10,5 Prozent. Gut jeder vierte Haushalt in Weinheim besteht nur aus Menschen ab 65 — in Baden-Württemberg 23,6 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>In Zahlen: 5.983 Menschen in Weinheim sind 75 Jahre oder älter, und es gibt 22.578 Wohnungen in 11.052 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

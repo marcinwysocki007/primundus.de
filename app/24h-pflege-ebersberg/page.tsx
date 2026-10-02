@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Ebersberg',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Am Rand des Ebersberger Forsts, in der Kreisstadt oder Richtung Grafing und Kirchseeon: Hier wohnt man grün — und bleibt. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Ebersberg',
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>Nur 41,2 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. 29,0 Prozent der Gebäude in Ebersberg stehen in geschlossener Reihe, an beiden Seiten angebaut — in Bayern 14,7 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
-        <Text>Altbau vor 1950 macht in Ebersberg 7,7 Prozent des Bestands aus, in Bayern 15,1 Prozent. Gut jeder vierte Haushalt in Ebersberg besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Altbau vor 1950 macht in Ebersberg 7,7 Prozent des Bestands aus, in Bayern 15,1 Prozent. Gut jeder vierte Haushalt in Ebersberg besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>Der Wohnungsmarkt ist eng: 2,7 Prozent Leerstand gegenüber 4,2 Prozent in Bayern. 13,4 Prozent der Wohnungen wurden nach 2010 gebaut, in Bayern 9,9 Prozent — ein vergleichsweise junger Bestand. Ebersberg ist älter als das Land: 12,1 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.453 Menschen, in Bayern sind es 10,4 Prozent.</Text>
         <Text>In Zahlen: 1.453 Menschen in Ebersberg sind 75 Jahre oder älter, und es gibt 5.669 Wohnungen in 3.019 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

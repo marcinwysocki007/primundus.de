@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Waldshut-Tiengen',
   land: 'Baden-Württemberg',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Ob in der Waldshuter Altstadt, in Tiengen oder in den Ortsteilen ringsum: Am Hochrhein bleibt man dort, wo man verwurzelt ist. Eine Betreuungskraft von Primundus sorgt dafür, dass das Alter daran nichts ändert: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Waldshut',
@@ -48,7 +48,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>Waldshut-Tiengen liegt beim Wohnen dicht am Schnitt von Baden-Württemberg — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 97,2 Quadratmeter, auf ein Gebäude kommen 2,5 Wohnungen, und 41,9 Prozent der Haushalte wohnen im Eigentum.</Text>
-        <Text>10,1 Prozent der Einwohner sind 75 Jahre oder älter, das sind 2.461 Menschen. In 24,2 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
+        <Text>10,1 Prozent der Einwohner sind 75 Jahre oder älter, das sind 2.461 Menschen. In 24,2 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort lebt niemand unter 65, der nachts einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>
     ),

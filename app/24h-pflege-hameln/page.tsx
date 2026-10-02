@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Hameln',
   land: 'Niedersachsen',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>In der Altstadt an der Weser oder draußen Richtung Aerzen und Hessisch Oldendorf: Hamelner halten an Haus und Garten fest. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
@@ -48,7 +48,7 @@ const ORT: OrtDaten = {
       <>
         <Text>Nur 2,3 Prozent der Wohnungen sind nach 2010 entstanden, in Niedersachsen 7,8 Prozent. Der Bestand ist älter als im Land. Die durchschnittliche Wohnung misst 93,5 Quadratmeter gegenüber 104,4 in Niedersachsen — rund 11 Quadratmeter weniger.</Text>
         <Text>Gut jedes vierte Gebäude in Hameln ist ein Reihenhaus — in Niedersachsen 12,9 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 56,3 Prozent der Gebäude stehen frei, in Niedersachsen sind es 72,2 Prozent.</Text>
-        <Text>In Hameln wohnen nur 41,9 Prozent der Haushalte im Eigentum, in Niedersachsen 51,1 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. 28,7 Prozent der Haushalte in Hameln bestehen nur aus Menschen ab 65 — in Niedersachsen 25,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. 36,6 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Niedersachsen sind es 28,2 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.</Text>
+        <Text>In Hameln wohnen nur 41,9 Prozent der Haushalte im Eigentum, in Niedersachsen 51,1 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. 28,7 Prozent der Haushalte in Hameln bestehen nur aus Menschen ab 65 — in Niedersachsen 25,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. 36,6 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Niedersachsen sind es 28,2 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.</Text>
         <Text>In Zahlen: 7.742 Menschen in Hameln sind 75 Jahre oder älter, und es gibt 31.937 Wohnungen in 14.377 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

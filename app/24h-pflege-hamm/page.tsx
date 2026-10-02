@@ -40,14 +40,14 @@ const ORT: OrtDaten = {
   ort: 'Hamm',
   land: 'Nordrhein-Westfalen',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Bockum-Hövel, Heessen oder Rhynern: Hammer wohnen westfälisch-bodenständig — oft seit Generationen im selben Haus. Eine Betreuungskraft von Primundus sorgt dafür, dass das so bleibt: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   vorOrt: {
     inhalt: (
       <>
         <Text>Hamm liegt beim Wohnen dicht am Schnitt von Nordrhein-Westfalen — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 88,9 Quadratmeter, auf ein Gebäude kommen 2,2 Wohnungen, und 39,4 Prozent der Haushalte wohnen im Eigentum.</Text>
-        <Text>10,4 Prozent der Einwohner sind 75 Jahre oder älter, das sind 18.641 Menschen. In 24,5 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
+        <Text>10,4 Prozent der Einwohner sind 75 Jahre oder älter, das sind 18.641 Menschen. In 24,5 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort lebt niemand unter 65, der nachts einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>
     ),

@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Kaufbeuren',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Altstadt oder Neugablonz: Kaufbeurer wohnen im Allgäu mit Geschichte — und möchten darin alt werden. Eine Betreuungskraft von Primundus sorgt dafür, dass es geht: Sie zieht mit ein, übernimmt den Alltag und ist auch nachts da.</>,
   kreis: 'Ostallgäu',
@@ -50,7 +50,7 @@ const ORT: OrtDaten = {
       <>
         <Text>44,1 Prozent der Gebäude in Kaufbeuren stehen in geschlossener Reihe, an beiden Seiten angebaut — in Bayern 14,7 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. 46,0 Prozent aller Wohnungen stammen aus den Jahren 1950 bis 1969, in Bayern sind es 26,0 Prozent. Das ist der Wiederaufbau — und der baute Treppenhäuser, die niemand für Rollatoren geplant hat.</Text>
         <Text>Nur 37,7 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Die durchschnittliche Wohnung misst 86,2 Quadratmeter gegenüber 100,5 in Bayern — rund 14 Quadratmeter weniger.</Text>
-        <Text>Die Nettokaltmiete liegt bei 6,85 Euro je Quadratmeter, in Bayern bei 8,74 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo. Gut jeder vierte Haushalt in Kaufbeuren besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. In Kaufbeuren wohnen nur 40,5 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
+        <Text>Die Nettokaltmiete liegt bei 6,85 Euro je Quadratmeter, in Bayern bei 8,74 Euro. Wo ein Zimmer fehlt, ist etwas Größeres hier eher erreichbar als anderswo. Gut jeder vierte Haushalt in Kaufbeuren besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. In Kaufbeuren wohnen nur 40,5 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
         <Text>In Zahlen: 5.258 Menschen in Kaufbeuren sind 75 Jahre oder älter, und es gibt 23.492 Wohnungen in 9.530 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

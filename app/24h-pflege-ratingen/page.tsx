@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Ratingen',
   land: 'Nordrhein-Westfalen',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Lintorf, Hösel oder Ratingen-West: Wer hier wohnt, hat oft in Düsseldorf gearbeitet und im Grünen gelebt — und will genau das behalten. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   kreis: 'nördlichen Kreis Mettmann',
@@ -48,7 +48,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>42,5 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Nordrhein-Westfalen 24,1 Prozent. Ratingen ist älter als das Land: 13,9 Prozent der Einwohner sind 75 Jahre oder älter — das sind 12.316 Menschen, in Nordrhein-Westfalen sind es 10,7 Prozent.</Text>
-        <Text>29,5 Prozent der Haushalte in Ratingen bestehen nur aus Menschen ab 65 — in Nordrhein-Westfalen 24,2 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Altbau vor 1950 macht in Ratingen 10,0 Prozent des Bestands aus, in Nordrhein-Westfalen 19,7 Prozent.</Text>
+        <Text>29,5 Prozent der Haushalte in Ratingen bestehen nur aus Menschen ab 65 — in Nordrhein-Westfalen 24,2 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Altbau vor 1950 macht in Ratingen 10,0 Prozent des Bestands aus, in Nordrhein-Westfalen 19,7 Prozent.</Text>
         <Text>Nur 32,3 Prozent der Gebäude stehen frei, in Nordrhein-Westfalen sind es 50,2 Prozent. Zwei von fünf Gebäuden in Ratingen ist ein Reihenhaus — in Nordrhein-Westfalen 27,2 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug. Nur 2,6 Prozent der Wohnungen sind nach 2010 entstanden, in Nordrhein-Westfalen 5,8 Prozent. Der Bestand ist älter als im Land.</Text>
         <Text>In Zahlen: 12.316 Menschen in Ratingen sind 75 Jahre oder älter, und es gibt 45.192 Wohnungen in 18.547 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

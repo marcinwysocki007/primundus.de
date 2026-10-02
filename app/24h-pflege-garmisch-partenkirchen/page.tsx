@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Garmisch-Partenkirchen',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Ob auf der Garmischer oder der Partenkirchner Seite, mit der Zugspitze im Blick: Wer hier zuhause ist, bleibt. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da — im ganzen Werdenfelser Land.</>,
   kreis: 'Landkreis Garmisch-Partenkirchen',
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>Die durchschnittliche Wohnung misst 80,2 Quadratmeter gegenüber 100,5 in Bayern — rund 20 Quadratmeter weniger. Garmisch-Partenkirchen ist älter als das Land: 15,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 4.218 Menschen, in Bayern sind es 10,4 Prozent.</Text>
-        <Text>Knapp jeder dritte Haushalt in Garmisch-Partenkirchen besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. In Garmisch-Partenkirchen wohnen nur 34,5 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
+        <Text>Knapp jeder dritte Haushalt in Garmisch-Partenkirchen besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. In Garmisch-Partenkirchen wohnen nur 34,5 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
         <Text>Eine Betreuungskraft braucht ein eigenes Zimmer, und genau daran hakt es in Garmisch-Partenkirchen häufiger als anderswo. Jede dritte Wohnung ist kleiner als 60 Quadratmeter — in Bayern sind es 20,7 Prozent. Deshalb klären wir vorab am Telefon, was Ihre Wohnung hergibt, statt es später herauszufinden. Garmisch-Partenkirchen ist städtischer gebaut, als der Landesschnitt vermuten lässt: Auf ein Gebäude kommen hier 3,2 Wohnungen, in Bayern 2,1. Mehr Geschosswohnung, weniger Haus mit Garten — und damit häufiger die Frage nach dem Stockwerk und der Treppe. 50,8 Prozent aller Haushalte in Garmisch-Partenkirchen bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.</Text>
         <Text>In Zahlen: 4.218 Menschen in Garmisch-Partenkirchen sind 75 Jahre oder älter, und es gibt 17.235 Wohnungen in 5.410 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

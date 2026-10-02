@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Cochem',
   land: 'Rheinland-Pfalz',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Cochem an der Mosel',
   einleitung: <>Unter der Reichsburg, in Cond oder Sehl an der Mosel: Cochemer wohnen, wo andere Urlaub machen — und bleiben, auch wenn die Kräfte nachlassen. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, im ganzen Moseltal.</>,
@@ -50,7 +50,7 @@ const ORT: OrtDaten = {
       <>
         <Text>8,6 Prozent der Wohnungen stehen leer, in Rheinland-Pfalz 4,8 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Cochem an der Mosel ist älter als das Land: 15,3 Prozent der Einwohner sind 75 Jahre oder älter — das sind 766 Menschen, in Rheinland-Pfalz sind es 10,7 Prozent.</Text>
         <Text>In Cochem an der Mosel wohnen nur 39,0 Prozent der Haushalte im Eigentum, in Rheinland-Pfalz 54,4 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Die durchschnittliche Wohnung misst 94,9 Quadratmeter gegenüber 107,7 in Rheinland-Pfalz — rund 13 Quadratmeter weniger.</Text>
-        <Text>50,3 Prozent aller Haushalte in Cochem an der Mosel bestehen aus einer einzigen Person, in Rheinland-Pfalz sind es 40,4 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Nur 51,5 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent. 28,8 Prozent der Haushalte in Cochem an der Mosel bestehen nur aus Menschen ab 65 — in Rheinland-Pfalz 24,4 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>50,3 Prozent aller Haushalte in Cochem an der Mosel bestehen aus einer einzigen Person, in Rheinland-Pfalz sind es 40,4 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. Nur 51,5 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent. 28,8 Prozent der Haushalte in Cochem an der Mosel bestehen nur aus Menschen ab 65 — in Rheinland-Pfalz 24,4 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>In Zahlen: 766 Menschen in Cochem an der Mosel sind 75 Jahre oder älter, und es gibt 3.035 Wohnungen in 1.508 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

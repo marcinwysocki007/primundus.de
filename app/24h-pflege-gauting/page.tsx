@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Gauting',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Im Würmtal — in Gauting, Stockdorf oder Königswiesen — wohnen viele, deren Kinder täglich nach München pendeln. Eine Betreuungskraft von Primundus schließt die Lücke: Sie zieht mit ein und ist bei Bedarf auch nachts da.</>,
   kreis: 'südwestlichen Landkreis Starnberg',
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>Mit 11,19 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Gauting teurer als im Schnitt von Bayern (8,74 Euro). Gauting ist älter als das Land: 13,1 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.832 Menschen, in Bayern sind es 10,4 Prozent.</Text>
-        <Text>Die durchschnittliche Wohnung misst 111,2 Quadratmeter und damit rund 11 Quadratmeter mehr als im Schnitt von Bayern (100,5). Gut jeder vierte Haushalt in Gauting besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Die durchschnittliche Wohnung misst 111,2 Quadratmeter und damit rund 11 Quadratmeter mehr als im Schnitt von Bayern (100,5). Gut jeder vierte Haushalt in Gauting besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>Altbau vor 1950 macht in Gauting 8,9 Prozent des Bestands aus, in Bayern 15,1 Prozent. Der Wohnungsmarkt ist eng: 2,8 Prozent Leerstand gegenüber 4,2 Prozent in Bayern. Nur 56,4 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent.</Text>
         <Text>In Zahlen: 2.832 Menschen in Gauting sind 75 Jahre oder älter, und es gibt 10.059 Wohnungen in 5.343 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

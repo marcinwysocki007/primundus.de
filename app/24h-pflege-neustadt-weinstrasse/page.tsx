@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Neustadt an der Weinstraße',
   land: 'Rheinland-Pfalz',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Haardt, Mußbach oder unterm Hambacher Schloss: An der Weinstraße wird man zwischen Reben alt — am liebsten im eigenen Haus. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   kreis: 'der Südlichen Weinstraße',
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
       <>
         <Text>Nur 55,0 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent. Neustadt an der Weinstraße ist älter als das Land: 12,7 Prozent der Einwohner sind 75 Jahre oder älter — das sind 6.727 Menschen, in Rheinland-Pfalz sind es 10,7 Prozent.</Text>
         <Text>In Neustadt an der Weinstraße wohnen nur 47,1 Prozent der Haushalte im Eigentum, in Rheinland-Pfalz 54,4 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen. Jedes vierte Gebäude in Neustadt an der Weinstraße ist ein Reihenhaus — in Rheinland-Pfalz 15,5 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
-        <Text>27,1 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Rheinland-Pfalz 21,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Gut jeder vierte Haushalt in Neustadt an der Weinstraße besteht nur aus Menschen ab 65 — in Rheinland-Pfalz 24,4 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>27,1 Prozent der Wohnungen stammen aus der Zeit vor 1950, in Rheinland-Pfalz 21,5 Prozent — schöner Altbau, aber mit Treppenhäusern, die für einen Rollator nie gedacht waren. Gut jeder vierte Haushalt in Neustadt an der Weinstraße besteht nur aus Menschen ab 65 — in Rheinland-Pfalz 24,4 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>In Zahlen: 6.727 Menschen in Neustadt an der Weinstraße sind 75 Jahre oder älter, und es gibt 28.093 Wohnungen in 14.237 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

@@ -52,7 +52,12 @@ const STALE = [
   // Senior = 65. Lebensjahr vollendet (Methodikblatt der Regionaltabelle Haushalte). Das Ehepaar mit 70 und
   // 72 ist so ein Haushalt — „nachts ist niemand da" behauptet deshalb mehr, als die Zahl hergibt, und zwar
   // zugunsten des eigenen Angebots. Stand am 21.09. auf 152 Ortsseiten (Codemod 24).
-  ['Senioren-Haushalt als „niemand da" gedeutet', /(?:ist|lebt|wohnt)\s+(?:nachts\s+)?niemand\s+(?:mehr\s+)?da[^.]{0,60}einspringen/g],
+  // 02.10.2026: Die erste Hälfte fing nur diesen einen Wortlaut. Auf 30 Seiten stand dieselbe Deutung anders —
+  // „Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt“, „dort ist niemand im Haus, der nachts
+  // einspringen könnte“, „ist also niemand da“ (Codemod 39). Die zweite Hälfte sucht deshalb ab dem Senioren-Anteil
+  // („ab 65“ / „schon 65“) bis in den nächsten Satz nach „ist/lebt/wohnt … niemand da/im Haus“. Der Satz zu den
+  // Einpersonenhaushalten („Alleinlebend heißt im Pflegefall: Es ist niemand da …“) bleibt erlaubt: Wer allein lebt, ist allein.
+  ['Senioren-Haushalt als „niemand da" gedeutet', /(?:ist|lebt|wohnt)\s+(?:nachts\s+)?niemand\s+(?:mehr\s+)?da[^.]{0,60}einspringen|(?:ab|schon)\s+65\b[^.]{0,120}(?:\.\s*[^.]{0,80})?\b(?:ist|lebt|wohnt)\s+(?:(?:also|dort|nachts)\s+)*niemand\s+(?:mehr\s+)?(?:da|im\s+Haus)\b/g],
   // Preisregel (Martin 25.09.2026, schon am 17.09. so gemeint und am 20.09. beim Ausbau von /kosten gebrochen):
   // Genannt wird der Grundpreis ab 2.150 € und eine Beispielrechnung; die Aufschläge des Rechners (Nächte, Deutsch,
   // Ehepaar, weitere Personen, Mobilität, Führerschein, Frau, Pflegegrad 5) werden benannt, aber nicht beziffert.

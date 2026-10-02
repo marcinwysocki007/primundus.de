@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Solingen',
   land: 'Nordrhein-Westfalen',
   art: 'erzeugt',
-  aktualisiert: '23. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Ohligs, Wald oder Gräfrath: Solinger Häuser stehen an bergischen Hängen — mit Treppen, Aussicht und Geschichte. Ins Heim muss deshalb niemand: Eine Betreuungskraft von Primundus zieht mit ein, begleitet jeden Weg und ist bei Bedarf auch nachts da.</>,
   kreis: 'Bergischen Land',
@@ -48,7 +48,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>Solingen liegt beim Wohnen dicht am Schnitt von Nordrhein-Westfalen — was für die Pflege zu Hause eine gute Nachricht ist, weil es weder besonders beengt noch besonders weitläufig zugeht. Die durchschnittliche Wohnung misst 86,9 Quadratmeter, auf ein Gebäude kommen 2,5 Wohnungen, und 37,2 Prozent der Haushalte wohnen im Eigentum.</Text>
-        <Text>11,4 Prozent der Einwohner sind 75 Jahre oder älter, das sind 18.844 Menschen. In 24,7 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort ist niemand im Haus, der nachts einspringen könnte. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
+        <Text>11,4 Prozent der Einwohner sind 75 Jahre oder älter, das sind 18.844 Menschen. In 24,7 Prozent der Haushalte lebt ausschließlich, wer schon 65 ist — dort lebt niemand unter 65, der nachts einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau für diese Haushalte ist eine Betreuungskraft gedacht, die mit einzieht.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>
     ),

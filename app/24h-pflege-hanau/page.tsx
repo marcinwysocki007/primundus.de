@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Hanau',
   land: 'Hessen',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Steinheim, Großauheim oder Kesselstadt: Hanauer wohnen am Main mit Geschichte — und wollen im Alter genau dort bleiben. Eine Betreuungskraft von Primundus macht es möglich: Sie zieht mit ein, übernimmt den Alltag und ist auch nachts da.</>,
   kreis: 'Main-Kinzig-Kreis',

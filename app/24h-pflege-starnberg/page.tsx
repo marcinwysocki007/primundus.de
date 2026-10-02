@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Starnberg',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Söcking, Percha oder mit Seeblick in der Stadt: Starnberger geben ihr Zuhause im Fünfseenland nicht auf. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Starnberg',
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>Mit 11,29 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Starnberg teurer als im Schnitt von Bayern (8,74 Euro). Starnberg ist älter als das Land: 13,4 Prozent der Einwohner sind 75 Jahre oder älter — das sind 3.237 Menschen, in Bayern sind es 10,4 Prozent.</Text>
-        <Text>Gut jeder vierte Haushalt in Starnberg besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Der Wohnungsmarkt ist eng: 2,6 Prozent Leerstand gegenüber 4,2 Prozent in Bayern.</Text>
+        <Text>Gut jeder vierte Haushalt in Starnberg besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Der Wohnungsmarkt ist eng: 2,6 Prozent Leerstand gegenüber 4,2 Prozent in Bayern.</Text>
         <Text>Die durchschnittliche Wohnung misst 107,2 Quadratmeter und damit rund 7 Quadratmeter mehr als im Schnitt von Bayern (100,5). In Starnberg wohnen nur 42,7 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
         <Text>In Zahlen: 3.237 Menschen in Starnberg sind 75 Jahre oder älter, und es gibt 12.159 Wohnungen in 5.653 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Schongau',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Weilheim-Schongau',
   einleitung: <>Von Weilheim über Peißenberg bis Schongau: Im Pfaffenwinkel hält man an Haus und Hof fest — oft über Generationen. Eine Betreuungskraft von Primundus sorgt dafür, dass das Alter daran nichts ändert: Sie zieht mit ein und ist bei Bedarf auch nachts da, im ganzen Landkreis.</>,
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
   vorOrt: {
     inhalt: (
       <>
-        <Text>Die durchschnittliche Wohnung misst 106,5 Quadratmeter und damit rund 6 Quadratmeter mehr als im Schnitt von Bayern (100,5). Jeder vierte Haushalt in Weilheim-Schongau besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Die durchschnittliche Wohnung misst 106,5 Quadratmeter und damit rund 6 Quadratmeter mehr als im Schnitt von Bayern (100,5). Jeder vierte Haushalt in Weilheim-Schongau besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>In Zahlen: 15.546 Menschen in Weilheim-Schongau sind 75 Jahre oder älter, und es gibt 66.773 Wohnungen in 37.614 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

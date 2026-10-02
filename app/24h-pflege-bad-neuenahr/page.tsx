@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Bad Neuenahr-Ahrweiler',
   land: 'Rheinland-Pfalz',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   titel: '24-Stunden-Pflege und Betreuung in Bad Neuenahr',
   einleitung: <>Ob im Kurviertel, in Ahrweiler oder mit Blick auf die Weinberge: Wer an der Ahr zuhause ist, bleibt hier — gerade jetzt. Eine Betreuungskraft von Primundus zieht mit ein, wenn Hilfe nötig wird, und ist bei Bedarf auch nachts da.</>,
@@ -49,7 +49,7 @@ const ORT: OrtDaten = {
     inhalt: (
       <>
         <Text>12,3 Prozent der Wohnungen stehen leer, in Rheinland-Pfalz 4,8 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo. Bad Neuenahr ist älter als das Land: 18,4 Prozent der Einwohner sind 75 Jahre oder älter — das sind 4.770 Menschen, in Rheinland-Pfalz sind es 10,7 Prozent.</Text>
-        <Text>Gut jeder dritte Haushalt in Bad Neuenahr besteht nur aus Menschen ab 65 — in Rheinland-Pfalz 24,4 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. In Bad Neuenahr wohnen nur 42,0 Prozent der Haushalte im Eigentum, in Rheinland-Pfalz 54,4 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
+        <Text>Gut jeder dritte Haushalt in Bad Neuenahr besteht nur aus Menschen ab 65 — in Rheinland-Pfalz 24,4 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. In Bad Neuenahr wohnen nur 42,0 Prozent der Haushalte im Eigentum, in Rheinland-Pfalz 54,4 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
         <Text>Die durchschnittliche Wohnung misst 96,2 Quadratmeter gegenüber 107,7 in Rheinland-Pfalz — rund 12 Quadratmeter weniger. Nur 55,8 Prozent der Gebäude stehen frei, in Rheinland-Pfalz sind es 69,6 Prozent. 47,1 Prozent aller Haushalte in Bad Neuenahr bestehen aus einer einzigen Person, in Rheinland-Pfalz sind es 40,4 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt.</Text>
         <Text>In Zahlen: 4.770 Menschen in Bad Neuenahr sind 75 Jahre oder älter, und es gibt 15.964 Wohnungen in 7.088 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>

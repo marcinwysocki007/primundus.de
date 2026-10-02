@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Wolfratshausen',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Die alte Flößerstadt an Loisach und Isar — Waldram, Farchet oder die Altstadt — ist für viele seit Jahrzehnten Zuhause. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   kreis: 'südlichen Landkreis Bad Tölz-Wolfratshausen',
@@ -50,7 +50,7 @@ const ORT: OrtDaten = {
       <>
         <Text>Nur 35,8 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Zwei von fünf Gebäuden in Wolfratshausen ist ein Reihenhaus — in Bayern 14,7 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
         <Text>Der Wohnungsmarkt ist eng: 2,4 Prozent Leerstand gegenüber 4,2 Prozent in Bayern. Wolfratshausen ist älter als das Land: 12,5 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.398 Menschen, in Bayern sind es 10,4 Prozent.</Text>
-        <Text>Mit 10,02 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Wolfratshausen teurer als im Schnitt von Bayern (8,74 Euro). Die durchschnittliche Wohnung misst 93,1 Quadratmeter gegenüber 100,5 in Bayern — rund 7 Quadratmeter weniger. Jeder vierte Haushalt in Wolfratshausen besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Mit 10,02 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Wolfratshausen teurer als im Schnitt von Bayern (8,74 Euro). Die durchschnittliche Wohnung misst 93,1 Quadratmeter gegenüber 100,5 in Bayern — rund 7 Quadratmeter weniger. Jeder vierte Haushalt in Wolfratshausen besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>In Zahlen: 2.398 Menschen in Wolfratshausen sind 75 Jahre oder älter, und es gibt 9.546 Wohnungen in 4.141 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

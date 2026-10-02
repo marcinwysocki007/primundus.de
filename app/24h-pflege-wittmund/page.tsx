@@ -16,7 +16,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'pflege-in-ostfriesland-weite', title: "Pflege in Ostfriesland: Weite Wege, knappe Plätze — und eine bessere Lösung" },
+  { id: 'pflege-in-ostfriesland-weite', title: "Pflege in Ostfriesland: Weite Wege — und eine bessere Lösung" },
   { id: 'unser-einsatzgebiet-im-landkreis', title: "Unser Einsatzgebiet im Landkreis Wittmund" },
   { id: 'was-kostet-das-und', title: "Was kostet das — und was zahlt die Pflegekasse dazu?" },
   { id: 'polnische-betreuungskraefte-in-wittmund', title: "Polnische Betreuungskräfte in Wittmund" },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Wittmund?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung.' },
   { q: 'Welche Orte im Kreis Wittmund deckt Primundus ab?', a: 'Das ganze Harlingerland: Wittmund, Esens, Carolinensiel, Harlesiel, Neuharlingersiel, Westerholt, Friedeburg und alle Dörfer dazwischen — bis an die Küste.' },
-  { q: 'Lohnt sich 24h-Pflege auch auf dem Land in Ostfriesland?', a: 'Gerade dort: Heimplätze sind rar und weit entfernt, ambulante Dienste haben lange Anfahrten. Eine Betreuungskraft, die mit im Haus wohnt, macht Wege überflüssig — und das Zuhause bleibt erhalten.' },
+  { q: 'Lohnt sich 24h-Pflege auch auf dem Land in Ostfriesland?', a: 'Gerade dort: Ambulante Dienste haben lange Anfahrten. Eine Betreuungskraft, die mit im Haus wohnt, macht Wege überflüssig — und das Zuhause bleibt erhalten.' },
   { q: 'Ist in einer Wohnung in Wittmund Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Wittmund hat im Schnitt 106,9 m², 15,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 90,3 % der Gebäude in Wittmund sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Niedersachsen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.010 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
@@ -103,8 +103,8 @@ export default function Page() {
           augenbraue="24-Stunden-Pflege in Landkreis Wittmund"
           titel="24h-Pflege in Wittmund und dem Harlingerland — Betreuung im eigenen Zuhause"
           einleitungTitel="Zuhause bleiben in Landkreis Wittmund"
-          einleitung={<>Wer zwischen Wittmund, Esens und der Küste zuhause ist, hat meist ein Haus mit Geschichte — und keinen Grund, es im Alter zu verlassen. Doch Heimplätze sind hier rar, und der nächste Pflegedienst fährt weit. Die Lösung wohnt mit ein: Eine Betreuungskraft von Primundus ist bei Bedarf auch nachts da, im vertrauten Zuhause hinterm Deich. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          einleitung={<>Wer zwischen Wittmund, Esens und der Küste zuhause ist, hat meist ein Haus mit Geschichte — und keinen Grund, es im Alter zu verlassen. Doch der nächste Pflegedienst fährt weit. Die Lösung wohnt mit ein: Eine Betreuungskraft von Primundus ist bei Bedarf auch nachts da, im vertrauten Zuhause hinterm Deich. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
+          aktualisiert="2. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-wittmund', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
@@ -118,7 +118,7 @@ export default function Page() {
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="pflege-in-ostfriesland-weite" titel="Pflege in Ostfriesland: Weite Wege, knappe Plätze — und eine bessere Lösung">
+          <Abschnitt id="pflege-in-ostfriesland-weite" titel="Pflege in Ostfriesland: Weite Wege — und eine bessere Lösung">
             <Text>Im Harlingerland ist Pflege vor allem eine Frage der Entfernung: Die Kinder wohnen oft in Oldenburg, Bremen oder noch weiter — und ein Heimplatz bedeutet für Besucher jedes Mal eine halbe Tagesreise. Eine Betreuungskraft, die mit im Haus lebt, dreht das um: Die Hilfe ist immer da, die Familie kommt zu Besuch wie früher, und das Zuhause bleibt der Mittelpunkt.</Text>
             <Punkte
               punkte={[
@@ -149,7 +149,7 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="was-die-pflege-zu" titel="Was die Pflege zu Hause in Wittmund ausmacht">
-            <Text>Gut drei von fünf Haushalten in Wittmund wohnen im Eigentum — in Niedersachsen sind es 51,1 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. 28,7 Prozent der Haushalte in Wittmund bestehen nur aus Menschen ab 65 — in Niedersachsen 25,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+            <Text>Gut drei von fünf Haushalten in Wittmund wohnen im Eigentum — in Niedersachsen sind es 51,1 Prozent. Wer im eigenen Haus lebt, entscheidet über ein freies Zimmer selbst und muss niemanden fragen. 28,7 Prozent der Haushalte in Wittmund bestehen nur aus Menschen ab 65 — in Niedersachsen 25,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
             <Text>Gebäude in geschlossener Reihe sind in Wittmund mit 4,4 Prozent seltener als in Niedersachsen (12,9 Prozent). 5,2 Prozent der Wohnungen stehen leer, in Niedersachsen 4,0 Prozent. Wo ein Zimmer fehlt, ist eine größere Wohnung hier eher zu finden als anderswo.</Text>
             <Text>In Zahlen: 6.648 Menschen in Wittmund sind 75 Jahre oder älter, und es gibt 31.761 Wohnungen in 23.407 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
             <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
