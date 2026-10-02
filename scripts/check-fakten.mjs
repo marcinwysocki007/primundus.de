@@ -42,6 +42,9 @@ const STALE = [
   // nannte das Dokument des Vollmacht-Generators noch „§ 1906 BGB“ (heute § 1831). Gesperrt sind die aufgehobenen
   // Fassungen: § 1896 (heute § 1814), § 1901a (§ 1827), § 1904 (§ 1829), § 1906 (§ 1831), § 1906a (§ 1832).
   ['Betreuungsrecht alt (§ 1896/1901a/1904/1906/1906a BGB)', /§\s*(?:1896|1901\s*a|1904|1906\s*a?)\b[^.\n]{0,20}BGB/g],
+  // Pflegegeld im Krankenhaus: seit 01.01.2026 acht Wochen (§ 34 Abs. 2 SGB XI), vorher vier. Am 02.10.2026 stand die
+  // alte Regel noch dreimal auf /24-stunden-pflege-krankenhausaufenthalt. Erlaubt bleibt der Rückblick „waren es vier Wochen“.
+  ['Pflegegeld im Krankenhaus alt (vier Wochen)', /(?:bis zu|ersten)\s+vier\s+Wochen\s+(?:weiter|einer\s+vollstationären)/g],
   // Zensus-Haushaltstyp HHTYP_SENIOR_HH__1 heißt „Haushalte mit ausschließlich Seniorinnen/Senioren",
   // Senior = 65. Lebensjahr vollendet (Methodikblatt der Regionaltabelle Haushalte). Das Ehepaar mit 70 und
   // 72 ist so ein Haushalt — „nachts ist niemand da" behauptet deshalb mehr, als die Zahl hergibt, und zwar
