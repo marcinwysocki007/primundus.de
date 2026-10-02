@@ -12,7 +12,10 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
 // richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
 // „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
-const AKTUALISIERT = aktualisiertAm('pflegemangel-melden-beschwerden', '1. Oktober 2026')
+// 02.10.2026: Frage „sofort abberufen“ (Martin: „hört sich komisch an“) ersetzt durch die Erreichbarkeit: täglich 8–20 Uhr per
+// Telefon, WhatsApp, E-Mail; die Notfallnummer bekommen Kunden nach der Auswahl der Betreuungskraft (Martin 02.10.), sie steht
+// bewusst nicht auf der Website. Ton ruhig, „darf nicht so klingen als gäbe es ständig Notfälle“ (Martin 02.10.).
+const AKTUALISIERT = aktualisiertAm('pflegemangel-melden-beschwerden', '2. Oktober 2026')
 
 const SECTIONS = [
   { id: 'wann-melden', title: 'Wann eine Beschwerde sinnvoll ist' },
@@ -151,7 +154,7 @@ export default function PflegemangelMeldenBeschwerden() {
             <Fragen
               fragen={[
                 { q: 'Wo kann man Pflegemängel melden?', a: 'Bei häuslicher Pflege: zunächst direkt bei der Agentur (Primundus: 089 200 000 830), dann bei der Pflegekasse. Bei Pflegeheimen: Heimaufsicht des Bundeslandes und Medizinischer Dienst. Für Beratung: Pflegestützpunkt kostenlos und unabhängig.' },
-                { q: 'Kann ich die Betreuungskraft sofort abberufen?', a: 'Ja, bei Primundus täglich kündbar. Bei akuten Problemen rufen Sie sofort an: 089 200 000 830. Primundus stellt schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen.' },
+                { q: 'Wie und wann erreiche ich Primundus?', a: 'Täglich von 8 bis 20 Uhr per Telefon unter 089 200 000 830, per WhatsApp unter derselben Nummer oder per E-Mail an info@primundus.de. Am schnellsten geht es per Telefon oder WhatsApp. Sollte außerhalb dieser Zeiten einmal etwas Dringendes sein, gibt es eine Notfallnummer; die bekommen Sie nach der Auswahl Ihrer Betreuungskraft. Muss eine Betreuungskraft ersetzt werden, stellt Primundus schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen.' },
                 { q: 'Was tun wenn jemand in einem Pflegeheim vernachlässigt wird?', a: 'Vorfälle dokumentieren, mit Heimleitung sprechen. Wenn ohne Ergebnis: Heimaufsicht des Bundeslandes einschalten. Bei akuter Gefahr: Polizei (110) und Pflegekasse informieren.' },
                 { q: 'Ist eine Beschwerde beim MD kostenlos?', a: 'Ja — der Medizinische Dienst nimmt Beschwerden kostenlos entgegen. Auch Pflegestützpunkte beraten kostenlos.' },
               ]}
