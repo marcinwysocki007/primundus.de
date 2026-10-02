@@ -45,6 +45,9 @@ const STALE = [
   // Pflegegeld im Krankenhaus: seit 01.01.2026 acht Wochen (§ 34 Abs. 2 SGB XI), vorher vier. Am 02.10.2026 stand die
   // alte Regel noch dreimal auf /24-stunden-pflege-krankenhausaufenthalt. Erlaubt bleibt der Rückblick „waren es vier Wochen“.
   ['Pflegegeld im Krankenhaus alt (vier Wochen)', /(?:bis zu|ersten)\s+vier\s+Wochen\s+(?:weiter|einer\s+vollstationären)/g],
+  // Hamburger Telefonnummer (Martin 02.10.2026): 040 468 95 8181 wie im Google-Profil. Die Ortsseite zeigte 040 468 951 181,
+  // eine Ziffer anders; dieselbe falsche Nummer steht in alten Verzeichniseinträgen.
+  ['Hamburger Nummer falsch (040 468951181)', /468\s?95\s?1\s?181|4940468951181/g],
   // Zensus-Haushaltstyp HHTYP_SENIOR_HH__1 heißt „Haushalte mit ausschließlich Seniorinnen/Senioren",
   // Senior = 65. Lebensjahr vollendet (Methodikblatt der Regionaltabelle Haushalte). Das Ehepaar mit 70 und
   // 72 ist so ein Haushalt — „nachts ist niemand da" behauptet deshalb mehr, als die Zahl hergibt, und zwar

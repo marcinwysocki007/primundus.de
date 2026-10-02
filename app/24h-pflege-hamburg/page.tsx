@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   aktualisiert: '24. September 2026',
   lesezeit: '8 Min.',
   titel: '24-Stunden-Pflege in Hamburg: So funktioniert Betreuung zu Hause',
-  telefon: { nummer: '+4940468951181', anzeige: '040 468 951 181', adresse: 'Baumwall 7, 20459 Hamburg' },
+  telefon: { nummer: '+4940468958181', anzeige: '040 468 958 181', adresse: 'Baumwall 7, 20459 Hamburg' },
   // Die Wohnungsdaten stehen schon in der Prosa — kein zweiter Wohnen-Baustein
   wohnenBaustein: false,
   einleitung: <>Die Betreuungskraft braucht ein eigenes, abschließbares Zimmer; Bad und Küche werden in der Regel geteilt.
