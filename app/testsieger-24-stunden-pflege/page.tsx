@@ -20,7 +20,7 @@ import { AuszeichnungsJahre, SiegelZeile, VorteileKasten } from '@/components/ve
 // gleich ist" — die Vorteile im Abschnitt #familie stehen in der Reihenfolge der USPs und im Wortlaut von Startseite
 // und Rechner (Hero-Punkte, Ablauf, Bestpreisgarantie).
 
-const AKTUALISIERT = aktualisiertAm('testsieger-24-stunden-pflege', '23. September 2026')
+const AKTUALISIERT = aktualisiertAm('testsieger-24-stunden-pflege', '2. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-testsieger'
 const PDF = '/downloads/die-welt-service-champions-2021.pdf'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
@@ -31,6 +31,13 @@ const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offse
 // „Das Siegel“ weiter unten fällt dafür weg, sonst stünde es zweimal auf der Seite.
 // Beschreibung D2 nach OpenAI-Prüfung (23.09.): stärkste Klickrate, führt in den Rechner, 106 Zeichen — am Handy vollständig
 const BESCHREIBUNG = 'Primundus ist 6× in Folge Testsieger bei DIE WELT. Preis und passende Pflegekräfte sehen Sie in 2 Minuten.'
+// 02.10.2026, Martin („1 ja“, Abnahme Website-Vergleich, OpenAI 2 Runden): „Primundus“ zurück in Titel und Überschrift.
+// Bis 24.09. kannte Google nur die Fassung vom 11.09. mit „Primundus“ im Titel und zeigte die Seite bei „24 stunden pflege
+// testsieger“ auf Platz 6–9; nach dem Neulesen am 24.09. (Titel ohne „Primundus“) zeigte es dafür die Startseite, ab 30.09.
+// die Testsieger-Seite gar nicht mehr. Suchphrase „24-Stunden-Pflege Testsieger“ bleibt vorn, Auszeichnung wie freigegeben
+// „bei DIE WELT“, kein „Nr. 1“, kein „Vermittler“. Die Überschrift beantwortet die Frage „Wer ist Testsieger?“ selbst;
+// Unterzeile und Einleitung bleiben. Danach Neuindexierung in der Search Console.
+const TITEL = '24-Stunden-Pflege Testsieger: Primundus 6× bei DIE WELT'
 const PDF_LINK = <a href={PDF} target="_blank" rel="noopener" className={`font-semibold ${LINK}`}>Veröffentlichung ansehen (PDF)</a>
 
 const SECTIONS = [
@@ -41,12 +48,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
+  title: TITEL,
   description: BESCHREIBUNG,
   alternates: { canonical: 'https://primundus.de/testsieger-24-stunden-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege Testsieger: 6× in Folge bei DIE WELT',
+    title: TITEL,
     description: BESCHREIBUNG,
     url: 'https://primundus.de/testsieger-24-stunden-pflege',
     siteName: 'Primundus',
@@ -131,7 +138,7 @@ export default function TestsiegerPage() {
             { label: 'Testsieger 24-Stunden-Pflege' },
           ]}
           augenbraue="Auszeichnung"
-          titel="Testsieger in der 24-Stunden-Pflege: 6× in Folge bei DIE WELT"
+          titel="Primundus ist Testsieger in der 24-Stunden-Pflege: 6× in Folge bei DIE WELT"
           einleitung={<>DIE WELT hat Primundus <strong className="text-pm-ink">sechs Jahre in Folge</strong> ausgezeichnet, zuletzt 2026. Entschieden haben das die Kunden — in einer der größten Service-Studien Deutschlands.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="3 Min."
