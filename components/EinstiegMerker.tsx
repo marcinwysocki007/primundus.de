@@ -18,6 +18,8 @@ const VERWEIS_OHNE_EINWILLIGUNG = false
 const SPEICHER = 'pm_einstieg'
 
 let einstieg: Einstieg | null = null
+// Adresse des ersten Aufrufs: Wer erst nach einem Seitenwechsel ohne Neuladen zustimmt, hat trotzdem hier begonnen
+let erster: { pfad: string; suche: string } | null = null
 
 function statistik(): boolean {
   return cookieConsent.getConsent()?.analytics === true
@@ -43,7 +45,8 @@ function merken(e: Einstieg | null) {
 
 function ermitteln(): Einstieg {
   const erlaubt = VERWEIS_OHNE_EINWILLIGUNG || statistik()
-  const jetzt = einstiegErmitteln(location.pathname, location.search, erlaubt ? document.referrer : null)
+  if (!erster) erster = { pfad: location.pathname, suche: location.search }
+  const jetzt = einstiegErmitteln(erster.pfad, erster.suche, erlaubt ? document.referrer : null)
   if (!statistik()) return jetzt
   const alt = gemerkt()
   // Neuladen innerhalb der Website: der gemerkte Einstieg gilt weiter. Neuer Besuch von außen im selben Tab: neu merken.
@@ -64,6 +67,8 @@ export function EinstiegMerker() {
         else merken(einstieg)
       } else {
         merken(null)
+        // Widerruf: Was aus dem Verweis stammt, geht nicht mehr mit — es bleibt, was die eigene Adresse sagt
+        if (!VERWEIS_OHNE_EINWILLIGUNG) einstieg = ermitteln()
       }
     }
 
