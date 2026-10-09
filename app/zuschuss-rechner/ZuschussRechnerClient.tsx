@@ -175,7 +175,7 @@ export function ZuschussRechnerClient() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href={`https://kostenrechner.primundus.de?pflegegrad=${pg.pg}`}
+                href={`https://kostenrechner.primundus.de/?pflegegrad=${pg.pg}&src=apex-zuschuss-pflegegrad`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-pm-coral hover:bg-pm-coral-deep text-white font-bold text-[15px] py-3.5 px-6 rounded-full transition-colors"

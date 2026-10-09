@@ -239,7 +239,7 @@ export default function Page() {
               <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
                 Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
                 Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
+                <a href="https://kostenrechner.primundus.de/bestpreisgarantie?src=apex-garantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
               </p>
             </div>
             <Schritte

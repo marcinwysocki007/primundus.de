@@ -9,7 +9,7 @@ import { ABLAUF_SCHRITTE } from '@/components/vertrauen/Ablauf'
 import { VORAUSSETZUNGEN } from '@/components/vertrauen/Voraussetzungen'
 
 export const RECHNER_START = 'https://kostenrechner.primundus.de/?start=1&src=apex-startseite'
-const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
+const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie?src=apex-garantie'
 
 const KNOPF =
   'inline-flex items-center justify-center gap-2 min-h-[58px] px-8 rounded-2xl bg-pm-coral hover:bg-pm-coral-deep text-white text-[18px] md:text-[19px] font-bold shadow-lift transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe'

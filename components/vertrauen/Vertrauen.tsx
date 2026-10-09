@@ -13,7 +13,7 @@ import { ProduktBuehne } from '@/components/vertrauen/ProduktBuehne'
 import { alleBewertungen, anzahlText, ladeDirekteBewertungen, schnitt, schnittText, type Bewertung } from '@/lib/bewertungen'
 import { ladeGoogleDaten } from '@/lib/google-bewertungen'
 
-export const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
+export const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie?src=apex-garantie'
 export const WHATSAPP = 'https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A'
 export const rechnerLink = (src: string) => `https://kostenrechner.primundus.de/?start=1&src=${src}`
 
