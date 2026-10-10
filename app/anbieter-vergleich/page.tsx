@@ -4,12 +4,12 @@ import { Fragen, RatgeberKopf, StandardUnterzeile } from '@/components/vorlage/R
 import { ANBIETER, PRIMUNDUS, KRITERIEN, FUSSNOTEN, STAND, wertungsRegeln, type Anbieter, type Wertung } from '@/lib/anbieterVergleich'
 
 export const metadata: Metadata = {
-  title: 'Anbieter-Vergleich 2026: Pflegehelden, Promedica24 & Co.',
+  title: 'Anbieter-Vergleich 2026: Promedica24, Hausengel & Co.',
   description:
-    'Pflegehelden, Promedica24, Hausengel, marta, Linara, Primundus: Wer nennt den Preis online, wer verlangt Gebühren, wer bindet wie lange?',
+    'Promedica24, Hausengel, marta, Linara, Primundus: Wer nennt den Preis online, wer verlangt Gebühren, wer bindet wie lange?',
   alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
-    title: 'Anbieter-Vergleich 2026: Pflegehelden, Promedica24 & Co.',
+    title: 'Anbieter-Vergleich 2026: Promedica24, Hausengel & Co.',
     description:
       'Sechs bekannte Anbieter und Primundus im Faktenvergleich: Preise, Gebühren, Vertragsbindung, Auswahl der Betreuungskraft.',
     url: 'https://primundus.de/anbieter-vergleich',
@@ -28,15 +28,15 @@ const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-anbieter-v
 const faqs = [
   {
     q: 'Welcher 24h-Pflege-Anbieter zeigt Preise sofort online?',
-    a: `Ohne Kontaktdaten zeigen marta Planpreise, Promedica24 eine Preisliste mit Tagespreisen und die Deutsche Seniorenbetreuung eine unverbindliche Kostenschätzung. Primundus zeigt nach Eingabe der Kontaktdaten in 2 Minuten einen Online-Preis samt Zuschüssen, ohne Rückruf; Linara zeigt nach Eingabe der Kontaktdaten die voraussichtlichen Monatskosten. Pflegehelden und Hausengel zeigen Beispielpreise; ein individuelles Angebot gibt es dort nach Anfrage oder Beratungsgespräch (Stand ${STAND}, eigene Angaben der Anbieter).`,
+    a: `Ohne Kontaktdaten zeigen marta Planpreise, Promedica24 eine Preisliste mit Tagespreisen und die Deutsche Seniorenbetreuung eine unverbindliche Kostenschätzung. Primundus zeigt nach Eingabe der Kontaktdaten in 2 Minuten einen Online-Preis samt Zuschüssen, ohne Rückruf; Linara zeigt nach Eingabe der Kontaktdaten die voraussichtlichen Monatskosten. Hausengel zeigt Beispielpreise; ein individuelles Angebot gibt es dort nach Anfrage oder Beratungsgespräch (Stand ${STAND}, eigene Angaben der Anbieter).`,
   },
   {
     q: 'Bei welchem Anbieter sehe ich Betreuungskräfte vor dem Vertrag?',
-    a: 'Bei Primundus sehen Sie passende Betreuungskräfte direkt mit dem Angebot, nach Eingabe der Kontaktdaten, und wählen aus, bevor ein Vertrag unterschrieben wird. Bei marta sind Profile nach kostenloser Registrierung mit Fragebogen einsehbar. Hausengel und die Deutsche Seniorenbetreuung schicken nach der Anfrage Personalvorschläge, die Familie lernt die Kräfte telefonisch kennen. Bei Hausengel folgt danach die Auftragsvergabe, bei der Deutschen Seniorenbetreuung folgen Vermittlung und Kosten erst nach der Entscheidung für eine Kraft. Bei Pflegehelden kommen die Personalvorschläge nach der Annahme des Angebots, bei Promedica24 und Linara im weiteren Vermittlungsprozess.',
+    a: 'Bei Primundus sehen Sie passende Betreuungskräfte direkt mit dem Angebot, nach Eingabe der Kontaktdaten, und wählen aus, bevor ein Vertrag unterschrieben wird. Bei marta sind Profile nach kostenloser Registrierung mit Fragebogen einsehbar. Hausengel und die Deutsche Seniorenbetreuung schicken nach der Anfrage Personalvorschläge, die Familie lernt die Kräfte telefonisch kennen. Bei Hausengel folgt danach die Auftragsvergabe, bei der Deutschen Seniorenbetreuung folgen Vermittlung und Kosten erst nach der Entscheidung für eine Kraft. Bei Promedica24 und Linara kommen die Personalvorschläge im weiteren Vermittlungsprozess.',
   },
   {
     q: 'Welche Vermittlungsgebühren verlangen 24h-Pflege-Anbieter?',
-    a: 'Primundus berechnet keine Vermittlungs- oder Aufnahmegebühr. Nach eigenen Angaben verlangt Linara eine Erstaufnahmepauschale von 418 € (mit Geld-zurück-Garantie), marta je nach Plan eine Aufnahmegebühr von 0 € bis 999 € und eine Plattformnutzungsgebühr, die nicht anfällt, solange eine Betreuungskraft vor Ort ist. Hausengel weist in seiner Beispielrechnung 220 € Vermittlung und ca. 490 € Franchisegebühr im Monat aus; die Vermittlung ist laut Hausengel in der Regel über die Pflegekasse erstattungsfähig. Die Deutsche Seniorenbetreuung berechnet für Vermittlung und Betreuung durchschnittlich 17,85 € pro Tag, dazu 280 € bei Einsätzen unter 40 Tagen. Bei Pflegehelden („Agenturgebühren einkalkuliert") und Promedica24 (Vermittlungsgebühren laut Preisseite im Tagespreis) sind die Gebühren im Preis enthalten.',
+    a: 'Primundus berechnet keine Vermittlungs- oder Aufnahmegebühr. Nach eigenen Angaben verlangt Linara eine Erstaufnahmepauschale von 418 € (mit Geld-zurück-Garantie), marta je nach Plan eine Aufnahmegebühr von 0 € bis 999 € und eine Plattformnutzungsgebühr, die nicht anfällt, solange eine Betreuungskraft vor Ort ist. Hausengel weist in seiner Beispielrechnung 220 € Vermittlung und ca. 490 € Franchisegebühr im Monat aus; die Vermittlung ist laut Hausengel in der Regel über die Pflegekasse erstattungsfähig. Die Deutsche Seniorenbetreuung berechnet für Vermittlung und Betreuung durchschnittlich 17,85 € pro Tag, dazu 280 € bei Einsätzen unter 40 Tagen. Bei Promedica24 sind die Vermittlungsgebühren laut Preisseite im Tagespreis enthalten.',
   },
   {
     q: 'Kann ich den Vertrag bei Primundus jederzeit kündigen?',
@@ -93,7 +93,7 @@ export default function Page() {
           knopfOben
           unterzeile={<StandardUnterzeile />}
           einleitungTitel="Worum es in diesem Vergleich geht"
-          einleitung={<>Pflegehelden, Promedica24, Hausengel, marta, Linara, Deutsche Seniorenbetreuung und Primundus: Wann sehen Sie den Preis, wann die Betreuungskraft, welche Gebühren fallen an, wie lange binden Sie sich? Die Antworten stehen auf den Websites der Anbieter; hier stehen sie nebeneinander, mit Quelle je Angabe (Stand {STAND}). Primundus steht selbst in der Tabelle. Kein Anspruch auf Vollständigkeit, Konditionen können sich ändern.</>}
+          einleitung={<>Promedica24, Hausengel, marta, Linara, Deutsche Seniorenbetreuung und Primundus: Wann sehen Sie den Preis, wann die Betreuungskraft, welche Gebühren fallen an, wie lange binden Sie sich? Die Antworten stehen auf den Websites der Anbieter; hier stehen sie nebeneinander, mit Quelle je Angabe (Stand {STAND}). Primundus steht selbst in der Tabelle. Kein Anspruch auf Vollständigkeit, Konditionen können sich ändern.</>}
         />
       </div>
       <div className="bg-pm-paper">
@@ -202,7 +202,7 @@ export default function Page() {
             <div className="bg-pm-shell border border-[rgba(139,115,85,0.2)] rounded-2xl p-5">
               <p className="text-[13px] font-bold text-pm-taupe-ink mb-1">Der Fairness halber</p>
               <p className="text-[13px] text-pm-taupe-ink leading-relaxed">
-                Jeder Anbieter hat Stärken: Pflegehelden, Promedica24, Hausengel und die Deutsche Seniorenbetreuung
+                Jeder Anbieter hat Stärken: Promedica24, Hausengel und die Deutsche Seniorenbetreuung
                 nennen Ansprechpartner vor Ort oder in der Region, Promedica24 und Hausengel einen Kontakt rund um
                 die Uhr. marta macht Profile und Preise online vergleichbar, Promedica24 veröffentlicht eine
                 Preisliste, Hausengel nennt über 200.000 Vermittlungen seit 2005, Linara eine Gründung 2008. Dieser
@@ -228,11 +228,6 @@ export default function Page() {
                   <p className="text-[13px] text-pm-body leading-relaxed">
                     <strong className="text-pm-ink">Stärken:</strong> {a.staerken.join(' · ')}
                   </p>
-                  {a.slug === 'pflegehelden' && (
-                    <p className="text-[13px] text-pm-taupe font-semibold mt-2">
-                      <a href="/pflegehelden-alternative" className="hover:underline">→ Ausführlicher Vergleich: Pflegehelden oder Primundus?</a>
-                    </p>
-                  )}
                   {a.slug === 'promedica24' && (
                     <p className="text-[13px] text-pm-taupe font-semibold mt-2">
                       <a href="/promedica24-alternative" className="hover:underline">→ Ausführlicher Vergleich: Promedica24 oder Primundus?</a>

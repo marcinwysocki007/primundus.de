@@ -206,7 +206,6 @@ export default function TestsiegerPage() {
               label="Zum Vergleich:"
               links={[
                 { href: '/anbieter-vergleich', text: '24h-Pflege-Anbieter im Vergleich 2026' },
-                { href: '/pflegehelden-alternative', text: 'Pflegehelden oder Primundus? Der direkte Vergleich' },
               ]}
             />
           </Abschnitt>

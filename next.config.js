@@ -70,6 +70,10 @@ const nextConfig = {
       // 10.10.2026 (Martin): Franchise-Seite abgeschaltet, Interessenten landen auf der Partnerseite.
       { source: '/franchisepartner', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
       { source: '/franchisepartner/', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
+      // 10.10.2026 (Martin): Pflegehelden-Vergleichsseite abgeschaltet. Pflegehelden steht weiter
+      // in der Tabelle auf /anbieter-vergleich, dorthin geht die Seite.
+      { source: '/pflegehelden-alternative', destination: '/anbieter-vergleich', permanent: true },
+      { source: '/pflegehelden-alternative/', destination: '/anbieter-vergleich', permanent: true },
       { source: '/partner-werden/agb', destination: '/pflegekraefte-fuer-vermittler/agb', permanent: true },
       // 20.09.2026 (Martins Freigabe „go fuer das Ersetzen der alten Versionen"): zwei Seiten, die dasselbe
       // Thema schwaecher abdecken, gehen in die neue Fassung. /alzheimer-betreuung-zuhause hatte 310

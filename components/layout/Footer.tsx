@@ -75,7 +75,6 @@ const vergleichLinks = [
   // 17.09.2026: Bewertungsseite (Google München/Hamburg, Trustpilot, eigenes Formular)
   { label: 'Erfahrungen & Bewertungen', href: '/erfahrungen' },
   { label: 'Rechtssicherheit', href: '/rechtssicher' },
-  { label: 'Pflegehelden-Alternative', href: '/pflegehelden-alternative' },
   { label: 'Promedica24-Alternative', href: '/promedica24-alternative' },
   { label: 'Hausengel-Alternative', href: '/hausengel-alternative' },
 ]

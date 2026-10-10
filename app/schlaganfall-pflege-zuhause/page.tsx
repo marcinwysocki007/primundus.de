@@ -19,7 +19,7 @@ import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN 
 // pflegegrad" auf 29–75), Googles Fragen („Welche pflegerischen Maßnahmen nach einem Schlaganfall gibt es?", „Welche Pflegestufe gibt
 // es nach einem Schlaganfall?", „Wann darf man nach einem Schlaganfall wieder nach Hause?", „Was kann man Schlaganfallpatienten Gutes
 // tun?"), Verfeinerungen (Finanzielle Hilfe, Keine Reha, Schwerstpflegefall, Pflegefall, Kurzzeitpflege, gesetzliche Betreuung) und die
-// Seiten auf Platz 1–8 (sanubi, Schlaganfall-Hilfe, curasenio, flintrehab, Pflegehelden-Blog). Der Keyword-Planer liefert für das
+// Seiten auf Platz 1–8 (sanubi, Schlaganfall-Hilfe, curasenio, flintrehab, ein Anbieter-Blog). Der Keyword-Planer liefert für das
 // Thema kaum Zahlen (Gesundheit). Belege: Stiftung Deutsche Schlaganfall-Hilfe (Factsheets: rund 270.000 Schlaganfälle im Jahr,
 // ein Jahr danach rund 64 % pflegebedürftig, rund 15 % in einer Einrichtung), §§ 39e, 37c SGB V, §§ 18a, 42 SGB XI, lib/fakten.
 // Raus: „Post-Stroke-Depression bei 30–40 %" ohne Quelle, „Entscheidungsfrist eine Woche" (richtig: Begutachtung am fünften Arbeitstag).
