@@ -13,7 +13,6 @@ const moneyPages = [
   'testsieger-24-stunden-pflege',
   'kontakt',
   'beratungsgespraech',
-  'franchisepartner',
 ]
 
 const hubs = [
