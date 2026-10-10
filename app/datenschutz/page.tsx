@@ -71,6 +71,10 @@ export default function Page() {
               <li>Kontaktdaten (Name, E-Mail-Adresse, Telefonnummer)</li>
               <li>Berechnete Kostenkalkulation und individuelle Zuschüsse</li>
             </ul>
+            {/* 10.10.2026, Martin („alles ja“ zur Abnahme vom 09.10., Punkt 2): Einstieg und Herkunft je Anfrage (components/EinstiegMerker.tsx) */}
+            <p className="text-[15px] text-pm-body leading-[1.7] mb-3">
+              <strong className="text-pm-ink">Herkunft Ihrer Anfrage:</strong> Wenn Sie von primundus.de in den Kostenrechner wechseln, geben wir zwei Angaben mit: die erste Seite, die Sie bei uns aufgerufen haben, und die Art der Seite, von der Sie kamen, zum Beispiel Google, eine Anzeige, eine andere Suchmaschine, ein KI-Assistent oder kein Verweis. Die genaue Adresse der Seite, von der Sie kamen, speichern wir nicht. Die beiden Angaben stehen in der Adresse des Kostenrechners und damit auch in Ihrem Browserverlauf. Haben Sie der Statistik zugestimmt, merkt sich Ihr Browser die Angaben außerdem, bis Sie den Tab schließen. Senden Sie im Kostenrechner eine Anfrage ab, speichern wir beide Angaben zusammen mit Ihrer Anfrage und löschen sie mit ihr. So sehen wir, welche Seiten zu Anfragen führen. Rechtsgrundlage ist unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO). Sie können jederzeit widersprechen, zum Beispiel per E-Mail an <a href="mailto:info@primundus.de" className="text-pm-taupe hover:underline">info@primundus.de</a>.
+            </p>
             <p className="text-[15px] text-pm-body leading-[1.7]">
               Mit dem Abschluss des Formulars wird automatisch ein persönliches Kundenkonto angelegt. Über dieses Konto können Sie Ihr individuelles Angebot einsehen, passende Pflegekräfte-Profile ansehen und Betreuungskräfte direkt einladen. Der Zugang erfolgt über einen Ihnen per E-Mail zugesandten persönlichen Einmal-Link (Magic Link) — es ist kein separates Passwort erforderlich.
             </p>
