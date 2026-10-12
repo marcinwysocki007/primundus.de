@@ -1,3 +1,14 @@
+const fs = require('fs')
+const path = require('path')
+
+// 12.10.2026: Alte Ortsadressen /24h-pflege/<ort>/ (Seitenstruktur bis Sommer 2026) liefern 404. Die Search Console
+// führt 27 davon unter „Nicht gefunden (404)“, zuletzt gecrawlt 16.07.–11.09.2026 (z. B. /24h-pflege/dormagen/,
+// /24h-pflege/sachsen-anhalt/). Zu jeder gibt es heute die Seite /24h-pflege-<ort>. Die Liste kommt aus app/, damit
+// nur auf bestehende Seiten umgeleitet wird; neue Ortsseiten sind automatisch dabei.
+const ORTSSEITEN = fs.readdirSync(path.join(__dirname, 'app'), { withFileTypes: true })
+  .filter((d) => d.isDirectory() && d.name.startsWith('24h-pflege-') && fs.existsSync(path.join(__dirname, 'app', d.name, 'page.tsx')))
+  .map((d) => d.name.slice('24h-pflege-'.length))
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -61,6 +72,7 @@ const nextConfig = {
       { source: '/24h-pflege-muenchen/kontakt', destination: '/kontakt', permanent: true },
       { source: '/24h-pflege-muenchen/datenschutz', destination: '/datenschutz', permanent: true },
       { source: '/24h-pflege-muenchen/:pfad+', destination: '/24h-pflege-muenchen', permanent: true },
+      ...ORTSSEITEN.map((ort) => ({ source: `/24h-pflege/${ort}`, destination: `/24h-pflege-${ort}`, permanent: true })),
       { source: '/24-stunden-pflege/kosten-24-std-pflege', destination: '/kosten', permanent: true },
       { source: '/24-stunden-pflege/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
       { source: '/pflegekraft-polen-premium', destination: '/pflegekraft-aus-polen', permanent: true },
