@@ -88,6 +88,22 @@ const STALE = [
     /Belege\s+(?:bis\s+)?(?:vor\s+dem|zum|spätestens\s+(?:am|zum)|bis\s+zum)\s+(?:31\.\s*Dezember|31\.\s*12\.|Jahresende)/gi, { ohneKommentare: true }],
   ['Verhinderungspflege „keine eigenständige“ (Leistung besteht weiter, § 42a)',
     /keine\s+eigenst[aä]ndige\s+Verhinderungspflege/gi, { ohneKommentare: true }],
+  // Sachfehler, die Martin am 13.10.2026 finden musste („warum muss ich jedes mal solche fehler finden“). Behoben in
+  // b6a8c8e5 und dd07e3f2 (Wortlaut von OpenAI, Beleg seo-reports/analysen/sachfehler_openai_2026-10-13.md). Die Regeln
+  // sorgen dafür, dass derselbe Satz nicht über eine andere Seite oder einen neuen Entwurf zurückkommt.
+  // BAG 24.06.2021, 5 AZR 505/20: Bereitschaftsdienst einer entsandten Betreuungskraft im Haushalt ist Arbeitszeit.
+  ['Bereitschaft als „keine Arbeitszeit“ (BAG 24.06.2021, 5 AZR 505/20)',
+    /Bereitschaft(?:sdienst|szeit(?:en)?)?\s+(?:ist|sind|gilt|gelten|zählt|zählen)\s+(?:als\s+)?(?:keine|nicht\s+als)\s+Arbeitszeit/gi,
+    { ohneKommentare: true }],
+  // Die A1-Bescheinigung stellt der Sozialversicherungsträger des Entsendestaats aus; der Arbeitgeber beantragt sie nur.
+  ['A1 „vom Arbeitgeber ausgestellt“ (stellt der Sozialversicherungsträger im Entsendestaat aus)',
+    /vom\s+Arbeitgeber(?:\s+im\s+(?:Heimatland|Herkunftsland|Entsendestaat))?\s+ausgestellt/gi, { ohneKommentare: true }],
+  // Kost und Logis ersetzen den Mindestlohn grundsätzlich nicht.
+  ['Sachbezüge auf den Mindestlohn angerechnet', /Sachbez(?:ü|ue)ge[^.]{0,60}(?:angerechnet|anrechenbar)/gi,
+    { ohneKommentare: true }],
+  // Regel 12.09.2026: Mindestlohn-Beträge stehen nicht auf Kundenseiten (am 13.10. stand dort noch der Wert von 2025).
+  ['Mindestlohn mit Betrag (Regel 12.09.: keine Beträge auf Kundenseiten)',
+    /Mindestlohn[^.;"'<]{0,40}\d{1,2},\d{2}\s*(?:€|Euro)/g, { ohneKommentare: true }],
 ]
 
 // Zeilen, die nur Kommentar sind (// …, * … in Blockkommentaren, {/* … in JSX)
