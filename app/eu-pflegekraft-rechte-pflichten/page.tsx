@@ -106,7 +106,7 @@ export default function EuPflegekraftRechtenPflichten() {
             punkte={[
               { title: 'Mindestlohn', desc: 'Entsandte Arbeitnehmer haben Anspruch auf den deutschen gesetzlichen Mindestlohn. Sachbezüge wie Kost und Logis ersetzen den Mindestlohn grundsätzlich nicht.' },
               { title: 'Eigenes Zimmer & Privatsphäre', desc: 'Die Betreuungskraft hat Anspruch auf ein eigenes Zimmer mit Privatsphäre. Das ist Pflicht — kein Schlafen auf dem Sofa oder ohne abschließbaren Rückzugsort.' },
-              { title: 'Ruhezeiten', desc: 'Gesetzliche tägliche Ruhezeit von mindestens 11 Stunden. Bereitschaft ist keine Arbeitszeit wenn sie tatsächlich ungestört ist.' },
+              { title: 'Ruhezeiten', desc: 'Nach Arbeitsende müssen grundsätzlich mindestens 11 zusammenhängende Stunden Ruhezeit frei bleiben; die Arbeitszeit darf im Durchschnitt 48 Stunden pro Woche nicht überschreiten. Muss die Betreuungskraft im Haushalt bereitstehen, ist das regelmäßig Arbeitszeit; nur echte Rufbereitschaft außerhalb des Haushalts zählt nicht dazu.' },
               { title: 'Urlaub', desc: 'Gesetzlicher Mindesturlaub (4 Wochen/Jahr). Für die Dauer eines Einsatzes (6–8 Wochen) anteilig.' },
               { title: 'Krankenversicherung', desc: 'Über das EU-Unternehmen im Heimatland sozialversichert. Bei Erkrankung in Deutschland: Behandlung über europäische Krankenversicherungskarte (EHIC) möglich.' },
               { title: 'Würdevoller Umgang', desc: 'Die Kraft ist kein "Personal" das jederzeit Befehle entgegennehmen muss. Sie ist ein Mensch in einem Arbeitsverhältnis der Respekt verdient.' },
