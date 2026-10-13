@@ -319,23 +319,32 @@ export const AUFRUF_TITEL = 'In 2 Minuten wissen\u00A0Sie, was es kostet und wer
 export const AUFRUF_TEXT = 'Sie beantworten ein paar Fragen zur Pflegesituation. Danach sehen Sie den Monatspreis und die Betreuungskräfte, die dafür in Frage kommen, mit Foto, Erfahrung und Deutschniveau.'
 
 /** Links der Aufruf, rechts das Produktbild: passende Pflegekräfte, wie das Kundenportal sie zeigt. Darunter Marta.
- * neutral: Titel und Text ohne Zusage zu Pflegekräften, ohne Produktbild mit Profilkarten; Marta bleibt. */
+ * neutral: Titel und Text ohne Zusage zu Pflegekräften, ohne Produktbild mit Profilkarten; am Computer steht der Knopf
+ * mit Sternen und Punkten in der rechten Spalte statt des Produktbilds (sonst bliebe sie leer). Marta bleibt. */
 export function SchlussAufruf({ src, titelId = 'schluss-titel', neutral = false }: { src: string; titelId?: string; bild?: string; neutral?: boolean }) {
   return (
     <aside aria-labelledby={titelId}>
       <div className="bg-white">
-        <div className={neutral ? 'mx-auto max-w-seite px-5 py-16 md:py-24' : 'mx-auto grid max-w-seite gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-10 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)] xl:gap-16'}>
-          <div className={neutral ? 'min-w-0 max-w-[46rem]' : 'min-w-0'}>
+        <div className={neutral ? 'mx-auto grid max-w-seite gap-8 px-5 py-16 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:items-center lg:gap-16 xl:gap-24' : 'mx-auto grid max-w-seite gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-10 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)] xl:gap-16'}>
+          <div className="min-w-0">
             <p className={`${AUGENBRAUE} text-pm-taupe`}>Kostenlos und unverbindlich</p>
             <h2 id={titelId} className="mt-4 text-[clamp(30px,4vw,48px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">
               {neutral ? NEUTRAL_TITEL : AUFRUF_TITEL}
             </h2>
             <p className="mt-5 max-w-[46ch] text-[18px] leading-[1.6] text-pm-body">{neutral ? NEUTRAL_TEXT : AUFRUF_TEXT}</p>
+            {neutral ? null : (
             <div className="mt-8">
-              <RechnerBlock src={src} neutral={neutral} />
+              <RechnerBlock src={src} />
             </div>
+            )}
           </div>
-          {neutral ? null : <ProduktBuehne garantie={GARANTIE} />}
+          {neutral ? (
+            <div className="min-w-0">
+              <RechnerBlock src={src} neutral />
+            </div>
+          ) : (
+            <ProduktBuehne garantie={GARANTIE} />
+          )}
         </div>
       </div>
       <MartaBand />
