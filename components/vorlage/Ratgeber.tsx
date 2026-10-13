@@ -420,7 +420,8 @@ function rechnerQuelle(href: string): string {
 }
 
 // Text links, rechts Inhaltsverzeichnis und Kostenknopf (beide mitlaufend, erst ab 1024 px).
-export function RatgeberRumpf({ abschnitte, children, src = 'apex-components' }: { abschnitte: { id: string; title: string }[]; children: ReactNode; src?: string }) {
+// neutral: Kostenknopf ohne Zusage zu Pflegekräften (LeistenKarte neutral), siehe RechnerKasten.
+export function RatgeberRumpf({ abschnitte, children, src = 'apex-components', neutral = false }: { abschnitte: { id: string; title: string }[]; children: ReactNode; src?: string; neutral?: boolean }) {
   return (
     <div className="max-w-seite mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
       <article className="min-w-0 max-w-[46rem]">{children}</article>
@@ -436,7 +437,7 @@ export function RatgeberRumpf({ abschnitte, children, src = 'apex-components' }:
             <InhaltLeiste abschnitte={abschnitte} />
           </div>
           <div className="mt-6 flex-none pb-6">
-            <LeistenKarte src={mitPosition(src, 'leiste')} />
+            <LeistenKarte src={mitPosition(src, 'leiste')} neutral={neutral} />
           </div>
         </div>
       </aside>
@@ -635,7 +636,30 @@ export function Kasten({
 
 // „Preis berechnen" führt direkt in den Kostenrechner, nicht zu Pflegegrad- oder Schätzrechnern
 // (Martin 17.09.2026). src bleibt je Seite, damit Anfragen ihrer Seite zugeordnet werden.
-export function RechnerKasten({ src }: { src: string }) {
+//
+// neutral (13.10.2026, Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien): Martins Vorgabe für diese
+// Seiten — Primundus „macht“ Kräfte aus diesen Ländern weder, noch „macht“ es sie nicht. Der Kasten verspricht deshalb
+// keine Pflegekräfte, nennt den Kontaktschritt und keine Minuten (Wortlaut aus den Entwürfen vom 13.10., Fassung 5c).
+// Ohne neutral bleibt jede andere Seite unverändert.
+export function RechnerKasten({ src, neutral = false }: { src: string; neutral?: boolean }) {
+  if (neutral) {
+    return (
+      <Kasten titel="Vergleichspreis für Ihre Situation">
+        <Text>
+          Der Kostenrechner von Primundus fragt nach Pflegegrad, Mobilität, Nächten und Deutschkenntnissen. Nach den Fragen und
+          Ihren Kontaktdaten erhalten Sie einen unverbindlichen Vergleichswert für die monatlichen Kosten einer Betreuungskraft,
+          die bei Ihnen wohnt.
+        </Text>
+        <a
+          href={`https://kostenrechner.primundus.de/?start=1&src=${src}`}
+          referrerPolicy="no-referrer-when-downgrade"
+          className={`${KNOPF} sm:self-start`}
+        >
+          Vergleichspreis ansehen
+        </a>
+      </Kasten>
+    )
+  }
   return (
     <Kasten titel="Berechnen Sie Ihren Preis und sehen Sie passende Pflegekräfte sofort">
       <Text>
