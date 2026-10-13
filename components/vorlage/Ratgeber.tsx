@@ -639,15 +639,16 @@ export function Kasten({
 //
 // neutral (13.10.2026, Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien): Martins Vorgabe für diese
 // Seiten — Primundus „macht“ Kräfte aus diesen Ländern weder, noch „macht“ es sie nicht. Der Kasten verspricht deshalb
-// keine Pflegekräfte, nennt den Kontaktschritt und keine Minuten (Wortlaut aus den Entwürfen vom 13.10., Fassung 6e:
-// ohne „von Primundus“, „nächtlichem Hilfebedarf“ statt „Nächten“). Ohne neutral bleibt jede andere Seite unverändert.
+// keine Pflegekräfte, nennt den Kontaktschritt und keine Minuten (Wortlaut aus den Entwürfen vom 13.10., Fassung 6g:
+// „von Primundus“, damit erkennbar ist, wessen Rechner es ist; „Vergleichspreis“ wie Titel und Knopf, Martin 13.10.).
+// Ohne neutral bleibt jede andere Seite unverändert.
 export function RechnerKasten({ src, neutral = false }: { src: string; neutral?: boolean }) {
   if (neutral) {
     return (
       <Kasten titel="Vergleichspreis für Ihre Situation">
         <Text>
           Der Kostenrechner von Primundus fragt nach Pflegegrad, Mobilität, nächtlichem Hilfebedarf und Deutschkenntnissen. Nach den Fragen und
-          Ihren Kontaktdaten erhalten Sie einen unverbindlichen Vergleichswert für die monatlichen Kosten einer Betreuungskraft,
+          Ihren Kontaktdaten erhalten Sie einen unverbindlichen monatlichen Vergleichspreis für eine Betreuungskraft,
           die bei Ihnen wohnt.
         </Text>
         <a

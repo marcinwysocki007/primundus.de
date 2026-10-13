@@ -92,7 +92,7 @@ function SterneLink({ d, klein = false, dunkel = false }: { d: Stand; klein?: bo
 // Ohne `neutral` bleibt jede andere Seite unverändert.
 const NEUTRAL_KNOPF = 'Vergleichspreis ansehen'
 const NEUTRAL_TITEL = 'Was Betreuung zu Hause in Ihrem Fall kostet'
-const NEUTRAL_TEXT = 'Nach ein paar Fragen zur Pflegesituation und Ihren Kontaktdaten erhalten Sie einen unverbindlichen Vergleichswert für Ihre Situation.'
+const NEUTRAL_TEXT = 'Nach ein paar Fragen zur Pflegesituation und Ihren Kontaktdaten erhalten Sie einen unverbindlichen Vergleichspreis für Ihre Situation.'
 
 /** Der Aufruf, überall gleich: Knopf und Plakette gleich breit, darunter die vier Punkte und die Sterne.
  * punkte=false im Kopf der Kernseiten (Martin 18.09.: Plakette und Sterne unter den Knopf; die Punkte stehen dort im Kasten rechts).

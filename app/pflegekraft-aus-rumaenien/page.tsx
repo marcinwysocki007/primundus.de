@@ -50,7 +50,7 @@ const FRAGEN = [
 const PRUEFLISTE = [
   'Wer ist mein Vertragspartner, mit Name, Sitz und Land?',
   'Bei wem ist die Kraft angestellt, und in welchem Land ist sie sozialversichert?',
-  'Bekomme ich vor Arbeitsbeginn eine Kopie der A1-Bescheinigung für genau diese Kraft? Für eine Firma in Rumänien stellt sie die Rentenkasse CNPP aus. Heften Sie die Kopie ab.',
+  'Bekomme ich vor Arbeitsbeginn eine Kopie der A1-Bescheinigung für genau diese Kraft? Ist sie noch nicht ausgestellt, zuerst den Antrag darauf und später die Bescheinigung. Für eine Firma in Rumänien stellt sie die Rentenkasse CNPP aus. Heften Sie die Kopien ab.',
   'Was kommt zum Monatspreis dazu: Anreise, Nächte, Feiertage, Gebühren?',
   'Verlangen Sie eine Vermittlungsgebühr oder eine Anzahlung?',
   'Wie lange bin ich gebunden, und wie kündige ich?',
@@ -296,7 +296,7 @@ export default function PflegekraftAusRumaenien() {
             titel="Ist eine Pflegekraft aus Rumänien legal? Ja, auf drei Wegen"
             einleitung="Für rumänische Staatsangehörige gilt seit 2014 die volle Freizügigkeit. Ob die Betreuung bei Ihnen legal ist, entscheiden der Vertrag und die Art, wie die Kraft tatsächlich arbeitet."
             punkte={[
-              { title: 'Entsendung mit A1-Bescheinigung', desc: 'Die Kraft ist bei einer Firma in Rumänien angestellt und dort sozialversichert. Eine Entsendung ist auf höchstens 24 Monate begrenzt (Art. 12 Verordnung (EG) 883/2004); Einsatzdauer, Wechsel und Ersatz regelt der Vertrag. Lassen Sie sich vor Beginn die A1-Bescheinigung zeigen: Sie belegt, dass das rumänische Sozialversicherungsrecht gilt; ausgestellt wird sie von der staatlichen Rentenkasse CNPP. Sie sind nicht Arbeitgeber. ' },
+              { title: 'Entsendung mit A1-Bescheinigung', desc: 'Die Kraft ist bei einer Firma in Rumänien angestellt und dort sozialversichert. Eine Entsendung ist auf höchstens 24 Monate begrenzt (Art. 12 Verordnung (EG) 883/2004); Einsatzdauer, Wechsel und Ersatz regelt der Vertrag. Lassen Sie sich vor Beginn die A1-Bescheinigung zeigen; ist sie noch nicht ausgestellt, zuerst den Antrag darauf und später die Bescheinigung. Sie belegt, dass das rumänische Sozialversicherungsrecht gilt; ausgestellt wird sie von der staatlichen Rentenkasse CNPP. Sie sind nicht Arbeitgeber. ' },
               { title: 'Eigene Anstellung', desc: 'Sie schließen einen Arbeitsvertrag und werden Arbeitgeber. Dazu gehören Anmeldung und Beiträge, Lohn nach deutschem Recht, Urlaub und Lohnfortzahlung bei Krankheit. Dafür bestimmen Sie den Alltag selbst. ' },
               { title: 'Selbstständige Betreuungskraft', desc: 'Die Kraft hat ein eigenes Gewerbe, in Deutschland oder in Rumänien, und schreibt Ihnen Rechnungen. Legal ist das nur, wenn sie selbst über Zeit und Ablauf ihrer Arbeit entscheidet und weitere Auftraggeber haben kann.' },
             ]}
