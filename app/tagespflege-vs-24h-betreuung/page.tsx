@@ -97,7 +97,7 @@ export default function TagespflegeVs24h() {
                 ['Nachtbetreuung', 'Nein', 'Ja'],
                 ['Ort', 'Externe Einrichtung', 'Eigenes Zuhause'],
                 ['Soziale Kontakte', 'Viele (Gruppenangebote)', '1:1-Beziehung zur Kraft'],
-                ['Angehörigen-Entlastung', 'Tagsüber', 'Rund um die Uhr'],
+                ['Angehörigen-Entlastung', 'Tagsüber', 'Im Alltag und bei Bedarf auch nachts'],
                 ['Kosten/Monat', '400–2.000+ €', 'ab 2.150 €'],
                 ['Kassenzuschuss', 'Eigenes Tages-/Nachtpflegebudget', 'Pflegegeld + Entlastungsbudget'],
                 ['Demenzbetreuung', 'Begrenzt (fremde Umgebung)', 'Besser (vertrautes Zuhause)'],
