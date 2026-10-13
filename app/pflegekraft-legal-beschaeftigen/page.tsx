@@ -62,7 +62,7 @@ const schemaMarkup = [
       { '@type': 'Question', name: 'Wie kann ich eine Pflegekraft legal beschäftigen?', acceptedAnswer: { '@type': 'Answer', text: 'Es gibt drei legale Wege: Das Entsendemodell (empfohlen) über eine Agentur — die Kraft ist im EU-Heimatland angestellt und kommt mit A1-Bescheinigung; die Direktanstellung — die Familie ist Arbeitgeberin; oder als angemeldete Selbstständige. Scheinselbstständigkeit ist illegal und führt zu Nachzahlungen.' } },
       { '@type': 'Question', name: 'Was ist das Entsendemodell?', acceptedAnswer: { '@type': 'Answer', text: 'Beim Entsendemodell ist die Pflegekraft bei einem Unternehmen im EU-Heimatland angestellt und wird für typischerweise 6–8 Wochen nach Deutschland entsandt. Mit A1-Bescheinigung ist sie rechtlich abgesichert. Die Familie schließt den Vertrag mit dem entsendenden Unternehmen oder einer Agentur — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' } },
       { '@type': 'Question', name: 'Was ist Scheinselbstständigkeit?', acceptedAnswer: { '@type': 'Answer', text: 'Scheinselbstständigkeit liegt vor wenn eine Pflegekraft formal als Selbstständige bezeichnet wird, faktisch aber weisungsgebunden im Haushalt lebt und arbeitet. Die Folge: Nachzahlung aller Sozialabgaben der letzten 4 Jahre plus Bußgelder — ein erhebliches finanzielles Risiko für die Familie.' } },
-      { '@type': 'Question', name: 'Was ist die A1-Bescheinigung?', acceptedAnswer: { '@type': 'Answer', text: 'Die A1-Bescheinigung ist ein EU-Dokument das belegt, dass die Pflegekraft in ihrem Heimatland (z.B. Polen) sozialversichert ist. Damit fallen in Deutschland keine Sozialabgaben an. Sie wird vom Sozialversicherungsträger im Herkunftsland ausgestellt und muss bei der Kraft vorliegen.' } },
+      { '@type': 'Question', name: 'Was ist die A1-Bescheinigung?', acceptedAnswer: { '@type': 'Answer', text: 'Die A1-Bescheinigung ist ein EU-Dokument das belegt, dass die Pflegekraft in ihrem Heimatland (z.B. Polen) sozialversichert ist. Damit fallen in Deutschland keine Sozialabgaben an. Sie wird vom zuständigen Sozialversicherungsträger im Entsendestaat ausgestellt und sollte während des Einsatzes vorliegen bzw. vorgelegt werden können.' } },
     ],
   },
 ]
@@ -169,7 +169,7 @@ export default function PflegekraftLegalBeschaeftigen() {
 
           <Abschnitt id="a1-bescheinigung" titel="Die A1-Bescheinigung — was sie bedeutet">
             <Text>
-              Die A1-Bescheinigung ist das zentrale Dokument im Entsendemodell. Sie wird vom Sozialversicherungsträger im Herkunftsland ausgestellt und belegt: Diese Person ist in ihrem Heimatland sozialversichert und darf deshalb in Deutschland ohne zusätzliche Sozialabgaben tätig sein.
+              Die A1-Bescheinigung ist das zentrale Dokument im Entsendemodell. Sie wird vom zuständigen Sozialversicherungsträger im Entsendestaat ausgestellt und belegt: Diese Person ist in ihrem Heimatland sozialversichert und darf deshalb in Deutschland ohne zusätzliche Sozialabgaben tätig sein.
             </Text>
             <Punkte
               punkte={[

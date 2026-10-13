@@ -104,7 +104,7 @@ export default function EuPflegekraftRechtenPflichten() {
             titel="Rechte der Betreuungskraft"
             einleitung="Auch im Entsendemodell gelten für entsandte Arbeitnehmer bestimmte deutsche Mindeststandards (EU-Entsenderichtlinie, § 2 AEntG). Kein seriöser Betreiber unterschreitet diese."
             punkte={[
-              { title: 'Mindestlohn', desc: 'Entsandte Arbeitnehmer haben Anspruch auf den deutschen Mindestlohn. Sachbezüge (Kost & Logis) können angerechnet werden.' },
+              { title: 'Mindestlohn', desc: 'Entsandte Arbeitnehmer haben Anspruch auf den deutschen gesetzlichen Mindestlohn. Sachbezüge wie Kost und Logis ersetzen den Mindestlohn grundsätzlich nicht.' },
               { title: 'Eigenes Zimmer & Privatsphäre', desc: 'Die Betreuungskraft hat Anspruch auf ein eigenes Zimmer mit Privatsphäre. Das ist Pflicht — kein Schlafen auf dem Sofa oder ohne abschließbaren Rückzugsort.' },
               { title: 'Ruhezeiten', desc: 'Gesetzliche tägliche Ruhezeit von mindestens 11 Stunden. Bereitschaft ist keine Arbeitszeit wenn sie tatsächlich ungestört ist.' },
               { title: 'Urlaub', desc: 'Gesetzlicher Mindesturlaub (4 Wochen/Jahr). Für die Dauer eines Einsatzes (6–8 Wochen) anteilig.' },
