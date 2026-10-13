@@ -39,7 +39,7 @@ const SECTIONS = [
 const FRAGEN = [
   { q: 'Was macht eine Haushaltshilfe aus Rumänien?', a: 'Sie hilft im Haushalt und bei der Grundpflege: Sie kocht, kauft ein und macht die Wäsche, hilft Ihrer Mutter beim Waschen, Anziehen und Essen und begleitet sie zum Arzt. Spritzen, Verbände und das Stellen von Medikamenten gehören zur Behandlungspflege und nicht zu den Aufgaben der Betreuungskraft; dafür kann die Hausärztin häusliche Krankenpflege verordnen. Die Kraft wohnt mit im Haus, arbeitet aber nicht 24 Stunden. Arbeitszeit, Bereitschaftszeiten, freie Tage und Ruhezeiten müssen vertraglich geregelt werden; als Grenze nennt die Verbraucherzentrale 48 Stunden pro Woche.' },
   { q: 'Wie viel kostet eine Pflegekraft aus Rumänien?', a: 'Eine eigene Preisübersicht nur für Kräfte aus Rumänien gibt es nicht. Für alle entsandten Kräfte aus Osteuropa zusammen nennt die Verbraucherzentrale etwa 2.800 bis 3.500 € im Monat; die Preise richten sich nach Hilfebedarf und Deutschkenntnissen. Zimmer und Verpflegung stellen Sie zusätzlich, je nach Angebot kommen Anreise, Feiertage oder Gebühren dazu. Braucht Ihre Mutter nachts regelmäßig Hilfe, braucht die Kraft dafür einen Ausgleich; Bereitschaft im Haushalt zählt als Arbeitszeit. Das Pflegegeld von 347 bis 990 € ab Pflegegrad 2 kann Ihre Mutter dafür einsetzen.' },
-  { q: 'Dürfen Pflegekräfte aus Moldawien in Deutschland arbeiten?', a: 'Das hängt vom Pass ab: Mit rumänischem Pass dürfen sie arbeiten wie jede EU-Bürgerin, mit moldauischem Pass allein nur mit einem Aufenthaltstitel, der die Arbeit erlaubt. Die Republik Moldau gehört nicht zur EU; ohne Visum sind bis zu 90 Tage in 180 Tagen erlaubt, aber keine Arbeit. Einen rumänischen Pass haben laut Bundeszentrale für politische Bildung über eine Million Menschen aus Moldau.' },
+  { q: 'Dürfen Pflegekräfte aus Moldawien in Deutschland arbeiten?', a: 'Das hängt vom Pass ab: Mit rumänischem Pass dürfen sie arbeiten wie jede EU-Bürgerin, mit moldauischem Pass allein nur mit einem Aufenthaltstitel, der die Arbeit erlaubt. Die Republik Moldau gehört nicht zur EU; mit biometrischem Pass sind ohne Visum bis zu 90 Tage in 180 Tagen erlaubt, aber keine Arbeit. Einen rumänischen Pass haben laut Bundeszentrale für politische Bildung über eine Million Menschen aus Moldau.' },
   { q: 'Welche Erfahrungen machen Familien mit Pflegekräften aus Rumänien?', a: 'Prüfbare Erfahrungsberichte gibt es kaum; belegt sind Probleme der Betreuung im Haushalt allgemein, unabhängig vom Herkunftsland. Der Bericht der Bundesministerien von 2024 nennt undurchsichtige Verträge, begrenzte Deutschkenntnisse und unklare Grenzen zwischen Arbeits- und Ruhezeit. Vorbeugen können Sie mit einem Videogespräch vor der Zusage, der A1-Bescheinigung für genau diese Kraft und schriftlichen Regeln für freie Zeit und Ersatz.' },
   { q: 'Ist eine Pflegekraft aus Rumänien illegal?', a: 'Nein, rumänische Staatsangehörige dürfen seit 2014 ohne Arbeitserlaubnis in Deutschland arbeiten. Illegal wird es bei Schwarzarbeit oder wenn eine angeblich selbstständige Kraft bei Ihnen wohnt und nach Ihren Vorgaben arbeitet. Legal sind die Entsendung mit A1-Bescheinigung, die eigene Anstellung mit Anmeldung und, in engen Grenzen, eine echte Selbstständigkeit.' },
   { q: 'Wie funktioniert das Entsendemodell mit einer Kraft aus Rumänien?', a: 'Die Kraft ist bei einer Firma in Rumänien angestellt und dort sozialversichert; die Firma schickt sie für eine befristete Zeit in Ihren Haushalt. Die A1-Bescheinigung der rumänischen Rentenkasse CNPP belegt, dass rumänisches Sozialversicherungsrecht gilt; ob das Modell insgesamt passt, entscheiden der Vertrag und wie die Betreuung im Alltag tatsächlich läuft. Sie schließen einen Dienstleistungsvertrag mit der Firma oder einem Anbieter und werden nicht Arbeitgeber.' },
@@ -156,8 +156,7 @@ export default function PflegekraftAusRumaenien() {
             <>
               Eine Pflegekraft aus Rumänien zieht bei Ihrer Mutter ein und begleitet sie durch den Tag. Sie kocht, kauft ein, macht
               die Wäsche, geht mit ihr zum Arzt und hilft beim Waschen und Anziehen. „24 Stunden“ heißt: Sie wohnt im Haus; arbeiten
-              darf sie nach der Verbraucherzentrale höchstens 48 Stunden pro Woche. Spritzen, Verbände und das Stellen von
-              Medikamenten gehören nicht zu ihren Aufgaben; dafür ist ein Pflegedienst zuständig. Eine Arbeitserlaubnis brauchen
+              darf sie nach der Verbraucherzentrale höchstens 48 Stunden pro Woche. Spritzen, Verbände und das Stellen von Medikamenten gehören nicht zu ihren Aufgaben; dafür kann die Hausärztin häusliche Krankenpflege durch einen Pflegedienst verordnen. Eine Arbeitserlaubnis brauchen
               Kräfte mit rumänischem Pass seit 2014 nicht; legal arbeiten sie vor allem entsandt von einer Firma oder bei Ihnen
               angestellt. Bevor Sie unterschreiben, gehen Sie jedes Angebot mit den zehn Fragen der{' '}
               <a href="#pruefliste" className={LINK}>Prüfliste</a> durch.
@@ -178,10 +177,7 @@ export default function PflegekraftAusRumaenien() {
         <RatgeberRumpf abschnitte={SECTIONS} src={SRC} neutral>
           <Abschnitt id="alltag" titel="Haushaltshilfe aus Rumänien: kochen, waschen, begleiten, aber keine Spritzen">
             <Text>
-              Eine Haushaltshilfe aus Rumänien hilft im Haushalt, betreut Ihre Mutter und übernimmt die Grundpflege. Der Bericht der
-              Bundesministerien für Arbeit und für Gesundheit von 2024 beschreibt diese Tätigkeiten als typische Aufgaben der Betreuung
-              im Haushalt, egal ob ein Angebot von Haushaltshilfe, Betreuungskraft oder Pflegekraft spricht; Behandlungspflege gehört
-              nicht dazu.
+              Eine Haushaltshilfe aus Rumänien hilft im Haushalt, betreut Ihre Mutter und übernimmt die Grundpflege. Der Bericht der Bundesministerien für Arbeit und für Gesundheit von 2024 weist darauf hin, dass rechtlich nur Haushalt, Betreuung und Grundpflege erlaubt sind; Behandlungspflege gehört nicht dazu. Das gilt unabhängig davon, ob ein Angebot von Haushaltshilfe, Betreuungskraft oder Pflegekraft spricht.
             </Text>
             <Text>
               Im Haushalt kocht die Kraft, wie Ihre Mutter es gewohnt ist, kauft ein, macht die Wäsche und hält die genutzten Räume sauber.
@@ -221,8 +217,7 @@ export default function PflegekraftAusRumaenien() {
             </Text>
             <Text>
               Mit dem Monatspreis einer Entsendung bezahlen Sie die Dienstleistung des Anbieters; darin stecken Vergütung, Sozialversicherung
-              im Entsendeland und Organisation. Lassen Sie sich die A1-Bescheinigung vorlegen und schriftlich bestätigen, dass deutscher
-              Mindestlohn, Arbeitszeitgrenzen und Ausgleich für regelmäßige Nacht- oder Bereitschaftszeiten eingehalten werden. Prüfen Sie
+              im Entsendeland und Organisation. Lassen Sie sich die A1-Bescheinigung vorlegen und schriftlich bestätigen, wie Arbeitszeit und Ausgleich für regelmäßige Nacht- oder Bereitschaftszeiten geregelt sind. Prüfen Sie
               außerdem An- und Abreise, Feiertage, Ersatz und Wechsel, Vermittlungsgebühren und Kündigungsfristen.
             </Text>
             <Zwischentitel>Was Pflegekasse und Finanzamt beitragen</Zwischentitel>
@@ -232,7 +227,7 @@ export default function PflegekraftAusRumaenien() {
             </Text>
             <Text>
               Das Finanzamt zieht 20 Prozent der Kosten von der Einkommensteuer ab, höchstens 4.000 € im Jahr, wenn Sie überweisen und bei
-              einem Anbieter eine Rechnung haben (§ 35a EStG). Den Gemeinsamen Jahresbetrag von bis zu 3.539 € zahlt die Kasse nur für
+              einem Anbieter eine Rechnung haben (§ 35a EStG). Den Gemeinsamen Jahresbetrag von bis zu 3.539 €, oft Entlastungsbudget genannt, zahlt die Kasse nur für
               Verhinderungs- und Kurzzeitpflege, nicht für die laufende Betreuung durch eine Kraft, die bei Ihnen wohnt (Pflegewegweiser NRW).
             </Text>
             <MehrDazu
@@ -278,8 +273,7 @@ export default function PflegekraftAusRumaenien() {
               Ihnen arbeiten. Haben Sie sie selbst angestellt, können die Behörden ein Bußgeld gegen Sie verhängen (§ 404 SGB III).
             </Text>
             <Text>
-              Fragen Sie deshalb vor dem Start, welchen Pass die Kraft hat. Kommt sie über eine Firma in Rumänien, gehört eine
-              A1-Bescheinigung dazu; mit moldauischem Pass allein braucht sie zusätzlich einen deutschen Aufenthaltstitel.
+              Fragen Sie deshalb vor dem Start, welchen Pass die Kraft hat. Mit moldauischem Pass allein braucht sie einen deutschen Aufenthaltstitel, der die Arbeit erlaubt.
             </Text>
           </Abschnitt>
 
@@ -302,8 +296,8 @@ export default function PflegekraftAusRumaenien() {
             titel="Ist eine Pflegekraft aus Rumänien legal? Ja, auf drei Wegen"
             einleitung="Für rumänische Staatsangehörige gilt seit 2014 die volle Freizügigkeit. Ob die Betreuung bei Ihnen legal ist, entscheiden der Vertrag und die Art, wie die Kraft tatsächlich arbeitet."
             punkte={[
-              { title: 'Entsendung mit A1-Bescheinigung', desc: 'Die Kraft ist bei einer Firma in Rumänien angestellt und dort sozialversichert. Eine Entsendung ist auf höchstens 24 Monate begrenzt (Art. 12 Verordnung (EG) 883/2004); Einsatzdauer, Wechsel und Ersatz regelt der Vertrag. Lassen Sie sich vor Beginn die A1-Bescheinigung zeigen: Sie belegt, dass das rumänische Sozialversicherungsrecht gilt; ausgestellt wird sie von der staatlichen Rentenkasse CNPP. Sie sind nicht Arbeitgeber. Die Aufgaben der Kraft legen Sie vorher im Vertrag fest.' },
-              { title: 'Eigene Anstellung', desc: 'Sie schließen einen Arbeitsvertrag und werden Arbeitgeber. Dazu gehören Anmeldung und Beiträge, Lohn nach deutschem Recht, Urlaub und Lohnfortzahlung bei Krankheit. Dafür bestimmen Sie den Alltag selbst. Die Schritte stehen im nächsten Abschnitt.' },
+              { title: 'Entsendung mit A1-Bescheinigung', desc: 'Die Kraft ist bei einer Firma in Rumänien angestellt und dort sozialversichert. Eine Entsendung ist auf höchstens 24 Monate begrenzt (Art. 12 Verordnung (EG) 883/2004); Einsatzdauer, Wechsel und Ersatz regelt der Vertrag. Lassen Sie sich vor Beginn die A1-Bescheinigung zeigen: Sie belegt, dass das rumänische Sozialversicherungsrecht gilt; ausgestellt wird sie von der staatlichen Rentenkasse CNPP. Sie sind nicht Arbeitgeber. ' },
+              { title: 'Eigene Anstellung', desc: 'Sie schließen einen Arbeitsvertrag und werden Arbeitgeber. Dazu gehören Anmeldung und Beiträge, Lohn nach deutschem Recht, Urlaub und Lohnfortzahlung bei Krankheit. Dafür bestimmen Sie den Alltag selbst. ' },
               { title: 'Selbstständige Betreuungskraft', desc: 'Die Kraft hat ein eigenes Gewerbe, in Deutschland oder in Rumänien, und schreibt Ihnen Rechnungen. Legal ist das nur, wenn sie selbst über Zeit und Ablauf ihrer Arbeit entscheidet und weitere Auftraggeber haben kann.' },
             ]}
           >
@@ -313,9 +307,7 @@ export default function PflegekraftAusRumaenien() {
               Sozialversicherungsbeiträge zahlen Sie nach.
             </Text>
             <Text>
-              <strong>Hinweis:</strong> Es besteht die Gefahr der Schwarzarbeit, wenn die Kraft ohne Anmeldung gegen bar bei Ihnen arbeitet,
-              mit folgenden Konsequenzen für die Familie: Die Sozialversicherungsträger fordern die Beiträge nach. Die Steuerermäßigung
-              entfällt.
+              <strong>Hinweis:</strong> Es besteht die Gefahr von Schwarzarbeit, wenn die Kraft ohne Anmeldung gegen bar bei Ihnen arbeitet, mit folgenden Konsequenzen für die Familie: Sozialversicherungsträger fordern Beiträge nach; die Steuerermäßigung nach § 35a EStG entfällt.
             </Text>
             <MehrDazu
               label="Im Detail:"
@@ -358,12 +350,12 @@ export default function PflegekraftAusRumaenien() {
             />
           </Abschnitt>
 
-          <Abschnitt id="anreise" titel="Anreise aus Rumänien: wie lange eine Kraft bleibt und wie schnell Ersatz kommt">
+          <Abschnitt id="anreise" titel="Anreise aus Rumänien: was Sie vor dem Start klären">
             <Text>Klären Sie vor dem Start zwei Fragen: wie lange eine Kraft bleibt und wie schnell Ersatz kommt.</Text>
             <Punkte
               punkte={[
                 { title: 'Dauer eines Einsatzes', desc: 'Rechtlich ist eine Entsendung nicht auf drei Monate begrenzt. Wie lange eine Kraft tatsächlich bleibt, vereinbaren Anbieter, Kraft und Familie; wichtig sind klare Regeln zu Wechsel und Ersatz.' },
-                { title: 'Wechsel bei einer Entsendung', desc: 'Eine entsandte Kraft darf bei demselben Einsatz im Haushalt keine zuvor entsandte Person ersetzen (Art. 12 Verordnung (EG) 883/2004). Eine Ausnahme nennt die Deutsche Verbindungsstelle Krankenversicherung Ausland (DVKA): Musste die Vorgängerin unplanmäßig gehen, etwa wegen schwerer Krankheit, darf eine andere Kraft die restliche geplante Zeit übernehmen.' },
+                { title: 'Wechsel bei einer Entsendung', desc: 'Eine entsandte Kraft darf nicht als Ersatz für eine andere entsandte Person eingesetzt werden (Art. 12 Abs. 1 Verordnung (EG) 883/2004). Eine Ausnahme nennt die Deutsche Verbindungsstelle Krankenversicherung Ausland (DVKA): Musste die Vorgängerin unplanmäßig gehen, etwa wegen schwerer Krankheit, darf eine andere Kraft die restliche geplante Zeit übernehmen.' },
                 { title: 'Ersatz bei Krankheit', desc: 'Wird die Kraft krank oder muss sie zu ihrer Familie, braucht Ihre Mutter Hilfe, bis die nächste Kraft ankommt. Lassen Sie sich schriftlich geben, wie schnell Ersatz kommt, wer die Fahrt bezahlt und wer in der Zwischenzeit einspringt.' },
               ]}
             />

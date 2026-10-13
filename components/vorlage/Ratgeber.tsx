@@ -646,7 +646,7 @@ export function RechnerKasten({ src, neutral = false }: { src: string; neutral?:
     return (
       <Kasten titel="Vergleichspreis für Ihre Situation">
         <Text>
-          Der Kostenrechner fragt nach Pflegegrad, Mobilität, nächtlichem Hilfebedarf und Deutschkenntnissen. Nach den Fragen und
+          Der Kostenrechner von Primundus fragt nach Pflegegrad, Mobilität, nächtlichem Hilfebedarf und Deutschkenntnissen. Nach den Fragen und
           Ihren Kontaktdaten erhalten Sie einen unverbindlichen Vergleichswert für die monatlichen Kosten einer Betreuungskraft,
           die bei Ihnen wohnt.
         </Text>

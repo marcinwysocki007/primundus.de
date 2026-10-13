@@ -39,12 +39,12 @@ const SECTIONS = [
 
 // Sichtbare Fragen = Daten für das FAQ-Schema (eine Quelle, Zeichen für Zeichen gleich)
 const FRAGEN = [
-  { q: 'Sind bulgarische Pflegekräfte ausgebildete Pflegefachkräfte?', a: 'Manche haben eine Pflegeausbildung. In der Betreuung zu Hause arbeiten sie aber in der Regel als Betreuungskraft, solange sie keine deutsche Berufserlaubnis als Pflegefachkraft haben und nicht entsprechend angestellt sind. Erlaubt sind in der Betreuung zu Hause Hilfe im Haushalt, Begleitung im Alltag und Grundpflege. Spritzen und Verbände kann die Hausärztin als häusliche Krankenpflege verordnen; in der Regel übernimmt dann ein Pflegedienst diese Leistungen. Pflegefachfrau oder Pflegefachmann darf sich in Deutschland nur nennen, wer die behördliche Erlaubnis hat; dafür sind unter anderem Deutschkenntnisse nötig, in der Regel auf Niveau B2.' },
-  { q: 'Wie wird eine Pflegefachkraft aus Bulgarien in Deutschland anerkannt?', a: 'Sie stellt einen Antrag bei der zuständigen Behörde; welche das ist, zeigt das Portal „Anerkennung in Deutschland“ des Bundesinstituts für Berufsbildung. Für Pflegeabschlüsse aus der EU gilt oft eine automatische Anerkennung, und das Verfahren dauert ab vollständigen Unterlagen höchstens drei Monate. Für die Erlaubnis braucht sie außerdem die nötigen Deutschkenntnisse, in der Regel auf Niveau B2.' },
+  { q: 'Sind bulgarische Pflegekräfte ausgebildete Pflegefachkräfte?', a: 'Manche haben eine Pflegeausbildung. In der Betreuung zu Hause arbeiten sie aber in der Regel als Betreuungskraft, solange sie nicht mit deutscher Berufserlaubnis als Pflegefachkraft angestellt sind. Erlaubt sind in der Betreuung zu Hause Hilfe im Haushalt, Begleitung im Alltag und Grundpflege. Spritzen und Verbände kann die Hausärztin als häusliche Krankenpflege verordnen; in der Regel übernimmt dann ein Pflegedienst diese Leistungen. Pflegefachfrau oder Pflegefachmann darf sich in Deutschland nur nennen, wer die behördliche Erlaubnis hat; dafür sind unter anderem Deutschkenntnisse nötig, in der Regel auf Niveau B2.' },
+  { q: 'Wie wird eine Pflegefachkraft aus Bulgarien in Deutschland anerkannt?', a: 'Sie stellt einen Antrag bei der zuständigen Behörde; welche das ist, zeigt das Portal „Anerkennung in Deutschland“ des Bundesinstituts für Berufsbildung. Für Pflegeabschlüsse aus der EU gilt oft eine automatische Anerkennung; dann dauert das Verfahren ab vollständigen Unterlagen höchstens drei Monate. Für die Erlaubnis braucht sie außerdem die nötigen Deutschkenntnisse, in der Regel auf Niveau B2.' },
   { q: 'Arbeitet eine 24-Stunden-Pflegekraft aus Bulgarien 24 Stunden am Tag?', a: 'Nein. Sie wohnt bei der pflegebedürftigen Person und ist deshalb in der Nähe, arbeitet aber nicht den ganzen Tag. Die Verbraucherzentrale nennt 48 Stunden pro Woche als Grenze. Hilft sie jede Nacht, braucht sie dafür einen Ausgleich, etwa freie Stunden am Tag, in denen Familie oder Pflegedienst übernehmen. Vereinbarte Bereitschaft in der Nacht zählt als Arbeitszeit.' },
   { q: 'Was macht eine Haushaltshilfe aus Bulgarien?', a: 'Eine Haushaltshilfe aus Bulgarien kocht, kauft ein und kümmert sich um die Wäsche. Ihrem Vater hilft sie beim Waschen, Anziehen und Essen und leistet ihm Gesellschaft. Für Spritzen und Verbände kann die Hausärztin häusliche Krankenpflege verordnen; dann kommt in der Regel ein Pflegedienst. Auch wenn sie bei Ihrem Vater wohnt, hat ihre Arbeitszeit eine Grenze; die Verbraucherzentrale nennt 48 Stunden pro Woche.' },
   { q: 'Welche Erfahrungen machen Familien mit bulgarischen Pflegekräften?', a: 'Verlässliche Berichte einzelner Familien gibt es kaum; was sich belegen lässt, gilt für alle Herkunftsländer. Für Vermittlungsagenturen gibt es nach dem Bericht der Bundesministerien von 2024 keine verbindlichen Mindeststandards; unklare Verträge, Sprachgrenzen und die schwer zu trennende Arbeits- und Ruhezeit nennt er als Schwachstellen. Vor dem Start helfen drei Prüfungen: Firma und A1-Bescheinigung, ein Videogespräch mit einem anonymisierten Beispielplan und schriftlich festgelegte freie Zeiten.' },
-  { q: 'Ist eine bulgarische Pflegekraft legal?', a: 'Ja, wenn Vertrag und Alltag stimmen. Bulgarische Staatsangehörige dürfen seit 2014 ohne Arbeitserlaubnis in Deutschland arbeiten. Legal sind die Entsendung durch eine Firma in Bulgarien mit A1-Bescheinigung, die Anstellung bei Ihnen mit Anmeldung und eine echte Selbstständigkeit. Wohnt eine „selbstständige“ Kraft bei Ihnen und arbeitet nach Ihren Vorgaben, besteht die Gefahr der Scheinselbstständigkeit; dann gelten Sie als Arbeitgeber und zahlen die Sozialbeiträge nach.' },
+  { q: 'Ist eine bulgarische Pflegekraft legal?', a: 'Ja, wenn Vertrag und Alltag stimmen. Bulgarische Staatsangehörige dürfen seit 2014 ohne Arbeitserlaubnis in Deutschland arbeiten. Legal sind die Entsendung durch eine Firma in Bulgarien mit A1-Bescheinigung, die Anstellung bei Ihnen mit Anmeldung und eine echte Selbstständigkeit. Wohnt eine „selbstständige“ Kraft im Haushalt der pflegebedürftigen Person und arbeitet nach Ihren Vorgaben, besteht die Gefahr der Scheinselbstständigkeit; dann gelten Sie als Arbeitgeber und zahlen die Sozialbeiträge nach.' },
   { q: 'Zahlt die Pflegekasse eine Pflegekraft aus Bulgarien?', a: 'Nicht direkt. Die Pflegekasse zahlt das Pflegegeld an die pflegebedürftige Person, ab Pflegegrad 2 zwischen 347 und 990 € im Monat, und die kann es frei für eine Betreuungskraft einsetzen. Den Gemeinsamen Jahresbetrag von bis zu 3.539 € gibt es nur für Kurzzeitpflege und für zusätzliche Ersatzpflege, wenn eine private Pflegeperson verhindert ist. Beim Finanzamt gibt es bis zu 4.000 € Steuerermäßigung im Jahr, mit Rechnung und Überweisung und soweit Einkommensteuer anfällt.' },
   { q: 'Zahlt die Pflegekasse weiter, wenn mein Vater zur Pflege nach Bulgarien zieht?', a: 'Das Pflegegeld zahlt sie weiter, solange Ihr Vater in einem EU-Staat lebt und in der deutschen Pflegeversicherung versichert bleibt (§ 34 Abs. 1a SGB XI). Bulgarien gehört seit 2007 zur EU. Andere Leistungen der Pflegekasse ruhen bei einem Aufenthalt im Ausland. Sprechen Sie vor dem Umzug mit der Pflegekasse und klären Sie auch die Krankenversicherung.' },
 ]
@@ -123,7 +123,7 @@ export default function PflegekraftAusBulgarien() {
           ]}
           augenbraue="Ratgeber Pflegekräfte"
           titel="Pflegekraft aus Bulgarien: was sie leisten darf und was „24 Stunden“ bei Ihnen heißt"
-          einleitung="Eine Pflegekraft aus Bulgarien wohnt bei Ihrem Vater, kocht, kauft ein, begleitet ihn durch den Tag und hilft beim Waschen, Anziehen und Essen. Sie ist bei Bedarf auch nachts vor Ort. Vereinbarte Bereitschaft im Haushalt zählt als Arbeitszeit; regelmäßige Einsätze brauchen einen Ausgleich. Als Grenze nennt die Verbraucherzentrale 48 Stunden pro Woche. Auch eine ausgebildete Krankenschwester arbeitet bei Ihnen in der Regel als Betreuungskraft. Spritzen, Verbände und das Stellen von Medikamenten gehören nicht zu ihren Aufgaben; dafür ist ein Pflegedienst zuständig. Seit 2014 brauchen bulgarische Staatsangehörige keine Arbeitserlaubnis; legal ist die Betreuung vor allem als Entsendung durch eine Firma oder als Anstellung bei Ihnen. Bei einer Entsendung lassen Sie sich vor dem ersten Arbeitstag die A1-Bescheinigung für genau diese Kraft zeigen."
+          einleitung="Eine Pflegekraft aus Bulgarien wohnt bei Ihrem Vater, kocht, kauft ein, begleitet ihn durch den Tag und hilft beim Waschen, Anziehen und Essen. Sie ist bei Bedarf auch nachts vor Ort. Muss sie nachts auf Zuruf bereitstehen, zählt das als Arbeitszeit; regelmäßige Hilfe in der Nacht braucht einen Ausgleich. Als Grenze nennt die Verbraucherzentrale 48 Stunden pro Woche. Auch eine ausgebildete Krankenschwester arbeitet bei Ihnen in der Regel als Betreuungskraft. Spritzen, Verbände und das Stellen von Medikamenten gehören nicht zu ihren Aufgaben; dafür kann die Hausärztin häusliche Krankenpflege durch einen Pflegedienst verordnen. Seit 2014 brauchen bulgarische Staatsangehörige keine Arbeitserlaubnis; legal ist die Betreuung vor allem als Entsendung durch eine Firma oder als Anstellung bei Ihnen. Bei einer Entsendung lassen Sie sich vor dem ersten Arbeitstag die A1-Bescheinigung für genau diese Kraft zeigen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
           blickVerweise={[
@@ -187,8 +187,7 @@ export default function PflegekraftAusBulgarien() {
 
           <Abschnitt id="aufgaben" titel="Haushaltshilfe aus Bulgarien: Haushalt, Betreuung und Grundpflege">
             <Text>
-              Ob eine Anzeige von Haushaltshilfe oder von Pflegekraft aus Bulgarien spricht: Der Bericht der Bundesministerien beschreibt in
-              beiden Fällen Haushalt, Betreuung und Grundpflege als typische Aufgaben. Die Kraft kocht, kauft ein und kümmert sich um die
+              Der Bericht der Bundesministerien weist darauf hin, dass rechtlich nur Haushalt, Betreuung und Grundpflege erlaubt sind; Behandlungspflege gehört nicht dazu. Das gilt unabhängig davon, ob eine Anzeige von Haushaltshilfe oder von Pflegekraft spricht. Die Kraft kocht, kauft ein und kümmert sich um die
               Wäsche, begleitet Ihren Vater durch den Tag und übernimmt die Grundpflege: Waschen, Anziehen, Essen, Toilettengang.
             </Text>
             <Text>
@@ -250,12 +249,11 @@ export default function PflegekraftAusBulgarien() {
             <Zwischentitel>Entsendung</Zwischentitel>
             <Text>
               Die Kraft ist bei einer bulgarischen Firma angestellt, bleibt dort versichert und arbeitet mit A1-Bescheinigung höchstens 24
-              Monate am Stück bei Ihnen (Art. 12 Verordnung (EG) 883/2004). Sie darf bei demselben Einsatz im Haushalt keine zuvor entsandte
-              Person ersetzen.
+              Monate am Stück bei Ihnen (Art. 12 Verordnung (EG) 883/2004). Sie darf nicht als Ersatz für eine andere entsandte Person eingesetzt werden.
             </Text>
             <Zwischentitel>Anstellung</Zwischentitel>
             <Text>
-              Sie werden Arbeitgeber: Anmeldung, Beiträge, Mindestlohn, Arbeitszeitnachweise, Urlaub, Lohnfortzahlung bei Krankheit und
+              Sie werden Arbeitgeber: Anmeldung, Beiträge, Arbeitszeitnachweise, Urlaub, Lohnfortzahlung bei Krankheit und
               Unfallversicherung liegen dann bei Ihnen.
             </Text>
             <Zwischentitel>Selbstständigkeit</Zwischentitel>
@@ -266,9 +264,7 @@ export default function PflegekraftAusBulgarien() {
               als Arbeitgeber und zahlen die Sozialversicherungsbeiträge nach.
             </Text>
             <Text>
-              <strong>Hinweis:</strong> Es besteht die Gefahr der Schwarzarbeit, wenn die Kraft gegen bar und ohne Anmeldung bei Ihnen
-              arbeitet, mit folgenden Konsequenzen für die Familie: Die Sozialversicherung fordert die Beiträge nach. Die Steuerermäßigung
-              entfällt.
+              <strong>Hinweis:</strong> Es besteht die Gefahr von Schwarzarbeit, wenn die Kraft gegen bar und ohne Anmeldung bei Ihnen arbeitet, mit folgenden Konsequenzen für die Familie: Sozialversicherungsträger fordern Beiträge nach; die Steuerermäßigung nach § 35a EStG entfällt.
             </Text>
             <MehrDazu
               label="Mehr dazu:"
@@ -316,15 +312,14 @@ export default function PflegekraftAusBulgarien() {
             <MehrDazu label="Mehr dazu:" links={[{ href: '/pflegegeld', text: 'Pflegegeld 2026: alle Beträge je Pflegegrad' }]} />
           </Abschnitt>
 
-          <Abschnitt id="anreise" titel="Anreise aus Bulgarien: wie die Kraft anreist und wie schnell Ersatz kommt">
+          <Abschnitt id="anreise" titel="Anreise aus Bulgarien: was Sie vor dem Start klären">
             <Text>
               Klären Sie vor dem Start, wie die Kraft anreist, wer die Fahrt bezahlt und wer hilft, bis eine Ersatzkraft da ist.
             </Text>
             <Text>
               In manchen Modellen wechseln sich zwei feste Kräfte ab. Der Bericht der Ministerien beschreibt ein solches Tandem zweier Kräfte,
               die beide beim Haushalt angestellt sind und sich etwa alle drei Monate abwechseln. Ihr Vater kennt dann beide, und jede Übergabe
-              fällt leichter. Bei einer Entsendung gilt für den Wechsel die <a href="#legal" className={LINK}>Regel zur Ablösung</a> aus dem
-              EU-Recht.
+              fällt leichter. Bei einer Entsendung gilt für den Wechsel die <a href="#legal" className={LINK}>Regel zur Ablösung</a> aus dem EU-Recht. Fällt die Vorgängerin unvorhergesehen aus, kann nach DVKA im Einzelfall Ersatz zulässig sein.
             </Text>
           </Abschnitt>
 
