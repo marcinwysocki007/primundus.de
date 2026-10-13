@@ -36,8 +36,11 @@ const STALE = [
   // Herkunft der eigenen Betreuungskräfte (Martin 19.09.2026): derzeit nur Polen — nicht „nur" schreiben,
   // aber auch keine anderen Länder als unsere Kräfte ausgeben. Am 20.09. stand die Aufzählung noch auf
   // 207 Ortsseiten. Die Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien bleiben erlaubt:
-  // Diese Regel trifft nur die Aufzählung, mit der wir eigene Kräfte beschreiben.
-  ['Herkunft aufgezählt (nur Polen)', /(?:einige|überwiegend|teils|auch)\s+aus\s+(?:Rumänien|Bulgarien)/g],
+  // Diese Regel trifft nur die Aufzählung, mit der wir eigene Kräfte beschreiben. Seit 13.10.2026 auch im Code
+  // ausgenommen: Die neutrale Rumänien-Seite beschreibt den Markt („Entsandte Kräfte, auch aus Rumänien, kosten
+  // laut Verbraucherzentrale …“), nicht unsere Kräfte.
+  ['Herkunft aufgezählt (nur Polen)', /(?:einige|überwiegend|teils|auch)\s+aus\s+(?:Rumänien|Bulgarien)/g,
+    { ohneDateien: [path.join('app', 'pflegekraft-aus-rumaenien', 'page.tsx'), path.join('app', 'pflegekraft-aus-bulgarien', 'page.tsx')] }],
   // Betreuungsrecht seit 01.01.2023 neu nummeriert (Reform des Vormundschafts- und Betreuungsrechts). Am 02.10.2026
   // nannte das Dokument des Vollmacht-Generators noch „§ 1906 BGB“ (heute § 1831). Gesperrt sind die aufgehobenen
   // Fassungen: § 1896 (heute § 1814), § 1901a (§ 1827), § 1904 (§ 1829), § 1906 (§ 1831), § 1906a (§ 1832).
@@ -129,6 +132,7 @@ function scanFile(file) {
   const text = fs.readFileSync(file, 'utf8')
   const zeilen = text.split('\n')
   for (const [desc, re, optionen] of STALE) {
+    if (optionen?.ohneDateien?.includes(rel)) continue
     re.lastIndex = 0
     let m
     while ((m = re.exec(text))) {
