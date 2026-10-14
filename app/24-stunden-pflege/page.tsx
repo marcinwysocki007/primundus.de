@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Gegenueber, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { AblaufZeitstrahl, Beispieltag, HeimVsZuhause, KostenAufteilung, ZuhauseQuote } from '@/components/grafik/Grafik'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -166,7 +166,6 @@ export default function VierUndZwanzigStundenPflege() {
           lesezeit="11 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
-          unterzeile={<StandardUnterzeile />}
           blickTitel="Warum Primundus"
           blick={[
             '6× Testsieger DIE WELT',
