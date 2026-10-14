@@ -18,7 +18,7 @@ import { ORG_ID } from '@/lib/schema'
 // Ersatzkraft nach Vertrag § 1 („schnellstmöglich, in der Regel innerhalb von 3 Tagen", Krankheitstage ohne
 // Honorar nach § 4), Ablauf in drei Schritten wie auf der Startseite und im Rechner.
 
-const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '19. September 2026')
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '14. Oktober 2026')
 const RECHNER_SEITE = 'https://kostenrechner.primundus.de/?start=1&src=apex-24-stunden-pflege'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
@@ -37,12 +37,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-  description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege zu Hause: Pflegekraft & Kosten',
+  description: 'Was eine Betreuungskraft zu Hause übernimmt und welche Zuschüsse es gibt. Preis und Pflegekräfte sofort ansehen. 6× Testsieger DIE WELT.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege' },
   openGraph: {
-    title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT.',
+    title: '24-Stunden-Pflege zu Hause: Pflegekraft & Kosten',
+    description: 'Was eine Betreuungskraft zu Hause übernimmt und welche Zuschüsse es gibt. Preis und Pflegekräfte sofort ansehen. 6× Testsieger DIE WELT.',
     url: 'https://primundus.de/24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
