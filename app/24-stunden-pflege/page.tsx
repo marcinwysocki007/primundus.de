@@ -93,14 +93,15 @@ const schemaMarkup = [
 
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
-// Antwort zuerst (14.10.2026, Entwurf): Die Definition aus „Was ist 24-Stunden-Pflege?“ steht wörtlich direkt unter der
-// Überschrift, der Knopfblock (Unterzeile, Knopf, Gesichter, Sterne) folgt darunter. Im Abschnitt entfällt der Absatz,
-// sonst stünde er zweimal auf der Seite. Platz `nachTitel` im RatgeberKopf, Schrift wie die Unterzeile.
+// Antwort zuerst (14.10.2026, Entwurf, Variante A): Die ersten beiden Sätze der Definition aus „Was ist
+// 24-Stunden-Pflege?“ stehen wörtlich direkt unter der Überschrift, der Knopfblock (Unterzeile, Knopf, Gesichter,
+// Sterne) folgt darunter. Mit allen drei Sätzen läge der Knopf am iPhone 13 knapp unter dem ersten Bildschirm.
+// Im Abschnitt entfällt der Absatz, sonst stünden die Sätze zweimal auf der Seite. Platz `nachTitel` im
+// RatgeberKopf, Schrift wie die Unterzeile.
 const ANTWORT = (
   <p className="text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem] [text-wrap:pretty]">
     Bei der 24-Stunden-Pflege zieht eine Betreuungskraft in den Haushalt des Pflegebedürftigen. Sie hilft bei
-    der Körperpflege, führt den Haushalt und leistet Gesellschaft. So kann Ihr Angehöriger in seiner Wohnung
-    bleiben und muss nicht in ein Pflegeheim ziehen.
+    der Körperpflege, führt den Haushalt und leistet Gesellschaft.
   </p>
 )
 
