@@ -93,6 +93,17 @@ const schemaMarkup = [
 
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
+// Antwort zuerst (14.10.2026, Entwurf): Die Definition aus „Was ist 24-Stunden-Pflege?“ steht wörtlich direkt unter der
+// Überschrift, der Knopfblock (Unterzeile, Knopf, Gesichter, Sterne) folgt darunter. Im Abschnitt entfällt der Absatz,
+// sonst stünde er zweimal auf der Seite. Platz `nachTitel` im RatgeberKopf, Schrift wie die Unterzeile.
+const ANTWORT = (
+  <p className="text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem] [text-wrap:pretty]">
+    Bei der 24-Stunden-Pflege zieht eine Betreuungskraft in den Haushalt des Pflegebedürftigen. Sie hilft bei
+    der Körperpflege, führt den Haushalt und leistet Gesellschaft. So kann Ihr Angehöriger in seiner Wohnung
+    bleiben und muss nicht in ein Pflegeheim ziehen.
+  </p>
+)
+
 const THEMEN = [
   {
     title: 'Grundlagen',
@@ -149,6 +160,7 @@ export default function VierUndZwanzigStundenPflege() {
           ]}
           augenbraue="6× Testsieger DIE WELT"
           titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
+          nachTitel={ANTWORT}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Preis & Pflegekräfte ansehen' }}
@@ -167,11 +179,6 @@ export default function VierUndZwanzigStundenPflege() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="was-ist" titel="Was ist 24-Stunden-Pflege?">
-            <Text>
-              Bei der 24-Stunden-Pflege zieht eine Betreuungskraft in den Haushalt des Pflegebedürftigen. Sie hilft bei
-              der Körperpflege, führt den Haushalt und leistet Gesellschaft. So kann Ihr Angehöriger in seiner Wohnung
-              bleiben und muss nicht in ein Pflegeheim ziehen.
-            </Text>
             <Kasten titel="Was „24 Stunden“ bedeutet">
               <Text>
                 Die Betreuungskraft wohnt mit im Haus und ist bei Bedarf auch nachts da. Sie hat geregelte Arbeitszeiten
