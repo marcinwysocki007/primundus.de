@@ -118,7 +118,7 @@ export default function VsKosten() {
           ]}
           augenbraue="Ratgeber Vergleich"
           titel="24h-Pflege vs. Pflegeheim — Kostenvergleich 2026"
-          einleitung="Der Pflegeheim-Eigenanteil liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg 2024 um weitere 211 Euro. Bei der 24h-Pflege zuhause bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung."
+          einleitung="Der Pflegeheim-Eigenanteil im ersten Heimjahr liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg im Juli 2026 um weitere 256 Euro. Bei der 24h-Pflege zuhause bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-vs-pflegeheim-kosten', text: 'Preis & Betreuungskräfte ansehen' }}
@@ -159,7 +159,7 @@ export default function VsKosten() {
               fuss="Quelle: vdek, Stand 1. Juli 2026 · Bundesweiter Durchschnitt im ersten Heimjahr"
             />
             <Kasten titel="Wichtig: Der Eigenanteil steigt jährlich" ton="koralle">
-              <Text>Im Pflegeheim stieg der Eigenanteil zuletzt um rund 8 % im Jahr: im Juli 2024 um 211 €, im Juli 2025 um 237 € und im Juli 2026 um 256 € im Monat (vdek). Die Personalkosten steigen, die Beträge der Pflegekasse bleiben bis Januar 2028 gleich.</Text>
+              <Text>Im bundesweiten Durchschnitt stieg der Eigenanteil im ersten Heimjahr zuletzt um rund 8 % im Jahr: im Juli 2024 um 211 €, im Juli 2025 um 237 € und im Juli 2026 um 256 € im Monat (vdek). Die Personalkosten steigen, die Leistungsbeträge der Pflegekasse (§ 43 SGB XI) bleiben bis Januar 2028 gleich.</Text>
             </Kasten>
             <MehrDazu
               label="Mehr zum Thema:"
@@ -193,7 +193,7 @@ export default function VsKosten() {
               titel=""
               kopf={["Kriterium", "24h-Pflege zuhause", "Pflegeheim"]}
               zeilen={[
-                ['Eigenanteil/Monat (PG 3)', 'ab ca. 923 €', 'Ø 3.364 € (steigend)'],
+                ['Eigenanteil/Monat (PG 3)', 'ab ca. 923 €', 'Ø 3.364 € im 1. Jahr (steigend)'],
                 ['Umgebung', 'Eigenes Zuhause', 'Neue, fremde Umgebung'],
                 ['Betreuungsintensität', '1:1, bei Bedarf auch nachts', 'Geteilt, nach Dienstplan'],
                 ['Tagesrhythmus', 'Vollständig eigener Rhythmus', 'Heimstruktur und -zeiten'],

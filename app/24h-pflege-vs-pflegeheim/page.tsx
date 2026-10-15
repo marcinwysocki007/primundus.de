@@ -52,7 +52,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was ist günstiger — Pflegeheim oder 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ist 24h-Pflege günstiger — besonders in teuren Ländern wie Nordrhein-Westfalen oder Baden-Württemberg. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil.' } },
+      { '@type': 'Question', name: 'Was ist günstiger — Pflegeheim oder 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ist 24h-Pflege günstiger, besonders in Ländern mit hohen Heimkosten wie Bremen, dem Saarland, Nordrhein-Westfalen oder Baden-Württemberg. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil.' } },
       { '@type': 'Question', name: 'Was ist der Unterschied in der Betreuungsqualität?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege: eine Kraft, die mit im Haus wohnt, für eine Person. Pflegeheim: Personal nach Dienstplan für viele Bewohner, wenig Zeit für den Einzelnen.' } },
       { '@type': 'Question', name: 'Wann ist das Pflegeheim die bessere Wahl?', acceptedAnswer: { '@type': 'Answer', text: 'Bei sehr hohem medizinischem Bedarf, der dauerhaft Fachpflege erfordert, oder wenn kein Zimmer für die Kraft vorhanden ist.' } }
     ],
@@ -84,10 +84,10 @@ export default function Page() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="kosten" titel="Kostenvergleich 2026">
             <Text>
-              Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat bundesweit (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — in Nordrhein-Westfalen und Baden-Württemberg rund 300 € mehr. 24h-Pflege über Primundus kostet ab 2.150 €/Monat; nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.
+              Der durchschnittliche Pflegeheim-Eigenanteil im ersten Heimjahr liegt 2026 bei 3.364 €/Monat bundesweit (Quelle: vdek-Auswertung, Stand 1. Juli 2026), am höchsten in Bremen, im Saarland, in Nordrhein-Westfalen und in Baden-Württemberg (3.657 bis 3.761 €). 24h-Pflege über Primundus kostet ab 2.150 €/Monat; nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.
             </Text>
             <Kasten augenbraue="Kosten im Vergleich — Pflegegrad 3" ton="gruen">
-              <Liste punkte={["Pflegeheim bundesweit: Ø 3.364 €/Monat Eigenanteil", "Pflegeheim Nordrhein-Westfalen: Ø 3.671 €/Monat Eigenanteil", "24h-Pflege: ab 2.150 €/Monat", "24h-Pflege nach Zuschüssen und Steuer: ab ca. 923 €/Monat"]} />
+              <Liste punkte={["Pflegeheim bundesweit, 1. Jahr: Ø 3.364 €/Monat Eigenanteil", "Pflegeheim Nordrhein-Westfalen, 1. Jahr: Ø 3.671 €/Monat Eigenanteil", "24h-Pflege: ab 2.150 €/Monat", "24h-Pflege nach Zuschüssen und Steuer: ab ca. 923 €/Monat"]} />
             </Kasten>
           </Abschnitt>
 
@@ -116,7 +116,7 @@ export default function Page() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: "Was ist günstiger — Pflegeheim oder 24h-Pflege?", a: "Oft ist 24h-Pflege günstiger — besonders in teuren Ländern wie Nordrhein-Westfalen oder Baden-Württemberg. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil." },
+                { q: "Was ist günstiger — Pflegeheim oder 24h-Pflege?", a: "Oft ist 24h-Pflege günstiger, besonders in Ländern mit hohen Heimkosten wie Bremen, dem Saarland, Nordrhein-Westfalen oder Baden-Württemberg. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil." },
                 { q: "Was ist der Unterschied in der Betreuungsqualität?", a: "24h-Pflege: eine Kraft, die mit im Haus wohnt, für eine Person. Pflegeheim: Personal nach Dienstplan für viele Bewohner, wenig Zeit für den Einzelnen." },
                 { q: "Wann ist das Pflegeheim die bessere Wahl?", a: "Bei sehr hohem medizinischem Bedarf, der dauerhaft Fachpflege erfordert, oder wenn kein Zimmer für die Kraft vorhanden ist." },
               ]}
