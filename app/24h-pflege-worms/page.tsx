@@ -28,12 +28,12 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Zahl in der Quelldatei, die irgendwann veraltet im Suchergebnis steht.
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Worms und Alzey-Worms | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Worms in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege zu Hause in Worms: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-worms' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Worms und Alzey-Worms | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Worms in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege zu Hause in Worms: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-worms',
     siteName: 'Primundus',
     locale: 'de_DE',

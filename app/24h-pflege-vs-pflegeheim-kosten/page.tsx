@@ -33,17 +33,17 @@ const SECTIONS = [
 // Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
 // Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
-  title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
-  description: 'Pflegeheim: im Schnitt 3.364 € Eigenanteil im Monat. Was 24-Stunden-Pflege zu Hause nach Zuschüssen und Steuer kostet, zeigt der Vergleich.',
+  title: '24-Stunden-Pflege oder Pflegeheim: Kostenvergleich 2026',
+  description: 'Pflegeheim: im ersten Jahr Ø 3.364 € Eigenanteil im Monat. Zu Hause senken Pflegegeld, Entlastungsbudget und Steuerermäßigung die Kosten.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten' },
   openGraph: {
-    title: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026 | Primundus',
-    description: 'Was kostet mehr — Pflegeheim oder 24h-Pflege? Vollständiger Vergleich mit aktuellen Zahlen 2026.',
+    title: '24-Stunden-Pflege oder Pflegeheim: Kostenvergleich 2026',
+    description: 'Pflegeheim: im ersten Jahr Ø 3.364 € Eigenanteil im Monat. Zu Hause senken Pflegegeld, Entlastungsbudget und Steuerermäßigung die Kosten.',
     url: 'https://primundus.de/24h-pflege-vs-pflegeheim-kosten',
     siteName: 'Primundus',
     locale: 'de_DE',
     type: 'article',
-    images: [{ url: '/images/primundus_logo_header.webp' }],
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
   },
 }
 

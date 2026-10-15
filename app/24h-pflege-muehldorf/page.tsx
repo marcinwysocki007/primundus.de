@@ -12,12 +12,12 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Mühldorf am Inn | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Mühldorf am Inn in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege in Mühldorf am Inn: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-muehldorf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Mühldorf am Inn | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Mühldorf am Inn in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege in Mühldorf am Inn: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-muehldorf',
     siteName: 'Primundus',
     locale: 'de_DE',

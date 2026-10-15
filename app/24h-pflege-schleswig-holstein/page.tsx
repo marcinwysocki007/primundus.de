@@ -30,12 +30,12 @@ const SECTIONS = [
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Schleswig-Holstein | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Schleswig-Holstein in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege in Schleswig-Holstein: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-schleswig-holstein' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Schleswig-Holstein | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Schleswig-Holstein in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege in Schleswig-Holstein: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-schleswig-holstein',
     siteName: 'Primundus',
     locale: 'de_DE',

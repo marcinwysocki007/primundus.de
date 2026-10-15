@@ -60,12 +60,12 @@ const FRAGEN = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Demenz zu Hause pflegen: wie lange, was es kostet, wann Heim',
-  description: 'Demenz zu Hause pflegen oder ins Heim? Wie lange häusliche Pflege möglich ist, was Betreuung kostet, wann 24-Stunden-Pflege hilft und was die Kasse zahlt.',
+  title: 'Demenzbetreuung zu Hause: wann 24-Stunden-Pflege hilft',
+  description: 'Welche Demenzbetreuung passt in welcher Phase, was zahlt die Pflegekasse? Für 24-Stunden-Pflege: Preis und Pflegekräfte sofort ansehen.',
   alternates: { canonical: 'https://primundus.de/demenz-pflege-zuhause' },
   openGraph: {
-    title: 'Demenz zu Hause pflegen oder ins Heim? Was möglich ist und was es kostet',
-    description: 'Wie lange Pflege zu Hause bei Demenz möglich ist, wann 24-Stunden-Pflege hilft und welche Leistungen die Pflegekasse zahlt.',
+    title: 'Demenzbetreuung zu Hause: wann 24-Stunden-Pflege hilft',
+    description: 'Welche Demenzbetreuung passt in welcher Phase, was zahlt die Pflegekasse? Für 24-Stunden-Pflege: Preis und Pflegekräfte sofort ansehen.',
     url: 'https://primundus.de/demenz-pflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',

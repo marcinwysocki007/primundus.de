@@ -63,13 +63,14 @@ const FRAGEN = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegeheim Kosten 2026: Eigenanteil je Bundesland, Rechner',
-  description: `Pflegeheim Kosten 2026: Eigenanteil Ø ${euro(HEIM_EIGENANTEIL_BUND)} im Monat, je Bundesland 2.890 bis 3.760 €. Rechner nach Bundesland, Pflegegrad und Heimjahr; was die Kasse zahlt.`,
+  title: 'Pflegeheim Kosten Rechner 2026: Eigenanteil je Bundesland',
+  // Meta 15.10.2026 (M3): Bundeswert mit Heimjahr, Länderspanne aus HEIM_EIGENANTEIL; openGraph wortgleich (M5).
+  description: `Pflegeheim Kosten 2026: im 1. Jahr Ø ${euro(HEIM_EIGENANTEIL_BUND)} Eigenanteil im Monat, je Bundesland rund ${LAENDER[0][1].toLocaleString('de-DE')} bis ${euro(LAENDER[LAENDER.length - 1][1])}. Bei Pflegegrad 2 bis 5 gleich hoch.`,
   alternates: { canonical: 'https://primundus.de/pflegeheim-kosten-deutschland' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegeheim Kosten 2026: Eigenanteil je Bundesland mit Rechner',
-    description: `Eigenanteil Ø ${euro(HEIM_EIGENANTEIL_BUND)} im Monat, je Bundesland von rund 2.890 bis 3.760 €; Rechner nach Bundesland, Pflegegrad und Heimjahr.`,
+    title: 'Pflegeheim Kosten Rechner 2026: Eigenanteil je Bundesland',
+    description: `Pflegeheim Kosten 2026: im 1. Jahr Ø ${euro(HEIM_EIGENANTEIL_BUND)} Eigenanteil im Monat, je Bundesland rund ${LAENDER[0][1].toLocaleString('de-DE')} bis ${euro(LAENDER[LAENDER.length - 1][1])}. Bei Pflegegrad 2 bis 5 gleich hoch.`,
     url: 'https://primundus.de/pflegeheim-kosten-deutschland',
     siteName: 'Primundus',
     locale: 'de_DE',

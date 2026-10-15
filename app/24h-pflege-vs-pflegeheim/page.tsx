@@ -14,13 +14,13 @@ const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim', '15. Oktober 202
 const SECTIONS = [{ id: 'kosten', title: 'Kostenvergleich 2026' }, { id: 'qualitaet', title: 'Betreuungsqualität' }, { id: 'alltag', title: 'Alltag & Lebensqualität' }, { id: 'wann-was', title: 'Wann was sinnvoll ist' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege vs. Pflegeheim — vollständiger Vergleich 2026',
-  description: '24h-Pflege zuhause oder Pflegeheim? Kosten, Qualität, Alltag — vollständiger Vergleich 2026 mit echten Zahlen. Wann was die bessere Wahl ist.',
+  title: 'Alternative zum Pflegeheim: 24-Stunden-Pflege im Vergleich',
+  description: 'Alternative zum Pflegeheim: So unterscheiden sich Betreuung, Alltag und Eigenanteil bei 24-Stunden-Pflege zu Hause und im Heim.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-pflegeheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege vs. Pflegeheim 2026 | Primundus',
-    description: '24h-Pflege zuhause oder Pflegeheim? Kosten, Qualität, Alltag — vollständiger Vergleich 2026 mit echten Zahlen. Wann was die bessere Wahl ist.',
+    title: 'Alternative zum Pflegeheim: 24-Stunden-Pflege im Vergleich',
+    description: 'Alternative zum Pflegeheim: So unterscheiden sich Betreuung, Alltag und Eigenanteil bei 24-Stunden-Pflege zu Hause und im Heim.',
     url: 'https://primundus.de/24h-pflege-vs-pflegeheim',
     siteName: 'Primundus',
     locale: 'de_DE',

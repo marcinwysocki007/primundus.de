@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Herzinsuffizienz Pflege zuhause — was möglich ist 2026',
-  description: 'Herzinsuffizienz Pflege zuhause: Was in welchem NYHA-Stadium möglich ist, worauf täglich geachtet werden muss und ab wann eine 24h-Betreuungskraft sinnvoll ist.',
+  title: 'Pflegegrad bei Herzinsuffizienz: Richtwerte je NYHA-Stufe',
+  description: 'NYHA-Stufe 2, 3 oder 4: Die Tabelle zeigt, welcher Pflegegrad als Richtwert gilt. Der Medizinische Dienst prüft die Selbstständigkeit im Alltag.',
   alternates: { canonical: 'https://primundus.de/herzinsuffizienz-pflege' },
   openGraph: {
-    title: 'Herzinsuffizienz Pflege zuhause | Primundus',
-    description: 'Was bei Herzinsuffizienz zuhause möglich ist und ab wann 24h-Pflege sinnvoll wird.',
+    title: 'Pflegegrad bei Herzinsuffizienz: Richtwerte je NYHA-Stufe',
+    description: 'NYHA-Stufe 2, 3 oder 4: Die Tabelle zeigt, welcher Pflegegrad als Richtwert gilt. Der Medizinische Dienst prüft die Selbstständigkeit im Alltag.',
     url: 'https://primundus.de/herzinsuffizienz-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
