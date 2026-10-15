@@ -17,7 +17,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // (Search Console, 480 Tage): Aufgaben, Kosten mit Pflegekasse und Finanzamt, 24 Stunden mit Moldau, Erfahrungen, Legal,
 // Anmelden, danach Anreise und Prüfliste. Zahlen nur mit Quelle (Abschnitt „Quellen“).
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-rumaenien', '13. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-rumaenien', '15. Oktober 2026')
 const SRC = 'apex-pflegekraft-rumaenien'
 const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 

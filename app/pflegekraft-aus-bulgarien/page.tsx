@@ -16,7 +16,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // (Search Console, 480 Tage): Fachkraft, 24 Stunden, Aufgaben, Erfahrungen, Sprache, Legal, danach Angebot, Pflegekasse,
 // Anreise und Checkliste. Kein Länderpreis. Zahlen nur mit Quelle (Abschnitt „Quellen“).
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-bulgarien', '13. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-bulgarien', '15. Oktober 2026')
 const SRC = 'apex-pflegekraft-bulgarien'
 const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
