@@ -150,7 +150,7 @@ export default function BeratungsgespraechPage() {
             <Text>Diese fünf Fragen sollten Sie jedem Anbieter stellen. So beantworten wir sie:</Text>
             <Punkte
               punkte={[
-                { title: 'Wer ist Arbeitgeber der Betreuungskraft?', desc: 'Wir. Die Betreuungskräfte sind bei uns angestellt und sozialversichert, für jeden Einsatz liegt eine A1-Bescheinigung vor. Sie werden nicht Arbeitgeber.' },
+                { title: 'Wer ist Arbeitgeber der Betreuungskraft?', desc: 'Wir. Die Betreuungskräfte sind bei uns angestellt und sozialversichert. Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie werden nicht Arbeitgeber.' },
                 { title: 'Was kostet es genau, und was kommt dazu?', desc: 'Der Monatspreis aus dem Rechner, ab 2.150 €. Dazu An- und Abreise mit 125 € je Strecke, Kost und Logis, und an neun Feiertagen im Jahr der doppelte Tagessatz. Eine Vermittlungsgebühr gibt es nicht.' },
                 { title: 'Was passiert, wenn die Betreuungskraft krank wird?', desc: 'Wir stellen schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
                 { title: 'Wie komme ich wieder raus?', desc: 'Täglich kündbar, taggenau abgerechnet. Keine Mindestlaufzeit.' },

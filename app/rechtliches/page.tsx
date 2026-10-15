@@ -68,8 +68,8 @@ export default function Rechtliches() {
               <Text>
                 Wer eine „selbstständige“ Betreuungskraft im Haushalt beschäftigt, riskiert in der Regel Scheinselbstständigkeit:
                 Sozialversicherungsbeiträge können für bis zu vier Jahre nachgefordert werden, dazu Bußgelder, bei Vorsatz ein
-                Strafverfahren. Sicher ist das Entsendemodell: Die Betreuungskraft ist beim Anbieter angestellt, für jeden Einsatz
-                liegt eine A1-Bescheinigung vor.
+                Strafverfahren. Sicher ist das Entsendemodell: Die Betreuungskraft ist beim Anbieter angestellt; die A1-Bescheinigung
+                wird vor der Anreise beantragt und, wenn sie noch nicht vorliegt, nachgereicht.
               </Text>
               <MehrDazu label="Mehr dazu:" links={[{ href: '/rechtssicher', text: 'So stellt Primundus das sicher' }]} />
             </Kasten>

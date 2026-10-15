@@ -104,7 +104,7 @@ const FRAGEN = [
   },
   {
     q: 'Was kostet eine polnische Pflegekraft im Monat?',
-    a: 'Bei Primundus ab 2.150 € im Monat für eine Person. Unsere Betreuungskräfte kommen aus Polen, sind bei uns angestellt und in Polen sozialversichert; für jeden Einsatz liegt eine A1-Bescheinigung vor. Bei Pflegegrad 3 bleiben nach den Zuschüssen ab ca. 923 € im Monat.',
+    a: 'Bei Primundus ab 2.150 € im Monat für eine Person. Unsere Betreuungskräfte kommen aus Polen, sind bei uns angestellt und in Polen sozialversichert. Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Bei Pflegegrad 3 bleiben nach den Zuschüssen ab ca. 923 € im Monat.',
   },
   {
     q: 'Was ist billiger, Pflegeheim oder 24-Stunden-Pflege?',
@@ -368,8 +368,8 @@ export default function Kosten() {
           <Abschnitt id="polnische-pflegekraft" titel="Was kostet eine polnische Pflegekraft?">
             <Text>
               Unsere Betreuungskräfte kommen aus Polen, und der Preis ab 2.150 € im Monat gilt für sie. Darin enthalten sind
-              Lohn und Sozialabgaben: Die Betreuungskraft ist bei uns angestellt und in Polen sozialversichert, für jeden
-              Einsatz liegt eine A1-Bescheinigung vor. Sie werden nicht Arbeitgeber und zahlen weder Lohnsteuer noch
+              Lohn und Sozialabgaben: Die Betreuungskraft ist bei uns angestellt und in Polen sozialversichert.
+              Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie werden nicht Arbeitgeber und zahlen weder Lohnsteuer noch
               Sozialabgaben.
             </Text>
             <Text>
