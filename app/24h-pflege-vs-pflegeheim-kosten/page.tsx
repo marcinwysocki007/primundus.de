@@ -150,16 +150,16 @@ export default function VsKosten() {
             <Tabelle
               titel="Pflegeheimkosten 2026 — was setzt sich zusammen"
               zeilen={[
-                ['Pflegebedingter Eigenanteil (EEE)', 'Ø 1.775 €/Monat', 'Identisch in allen Heimen eines Bundeslandes'],
+                ['Pflegebedingter Eigenanteil (EEE)', 'Ø 1.775 €/Monat', 'Für alle Bewohner eines Heims gleich, je Heim verschieden'],
+                ['davon Ausbildungsumlage', 'Ø 128 €/Monat', 'Im pflegebedingten Eigenanteil enthalten, je Land verschieden'],
                 ['Unterkunft & Verpflegung', 'Ø 1.068 €/Monat', 'Je nach Zimmerausstattung und Region'],
                 ['Investitionsumlage', 'Ø 521 €/Monat', 'Für Gebäude, Ausstattung — zahlt Bewohner'],
-                ['Ausbildungsumlage', 'ca. 128 €/Monat', 'Seit 2020 bundeseinheitlich'],
                 ['Gesamteigenanteil (Ø 1. Jahr)', '3.364 €/Monat', 'Bundesweiter Durchschnitt 2026'],
               ]}
-              fuss="Quelle: vdek, Stand 1. Juli 2026 · Bundesweiter Durchschnitt"
+              fuss="Quelle: vdek, Stand 1. Juli 2026 · Bundesweiter Durchschnitt im ersten Heimjahr"
             />
             <Kasten titel="Wichtig: Der Eigenanteil steigt jährlich" ton="koralle">
-              <Text>Im Pflegeheim steigt der Eigenanteil typischerweise 3–5 % pro Jahr — weil Personalkosten steigen aber die Kassenzuschüsse eingefroren sind (bis Jan. 2028). 2024 stieg der Eigenanteil um durchschnittlich 211 €/Monat.</Text>
+              <Text>Im Pflegeheim stieg der Eigenanteil zuletzt um rund 8 % im Jahr: im Juli 2024 um 211 €, im Juli 2025 um 237 € und im Juli 2026 um 256 € im Monat (vdek). Die Personalkosten steigen, die Beträge der Pflegekasse bleiben bis Januar 2028 gleich.</Text>
             </Kasten>
             <MehrDazu
               label="Mehr zum Thema:"
@@ -174,13 +174,14 @@ export default function VsKosten() {
             <Tabelle
               titel="Eigenanteil 24h-Pflege nach Kassenzuschüssen — Pflegegrad 3"
               zeilen={[
-                ['Betreuungskosten Primundus', '2.700 €/Monat'],
-                ['Kost & Logis Betreuungskraft', '250 €/Monat'],
-                ['– Pflegegeld PG 3', '– 599 €/Monat'],
-                ['– Entlastungsbudget (anteilig)', '– ca. 295 €/Monat'],
-                ['Eigenanteil', 'ca. 2.055 €/Monat'],
+                ['Betreuung im Monat', 'ab 2.150 €'],
+                ['Pflegegeld (Pflegegrad 3)', '− 599 €'],
+                ['Entlastungsbudget (3.539 € im Jahr)', '− 295 €'],
+                ['Steuerermäßigung (20 %, bis 4.000 € im Jahr)', '− 333 €'],
+                [<strong key="s">Selbst zu tragen im Monat</strong>, <strong key="w">ab ca. 923 €</strong>],
               ]}
               betont={1}
+              fuss="Stand September 2026, Werte aus unserem Kostenrechner · zzgl. An- und Abreise 125 € je Strecke · Budget-Anteil setzt voraus, dass Ihre Kasse den Einsatz als Verhinderungspflege anerkennt"
             />
           </Abschnitt>
 
@@ -192,7 +193,7 @@ export default function VsKosten() {
               titel=""
               kopf={["Kriterium", "24h-Pflege zuhause", "Pflegeheim"]}
               zeilen={[
-                ['Eigenanteil/Monat (PG 3)', 'ca. 1.700–2.000 €', 'Ø 3.364 € (steigend)'],
+                ['Eigenanteil/Monat (PG 3)', 'ab ca. 923 €', 'Ø 3.364 € (steigend)'],
                 ['Umgebung', 'Eigenes Zuhause', 'Neue, fremde Umgebung'],
                 ['Betreuungsintensität', '1:1, bei Bedarf auch nachts', 'Geteilt, nach Dienstplan'],
                 ['Tagesrhythmus', 'Vollständig eigener Rhythmus', 'Heimstruktur und -zeiten'],

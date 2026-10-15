@@ -52,9 +52,9 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was ist günstiger — Pflegeheim oder 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ist 24h-Pflege günstiger — besonders in teuren Regionen wie Bayern oder BW. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil.' } },
-      { '@type': 'Question', name: 'Was ist der Unterschied in der Betreuungsqualität?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege: eine Kraft für eine Person, 24 Stunden. Pflegeheim: eine Kraft für 3–5 Bewohner, begrenzte Individualzeit.' } },
-      { '@type': 'Question', name: 'Wann ist das Pflegeheim die bessere Wahl?', acceptedAnswer: { '@type': 'Answer', text: 'Bei sehr hohem medizinischem Bedarf der dauerhafte Fachpflege erfordert, oder wenn kein Zimmer für die Kraft vorhanden ist.' } }
+      { '@type': 'Question', name: 'Was ist günstiger — Pflegeheim oder 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ist 24h-Pflege günstiger — besonders in teuren Ländern wie Nordrhein-Westfalen oder Baden-Württemberg. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil.' } },
+      { '@type': 'Question', name: 'Was ist der Unterschied in der Betreuungsqualität?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege: eine Kraft, die mit im Haus wohnt, für eine Person. Pflegeheim: Personal nach Dienstplan für viele Bewohner, wenig Zeit für den Einzelnen.' } },
+      { '@type': 'Question', name: 'Wann ist das Pflegeheim die bessere Wahl?', acceptedAnswer: { '@type': 'Answer', text: 'Bei sehr hohem medizinischem Bedarf, der dauerhaft Fachpflege erfordert, oder wenn kein Zimmer für die Kraft vorhanden ist.' } }
     ],
   },
 ]
@@ -84,16 +84,16 @@ export default function Page() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="kosten" titel="Kostenvergleich 2026">
             <Text>
-              Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat bundesweit (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — in Bayern und Baden-Württemberg deutlich höher. 24h-Pflege über Primundus kostet ab 2.150 €/Monat; nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.
+              Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat bundesweit (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — in Nordrhein-Westfalen und Baden-Württemberg rund 300 € mehr. 24h-Pflege über Primundus kostet ab 2.150 €/Monat; nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat.
             </Text>
             <Kasten augenbraue="Kosten im Vergleich — Pflegegrad 3" ton="gruen">
-              <Liste punkte={["Pflegeheim bundesweit: Ø 3.364 €/Monat Eigenanteil", "Pflegeheim Bayern/BW: bis 4.000 €/Monat Eigenanteil", "24h-Pflege: ab 2.150 €/Monat", "24h-Pflege nach Zuschüssen und Steuer: ab ca. 923 €/Monat", "Ersparnis vs. Pflegeheim Bayern: bis 2.500 €/Monat möglich"]} />
+              <Liste punkte={["Pflegeheim bundesweit: Ø 3.364 €/Monat Eigenanteil", "Pflegeheim Nordrhein-Westfalen: Ø 3.671 €/Monat Eigenanteil", "24h-Pflege: ab 2.150 €/Monat", "24h-Pflege nach Zuschüssen und Steuer: ab ca. 923 €/Monat"]} />
             </Kasten>
           </Abschnitt>
 
           <Abschnitt id="qualitaet" titel="Betreuungsqualität">
             <Text>
-              Im Pflegeheim teilen sich typisch 3–5 Bewohner eine Pflegekraft. Individueller Zeitaufwand pro Person: 30–60 Minuten täglich. Bei der 24h-Pflege ist eine Kraft ausschließlich für eine Person da — 24 Stunden, 7 Tage.
+              Im Pflegeheim betreut das Personal nach Dienstplan viele Bewohner zugleich. Bei der 24h-Pflege wohnt eine Kraft mit im Haus und ist für eine Person da, bei Bedarf auch nachts.
             </Text>
             <Text>
               Der entscheidende Unterschied: Kontinuität. Die 24h-Kraft kennt die Vorlieben, Gewohnheiten und Eigenheiten der betreuten Person — das ist bei Demenz nicht verhandelbar.
@@ -116,9 +116,9 @@ export default function Page() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: "Was ist günstiger — Pflegeheim oder 24h-Pflege?", a: "Oft ist 24h-Pflege günstiger — besonders in teuren Regionen wie Bayern oder BW. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil." },
-                { q: "Was ist der Unterschied in der Betreuungsqualität?", a: "24h-Pflege: eine Kraft für eine Person, 24 Stunden. Pflegeheim: eine Kraft für 3–5 Bewohner, begrenzte Individualzeit." },
-                { q: "Wann ist das Pflegeheim die bessere Wahl?", a: "Bei sehr hohem medizinischem Bedarf der dauerhafte Fachpflege erfordert, oder wenn kein Zimmer für die Kraft vorhanden ist." },
+                { q: "Was ist günstiger — Pflegeheim oder 24h-Pflege?", a: "Oft ist 24h-Pflege günstiger — besonders in teuren Ländern wie Nordrhein-Westfalen oder Baden-Württemberg. Mit Kassenzuschüssen liegt der Eigenanteil bei PG 3 oft unter dem Pflegeheim-Eigenanteil." },
+                { q: "Was ist der Unterschied in der Betreuungsqualität?", a: "24h-Pflege: eine Kraft, die mit im Haus wohnt, für eine Person. Pflegeheim: Personal nach Dienstplan für viele Bewohner, wenig Zeit für den Einzelnen." },
+                { q: "Wann ist das Pflegeheim die bessere Wahl?", a: "Bei sehr hohem medizinischem Bedarf, der dauerhaft Fachpflege erfordert, oder wenn kein Zimmer für die Kraft vorhanden ist." },
               ]}
             />
           </Abschnitt>
