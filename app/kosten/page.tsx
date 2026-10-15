@@ -188,8 +188,9 @@ export default function Kosten() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="kosten-uebersicht" titel="Was kostet 24-Stunden-Pflege bei Primundus?">
+            {/* 15.10.2026: das vorhandene Wort verlinkt auf die Themenseite (Text unverändert) */}
             <Text>
-              Die Kosten der 24-Stunden-Pflege bestehen aus dem Monatspreis, der An- und Abreise und Kost und Logis. Der
+              Die Kosten der <a href="/24-stunden-pflege" className={QUELLE}>24-Stunden-Pflege</a> bestehen aus dem Monatspreis, der An- und Abreise und Kost und Logis. Der
               Grundpreis liegt bei 2.150 € im Monat. Er gilt für eine Person, die noch mobil ist oder mit Rollator geht.
               Nachts braucht sie keine Hilfe, und es gibt keine besonderen Wünsche an die Betreuungskraft. Im Preis
               enthalten sind Lohn und Sozialabgaben der Betreuungskraft, die Organisation der Einsätze, der Ersatz bei

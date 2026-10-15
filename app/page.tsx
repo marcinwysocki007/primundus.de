@@ -224,8 +224,10 @@ export default function Page() {
             <h2 className="text-[26px] md:text-[32px] lg:text-[36px] leading-[1.25] font-bold text-pm-ink mb-3">
               Betreuung zu Hause in Ihrer Stadt
             </h2>
+            {/* 15.10.2026: das vorhandene Wort „24-Stunden-Pflege" verlinkt auf die Themenseite (Text unverändert) */}
             <p className="text-[16px] text-pm-body mb-8 max-w-2xl">
-              Ob Sie es Altenpflege, Seniorenbetreuung oder 24-Stunden-Pflege nennen: Auf den Seiten für Ihre Stadt stehen
+              Ob Sie es Altenpflege, Seniorenbetreuung oder{' '}
+              <a href="/24-stunden-pflege" className="font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">24-Stunden-Pflege</a> nennen: Auf den Seiten für Ihre Stadt stehen
               die Preise, die Kassenzuschüsse und die Stadtteile, in denen unsere Betreuungskräfte im Einsatz sind.
             </p>
             <ul className="flex flex-wrap gap-2.5">

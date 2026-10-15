@@ -79,6 +79,8 @@ const FRAGEN = [
   {
     q: 'Was kostet die 24-Stunden-Pflege beim Testsieger?',
     a: 'Eine 24-Stunden-Betreuung kostet bei Primundus ab 2.150 Euro im Monat, je nach Pflegesituation und Deutschkenntnissen der Betreuungskraft. Nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei Pflegegrad 3 ab ca. 923 Euro im Monat selbst zu tragen. Den Preis für Ihre Situation zeigt der Kostenrechner in zwei Minuten.',
+    // 15.10.2026: das vorhandene Wort verlinkt auf die Themenseite; Wortlaut und FAQ-Schema unverändert
+    link: { wort: '24-Stunden-Betreuung', href: '/24-stunden-pflege' },
   },
   {
     q: 'Worauf sollte ich neben einer Auszeichnung achten?',

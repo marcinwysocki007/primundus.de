@@ -798,7 +798,26 @@ export function MehrDazu({ label, links }: { label: string; links: { href: strin
   )
 }
 
-export function Fragen({ fragen }: { fragen: { q: string; a: string }[] }) {
+// Ein Wort der Antwort als Link (15.10.2026): Der sichtbare Text bleibt zeichengleich, das FAQ-Schema liest weiter
+// `a`. Fehlt das Wort nach einer Textänderung, bricht der Build ab, statt den Link lautlos zu verlieren.
+type FrageLink = { wort: string; href: string }
+
+function Antwort({ a, link }: { a: string; link?: FrageLink }) {
+  if (!link) return <>{a}</>
+  const i = a.indexOf(link.wort)
+  if (i < 0) throw new Error(`Fragen: „${link.wort}" steht nicht in der Antwort „${a.slice(0, 60)}…"`)
+  return (
+    <>
+      {a.slice(0, i)}
+      <a href={link.href} className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">
+        {link.wort}
+      </a>
+      {a.slice(i + link.wort.length)}
+    </>
+  )
+}
+
+export function Fragen({ fragen }: { fragen: { q: string; a: string; link?: FrageLink }[] }) {
   return (
     <div className="border-t border-pm-line">
       {fragen.map((f) => (
@@ -811,7 +830,7 @@ export function Fragen({ fragen }: { fragen: { q: string; a: string }[] }) {
               </svg>
             </span>
           </summary>
-          <p className="pb-6 pr-14 text-[17px] leading-[1.7] text-pm-body max-w-[64ch]">{f.a}</p>
+          <p className="pb-6 pr-14 text-[17px] leading-[1.7] text-pm-body max-w-[64ch]"><Antwort a={f.a} link={f.link} /></p>
         </details>
       ))}
     </div>

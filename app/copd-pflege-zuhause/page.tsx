@@ -149,10 +149,11 @@ export default function Page() {
           </Abschnitt>
 
           <Abschnitt id="nachts" titel="Nachts ist die Angst am größten">
+            {/* 15.10.2026: das vorhandene Wort verlinkt auf die Themenseite (Text unverändert) */}
             <Text>
               Atemnot kommt bei COPD oft nachts — im Liegen sammelt sich Schleim, und wer allein aufwacht und
             keine Luft bekommt, gerät in Panik, die alles schlimmer macht. Genau hier liegt der Unterschied
-            der 24-Stunden-Betreuung zum ambulanten Dienst, der zweimal am Tag kommt: <strong>Es ist jemand
+            der <a href="/24-stunden-pflege" className="text-pm-taupe underline hover:text-pm-taupe-deep">24-Stunden-Betreuung</a> zum ambulanten Dienst, der zweimal am Tag kommt: <strong>Es ist jemand
             da.</strong> Eine Betreuungskraft, die im Haus schläft, hört, wenn etwas nicht stimmt, hilft beim
             Aufsetzen, bleibt ruhig — und ruft Hilfe, wenn es nötig wird. Für viele Familien ist das der
             Moment, in dem sie nach Monaten zum ersten Mal wieder durchschlafen.
