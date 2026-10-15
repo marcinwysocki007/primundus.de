@@ -144,7 +144,7 @@ export default function OsteuropaeischePflegekraftOderAgentur() {
               fragen={[
                 { q: 'Ist Direktsuche einer Pflegekraft günstiger?', a: 'Evtl. auf dem Papier — aber dann muss die Familie selbst Rechtssicherheit herstellen, selbst prüfen, selbst Ersatz organisieren. Der versteckte Aufwand und das rechtliche Risiko werden selten einkalkuliert.' },
                 { q: 'Kann ich eine Pflegekraft direkt aus Polen suchen?', a: 'Technisch ja — aber die Rechtssicherheit herzustellen ist komplex (Entsendemodell, A1-Bescheinigung) und das Scheinselbstständigkeitsrisiko ist hoch. Seriöse Agenturen nehmen dieses Risiko ab.' },
-                { q: 'Wie erkenne ich eine seriöse Pflegeagentur?', a: 'Entsendemodell mit A1-Bescheinigung, transparente Preise, tägliche Kündbarkeit, aktive Qualitätsprüfung, langjährige Erfahrung, unabhängige Bewertungen.' },
+                { q: 'Wie erkenne ich eine seriöse Pflegeagentur?', a: 'Entsendemodell mit A1-Bescheinigung, transparente Preise, klare Regeln im Vertrag zu Anreise, Ersatz und Kündigung, aktive Qualitätsprüfung, langjährige Erfahrung, unabhängige Bewertungen.' },
                 { q: 'Was passiert wenn die Kraft direkt kündigt?', a: 'Bei Direktsuche: Die Familie muss sofort neu suchen — Wochen bis Monate bis zur nächsten Kraft. Bei Primundus: Ersatz laut Vertrag in der Regel innerhalb von 3 Tagen.' },
               ]}
             />

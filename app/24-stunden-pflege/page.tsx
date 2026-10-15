@@ -62,7 +62,7 @@ const FRAGEN = [
   { q: 'Was sind die Nachteile der 24-Stunden-Pflege?', a: 'Die Betreuungskraft braucht ein eigenes Zimmer, Kost und Logis stellen Sie. Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, eine Überwachung rund um die Uhr gibt es nicht. Alle 6 bis 8 Wochen wechselt die Betreuungskraft, und medizinische Behandlungspflege übernimmt weiter ein Pflegedienst. Für Menschen, die dauerhaft Fachpflege brauchen, passt sie nicht.' },
   { q: 'Was ist billiger, Pflegeheim oder 24-Stunden-Pflege?', a: 'Meist die 24-Stunden-Pflege. Im Pflegeheim zahlen Sie bundesweit im Durchschnitt 3.364 € im Monat selbst (vdek, Stand 1. Juli 2026). Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 € im Monat, zzgl. An- und Abreise sowie Kost und Logis.' },
   { q: 'Wie lange arbeitet eine Betreuungskraft am Tag?', a: 'Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, so wie jede Arbeitnehmerin. Den Tagesablauf legen Sie gemeinsam fest: Hilfe am Morgen, im Haushalt, am Nachmittag und am Abend, dazwischen ihre Ruhezeit. Nachts schläft sie im Haus und hilft, wenn etwas ist; wie oft nachts Hilfe nötig ist, fließt in den Preis ein.' },
-  { q: 'Woran erkenne ich einen seriösen Anbieter?', a: 'An vier Dingen: Die Betreuungskraft ist angestellt, und die A1-Bescheinigung ist vor der Anreise beantragt. Sie sehen Preis und Betreuungskräfte, bevor Sie etwas unterschreiben. Der Vertrag nennt An- und Abreise, Ersatz bei Krankheit und die Kündigung klar. Und es gibt keine Vermittlungsgebühr oder Anzahlung. Den Mustervertrag von Primundus können Sie vorab lesen.' },
+  { q: 'Woran erkenne ich einen seriösen Anbieter?', a: 'An drei Dingen: Die Betreuungskraft ist angestellt, und die A1-Bescheinigung ist vor der Anreise beantragt. Sie sehen Preis und Betreuungskräfte, bevor Sie etwas unterschreiben. Der Vertrag nennt An- und Abreise, Ersatz bei Krankheit und die Kündigung klar. Den Mustervertrag von Primundus können Sie vorab lesen.' },
 ]
 
 const schemaMarkup = [
@@ -425,13 +425,12 @@ export default function VierUndZwanzigStundenPflege() {
                 { title: 'Kost und Logis, Reisen, Feiertage', desc: 'Neben dem Monatspreis stellen Sie Kost und Logis, zahlen An- und Abreise mit 125 € je Strecke und an neun Feiertagen im Jahr den doppelten Tagessatz.' },
               ]}
             />
-            <Kasten augenbraue="Seriös oder nicht" titel="Vier Dinge, die Sie vor der Unterschrift sehen sollten">
+            <Kasten augenbraue="Seriös oder nicht" titel="Drei Dinge, die Sie vor der Unterschrift sehen sollten">
               <Punkte
                 punkte={[
                   { title: 'A1-Bescheinigung als Nachweis', desc: 'Sie belegt, dass die Betreuungskraft im Heimatland sozialversichert ist. Beantragt wird sie vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht.' },
                   { title: 'Preis und Betreuungskraft vor dem Vertrag', desc: 'Ein seriöser Anbieter nennt den Monatspreis vorher und zeigt, wer kommt. Bei Primundus sehen Sie beides online, bevor Sie etwas unterschreiben.' },
                   { title: 'Klare Regeln im Vertrag', desc: 'An- und Abreise, Ersatz bei Krankheit, Feiertage und Kündigung stehen schwarz auf weiß. Unseren Mustervertrag können Sie vorab lesen.' },
-                  { title: 'Keine Vermittlungsgebühr, keine Anzahlung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist, und können täglich kündigen.' },
                 ]}
               />
             </Kasten>
