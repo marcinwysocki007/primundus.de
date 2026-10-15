@@ -31,7 +31,7 @@ const FRAGEN = [
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Würzburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie viele ältere Menschen leben in Würzburg?', a: '14.490 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 11,0 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 19,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Würzburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Würzburg im Schnitt 3,9 Wohnungen, in Bayern 2,1. 45,5 Prozent der Gebäude stehen frei, 35,0 Prozent stehen in geschlossener Reihe. 54,6 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Würzburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
-  { q: 'Welches Einzugsgebiet wird in Würzburg bedient?', a: 'Würzburg und Landkreis Würzburg: Kitzingen, Ochsenfurt, Veitsshöchheim, Gerbrunn und alle Gemeinden im Landkreis Würzburg' },
+  { q: 'Welches Einzugsgebiet wird in Würzburg bedient?', a: 'Würzburg und Landkreis Würzburg: Ochsenfurt, Veitshöchheim, Gerbrunn und alle Gemeinden im Landkreis Würzburg' },
   { q: 'Ist in einer Wohnung in Würzburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Würzburg hat im Schnitt 78,5 m², 38,4 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 64,0 % der Gebäude in Würzburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.270 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
@@ -56,7 +56,7 @@ const ORT: OrtDaten = {
       </>
     ),
   },
-  einzugsgebiet: 'Würzburg und Landkreis Würzburg: Kitzingen, Ochsenfurt, Veitsshöchheim, Gerbrunn und alle Gemeinden im Landkreis Würzburg',
+  einzugsgebiet: 'Würzburg und Landkreis Würzburg: Ochsenfurt, Veitshöchheim, Gerbrunn und alle Gemeinden im Landkreis Würzburg',
   stimmen: ['k-20260226-bernd'],
   fragen: FRAGEN,
 }
