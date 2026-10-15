@@ -178,7 +178,7 @@ export default function PflegeheimKosten() {
                 ['Pflegegrad 5', euro(HEIM_LEISTUNG[5]), `rund ${euro(gesamt(5))}`],
               ]}
               betont={1}
-              fuss={`Gesamtkosten = Kassenbetrag + Leistungszuschlag der Kasse im ersten Jahr (${euro(ZUSCHLAG_JAHR1)}) + durchschnittlicher Eigenanteil ${euro(HEIM_EIGENANTEIL_BUND)}. Der Eigenanteil bleibt bei Pflegegrad 2 bis 5 gleich (einrichtungseinheitlicher Eigenanteil).`}
+              fuss={`Gesamtkosten = Kassenbetrag + Leistungszuschlag der Kasse im ersten Jahr (${euro(ZUSCHLAG_JAHR1)}) + durchschnittlicher Eigenanteil ${euro(HEIM_EIGENANTEIL_BUND)}. Der pflegebedingte Anteil ist in einem Heim für Pflegegrad 2 bis 5 gleich (einrichtungseinheitlicher Eigenanteil).`}
             />
           </Abschnitt>
 

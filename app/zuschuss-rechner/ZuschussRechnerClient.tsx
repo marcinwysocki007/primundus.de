@@ -157,7 +157,7 @@ export function ZuschussRechnerClient() {
             <div className="bg-white border border-pm-line rounded-xl px-5 py-4 mb-6 shadow-sm">
               <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-mute mb-2">Zum Vergleich — Pflegeheim</p>
               <div className="flex items-center justify-between gap-2">
-                <span className="text-[14px] text-pm-body">Eigenanteil Ø Deutschland (alle PG)</span>
+                <span className="text-[14px] text-pm-body">Eigenanteil Ø Deutschland, 1. Heimjahr (alle PG)</span>
                 <span className="text-[14px] font-bold text-pm-coral">≈ 3.364 €/Monat</span>
               </div>
               <p className="text-[12px] text-pm-mute mt-1">
