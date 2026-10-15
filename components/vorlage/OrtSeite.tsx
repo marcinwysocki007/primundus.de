@@ -9,7 +9,7 @@
 //   Kopf   Brotkrumen · „6× Testsieger DIE WELT" · H1 · Unterzeile · Knopf, Gesichter, Punkte, Sterne ·
 //          „Was 24-Stunden-Pflege in <Ort> bedeutet" (Definition) · Marta mit Siegel      RatgeberKopf
 //   1  Bekannt aus                                                   BekanntAus (Startseite)
-//   2  Was es in <Ort> kostet und was die Kasse zahlt               OrtKostenLanding (Heim im Land gegen Zuschüsse zu Hause, Tabellen)
+//   2  Was 24-Stunden-Pflege in <Ort> kostet und welche Zuschüsse  OrtKostenLanding (Heim im Land gegen Zuschüsse zu Hause, Tabellen)
 //   3  So läuft es ab                                                OrtAblaufLanding (3 Spalten mit Bild) + das eine dunkle Band
 //   4  Was eine Betreuungskraft bei Ihnen übernimmt                  OrtAufgabenLanding (Bild + Punkte + Themen-Links)
 //   5  Passt 24-Stunden-Pflege zu Ihrer Situation?                   OrtPasstLanding (Situationen, Voraussetzungen, „Sie sind unsicher?")

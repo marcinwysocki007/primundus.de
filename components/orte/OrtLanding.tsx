@@ -54,8 +54,10 @@ export function OrtKostenLanding({ slug, ort, land, src }: { slug: string; ort: 
     <Sektion
       id="kosten-und-kassenzuschuesse-in"
       augenbraue="Kosten"
-      titel={`Was es in ${ort} kostet und was die Kasse zahlt`}
-      einleitung="Der Monatspreis hängt vom Pflegebedarf ab und davon, wie gut die Betreuungskraft Deutsch spricht. Der Kostenrechner zeigt ihn Ihnen in 2 Minuten — samt Zuschüssen der Pflegekasse und Steuervorteil."
+      // Martin 15.10.2026: „keiner versteht worum es geht“ / „es geht doch um die kosten für 24 stunden pflege durch
+      // osteuropäische pflegekräfte“. Ohne eigenen Preis (Entscheidung 23.09., bestätigt als 29 a); Zuschüsse mit Entlastungsbudget.
+      titel={`Was 24-Stunden-Pflege in ${ort} kostet und welche Zuschüsse es gibt`}
+      einleitung={`Bei der 24-Stunden-Pflege wohnt eine Betreuungskraft aus Osteuropa bei Ihrem Angehörigen in ${ort}. Den Monatspreis bestimmen vor allem der Pflegebedarf und die Deutschkenntnisse der Kraft; der Kostenrechner zeigt ihn in 2 Minuten. Bei Pflegegrad 3 können Pflegegeld, Entlastungsbudget und Steuerermäßigung die Kosten um bis zu ca. ${eur(summePg3)} im Monat senken.`}
       ton="weiss"
     >
       <div className="grid gap-6 md:grid-cols-2">

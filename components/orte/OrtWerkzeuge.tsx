@@ -45,7 +45,7 @@ export function OrtWerkzeuge({
   const bayern = land === 'Bayern'
 
   return (
-    <Abschnitt id="werkzeuge" titel={titel ?? `Was es in ${ort} kostet, und was die Pflegekasse dazugibt`}>
+    <Abschnitt id="werkzeuge" titel={titel ?? `Was es ${ort === 'Saarland' ? 'im' : 'in'} ${ort} kostet, und was die Pflegekasse dazugibt`}>
       <Text>
         Ihr Monatspreis richtet sich danach, wie viel Hilfe nötig ist und was Sie von der Betreuungskraft
         erwarten — wie gut sie Deutsch spricht, ob sie Erfahrung mit Demenz hat, ob

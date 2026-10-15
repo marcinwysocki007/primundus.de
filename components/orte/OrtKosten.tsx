@@ -31,15 +31,15 @@ export function OrtKosten({ slug, ort, land }: { slug: string; ort: string; land
   const heim = HEIM_EIGENANTEIL[land] ?? HEIM_EIGENANTEIL_BUND
   const heimWo = HEIM_EIGENANTEIL[land] ? `in ${land}` : 'in Deutschland'
   return (
-    <Abschnitt id="kosten-und-kassenzuschuesse-in" titel={`Was es in ${ort} kostet und was die Kasse zahlt`}>
+    <Abschnitt id="kosten-und-kassenzuschuesse-in" titel={`Was 24-Stunden-Pflege in ${ort} kostet und welche Zuschüsse es gibt`}>
       {/* Martin 24.09.: „Mir fehlt der Preis — was kostet 24-Stunden-Pflege in Worms? Berechnen Sie, sehen Sie
           sofort; Zuschüsse und Steuervorteil benennen." Kein eigener Betrag (Entscheidung 23.09.), aber die
           Frage, die Antwort in 2 Minuten und der Knopf — zuerst im Abschnitt, vor den Tabellen. */}
       <Kasten ton="gruen" augenbraue={`Was kostet 24-Stunden-Pflege in ${ort}?`} titel="Ihren Preis sehen Sie sofort — mit Zuschüssen und Steuervorteil">
         <Text>
-          Der Monatspreis hängt vom Pflegebedarf ab und davon, wie gut die Betreuungskraft Deutsch spricht. Der
-          Kostenrechner zeigt ihn Ihnen in 2 Minuten — samt Zuschüssen der Pflegekasse und Steuervorteil, dazu die
-          Betreuungskräfte, die dafür in Frage kommen.
+          Bei der 24-Stunden-Pflege wohnt eine Betreuungskraft aus Osteuropa bei Ihrem Angehörigen in {ort}. Den
+          Monatspreis bestimmen vor allem der Pflegebedarf und die Deutschkenntnisse der Kraft; der Kostenrechner zeigt
+          ihn in 2 Minuten, dazu die Betreuungskräfte, die in Frage kommen.
         </Text>
         <a
           href={`https://kostenrechner.primundus.de/?start=1&src=ort-${slug}-kosten`}

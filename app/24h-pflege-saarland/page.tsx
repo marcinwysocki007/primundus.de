@@ -22,7 +22,7 @@ const SECTIONS = [
   { id: 'polnische-betreuungskraefte-im-saarland', title: "Polnische Betreuungskräfte im Saarland" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause im Saarland ausmacht" },
   { id: 'einzugsgebiet-saarland', title: "Einzugsgebiet Saarland" },
-  { id: 'werkzeuge', title: "Was es in Saarland kostet, und was die Pflegekasse dazugibt" },
+  { id: 'werkzeuge', title: "Was es im Saarland kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
 
   { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Saarland" },
