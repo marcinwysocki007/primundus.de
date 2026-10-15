@@ -112,12 +112,13 @@ export default function Page() {
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-brandenburg', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort="Brandenburg" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim Brandenburg: Eigenanteil Ø 3.150 €/Monat',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
+          blickVerweise={[
+            // Inhaltsverzeichnis mit Grund statt gemischter Häkchen-Liste (Martin 15.10.2026: „warum mischen wir hier alles“).
+            { href: '#kosten-und-kassenzuschuesse-in', titel: 'Kosten und Zuschüsse', text: 'Pflegegeld, Entlastungsbudget und Steuerermäßigung bringen bei Pflegegrad 3 bis zu ca. 1.227 € im Monat' },
+            { href: '#polnische-betreuungskraefte-in-brandenburg', titel: 'Betreuungskräfte', text: 'aus Polen und bei uns fest angestellt, Sie werden nicht Arbeitgeber' },
+            { href: '#einzugsgebiet-brandenburg', titel: 'Einzugsgebiet', text: 'Potsdam, Cottbus, Brandenburg an der Havel und alle Orte in Brandenburg' },
+            { href: '#werkzeuge', titel: 'Heim oder zu Hause', text: 'ein Heimplatz kostet in Brandenburg im ersten Jahr im Schnitt rund 3.150 € Eigenanteil im Monat' },
+            { href: '#so-arbeiten-wir', titel: 'So arbeiten wir', text: 'Bestpreisgarantie, keine Vermittlungsgebühr, täglich kündbar' },
           ]}
           blickTitel="Brandenburg auf einen Blick"
           person={<AnsprechpartnerinGross ort="Brandenburg" />}

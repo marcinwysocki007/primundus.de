@@ -111,12 +111,13 @@ export default function Page() {
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-rheinland-pfalz', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort="Rheinland-Pfalz" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim Rheinland-Pfalz: Eigenanteil Ø 3.289 €/Monat',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
+          blickVerweise={[
+            // Inhaltsverzeichnis mit Grund statt gemischter Häkchen-Liste (Martin 15.10.2026: „warum mischen wir hier alles“).
+            { href: '#kosten-und-kassenzuschuesse-in', titel: 'Kosten und Zuschüsse', text: 'Pflegegeld, Entlastungsbudget und Steuerermäßigung bringen bei Pflegegrad 3 bis zu ca. 1.227 € im Monat' },
+            { href: '#polnische-betreuungskraefte-in-rheinland', titel: 'Betreuungskräfte', text: 'aus Polen und bei uns fest angestellt, Sie werden nicht Arbeitgeber' },
+            { href: '#einzugsgebiet-rheinland-pfalz', titel: 'Einzugsgebiet', text: 'Mainz, Ludwigshafen, Koblenz und alle Orte in Rheinland-Pfalz' },
+            { href: '#werkzeuge', titel: 'Heim oder zu Hause', text: 'ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.290 € Eigenanteil im Monat' },
+            { href: '#so-arbeiten-wir', titel: 'So arbeiten wir', text: 'Bestpreisgarantie, keine Vermittlungsgebühr, täglich kündbar' },
           ]}
           blickTitel="Rheinland-Pfalz auf einen Blick"
           person={<AnsprechpartnerinGross ort="Rheinland-Pfalz" />}

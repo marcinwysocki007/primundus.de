@@ -111,12 +111,13 @@ export default function Page() {
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-sachsen-anhalt', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort="Sachsen-Anhalt" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim Sachsen-Anhalt: Eigenanteil Ø 2.891 €/Monat',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
+          blickVerweise={[
+            // Inhaltsverzeichnis mit Grund statt gemischter Häkchen-Liste (Martin 15.10.2026: „warum mischen wir hier alles“).
+            { href: '#kosten-und-kassenzuschuesse-in', titel: 'Kosten und Zuschüsse', text: 'Pflegegeld, Entlastungsbudget und Steuerermäßigung bringen bei Pflegegrad 3 bis zu ca. 1.227 € im Monat' },
+            { href: '#polnische-betreuungskraefte-in-sachsen', titel: 'Betreuungskräfte', text: 'aus Polen und bei uns fest angestellt, Sie werden nicht Arbeitgeber' },
+            { href: '#einzugsgebiet-sachsen-anhalt', titel: 'Einzugsgebiet', text: 'Halle, Magdeburg, Dessau-Roßlau und alle Orte in Sachsen-Anhalt' },
+            { href: '#werkzeuge', titel: 'Heim oder zu Hause', text: 'ein Heimplatz kostet in Sachsen-Anhalt im ersten Jahr im Schnitt rund 2.890 € Eigenanteil im Monat' },
+            { href: '#so-arbeiten-wir', titel: 'So arbeiten wir', text: 'Bestpreisgarantie, keine Vermittlungsgebühr, täglich kündbar' },
           ]}
           blickTitel="Sachsen-Anhalt auf einen Blick"
           person={<AnsprechpartnerinGross ort="Sachsen-Anhalt" />}

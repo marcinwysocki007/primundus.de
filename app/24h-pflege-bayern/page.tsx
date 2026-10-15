@@ -112,13 +112,13 @@ export default function Page() {
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bayern', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort="Bayern" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim Bayern: Eigenanteil Ø 3.270 €/Monat',
-            'Bayern: Landespflegegeld +500 €/Jahr',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
+          blickVerweise={[
+            // Inhaltsverzeichnis mit Grund statt gemischter Häkchen-Liste (Martin 15.10.2026: „warum mischen wir hier alles“).
+            { href: '#kosten-und-kassenzuschuesse-in', titel: 'Kosten und Zuschüsse', text: 'Pflegegeld, Entlastungsbudget und Steuerermäßigung bringen bei Pflegegrad 3 bis zu ca. 1.227 € im Monat; in Bayern kommen 500 € Landespflegegeld im Jahr vom Freistaat hinzu' },
+            { href: '#polnische-betreuungskraefte-in-bayern', titel: 'Betreuungskräfte', text: 'aus Polen und bei uns fest angestellt, Sie werden nicht Arbeitgeber' },
+            { href: '#einzugsgebiet-bayern', titel: 'Einzugsgebiet', text: 'München, Nürnberg, Augsburg und alle Orte in Bayern' },
+            { href: '#werkzeuge', titel: 'Heim oder zu Hause', text: 'ein Heimplatz kostet in Bayern im ersten Jahr im Schnitt rund 3.270 € Eigenanteil im Monat' },
+            { href: '#so-arbeiten-wir', titel: 'So arbeiten wir', text: 'Bestpreisgarantie, keine Vermittlungsgebühr, täglich kündbar' },
           ]}
           blickTitel="Bayern auf einen Blick"
           person={<AnsprechpartnerinGross ort="Bayern" />}
