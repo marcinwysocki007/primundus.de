@@ -107,7 +107,7 @@ export default function Page() {
           titel="24h-Pflege Brandenburg — Betreuungskraft zuhause"
           einleitungTitel="Zuhause bleiben in Brandenburg"
           einleitung={<>Das Haus am Stadtrand von Potsdam, die Wohnung in Berlin, das Grundstück in der Uckermark: Rund um die Hauptstadt wohnen viele Eltern, deren Kinder mitten im Berliner Alltag stecken. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht — bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-brandenburg', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben

@@ -107,7 +107,7 @@ export default function Page() {
           titel="24h-Pflege Bayern — Betreuungskraft zuhause"
           einleitungTitel="Zuhause bleiben in Bayern"
           einleitung={<>Ob Hof im Oberland, Reihenhaus in Nürnberg oder Wohnung in München-Schwabing: In Bayern gehört das Zuhause zur Familie — hergeben will es niemand, schon gar nicht fürs Pflegeheim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, von Franken bis ins Allgäu. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-bayern', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben

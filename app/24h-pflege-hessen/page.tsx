@@ -106,7 +106,7 @@ export default function Page() {
           titel="24h-Pflege Hessen — Betreuungskraft zuhause"
           einleitungTitel="Zuhause bleiben in Hessen"
           einleitung={<>Zwischen Frankfurter Skyline und Vogelsberg-Dörfern liegt ein Land voller Eigenheime — und voller Familien, die pendeln, während die Eltern in Wetterau, Taunus oder Odenwald zuhause sind. Wenn Hilfe nötig wird, zieht eine Betreuungskraft von Primundus mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-hessen', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben

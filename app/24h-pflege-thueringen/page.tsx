@@ -107,7 +107,7 @@ export default function Page() {
           titel="24h-Pflege Thüringen — Betreuungskraft zuhause"
           einleitungTitel="Zuhause bleiben in Thüringen"
           einleitung={<>Fachwerk in Erfurt, Plattenbau in Jena, Haus am Waldrand im Thüringer Wald: Zuhause ist in Thüringen mehr als eine Adresse. Damit es auch mit Pflegebedarf so bleibt, zieht eine Betreuungskraft von Primundus mit ein — bei Bedarf auch nachts da, 1:1, ohne Heimumzug. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-thueringen', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben

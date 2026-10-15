@@ -26,7 +26,7 @@ import {
 // § 43 Abs. 2 und 3, § 43c SGB XI, §§ 61 ff., 90, 94 SGB XII, Preise aus unserem Kostenrechner. Der alte Rechner auf
 // /pflegeheim-kostenvergleich (erfundene Länderfaktoren, halbes Pflegegeld, Entlastungsbetrag eingerechnet) ist damit überflüssig.
 
-const AKTUALISIERT = aktualisiertAm('pflegeheim-kosten-deutschland', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('pflegeheim-kosten-deutschland', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegeheim-kosten'
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 

@@ -106,7 +106,7 @@ export default function Page() {
           titel="24h-Pflege Nordrhein-Westfalen — Betreuungskraft zuhause"
           einleitungTitel="Zuhause bleiben in Nordrhein-Westfalen"
           einleitung={<>Reihenhaus im Ruhrgebiet, Hof im Münsterland, Wohnung am Rhein: Nirgendwo leben mehr Pflegebedürftige als in Nordrhein-Westfalen — und nirgendwo sind die Heim-Wartelisten länger. Eine Betreuungskraft von Primundus zieht stattdessen mit ein und ist bei Bedarf auch nachts da, von Aachen bis Minden. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-nordrhein-westfalen', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben

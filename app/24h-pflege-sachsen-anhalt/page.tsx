@@ -106,7 +106,7 @@ export default function Page() {
           titel="24h-Pflege Sachsen-Anhalt — Betreuungskraft zuhause"
           einleitungTitel="Zuhause bleiben in Sachsen-Anhalt"
           einleitung={<>Ob Altbau in Halle, Einfamilienhaus in Magdeburg oder Hof in der Altmark: In Sachsen-Anhalt sind die Wege zu Kindern und Heimen oft weit — das Zuhause aber ist nah. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, damit niemand es verlassen muss. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-sachsen-anhalt', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben

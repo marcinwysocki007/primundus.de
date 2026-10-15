@@ -14,7 +14,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
 // richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
 // „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
-const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim-kosten', '1. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-pflegeheim-kosten', '15. Oktober 2026')
 
 const GrafikKostenvergleich = dynamic(
   () => import('@/components/charts/GrafikKostenvergleich').then(m => ({ default: m.GrafikKostenvergleich })),

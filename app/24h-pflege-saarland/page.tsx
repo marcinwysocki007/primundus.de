@@ -107,7 +107,7 @@ export default function Page() {
           titel="24h-Pflege Saarland — Betreuungskraft zuhause"
           einleitungTitel="Zuhause bleiben in Saarland"
           einleitung={<>Im Saarland wohnt man nah beieinander — und trotzdem können Kinder nicht rund um die Uhr bei den Eltern in Saarbrücken, Völklingen oder St. Wendel sein. Eine Betreuungskraft von Primundus schließt genau diese Lücke: Sie zieht mit ein und ist bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-saarland', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
