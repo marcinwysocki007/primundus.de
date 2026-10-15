@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Würzburg',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '15. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Frauenland, Zellerau oder Heidingsfeld: Mit Blick auf Festung und Weinberge wird man in Würzburg gern alt — im eigenen Zuhause, nicht im Heim. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch im Umland an Main und Fränkischem Weinland.</>,
   kreis: 'Landkreis Würzburg',

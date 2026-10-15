@@ -12,7 +12,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // „Kontrollen seit Jahren häufiger", „Vertrag mit Primundus als deutscher Agentur" (Vertragspartner ist die PRIMUNDUS
 // Sp. z o.o.; kein „Agentur"), „seit 20 Jahren ausschließlich". Die Kurzantwort (August 2026) steht jetzt als Einleitung.
 
-const AKTUALISIERT = aktualisiertAm('rechtssicher', '19. September 2026')
+const AKTUALISIERT = aktualisiertAm('rechtssicher', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-rechtssicher'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'

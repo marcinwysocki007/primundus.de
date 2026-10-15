@@ -11,7 +11,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // stimmt: Den Preis zeigt der Rechner vorab. Jetzt: was wir fragen (die Fragen des Rechners), was Sie fragen sollten (Vertrag,
 // Kosten, Krankheit, Kündigung), was danach passiert. Keine Dauer-Angabe, kein „kein Verkaufsgespräch".
 
-const AKTUALISIERT = aktualisiertAm('beratungsgespraech', '19. September 2026')
+const AKTUALISIERT = aktualisiertAm('beratungsgespraech', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-beratungsgespraech'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'

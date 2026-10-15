@@ -27,7 +27,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // Personen, Mobilität, Wünsche, Pflegegrad 5), wird benannt und gewichtet, aber nicht beziffert — den Betrag zeigt der
 // Rechner. Zuschüsse (Pflegegeld, Entlastungsbudget, Steuer) bleiben exakt, das sind Gesetzeszahlen.
 
-const AKTUALISIERT = aktualisiertAm('kosten', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('kosten', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-kosten'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 

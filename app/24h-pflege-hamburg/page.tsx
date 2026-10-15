@@ -40,7 +40,7 @@ const ORT: OrtDaten = {
   ort: 'Hamburg',
   land: 'Hamburg',
   art: 'hand',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '15. Oktober 2026',
   lesezeit: '8 Min.',
   titel: '24-Stunden-Pflege in Hamburg: So funktioniert Betreuung zu Hause',
   telefon: { nummer: '+4940468958181', anzeige: '040 468 958 181', adresse: 'Baumwall 7, 20459 Hamburg' },

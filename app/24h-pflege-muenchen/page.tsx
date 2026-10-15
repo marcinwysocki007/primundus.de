@@ -43,7 +43,7 @@ const ORT: OrtDaten = {
   ort: 'München',
   land: 'Bayern',
   art: 'hand',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '15. Oktober 2026',
   lesezeit: '8 Min.',
   titel: '24-Stunden-Pflege in München: So funktioniert Betreuung zu Hause',
   // Die Wohnungsdaten stehen schon in der Prosa — kein zweiter Wohnen-Baustein
