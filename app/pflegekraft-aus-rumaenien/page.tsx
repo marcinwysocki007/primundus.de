@@ -62,8 +62,6 @@ const PRUEFLISTE = [
 
 const QUELLEN = [
   'Verbraucherzentrale: Ausländische Betreuungskräfte, wie geht das legal? (Kosten bei Entsendung, 48-Stunden-Grenze, A1, Krankenversicherung bei Selbstständigen)',
-  'Pflegewegweiser NRW (Verbraucherzentrale NRW): So viel kostet eine ausländische Haushalts- und Betreuungskraft (Verhinderungspflege)',
-  'GKV-Spitzenverband: Gemeinsames Rundschreiben zu den leistungsrechtlichen Vorschriften des SGB XI, 2026 (Verhinderungspflege)',
   'Abschlussbericht der Arbeitsgruppe von Bundesarbeitsministerium, Bundesgesundheitsministerium und Pflegebevollmächtigter zur Live-In-Betreuung, November 2024',
   'Bundesministerium für Gesundheit: Online-Ratgeber Demenz, Teilnahme am täglichen Leben',
   'Gemeinsamer Bundesausschuss: Häusliche-Krankenpflege-Richtlinie, Nr. 26 (Medikamente)',
@@ -227,8 +225,7 @@ export default function PflegekraftAusRumaenien() {
             </Text>
             <Text>
               Das Finanzamt zieht 20 Prozent der Kosten von der Einkommensteuer ab, höchstens 4.000 € im Jahr, wenn Sie überweisen und bei
-              einem Anbieter eine Rechnung haben (§ 35a EStG). Den Gemeinsamen Jahresbetrag von bis zu 3.539 €, oft Entlastungsbudget genannt, zahlt die Kasse nur für
-              Verhinderungs- und Kurzzeitpflege, nicht für die laufende Betreuung durch eine Kraft, die bei Ihnen wohnt (Pflegewegweiser NRW).
+              einem Anbieter eine Rechnung haben (§ 35a EStG).
             </Text>
             <MehrDazu
               label="Mehr zu Kosten und Zuschüssen:"
