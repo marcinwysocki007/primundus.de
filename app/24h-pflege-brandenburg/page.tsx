@@ -216,7 +216,7 @@ export default function Page() {
             <CitiesOfRegion region="brandenburg" />
           </Abschnitt>
 
-          <OrtWerkzeuge slug="brandenburg" ort={'Brandenburg'} land={'Deutschland insgesamt'} altbau={48.2} miete={6.21} />
+          <OrtWerkzeuge slug="brandenburg" ort={'Brandenburg'} land={'Brandenburg'} altbau={48.2} miete={6.21} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">

@@ -43,6 +43,7 @@ export function OrtWerkzeuge({
 }) {
   const heim = HEIM_EIGENANTEIL[land] ?? HEIM_EIGENANTEIL_BUND
   const bayern = land === 'Bayern'
+  const inLand = land === 'Saarland' ? 'im Saarland' : `in ${land}`
 
   return (
     <Abschnitt id="werkzeuge" titel={titel ?? `Was es ${ort === 'Saarland' ? 'im' : 'in'} ${ort} kostet, und was die Pflegekasse dazugibt`}>
@@ -55,7 +56,7 @@ export function OrtWerkzeuge({
       <Text>
         Vom Pflegegrad hängt etwas anderes ab: das, was die Pflegekasse dazugibt — Pflegegeld, anteiliges Entlastungsbudget,
         dazu die Steuerermäßigung. Diese Zuschüsse werden vom Preis abgezogen, übrig bleibt Ihr Eigenanteil. Zum Vergleich: Ein
-        Heimplatz in {land} kostet rund {euro(heim)} Eigenanteil im Monat, und der hängt nicht vom Pflegegrad ab.
+        Heimplatz {inLand} kostet rund {euro(heim)} Eigenanteil im Monat, und der hängt nicht vom Pflegegrad ab.
         {bayern ? ' Wer in Bayern wohnt, bekommt ab Pflegegrad 2 zusätzlich 500 € Landespflegegeld im Jahr.' : ''}
       </Text>
       {altbau !== undefined && !ohneWohnen && (
@@ -86,7 +87,7 @@ export function OrtWerkzeuge({
           },
           {
             title: <a href="/pflegeheim-kosten-deutschland" className={LINK}>Pflegeheim-Kosten-Rechner</a>,
-            desc: `Was ein Heimplatz in ${land} kostet, nach Pflegegrad und Heimjahr, und was daneben zu Hause bleibt.`,
+            desc: `Was ein Heimplatz ${inLand} kostet, nach Pflegegrad und Heimjahr, und was daneben zu Hause bleibt.`,
           },
           {
             title: <a href="/vollmacht-generator" className={LINK}>Vorsorgevollmacht erstellen</a>,

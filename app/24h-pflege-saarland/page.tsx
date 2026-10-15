@@ -215,7 +215,7 @@ export default function Page() {
             <CitiesOfRegion region="saarland" />
           </Abschnitt>
 
-          <OrtWerkzeuge slug="saarland" ort={'Saarland'} land={'Deutschland insgesamt'} altbau={59.9} miete={6.12} />
+          <OrtWerkzeuge slug="saarland" ort={'Saarland'} land={'Saarland'} altbau={59.9} miete={6.12} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
