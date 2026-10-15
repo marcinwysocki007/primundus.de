@@ -74,7 +74,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet ein Pflegeheim 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.775 €), Unterkunft & Verpflegung (Ø 1.068 €) und Investitionsumlage (Ø 521 €). Tendenz steigend.' },
       },
       {
         '@type': 'Question',
@@ -94,7 +94,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was zahlt die Pflegekasse im Pflegeheim?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 805 €, PG 3 = 1.319 €, PG 4 = 1.855 €, PG 5 = 2.096 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
       },
     ],
   },
@@ -150,13 +150,13 @@ export default function VsKosten() {
             <Tabelle
               titel="Pflegeheimkosten 2026 — was setzt sich zusammen"
               zeilen={[
-                ['Pflegebedingter Eigenanteil (EEE)', 'Ø 1.132 €/Monat', 'Identisch in allen Heimen eines Bundeslandes'],
-                ['Unterkunft & Verpflegung', 'Ø 900 €/Monat', 'Je nach Zimmerausstattung und Region'],
-                ['Investitionsumlage', 'Ø 500–600 €/Monat', 'Für Gebäude, Ausstattung — zahlt Bewohner'],
-                ['Ausbildungsumlage', 'ca. 60–100 €/Monat', 'Seit 2020 bundeseinheitlich'],
+                ['Pflegebedingter Eigenanteil (EEE)', 'Ø 1.775 €/Monat', 'Identisch in allen Heimen eines Bundeslandes'],
+                ['Unterkunft & Verpflegung', 'Ø 1.068 €/Monat', 'Je nach Zimmerausstattung und Region'],
+                ['Investitionsumlage', 'Ø 521 €/Monat', 'Für Gebäude, Ausstattung — zahlt Bewohner'],
+                ['Ausbildungsumlage', 'ca. 128 €/Monat', 'Seit 2020 bundeseinheitlich'],
                 ['Gesamteigenanteil (Ø 1. Jahr)', '3.364 €/Monat', 'Bundesweiter Durchschnitt 2026'],
               ]}
-              fuss="Quelle: vdek Pflegeversicherungsbericht 2024 · Bundesweiter Durchschnitt"
+              fuss="Quelle: vdek, Stand 1. Juli 2026 · Bundesweiter Durchschnitt"
             />
             <Kasten titel="Wichtig: Der Eigenanteil steigt jährlich" ton="koralle">
               <Text>Im Pflegeheim steigt der Eigenanteil typischerweise 3–5 % pro Jahr — weil Personalkosten steigen aber die Kassenzuschüsse eingefroren sind (bis Jan. 2028). 2024 stieg der Eigenanteil um durchschnittlich 211 €/Monat.</Text>
@@ -225,11 +225,11 @@ export default function VsKosten() {
           <Abschnitt id="faq" titel="Häufige Fragen zum Kostenvergleich">
             <Fragen
               fragen={[
-                { q: 'Was kostet ein Pflegeheim 2026?', a: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.132 €), Unterkunft & Verpflegung (Ø 900 €) und Investitionsumlage (Ø 500–600 €). Tendenz steigend.' },
+                { q: 'Was kostet ein Pflegeheim 2026?', a: 'Der durchschnittliche Eigenanteil beträgt 2026 bundesweit 3.364 €/Monat im ersten Jahr. Er setzt sich zusammen aus pflegebedingtem Eigenanteil (Ø 1.775 €), Unterkunft & Verpflegung (Ø 1.068 €) und Investitionsumlage (Ø 521 €). Tendenz steigend.' },
                 { q: 'Was kostet 24h-Pflege im Vergleich zum Pflegeheim?', a: 'Bei Primundus ab 2.150 €/Monat. Nach Pflegegeld (599 € bei Pflegegrad 3), Entlastungsbudget und Steuerermäßigung bleiben ab ca. 923 €/Monat — oft deutlich günstiger als ein Pflegeheim.' },
                 { q: 'Ist 24h-Pflege zuhause besser als ein Pflegeheim?', a: 'Für die meisten Pflegesituationen ja — günstigerer Eigenanteil, eigenes Zuhause, individuelle 1:1-Betreuung, kein Umzugsstress. Ein Pflegeheim ist besser bei intensivmedizinischem Dauerbedarf oder fehlendem Wohnraum.' },
                 { q: 'Wann kann das Pflegeheim günstiger werden?', a: 'Ab dem dritten Jahr im Pflegeheim steigen die Kassenzuschläge auf 50 % des pflegebedingten Eigenanteils. Bei sehr hohem Pflegegrad (PG 4–5) kann das langfristig die Rechnung zugunsten des Heims ändern.' },
-                { q: 'Was zahlt die Pflegekasse im Pflegeheim?', a: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 770 €, PG 3 = 1.262 €, PG 4 = 1.775 €, PG 5 = 2.005 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
+                { q: 'Was zahlt die Pflegekasse im Pflegeheim?', a: 'Einen einheitlichen monatlichen Betrag je Pflegegrad für die Pflegekosten (Sachleistungen vollstationär: PG 2 = 805 €, PG 3 = 1.319 €, PG 4 = 1.855 €, PG 5 = 2.096 €). Unterkunft, Verpflegung und Investitionsumlage trägt immer der Bewohner selbst.' },
               ]}
             />
           </Abschnitt>

@@ -158,7 +158,7 @@ export function ZuschussRechnerClient() {
               <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-pm-mute mb-2">Zum Vergleich — Pflegeheim</p>
               <div className="flex items-center justify-between gap-2">
                 <span className="text-[14px] text-pm-body">Eigenanteil Ø Deutschland (alle PG)</span>
-                <span className="text-[14px] font-bold text-pm-coral">≈ 2.871 €/Monat</span>
+                <span className="text-[14px] font-bold text-pm-coral">≈ 3.364 €/Monat</span>
               </div>
               <p className="text-[12px] text-pm-mute mt-1">
                 24h-Pflege zuhause ist bei PG {pg.pg} oft günstiger — und das vertraute Zuhause bleibt.

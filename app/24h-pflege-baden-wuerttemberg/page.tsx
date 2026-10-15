@@ -114,7 +114,7 @@ export default function Page() {
           blick={[
             'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
             'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim Baden-Württemberg: Eigenanteil Ø 2700–3500 €/Monat',
+            'Pflegeheim Baden-Württemberg: Eigenanteil Ø 3.657 €/Monat',
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',
           ]}
@@ -172,7 +172,7 @@ export default function Page() {
                 [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim Baden-Württemberg: Eigenanteil Ø 2700–3500 €/Monat — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim Baden-Württemberg: Eigenanteil Ø 3.657 €/Monat — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
