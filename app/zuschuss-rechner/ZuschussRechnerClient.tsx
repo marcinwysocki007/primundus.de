@@ -36,7 +36,7 @@ export function ZuschussRechnerClient() {
 
         <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">TOOLS & RECHNER</p>
         <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-          Zuschuss & Förderung 2026
+          Pflegezuschuss-Rechner 2026: welche Leistungen Ihnen je Pflegegrad zustehen
         </h1>
         <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
           Welche Leistungen stehen Ihnen zu? Pflegegrad wählen — alle Zuschüsse sofort sehen.

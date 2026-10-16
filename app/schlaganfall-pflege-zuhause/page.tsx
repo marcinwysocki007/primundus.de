@@ -73,7 +73,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflege nach Schlaganfall zu Hause: Wann es nach Hause geht, was zu tun ist und was es kostet',
+    headline: 'Pflege nach Schlaganfall zu Hause: wann es nach Hause oder ins Heim geht und was es kostet',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -116,7 +116,7 @@ export default function SchlaganfallPflegeZuhause() {
             { label: 'Pflege nach Schlaganfall' },
           ]}
           augenbraue="Ratgeber Schlaganfall"
-          titel="Pflege nach Schlaganfall zu Hause: Wann es nach Hause geht, was zu tun ist und was es kostet"
+          titel="Pflege nach Schlaganfall zu Hause: wann es nach Hause oder ins Heim geht und was es kostet"
           einleitung="Rund 270.000 Menschen erleiden in Deutschland jedes Jahr einen Schlaganfall. Ein Jahr danach sind rund zwei Drittel der Betroffenen pflegebedürftig, aber nur etwa jeder Siebte lebt in einer Einrichtung. Die meisten werden zu Hause versorgt. Hier lesen Sie, wie der Weg von der Klinik nach Hause läuft, wann das Heim wirklich nötig ist, welche zehn Maßnahmen zu Hause zählen, welchen Pflegegrad es gibt und was die Pflege kostet."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."

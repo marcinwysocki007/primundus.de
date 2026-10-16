@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Barrierefreies Zuhause gestalten — Tipps & Förderung 2026',
+  title: 'Barrierefreies Zuhause gestalten: Tipps und Förderung 2026',
   description: 'Barrierefreies Zuhause: Die wichtigsten Maßnahmen, wie Pflegekasse bis 4.180 €/Maßnahme fördert und was sofort umgesetzt werden kann.',
   alternates: { canonical: 'https://primundus.de/barrierefreies-zuhause-gestalten' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Barrierefreies Zuhause gestalten 2026 | Primundus',
+    title: 'Barrierefreies Zuhause gestalten: Tipps und Förderung 2026',
     description: 'Wohnraumanpassung: Maßnahmen, Förderung bis 4.180 €/Maßnahme und Checkliste.',
     url: 'https://primundus.de/barrierefreies-zuhause-gestalten',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Barrierefreies Zuhause gestalten — Tipps und Förderung 2026',
+    headline: 'Barrierefreies Zuhause gestalten: Tipps und Förderung 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function BarrierefreiesZuhause() {
             { label: "Barrierefreies Zuhause" },
           ]}
           augenbraue="Ratgeber Wohnen"
-          titel="Barrierefreies Zuhause gestalten — Tipps & Förderung 2026"
+          titel="Barrierefreies Zuhause gestalten: Tipps und Förderung 2026"
           einleitung="Ein sicheres, barrierefreies Zuhause ist die Grundlage für häusliche Pflege. Die Pflegekasse fördert Wohnraumanpassungen mit bis zu 4.180 Euro je Maßnahme — und viele der wirksamsten Maßnahmen kosten nur wenige hundert Euro. Wichtig: Antrag vor Beginn der Maßnahme stellen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

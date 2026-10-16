@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad nach Schlaganfall — welcher Grad & wie beantragen',
+  title: 'Pflegegrad nach Schlaganfall: welcher Grad, wie beantragen',
   description: 'Pflegegrad nach Schlaganfall: Welcher Grad ist realistisch, wie bereitet man die Begutachtung vor und welche Leistungen stehen zu? Alles erklärt für 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-nach-schlaganfall' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegegrad nach Schlaganfall 2026 | Primundus',
+    title: 'Pflegegrad nach Schlaganfall: welcher Grad, wie beantragen',
     description: 'Welcher Pflegegrad nach Schlaganfall — Begutachtung, Leistungen und Antrag.',
     url: 'https://primundus.de/pflegegrad-nach-schlaganfall',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegegrad nach Schlaganfall — welcher Grad und wie beantragen',
+    headline: 'Pflegegrad nach Schlaganfall: welcher Grad realistisch ist und wie Sie ihn beantragen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -80,7 +80,7 @@ export default function PflegegradNachSchlaganfall() {
             { label: "Pflegegrad nach Schlaganfall" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="Pflegegrad nach Schlaganfall — welcher Grad & wie beantragen"
+          titel="Pflegegrad nach Schlaganfall: welcher Grad realistisch ist und wie Sie ihn beantragen"
           einleitung="Nach einem Schlaganfall ändert sich oft alles innerhalb von Stunden. Der Pflegegrad bestimmt welche Kassenzuschüsse zur Verfügung stehen — und sollte so früh wie möglich beantragt werden, da er rückwirkend ab Antragsdatum gilt. Welcher Pflegegrad realistisch ist, hängt vom tatsächlichen Ausmaß der Folgeschäden ab."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

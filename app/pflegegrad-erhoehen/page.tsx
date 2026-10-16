@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad erhöhen — wann & wie Höherstufung beantragen',
+  title: 'Pflegegrad erhöhen: wann und wie Höherstufung beantragen',
   description: 'Pflegegrad erhöhen 2026: Wann ein Antrag auf Höherstufung sinnvoll ist, wie man ihn stellt und wie die Begutachtung vorbereitet wird. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-erhoehen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegegrad erhöhen — Höherstufung beantragen | Primundus',
+    title: 'Pflegegrad erhöhen: wann und wie Höherstufung beantragen',
     description: 'Wann und wie man einen höheren Pflegegrad beantragt — Anleitung und Vorbereitung.',
     url: 'https://primundus.de/pflegegrad-erhoehen',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegegrad erhöhen — wann und wie Höherstufung beantragen 2026',
+    headline: 'Pflegegrad erhöhen: wann und wie Sie die Höherstufung beantragen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function PflegegradErhoehen() {
             { label: "Pflegegrad erhöhen" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="Pflegegrad erhöhen — wann & wie Höherstufung beantragen"
+          titel="Pflegegrad erhöhen: wann und wie Sie die Höherstufung beantragen"
           einleitung="Wenn sich der Pflegebedarf verschlechtert, sollte sofort ein Antrag auf Höherstufung gestellt werden — denn jede Pflegegrad-Stufe bedeutet hunderte Euro mehr Kassenzuschuss pro Monat. Es gibt keine Sperrfrist. Der Antrag ist formlos, die Leistungen gelten ab Antragsdatum."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

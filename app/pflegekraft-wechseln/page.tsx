@@ -23,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft wechseln — wann & wie | Primundus',
+  title: 'Pflegekraft wechseln: wann und wie die Übergabe gelingt',
   description: 'Pflegekraft wechseln: Wann ein Wechsel sinnvoll ist, wie der reguläre Kraftwechsel alle 6–8 Wochen funktioniert und was eine gute Übergabe ausmacht.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-wechseln' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegekraft wechseln | Primundus',
+    title: 'Pflegekraft wechseln: wann und wie die Übergabe gelingt',
     description: 'Wann und wie man eine 24h-Betreuungskraft wechselt — regulär und kurzfristig.',
     url: 'https://primundus.de/pflegekraft-wechseln',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft wechseln — wann und wie',
+    headline: 'Pflegekraft wechseln: wann ein Wechsel sinnvoll ist und wie die Übergabe gelingt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -76,7 +76,7 @@ export default function PflegekraftWechseln() {
             { label: "Pflegekraft wechseln" },
           ]}
           augenbraue="Ratgeber Pflegekräfte"
-          titel="Pflegekraft wechseln — wann & wie es richtig funktioniert"
+          titel="Pflegekraft wechseln: wann ein Wechsel sinnvoll ist und wie die Übergabe gelingt"
           einleitung="Jede 24h-Betreuungskraft arbeitet typischerweise 6–8 Wochen am Stück, dann fährt sie nach Hause und eine neue Kraft kommt. Das ist normal, geplant und bei Primundus vollständig organisiert. Daneben gibt es Situationen die einen kurzfristigen Wechsel erfordern — auch das ist kein Problem."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

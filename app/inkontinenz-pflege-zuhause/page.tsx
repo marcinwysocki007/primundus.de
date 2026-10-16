@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde',
+  title: 'Inkontinenz in der Pflege zu Hause: Hilfsmittel und Alltag',
   description: 'Inkontinenz bei pflegebedürftigen Senioren: Formen, Hilfsmittel (Kassenzuschuss bis 40 €/Mo), Alltagstipps und wie man Würde beim Umgang bewahrt.',
   alternates: { canonical: 'https://primundus.de/inkontinenz-pflege-zuhause' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Inkontinenz Pflege zuhause | Primundus',
+    title: 'Inkontinenz in der Pflege zu Hause: Hilfsmittel und Alltag',
     description: 'Inkontinenz in der häuslichen Pflege — Hilfsmittel, Alltag und Würde bewahren.',
     url: 'https://primundus.de/inkontinenz-pflege-zuhause',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Inkontinenz Pflege zuhause — Hilfsmittel, Alltag und Würde',
+    headline: 'Inkontinenz in der Pflege zu Hause: Hilfsmittel, Alltag und Würde',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -80,7 +80,7 @@ export default function InkontinenzPflegeZuhause() {
             { label: "Inkontinenz Pflege" },
           ]}
           augenbraue="Ratgeber Inkontinenz"
-          titel="Inkontinenz Pflege zuhause — Hilfsmittel, Alltag & Würde"
+          titel="Inkontinenz in der Pflege zu Hause: Hilfsmittel, Alltag und Würde"
           einleitung="Inkontinenz ist eines der häufigsten und gleichzeitig schamhaftesten Pflegethemen. Rund 80 % der pflegebedürftigen Senioren sind davon betroffen — in unterschiedlichem Ausmaß. Der richtige Umgang schützt die Würde, verhindert Infektionen und Wundliegen, und macht den Alltag für alle leichter."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

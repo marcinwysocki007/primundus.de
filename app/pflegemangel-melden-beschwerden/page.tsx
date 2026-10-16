@@ -26,12 +26,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegemangel melden — Beschwerden richtig einreichen',
+  title: 'Pflegemängel melden: an wen Sie sich wenden',
   description: 'Pflegemangel melden: An wen man sich bei Problemen in der Pflege wendet, wie eine Beschwerde eingereicht wird und welche Stellen zuständig sind.',
   alternates: { canonical: 'https://primundus.de/pflegemangel-melden-beschwerden' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegemangel melden | Primundus',
+    title: 'Pflegemängel melden: an wen Sie sich wenden',
     description: 'Probleme in der Pflege melden — welche Stellen zuständig sind und wie man vorgeht.',
     url: 'https://primundus.de/pflegemangel-melden-beschwerden',
     siteName: 'Primundus',
@@ -44,7 +44,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegemangel melden — Beschwerden richtig einreichen',
+    headline: 'Pflegemängel melden: an wen Sie sich wenden und wie Sie sich beschweren',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -90,7 +90,7 @@ export default function PflegemangelMeldenBeschwerden() {
             { label: "Pflegemangel melden" },
           ]}
           augenbraue="Ratgeber Recht"
-          titel="Pflegemangel melden — Beschwerden richtig einreichen"
+          titel="Pflegemängel melden: an wen Sie sich wenden und wie Sie sich beschweren"
           einleitung="Wer Pflegemängel erlebt — schlechte Versorgung, Vernachlässigung, unwürdige Behandlung — hat das Recht etwas dagegen zu tun. Dieser Ratgeber zeigt wann und wie man Beschwerden einreicht, an wen man sich wendet, und welche Stellen in Deutschland zuständig sind."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

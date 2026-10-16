@@ -14,12 +14,12 @@ const AKTUALISIERT = aktualisiertAm('pflegereform-2025', '30. April 2026')
 const SECTIONS = [{ id: 'aenderungen', title: 'Die wichtigsten Änderungen' }, { id: 'entlastungsbudget', title: 'Das neue Entlastungsbudget' }, { id: 'auswirkungen', title: 'Was das für Familien bedeutet' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegereform 2025 — was hat sich geändert? | Primundus',
+  title: 'Pflegereform 2025: was sich für Familien geändert hat',
   description: 'Pflegereform 2025: Das neue Entlastungsbudget, höhere Leistungsbeträge, Änderungen bei Verhinderungs- und Kurzzeitpflege. Alle Änderungen kompakt.',
   alternates: { canonical: 'https://primundus.de/pflegereform-2025' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegereform 2025 | Primundus',
+    title: 'Pflegereform 2025: was sich für Familien geändert hat',
     description: 'Pflegereform 2025: Das neue Entlastungsbudget, höhere Leistungsbeträge, Änderungen bei Verhinderungs- und Kurzzeitpflege. Alle Änderungen kompakt.',
     url: 'https://primundus.de/pflegereform-2025',
     siteName: 'Primundus',
@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegereform 2025 — alle wichtigen Änderungen im Überblick',
+    headline: 'Pflegereform 2025: was sich für Familien geändert hat',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -75,7 +75,7 @@ export default function Page() {
             { label: "Pflegereform 2025" },
           ]}
           augenbraue="Ratgeber Pflegereform"
-          titel="Pflegereform 2025 — alle wichtigen Änderungen im Überblick"
+          titel="Pflegereform 2025: was sich für Familien geändert hat"
           einleitung="Juli 2025: Die größte Pflegereform seit Jahren tritt in Kraft. Das neue Entlastungsbudget fasst Verhinderungspflege und Kurzzeitpflege zusammen. Leistungsbeträge steigen. Was das für Familien bedeutet."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

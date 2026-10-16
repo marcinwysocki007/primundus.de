@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegende Angehörige unterstützen — Entlastung & Hilfe',
+  title: 'Entlastung für pflegende Angehörige: Angebote und Hilfe',
   description: 'Wie man pflegende Angehörige unterstützt: Konkrete Entlastungsangebote, Selbstfürsorge-Tipps und wie man Hilfe annimmt.',
   alternates: { canonical: 'https://primundus.de/pflegende-angehoerige-unterstuetzen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegende Angehörige unterstützen | Primundus',
+    title: 'Entlastung für pflegende Angehörige: Angebote und Hilfe',
     description: 'Wie man pflegende Angehörige wirklich unterstützt — konkrete Hilfe statt gut gemeinter Ratschläge.',
     url: 'https://primundus.de/pflegende-angehoerige-unterstuetzen',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegende Angehörige unterstützen — Entlastung und Hilfe',
+    headline: 'Entlastung für pflegende Angehörige: welche Angebote es gibt und wer Ihnen helfen kann',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +73,7 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
             { label: "Pflegende Angehörige unterstützen" },
           ]}
           augenbraue="Ratgeber Angehörige"
-          titel="Pflegende Angehörige unterstützen — echte Hilfe, keine Ratschläge"
+          titel="Entlastung für pflegende Angehörige: welche Angebote es gibt und wer Ihnen helfen kann"
           einleitung="Dieser Ratgeber richtet sich an zwei Gruppen: an Menschen die jemanden kennen der pflegt — und an die Pflegenden selbst. Gut gemeinte Ratschläge helfen selten. Konkrete Entlastung schon. Und das Schwerste für viele Pflegende: Hilfe annehmen zu lernen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

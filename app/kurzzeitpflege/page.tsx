@@ -11,12 +11,12 @@ const AKTUALISIERT = aktualisiertAm('kurzzeitpflege', '30. April 2026')
 const SECTIONS = [{ id: 'was-ist', title: 'Was ist Kurzzeitpflege?' }, { id: 'leistungen', title: 'Leistungen 2026' }, { id: 'beantragen', title: 'Wie beantragen' }, { id: 'alternative', title: 'Wann 24h-Pflege besser ist' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Kurzzeitpflege 2026 — Anspruch, Kosten & Beantragung',
+  title: 'Kurzzeitpflege 2026: Anspruch, Kosten und Entlastungsbudget',
   description: 'Kurzzeitpflege: Was es ist, wie viel die Kasse zahlt (2026: bis 3.539 €/Jahr), wie man es beantragt und wann 24h-Pflege die bessere Alternative ist.',
   alternates: { canonical: 'https://primundus.de/kurzzeitpflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Kurzzeitpflege 2026 | Primundus',
+    title: 'Kurzzeitpflege 2026: Anspruch, Kosten und Entlastungsbudget',
     description: 'Kurzzeitpflege: Was es ist, wie viel die Kasse zahlt (2026: bis 3.539 €/Jahr), wie man es beantragt und wann 24h-Pflege die bessere Alternative ist.',
     url: 'https://primundus.de/kurzzeitpflege',
     siteName: 'Primundus',
@@ -29,7 +29,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Kurzzeitpflege 2026 — Anspruch, Kosten und wann 24h-Pflege besser ist',
+    headline: 'Kurzzeitpflege 2026: Anspruch, Kosten und was das Entlastungsbudget zahlt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -72,7 +72,7 @@ export default function Page() {
             <span className="text-pm-ink">Kurzzeitpflege</span>
           </nav>
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 5 Min Lesezeit · Aktualisiert April 2026</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Kurzzeitpflege 2026 — Anspruch, Kosten und wann 24h-Pflege besser ist</h1>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Kurzzeitpflege 2026: Anspruch, Kosten und was das Entlastungsbudget zahlt</h1>
 
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Kurzzeitpflege überbrückt Phasen wenn die häusliche Pflege vorübergehend nicht sichergestellt werden kann — nach Krankenhausaufenthalt, bei Urlaub des pflegenden Angehörigen, in Krisensituationen. Seit Juli 2025 ist sie ins Entlastungsbudget integriert.</p>

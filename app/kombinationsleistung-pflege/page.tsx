@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Kombinationsleistung Pflege — Pflegegeld + Sachleistung kombinieren | Primundus',
+  title: 'Kombinationsleistung Pflege: Pflegegeld und Sachleistung',
   description: 'Kombinationsleistung: Pflegegeld und Sachleistung gleichzeitig nutzen. Wie die Berechnung funktioniert, was übrig bleibt und für wen sich das lohnt.',
   alternates: { canonical: 'https://primundus.de/kombinationsleistung-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Kombinationsleistung Pflege | Primundus',
+    title: 'Kombinationsleistung Pflege: Pflegegeld und Sachleistung',
     description: 'Pflegegeld und Sachleistungen kombinieren — wie es geht und was dabei rauskommt.',
     url: 'https://primundus.de/kombinationsleistung-pflege',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Kombinationsleistung Pflege — Pflegegeld und Sachleistungen kombinieren',
+    headline: 'Kombinationsleistung Pflege: Pflegegeld und Sachleistungen kombinieren',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -85,7 +85,7 @@ export default function Kombinationsleistung() {
           // auf 360-px-Handys nur 320 px: Das Dokument wurde 367 px breit. Unter 640 px
           // Silbentrennung nur für Wörter ab 16 Zeichen mit je 8 Zeichen vor und nach der
           // Trennstelle, also allein „Kombinations-leistung"; Wortlaut unverändert.
-          titel={<span className="max-sm:hyphens-auto max-sm:[hyphenate-limit-chars:16_8_8] max-sm:[-webkit-hyphenate-limit-before:8] max-sm:[-webkit-hyphenate-limit-after:8]">Kombinationsleistung Pflege — Pflegegeld &amp; Sachleistungen kombinieren</span>}
+          titel="Kombinationsleistung Pflege: Pflegegeld und Sachleistungen kombinieren"
           einleitung="Wer nicht alle Sachleistungen durch einen ambulanten Pflegedienst nutzt, bekommt anteiliges Pflegegeld für den Rest — das ist die Kombinationsleistung nach § 38 SGB XI. Damit lassen sich ambulanter Pflegedienst und private Betreuung durch Angehörige oder eine 24h-Kraft optimal kombinieren."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

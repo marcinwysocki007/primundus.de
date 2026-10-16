@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Diabetes Pflege Senioren — Blutzucker, Hypoglykämie & 24h-Betreuung | Primundus',
+  title: 'Diabetes im Alter: Pflege zu Hause und Unterzuckerung',
   description: 'Diabetes Pflege bei älteren Menschen: Blutzuckermessen, Insulingabe, Hypoglykämie erkennen, richtige Ernährung und ab wann eine 24h-Betreuungskraft sinnvoll.',
   alternates: { canonical: 'https://primundus.de/diabetes-pflege-senioren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Diabetes Pflege Senioren | Primundus',
+    title: 'Diabetes im Alter: Pflege zu Hause und Unterzuckerung',
     description: 'Diabetesmanagement bei pflegebedürftigen Senioren — Blutzucker, Hypoglykämie, 24h-Betreuung.',
     url: 'https://primundus.de/diabetes-pflege-senioren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Diabetes Pflege Senioren — Blutzucker, Hypoglykämie und 24h-Betreuung',
+    headline: 'Diabetes im Alter: Pflege zu Hause und Anzeichen einer Unterzuckerung',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function DiabetesPflegeSenioren() {
             { label: "Diabetes Pflege Senioren" },
           ]}
           augenbraue="Ratgeber Diabetes"
-          titel="Diabetes Pflege Senioren — was bei der Betreuung zuhause wichtig ist"
+          titel="Diabetes im Alter: Pflege zu Hause und Anzeichen einer Unterzuckerung"
           einleitung="Diabetes Typ 2 ist bei Senioren über 70 eine der häufigsten Erkrankungen — und bei pflegebedürftigen Menschen oft eines von mehreren gleichzeitigen Problemen. Die häusliche Pflege von Menschen mit Diabetes erfordert strukturiertes Management: regelmäßige Mahlzeiten, Blutzuckerkontrolle, Medikamentensicherheit und das sichere Erkennen einer Unterzuckerung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

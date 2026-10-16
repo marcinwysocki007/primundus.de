@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Kommunikation mit Demenzkranken — was hilft & was schadet',
+  title: 'Kommunikation mit Demenzkranken: was hilft und was schadet',
   description: 'Kommunikation mit Demenzkranken: 5 Grundprinzipien, konkrete Gesprächstipps und wie man schwierige Situationen (Aggression, Verweigerung, Weinen) meistert.',
   alternates: { canonical: 'https://primundus.de/kommunikation-mit-demenzkranken' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Kommunikation mit Demenzkranken | Primundus',
+    title: 'Kommunikation mit Demenzkranken: was hilft und was schadet',
     description: 'Was bei der Kommunikation mit Demenzkranken hilft und was schadet — 5 Grundprinzipien und konkrete Tipps.',
     url: 'https://primundus.de/kommunikation-mit-demenzkranken',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Kommunikation mit Demenzkranken — was hilft und was schadet',
+    headline: 'Kommunikation mit Demenzkranken: was hilft und was schadet',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -82,7 +82,7 @@ export default function KommunikationMitDemenzkranken() {
             { label: "Kommunikation mit Demenzkranken" },
           ]}
           augenbraue="Ratgeber Demenz"
-          titel="Kommunikation mit Demenzkranken — was hilft & was schadet"
+          titel="Kommunikation mit Demenzkranken: was hilft und was schadet"
           einleitung="Mit einem demenzkranken Menschen zu kommunizieren bedeutet: In seine Welt einsteigen statt ihn in unsere zu holen. Korrekturen, Konfrontationen mit der Realität und Ungeduld führen zu Distress ohne jeden Nutzen. Fünf Grundprinzipien verändern die tägliche Kommunikation grundlegend — und erleichtern den Alltag für alle Beteiligten."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

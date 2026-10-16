@@ -15,17 +15,17 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'was-ist-24h-pflege', title: "Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?" },
-  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
-  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Saarland 2026" },
+  { id: 'was-ist-24h-pflege', title: "Was ist 24-Stunden-Pflege? Der Unterschied zu Pflegedienst und Heim" },
+  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24-Stunden-Pflege die richtige Wahl?" },
+  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft, und was ergänzt der Pflegedienst?" },
+  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten und Kassenzuschüsse im Saarland 2026" },
   { id: 'polnische-betreuungskraefte-im-saarland', title: "Polnische Betreuungskräfte im Saarland" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause im Saarland ausmacht" },
   { id: 'einzugsgebiet-saarland', title: "Einzugsgebiet Saarland" },
   { id: 'werkzeuge', title: "Was es im Saarland kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
 
-  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Saarland" },
+  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen zur 24-Stunden-Pflege im Saarland" },
 ]
 
 export const metadata: Metadata = {
@@ -103,15 +103,15 @@ export default function Page() {
             { label: 'Regionen', href: '/regionen' },
             { label: 'Saarland' },
           ]}
-          augenbraue="24-Stunden-Pflege in Saarland"
-          titel="24h-Pflege Saarland — Betreuungskraft zuhause"
-          einleitungTitel="Zuhause bleiben in Saarland"
+          augenbraue="6× Testsieger DIE WELT"
+          titel="24-Stunden-Pflege im Saarland: Betreuung zu Hause, Kosten und Zuschüsse"
+          einleitungTitel="Zu Hause bleiben im Saarland"
           einleitung={<>Im Saarland wohnt man nah beieinander — und trotzdem können Kinder nicht rund um die Uhr bei den Eltern in Saarbrücken, Völklingen oder St. Wendel sein. Eine Betreuungskraft von Primundus schließt genau diese Lücke: Sie zieht mit ein und ist bei Bedarf auch nachts da, im vertrauten Zuhause. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-saarland', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
-          unterzeile={<StandardUnterzeile ort="Saarland" />}
+          unterzeile={<StandardUnterzeile ort="Saarland" inOrt="im Saarland" />}
           blickVerweise={[
             // Inhaltsverzeichnis mit Grund statt gemischter Häkchen-Liste (Martin 15.10.2026: „warum mischen wir hier alles“).
             { href: '#kosten-und-kassenzuschuesse-in', titel: 'Kosten und Zuschüsse', text: 'Pflegegeld, Entlastungsbudget und Steuerermäßigung bringen bei Pflegegrad 3 bis zu ca. 1.227 € im Monat' },
@@ -125,7 +125,7 @@ export default function Page() {
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24h-pflege" titel="Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?">
+          <Abschnitt id="was-ist-24h-pflege" titel="Was ist 24-Stunden-Pflege? Der Unterschied zu Pflegedienst und Heim">
             <Text>Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.</Text>
             <Punkte
               punkte={[
@@ -136,7 +136,7 @@ export default function Page() {
             />
           </Abschnitt>
 
-          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
+          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24-Stunden-Pflege die richtige Wahl?">
             <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
             <Punkte
               punkte={[
@@ -148,13 +148,13 @@ export default function Page() {
                 { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
               ]}
             />
-            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
+            <Kasten augenbraue="Wann 24-Stunden-Pflege allein nicht ausreicht">
               <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
             </Kasten>
             <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
           </Abschnitt>
 
-          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
+          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft, und was ergänzt der Pflegedienst?">
             <Gegenueber
               seiten={[
                 { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Körperpflege — Waschen, Ankleiden, Zahnpflege', 'Kochen — frisch, nach Vorlieben und Diät', 'Haushalt — Putzen, Einkaufen, Wäsche', 'Mobilisierung, Spaziergänge, Begleitung', 'Gesellschaft und Begleitung im Alltag', 'Medikamentenerinnerung', 'Arzt- und Therapietermine begleiten', 'Nachts im Haus — da, wenn Hilfe gebraucht wird'] },
@@ -164,7 +164,7 @@ export default function Page() {
             <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
           </Abschnitt>
 
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Saarland 2026">
+          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten und Kassenzuschüsse im Saarland 2026">
             <Tabelle
               titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
@@ -257,7 +257,7 @@ export default function Page() {
           <OrtStimmen ort={'Saarland'} />
 
 
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Saarland">
+          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen zur 24-Stunden-Pflege im Saarland">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>

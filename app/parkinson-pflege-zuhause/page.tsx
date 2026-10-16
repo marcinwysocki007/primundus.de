@@ -20,11 +20,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Parkinson Pflege zuhause — Alltag, Tipps & 24h-Pflege',
+  title: 'Parkinson-Pflege zu Hause: Alltag, Zuschüsse und Betreuung',
   description: 'Parkinson Pflege zuhause: Besonderheiten, Alltagstipps, welcher Pflegegrad möglich ist und wann eine 24h-Betreuungskraft die richtige Unterstützung bietet.',
   alternates: { canonical: 'https://primundus.de/parkinson-pflege-zuhause' },
   openGraph: {
-    title: 'Parkinson Pflege zuhause | Primundus',
+    title: 'Parkinson-Pflege zu Hause: Alltag, Zuschüsse und Betreuung',
     description: 'Parkinson-Pflege zuhause: Alltagstipps, Pflegegrade und wie 24h-Pflege hilft.',
     url: 'https://primundus.de/parkinson-pflege-zuhause',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Parkinson Pflege zuhause — Alltag, Pflegegrad & 24h-Pflege',
+    headline: 'Parkinson-Pflege zu Hause: Alltag, Zuschüsse und wann 24-Stunden-Pflege hilft',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -82,7 +82,7 @@ export default function ParkinsonPflegeZuhause() {
             { label: "Parkinson Pflege zuhause" },
           ]}
           augenbraue="Ratgeber Parkinson"
-          titel="Parkinson Pflege zuhause — Alltag, Tipps & 24h-Pflege"
+          titel="Parkinson-Pflege zu Hause: Alltag, Zuschüsse und wann 24-Stunden-Pflege hilft"
           einleitung="Parkinson-Pflege zuhause ist in den meisten Stadien möglich — aber sie erfordert Wissen über den schwankenden Tagesverlauf der Erkrankung. Eine Betreuungskraft die On- und Off-Phasen kennt und den Medikationsrhythmus versteht, macht den entscheidenden Unterschied."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

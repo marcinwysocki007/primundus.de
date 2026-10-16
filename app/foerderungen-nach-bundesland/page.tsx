@@ -23,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Förderungen nach Bundesland — alle Pflegezuschüsse 2026',
+  title: 'Förderungen nach Bundesland: Pflegezuschüsse 2026',
   description: 'Pflege-Förderungen 2026: Bundesweite Pflegekasse-Leistungen plus Landesförderungen in Bayern, NRW, BW und weiteren Bundesländern. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/foerderungen-nach-bundesland' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Förderungen nach Bundesland — Pflegezuschüsse 2026 | Primundus',
+    title: 'Förderungen nach Bundesland: Pflegezuschüsse 2026',
     description: 'Welche Pflege-Förderungen gibt es 2026 — bundesweit und je Bundesland?',
     url: 'https://primundus.de/foerderungen-nach-bundesland',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Förderungen nach Bundesland — alle Pflegezuschüsse 2026',
+    headline: 'Förderungen nach Bundesland: Pflegezuschüsse 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -87,7 +87,7 @@ export default function FoerderungenNachBundesland() {
             { label: "Förderungen nach Bundesland" },
           ]}
           augenbraue="Ratgeber Finanzierung"
-          titel="Förderungen nach Bundesland — alle Pflegezuschüsse 2026"
+          titel="Förderungen nach Bundesland: Pflegezuschüsse 2026"
           einleitung="Viele Familien kennen die Pflegekassen-Zuschüsse — aber nicht alle wissen: Darüber hinaus gibt es KfW-Förderkredite für Wohnraumanpassung, steuerliche Absetzbarkeit, und in mehreren Bundesländern eigene Landeszuschüsse. Wer alle Förderungen kombiniert, kann den Eigenanteil bei der 24h-Pflege erheblich senken."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

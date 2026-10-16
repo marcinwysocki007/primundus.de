@@ -23,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht',
+  title: 'Leistungen der 24-Stunden-Pflege: was die Betreuungskraft tut',
   description: 'Leistungen der 24h-Pflege: Körperpflege, Haushalt, Gesellschaft, bei Bedarf nachts. Was inbegriffen ist und was der Pflegedienst macht.',
   alternates: { canonical: 'https://primundus.de/leistungen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Leistungen der 24h-Pflege | Primundus',
+    title: 'Leistungen der 24-Stunden-Pflege: was die Betreuungskraft tut',
     description: 'Was eine 24h-Betreuungskraft macht — alle Leistungen im Überblick.',
     url: 'https://primundus.de/leistungen',
     siteName: 'Primundus',
@@ -50,7 +50,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Leistungen der 24h-Pflege — was eine Betreuungskraft macht',
+    headline: 'Leistungen der 24-Stunden-Pflege: was eine Betreuungskraft macht',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -88,7 +88,7 @@ export default function Leistungen() {
             { label: 'Leistungen' },
           ]}
           augenbraue="Leistungen"
-          titel="Leistungen der 24h-Pflege — was eine Betreuungskraft macht"
+          titel="Leistungen der 24-Stunden-Pflege: was eine Betreuungskraft macht"
           einleitung="Eine Betreuungskraft von Primundus zieht bei Ihrem Angehörigen ein. Sie führt den Haushalt, hilft bei der Körperpflege, leistet Gesellschaft und ist bei Bedarf auch nachts da. Behandlungspflege wie Spritzen oder Verbände übernimmt ein ambulanter Pflegedienst."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Sturzprävention Senioren — wie man Stürze verhindert',
+  title: 'Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken',
   description: 'Sturzprävention Senioren 2026: Risikofaktoren erkennen, Wohnung sichern, Gleichgewichtsübungen und Hilfsmittel — wie man Stürze im Alter effektiv verhindert.',
   alternates: { canonical: 'https://primundus.de/sturzpraevention-senioren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Sturzprävention Senioren | Primundus',
+    title: 'Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken',
     description: 'Wie man Stürze im Alter verhindert — Risikofaktoren, Wohnungssicherung, Übungen, Hilfsmittel.',
     url: 'https://primundus.de/sturzpraevention-senioren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Sturzprävention Senioren — wie man Stürze verhindert',
+    headline: 'Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function SturzpraventionSenioren() {
             { label: "Sturzprävention Senioren" },
           ]}
           augenbraue="Ratgeber Sicherheit"
-          titel="Sturzprävention Senioren — wie man Stürze wirklich verhindert"
+          titel="Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken"
           einleitung="Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein senkt die Zahl der Stürze um rund ein Viertel (Cochrane-Übersicht 2019). Die Wohnungssicherung tut ihr Übriges."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

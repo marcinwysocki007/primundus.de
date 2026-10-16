@@ -21,11 +21,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad bei Demenz — welcher Grad & wie beantragen? 2026',
+  title: 'Pflegegrad bei Demenz: Richtwerte und Begutachtung 2026',
   description: 'Pflegegrad bei Demenz 2026: Leichte Demenz meist PG 2–3, mittlere PG 3–4, schwere PG 4–5. Begutachtung vorbereiten, höhere Einstufung erreichen — alle Tipps.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-bei-demenz' },
   openGraph: {
-    title: 'Pflegegrad bei Demenz 2026 | Primundus',
+    title: 'Pflegegrad bei Demenz: Richtwerte und Begutachtung 2026',
     description: 'Welcher Pflegegrad bei Demenz? Einstufung, Tipps für höheren Grad und alle Leistungen 2026.',
     url: 'https://primundus.de/pflegegrad-bei-demenz',
     siteName: 'Primundus',
@@ -39,7 +39,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegegrad bei Demenz — welcher Grad und wie beantragen 2026',
+    headline: 'Pflegegrad bei Demenz: welcher Grad zu erwarten ist und was bei der Begutachtung zählt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -83,7 +83,7 @@ export default function PflegegradBeiDemenz() {
             { label: "Pflegegrad bei Demenz" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="Pflegegrad bei Demenz — welcher Grad & wie beantragen?"
+          titel="Pflegegrad bei Demenz: welcher Grad zu erwarten ist und was bei der Begutachtung zählt"
           einleitung="Seit der Pflegereform 2017 werden kognitive Einschränkungen bei der Begutachtung deutlich stärker bewertet. Demenzkranke erhalten heute erheblich höhere Pflegegrade als früher. Leichte Demenz führt meist zu PG 2–3, mittlere zu PG 3–4, schwere zu PG 4–5. Die Begutachtung muss gut vorbereitet sein — weil Betroffene ihre eigenen Einschränkungen oft minimieren."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

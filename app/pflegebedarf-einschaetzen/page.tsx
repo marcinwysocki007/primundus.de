@@ -4,11 +4,11 @@ import { PflegebedarfClient } from './PflegebedarfClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
-  title: 'Pflegebedarf einschätzen — kostenloser Self-Check',
+  title: 'Pflegebedarf einschätzen: kostenloser Selbsttest',
   description: 'In 3 Minuten den Pflegebedarf einschätzen. 20 Fragen aus 6 Bereichen — Sofort-Auswertung mit voraussichtlichem Pflegegrad und Empfehlung.',
   alternates: { canonical: 'https://primundus.de/pflegebedarf-einschaetzen' },
   openGraph: {
-    title: 'Pflegebedarf einschätzen — Self-Check 2026 | Primundus',
+    title: 'Pflegebedarf einschätzen: kostenloser Selbsttest',
     description: '20 Fragen, sofort Auswertung: voraussichtlicher Pflegegrad + konkrete Empfehlung für die nächsten Schritte.',
     url: 'https://primundus.de/pflegebedarf-einschaetzen',
     siteName: 'Primundus',

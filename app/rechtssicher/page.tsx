@@ -65,7 +65,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Rechtssichere 24-Stunden-Pflege: so stellt Primundus das sicher',
+    headline: 'Rechtssichere 24-Stunden-Pflege im Entsendemodell: wie es funktioniert und was Primundus dafür tut',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -103,7 +103,7 @@ export default function RechtssicherPage() {
             { label: 'Rechtssicher' },
           ]}
           augenbraue="Über Primundus"
-          titel={<>Rechtssichere <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span>: so stellt Primundus das sicher</>}
+          titel="Rechtssichere 24-Stunden-Pflege im Entsendemodell: wie es funktioniert und was Primundus dafür tut"
           einleitung={<>Legal ist die 24-Stunden-Betreuung im <strong className="text-pm-ink">Entsendemodell</strong>: Die Betreuungskraft ist bei uns angestellt und sozialversichert und hat geregelte Arbeits- und Ruhezeiten. Die <strong className="text-pm-ink">A1-Bescheinigung</strong> beantragen wir vor jedem Einsatz; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie als Familie werden nicht Arbeitgeber. Was das im Einzelnen heißt, warum „selbstständige“ Kräfte riskant sind und was bei einer Kontrolle zählt.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

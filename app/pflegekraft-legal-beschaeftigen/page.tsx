@@ -21,11 +21,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft legal beschäftigen — die 3 Modelle 2026',
+  title: 'Pflegekraft legal beschäftigen: die 3 Modelle 2026',
   description: 'Pflegekraft legal beschäftigen: Entsendung, Anstellung oder selbstständig? Was erlaubt ist, welche Risiken drohen und woran Sie ein sauberes Modell erkennen.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-legal-beschaeftigen' },
   openGraph: {
-    title: 'Pflegekraft legal beschäftigen — 3 Modelle | Primundus',
+    title: 'Pflegekraft legal beschäftigen: die 3 Modelle 2026',
     description: 'Entsendemodell, Direktanstellung, Scheinselbstständigkeit: Was legal ist und was teuer werden kann.',
     url: 'https://primundus.de/pflegekraft-legal-beschaeftigen',
     siteName: 'Primundus',
@@ -39,7 +39,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft legal beschäftigen — die 3 Modelle 2026',
+    headline: 'Pflegekraft legal beschäftigen: Entsendung, Anstellung und das Risiko Scheinselbstständigkeit',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -84,7 +84,7 @@ export default function PflegekraftLegalBeschaeftigen() {
             { label: "Pflegekraft legal beschäftigen" },
           ]}
           augenbraue="Ratgeber Recht"
-          titel="Pflegekraft legal beschäftigen — die 3 Wege"
+          titel="Pflegekraft legal beschäftigen: Entsendung, Anstellung und das Risiko Scheinselbstständigkeit"
           einleitung="Es gibt drei Wege eine Pflegekraft zu beschäftigen — nur zwei davon sind legal, einer ist eindeutig empfehlenswert. Das Entsendemodell über eine Agentur ist der rechtssicherste, unkomplizierteste und meistgenutzte Weg. Scheinselbstständigkeit dagegen ist strafbar und kostet im Ernstfall tausende Euro."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

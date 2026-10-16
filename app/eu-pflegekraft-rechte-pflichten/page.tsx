@@ -26,12 +26,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'EU-Pflegekraft — Rechte und Pflichten im Entsendemodell',
+  title: 'EU-Pflegekraft: Rechte und Pflichten im Entsendemodell',
   description: 'EU-Pflegekraft Rechte und Pflichten: Was das Entsendemodell regelt, welche Rechte Betreuungskräfte haben und was Familien wissen müssen.',
   alternates: { canonical: 'https://primundus.de/eu-pflegekraft-rechte-pflichten' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'EU-Pflegekraft Rechte & Pflichten | Primundus',
+    title: 'EU-Pflegekraft: Rechte und Pflichten im Entsendemodell',
     description: 'Rechte und Pflichten im Entsendemodell — für Betreuungskräfte und Familien.',
     url: 'https://primundus.de/eu-pflegekraft-rechte-pflichten',
     siteName: 'Primundus',
@@ -44,7 +44,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'EU-Pflegekraft — Rechte und Pflichten im Entsendemodell',
+    headline: 'EU-Pflegekraft: Rechte und Pflichten im Entsendemodell',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -79,7 +79,7 @@ export default function EuPflegekraftRechtenPflichten() {
             { label: "EU-Pflegekraft Rechte & Pflichten" },
           ]}
           augenbraue="Ratgeber Recht"
-          titel="EU-Pflegekraft — Rechte & Pflichten im Entsendemodell"
+          titel="EU-Pflegekraft: Rechte und Pflichten im Entsendemodell"
           einleitung="Das Entsendemodell ist die rechtssichere Grundlage für die meisten 24h-Betreuungsverhältnisse in Deutschland. Es schützt beide Seiten — die Familie und die Betreuungskraft. Trotzdem gibt es häufige Missverständnisse: Was darf die Familie verlangen? Was hat die Kraft Anspruch auf? Dieser Ratgeber klärt auf."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

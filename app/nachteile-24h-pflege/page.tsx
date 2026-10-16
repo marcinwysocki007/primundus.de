@@ -14,12 +14,12 @@ const AKTUALISIERT = aktualisiertAm('nachteile-24h-pflege', '30. April 2026')
 const SECTIONS = [{ id: 'nachteile', title: 'Die wichtigsten Nachteile' }, { id: 'loesungen', title: 'Was die Lösung ist' }, { id: 'wann-nicht', title: 'Wann 24h-Pflege nicht passt' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Nachteile der 24h-Pflege — was man wissen sollte | Primundus',
+  title: 'Nachteile der 24-Stunden-Pflege: wann sie nicht passt',
   description: 'Ehrliche Übersicht der Nachteile der 24h-Pflege: Privatsphäre, Sprachbarrieren, Kraftwechsel, Kosten. Was die Lösung ist und wann 24h-Pflege nicht passt.',
   alternates: { canonical: 'https://primundus.de/nachteile-24h-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Nachteile der 24h-Pflege | Primundus',
+    title: 'Nachteile der 24-Stunden-Pflege: wann sie nicht passt',
     description: 'Ehrliche Übersicht der Nachteile der 24h-Pflege: Privatsphäre, Sprachbarrieren, Kraftwechsel, Kosten. Was die Lösung ist und wann 24h-Pflege nicht passt.',
     url: 'https://primundus.de/nachteile-24h-pflege',
     siteName: 'Primundus',
@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Nachteile der 24h-Pflege — eine ehrliche Einschätzung',
+    headline: 'Nachteile der 24-Stunden-Pflege: wann sie nicht die richtige Wahl ist',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -75,7 +75,7 @@ export default function Page() {
             { label: "Nachteile der 24h-Pflege" },
           ]}
           augenbraue="Ratgeber 24-Stunden-Pflege"
-          titel="Nachteile der 24h-Pflege — eine ehrliche Einschätzung"
+          titel="Nachteile der 24-Stunden-Pflege: wann sie nicht die richtige Wahl ist"
           einleitung="24h-Pflege ist für viele die beste Lösung — aber nicht für alle. Hier sind die echten Nachteile, offen aufgelistet. Und was man dagegen tun kann."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

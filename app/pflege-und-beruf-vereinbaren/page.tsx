@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege und Beruf vereinbaren — Rechte, Tipps & Lösungen 2026',
+  title: 'Pflege und Beruf vereinbaren: Ihre Rechte und Ihr Einkommen',
   description: 'Pflege und Beruf vereinbaren: Pflegezeit, Familienpflegezeit, Freistellungsansprüche und wie eine 24h-Betreuungskraft die Doppelbelastung löst.',
   alternates: { canonical: 'https://primundus.de/pflege-und-beruf-vereinbaren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflege und Beruf vereinbaren 2026 | Primundus',
+    title: 'Pflege und Beruf vereinbaren: Ihre Rechte und Ihr Einkommen',
     description: 'Rechte, Freistellungen und praktische Lösungen wenn Pflege und Beruf zusammenkommen.',
     url: 'https://primundus.de/pflege-und-beruf-vereinbaren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflege und Beruf vereinbaren — Rechte, Tipps und Lösungen 2026',
+    headline: 'Pflege und Beruf vereinbaren: Ihre Rechte und wie Sie Ihr Einkommen absichern',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function PflegeUndBerufVereinbaren() {
             { label: "Pflege und Beruf vereinbaren" },
           ]}
           augenbraue="Ratgeber Angehörige"
-          titel="Pflege und Beruf vereinbaren — Rechte, Tipps & Lösungen"
+          titel="Pflege und Beruf vereinbaren: Ihre Rechte und wie Sie Ihr Einkommen absichern"
           einleitung="Über 2 Millionen Berufstätige in Deutschland pflegen gleichzeitig einen Angehörigen — die meisten ohne zu wissen welche Rechte sie haben. Das Gesetz schützt pflegende Angehörige: Freistellungsansprüche, Kündigungsschutz, Pflegeunterstützungsgeld. Und eine 24h-Betreuungskraft löst die Doppelbelastung oft grundlegend."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

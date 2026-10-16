@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung',
+  title: 'Pflegesachleistungen 2026: Budget für den Pflegedienst',
   description: 'Pflegesachleistungen 2026: 796 € (PG 2) bis 2.299 € (PG 5) pro Monat für ambulante Pflegedienste. Was absetzbar ist, wie man kombiniert und was nicht geht.',
   alternates: { canonical: 'https://primundus.de/pflegesachleistungen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegesachleistungen 2026 | Primundus',
+    title: 'Pflegesachleistungen 2026: Budget für den Pflegedienst',
     description: 'Pflegesachleistungen: Beträge, Anspruch und wie man sie mit Pflegegeld kombiniert.',
     url: 'https://primundus.de/pflegesachleistungen',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegesachleistungen 2026 — Beträge, Anspruch und Nutzung',
+    headline: 'Pflegesachleistungen 2026: was die Pflegekasse für den Pflegedienst zahlt und wie Sie es nutzen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function Pflegesachleistungen() {
             { label: "Pflegesachleistungen" },
           ]}
           augenbraue="Ratgeber Finanzierung"
-          titel="Pflegesachleistungen 2026 — Beträge, Anspruch & Nutzung"
+          titel="Pflegesachleistungen 2026: was die Pflegekasse für den Pflegedienst zahlt und wie Sie es nutzen"
           einleitung="Pflegesachleistungen sind Kassengelder die direkt an ambulante Pflegedienste fließen — nicht an die Familie. Sie betragen 796 Euro (PG 2) bis 2.299 Euro (PG 5) pro Monat. Wer Sachleistungen nicht vollständig nutzt, bekommt anteiliges Pflegegeld — die Kombinationsleistung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

@@ -1044,8 +1044,8 @@ export default function PflegevertragClient() {
             Kostenlos · Kein Konto nötig
           </p>
           <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Pflegevertrag-Generator
-          </h1>
+          Pflegevertrag-Generator: kostenloser Vertrag für pflegende Angehörige
+        </h1>
           <p className="text-[15px] text-pm-body leading-relaxed mb-3">
             Erstellen Sie in 5 Minuten einen schriftlichen Pflegevertrag: kostenlos, individuell anpassbar, sofort druckfertig.
           </p>

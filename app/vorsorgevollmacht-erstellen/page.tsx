@@ -21,11 +21,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Vorsorgevollmacht erstellen — Anleitung, Inhalt & Kosten',
+  title: 'Vorsorgevollmacht erstellen: Anleitung, Inhalt und Kosten',
   description: 'Vorsorgevollmacht erstellen: Was reinmuss, ob Notar nötig ist, wie sie registriert wird und warum sie für die Organisation der 24h-Pflege unverzichtbar ist.',
   alternates: { canonical: 'https://primundus.de/vorsorgevollmacht-erstellen' },
   openGraph: {
-    title: 'Vorsorgevollmacht erstellen | Primundus',
+    title: 'Vorsorgevollmacht erstellen: Anleitung, Inhalt und Kosten',
     description: 'Vorsorgevollmacht: Was reinmuss, ob Notar nötig ist und warum sie für die Pflege-Organisation unverzichtbar ist.',
     url: 'https://primundus.de/vorsorgevollmacht-erstellen',
     siteName: 'Primundus',
@@ -39,7 +39,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Vorsorgevollmacht erstellen — Anleitung, Inhalt & Kosten',
+    headline: 'Vorsorgevollmacht erstellen: Anleitung, Inhalt und Kosten',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -83,7 +83,7 @@ export default function VorsorgevollmachtErstellen() {
             { label: "Vorsorgevollmacht erstellen" },
           ]}
           augenbraue="Ratgeber Vorsorge"
-          titel="Vorsorgevollmacht erstellen — Anleitung, Inhalt & Kosten"
+          titel="Vorsorgevollmacht erstellen: Anleitung, Inhalt und Kosten"
           einleitung="Eine Vorsorgevollmacht ist das wichtigste Dokument für den Pflegefall — und wird von den meisten Menschen zu spät erstellt. Wer eine Pflegesituation organisiert ohne gültige Vollmacht, verliert wertvolle Wochen durch gerichtliche Betreuungsverfahren. Erstellen dauert einen Nachmittag — und gilt ein Leben lang."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Widerspruch Pflegekasse einlegen — Muster & Tipps 2026',
+  title: 'Widerspruch gegen den Pflegegrad: Muster für die Pflegekasse',
   description: 'Widerspruch gegen Pflegegrad-Bescheid: Wie man ihn einlegt, Musterschreiben und welche Erfolgschancen realistisch sind. Frist: 1 Monat nach Bescheid.',
   alternates: { canonical: 'https://primundus.de/widerspruch-pflegekasse-einlegen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Widerspruch Pflegekasse 2026 | Primundus',
+    title: 'Widerspruch gegen den Pflegegrad: Muster für die Pflegekasse',
     description: 'Widerspruch gegen zu niedrigen Pflegegrad — Muster, Fristen und Erfolgschancen.',
     url: 'https://primundus.de/widerspruch-pflegekasse-einlegen',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Widerspruch Pflegekasse einlegen — Muster & Tipps 2026',
+    headline: 'Widerspruch gegen den Pflegegrad: Muster für die Pflegekasse und die Frist von einem Monat',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -82,7 +82,7 @@ export default function WiderspruchPflegekasseEinlegen() {
             { label: "Widerspruch einlegen" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="Widerspruch Pflegekasse einlegen — Muster & Tipps"
+          titel="Widerspruch gegen den Pflegegrad: Muster für die Pflegekasse und die Frist von einem Monat"
           einleitung="Rund ein Drittel aller Widersprüche gegen Pflegegrad-Bescheide sind erfolgreich. Das Zeitfenster ist eng: genau ein Monat nach dem Bescheiddatum. Der Widerspruch selbst ist formlos — was danach kommt, entscheidet über den Erfolg: Pflegetagebuch, Arztberichte, konkretes Gutachten."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

@@ -23,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Checkliste Pflegekraft einstellen — vollständige Anleitung',
+  title: 'Pflegekraft einstellen: Checkliste von der Auswahl bis zum Start',
   description: 'Checkliste Pflegekraft einstellen: Was vor der Auswahl, beim Gespräch, vor Anreise und in der ersten Woche zu beachten ist.',
   alternates: { canonical: 'https://primundus.de/checkliste-pflegekraft-einstellen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Checkliste Pflegekraft einstellen | Primundus',
+    title: 'Pflegekraft einstellen: Checkliste von der Auswahl bis zum Start',
     description: 'Vollständige Checkliste: Was bei der Einstellung einer 24h-Betreuungskraft zu beachten ist.',
     url: 'https://primundus.de/checkliste-pflegekraft-einstellen',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Checkliste Pflegekraft einstellen — vollständige Anleitung',
+    headline: 'Pflegekraft einstellen: Checkliste von der Auswahl bis zur ersten Woche',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -76,7 +76,7 @@ export default function ChecklistePflegekraftEinstellen() {
             { label: "Checkliste Pflegekraft einstellen" },
           ]}
           augenbraue="Ratgeber Checkliste"
-          titel="Checkliste Pflegekraft einstellen — vollständige Anleitung"
+          titel="Pflegekraft einstellen: Checkliste von der Auswahl bis zur ersten Woche"
           einleitung="Die Entscheidung für eine 24h-Betreuungskraft ist richtig — aber worauf kommt es bei der Auswahl an? Was muss vor der Anreise vorbereitet sein? Und wie gelingt der Start in der ersten Woche? Diese Checkliste führt durch jeden Schritt — mit konkreten Fragen für das Auswahlgespräch."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

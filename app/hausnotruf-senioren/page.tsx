@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Hausnotruf für Senioren — Kosten, Kassenzuschuss & Auswahl 2026 | Primundus',
+  title: 'Hausnotruf für Senioren: Kosten und Kassenzuschuss 2026',
   description: 'Hausnotruf für Senioren: Kosten ab 20 €/Monat, Kassenzuschuss möglich. Was ein Hausnotruf leistet, welche Systeme es gibt und wann er sinnvoll ist.',
   alternates: { canonical: 'https://primundus.de/hausnotruf-senioren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Hausnotruf für Senioren 2026 | Primundus',
+    title: 'Hausnotruf für Senioren: Kosten und Kassenzuschuss 2026',
     description: 'Hausnotruf: Kosten, Kassenzuschuss und welche Systeme für wen geeignet sind.',
     url: 'https://primundus.de/hausnotruf-senioren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Hausnotruf für Senioren — Kosten, Kassenzuschuss und Auswahl 2026',
+    headline: 'Hausnotruf für Senioren: Kosten, Zuschuss und Auswahl',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function HausnotrufSenioren() {
             { label: "Hausnotruf Senioren" },
           ]}
           augenbraue="Ratgeber Sicherheit"
-          titel="Hausnotruf für Senioren — Kosten, Zuschuss & Auswahl"
+          titel="Hausnotruf für Senioren: Kosten, Zuschuss und Auswahl"
           einleitung="Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 25,50 € im Monat. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall ohnehin im Haus."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

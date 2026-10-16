@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad bei Parkinson — welcher Grad & wie beantragen',
+  title: 'Pflegegrad bei Parkinson: typischer Grad und Begutachtung',
   description: 'Pflegegrad bei Parkinson 2026: Welcher Grad ist realistisch, was bei der Begutachtung zu beachten ist und wie die Leistungen sich staffeln.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-bei-parkinson' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegegrad bei Parkinson 2026 | Primundus',
+    title: 'Pflegegrad bei Parkinson: typischer Grad und Begutachtung',
     description: 'Welcher Pflegegrad bei Parkinson — Begutachtung, Leistungen und Höherstufung.',
     url: 'https://primundus.de/pflegegrad-bei-parkinson',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegegrad bei Parkinson — welcher Grad und wie beantragen 2026',
+    headline: 'Pflegegrad bei Parkinson: welcher Grad typisch ist und was bei der Begutachtung zählt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function PflegegradBeiParkinson() {
             { label: "Pflegegrad bei Parkinson" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="Pflegegrad bei Parkinson — welcher Grad & wie beantragen"
+          titel="Pflegegrad bei Parkinson: welcher Grad typisch ist und was bei der Begutachtung zählt"
           einleitung="Parkinson ist eine progrediente Erkrankung — der Pflegebedarf nimmt über Zeit zu, der Pflegegrad auch. Was Menschen mit Parkinson bei der Begutachtung wissen müssen: Das On-Off-Phänomen führt häufig zu Untereinstufungen, weil der Gutachtertermin in einer guten Phase liegen kann. Dieses Risiko lässt sich durch gute Vorbereitung minimieren."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

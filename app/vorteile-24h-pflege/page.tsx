@@ -14,12 +14,12 @@ const AKTUALISIERT = aktualisiertAm('vorteile-24h-pflege', '30. April 2026')
 const SECTIONS = [{ id: 'zuhause', title: 'Im eigenen Zuhause bleiben' }, { id: 'eins-zu-eins', title: '1:1-Betreuung' }, { id: 'kosten', title: 'Kosten oft günstiger' }, { id: 'rechtssicher', title: 'Rechtssicher & flexibel' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Vorteile der 24h-Pflege zuhause — warum sie besser ist als das Pflegeheim | Primundus',
+  title: 'Vorteile der 24-Stunden-Pflege zu Hause: 1:1-Betreuung',
   description: 'Alle Vorteile der 24h-Pflege zuhause im Überblick: eigenes Zuhause, 1:1-Betreuung, günstiger als Pflegeheim, täglich kündbar. Mit ehrlichem Vergleich.',
   alternates: { canonical: 'https://primundus.de/vorteile-24h-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Vorteile der 24h-Pflege | Primundus',
+    title: 'Vorteile der 24-Stunden-Pflege zu Hause: 1:1-Betreuung',
     description: 'Alle Vorteile der 24h-Pflege zuhause im Überblick: eigenes Zuhause, 1:1-Betreuung, günstiger als Pflegeheim, täglich kündbar. Mit ehrlichem Vergleich.',
     url: 'https://primundus.de/vorteile-24h-pflege',
     siteName: 'Primundus',
@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Vorteile der 24h-Pflege zuhause — was sie von anderen Lösungen unterscheidet',
+    headline: 'Vorteile der 24-Stunden-Pflege zu Hause: was sie von anderen Lösungen unterscheidet',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -75,7 +75,7 @@ export default function Page() {
             { label: "Vorteile der 24h-Pflege" },
           ]}
           augenbraue="Ratgeber 24-Stunden-Pflege"
-          titel="Vorteile der 24h-Pflege zuhause — was sie von anderen Lösungen unterscheidet"
+          titel="Vorteile der 24-Stunden-Pflege zu Hause: was sie von anderen Lösungen unterscheidet"
           einleitung="24h-Pflege zuhause ist keine Notlösung — sie ist für viele Menschen die bessere Lösung. Warum? Weil das eigene Zuhause bleibt, weil eine vertraute Person immer da ist, und weil die Kosten oft günstiger sind als ein Pflegeheim. Hier alle Vorteile im Überblick."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

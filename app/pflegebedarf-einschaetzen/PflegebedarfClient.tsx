@@ -104,7 +104,7 @@ export function PflegebedarfClient() {
 
         <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">TOOLS & RECHNER</p>
         <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-          Pflegebedarf einschätzen — Self-Check
+          Pflegebedarf einschätzen: kostenloser Selbsttest mit 20 Fragen
         </h1>
         <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
           20 Fragen aus 6 Bereichen — in 3 Minuten eine erste Einschätzung zum Pflegebedarf und voraussichtlichen Pflegegrad.

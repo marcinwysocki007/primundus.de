@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekasse Antrag stellen — Schritt für Schritt 2026',
+  title: 'Antrag bei der Pflegekasse: Leistungen und Fristen 2026',
   description: 'Pflegekasse Antrag stellen 2026: Pflegegrad beantragen, welche Leistungen es gibt, Fristen und was bei Ablehnung zu tun ist. Mit Musterschreiben.',
   alternates: { canonical: 'https://primundus.de/pflegekasse-antrag-stellen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegekasse Antrag stellen 2026 | Primundus',
+    title: 'Antrag bei der Pflegekasse: Leistungen und Fristen 2026',
     description: 'Pflegegrad und Pflegeleistungen bei der Pflegekasse beantragen — Schritt für Schritt erklärt.',
     url: 'https://primundus.de/pflegekasse-antrag-stellen',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekasse Antrag stellen — Schritt für Schritt 2026',
+    headline: 'Antrag bei der Pflegekasse: welche Leistungen Sie beantragen und welche Fristen gelten',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function PflegekasseAntragStellen() {
             { label: "Pflegekasse Antrag stellen" },
           ]}
           augenbraue="Ratgeber Pflegekasse"
-          titel="Pflegekasse Antrag stellen — Schritt für Schritt 2026"
+          titel="Antrag bei der Pflegekasse: welche Leistungen Sie beantragen und welche Fristen gelten"
           einleitung="Der Antrag bei der Pflegekasse ist der erste und wichtigste Schritt — denn alle Leistungen gelten rückwirkend ab Antragsdatum, nicht ab dem Datum der Begutachtung. Der Antrag selbst ist formlos: Ein kurzes Schreiben oder ein Telefonanruf genügt."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

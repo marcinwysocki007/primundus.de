@@ -17,11 +17,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen',
+  title: 'Wann brauche ich 24-Stunden-Pflege? Die 10 klaren Zeichen',
   description: 'Wann ist 24h-Pflege notwendig? 10 klare Zeichen, typische Pflegesituationen und eine Checkliste die hilft die richtige Entscheidung zu treffen.',
   alternates: { canonical: 'https://primundus.de/wann-brauche-ich-24h-pflege' },
   openGraph: {
-    title: 'Wann brauche ich 24h-Pflege? | Primundus',
+    title: 'Wann brauche ich 24-Stunden-Pflege? Die 10 klaren Zeichen',
     description: '10 klare Zeichen die zeigen wann eine 24h-Betreuungskraft die richtige Lösung ist.',
     url: 'https://primundus.de/wann-brauche-ich-24h-pflege',
     siteName: 'Primundus',
@@ -35,7 +35,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen',
+    headline: 'Wann brauche ich 24-Stunden-Pflege? Die 10 klaren Zeichen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -83,9 +83,7 @@ export default function WannBraucheIch24hPflege() {
             Ratgeber · 6 Min Lesezeit · Aktualisiert April 2026
           </p>
 
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Wann brauche ich 24h-Pflege? — Die 10 klaren Zeichen
-          </h1>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Wann brauche ich 24-Stunden-Pflege? Die 10 klaren Zeichen</h1>
 
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
 

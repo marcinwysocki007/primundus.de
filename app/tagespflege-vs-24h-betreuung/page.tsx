@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Tagespflege vs. 24h-Betreuung — Vergleich 2026 | Primundus',
+  title: 'Tagespflege oder 24-Stunden-Pflege: Kosten im Vergleich',
   description: 'Tagespflege oder 24h-Betreuung zuhause? Kostenvergleich, Kassenzuschüsse und wann welche Form sinnvoll ist — vollständiger Vergleich für 2026.',
   alternates: { canonical: 'https://primundus.de/tagespflege-vs-24h-betreuung' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Tagespflege vs. 24h-Betreuung 2026 | Primundus',
+    title: 'Tagespflege oder 24-Stunden-Pflege: Kosten im Vergleich',
     description: 'Vollständiger Vergleich: Kosten, Leistungen und wann welche Pflegeform besser passt.',
     url: 'https://primundus.de/tagespflege-vs-24h-betreuung',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Tagespflege vs. 24h-Betreuung — Vergleich 2026',
+    headline: 'Tagespflege oder 24-Stunden-Pflege: was sie kosten und wann was passt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function TagespflegeVs24h() {
             { label: "Tagespflege vs. 24h" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="Tagespflege vs. 24h-Betreuung — Vergleich 2026"
+          titel="Tagespflege oder 24-Stunden-Pflege: was sie kosten und wann was passt"
           einleitung="Tagespflege und 24h-Betreuung sind zwei sehr unterschiedliche Modelle. Tagespflege entlastet Angehörige tagsüber und bietet soziale Kontakte für den Pflegebedürftigen — abends kommen alle nach Hause. Eine 24h-Betreuungskraft wohnt mit im Haus und ist sinnvoll, wenn Tag und Nacht Betreuung nötig ist."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

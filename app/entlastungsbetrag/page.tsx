@@ -21,12 +21,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen',
-  description: 'Entlastungsbetrag 2026: 131 €/Monat für alle Pflegegrade 1–5. Wofür er nutzbar ist, wie man ihn beantragt und wie er mit Pflegegeld und 24h-Pflege.',
+  title: 'Entlastungsbetrag 2026: 131 € pro Monat richtig nutzen',
+  description: 'Entlastungsbetrag 2026: 131 €/Monat für alle Pflegegrade. Wofür er nutzbar ist, wie man ihn abrechnet und bis wann man Reste ansparen kann.',
   alternates: { canonical: 'https://primundus.de/entlastungsbetrag' },
   openGraph: {
-    title: 'Entlastungsbetrag 2026 — 131 €/Monat | Primundus',
-    description: '131 €/Monat für alle Pflegegrade 1–5. Wofür nutzbar, wie beantragen, wie kombinieren.',
+    title: 'Entlastungsbetrag 2026: 131 € pro Monat richtig nutzen',
+    description: 'Entlastungsbetrag 2026: 131 €/Monat für alle Pflegegrade. Wofür er nutzbar ist, wie man ihn abrechnet und bis wann man Reste ansparen kann.',
     url: 'https://primundus.de/entlastungsbetrag',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -39,7 +39,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Entlastungsbetrag 2026 — 131 Euro pro Monat richtig nutzen',
+    headline: 'Entlastungsbetrag 2026: 131 € pro Monat richtig nutzen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -83,7 +83,7 @@ export default function Entlastungsbetrag() {
             { label: "Entlastungsbetrag" },
           ]}
           augenbraue="Ratgeber Finanzierung"
-          titel="Entlastungsbetrag 2026 — 131 € pro Monat richtig nutzen"
+          titel="Entlastungsbetrag 2026: 131 € pro Monat richtig nutzen"
           einleitung="Der Entlastungsbetrag beträgt 131 Euro pro Monat — für alle Pflegegrade 1 bis 5, zusätzlich zum Pflegegeld. Er ist zweckgebunden, wird von vielen Familien nicht vollständig genutzt, und kann bis zu 1.572 Euro angespart werden. Wer die Regeln kennt, holt das Maximum heraus."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

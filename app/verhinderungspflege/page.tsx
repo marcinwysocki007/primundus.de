@@ -20,11 +20,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Verhinderungspflege 2026 — neues Entlastungsbudget erklärt',
+  title: 'Verhinderungspflege 2026: 3.539 € Entlastungsbudget erklärt',
   description: 'Verhinderungspflege 2026: gemeinsames Jahresbudget von 3.539 €, was sich geändert hat, wer Anspruch hat und wie Angehörige es beantragen.',
   alternates: { canonical: 'https://primundus.de/verhinderungspflege' },
   openGraph: {
-    title: 'Verhinderungspflege 2026 — neues Entlastungsbudget | Primundus',
+    title: 'Verhinderungspflege 2026: 3.539 € Entlastungsbudget erklärt',
     description: 'Verhinderungspflege und Kurzzeitpflege teilen sich seit Juli 2025 ein Entlastungsbudget von 3.539 €/Jahr. Alles erklärt.',
     url: 'https://primundus.de/verhinderungspflege',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Verhinderungspflege 2026 — das neue Entlastungsbudget erklärt',
+    headline: 'Verhinderungspflege 2026: was das neue Entlastungsbudget von 3.539 € ändert und wie Sie es nutzen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -83,7 +83,7 @@ export default function Verhinderungspflege() {
             { label: "Verhinderungspflege 2026" },
           ]}
           augenbraue="Ratgeber Finanzierung"
-          titel="Verhinderungspflege 2026 — das neue Entlastungsbudget"
+          titel="Verhinderungspflege 2026: was das neue Entlastungsbudget von 3.539 € ändert und wie Sie es nutzen"
           einleitung="Verhinderungspflege gibt es weiter. Seit 1. Juli 2025 rechnet die Pflegekasse sie zusammen mit der Kurzzeitpflege auf einen gemeinsamen Jahresbetrag von bis zu 3.539 Euro an, oft Entlastungsbudget genannt (§ 42a SGB XI). 2026 ist das erste volle Kalenderjahr mit dieser Regel — wer das Budget nicht kennt, verschenkt bares Geld."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

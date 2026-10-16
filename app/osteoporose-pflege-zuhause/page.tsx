@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Osteoporose Pflege zuhause — Sturzschutz & Alltag',
+  title: 'Pflege bei Osteoporose zu Hause: Sturzschutz und Alltag',
   description: 'Osteoporose Pflege zuhause: Warum Sturzprävention das Wichtigste ist, wie man den Alltag sicher gestaltet und was Ernährung und Vitamin D beitragen.',
   alternates: { canonical: 'https://primundus.de/osteoporose-pflege-zuhause' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Osteoporose Pflege zuhause | Primundus',
+    title: 'Pflege bei Osteoporose zu Hause: Sturzschutz und Alltag',
     description: 'Häusliche Pflege bei Osteoporose — Sturzschutz, Alltag und Ernährung.',
     url: 'https://primundus.de/osteoporose-pflege-zuhause',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Osteoporose Pflege zuhause — Sturzschutz, Alltag und Ernährung',
+    headline: 'Pflege bei Osteoporose zu Hause: Sturzschutz und Alltag',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +73,7 @@ export default function OsteoporosePflegeZuhause() {
             { label: "Osteoporose Pflege zuhause" },
           ]}
           augenbraue="Ratgeber Osteoporose"
-          titel="Osteoporose Pflege zuhause — Sturzschutz & Alltag"
+          titel="Pflege bei Osteoporose zu Hause: Sturzschutz und Alltag"
           einleitung="Bei Osteoporose sind die Knochen so porös dass ein Sturz zu einem schweren Bruch führen kann — der Hüftbruch ist die gefürchtetste Folge und bedeutet für viele ältere Menschen den Einstieg in intensive Pflege. Sturzprävention ist deshalb das wichtigste Ziel. Mit einer 24h-Betreuungskraft die immer anwesend ist, sinkt das Sturzrisiko erheblich."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

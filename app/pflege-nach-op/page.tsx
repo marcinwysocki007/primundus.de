@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege nach OP zuhause — Betreuung & Unterstützung',
+  title: 'Pflege nach Operation zu Hause: Betreuung und Zuschüsse',
   description: 'Pflege nach Operation zuhause: Was nach Hüft-OP, Knie-OP und Herzoperationen zu beachten ist, welche Unterstützung nötig ist und welche Kassenzuschüsse greifen.',
   alternates: { canonical: 'https://primundus.de/pflege-nach-op' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflege nach OP zuhause | Primundus',
+    title: 'Pflege nach Operation zu Hause: Betreuung und Zuschüsse',
     description: 'Häusliche Betreuung nach einer Operation — was nötig ist und wer die Kosten trägt.',
     url: 'https://primundus.de/pflege-nach-op',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflege nach OP zuhause — Betreuung und Unterstützung',
+    headline: 'Pflege nach Operation zu Hause: Hilfe nach Hüft-, Knie- oder Herz-OP, auch mit 24-Stunden-Betreuung',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +73,7 @@ export default function PflegeNachOp() {
             { label: "Pflege nach OP" },
           ]}
           augenbraue="Ratgeber Pflege nach OP"
-          titel="Pflege nach OP zuhause — Betreuung & Unterstützung"
+          titel="Pflege nach Operation zu Hause: Hilfe nach Hüft-, Knie- oder Herz-OP, auch mit 24-Stunden-Betreuung"
           einleitung="Nach einer Operation werden ältere Menschen heute schnell aus dem Krankenhaus entlassen — oft schneller als ihre Angehörigen gewappnet sind. Die ersten Wochen zuhause sind kritisch: Wundversorgung durch den Pflegedienst, Mobilisierung, Hilfsbedarf bei allen Alltagsaufgaben. Eine 24h-Betreuungskraft überbrückt diese Zeit — und lässt sich schon vor der OP planen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

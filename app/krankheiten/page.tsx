@@ -8,11 +8,11 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
-  title: 'Krankheiten & Pflege zuhause — Ratgeber für alle Diagnosen',
+  title: 'Pflege zu Hause bei Krankheiten: Demenz, Parkinson und mehr',
   description: 'Pflege zuhause bei Demenz, Alzheimer, Parkinson, Schlaganfall, Herzinsuffizienz, MS und mehr. Alle Krankheits-Ratgeber von Primundus auf einen Blick.',
   alternates: { canonical: 'https://primundus.de/krankheiten' },
   openGraph: {
-    title: 'Krankheiten & Pflege zuhause | Primundus',
+    title: 'Pflege zu Hause bei Krankheiten: Demenz, Parkinson und mehr',
     description: 'Ratgeber für alle Diagnosen: Demenz, Alzheimer, Parkinson, Schlaganfall, MS, Herzinsuffizienz.',
     url: 'https://primundus.de/krankheiten',
     siteName: 'Primundus',
@@ -61,7 +61,7 @@ export default function Krankheiten() {
             { label: 'Pflege bei Krankheiten' },
           ]}
           augenbraue="Ratgeber"
-          titel="Pflege bei Krankheiten"
+          titel="Pflege zu Hause bei Krankheiten: Ratgeber zu Demenz, Parkinson und mehr"
           einleitung="Jede Erkrankung stellt andere Anforderungen an die Pflege zu Hause. Hier finden Sie alle Ratgeber zu einzelnen Krankheiten, von Demenz über Parkinson und Schlaganfall bis zur Palliativpflege."
         />
 

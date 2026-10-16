@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Herzinsuffizienz Pflege zuhause 2026',
+    headline: 'Pflegegrad bei Herzinsuffizienz: Richtwerte je NYHA-Stufe und Pflege zu Hause',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function HerzinsuffizienzPflege() {
             { label: "Herzinsuffizienz Pflege" },
           ]}
           augenbraue="Ratgeber Herzinsuffizienz"
-          titel="Herzinsuffizienz Pflege zuhause — was möglich ist"
+          titel="Pflegegrad bei Herzinsuffizienz: Richtwerte je NYHA-Stufe und Pflege zu Hause"
           einleitung="Herzinsuffizienz ist eine der häufigsten Ursachen für Pflegebedürftigkeit im Alter — und in den meisten Fällen ist die Pflege zuhause gut möglich. Entscheidend ist die konsequente Medikamentengabe, tägliche Gewichtskontrolle und Belastungsanpassung. Eine 24h-Betreuungskraft überwacht diese Punkte rund um die Uhr und erkennt Verschlechterungen frühzeitig."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

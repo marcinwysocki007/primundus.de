@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege vs. Pflegeheim — der vollständige Vergleich 2026',
+    headline: 'Alternative zum Pflegeheim: 24-Stunden-Pflege und Heim im Vergleich',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -75,7 +75,7 @@ export default function Page() {
             { label: "24h-Pflege vs. Pflegeheim" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="24h-Pflege vs. Pflegeheim — der vollständige Vergleich 2026"
+          titel="Alternative zum Pflegeheim: 24-Stunden-Pflege und Heim im Vergleich"
           einleitung="Pflegeheim oder 24h-Pflege zuhause — das ist die wichtigste Entscheidung wenn Pflege nötig wird. Dieser Vergleich zeigt alle relevanten Unterschiede: Kosten, Betreuungsqualität, Alltag und emotionale Aspekte."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="8 Min."

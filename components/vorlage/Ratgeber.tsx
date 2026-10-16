@@ -44,8 +44,11 @@ export function zusammenhalten(titel: ReactNode, bis = 14): ReactNode {
  */
 export function titelTeilen(titel: ReactNode): { kopf: string; trenner: string; rest: string } | null {
   if (typeof titel !== 'string') return null
-  const m = titel.match(/^(.+?)(:\s+|\s+[—–]\s+)(.+)$/)
+  const m = titel.match(/^(.+?)(:\s+|\?\s+|\s+[—–]\s+)(.+)$/)
   if (!m || m[1].length > 70 || m[3].length < 6) return null
+  // 16.10.2026: Auch nach einer Frage teilen; das Fragezeichen bleibt in der fetten ersten Zeile
+  // („Was kostet 24-Stunden-Pflege?“ / „Kosten und Zuschüsse 2026“, vorher drei Zeilen fett).
+  if (m[2].startsWith('?')) return { kopf: m[1] + '?', trenner: ' ', rest: m[3] }
   return { kopf: m[1], trenner: m[2], rest: m[3] }
 }
 
@@ -116,7 +119,9 @@ function SiegelKopf({ ziel, karte = false }: { ziel: string; karte?: boolean }) 
  * Die Unterzeile aus dem Rechner-Kopf, Wort für Wort — mit Ort in der Anreise-Zusage
  * (Martin 22.09.: „Anreise in Worms in drei Tagen möglich … ist besser").
  */
-export function StandardUnterzeile({ ort }: { ort?: string }) {
+/** inOrt für Namen mit Artikel („im Saarland“, „im Landkreis Wittmund“), sonst „in <ort>“ */
+export function StandardUnterzeile({ ort, inOrt }: { ort?: string; inOrt?: string }) {
+  const wo = inOrt ?? (ort ? `in ${ort}` : '')
   return (
     <>
       Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und{' '}
@@ -124,7 +129,7 @@ export function StandardUnterzeile({ ort }: { ort?: string }) {
       {/* 16.10.2026: Nur „in 3 Tagen möglich.“ bleibt zusammen. Vorher hing der ganze Satz samt Ortsname an einem Stück
           und lief auf 53 Seiten mit langen Namen („Anreise in Mecklenburg-Vorpommern in 3 Tagen möglich.“) am iPhone
           bis zu 129 px über den Rand, die Seite ließ sich seitlich verschieben. */}
-      Anreise{ort ? ` in ${ort}` : ''} <span className="whitespace-nowrap">in 3 Tagen möglich.</span>
+      Anreise{wo ? ` ${wo}` : ''} <span className="whitespace-nowrap">in 3 Tagen möglich.</span>
     </>
   )
 }

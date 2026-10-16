@@ -170,7 +170,7 @@ export default function PflegegradRechnerSeite() {
             { label: 'Pflegegrad-Rechner' },
           ]}
           augenbraue="Pflegegrad-Rechner 2026"
-          titel="Pflegegrad berechnen: der Rechner mit den Fragen des Medizinischen Dienstes"
+          titel="Pflegegrad-Rechner: Pflegegrad kostenlos berechnen mit den 64 Fragen des Medizinischen Dienstes"
           einleitung="Der Pflegegrad-Rechner stellt dieselben 64 Fragen wie der Gutachter, rechnet mit den amtlichen Punkten aus § 15 SGB XI und zeigt sofort den Pflegegrad, die Punkte je Modul und die Leistungen 2026. Kostenlos, ohne Anmeldung, auch für Kinder."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="9 Min."

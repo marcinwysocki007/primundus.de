@@ -14,12 +14,12 @@ const AKTUALISIERT = aktualisiertAm('kurzzeitpflege-oder-24h-pflege', '30. April
 const SECTIONS = [{ id: 'unterschied', title: 'Der grundlegende Unterschied' }, { id: 'wann-kurz', title: 'Wann Kurzzeitpflege' }, { id: 'wann-24h', title: 'Wann 24h-Pflege' }, { id: 'kosten', title: 'Kostenvergleich' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Kurzzeitpflege oder 24h-Pflege — was ist besser? | Primundus',
+  title: 'Kurzzeitpflege oder 24-Stunden-Pflege: Unterschied und Kosten',
   description: 'Kurzzeitpflege vs. 24h-Pflege zuhause: Wann was sinnvoll ist, Kostenvergleich 2026 und welche Lösung für welche Situation passt.',
   alternates: { canonical: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Kurzzeitpflege oder 24h-Pflege? | Primundus',
+    title: 'Kurzzeitpflege oder 24-Stunden-Pflege: Unterschied und Kosten',
     description: 'Kurzzeitpflege vs. 24h-Pflege zuhause: Wann was sinnvoll ist, Kostenvergleich 2026 und welche Lösung für welche Situation passt.',
     url: 'https://primundus.de/kurzzeitpflege-oder-24h-pflege',
     siteName: 'Primundus',
@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Kurzzeitpflege oder 24h-Pflege — was passt zu Ihrer Situation?',
+    headline: 'Kurzzeitpflege oder 24-Stunden-Pflege: Unterschied und Kosten im Vergleich',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -74,7 +74,7 @@ export default function Page() {
             { label: "Kurzzeitpflege oder 24h-Pflege" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="Kurzzeitpflege oder 24h-Pflege — was passt zu Ihrer Situation?"
+          titel="Kurzzeitpflege oder 24-Stunden-Pflege: Unterschied und Kosten im Vergleich"
           einleitung="Nach dem Krankenhausaufenthalt, beim Ausfall des pflegenden Angehörigen, in einer Übergangssituation — welche Lösung ist die richtige? Kurzzeitpflege oder direkt 24h-Pflege zuhause? Dieser Ratgeber hilft bei der Entscheidung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

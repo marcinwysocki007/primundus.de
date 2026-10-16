@@ -20,11 +20,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Patientenverfügung aufsetzen — Anleitung & was rein muss',
+  title: 'Patientenverfügung erstellen: Anleitung und was rein muss',
   description: 'Patientenverfügung aufsetzen: Was hineingehört, wie man sie gültig erstellt und was der Unterschied zur Vorsorgevollmacht ist.',
   alternates: { canonical: 'https://primundus.de/patientenverfuegung-aufsetzen' },
   openGraph: {
-    title: 'Patientenverfügung aufsetzen | Primundus',
+    title: 'Patientenverfügung erstellen: Anleitung und was rein muss',
     description: 'Was in eine Patientenverfügung gehört und wie man sie rechtsgültig erstellt — Anleitung und Checkliste.',
     url: 'https://primundus.de/patientenverfuegung-aufsetzen',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Patientenverfügung aufsetzen — Anleitung und was hineingehört',
+    headline: 'Patientenverfügung erstellen: Anleitung und Pflichtinhalte',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -82,7 +82,7 @@ export default function PatientenverfuegungAufsetzen() {
             { label: "Patientenverfügung aufsetzen" },
           ]}
           augenbraue="Ratgeber Vorsorge"
-          titel="Patientenverfügung aufsetzen — Anleitung & Pflichtinhalte"
+          titel="Patientenverfügung erstellen: Anleitung und Pflichtinhalte"
           einleitung="Eine Patientenverfügung legt verbindlich fest welche medizinischen Maßnahmen man im Fall der Entscheidungsunfähigkeit wünscht oder ablehnt. Sie muss schriftlich sein und eigenhändig unterschrieben werden — ein Notar ist nicht nötig. Je konkreter die Formulierungen, desto wirksamer das Dokument."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

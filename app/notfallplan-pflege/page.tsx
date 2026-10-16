@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Notfallplan Pflege — was hineingehört & Vorlage | Primundus',
+  title: 'Notfallplan Pflege: was hineingehört, mit Vorlage',
   description: 'Notfallplan für die Pflege zu Hause: was hineingehört, wer informiert werden muss und wie Sie den Plan aktuell halten — als Vorlage zum Ausfüllen.',
   alternates: { canonical: 'https://primundus.de/notfallplan-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Notfallplan Pflege — Vorlage & Anleitung | Primundus',
+    title: 'Notfallplan Pflege: was hineingehört, mit Vorlage',
     description: 'Notfallplan für die häusliche Pflege — was reingehört und wie man ihn aktuell hält.',
     url: 'https://primundus.de/notfallplan-pflege',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Notfallplan Pflege — was hineingehört und Vorlage',
+    headline: 'Notfallplan Pflege: was hineingehört, mit Vorlage zum Ausfüllen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +73,7 @@ export default function NotfallplanPflege() {
             { label: "Notfallplan Pflege" },
           ]}
           augenbraue="Ratgeber Notfall"
-          titel="Notfallplan Pflege — was hineingehört & Vorlage"
+          titel="Notfallplan Pflege: was hineingehört, mit Vorlage zum Ausfüllen"
           einleitung="Im Notfall zählen Sekunden. Wer dann erst suchen muss welche Medikamente jemand nimmt, welcher Arzt zuständig ist, oder wer bei einem Sturz als Erstes angerufen werden soll — verliert wertvolle Zeit. Ein Notfallplan kostet einmal 30 Minuten und gibt Jahre lang Sicherheit."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

@@ -29,11 +29,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegevertrag aufsetzen — was muss rein? Muster & Tipps',
+  title: 'Pflegevertrag aufsetzen: was hineingehört',
   description: 'Pflegevertrag aufsetzen: Was in einen Pflegevertrag gehört, welches Modell für wen gilt und worauf bei der Kündigung geachtet werden muss. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/pflegevertrag-aufsetzen' },
   openGraph: {
-    title: 'Pflegevertrag aufsetzen | Primundus',
+    title: 'Pflegevertrag aufsetzen: was hineingehört',
     description: 'Was in einen Pflegevertrag gehört, Beschäftigungsmodelle und Kündigungsfristen — Checkliste und Tipps.',
     url: 'https://primundus.de/pflegevertrag-aufsetzen',
     siteName: 'Primundus',
@@ -47,7 +47,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegevertrag aufsetzen — was muss rein?',
+    headline: 'Pflegevertrag aufsetzen: was hineingehört, je nach Beschäftigungsmodell',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -90,7 +90,7 @@ export default function PflegevertragAufsetzen() {
             { label: "Pflegevertrag aufsetzen" },
           ]}
           augenbraue="Ratgeber Vertrag"
-          titel="Pflegevertrag aufsetzen — was muss rein?"
+          titel="Pflegevertrag aufsetzen: was hineingehört, je nach Beschäftigungsmodell"
           einleitung="Ein schriftlicher Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt Leistungen, Arbeitszeiten, Vergütung und Kündigungsmodalitäten klar und verbindlich. Was genau hineingehört, hängt vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist der Vertrag standardisiert und rechtssicher."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

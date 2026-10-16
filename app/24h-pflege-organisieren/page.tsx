@@ -23,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege organisieren — Checkliste & Schritt-für-Schritt',
+  title: '24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt',
   description: '24h-Pflege organisieren: Was vor dem Start geregelt sein muss, wie man Wohnraum vorbereitet und was laufend zu organisieren ist. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-organisieren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege organisieren | Primundus',
+    title: '24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt',
     description: 'Schritt-für-Schritt: Was vor und nach dem Start der 24h-Pflege organisiert werden muss.',
     url: 'https://primundus.de/24h-pflege-organisieren',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege organisieren — Checkliste und Schritt-für-Schritt',
+    headline: '24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -76,7 +76,7 @@ export default function PflegeOrganisieren() {
             { label: "24h-Pflege organisieren" },
           ]}
           augenbraue="Ratgeber Organisation"
-          titel="24h-Pflege organisieren — Checkliste & Schritt-für-Schritt"
+          titel="24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt"
           einleitung="Die Organisation der 24h-Pflege wirkt am Anfang überwältigend — ist es aber nicht wenn man es systematisch angeht. Wer mit Primundus arbeitet, hat einen festen Ansprechpartner der die meiste Arbeit übernimmt. Trotzdem gibt es Dinge die die Familie selbst regeln muss. Hier ist die vollständige Übersicht."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

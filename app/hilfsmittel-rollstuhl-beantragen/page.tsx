@@ -59,7 +59,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Rollator & Rollstuhl beantragen: Rezept, Kasse, Ablauf',
+    headline: 'Rollstuhl und Rollator beantragen: auf Rezept, auch ohne Pflegegrad',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -98,7 +98,7 @@ export default function Page() {
             { label: "Rollator & Rollstuhl beantragen" },
           ]}
           augenbraue="Ratgeber Hilfsmittel"
-          titel="Rollator & Rollstuhl beantragen: auf Rezept, ohne Pflegegrad"
+          titel="Rollstuhl und Rollator beantragen: auf Rezept, auch ohne Pflegegrad"
           einleitung={<>Das Wichtigste zuerst: Für einen Rollator oder Rollstuhl brauchen Sie <strong>keinen
             Pflegegrad</strong> — nur ein Rezept vom Arzt. Zuständig ist die Krankenkasse, die Zuzahlung
             beträgt 5 bis 10 Euro. Hier steht, wie der Antrag Schritt für Schritt läuft, was der

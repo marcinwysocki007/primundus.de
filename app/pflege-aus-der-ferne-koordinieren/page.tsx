@@ -26,12 +26,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege aus der Ferne koordinieren — so geht es | Primundus',
+  title: 'Pflege aus der Ferne koordinieren: Kontakt und Notfallplan',
   description: 'Pflege aus der Ferne koordinieren: Wie man Kommunikation strukturiert, welche digitalen Hilfsmittel helfen und warum eine 24h-Betreuungskraft die.',
   alternates: { canonical: 'https://primundus.de/pflege-aus-der-ferne-koordinieren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflege aus der Ferne koordinieren | Primundus',
+    title: 'Pflege aus der Ferne koordinieren: Kontakt und Notfallplan',
     description: 'Wie man häusliche Pflege aus der Entfernung organisiert und koordiniert.',
     url: 'https://primundus.de/pflege-aus-der-ferne-koordinieren',
     siteName: 'Primundus',
@@ -44,7 +44,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflege aus der Ferne koordinieren — so geht es',
+    headline: 'Pflege aus der Ferne koordinieren: wie Sie Kontakt halten und für den Notfall vorsorgen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -79,7 +79,7 @@ export default function PflegeAusDerFerneKoordinieren() {
             { label: "Pflege aus der Ferne" },
           ]}
           augenbraue="Ratgeber Organisation"
-          titel="Pflege aus der Ferne koordinieren — so geht es"
+          titel="Pflege aus der Ferne koordinieren: wie Sie Kontakt halten und für den Notfall vorsorgen"
           einleitung="Viele Kinder leben hunderte Kilometer von ihren Eltern entfernt — und tragen trotzdem Verantwortung für die Pflege. Fernbetreuung ist anspruchsvoll: die ständige Sorge, die Hilflosigkeit bei Problemen, die Schuldgefühle wenn man nicht vor Ort ist. Eine 24h-Betreuungskraft mit Primundus als Ansprechpartner verändert diese Situation grundlegend."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

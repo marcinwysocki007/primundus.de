@@ -27,12 +27,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Ablauf der 24h-Pflege mit Primundus — von Anfrage bis Start',
+  title: 'Ablauf der 24-Stunden-Pflege: vom Angebot bis zum Start',
   description: '24h-Pflege Ablauf: Preis und Pflegekräfte in 2 Minuten, Bewerbungen erhalten, selbst auswählen, dann der Vertrag. Anreise in 3 Tagen möglich.',
   alternates: { canonical: 'https://primundus.de/ablauf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Ablauf der 24h-Pflege mit Primundus | Primundus',
+    title: 'Ablauf der 24-Stunden-Pflege: vom Angebot bis zum Start',
     description: 'Von der Anfrage bis zur Betreuungskraft zuhause: der vollständige Ablauf erklärt.',
     url: 'https://primundus.de/ablauf',
     siteName: 'Primundus',
@@ -53,7 +53,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start',
+    headline: 'Ablauf der 24-Stunden-Pflege mit Primundus: vom Angebot bis zum Start',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -93,7 +93,7 @@ export default function Ablauf() {
             { label: 'Ablauf' },
           ]}
           augenbraue="So funktioniert es"
-          titel="Ablauf der 24h-Pflege mit Primundus — von Angebot bis Start"
+          titel="Ablauf der 24-Stunden-Pflege mit Primundus: vom Angebot bis zum Start"
           // Knopf direkt unter die Überschrift mit der Unterzeile der Startseite (25.09.2026, Martin: „nehme all deine Vorschläge“):
           // Beim Erstbesuch lag er am iPhone 13 bei 561–621 px unter der Cookie-Leiste (ab 553 px). Die alte Einleitung
           // wiederholte danach Preis in 2 Minuten und Anreise in 3 Tagen; Zwischenüberschrift und Einleitung nach zwei

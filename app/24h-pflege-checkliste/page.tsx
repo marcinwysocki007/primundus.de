@@ -14,12 +14,12 @@ const AKTUALISIERT = aktualisiertAm('24h-pflege-checkliste', '30. April 2026')
 const SECTIONS = [{ id: 'wohnung', title: 'Wohnung vorbereiten' }, { id: 'dokumente', title: 'Dokumente & Informationen' }, { id: 'erster-tag', title: 'Erster Tag' }, { id: 'laufend', title: 'Laufende Betreuung' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Checkliste — alles was Familien brauchen',
+  title: 'Checkliste 24-Stunden-Pflege: was Familien vorbereiten',
   description: 'Vollständige Checkliste für den Start der 24h-Pflege: Was vorzubereiten ist, welche Dokumente gebraucht werden, wie der erste Tag abläuft.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-checkliste' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Checkliste 2026 | Primundus',
+    title: 'Checkliste 24-Stunden-Pflege: was Familien vorbereiten',
     description: 'Vollständige Checkliste für den Start der 24h-Pflege: Was vorzubereiten ist, welche Dokumente gebraucht werden, wie der erste Tag abläuft.',
     url: 'https://primundus.de/24h-pflege-checkliste',
     siteName: 'Primundus',
@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege Checkliste — alles was Familien vor dem Start vorbereiten sollten',
+    headline: 'Checkliste 24-Stunden-Pflege: was Familien vor dem Start vorbereiten sollten',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -75,7 +75,7 @@ export default function Page() {
             { label: "24h-Pflege Checkliste" },
           ]}
           augenbraue="Ratgeber Checkliste"
-          titel="24h-Pflege Checkliste — alles was Familien vor dem Start vorbereiten sollten"
+          titel="Checkliste 24-Stunden-Pflege: was Familien vor dem Start vorbereiten sollten"
           einleitung="Eine Betreuungskraft zieht ein — und die Familie möchte, dass alles reibungslos läuft. Diese Checkliste zeigt was vorzubereiten ist: von der Wohnung bis zu den Dokumenten, vom ersten Tag bis zur laufenden Betreuung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

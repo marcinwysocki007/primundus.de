@@ -23,11 +23,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft finden — worauf achten & wie vorgehen 2026',
+  title: 'Pflegekraft finden: Wege und worauf Sie achten sollten',
   description: 'Pflegekraft finden: Agentur, Anbieter mit eigenen Kräften oder Selbstständige? Worauf Sie bei Auswahl, Sprache und Rechtssicherheit achten sollten.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-finden' },
   openGraph: {
-    title: 'Pflegekraft finden 2026 | Primundus',
+    title: 'Pflegekraft finden: Wege und worauf Sie achten sollten',
     description: 'Wie man eine zuverlässige Pflegekraft findet — Agentur vs. Direktsuche, Qualifikationen, Auswahlkriterien.',
     url: 'https://primundus.de/pflegekraft-finden',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft finden — worauf achten und wie vorgehen 2026',
+    headline: 'Pflegekraft finden: welche Wege es gibt und worauf Sie bei der Auswahl achten',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -85,7 +85,7 @@ export default function PflegekraftFinden() {
             { label: "Pflegekraft finden" },
           ]}
           augenbraue="Ratgeber Pflegekräfte"
-          titel="Pflegekraft finden — worauf achten & wie vorgehen"
+          titel="Pflegekraft finden: welche Wege es gibt und worauf Sie bei der Auswahl achten"
           einleitung="Eine zuverlässige Pflegekraft zu finden ist die wichtigste Entscheidung bei der Organisation der 24h-Pflege. Der sicherste Weg führt über eine seriöse Agentur — sie prüft Qualifikation und Erfahrung, stellt Ersatz bei Ausfall und regelt alles Rechtliche. Bei Primundus kann die passende Kraft schon in 3 Tagen vor Ort sein."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

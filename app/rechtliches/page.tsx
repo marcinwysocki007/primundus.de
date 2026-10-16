@@ -7,11 +7,11 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
-  title: 'Rechtliches zur 24h-Pflege — alle rechtlichen Aspekte',
+  title: 'Rechtliches zur 24-Stunden-Pflege: Beschäftigung und Verträge',
   description: 'Rechtliches zur 24h-Pflege: Beschäftigungsmodelle, Scheinselbstständigkeit vermeiden, Pflegevertrag, Vorsorgevollmacht, Patientenverfügung und Steuerrecht.',
   alternates: { canonical: 'https://primundus.de/rechtliches' },
   openGraph: {
-    title: 'Rechtliches zur 24h-Pflege | Primundus',
+    title: 'Rechtliches zur 24-Stunden-Pflege: Beschäftigung und Verträge',
     description: 'Alle rechtlichen Aspekte der 24h-Pflege — Beschäftigung, Verträge, Steuern.',
     url: 'https://primundus.de/rechtliches',
     siteName: 'Primundus',
@@ -58,7 +58,7 @@ export default function Rechtliches() {
             { label: 'Rechtliches & Vorsorge' },
           ]}
           augenbraue="Ratgeber"
-          titel="Rechtliches & Vorsorge"
+          titel="Rechtliches zur 24-Stunden-Pflege: Beschäftigung, Verträge, Vollmachten und Steuern"
           einleitung="Rechtssichere Beschäftigung, Verträge, Vollmachten und Steuern: alle rechtlichen Themen rund um die 24-Stunden-Pflege."
         />
 

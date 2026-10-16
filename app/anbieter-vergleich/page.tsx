@@ -88,7 +88,7 @@ export default function Page() {
         <RatgeberKopf
           pfad={[{ label: 'Startseite', href: '/' }, { label: 'Tools & Rechner', href: '/tools' }, { label: 'Anbieter-Vergleich' }]}
           augenbraue={`Anbieter-Vergleich · Stand ${STAND}`}
-          titel="24h-Pflege-Anbieter im Vergleich: Wer bietet was?"
+          titel="24-Stunden-Pflege-Anbieter im Vergleich: Gebühren, Vertragsbindung und Leistungen"
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile />}

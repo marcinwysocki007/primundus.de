@@ -82,9 +82,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Anbieter-Vergleich · Stand {STAND}
           </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Hausengel oder Primundus? Der direkte Vergleich
-          </h1>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Hausengel-Alternative: Hausengel und Primundus im direkten Vergleich</h1>
           <p className="text-[16px] text-pm-body leading-relaxed mb-6 max-w-[720px]">
             Wer Hausengel mit anderen Anbietern vergleicht, steht vor allem vor einer Grundsatzfrage:
             selbstständige Betreuungskräfte oder angestelltes Personal? Dazu kommt das Praktische — wann

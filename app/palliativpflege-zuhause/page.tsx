@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Palliativpflege zuhause — würdevoll bis zum Ende | Primundus',
+  title: 'Palliativpflege zu Hause: wer hilft und was Angehörige entlastet',
   description: 'Palliativpflege zuhause: Was möglich ist, welches Team gebraucht wird und wie Angehörige in der letzten Lebensphase unterstützt werden können.',
   alternates: { canonical: 'https://primundus.de/palliativpflege-zuhause' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Palliativpflege zuhause | Primundus',
+    title: 'Palliativpflege zu Hause: wer hilft und was Angehörige entlastet',
     description: 'Würdevolle Begleitung in der letzten Lebensphase zuhause — was möglich ist und was gebraucht wird.',
     url: 'https://primundus.de/palliativpflege-zuhause',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Palliativpflege zuhause — würdevoll bis zum Ende',
+    headline: 'Palliativpflege zu Hause: wer Schmerzen lindert und was Angehörige entlastet',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function PalliativpflegeZuhause() {
             { label: "Palliativpflege zuhause" },
           ]}
           augenbraue="Ratgeber Palliativpflege"
-          titel="Palliativpflege zuhause — würdevoll bis zum Ende"
+          titel="Palliativpflege zu Hause: wer Schmerzen lindert und was Angehörige entlastet"
           einleitung="Die meisten Menschen möchten in ihrem Zuhause sterben — umgeben von vertrauten Menschen und Gegenständen. Mit dem richtigen Team ist das in den meisten Fällen möglich: Hausarzt, SAPV-Team, palliative Pflegekraft und Hospizbegleiter ermöglichen eine würdevolle letzte Lebensphase zuhause."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

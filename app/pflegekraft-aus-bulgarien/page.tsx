@@ -80,7 +80,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft aus Bulgarien: was sie leisten darf und was „24 Stunden“ bei Ihnen heißt',
+    headline: 'Pflegekräfte aus Bulgarien: Fachkraft oder Betreuungskraft und was „24 Stunden“ bei Ihnen heißt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -120,7 +120,7 @@ export default function PflegekraftAusBulgarien() {
             { label: 'Pflegekraft aus Bulgarien' },
           ]}
           augenbraue="Ratgeber Pflegekräfte"
-          titel="Pflegekraft aus Bulgarien: was sie leisten darf und was „24 Stunden“ bei Ihnen heißt"
+          titel="Pflegekräfte aus Bulgarien: Fachkraft oder Betreuungskraft und was „24 Stunden“ bei Ihnen heißt"
           einleitung="Eine Pflegekraft aus Bulgarien wohnt bei Ihrem Vater, kocht, kauft ein, begleitet ihn durch den Tag und hilft beim Waschen, Anziehen und Essen. Sie ist bei Bedarf auch nachts vor Ort. Muss sie nachts auf Zuruf bereitstehen, zählt das als Arbeitszeit; regelmäßige Hilfe in der Nacht braucht einen Ausgleich. Als Grenze nennt die Verbraucherzentrale 48 Stunden pro Woche. Auch eine ausgebildete Krankenschwester arbeitet bei Ihnen in der Regel als Betreuungskraft. Spritzen, Verbände und das Stellen von Medikamenten gehören nicht zu ihren Aufgaben; dafür kann die Hausärztin häusliche Krankenpflege durch einen Pflegedienst verordnen. Seit 2014 brauchen bulgarische Staatsangehörige keine Arbeitserlaubnis; legal ist die Betreuung vor allem als Entsendung durch eine Firma oder als Anstellung bei Ihnen. Bei einer Entsendung lassen Sie sich vor dem ersten Arbeitstag die A1-Bescheinigung für genau diese Kraft oder den Antrag darauf zeigen; liegt erst der Antrag vor, wird die Bescheinigung nachgereicht."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."

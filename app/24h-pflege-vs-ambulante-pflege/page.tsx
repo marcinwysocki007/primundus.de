@@ -20,13 +20,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege vs. ambulante Pflege — Vergleich 2026 | Primundus',
-  description: '24h-Pflege vs. ambulanter Pflegedienst: Was kostet was, wann ist welche Form sinnvoll und wann wird aus ambulant eine 24h-Betreuung notwendig? Vollständiger.',
+  title: 'Ambulante Pflege oder 24-Stunden-Betreuung: Vergleich 2026',
+  description: 'Ambulante Pflege oder 24-Stunden-Betreuung: Was beides kostet, was die Pflegekasse zahlt und wann der Pflegedienst nicht mehr reicht.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-ambulante-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege vs. ambulante Pflege 2026 | Primundus',
-    description: 'Vollständiger Vergleich: Kosten, Leistungen und wann welche Pflegeform sinnvoll ist.',
+    title: 'Ambulante Pflege oder 24-Stunden-Betreuung: Vergleich 2026',
+    description: 'Ambulante Pflege oder 24-Stunden-Betreuung: Was beides kostet, was die Pflegekasse zahlt und wann der Pflegedienst nicht mehr reicht.',
     url: 'https://primundus.de/24h-pflege-vs-ambulante-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege vs. ambulante Pflege — Vergleich 2026',
+    headline: 'Ambulante Pflege oder 24-Stunden-Betreuung: Kosten und wann der Pflegedienst nicht mehr reicht',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -99,7 +99,7 @@ export default function VsAmbulantePflege() {
             { label: "24h-Pflege vs. ambulante Pflege" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="24h-Pflege vs. ambulante Pflege — Vergleich 2026"
+          titel="Ambulante Pflege oder 24-Stunden-Betreuung: Kosten und wann der Pflegedienst nicht mehr reicht"
           einleitung="Ambulante Pflege oder 24h-Betreuung — das ist oft die erste Entscheidung wenn Pflege notwendig wird. Ambulante Dienste kommen mehrmals täglich für definierte Einsätze. Eine 24h-Kraft lebt im Haushalt und ist bei Bedarf auch nachts da. Wann was sinnvoll ist, hängt nicht nur von den Kosten ab — sondern vom tatsächlichen Pflegebedarf."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

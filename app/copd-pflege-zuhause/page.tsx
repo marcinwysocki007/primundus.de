@@ -22,13 +22,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege bei COPD zuhause — Unterstützung im Alltag',
+  title: 'Pflegerische Unterstützung bei COPD: Alltag und Pflegegrad',
   description:
     'Pflegerische Unterstützung bei COPD: was im Alltag hilft, was die Betreuungskraft übernimmt, wann der Arzt gerufen werden muss und welcher Pflegegrad möglich ist.',
   alternates: { canonical: 'https://primundus.de/copd-pflege-zuhause' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflege bei COPD zuhause',
+    title: 'Pflegerische Unterstützung bei COPD: Alltag und Pflegegrad',
     description: 'Was im Alltag mit COPD hilft, was die Betreuungskraft übernimmt und welcher Pflegegrad möglich ist.',
     url: 'https://primundus.de/copd-pflege-zuhause',
     siteName: 'Primundus',
@@ -60,7 +60,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflege bei COPD zuhause — pflegerische Unterstützung im Alltag',
+    headline: 'Pflegerische Unterstützung bei COPD: was im Alltag hilft und welcher Pflegegrad möglich ist',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -99,7 +99,7 @@ export default function Page() {
             { label: "COPD Pflege zuhause" },
           ]}
           augenbraue="Ratgeber COPD"
-          titel="Pflege bei COPD: Wie Sie den Alltag zuhause sicher machen"
+          titel="Pflegerische Unterstützung bei COPD: was im Alltag hilft und welcher Pflegegrad möglich ist"
           einleitung="Wer einen Menschen mit COPD pflegt, kennt die ständige Sorge: Reicht die Luft heute? Kommt sie die Treppe noch hoch? Was, wenn nachts die Atemnot kommt — und niemand da ist? Dieser Ratgeber zeigt, welche pflegerische Unterstützung im Alltag wirklich hilft, wo die Grenzen von Angehörigen und Betreuungskräften liegen und wann Sie ärztliche Hilfe holen müssen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="8 Min."

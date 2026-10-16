@@ -11,14 +11,14 @@ const AKTUALISIERT = aktualisiertAm('24h-pflege-anbieter-vergleich', '30. April 
 const SECTIONS = [{ id: 'kriterien', title: 'Die wichtigsten Kriterien' }, { id: 'rechtssicherheit', title: 'Rechtssicherheit zuerst' }, { id: 'qualitaet', title: 'Qualitätsprüfung' }, { id: 'transparenz', title: 'Kosten & Transparenz' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege Anbieter Vergleich 2026 — worauf es ankommt',
+  title: 'Anbieter für 24-Stunden-Pflege vergleichen: worauf es ankommt',
   description: 'Worauf man beim Vergleich von 24h-Pflege-Anbietern achten sollte: Rechtssicherheit, Qualitätsprüfung, Transparenz, Kosten. Primundus im Vergleich.',
   // Konsolidierung 17.08.: /anbieter-vergleich rankt (Pos. 4,8), diese Seite
   // nicht — Signale werden dort gebündelt statt sich gegenseitig zu schwächen.
   alternates: { canonical: 'https://primundus.de/anbieter-vergleich' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege Anbieter Vergleich 2026 | Primundus',
+    title: 'Anbieter für 24-Stunden-Pflege vergleichen: worauf es ankommt',
     description: 'Worauf man beim Vergleich von 24h-Pflege-Anbietern achten sollte: Rechtssicherheit, Qualitätsprüfung, Transparenz, Kosten. Primundus im Vergleich.',
     url: 'https://primundus.de/24h-pflege-anbieter-vergleich',
     siteName: 'Primundus',
@@ -31,7 +31,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege Anbieter vergleichen — worauf es wirklich ankommt',
+    headline: 'Anbieter für 24-Stunden-Pflege vergleichen: worauf es ankommt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -74,7 +74,7 @@ export default function Page() {
             <span className="text-pm-ink">24h-Pflege Anbieter Vergleich</span>
           </nav>
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Ratgeber · 6 Min Lesezeit · Aktualisiert August 2026</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">24h-Pflege Anbieter vergleichen — worauf es wirklich ankommt</h1>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Anbieter für 24-Stunden-Pflege vergleichen: worauf es ankommt</h1>
 
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Nicht jeder 24h-Pflege-Anbieter ist gleich. Manche vermitteln über Marktplätze ohne Qualitätskontrolle, andere arbeiten im rechtlichen Graubereich. Diese Seite zeigt die entscheidenden Kriterien beim Anbietervergleich.</p>

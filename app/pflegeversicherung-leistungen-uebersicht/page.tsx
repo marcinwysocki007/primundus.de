@@ -11,12 +11,12 @@ const AKTUALISIERT = aktualisiertAm('pflegeversicherung-leistungen-uebersicht', 
 const SECTIONS = [{ id: 'geldleistungen', title: 'Geldleistungen' }, { id: 'sachleistungen', title: 'Sachleistungen' }, { id: 'entlastung', title: 'Entlastungsleistungen' }, { id: 'weitere', title: 'Weitere Leistungen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht',
+  title: 'Leistungen der Pflegeversicherung 2026 im Überblick',
   description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
   alternates: { canonical: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegeversicherung Leistungen 2026 | Primundus',
+    title: 'Leistungen der Pflegeversicherung 2026 im Überblick',
     description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
     url: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht',
     siteName: 'Primundus',
@@ -29,7 +29,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht aller Zuschüsse',
+    headline: 'Leistungen der Pflegeversicherung 2026: Übersicht der Zuschüsse',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -72,7 +72,7 @@ export default function Page() {
             <span className="text-pm-ink">Pflegeversicherung Leistungen 2026</span>
           </nav>
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 7 Min Lesezeit · Aktualisiert April 2026</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Pflegeversicherung Leistungen 2026 — vollständige Übersicht aller Zuschüsse</h1>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Leistungen der Pflegeversicherung 2026: Übersicht der Zuschüsse</h1>
 
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Die Pflegeversicherung zahlt mehr als viele wissen. Pflegegeld, Sachleistungen, Entlastungsbetrag, Entlastungsbudget, Pflegehilfsmittel, Wohnraumanpassung — hier alle Leistungen 2026 mit aktuellen Beträgen.</p>

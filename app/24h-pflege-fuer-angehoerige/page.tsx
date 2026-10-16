@@ -14,12 +14,12 @@ const AKTUALISIERT = aktualisiertAm('24h-pflege-fuer-angehoerige', '30. April 20
 const SECTIONS = [{ id: 'einstieg', title: 'Wann ist der richtige Zeitpunkt?' }, { id: 'ablauf', title: 'Wie läuft die Organisation ab?' }, { id: 'kosten', title: 'Was kostet es die Familie?' }, { id: 'entlastung', title: 'Entlastung für pflegende Angehörige' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege für Angehörige organisieren — Leitfaden für Familien | Primundus',
+  title: '24-Stunden-Pflege für Angehörige: Leitfaden für Familien',
   description: '24h-Pflege für Eltern oder Angehörige organisieren: was zu beachten ist, wie der Ablauf läuft, welche Kosten entstehen und wie Primundus unterstützt.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-fuer-angehoerige' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege für Angehörige | Primundus',
+    title: '24-Stunden-Pflege für Angehörige: Leitfaden für Familien',
     description: '24h-Pflege für Eltern oder Angehörige organisieren: was zu beachten ist, wie der Ablauf läuft, welche Kosten entstehen und wie Primundus unterstützt.',
     url: 'https://primundus.de/24h-pflege-fuer-angehoerige',
     siteName: 'Primundus',
@@ -32,7 +32,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege für Angehörige — wie Familien die Betreuung organisieren',
+    headline: '24-Stunden-Pflege für Angehörige: Leitfaden zu Zeitpunkt, Ablauf und Entlastung',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -75,7 +75,7 @@ export default function Page() {
             { label: "24h-Pflege für Angehörige" },
           ]}
           augenbraue="Ratgeber Angehörige"
-          titel="24h-Pflege für Angehörige — wie Familien die Betreuung organisieren"
+          titel="24-Stunden-Pflege für Angehörige: Leitfaden zu Zeitpunkt, Ablauf und Entlastung"
           einleitung="Die Eltern brauchen Pflege — aber das Pflegeheim kommt nicht in Frage. Und selbst rund um die Uhr da sein ist nicht möglich. 24h-Pflege ist die Lösung: eine Betreuungskraft zieht ein, übernimmt alles, und die Familie kann wieder aufatmen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

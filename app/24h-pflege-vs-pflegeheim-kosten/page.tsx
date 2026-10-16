@@ -51,7 +51,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege vs. Pflegeheim — Kostenvergleich 2026',
+    headline: '24-Stunden-Pflege oder Pflegeheim: Kostenvergleich 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -117,7 +117,7 @@ export default function VsKosten() {
             { label: "24h-Pflege vs. Pflegeheim" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="24h-Pflege vs. Pflegeheim — Kostenvergleich 2026"
+          titel="24-Stunden-Pflege oder Pflegeheim: Kostenvergleich 2026"
           einleitung="Der Pflegeheim-Eigenanteil im ersten Heimjahr liegt 2026 bundesweit bei durchschnittlich 3.364 Euro pro Monat — und stieg im Juli 2026 um weitere 256 Euro. Bei der 24h-Pflege zuhause bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 Euro. Wer nur die Bruttokosten vergleicht, trifft die falsche Entscheidung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

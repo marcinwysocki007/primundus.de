@@ -23,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Scheinselbstständigkeit in der Pflege vermeiden | Primundus',
+  title: 'Scheinselbstständigkeit in der Pflege vermeiden',
   description: 'Scheinselbstständigkeit bei Pflegekräften: Was sie ist, woran Behörden sie erkennen, welche Folgen drohen und wie man das Risiko vollständig vermeidet.',
   alternates: { canonical: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Scheinselbstständigkeit in der Pflege vermeiden | Primundus',
+    title: 'Scheinselbstständigkeit in der Pflege vermeiden',
     description: 'Was Scheinselbstständigkeit ist und wie man das Risiko bei der 24h-Pflege vollständig vermeidet.',
     url: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Scheinselbstständigkeit in der Pflege vermeiden',
+    headline: 'Scheinselbstständigkeit in der Pflege: was das ist und wie Sie es vermeiden',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -84,7 +84,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             { label: "Scheinselbstständigkeit vermeiden" },
           ]}
           augenbraue="Ratgeber Recht"
-          titel="Scheinselbstständigkeit in der Pflege — was es ist & wie man es vermeidet"
+          titel="Scheinselbstständigkeit in der Pflege: was das ist und wie Sie es vermeiden"
           einleitung={"Tausende Familien beschäftigen \"selbstständige Pflegekräfte\" ohne zu wissen dass sie damit ein erhebliches rechtliches Risiko eingehen. Scheinselbstständigkeit bedeutet: Die Behörden werten das Verhältnis als verstecktes Arbeitsverhältnis — und fordern alle Sozialversicherungsbeiträge nach. Rückwirkend. Für bis zu vier Jahre."}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

@@ -101,15 +101,15 @@ export default function Page() {
             { label: 'Regionen', href: '/regionen' },
             { label: 'Landkreis Wittmund' },
           ]}
-          augenbraue="24-Stunden-Pflege in Landkreis Wittmund"
-          titel="24h-Pflege in Wittmund und dem Harlingerland — Betreuung im eigenen Zuhause"
-          einleitungTitel="Zuhause bleiben in Landkreis Wittmund"
+          augenbraue="6× Testsieger DIE WELT"
+          titel="24-Stunden-Pflege in Wittmund und im Harlingerland: Betreuung zu Hause"
+          einleitungTitel="Zu Hause bleiben im Landkreis Wittmund"
           einleitung={<>Wer zwischen Wittmund, Esens und der Küste zuhause ist, hat meist ein Haus mit Geschichte — und keinen Grund, es im Alter zu verlassen. Doch der nächste Pflegedienst fährt weit. Die Lösung wohnt mit ein: Eine Betreuungskraft von Primundus ist bei Bedarf auch nachts da, im vertrauten Zuhause hinterm Deich. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
           aktualisiert="2. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-wittmund', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
-          unterzeile={<StandardUnterzeile ort="Landkreis Wittmund" />}
+          unterzeile={<StandardUnterzeile ort="Landkreis Wittmund" inOrt="im Landkreis Wittmund" />}
           blick={[
             'Täglich kündbar, keine Vermittlungsgebühr',
             'Anreise in 3 Tagen möglich',

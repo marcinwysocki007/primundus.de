@@ -26,12 +26,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft kündigen — Fristen, Muster & Ablauf 2026',
+  title: 'Pflegekraft kündigen: Fristen, Muster und Ablauf 2026',
   description: 'Pflegekraft kündigen 2026: Kündigungsfristen je nach Beschäftigungsmodell, Musterschreiben und was bei Kündigung aus wichtigem Grund gilt.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-kuendigen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegekraft kündigen 2026 | Primundus',
+    title: 'Pflegekraft kündigen: Fristen, Muster und Ablauf 2026',
     description: 'Kündigungsfristen, Musterschreiben und Ablauf — je nach Beschäftigungsmodell.',
     url: 'https://primundus.de/pflegekraft-kuendigen',
     siteName: 'Primundus',
@@ -44,7 +44,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft kündigen — Fristen, Muster und Ablauf 2026',
+    headline: 'Pflegekraft kündigen: Fristen, Muster und Ablauf 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -79,7 +79,7 @@ export default function PflegekraftKuendigen() {
             { label: "Pflegekraft kündigen" },
           ]}
           augenbraue="Ratgeber Pflegekräfte"
-          titel="Pflegekraft kündigen — Fristen, Muster & Ablauf 2026"
+          titel="Pflegekraft kündigen: Fristen, Muster und Ablauf 2026"
           einleitung="Wie man eine Pflegekraft kündigt hängt komplett vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist die Kündigung denkbar einfach: täglich kündbar, ein Anruf genügt. Soll nur eine andere Betreuungskraft kommen, stellt Primundus schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen. Bei der Direktanstellung gelten die gesetzlichen Kündigungsfristen nach deutschem Arbeitsrecht."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

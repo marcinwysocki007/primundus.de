@@ -160,7 +160,7 @@ export default function VierUndZwanzigStundenPflege() {
             { label: '24-Stunden-Pflege' },
           ]}
           augenbraue="6× Testsieger DIE WELT"
-          titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
+          titel="24-Stunden-Pflege zu Hause: was die Betreuungskraft übernimmt und was es kostet"
           nachTitel={ANTWORT}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."

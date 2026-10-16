@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'MDK-Begutachtung Tipps — so bereiten Sie sich vor',
+  title: 'MDK-Begutachtung: Tipps, wie Sie sich richtig vorbereiten',
   description: 'MDK-Begutachtung vorbereiten: Wie der Besuch abläuft, was geprüft wird, welche Tipps wirklich helfen und wie ein Pflegetagebuch den Pflegegrad sichert.',
   alternates: { canonical: 'https://primundus.de/mdk-begutachtung-tipps' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'MDK-Begutachtung Tipps 2026 | Primundus',
+    title: 'MDK-Begutachtung: Tipps, wie Sie sich richtig vorbereiten',
     description: 'MDK-Besuch vorbereiten: Ablauf, Checkliste, Pflegetagebuch — so sichern Sie den richtigen Pflegegrad.',
     url: 'https://primundus.de/mdk-begutachtung-tipps',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'MDK-Begutachtung Tipps — so bereiten Sie sich richtig vor',
+    headline: 'MDK-Begutachtung: Tipps, wie Sie sich auf den Medizinischen Dienst vorbereiten',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -84,7 +84,7 @@ export default function MdkBegutachtungTipps() {
             { label: "MDK-Begutachtung Tipps" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="MDK-Begutachtung Tipps — so bereiten Sie sich richtig vor"
+          titel="MDK-Begutachtung: Tipps, wie Sie sich auf den Medizinischen Dienst vorbereiten"
           einleitung="Die MDK-Begutachtung (seit 2023: MDS — Medizinischer Dienst) entscheidet über den Pflegegrad — und damit über hunderte Euro monatlich an Kassenzuschüssen. Viele Familien unterschätzen wie wichtig die Vorbereitung ist. Der Gutachter sieht den Pflegebedürftigen einmal, für etwa eine Stunde. Was in dieser Stunde gesagt und gezeigt wird, zählt."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="8 Min."
