@@ -121,7 +121,10 @@ export function StandardUnterzeile({ ort }: { ort?: string }) {
     <>
       Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und{' '}
       <strong className="text-pm-ink">welche Pflegekräfte verfügbar sind</strong>&nbsp;–{' '}
-      <span className="whitespace-nowrap">Anreise{ort ? ` in ${ort}` : ''} in 3 Tagen möglich.</span>
+      {/* 16.10.2026: Nur „in 3 Tagen möglich.“ bleibt zusammen. Vorher hing der ganze Satz samt Ortsname an einem Stück
+          und lief auf 53 Seiten mit langen Namen („Anreise in Mecklenburg-Vorpommern in 3 Tagen möglich.“) am iPhone
+          bis zu 129 px über den Rand, die Seite ließ sich seitlich verschieben. */}
+      Anreise{ort ? ` in ${ort}` : ''} <span className="whitespace-nowrap">in 3 Tagen möglich.</span>
     </>
   )
 }
