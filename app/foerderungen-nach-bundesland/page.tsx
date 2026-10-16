@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('foerderungen-nach-bundesland', '21. August 2026')
+const AKTUALISIERT = aktualisiertAm('foerderungen-nach-bundesland', '16. Oktober 2026')
 
 // Links in der Checkliste wie die Linkzeilen der Vorlage (MehrDazu)
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
@@ -105,7 +105,7 @@ export default function FoerderungenNachBundesland() {
                 ['Pflegegeld/Mo', '347 €', '599 €', '800 €', '990 €', 'Für private Pflege'],
                 ['Sachleistungen/Mo', '796 €', '1.497 €', '1.859 €', '2.299 €', 'Für Pflegedienste'],
                 ['Entlastungsbetrag/Mo', '131 €', '131 €', '131 €', '131 €', 'Auch PG 1'],
-                ['Entlastungsbudget/Jahr', '3.539 €', '3.539 €', '3.539 €', '3.539 €', 'Angesammelt 3 Jahre'],
+                ['Entlastungsbudget/Jahr', '3.539 €', '3.539 €', '3.539 €', '3.539 €', 'Kein Übertrag ins Folgejahr'],
                 // Fett 283 px breit, auf 360 px stehen 280 px zur Verfügung: Umbruch nach dem Schrägstrich
                 // statt Silbentrennung „Maßnah-me"
                 [<span className="whitespace-normal hyphens-manual">Wohnraumanpassung/<wbr />Maßnahme</span>, '4.180 €', '4.180 €', '4.180 €', '4.180 €', 'Antrag vor Beginn'],

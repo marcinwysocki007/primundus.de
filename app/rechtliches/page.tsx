@@ -78,8 +78,8 @@ export default function Rechtliches() {
           <Abschnitt id="rechtssichere-beschaeftigung-von-pflegekraeften" titel="Rechtssichere Beschäftigung von Pflegekräften">
             <Punkte
               punkte={[
-                { title: l('/pflegekraft-legal-beschaeftigen', 'Pflegekraft legal beschäftigen'), desc: 'Die 3 legalen Modelle — Entsendemodell, Direktanstellung, Scheinselbstständigkeit — erklärt und verglichen.' },
-                { title: l('/scheinselbststaendigkeit-pflege-vermeiden', 'Scheinselbstständigkeit vermeiden'), desc: 'Was Scheinselbstständigkeit ist, woran die Behörden sie erkennen und wie man das Risiko vollständig vermeidet.' },
+                { title: l('/pflegekraft-legal-beschaeftigen', 'Pflegekraft legal beschäftigen'), desc: 'Entsendemodell und Direktanstellung werden erklärt und verglichen, dazu das Risiko einer Scheinselbstständigkeit.' },
+                { title: l('/scheinselbststaendigkeit-pflege-vermeiden', 'Scheinselbstständigkeit vermeiden'), desc: 'Was Scheinselbstständigkeit ist, woran Behörden sie erkennen und wie Sie das Risiko vermeiden.' },
                 { title: l('/pflegevertrag-aufsetzen', 'Pflegevertrag aufsetzen'), desc: 'Was in jeden Pflegevertrag gehört — Leistungsumfang, Vergütung, Kündigung, Kost und Logis.' },
                 { title: l('/eu-pflegekraft-rechte-pflichten', 'EU-Pflegekraft: Rechte & Pflichten'), desc: 'Was das A1-Entsendemodell bedeutet und welche Regeln für EU-Pflegekräfte gelten.' },
                 { title: l('/haftung-pflegehaushalt', 'Haftung im Pflegehaushalt'), desc: 'Wer haftet bei Schäden: Familie, Anbieter oder Betreuungskraft?' },

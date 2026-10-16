@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24h-pflege-checkliste', '30. April 2026')
+const AKTUALISIERT = aktualisiertAm('24h-pflege-checkliste', '16. Oktober 2026')
 
 const SECTIONS = [{ id: 'wohnung', title: 'Wohnung vorbereiten' }, { id: 'dokumente', title: 'Dokumente & Informationen' }, { id: 'erster-tag', title: 'Erster Tag' }, { id: 'laufend', title: 'Laufende Betreuung' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -54,7 +54,7 @@ const schemaMarkup = [
     mainEntity: [
       { '@type': 'Question', name: 'Was muss ich vor dem Start der 24h-Pflege vorbereiten?', acceptedAnswer: { '@type': 'Answer', text: 'Zimmer für die Kraft einrichten, Medikamentenliste aktualisieren, Dokumente (Pflegekarte, Vollmachten) bereitstellen, Tagesablauf aufschreiben.' } },
       { '@type': 'Question', name: 'Wie viel Platz braucht die Betreuungskraft?', acceptedAnswer: { '@type': 'Answer', text: 'Ein eigenes Zimmer ist notwendig — Mindestgröße ca. 10 m². Mit eigenem Bett, Schrank und idealerweise Internetzugang.' } },
-      { '@type': 'Question', name: 'Was wenn ich etwas vergessen habe?', acceptedAnswer: { '@type': 'Answer', text: 'Kein Problem — Primundus begleitet den Start aktiv und steht Mo–Fr 9–18 Uhr telefonisch zur Verfügung.' } }
+      { '@type': 'Question', name: 'Was wenn ich etwas vergessen habe?', acceptedAnswer: { '@type': 'Answer', text: 'Kein Problem. Primundus begleitet den Start aktiv und ist täglich von 8 bis 20 Uhr telefonisch erreichbar.' } }
     ],
   },
 ]
@@ -102,7 +102,7 @@ export default function Page() {
               fragen={[
                 { q: "Was muss ich vor dem Start der 24h-Pflege vorbereiten?", a: "Zimmer für die Kraft einrichten, Medikamentenliste aktualisieren, Dokumente (Pflegekarte, Vollmachten) bereitstellen, Tagesablauf aufschreiben." },
                 { q: "Wie viel Platz braucht die Betreuungskraft?", a: "Ein eigenes Zimmer ist notwendig — Mindestgröße ca. 10 m². Mit eigenem Bett, Schrank und idealerweise Internetzugang." },
-                { q: "Was wenn ich etwas vergessen habe?", a: "Kein Problem — Primundus begleitet den Start aktiv und steht Mo–Fr 9–18 Uhr telefonisch zur Verfügung." },
+                { q: "Was wenn ich etwas vergessen habe?", a: "Kein Problem. Primundus begleitet den Start aktiv und ist täglich von 8 bis 20 Uhr telefonisch erreichbar." },
               ]}
             />
           </Abschnitt>

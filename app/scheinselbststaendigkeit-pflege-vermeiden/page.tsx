@@ -12,24 +12,24 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
 // angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
 // „Agenturvertrag“, „Primundus vermittelt“.
-const AKTUALISIERT = aktualisiertAm('scheinselbststaendigkeit-pflege-vermeiden', '1. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('scheinselbststaendigkeit-pflege-vermeiden', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist Scheinselbstständigkeit?' },
   { id: 'kriterien', title: 'Woran erkennen Behörden sie?' },
   { id: 'folgen', title: 'Folgen & Risiken' },
-  { id: 'vermeiden', title: 'Wie man das Risiko vermeidet' },
+  { id: 'vermeiden', title: 'Wie Sie das Risiko vermeiden' },
   { id: 'faq', title: 'Häufige Fragen' },
 ]
 
 export const metadata: Metadata = {
   title: 'Scheinselbstständigkeit in der Pflege vermeiden',
-  description: 'Scheinselbstständigkeit bei Pflegekräften: Was sie ist, woran Behörden sie erkennen, welche Folgen drohen und wie man das Risiko vollständig vermeidet.',
+  description: 'Scheinselbstständigkeit bei Pflegekräften: Was sie ist, woran Behörden sie erkennen, welche Folgen sie hat und wie Sie das Risiko vermeiden.',
   alternates: { canonical: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: 'Scheinselbstständigkeit in der Pflege vermeiden',
-    description: 'Was Scheinselbstständigkeit ist und wie man das Risiko bei der 24h-Pflege vollständig vermeidet.',
+    description: 'Was Scheinselbstständigkeit ist und wie Sie das Risiko bei der 24-Stunden-Pflege vermeiden.',
     url: 'https://primundus.de/scheinselbststaendigkeit-pflege-vermeiden',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -62,7 +62,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was ist Scheinselbstständigkeit in der Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Scheinselbstständigkeit liegt vor wenn eine Pflegekraft als "selbstständig" abgerechnet wird, tatsächlich aber wie eine Angestellte arbeitet: feste Arbeitszeiten, persönliche Leistungserbringung, keine eigenen Auftraggeber, kein eigenes Unternehmerrisiko. Die Behörden stufen sie als verstecktes Arbeitsverhältnis ein — mit erheblichen rechtlichen Folgen.' } },
-      { '@type': 'Question', name: 'Welche Konsequenzen drohen?', acceptedAnswer: { '@type': 'Answer', text: 'Nachzahlung aller Sozialversicherungsbeiträge (Arbeitgeber- und Arbeitnehmeranteil) für bis zu 4 Jahre rückwirkend. Bußgelder. Strafrechtliche Verfolgung wegen Vorenthaltung von Sozialversicherungsbeiträgen. Die Familie haftet als Arbeitgeberin.' } },
+      { '@type': 'Question', name: 'Welche Folgen hat Scheinselbstständigkeit für die Familie?', acceptedAnswer: { '@type': 'Answer', text: 'Nachzahlung aller Sozialversicherungsbeiträge (bis 4 Jahre rückwirkend), Bußgelder, strafrechtliche Verfolgung nach § 266a StGB (bis 5 Jahre Freiheitsstrafe). Die Familie haftet als Arbeitgeberin.' } },
     ],
   },
 ]
@@ -131,7 +131,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             />
           </Abschnitt>
 
-          <Abschnitt id="vermeiden" titel="Wie man das Risiko vollständig vermeidet">
+          <Abschnitt id="vermeiden" titel="Wie Sie das Risiko vermeiden">
             <Text>
               Es gibt zwei legale Wege — mit klar unterschiedlichem Aufwand für die Familie:
             </Text>
@@ -151,7 +151,7 @@ export default function ScheinselbststaendigkeitVermeiden() {
             <Fragen
               fragen={[
                 { q: 'Was ist Scheinselbstständigkeit in der Pflege?', a: 'Wenn eine "selbstständige" Pflegekraft faktisch wie eine Angestellte tätig ist — feste Zeiten, nur ein Auftraggeber, persönliche Leistungserbringung. Die Behörden werten das als verstecktes Arbeitsverhältnis.' },
-                { q: 'Welche Konsequenzen drohen?', a: 'Nachzahlung aller Sozialversicherungsbeiträge (bis 4 Jahre rückwirkend), Bußgelder, strafrechtliche Verfolgung nach §266a StGB (bis 5 Jahre Freiheitsstrafe). Die Familie haftet als Arbeitgeberin.' },
+                { q: 'Welche Folgen hat Scheinselbstständigkeit für die Familie?', a: 'Nachzahlung aller Sozialversicherungsbeiträge (bis 4 Jahre rückwirkend), Bußgelder, strafrechtliche Verfolgung nach § 266a StGB (bis 5 Jahre Freiheitsstrafe). Die Familie haftet als Arbeitgeberin.' },
                 { q: 'Wie vermeidet man Scheinselbstständigkeit?', a: 'Entsendemodell über eine seriöse Agentur — kein eigenes Arbeitsverhältnis, A1-Bescheinigung aus EU-Land, vollständig rechtssicher. Alternative: Direktanstellung mit Arbeitsvertrag und Sozialversicherungsanmeldung.' },
                 { q: 'Ist das Entsendemodell wirklich legal?', a: 'Ja — das Entsendemodell ist nach EU-Recht und deutschem Recht vollständig legal. Die A1-Bescheinigung belegt den legalen EU-Entsendestatus. Primundus hat in 20 Jahren und 60.000+ Betreuungen kein einziges rechtliches Problem dieser Art gehabt.' },
               ]}

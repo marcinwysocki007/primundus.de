@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('vorteile-24h-pflege', '30. April 2026')
+const AKTUALISIERT = aktualisiertAm('vorteile-24h-pflege', '16. Oktober 2026')
 
 const SECTIONS = [{ id: 'zuhause', title: 'Im eigenen Zuhause bleiben' }, { id: 'eins-zu-eins', title: '1:1-Betreuung' }, { id: 'kosten', title: 'Kosten oft günstiger' }, { id: 'rechtssicher', title: 'Rechtssicher & flexibel' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -52,9 +52,9 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was sind die größten Vorteile der 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Eigenes Zuhause bleibt, 1:1-Betreuung rund um die Uhr, Haushalt vollständig übernommen, täglich kündbar, oft günstiger als Pflegeheim.' } },
+      { '@type': 'Question', name: 'Was sind die größten Vorteile der 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Eigenes Zuhause bleibt, 1:1-Betreuung durch eine Kraft im Haus, Unterstützung im Haushalt, täglich kündbar, oft günstiger als Pflegeheim.' } },
       { '@type': 'Question', name: 'Ist 24h-Pflege wirklich günstiger als ein Pflegeheim?', acceptedAnswer: { '@type': 'Answer', text: 'Oft ja — nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat. Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat.' } },
-      { '@type': 'Question', name: 'Welche Vorteile hat 24h-Pflege bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson ist immer da — das gibt Orientierung und Sicherheit.' } }
+      { '@type': 'Question', name: 'Welche Vorteile hat 24h-Pflege bei Demenz?', acceptedAnswer: { '@type': 'Answer', text: 'Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson lebt mit im Haus. Das gibt Orientierung und Sicherheit.' } }
     ],
   },
 ]
@@ -76,7 +76,7 @@ export default function Page() {
           ]}
           augenbraue="Ratgeber 24-Stunden-Pflege"
           titel="Vorteile der 24-Stunden-Pflege zu Hause: was sie von anderen Lösungen unterscheidet"
-          einleitung="24h-Pflege zuhause ist keine Notlösung — sie ist für viele Menschen die bessere Lösung. Warum? Weil das eigene Zuhause bleibt, weil eine vertraute Person immer da ist, und weil die Kosten oft günstiger sind als ein Pflegeheim. Hier alle Vorteile im Überblick."
+          einleitung="24h-Pflege zuhause ist keine Notlösung — sie ist für viele Menschen die bessere Lösung. Warum? Weil das eigene Zuhause bleibt, weil eine vertraute Person mit im Haus lebt und weil die Kosten oft günstiger sind als ein Pflegeheim. Hier alle Vorteile im Überblick."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
         />
@@ -91,9 +91,9 @@ export default function Page() {
             </Text>
           </Abschnitt>
 
-          <Abschnitt id="eins-zu-eins" titel="1:1-Betreuung rund um die Uhr">
+          <Abschnitt id="eins-zu-eins" titel="1:1-Betreuung: eine Kraft für eine Person">
             <Text>
-              Im Pflegeheim teilen sich viele Bewohner eine Pflegekraft. Zu Stoßzeiten fehlt die Zeit für den Einzelnen. Bei der 24h-Pflege ist eine Kraft ausschließlich für eine Person da — ganztags, nachts, bei Arztbesuchen, beim Kochen.
+              Im Pflegeheim teilen sich viele Bewohner eine Pflegekraft. Zu Stoßzeiten fehlt die Zeit für den Einzelnen. Bei der 24-Stunden-Pflege ist eine Kraft nur für eine Person da: im Alltag, bei Arztbesuchen, beim Kochen und bei Bedarf auch nachts.
             </Text>
             <Text>
               Das schafft Vertrauen, Kontinuität und echte Beziehung — besonders wichtig bei Demenz, Parkinson oder nach einem Schlaganfall.
@@ -103,7 +103,7 @@ export default function Page() {
                 { title: "Täglich kündbar", desc: "Keine Mindestlaufzeit, keine Fristen — maximale Flexibilität für die Familie." },
                 { title: "Anreise in 3 Tagen möglich", desc: "Primundus organisiert den Start schnell — auch in dringenden Situationen." },
                 { title: "Haushalt vollständig übernommen", desc: "Kochen, Putzen, Einkaufen, Wäsche — alles inklusive." },
-                { title: "Nachtbereitschaft", desc: "Immer erreichbar — auch bei nächtlicher Unruhe oder Stürzen." },
+                { title: "Auch nachts im Haus", desc: "Bei Bedarf auch nachts da, etwa bei Unruhe oder einem Sturz. Regelmäßige Einsätze in der Nacht müssen ausgeglichen werden." },
                 { title: "Günstiger als Pflegeheim", desc: "Mit Kassenzuschüssen oft unter dem Pflegeheim-Eigenanteil." },
                 { title: "Rechtssicher", desc: "Entsendemodell mit A1-Bescheinigung — keine deutschen Sozialabgaben." },
               ]}
@@ -122,9 +122,9 @@ export default function Page() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: "Was sind die größten Vorteile der 24h-Pflege?", a: "Eigenes Zuhause bleibt, 1:1-Betreuung rund um die Uhr, Haushalt vollständig übernommen, täglich kündbar, oft günstiger als Pflegeheim." },
+                { q: "Was sind die größten Vorteile der 24h-Pflege?", a: "Eigenes Zuhause bleibt, 1:1-Betreuung durch eine Kraft im Haus, Unterstützung im Haushalt, täglich kündbar, oft günstiger als Pflegeheim." },
                 { q: "Ist 24h-Pflege wirklich günstiger als ein Pflegeheim?", a: "Oft ja — nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat. Der durchschnittliche Pflegeheim-Eigenanteil liegt 2026 bei 3.364 €/Monat." },
-                { q: "Welche Vorteile hat 24h-Pflege bei Demenz?", a: "Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson ist immer da — das gibt Orientierung und Sicherheit." },
+                { q: "Welche Vorteile hat 24h-Pflege bei Demenz?", a: "Vertraute Umgebung bleibt erhalten, eine feste Bezugsperson lebt mit im Haus. Das gibt Orientierung und Sicherheit." },
               ]}
             />
           </Abschnitt>

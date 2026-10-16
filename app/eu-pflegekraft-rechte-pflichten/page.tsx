@@ -15,7 +15,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
 // richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
 // „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
-const AKTUALISIERT = aktualisiertAm('eu-pflegekraft-rechte-pflichten', '1. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('eu-pflegekraft-rechte-pflichten', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'entsendemodell', title: 'Das Entsendemodell erklärt' },
@@ -118,7 +118,7 @@ export default function EuPflegekraftRechtenPflichten() {
               punkte={[
                 { title: 'Pflege- und Betreuungsleistungen erbringen', desc: 'Die vertraglich vereinbarten Leistungen zuverlässig und sorgfältig erbringen — Körperpflege, Haushalt, Betreuung, Gesellschaft.' },
                 { title: 'Verschwiegenheit', desc: 'Über alle persönlichen und gesundheitlichen Informationen des Pflegebedürftigen und der Familie ist absolute Verschwiegenheit zu wahren — auch nach dem Einsatz.' },
-                { title: 'A1-Bescheinigung mitführen', desc: 'Die A1-Bescheinigung belegt den legalen Entsendestatus und muss bei einer Kontrolle durch Behörden vorgezeigt werden können.' },
+                { title: 'A1-Bescheinigung', desc: 'Die A1-Bescheinigung belegt den legalen Entsendestatus. Bei einer Kontrolle durch Behörden zeigt sie, wo die Betreuungskraft sozialversichert ist.' },
                 { title: 'Pünktlichkeit und Zuverlässigkeit', desc: 'An- und Abreise zum vereinbarten Zeitpunkt. Krankmeldung so früh wie möglich damit Ersatz organisiert werden kann.' },
                 { title: 'Umgang mit Wertgegenständen', desc: 'Sorgfältiger Umgang mit dem Eigentum der Familie und des Pflegebedürftigen. Keine Annahme von Geldgeschenken ohne Absprache.' },
               ]}
@@ -131,7 +131,7 @@ export default function EuPflegekraftRechtenPflichten() {
                 {
                   titel: 'Familie hat Anspruch auf:',
                   ton: 'gruen',
-                  punkte: ['Vertragsgemäße Leistungserbringung', 'Informationen über Veränderungen im Pflegezustand', 'Verschwiegenheit über familiäre Angelegenheiten', 'A1-Bescheinigung der Kraft vorab'],
+                  punkte: ['Vertragsgemäße Leistungserbringung', 'Informationen über Veränderungen im Pflegezustand', 'Verschwiegenheit über familiäre Angelegenheiten', 'A1-Bescheinigung für die Kraft beantragen'],
                 },
                 {
                   titel: 'Familie ist verpflichtet:',

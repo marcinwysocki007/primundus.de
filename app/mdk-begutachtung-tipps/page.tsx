@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('mdk-begutachtung-tipps', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('mdk-begutachtung-tipps', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'ablauf', title: 'Wie die MDK-Begutachtung abläuft' },
@@ -85,7 +85,7 @@ export default function MdkBegutachtungTipps() {
           ]}
           augenbraue="Ratgeber Pflegegrad"
           titel="MDK-Begutachtung: Tipps, wie Sie sich auf den Medizinischen Dienst vorbereiten"
-          einleitung="Die MDK-Begutachtung (seit 2023: MDS — Medizinischer Dienst) entscheidet über den Pflegegrad — und damit über hunderte Euro monatlich an Kassenzuschüssen. Viele Familien unterschätzen wie wichtig die Vorbereitung ist. Der Gutachter sieht den Pflegebedürftigen einmal, für etwa eine Stunde. Was in dieser Stunde gesagt und gezeigt wird, zählt."
+          einleitung="Die MDK-Begutachtung (seit 2021: Medizinischer Dienst, kurz MD) entscheidet über den Pflegegrad und damit über hunderte Euro monatlich an Kassenzuschüssen. Viele Familien unterschätzen wie wichtig die Vorbereitung ist. Der Gutachter sieht den Pflegebedürftigen einmal, für etwa eine Stunde. Was in dieser Stunde gesagt und gezeigt wird, zählt."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="8 Min."
         />

@@ -10,17 +10,16 @@ const PFLEGEGRADE = [
   { pg: 5, pflegegeld: 990, sachleistung: 2299, entlastung: 131, budget: 3539, hilfsmittel: 42 },
 ]
 
-const STEUER = 200
-const KOSTEN_MIN = 2200
-const KOSTEN_MAX = 3500
+const STEUER = 333 // § 35a EStG: 20 %, höchstens 4.000 € im Jahr
+const GRUNDPREIS = 2150 // Kostenrechner: ab 2.150 € im Monat
 
 export function ZuschussRechnerClient() {
   const [selected, setSelected] = useState<number | null>(null)
   const pg = PFLEGEGRADE.find(p => p.pg === selected)
   const budgetMo = pg ? Math.round(pg.budget / 12) : 0
-  const gesamt = pg ? pg.pflegegeld + pg.entlastung + budgetMo + STEUER : 0
-  const eigenMin = pg ? Math.max(0, KOSTEN_MIN - gesamt) : 0
-  const eigenMax = pg ? Math.max(0, KOSTEN_MAX - gesamt) : 0
+  const abzug = pg ? pg.pflegegeld + budgetMo + STEUER : 0 // drei Posten, ohne Entlastungsbetrag
+  const eigenanteil = Math.max(0, GRUNDPREIS - abzug)
+  const mitEigenanteil = !!pg && pg.pg === 3 // Preisregel: Eigenanteil nur bei PG 3
 
   return (
     <div className="min-h-screen bg-pm-paper">
@@ -91,7 +90,7 @@ export function ZuschussRechnerClient() {
                     label: 'Entlastungsbetrag',
                     value: `${pg.entlastung} €/Monat`,
                     active: true,
-                    desc: 'Für alle Pflegegrade — für Betreuungs- und Entlastungsleistungen',
+                    desc: 'Für alle Pflegegrade, für anerkannte Entlastungsangebote, in der Regel nicht für die Betreuungskraft',
                   },
                   {
                     label: 'Entlastungsbudget',
@@ -142,13 +141,13 @@ export function ZuschussRechnerClient() {
               {/* Eigenanteil */}
               <div className="bg-pm-shell border-t border-pm-line px-5 py-4">
                 <div className="flex items-start justify-between gap-3 mb-1">
-                  <span className="text-[14px] font-bold text-pm-ink">Ihr Eigenanteil bei 24h-Pflege (Primundus)</span>
+                  <span className="text-[14px] font-bold text-pm-ink">{mitEigenanteil ? 'Ihr Eigenanteil bei 24-Stunden-Pflege (Primundus)' : 'Zuschüsse und Steuerermäßigung zusammen'}</span>
                   <span className="text-[16px] font-bold text-pm-taupe whitespace-nowrap">
-                    ca. {eigenMin.toLocaleString('de')}–{eigenMax.toLocaleString('de')} €/Mo
+                    {mitEigenanteil ? `ab ca. ${eigenanteil.toLocaleString('de')} €/Mo` : `bis zu ${abzug.toLocaleString('de')} €/Mo`}
                   </span>
                 </div>
                 <p className="text-[12px] text-pm-taupe-ink">
-                  Primundus-Kosten {KOSTEN_MIN.toLocaleString('de')}–{KOSTEN_MAX.toLocaleString('de')} €/Mo minus {gesamt} € Zuschüsse
+                  {mitEigenanteil ? `Grundpreis ab ${GRUNDPREIS.toLocaleString('de')} €/Mo minus Pflegegeld, Entlastungsbudget und Steuerermäßigung (${abzug.toLocaleString('de')} €)` : 'Ihren Preis zeigt der Kostenrechner.'}
                 </p>
               </div>
             </div>

@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('herzinsuffizienz-pflege', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('herzinsuffizienz-pflege', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'zuhause', title: 'Herzinsuffizienz zuhause pflegen' },
@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Kann man bei Herzinsuffizienz zuhause gepflegt werden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Herzinsuffizienz-Pflege zuhause ist in den meisten Fällen möglich. Wichtig ist die konsequente Medikamentengabe, tägliche Gewichtskontrolle, Flüssigkeitsbilanz und die Vermeidung von Überlastung. Eine 24h-Betreuungskraft überwacht diese Punkte rund um die Uhr.' } },
+      { '@type': 'Question', name: 'Kann man bei Herzinsuffizienz zuhause gepflegt werden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, in den meisten Fällen ist Herzinsuffizienz-Pflege zuhause gut möglich. Wichtig sind tägliche Gewichtskontrolle, Flüssigkeitsbilanz, pünktliche Medikamenteneinnahme und Belastungsanpassung. Eine Betreuungskraft lebt mit im Haushalt, erinnert an Medikamente und achtet im Alltag auf Gewicht, Trinkmenge und Belastung.' } },
       { '@type': 'Question', name: 'Welchen Pflegegrad bekommt man bei Herzinsuffizienz?', acceptedAnswer: { '@type': 'Answer', text: 'Je nach NYHA-Stadium und Einschränkungen im Alltag: Leichte Herzinsuffizienz meist PG 1–2, moderate PG 2–3, schwere PG 3–4, schwerste PG 4–5. Entscheidend ist wie stark die körperliche Belastbarkeit und Selbstständigkeit eingeschränkt sind.' } },
     ],
   },
@@ -82,13 +82,13 @@ export default function HerzinsuffizienzPflege() {
           ]}
           augenbraue="Ratgeber Herzinsuffizienz"
           titel="Pflegegrad bei Herzinsuffizienz: Richtwerte je NYHA-Stufe und Pflege zu Hause"
-          einleitung="Herzinsuffizienz ist eine der häufigsten Ursachen für Pflegebedürftigkeit im Alter — und in den meisten Fällen ist die Pflege zuhause gut möglich. Entscheidend ist die konsequente Medikamentengabe, tägliche Gewichtskontrolle und Belastungsanpassung. Eine 24h-Betreuungskraft überwacht diese Punkte rund um die Uhr und erkennt Verschlechterungen frühzeitig."
+          einleitung="Herzinsuffizienz ist eine der häufigsten Ursachen für Pflegebedürftigkeit im Alter — und in den meisten Fällen ist die Pflege zuhause gut möglich. Entscheidend ist die konsequente Medikamentengabe, tägliche Gewichtskontrolle und Belastungsanpassung. Eine Betreuungskraft lebt mit im Haushalt, erinnert an Medikamente und tägliches Wiegen und bemerkt Verschlechterungen früh."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
           blick={[
                 'Herzinsuffizienz-Pflege zuhause ist in den meisten Fällen gut möglich',
                 'Tägliche Gewichtskontrolle und Flüssigkeitsbilanz sind entscheidend',
-                'Medikamentengabe: Pünktlichkeit und Dosierung kritisch — Betreuungskraft überwacht',
+                'Medikamente: Pünktliche Einnahme und Dosierung sind wichtig, die Betreuungskraft erinnert',
                 'Pflegegrad 2–4 typisch je nach NYHA-Stadium und Einschränkungen',
                 'Kassenzuschüsse: 347–800 €/Monat + 3.539 €/Jahr Entlastungsbudget',
                 'Notfallzeichen kennen: Plötzliche Gewichtszunahme, Atemnot, Unterschenkelödeme',
@@ -103,7 +103,7 @@ export default function HerzinsuffizienzPflege() {
             <Punkte
               punkte={[
                 { title: 'NYHA I–II', desc: 'Pflege durch Angehörige meist ausreichend. Unterstützung bei schweren Haushaltsarbeiten, Begleitung zu Arztterminen, Medikamentenerinnerung. Selbstständigkeit weitgehend erhalten.' },
-                { title: 'NYHA III', desc: 'Deutliche Einschränkung der Belastbarkeit — bereits bei leichter Aktivität Atemnot. Unterstützung bei Körperpflege, Kochen, Einkaufen. 24h-Präsenz empfehlenswert.' },
+                { title: 'NYHA III', desc: 'Deutliche Einschränkung der Belastbarkeit — bereits bei leichter Aktivität Atemnot. Unterstützung bei Körperpflege, Kochen, Einkaufen. Eine Betreuungskraft im Haushalt ist empfehlenswert.' },
                 { title: 'NYHA IV', desc: 'Symptome in Ruhe — vollständige Pflegeabhängigkeit. 24h-Betreuungskraft notwendig. Engmaschige ärztliche Kontrolle. Palliative Begleitung möglicherweise sinnvoll.' },
               ]}
             />
@@ -112,11 +112,11 @@ export default function HerzinsuffizienzPflege() {
           <DunklerAbschnitt
             id="alltag"
             titel="Alltag bei Herzinsuffizienz — worauf täglich geachtet wird"
-            einleitung="Bei Herzinsuffizienz gibt es tägliche Maßnahmen die konsequent eingehalten werden müssen. Eine Betreuungskraft übernimmt diese Überwachung zuverlässig und erkennt Alarmzeichen früher als Betroffene selbst."
+            einleitung="Bei Herzinsuffizienz gibt es tägliche Maßnahmen die konsequent eingehalten werden müssen. Eine Betreuungskraft im Haushalt hilft, Vorgaben im Alltag einzuhalten, und kann Alarmzeichen bemerken."
             punkte={[
               { title: 'Tägliche Gewichtskontrolle', desc: 'Jeden Morgen zur gleichen Zeit wiegen — vor dem Frühstück, nach dem ersten Toilettengang. Mehr als 2 kg Gewichtszunahme in 2–3 Tagen kann auf Wasseransammlungen hinweisen — sofort Arzt informieren.' },
               { title: 'Flüssigkeitsbilanz', desc: 'Je nach ärztlicher Anweisung Trinkmenge begrenzen (oft 1,5–2 l/Tag). Betreuungskraft protokolliert Einfuhr und Ausscheidung, informiert Arzt bei Auffälligkeiten.' },
-              { title: 'Medikamentengabe', desc: 'Pünktliche und korrekte Medikamentengabe ist entscheidend — ACE-Hemmer, Betablocker, Diuretika müssen exakt eingenommen werden. Betreuungskraft überwacht und erinnert.' },
+              { title: 'Medikamentengabe', desc: 'Pünktliche und korrekte Medikamentengabe ist entscheidend — ACE-Hemmer, Betablocker, Diuretika müssen exakt eingenommen werden. Die Betreuungskraft erinnert an die Einnahme.' },
               { title: 'Belastungsanpassung', desc: 'Körperliche Aktivität nach ärztlicher Anweisung — nicht zu wenig (schadet), nicht zu viel (überfordert). Spaziergänge planen, Treppen nur wenn medizinisch erlaubt.' },
               { title: 'Notfallzeichen erkennen', desc: 'Plötzliche Atemnot, starke Wassereinlagerungen in Beinen, Brustschmerzen, Bewusstlosigkeit — sofort Notarzt rufen. Betreuungskraft kennt diese Zeichen und handelt.' },
             ]}
@@ -163,7 +163,7 @@ export default function HerzinsuffizienzPflege() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Kann man bei Herzinsuffizienz zuhause gepflegt werden?', a: 'Ja — in den meisten Fällen ist Herzinsuffizienz-Pflege zuhause gut möglich. Wichtig sind tägliche Gewichtskontrolle, Flüssigkeitsbilanz, pünktliche Medikamentengabe und Belastungsanpassung. Eine 24h-Betreuungskraft überwacht diese Punkte zuverlässig.' },
+                { q: 'Kann man bei Herzinsuffizienz zuhause gepflegt werden?', a: 'Ja, in den meisten Fällen ist Herzinsuffizienz-Pflege zuhause gut möglich. Wichtig sind tägliche Gewichtskontrolle, Flüssigkeitsbilanz, pünktliche Medikamenteneinnahme und Belastungsanpassung. Eine Betreuungskraft lebt mit im Haushalt, erinnert an Medikamente und achtet im Alltag auf Gewicht, Trinkmenge und Belastung.' },
                 { q: 'Welchen Pflegegrad bekommt man bei Herzinsuffizienz?', a: 'Je nach NYHA-Stadium und Alltagseinschränkungen: NYHA I–II meist PG 1–2, NYHA III meist PG 2–3, NYHA IV meist PG 3–5. Der Pflegegrad hängt vom tatsächlichen Hilfebedarf ab, nicht von der Diagnose allein.' },
                 { q: 'Was muss bei der Pflege von Herzinsuffizienz täglich beachtet werden?', a: 'Tägliche Gewichtskontrolle (Zunahme von 2+ kg = Arzt informieren), Flüssigkeitsbilanz nach ärztlicher Anweisung, pünktliche Medikamentengabe, Belastungsanpassung, Notfallzeichen (Atemnot, Ödeme, Brustschmerzen) erkennen.' },
                 { q: 'Ab wann braucht man bei Herzinsuffizienz eine 24h-Betreuungskraft?', a: 'Ab NYHA III mit deutlichen Alltagseinschränkungen, bei wiederholten Krankenhausaufenthalten durch Dekompensation, wenn Überwachungspflichten nicht durch Angehörige gewährleistet werden können.' },

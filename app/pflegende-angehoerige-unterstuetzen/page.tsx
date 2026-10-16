@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegende-angehoerige-unterstuetzen', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('pflegende-angehoerige-unterstuetzen', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'situation', title: 'Die Situation pflegender Angehöriger' },
@@ -114,7 +114,7 @@ export default function PflegendeAngehoerigeUnterstuetzen() {
             <Punkte
               punkte={[
                 { title: 'Tägliche Mindestauszeit einplanen', desc: 'Mindestens 30 Minuten täglich die nur Ihnen gehören. Kein Kompromiss. Diese Zeit ist keine Belohnung — sie ist Voraussetzung dafür dass die Pflege langfristig funktioniert.' },
-                { title: 'Schlaf schützen', desc: 'Nächtliche Unterbrechungen systematisch verringern — Hausnotruf, Schichtsystem mit Geschwistern, oder 24h-Betreuungskraft die die Nächte übernimmt.' },
+                { title: 'Schlaf schützen', desc: 'Nächtliche Unterbrechungen systematisch verringern: Hausnotruf, Schichtsystem mit Geschwistern oder eine Betreuungskraft, die bei Bedarf auch nachts hilft.' },
                 { title: 'Körperliche Gesundheit nicht vernachlässigen', desc: 'Eigene Arzttermine nicht absagen. Rücken schonen (Hebetechniken, Hilfsmittel). Körper ist das wichtigste Werkzeug beim Pflegen.' },
                 { title: 'Soziale Kontakte aktiv aufrechterhalten', desc: 'Freunde, Hobbys, eigene Termine halten. Isolation ist der Beschleuniger von Burnout.' },
                 { title: 'Professionelle Unterstützung suchen', desc: 'Psychologische Beratung, Selbsthilfegruppen für pflegende Angehörige — kein Zeichen von Schwäche, sondern von Weitsicht.' },

@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-legal-beschaeftigen', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('pflegekraft-legal-beschaeftigen', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'modelle', title: 'Die 3 Beschäftigungsmodelle' },
@@ -62,7 +62,7 @@ const schemaMarkup = [
       { '@type': 'Question', name: 'Wie kann ich eine Pflegekraft legal beschäftigen?', acceptedAnswer: { '@type': 'Answer', text: 'Es gibt drei legale Wege: Das Entsendemodell (empfohlen) über eine Agentur — die Kraft ist im EU-Heimatland angestellt und kommt mit A1-Bescheinigung; die Direktanstellung — die Familie ist Arbeitgeberin; oder als angemeldete Selbstständige. Scheinselbstständigkeit ist illegal und führt zu Nachzahlungen.' } },
       { '@type': 'Question', name: 'Was ist das Entsendemodell?', acceptedAnswer: { '@type': 'Answer', text: 'Beim Entsendemodell ist die Pflegekraft bei einem Unternehmen im EU-Heimatland angestellt und wird für typischerweise 6–8 Wochen nach Deutschland entsandt. Mit A1-Bescheinigung ist sie rechtlich abgesichert. Die Familie schließt den Vertrag mit dem entsendenden Unternehmen oder einer Agentur — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' } },
       { '@type': 'Question', name: 'Was ist Scheinselbstständigkeit?', acceptedAnswer: { '@type': 'Answer', text: 'Scheinselbstständigkeit liegt vor wenn eine Pflegekraft formal als Selbstständige bezeichnet wird, faktisch aber weisungsgebunden im Haushalt lebt und arbeitet. Die Folge: Nachzahlung aller Sozialabgaben der letzten 4 Jahre plus Bußgelder — ein erhebliches finanzielles Risiko für die Familie.' } },
-      { '@type': 'Question', name: 'Was ist die A1-Bescheinigung?', acceptedAnswer: { '@type': 'Answer', text: 'Die A1-Bescheinigung ist ein EU-Dokument das belegt, dass die Pflegekraft in ihrem Heimatland (z.B. Polen) sozialversichert ist. Damit fallen in Deutschland keine Sozialabgaben an. Sie wird vom zuständigen Sozialversicherungsträger im Entsendestaat ausgestellt und sollte während des Einsatzes vorliegen bzw. vorgelegt werden können.' } },
+      { '@type': 'Question', name: 'Was ist die A1-Bescheinigung?', acceptedAnswer: { '@type': 'Answer', text: 'Die A1-Bescheinigung ist ein EU-Dokument, das belegt, dass die Pflegekraft in ihrem Heimatland, zum Beispiel Polen, sozialversichert ist. Damit fallen in Deutschland keine Sozialabgaben an. Ausgestellt wird sie vom Sozialversicherungsträger im Entsendestaat.' } },
     ],
   },
 ]
@@ -92,8 +92,7 @@ export default function PflegekraftLegalBeschaeftigen() {
                 'Entsendemodell: Empfohlen — Kraft ist im EU-Heimatland angestellt, A1-Bescheinigung',
                 'Direktanstellung: Legal, aber hoher Aufwand für die Familie als Arbeitgeberin',
                 'Scheinselbstständigkeit: Illegal — Nachzahlungen Sozialabgaben + Bußgelder',
-                'A1-Bescheinigung: Muss immer vorliegen — belegt legale EU-Entsendung',
-                'Mindestlohn: Auch für entsandte EU-Kräfte gilt der deutsche Mindestlohn',
+                'A1-Bescheinigung: belegt die legale Entsendung aus dem EU-Heimatland',
                 'Primundus: Ausschließlich Entsendemodell — vollständige Rechtssicherheit',
               ]}
         />
@@ -122,7 +121,7 @@ export default function PflegekraftLegalBeschaeftigen() {
             punkte={[
               { title: 'Für die Familie', desc: 'Kein eigenes Arbeitsverhältnis mit der Kraft. Keine deutschen Lohnabrechnungen. Keine Sozialversicherungspflichten in Deutschland. Klare Vertragspartnerschaft mit der Agentur — bei Problemen ist die Agentur der Ansprechpartner.' },
               { title: 'Für die Betreuungskraft', desc: 'Angestellt im Heimatland mit allen Sozialversicherungsleistungen. A1-Bescheinigung sichert legalen Status in Deutschland. Regelmäßiger Wechsel alle 6–8 Wochen ermöglicht Rückkehr zur Familie.' },
-              { title: 'Für die Rechtssicherheit', desc: 'Vollständig konform mit EU-Recht und deutschem Arbeitsrecht. Mindestlohn gilt auch für entsandte Kräfte. Bei Kontrolle durch Zoll oder Finanzkontrolle Schwarzarbeit: A1-Bescheinigung sofort vorzeigen.' },
+              { title: 'Für die Rechtssicherheit', desc: 'Vollständig konform mit EU-Recht und deutschem Arbeitsrecht. Bei Kontrolle durch Zoll oder Finanzkontrolle Schwarzarbeit: A1-Bescheinigung sofort vorzeigen.' },
             ]}
           >
             <MehrDazu
@@ -139,7 +138,7 @@ export default function PflegekraftLegalBeschaeftigen() {
               punkte={[
                 { title: 'Was die Familie übernimmt', desc: 'Lohnabrechnung jeden Monat, Anmeldung bei Krankenkasse und Rentenversicherung, Urlaubsansprüche, Lohnfortzahlung bei Krankheit, Kündigung nach Arbeitsrecht, Suche nach Urlaubsvertretung.' },
                 { title: 'Wann sinnvoll', desc: 'Wenn eine langfristige Beziehung mit einer bestimmten Kraft angestrebt wird und die Familie bereit ist, Arbeitgeberpflichten zu übernehmen. Oder wenn kein Entsendemodell verfügbar ist.' },
-                { title: 'Was zu beachten ist', desc: 'Mindestlohn gilt. Arbeitszeitgesetz gilt — max. 8 Stunden täglich reguläre Arbeitszeit, Ruhezeiten müssen eingehalten werden. Wohn- und Verpflegungsleistungen können angerechnet werden.' },
+                { title: 'Was zu beachten ist', desc: 'Bei Direktanstellung trägt die Familie alle Pflichten einer Arbeitgeberin, auch für Arbeits- und Ruhezeiten.' },
               ]}
             />
           </Abschnitt>
@@ -175,7 +174,7 @@ export default function PflegekraftLegalBeschaeftigen() {
               punkte={[
                 { title: 'Wer stellt sie aus?', desc: 'Der Arbeitgeber im Heimatland — also das polnische, bulgarische oder rumänische Pflegeunternehmen — beantragt sie bei der zuständigen Sozialversicherungsbehörde.' },
                 { title: 'Was sie belegt', desc: 'Sozialversicherungspflicht im Heimatland. Dass in Deutschland keine doppelten Sozialabgaben anfallen. Dass die Entsendung zeitlich begrenzt ist (max. 24 Monate).' },
-                { title: 'Was bei Kontrolle passiert', desc: 'Bei Kontrolle durch die Finanzkontrolle Schwarzarbeit (FKS) muss die A1-Bescheinigung sofort vorgezeigt werden können. Fehlt sie, können Bußgelder verhängt werden — auch gegen die Familie als Auftraggeber.' },
+                { title: 'Was bei Kontrolle passiert', desc: 'Bei einer Kontrolle durch die Finanzkontrolle Schwarzarbeit (FKS) belegt die A1-Bescheinigung, dass die Betreuungskraft im Heimatland sozialversichert ist.' },
               ]}
             />
             <MehrDazu
@@ -190,8 +189,7 @@ export default function PflegekraftLegalBeschaeftigen() {
                 { q: 'Wie kann ich eine Pflegekraft legal beschäftigen?', a: 'Drei Wege: Entsendemodell über Agentur (empfohlen, kein eigenes Arbeitsverhältnis), Direktanstellung (legal, aber hoher Aufwand), oder angemeldete Selbstständigkeit (nur wenn echte unternehmerische Freiheit besteht). Scheinselbstständigkeit ist illegal.' },
                 { q: 'Was ist das Entsendemodell?', a: 'Die Pflegekraft ist bei einem EU-Unternehmen angestellt und wird mit A1-Bescheinigung nach Deutschland entsandt. Die Familie hat einen Vertrag mit dem Unternehmen oder einer Agentur — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben.' },
                 { q: 'Was ist Scheinselbstständigkeit?', a: 'Wenn eine Pflegekraft formal als Selbstständige gilt, aber faktisch weisungsgebunden dauerhaft in einem Haushalt arbeitet. Folge: Nachzahlung aller Sozialabgaben der letzten 4 Jahre plus Bußgelder.' },
-                { q: 'Was ist die A1-Bescheinigung?', a: 'EU-Dokument das belegt, dass die Pflegekraft im Heimatland sozialversichert ist. Muss bei der Kraft immer vorliegen. Bei Kontrolle sofort vorzeigen. Fehlt sie, drohen Bußgelder.' },
-                { q: 'Gilt der Mindestlohn auch für Pflegekräfte aus Polen?', a: 'Ja — der deutsche Mindestlohn gilt für alle in Deutschland tätigen Personen, auch für entsandte EU-Kräfte. Beim Entsendemodell stellt das Heimatunternehmen sicher dass Mindestlohn und Arbeitszeitrecht eingehalten werden.' },
+                { q: 'Was ist die A1-Bescheinigung?', a: 'Die A1-Bescheinigung ist ein EU-Dokument, das belegt, dass die Pflegekraft in ihrem Heimatland, zum Beispiel Polen, sozialversichert ist. Damit fallen in Deutschland keine Sozialabgaben an. Ausgestellt wird sie vom Sozialversicherungsträger im Entsendestaat.' },
               ]}
             />
           </Abschnitt>

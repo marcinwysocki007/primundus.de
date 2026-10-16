@@ -6,7 +6,7 @@ import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('wann-brauche-ich-24h-pflege', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('wann-brauche-ich-24h-pflege', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'zeichen', title: 'Klare Zeichen für 24h-Pflege' },
@@ -55,7 +55,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wann ist 24h-Pflege notwendig?', acceptedAnswer: { '@type': 'Answer', text: 'Spätestens wenn einer dieser Punkte zutrifft: Der Pflegebedürftige kann nicht mehr allein gelassen werden. Stürze passieren häufig. Nächte sind unruhig und gefährlich. Angehörige sind erschöpft. Eine sichere Entlassung aus dem Krankenhaus ist nur mit 24h-Präsenz möglich.' } },
+      { '@type': 'Question', name: 'Wann ist 24h-Pflege notwendig?', acceptedAnswer: { '@type': 'Answer', text: 'Spätestens wenn der Pflegebedürftige nicht mehr allein gelassen werden kann, Stürze ein Thema sind, Demenz-Sicherheitsrisiken entstehen oder Angehörige erschöpft sind.' } },
       { '@type': 'Question', name: 'Ab welchem Pflegegrad braucht man 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: '24h-Pflege kann ab Pflegegrad 2 sinnvoll sein. Pflegegrad 2 bei Alleinleben oder Demenz, Pflegegrad 3 wenn der Pflegebedarf die Kapazität von Angehörigen übersteigt, Pflegegrad 4–5 fast immer wenn zuhause bleiben gewünscht ist.' } },
     ],
   },
@@ -88,7 +88,7 @@ export default function WannBraucheIch24hPflege() {
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
 
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">
-            Viele Familien warten zu lang mit der Entscheidung für 24h-Pflege — aus Kostengründen, aus Gewohnheit, oder weil sie die Zeichen nicht deuten. Dabei gibt es klare Situationen in denen 24h-Präsenz nicht mehr optional ist. Wer zu lange wartet, riskiert einen Sturz, einen Krankenhausaufenthalt oder den Zusammenbruch pflegender Angehöriger.
+            Viele Familien warten zu lang mit der Entscheidung für 24h-Pflege — aus Kostengründen, aus Gewohnheit, oder weil sie die Zeichen nicht deuten. Dabei gibt es klare Situationen, in denen 24-Stunden-Pflege nicht mehr optional ist. Wer zu lange wartet, riskiert einen Sturz, einen Krankenhausaufenthalt oder den Zusammenbruch pflegender Angehöriger.
           </p>
 
           <div className="bg-white border border-pm-line rounded-2xl p-6 mb-10 shadow-sm">
@@ -115,15 +115,15 @@ export default function WannBraucheIch24hPflege() {
           </h2>
           <div className="space-y-4 mb-10">
             {[
-              { n: '1', title: 'Nicht mehr allein lassen können', desc: 'Wenn die Frage nicht mehr lautet "Wie oft komme ich vorbei?" sondern "Wer ist jetzt gerade bei ihm/ihr?" — dann ist 24h-Präsenz notwendig.' },
-              { n: '2', title: 'Stürze oder Sturzangst', desc: 'Ein erster Sturz ist oft das Signal. Danach ist die Sturzangst oft so groß dass Bewegung vermieden wird — was den Zustand verschlechtert. Rund um die Uhr präsente Betreuung schützt und mobilisiert.' },
+              { n: '1', title: 'Nicht mehr allein lassen können', desc: 'Wenn die Frage nicht mehr lautet "Wie oft komme ich vorbei?" sondern "Wer ist jetzt gerade bei ihm/ihr?" — dann ist 24-Stunden-Pflege notwendig.' },
+              { n: '2', title: 'Stürze oder Sturzangst', desc: 'Ein erster Sturz ist oft das Signal. Danach ist die Sturzangst oft so groß dass Bewegung vermieden wird — was den Zustand verschlechtert. Eine Betreuungskraft im Haus gibt Sicherheit und hilft bei der Bewegung.' },
               { n: '3', title: 'Demenz mit Sicherheitsrisiken', desc: 'Herd vergessen, Wohnung verlassen, Weglaufen, Nachtunruhe — sobald die Demenz Sicherheitsrisiken schafft, reicht stundenweise Betreuung nicht mehr.' },
               { n: '4', title: 'Angehörige erschöpft', desc: 'Wenn der pflegende Angehörige Anzeichen von Burnout zeigt — Reizbarkeit, Schlafmangel, eigene Gesundheitsvernachlässigung — ist das ein klares Signal. Pflege darf nicht auf Kosten der eigenen Gesundheit gehen.' },
               { n: '5', title: 'Entlassung aus Krankenhaus oder Reha', desc: 'Das Krankenhaus kann den Patienten entlassen wenn die häusliche Versorgung sichergestellt ist. Eine 24h-Betreuungskraft ermöglicht Entlassung ohne Pflegeheimaufenthalt.' },
               { n: '6', title: 'Nächte unruhig oder gefährlich', desc: 'Wenn nächtliche Hilfe nötig ist — Toilette, Orientierungslosigkeit, Medikamente, Sturz — dann ist tagsüber ambulante Pflege nicht ausreichend.' },
               { n: '7', title: 'Medikamentenverwaltung nicht mehr selbstständig', desc: 'Wenn Medikamente nicht mehr zuverlässig selbst eingenommen werden — entweder vergessen oder überdosiert — braucht es jemanden der das täglich sicherstellt.' },
               { n: '8', title: 'Soziale Isolation', desc: 'Wenn der Pflegebedürftige allein lebt und kaum noch Kontakte hat. Eine Betreuungskraft ist nicht nur praktische Hilfe — sie gibt Gesellschaft, Gespräche, Tagesstruktur.' },
-              { n: '9', title: 'Ambulanter Pflegedienst nicht ausreichend', desc: 'Wenn der Dienst zweimal täglich kommt, aber dazwischen viel unkontrolliert passiert — Stürze, Verweigerung von Essen, Unsauberkeit. 24h-Präsenz schließt diese Lücken.' },
+              { n: '9', title: 'Ambulanter Pflegedienst nicht ausreichend', desc: 'Wenn der Dienst zweimal täglich kommt, aber dazwischen viel unkontrolliert passiert — Stürze, Verweigerung von Essen, Unsauberkeit. Eine Betreuungskraft im Haushalt schließt diese Lücken.' },
               { n: '10', title: 'Pflegebedürftiger wünscht es', desc: 'Wenn der Betroffene selbst sagt: "Ich möchte nicht allein sein" oder "Ich traue mich das nicht mehr alleine" — das ist der deutlichste aller Hinweise.' },
             ].map((item) => (
               <div key={item.n} className="flex gap-4 bg-white rounded-xl p-5 border border-pm-line">
@@ -143,7 +143,7 @@ export default function WannBraucheIch24hPflege() {
             {[
               { title: 'Nach Schlaganfall oder OP', desc: 'Direkte Entlassung aus Krankenhaus oder Reha nach Hause — mit 24h-Betreuungskraft die die Lücke schließt die kein ambulanter Dienst füllen kann.', link: '/schlaganfall-pflege-zuhause' },
               { title: 'Mittlere bis schwere Demenz', desc: 'Wenn eigenständige Aktivitäten nicht mehr sicher möglich sind und Weglaufen, Nachtunruhe oder Selbstgefährdung auftreten.', link: '/demenz-pflege-zuhause' },
-              { title: 'Fortgeschrittenes Parkinson-Stadium', desc: 'On-Off-Phasen, Sturzgefahr, Medikamenten-Timing — ein fester Ansprechpartner rund um die Uhr ist entscheidend.', link: '/parkinson-pflege-zuhause' },
+              { title: 'Fortgeschrittenes Parkinson-Stadium', desc: 'On-Off-Phasen, Sturzgefahr und Medikamentenplan machen einen festen Ansprechpartner im Haus wichtig.', link: '/parkinson-pflege-zuhause' },
               { title: 'Angehörige an der Belastungsgrenze', desc: 'Wenn Kinder oder Partner erschöpft sind und die Pflege nicht mehr leisten können — ohne dass das Pflegeheim die einzige Alternative sein muss.', link: '/burnout-pflegende-angehoerige' },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-5 border border-pm-line">

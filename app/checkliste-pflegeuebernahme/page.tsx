@@ -37,7 +37,7 @@ const schemaMarkup = JSON.stringify([
         name: 'Was sind die ersten Schritte bei der Pflegeübernahme?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Die wichtigsten Sofortmaßnahmen sind: Hausarzt einbinden, Pflegegrad-Antrag bei der Pflegekasse stellen (der Antragsmonat zählt rückwirkend), Vorsorgevollmacht und Patientenverfügung prüfen, Medikamentenliste erstellen sowie wichtige Kontakte zentral hinterlegen. Ein Hausnotruf wird ab PG 1 mit 25,50 €/Monat bezuschusst.',
+          text: 'Hausarzt einbinden, Pflegegrad-Antrag bei der Pflegekasse stellen (Antragsmonat zählt!), Vorsorgevollmacht/Patientenverfügung prüfen, Medikamentenliste erstellen, Kontakte zentral hinterlegen. Hausnotruf wird ab PG 1 mit bis zu 27 €/Monat bezuschusst.',
         },
       },
       {
@@ -87,7 +87,7 @@ const phasen = [
 const faqs = [
   {
     q: 'Was sind die ersten Schritte bei der Pflegeübernahme?',
-    a: 'Hausarzt einbinden, Pflegegrad-Antrag bei der Pflegekasse stellen (Antragsmonat zählt!), Vorsorgevollmacht/Patientenverfügung prüfen, Medikamentenliste erstellen, Kontakte zentral hinterlegen. Hausnotruf wird ab PG 1 mit 25,50 €/Monat bezuschusst.',
+    a: 'Hausarzt einbinden, Pflegegrad-Antrag bei der Pflegekasse stellen (Antragsmonat zählt!), Vorsorgevollmacht/Patientenverfügung prüfen, Medikamentenliste erstellen, Kontakte zentral hinterlegen. Hausnotruf wird ab PG 1 mit bis zu 27 €/Monat bezuschusst.',
   },
   {
     q: 'Wie lange bis die Pflege stabil organisiert ist?',
