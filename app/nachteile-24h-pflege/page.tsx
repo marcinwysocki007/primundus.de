@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('nachteile-24h-pflege', '16. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('nachteile-24h-pflege', '22. Oktober 2026')
 
 const SECTIONS = [{ id: 'nachteile', title: 'Die wichtigsten Nachteile' }, { id: 'wann-nicht', title: 'Wann 24-Stunden-Pflege nicht passt' }, { id: 'faq', title: 'Häufige Fragen' }]
 
@@ -53,7 +53,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was sind die Nachteile der 24h-Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Eingeschränkte Privatsphäre, mögliche Sprachbarrieren, regelmäßige Kraftwechsel, kein Ersatz für medizinische Behandlungspflege, Platzbedarf für eigenes Zimmer der Kraft.' } },
-      { '@type': 'Question', name: 'Wie oft wechselt die Betreuungskraft?', acceptedAnswer: { '@type': 'Answer', text: 'Alle 6–8 Wochen — Kräfte aus EU-Ländern haben Anspruch auf Heimfahrt. Primundus organisiert die Übergaben.' } },
+      { '@type': 'Question', name: 'Wie oft wechselt die Betreuungskraft?', acceptedAnswer: { '@type': 'Answer', text: 'In der Regel alle 6 bis 8 Wochen. An- und Abreise gehören zum Einsatz. Primundus organisiert sie und die Übergabe an die nächste Kraft.' } },
       { '@type': 'Question', name: 'Was wenn die Kraft nicht gut Deutsch spricht?', acceptedAnswer: { '@type': 'Answer', text: 'Primundus prüft Deutschkenntnisse aktiv im Gespräch. Auf Wunsch Telefonat mit der Kraft vor Beginn möglich.' } }
     ],
   },
@@ -108,7 +108,7 @@ export default function Page() {
             <Fragen
               fragen={[
                 { q: "Was sind die Nachteile der 24h-Pflege?", a: "Eingeschränkte Privatsphäre, mögliche Sprachbarrieren, regelmäßige Kraftwechsel, kein Ersatz für medizinische Behandlungspflege, Platzbedarf für eigenes Zimmer der Kraft." },
-                { q: "Wie oft wechselt die Betreuungskraft?", a: "Alle 6–8 Wochen — Kräfte aus EU-Ländern haben Anspruch auf Heimfahrt. Primundus organisiert die Übergaben." },
+                { q: "Wie oft wechselt die Betreuungskraft?", a: "In der Regel alle 6 bis 8 Wochen. An- und Abreise gehören zum Einsatz. Primundus organisiert sie und die Übergabe an die nächste Kraft." },
                 { q: "Was wenn die Kraft nicht gut Deutsch spricht?", a: "Primundus prüft Deutschkenntnisse aktiv im Gespräch. Auf Wunsch Telefonat mit der Kraft vor Beginn möglich." },
               ]}
             />

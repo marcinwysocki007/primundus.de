@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('eigenanteil-24h-pflege-senken', '16. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('eigenanteil-24h-pflege-senken', '22. Oktober 2026')
 
 const SECTIONS = [
   { id: 'uebersicht', title: 'Alle Stellschrauben' },
@@ -97,7 +97,8 @@ export default function EigenanteilSenken() {
                 'Pflegegeld: – 599 €/Monat',
                 'Entlastungsbudget (anteilig): – ca. 295 €/Monat',
                 'Steuerabzug: – ca. 333 €/Monat (max. 4.000 €/Jahr)',
-                'Gesamt mögliche Einsparung: über 1.200 €/Monat',
+                'Pflegehilfsmittel: – 42 €/Monat',
+                'Gesamt mögliche Einsparung: über 1.250 €/Monat',
               ]} />
             </Kasten>
           </Vorspann>

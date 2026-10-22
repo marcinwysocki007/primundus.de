@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, DunklerAbschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text,
+  Abschnitt, DunklerAbschnitt, Fragen, Gruppen, Punkte, RatgeberKopf, RatgeberRumpf, Schritte, Text, Zwischentitel,
 } from '@/components/vorlage/Ratgeber'
 import { Weiterlesen } from '@/components/Weiterlesen'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -12,11 +12,13 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
 // richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
 // „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
-const AKTUALISIERT = aktualisiertAm('pflegekraft-finden', '16. Oktober 2026')
+// 22.10.2026 (Martin): „Pflegeagentur“ statt „Anbieter“ (Primundus ist Pflegeagentur, kein Vermittler); Hauptaussage: passende
+// Pflegekräfte sofort sehen und selbst auswählen; ohne Agentur wird die Familie Arbeitgeber und sucht bei jedem Wechsel neu.
+const AKTUALISIERT = aktualisiertAm('pflegekraft-finden', '22. Oktober 2026')
 
 const SECTIONS = [
   { id: 'wege', title: 'Wege zur Pflegekraft' },
-  { id: 'agentur', title: 'Über einen Anbieter: Vorteile' },
+  { id: 'agentur', title: 'Über eine Pflegeagentur: Vorteile' },
   { id: 'worauf-achten', title: 'Worauf bei der Auswahl achten?' },
   { id: 'ablauf', title: 'Ablauf bei Primundus' },
   { id: 'faq', title: 'Häufige Fragen' },
@@ -61,9 +63,10 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie findet man eine gute Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Ein guter Weg ist ein Anbieter wie Primundus. Er prüft Qualifikation, stellt Ersatz bei Ausfall und regelt das Rechtliche. Direktsuche ist möglich, erfordert aber mehr Eigenaufwand.' } },
+      { '@type': 'Question', name: 'Wie findet man eine gute Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Am einfachsten über eine Pflegeagentur wie Primundus. Sie sehen passende Pflegekräfte sofort mit Profil und wählen selbst aus. Primundus prüft die Kräfte, stellt Ersatz bei Ausfall und regelt das Rechtliche. Ohne Agentur werden Sie Arbeitgeber und suchen bei jedem Wechsel neu.' } },
+      { '@type': 'Question', name: 'Was ist, wenn ich ohne Agentur suche?', acceptedAnswer: { '@type': 'Answer', text: 'Dann werden Sie Arbeitgeber und regeln Vertrag, Anmeldung und Lohn selbst. Fällt die Kraft aus oder muss sie wechseln, stehen Sie ohne Pflegekraft da, bis Sie eine neue gefunden haben. Von Schwarzarbeit raten wir ab.' } },
       { '@type': 'Question', name: 'Worauf sollte man bei der Auswahl achten?', acceptedAnswer: { '@type': 'Answer', text: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung (Anzahl und Art früherer Einsätze), Referenzen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen (Demenz, Parkinson) auf Spezialerfahrung achten.' } },
-      { '@type': 'Question', name: 'Wie schnell findet Primundus eine Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Anreise ist schon 3 Tage nach dem ersten Beratungsgespräch möglich. Wann genau, richtet sich nach Ihrem Wunschtermin.' } },
+      { '@type': 'Question', name: 'Wie schnell findet Primundus eine Pflegekraft?', acceptedAnswer: { '@type': 'Answer', text: 'Passende Pflegekräfte sehen Sie sofort nach der Kostenberechnung im Kundenportal. Eine Anreise ist schon in 3 Tagen möglich. Wann genau, richtet sich nach Ihrem Wunschtermin.' } },
     ],
   },
 ]
@@ -86,39 +89,48 @@ export default function PflegekraftFinden() {
           ]}
           augenbraue="Ratgeber Pflegekräfte"
           titel="Pflegekraft finden: welche Wege es gibt und worauf Sie bei der Auswahl achten"
-          einleitung="Eine zuverlässige Pflegekraft zu finden ist die wichtigste Entscheidung bei der Organisation der 24h-Pflege. Ein guter Weg führt über einen seriösen Anbieter. Er prüft Qualifikation und Erfahrung, stellt Ersatz bei Ausfall und regelt das Rechtliche. Bei Primundus kann die passende Kraft schon in 3 Tagen vor Ort sein."
+          einleitung="Wer Ihre Pflegekraft wird, ist die wichtigste Entscheidung bei der 24-Stunden-Pflege. Bei Primundus sehen Sie nach der Kostenberechnung sofort passende Pflegekräfte mit Profil und wählen selbst aus. Unterschreiben müssen Sie erst, wenn Sie sich für eine Kraft entschieden haben. Die Anreise ist schon in 3 Tagen möglich."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
           blick={[
-                'Anbieter wie Primundus: Prüfung, Ersatz, Rechtssicherheit',
-                'Direktsuche: möglich, aber mehr Aufwand und rechtliches Risiko',
+                'Pflegeagentur wie Primundus: passende Kräfte sofort sehen und selbst auswählen',
+                'Ohne Agentur: Sie werden Arbeitgeber und suchen bei jedem Wechsel neu',
                 'Deutschkenntnisse: Grundkommunikation ist Mindestanforderung',
                 'Pflegeerfahrung: Anzahl und Art früherer Einsätze prüfen',
-                'Persönlichkeit: Telefonat vorab möglich — Passung zur Pflegesituation zählt',
-                'Start: Anreise schon 3 Tage nach dem Erstgespräch möglich',
+                'Persönlichkeit: Telefonat vorab möglich, entscheidend ist die Passung zur Pflegesituation',
+                'Start: Anreise schon in 3 Tagen möglich',
               ]}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="wege" titel="Wege zur Pflegekraft — was gibt es?">
+          <Abschnitt id="wege" titel="Wege zur Pflegekraft: Welche Möglichkeiten gibt es?">
             <Punkte
               punkte={[
-                { title: 'Über einen Anbieter (empfohlen)', desc: 'Der Anbieter übernimmt Auswahl, Prüfung und Einsatzplanung. Bei Primundus: Rechtssicheres Entsendemodell mit A1-Bescheinigung, Ersatz bei Ausfall, persönliche Beratung.' },
-                { title: 'Direktsuche über Portale', desc: 'Plattformen wie Pflegemarkt.de, care.de oder Kleinanzeigen. Mehr Eigenaufwand bei Prüfung und Rechtlichem — aber potenziell günstigere Preise.' },
-                { title: 'Weiterempfehlung im Bekanntenkreis', desc: 'Oft der persönlichste Weg — aber Rechtliches (Arbeitsvertrag, Sozialversicherung) muss trotzdem sorgfältig geregelt werden.' },
+                { title: 'Über eine Pflegeagentur (empfohlen)', desc: 'Die Agentur prüft die Kräfte, plant den Einsatz und stellt Ersatz. Bei Primundus sehen Sie passende Pflegekräfte sofort im Kundenportal und wählen selbst aus. Die Kräfte sind bei Primundus angestellt und kommen im Entsendemodell mit A1-Bescheinigung.' },
+                { title: 'Direktsuche über Portale', desc: 'Plattformen wie Pflegemarkt.de, care.de oder Kleinanzeigen. Sie stellen die Kraft selbst an und kümmern sich um Vertrag, Anmeldung und Lohn. Der Preis kann niedriger sein, Aufwand und Risiko liegen bei Ihnen.' },
+                { title: 'Weiterempfehlung im Bekanntenkreis', desc: 'Oft der persönlichste Weg. Arbeitsvertrag und Sozialversicherung müssen Sie trotzdem selbst regeln.' },
+              ]}
+            />
+            <Zwischentitel>Ohne Agentur: was Sie bedenken sollten</Zwischentitel>
+            <Punkte
+              punkte={[
+                { title: 'Sie werden Arbeitgeber', desc: 'Arbeitsvertrag, Anmeldung zur Sozialversicherung, Lohnabrechnung, Urlaub und Lohnfortzahlung bei Krankheit liegen bei Ihnen. Das ist rechtlich und organisatorisch aufwendig.' },
+                { title: 'Schwarzarbeit', desc: 'Hinweis: Wird die Pflegekraft ohne Anmeldung beschäftigt, ist das Schwarzarbeit. Es besteht die Gefahr von Bußgeldern und Nachzahlungen der Sozialabgaben. Davon raten wir ab.' },
+                { title: 'Wechsel', desc: 'Muss die Kraft wechseln, regulär oder weil es nicht passt, suchen Sie von vorn. Bis eine neue Kraft da ist, stehen Sie ohne Pflegekraft da. Bei Primundus ist der reguläre Wechsel geplant, und passt eine Kraft nicht, kommt Ersatz in der Regel innerhalb von 3 Tagen.' },
               ]}
             />
           </Abschnitt>
 
           <DunklerAbschnitt
             id="agentur"
-            titel="Über einen Anbieter: was die Vorteile sind"
-            einleitung="Ein Anbieter wie Primundus übernimmt viele Aufgaben, die bei der Direktsuche bei der Familie liegen, und bietet zusätzliche Sicherheitsnetze."
+            titel="Über eine Pflegeagentur: was die Vorteile sind"
+            einleitung="Eine Pflegeagentur wie Primundus übernimmt viele Aufgaben, die bei der Direktsuche bei Ihnen liegen."
             punkte={[
-              { title: 'Geprüfte Qualifikation', desc: 'Pflegeerfahrung, Deutschkenntnisse, Referenzen — alles wird vor dem Einsatz geprüft. Kein Risiko mit ungeprüften Personen.' },
-              { title: 'Rechtliche Absicherung', desc: 'Entsendemodell mit A1-Bescheinigung — vollständig rechtssicher. Die Familie hat kein eigenes Arbeitsverhältnis.' },
+              { title: 'Pflegekräfte sofort sehen und auswählen', desc: 'Nach der Kostenberechnung sehen Sie im Kundenportal passende Pflegekräfte mit Profil. Sie wählen selbst aus, ein Telefonat vorab ist möglich.' },
+              { title: 'Geprüfte Qualifikation', desc: 'Pflegeerfahrung, Deutschkenntnisse und Referenzen werden vor dem Einsatz geprüft.' },
+              { title: 'Rechtliche Absicherung', desc: 'Die Kräfte sind bei Primundus angestellt und im Entsendemodell mit A1-Bescheinigung im Einsatz. Sie werden nicht Arbeitgeber.' },
               { title: 'Ersatz bei Ausfall', desc: 'Wird die Betreuungskraft krank, stellt Primundus schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnet Primundus nicht.' },
-              { title: 'Nahtlose Rotation', desc: 'Wechsel der Kraft alle 6–8 Wochen ist organisiert und wird von Primundus koordiniert — Familie muss sich nicht selbst darum kümmern.' },
+              { title: 'Wechsel organisiert', desc: 'Ob regulär alle 6 bis 8 Wochen oder weil es nicht passt: Primundus plant den Wechsel und stellt die nächste Kraft. Sie müssen nicht selbst suchen.' },
               { title: 'Persönliche Beratung', desc: 'Marta Kapcio und das Primundus-Team begleiten die Familie — von der ersten Anfrage bis zur laufenden Betreuung.' },
             ]}
           />
@@ -138,14 +150,15 @@ export default function PflegekraftFinden() {
             />
           </Abschnitt>
 
-          <Abschnitt id="ablauf" titel="Ablauf bei Primundus — von Anfrage bis Start">
+          <Abschnitt id="ablauf" titel="Ablauf bei Primundus: vom Preis bis zur Anreise">
             <Schritte
               schritte={[
-                { title: 'Kostenloses Beratungsgespräch', desc: 'Pflegesituation, Diagnosen, besondere Anforderungen erfassen. Kein Auftrag, kein Risiko.' },
-                { title: 'Passende Kraft vorschlagen', desc: 'Primundus schlägt eine geprüfte Kraft vor — Profil mit Erfahrung, Qualifikation und Foto. Telefonat vorab möglich.' },
-                { title: 'Angebot & Vertrag', desc: 'Transparentes Angebot mit allen Kosten. Vertrag mit Primundus — kein direktes Arbeitsverhältnis mit der Kraft.' },
+                { title: 'Kosten berechnen', desc: 'Im Kostenrechner beschreiben Sie die Pflegesituation und sehen Ihren Preis sofort.' },
+                { title: 'Pflegekräfte ansehen', desc: 'Im Kundenportal sehen Sie passende, verfügbare Pflegekräfte mit Profil und Foto.' },
+                { title: 'Auswählen und kennenlernen', desc: 'Sie wählen selbst aus. Ein Telefonat vorab ist möglich.' },
+                { title: 'Vertrag', desc: 'Unterschrieben wird erst, wenn Sie sich für eine Kraft entschieden haben. Ihr Vertrag ist mit Primundus, nicht mit der Kraft.' },
                 { title: 'Anreise in 3 Tagen möglich', desc: 'Die Betreuungskraft reist an, das Primundus-Team begleitet die Übergabe.' },
-                { title: 'Laufende Betreuung', desc: 'Primundus bleibt Ansprechpartner — Qualitätssicherung, Kraftwechsel, Ersatz bei Ausfall.' },
+                { title: 'Laufende Betreuung', desc: 'Marta Kapcio und das Team bleiben Ihre Ansprechpartner, auch beim Wechsel und bei Ausfall.' },
               ]}
             />
           </Abschnitt>
@@ -153,10 +166,11 @@ export default function PflegekraftFinden() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Wie findet man eine gute Pflegekraft?', a: 'Ein guter Weg ist ein Anbieter wie Primundus. Er prüft Qualifikation, stellt Ersatz bei Ausfall und regelt das Rechtliche. Direktsuche ist möglich, erfordert aber mehr Eigenaufwand.' },
+                { q: 'Wie findet man eine gute Pflegekraft?', a: 'Am einfachsten über eine Pflegeagentur wie Primundus. Sie sehen passende Pflegekräfte sofort mit Profil und wählen selbst aus. Primundus prüft die Kräfte, stellt Ersatz bei Ausfall und regelt das Rechtliche. Ohne Agentur werden Sie Arbeitgeber und suchen bei jedem Wechsel neu.' },
+                { q: 'Was ist, wenn ich ohne Agentur suche?', a: 'Dann werden Sie Arbeitgeber und regeln Vertrag, Anmeldung und Lohn selbst. Fällt die Kraft aus oder muss sie wechseln, stehen Sie ohne Pflegekraft da, bis Sie eine neue gefunden haben. Von Schwarzarbeit raten wir ab.' },
                 { q: 'Worauf sollte man bei der Auswahl achten?', a: 'Deutschkenntnisse (Grundkommunikation Pflicht), Pflegeerfahrung und Referenzen prüfen, Führerschein wenn nötig, Persönlichkeit und Passung zur Pflegesituation. Bei spezifischen Diagnosen auf Spezialerfahrung achten.' },
-                { q: 'Wie schnell findet Primundus eine Pflegekraft?', a: 'Eine Anreise ist schon 3 Tage nach dem ersten Beratungsgespräch möglich. Wann genau, richtet sich nach Ihrem Wunschtermin.' },
-                { q: 'Kann ich vor dem Einsatz mit der Pflegekraft sprechen?', a: 'Ja — Primundus ermöglicht ein Telefonat vorab. So kann die Familie einen ersten Eindruck gewinnen bevor die Kraft anreist.' },
+                { q: 'Wie schnell findet Primundus eine Pflegekraft?', a: 'Passende Pflegekräfte sehen Sie sofort nach der Kostenberechnung im Kundenportal. Eine Anreise ist schon in 3 Tagen möglich. Wann genau, richtet sich nach Ihrem Wunschtermin.' },
+                { q: 'Kann ich vor dem Einsatz mit der Pflegekraft sprechen?', a: 'Ja. Sie wählen die Pflegekraft selbst aus und können vorab mit ihr telefonieren.' },
                 { q: 'Was passiert wenn die Pflegekraft nicht passt?', a: 'Sagen Sie Primundus, was nicht passt. Primundus stellt schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen. Der Vertrag ist außerdem täglich kündbar.' },
               ]}
             />
