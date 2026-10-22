@@ -1,9 +1,47 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+import { aktuelleSeite, istLadefehler, type AktuelleSeite } from '@/lib/seite-nachladen'
+
 // Letzte Fehlergrenze (20.09.2026), greift nur, wenn das Layout selbst ausfällt. Rendert ein eigenes Dokument mit Canonical auf
 // die eigene Adresse, damit Google die Seite nie als Duplikat einer fremden Fehlerseite liest.
-export default function GlobalerFehler({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
+// Seit 22.10.2026: Fehlt nach einem Deploy der Layout-Chunk, zeigt sie die aktuelle Fassung der Seite (ohne Skripte, mit Stilen).
+export default function GlobalerFehler({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   const adresse = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : 'https://primundus.de/'
+  const ladefehler = istLadefehler(error)
+  const [seite, setSeite] = useState<AktuelleSeite | null>(null)
+  const [nachladenFehlgeschlagen, setNachladenFehlgeschlagen] = useState(false)
+
+  useEffect(() => {
+    if (!ladefehler) return
+    let abgebrochen = false
+    aktuelleSeite()
+      .then((s) => {
+        if (abgebrochen) return
+        if (s.body) setSeite(s)
+        else setNachladenFehlgeschlagen(true)
+      })
+      .catch(() => {
+        if (!abgebrochen) setNachladenFehlgeschlagen(true)
+      })
+    return () => {
+      abgebrochen = true
+    }
+  }, [ladefehler])
+
+  if (ladefehler && !nachladenFehlgeschlagen) {
+    return (
+      <html lang="de">
+        <head>
+          {seite?.titel ? <title>{seite.titel}</title> : null}
+          <link rel="canonical" href={seite?.canonical ?? adresse} />
+          {seite?.stile.map((href) => <link key={href} rel="stylesheet" href={href} />)}
+        </head>
+        {seite?.body ? <body dangerouslySetInnerHTML={{ __html: seite.body }} /> : <body />}
+      </html>
+    )
+  }
+
   return (
     <html lang="de">
       <head>

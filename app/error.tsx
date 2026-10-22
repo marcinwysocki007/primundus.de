@@ -1,13 +1,38 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { aktuelleSeite, istLadefehler } from '@/lib/seite-nachladen'
 
 // Fehlerseite innerhalb des Layouts (20.09.2026): Kopfzeile, Fußzeile und der <head> mit Titel und Canonical bleiben stehen,
 // die Seite bietet den Weg zurück. Ohne diese Datei zeigt Next.js eine leere Standardseite ohne Canonical.
+// Seit 22.10.2026: Bei einem Ladefehler (alter Chunk nach Deploy) zeigt sie stattdessen den Inhalt der aktuellen Fassung.
 export default function Fehler({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  const ladefehler = istLadefehler(error)
+  const [inhalt, setInhalt] = useState<string | null>(null)
+  const [nachladenFehlgeschlagen, setNachladenFehlgeschlagen] = useState(false)
+
   useEffect(() => {
     console.error('Seite konnte nicht gerendert werden:', error)
-  }, [error])
+    if (!ladefehler) return
+    let abgebrochen = false
+    aktuelleSeite()
+      .then((seite) => {
+        if (abgebrochen) return
+        if (seite.main) setInhalt(seite.main)
+        else setNachladenFehlgeschlagen(true)
+      })
+      .catch((e) => {
+        console.error('Aktuelle Fassung nicht geladen:', e)
+        if (!abgebrochen) setNachladenFehlgeschlagen(true)
+      })
+    return () => {
+      abgebrochen = true
+    }
+  }, [error, ladefehler])
+
+  if (inhalt) return <div dangerouslySetInnerHTML={{ __html: inhalt }} />
+  // Während des Nachladens keine Fehlermeldung, damit weder Besucher noch Google sie sehen.
+  if (ladefehler && !nachladenFehlgeschlagen) return <div className="min-h-[60vh]" aria-busy="true" />
 
   return (
     <div className="bg-pm-paper">
