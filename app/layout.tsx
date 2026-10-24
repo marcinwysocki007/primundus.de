@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import { SiteHeader } from '@/components/layout/Header'
+import { WeihnachtsBand } from '@/components/layout/WeihnachtsBand'
 import { SiteFooter } from '@/components/layout/Footer'
 import { CookieConsent } from '@/components/CookieConsent'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
@@ -106,6 +107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <Sicher name="Kopfzeile"><SiteHeader /></Sicher>
+        <Sicher name="Weihnachtsband"><WeihnachtsBand /></Sicher>
         <main>{children}</main>
         <Sicher name="Fußzeile"><SiteFooter /></Sicher>
         <Sicher name="Cookie-Hinweis"><CookieConsent /></Sicher>

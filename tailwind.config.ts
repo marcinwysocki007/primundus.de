@@ -49,7 +49,7 @@ const config: Config = {
           paper: '#F8F7F5',
           shell: '#F2EDE6',
           line: { DEFAULT: '#E5E3DF', soft: '#F0EDE8' },
-          green: { DEFAULT: '#3D7A5C', deep: '#2A5C3F' },
+          green: { DEFAULT: '#3D7A5C', deep: '#2A5C3F', nacht: '#123222' },
           mint: '#E8F5EE',
           coral: { DEFAULT: '#E76F63', deep: '#D45F53', tint: '#FDF0EE', ink: '#8B3E2F' },
           cocoa: '#3D2314',
