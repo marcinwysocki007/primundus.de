@@ -153,6 +153,15 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'geolocation=(), camera=(), microphone=()' },
         ],
       },
+      // 23.10.2026: Archivliste der Programmdateien (scripts/chunk-archiv.mjs). Der nächste Build liest sie von der Live-Seite;
+      // sie darf nirgends zwischengespeichert werden und gehört nicht in den Index.
+      {
+        source: '/_archiv/:pfad*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store, max-age=0' },
+          { key: 'X-Robots-Tag', value: 'noindex' },
+        ],
+      },
     ]
   },
 };

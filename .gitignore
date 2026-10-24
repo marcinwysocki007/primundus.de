@@ -3,6 +3,8 @@
 
 # next.js
 /.next/
+# Archivliste, entsteht in jedem Build (scripts/chunk-archiv.mjs)
+/public/_archiv/
 /out/
 /build
 
