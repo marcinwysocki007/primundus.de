@@ -108,3 +108,9 @@ html {
   html.pgr-druck #pgr-druck, html.pgr-druck #pgr-druck * { visibility: visible; }
   html.pgr-druck #pgr-druck { position: absolute; left: 0; top: 0; width: 100%; padding: 16px; }
 }
+
+/* Weihnachtsband (Martin 24.10.2026, bis 26.12.): Liegt es auf einer Seite am Handy auf dem Foto (lage="foto"), entfällt dort
+   das Band unter der Kopfzeile. Ohne :has-Unterstützung (iOS < 15.4) stehen beide da, sonst nichts. */
+@media (max-width: 1023.98px) {
+  body:has([data-weihnachtsband="foto"]) [data-weihnachtsband="kopf"] { display: none; }
+}

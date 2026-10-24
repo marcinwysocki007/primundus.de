@@ -5,6 +5,7 @@
 // auch nachts" statt „rund um die Uhr", Auszeichnung ohne „Vermittler", Sterne aus echten Bewertungen.
 import Image from 'next/image'
 import { RechnerBlock } from '@/components/vertrauen/Vertrauen'
+import { WeihnachtsBand } from '@/components/layout/WeihnachtsBand'
 import { ABLAUF_SCHRITTE } from '@/components/vertrauen/Ablauf'
 import { VORAUSSETZUNGEN } from '@/components/vertrauen/Voraussetzungen'
 
@@ -53,6 +54,8 @@ export function StartKopf() {
             die Köpfe ab, um den Knopf über die Cookie-Leiste zu heben; seitdem kam von 9 Website-Besuchern im Rechner kein Lead,
             vorher 12 aus 21. Der Knopf steht damit wieder knapp unter dem ersten Bildschirm (iPhone 13 ca. 665 px). */}
         <div className="relative lg:order-2">
+          {/* Weihnachtsband am Handy auf der Fotokante statt unter der Kopfzeile (Martin 24.10.2026), bis 26.12. */}
+          <WeihnachtsBand lage="foto" />
           <Image
             src="/images/PM-Header-Shooting_hero-v3.webp"
             alt="Betreuungskraft und Seniorin zu Hause im Wohnzimmer"

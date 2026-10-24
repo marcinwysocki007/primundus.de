@@ -1,6 +1,13 @@
-// Weihnachtsband unter der Kopfzeile (Martin 24.10.2026: „Betreuung auch über Weihnachten gesichert“; Entwurf A
-// „Nur Band, überall“, Freigabeseite https://claude.ai/artifact/4yZYEDoVpsyNX5z2Ztbxb2). Auf jeder Seite, im Fluss unter
-// der mitlaufenden Kopfzeile, scrollt also weg. Kostet am Handy ca. 38 px über dem Inhalt — von Martin so gewählt.
+// Weihnachtsband (Martin 24.10.2026). Entwurf A „Nur Band, überall“, Freigabeseite
+// https://claude.ai/artifact/4yZYEDoVpsyNX5z2Ztbxb2. Text seit dem Abend des 24.10. (Martin nach OpenAI-Prüfung: „gesichert“
+// klang nach interner Planung): am Handy „Betreuung über Weihnachten garantiert“ (≤ 42 Zeichen), ab 768 px zusätzlich
+// „, auch kurzfristig“.
+//
+// Zwei Lagen:
+//   kopf  im Fluss unter der Kopfzeile, auf jeder Seite (app/layout.tsx); kostet am Handy 40 px über dem Inhalt
+//   foto  am Handy und Tablet (< 1024 px) deckend auf der Oberkante des Startseiten-Fotos, über Regal und Wand, nicht über
+//         Gesichtern — dort rutscht nichts nach unten (Martin 24.10.: „Ja, am Handy aufs Foto“). Steht `foto` auf der Seite,
+//         blendet globals.css das Band `kopf` unter 1024 px aus.
 // Gleiches Band im Kostenrechner (CAapp, app/page.tsx). Die Seiten sind statisch: Das Band verschwindet mit dem ersten
 // Build ab dem 27. Dezember 2026.
 const WEIHNACHTEN_BIS = Date.UTC(2026, 11, 27)
@@ -19,12 +26,17 @@ function Stern() {
   )
 }
 
-export function WeihnachtsBand() {
+export function WeihnachtsBand({ lage = 'kopf' }: { lage?: 'kopf' | 'foto' }) {
   if (Date.now() >= WEIHNACHTEN_BIS) return null
+  const rahmen =
+    lage === 'foto'
+      ? 'absolute inset-x-0 top-0 z-10 border-b lg:hidden'
+      : 'relative border-y'
   return (
     <aside
       aria-label="Weihnachten"
-      className="relative overflow-hidden border-y border-pm-gold/60 bg-gradient-to-r from-pm-green-nacht via-pm-green-deep to-pm-green-nacht text-white"
+      data-weihnachtsband={lage}
+      className={`${rahmen} overflow-hidden border-pm-gold/60 bg-gradient-to-r from-pm-green-nacht via-pm-green-deep to-pm-green-nacht text-white`}
     >
       {PUNKTE.map((p) => (
         <span
@@ -37,7 +49,8 @@ export function WeihnachtsBand() {
       <p className="relative mx-auto flex max-w-seite items-center justify-center gap-2 px-3 py-2.5 min-[375px]:px-3.5 md:gap-3.5 md:px-5 md:py-3">
         <Stern />
         <span className="whitespace-nowrap text-[14px] font-semibold leading-tight max-[374px]:text-[13px] min-[390px]:text-[14.5px] md:text-[16.5px]">
-          Betreuung auch über <strong className="font-extrabold text-pm-gold">Weihnachten</strong> gesichert
+          Betreuung über <strong className="font-extrabold text-pm-gold">Weihnachten</strong> garantiert
+          <span className="hidden md:inline">, auch kurzfristig</span>
         </span>
         <Stern />
       </p>
