@@ -5,14 +5,17 @@
 // Sechs Module, ein Modul je Schritt; alles, was die Person allein schafft, bleibt auf „selbständig".
 // Nichts wird gespeichert oder gesendet. Das Ergebnis lässt sich drucken oder als PDF sichern
 // (Fragebogen für die Begutachtung). Optik wie die Vorlage: weiße Karte, pm-Farben, keine Symbole.
+// Kinder (02.10.2026, Begutachtungs-Richtlinien vom 26.08.2026): bis 18 Monate nur Modul 3, 5, 4.K und die besondere
+// Bedarfskonstellation (Module 2 und 6 werden übersprungen); ab 18 Monaten mit Alter, Vergleich je Kriterium mit gesund
+// entwickelten Kindern gleichen Alters, Kriterien ohne Bewertung in diesem Alter werden nicht abgefragt.
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { KNOPF } from '@/components/ArticleCTA'
 import { PflegegradSkala } from '@/components/grafik/Grafik'
 import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN } from '@/lib/fakten'
 import {
-  berechnen, ERKLAERUNG_STUFEN, GEWICHTE_PROZENT, leereAntworten, MODUL1, MODUL2, MODUL3, MODUL4, MODUL4_KIND, MODUL4_SONDE, MODUL5_DIAET,
-  MODUL5_TEIL1, MODUL5_TEIL2, MODUL5_TEIL3, MODUL6, PFLEGEGRAD_NAMEN, SCHWEREGRAD, STUFEN_FAEHIGKEIT, STUFEN_HAEUFIGKEIT, STUFEN_SELBSTAENDIG,
-  STUFEN_SONDE, type Antworten, type Haeufigkeit, type Kriterium, type Person,
+  ALTER_KIND, altersstufe, berechnen, ERKLAERUNG_STUFEN, GEWICHTE_PROZENT, HOECHSTPUNKTE_SAEUGLING, leereAntworten, MODUL1, MODUL2, MODUL3, MODUL4,
+  MODUL4_KIND, MODUL4_SONDE, MODUL5_DIAET, MODUL5_TEIL1, MODUL5_TEIL2, MODUL5_TEIL3, MODUL6, PFLEGEGRAD_NAMEN, SCHWEREGRAD, STUFEN_FAEHIGKEIT,
+  STUFEN_HAEUFIGKEIT, STUFEN_SELBSTAENDIG, STUFEN_SONDE, wirdBewertet, type Antworten, type Haeufigkeit, type Kriterium, type Person,
 } from '@/lib/begutachtung'
 
 const AUGENBRAUE = 'text-[11.5px] font-bold uppercase tracking-[.15em] text-pm-taupe'
@@ -33,6 +36,18 @@ const MODULE_TITEL = [
   { nr: 5, name: 'Umgang mit Krankheit und Therapie', gewicht: `${GEWICHTE_PROZENT.modul5} %`, frage: 'Welche ärztlich verordneten Maßnahmen braucht die Person, die sie nicht allein schafft, und wie oft?' },
   { nr: 6, name: 'Gestaltung des Alltagslebens und sozialer Kontakte', gewicht: `${GEWICHTE_PROZENT.modul6} %`, frage: 'Wie selbständig gestaltet die Person ihren Tag und ihre Kontakte?' },
 ]
+/** Module je Person (Index in MODULE_TITEL). Bis 18 Monate entfallen Modul 2 und 6; aus Modul 1 bleibt nur die Bedarfskonstellation. */
+const MODULE_ALLE = [0, 1, 2, 3, 4, 5]
+const MODULE_SAEUGLING = [0, 2, 3, 4]
+
+/** Besondere Bedarfskonstellation (§ 15 Abs. 4 SGB XI; Wortlaut nach den Begutachtungs-Richtlinien, F 4.1.B und KF 4.1.B) */
+const bedarfskonstellation = (saeugling: boolean) => ({
+  nr: '§ 15 Abs. 4',
+  name: 'Besondere Bedarfskonstellation: Sind beide Arme und beide Beine gebrauchsunfähig?',
+  erklaerung: saeugling
+    ? 'Gemeint ist der vollständige Verlust der Greif-, Steh- und Gehfunktionen, etwa bei einer Lähmung aller Gliedmaßen, und bei Säuglingen auch, wenn keine Bewegungen von Armen und Beinen erkennbar sind. Dann gilt Pflegegrad 5, auch wenn die Punkte darunter liegen.'
+    : 'Gemeint ist der vollständige Verlust der Greif-, Steh- und Gehfunktionen, der sich auch mit Hilfsmitteln nicht ausgleichen lässt, etwa bei einer Lähmung aller Gliedmaßen oder im Wachkoma. Sie liegt auch vor, wenn die Arme noch minimal beweglich sind oder nur unkontrollierbare Greifreflexe bestehen. Dann gilt Pflegegrad 5, auch wenn die Punkte darunter liegen.',
+})
 
 /** Vier Stufen als Schalterleiste (Module 1, 2, 3, 4, 6 und Kriterium 5.16) */
 function Stufen({
@@ -62,15 +77,29 @@ function Stufen({
   )
 }
 
-function Kriteriumzeile({ k, children }: { k: { nr: string; name: string; erklaerung: string }; children: ReactNode }) {
+function Kriteriumzeile({ k, vergleich, children }: { k: { nr: string; name: string; erklaerung: string }; vergleich?: string | null; children: ReactNode }) {
   return (
     <div className="border-t border-pm-line-soft pt-5 first:border-t-0 first:pt-0">
       <p className="text-[16.5px] font-bold leading-[1.35] text-pm-ink">
         <span className="text-pm-taupe [font-variant-numeric:tabular-nums]">{k.nr}</span> {k.name}
       </p>
       <p className="mt-1 text-[14.5px] leading-[1.5] text-pm-mute">{k.erklaerung}</p>
+      {vergleich && (
+        <p className="mt-1 text-[14px] font-semibold leading-[1.45] text-pm-taupe-ink">Gesund entwickelte Kinder in diesem Alter: {vergleich}</p>
+      )}
       <div className="mt-3">{children}</div>
     </div>
+  )
+}
+
+/** Kinder ab 18 Monaten: Kriterien, die in diesem Alter noch nicht bewertet werden (BRi, Übersicht in Kapitel 6.6.1) */
+function NichtBewertet({ liste }: { liste: Kriterium[] }) {
+  if (liste.length === 0) return null
+  return (
+    <p className="rounded-[14px] bg-pm-paper px-4 py-3 text-[14.5px] leading-[1.5] text-pm-body">
+      In diesem Alter bewerten die Begutachtungs-Richtlinien noch nicht:{' '}
+      {liste.map((k) => `${k.nr} ${k.name}`).join(', ')}.
+    </p>
   )
 }
 
@@ -182,7 +211,21 @@ export function PflegegradRechner() {
   }
 
   const kinderModus = a.person !== 'erwachsen'
-  const anzahlFragen = a.person === 'saeugling' ? 5 + 11 + 13 + 1 + 17 + 6 : kinderModus ? 5 + 11 + 13 + 13 + 17 + 6 : 5 + 11 + 13 + 13 + 16 + 6
+  const saeugling = a.person === 'saeugling'
+  const alter = a.person === 'kind' ? a.alterMonate : null
+  const alterOk = a.person !== 'kind' || (alter !== null && alter >= 18)
+  const sichtbar = saeugling ? MODULE_SAEUGLING : MODULE_ALLE
+  const bewertet = (nr: string) => wirdBewertet(nr, a.person, a.alterMonate)
+  /** Stufe gesund entwickelter Kinder gleichen Alters (nur Kind ab 18 Monaten, Module 1, 2, 4 und 6) */
+  const gleichaltrige = (nr: string, stufen: readonly string[]) => (alter !== null && ALTER_KIND[nr] ? stufen[altersstufe(nr, alter)] : null)
+  const nichtBewertet = (liste: Kriterium[]) => liste.filter((k) => !bewertet(k.nr))
+  /** Bei Kindern die Beispiele aus den Begutachtungs-Richtlinien für Kinder statt der Beispiele für Erwachsene */
+  const fuerKind = (k: Kriterium) => (a.person === 'kind' && k.erklaerungKind ? { ...k, erklaerung: k.erklaerungKind } : k)
+  const alterText = alter === null ? '' : `${Math.floor(alter / 12)} ${Math.floor(alter / 12) === 1 ? 'Jahr' : 'Jahre'}${alter % 12 ? ` und ${alter % 12} ${alter % 12 === 1 ? 'Monat' : 'Monate'}` : ''}`
+  // Fragen, die der Gutachter in diesem Fall bewertet (4.13 und 5.16 je eine Frage, 5.K nur bei Kindern)
+  const anzahlFragen = saeugling
+    ? MODUL3.length + 1 + MODUL5_TEIL1.length + MODUL5_TEIL2.length + MODUL5_TEIL3.length + 1
+    : [...MODUL1, ...MODUL2, ...MODUL3, ...MODUL4, ...MODUL6].filter((k) => bewertet(k.nr)).length + 1 + MODUL5_TEIL1.length + MODUL5_TEIL2.length + (kinderModus ? 5 : 4) + 1
 
   if (schritt === 'start') {
     return (
@@ -215,6 +258,48 @@ export function PflegegradRechner() {
           ))}
         </div>
 
+        {a.person === 'kind' && (
+          <div className="mt-6">
+            <span id="pgr-alter" className="block text-[16px] font-semibold text-pm-ink">Wie alt ist das Kind?</span>
+            <span className="mt-0.5 block text-[14.5px] text-pm-mute">Der Rechner vergleicht Ihre Angaben mit den Werten der Begutachtungs-Richtlinien für gesund entwickelte Kinder desselben Alters.</span>
+            <div role="group" aria-labelledby="pgr-alter" className="mt-2 flex flex-wrap items-center gap-3">
+              <label className="flex items-center gap-2 text-[15px] text-pm-body">
+                <select
+                  aria-label="Alter in Jahren"
+                  value={alter === null ? '' : Math.floor(alter / 12)}
+                  onChange={(e) => setze({ alterMonate: e.target.value === '' ? null : Number(e.target.value) * 12 + (alter === null ? 0 : alter % 12) })}
+                  className="min-h-[48px] rounded-[12px] border border-pm-line bg-white px-3 text-[15px] font-semibold text-pm-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
+                >
+                  <option value="">bitte wählen</option>
+                  {Array.from({ length: 17 }, (_, i) => i + 1).map((j) => (
+                    <option key={j} value={j}>{j}</option>
+                  ))}
+                </select>
+                <span>{alter !== null && Math.floor(alter / 12) === 1 ? 'Jahr' : 'Jahre'}</span>
+              </label>
+              <label className="flex items-center gap-2 text-[15px] text-pm-body">
+                <select
+                  aria-label="und Monate"
+                  value={alter === null ? 0 : alter % 12}
+                  disabled={alter === null}
+                  onChange={(e) => setze({ alterMonate: Math.floor((alter ?? 0) / 12) * 12 + Number(e.target.value) })}
+                  className="min-h-[48px] rounded-[12px] border border-pm-line bg-white px-3 text-[15px] font-semibold text-pm-ink disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe"
+                >
+                  {Array.from({ length: 12 }, (_, i) => i).map((m) => (
+                    <option key={m} value={m}>{m}</option>
+                  ))}
+                </select>
+                <span>Monate</span>
+              </label>
+            </div>
+            {alter !== null && alter < 18 && (
+              <p className="mt-2 text-[14.5px] leading-[1.5] text-pm-body">
+                Für ein Kind bis 18 Monate wählen Sie oben „Kind bis 18 Monate“. Dort gelten eigene Regeln.
+              </p>
+            )}
+          </div>
+        )}
+
         <label className="mt-6 block">
           <span className="block text-[16px] font-semibold text-pm-ink">Gibt es schon einen Pflegegrad?</span>
           <span className="mt-0.5 block text-[14.5px] text-pm-mute">Dann zeigen wir am Ende, ob sich ein Antrag auf Höherstufung lohnt.</span>
@@ -238,98 +323,137 @@ export function PflegegradRechner() {
           <p className="mt-2">Keine Anmeldung, keine E-Mail-Adresse. Ihre Antworten bleiben auf Ihrem Gerät; wir speichern und senden nichts.</p>
           {a.person === 'kind' && (
             <p className="mt-2">
-              Bei Kindern zählt nur, was ein gesundes Kind gleichen Alters schon allein kann. Was gleichaltrige Kinder ebenfalls nicht schaffen, bleibt auf „selbständig".
+              Geben Sie bei jeder Frage an, wie selbständig Ihr Kind wirklich ist. Der Rechner zieht ab, was gesund entwickelte Kinder gleichen Alters
+              auch noch nicht allein können, so wie es die Begutachtungs-Richtlinien vorgeben. Was die Richtlinien in diesem Alter noch nicht bewerten,
+              fragt er nicht ab. Ab 11 Jahren gilt die Rechnung für Erwachsene.
             </p>
           )}
           {a.person === 'saeugling' && (
             <p className="mt-2">
-              Bei Kindern bis 18 Monate ersetzt eine Frage zur Nahrungsaufnahme das Modul Selbstversorgung, und die Punkte ergeben einen Pflegegrad höher als bei Erwachsenen.
+              Bei Kindern bis 18 Monate zählen nur Verhalten (Modul 3), Krankheit und Therapie (Modul 5), eine Frage zur Nahrungsaufnahme und die Frage,
+              ob Arme und Beine gebrauchsunfähig sind. Mobilität (Modul 1), kognitive und kommunikative Fähigkeiten (Modul 2) und Alltagsleben (Modul 6)
+              werden nicht bewertet, weil jedes Kind in diesem Alter dabei Hilfe braucht. Mit derselben Punktzahl wird ein Kind in diesem Alter eine Stufe
+              höher eingestuft als ein Erwachsener (§ 15 Abs. 7 SGB XI).
             </p>
           )}
         </div>
 
-        <button type="button" onClick={() => { setModul(0); setSchritt('modul') }} className={`${KNOPF} mt-6 sm:self-start`}>
+        <button
+          type="button"
+          disabled={!alterOk}
+          onClick={() => { setModul(0); setSchritt('modul') }}
+          className={`${KNOPF} mt-6 sm:self-start disabled:cursor-not-allowed disabled:opacity-50`}
+        >
           Rechner starten
         </button>
+        {!alterOk && alter === null && (
+          <p className="mt-2 text-[14.5px] text-pm-mute">Bitte wählen Sie zuerst das Alter des Kindes.</p>
+        )}
       </div>
     )
   }
 
   if (schritt === 'modul') {
     const m = MODULE_TITEL[modul]
-    const fortschritt = ((modul + 1) / 6) * 100
+    const pos = Math.max(0, sichtbar.indexOf(modul))
+    const fortschritt = ((pos + 1) / sichtbar.length) * 100
+    const naechstes = pos < sichtbar.length - 1 ? MODULE_TITEL[sichtbar[pos + 1]] : null
+    // Kinder bis 18 Monate: Modul 1 nur Bedarfskonstellation, Modul 4 nur Nahrungsaufnahme (4.K), Modul 3 ohne Modul 2
+    const gewicht = !saeugling ? m.gewicht : modul === 0 ? 'nur diese eine Frage' : modul === 2 ? `${GEWICHTE_PROZENT.modul2und3} %` : m.gewicht
+    const frage = !saeugling ? m.frage : modul === 0 ? 'Bei Kindern bis 18 Monate zählt hier nur eine Frage.' : modul === 3 ? 'Bei Kindern bis 18 Monate zählt hier nur die Nahrungsaufnahme.' : m.frage
     return (
       <div id="pflegegrad-rechner" className={`${KARTE} scroll-mt-[88px] md:scroll-mt-[150px]`}>
         <div className="flex items-baseline justify-between gap-4">
-          <p className={AUGENBRAUE}>Modul {m.nr} von 6</p>
-          <p className="text-[13.5px] text-pm-mute">zählt {m.gewicht}</p>
+          <p className={AUGENBRAUE}>{saeugling ? `Modul ${m.nr} · Schritt ${pos + 1} von ${sichtbar.length}` : `Modul ${m.nr} von 6`}</p>
+          <p className="text-[13.5px] text-pm-mute">{saeugling && modul === 0 ? gewicht : `zählt ${gewicht}`}</p>
         </div>
         <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-pm-line-soft" aria-hidden="true">
           <div className="h-full rounded-full bg-pm-taupe transition-all duration-300" style={{ width: `${fortschritt}%` }} />
         </div>
         <h3 className="mt-5 text-[24px] font-extrabold leading-[1.15] tracking-[-0.02em] text-pm-ink [text-wrap:balance]">{m.name}</h3>
-        <p className="mt-2 text-[16px] leading-[1.55] text-pm-body">{m.frage}</p>
+        <p className="mt-2 text-[16px] leading-[1.55] text-pm-body">{frage}</p>
 
         <div className="mt-5">
-          {modul === 0 && <Legende stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} />}
+          {modul === 0 && !saeugling && <Legende stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} />}
           {modul === 1 && <Legende stufen={STUFEN_FAEHIGKEIT} erklaerungen={ERKLAERUNG_STUFEN.faehigkeit} />}
           {modul === 2 && <Legende stufen={STUFEN_HAEUFIGKEIT} erklaerungen={ERKLAERUNG_STUFEN.haeufigkeit} />}
-          {(modul === 3 || modul === 5) && <Legende stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} />}
+          {((modul === 3 && !saeugling) || modul === 5) && <Legende stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} />}
         </div>
 
         <div className="mt-6 grid gap-5">
           {modul === 0 && (
             <>
-              {MODUL1.map((k, i) => (
-                <Kriteriumzeile key={k.nr} k={k}>
-                  <Stufen name={k.name} wert={a.m1[i]} stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} onChange={(v) => setzeListe('m1', i, v)} />
-                </Kriteriumzeile>
-              ))}
-              <Kriteriumzeile
-                k={{ nr: '§ 15 Abs. 4', name: 'Sind beide Arme und beide Beine gebrauchsunfähig?', erklaerung: 'Diese besondere Bedarfskonstellation führt zu Pflegegrad 5, auch wenn die Punkte darunter liegen.' }}
-              >
+              {!saeugling && (
+                <>
+                  <NichtBewertet liste={nichtBewertet(MODUL1)} />
+                  {MODUL1.map((k, i) => bewertet(k.nr) && (
+                    <Kriteriumzeile key={k.nr} k={fuerKind(k)} vergleich={gleichaltrige(k.nr, STUFEN_SELBSTAENDIG)}>
+                      <Stufen name={k.name} wert={a.m1[i]} stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} onChange={(v) => setzeListe('m1', i, v)} />
+                    </Kriteriumzeile>
+                  ))}
+                </>
+              )}
+              <Kriteriumzeile k={bedarfskonstellation(saeugling)}>
                 <JaNein name="Gebrauchsunfähigkeit beider Arme und Beine" wert={a.bedarfskonstellation} onChange={(v) => setze({ bedarfskonstellation: v })} />
               </Kriteriumzeile>
             </>
           )}
 
-          {modul === 1 &&
-            MODUL2.map((k, i) => (
-              <Kriteriumzeile key={k.nr} k={k}>
-                <Stufen name={k.name} wert={a.m2[i]} stufen={STUFEN_FAEHIGKEIT} erklaerungen={ERKLAERUNG_STUFEN.faehigkeit} onChange={(v) => setzeListe('m2', i, v)} />
-              </Kriteriumzeile>
-            ))}
+          {modul === 1 && (
+            <>
+              <NichtBewertet liste={nichtBewertet(MODUL2)} />
+              {MODUL2.map((k, i) => bewertet(k.nr) && (
+                <Kriteriumzeile key={k.nr} k={fuerKind(k)} vergleich={gleichaltrige(k.nr, STUFEN_FAEHIGKEIT)}>
+                  <Stufen name={k.name} wert={a.m2[i]} stufen={STUFEN_FAEHIGKEIT} erklaerungen={ERKLAERUNG_STUFEN.faehigkeit} onChange={(v) => setzeListe('m2', i, v)} />
+                </Kriteriumzeile>
+              ))}
+            </>
+          )}
 
-          {modul === 2 &&
-            MODUL3.map((k, i) => (
-              <Kriteriumzeile key={k.nr} k={k}>
-                <Stufen name={k.name} wert={a.m3[i]} stufen={STUFEN_HAEUFIGKEIT} erklaerungen={ERKLAERUNG_STUFEN.haeufigkeit} onChange={(v) => setzeListe('m3', i, v)} />
-              </Kriteriumzeile>
-            ))}
+          {modul === 2 && (
+            <>
+              {kinderModus && (
+                <p className="text-[14.5px] leading-[1.5] text-pm-mute">
+                  Bei Kindern zählt nur Verhalten, das auf eine Erkrankung oder Behinderung zurückgeht und immer wieder Hilfe nötig macht. Trotzphase,
+                  Pubertät und Erziehungsfragen zählen nicht.
+                </p>
+              )}
+              {MODUL3.map((k, i) => (
+                <Kriteriumzeile key={k.nr} k={k}>
+                  <Stufen name={k.name} wert={a.m3[i]} stufen={STUFEN_HAEUFIGKEIT} erklaerungen={ERKLAERUNG_STUFEN.haeufigkeit} onChange={(v) => setzeListe('m3', i, v)} />
+                </Kriteriumzeile>
+              ))}
+            </>
+          )}
 
-          {modul === 3 && a.person === 'saeugling' && (
+          {modul === 3 && saeugling && (
             <Kriteriumzeile k={MODUL4_KIND}>
               <JaNein name={MODUL4_KIND.name} wert={a.kindNahrung} onChange={(v) => setze({ kindNahrung: v })} />
             </Kriteriumzeile>
           )}
-          {modul === 3 && a.person !== 'saeugling' && (
+          {modul === 3 && !saeugling && (
             <>
-              {MODUL4.slice(0, 10).map((k, i) => (
-                <Kriteriumzeile key={k.nr} k={k}>
+              <NichtBewertet liste={nichtBewertet(MODUL4)} />
+              {MODUL4.slice(0, 10).map((k, i) => bewertet(k.nr) && (
+                <Kriteriumzeile key={k.nr} k={fuerKind(k)} vergleich={gleichaltrige(k.nr, STUFEN_SELBSTAENDIG)}>
                   <Stufen name={k.name} wert={a.m4[i]} stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} onChange={(v) => setzeListe('m4', i, v)} />
                 </Kriteriumzeile>
               ))}
-              <Kriteriumzeile
-                k={{ nr: '4.11 / 4.12', name: 'Besteht überwiegend oder vollständig eine Harn- oder Stuhlinkontinenz, ein Dauerkatheter, Urostoma oder Stoma?', erklaerung: 'Nur dann zählen die beiden folgenden Kriterien. Gelegentliches Tröpfeln zählt nicht.' }}
-              >
-                <JaNein name="Inkontinenz oder künstliche Ableitung" wert={a.inkontinenz} onChange={(v) => setze({ inkontinenz: v })} />
-              </Kriteriumzeile>
-              {a.inkontinenz &&
-                MODUL4.slice(10).map((k, j) => (
-                  <Kriteriumzeile key={k.nr} k={k}>
-                    <Stufen name={k.name} wert={a.m4[10 + j]} stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} onChange={(v) => setzeListe('m4', 10 + j, v)} />
+              {bewertet('4.11') && (
+                <>
+                  <Kriteriumzeile
+                    k={{ nr: '4.11 / 4.12', name: 'Besteht überwiegend oder vollständig eine Harn- oder Stuhlinkontinenz, ein Dauerkatheter, Urostoma oder Stoma?', erklaerung: 'Nur dann zählen die beiden folgenden Kriterien. Gelegentliches Tröpfeln zählt nicht.' }}
+                  >
+                    <JaNein name="Inkontinenz oder künstliche Ableitung" wert={a.inkontinenz} onChange={(v) => setze({ inkontinenz: v })} />
                   </Kriteriumzeile>
-                ))}
+                  {a.inkontinenz &&
+                    MODUL4.slice(10).map((k, j) => (
+                      <Kriteriumzeile key={k.nr} k={fuerKind(k)} vergleich={gleichaltrige(k.nr, STUFEN_SELBSTAENDIG)}>
+                        <Stufen name={k.name} wert={a.m4[10 + j]} stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} onChange={(v) => setzeListe('m4', 10 + j, v)} />
+                      </Kriteriumzeile>
+                    ))}
+                </>
+              )}
               <Kriteriumzeile k={MODUL4_SONDE}>
                 <div role="radiogroup" aria-label={MODUL4_SONDE.name} className="grid max-w-[480px] grid-cols-3 gap-2">
                   {STUFEN_SONDE.map((s, i) => (
@@ -380,20 +504,24 @@ export function PflegegradRechner() {
             </>
           )}
 
-          {modul === 5 &&
-            MODUL6.map((k, i) => (
-              <Kriteriumzeile key={k.nr} k={k}>
-                <Stufen name={k.name} wert={a.m6[i]} stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} onChange={(v) => setzeListe('m6', i, v)} />
-              </Kriteriumzeile>
-            ))}
+          {modul === 5 && (
+            <>
+              <NichtBewertet liste={nichtBewertet(MODUL6)} />
+              {MODUL6.map((k, i) => bewertet(k.nr) && (
+                <Kriteriumzeile key={k.nr} k={fuerKind(k)} vergleich={gleichaltrige(k.nr, STUFEN_SELBSTAENDIG)}>
+                  <Stufen name={k.name} wert={a.m6[i]} stufen={STUFEN_SELBSTAENDIG} erklaerungen={ERKLAERUNG_STUFEN.selbstaendig} onChange={(v) => setzeListe('m6', i, v)} />
+                </Kriteriumzeile>
+              ))}
+            </>
+          )}
         </div>
 
         <div className="mt-8 flex flex-col-reverse gap-3 border-t border-pm-line-soft pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <button type="button" onClick={() => (modul === 0 ? setSchritt('start') : setModul(modul - 1))} className={ZWEITKNOPF}>
+          <button type="button" onClick={() => (pos === 0 ? setSchritt('start') : setModul(sichtbar[pos - 1]))} className={ZWEITKNOPF}>
             Zurück
           </button>
-          <button type="button" onClick={() => (modul === 5 ? setSchritt('ergebnis') : setModul(modul + 1))} className={KNOPF}>
-            {modul === 5 ? 'Ergebnis anzeigen' : `Weiter zu Modul ${modul + 2}`}
+          <button type="button" onClick={() => (naechstes ? setModul(sichtbar[pos + 1]) : setSchritt('ergebnis'))} className={KNOPF}>
+            {naechstes ? `Weiter zu Modul ${naechstes.nr}` : 'Ergebnis anzeigen'}
           </button>
         </div>
       </div>
@@ -405,13 +533,22 @@ export function PflegegradRechner() {
   const grad = e.pflegegrad
   const grenzen = [12.5, 27, 47.5, 70, 90]
   const untereGrenze = grad > 0 && !a.bedarfskonstellation ? grenzen[a.person === 'saeugling' ? Math.max(0, grad - 2) : grad - 1] : null
+  const entfaellt = 'bis 18 Monate nicht bewertet'
   const zeilen: { name: string; summe: number; bereich: number; gewichtet: number; hinweis?: string }[] = [
-    { name: 'Modul 1: Mobilität', ...e.module.m1 },
-    { name: 'Modul 2: Kognitive und kommunikative Fähigkeiten', ...e.module.m2, hinweis: e.module.m2.gewichtet >= e.module.m3.gewichtet ? 'zählt' : 'zählt nicht, Modul 3 ist höher' },
-    { name: 'Modul 3: Verhaltensweisen und psychische Problemlagen', ...e.module.m3, hinweis: e.module.m3.gewichtet > e.module.m2.gewichtet ? 'zählt' : 'zählt nicht, Modul 2 ist gleich oder höher' },
-    { name: 'Modul 4: Selbstversorgung', ...e.module.m4 },
+    { name: 'Modul 1: Mobilität', ...e.module.m1, hinweis: saeugling ? entfaellt : undefined },
+    {
+      name: 'Modul 2: Kognitive und kommunikative Fähigkeiten',
+      ...e.module.m2,
+      hinweis: saeugling ? entfaellt : e.module.m2.gewichtet >= e.module.m3.gewichtet ? 'zählt' : 'zählt nicht, Modul 3 ist höher',
+    },
+    {
+      name: 'Modul 3: Verhaltensweisen und psychische Problemlagen',
+      ...e.module.m3,
+      hinweis: saeugling || e.module.m3.gewichtet > e.module.m2.gewichtet ? 'zählt' : 'zählt nicht, Modul 2 ist gleich oder höher',
+    },
+    { name: saeugling ? 'Modul 4: Selbstversorgung (bis 18 Monate: Nahrungsaufnahme)' : 'Modul 4: Selbstversorgung', ...e.module.m4 },
     { name: 'Modul 5: Umgang mit Krankheit und Therapie', ...e.module.m5 },
-    { name: 'Modul 6: Alltagsleben und soziale Kontakte', ...e.module.m6 },
+    { name: 'Modul 6: Alltagsleben und soziale Kontakte', ...e.module.m6, hinweis: saeugling ? entfaellt : undefined },
   ]
   const leistungen =
     grad >= 2
@@ -432,7 +569,10 @@ export function PflegegradRechner() {
           ]
         : []
 
-  const antwortText = (k: Kriterium, wert: number, stufen: readonly string[]) => `${k.nr} ${k.name}: ${stufen[wert]}`
+  const antwortText = (k: Kriterium, wert: number, stufen: readonly string[]) => {
+    const vergleich = gleichaltrige(k.nr, stufen)
+    return `${k.nr} ${k.name}: ${stufen[wert]}${vergleich ? ` (gesund entwickelte Kinder in diesem Alter: ${vergleich})` : ''}`
+  }
   const haeufigkeitText = (h: Haeufigkeit) =>
     h.einheit === 'keine' ? 'entfällt oder selbständig' : `${h.anzahl}× ${h.einheit === 'tag' ? 'täglich' : h.einheit === 'woche' ? 'wöchentlich' : 'monatlich'}`
 
@@ -444,12 +584,25 @@ export function PflegegradRechner() {
           {grad === 0 ? 'Kein Pflegegrad' : `Pflegegrad ${grad}`}
         </p>
         <p className="mt-2 text-[17px] leading-[1.5] text-pm-body">
-          {grad === 0 ? 'Die Punkte reichen noch nicht für Pflegegrad 1 (ab 12,5 Punkten).' : (() => { const t = PFLEGEGRAD_NAMEN[grad].replace(/^Pflegegrad \d: /, ''); return t.charAt(0).toUpperCase() + t.slice(1) + '.' })()}{' '}
+          {grad === 0 ? 'Die Punkte reichen noch nicht für einen Pflegegrad (ab 12,5 Punkten).' : (() => { const t = PFLEGEGRAD_NAMEN[grad].replace(/^Pflegegrad \d: /, ''); return t.charAt(0).toUpperCase() + t.slice(1) + '.' })()}{' '}
           <strong className="text-pm-ink [font-variant-numeric:tabular-nums]">{fmt(e.gesamt)} von 100 Punkten.</strong>
         </p>
         {a.bedarfskonstellation && (
           <p className="mt-2 text-[15px] leading-[1.5] text-pm-body">
-            Wegen der Gebrauchsunfähigkeit beider Arme und Beine gilt Pflegegrad 5 unabhängig von den Punkten (§ 15 Abs. 4 SGB XI).
+            Wegen der Gebrauchsunfähigkeit beider Arme und Beine gilt Pflegegrad 5 unabhängig von den Punkten (besondere Bedarfskonstellation,
+            § 15 Abs. 4 SGB XI und Begutachtungs-Richtlinien).
+          </p>
+        )}
+        {a.person === 'kind' && alter !== null && (
+          <p className="mt-2 text-[15px] leading-[1.5] text-pm-body">
+            Berechnet für ein Kind von {alterText}, im Vergleich mit gesund entwickelten Kindern gleichen Alters.
+          </p>
+        )}
+        {saeugling && grad === 4 && !a.bedarfskonstellation && (
+          <p className="mt-2 text-[15px] leading-[1.5] text-pm-body">
+            Höher geht es bei Kindern bis 18 Monate über die Punkte nicht: Die bewerteten Module ergeben höchstens {HOECHSTPUNKTE_SAEUGLING} Punkte (Modul 3:
+            15, Nahrungsaufnahme: 30, Modul 5: 20).
+            Pflegegrad 5 gibt es in diesem Alter bei Gebrauchsunfähigkeit beider Arme und Beine.
           </p>
         )}
 
@@ -545,17 +698,21 @@ export function PflegegradRechner() {
         {/* Nur im Druck: alle Antworten als Fragebogen für die Begutachtung */}
         <div className="hidden print:block">
           <p className="mt-8 text-[18px] font-bold text-pm-ink">Ihre Antworten (Vorbereitung auf die Begutachtung)</p>
+          <p className="mt-1 text-[13px] text-pm-body">
+            Berechnet für: {a.person === 'erwachsen' ? 'Erwachsene Person' : saeugling ? 'Kind bis 18 Monate' : `Kind, ${alterText}`}
+          </p>
           <ol className="mt-3 grid gap-1 text-[13px] leading-[1.45] text-pm-body">
-            {MODUL1.map((k, i) => <li key={k.nr}>{antwortText(k, a.m1[i], STUFEN_SELBSTAENDIG)}</li>)}
-            {MODUL2.map((k, i) => <li key={k.nr}>{antwortText(k, a.m2[i], STUFEN_FAEHIGKEIT)}</li>)}
+            {!saeugling && MODUL1.map((k, i) => bewertet(k.nr) && <li key={k.nr}>{antwortText(k, a.m1[i], STUFEN_SELBSTAENDIG)}</li>)}
+            <li>Besondere Bedarfskonstellation (beide Arme und beide Beine gebrauchsunfähig): {a.bedarfskonstellation ? 'ja' : 'nein'}</li>
+            {!saeugling && MODUL2.map((k, i) => bewertet(k.nr) && <li key={k.nr}>{antwortText(k, a.m2[i], STUFEN_FAEHIGKEIT)}</li>)}
             {MODUL3.map((k, i) => <li key={k.nr}>{antwortText(k, a.m3[i], STUFEN_HAEUFIGKEIT)}</li>)}
-            {a.person === 'saeugling' ? (
+            {saeugling ? (
               <li>4.K {MODUL4_KIND.name}: {a.kindNahrung ? 'ja' : 'nein'}</li>
             ) : (
               <>
-                {MODUL4.slice(0, 10).map((k, i) => <li key={k.nr}>{antwortText(k, a.m4[i], STUFEN_SELBSTAENDIG)}</li>)}
-                <li>Inkontinenz oder künstliche Ableitung: {a.inkontinenz ? 'ja' : 'nein'}</li>
-                {a.inkontinenz && MODUL4.slice(10).map((k, j) => <li key={k.nr}>{antwortText(k, a.m4[10 + j], STUFEN_SELBSTAENDIG)}</li>)}
+                {MODUL4.slice(0, 10).map((k, i) => bewertet(k.nr) && <li key={k.nr}>{antwortText(k, a.m4[i], STUFEN_SELBSTAENDIG)}</li>)}
+                {bewertet('4.11') && <li>Inkontinenz oder künstliche Ableitung: {a.inkontinenz ? 'ja' : 'nein'}</li>}
+                {bewertet('4.11') && a.inkontinenz && MODUL4.slice(10).map((k, j) => <li key={k.nr}>{antwortText(k, a.m4[10 + j], STUFEN_SELBSTAENDIG)}</li>)}
                 <li>{MODUL4_SONDE.nr} {MODUL4_SONDE.name}: {STUFEN_SONDE[a.sonde]}</li>
               </>
             )}
@@ -563,7 +720,7 @@ export function PflegegradRechner() {
             {MODUL5_TEIL2.map((k, i) => <li key={k.nr}>{k.nr} {k.name}: {haeufigkeitText(a.m5teil2[i])}</li>)}
             {MODUL5_TEIL3.map((k, i) => (('nurKinder' in k && k.nurKinder && !kinderModus) ? null : <li key={k.nr}>{k.nr} {k.name}: {haeufigkeitText(a.m5teil3[i])}</li>))}
             <li>{MODUL5_DIAET.nr} {MODUL5_DIAET.name}: {STUFEN_SELBSTAENDIG[a.m5diaet]}</li>
-            {MODUL6.map((k, i) => <li key={k.nr}>{antwortText(k, a.m6[i], STUFEN_SELBSTAENDIG)}</li>)}
+            {!saeugling && MODUL6.map((k, i) => bewertet(k.nr) && <li key={k.nr}>{antwortText(k, a.m6[i], STUFEN_SELBSTAENDIG)}</li>)}
           </ol>
           <p className="mt-4 text-[12px] text-pm-mute">primundus.de/pflegegrad-rechner · Rechenweg nach § 15 SGB XI, Anlage 1 und 2 · Stand 2026</p>
         </div>
@@ -581,7 +738,8 @@ export function PflegegradRechner() {
         </button>
       </div>
 
-      {grad >= 2 && (
+      {/* 24-Stunden-Betreuung nur bei Erwachsenen anbieten (02.10.2026: für Eltern pflegebedürftiger Kinder passt das Angebot nicht) */}
+      {grad >= 2 && !kinderModus && (
         <div className="mt-6 rounded-[14px] bg-pm-paper p-5 print:hidden">
           <p className="text-[17px] font-bold leading-[1.3] text-pm-ink">Soll die Person zu Hause bleiben?</p>
           <p className="mt-1.5 text-[15px] leading-[1.55] text-pm-body">

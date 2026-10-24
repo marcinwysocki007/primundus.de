@@ -26,7 +26,7 @@ import {
 // § 43 Abs. 2 und 3, § 43c SGB XI, §§ 61 ff., 90, 94 SGB XII, Preise aus unserem Kostenrechner. Der alte Rechner auf
 // /pflegeheim-kostenvergleich (erfundene Länderfaktoren, halbes Pflegegeld, Entlastungsbetrag eingerechnet) ist damit überflüssig.
 
-const AKTUALISIERT = aktualisiertAm('pflegeheim-kosten-deutschland', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('pflegeheim-kosten-deutschland', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegeheim-kosten'
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 
@@ -42,7 +42,12 @@ const SECTIONS = [
 ]
 
 const LAENDER = Object.entries(HEIM_EIGENANTEIL).sort((a, b) => a[1] - b[1])
-const gesamt = (pg: 2 | 3 | 4 | 5) => HEIM_LEISTUNG[pg] + HEIM_EIGENANTEIL_BUND
+/** Die drei günstigsten Länder für Frage 6, aus derselben sortierten Liste wie die Ländertabelle. */
+const GUENSTIGSTE = LAENDER.slice(0, 3)
+/** Leistungszuschlag der Kasse im ersten Jahr (15 % des pflegebedingten Anteils, vdek Bund 313 €). */
+const ZUSCHLAG_JAHR1 = HEIM_EEE_BUND_OHNE_ZUSCHLAG - HEIM_EEE_BUND_JAHR1
+/** Gesamtkosten des Platzes im ersten Jahr: Leistungsbetrag (§ 43) + Leistungszuschlag (§ 43c) + Eigenanteil (15.10.2026; vorher ohne Zuschlag). */
+const gesamt = (pg: 2 | 3 | 4 | 5) => HEIM_LEISTUNG[pg] + ZUSCHLAG_JAHR1 + HEIM_EIGENANTEIL_BUND
 
 const FRAGEN = [
   { q: 'Was kostet ein Pflegeheim 2026 im Monat?', a: `Der Eigenanteil liegt im ersten Jahr bundesweit bei durchschnittlich ${euro(HEIM_EIGENANTEIL_BUND)} im Monat (vdek, Stand 1. Juli 2026): ${euro(HEIM_EEE_BUND_JAHR1)} pflegebedingter Anteil, ${euro(HEIM_UNTERKUNFT_BUND)} Unterkunft und Verpflegung, ${euro(HEIM_INVEST_BUND)} Investitionskosten. Am günstigsten ist Sachsen-Anhalt mit rund ${euro(HEIM_EIGENANTEIL['Sachsen-Anhalt'])}, am teuersten Bremen mit rund ${euro(HEIM_EIGENANTEIL['Bremen'])}. Dazu zahlt die Pflegekasse je nach Pflegegrad ${euro(HEIM_LEISTUNG[2])} bis ${euro(HEIM_LEISTUNG[5])} direkt an das Heim.` },
@@ -50,7 +55,7 @@ const FRAGEN = [
   { q: 'Was kostet ein Pflegeheim bei Pflegegrad 3?', a: `Den gleichen Eigenanteil wie bei Pflegegrad 2, 4 oder 5: im Bundesdurchschnitt ${euro(HEIM_EIGENANTEIL_BUND)} im Monat im ersten Jahr. Der pflegebedingte Anteil ist einrichtungseinheitlich; die Pflegekasse zahlt bei Pflegegrad 3 ${euro(HEIM_LEISTUNG[3])} an das Heim, bei Pflegegrad 5 ${euro(HEIM_LEISTUNG[5])}, und das Heim berechnet allen Bewohnern denselben Rest. Die Gesamtkosten des Platzes liegen bei Pflegegrad 3 bei rund ${euro(gesamt(3))}.` },
   { q: 'Warum ist der Eigenanteil im Heim bei jedem Pflegegrad gleich?', a: 'Seit 2017 gilt der einrichtungseinheitliche Eigenanteil: Das Heim verteilt seine Pflegekosten nach Abzug der Kassenbeträge gleichmäßig auf alle Bewohner der Pflegegrade 2 bis 5. Wer einen höheren Pflegegrad bekommt, zahlt deshalb nicht mehr. Nur bei Pflegegrad 1 ist es anders: Dort zahlt die Kasse nur 131 €, der Rest bleibt beim Bewohner.' },
   { q: 'Sinkt der Eigenanteil im Pflegeheim mit der Zeit?', a: `Ja, durch den Leistungszuschlag der Pflegekasse auf den pflegebedingten Anteil: 15 Prozent im ersten Jahr, 30 im zweiten, 50 im dritten, 75 ab dem vierten. Im Bundesdurchschnitt sinkt der Eigenanteil so von ${euro(heimEigenanteilBundJahr(1))} auf ${euro(heimEigenanteilBundJahr(2))}, ${euro(heimEigenanteilBundJahr(3))} und ${euro(heimEigenanteilBundJahr(4))} im Monat. Unterkunft, Verpflegung und Investitionskosten bleiben unverändert und steigen mit den Preisen.` },
-  { q: 'Was kostet ein Pflegeheim in Bayern oder NRW?', a: `In Bayern liegt der Eigenanteil im ersten Jahr bei rund ${euro(HEIM_EIGENANTEIL['Bayern'])} im Monat, in Nordrhein-Westfalen bei rund ${euro(HEIM_EIGENANTEIL['Nordrhein-Westfalen'])}, in Baden-Württemberg bei rund ${euro(HEIM_EIGENANTEIL['Baden-Württemberg'])}. Am günstigsten sind Sachsen-Anhalt, Sachsen und Thüringen mit rund ${euro(HEIM_EIGENANTEIL['Sachsen-Anhalt'])} bis ${euro(HEIM_EIGENANTEIL['Thüringen'])}. Innerhalb eines Landes unterscheiden sich die Heime noch einmal deutlich.` },
+  { q: 'Was kostet ein Pflegeheim in Bayern oder NRW?', a: `In Bayern liegt der Eigenanteil im ersten Jahr bei rund ${euro(HEIM_EIGENANTEIL['Bayern'])} im Monat, in Nordrhein-Westfalen bei rund ${euro(HEIM_EIGENANTEIL['Nordrhein-Westfalen'])}, in Baden-Württemberg bei rund ${euro(HEIM_EIGENANTEIL['Baden-Württemberg'])}. Am günstigsten sind ${GUENSTIGSTE[0][0]}, ${GUENSTIGSTE[1][0]} und ${GUENSTIGSTE[2][0]} mit rund ${euro(GUENSTIGSTE[0][1])} bis ${euro(GUENSTIGSTE[2][1])}. Innerhalb eines Landes unterscheiden sich die Heime noch einmal deutlich.` },
   { q: 'Wer zahlt, wenn die Rente für das Pflegeheim nicht reicht?', a: 'Zuerst Rente, Einkommen und Vermögen der pflegebedürftigen Person; 10.000 € Vermögen bleiben geschützt. Reicht das nicht, zahlt das Sozialamt Hilfe zur Pflege (SGB XII). Kinder werden erst herangezogen, wenn sie mehr als 100.000 € brutto im Jahr verdienen. In einigen Bundesländern gibt es zusätzlich Pflegewohngeld für die Investitionskosten.' },
   { q: 'Müssen Kinder für das Pflegeheim der Eltern zahlen?', a: 'Nur bei einem Bruttoeinkommen über 100.000 € im Jahr, und dann nur aus dem Einkommen, das über einem Selbstbehalt liegt. Das Sozialamt prüft das erst, wenn es selbst Hilfe zur Pflege zahlt. Schwiegerkinder und Enkel zahlen nicht.' },
   { q: 'Was ist im Eigenanteil enthalten und was nicht?', a: 'Enthalten sind Pflege und Betreuung (nach Abzug des Kassenbetrags), Unterkunft, Verpflegung, Investitionskosten und die Ausbildungsumlage. Nicht enthalten sind Friseur, Fußpflege, eigene Kleidung, Telefon, Zuzahlungen zu Medikamenten und Hilfsmitteln sowie Zusatzleistungen wie ein Einzelzimmer mit Aufpreis.' },
@@ -58,13 +63,14 @@ const FRAGEN = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegeheim Kosten 2026: Eigenanteil je Bundesland, Rechner',
-  description: `Pflegeheim Kosten 2026: Eigenanteil Ø ${euro(HEIM_EIGENANTEIL_BUND)} im Monat, je Bundesland 2.890 bis 3.760 €. Rechner nach Bundesland, Pflegegrad und Heimjahr; was die Kasse zahlt.`,
+  title: 'Pflegeheim Kosten Rechner 2026: Eigenanteil je Bundesland',
+  // Meta 15.10.2026 (M3): Bundeswert mit Heimjahr, Länderspanne aus HEIM_EIGENANTEIL; openGraph wortgleich (M5).
+  description: `Pflegeheim Kosten 2026: im 1. Jahr Ø ${euro(HEIM_EIGENANTEIL_BUND)} Eigenanteil im Monat, je Bundesland rund ${LAENDER[0][1].toLocaleString('de-DE')} bis ${euro(LAENDER[LAENDER.length - 1][1])}. Bei Pflegegrad 2 bis 5 gleich hoch.`,
   alternates: { canonical: 'https://primundus.de/pflegeheim-kosten-deutschland' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegeheim Kosten 2026: Eigenanteil je Bundesland mit Rechner',
-    description: `Eigenanteil Ø ${euro(HEIM_EIGENANTEIL_BUND)} im Monat, je Bundesland von rund 2.890 bis 3.760 €; Rechner nach Bundesland, Pflegegrad und Heimjahr.`,
+    title: 'Pflegeheim Kosten Rechner 2026: Eigenanteil je Bundesland',
+    description: `Pflegeheim Kosten 2026: im 1. Jahr Ø ${euro(HEIM_EIGENANTEIL_BUND)} Eigenanteil im Monat, je Bundesland rund ${LAENDER[0][1].toLocaleString('de-DE')} bis ${euro(LAENDER[LAENDER.length - 1][1])}. Bei Pflegegrad 2 bis 5 gleich hoch.`,
     url: 'https://primundus.de/pflegeheim-kosten-deutschland',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -173,7 +179,7 @@ export default function PflegeheimKosten() {
                 ['Pflegegrad 5', euro(HEIM_LEISTUNG[5]), `rund ${euro(gesamt(5))}`],
               ]}
               betont={1}
-              fuss={`Gesamtkosten = Kassenbetrag + durchschnittlicher Eigenanteil ${euro(HEIM_EIGENANTEIL_BUND)}. Der Eigenanteil bleibt bei Pflegegrad 2 bis 5 gleich (einrichtungseinheitlicher Eigenanteil).`}
+              fuss={`Gesamtkosten = Kassenbetrag + Leistungszuschlag der Kasse im ersten Jahr (${euro(ZUSCHLAG_JAHR1)}) + durchschnittlicher Eigenanteil ${euro(HEIM_EIGENANTEIL_BUND)}. Der pflegebedingte Anteil ist in einem Heim für Pflegegrad 2 bis 5 gleich (einrichtungseinheitlicher Eigenanteil).`}
             />
           </Abschnitt>
 

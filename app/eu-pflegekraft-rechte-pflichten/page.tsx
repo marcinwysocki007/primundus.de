@@ -9,7 +9,13 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('eu-pflegekraft-rechte-pflichten', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('eu-pflegekraft-rechte-pflichten', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'entsendemodell', title: 'Das Entsendemodell erklärt' },
@@ -20,12 +26,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'EU-Pflegekraft — Rechte und Pflichten im Entsendemodell',
+  title: 'EU-Pflegekraft: Rechte und Pflichten im Entsendemodell',
   description: 'EU-Pflegekraft Rechte und Pflichten: Was das Entsendemodell regelt, welche Rechte Betreuungskräfte haben und was Familien wissen müssen.',
   alternates: { canonical: 'https://primundus.de/eu-pflegekraft-rechte-pflichten' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'EU-Pflegekraft Rechte & Pflichten | Primundus',
+    title: 'EU-Pflegekraft: Rechte und Pflichten im Entsendemodell',
     description: 'Rechte und Pflichten im Entsendemodell — für Betreuungskräfte und Familien.',
     url: 'https://primundus.de/eu-pflegekraft-rechte-pflichten',
     siteName: 'Primundus',
@@ -38,7 +44,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'EU-Pflegekraft — Rechte und Pflichten im Entsendemodell',
+    headline: 'EU-Pflegekraft: Rechte und Pflichten im Entsendemodell',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +79,7 @@ export default function EuPflegekraftRechtenPflichten() {
             { label: "EU-Pflegekraft Rechte & Pflichten" },
           ]}
           augenbraue="Ratgeber Recht"
-          titel="EU-Pflegekraft — Rechte & Pflichten im Entsendemodell"
+          titel="EU-Pflegekraft: Rechte und Pflichten im Entsendemodell"
           einleitung="Das Entsendemodell ist die rechtssichere Grundlage für die meisten 24h-Betreuungsverhältnisse in Deutschland. Es schützt beide Seiten — die Familie und die Betreuungskraft. Trotzdem gibt es häufige Missverständnisse: Was darf die Familie verlangen? Was hat die Kraft Anspruch auf? Dieser Ratgeber klärt auf."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
@@ -87,8 +93,7 @@ export default function EuPflegekraftRechtenPflichten() {
             <Punkte
               punkte={[
                 { title: 'Betreuungskraft', desc: 'Angestellt beim EU-Unternehmen im Heimatland. Dort sozialversichert (Rente, Kranken-, Pflegeversicherung). A1-Bescheinigung belegt den legalen Entsendestatus in Deutschland.' },
-                { title: 'EU-Unternehmen (Entsendefirma)', desc: 'Arbeitgeber der Betreuungskraft. Zahlt Lohn, stellt A1-Bescheinigung aus, ist verantwortlich für Sozialversicherungsbeiträge im Heimatland.' },
-                { title: 'Deutsche Agentur (Primundus)', desc: 'Vermittelt und koordiniert. Ist Vertragspartner der deutschen Familie. Schnittstelle zwischen Familie, EU-Unternehmen und Betreuungskraft.' },
+                { title: 'EU-Unternehmen (Entsendefirma)', desc: 'Arbeitgeber der Betreuungskraft. Zahlt den Lohn, beantragt die A1-Bescheinigung und führt die Sozialversicherungsbeiträge im Heimatland ab. Bei Primundus ist das die PRIMUNDUS Sp. z o.o. mit Sitz in Warschau, zugleich Vertragspartner der Familie; das Büro in Deutschland ist in München.' },
                 { title: 'Familie', desc: 'Kein eigenes Arbeitsverhältnis mit der Kraft. Vertrag nur mit Primundus. Keine deutschen Sozialabgaben. A1-Bescheinigung bei Kontrollen vorzeigen.' },
               ]}
             />
@@ -99,9 +104,9 @@ export default function EuPflegekraftRechtenPflichten() {
             titel="Rechte der Betreuungskraft"
             einleitung="Auch im Entsendemodell gelten für entsandte Arbeitnehmer bestimmte deutsche Mindeststandards (EU-Entsenderichtlinie, § 2 AEntG). Kein seriöser Betreiber unterschreitet diese."
             punkte={[
-              { title: 'Mindestlohn', desc: 'Entsandte Arbeitnehmer haben Anspruch auf den deutschen Mindestlohn (2026: 12,82 €/Stunde). Sachbezüge (Kost & Logis) können angerechnet werden.' },
+              { title: 'Mindestlohn', desc: 'Entsandte Arbeitnehmer haben Anspruch auf den deutschen gesetzlichen Mindestlohn. Sachbezüge wie Kost und Logis ersetzen den Mindestlohn grundsätzlich nicht.' },
               { title: 'Eigenes Zimmer & Privatsphäre', desc: 'Die Betreuungskraft hat Anspruch auf ein eigenes Zimmer mit Privatsphäre. Das ist Pflicht — kein Schlafen auf dem Sofa oder ohne abschließbaren Rückzugsort.' },
-              { title: 'Ruhezeiten', desc: 'Gesetzliche tägliche Ruhezeit von mindestens 11 Stunden. Bereitschaft ist keine Arbeitszeit wenn sie tatsächlich ungestört ist.' },
+              { title: 'Ruhezeiten', desc: 'Nach Arbeitsende müssen grundsätzlich mindestens 11 zusammenhängende Stunden Ruhezeit frei bleiben; die Arbeitszeit darf im Durchschnitt 48 Stunden pro Woche nicht überschreiten. Muss die Betreuungskraft im Haushalt bereitstehen, ist das regelmäßig Arbeitszeit; nur echte Rufbereitschaft außerhalb des Haushalts zählt nicht dazu.' },
               { title: 'Urlaub', desc: 'Gesetzlicher Mindesturlaub (4 Wochen/Jahr). Für die Dauer eines Einsatzes (6–8 Wochen) anteilig.' },
               { title: 'Krankenversicherung', desc: 'Über das EU-Unternehmen im Heimatland sozialversichert. Bei Erkrankung in Deutschland: Behandlung über europäische Krankenversicherungskarte (EHIC) möglich.' },
               { title: 'Würdevoller Umgang', desc: 'Die Kraft ist kein "Personal" das jederzeit Befehle entgegennehmen muss. Sie ist ein Mensch in einem Arbeitsverhältnis der Respekt verdient.' },
@@ -113,7 +118,7 @@ export default function EuPflegekraftRechtenPflichten() {
               punkte={[
                 { title: 'Pflege- und Betreuungsleistungen erbringen', desc: 'Die vertraglich vereinbarten Leistungen zuverlässig und sorgfältig erbringen — Körperpflege, Haushalt, Betreuung, Gesellschaft.' },
                 { title: 'Verschwiegenheit', desc: 'Über alle persönlichen und gesundheitlichen Informationen des Pflegebedürftigen und der Familie ist absolute Verschwiegenheit zu wahren — auch nach dem Einsatz.' },
-                { title: 'A1-Bescheinigung mitführen', desc: 'Die A1-Bescheinigung belegt den legalen Entsendestatus und muss bei einer Kontrolle durch Behörden vorgezeigt werden können.' },
+                { title: 'A1-Bescheinigung', desc: 'Die A1-Bescheinigung belegt den legalen Entsendestatus. Bei einer Kontrolle durch Behörden zeigt sie, wo die Betreuungskraft sozialversichert ist.' },
                 { title: 'Pünktlichkeit und Zuverlässigkeit', desc: 'An- und Abreise zum vereinbarten Zeitpunkt. Krankmeldung so früh wie möglich damit Ersatz organisiert werden kann.' },
                 { title: 'Umgang mit Wertgegenständen', desc: 'Sorgfältiger Umgang mit dem Eigentum der Familie und des Pflegebedürftigen. Keine Annahme von Geldgeschenken ohne Absprache.' },
               ]}
@@ -126,7 +131,7 @@ export default function EuPflegekraftRechtenPflichten() {
                 {
                   titel: 'Familie hat Anspruch auf:',
                   ton: 'gruen',
-                  punkte: ['Vertragsgemäße Leistungserbringung', 'Informationen über Veränderungen im Pflegezustand', 'Verschwiegenheit über familiäre Angelegenheiten', 'A1-Bescheinigung der Kraft vorab'],
+                  punkte: ['Vertragsgemäße Leistungserbringung', 'Informationen über Veränderungen im Pflegezustand', 'Verschwiegenheit über familiäre Angelegenheiten', 'A1-Bescheinigung für die Kraft beantragen'],
                 },
                 {
                   titel: 'Familie ist verpflichtet:',
@@ -145,7 +150,7 @@ export default function EuPflegekraftRechtenPflichten() {
               fragen={[
                 { q: 'Welche Rechte hat eine EU-Pflegekraft in Deutschland?', a: 'Anspruch auf deutschen Mindestlohn, eigenes Zimmer, Ruhezeiten (min. 11 Std./Tag), anteiligen Urlaub, Krankenversicherung über EHIC und würdevollen Umgang.' },
                 { q: 'Muss die Familie soziale Abgaben für die EU-Pflegekraft zahlen?', a: 'Nein — beim Entsendemodell über Primundus zahlt die Familie keine deutschen Sozialabgaben. Die Kraft ist im EU-Heimatland sozialversichert.' },
-                { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Das EU-Unternehmen ist verantwortlicher Arbeitgeber. Primundus organisiert sofort Ersatzkraft.' },
+                { q: 'Was passiert wenn eine EU-Pflegekraft in Deutschland krank wird?', a: 'Behandlung über europäische Krankenversicherungskarte (EHIC) möglich. Verantwortlicher Arbeitgeber ist das entsendende Unternehmen, bei Primundus die PRIMUNDUS Sp. z o.o. Primundus stellt schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen, und berechnet die Krankheitstage nicht.' },
                 { q: 'Darf die Familie der Pflegekraft Anweisungen geben?', a: 'Im Rahmen des vereinbarten Leistungsumfangs: Ja. Aber die Kraft ist kein "Personal auf Abruf" — Grundpflicht ist die vertraglich vereinbarte Tätigkeit, nicht unbegrenzte Verfügbarkeit für beliebige Aufgaben.' },
               ]}
             />

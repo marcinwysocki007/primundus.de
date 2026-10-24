@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Ernährung pflegebedürftiger Senioren — was wichtig ist',
+  title: 'Ernährung im Alter: was pflegebedürftige Senioren brauchen',
   description: 'Ernährung pflegebedürftiger Senioren: Grundlagen, häufige Probleme, Mangelernährung erkennen und praktische Tipps für Betreuungskräfte und Angehörige.',
   alternates: { canonical: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Ernährung pflegebedürftiger Senioren | Primundus',
+    title: 'Ernährung im Alter: was pflegebedürftige Senioren brauchen',
     description: 'Was pflegebedürftige Senioren essen sollten und wie man Mangelernährung verhindert.',
     url: 'https://primundus.de/ernaehrung-pflegebeduerftige-senioren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Ernährung pflegebedürftiger Senioren — was wichtig ist',
+    headline: 'Ernährung im Alter: was pflegebedürftige Senioren brauchen und wie Sie Mangelernährung vorbeugen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -80,7 +80,7 @@ export default function ErnaehrungPflegebeduerftigeSenioren() {
             { label: "Ernährung pflegebedürftiger Senioren" },
           ]}
           augenbraue="Ratgeber Ernährung"
-          titel="Ernährung pflegebedürftiger Senioren — was wirklich wichtig ist"
+          titel="Ernährung im Alter: was pflegebedürftige Senioren brauchen und wie Sie Mangelernährung vorbeugen"
           einleitung="Gute Ernährung ist in der Pflege oft unterschätzt — dabei ist sie eine der wirksamsten Maßnahmen für Wohlbefinden, Heilung und Lebensqualität. Pflegebedürftige Senioren haben andere Bedürfnisse als jüngere Menschen: weniger Hunger, aber höherer Nährstoffbedarf, vermindertes Durstgefühl, oft Schluckprobleme. Eine 24h-Betreuungskraft die frisch kocht macht den Unterschied."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

@@ -33,6 +33,14 @@
 // check-tsc mit einer Grundlinie: Bekanntes wird gezaehlt, NEUES laesst den Build scheitern.
 // Die Grundlinie steht in scripts/daten/snippets-grundlinie.json.
 //
+// ZUSAMMENGESETZTE TEXTE (15.10.2026)
+// Titel und Beschreibungen als Template-Literal (`… ${euro(HEIM_EIGENANTEIL_BUND)} …`) oder aus
+// generateMetadata lassen sich im Quelltext nicht messen. Die Beschreibung von
+// /pflegeheim-kosten-deutschland stand so mit 1.032 px wochenlang über der Grenze, ohne dass der
+// Wächter etwas sagte. Für diese Seiten liest er deshalb <title>, description und og:-Werte aus dem
+// gebauten HTML (.next/server/app/<seite>.html), das `npm run verify` vorher erzeugt. Ohne Build
+// meldet er die Seiten als ungeprüft.
+//
 // Aufruf:  node scripts/check-snippets.mjs
 //          node scripts/check-snippets.mjs --grundlinie-neu    (nach einer Aufraeumrunde)
 import fs from 'node:fs'
@@ -72,6 +80,22 @@ function felder(block, name) {
   return [...block.matchAll(re)].map((m) => m[1])
 }
 
+// Wert beginnt mit einem Backtick: zusammengesetzter Text, siehe oben.
+const ZUSAMMENGESETZT = /(?:title|description):\s*\n?\s*`/
+const GEBAUT = path.join(WURZEL, '.next/server/app')
+
+function ausHtml(slug) {
+  const datei = path.join(GEBAUT, (slug === '/' ? 'index' : slug.slice(1)) + '.html')
+  if (!fs.existsSync(datei)) return null
+  const html = fs.readFileSync(datei, 'utf8')
+  const text = (s) => s.replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
+  const alle = (re) => [...html.matchAll(re)].map((m) => text(m[1]))
+  return {
+    titel: [...alle(/<title>([^<]*)<\/title>/g), ...alle(/<meta property="og:title" content="([^"]*)"/g)],
+    beschreibungen: [...alle(/<meta name="description" content="([^"]*)"/g), ...alle(/<meta property="og:description" content="([^"]*)"/g)],
+  }
+}
+
 const seiten = []
 const start = path.join(APP, 'page.tsx')
 if (fs.existsSync(start)) seiten.push(['/', start])
@@ -83,24 +107,35 @@ for (const d of fs.readdirSync(APP, { withFileTypes: true })) {
 
 const fehler = new Set()
 const warnungen = new Set()
+const ungeprueft = []
 let geprueft = 0
 
 for (const [slug, datei] of seiten) {
   const quelle = fs.readFileSync(datei, 'utf8')
   const block = metadatenBlock(quelle)
-  if (!block) continue
+  const zusammengesetzt = ZUSAMMENGESETZT.test(block ?? '') || /export (?:async )?function generateMetadata/.test(quelle)
+  if (!block && !zusammengesetzt) continue
   geprueft++
   const darfPolen = POLEN_SEITEN.test(slug)
+  const titel = felder(block ?? '', 'title')
+  const beschreibungen = felder(block ?? '', 'description')
+  if (zusammengesetzt) {
+    const gebaut = ausHtml(slug)
+    if (gebaut) {
+      titel.push(...gebaut.titel)
+      beschreibungen.push(...gebaut.beschreibungen)
+    } else ungeprueft.push(slug)
+  }
 
   // Set, damit metadata und openGraph mit demselben Wert nur einmal gemeldet werden.
-  for (const t of new Set(felder(block, 'title'))) {
+  for (const t of new Set(titel)) {
     if (UNSER_PREIS.test(t)) fehler.add(`${slug}  Titel enthält unseren Preis: „${t}"`)
     if (!darfPolen && /oln/i.test(t)) fehler.add(`${slug}  Titel sagt „polnisch", obwohl es keine Polen-Seite ist: „${t}"`)
     const px = breite(t, '20px Arial')
     if (px > TITEL_GRENZE + PUFFER) fehler.add(`${slug}  Titel ${px} px, Grenze ${TITEL_GRENZE}: „${t}"`)
     else if (px > TITEL_GRENZE - PUFFER) warnungen.add(`${slug}  Titel ${px} px — dicht an der Grenze`)
   }
-  for (const b of new Set(felder(block, 'description'))) {
+  for (const b of new Set(beschreibungen)) {
     if (UNSER_PREIS.test(b)) fehler.add(`${slug}  Beschreibung enthält unseren Preis: „${b.slice(0, 76)}…"`)
     if (!darfPolen && /oln/i.test(b)) fehler.add(`${slug}  Beschreibung sagt „polnisch", obwohl es keine Polen-Seite ist`)
     const px = breite(b, '14px Arial')
@@ -125,6 +160,9 @@ const behoben = [...bekannt].filter((f) => !fehler.has(f))
 console.log(`check-snippets: ${geprueft} Seiten · ${jetzt.length} Befunde · Grundlinie ${bekannt.size} · neu ${neuDazu.length} · behoben ${behoben.length}`)
 if (warnungen.size) {
   console.log(`  ${warnungen.size} Grenzfälle innerhalb der Messungenauigkeit von ±${PUFFER} px`)
+}
+if (ungeprueft.length) {
+  console.log(`  ${ungeprueft.length} Seiten mit zusammengesetztem Text ungeprüft, weil kein Build da ist (npm run build): ${ungeprueft.join(', ')}`)
 }
 if (neuDazu.length) {
   for (const f of neuDazu) console.log('  ✗ NEU: ' + f)

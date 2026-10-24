@@ -15,27 +15,27 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'was-ist-24h-pflege', title: "Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?" },
-  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
-  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Rheinland-Pfalz 2026" },
+  { id: 'was-ist-24h-pflege', title: "Was ist 24-Stunden-Pflege? Der Unterschied zu Pflegedienst und Heim" },
+  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24-Stunden-Pflege die richtige Wahl?" },
+  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft, und was ergänzt der Pflegedienst?" },
+  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten und Kassenzuschüsse in Rheinland-Pfalz 2026" },
   { id: 'polnische-betreuungskraefte-in-rheinland', title: "Polnische Betreuungskräfte in Rheinland-Pfalz" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Rheinland-Pfalz ausmacht" },
   { id: 'einzugsgebiet-rheinland-pfalz', title: "Einzugsgebiet Rheinland-Pfalz" },
   { id: 'werkzeuge', title: "Was es in Rheinland-Pfalz kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
 
-  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Rheinland-Pfalz" },
+  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen zur 24-Stunden-Pflege in Rheinland-Pfalz" },
 ]
 
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Rheinland-Pfalz | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Rheinland-Pfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege in Rheinland-Pfalz: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-rheinland-pfalz' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Rheinland-Pfalz | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Rheinland-Pfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege in Rheinland-Pfalz: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-rheinland-pfalz',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Rheinland-Pfalz?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.220 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Rheinland-Pfalz?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.290 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Rheinland-Pfalz starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Rheinland-Pfalz — auch in ländlichen Regionen.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
-  { q: 'Ist 24h-Pflege über Primundus in Rheinland-Pfalz rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Ist 24h-Pflege über Primundus in Rheinland-Pfalz rechtssicher?', a: 'Ja, im Entsendemodell: Die Betreuungskräfte sind bei uns angestellt und in Polen sozialversichert. Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie werden nicht Arbeitgeber der Betreuungskraft und zahlen für sie keine Sozialabgaben. Die Firmengruppe hinter Primundus ist seit 2006 in der häuslichen 24-Stunden-Pflege tätig und hat seitdem über 60.000 Betreuungen organisiert.' },
   { q: 'Ist in einer Wohnung in Rheinland-Pfalz Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Rheinland-Pfalz hat im Schnitt 107,7 m², 15,4 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 86,8 % der Gebäude in Rheinland-Pfalz sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Deutschland insgesamt zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.364 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
@@ -102,28 +102,29 @@ export default function Page() {
             { label: 'Regionen', href: '/regionen' },
             { label: 'Rheinland-Pfalz' },
           ]}
-          augenbraue="24-Stunden-Pflege in Rheinland-Pfalz"
-          titel="24h-Pflege Rheinland-Pfalz — Betreuungskraft zuhause"
-          einleitungTitel="Zuhause bleiben in Rheinland-Pfalz"
+          augenbraue="6× Testsieger DIE WELT"
+          titel="24-Stunden-Pflege in Rheinland-Pfalz: Betreuung zu Hause, Kosten und Zuschüsse"
+          einleitungTitel="Zu Hause bleiben in Rheinland-Pfalz"
           einleitung={<>Zwischen Weinbergen an der Mosel, Dörfern in der Eifel und Städten wie Mainz und Koblenz: In Rheinland-Pfalz bleibt man seinem Ort treu — oft ein Leben lang. Eine Betreuungskraft von Primundus sorgt dafür, dass das auch mit Pflegebedarf gilt: Sie zieht mit ein und ist bei Bedarf auch nachts da. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-rheinland-pfalz', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort="Rheinland-Pfalz" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim Rheinland-Pfalz: Eigenanteil Ø 2300–2800 €/Monat',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
+          blickVerweise={[
+            // Inhaltsverzeichnis mit Grund statt gemischter Häkchen-Liste (Martin 15.10.2026: „warum mischen wir hier alles“).
+            { href: '#kosten-und-kassenzuschuesse-in', titel: 'Kosten und Zuschüsse', text: 'Pflegegeld, Entlastungsbudget und Steuerermäßigung bringen bei Pflegegrad 3 bis zu ca. 1.227 € im Monat' },
+            { href: '#polnische-betreuungskraefte-in-rheinland', titel: 'Betreuungskräfte', text: 'aus Polen und bei uns fest angestellt, Sie werden nicht Arbeitgeber' },
+            { href: '#einzugsgebiet-rheinland-pfalz', titel: 'Einzugsgebiet', text: 'Mainz, Ludwigshafen, Koblenz und alle Orte in Rheinland-Pfalz' },
+            { href: '#werkzeuge', titel: 'Heim oder zu Hause', text: 'ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.290 € Eigenanteil im Monat' },
+            { href: '#so-arbeiten-wir', titel: 'So arbeiten wir', text: 'Bestpreisgarantie, keine Vermittlungsgebühr, täglich kündbar' },
           ]}
           blickTitel="Rheinland-Pfalz auf einen Blick"
           person={<AnsprechpartnerinGross ort="Rheinland-Pfalz" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24h-pflege" titel="Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?">
+          <Abschnitt id="was-ist-24h-pflege" titel="Was ist 24-Stunden-Pflege? Der Unterschied zu Pflegedienst und Heim">
             <Text>Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.</Text>
             <Punkte
               punkte={[
@@ -134,7 +135,7 @@ export default function Page() {
             />
           </Abschnitt>
 
-          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
+          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24-Stunden-Pflege die richtige Wahl?">
             <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
             <Punkte
               punkte={[
@@ -146,13 +147,13 @@ export default function Page() {
                 { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
               ]}
             />
-            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
+            <Kasten augenbraue="Wann 24-Stunden-Pflege allein nicht ausreicht">
               <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
             </Kasten>
             <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
           </Abschnitt>
 
-          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
+          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft, und was ergänzt der Pflegedienst?">
             <Gegenueber
               seiten={[
                 { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Körperpflege — Waschen, Ankleiden, Zahnpflege', 'Kochen — frisch, nach Vorlieben und Diät', 'Haushalt — Putzen, Einkaufen, Wäsche', 'Mobilisierung, Spaziergänge, Begleitung', 'Gesellschaft und Begleitung im Alltag', 'Medikamentenerinnerung', 'Arzt- und Therapietermine begleiten', 'Nachts im Haus — da, wenn Hilfe gebraucht wird'] },
@@ -162,7 +163,7 @@ export default function Page() {
             <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
           </Abschnitt>
 
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Rheinland-Pfalz 2026">
+          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten und Kassenzuschüsse in Rheinland-Pfalz 2026">
             <Tabelle
               titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
@@ -172,7 +173,7 @@ export default function Page() {
                 [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim Rheinland-Pfalz: Eigenanteil Ø 2300–2800 €/Monat — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim Rheinland-Pfalz: Eigenanteil Ø 3.289 €/Monat — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -194,7 +195,7 @@ export default function Page() {
             <Kasten titel="Angestellt statt vermittelt">
               <Text>Das ist der Unterschied, der im Alltag zählt: Bei Primundus sind die Betreuungskräfte fest angestellt. Wir reichen sie nicht an Sie weiter, und Sie werden nicht zum Arbeitgeber. Die Kraft arbeitet mit A1-Bescheinigung im Entsendemodell in Deutschland, Ihr Vertrag läuft mit uns. Für Sie heißt das: keine Lohnabrechnung, keine Sozialabgaben, keine Arbeitgeberhaftung. Und wenn eine Kraft ausfällt, organisieren wir den Ersatz — ohne Zusatzkosten, es fallen lediglich die An- und Abreisekosten an.</Text>
             </Kasten>
-            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.220 Euro Eigenanteil.</Text>
+            <Text><strong className="text-pm-ink font-semibold">Was eine polnische Betreuungskraft kostet,</strong> hängt von der Pflegesituation und den Deutschkenntnissen ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 Euro im Monat, dazu kommen bis zu 333 Euro Steuerermäßigung; ein Heimplatz kostet in Rheinland-Pfalz im ersten Jahr im Schnitt rund 3.290 Euro Eigenanteil.</Text>
             <Text><strong className="text-pm-ink font-semibold">Wie gut sprechen die Betreuungskräfte Deutsch?</strong> Das ist die häufigste Frage, und wir beantworten sie vor der Entscheidung: Jede Kraft wird eingestuft, und das Sprachniveau steht im Profil — zusammen mit Erfahrung und Foto. Sie sehen also, wen Sie bekommen, bevor Sie sich festlegen. Bei vielen Anbietern erfahren Familien das erst nach Vertragsabschluss.</Text>
             <Text>Wie das Entsendemodell rechtlich funktioniert, welche Unterlagen dazugehören und wie schnell es geht, steht ausführlich hier: <a href="/pflegekraft-aus-polen" className="text-pm-taupe font-semibold hover:underline">Polnische Pflegekräfte — was sie kosten und wie es rechtlich läuft</a>.</Text>
           </Abschnitt>
@@ -212,7 +213,7 @@ export default function Page() {
             <CitiesOfRegion region="rheinland-pfalz" />
           </Abschnitt>
 
-          <OrtWerkzeuge slug="rheinland-pfalz" ort={'Rheinland-Pfalz'} land={'Deutschland insgesamt'} altbau={47.4} miete={6.75} />
+          <OrtWerkzeuge slug="rheinland-pfalz" ort={'Rheinland-Pfalz'} land={'Rheinland-Pfalz'} altbau={47.4} miete={6.75} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
@@ -239,7 +240,7 @@ export default function Page() {
               <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
                 Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
                 Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
+                <a href="https://kostenrechner.primundus.de/bestpreisgarantie?src=apex-garantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
               </p>
             </div>
             <Schritte
@@ -254,7 +255,7 @@ export default function Page() {
           <OrtStimmen ort={'Rheinland-Pfalz'} />
 
 
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Rheinland-Pfalz">
+          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen zur 24-Stunden-Pflege in Rheinland-Pfalz">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>

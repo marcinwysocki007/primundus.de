@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Betreuung und Pflege in Gütersloh | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Gütersloh in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege und Betreuung in Gütersloh | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Gütersloh: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-guetersloh' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Betreuung und Pflege in Gütersloh | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Gütersloh in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege und Betreuung in Gütersloh | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Gütersloh: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-guetersloh',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Gütersloh?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Nordrhein-Westfalen kostet im Schnitt rund 3.580 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Gütersloh?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Nordrhein-Westfalen kostet im Schnitt rund 3.670 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Gütersloh starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Gütersloh gilt als junge Stadt — ist Pflege hier überhaupt ein Thema?', a: 'Ja, und zwar zunehmend. Der Anteil der über 65-Jährigen liegt zwar leicht unter dem nordrhein-westfälischen Schnitt, aber das liegt am Zuzug jüngerer Menschen, nicht an wenigen Älteren. In absoluten Zahlen wächst die Gruppe der über 65-Jährigen bis 2050 um rund 27 Prozent, im Land nur um 12. Und die Gruppe der über 80-Jährigen bleibt bis 2030 fast konstant — das sind die geburtenschwachen Kriegsjahrgänge — und wächst danach bis 2040 um mehr als ein Drittel.' },
   { q: 'Im Kreis Gütersloh gibt es viele Pflege-Wohngemeinschaften. Was ist der Unterschied zur Betreuung zu Hause?', a: 'In einer Pflege-Wohngemeinschaft ziehen mehrere Menschen zusammen, ein ambulanter Dienst betreut rund um die Uhr. Der Kreis Gütersloh hat davon rund 84 — eine bundesweite Besonderheit, und ein Grund, warum hier nur 10,7 Prozent der Pflegebedürftigen im Heim leben, deutlich weniger als in NRW und im Bund. Bei einer Betreuungskraft zu Hause bleibt dagegen alles, wie es ist: die eigene Wohnung, die eigenen Möbel, der eigene Tagesablauf — nur mit jemandem, der da ist.' },
   { q: 'Gibt es in Gütersloh eine geriatrische Klinik?', a: 'Im somatischen Krankenhaus in Gütersloh selbst nicht. Nach dem Krankenhausplan des Landes hat weder das Klinikum Gütersloh noch das Sankt Elisabeth Hospital eine geriatrische Fachabteilung; geplant ist Geriatrie in der Stadt nur an der LWL-Klinik, einem psychiatrischen Haus. Die nächstgelegenen geriatrischen Abteilungen liegen in Harsewinkel, Rheda-Wiedenbrück und Halle. Für den Übergang nach einem Klinikaufenthalt ist es deshalb sinnvoll, die Versorgung zu Hause früh zu klären.' },
   { q: 'Welches Einzugsgebiet wird in Gütersloh bedient?', a: 'Gütersloh und Kreis Gütersloh: Bielefeld-Südost, Rheda-Wiedenbrück, Herzebrock-Clarholz, Borgholzhausen und alle Gemeinden im Kreis Gütersloh' },
   { q: 'Ist in einer Wohnung in Gütersloh Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Gütersloh hat im Schnitt 97,9 m², 15,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 78,7 % der Gebäude in Gütersloh sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.670 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

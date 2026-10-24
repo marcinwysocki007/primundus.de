@@ -36,13 +36,31 @@ const STALE = [
   // Herkunft der eigenen Betreuungskräfte (Martin 19.09.2026): derzeit nur Polen — nicht „nur" schreiben,
   // aber auch keine anderen Länder als unsere Kräfte ausgeben. Am 20.09. stand die Aufzählung noch auf
   // 207 Ortsseiten. Die Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien bleiben erlaubt:
-  // Diese Regel trifft nur die Aufzählung, mit der wir eigene Kräfte beschreiben.
-  ['Herkunft aufgezählt (nur Polen)', /(?:einige|überwiegend|teils|auch)\s+aus\s+(?:Rumänien|Bulgarien)/g],
+  // Diese Regel trifft nur die Aufzählung, mit der wir eigene Kräfte beschreiben. Seit 13.10.2026 auch im Code
+  // ausgenommen: Die neutrale Rumänien-Seite beschreibt den Markt („Entsandte Kräfte, auch aus Rumänien, kosten
+  // laut Verbraucherzentrale …“), nicht unsere Kräfte.
+  ['Herkunft aufgezählt (nur Polen)', /(?:einige|überwiegend|teils|auch)\s+aus\s+(?:Rumänien|Bulgarien)/g,
+    { ohneDateien: [path.join('app', 'pflegekraft-aus-rumaenien', 'page.tsx'), path.join('app', 'pflegekraft-aus-bulgarien', 'page.tsx')] }],
+  // Betreuungsrecht seit 01.01.2023 neu nummeriert (Reform des Vormundschafts- und Betreuungsrechts). Am 02.10.2026
+  // nannte das Dokument des Vollmacht-Generators noch „§ 1906 BGB“ (heute § 1831). Gesperrt sind die aufgehobenen
+  // Fassungen: § 1896 (heute § 1814), § 1901a (§ 1827), § 1904 (§ 1829), § 1906 (§ 1831), § 1906a (§ 1832).
+  ['Betreuungsrecht alt (§ 1896/1901a/1904/1906/1906a BGB)', /§\s*(?:1896|1901\s*a|1904|1906\s*a?)\b[^.\n]{0,20}BGB/g],
+  // Pflegegeld im Krankenhaus: seit 01.01.2026 acht Wochen (§ 34 Abs. 2 SGB XI), vorher vier. Am 02.10.2026 stand die
+  // alte Regel noch dreimal auf /24-stunden-pflege-krankenhausaufenthalt. Erlaubt bleibt der Rückblick „waren es vier Wochen“.
+  ['Pflegegeld im Krankenhaus alt (vier Wochen)', /(?:bis zu|ersten)\s+vier\s+Wochen\s+(?:weiter|einer\s+vollstationären)/g],
+  // Hamburger Telefonnummer (Martin 02.10.2026): 040 468 95 8181 wie im Google-Profil. Die Ortsseite zeigte 040 468 951 181,
+  // eine Ziffer anders; dieselbe falsche Nummer steht in alten Verzeichniseinträgen.
+  ['Hamburger Nummer falsch (040 468951181)', /468\s?95\s?1\s?181|4940468951181/g],
   // Zensus-Haushaltstyp HHTYP_SENIOR_HH__1 heißt „Haushalte mit ausschließlich Seniorinnen/Senioren",
   // Senior = 65. Lebensjahr vollendet (Methodikblatt der Regionaltabelle Haushalte). Das Ehepaar mit 70 und
   // 72 ist so ein Haushalt — „nachts ist niemand da" behauptet deshalb mehr, als die Zahl hergibt, und zwar
   // zugunsten des eigenen Angebots. Stand am 21.09. auf 152 Ortsseiten (Codemod 24).
-  ['Senioren-Haushalt als „niemand da" gedeutet', /(?:ist|lebt|wohnt)\s+(?:nachts\s+)?niemand\s+(?:mehr\s+)?da[^.]{0,60}einspringen/g],
+  // 02.10.2026: Die erste Hälfte fing nur diesen einen Wortlaut. Auf 30 Seiten stand dieselbe Deutung anders —
+  // „Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt“, „dort ist niemand im Haus, der nachts
+  // einspringen könnte“, „ist also niemand da“ (Codemod 39). Die zweite Hälfte sucht deshalb ab dem Senioren-Anteil
+  // („ab 65“ / „schon 65“) bis in den nächsten Satz nach „ist/lebt/wohnt … niemand da/im Haus“. Der Satz zu den
+  // Einpersonenhaushalten („Alleinlebend heißt im Pflegefall: Es ist niemand da …“) bleibt erlaubt: Wer allein lebt, ist allein.
+  ['Senioren-Haushalt als „niemand da" gedeutet', /(?:ist|lebt|wohnt)\s+(?:nachts\s+)?niemand\s+(?:mehr\s+)?da[^.]{0,60}einspringen|(?:ab|schon)\s+65\b[^.]{0,120}(?:\.\s*[^.]{0,80})?\b(?:ist|lebt|wohnt)\s+(?:(?:also|dort|nachts)\s+)*niemand\s+(?:mehr\s+)?(?:da|im\s+Haus)\b/g],
   // Preisregel (Martin 25.09.2026, schon am 17.09. so gemeint und am 20.09. beim Ausbau von /kosten gebrochen):
   // Genannt wird der Grundpreis ab 2.150 € und eine Beispielrechnung; die Aufschläge des Rechners (Nächte, Deutsch,
   // Ehepaar, weitere Personen, Mobilität, Führerschein, Frau, Pflegegrad 5) werden benannt, aber nicht beziffert.
@@ -54,7 +72,45 @@ const STALE = [
   ['Preisregel: Nacht-Aufschlag als Spanne (50 bis 300 €)', /N[aä]cht[^.]{0,60}\+?50\s*(?:bis|–|-)\s*\+?300\s*€/g],
   ['Preisregel: Ehepaar-Preis (2.600 €)', /2\.600\s*€/g],
   ['Preisregel: Pflegegrad-5-/Rollstuhl-Preis (2.200 / 2.250 / 2.300 €)', /2\.(?:200|250|300)\s*€/g],
+  // Vertragspartner (Martin 12.09. und 30.09.2026, Mustervertrag): Die Familie schließt den Vertrag mit der PRIMUNDUS
+  // Sp. z o.o., bei der die Betreuungskräfte angestellt sind. Am 01.10. nannten fünf Ratgeber Primundus noch eine
+  // „deutsche Agentur“, sprachen vom „Agenturvertrag“ oder schrieben „Primundus prüft und vermittelt“, während /ueber-uns
+  // „Angestellt, nicht vermittelt“ sagt. Kommentarzeilen zählen nicht (dort steht der alte Wortlaut als Beleg).
+  ['Primundus als deutsche Agentur/Vermittler (Vertragspartner ist die PRIMUNDUS Sp. z o.o.)',
+    /[Dd]eutsche[nmr]?\s+(?:Vermittlungs)?[Aa]gentur|Agenturvertrag|Primundus\s+(?:prüft\s+und\s+)?vermittelt/g, { ohneKommentare: true }],
+  // Ersatz „schnellstmöglich (in der Regel innerhalb von 3 Tagen)“ (Mustervertrag § 1 Nr. 4; Martin 01.10.: „ist auch richtig“).
+  // Am 01.10. versprachen zehn Seiten „sofort“ oder „unverzüglich“ Ersatz,
+  // „sofortige Ablösung“, einen „unmittelbaren Wechsel“ oder Ersatz „ohne Vorlaufzeit“, während /ueber-uns „in der Regel
+  // innerhalb von 3 Tagen“ sagt.
+  ['Ersatz „sofort“/„unverzüglich“ (Mustervertrag § 1 Nr. 4: in der Regel innerhalb von 3 Tagen)',
+    /(?:sofort(?:ig(?:e[rnms]?)?)?|unverzüglich|unmittelbar(?:e[rnms]?)?)\s+(?:eine\s+)?(?:Ersatz|Ablösung|Wechsel)|Ersatz(?:kraft)?\s+sofort|sofortige[nmrs]?\s+Ersatzorganisation|ohne\s+Vorlaufzeit/gi,
+    { ohneKommentare: true }],
+  // Verhinderungspflege-Frist: Sachfehler auf /verhinderungspflege, behoben in 038df3df (01.10.2026, Quellen und Wortlaut
+  // dort und in der Fakten-Memory pflege-leistungsfakten-2026). Die 30.-Juni-Regel gilt nur für den Entlastungsbetrag (§ 45b).
+  ['Verhinderungspflege: Belege „vor dem 31. Dezember“ (Antrag bis Ende des Folgejahres, § 39 Abs. 1)',
+    /Belege\s+(?:bis\s+)?(?:vor\s+dem|zum|spätestens\s+(?:am|zum)|bis\s+zum)\s+(?:31\.\s*Dezember|31\.\s*12\.|Jahresende)/gi, { ohneKommentare: true }],
+  ['Verhinderungspflege „keine eigenständige“ (Leistung besteht weiter, § 42a)',
+    /keine\s+eigenst[aä]ndige\s+Verhinderungspflege/gi, { ohneKommentare: true }],
+  // Sachfehler, die Martin am 13.10.2026 finden musste („warum muss ich jedes mal solche fehler finden“). Behoben in
+  // b6a8c8e5 und dd07e3f2 (Wortlaut von OpenAI, Beleg seo-reports/analysen/sachfehler_openai_2026-10-13.md). Die Regeln
+  // sorgen dafür, dass derselbe Satz nicht über eine andere Seite oder einen neuen Entwurf zurückkommt.
+  // BAG 24.06.2021, 5 AZR 505/20: Bereitschaftsdienst einer entsandten Betreuungskraft im Haushalt ist Arbeitszeit.
+  ['Bereitschaft als „keine Arbeitszeit“ (BAG 24.06.2021, 5 AZR 505/20)',
+    /Bereitschaft(?:sdienst|szeit(?:en)?)?\s+(?:ist|sind|gilt|gelten|zählt|zählen)\s+(?:als\s+)?(?:keine|nicht\s+als)\s+Arbeitszeit/gi,
+    { ohneKommentare: true }],
+  // Die A1-Bescheinigung stellt der Sozialversicherungsträger des Entsendestaats aus; der Arbeitgeber beantragt sie nur.
+  ['A1 „vom Arbeitgeber ausgestellt“ (stellt der Sozialversicherungsträger im Entsendestaat aus)',
+    /vom\s+Arbeitgeber(?:\s+im\s+(?:Heimatland|Herkunftsland|Entsendestaat))?\s+ausgestellt/gi, { ohneKommentare: true }],
+  // Kost und Logis ersetzen den Mindestlohn grundsätzlich nicht.
+  ['Sachbezüge auf den Mindestlohn angerechnet', /Sachbez(?:ü|ue)ge[^.]{0,60}(?:angerechnet|anrechenbar)/gi,
+    { ohneKommentare: true }],
+  // Regel 12.09.2026: Mindestlohn-Beträge stehen nicht auf Kundenseiten (am 13.10. stand dort noch der Wert von 2025).
+  ['Mindestlohn mit Betrag (Regel 12.09.: keine Beträge auf Kundenseiten)',
+    /Mindestlohn[^.;"'<]{0,40}\d{1,2},\d{2}\s*(?:€|Euro)/g, { ohneKommentare: true }],
 ]
+
+// Zeilen, die nur Kommentar sind (// …, * … in Blockkommentaren, {/* … in JSX)
+const KOMMENTARZEILE = /^\s*(?:\/\/|\/?\*|\{\/\*)/
 
 const SCAN_DIRS = ['app', 'components', 'lib']
 const SCAN_FILES = ['public/llms.txt']
@@ -74,11 +130,14 @@ function scanFile(file) {
   const rel = path.relative(ROOT, file)
   if (rel === SELF || ALLOW_FILES.has(rel)) return
   const text = fs.readFileSync(file, 'utf8')
-  for (const [desc, re] of STALE) {
+  const zeilen = text.split('\n')
+  for (const [desc, re, optionen] of STALE) {
+    if (optionen?.ohneDateien?.includes(rel)) continue
     re.lastIndex = 0
     let m
     while ((m = re.exec(text))) {
       const line = text.slice(0, m.index).split('\n').length
+      if (optionen?.ohneKommentare && KOMMENTARZEILE.test(zeilen[line - 1])) continue
       findings.push(`${rel}:${line}  ${desc}`)
     }
   }

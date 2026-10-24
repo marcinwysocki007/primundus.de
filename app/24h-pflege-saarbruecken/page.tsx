@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Saarbrücken | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Saarbrücken in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Saarbrücken | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Saarbrücken: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-saarbruecken' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Saarbrücken | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Saarbrücken in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege in Saarbrücken | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Saarbrücken: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-saarbruecken',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Saarbrücken?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Saarland kostet im Schnitt rund 3.690 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Saarbrücken?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Saarland kostet im Schnitt rund 3.700 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Saarbrücken starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Lohnt sich 24-Stunden-Pflege, wenn es in Saarbrücken genug ambulante Dienste gibt?', a: 'Die Frage ist berechtigt — der Regionalverband ist dicht besiedelt, ambulante Dienste sind erreichbar. Der Unterschied liegt nicht in der Entfernung, sondern in der Anwesenheit. Ein Dienst kommt zu festen Zeiten und bleibt zwanzig Minuten. Er ist nicht da, wenn nachts jemand aufsteht, er kocht nicht mit und er merkt nicht, wenn tagsüber etwas nicht stimmt. Wo es um Begleitung über den ganzen Tag geht, ersetzt kein Einsatzplan jemanden, der im Haus wohnt.' },
   { q: 'Was bedeutet die Hanglage für die Betreuung in Saarbrücken?', a: 'Zwischen der Stadtmitte auf rund 230 Metern und Wohnlagen wie dem Eschberg auf 340 Metern liegen gut hundert Höhenmeter — auf kurzer Strecke. Wer dort oben oder in einer der Hanglagen über der Saar wohnt, merkt jede Steigung, sobald das Gehen schwerer fällt. Eine Betreuungskraft übernimmt die Wege nach draußen: einkaufen, Arzttermine, Begleitung. Damit bleibt der Alltag möglich, ohne dass jemand die vertraute Wohnung aufgeben muss.' },
   { q: 'Welches Einzugsgebiet wird in Saarbrücken bedient?', a: 'Saarbrücken und Umland: Neunkirchen, Homburg, Völklingen, Saarlouis und alle Gemeinden im Saarpfalz-Kreis und Landkreis Saarlouis' },
   { q: 'Ist in einer Wohnung in Saarbrücken Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Saarbrücken hat im Schnitt 85,7 m², 28,9 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 69,7 % der Gebäude in Saarbrücken sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Saarland zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.690 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Saarland zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.700 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Tagesstruktur bei Demenz — Tipps & Tagesplan | Primundus',
-  description: 'Tagesstruktur bei Demenz: Warum feste Routinen entscheidend sind, ein konkreter Tagesplan mit sinnvollen Aktivitäten und wie 24h-Betreuung den Alltag.',
+  title: 'Tagesstruktur bei Demenz: Tagesplan, Aktivitäten und Tipps',
+  description: 'Tagesstruktur bei Demenz: Warum feste Routinen entscheidend sind, ein konkreter Tagesplan mit sinnvollen Aktivitäten und Tipps für die Nacht.',
   alternates: { canonical: 'https://primundus.de/tagesstruktur-demenz' },
   openGraph: {
-    title: 'Tagesstruktur bei Demenz | Primundus',
-    description: 'Feste Routinen und Tagesstruktur bei Demenz: Warum sie wirken und wie man sie umsetzt.',
+    title: 'Tagesstruktur bei Demenz: Tagesplan, Aktivitäten und Tipps',
+    description: 'Tagesstruktur bei Demenz: Warum feste Routinen entscheidend sind, ein konkreter Tagesplan mit sinnvollen Aktivitäten und Tipps für die Nacht.',
     url: 'https://primundus.de/tagesstruktur-demenz',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Tagesstruktur bei Demenz — Tagesplan, Aktivitäten & Tipps',
+    headline: 'Tagesstruktur bei Demenz: Tagesplan, Aktivitäten und Tipps',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function TagesstrukturDemenz() {
             { label: "Tagesstruktur bei Demenz" },
           ]}
           augenbraue="Ratgeber Demenz"
-          titel="Tagesstruktur bei Demenz — Tagesplan, Aktivitäten & Tipps"
+          titel="Tagesstruktur bei Demenz: Tagesplan, Aktivitäten und Tipps"
           einleitung="Feste Tagesstrukturen geben Menschen mit Demenz Halt, ganz ohne Medikamente. Sie reduzieren Angst, Unruhe und Verhaltensauffälligkeiten erheblich — weil sie Orientierung geben ohne Gedächtnis zu brauchen. Der Körper erinnert sich auch wenn der Kopf es nicht mehr kann."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

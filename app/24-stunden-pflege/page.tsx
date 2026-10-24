@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { KontaktBand } from '@/components/ArticleCTA'
 import {
-  Abschnitt, Fragen, Gegenueber, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, StandardUnterzeile, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
+  Abschnitt, Fragen, Gegenueber, Gruppen, Kasten, MehrDazu, Punkte, RatgeberKopf, RatgeberRumpf, RechnerKasten, Schritte, Tabelle, Text,
 } from '@/components/vorlage/Ratgeber'
 import { AblaufZeitstrahl, Beispieltag, HeimVsZuhause, KostenAufteilung, ZuhauseQuote } from '@/components/grafik/Grafik'
 import { ArticleProgressBar } from '@/components/ArticleProgressBar'
@@ -18,7 +18,7 @@ import { ORG_ID } from '@/lib/schema'
 // Ersatzkraft nach Vertrag § 1 („schnellstmöglich, in der Regel innerhalb von 3 Tagen", Krankheitstage ohne
 // Honorar nach § 4), Ablauf in drei Schritten wie auf der Startseite und im Rechner.
 
-const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '19. September 2026')
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '15. Oktober 2026')
 const RECHNER_SEITE = 'https://kostenrechner.primundus.de/?start=1&src=apex-24-stunden-pflege'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
@@ -37,12 +37,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-  description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege zu Hause: Pflegekraft & Kosten',
+  description: 'Was eine Betreuungskraft zu Hause übernimmt und welche Zuschüsse es gibt. Preis und Pflegekräfte sofort ansehen. 6× Testsieger DIE WELT.',
   alternates: { canonical: 'https://primundus.de/24-stunden-pflege' },
   openGraph: {
-    title: '24-Stunden-Pflege — Testsieger & täglich kündbar | Primundus',
-    description: 'Geprüfte Betreuungskraft im Haushalt, täglich kündbar, Anreise in 3 Tagen möglich. 6× Testsieger DIE WELT.',
+    title: '24-Stunden-Pflege zu Hause: Pflegekraft & Kosten',
+    description: 'Was eine Betreuungskraft zu Hause übernimmt und welche Zuschüsse es gibt. Preis und Pflegekräfte sofort ansehen. 6× Testsieger DIE WELT.',
     url: 'https://primundus.de/24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -62,7 +62,7 @@ const FRAGEN = [
   { q: 'Was sind die Nachteile der 24-Stunden-Pflege?', a: 'Die Betreuungskraft braucht ein eigenes Zimmer, Kost und Logis stellen Sie. Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, eine Überwachung rund um die Uhr gibt es nicht. Alle 6 bis 8 Wochen wechselt die Betreuungskraft, und medizinische Behandlungspflege übernimmt weiter ein Pflegedienst. Für Menschen, die dauerhaft Fachpflege brauchen, passt sie nicht.' },
   { q: 'Was ist billiger, Pflegeheim oder 24-Stunden-Pflege?', a: 'Meist die 24-Stunden-Pflege. Im Pflegeheim zahlen Sie bundesweit im Durchschnitt 3.364 € im Monat selbst (vdek, Stand 1. Juli 2026). Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 € im Monat, zzgl. An- und Abreise sowie Kost und Logis.' },
   { q: 'Wie lange arbeitet eine Betreuungskraft am Tag?', a: 'Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, so wie jede Arbeitnehmerin. Den Tagesablauf legen Sie gemeinsam fest: Hilfe am Morgen, im Haushalt, am Nachmittag und am Abend, dazwischen ihre Ruhezeit. Nachts schläft sie im Haus und hilft, wenn etwas ist; wie oft nachts Hilfe nötig ist, fließt in den Preis ein.' },
-  { q: 'Woran erkenne ich einen seriösen Anbieter?', a: 'An vier Dingen: Für jede Betreuungskraft liegt eine A1-Bescheinigung vor. Sie sehen Preis und Betreuungskräfte, bevor Sie etwas unterschreiben. Der Vertrag nennt An- und Abreise, Ersatz bei Krankheit und die Kündigung klar. Und es gibt keine Vermittlungsgebühr oder Anzahlung. Den Mustervertrag von Primundus können Sie vorab lesen.' },
+  { q: 'Woran erkenne ich einen seriösen Anbieter?', a: 'An drei Dingen: Die Betreuungskraft ist angestellt, und die A1-Bescheinigung ist vor der Anreise beantragt. Sie sehen Preis und Betreuungskräfte, bevor Sie etwas unterschreiben. Der Vertrag nennt An- und Abreise, Ersatz bei Krankheit und die Kündigung klar. Den Mustervertrag von Primundus können Sie vorab lesen.' },
 ]
 
 const schemaMarkup = [
@@ -92,6 +92,18 @@ const schemaMarkup = [
 ]
 
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
+
+// Antwort zuerst (14.10.2026, Entwurf, Variante A): Die ersten beiden Sätze der Definition aus „Was ist
+// 24-Stunden-Pflege?“ stehen wörtlich direkt unter der Überschrift, der Knopfblock (Unterzeile, Knopf, Gesichter,
+// Sterne) folgt darunter. Mit allen drei Sätzen läge der Knopf am iPhone 13 knapp unter dem ersten Bildschirm.
+// Im Abschnitt entfällt der Absatz, sonst stünden die Sätze zweimal auf der Seite. Platz `nachTitel` im
+// RatgeberKopf, Schrift wie die Unterzeile.
+const ANTWORT = (
+  <p className="text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem] [text-wrap:pretty]">
+    Bei der 24-Stunden-Pflege zieht eine Betreuungskraft in den Haushalt des Pflegebedürftigen. Sie hilft bei
+    der Körperpflege, führt den Haushalt und leistet Gesellschaft.
+  </p>
+)
 
 const THEMEN = [
   {
@@ -148,12 +160,12 @@ export default function VierUndZwanzigStundenPflege() {
             { label: '24-Stunden-Pflege' },
           ]}
           augenbraue="6× Testsieger DIE WELT"
-          titel="24-Stunden-Pflege zu Hause — rechtssicher und täglich kündbar"
+          titel="24-Stunden-Pflege zu Hause: was die Betreuungskraft übernimmt und was es kostet"
+          nachTitel={ANTWORT}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."
           knopf={{ href: RECHNER_SEITE, text: 'Preis & Pflegekräfte ansehen' }}
           knopfOben
-          unterzeile={<StandardUnterzeile />}
           blickTitel="Warum Primundus"
           blick={[
             '6× Testsieger DIE WELT',
@@ -167,11 +179,6 @@ export default function VierUndZwanzigStundenPflege() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="was-ist" titel="Was ist 24-Stunden-Pflege?">
-            <Text>
-              Bei der 24-Stunden-Pflege zieht eine Betreuungskraft in den Haushalt des Pflegebedürftigen. Sie hilft bei
-              der Körperpflege, führt den Haushalt und leistet Gesellschaft. So kann Ihr Angehöriger in seiner Wohnung
-              bleiben und muss nicht in ein Pflegeheim ziehen.
-            </Text>
             <Kasten titel="Was „24 Stunden“ bedeutet">
               <Text>
                 Die Betreuungskraft wohnt mit im Haus und ist bei Bedarf auch nachts da. Sie hat geregelte Arbeitszeiten
@@ -278,8 +285,8 @@ export default function VierUndZwanzigStundenPflege() {
             <Text>
               Eine Betreuungskraft aus dem EU-Ausland kann auf drei Wegen bei Ihnen arbeiten. Entscheidend ist, wer
               ihr Arbeitgeber ist und wer die Sozialabgaben zahlt. Bei Primundus arbeiten die Betreuungskräfte im
-              Entsendemodell: Sie sind bei uns angestellt, in Polen sozialversichert und für jeden Einsatz liegt eine
-              A1-Bescheinigung vor. Sie als Familie werden nicht Arbeitgeber.
+              Entsendemodell: Sie sind bei uns angestellt und in Polen sozialversichert. Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht.
+              Sie als Familie werden nicht Arbeitgeber.
             </Text>
             <Tabelle
               kopf={['', 'Entsendemodell (Primundus)', 'Arbeitgebermodell', 'Selbstständige Kraft']}
@@ -418,13 +425,12 @@ export default function VierUndZwanzigStundenPflege() {
                 { title: 'Kost und Logis, Reisen, Feiertage', desc: 'Neben dem Monatspreis stellen Sie Kost und Logis, zahlen An- und Abreise mit 125 € je Strecke und an neun Feiertagen im Jahr den doppelten Tagessatz.' },
               ]}
             />
-            <Kasten augenbraue="Seriös oder nicht" titel="Vier Dinge, die Sie vor der Unterschrift sehen sollten">
+            <Kasten augenbraue="Seriös oder nicht" titel="Drei Dinge, die Sie vor der Unterschrift sehen sollten">
               <Punkte
                 punkte={[
-                  { title: 'A1-Bescheinigung für jede Betreuungskraft', desc: 'Sie belegt, dass die Betreuungskraft im Heimatland sozialversichert ist. Ohne A1 fehlt dieser Nachweis.' },
+                  { title: 'A1-Bescheinigung als Nachweis', desc: 'Sie belegt, dass die Betreuungskraft im Heimatland sozialversichert ist. Beantragt wird sie vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht.' },
                   { title: 'Preis und Betreuungskraft vor dem Vertrag', desc: 'Ein seriöser Anbieter nennt den Monatspreis vorher und zeigt, wer kommt. Bei Primundus sehen Sie beides online, bevor Sie etwas unterschreiben.' },
                   { title: 'Klare Regeln im Vertrag', desc: 'An- und Abreise, Ersatz bei Krankheit, Feiertage und Kündigung stehen schwarz auf weiß. Unseren Mustervertrag können Sie vorab lesen.' },
-                  { title: 'Keine Vermittlungsgebühr, keine Anzahlung', desc: 'Sie zahlen erst, wenn die Betreuungskraft da ist, und können täglich kündigen.' },
                 ]}
               />
             </Kasten>

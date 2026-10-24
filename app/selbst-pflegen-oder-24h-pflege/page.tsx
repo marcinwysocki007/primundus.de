@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Selbst pflegen oder 24h-Pflege? — Ehrlicher Vergleich',
+  title: 'Selbst pflegen oder 24-Stunden-Pflege: wann es allein geht',
   description: 'Selbst pflegen oder 24-Stunden-Betreuung? Wann Angehörigenpflege funktioniert, wo ihre Grenzen liegen und was die Alternative kostet.',
   alternates: { canonical: 'https://primundus.de/selbst-pflegen-oder-24h-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Selbst pflegen oder 24h-Pflege? | Primundus',
+    title: 'Selbst pflegen oder 24-Stunden-Pflege: wann es allein geht',
     description: 'Wann Angehörigenpflege reicht — und wann eine 24h-Kraft die bessere Entscheidung ist.',
     url: 'https://primundus.de/selbst-pflegen-oder-24h-pflege',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Selbst pflegen oder 24h-Pflege — ehrlicher Vergleich',
+    headline: 'Selbst pflegen oder 24-Stunden-Pflege: wann es allein geht und wann nicht mehr',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +73,7 @@ export default function SelbstPflegenOder24h() {
             { label: "Selbst pflegen oder 24h-Pflege" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="Selbst pflegen oder 24h-Pflege? — Ehrlicher Vergleich"
+          titel="Selbst pflegen oder 24-Stunden-Pflege: wann es allein geht und wann nicht mehr"
           einleitung="Die Entscheidung zwischen Selbstpflege und professioneller 24h-Betreuung ist eine der schwierigsten die pflegende Familien treffen. Sie ist emotional aufgeladen — und wird oft zu lange hinausgezögert. Dieser Ratgeber gibt keine schnelle Antwort. Aber er stellt die Fragen die gestellt werden müssen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

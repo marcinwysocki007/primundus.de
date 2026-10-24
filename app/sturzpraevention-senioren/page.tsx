@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('sturzpraevention-senioren', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('sturzpraevention-senioren', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'risikofaktoren', title: 'Risikofaktoren erkennen' },
@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Sturzprävention Senioren — wie man Stürze verhindert',
+  title: 'Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken',
   description: 'Sturzprävention Senioren 2026: Risikofaktoren erkennen, Wohnung sichern, Gleichgewichtsübungen und Hilfsmittel — wie man Stürze im Alter effektiv verhindert.',
   alternates: { canonical: 'https://primundus.de/sturzpraevention-senioren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Sturzprävention Senioren | Primundus',
+    title: 'Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken',
     description: 'Wie man Stürze im Alter verhindert — Risikofaktoren, Wohnungssicherung, Übungen, Hilfsmittel.',
     url: 'https://primundus.de/sturzpraevention-senioren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Sturzprävention Senioren — wie man Stürze verhindert',
+    headline: 'Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function SturzpraventionSenioren() {
             { label: "Sturzprävention Senioren" },
           ]}
           augenbraue="Ratgeber Sicherheit"
-          titel="Sturzprävention Senioren — wie man Stürze wirklich verhindert"
+          titel="Sturzprävention bei Senioren: wie Sie das Sturzrisiko senken"
           einleitung="Stürze sind die häufigste Unfallursache bei Menschen über 65 — und einer der häufigsten Auslöser für den Einstieg in intensive Pflege. Das Gute: Sturzrisiko ist zu einem erheblichen Teil vermeidbar. Gleichgewichtstraining allein senkt die Zahl der Stürze um rund ein Viertel (Cochrane-Übersicht 2019). Die Wohnungssicherung tut ihr Übriges."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
@@ -146,7 +146,7 @@ export default function SturzpraventionSenioren() {
               gruppen={[
                 { title: 'Gehstock / Rollator', zusatz: 'Krankenkasse', punkte: ['Arztrezept nötig. Rollator hat mehr Stabilität als Gehstock — bei höherem Sturzrisiko bevorzugen.'] },
                 { title: 'Hüftprotektor', zusatz: 'Hilfsmittelliste', punkte: ['Polstereinlage in der Unterwäsche die bei Sturz Hüfte schützt. Besonders bei erhöhtem Sturzrisiko und Osteoporose sinnvoll.'] },
-                { title: 'Hausnotruf', zusatz: 'Pflegekasse: bis 25,50 €/Mo', punkte: ['Wenn Sturz passiert und niemand da ist: Hausnotruf ermöglicht schnelle Hilfe.'] },
+                { title: 'Hausnotruf', zusatz: 'Pflegekasse: bis 27 €/Mo', punkte: ['Wenn Sturz passiert und niemand da ist: Hausnotruf ermöglicht schnelle Hilfe.'] },
                 { title: 'Orthopädische Schuhe', zusatz: 'Krankenkasse (ärztl. Verordnung)', punkte: ['Bei Gangstörungen oder Fehlstellungen die Sturzrisiko erhöhen.'] },
               ]}
             />
@@ -157,7 +157,7 @@ export default function SturzpraventionSenioren() {
               fragen={[
                 { q: 'Wie kann man Stürze im Alter verhindern?', a: 'Die wirksamsten Maßnahmen: Gleichgewichtstraining (rund ein Viertel weniger Stürze), Wohnungssicherung (Haltegriffe, rutschfreie Böden), Medikamente auf Schwindelnebenwirkungen überprüfen lassen, gutes Schuhwerk, regelmäßiger Sehcheck.' },
                 { q: 'Welche Übungen helfen gegen Sturzgefahr?', a: 'Einbeinstand, Aufstehen vom Stuhl ohne Hände, Tandemgang, Zehenspitzenstand. Tai Chi senkt die Zahl der Stürze laut Cochrane-Übersicht 2019 um rund ein Fünftel. Täglich 10–15 Minuten sind wirksamer als ein langer Sporttag.' },
-                { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: als Pflegehilfsmittel über die Pflegekasse (bis 25,50 €/Monat). Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
+                { q: 'Bezahlt die Krankenkasse Hilfsmittel zur Sturzprävention?', a: 'Rollator und Gehstock: Krankenkasse mit Rezept. Hausnotruf: als Pflegehilfsmittel über die Pflegekasse (bis 27 €/Monat). Hüftprotektor: oft über Hilfsmittelliste. Wohnraumanpassungen: Pflegekasse bis 4.180 €/Maßnahme.' },
                 { q: 'Was tun wenn jemand gestürzt ist?', a: 'Nicht sofort aufrichten wenn Verletzung möglich. Notarzt rufen bei Verdacht auf Knochenbruch, Kopfverletzung oder Bewusstlosigkeit. Danach Arzt aufsuchen, Ursache des Sturzes analysieren, Präventionsmaßnahmen anpassen.' },
               ]}
             />

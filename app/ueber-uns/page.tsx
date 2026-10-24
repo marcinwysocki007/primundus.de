@@ -113,7 +113,7 @@ export default function UeberUnsPage() {
             { label: 'Über uns' },
           ]}
           augenbraue="Über Primundus"
-          titel={<>Über Primundus — seit 2006 in der <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span> zu Hause</>}
+          titel="Über Primundus: seit 2006 in der 24-Stunden-Pflege zu Hause"
           einleitung={<>Die Firmengruppe hinter Primundus organisiert seit 2006 Betreuungskräfte für Familien in Deutschland, über <strong className="text-pm-ink">60.000 Betreuungen</strong> bis heute. DIE WELT hat Primundus <strong className="text-pm-ink">sechsmal in Folge</strong> ausgezeichnet. Unsere Betreuungskräfte sind bei uns angestellt, Sie sehen Preis und passende Kräfte vor dem Vertrag. Marta Kapcio und ihr Team sind täglich von 8 bis 20 Uhr für Sie da.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."

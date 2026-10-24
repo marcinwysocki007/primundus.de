@@ -8,11 +8,11 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
-  title: 'Pflege vergleichen — alle Vergleiche auf einen Blick',
+  title: 'Pflege vergleichen: Heim, Pflegedienst, 24-Stunden-Pflege',
   description: 'Pflegeformen, Kosten und Betreuungsmodelle vergleichen: 24h-Pflege vs. Pflegeheim, ambulante Pflege, Tagespflege, osteuropäische Pflegekräfte. Alle Vergleiche.',
   alternates: { canonical: 'https://primundus.de/vergleiche' },
   openGraph: {
-    title: 'Pflege vergleichen | Primundus',
+    title: 'Pflege vergleichen: Heim, Pflegedienst, 24-Stunden-Pflege',
     description: 'Alle Pflegevergleiche auf einen Blick — von Pflegeheim vs. 24h bis ambulant vs. stationär.',
     url: 'https://primundus.de/vergleiche',
     siteName: 'Primundus',
@@ -60,7 +60,7 @@ export default function Vergleiche() {
             { label: 'Vergleiche' },
           ]}
           augenbraue="Ratgeber"
-          titel="Pflege vergleichen"
+          titel="Pflege vergleichen: Pflegeheim, Pflegedienst und 24-Stunden-Pflege, mit Kosten und Anbietern"
           einleitung="Pflegeheim, ambulanter Pflegedienst, Tagespflege oder Betreuungskraft zu Hause: alle Vergleiche mit konkreten Zahlen."
         />
 

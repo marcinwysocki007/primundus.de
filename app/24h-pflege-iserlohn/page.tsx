@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Betreuung und Pflege in Iserlohn | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Iserlohn in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege und Betreuung in Iserlohn | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Iserlohn: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-iserlohn' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Betreuung und Pflege in Iserlohn | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Iserlohn in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege und Betreuung in Iserlohn | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Iserlohn: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-iserlohn',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Iserlohn?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Nordrhein-Westfalen kostet im Schnitt rund 3.580 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Iserlohn?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Nordrhein-Westfalen kostet im Schnitt rund 3.670 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Iserlohn starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Funktioniert 24-Stunden-Pflege auch in einem Iserlohner Altbau?', a: 'Ja, und hier stellt sich die Frage häufiger als anderswo. Weil Iserlohn im Krieg weitgehend verschont blieb, steht viel alte Bausubstanz — mit engen Treppenhäusern und selten einem Aufzug. Für die Betreuungskraft braucht es lediglich ein eigenes Zimmer. Der eigentliche Gewinn liegt darin, dass jemand im Haus ist und die Wege nach draußen übernimmt, sobald die Treppe zur Hürde wird.' },
   { q: 'Was bedeutet die Höhenlage für die Betreuung in Iserlohn?', a: 'Zwischen der Ruhr im Norden und dem Rüssenberg im Süden liegen rund 390 Höhenmeter — Iserlohn ist eine Sauerlandstadt, keine Stadt der Ebene. Wer am Hang wohnt, für den beginnt jeder Weg mit einer Steigung, auch der zur Bushaltestelle. Viele Ältere bleiben deshalb irgendwann einfach zu Hause. Eine Betreuungskraft übernimmt diese Wege: einkaufen, zum Arzt begleiten, Termine organisieren — und hält damit den Alltag offen.' },
   { q: 'Kommt eine Betreuungskraft auch in die Stadtteile und Nachbarorte?', a: 'Ja. Letmathe ist mit rund 24.800 Einwohnern der mit Abstand größte Stadtteil, dazu kommen Hennen, Kesbern, Sümmern und die kleineren Ortslagen. Auch in Hemer, Menden, Altena und Lüdenscheid sind unsere Betreuungskräfte im Einsatz. Die Anreise dauert überall gleich lang, Anfahrtskosten berechnen wir nicht, und der Preis ist derselbe wie in der Kernstadt.' },
   { q: 'Welches Einzugsgebiet wird in Iserlohn bedient?', a: 'Iserlohn und Märkischer Kreis: Lüdenscheid, Hemer, Menden, Plettenberg und alle Gemeinden im Märkischen Kreis' },
   { q: 'Ist in einer Wohnung in Iserlohn Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Iserlohn hat im Schnitt 88,7 m², 23,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 72,0 % der Gebäude in Iserlohn sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.670 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

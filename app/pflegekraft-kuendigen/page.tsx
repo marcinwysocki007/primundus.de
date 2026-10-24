@@ -9,7 +9,13 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-kuendigen', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('pflegekraft-kuendigen', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'modell', title: 'Kündigung je nach Beschäftigungsmodell' },
@@ -20,12 +26,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft kündigen — Fristen, Muster & Ablauf 2026',
+  title: 'Pflegekraft kündigen: Fristen, Muster und Ablauf 2026',
   description: 'Pflegekraft kündigen 2026: Kündigungsfristen je nach Beschäftigungsmodell, Musterschreiben und was bei Kündigung aus wichtigem Grund gilt.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-kuendigen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegekraft kündigen 2026 | Primundus',
+    title: 'Pflegekraft kündigen: Fristen, Muster und Ablauf 2026',
     description: 'Kündigungsfristen, Musterschreiben und Ablauf — je nach Beschäftigungsmodell.',
     url: 'https://primundus.de/pflegekraft-kuendigen',
     siteName: 'Primundus',
@@ -38,7 +44,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft kündigen — Fristen, Muster und Ablauf 2026',
+    headline: 'Pflegekraft kündigen: Fristen, Muster und Ablauf 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,8 +79,8 @@ export default function PflegekraftKuendigen() {
             { label: "Pflegekraft kündigen" },
           ]}
           augenbraue="Ratgeber Pflegekräfte"
-          titel="Pflegekraft kündigen — Fristen, Muster & Ablauf 2026"
-          einleitung="Wie man eine Pflegekraft kündigt hängt komplett vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist die Kündigung denkbar einfach: täglich kündbar, ein Anruf genügt, Primundus stellt sofort Ersatz. Bei der Direktanstellung gelten die gesetzlichen Kündigungsfristen nach deutschem Arbeitsrecht."
+          titel="Pflegekraft kündigen: Fristen, Muster und Ablauf 2026"
+          einleitung="Wie man eine Pflegekraft kündigt hängt komplett vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist die Kündigung denkbar einfach: täglich kündbar, ein Anruf genügt. Soll nur eine andere Betreuungskraft kommen, stellt Primundus schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen. Bei der Direktanstellung gelten die gesetzlichen Kündigungsfristen nach deutschem Arbeitsrecht."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
         />
@@ -85,7 +91,7 @@ export default function PflegekraftKuendigen() {
               titel=""
               kopf={['Modell', 'Kündigung durch Familie', 'Frist', 'Ersatz']}
               zeilen={[
-                ['Entsendemodell (Primundus)', 'Kündigung des Agenturvertrags', 'Täglich kündbar', 'Primundus stellt sofort Ersatz'],
+                ['Entsendemodell (Primundus)', 'Kündigung des Betreuungsvertrags', 'Täglich kündbar', 'Primundus organisiert Ersatz oder Wechsel'],
                 ['Direktanstellung', 'Arbeitgeberkündigung an Kraft', 'Probezeit: 2 Wo · danach: 4 Wo', 'Familie muss selbst organisieren'],
               ]}
               betont={2}
@@ -136,7 +142,7 @@ export default function PflegekraftKuendigen() {
             punkte={[
               { title: 'Diebstahl oder Unterschlagung', desc: 'Sofortige fristlose Kündigung. Beweise sichern. Primundus informieren. Ggf. Anzeige erstatten.' },
               { title: 'Schwere Pflichtverletzungen', desc: 'Z.B. grobe Vernachlässigung des Pflegebedürftigen, Dokumentenfälschung, Alkohol im Dienst. Fristlose Kündigung möglich, Begründungspflicht.' },
-              { title: 'Beim Entsendemodell', desc: 'Sofort Primundus anrufen — Primundus organisiert die sofortige Ablösung und regelt alle weiteren Schritte. Keine direkte Kündigung der Familie gegenüber der Kraft nötig.' },
+              { title: 'Beim Entsendemodell', desc: 'Rufen Sie sofort Primundus an und schildern Sie den Vorfall. Primundus organisiert die Abreise der Kraft, schnellstmöglich Ersatz und die weiteren Schritte. Eine Kündigung gegenüber der Kraft ist nicht nötig.' },
             ]}
           />
 
@@ -145,7 +151,7 @@ export default function PflegekraftKuendigen() {
               fragen={[
                 { q: 'Wie kündige ich eine Pflegekraft beim Entsendemodell?', a: 'Primundus anrufen (089 200 000 830) — fertig. Täglich kündbar, kein Formular, keine Fristen.' },
                 { q: 'Was sind die Kündigungsfristen bei Direktanstellung?', a: 'Probezeit: 2 Wochen. Nach Probezeit bis 2 Jahre: 4 Wochen zum 15. oder Monatsende. Ab 2 Jahren: 1 Monat zum Monatsende.' },
-                { q: 'Muss die Kündigung schriftlich sein?', a: 'Bei Direktanstellung: Ja — Schriftform ist Pflicht. Beim Entsendemodell über Primundus: Kündigung des Agenturvertrags genügt, formlos per Telefon.' },
+                { q: 'Muss die Kündigung schriftlich sein?', a: 'Bei Direktanstellung: Ja — Schriftform ist Pflicht. Beim Entsendemodell über Primundus: Kündigung des Betreuungsvertrags genügt, formlos per Telefon.' },
                 { q: 'Was wenn die Kraft sofort gehen soll?', a: 'Beim Entsendemodell: Primundus anrufen, sofortige Beendigung möglich. Bei Direktanstellung: nur bei wichtigem Grund (fristlose Kündigung) oder gegen Zahlung einer Abfindung.' },
               ]}
             />

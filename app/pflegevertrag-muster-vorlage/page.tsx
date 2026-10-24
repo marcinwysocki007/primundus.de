@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegevertrag-muster-vorlage', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+const AKTUALISIERT = aktualisiertAm('pflegevertrag-muster-vorlage', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-muss-rein', title: 'Was muss in den Pflegevertrag?' },
@@ -20,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegevertrag Muster & Vorlage 2026 — kostenlos | Primundus',
+  title: 'Pflegevertrag Muster und Vorlage 2026: was hineingehört',
   description: 'Pflegevertrag Vorlage 2026: Vollständiges Muster mit allen Pflichtangaben — Leistungsumfang, Vergütung, Kost und Logis, Kündigung. Kostenlos zum Ausdrucken.',
   alternates: { canonical: 'https://primundus.de/pflegevertrag-muster-vorlage' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegevertrag Muster & Vorlage 2026 | Primundus',
+    title: 'Pflegevertrag Muster und Vorlage 2026: was hineingehört',
     description: 'Kostenloses Pflegevertrag-Muster mit allen Pflichtangaben für die häusliche 24h-Pflege.',
     url: 'https://primundus.de/pflegevertrag-muster-vorlage',
     siteName: 'Primundus',
@@ -38,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegevertrag Muster und Vorlage 2026',
+    headline: 'Pflegevertrag Muster und Vorlage 2026: was hineingehört, mit kostenloser Vorlage',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -80,7 +83,7 @@ export default function PflegevertragMusterVorlage() {
             { label: "Pflegevertrag Muster & Vorlage" },
           ]}
           augenbraue="Ratgeber Vertrag"
-          titel="Pflegevertrag Muster & Vorlage 2026 — vollständig & kostenlos"
+          titel="Pflegevertrag Muster und Vorlage 2026: was hineingehört, mit kostenloser Vorlage"
           einleitung="Ein Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt was geleistet wird, was es kostet, wie Kost und Logis angerechnet werden und wie gekündigt werden kann. Wer mit Primundus im Entsendemodell arbeitet, bekommt einen fertigen Vertrag — wer direkt anstellt, braucht dieses Muster."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
@@ -89,7 +92,7 @@ export default function PflegevertragMusterVorlage() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
             <Kasten titel="Wichtiger Hinweis" ton="koralle">
-              <Text>Diese Vorlage gilt für die Direktanstellung einer Pflegekraft durch die Familie (deutsches Arbeitsverhältnis). Beim Entsendemodell über Primundus schließt die Familie nur einen Vertrag mit Primundus als Agentur — kein eigener Arbeitsvertrag mit der Kraft notwendig. Die Vorlage hier dient als Orientierung und ersetzt keine Rechtsberatung.</Text>
+              <Text>Diese Vorlage gilt für die Direktanstellung einer Pflegekraft durch die Familie (deutsches Arbeitsverhältnis). Beim Entsendemodell über Primundus schließt die Familie nur einen Betreuungsvertrag mit der PRIMUNDUS Sp. z o.o., bei der die Betreuungskräfte angestellt sind. Einen eigenen Arbeitsvertrag mit der Kraft braucht die Familie nicht. Die Vorlage hier dient als Orientierung und ersetzt keine Rechtsberatung.</Text>
             </Kasten>
           </Vorspann>
 

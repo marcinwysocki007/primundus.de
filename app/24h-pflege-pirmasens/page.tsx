@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Pirmasens | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Pirmasens in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege und Betreuung in Pirmasens | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Pirmasens: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-pirmasens' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Pirmasens | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Pirmasens in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege und Betreuung in Pirmasens | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Pirmasens: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-pirmasens',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Pirmasens?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.220 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Pirmasens?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.290 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Pirmasens starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Kommt eine Betreuungskraft auch in die Orte im Pfälzerwald?', a: 'Ja, und genau dort ist der Unterschied am größten. In Rodalben, Hauenstein, Dahn und den kleineren Gemeinden des Landkreises Südwestpfalz fahren ambulante Dienste lange Touren — die Termine richten sich dann nach der Route, nicht nach Ihrem Tagesablauf. Eine Betreuungskraft, die im Haus wohnt, ist von Fahrplänen unabhängig. Anfahrtskosten berechnen wir nicht, der Preis ist derselbe wie in der Stadt.' },
   { q: 'Was bedeuten die Pirmasenser Steigungen für die Betreuung?', a: 'Sie sind oft der eigentliche Auslöser. Wer in einer der Hanglagen wohnt, schafft irgendwann den Weg zur Haltestelle oder zum Arzt nicht mehr allein — und bleibt dann zu Hause, obwohl gesundheitlich noch mehr möglich wäre. Eine Betreuungskraft übernimmt genau diese Wege: einkaufen, begleiten, Termine organisieren. Das hält Menschen im Alltag, statt sie in der Wohnung zu isolieren.' },
   { q: 'Welches Einzugsgebiet wird in Pirmasens bedient?', a: 'Pirmasens und Zweibrücken sowie Landkreis Südwestpfalz: Rodalben, Hauenstein, Dahn und alle Gemeinden im Landkreis Südwestpfalz' },
   { q: 'Ist in einer Wohnung in Pirmasens Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Pirmasens hat im Schnitt 91,1 m², 22,8 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 72,1 % der Gebäude in Pirmasens sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.290 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

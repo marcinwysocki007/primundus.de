@@ -1,3 +1,14 @@
+const fs = require('fs')
+const path = require('path')
+
+// 12.10.2026: Alte Ortsadressen /24h-pflege/<ort>/ (Seitenstruktur bis Sommer 2026) liefern 404. Die Search Console
+// führt 27 davon unter „Nicht gefunden (404)“, zuletzt gecrawlt 16.07.–11.09.2026 (z. B. /24h-pflege/dormagen/,
+// /24h-pflege/sachsen-anhalt/). Zu jeder gibt es heute die Seite /24h-pflege-<ort>. Die Liste kommt aus app/, damit
+// nur auf bestehende Seiten umgeleitet wird; neue Ortsseiten sind automatisch dabei.
+const ORTSSEITEN = fs.readdirSync(path.join(__dirname, 'app'), { withFileTypes: true })
+  .filter((d) => d.isDirectory() && d.name.startsWith('24h-pflege-') && fs.existsSync(path.join(__dirname, 'app', d.name, 'page.tsx')))
+  .map((d) => d.name.slice('24h-pflege-'.length))
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // `eslint.ignoreDuringBuilds` entfällt mit Next 16: `next build` prüft ESLint nicht mehr (29.09.2026, Upgrade 13.5.1 → 16).
@@ -44,12 +55,35 @@ const nextConfig = {
       { source: '/24h-pflege-hochtaunuskreis', destination: '/24h-pflege-bad-homburg', permanent: true },
       { source: '/24h-pflege-rhein-pfalz-kreis', destination: '/24h-pflege-ludwigshafen', permanent: true },
       { source: '/24h-pflege-rheinisch-bergischer-kreis', destination: '/24h-pflege-bergisch-gladbach', permanent: true },
+      // primundus-muenchen.de gehört seit 02.10.2026 wieder uns (war frei, Martin hat sie registriert). Die
+      // IONOS-Weiterleitung schickt alles auf /24h-pflege-muenchen und hängt den alten Pfad an, z. B.
+      // /24-stunden-pflege/erding/ → /24h-pflege-muenchen/24-stunden-pflege/erding (404). Laut Internet-Archiv hatte
+      // die Domain 277 Seiten, meist Orte im Münchner Umland. Orte mit eigener Ortsseite gehen dorthin, die
+      // Grundseiten auf ihr Gegenstück, alles Übrige auf München. „oberhausen“ bleibt bei München, weil
+      // /24h-pflege-oberhausen Oberhausen in NRW meint.
+      ...['augsburg', 'bad-aibling', 'ebersberg', 'erding', 'freising', 'gauting', 'germering', 'holzkirchen',
+        'starnberg', 'unterschleissheim', 'vaterstetten', 'wolfratshausen'].map((ort) => (
+        { source: `/24h-pflege-muenchen/24-stunden-pflege/${ort}`, destination: `/24h-pflege-${ort}`, permanent: true })),
+      { source: '/24h-pflege-muenchen/kosten-24-stunden-pflege', destination: '/kosten', permanent: true },
+      { source: '/24h-pflege-muenchen/leistungen-24-stunden-pflege', destination: '/leistungen', permanent: true },
+      { source: '/24h-pflege-muenchen/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
+      { source: '/24h-pflege-muenchen/kontakt', destination: '/kontakt', permanent: true },
+      { source: '/24h-pflege-muenchen/datenschutz', destination: '/datenschutz', permanent: true },
+      { source: '/24h-pflege-muenchen/:pfad+', destination: '/24h-pflege-muenchen', permanent: true },
+      ...ORTSSEITEN.map((ort) => ({ source: `/24h-pflege/${ort}`, destination: `/24h-pflege-${ort}`, permanent: true })),
       { source: '/24-stunden-pflege/kosten-24-std-pflege', destination: '/kosten', permanent: true },
       { source: '/24-stunden-pflege/24h-pflege-ablauf', destination: '/ablauf', permanent: true },
       { source: '/pflegekraft-polen-premium', destination: '/pflegekraft-aus-polen', permanent: true },
       { source: '/vermittler-kooperation', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
       { source: '/faqs', destination: '/ratgeber', permanent: true },
       { source: '/partner-werden', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
+      // 10.10.2026 (Martin): Franchise-Seite abgeschaltet, Interessenten landen auf der Partnerseite.
+      { source: '/franchisepartner', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
+      { source: '/franchisepartner/', destination: '/pflegekraefte-fuer-vermittler', permanent: true },
+      // 10.10.2026 (Martin): Pflegehelden-Vergleichsseite abgeschaltet. Pflegehelden steht weiter
+      // in der Tabelle auf /anbieter-vergleich, dorthin geht die Seite.
+      { source: '/pflegehelden-alternative', destination: '/anbieter-vergleich', permanent: true },
+      { source: '/pflegehelden-alternative/', destination: '/anbieter-vergleich', permanent: true },
       { source: '/partner-werden/agb', destination: '/pflegekraefte-fuer-vermittler/agb', permanent: true },
       // 20.09.2026 (Martins Freigabe „go fuer das Ersetzen der alten Versionen"): zwei Seiten, die dasselbe
       // Thema schwaecher abdecken, gehen in die neue Fassung. /alzheimer-betreuung-zuhause hatte 310

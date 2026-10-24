@@ -12,12 +12,12 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Neumarkt i.d.OPf. | 6× Testsieger',
-  description: 'Geprüfte Betreuungskräfte und Preis direkt online sehen. Anreise in Neumarkt in der Oberpfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege in Neumarkt in der Oberpfalz: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-neumarkt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Neumarkt i.d.OPf. | 6× Testsieger',
-    description: 'Geprüfte Betreuungskräfte und Preis direkt online sehen. Anreise in Neumarkt in der Oberpfalz in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege in Neumarkt in der Oberpfalz: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-neumarkt',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Neumarkt in der Oberpfalz?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.200 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Neumarkt in der Oberpfalz?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.270 € Eigenanteil (vdek 07/2026).' },
   { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Neumarkt in der Oberpfalz starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie ist die ambulante Versorgung im Landkreis Neumarkt?', a: 'Dünn. Für rund 138.000 Einwohner gibt es elf ambulante Pflegedienste; auf jeden kommen im Schnitt etwa 97 Pflegebedürftige, in Bayern sind es 58. Das ist einer der höchsten Werte der Oberpfalz. Wer kurzfristig Unterstützung braucht, merkt das sofort — die Dienste sind ausgelastet, und die Termine richten sich nach der Tour. Eine Betreuungskraft, die im Haus wohnt, hängt an keiner Tourenplanung.' },
@@ -34,7 +34,7 @@ const FRAGEN = [
   { q: 'Sind Neumarkter Wohnungen für Pflege zu Hause geeignet?', a: 'In aller Regel ja, barrierefrei sind sie aber selten. Im April 1945 lagen 92 Prozent der Bausubstanz im historischen Stadtkern in Trümmern — in der Marktstraße blieben zwei Häuser stehen. Was heute steht, ist deshalb fast durchweg Nachkriegsbau: Nur gut ein Prozent der Neumarkter Wohnungen stammt aus der Zeit vor 1919, im Bundesschnitt sind es dreizehn. Diese Häuser sind solide, entstanden aber vor jedem Gedanken an Barrierefreiheit. Für die Betreuungskraft genügt ein eigenes Zimmer.' },
   { q: 'Welches Einzugsgebiet wird in Neumarkt in der Oberpfalz bedient?', a: 'Neumarkt und Landkreis Neumarkt in der Oberpfalz: Parsberg, Velburg, Berching und alle Gemeinden im Landkreis Neumarkt' },
   { q: 'Ist in einer Wohnung in Neumarkt i.d.OPf. Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Neumarkt i.d.OPf. hat im Schnitt 100,9 m², 16,6 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 86,3 % der Gebäude in Neumarkt i.d.OPf. sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.270 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

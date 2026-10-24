@@ -6,17 +6,17 @@ import { AuthorByline } from '@/components/AuthorByline'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegeversicherung-leistungen-uebersicht', '30. April 2026')
+const AKTUALISIERT = aktualisiertAm('pflegeversicherung-leistungen-uebersicht', '16. Oktober 2026')
 
 const SECTIONS = [{ id: 'geldleistungen', title: 'Geldleistungen' }, { id: 'sachleistungen', title: 'Sachleistungen' }, { id: 'entlastung', title: 'Entlastungsleistungen' }, { id: 'weitere', title: 'Weitere Leistungen' }, { id: 'faq', title: 'Häufige Fragen' }]
 
 export const metadata: Metadata = {
-  title: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht',
+  title: 'Leistungen der Pflegeversicherung 2026 im Überblick',
   description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
   alternates: { canonical: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegeversicherung Leistungen 2026 | Primundus',
+    title: 'Leistungen der Pflegeversicherung 2026 im Überblick',
     description: 'Alle Leistungen der Pflegeversicherung 2026 im Überblick: Pflegegeld, Sachleistungen, Entlastungsbudget, Hilfsmittel. Mit aktuellen Beträgen.',
     url: 'https://primundus.de/pflegeversicherung-leistungen-uebersicht',
     siteName: 'Primundus',
@@ -29,7 +29,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegeversicherung Leistungen 2026 — vollständige Übersicht aller Zuschüsse',
+    headline: 'Leistungen der Pflegeversicherung 2026: Übersicht der Zuschüsse',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -49,7 +49,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was zahlt die Pflegeversicherung 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegeld (347–990 €/Mo), Sachleistungen (796–2.299 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget (3.539 €/Jahr), Pflegehilfsmittel (42 €/Mo), Wohnraumanpassung (bis 4.000 €).' } },
+      { '@type': 'Question', name: 'Was zahlt die Pflegeversicherung 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegeld (347–990 €/Mo), Sachleistungen (796–2.299 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget (3.539 €/Jahr), Pflegehilfsmittel (42 €/Mo), Wohnraumanpassung (bis 4.180 €).' } },
       { '@type': 'Question', name: 'Was ist der Unterschied zwischen Pflegegeld und Sachleistungen?', acceptedAnswer: { '@type': 'Answer', text: 'Pflegegeld: Geld direkt an die pflegebedürftige Person wenn Angehörige pflegen. Sachleistungen: Kasse zahlt direkt an einen zugelassenen Pflegedienst.' } },
       { '@type': 'Question', name: 'Können Pflegegeld und Sachleistungen kombiniert werden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Kombinationsleistung. Wird z.B. 50% der Sachleistungen genutzt, gibt es 50% des Pflegegeldes zusätzlich.' } }
     ],
@@ -72,7 +72,7 @@ export default function Page() {
             <span className="text-pm-ink">Pflegeversicherung Leistungen 2026</span>
           </nav>
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">Finanzierung · 7 Min Lesezeit · Aktualisiert April 2026</p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Pflegeversicherung Leistungen 2026 — vollständige Übersicht aller Zuschüsse</h1>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Leistungen der Pflegeversicherung 2026: Übersicht der Zuschüsse</h1>
 
           <AuthorByline updated={AKTUALISIERT.sichtbar} />
           <p className="text-[17px] md:text-[19px] leading-relaxed text-pm-body mb-10 font-medium">Die Pflegeversicherung zahlt mehr als viele wissen. Pflegegeld, Sachleistungen, Entlastungsbetrag, Entlastungsbudget, Pflegehilfsmittel, Wohnraumanpassung — hier alle Leistungen 2026 mit aktuellen Beträgen.</p>
@@ -94,8 +94,8 @@ export default function Page() {
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Entlastungsbetrag: 131 €/Monat (alle PG 1–5)</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Entlastungsbudget: 3.539 €/Jahr (PG 2–5) — umfasst Verhinderungs- + Kurzzeitpflege</div>
               <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Pflegehilfsmittel: 42 €/Monat pauschal</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Wohnraumanpassung: bis 4.000 €/Maßnahme, max. 16.000 € bei mehreren Personen</div>
-              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Hausnotruf: 25,90 €/Monat (Grundpauschale)</div>
+              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Wohnraumanpassung: bis 4.180 €/Maßnahme, max. 16.720 € bei mehreren Personen</div>
+              <div className="flex gap-2 text-[13px] text-pm-green-deep py-1.5 border-b border-[rgba(0,0,0,0.06)] last:border-0"><span>→</span>Hausnotruf: bis 27 €/Monat (Basistarif)</div>
           </div>          <h2 id="weitere" className="text-h2 md:text-h2-lg font-bold text-pm-ink mt-10 mb-4 leading-snug">Weitere Leistungen der Pflegeversicherung</h2>
           <p className="text-[16px] leading-relaxed text-pm-body mb-4">Darüber hinaus zahlt die Pflegeversicherung: Beratungsbesuche (bis 37 €/Besuch), Unterstützung beim Pflegekurs für Angehörige (kostenlos), Rentenversicherungsbeiträge für pflegende Angehörige, und bei vollstationärer Pflege einen Zuschuss zum Heimkostenbeitrag.</p>
 
@@ -106,7 +106,7 @@ export default function Page() {
                 <h3 className="text-[15px] font-semibold text-pm-ink pr-4">Was zahlt die Pflegeversicherung 2026?</h3>
                 <span className="text-pm-taupe font-bold text-[20px] flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Pflegegeld (347–990 €/Mo), Sachleistungen (796–2.299 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget (3.539 €/Jahr), Pflegehilfsmittel (42 €/Mo), Wohnraumanpassung (bis 4.000 €).</p></div>
+              <div className="px-5 pb-4"><p className="text-[15px] text-pm-body leading-relaxed">Pflegegeld (347–990 €/Mo), Sachleistungen (796–2.299 €/Mo), Entlastungsbetrag (131 €/Mo), Entlastungsbudget (3.539 €/Jahr), Pflegehilfsmittel (42 €/Mo), Wohnraumanpassung (bis 4.180 €).</p></div>
             </details>
             <details className="bg-white rounded-xl border border-pm-line group">
               <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">

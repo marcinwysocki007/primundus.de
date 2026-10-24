@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('hausnotruf-senioren', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('hausnotruf-senioren', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist ein Hausnotruf?' },
@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Hausnotruf für Senioren — Kosten, Kassenzuschuss & Auswahl 2026 | Primundus',
+  title: 'Hausnotruf für Senioren: Kosten und Kassenzuschuss 2026',
   description: 'Hausnotruf für Senioren: Kosten ab 20 €/Monat, Kassenzuschuss möglich. Was ein Hausnotruf leistet, welche Systeme es gibt und wann er sinnvoll ist.',
   alternates: { canonical: 'https://primundus.de/hausnotruf-senioren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Hausnotruf für Senioren 2026 | Primundus',
+    title: 'Hausnotruf für Senioren: Kosten und Kassenzuschuss 2026',
     description: 'Hausnotruf: Kosten, Kassenzuschuss und welche Systeme für wen geeignet sind.',
     url: 'https://primundus.de/hausnotruf-senioren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Hausnotruf für Senioren — Kosten, Kassenzuschuss und Auswahl 2026',
+    headline: 'Hausnotruf für Senioren: Kosten, Zuschuss und Auswahl',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -58,8 +58,8 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was kostet ein Hausnotruf?', acceptedAnswer: { '@type': 'Answer', text: 'Ein klassischer Hausnotruf kostet typischerweise 20–50 € pro Monat (Anschluss + monatliche Grundgebühr). Mobilfunk-Hausnotruf (auch außerhalb der Wohnung nutzbar) kostet 30–80 €/Monat. Die Pflegekasse zahlt als Pflegehilfsmittel ab Pflegegrad 1 bis zu 25,50 € im Monat dazu.' } },
-      { '@type': 'Question', name: 'Zahlt die Krankenkasse oder Pflegekasse den Hausnotruf?', acceptedAnswer: { '@type': 'Answer', text: 'Der Hausnotruf ist ein Pflegehilfsmittel: Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 25,50 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat. Bei manchen Pflegekassen ist auch eine direkte Kostenübernahme über den Anbieter möglich.' } },
+      { '@type': 'Question', name: 'Was kostet ein Hausnotruf?', acceptedAnswer: { '@type': 'Answer', text: 'Klassischer Hausnotruf: 20–50 €/Monat. Mobilfunk-Notruf mit GPS: 30–80 €/Monat. Einmalige Anschlussgebühr 20–80 € (viele Anbieter ohne). Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 27 € im Monat.' } },
+      { '@type': 'Question', name: 'Zahlt die Pflegekasse den Hausnotruf?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, der Hausnotruf ist ein Pflegehilfsmittel. Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 27 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat.' } },
     ],
   },
 ]
@@ -81,15 +81,15 @@ export default function HausnotrufSenioren() {
             { label: "Hausnotruf Senioren" },
           ]}
           augenbraue="Ratgeber Sicherheit"
-          titel="Hausnotruf für Senioren — Kosten, Zuschuss & Auswahl"
-          einleitung="Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 25,50 € im Monat. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall ohnehin im Haus."
+          titel="Hausnotruf für Senioren: Kosten, Zuschuss und Auswahl"
+          einleitung="Ein Hausnotruf gibt Senioren und Angehörigen Sicherheit — rund um die Uhr, auf Knopfdruck. Ab ca. 20 Euro pro Monat. Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 27 € im Monat. Und mit einer 24h-Betreuungskraft ist die direkte menschliche Hilfe im Notfall ohnehin im Haus."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
           blick={[
                 'Klassischer Hausnotruf: 20–50 €/Monat — Knopf am Handgelenk oder als Anhänger',
                 'Mobilfunk-Notruf: 30–80 €/Monat — auch außerhalb der Wohnung nutzbar',
                 'GPS-Tracker: 30–80 €/Monat — besonders bei Demenz und Weglaufen wichtig',
-                'Finanzierung: Pflegekasse zahlt ab Pflegegrad 1 bis zu 25,50 €/Monat (Pflegehilfsmittel)',
+                'Finanzierung: Pflegekasse zahlt ab Pflegegrad 1 bis zu 27 €/Monat (Pflegehilfsmittel)',
                 'Mit 24h-Betreuungskraft: Kraft wohnt im Haus — Notruf als zusätzliche Absicherung',
                 'Anbieter: DRK, Malteser, Johanniter, DUSSMANN, viele weitere',
               ]}
@@ -121,7 +121,7 @@ export default function HausnotrufSenioren() {
               Ein Hausnotruf kostet typischerweise eine einmalige Anschlussgebühr (20–80 €) plus eine monatliche Grundgebühr (15–50 €). Viele Anbieter ohne Anschlussgebühr möglich.
             </Text>
             <Kasten titel="Kassenzuschuss: Hausnotruf als Pflegehilfsmittel" ton="gruen">
-              <Text>Der Hausnotruf ist ein Pflegehilfsmittel: Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 25,50 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat. Welche Anbieter das sind, sagt die Pflegekasse.</Text>
+              <Text>Der Hausnotruf ist ein Pflegehilfsmittel: Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 27 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat. Welche Anbieter das sind, sagt die Pflegekasse.</Text>
             </Kasten>
             <MehrDazu
               label="Entlastungsbetrag richtig nutzen:"
@@ -148,8 +148,8 @@ export default function HausnotrufSenioren() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Was kostet ein Hausnotruf?', a: 'Klassischer Hausnotruf: 20–50 €/Monat. Mobilfunk-Notruf mit GPS: 30–80 €/Monat. Einmalige Anschlussgebühr 20–80 € (viele Anbieter ohne). Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 25,50 € im Monat.' },
-                { q: 'Zahlt die Pflegekasse den Hausnotruf?', a: 'Ja — der Hausnotruf ist ein Pflegehilfsmittel. Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 25,50 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat.' },
+                { q: 'Was kostet ein Hausnotruf?', a: 'Klassischer Hausnotruf: 20–50 €/Monat. Mobilfunk-Notruf mit GPS: 30–80 €/Monat. Einmalige Anschlussgebühr 20–80 € (viele Anbieter ohne). Die Pflegekasse übernimmt ab Pflegegrad 1 bis zu 27 € im Monat.' },
+                { q: 'Zahlt die Pflegekasse den Hausnotruf?', a: 'Ja, der Hausnotruf ist ein Pflegehilfsmittel. Ab Pflegegrad 1 übernimmt die Pflegekasse bis zu 27 € im Monat, wenn der Anbieter einen Vertrag mit der Pflegekasse hat.' },
                 { q: 'Was ist der Unterschied zwischen Hausnotruf und GPS-Tracker?', a: 'Hausnotruf: Knopfdruck löst Notruf aus, funktioniert klassisch nur in der Wohnung. GPS-Tracker: Echtzeit-Ortung jederzeit, besonders für Demenzkranke mit Weglauftendenz.' },
                 { q: 'Ist ein Hausnotruf bei 24h-Pflege noch nötig?', a: 'Nicht zwingend — aber als zusätzliche Absicherung sinnvoll. Die 24h-Betreuungskraft wohnt mit im Haus. Ein Notruf-System gibt zusätzliche Sicherheit für Momente wenn die Kraft kurz abwesend ist.' },
               ]}

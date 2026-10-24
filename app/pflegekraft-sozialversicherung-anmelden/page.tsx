@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft Sozialversicherung anmelden — Anleitung 2026',
+  title: 'Pflegekraft bei der Sozialversicherung anmelden: Anleitung',
   description: 'Pflegekraft bei der Sozialversicherung anmelden: Minijob, reguläre Beschäftigung oder Entsendemodell — wann was gilt und wie die Anmeldung läuft. 2026.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegekraft Sozialversicherung anmelden 2026 | Primundus',
+    title: 'Pflegekraft bei der Sozialversicherung anmelden: Anleitung',
     description: 'Sozialversicherungsanmeldung für Pflegekräfte — Minijob, regulär oder Entsendemodell.',
     url: 'https://primundus.de/pflegekraft-sozialversicherung-anmelden',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft Sozialversicherung anmelden — Anleitung 2026',
+    headline: 'Pflegekraft bei der Sozialversicherung anmelden: Anleitung 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +73,7 @@ export default function PflegekraftSozialversicherungAnmelden() {
             { label: "Sozialversicherung anmelden" },
           ]}
           augenbraue="Ratgeber Recht"
-          titel="Pflegekraft Sozialversicherung anmelden — Anleitung 2026"
+          titel="Pflegekraft bei der Sozialversicherung anmelden: Anleitung 2026"
           einleitung="Wer eine Pflegekraft direkt anstellt, wird zum Arbeitgeber — mit allen Pflichten: Sozialversicherungsanmeldung, Lohnabrechnung, Beitragsabführung. Beim Entsendemodell über Primundus entfällt das vollständig. Dieser Ratgeber erklärt beide Wege."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

@@ -11,7 +11,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // stimmt: Den Preis zeigt der Rechner vorab. Jetzt: was wir fragen (die Fragen des Rechners), was Sie fragen sollten (Vertrag,
 // Kosten, Krankheit, Kündigung), was danach passiert. Keine Dauer-Angabe, kein „kein Verkaufsgespräch".
 
-const AKTUALISIERT = aktualisiertAm('beratungsgespraech', '19. September 2026')
+const AKTUALISIERT = aktualisiertAm('beratungsgespraech', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-beratungsgespraech'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
@@ -150,7 +150,7 @@ export default function BeratungsgespraechPage() {
             <Text>Diese fünf Fragen sollten Sie jedem Anbieter stellen. So beantworten wir sie:</Text>
             <Punkte
               punkte={[
-                { title: 'Wer ist Arbeitgeber der Betreuungskraft?', desc: 'Wir. Die Betreuungskräfte sind bei uns angestellt und sozialversichert, für jeden Einsatz liegt eine A1-Bescheinigung vor. Sie werden nicht Arbeitgeber.' },
+                { title: 'Wer ist Arbeitgeber der Betreuungskraft?', desc: 'Wir. Die Betreuungskräfte sind bei uns angestellt und sozialversichert. Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie werden nicht Arbeitgeber.' },
                 { title: 'Was kostet es genau, und was kommt dazu?', desc: 'Der Monatspreis aus dem Rechner, ab 2.150 €. Dazu An- und Abreise mit 125 € je Strecke, Kost und Logis, und an neun Feiertagen im Jahr der doppelte Tagessatz. Eine Vermittlungsgebühr gibt es nicht.' },
                 { title: 'Was passiert, wenn die Betreuungskraft krank wird?', desc: 'Wir stellen schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnen wir nicht.' },
                 { title: 'Wie komme ich wieder raus?', desc: 'Täglich kündbar, taggenau abgerechnet. Keine Mindestlaufzeit.' },

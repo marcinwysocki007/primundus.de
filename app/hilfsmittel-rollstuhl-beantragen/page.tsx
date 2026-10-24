@@ -21,14 +21,14 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Rollator & Rollstuhl beantragen: Rezept, Kasse, Ablauf',
+  title: 'Rollstuhl und Rollator beantragen: Rezept oder Pflegegrad?',
   description:
-    'Rollator oder Rollstuhl auf Rezept: Die Krankenkasse zahlt — ganz ohne Pflegegrad. Ablauf über Arzt und Sanitätshaus, Zuzahlung, Fristen und Widerspruch.',
+    'Rollstuhl und Rollator: Rezept vom Arzt, die Krankenkasse entscheidet nach medizinischer Notwendigkeit. Ein Pflegegrad ist nicht nötig.',
   alternates: { canonical: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Rollator & Rollstuhl beantragen',
-    description: 'Auf Rezept über die Krankenkasse — ohne Pflegegrad. Ablauf, Kosten, Ablehnung.',
+    title: 'Rollstuhl und Rollator beantragen: Rezept oder Pflegegrad?',
+    description: 'Rollstuhl und Rollator: Rezept vom Arzt, die Krankenkasse entscheidet nach medizinischer Notwendigkeit. Ein Pflegegrad ist nicht nötig.',
     url: 'https://primundus.de/hilfsmittel-rollstuhl-beantragen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -59,7 +59,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Rollator & Rollstuhl beantragen: Rezept, Kasse, Ablauf',
+    headline: 'Rollstuhl und Rollator beantragen: auf Rezept, auch ohne Pflegegrad',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -98,7 +98,7 @@ export default function Page() {
             { label: "Rollator & Rollstuhl beantragen" },
           ]}
           augenbraue="Ratgeber Hilfsmittel"
-          titel="Rollator & Rollstuhl beantragen: auf Rezept, ohne Pflegegrad"
+          titel="Rollstuhl und Rollator beantragen: auf Rezept, auch ohne Pflegegrad"
           einleitung={<>Das Wichtigste zuerst: Für einen Rollator oder Rollstuhl brauchen Sie <strong>keinen
             Pflegegrad</strong> — nur ein Rezept vom Arzt. Zuständig ist die Krankenkasse, die Zuzahlung
             beträgt 5 bis 10 Euro. Hier steht, wie der Antrag Schritt für Schritt läuft, was der

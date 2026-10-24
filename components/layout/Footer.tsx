@@ -46,8 +46,6 @@ const serviceLinks = [
   // Beide stehen bei Google als „Duplikat" und wurden seit Juli nicht gecrawlt.
   { label: 'Leistungen', href: '/leistungen' },
   { label: 'Ablauf', href: '/ablauf' },
-  // 14.09.2026 umbenannt (Martin): vorher „Franchisepartner werden".
-  { label: 'Vertriebspartner werden', href: '/franchisepartner' },
   // 14.09.2026: Landingpage fuer Vermittler (statisch unter public/pflegekraefte-fuer-vermittler).
   { label: 'Pflegekräfte für Vermittler', href: '/pflegekraefte-fuer-vermittler' },
 ]
@@ -77,7 +75,6 @@ const vergleichLinks = [
   // 17.09.2026: Bewertungsseite (Google München/Hamburg, Trustpilot, eigenes Formular)
   { label: 'Erfahrungen & Bewertungen', href: '/erfahrungen' },
   { label: 'Rechtssicherheit', href: '/rechtssicher' },
-  { label: 'Pflegehelden-Alternative', href: '/pflegehelden-alternative' },
   { label: 'Promedica24-Alternative', href: '/promedica24-alternative' },
   { label: 'Hausengel-Alternative', href: '/hausengel-alternative' },
 ]
@@ -88,6 +85,16 @@ const rechtlichLinks = [
   { label: 'AGB', href: '/agb' },
   { label: 'Sitemap', href: '/sitemap' },
 ]
+
+// Exakter Host statt startsWith (OpenAI-Gegenprüfung 01.10.2026).
+function istRechnerLink(href: string) {
+  try {
+    const url = new URL(href)
+    return url.protocol === 'https:' && url.hostname === 'kostenrechner.primundus.de'
+  } catch {
+    return false
+  }
+}
 
 export function SiteFooter() {
   return (
@@ -168,7 +175,10 @@ export function SiteFooter() {
                     <a
                       href={l.href}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      // Rechner-Link ohne noreferrer: Der Rechner bekommt dann nach der globalen Policy nur die Origin
+                      // „primundus.de" (kein Pfad, keine Query) und zählt den Besuch als Website-Besuch. Fremde Seiten
+                      // behalten noreferrer.
+                      rel={istRechnerLink(l.href) ? 'noopener' : 'noopener noreferrer'}
                       className="text-[14px] text-gray-300 hover:text-white transition-colors"
                     >
                       {l.label}

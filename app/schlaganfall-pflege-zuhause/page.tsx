@@ -19,7 +19,7 @@ import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN 
 // pflegegrad" auf 29–75), Googles Fragen („Welche pflegerischen Maßnahmen nach einem Schlaganfall gibt es?", „Welche Pflegestufe gibt
 // es nach einem Schlaganfall?", „Wann darf man nach einem Schlaganfall wieder nach Hause?", „Was kann man Schlaganfallpatienten Gutes
 // tun?"), Verfeinerungen (Finanzielle Hilfe, Keine Reha, Schwerstpflegefall, Pflegefall, Kurzzeitpflege, gesetzliche Betreuung) und die
-// Seiten auf Platz 1–8 (sanubi, Schlaganfall-Hilfe, curasenio, flintrehab, Pflegehelden-Blog). Der Keyword-Planer liefert für das
+// Seiten auf Platz 1–8 (sanubi, Schlaganfall-Hilfe, curasenio, flintrehab, ein Anbieter-Blog). Der Keyword-Planer liefert für das
 // Thema kaum Zahlen (Gesundheit). Belege: Stiftung Deutsche Schlaganfall-Hilfe (Factsheets: rund 270.000 Schlaganfälle im Jahr,
 // ein Jahr danach rund 64 % pflegebedürftig, rund 15 % in einer Einrichtung), §§ 39e, 37c SGB V, §§ 18a, 42 SGB XI, lib/fakten.
 // Raus: „Post-Stroke-Depression bei 30–40 %" ohne Quelle, „Entscheidungsfrist eine Woche" (richtig: Begutachtung am fünften Arbeitstag).
@@ -73,7 +73,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflege nach Schlaganfall zu Hause: Wann es nach Hause geht, was zu tun ist und was es kostet',
+    headline: 'Pflege nach Schlaganfall zu Hause: wann es nach Hause oder ins Heim geht und was es kostet',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -116,7 +116,7 @@ export default function SchlaganfallPflegeZuhause() {
             { label: 'Pflege nach Schlaganfall' },
           ]}
           augenbraue="Ratgeber Schlaganfall"
-          titel="Pflege nach Schlaganfall zu Hause: Wann es nach Hause geht, was zu tun ist und was es kostet"
+          titel="Pflege nach Schlaganfall zu Hause: wann es nach Hause oder ins Heim geht und was es kostet"
           einleitung="Rund 270.000 Menschen erleiden in Deutschland jedes Jahr einen Schlaganfall. Ein Jahr danach sind rund zwei Drittel der Betroffenen pflegebedürftig, aber nur etwa jeder Siebte lebt in einer Einrichtung. Die meisten werden zu Hause versorgt. Hier lesen Sie, wie der Weg von der Klinik nach Hause läuft, wann das Heim wirklich nötig ist, welche zehn Maßnahmen zu Hause zählen, welchen Pflegegrad es gibt und was die Pflege kostet."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="11 Min."

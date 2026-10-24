@@ -122,7 +122,7 @@ export const ORTE_BERATUNG: Record<string, Beratung> = {
   'hamburg': { kreis: 'Hamburg', kreisfrei: true, land: 'Hamburg' },
   'hameln': { kreis: 'Landkreis Hameln-Pyrmont', kreisfrei: false, land: 'Niedersachsen' },
   'hamm': { kreis: 'Hamm', kreisfrei: true, land: 'Nordrhein-Westfalen' },
-  'hanau': { kreis: 'Main-Kinzig-Kreis', kreisfrei: false, land: 'Hessen' },
+  'hanau': { kreis: 'Hanau', kreisfrei: true, land: 'Hessen' },
   'hannover': { kreis: 'Region Hannover', kreisfrei: false, land: 'Niedersachsen' },
   'heidelberg': { kreis: 'Heidelberg', kreisfrei: true, land: 'Baden-Württemberg' },
   'heilbronn': { kreis: 'Heilbronn', kreisfrei: true, land: 'Baden-Württemberg' },

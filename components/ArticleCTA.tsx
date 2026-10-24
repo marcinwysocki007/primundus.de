@@ -357,9 +357,10 @@ function MartaVertrauen() {
 // Vorschlag 2 vom 17.09.2026 (Martin: „vereinheitliche es", „so schön und horizontal scrollbar", „cooles Design
 // wie auf den anderen"): Seitenende = Bewertungen zum Wischen + Aufruf mit Punkten, Siegel und Marta (Telefon, WhatsApp).
 // ohneBewertungen: auf /erfahrungen stehen die Bewertungen schon vollständig darüber
-export function KontaktBand({ ohneBewertungen = false, src = 'apex-components' }: { ohneBewertungen?: boolean; src?: string } = {}) {
+// neutral: Schlussband ohne Zusage zu Pflegekräften (13.10.2026, /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien)
+export function KontaktBand({ ohneBewertungen = false, src = 'apex-components', neutral = false }: { ohneBewertungen?: boolean; src?: string; neutral?: boolean } = {}) {
   // src je Seite (Ortsseiten: ort-<slug>-schluss), sonst die allgemeine Quelle wie bisher
-  return <Schluss src={src} ohneStimmen={ohneBewertungen} />
+  return <Schluss src={src} ohneStimmen={ohneBewertungen} neutral={neutral} />
 }
 
 export function ArticleCTA() {

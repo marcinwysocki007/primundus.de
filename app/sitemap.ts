@@ -13,7 +13,6 @@ const moneyPages = [
   'testsieger-24-stunden-pflege',
   'kontakt',
   'beratungsgespraech',
-  'franchisepartner',
 ]
 
 const hubs = [
@@ -146,6 +145,8 @@ const artikel = [
   'mdk-begutachtung-tipps',
   'pflegemangel-melden-beschwerden',
   'pflegegeld',
+  // 02.10.2026: Kreisvergleich aus der Pflegestatistik (Datenseite, Anker je Kreis)
+  'pflege-im-kreis',
 ]
 
 // Hinweis: 'eigenanteil-rechner' und 'kostenrechner' fehlen bewusst —
@@ -155,7 +156,6 @@ const tools = [
   'zuschuss-rechner',
   'pflegebedarf-einschaetzen',
   'anbieter-vergleich',
-  'pflegehelden-alternative',
   'promedica24-alternative',
   'hausengel-alternative',
   'checkliste-pflegeuebernahme',

@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-krankenhausaufenthalt', '17. September 2026')
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-krankenhausaufenthalt', '2. Oktober 2026')
 
 // Wettbewerbs-Lücke (Analyse 14.08.): KEIN Anbieter beantwortet öffentlich,
 // was bei Krankenhausaufenthalt, Ausfall der Kraft oder Wechsel gilt.
@@ -65,7 +65,7 @@ const schemaMarkup = [
         name: 'Muss ich die 24-Stunden-Pflege weiterzahlen, wenn meine Mutter ins Krankenhaus kommt?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter; dauert der Aufenthalt länger als 7 Tage, ruht der Vertrag ab dem 8. Tag kostenlos, bis die Betreuung weitergeht. Soll sie abreisen, zahlen Sie nur noch bis zur Abreise, höchstens 3 Tage. Zusätzlich zahlt die Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu vier Wochen weiter.',
+          text: 'Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter; dauert der Aufenthalt länger als 7 Tage, ruht der Vertrag ab dem 8. Tag kostenlos, bis die Betreuung weitergeht. Soll sie abreisen, zahlen Sie nur noch bis zur Abreise, höchstens 3 Tage. Zusätzlich zahlt die Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu acht Wochen weiter (§ 34 Abs. 2 SGB XI).',
         },
       },
       {
@@ -141,7 +141,7 @@ export default function KrankenhausPage() {
             />
             <Kasten>
               <Text><strong>Gut zu wissen:</strong> Das Pflegegeld der Pflegekasse wird bei einem
-              Krankenhausaufenthalt bis zu vier Wochen weitergezahlt — die wichtigste Förderung
+              Krankenhausaufenthalt bis zu acht Wochen weitergezahlt — die wichtigste Förderung
               läuft also zunächst ungekürzt weiter.</Text>
             </Kasten>
           </Abschnitt>
@@ -179,7 +179,7 @@ export default function KrankenhausPage() {
           <Abschnitt id="die-antworten-auf-einen" titel="Die Antworten auf einen Blick">
             <Punkte
               punkte={[
-                { title: "Muss ich die 24-Stunden-Pflege weiterzahlen, wenn meine Mutter ins Krankenhaus kommt?", desc: "Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter; dauert der Aufenthalt länger als 7 Tage, ruht der Vertrag ab dem 8. Tag kostenlos, bis die Betreuung weitergeht. Soll sie abreisen, zahlen Sie nur noch bis zur Abreise, höchstens 3 Tage. Zusätzlich zahlt die Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu vier Wochen weiter." },
+                { title: "Muss ich die 24-Stunden-Pflege weiterzahlen, wenn meine Mutter ins Krankenhaus kommt?", desc: "Bei Primundus entscheiden Sie: Bleibt die Betreuungskraft im Haus (führt den Haushalt weiter und ist bei der Rückkehr sofort da), läuft die Zahlung weiter; dauert der Aufenthalt länger als 7 Tage, ruht der Vertrag ab dem 8. Tag kostenlos, bis die Betreuung weitergeht. Soll sie abreisen, zahlen Sie nur noch bis zur Abreise, höchstens 3 Tage. Zusätzlich zahlt die Pflegekasse das Pflegegeld bei Krankenhausaufenthalten bis zu acht Wochen weiter (§ 34 Abs. 2 SGB XI)." },
                 { title: "Was passiert, wenn die Betreuungskraft krank wird oder ausfällt?", desc: "Primundus stellt eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Tage, an denen die Betreuungskraft krank ist, berechnen wir nicht; für den Ersatz fallen nur die An- und Abreisekosten an." },
                 { title: "Kostet ein Wechsel der Betreuungskraft etwas?", desc: "Ob regulär alle 6–8 Wochen oder weil die Chemie nicht stimmt: Sie zahlen An- und Abreise mit 125 Euro je Strecke, und weil An- und Abreisetag Arbeitstage sind, berechnen wir am Wechseltag den Tagessatz für beide Betreuungskräfte. Eine Gebühr für den Wechsel gibt es nicht." },
                 { title: "Wie hoch sind die Feiertagszuschläge?", desc: <>An neun Feiertagen gilt der doppelte Tagessatz, beim Grundpreis von 2.150 Euro rund

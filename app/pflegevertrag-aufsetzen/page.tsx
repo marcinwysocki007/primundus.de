@@ -9,7 +9,16 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegevertrag-aufsetzen', '25. April 2026')
+// 01.10.2026: Vertragspartner der Familie ist die PRIMUNDUS Sp. z o.o. in Warschau, bei ihr sind die Betreuungskräfte
+// angestellt (Mustervertrag, /ueber-uns, /rechtssicher; Martin 12.09. und 30.09.). Raus: „deutsche Agentur“,
+// „Agenturvertrag“, „Primundus vermittelt“.
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+// 02.10.2026: Drittes Modell „Selbstständige Betreuungskraft“ mit dem Risiko der Scheinselbstständigkeit (Martin 02.10.:
+// „sollten wir hier nicht auch die Selbstständigen mitnehmen“); Inhalt wie /rechtssicher, als Hinweis statt Drohung (Martin:
+// „es besteht hier die Gefahr … Scheinselbstständigkeit, wenn …, mit folgenden Konsequenzen für die Familien, also hier Obacht“).
+const AKTUALISIERT = aktualisiertAm('pflegevertrag-aufsetzen', '2. Oktober 2026')
 
 const SECTIONS = [
   { id: 'warum', title: 'Warum ein Pflegevertrag wichtig ist' },
@@ -20,11 +29,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegevertrag aufsetzen — was muss rein? Muster & Tipps',
+  title: 'Pflegevertrag aufsetzen: was hineingehört',
   description: 'Pflegevertrag aufsetzen: Was in einen Pflegevertrag gehört, welches Modell für wen gilt und worauf bei der Kündigung geachtet werden muss. Mit Checkliste.',
   alternates: { canonical: 'https://primundus.de/pflegevertrag-aufsetzen' },
   openGraph: {
-    title: 'Pflegevertrag aufsetzen | Primundus',
+    title: 'Pflegevertrag aufsetzen: was hineingehört',
     description: 'Was in einen Pflegevertrag gehört, Beschäftigungsmodelle und Kündigungsfristen — Checkliste und Tipps.',
     url: 'https://primundus.de/pflegevertrag-aufsetzen',
     siteName: 'Primundus',
@@ -38,7 +47,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegevertrag aufsetzen — was muss rein?',
+    headline: 'Pflegevertrag aufsetzen: was hineingehört, je nach Beschäftigungsmodell',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -59,7 +68,7 @@ const schemaMarkup = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Was muss in einen Pflegevertrag?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Pflegevertrag sollte enthalten: Vertragsparteien, Leistungsumfang (konkrete Tätigkeiten), Arbeitszeit und Dienstplan, Vergütung und Zahlungsmodalitäten, Kost und Logis, Urlaubs- und Krankheitsregelungen, Kündigungsfristen und Datenschutz.' } },
-      { '@type': 'Question', name: 'Wer schließt den Pflegevertrag beim Entsendemodell?', acceptedAnswer: { '@type': 'Answer', text: 'Beim Entsendemodell schließt die Familie einen Vertrag mit der deutschen Vermittlungsagentur (z.B. Primundus) — nicht direkt mit der Betreuungskraft. Die Kraft hat einen Arbeitsvertrag mit dem entsendenden Unternehmen im EU-Heimatland.' } },
+      { '@type': 'Question', name: 'Wer schließt den Pflegevertrag beim Entsendemodell?', acceptedAnswer: { '@type': 'Answer', text: 'Die Familie schließt den Vertrag mit dem Unternehmen, bei dem die Betreuungskraft angestellt ist und das sie nach Deutschland entsendet. Bei Primundus ist das die PRIMUNDUS Sp. z o.o. mit Sitz in Warschau; das Büro in Deutschland ist in München. Einen Arbeitsvertrag mit der Betreuungskraft schließt die Familie nicht.' } },
     ],
   },
 ]
@@ -81,7 +90,7 @@ export default function PflegevertragAufsetzen() {
             { label: "Pflegevertrag aufsetzen" },
           ]}
           augenbraue="Ratgeber Vertrag"
-          titel="Pflegevertrag aufsetzen — was muss rein?"
+          titel="Pflegevertrag aufsetzen: was hineingehört, je nach Beschäftigungsmodell"
           einleitung="Ein schriftlicher Pflegevertrag schützt beide Seiten — die Familie und die Betreuungskraft. Er regelt Leistungen, Arbeitszeiten, Vergütung und Kündigungsmodalitäten klar und verbindlich. Was genau hineingehört, hängt vom Beschäftigungsmodell ab. Beim Entsendemodell über Primundus ist der Vertrag standardisiert und rechtssicher."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
@@ -107,14 +116,14 @@ export default function PflegevertragAufsetzen() {
               Ohne schriftlichen Vertrag entstehen schnell Missverständnisse: Welche Tätigkeiten sind inbegriffen? Wie viele Stunden? Was passiert bei Krankheit der Betreuungskraft? Wer kümmert sich um Ersatz? Ein klarer Vertrag schafft von Anfang an Klarheit und vermeidet Konflikte.
             </Text>
             <Text>
-              Rechtlich ist ein schriftlicher Vertrag bei Direktanstellung Pflicht. Beim Entsendemodell regelt der Vertrag mit der Agentur alle wesentlichen Punkte. Auf keinen Fall sollte auf einen Vertrag verzichtet werden — auch nicht bei vertrauensvollen Verhältnissen.
+              Rechtlich ist ein schriftlicher Vertrag bei Direktanstellung Pflicht. Beim Entsendemodell regelt der Betreuungsvertrag mit dem entsendenden Unternehmen alle wesentlichen Punkte. Auf keinen Fall sollte auf einen Vertrag verzichtet werden — auch nicht bei vertrauensvollen Verhältnissen.
             </Text>
           </Abschnitt>
 
           <Abschnitt id="inhalte" titel="Was in den Pflegevertrag gehört — vollständige Checkliste">
             <Punkte
               punkte={[
-                { title: 'Vertragsparteien', desc: 'Vollständige Namen, Adressen, Geburtsdaten beider Seiten. Bei Entsendemodell: Agentur als Vertragspartner, Name der Betreuungskraft als Anlage.' },
+                { title: 'Vertragsparteien', desc: 'Vollständige Namen, Adressen, Geburtsdaten beider Seiten. Beim Entsendemodell: das entsendende Unternehmen als Vertragspartner.' },
                 { title: 'Leistungsumfang', desc: 'Konkret benennen: Körperpflege (Waschen, Anziehen, Zahnpflege), Haushalt (Kochen, Reinigung, Einkauf), Betreuung (Spaziergänge, Gespräche, Arztbegleitung). Was NICHT inbegriffen ist ebenfalls festhalten.' },
                 { title: 'Arbeitszeit & Dienstplan', desc: 'Wochenstunden, Kern-Dienstzeiten, Bereitschaftsdienst-Regelung (Nacht/Wochenende). In Deutschland gilt das Arbeitszeitgesetz — max. 8 Stunden täglich reguläre Arbeitszeit.' },
                 { title: 'Vergütung', desc: 'Monatliches Bruttogehalt, Zahlungsdatum, Zahlungsweg (Überweisung). Mindestlohn einhalten. Kost und Logis: Wert schriftlich festhalten und Anrechnung auf Vergütung regeln.' },
@@ -130,13 +139,17 @@ export default function PflegevertragAufsetzen() {
             titel="Vertrag je nach Beschäftigungsmodell"
             einleitung="Das Beschäftigungsmodell bestimmt wer mit wem einen Vertrag schließt."
             punkte={[
-              { title: 'Entsendemodell (über Agentur wie Primundus)', desc: 'Familie schließt Vertrag mit der deutschen Agentur. Die Betreuungskraft hat eigenen Arbeitsvertrag mit dem entsendenden EU-Unternehmen. Einfach, rechtssicher, klar geregelt.' },
+              { title: 'Entsendemodell (wie bei Primundus)', desc: 'Die Familie schließt einen Betreuungsvertrag mit dem Unternehmen, bei dem die Betreuungskraft angestellt ist und das sie mit A1-Bescheinigung entsendet. Bei Primundus ist das die PRIMUNDUS Sp. z o.o. in Warschau. Die Familie wird nicht Arbeitgeberin.' },
               { title: 'Direktanstellung', desc: 'Familie ist Arbeitgeberin — schließt Arbeitsvertrag direkt mit der Betreuungskraft. Alle Arbeitgebergerechtlichen Pflichten liegen bei der Familie: Lohnabrechnung, Sozialversicherung, Urlaubsplanung.' },
+              { title: 'Selbstständige Betreuungskraft', desc: <>Die Familie beauftragt die Kraft direkt, die Kraft stellt Rechnungen. <strong>Hinweis:</strong> Es besteht die Gefahr der Scheinselbstständigkeit, wenn die Betreuungskraft im Haushalt wohnt, nach Weisung der Familie arbeitet und nur diesen einen Auftraggeber hat, mit folgenden Konsequenzen für die Familie: Sie gilt dann als Arbeitgeberin und muss Sozialversicherungsbeiträge nachzahlen; hinzu kommen Bußgelder, bei Vorsatz ein Strafverfahren.</> },
             ]}
           >
             <MehrDazu
               label="Alle Modelle erklärt:"
-              links={[{ href: "/pflegekraft-legal-beschaeftigen", text: "Pflegekraft legal beschäftigen — die 3 Wege" }]}
+              links={[
+                { href: "/pflegekraft-legal-beschaeftigen", text: "Pflegekraft legal beschäftigen — die 3 Wege" },
+                { href: "/scheinselbststaendigkeit-pflege-vermeiden", text: "Scheinselbstständigkeit vermeiden" },
+              ]}
             />
           </DunklerAbschnitt>
 
@@ -148,7 +161,7 @@ export default function PflegevertragAufsetzen() {
               titel=""
               kopf={['Modell', 'Kündigungsfrist', 'Ersatz bei Kündigung']}
               zeilen={[
-                ['Primundus (Entsendung)', 'Täglich kündbar', 'Primundus stellt sofort Ersatzkraft'],
+                ['Primundus (Entsendung)', 'Täglich kündbar', 'Primundus stellt schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen'],
                 ['Direktanstellung <6 Monate', '2 Wochen', 'Familie muss selbst suchen'],
                 ['Direktanstellung >2 Jahre', '2 Monate', 'Familie muss selbst suchen'],
               ]}
@@ -163,9 +176,9 @@ export default function PflegevertragAufsetzen() {
             <Fragen
               fragen={[
                 { q: 'Was muss in einen Pflegevertrag?', a: 'Vertragsparteien, Leistungsumfang (konkrete Tätigkeiten), Arbeitszeiten, Vergütung, Kost und Logis, Urlaubs- und Krankheitsregelungen, Kündigungsfristen, Datenschutz.' },
-                { q: 'Wer schließt beim Entsendemodell den Vertrag?', a: 'Die Familie schließt den Vertrag mit der deutschen Agentur (z.B. Primundus) — nicht direkt mit der Betreuungskraft. Die Kraft hat einen Arbeitsvertrag mit dem entsendenden EU-Unternehmen.' },
+                { q: 'Wer schließt beim Entsendemodell den Vertrag?', a: 'Die Familie schließt den Vertrag mit dem Unternehmen, bei dem die Betreuungskraft angestellt ist und das sie nach Deutschland entsendet. Bei Primundus ist das die PRIMUNDUS Sp. z o.o. mit Sitz in Warschau; das Büro in Deutschland ist in München. Einen Arbeitsvertrag mit der Betreuungskraft schließt die Familie nicht.' },
                 { q: 'Kann man den Pflegevertrag bei Primundus täglich kündigen?', a: 'Ja — Primundus-Verträge sind täglich kündbar, taggenaue Abrechnung. Das ist einer der zentralen Vorteile des Entsendemodells.' },
-                { q: 'Muss der Pflegevertrag schriftlich sein?', a: 'Bei Direktanstellung ist Schriftform Pflicht. Beim Entsendemodell regelt der Agenturvertrag alle wesentlichen Punkte schriftlich. Auf einen schriftlichen Vertrag sollte in keinem Fall verzichtet werden.' },
+                { q: 'Muss der Pflegevertrag schriftlich sein?', a: 'Bei Direktanstellung ist Schriftform Pflicht. Beim Entsendemodell regelt der Betreuungsvertrag mit dem entsendenden Unternehmen alle wesentlichen Punkte schriftlich. Auf einen schriftlichen Vertrag sollte in keinem Fall verzichtet werden.' },
               ]}
             />
           </Abschnitt>

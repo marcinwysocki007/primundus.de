@@ -9,7 +9,13 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegemangel-melden-beschwerden', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+// 02.10.2026: Frage „sofort abberufen“ (Martin: „hört sich komisch an“) ersetzt durch die Erreichbarkeit: täglich 8–20 Uhr per
+// Telefon, WhatsApp, E-Mail; die Notfallnummer bekommen Kunden nach der Auswahl der Betreuungskraft (Martin 02.10.), sie steht
+// bewusst nicht auf der Website. Ton ruhig, „darf nicht so klingen als gäbe es ständig Notfälle“ (Martin 02.10.).
+const AKTUALISIERT = aktualisiertAm('pflegemangel-melden-beschwerden', '2. Oktober 2026')
 
 const SECTIONS = [
   { id: 'wann-melden', title: 'Wann eine Beschwerde sinnvoll ist' },
@@ -20,12 +26,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegemangel melden — Beschwerden richtig einreichen',
+  title: 'Pflegemängel melden: an wen Sie sich wenden',
   description: 'Pflegemangel melden: An wen man sich bei Problemen in der Pflege wendet, wie eine Beschwerde eingereicht wird und welche Stellen zuständig sind.',
   alternates: { canonical: 'https://primundus.de/pflegemangel-melden-beschwerden' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegemangel melden | Primundus',
+    title: 'Pflegemängel melden: an wen Sie sich wenden',
     description: 'Probleme in der Pflege melden — welche Stellen zuständig sind und wie man vorgeht.',
     url: 'https://primundus.de/pflegemangel-melden-beschwerden',
     siteName: 'Primundus',
@@ -38,7 +44,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegemangel melden — Beschwerden richtig einreichen',
+    headline: 'Pflegemängel melden: an wen Sie sich wenden und wie Sie sich beschweren',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -84,7 +90,7 @@ export default function PflegemangelMeldenBeschwerden() {
             { label: "Pflegemangel melden" },
           ]}
           augenbraue="Ratgeber Recht"
-          titel="Pflegemangel melden — Beschwerden richtig einreichen"
+          titel="Pflegemängel melden: an wen Sie sich wenden und wie Sie sich beschweren"
           einleitung="Wer Pflegemängel erlebt — schlechte Versorgung, Vernachlässigung, unwürdige Behandlung — hat das Recht etwas dagegen zu tun. Dieser Ratgeber zeigt wann und wie man Beschwerden einreicht, an wen man sich wendet, und welche Stellen in Deutschland zuständig sind."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
@@ -108,7 +114,7 @@ export default function PflegemangelMeldenBeschwerden() {
             <Kasten augenbraue="Erste Anlaufstelle">
               <Gruppen
                 gruppen={[
-                  { title: 'Primundus (bei häuslicher Pflege)', zusatz: '089 200 000 830 · info@primundus.de', punkte: ['Erste Anlaufstelle bei allen Problemen mit der Betreuungskraft. Primundus reagiert sofort — Gespräch mit Kraft, und wenn nötig unmittelbarer Wechsel. Täglich kündbar.'] },
+                  { title: 'Primundus (bei häuslicher Pflege)', zusatz: '089 200 000 830 · info@primundus.de', punkte: ['Erste Anlaufstelle bei allen Problemen mit der Betreuungskraft. Primundus spricht mit der Kraft und organisiert, wenn nötig, einen Wechsel. Täglich kündbar.'] },
                 ]}
               />
             </Kasten>
@@ -148,7 +154,7 @@ export default function PflegemangelMeldenBeschwerden() {
             <Fragen
               fragen={[
                 { q: 'Wo kann man Pflegemängel melden?', a: 'Bei häuslicher Pflege: zunächst direkt bei der Agentur (Primundus: 089 200 000 830), dann bei der Pflegekasse. Bei Pflegeheimen: Heimaufsicht des Bundeslandes und Medizinischer Dienst. Für Beratung: Pflegestützpunkt kostenlos und unabhängig.' },
-                { q: 'Kann ich die Betreuungskraft sofort abberufen?', a: 'Ja — bei Primundus täglich kündbar. Bei akuten Problemen sofort anrufen: 089 200 000 830. Primundus stellt unverzüglich Ersatz.' },
+                { q: 'Wie und wann erreiche ich Primundus?', a: 'Täglich von 8 bis 20 Uhr per Telefon unter 089 200 000 830, per WhatsApp unter derselben Nummer oder per E-Mail an info@primundus.de. Am schnellsten geht es per Telefon oder WhatsApp. Sollte außerhalb dieser Zeiten einmal etwas Dringendes sein, gibt es eine Notfallnummer; die bekommen Sie nach der Auswahl Ihrer Betreuungskraft. Muss eine Betreuungskraft ersetzt werden, stellt Primundus schnellstmöglich Ersatz, in der Regel innerhalb von 3 Tagen.' },
                 { q: 'Was tun wenn jemand in einem Pflegeheim vernachlässigt wird?', a: 'Vorfälle dokumentieren, mit Heimleitung sprechen. Wenn ohne Ergebnis: Heimaufsicht des Bundeslandes einschalten. Bei akuter Gefahr: Polizei (110) und Pflegekasse informieren.' },
                 { q: 'Ist eine Beschwerde beim MD kostenlos?', a: 'Ja — der Medizinische Dienst nimmt Beschwerden kostenlos entgegen. Auch Pflegestützpunkte beraten kostenlos.' },
               ]}

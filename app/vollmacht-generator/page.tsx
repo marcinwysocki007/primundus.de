@@ -20,76 +20,26 @@ export const metadata: Metadata = {
   },
 }
 
-const schemaMarkup = JSON.stringify([
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://primundus.de/" },
-      { "@type": "ListItem", "position": 2, "name": "Tools & Rechner", "item": "https://primundus.de/tools/" },
-      { "@type": "ListItem", "position": 3, "name": "Vorsorgevollmacht-Generator", "item": "https://primundus.de/vollmacht-generator/" },
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was ist eine Vorsorgevollmacht?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine Vorsorgevollmacht ermächtigt eine Vertrauensperson, für Sie zu entscheiden, wenn Sie es selbst nicht mehr können — z.B. bei Krankheit oder Pflegebedürftigkeit. Sie regelt Gesundheitssorge, Vermögen, Wohnung und Behördenangelegenheiten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Muss die Vorsorgevollmacht notariell beglaubigt werden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Für die meisten Bereiche (Gesundheit, Aufenthalt) reicht eine handschriftlich unterschriebene Vollmacht. Für Immobilien oder Bankgeschäfte empfiehlt sich eine notarielle Beglaubigung."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist der Unterschied zwischen Vorsorgevollmacht und Betreuungsverfügung?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Vorsorgevollmacht bevollmächtigt eine Person Ihrer Wahl. Ohne Vollmacht bestellt das Gericht einen gesetzlichen Betreuer — das kann auch ein Fremder sein. Die Vollmacht gibt Ihnen die Kontrolle darüber, wer entscheidet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ab wann gilt die Vorsorgevollmacht?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sie können wählen: Die Vollmacht kann sofort gelten (auch wenn Sie noch handlungsfähig sind) oder erst im Vorsorgefall (wenn Sie nicht mehr selbst entscheiden können). Für die meisten Bereiche empfiehlt sich 'sofort', da ein Nachweis der Handlungsunfähigkeit oft schwierig ist."
-        }
-      }
-    ]
-  }
-])
-
 const vollmachtBereiche = [
   {
     title: 'Gesundheitssorge',
     icon: '🏥',
-    desc: 'Einwilligung in Behandlungen, Operationen und Krankenhausaufenthalte. Der Bevollmächtigte kann Ärzte und Therapeuten beauftragen und Patientenakten einsehen.',
+    desc: 'Einwilligung in Behandlungen, Operationen und Krankenhausaufenthalte. Der Bevollmächtigte kann Ärzte und Therapeuten beauftragen und Patientenakten einsehen. Entscheidungen, bei denen die Gefahr des Todes oder eines schweren, länger dauernden Gesundheitsschadens besteht, deckt die Vollmacht nur, wenn Sie sie ausdrücklich ankreuzen.',
   },
   {
     title: 'Aufenthaltsbestimmung',
     icon: '🏠',
-    desc: 'Entscheidung über Wohnort, Aufnahme in ein Pflegeheim und sonstige Unterbringung — auch freiheitsentziehende Maßnahmen (mit Gerichtsgenehmigung).',
+    desc: 'Entscheidung über Wohnort und Aufnahme in ein Pflegeheim, auch über eine geschlossene Unterbringung. Die braucht zusätzlich die Genehmigung des Betreuungsgerichts.',
   },
   {
     title: 'Vermögenssorge',
     icon: '💼',
-    desc: 'Verwaltung von beweglichem und unbeweglichem Eigentum. Abschluss und Kündigung von Verträgen, Geltendmachung von Forderungen und Begleichung von Verbindlichkeiten.',
+    desc: 'Verwaltung von beweglichem und unbeweglichem Eigentum. Abschluss und Kündigung von Verträgen, Geltendmachung von Forderungen und Begleichung von Verbindlichkeiten. Für Grundstücksgeschäfte muss Ihre Unterschrift unter der Vollmacht öffentlich beglaubigt sein.',
   },
   {
     title: 'Bankgeschäfte',
     icon: '🏦',
-    desc: 'Verfügung über Konten und Depots, Überweisungen, Kreditverträge. Für Bankgeschäfte wird eine notarielle Beglaubigung der Vollmacht empfohlen.',
+    desc: 'Verfügung über Konten und Depots, Überweisungen, Bankverträge. Viele Banken verlangen zusätzlich ihre eigene Konto- und Depotvollmacht. Einen Verbraucherkredit deckt die Vollmacht nur, wenn sie notariell beurkundet ist.',
   },
   {
     title: 'Wohnungsangelegenheiten',
@@ -110,17 +60,37 @@ const vollmachtFaqs = [
   },
   {
     q: 'Muss die Vorsorgevollmacht notariell beglaubigt werden?',
-    a: 'Für die meisten Bereiche (Gesundheit, Aufenthalt) reicht eine handschriftlich unterschriebene Vollmacht. Für Immobilien oder Bankgeschäfte empfiehlt sich eine notarielle Beglaubigung. Die einfache Unterschrift reicht nicht mehr für Grundstücksgeschäfte oder bestimmte Bankverträge.',
+    a: 'Für die meisten Bereiche nicht. Eine schriftliche, eigenhändig unterschriebene Vollmacht genügt. Für Entscheidungen, bei denen die Gefahr des Todes oder eines schweren, länger dauernden Gesundheitsschadens besteht, und für eine geschlossene Unterbringung muss sie schriftlich sein und diese Entscheidungen ausdrücklich nennen (§ 1820 Abs. 2 BGB). Für Grundstücke verlangt das Grundbuchamt, dass Ihre Unterschrift unter der Vollmacht öffentlich beglaubigt ist (§ 29 GBO); das übernimmt ein Notar oder die Betreuungsbehörde. Einen Verbraucherkredit kann die Vertrauensperson mit einer allgemeinen Vorsorgevollmacht nur aufnehmen, wenn sie notariell beurkundet ist (§ 492 Abs. 4 BGB). Banken verlangen oft zusätzlich ihre eigene Konto- und Depotvollmacht.',
   },
   {
     q: 'Was ist der Unterschied zwischen Vorsorgevollmacht und Betreuungsverfügung?',
-    a: 'Die Vorsorgevollmacht bevollmächtigt eine Person Ihrer Wahl. Ohne Vollmacht bestellt das Gericht einen gesetzlichen Betreuer — das kann auch ein Fremder sein. Die Vollmacht gibt Ihnen die Kontrolle darüber, wer entscheidet.',
+    a: 'Mit der Vorsorgevollmacht bestimmen Sie eine Person, die für Sie handeln darf, ohne dass ein Gericht sie bestellt. Mit einer Betreuungsverfügung legen Sie nur fest, wen das Betreuungsgericht als rechtlichen Betreuer bestellen soll und was Ihnen dabei wichtig ist, falls doch ein Betreuer nötig wird. Das Gericht hält sich an diesen Wunsch, wenn die Person geeignet ist (§ 1816 Abs. 2 BGB). Der Betreuer steht unter der Aufsicht des Gerichts.',
   },
   {
     q: 'Ab wann gilt die Vorsorgevollmacht?',
-    a: "Sie können wählen: Die Vollmacht kann sofort gelten (auch wenn Sie noch handlungsfähig sind) oder erst im Vorsorgefall (wenn Sie nicht mehr selbst entscheiden können). Für die meisten Bereiche empfiehlt sich 'sofort', da ein Nachweis der Handlungsunfähigkeit oft schwierig ist.",
+    a: 'Sie können wählen: ab der Unterschrift oder erst im Vorsorgefall, also wenn Sie nicht mehr selbst entscheiden können. Das Bundesministerium der Justiz rät von solchen Bedingungen ab, weil Banken und Behörden dann einen Nachweis verlangen, etwa ein ärztliches Attest. Wann Ihre Vertrauensperson die Vollmacht nutzen soll, sprechen Sie besser mit ihr ab.',
   },
 ]
+
+// Sichtbare Fragen = Daten für Google (eine Quelle)
+const schemaMarkup = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://primundus.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools & Rechner", "item": "https://primundus.de/tools/" },
+      { "@type": "ListItem", "position": 3, "name": "Vorsorgevollmacht-Generator", "item": "https://primundus.de/vollmacht-generator/" },
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": vollmachtFaqs.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })),
+  }
+])
+
+const QUELLE = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
 export default function Page() {
   return (
@@ -182,6 +152,15 @@ export default function Page() {
               ))}
             </div>
           </section>
+
+          <p className="text-[13px] text-pm-mute leading-relaxed mb-12">
+            Rechtsgrundlagen: §§ 164 ff., 1358, 1814, 1816, 1820, 1827 bis 1832 und 492 Abs. 4 BGB, § 29 GBO; Stand Oktober 2026. Zum Vergleich:
+            das{' '}
+            <a href="https://www.bmjv.de/SharedDocs/Downloads/DE/Formular/Vorsorgevollmacht.html" className={QUELLE} rel="noopener" target="_blank">
+              Formular „Vollmacht“ des Bundesministeriums der Justiz
+            </a>{' '}
+            (Stand Januar 2023).
+          </p>
 
           {/* Related Tools */}
           <section>

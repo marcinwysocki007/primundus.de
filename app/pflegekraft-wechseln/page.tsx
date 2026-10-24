@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-wechseln', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('pflegekraft-wechseln', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'wann-wechseln', title: 'Wann einen Wechsel anstoßen?' },
@@ -20,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegekraft wechseln — wann & wie | Primundus',
+  title: 'Pflegekraft wechseln: wann und wie die Übergabe gelingt',
   description: 'Pflegekraft wechseln: Wann ein Wechsel sinnvoll ist, wie der reguläre Kraftwechsel alle 6–8 Wochen funktioniert und was eine gute Übergabe ausmacht.',
   alternates: { canonical: 'https://primundus.de/pflegekraft-wechseln' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegekraft wechseln | Primundus',
+    title: 'Pflegekraft wechseln: wann und wie die Übergabe gelingt',
     description: 'Wann und wie man eine 24h-Betreuungskraft wechselt — regulär und kurzfristig.',
     url: 'https://primundus.de/pflegekraft-wechseln',
     siteName: 'Primundus',
@@ -38,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegekraft wechseln — wann und wie',
+    headline: 'Pflegekraft wechseln: wann ein Wechsel sinnvoll ist und wie die Übergabe gelingt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +76,7 @@ export default function PflegekraftWechseln() {
             { label: "Pflegekraft wechseln" },
           ]}
           augenbraue="Ratgeber Pflegekräfte"
-          titel="Pflegekraft wechseln — wann & wie es richtig funktioniert"
+          titel="Pflegekraft wechseln: wann ein Wechsel sinnvoll ist und wie die Übergabe gelingt"
           einleitung="Jede 24h-Betreuungskraft arbeitet typischerweise 6–8 Wochen am Stück, dann fährt sie nach Hause und eine neue Kraft kommt. Das ist normal, geplant und bei Primundus vollständig organisiert. Daneben gibt es Situationen die einen kurzfristigen Wechsel erfordern — auch das ist kein Problem."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
@@ -81,8 +84,8 @@ export default function PflegekraftWechseln() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
-            <Kasten titel="Bei Primundus: Täglich kündbar — sofort Ersatz" ton="gruen">
-              <Text>Wer mit Primundus arbeitet kann täglich kündigen. Primundus stellt sofort Ersatz — ohne Versorgungslücke. Kein Risiko, keine Wartezeit, kein Aufwand für die Familie.</Text>
+            <Kasten titel="Bei Primundus: täglich kündbar, Ersatz bei Ausfall in der Regel innerhalb von 3 Tagen" ton="gruen">
+              <Text>Wer mit Primundus arbeitet, kann täglich kündigen. Fällt eine Betreuungskraft aus, stellt Primundus schnellstmöglich Ersatz, laut Vertrag in der Regel innerhalb von 3 Tagen, und berechnet die Krankheitstage nicht.</Text>
             </Kasten>
           </Vorspann>
 
@@ -92,7 +95,7 @@ export default function PflegekraftWechseln() {
                 { title: 'Regulärer Rhythmuswechsel (alle 6–8 Wochen)', desc: 'Der Normalfall. Die Kraft fährt nach Hause zu ihrer eigenen Familie, eine neue Kraft kommt. Primundus kündigt den Wechsel rechtzeitig an und organisiert alles.' },
                 { title: 'Kraft passt nicht', desc: 'Persönlichkeit, Arbeitsweise oder Deutschkenntnisse entsprechen nicht den Erwartungen. Kein Augenrollen, keine Auseinandersetzungen — einfach Primundus anrufen. Täglich kündbar.' },
                 { title: 'Pflegebedarf hat sich verändert', desc: 'Neuer Pflegegrad, neue Diagnose, gestiegener Aufwand — die bisherige Kraft hat nicht die nötige Spezialerfahrung. Neue Kraft mit besserer Qualifikation wählen.' },
-                { title: 'Ausfall durch Krankheit oder Kündigung der Kraft', desc: 'Passiert — und dann ist sofortiger Ersatz entscheidend. Primundus organisiert das ohne Vorlaufzeit.' },
+                { title: 'Ausfall durch Krankheit oder Kündigung der Kraft', desc: 'Dann zählt, wie schnell Ersatz kommt: bei Primundus laut Vertrag in der Regel innerhalb von 3 Tagen.' },
               ]}
             />
           </Abschnitt>
@@ -116,7 +119,7 @@ export default function PflegekraftWechseln() {
               { title: 'Pflegebedürftiger mag die Kraft nicht', desc: 'Ernst nehmen — auch wenn keine objektiven Gründe benannt werden können. Primundus anrufen, Wechsel veranlassen.' },
               { title: 'Qualität der Pflege ist unzureichend', desc: 'Konkrete Beispiele sammeln, mit Primundus besprechen. Primundus geht der Sache nach und organisiert Ersatz.' },
               { title: 'Vertrauensbruch (Diebstahl, Lügen)', desc: 'Sofort Primundus informieren. Je nach Schwere: sofortige Kündigung aus wichtigem Grund möglich.' },
-              { title: 'Kraft krank oder möchte vorzeitig abbrechen', desc: 'Primundus übernimmt — sofortige Ersatzorganisation.' },
+              { title: 'Kraft krank oder möchte vorzeitig abbrechen', desc: 'Primundus übernimmt und organisiert Ersatz. Sie müssen niemanden selbst suchen.' },
             ]}
           />
 

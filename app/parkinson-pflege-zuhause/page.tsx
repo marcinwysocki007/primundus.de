@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('parkinson-pflege-zuhause', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('parkinson-pflege-zuhause', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'herausforderungen', title: 'Besonderheiten der Parkinson-Pflege' },
@@ -20,11 +20,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Parkinson Pflege zuhause — Alltag, Tipps & 24h-Pflege',
+  title: 'Parkinson-Pflege zu Hause: Alltag, Zuschüsse und Betreuung',
   description: 'Parkinson Pflege zuhause: Besonderheiten, Alltagstipps, welcher Pflegegrad möglich ist und wann eine 24h-Betreuungskraft die richtige Unterstützung bietet.',
   alternates: { canonical: 'https://primundus.de/parkinson-pflege-zuhause' },
   openGraph: {
-    title: 'Parkinson Pflege zuhause | Primundus',
+    title: 'Parkinson-Pflege zu Hause: Alltag, Zuschüsse und Betreuung',
     description: 'Parkinson-Pflege zuhause: Alltagstipps, Pflegegrade und wie 24h-Pflege hilft.',
     url: 'https://primundus.de/parkinson-pflege-zuhause',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Parkinson Pflege zuhause — Alltag, Pflegegrad & 24h-Pflege',
+    headline: 'Parkinson-Pflege zu Hause: Alltag, Zuschüsse und wann 24-Stunden-Pflege hilft',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -82,14 +82,14 @@ export default function ParkinsonPflegeZuhause() {
             { label: "Parkinson Pflege zuhause" },
           ]}
           augenbraue="Ratgeber Parkinson"
-          titel="Parkinson Pflege zuhause — Alltag, Tipps & 24h-Pflege"
+          titel="Parkinson-Pflege zu Hause: Alltag, Zuschüsse und wann 24-Stunden-Pflege hilft"
           einleitung="Parkinson-Pflege zuhause ist in den meisten Stadien möglich — aber sie erfordert Wissen über den schwankenden Tagesverlauf der Erkrankung. Eine Betreuungskraft die On- und Off-Phasen kennt und den Medikationsrhythmus versteht, macht den entscheidenden Unterschied."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
           blick={[
                 'Zuhause bleiben in den meisten Parkinson-Stadien möglich',
                 'Tagesverlauf schwankt: On-Phasen (gut beweglich) und Off-Phasen (steif, langsam)',
-                'Sturzprävention ist entscheidend — 24h-Präsenz schützt',
+                'Sturzprävention ist entscheidend: eine Betreuungskraft im Haus hilft dabei',
                 'Medikamenten-Timing kritisch — Betreuungskraft muss das kennen',
                 'Pflegegrad 2–5 je nach Stadium — frühzeitig beantragen',
                 'Physio- und Ergotherapie zuhause fortsetzen',
@@ -104,7 +104,7 @@ export default function ParkinsonPflegeZuhause() {
             <Punkte
               punkte={[
                 { title: 'On-Phasen und Off-Phasen', desc: 'Kurz nach der Medikamenteneinnahme funktioniert die Bewegung oft gut (On-Phase). Gegen Ende der Wirkdauer — morgens nach dem Aufwachen, nachmittags — wird Bewegung sehr schwer (Off-Phase). Pflege muss auf diesen Rhythmus abgestimmt sein.' },
-                { title: 'Sturzgefahr', desc: 'Gangunsicherheit, Einfrieren (Freezing), Gleichgewichtsstörungen machen Stürze zur größten akuten Gefahr. Eine ständig präsente Betreuungsperson reduziert das Risiko massiv.' },
+                { title: 'Sturzgefahr', desc: 'Gangunsicherheit, Einfrieren (Freezing), Gleichgewichtsstörungen machen Stürze zur größten akuten Gefahr. Eine Betreuungskraft, die mit im Haushalt lebt, kann das Risiko senken.' },
                 { title: 'Medikamenten-Timing', desc: 'Die Einnahme von L-Dopa muss präzise getaktet werden — zu früh, zu spät oder gemeinsam mit Protein kann die Wirkung erheblich beeinflussen. Die Betreuungskraft muss das verstehen.' },
                 { title: 'Schluckstörungen im Spätstadium', desc: 'Dysphagie tritt im fortgeschrittenen Stadium auf — Ernährung muss angepasst werden, Aspirationspneumonie ist ein ernstes Risiko.' },
                 { title: 'Kognition und Demenz', desc: 'Bis zu 80 % der Parkinson-Patienten entwickeln im Verlauf kognitive Einschränkungen. Im Spätstadium können Halluzinationen und Demenz hinzukommen.' },
@@ -150,8 +150,8 @@ export default function ParkinsonPflegeZuhause() {
             titel="Wann wird 24h-Pflege bei Parkinson sinnvoll?"
             einleitung="Eine 24h-Betreuungskraft ist bei Parkinson spätestens dann sinnvoll wenn Stürze, Off-Phasen oder nächtliche Beschwerden ein Sicherheitsrisiko darstellen — oder wenn Angehörige nicht täglich präsent sein können."
             punkte={[
-              { title: 'Sturzgefahr rund um die Uhr', desc: 'Gangunsicherheit und Freezing können jederzeit auftreten — auch nachts. Eine ständig anwesende Kraft gibt Sicherheit und reagiert sofort.' },
-              { title: 'Medikamenten-Management', desc: 'Die Betreuungskraft kennt das Medikationsschema, gibt zur richtigen Zeit, beobachtet die Wirkung und informiert bei Auffälligkeiten den behandelnden Arzt.' },
+              { title: 'Sturzgefahr rund um die Uhr', desc: 'Gangunsicherheit und Freezing können jederzeit auftreten, auch nachts. Eine Betreuungskraft lebt mit im Haushalt und ist bei Bedarf auch nachts da.' },
+              { title: 'Medikamenten-Management', desc: 'Die Betreuungskraft kennt das Medikationsschema, erinnert zur richtigen Zeit an die Einnahme, achtet auf Auffälligkeiten und informiert den behandelnden Arzt.' },
               { title: 'Tagesrhythmus kennen und einhalten', desc: 'Eine feste Kraft die den individuellen On-Off-Rhythmus des Pflegebedürftigen kennt, bietet bessere Pflege als wechselndes Personal.' },
             ]}
           >

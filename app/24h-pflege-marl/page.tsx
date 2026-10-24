@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Marl | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Marl in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege und Betreuung in Marl | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Marl: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-marl' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Marl | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Marl in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege und Betreuung in Marl | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Marl: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-marl',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -33,7 +33,7 @@ const FRAGEN = [
   { q: 'Wie viele Heimplätze sind in Marl frei?', a: 'Fast keine. Von den 1.014 Pflegeplätzen in Marl waren im Frühjahr 2023 sieben frei — 0,7 Prozent. Kreisweit standen nominell 483 Plätze leer, tatsächlich belegbar waren davon 47; der Rest hing an Umbauten, Doppelzimmerabbau und Belegungsstopps. Der Kreis Recklinghausen hat mit 85,5 Pflegebedürftigen je 1.000 Einwohner die höchste Pflegequote aller achtzehn Kreise in Westfalen-Lippe, und die Kreisplanung erwartet für Marl bis 2040 eine Lücke von rund 111 Plätzen. Wer heute plant, sollte nicht mit einem kurzfristig verfügbaren Heimplatz rechnen.' },
   { q: 'Welches Einzugsgebiet wird in Marl bedient?', a: 'Marl und Umland: Recklinghausen, Haltern am See, Oer-Erkenschwick, Datteln, Dorsten und alle Gemeinden im Kreis Recklinghausen' },
   { q: 'Ist in einer Wohnung in Marl Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Marl hat im Schnitt 87,7 m², 22,1 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 77,7 % der Gebäude in Marl sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.580 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Nordrhein-Westfalen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.670 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

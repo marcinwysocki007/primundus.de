@@ -117,6 +117,62 @@ const bk = B.leereAntworten('erwachsen')
 bk.bedarfskonstellation = true
 gleich('Bedarfskonstellation → PG 5', B.berechnen(bk).pflegegrad, 5)
 
+// ── Kinder bis 18 Monate (Begutachtungs-Richtlinien des MD Bund vom 26.08.2026, in Kraft seit 01.10.2026, Kap. 6 und 6.6.1):
+// Es zählen nur Modul 3, Modul 5, die Frage 4.K und die besondere Bedarfskonstellation. Module 1, 2 und 6 „entfallen bei Kindern im
+// Alter bis zu 18 Monaten“, weil jedes Kind in diesem Alter dort unselbständig ist. Fehler bis 02.10.2026: Der Rechner zählte sie mit.
+// Ein gesunder Säugling, bei dem die Eltern Mobilität, Kognition und Alltag wahrheitsgemäß als unselbständig angeben, hat keinen Pflegegrad.
+const baby = B.leereAntworten('saeugling')
+baby.m1 = baby.m1.map(() => 3); baby.m2 = baby.m2.map(() => 3); baby.m6 = baby.m6.map(() => 3)
+const be = B.berechnen(baby)
+gleich('Säugling: Modul 1, 2 und 6 entfallen → 0 Punkte, kein Pflegegrad', [be.module.m1.summe, be.module.m2.summe, be.module.m6.summe, be.gesamt, be.pflegegrad], [0, 0, 0, 0, 0])
+// Höchstwert bis 18 Monate: 15 (Modul 3) + 30 (4.K, 20 Einzelpunkte) + 20 (Modul 5) = 65 → Pflegegrad 4; Pflegegrad 5 nur über die Bedarfskonstellation
+const babyMax = B.leereAntworten('saeugling')
+babyMax.m3 = babyMax.m3.map(() => 3); babyMax.kindNahrung = true
+babyMax.m5teil1 = babyMax.m5teil1.map(() => ({ einheit: 'tag', anzahl: 2 })); babyMax.m5teil3[0] = { einheit: 'tag', anzahl: 1 }; babyMax.m5diaet = 3
+const bm = B.berechnen(babyMax)
+gleich('Säugling: Höchstwert 65 Punkte → Pflegegrad 4, kein unerreichbares „fehlen bis Pflegegrad 5“', [bm.gesamt, bm.pflegegrad, bm.bisNaechster], [65, 4, null])
+babyMax.bedarfskonstellation = true
+gleich('Säugling mit Bedarfskonstellation → Pflegegrad 5 (BRi Kap. 6.6.1)', B.berechnen(babyMax).pflegegrad, 5)
+
+// ── Kinder ab 18 Monate bis unter 11 Jahre: Punkte nur für den Abstand zur Stufe eines gesund entwickelten Kindes gleichen Alters
+// (§ 15 Abs. 6 SGB XI; BRi Kap. 6, „Tabelle zur Berechnungssystematik“ und Alterstabellen zu Modul 1, 2, 4 und 6). Die Beispiele
+// stehen wörtlich in den Richtlinien. Fehler bis 02.10.2026: Der Rechner zählte die volle Stufe und überließ den Vergleich den Eltern.
+// Gegenprobe zur Tabelle: BRi Kap. 6.6.1 listet, was erst ab einem bestimmten Alter bewertet wird (ab 2 Jahren 4.1, 4.3, 4.7;
+// ab 2½ Jahren 2.3, 2.8, 6.1, 6.4; ab 3½ Jahren 4.4; ab 4 Jahren 2.7; ab 5 Jahren 4.11, 4.12). Alles andere ab 18 Monaten.
+const SPAETER = { '4.1': 24, '4.3': 24, '4.7': 24, '2.3': 30, '2.8': 30, '6.1': 30, '6.4': 30, '4.4': 42, '2.7': 48, '4.11': 60, '4.12': 60 }
+const abweichend = Object.entries(B.ALTER_KIND).filter(([nr, g]) => g[0] !== (SPAETER[nr] ?? g[0]) || (!SPAETER[nr] && g[0] > 18) || g[0] > g[1] || g[1] > g[2])
+gleich('Alterstabelle: 34 Kriterien, erste Bewertung wie in BRi Kap. 6.6.1, Grenzen aufsteigend', [Object.keys(B.ALTER_KIND).length, abweichend.map(([nr]) => nr)], [34, []])
+gleich('Alterstabelle: Essen mit 24 Monaten → gleichaltrige Kinder überwiegend selbständig (Stufe 1)', B.altersstufe('4.8', 24), 1)
+gleich('Alterstabelle: An- und Auskleiden Oberkörper mit 36 Monaten → überwiegend unselbständig (Stufe 2)', B.altersstufe('4.5', 36), 2)
+gleich('Alterstabelle: Zeitliche Orientierung mit 29 Monaten → noch nicht vorhanden (Stufe 3, keine Bewertung)', B.altersstufe('2.3', 29), 3)
+gleich('Alterstabelle: Ruhen und Schlafen mit 131 Monaten → überwiegend selbständig; mit 11 Jahren selbständig', [B.altersstufe('6.2', 131), B.altersstufe('6.2', 132)], [1, 0])
+const kindAlt = (monate) => { const k = B.leereAntworten('kind'); k.alterMonate = monate; return k }
+const k1 = kindAlt(24); k1.m4[7] = 3
+gleich('BRi-Beispiel: Essen unselbständig, Gleichaltrige überwiegend selbständig → 6 Punkte (Dreifachwertung)', B.berechnen(k1).module.m4.summe, 6)
+const k2 = kindAlt(72); k2.m4[9] = 2
+gleich('BRi-Beispiel: Toilette überwiegend unselbständig, Gleichaltrige selbständig → 4 Punkte (Doppelwertung)', B.berechnen(k2).module.m4.summe, 4)
+const k3 = kindAlt(36); k3.m4[4] = 2
+gleich('BRi-Beispiel: überwiegend unselbständig wie Gleichaltrige → 0 Punkte', B.berechnen(k3).module.m4.summe, 0)
+const k4 = kindAlt(24); k4.m2[1] = 2
+gleich('BRi-Beispiel: Fähigkeit in geringem Maße, Gleichaltrige größtenteils → 1 Punkt', B.berechnen(k4).module.m2.summe, 1)
+const k5 = kindAlt(24); k5.m1[4] = 3
+gleich('BRi-Beispiel: unselbständig, Gleichaltrige überwiegend selbständig → 2 Punkte', B.berechnen(k5).module.m1.summe, 2)
+const k6 = kindAlt(48); k6.inkontinenz = true; k6.m4[10] = 3; k6.m4[11] = 3
+gleich('Kind 4 Jahre: Folgen der Inkontinenz (4.11/4.12) werden erst ab 5 Jahren bewertet → 0', B.berechnen(k6).module.m4.summe, 0)
+k6.alterMonate = 60
+gleich('Kind 5 Jahre: 4.11/4.12 wie bei Erwachsenen → 6', B.berechnen(k6).module.m4.summe, 6)
+const k7 = kindAlt(30); k7.m3[1] = 3; k7.m5teil1[0] = { einheit: 'tag', anzahl: 2 }
+gleich('Kind: Modul 3 und 5 sind altersunabhängig (wie Erwachsene)', [B.berechnen(k7).module.m3.summe, B.berechnen(k7).module.m5.summe], [5, 1])
+gleich('Kriterium wird bewertet? Säugling Modul 1 nein, Modul 3 ja; Kind 29 Monate 2.3 nein, 2.2 ja', [B.wirdBewertet('1.1', 'saeugling', null), B.wirdBewertet('3.1', 'saeugling', null), B.wirdBewertet('2.3', 'kind', 29), B.wirdBewertet('2.2', 'kind', 29)], [false, true, false, true])
+// Gleiches Kind, alles „unselbständig“: mit 3 Jahren zählt nur der Abstand, mit 11 Jahren die volle Stufe wie bei Erwachsenen
+const k8 = kindAlt(36)
+k8.m1 = k8.m1.map(() => 3); k8.m2 = k8.m2.map(() => 3); k8.m4 = k8.m4.map(() => 3); k8.m6 = k8.m6.map(() => 3)
+const k8a = B.berechnen(k8)
+k8.alterMonate = 132
+const k8b = B.berechnen(k8)
+gleich('Kind 3 Jahre, alles unselbständig: Abstand statt voller Stufe (Modul 1/2/4/6 = 15/21/23/11)', [k8a.module.m1.summe, k8a.module.m2.summe, k8a.module.m4.summe, k8a.module.m6.summe], [15, 21, 23, 11])
+gleich('Kind 11 Jahre, alles unselbständig: volle Stufe wie Erwachsene (15/33/42/18)', [k8b.module.m1.summe, k8b.module.m2.summe, k8b.module.m4.summe, k8b.module.m6.summe], [15, 33, 42, 18])
+
 // Höchstwerte: alles unselbständig → 100 Punkte, PG 5
 const max = B.leereAntworten('erwachsen')
 max.m1 = max.m1.map(() => 3); max.m2 = max.m2.map(() => 3); max.m3 = max.m3.map(() => 3)

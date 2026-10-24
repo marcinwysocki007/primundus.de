@@ -60,12 +60,12 @@ const FRAGEN = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Demenz zu Hause pflegen: wie lange, was es kostet, wann Heim',
-  description: 'Demenz zu Hause pflegen oder ins Heim? Wie lange häusliche Pflege möglich ist, was Betreuung kostet, wann 24-Stunden-Pflege hilft und was die Kasse zahlt.',
+  title: 'Demenzbetreuung zu Hause: wann 24-Stunden-Pflege hilft',
+  description: 'Welche Demenzbetreuung passt in welcher Phase, was zahlt die Pflegekasse? Für 24-Stunden-Pflege: Preis und Pflegekräfte sofort ansehen.',
   alternates: { canonical: 'https://primundus.de/demenz-pflege-zuhause' },
   openGraph: {
-    title: 'Demenz zu Hause pflegen oder ins Heim? Was möglich ist und was es kostet',
-    description: 'Wie lange Pflege zu Hause bei Demenz möglich ist, wann 24-Stunden-Pflege hilft und welche Leistungen die Pflegekasse zahlt.',
+    title: 'Demenzbetreuung zu Hause: wann 24-Stunden-Pflege hilft',
+    description: 'Welche Demenzbetreuung passt in welcher Phase, was zahlt die Pflegekasse? Für 24-Stunden-Pflege: Preis und Pflegekräfte sofort ansehen.',
     url: 'https://primundus.de/demenz-pflege-zuhause',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -78,7 +78,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Demenz zu Hause pflegen oder ins Heim? Was möglich ist, was es kostet, wann 24-Stunden-Pflege hilft',
+    headline: 'Demenzbetreuung zu Hause: wann 24-Stunden-Pflege hilft und wann das Heim besser ist',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -122,7 +122,7 @@ export default function DemenzPflegeZuhause() {
             { label: 'Demenz zu Hause pflegen' },
           ]}
           augenbraue="Ratgeber Demenz"
-          titel="Demenz: zu Hause pflegen oder ins Heim? Was möglich ist, was es kostet, wann 24-Stunden-Pflege hilft"
+          titel="Demenzbetreuung zu Hause: wann 24-Stunden-Pflege hilft und wann das Heim besser ist"
           einleitung="Rund 1,8 Millionen Menschen in Deutschland leben mit Demenz, und 87 Prozent aller Pflegebedürftigen werden zu Hause gepflegt. Die Pflege zu Hause ist in den meisten Phasen möglich und für die Betroffenen meist die bessere Wahl: Das Vertraute gibt Orientierung. Hier lesen Sie, wie lange das geht, wann jemand im Haus sein muss, was Betreuung kostet und wann das Heim die richtige Entscheidung ist."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="12 Min."

@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Ludwigshafen | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Ludwigshafen am Rhein in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Ludwigshafen | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Ludwigshafen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-ludwigshafen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Ludwigshafen | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Ludwigshafen am Rhein in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege in Ludwigshafen | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Ludwigshafen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-ludwigshafen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Ludwigshafen am Rhein?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.220 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Ludwigshafen am Rhein?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Rheinland-Pfalz kostet im Schnitt rund 3.290 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Ludwigshafen am Rhein starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie viele ältere Menschen leben in Ludwigshafen?', a: '16.798 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,7 Prozent — in Rheinland-Pfalz 10,7 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,0 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Rheinland-Pfalz: 24,4 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Ludwigshafen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Ludwigshafen im Schnitt 3,1 Wohnungen, in Rheinland-Pfalz 1,7. 31,0 Prozent der Gebäude stehen frei, 45,6 Prozent stehen in geschlossener Reihe. 60,8 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Ludwigshafen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Spricht die Betreuungskraft die Sprache, die zu Hause gesprochen wird?', a: 'In Ludwigshafen ist das eine der häufigsten Fragen, und die Zahlen erklären warum: 15,1 Prozent der Einwohner über 65 haben keine deutsche Staatsangehörigkeit — in Rheinland-Pfalz sind es 5,1 Prozent. Beides sind Höchstwerte im Land. In Nord-Hemshof sind sogar 41,8 Prozent der über 75-Jährigen Ausländer. Unsere Betreuungskräfte kommen aus Polen. Das Deutschniveau jeder Kraft wird eingestuft und steht vorab im Profil, zusammen mit Erfahrung und Foto. Bei anderen Herkunftssprachen sagen wir Ihnen ehrlich, was wir leisten können und was nicht.' },
   { q: 'Welches Einzugsgebiet wird in Ludwigshafen am Rhein bedient?', a: 'Ludwigshafen und Rhein-Pfalz-Kreis: Frankenthal, Speyer, Neustadt an der Weinstraße, Landau und alle Gemeinden im Rhein-Pfalz-Kreis' },
   { q: 'Ist in einer Wohnung in Ludwigshafen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Ludwigshafen hat im Schnitt 84,8 m², 26,7 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 71,4 % der Gebäude in Ludwigshafen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.220 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Rheinland-Pfalz zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.290 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

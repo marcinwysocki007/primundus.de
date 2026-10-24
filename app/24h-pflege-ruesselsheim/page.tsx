@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Rüsselsheim | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Rüsselsheim am Main in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Rüsselsheim | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Rüsselsheim: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-ruesselsheim' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Rüsselsheim | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Rüsselsheim am Main in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege in Rüsselsheim | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Rüsselsheim: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-ruesselsheim',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Rüsselsheim am Main?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Hessen kostet im Schnitt rund 3.230 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Rüsselsheim am Main?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Hessen kostet im Schnitt rund 3.430 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Rüsselsheim am Main starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie viele ältere Menschen leben in Rüsselsheim?', a: '6.362 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 9,9 Prozent — in Hessen 10,5 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,1 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Hessen: 23,1 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Rüsselsheim — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Rüsselsheim im Schnitt 2,8 Wohnungen, in Hessen 2,2. 65,7 Prozent der Gebäude stehen frei, 16,9 Prozent stehen in geschlossener Reihe. 54,2 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Rüsselsheim ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Wie schwer ist es, in Rüsselsheim einen Heimplatz zu bekommen?', a: 'Schwerer als fast überall sonst in Hessen. Der Kreis Groß-Gerau hat 36 vollstationäre Heimplätze je 1.000 Einwohner über 65 — in Hessen sind es 47, also fast ein Viertel mehr. Nur zwei Kreise im Regierungsbezirk Darmstadt liegen darunter. Dazu passt, dass hier 63,9 Prozent aller Pflegebedürftigen ausschließlich von Angehörigen versorgt werden (Hessen: 58,6 Prozent) und ambulante Dienste mit 12,9 Prozent deutlich seltener zum Einsatz kommen als landesweit (17,6 Prozent). Für viele Familien ist die Betreuung zu Hause deshalb nicht die zweitbeste Lösung, sondern die einzige, die sich planen lässt.' },
   { q: 'Welches Einzugsgebiet wird in Rüsselsheim am Main bedient?', a: 'Rüsselsheim und Groß-Gerau: Groß-Gerau, Mörfelden-Walldorf, Gernsheim und alle Gemeinden im Kreis Groß-Gerau' },
   { q: 'Ist in einer Wohnung in Rüsselsheim Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Rüsselsheim hat im Schnitt 84,6 m², 25,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 73,4 % der Gebäude in Rüsselsheim sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.230 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.430 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

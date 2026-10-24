@@ -9,7 +9,10 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24h-pflege-organisieren', '25. April 2026')
+// 01.10.2026: Ersatz „schnellstmöglich, in der Regel innerhalb von 3 Tagen“ (Mustervertrag § 1 Nr. 4, Martin 01.10.: „ist auch
+// richtig“); Krankheitstage ohne Honorar (§ 4 Nr. 6). Raus: „sofort/unverzüglich Ersatz“, „keine Versorgungslücke“,
+// „durchgehend gesichert, ohne Lücken“, „unmittelbarer Wechsel“.
+const AKTUALISIERT = aktualisiertAm('24h-pflege-organisieren', '1. Oktober 2026')
 
 const SECTIONS = [
   { id: 'schritt-fuer-schritt', title: 'Schritt-für-Schritt-Planung' },
@@ -20,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege organisieren — Checkliste & Schritt-für-Schritt',
+  title: '24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt',
   description: '24h-Pflege organisieren: Was vor dem Start geregelt sein muss, wie man Wohnraum vorbereitet und was laufend zu organisieren ist. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-organisieren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege organisieren | Primundus',
+    title: '24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt',
     description: 'Schritt-für-Schritt: Was vor und nach dem Start der 24h-Pflege organisiert werden muss.',
     url: 'https://primundus.de/24h-pflege-organisieren',
     siteName: 'Primundus',
@@ -38,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege organisieren — Checkliste und Schritt-für-Schritt',
+    headline: '24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -73,7 +76,7 @@ export default function PflegeOrganisieren() {
             { label: "24h-Pflege organisieren" },
           ]}
           augenbraue="Ratgeber Organisation"
-          titel="24h-Pflege organisieren — Checkliste & Schritt-für-Schritt"
+          titel="24-Stunden-Pflege organisieren: Checkliste Schritt für Schritt"
           einleitung="Die Organisation der 24h-Pflege wirkt am Anfang überwältigend — ist es aber nicht wenn man es systematisch angeht. Wer mit Primundus arbeitet, hat einen festen Ansprechpartner der die meiste Arbeit übernimmt. Trotzdem gibt es Dinge die die Familie selbst regeln muss. Hier ist die vollständige Übersicht."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
@@ -136,7 +139,7 @@ export default function PflegeOrganisieren() {
                 { q: 'Was muss ich vor dem Start der 24h-Pflege organisieren?', a: 'Pflegekasse-Antrag stellen, Beschäftigungsmodell wählen, Kraft auswählen, Zimmer vorbereiten, Schlüssel bereitstellen, Hausarzt informieren, Medikamentenliste bereithalten, Vorsorgevollmacht prüfen.' },
                 { q: 'Muss die Betreuungskraft ein eigenes Zimmer haben?', a: 'Ja — eigenes Zimmer mit Privatsphäre ist Pflichtvoraussetzung. Kost und Logis werden auf die Vergütung angerechnet (ca. 300–400 €/Monat).' },
                 { q: 'Wie oft wechselt die Betreuungskraft?', a: 'In der Regel alle 6–8 Wochen. Primundus organisiert jeden Wechsel nahtlos — die Familie muss sich darum nicht kümmern.' },
-                { q: 'Was passiert wenn die Kraft krank wird?', a: 'Primundus stellt unverzüglich eine Ersatzkraft. Die Familie bleibt nie ohne Versorgung.' },
+                { q: 'Was passiert wenn die Kraft krank wird?', a: 'Primundus stellt schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Die Krankheitstage berechnet Primundus nicht.' },
               ]}
             />
           </Abschnitt>

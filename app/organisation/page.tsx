@@ -7,11 +7,11 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
-  title: 'Organisation der 24h-Pflege — so geht es 2026 | Primundus',
+  title: 'Organisation der 24-Stunden-Pflege: Auswahl und Verträge',
   description: 'Organisation der 24h-Pflege: Beschäftigungsmodelle, Pflegekraft finden, Verträge, rechtliche Absicherung — alles was Familien wissen müssen.',
   alternates: { canonical: 'https://primundus.de/organisation' },
   openGraph: {
-    title: 'Organisation der 24h-Pflege 2026 | Primundus',
+    title: 'Organisation der 24-Stunden-Pflege: Auswahl und Verträge',
     description: 'Beschäftigungsmodelle, Pflegekraft finden, Verträge — der vollständige Organisations-Ratgeber.',
     url: 'https://primundus.de/organisation',
     siteName: 'Primundus',
@@ -60,7 +60,7 @@ export default function Organisation() {
             { label: 'Organisation' },
           ]}
           augenbraue="Ratgeber"
-          titel="Organisation der 24h-Pflege"
+          titel="Organisation der 24-Stunden-Pflege: Pflegekraft finden, Verträge, Wechsel und Notfall"
           einleitung="Von der Suche nach der passenden Betreuungskraft bis zum laufenden Einsatz: alle Ratgeber zur Organisation der 24-Stunden-Pflege."
         />
 

@@ -4,11 +4,11 @@ import { ZuschussRechnerClient } from './ZuschussRechnerClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
-  title: 'Pflegezuschüsse 2026 — alle Leistungen im Überblick',
+  title: 'Pflegezuschuss-Rechner 2026: Leistungen je Pflegegrad',
   description: 'Welche Zuschüsse stehen Ihnen zu? Pflegegrad wählen und sofort alle Leistungen 2026 sehen: Pflegegeld, Entlastungsbudget und Steuerabzug.',
   alternates: { canonical: 'https://primundus.de/zuschuss-rechner' },
   openGraph: {
-    title: 'Zuschuss & Förderung 2026 | Primundus',
+    title: 'Pflegezuschuss-Rechner 2026: Leistungen je Pflegegrad',
     description: 'Alle Pflegeleistungen nach Pflegegrad — Pflegegeld, Entlastungsbudget, Steuerabzug. Eigenanteil für 24h-Pflege sofort berechnen.',
     url: 'https://primundus.de/zuschuss-rechner',
     siteName: 'Primundus',

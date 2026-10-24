@@ -28,12 +28,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Qualität der 24h-Pflege: So wählt Primundus Pflegekräfte aus',
+  title: 'Qualität der 24-Stunden-Pflege: Auswahl der Pflegekräfte',
   description: 'Bei uns angestellt, Profil mit Foto, Erfahrung und Deutschkenntnissen vorab, Sie wählen selbst, täglich kündbar. So sichern wir Qualität.',
   alternates: { canonical: 'https://primundus.de/qualitaet' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Qualität der 24h-Pflege | Primundus',
+    title: 'Qualität der 24-Stunden-Pflege: Auswahl der Pflegekräfte',
     description: 'Bei uns angestellte Betreuungskräfte, Profil vorab, Sie wählen selbst, täglich kündbar.',
     url: 'https://primundus.de/qualitaet',
     siteName: 'Primundus',
@@ -66,7 +66,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Qualität der 24h-Pflege bei Primundus — wie wir Betreuungskräfte auswählen',
+    headline: 'Qualität der 24-Stunden-Pflege: wie wir Betreuungskräfte auswählen und den Einsatz begleiten',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -104,7 +104,7 @@ export default function Qualitaet() {
             { label: 'Qualität' },
           ]}
           augenbraue="Über Primundus"
-          titel="Qualität der 24h-Pflege — wie wir Betreuungskräfte auswählen und den Einsatz begleiten"
+          titel="Qualität der 24-Stunden-Pflege: wie wir Betreuungskräfte auswählen und den Einsatz begleiten"
           einleitung={<>Über 20 Jahre Erfahrung, mehr als 60.000 Betreuungen, sechsmal Testsieger bei DIE WELT. Dahinter steht ein einfaches System: Unsere Betreuungskräfte sind bei uns angestellt, Sie sehen vor der Entscheidung, wer zu Ihnen kommt, und wenn es nicht passt, wechseln Sie. Der Vertrag ist täglich kündbar.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="4 Min."

@@ -26,12 +26,12 @@ const SECTIONS = [
 // Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
 // Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
-  title: 'Pflegegeld und 24h-Pflege kombinieren — so geht es',
+  title: 'Pflegegeld und 24-Stunden-Pflege kombinieren: so geht es',
   description: 'Pflegegeld gibt es auch mit 24-Stunden-Betreuungskraft, Sachleistungen nicht. Was die Kasse zahlt und was als Eigenanteil bleibt.',
   alternates: { canonical: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegegeld und 24h-Pflege kombinieren | Primundus',
+    title: 'Pflegegeld und 24-Stunden-Pflege kombinieren: so geht es',
     description: 'Pflegegeld gibt es auch mit 24-Stunden-Betreuungskraft, Sachleistungen nicht. Was die Kasse zahlt und was bei Pflegegrad 3 bleibt.',
     url: 'https://primundus.de/pflegegeld-und-24h-pflege-kombinieren',
     siteName: 'Primundus',
@@ -52,7 +52,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegegeld und 24h-Pflege kombinieren — alle Optionen 2026',
+    headline: 'Pflegegeld und 24-Stunden-Pflege kombinieren: Pflegegeld ja, Sachleistungen nur für Pflegedienste',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-30',
@@ -94,7 +94,7 @@ export default function Page() {
             { label: 'Pflegegeld und 24h-Pflege kombinieren' },
           ]}
           augenbraue="Finanzierung"
-          titel="Pflegegeld und 24h-Pflege kombinieren — alle Optionen 2026"
+          titel="Pflegegeld und 24-Stunden-Pflege kombinieren: Pflegegeld ja, Sachleistungen nur für Pflegedienste"
           einleitung={<>Ja, das geht: Mit einer 24-Stunden-Betreuungskraft zahlt die Pflegekasse das Pflegegeld weiter, und Sie dürfen es für die Betreuung einsetzen. Pflegesachleistungen gibt es dafür nicht, die zahlt die Kasse nur an zugelassene Pflegedienste. Bei Pflegegrad 3 bleiben so ab ca.{' '}923{' '}€ im Monat selbst zu tragen.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."

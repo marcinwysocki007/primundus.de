@@ -16,7 +16,7 @@ const PHASEN: Phase[] = [
       { id: 'vollmacht', label: 'Vorsorgevollmacht und Patientenverfügung prüfen', desc: 'Existieren diese Dokumente? Sind sie aktuell?' },
       { id: 'kontakte', label: 'Wichtige Kontakte sammeln (Ärzte, Apotheke, Angehörige)', desc: 'Liste an einem zentralen Ort hinterlegen' },
       { id: 'medikamente', label: 'Aktuelle Medikamentenliste erstellen', desc: 'Wirkstoff, Dosis, Einnahmezeit, behandelnder Arzt' },
-      { id: 'notruf', label: 'Hausnotruf einrichten', desc: 'Wird ab PG 1 von der Pflegekasse bezuschusst (25,50 €/Mo)' },
+      { id: 'notruf', label: 'Hausnotruf einrichten', desc: 'Wird ab PG 1 von der Pflegekasse bezuschusst (bis 27 €/Mo)' },
     ],
   },
   {

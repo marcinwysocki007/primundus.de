@@ -13,7 +13,7 @@ import { ProduktBuehne } from '@/components/vertrauen/ProduktBuehne'
 import { alleBewertungen, anzahlText, ladeDirekteBewertungen, schnitt, schnittText, type Bewertung } from '@/lib/bewertungen'
 import { ladeGoogleDaten } from '@/lib/google-bewertungen'
 
-export const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
+export const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie?src=apex-garantie'
 export const WHATSAPP = 'https://wa.me/4989200000830?text=Hallo%20Frau%20Kapcio%2C%20ich%20habe%20eine%20R%C3%BCckfrage%3A'
 export const rechnerLink = (src: string) => `https://kostenrechner.primundus.de/?start=1&src=${src}`
 
@@ -86,9 +86,18 @@ function SterneLink({ d, klein = false, dunkel = false }: { d: Stand; klein?: bo
   )
 }
 
+// Neutraler Rahmen (13.10.2026) für die Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien: Martins Vorgabe —
+// Primundus „macht“ Kräfte aus diesen Ländern weder, noch „macht“ es sie nicht. Deshalb dort keine Zusage zu Pflegekräften
+// (keine Gesichterreihe, keine Profilkarten), Knopf „Vergleichspreis ansehen“, Wortlaut aus den Entwürfen vom 13.10. (Fassung 5c).
+// Ohne `neutral` bleibt jede andere Seite unverändert.
+const NEUTRAL_KNOPF = 'Vergleichspreis ansehen'
+const NEUTRAL_TITEL = 'Was Betreuung zu Hause in Ihrem Fall kostet'
+const NEUTRAL_TEXT = 'Nach ein paar Fragen zur Pflegesituation und Ihren Kontaktdaten erhalten Sie einen unverbindlichen Vergleichspreis für Ihre Situation.'
+
 /** Der Aufruf, überall gleich: Knopf und Plakette gleich breit, darunter die vier Punkte und die Sterne.
- * punkte=false im Kopf der Kernseiten (Martin 18.09.: Plakette und Sterne unter den Knopf; die Punkte stehen dort im Kasten rechts). */
-export async function RechnerBlock({ src, sterne = true, punkte = true, dunkel = false }: { src: string; sterne?: boolean; punkte?: boolean; dunkel?: boolean }) {
+ * punkte=false im Kopf der Kernseiten (Martin 18.09.: Plakette und Sterne unter den Knopf; die Punkte stehen dort im Kasten rechts).
+ * neutral: Knopf „Vergleichspreis ansehen“, ohne Plakette mit Gesichtern; Sterne und Punkte bleiben. */
+export async function RechnerBlock({ src, sterne = true, punkte = true, dunkel = false, neutral = false }: { src: string; sterne?: boolean; punkte?: boolean; dunkel?: boolean; neutral?: boolean }) {
   const d = sterne ? await ladeStimmen(0) : null
   return (
     <div>
@@ -98,8 +107,9 @@ export async function RechnerBlock({ src, sterne = true, punkte = true, dunkel =
           referrerPolicy="no-referrer-when-downgrade"
           className={`flex min-h-[60px] w-full items-center justify-center rounded-full bg-pm-coral px-3 text-center text-[15.5px] font-bold text-white shadow-[0_10px_24px_-10px_rgba(231,111,99,0.75)] transition-colors hover:bg-pm-coral-deep min-[360px]:px-4 min-[360px]:text-[16.5px] min-[390px]:text-[17.5px] sm:text-[18px] ${FOKUS}`}
         >
-          Preis &amp; Pflegekräfte ansehen&nbsp;→
+          {neutral ? `${NEUTRAL_KNOPF} →` : 'Preis & Pflegekräfte ansehen →'}
         </a>
+        {neutral ? null : (
         <a
           href={rechnerLink(src)}
           referrerPolicy="no-referrer-when-downgrade"
@@ -114,6 +124,7 @@ export async function RechnerBlock({ src, sterne = true, punkte = true, dunkel =
           <span className="max-[359px]:hidden">Passende Pflegekräfte sofort verfügbar</span>
           <span className="hidden max-[359px]:inline">Passende Pflegekräfte verfügbar</span>
         </a>
+        )}
       </div>
       {/* Sterne VOR den Vorteilen (Martin 26.09.: „die Sterne vor die Vorteile habe ich auch schon überlegt"): Am iPhone 13
           lagen sie nach den vier Punkten auf fast allen Kernseiten knapp unter dem ersten Bildschirm (680–810 px); jetzt kommen
@@ -132,18 +143,18 @@ export async function RechnerBlock({ src, sterne = true, punkte = true, dunkel =
   )
 }
 
-/** Seitenleiste der Ratgeber (ab 1.024 px). */
-export async function LeistenKarte({ src }: { src: string }) {
+/** Seitenleiste der Ratgeber (ab 1.024 px). neutral: Titel und Knopf ohne Zusage zu Pflegekräften; Punkte und Sterne bleiben. */
+export async function LeistenKarte({ src, neutral = false }: { src: string; neutral?: boolean }) {
   const d = await ladeStimmen(0)
   return (
     <div className="rounded-[20px] bg-white p-5 shadow-lift">
-      <p className="text-[17px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">In 2 Minuten wissen Sie, was es kostet und wer zu Ihnen passt</p>
+      <p className="text-[17px] font-bold leading-[1.3] tracking-[-0.015em] text-pm-ink [text-wrap:balance]">{neutral ? NEUTRAL_TITEL : 'In 2 Minuten wissen Sie, was es kostet und wer zu Ihnen passt'}</p>
       <a
         href={rechnerLink(src)}
         referrerPolicy="no-referrer-when-downgrade"
         className={`mt-4 flex min-h-[48px] items-center justify-center rounded-full bg-pm-coral px-4 text-center text-[15px] font-semibold text-white transition-colors hover:bg-pm-coral-deep ${FOKUS}`}
       >
-        Preis &amp; Pflegekräfte ansehen
+        {neutral ? NEUTRAL_KNOPF : 'Preis & Pflegekräfte ansehen'}
       </a>
       <div className="mt-5">
         <Punkte klein />
@@ -307,23 +318,33 @@ export const AUFRUF_TITEL = 'In 2 Minuten wissen\u00A0Sie, was es kostet und wer
 // Text wie im bisherigen Kontaktbereich (live, freigegeben), ohne den letzten Satz — „Kein Vertrag vor Ihrer Auswahl" steht als Punkt darunter
 export const AUFRUF_TEXT = 'Sie beantworten ein paar Fragen zur Pflegesituation. Danach sehen Sie den Monatspreis und die Betreuungskräfte, die dafür in Frage kommen, mit Foto, Erfahrung und Deutschniveau.'
 
-/** Links der Aufruf, rechts das Produktbild: passende Pflegekräfte, wie das Kundenportal sie zeigt. Darunter Marta. */
-export function SchlussAufruf({ src, titelId = 'schluss-titel' }: { src: string; titelId?: string; bild?: string }) {
+/** Links der Aufruf, rechts das Produktbild: passende Pflegekräfte, wie das Kundenportal sie zeigt. Darunter Marta.
+ * neutral: Titel und Text ohne Zusage zu Pflegekräften, ohne Produktbild mit Profilkarten; am Computer steht der Knopf
+ * mit Sternen und Punkten in der rechten Spalte statt des Produktbilds (sonst bliebe sie leer). Marta bleibt. */
+export function SchlussAufruf({ src, titelId = 'schluss-titel', neutral = false }: { src: string; titelId?: string; bild?: string; neutral?: boolean }) {
   return (
     <aside aria-labelledby={titelId}>
       <div className="bg-white">
-        <div className="mx-auto grid max-w-seite gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-10 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)] xl:gap-16">
+        <div className={neutral ? 'mx-auto grid max-w-seite gap-8 px-5 py-16 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:items-center lg:gap-16 xl:gap-24' : 'mx-auto grid max-w-seite gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-10 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)] xl:gap-16'}>
           <div className="min-w-0">
             <p className={`${AUGENBRAUE} text-pm-taupe`}>Kostenlos und unverbindlich</p>
             <h2 id={titelId} className="mt-4 text-[clamp(30px,4vw,48px)] font-extrabold leading-[1.06] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">
-              {AUFRUF_TITEL}
+              {neutral ? NEUTRAL_TITEL : AUFRUF_TITEL}
             </h2>
-            <p className="mt-5 max-w-[46ch] text-[18px] leading-[1.6] text-pm-body">{AUFRUF_TEXT}</p>
+            <p className="mt-5 max-w-[46ch] text-[18px] leading-[1.6] text-pm-body">{neutral ? NEUTRAL_TEXT : AUFRUF_TEXT}</p>
+            {neutral ? null : (
             <div className="mt-8">
               <RechnerBlock src={src} />
             </div>
+            )}
           </div>
-          <ProduktBuehne garantie={GARANTIE} />
+          {neutral ? (
+            <div className="min-w-0">
+              <RechnerBlock src={src} neutral />
+            </div>
+          ) : (
+            <ProduktBuehne garantie={GARANTIE} />
+          )}
         </div>
       </div>
       <MartaBand />
@@ -332,11 +353,11 @@ export function SchlussAufruf({ src, titelId = 'schluss-titel' }: { src: string;
 }
 
 /** Seitenende aller Seiten: Bewertungen zum Wischen, dann Aufruf mit Produktbild, dann Marta. */
-export function Schluss({ src, ohneStimmen = false }: { src: string; ohneStimmen?: boolean }) {
+export function Schluss({ src, ohneStimmen = false, neutral = false }: { src: string; ohneStimmen?: boolean; neutral?: boolean }) {
   return (
     <>
       {!ohneStimmen && <Stimmen />}
-      <SchlussAufruf src={src} />
+      <SchlussAufruf src={src} neutral={neutral} />
     </>
   )
 }

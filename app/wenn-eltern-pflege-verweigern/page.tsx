@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Wenn Eltern Pflege verweigern — was jetzt hilft | Primundus',
+  title: 'Wenn Eltern Pflege verweigern: was jetzt hilft',
   description: 'Eltern verweigern Pflege oder Betreuungskraft? Warum das passiert, welche Strategien wirklich helfen und wo die Grenzen der Selbstbestimmung liegen.',
   alternates: { canonical: 'https://primundus.de/wenn-eltern-pflege-verweigern' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Wenn Eltern Pflege verweigern | Primundus',
+    title: 'Wenn Eltern Pflege verweigern: was jetzt hilft',
     description: 'Was man tun kann wenn Eltern Pflege oder eine Betreuungskraft ablehnen.',
     url: 'https://primundus.de/wenn-eltern-pflege-verweigern',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Wenn Eltern Pflege verweigern — was jetzt hilft',
+    headline: 'Wenn Eltern Pflege verweigern: was jetzt hilft',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function WennElternPflegeVerweigern() {
             { label: "Wenn Eltern Pflege verweigern" },
           ]}
           augenbraue="Ratgeber Angehörige"
-          titel="Wenn Eltern Pflege verweigern — was jetzt hilft"
+          titel="Wenn Eltern Pflege verweigern: was jetzt hilft"
           einleitung={"\"Ich brauche keine Hilfe\" — drei Wörter die pflegende Kinder verzweifeln lassen. Gleichzeitig sehen sie wie der Vater immer schwächer wird, die Mutter Medikamente vergisst, die Wohnung verwahrlost. Die Ablehnung von Pflege ist häufig — und fast immer versteht man sie erst wenn man den wahren Grund dahinter kennt."}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

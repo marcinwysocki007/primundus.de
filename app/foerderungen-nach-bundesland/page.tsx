@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('foerderungen-nach-bundesland', '21. August 2026')
+const AKTUALISIERT = aktualisiertAm('foerderungen-nach-bundesland', '16. Oktober 2026')
 
 // Links in der Checkliste wie die Linkzeilen der Vorlage (MehrDazu)
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
@@ -23,12 +23,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Förderungen nach Bundesland — alle Pflegezuschüsse 2026',
+  title: 'Förderungen nach Bundesland: Pflegezuschüsse 2026',
   description: 'Pflege-Förderungen 2026: Bundesweite Pflegekasse-Leistungen plus Landesförderungen in Bayern, NRW, BW und weiteren Bundesländern. Mit vollständiger Checkliste.',
   alternates: { canonical: 'https://primundus.de/foerderungen-nach-bundesland' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Förderungen nach Bundesland — Pflegezuschüsse 2026 | Primundus',
+    title: 'Förderungen nach Bundesland: Pflegezuschüsse 2026',
     description: 'Welche Pflege-Förderungen gibt es 2026 — bundesweit und je Bundesland?',
     url: 'https://primundus.de/foerderungen-nach-bundesland',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Förderungen nach Bundesland — alle Pflegezuschüsse 2026',
+    headline: 'Förderungen nach Bundesland: Pflegezuschüsse 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -87,7 +87,7 @@ export default function FoerderungenNachBundesland() {
             { label: "Förderungen nach Bundesland" },
           ]}
           augenbraue="Ratgeber Finanzierung"
-          titel="Förderungen nach Bundesland — alle Pflegezuschüsse 2026"
+          titel="Förderungen nach Bundesland: Pflegezuschüsse 2026"
           einleitung="Viele Familien kennen die Pflegekassen-Zuschüsse — aber nicht alle wissen: Darüber hinaus gibt es KfW-Förderkredite für Wohnraumanpassung, steuerliche Absetzbarkeit, und in mehreren Bundesländern eigene Landeszuschüsse. Wer alle Förderungen kombiniert, kann den Eigenanteil bei der 24h-Pflege erheblich senken."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
@@ -105,7 +105,7 @@ export default function FoerderungenNachBundesland() {
                 ['Pflegegeld/Mo', '347 €', '599 €', '800 €', '990 €', 'Für private Pflege'],
                 ['Sachleistungen/Mo', '796 €', '1.497 €', '1.859 €', '2.299 €', 'Für Pflegedienste'],
                 ['Entlastungsbetrag/Mo', '131 €', '131 €', '131 €', '131 €', 'Auch PG 1'],
-                ['Entlastungsbudget/Jahr', '3.539 €', '3.539 €', '3.539 €', '3.539 €', 'Angesammelt 3 Jahre'],
+                ['Entlastungsbudget/Jahr', '3.539 €', '3.539 €', '3.539 €', '3.539 €', 'Kein Übertrag ins Folgejahr'],
                 // Fett 283 px breit, auf 360 px stehen 280 px zur Verfügung: Umbruch nach dem Schrägstrich
                 // statt Silbentrennung „Maßnah-me"
                 [<span className="whitespace-normal hyphens-manual">Wohnraumanpassung/<wbr />Maßnahme</span>, '4.180 €', '4.180 €', '4.180 €', '4.180 €', 'Antrag vor Beginn'],

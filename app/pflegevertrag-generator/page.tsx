@@ -4,13 +4,13 @@ import PflegevertragClient from './PflegevertragClient'
 import { BewertungsAuszug } from '@/components/bewertungen/BewertungsAuszug'
 
 export const metadata: Metadata = {
-  title: 'Pflegevertrag-Generator 2026 — kostenlos | Primundus',
+  title: 'Pflegevertrag-Generator: kostenloser Vertrag für Angehörige',
   description: 'Kostenlosen Pflegevertrag erstellen — in 5 Minuten. Für Pflege durch Angehörige, individuell anpassbar, sofort als PDF drucken.',
   alternates: {
     canonical: 'https://primundus.de/pflegevertrag-generator',
   },
   openGraph: {
-    title: 'Pflegevertrag-Generator 2026 — kostenlos | Primundus',
+    title: 'Pflegevertrag-Generator: kostenloser Vertrag für Angehörige',
     description: 'Kostenlosen Pflegevertrag erstellen — in 5 Minuten. Für Pflege durch Angehörige, individuell anpassbar, sofort als PDF drucken.',
     url: 'https://primundus.de/pflegevertrag-generator',
     siteName: 'Primundus',

@@ -15,27 +15,27 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 
 const SECTIONS = [
-  { id: 'was-ist-24h-pflege', title: "Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?" },
-  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24h-Pflege die richtige Wahl?" },
-  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?" },
-  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten & Kassenzuschüsse in Niedersachsen 2026" },
+  { id: 'was-ist-24h-pflege', title: "Was ist 24-Stunden-Pflege? Der Unterschied zu Pflegedienst und Heim" },
+  { id: 'fuer-wen-ist-24h', title: "Für wen ist 24-Stunden-Pflege die richtige Wahl?" },
+  { id: 'was-macht-eine-betreuungskraft', title: "Was macht eine Betreuungskraft, und was ergänzt der Pflegedienst?" },
+  { id: 'kosten-und-kassenzuschuesse-in', title: "Kosten und Kassenzuschüsse in Niedersachsen 2026" },
   { id: 'polnische-betreuungskraefte-in-niedersachsen', title: "Polnische Betreuungskräfte in Niedersachsen" },
   { id: 'was-die-pflege-zu', title: "Was die Pflege zu Hause in Niedersachsen ausmacht" },
   { id: 'einzugsgebiet-niedersachsen', title: "Einzugsgebiet Niedersachsen" },
   { id: 'werkzeuge', title: "Was es in Niedersachsen kostet, und was die Pflegekasse dazugibt" },
   { id: 'so-arbeiten-wir', title: "So arbeiten wir" },  { id: 'stimmen-vor-ort', title: "Was Familien über uns sagen" },
 
-  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen — 24h-Pflege in Niedersachsen" },
+  { id: 'haeufige-fragen-24h-pflege', title: "Häufige Fragen zur 24-Stunden-Pflege in Niedersachsen" },
 ]
 
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Niedersachsen | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Niedersachsen in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Niedersachsen | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Niedersachsen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-niedersachsen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Niedersachsen | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Niedersachsen in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege in Niedersachsen | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Niedersachsen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-niedersachsen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -47,7 +47,7 @@ const FRAGEN = [
   { q: 'Was kostet eine 24h-Pflegekraft in Niedersachsen?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Niedersachsen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung. In dringenden Situationen geht es oft schneller. Primundus ist mit eigenen Betreuungskräften in ganz Niedersachsen — auch in ländlichen Regionen.' },
   { q: 'Was ist der Unterschied zu einem ambulanten Pflegedienst?', a: 'Ein ambulanter Dienst kommt zu festen Zeiten für einzelne Aufgaben. Eine 24h-Betreuungskraft lebt im Haushalt: Sie hilft bei Körperpflege und Alltag, ist bei Bedarf auch nachts da und versorgt den Haushalt mit. Bei Demenz zählt vor allem, dass es über Wochen dieselbe Person ist und niemand umziehen muss.' },
-  { q: 'Ist 24h-Pflege über Primundus in Niedersachsen rechtssicher?', a: 'Vollständig. Entsendemodell mit A1-Bescheinigung aus EU-Heimatland — kein eigenes Arbeitsverhältnis, keine deutschen Sozialabgaben. Primundus arbeitet seit 20 Jahren ausschließlich in diesem Modell: null Rechtsprobleme für Kundenfamilien in 60.000+ Betreuungen.' },
+  { q: 'Ist 24h-Pflege über Primundus in Niedersachsen rechtssicher?', a: 'Ja, im Entsendemodell: Die Betreuungskräfte sind bei uns angestellt und in Polen sozialversichert. Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie werden nicht Arbeitgeber der Betreuungskraft und zahlen für sie keine Sozialabgaben. Die Firmengruppe hinter Primundus ist seit 2006 in der häuslichen 24-Stunden-Pflege tätig und hat seitdem über 60.000 Betreuungen organisiert.' },
   { q: 'Ist in einer Wohnung in Niedersachsen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Niedersachsen hat im Schnitt 104,4 m², 17,1 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 87,3 % der Gebäude in Niedersachsen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
   { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Deutschland insgesamt zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.364 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
@@ -102,28 +102,29 @@ export default function Page() {
             { label: 'Regionen', href: '/regionen' },
             { label: 'Niedersachsen' },
           ]}
-          augenbraue="24-Stunden-Pflege in Niedersachsen"
-          titel="24h-Pflege Niedersachsen — Betreuungskraft zuhause"
-          einleitungTitel="Zuhause bleiben in Niedersachsen"
+          augenbraue="6× Testsieger DIE WELT"
+          titel="24-Stunden-Pflege in Niedersachsen: Betreuung zu Hause, Kosten und Zuschüsse"
+          einleitungTitel="Zu Hause bleiben in Niedersachsen"
           einleitung={<>Vom Emsland bis in die Börde, von der Nordseeküste bis in den Harz: In Niedersachsen und Bremen steht das eigene Haus oft seit Generationen — und soll auch im Alter das Zuhause bleiben. Eine Betreuungskraft von Primundus zieht mit ein und ist bei Bedarf auch nachts da, auch dort, wo der nächste Pflegedienst weit fährt. Täglich kündbar, rechtssicher, Anreise in 3 Tagen möglich.</>}
-          aktualisiert="28. August 2026"
+          aktualisiert="15. Oktober 2026"
           lesezeit="6 Min."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=ort-niedersachsen', text: 'Preis & Betreuungskräfte ansehen' }}
           knopfOben
           unterzeile={<StandardUnterzeile ort="Niedersachsen" />}
-          blick={[
-            'Pflegegeld bei Pflegegrad 3: 599 €/Monat – auch mit Betreuungskraft',
-            'Steuerermäßigung: 20 % der Kosten, bis 4.000 €/Jahr',
-            'Pflegeheim Niedersachsen: Eigenanteil Ø 2200–2800 €/Monat',
-            'Täglich kündbar, keine Vermittlungsgebühr',
-            'Anreise in 3 Tagen möglich',
+          blickVerweise={[
+            // Inhaltsverzeichnis mit Grund statt gemischter Häkchen-Liste (Martin 15.10.2026: „warum mischen wir hier alles“).
+            { href: '#kosten-und-kassenzuschuesse-in', titel: 'Kosten und Zuschüsse', text: 'Pflegegeld, Entlastungsbudget und Steuerermäßigung bringen bei Pflegegrad 3 bis zu ca. 1.227 € im Monat' },
+            { href: '#polnische-betreuungskraefte-in-niedersachsen', titel: 'Betreuungskräfte', text: 'aus Polen und bei uns fest angestellt, Sie werden nicht Arbeitgeber' },
+            { href: '#einzugsgebiet-niedersachsen', titel: 'Einzugsgebiet', text: 'Hannover, Braunschweig, Osnabrück und alle Orte in Niedersachsen' },
+            { href: '#werkzeuge', titel: 'Heim oder zu Hause', text: 'ein Heimplatz kostet in Niedersachsen im ersten Jahr im Schnitt rund 3.010 € Eigenanteil im Monat' },
+            { href: '#so-arbeiten-wir', titel: 'So arbeiten wir', text: 'Bestpreisgarantie, keine Vermittlungsgebühr, täglich kündbar' },
           ]}
           blickTitel="Niedersachsen auf einen Blick"
           person={<AnsprechpartnerinGross ort="Niedersachsen" />}
         />
 
         <RatgeberRumpf abschnitte={SECTIONS}>
-          <Abschnitt id="was-ist-24h-pflege" titel="Was ist 24h-Pflege — und was unterscheidet sie von allem anderen?">
+          <Abschnitt id="was-ist-24h-pflege" titel="Was ist 24-Stunden-Pflege? Der Unterschied zu Pflegedienst und Heim">
             <Text>Bei der 24h-Pflege lebt eine Betreuungskraft dauerhaft im Haushalt. Sie ist bei Bedarf auch nachts da — nicht nur für zwei Stunden täglich wie ein ambulanter Dienst, und nicht in einer fremden Einrichtung wie im Pflegeheim. Das eigene Zuhause bleibt erhalten. Der gewohnte Alltag auch.</Text>
             <Punkte
               punkte={[
@@ -134,7 +135,7 @@ export default function Page() {
             />
           </Abschnitt>
 
-          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24h-Pflege die richtige Wahl?">
+          <Abschnitt id="fuer-wen-ist-24h" titel="Für wen ist 24-Stunden-Pflege die richtige Wahl?">
             <Text>Viele Familien stehen irgendwann vor demselben Moment: Man merkt, dass es so nicht mehr geht — aber ein Pflegeheim fühlt sich falsch an. Genau für diese Situation ist die 24h-Betreuung zuhause die Antwort.</Text>
             <Punkte
               punkte={[
@@ -146,13 +147,13 @@ export default function Page() {
                 { title: 'Nach Krankenhausaufenthalt', desc: 'Nach OP oder Schlaganfall: Wochen intensiver Unterstützung überbrücken' },
               ]}
             />
-            <Kasten augenbraue="Wann 24h-Pflege alleine nicht ausreicht">
+            <Kasten augenbraue="Wann 24-Stunden-Pflege allein nicht ausreicht">
               <Text>Bei intensivem medizinischem Versorgungsbedarf arbeitet die Betreuungskraft in Kombination mit einem ambulanten Pflegedienst. Primundus koordiniert diese Zusammenarbeit auf Wunsch — so bleibt das Zuhause auch bei höherem Bedarf die Option.</Text>
             </Kasten>
             <Text>Nicht sicher ob 24h-Pflege die richtige Lösung ist? Primundus berät kostenlos und ehrlich — auch wenn das Ergebnis eine andere Empfehlung ist.</Text>
           </Abschnitt>
 
-          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft — und was ergänzt der Pflegedienst?">
+          <Abschnitt id="was-macht-eine-betreuungskraft" titel="Was macht eine Betreuungskraft, und was ergänzt der Pflegedienst?">
             <Gegenueber
               seiten={[
                 { titel: 'Betreuungskraft übernimmt', ton: 'gruen', punkte: ['Körperpflege — Waschen, Ankleiden, Zahnpflege', 'Kochen — frisch, nach Vorlieben und Diät', 'Haushalt — Putzen, Einkaufen, Wäsche', 'Mobilisierung, Spaziergänge, Begleitung', 'Gesellschaft und Begleitung im Alltag', 'Medikamentenerinnerung', 'Arzt- und Therapietermine begleiten', 'Nachts im Haus — da, wenn Hilfe gebraucht wird'] },
@@ -162,7 +163,7 @@ export default function Page() {
             <Text><strong className="font-bold text-pm-ink">Beide gemeinsam machen häusliche Pflege auch bei hohem Bedarf möglich.</strong> Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem ambulanten Pflegedienst.</Text>
           </Abschnitt>
 
-          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten & Kassenzuschüsse in Niedersachsen 2026">
+          <Abschnitt id="kosten-und-kassenzuschuesse-in" titel="Kosten und Kassenzuschüsse in Niedersachsen 2026">
             <Tabelle
               titel="Was Kasse und Finanzamt bei Pflegegrad 3 beisteuern"
               zeilen={[
@@ -172,7 +173,7 @@ export default function Page() {
                 [<strong key="e">Zusammen</strong>, <strong key="w">bis zu ca. 1.227 €/Monat</strong>],
               ]}
               betont={1}
-              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim Niedersachsen: Eigenanteil Ø 2200–2800 €/Monat — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
+              fuss="Eine Person, Pflegegrad 3, Werte aus unserem Kostenrechner · Pflegeheim Niedersachsen: Eigenanteil Ø 3.008 €/Monat — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten"
             />
             <Tabelle
               titel="Was die Pflegekasse zahlt"
@@ -212,7 +213,7 @@ export default function Page() {
             <CitiesOfRegion region="niedersachsen" />
           </Abschnitt>
 
-          <OrtWerkzeuge slug="niedersachsen" ort={'Niedersachsen'} land={'Deutschland insgesamt'} altbau={48.9} miete={6.56} />
+          <OrtWerkzeuge slug="niedersachsen" ort={'Niedersachsen'} land={'Niedersachsen'} altbau={48.9} miete={6.56} />
 
 
           <Abschnitt id="so-arbeiten-wir" titel="So arbeiten wir">
@@ -239,7 +240,7 @@ export default function Page() {
               <p className="mt-3 text-[17px] leading-[1.65] text-pm-body">
                 Das können wir, weil unsere Betreuungskräfte bei uns angestellt sind und keine
                 Vermittlungsgebühr anfällt.{' '}
-                <a href="https://kostenrechner.primundus.de/bestpreisgarantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
+                <a href="https://kostenrechner.primundus.de/bestpreisgarantie?src=apex-garantie" className="font-semibold text-pm-taupe-ink underline underline-offset-4 hover:text-pm-ink">Was heißt vergleichbar?</a>
               </p>
             </div>
             <Schritte
@@ -254,7 +255,7 @@ export default function Page() {
           <OrtStimmen ort={'Niedersachsen'} />
 
 
-          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen — 24h-Pflege in Niedersachsen">
+          <Abschnitt id="haeufige-fragen-24h-pflege" titel="Häufige Fragen zur 24-Stunden-Pflege in Niedersachsen">
             <Fragen fragen={FRAGEN} />
           </Abschnitt>
         </RatgeberRumpf>

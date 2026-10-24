@@ -31,13 +31,13 @@ const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offse
 // Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
 // Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
-  title: 'Was ist 24-Stunden-Pflege? Definition, Kosten & Ablauf',
+  title: 'Was ist 24-Stunden-Pflege? Wer bei Ihnen wohnt und hilft',
   description: 'Eine Betreuungskraft lebt im Haushalt und ist die meistgenutzte Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
   alternates: {
     canonical: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   openGraph: {
-    title: 'Was ist 24-Stunden-Pflege? | Primundus',
+    title: 'Was ist 24-Stunden-Pflege? Wer bei Ihnen wohnt und hilft',
     description: 'Eine Betreuungskraft lebt im Haushalt und ist die meistgenutzte Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
     url: 'https://primundus.de/was-ist-24-stunden-pflege',
     siteName: 'Primundus',
@@ -51,7 +51,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Was ist 24-Stunden-Pflege?',
+    headline: 'Was ist 24-Stunden-Pflege? Wer bei Ihnen wohnt und was die Betreuungskraft macht',
     description: 'Definition, Leistungen, Kosten und aktuelle Kassenzuschüsse 2026 der 24h-Pflege in Deutschland.',
     author: { '@id': PERSON_MARTA_ID },
     publisher: {
@@ -141,7 +141,7 @@ export default function WasIst24StundenPflege() {
             { label: "Was ist 24-Stunden-Pflege?" },
           ]}
           augenbraue="Ratgeber 24-Stunden-Pflege"
-          titel="Was ist 24-Stunden-Pflege?"
+          titel="Was ist 24-Stunden-Pflege? Wer bei Ihnen wohnt und was die Betreuungskraft macht"
           einleitung=""
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="8 Min."

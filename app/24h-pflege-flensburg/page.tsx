@@ -12,12 +12,12 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege und Betreuung in Flensburg | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Flensburg in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege zu Hause in Flensburg: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-flensburg' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege und Betreuung in Flensburg | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Flensburg in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege zu Hause in Flensburg: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-flensburg',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Flensburg?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Schleswig-Holstein kostet im Schnitt rund 3.040 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Flensburg?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Schleswig-Holstein kostet im Schnitt rund 3.150 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Flensburg starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie wohnt man in Flensburg — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Flensburg im Schnitt 3,0 Wohnungen, in Schleswig-Holstein 1,8. 44,7 Prozent der Gebäude stehen frei, 40,0 Prozent stehen in geschlossener Reihe. 60,7 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Flensburg ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Wie viele ältere Menschen leben in Flensburg?', a: '9.855 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 10,4 Prozent — in Schleswig-Holstein 12,2 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 22,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Schleswig-Holstein: 26,6 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'In welchen Flensburger Stadtteilen wird Pflege am häufigsten gebraucht?', a: 'Das Alter verteilt sich in Flensburg extrem ungleich. In Mürwik sind 10,9 Prozent der Einwohner über 80, in der Neustadt nur 1,6 Prozent — fast das Siebenfache Unterschied. Mürwik ist mit 15.324 Menschen zugleich der größte Stadtteil. Hohe Anteile Hochbetagter haben außerdem die Westliche Höhe (8,7 Prozent), Fruerlund (8,4) und Engelsby (7,6). Insgesamt wirkt Flensburg jung — 20,1 Prozent über 65 gegenüber 23,6 Prozent in Schleswig-Holstein —, was an den rund 9.000 Studierenden liegt, nicht an wenigen alten Menschen. Unsere Betreuungskräfte kommen in jeden Stadtteil; Anreise und Preis sind überall gleich.' },
   { q: 'Welches Einzugsgebiet wird in Flensburg bedient?', a: 'Flensburg und Kreis Schleswig-Flensburg: Schleswig, Kappeln, Eckernförde und alle Gemeinden im Kreis Schleswig-Flensburg' },
   { q: 'Ist in einer Wohnung in Flensburg Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Flensburg hat im Schnitt 78,7 m², 36,2 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 71,0 % der Gebäude in Flensburg sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Schleswig-Holstein zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.040 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Schleswig-Holstein zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.150 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

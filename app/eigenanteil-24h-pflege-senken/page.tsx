@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('eigenanteil-24h-pflege-senken', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('eigenanteil-24h-pflege-senken', '22. Oktober 2026')
 
 const SECTIONS = [
   { id: 'uebersicht', title: 'Alle Stellschrauben' },
@@ -23,11 +23,11 @@ const SECTIONS = [
 // Preis aus dem Snippet entfernt (23.09.2026, Martin: „keine kosten in den snippets").
 // Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
-  title: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026',
+  title: 'Eigenanteil der 24-Stunden-Pflege senken: Zuschüsse, Steuer',
   description: 'Eigenanteil der 24h-Pflege senken: Pflegegrad erhöhen, Entlastungsbudget nutzen, Steuerabzug, Hilfsmittel. Was greift, zeigt der Rechner.',
   alternates: { canonical: 'https://primundus.de/eigenanteil-24h-pflege-senken' },
   openGraph: {
-    title: 'Eigenanteil 24h-Pflege senken | Primundus',
+    title: 'Eigenanteil der 24-Stunden-Pflege senken: Zuschüsse, Steuer',
     description: 'Alle Möglichkeiten um den Eigenanteil der 24h-Pflege 2026 zu senken.',
     url: 'https://primundus.de/eigenanteil-24h-pflege-senken',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Eigenanteil 24h-Pflege senken — alle Möglichkeiten 2026',
+    headline: 'Eigenanteil der 24-Stunden-Pflege senken: Pflegegrad, Kassenzuschüsse und Steuer 2026',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -84,7 +84,7 @@ export default function EigenanteilSenken() {
             { label: "Eigenanteil senken" },
           ]}
           augenbraue="Ratgeber Kosten"
-          titel="Eigenanteil der 24h-Pflege senken — alle Möglichkeiten 2026"
+          titel="Eigenanteil der 24-Stunden-Pflege senken: Pflegegrad, Kassenzuschüsse und Steuer 2026"
           einleitung="24h-Pflege kostet ab 2.150 Euro im Monat — aber wer alle verfügbaren Leistungen kennt und kombiniert, senkt den tatsächlichen Eigenanteil bei Pflegegrad 3 auf ab ca. 923 Euro. Viele Familien verschenken hunderte Euro monatlich weil sie nicht alle Möglichkeiten nutzen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

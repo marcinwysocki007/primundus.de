@@ -82,9 +82,7 @@ export default function Page() {
           <p className="text-meta font-bold uppercase tracking-[0.1em] text-pm-taupe-light mb-4">
             Anbieter-Vergleich · Stand {STAND}
           </p>
-          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">
-            Promedica24 oder Primundus? Der direkte Vergleich
-          </h1>
+          <h1 className="text-h1 md:text-h1-lg font-bold text-pm-ink mb-6">Promedica24-Alternative: Promedica24 und Primundus im direkten Vergleich</h1>
           <p className="text-[16px] text-pm-body leading-relaxed mb-6 max-w-[720px]">
             Wer eine Alternative zu Promedica24 sucht, vergleicht meist drei Dinge: Was kostet die Betreuung,
             wer wählt die Betreuungskraft aus, und wie lange binde ich mich? Hier sind die Angaben beider

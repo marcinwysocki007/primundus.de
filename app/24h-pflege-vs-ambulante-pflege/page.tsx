@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-ambulante-pflege', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-ambulante-pflege', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'unterschied', title: 'Der grundlegende Unterschied' },
@@ -20,13 +20,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: '24h-Pflege vs. ambulante Pflege — Vergleich 2026 | Primundus',
-  description: '24h-Pflege vs. ambulanter Pflegedienst: Was kostet was, wann ist welche Form sinnvoll und wann wird aus ambulant eine 24h-Betreuung notwendig? Vollständiger.',
+  title: 'Ambulante Pflege oder 24-Stunden-Betreuung: Vergleich 2026',
+  description: 'Ambulante Pflege oder 24-Stunden-Betreuung: Was beides kostet, was die Pflegekasse zahlt und wann der Pflegedienst nicht mehr reicht.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-vs-ambulante-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege vs. ambulante Pflege 2026 | Primundus',
-    description: 'Vollständiger Vergleich: Kosten, Leistungen und wann welche Pflegeform sinnvoll ist.',
+    title: 'Ambulante Pflege oder 24-Stunden-Betreuung: Vergleich 2026',
+    description: 'Ambulante Pflege oder 24-Stunden-Betreuung: Was beides kostet, was die Pflegekasse zahlt und wann der Pflegedienst nicht mehr reicht.',
     url: 'https://primundus.de/24h-pflege-vs-ambulante-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '24h-Pflege vs. ambulante Pflege — Vergleich 2026',
+    headline: 'Ambulante Pflege oder 24-Stunden-Betreuung: Kosten und wann der Pflegedienst nicht mehr reicht',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -71,7 +71,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was kostet ambulante Pflege im Vergleich zu 24h?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ambulant: 800–2.500 €/Monat, bei PG 2–5 oft durch Sachleistungen vollständig gedeckt. 24h: ab 2.150 €/Monat, Eigenanteil nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bei PG 3 ab ca. 923 €.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ambulant: je nach Zahl und Art der Einsätze, Sachleistungen können angerechnet werden. 24-Stunden-Pflege: ab 2.150 €/Monat, Eigenanteil nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bei PG 3 ab ca. 923 €.' },
       },
       {
         '@type': 'Question',
@@ -99,7 +99,7 @@ export default function VsAmbulantePflege() {
             { label: "24h-Pflege vs. ambulante Pflege" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="24h-Pflege vs. ambulante Pflege — Vergleich 2026"
+          titel="Ambulante Pflege oder 24-Stunden-Betreuung: Kosten und wann der Pflegedienst nicht mehr reicht"
           einleitung="Ambulante Pflege oder 24h-Betreuung — das ist oft die erste Entscheidung wenn Pflege notwendig wird. Ambulante Dienste kommen mehrmals täglich für definierte Einsätze. Eine 24h-Kraft lebt im Haushalt und ist bei Bedarf auch nachts da. Wann was sinnvoll ist, hängt nicht nur von den Kosten ab — sondern vom tatsächlichen Pflegebedarf."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
@@ -108,7 +108,7 @@ export default function VsAmbulantePflege() {
           blick={[
                 'Ambulante Pflege: kommt für definierte Einsätze — außerhalb nicht vor Ort',
                 '24h-Betreuung: Kraft lebt im Haushalt — bei Bedarf auch nachts vor Ort',
-                'Kosten ambulant: 800–2.500 €/Monat, oft durch Sachleistungen gedeckt',
+                'Kosten ambulant: je nach Zahl und Art der Einsätze, Sachleistungen können angerechnet werden',
                 'Kosten 24h: ab 2.150 €/Monat, Eigenanteil bei PG 3 ab ca. 923 €',
                 'Wechsel von ambulant zu 24h meist wenn: Demenz, Sturzrisiko nachts, hoher Gesamtbedarf',
                 'Kombination möglich: ambulant + 24h-Kraft parallel in bestimmten Konstellationen',
@@ -118,19 +118,19 @@ export default function VsAmbulantePflege() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="unterschied" titel="Der grundlegende Unterschied">
             <Text>
-              Der entscheidende Unterschied ist nicht das Leistungsspektrum — sondern die Verfügbarkeit. Ein ambulanter Pflegedienst kommt zu vereinbarten Zeiten und geht wieder. Eine 24h-Betreuungskraft lebt im Haushalt und ist immer anwesend.
+              Der entscheidende Unterschied ist nicht das Leistungsspektrum — sondern die Verfügbarkeit. Ein ambulanter Pflegedienst kommt zu vereinbarten Zeiten und geht wieder. Eine Betreuungskraft lebt im Haushalt und ist bei Bedarf auch nachts da.
             </Text>
             <Tabelle
               titel=""
               kopf={["Kriterium", "Ambulante Pflege", "24h-Pflege (Primundus)"]}
               zeilen={[
                 ['Verfügbarkeit', 'Nur zu Einsatzzeiten', 'Lebt im Haushalt, bei Bedarf auch nachts'],
-                ['Nächtliche Sicherheit', 'Kein Personal nachts', 'Immer anwesend'],
-                ['Gesellschaft & Betreuung', 'Nur während Einsatz', 'Ganztagsbegleitung'],
+                ['Nächtliche Sicherheit', 'Ambulante Einsätze nach Vereinbarung', 'Bei Bedarf auch nachts da'],
+                ['Gesellschaft & Betreuung', 'Nur während Einsatz', 'Begleitung im Alltag'],
                 ['Haushalt', 'Begrenzt je Einsatz', 'Vollständige Haushaltsführung'],
-                ['Demenzbetreuung', 'Schwierig ohne Kontinuität', 'Vertraute Person immer da'],
-                ['Kosten/Monat', '800–2.500 €', 'ab 2.150 €'],
-                ['Eigenanteil (PG 3)', 'Oft sehr gering durch Sachleistungen', 'ca. 1.500–2.000 € nach Zuschüssen'],
+                ['Demenzbetreuung', 'Schwierig ohne Kontinuität', 'Vertraute Person im Haus'],
+                ['Kosten/Monat', 'Je nach Zahl und Art der Einsätze', 'ab 2.150 €'],
+                ['Eigenanteil (PG 3)', 'Oft sehr gering durch Sachleistungen', 'ab ca. 923 € nach Pflegegeld, Entlastungsbudget und Steuerermäßigung'],
                 ['Flexibilität', 'Einsatzzeiten planbar', 'Täglich kündbar'],
               ]}
             />
@@ -192,7 +192,7 @@ export default function VsAmbulantePflege() {
               fragen={[
                 { q: 'Was ist der Unterschied zwischen ambulanter Pflege und 24h-Pflege?', a: 'Ambulanter Pflegedienst kommt zu vereinbarten Zeiten, geht dann wieder. 24h-Betreuungskraft lebt im Haushalt und ist bei Bedarf auch nachts da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft im Alltag.' },
                 { q: 'Wann reicht ambulante Pflege nicht mehr aus?', a: 'Wenn Pflegebedarf über mehrere Tageszeiten verteilt ist und Angehörige nicht übernehmen können, bei nächtlichem Betreuungsbedarf, bei Demenz mit Weglaufen oder Selbstgefährdung, oder wenn ambulante Kosten die Sachleistungen deutlich übersteigen.' },
-                { q: 'Was kostet ambulante Pflege im Vergleich zu 24h?', a: 'Ambulant: 800–2.500 €/Monat, bei PG 2–5 oft durch Sachleistungen vollständig gedeckt. 24h: ab 2.150 €/Monat, Eigenanteil nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bei PG 3 ab ca. 923 €.' },
+                { q: 'Was kostet ambulante Pflege im Vergleich zu 24h?', a: 'Ambulant: je nach Zahl und Art der Einsätze, Sachleistungen können angerechnet werden. 24-Stunden-Pflege: ab 2.150 €/Monat, Eigenanteil nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bei PG 3 ab ca. 923 €.' },
                 { q: 'Kann man ambulante Pflege und 24h kombinieren?', a: 'Ja — Kombinationsleistung: Sachleistungen für ambulanten Pflegedienst + anteiliges Pflegegeld für private Betreuung. Sinnvoll wenn z.B. medizinische Behandlungspflege durch Dienst und Betreuung durch 24h-Kraft.' },
               ]}
             />

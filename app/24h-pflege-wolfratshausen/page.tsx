@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Wolfratshausen | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Wolfratshausen in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Wolfratshausen | 6× Testsieger',
+  description: '24-Stunden-Pflege in Wolfratshausen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-wolfratshausen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Wolfratshausen | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Wolfratshausen in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege in Wolfratshausen | 6× Testsieger',
+    description: '24-Stunden-Pflege in Wolfratshausen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-wolfratshausen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Wolfratshausen?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.200 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Wolfratshausen?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.270 € Eigenanteil (vdek 07/2026).' },
   { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Wolfratshausen starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie viele ältere Menschen leben in Wolfratshausen?', a: '2.398 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 12,5 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 25,6 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Wolfratshausen — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Wolfratshausen im Schnitt 2,3 Wohnungen, in Bayern 2,1. 35,8 Prozent der Gebäude stehen frei, 39,6 Prozent stehen in geschlossener Reihe. 33,9 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Wolfratshausen ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Wolfratshausen bedient?', a: 'Wolfratshausen und südlicher Landkreis Bad Tölz-Wolfratshausen: Geretsried, Icking, Münsing, Egling und alle Gemeinden im südlichen Landkreis Bad Tölz-Wolfratshausen' },
   { q: 'Ist in einer Wohnung in Wolfratshausen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Wolfratshausen hat im Schnitt 93,1 m², 20,3 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 81,2 % der Gebäude in Wolfratshausen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.270 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {
@@ -41,7 +41,7 @@ const ORT: OrtDaten = {
   ort: 'Wolfratshausen',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Die alte Flößerstadt an Loisach und Isar — Waldram, Farchet oder die Altstadt — ist für viele seit Jahrzehnten Zuhause. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   kreis: 'südlichen Landkreis Bad Tölz-Wolfratshausen',
@@ -50,7 +50,7 @@ const ORT: OrtDaten = {
       <>
         <Text>Nur 35,8 Prozent der Gebäude stehen frei, in Bayern sind es 67,3 Prozent. Zwei von fünf Gebäuden in Wolfratshausen ist ein Reihenhaus — in Bayern 14,7 Prozent. Ob Reihenhaus oder Mehrfamilienhaus im Block, gemeinsam ist ihnen die Treppe: Wenn das Treppensteigen zur täglichen Hürde wird, ist jemand im Haus oft die Alternative zum Umzug.</Text>
         <Text>Der Wohnungsmarkt ist eng: 2,4 Prozent Leerstand gegenüber 4,2 Prozent in Bayern. Wolfratshausen ist älter als das Land: 12,5 Prozent der Einwohner sind 75 Jahre oder älter — das sind 2.398 Menschen, in Bayern sind es 10,4 Prozent.</Text>
-        <Text>Mit 10,02 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Wolfratshausen teurer als im Schnitt von Bayern (8,74 Euro). Die durchschnittliche Wohnung misst 93,1 Quadratmeter gegenüber 100,5 in Bayern — rund 7 Quadratmeter weniger. Jeder vierte Haushalt in Wolfratshausen besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
+        <Text>Mit 10,02 Euro Nettokaltmiete je Quadratmeter wohnt es sich in Wolfratshausen teurer als im Schnitt von Bayern (8,74 Euro). Die durchschnittliche Wohnung misst 93,1 Quadratmeter gegenüber 100,5 in Bayern — rund 7 Quadratmeter weniger. Jeder vierte Haushalt in Wolfratshausen besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist.</Text>
         <Text>In Zahlen: 2.398 Menschen in Wolfratshausen sind 75 Jahre oder älter, und es gibt 9.546 Wohnungen in 4.141 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>
         <Text>Was davon auf Ihre Situation zutrifft, klären wir vor jeder Entscheidung — insbesondere die Frage nach dem eigenen Zimmer für die Betreuungskraft. Und lassen Sie sich unabhängig beraten: Die Pflegeberatung nach § 7a SGB XI ist kostenlos, neutral und kommt auf Wunsch zu Ihnen nach Hause.</Text>
       </>

@@ -6,6 +6,7 @@ import { SiteHeader } from '@/components/layout/Header'
 import { SiteFooter } from '@/components/layout/Footer'
 import { CookieConsent } from '@/components/CookieConsent'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
+import { EinstiegMerker } from '@/components/EinstiegMerker'
 import { Sicher } from '@/components/Sicher'
 import { JsonLd } from '@/components/JsonLd'
 import { siteGraph } from '@/lib/schema'
@@ -109,6 +110,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Sicher name="Fußzeile"><SiteFooter /></Sicher>
         <Sicher name="Cookie-Hinweis"><CookieConsent /></Sicher>
         <Sicher name="WhatsApp"><WhatsAppFloat /></Sicher>
+        <Sicher name="Einstieg"><EinstiegMerker /></Sicher>
       </body>
     </html>
   )

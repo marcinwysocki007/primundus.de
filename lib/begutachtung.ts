@@ -1,10 +1,17 @@
 // lib/begutachtung.ts — das Begutachtungsinstrument nach § 15 SGB XI mit Anlage 1 (Einzelpunkte)
-// und Anlage 2 (gewichtete Punkte), Rechtsstand gesetze-im-internet.de, gelesen am 20.09.2026.
+// und Anlage 2 (gewichtete Punkte), Rechtsstand gesetze-im-internet.de, gelesen am 20.09.2026 und 02.10.2026.
 //
 // Alle Kriterien, Kategorien, Einzelpunkte, Punktbereiche und die Pflegegrad-Grenzen stehen hier
 // wörtlich nach dem Gesetz. Die Erklärungen zu den Kriterien sind unsere Kurzfassung der
 // Begutachtungs-Richtlinien für Angehörige. Der Rechner in components/werkzeuge/PflegegradRechner.tsx
 // liest nur diese Datei; scripts/test-begutachtung.mjs prüft die Rechnung gegen Beispiele.
+//
+// Kinder (02.10.2026): Regeln nach den Begutachtungs-Richtlinien (BRi) des Medizinischen Dienstes Bund vom
+// 26.08.2026, in Kraft seit 01.10.2026, Kapitel 6 (https://md-bund.de, BRi_Pflege_26_08_2026.pdf). Bis 18 Monate
+// zählen nur Modul 3, Modul 5, die Frage 4.K und die besondere Bedarfskonstellation; ab 18 Monaten bis unter
+// 11 Jahre gibt es Punkte nur für den Abstand zur Stufe eines gesund entwickelten Kindes gleichen Alters
+// (ALTER_KIND). Vorher zählte der Rechner bei Säuglingen Mobilität, Kognition und Alltag voll mit und überließ
+// den Altersvergleich den Eltern.
 
 /** Die vier Stufen der Selbständigkeit (Module 1, 4, 6 und Kriterium 5.16) */
 export const STUFEN_SELBSTAENDIG = ['selbständig', 'überwiegend selbständig', 'überwiegend unselbständig', 'unselbständig'] as const
@@ -34,29 +41,30 @@ export const ERKLAERUNG_STUFEN: Record<'selbstaendig' | 'faehigkeit' | 'haeufigk
   ],
 }
 
-export type Kriterium = { nr: string; name: string; erklaerung: string; punkte: readonly number[] }
+/** erklaerungKind: Beispiele für Kinder nach den Begutachtungs-Richtlinien (Kapitel 6.5), wo die Beispiele für Erwachsene in die Irre führen */
+export type Kriterium = { nr: string; name: string; erklaerung: string; erklaerungKind?: string; punkte: readonly number[] }
 
 /** Modul 1 (10 %): fünf Kriterien, 0/1/2/3 Punkte */
 export const MODUL1: Kriterium[] = [
   { nr: '1.1', name: 'Positionswechsel im Bett', erklaerung: 'Sich im Liegen drehen, aufsetzen, wieder hinlegen.', punkte: [0, 1, 2, 3] },
   { nr: '1.2', name: 'Halten einer stabilen Sitzposition', erklaerung: 'Auf einem Stuhl oder an der Bettkante sitzen, ohne zu kippen oder abzurutschen.', punkte: [0, 1, 2, 3] },
-  { nr: '1.3', name: 'Umsetzen', erklaerung: 'Vom Bett auf den Stuhl, Rollstuhl oder Toilettenstuhl wechseln und zurück.', punkte: [0, 1, 2, 3] },
-  { nr: '1.4', name: 'Fortbewegen innerhalb des Wohnbereichs', erklaerung: 'Von einem Raum in den anderen kommen, auch mit Rollator oder Rollstuhl, wenn es ohne Hilfe geht.', punkte: [0, 1, 2, 3] },
+  { nr: '1.3', name: 'Umsetzen', erklaerung: 'Vom Bett auf den Stuhl, Rollstuhl oder Toilettenstuhl wechseln und zurück.', erklaerungKind: 'Von einer für das Alter üblichen Sitzgelegenheit aufstehen und sich auf eine andere setzen; bei Kleinkindern vom Boden aufstehen und sich wieder hinsetzen.', punkte: [0, 1, 2, 3] },
+  { nr: '1.4', name: 'Fortbewegen innerhalb des Wohnbereichs', erklaerung: 'Von einem Raum in den anderen kommen, auch mit Rollator oder Rollstuhl, wenn es ohne Hilfe geht.', erklaerungKind: 'In der Wohnung sicher von Zimmer zu Zimmer kommen, mindestens etwa acht Meter, auch mit Hilfsmittel, wenn es ohne Hilfe einer Person geht.', punkte: [0, 1, 2, 3] },
   { nr: '1.5', name: 'Treppensteigen', erklaerung: 'Eine Etage hinauf und hinunter. Wird auch bewertet, wenn es in der Wohnung keine Treppe gibt.', punkte: [0, 1, 2, 3] },
 ]
 
 /** Modul 2 (15 % gemeinsam mit Modul 3): elf Kriterien, 0/1/2/3 Punkte */
 export const MODUL2: Kriterium[] = [
-  { nr: '2.1', name: 'Erkennen von Personen aus dem näheren Umfeld', erklaerung: 'Angehörige, Nachbarn, die Pflegeperson erkennen und einordnen.', punkte: [0, 1, 2, 3] },
-  { nr: '2.2', name: 'Örtliche Orientierung', erklaerung: 'Wissen, wo man ist; den Weg in der Wohnung und in der Nachbarschaft finden.', punkte: [0, 1, 2, 3] },
-  { nr: '2.3', name: 'Zeitliche Orientierung', erklaerung: 'Tageszeit, Wochentag, Monat und Jahreszeit einordnen.', punkte: [0, 1, 2, 3] },
-  { nr: '2.4', name: 'Erinnern an wesentliche Ereignisse oder Beobachtungen', erklaerung: 'Was heute Morgen war, wer zu Besuch war, wichtige Stationen des eigenen Lebens.', punkte: [0, 1, 2, 3] },
-  { nr: '2.5', name: 'Steuern von mehrschrittigen Alltagshandlungen', erklaerung: 'Eine Handlung mit mehreren Schritten in der richtigen Reihenfolge schaffen, zum Beispiel Kaffee kochen oder sich anziehen.', punkte: [0, 1, 2, 3] },
-  { nr: '2.6', name: 'Treffen von Entscheidungen im Alltag', erklaerung: 'Selbst entscheiden, was man anzieht, isst oder wann man aufsteht, und diese Entscheidung sinnvoll treffen.', punkte: [0, 1, 2, 3] },
-  { nr: '2.7', name: 'Verstehen von Sachverhalten und Informationen', erklaerung: 'Erklärungen, Nachrichten oder einen Brief inhaltlich verstehen.', punkte: [0, 1, 2, 3] },
-  { nr: '2.8', name: 'Erkennen von Risiken und Gefahren', erklaerung: 'Herdplatte, Straßenverkehr, Glatteis, Stolperfallen als Gefahr erkennen.', punkte: [0, 1, 2, 3] },
-  { nr: '2.9', name: 'Mitteilen von elementaren Bedürfnissen', erklaerung: 'Hunger, Durst, Schmerzen, Kälte oder den Gang zur Toilette verständlich machen, auch ohne Worte.', punkte: [0, 1, 2, 3] },
-  { nr: '2.10', name: 'Verstehen von Aufforderungen', erklaerung: 'Einfache Bitten verstehen und umsetzen, zum Beispiel „Bitte setzen Sie sich".', punkte: [0, 1, 2, 3] },
+  { nr: '2.1', name: 'Erkennen von Personen aus dem näheren Umfeld', erklaerung: 'Angehörige, Nachbarn, die Pflegeperson erkennen und einordnen.', erklaerungKind: 'Eltern, Geschwister, Erzieherinnen oder Lehrer erkennen; bei Kindern ohne Sprache daran sichtbar, ob und wie sie Kontakt aufnehmen.', punkte: [0, 1, 2, 3] },
+  { nr: '2.2', name: 'Örtliche Orientierung', erklaerung: 'Wissen, wo man ist; den Weg in der Wohnung und in der Nachbarschaft finden.', erklaerungKind: 'Wissen, wo es ist, und sich in Wohnung, Kita oder Schule zurechtfinden.', punkte: [0, 1, 2, 3] },
+  { nr: '2.3', name: 'Zeitliche Orientierung', erklaerung: 'Tageszeit, Wochentag, Monat und Jahreszeit einordnen.', erklaerungKind: 'Tageszeiten, Wochentage und Jahreszeiten einordnen, zum Beispiel Vormittag und Abend unterscheiden.', punkte: [0, 1, 2, 3] },
+  { nr: '2.4', name: 'Erinnern an wesentliche Ereignisse oder Beobachtungen', erklaerung: 'Was heute Morgen war, wer zu Besuch war, wichtige Stationen des eigenen Lebens.', erklaerungKind: 'Wissen, was es zum Frühstück gab, womit es am Vormittag gespielt hat oder was in Kita oder Schule passiert ist.', punkte: [0, 1, 2, 3] },
+  { nr: '2.5', name: 'Steuern von mehrschrittigen Alltagshandlungen', erklaerung: 'Eine Handlung mit mehreren Schritten in der richtigen Reihenfolge schaffen, zum Beispiel Kaffee kochen oder sich anziehen.', erklaerungKind: 'Altersgerechte Handlungen mit mehreren Schritten in der richtigen Reihenfolge schaffen, zum Beispiel einen Turm bauen oder ein Spiel nach seiner Reihenfolge spielen.', punkte: [0, 1, 2, 3] },
+  { nr: '2.6', name: 'Treffen von Entscheidungen im Alltag', erklaerung: 'Selbst entscheiden, was man anzieht, isst oder wann man aufsteht, und diese Entscheidung sinnvoll treffen.', erklaerungKind: 'Passend entscheiden, zum Beispiel was es essen oder spielen möchte oder welche Kleidung zum Sport passt.', punkte: [0, 1, 2, 3] },
+  { nr: '2.7', name: 'Verstehen von Sachverhalten und Informationen', erklaerung: 'Erklärungen, Nachrichten oder einen Brief inhaltlich verstehen.', erklaerungKind: 'Alltagssituationen und Erklärungen verstehen, zum Beispiel Spielregeln oder eine Bauanleitung.', punkte: [0, 1, 2, 3] },
+  { nr: '2.8', name: 'Erkennen von Risiken und Gefahren', erklaerung: 'Herdplatte, Straßenverkehr, Glatteis, Stolperfallen als Gefahr erkennen.', erklaerungKind: 'Herd, Steckdose, Wasser, Straßenverkehr oder Baustellen als Gefahr erkennen.', punkte: [0, 1, 2, 3] },
+  { nr: '2.9', name: 'Mitteilen von elementaren Bedürfnissen', erklaerung: 'Hunger, Durst, Schmerzen, Kälte oder den Gang zur Toilette verständlich machen, auch ohne Worte.', erklaerungKind: 'Hunger, Durst, Schmerzen oder Frieren zeigen, auch durch Laute, Mimik oder Gesten.', punkte: [0, 1, 2, 3] },
+  { nr: '2.10', name: 'Verstehen von Aufforderungen', erklaerung: 'Einfache Bitten verstehen und umsetzen, zum Beispiel „Bitte setzen Sie sich".', erklaerungKind: 'Einfache Aufforderungen zu Essen, Trinken, Anziehen oder Spielen verstehen.', punkte: [0, 1, 2, 3] },
   { nr: '2.11', name: 'Beteiligen an einem Gespräch', erklaerung: 'Einem Gespräch folgen, passend antworten, selbst etwas beitragen.', punkte: [0, 1, 2, 3] },
 ]
 
@@ -80,15 +88,15 @@ export const MODUL3: Kriterium[] = [
 /** Modul 4 (40 %): 4.1 bis 4.12 mit Selbständigkeitsstufen (Essen, Trinken und Toilette zählen mehr), 4.13 gesondert */
 export const MODUL4: Kriterium[] = [
   { nr: '4.1', name: 'Waschen des vorderen Oberkörpers', erklaerung: 'Gesicht, Hals, Arme, Hände und Brust am Waschbecken waschen und abtrocknen.', punkte: [0, 1, 2, 3] },
-  { nr: '4.2', name: 'Körperpflege im Bereich des Kopfes', erklaerung: 'Kämmen, Zähne putzen oder Prothese reinigen, Rasieren.', punkte: [0, 1, 2, 3] },
+  { nr: '4.2', name: 'Körperpflege im Bereich des Kopfes', erklaerung: 'Kämmen, Zähne putzen oder Prothese reinigen, Rasieren.', erklaerungKind: 'Vor allem Zähneputzen und Mundpflege, außerdem Kämmen.', punkte: [0, 1, 2, 3] },
   { nr: '4.3', name: 'Waschen des Intimbereichs', erklaerung: 'Den Intimbereich waschen und abtrocknen.', punkte: [0, 1, 2, 3] },
-  { nr: '4.4', name: 'Duschen und Baden einschließlich Waschen der Haare', erklaerung: 'In die Dusche oder Wanne steigen, sich ganz waschen, Haare waschen, abtrocknen.', punkte: [0, 1, 2, 3] },
+  { nr: '4.4', name: 'Duschen und Baden einschließlich Waschen der Haare', erklaerung: 'In die Dusche oder Wanne steigen, sich ganz waschen, Haare waschen, abtrocknen.', erklaerungKind: 'Baden oder Duschen mit Haarewaschen und Abtrocknen; auch die nötige Aufsicht in der Wanne zählt.', punkte: [0, 1, 2, 3] },
   { nr: '4.5', name: 'An- und Auskleiden des Oberkörpers', erklaerung: 'Unterhemd, Hemd, Pullover, Jacke an- und ausziehen, Knöpfe schließen.', punkte: [0, 1, 2, 3] },
   { nr: '4.6', name: 'An- und Auskleiden des Unterkörpers', erklaerung: 'Unterhose, Hose, Strümpfe und Schuhe an- und ausziehen.', punkte: [0, 1, 2, 3] },
-  { nr: '4.7', name: 'Mundgerechtes Zubereiten der Nahrung und Eingießen von Getränken', erklaerung: 'Brot schneiden und belegen, Fleisch klein schneiden, Getränke eingießen. Nicht: Kochen.', punkte: [0, 1, 2, 3] },
-  { nr: '4.8', name: 'Essen', erklaerung: 'Nahrung zum Mund führen, kauen, schlucken; dabei ausreichend und regelmäßig essen. Zählt dreifach.', punkte: [0, 3, 6, 9] },
-  { nr: '4.9', name: 'Trinken', erklaerung: 'Aus Glas oder Tasse trinken und genug trinken, auch ans Trinken denken. Zählt doppelt.', punkte: [0, 2, 4, 6] },
-  { nr: '4.10', name: 'Benutzen einer Toilette oder eines Toilettenstuhls', erklaerung: 'Hingehen, Kleidung richten, hinsetzen, Intimhygiene, aufstehen. Zählt doppelt.', punkte: [0, 2, 4, 6] },
+  { nr: '4.7', name: 'Mundgerechtes Zubereiten der Nahrung und Eingießen von Getränken', erklaerung: 'Brot schneiden und belegen, Fleisch klein schneiden, Getränke eingießen. Nicht: Kochen.', erklaerungKind: 'Brot, Obst oder Fleisch klein schneiden, Kartoffeln zerdrücken, Flaschen öffnen und Getränke eingießen.', punkte: [0, 1, 2, 3] },
+  { nr: '4.8', name: 'Essen', erklaerung: 'Nahrung zum Mund führen, kauen, schlucken; dabei ausreichend und regelmäßig essen. Zählt dreifach.', erklaerungKind: 'Mundgerechte Speisen mit den Fingern, dem Löffel oder der Gabel essen und genug essen. Zählt dreifach.', punkte: [0, 3, 6, 9] },
+  { nr: '4.9', name: 'Trinken', erklaerung: 'Aus Glas oder Tasse trinken und genug trinken, auch ans Trinken denken. Zählt doppelt.', erklaerungKind: 'Aus Becher oder Glas trinken, auch mit Trinkhalm oder Spezialbecher, und genug trinken. Zählt doppelt.', punkte: [0, 2, 4, 6] },
+  { nr: '4.10', name: 'Benutzen einer Toilette oder eines Toilettenstuhls', erklaerung: 'Hingehen, Kleidung richten, hinsetzen, Intimhygiene, aufstehen. Zählt doppelt.', erklaerungKind: 'Zur Toilette gehen, hinsetzen, Intimhygiene, Kleidung richten. Wird auch bewertet, wenn statt der Toilette Windeln oder andere Hilfsmittel nötig sind; Punkte gibt es nur für Hilfe, die über das Altersübliche hinausgeht. Zählt doppelt.', punkte: [0, 2, 4, 6] },
   { nr: '4.11', name: 'Bewältigen der Folgen einer Harninkontinenz und Umgang mit Dauerkatheter und Urostoma', erklaerung: 'Einlagen wechseln, Katheterbeutel leeren, Hautpflege. Zählt nur bei überwiegender oder vollständiger Inkontinenz oder künstlicher Ableitung.', punkte: [0, 1, 2, 3] },
   { nr: '4.12', name: 'Bewältigen der Folgen einer Stuhlinkontinenz und Umgang mit Stoma', erklaerung: 'Einlagen wechseln, Stoma versorgen, reinigen. Zählt nur bei überwiegender oder vollständiger Inkontinenz oder Stoma.', punkte: [0, 1, 2, 3] },
 ]
@@ -104,7 +112,7 @@ export const STUFEN_SONDE = ['entfällt', 'teilweise', 'vollständig'] as const
 export const MODUL4_KIND = {
   nr: '4.K',
   name: 'Gravierende Probleme bei der Nahrungsaufnahme',
-  erklaerung: 'Bei Kindern bis 18 Monate ersetzt diese eine Frage die Selbstversorgung: Bestehen gravierende Probleme bei der Nahrungsaufnahme, die einen außergewöhnlich pflegeintensiven Hilfebedarf auslösen? Dann gibt es 20 Punkte.',
+  erklaerung: 'Bei Kindern bis 18 Monate ersetzt diese eine Frage die Selbstversorgung: Bestehen gravierende Probleme bei der Nahrungsaufnahme, die einen außergewöhnlich pflegeintensiven Hilfebedarf auslösen? Das ist der Fall, wenn das Füttern deutlich häufiger nötig ist oder deutlich länger dauert als bei gleichaltrigen Kindern, etwa bei Trinkschwäche, Schluckstörungen oder häufigem Erbrechen. Dann gibt es 20 Punkte.',
   punkte: 20,
 }
 
@@ -143,12 +151,12 @@ export const MODUL5_DIAET: Kriterium = {
 
 /** Modul 6 (15 %): sechs Kriterien, 0/1/2/3 Punkte */
 export const MODUL6: Kriterium[] = [
-  { nr: '6.1', name: 'Gestaltung des Tagesablaufs und Anpassung an Veränderungen', erklaerung: 'Den Tag selbst einteilen, mit ungeplanten Änderungen zurechtkommen.', punkte: [0, 1, 2, 3] },
-  { nr: '6.2', name: 'Ruhen und Schlafen', erklaerung: 'Einen Schlafrhythmus halten, zur Ruhe kommen, bei Bedarf tagsüber ruhen.', punkte: [0, 1, 2, 3] },
-  { nr: '6.3', name: 'Sichbeschäftigen', erklaerung: 'Lesen, Radio hören, Handarbeit, Rätsel, Gartenarbeit: sich allein sinnvoll beschäftigen.', punkte: [0, 1, 2, 3] },
-  { nr: '6.4', name: 'Vornehmen von in die Zukunft gerichteten Planungen', erklaerung: 'Termine vereinbaren, einen Besuch oder Ausflug planen, Vorräte im Blick haben.', punkte: [0, 1, 2, 3] },
+  { nr: '6.1', name: 'Gestaltung des Tagesablaufs und Anpassung an Veränderungen', erklaerung: 'Den Tag selbst einteilen, mit ungeplanten Änderungen zurechtkommen.', erklaerungKind: 'Von sich aus festlegen, was es in den nächsten Stunden tun möchte, zum Beispiel spielen oder Freunde besuchen, und mit Änderungen zurechtkommen.', punkte: [0, 1, 2, 3] },
+  { nr: '6.2', name: 'Ruhen und Schlafen', erklaerung: 'Einen Schlafrhythmus halten, zur Ruhe kommen, bei Bedarf tagsüber ruhen.', erklaerungKind: 'Einen Tag-Nacht-Rhythmus halten, zur Ruhe kommen, ins Bett kommen und nachts liegen bleiben.', punkte: [0, 1, 2, 3] },
+  { nr: '6.3', name: 'Sichbeschäftigen', erklaerung: 'Lesen, Radio hören, Handarbeit, Rätsel, Gartenarbeit: sich allein sinnvoll beschäftigen.', erklaerungKind: 'Freie Zeit mit Spielen, Basteln, Lesen oder Medien füllen, allein oder mit anderen Kindern.', punkte: [0, 1, 2, 3] },
+  { nr: '6.4', name: 'Vornehmen von in die Zukunft gerichteten Planungen', erklaerung: 'Termine vereinbaren, einen Besuch oder Ausflug planen, Vorräte im Blick haben.', erklaerungKind: 'Über den Tag hinaus planen, zum Beispiel Vorstellungen zu einem anstehenden Geburtstag oder den Ferien entwickeln oder einen Wochenplan der Schule nachvollziehen.', punkte: [0, 1, 2, 3] },
   { nr: '6.5', name: 'Interaktion mit Personen im direkten Kontakt', erklaerung: 'Auf Menschen im Raum reagieren, Gespräch, Blick, Gestik erwidern.', punkte: [0, 1, 2, 3] },
-  { nr: '6.6', name: 'Kontaktpflege zu Personen außerhalb des direkten Umfelds', erklaerung: 'Telefonieren, schreiben, Freunde und Verwandte treffen oder einladen.', punkte: [0, 1, 2, 3] },
+  { nr: '6.6', name: 'Kontaktpflege zu Personen außerhalb des direkten Umfelds', erklaerung: 'Telefonieren, schreiben, Freunde und Verwandte treffen oder einladen.', erklaerungKind: 'Kontakt zu Freunden, Verwandten oder Nachbarn halten, zum Beispiel Besuche verabreden oder telefonieren.', punkte: [0, 1, 2, 3] },
 ]
 
 /** Anlage 2: Summe der Einzelpunkte je Modul → gewichtete Punkte (Punktbereich 0 bis 4) */
@@ -221,6 +229,76 @@ export function punkteTeil3(liste: { h: Haeufigkeit; taeglich: number | null; wo
 
 export type Person = 'erwachsen' | 'kind' | 'saeugling'
 
+/**
+ * Altersentsprechender Selbständigkeitsgrad bei Kindern (BRi 26.08.2026, Kapitel 6.5, Tabellen zu Modul 1, 2, 4 und 6).
+ * Je Kriterium drei Altersgrenzen in Monaten: Ab der ersten ist ein gesund entwickeltes Kind „überwiegend unselbständig“
+ * (Modul 2: Fähigkeit „in geringem Maße vorhanden“), ab der zweiten „überwiegend selbständig“ („größtenteils vorhanden“),
+ * ab der dritten „selbständig“ („vorhanden“). Darunter ist es „unselbständig“ („nicht vorhanden“); das Kriterium wird dann
+ * nicht bewertet. 6 Wochen = 1,5 Monate. 4.11 und 4.12: unter 5 Jahren unselbständig, ab 5 Jahren selbständig.
+ * 4.13 wird ab 18 Monaten wie bei Erwachsenen bewertet. Die Module 3 und 5 sind altersunabhängig.
+ */
+export const ALTER_KIND: Record<string, readonly [number, number, number]> = {
+  '1.1': [1, 3, 9],
+  '1.2': [6, 8, 9],
+  '1.3': [8, 9, 11],
+  '1.4': [12, 13, 18],
+  '1.5': [15, 18, 30],
+  '2.1': [1.5, 9, 15],
+  '2.2': [13, 18, 72],
+  '2.3': [30, 60, 84],
+  '2.4': [9, 36, 66],
+  '2.5': [5, 12, 15],
+  '2.6': [18, 30, 54],
+  '2.7': [48, 60, 72],
+  '2.8': [30, 78, 120],
+  '2.9': [3, 13, 48],
+  '2.10': [16, 18, 30],
+  '2.11': [15, 24, 48],
+  '4.1': [24, 48, 72],
+  '4.2': [18, 42, 60],
+  '4.3': [24, 48, 72],
+  '4.4': [42, 48, 96],
+  '4.5': [18, 42, 72],
+  '4.6': [18, 42, 72],
+  '4.7': [24, 66, 96],
+  '4.8': [7, 20, 30],
+  '4.9': [8, 11, 24],
+  '4.10': [18, 42, 72],
+  '4.11': [60, 60, 60],
+  '4.12': [60, 60, 60],
+  '6.1': [30, 60, 84],
+  '6.2': [6, 60, 132],
+  '6.3': [6, 36, 60],
+  '6.4': [30, 36, 60],
+  '6.5': [1.5, 9, 12],
+  '6.6': [12, 36, 60],
+}
+/** Ab dem vollendeten 11. Lebensjahr gilt die Punktesystematik der Erwachsenen (BRi Kapitel 6) */
+export const ALTER_WIE_ERWACHSENE = 132
+/** Kinder bis 18 Monate erreichen über die Punkte höchstens 65 (Modul 3: 15, 4.K: 30, Modul 5: 20), also höchstens Pflegegrad 4 */
+export const HOECHSTPUNKTE_SAEUGLING = 65
+
+/** Stufe, die ein gesund entwickeltes Kind dieses Alters erreicht: 0 selbständig … 3 unselbständig (Modul 2: vorhanden … nicht vorhanden) */
+export function altersstufe(nr: string, alterMonate: number): number {
+  const g = ALTER_KIND[nr]
+  if (!g || alterMonate >= ALTER_WIE_ERWACHSENE) return 0
+  if (alterMonate < g[0]) return 3
+  if (alterMonate < g[1]) return 2
+  if (alterMonate < g[2]) return 1
+  return 0
+}
+
+/**
+ * Wird das Kriterium bewertet? Kinder bis 18 Monate: nur Modul 3 und 5 (dazu 4.K und die besondere Bedarfskonstellation,
+ * die gesondert abgefragt werden). Kinder ab 18 Monaten: nicht, solange auch gesund entwickelte Kinder gleichen Alters
+ * hier noch unselbständig sind.
+ */
+export function wirdBewertet(nr: string, person: Person, alterMonate: number | null): boolean {
+  if (person === 'saeugling') return nr.startsWith('3.') || nr.startsWith('5.')
+  if (person === 'kind' && alterMonate !== null) return altersstufe(nr, alterMonate) < 3
+  return true
+}
+
 /** Pflegegrad aus den Gesamtpunkten (§ 15 Abs. 3; Kinder bis 18 Monate nach Abs. 7 eine Stufe höher) */
 export function pflegegrad(gesamt: number, person: Person): number {
   if (gesamt < 12.5) return 0
@@ -233,6 +311,8 @@ export const GRENZEN_PFLEGEGRAD = [12.5, 27, 47.5, 70, 90] as const
 
 export type Antworten = {
   person: Person
+  /** Alter des Kindes in vollendeten Monaten (nur bei person 'kind'; Vergleich mit gleichaltrigen Kindern) */
+  alterMonate: number | null
   aktuellerPflegegrad: number | null
   /** 0–3 je Kriterium, Index wie in MODUL1 … MODUL6 */
   m1: number[]
@@ -257,6 +337,7 @@ export type Antworten = {
 export function leereAntworten(person: Person = 'erwachsen'): Antworten {
   return {
     person,
+    alterMonate: null,
     aktuellerPflegegrad: null,
     m1: MODUL1.map(() => 0),
     m2: MODUL2.map(() => 0),
@@ -287,17 +368,23 @@ export type Ergebnis = {
 }
 
 export function berechnen(a: Antworten): Ergebnis {
-  const summe = (liste: Kriterium[], antworten: number[]) => liste.reduce((s, k, i) => s + (k.punkte[antworten[i] ?? 0] ?? 0), 0)
-  const m1s = summe(MODUL1, a.m1)
-  const m2s = summe(MODUL2, a.m2)
+  const saeugling = a.person === 'saeugling'
+  const alter = a.person === 'kind' ? a.alterMonate : null
+  // Kinder ab 18 Monaten: Punkte nur für den Abstand zur Stufe eines gesund entwickelten Kindes gleichen Alters
+  // (BRi Kapitel 6, „Tabelle zur Berechnungssystematik“); bei Erwachsenen und in Modul 3 und 5 ist der Abstand die Stufe selbst.
+  const abstand = (nr: string, stufe: number) => Math.max(0, stufe - (alter === null ? 0 : altersstufe(nr, alter)))
+  const summe = (liste: Kriterium[], antworten: number[]) => liste.reduce((s, k, i) => s + (k.punkte[abstand(k.nr, antworten[i] ?? 0)] ?? 0), 0)
+  // Kinder bis 18 Monate: Module 1, 2 und 6 entfallen, Modul 4 ersetzt die Frage 4.K (BRi Kapitel 6.6.1)
+  const m1s = saeugling ? 0 : summe(MODUL1, a.m1)
+  const m2s = saeugling ? 0 : summe(MODUL2, a.m2)
   const m3s = summe(MODUL3, a.m3)
   let m4s: number
-  if (a.person === 'saeugling') {
+  if (saeugling) {
     m4s = a.kindNahrung ? MODUL4_KIND.punkte : 0
   } else {
     m4s = MODUL4.reduce((s, k, i) => {
       if ((k.nr === '4.11' || k.nr === '4.12') && !a.inkontinenz) return s
-      return s + (k.punkte[a.m4[i] ?? 0] ?? 0)
+      return s + (k.punkte[abstand(k.nr, a.m4[i] ?? 0)] ?? 0)
     }, 0)
     m4s += MODUL4_SONDE.punkte[a.sonde] ?? 0
   }
@@ -305,7 +392,7 @@ export function berechnen(a: Antworten): Ergebnis {
     MODUL5_TEIL3.map((k, i) => ({ h: a.m5teil3[i] ?? KEINE, taeglich: k.taeglich, woche: k.woche, monat: k.monat })).filter((_, i) => !(MODUL5_TEIL3[i] as { nurKinder?: boolean }).nurKinder || a.person !== 'erwachsen'),
   )
   const m5s = punkteTeil1(a.m5teil1) + punkteTeil2(a.m5teil2) + teil3.punkte + (MODUL5_DIAET.punkte[a.m5diaet] ?? 0)
-  const m6s = summe(MODUL6, a.m6)
+  const m6s = saeugling ? 0 : summe(MODUL6, a.m6)
 
   const modul = (s: number, g: { grenzen: readonly number[]; punkte: readonly number[] }): ModulErgebnis => ({ summe: s, bereich: punktbereich(s, g), gewichtet: gewichtetePunkte(s, g) })
   const module = {
@@ -319,9 +406,12 @@ export function berechnen(a: Antworten): Ergebnis {
   const m2und3 = Math.max(module.m2.gewichtet, module.m3.gewichtet)
   const gesamt = Math.round((module.m1.gewichtet + m2und3 + module.m4.gewichtet + module.m5.gewichtet + module.m6.gewichtet) * 100) / 100
   let grad = pflegegrad(gesamt, a.person)
+  // Besondere Bedarfskonstellation: Pflegegrad 5, auch wenn die Punkte darunter liegen (§ 15 Abs. 4; bei Kindern bis 18 Monate BRi Kapitel 6.6.1)
   if (a.bedarfskonstellation) grad = 5
   const naechste = GRENZEN_PFLEGEGRAD.find((g) => g > gesamt)
-  const bisNaechster = grad >= 5 || naechste === undefined ? null : Math.round((naechste - gesamt) * 100) / 100
+  // Bei Kindern bis 18 Monate ist die Grenze zu Pflegegrad 5 (70) über die Punkte nicht erreichbar (höchstens 65)
+  const unerreichbar = saeugling && naechste !== undefined && naechste > HOECHSTPUNKTE_SAEUGLING
+  const bisNaechster = grad >= 5 || naechste === undefined || unerreichbar ? null : Math.round((naechste - gesamt) * 100) / 100
   return { module, m2und3, gesamt, pflegegrad: grad, bisNaechster, teil3Summe: teil3.summe }
 }
 

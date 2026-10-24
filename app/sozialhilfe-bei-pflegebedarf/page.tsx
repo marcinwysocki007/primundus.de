@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Sozialhilfe bei Pflegebedarf — Hilfe zur Pflege beantragen',
+  title: 'Sozialhilfe bei Pflegebedarf: Hilfe zur Pflege beantragen',
   description: 'Sozialhilfe Pflege 2026: Was Hilfe zur Pflege (§61 SGB XII) ist, wer Anspruch hat, ob Kinder zahlen müssen und wie man den Antrag stellt.',
   alternates: { canonical: 'https://primundus.de/sozialhilfe-bei-pflegebedarf' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Sozialhilfe bei Pflegebedarf 2026 | Primundus',
+    title: 'Sozialhilfe bei Pflegebedarf: Hilfe zur Pflege beantragen',
     description: 'Hilfe zur Pflege (§61 SGB XII): Wer Anspruch hat, ob Kinder zahlen müssen und wie man Antrag stellt.',
     url: 'https://primundus.de/sozialhilfe-bei-pflegebedarf',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Sozialhilfe bei Pflegebedarf — Hilfe zur Pflege beantragen 2026',
+    headline: 'Sozialhilfe bei Pflegebedarf: Hilfe zur Pflege beantragen und ob Kinder zahlen müssen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function SozialhilfeBeiPflegebedarf() {
             { label: "Sozialhilfe bei Pflegebedarf" },
           ]}
           augenbraue="Ratgeber Finanzierung"
-          titel="Sozialhilfe bei Pflegebedarf — Hilfe zur Pflege beantragen"
+          titel="Sozialhilfe bei Pflegebedarf: Hilfe zur Pflege beantragen und ob Kinder zahlen müssen"
           einleitung="Wenn Rente, Ersparnisse und Pflegekasse-Leistungen die Pflegekosten nicht decken, greift die Hilfe zur Pflege nach §61 SGB XII. Das Sozialamt übernimmt den nicht gedeckten Teil. Und seit 2020 gilt: Kinder müssen erst dann für elterliche Pflegekosten aufkommen wenn ihr eigenes Jahreseinkommen 100.000 Euro brutto übersteigt."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

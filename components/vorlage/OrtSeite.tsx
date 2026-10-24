@@ -9,7 +9,7 @@
 //   Kopf   Brotkrumen · „6× Testsieger DIE WELT" · H1 · Unterzeile · Knopf, Gesichter, Punkte, Sterne ·
 //          „Was 24-Stunden-Pflege in <Ort> bedeutet" (Definition) · Marta mit Siegel      RatgeberKopf
 //   1  Bekannt aus                                                   BekanntAus (Startseite)
-//   2  Was es in <Ort> kostet und was die Kasse zahlt               OrtKostenLanding (Heim im Land gegen Zuschüsse zu Hause, Tabellen)
+//   2  Was 24-Stunden-Pflege in <Ort> kostet und welche Zuschüsse  OrtKostenLanding (Heim im Land gegen Zuschüsse zu Hause, Tabellen)
 //   3  So läuft es ab                                                OrtAblaufLanding (3 Spalten mit Bild) + das eine dunkle Band
 //   4  Was eine Betreuungskraft bei Ihnen übernimmt                  OrtAufgabenLanding (Bild + Punkte + Themen-Links)
 //   5  Passt 24-Stunden-Pflege zu Ihrer Situation?                   OrtPasstLanding (Situationen, Voraussetzungen, „Sie sind unsicher?")
@@ -26,6 +26,7 @@
 import { AnsprechpartnerinGross, KontaktBand } from '@/components/ArticleCTA'
 import { NearbyCities } from '@/components/NearbyCities'
 import { OrtBeratung } from '@/components/orte/OrtBeratung'
+import { OrtPflegeImKreis } from '@/components/orte/OrtPflegeImKreis'
 import { OrtWasBedeutetText } from '@/components/orte/OrtGrundlagen'
 import { OrtAblaufLanding, OrtAufgabenLanding, OrtKostenLanding, OrtPasstLanding, OrtWarumLanding } from '@/components/orte/OrtLanding'
 import { BekanntAus } from '@/components/vertrauen/BekanntAus'
@@ -174,6 +175,9 @@ export function OrtSeite({ daten: d, siegel = 'foto' }: { daten: OrtDaten; siege
           ) : null}
           {(d.wohnenBaustein ?? d.art === 'hand') ? <OrtWohnen slug={d.slug} ort={d.ort} als="h3" /> : null}
           {zahlen.length ? <BlickKasten titel={`${d.ort} in Zahlen`} punkte={zahlen} /> : null}
+          {/* 02.10.2026: Pflegestatistik des Kreises (kreisfreie Stadt = eigener Kreis), Link auf /pflege-im-kreis#kreis-<AGS>.
+              Nur Zahlen und ein Satz, kein Fließtext, der auf 186 Seiten gleich stünde. Offene Zuordnung = kein Kasten. */}
+          <OrtPflegeImKreis slug={d.slug} />
           <OrtBeratung slug={d.slug} ort={d.ort} als="h3" eigene={d.beratungEigene} />
         </div>
       </Sektion>

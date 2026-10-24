@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegedienst oder 24h-Kraft — was ist besser? | Primundus',
+  title: 'Pflegedienst oder 24-Stunden-Pflege: was ist besser?',
   description: 'Ambulanter Pflegedienst oder 24h-Betreuungskraft? Vollständiger Vergleich: Kosten, Leistungen, wann was sinnvoll ist und wann eine Kombination am besten trägt.',
   alternates: { canonical: 'https://primundus.de/pflegedienst-oder-24h-kraft' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Pflegedienst oder 24h-Kraft? | Primundus',
+    title: 'Pflegedienst oder 24-Stunden-Pflege: was ist besser?',
     description: 'Ambulanter Pflegedienst vs. 24h-Betreuungskraft — ehrlicher Vergleich 2026.',
     url: 'https://primundus.de/pflegedienst-oder-24h-kraft',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegedienst oder 24h-Kraft — was ist besser?',
+    headline: 'Pflegedienst oder 24-Stunden-Pflege: was ist die bessere Wahl?',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -84,7 +84,7 @@ export default function PflegedienstOder24hKraft() {
             { label: "Pflegedienst oder 24h-Kraft" },
           ]}
           augenbraue="Ratgeber Vergleich"
-          titel="Pflegedienst oder 24h-Kraft — was ist die bessere Wahl?"
+          titel="Pflegedienst oder 24-Stunden-Pflege: was ist die bessere Wahl?"
           einleitung="Ambulanter Pflegedienst oder 24h-Betreuungskraft zuhause — das ist oft die erste Frage wenn Pflege notwendig wird. Beide sind legitime Lösungen. Welche besser passt, hängt vom Pflegebedarf, den Lebensumständen und dem Budget ab. Und sehr oft ist die Antwort: beide zusammen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

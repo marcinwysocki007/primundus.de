@@ -12,12 +12,12 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Prien am Chiemsee | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Prien am Chiemsee in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege in Prien am Chiemsee: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-prien' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Prien am Chiemsee | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Prien am Chiemsee in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege in Prien am Chiemsee: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-prien',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Prien am Chiemsee?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.200 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Prien am Chiemsee?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.270 € Eigenanteil (vdek 07/2026).' },
   { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Prien am Chiemsee starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Wie viele ältere Menschen leben in Prien am Chiemsee?', a: '1.714 Einwohnerinnen und Einwohner sind 75 Jahre oder älter, das sind 16,0 Prozent — in Bayern 10,4 Prozent. Wichtiger für die Frage nach Betreuung ist aber, wer mit wem zusammenlebt: In 33,4 Prozent der Haushalte leben ausschließlich Menschen ab 65 (Bayern: 23,0 Prozent). In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Genau dafür ist eine Betreuungskraft gedacht, die mit einzieht.' },
   { q: 'Wie wohnt man in Prien am Chiemsee — Haus oder Geschosswohnung?', a: 'Auf ein Gebäude kommen in Prien am Chiemsee im Schnitt 2,2 Wohnungen, in Bayern 2,1. 67,1 Prozent der Gebäude stehen frei, 12,3 Prozent stehen in geschlossener Reihe. 33,0 Prozent aller Wohnungen stammen aus der Zeit vor 1970. Für die Pflege zu Hause heißt das vor allem eins: Treppen sind in Prien am Chiemsee ein Thema, und wer sie nicht mehr schafft, braucht jemanden im Haus statt jemanden, der dreimal am Tag kommt.' },
   { q: 'Welches Einzugsgebiet wird in Prien am Chiemsee bedient?', a: 'Prien am Chiemsee und Landkreis Rosenheim West: Bernau, Brannenburg, Aschau, Wasserburg am Inn und alle Gemeinden im westlichen Landkreis Rosenheim' },
   { q: 'Ist in einer Wohnung in Prien am Chiemsee Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Prien am Chiemsee hat im Schnitt 97,3 m², 23,5 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 76,1 % der Gebäude in Prien am Chiemsee sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.270 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {
@@ -41,14 +41,14 @@ const ORT: OrtDaten = {
   ort: 'Prien am Chiemsee',
   land: 'Bayern',
   art: 'erzeugt',
-  aktualisiert: '24. September 2026',
+  aktualisiert: '2. Oktober 2026',
   lesezeit: '6 Min.',
   einleitung: <>Mit dem Chiemsee vor der Tür — in Prien, am Hafen in Stock oder Richtung Rimsting und Bernau — wird man gern alt. Eine Betreuungskraft von Primundus zieht mit ein, wenn allein leben nicht mehr geht, und ist bei Bedarf auch nachts da.</>,
   kreis: 'Landkreis Rosenheim West',
   vorOrt: {
     inhalt: (
       <>
-        <Text>Jeder dritte Haushalt in Prien am Chiemsee besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. Wenn dort nachts etwas passiert, ist niemand da, der es mitbekommt. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Prien am Chiemsee ist älter als das Land: 16,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.714 Menschen, in Bayern sind es 10,4 Prozent.</Text>
+        <Text>Jeder dritte Haushalt in Prien am Chiemsee besteht nur aus Menschen ab 65 — in Bayern 23,0 Prozent. In diesen Haushalten lebt niemand unter 65, der einspringen könnte. Hilfe kommt entweder von außen — oder vom Partner, der selbst über 65 ist. Das ist der Fall, für den eine Betreuungskraft im Haushalt gedacht ist. Prien am Chiemsee ist älter als das Land: 16,0 Prozent der Einwohner sind 75 Jahre oder älter — das sind 1.714 Menschen, in Bayern sind es 10,4 Prozent.</Text>
         <Text>49,7 Prozent aller Haushalte in Prien am Chiemsee bestehen aus einer einzigen Person, in Bayern sind es 41,9 Prozent. Alleinlebend heißt im Pflegefall: Es ist niemand da, der es mitbekommt. 34,9 Prozent der Wohnungen wurden zwischen 1970 und 1989 gebaut, in Bayern 27,8 Prozent.</Text>
         <Text>In Prien am Chiemsee wohnen nur 43,0 Prozent der Haushalte im Eigentum, in Bayern 49,3 Prozent. In eine größere Wohnung zu ziehen ist für die meisten keine Option — es muss also in der vorhandenen gehen.</Text>
         <Text>In Zahlen: 1.714 Menschen in Prien am Chiemsee sind 75 Jahre oder älter, und es gibt 6.213 Wohnungen in 2.769 Gebäuden. Ob darunter eine ist, in der eine Betreuungskraft ein eigenes Zimmer bekommt, entscheidet sich nicht an der Statistik, sondern an Ihrem Grundriss — und das klären wir vorab.</Text>

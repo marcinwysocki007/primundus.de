@@ -5,7 +5,7 @@
 // Entlastungsbetrag nie eingerechnet. Preisregel 25.09. (Martin): Aufschläge (Pflegegrad 5, bettlägerig, Nächte) werden
 // benannt, nicht beziffert — deshalb bei Pflegegrad 5 kein Preis und kein Eigenanteil, sondern die Zuschüsse und der Rechner.
 import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN } from '@/lib/fakten'
-import { HEIM_LEISTUNG } from '@/lib/heimkosten'
+import { HEIM_EIGENANTEIL, HEIM_LEISTUNG } from '@/lib/heimkosten'
 
 export const TAGESPFLEGE: Record<2 | 3 | 4 | 5, number> = { 2: 721, 3: 1357, 4: 1685, 5: 2085 }
 
@@ -182,7 +182,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       { title: 'Betreuungskraft im Haus: bei Pflegegrad 3 die häufigste Wahl', desc: 'Ab 2.150 € im Monat für eine Person. Davon gehen 599 € Pflegegeld, 295 € anteiliges Entlastungsbudget (wenn die Kasse den Einsatz als Verhinderungspflege anerkennt) und bis zu 333 € Steuerermäßigung ab: ab ca. 923 € selbst zu tragen. Die Betreuungskraft übernimmt Körperpflege, Haushalt, Begleitung, ist bei Bedarf auch nachts da.' },
       { title: 'Pflegedienst dazu für die Behandlungspflege', desc: 'Spritzen, Verbände, Blutzucker verordnet der Arzt; die Krankenkasse zahlt, das Pflegegeld bleibt voll. Grundpflege durch den Pflegedienst geht über die Sachleistungen und mindert das Pflegegeld anteilig.' },
       { title: 'Tagespflege, wenn Angehörige tagsüber pflegen', desc: `Bis ${euro(TAGESPFLEGE[3])} im Monat zusätzlich zum Pflegegeld. Zwei bis drei Tage in der Woche Tagespflege plus Familie am Abend und am Wochenende tragen viele bis in die späte Phase.` },
-      { title: 'Pflegeheim', desc: `Die Kasse zahlt ${euro(HEIM_LEISTUNG[3])} an das Heim; der Eigenanteil liegt im ersten Jahr bundesweit bei durchschnittlich 3.364 € im Monat, in Bayern bei rund 3.200 €, in Nordrhein-Westfalen bei rund 3.580 €. Bei Pflegegrad 3 ist das Heim selten die günstigere Lösung.` },
+      { title: 'Pflegeheim', desc: `Die Kasse zahlt ${euro(HEIM_LEISTUNG[3])} an das Heim; der Eigenanteil liegt im ersten Jahr bundesweit bei durchschnittlich 3.364 € im Monat, in Bayern bei rund ${euro(HEIM_EIGENANTEIL['Bayern'])}, in Nordrhein-Westfalen bei rund ${euro(HEIM_EIGENANTEIL['Nordrhein-Westfalen'])}. Bei Pflegegrad 3 ist das Heim selten die günstigere Lösung.` },
     ],
     eigenanteil: 2150 - PFLEGEGELD[3] - 295 - 333,
     preis: 2150,

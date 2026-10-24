@@ -12,12 +12,12 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
   title: '24-Stunden-Pflege in Darmstadt und Landkreis | 6× Testsieger',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Darmstadt in 3 Tagen möglich – mit Bestpreisgarantie.',
+  description: '24-Stunden-Pflege zu Hause in Darmstadt: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-darmstadt' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     title: '24-Stunden-Pflege in Darmstadt und Landkreis | 6× Testsieger',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Darmstadt in 3 Tagen möglich – mit Bestpreisgarantie.',
+    description: '24-Stunden-Pflege zu Hause in Darmstadt: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-darmstadt',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Darmstadt?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Hessen kostet im Schnitt rund 3.230 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Darmstadt?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Hessen kostet im Schnitt rund 3.430 € Eigenanteil (vdek 07/2026).' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Darmstadt starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Funktioniert 24-Stunden-Betreuung in einer Darmstädter Wohnung?', a: 'Das ist hier die entscheidende Frage, und wir beantworten sie ehrlich: Darmstadt ist räumlich die anspruchsvollste Stadt der Region. Die durchschnittliche Wohnung misst 81,8 Quadratmeter gegenüber 98,3 in Hessen, jede dritte hat unter 60, und 53,1 Prozent liegen in Häusern mit sieben oder mehr Parteien — eine Folge des Wiederaufbaus nach der Brandnacht 1944, aus der allein 20,9 Prozent des heutigen Wohnungsbestands stammen. Nur 29,5 Prozent der Haushalte wohnen im Eigentum. Notwendig ist ein eigenes, abschließbares Zimmer für die Betreuungskraft. Ist das da, funktioniert es wie überall; ist es nicht da, sagen wir Ihnen das vorher.' },
   { q: 'Darmstadt ist eine junge Stadt — lohnt sich das Thema hier überhaupt?', a: 'Die Quote täuscht. Mit 48 Pflegebedürftigen je 1.000 Einwohner hat Darmstadt die niedrigste Pflegequote aller 26 hessischen Kreise (Hessen: 67) — das liegt an den vielen Studierenden, nicht an geringerem Bedarf. In absoluten Zahlen sind 7.587 Menschen pflegebedürftig und 29.645 über 65 Jahre alt. Interessanter ist die Struktur: In Darmstadt wird seltener rein familiär gepflegt als im Umland (54,5 gegen 62,1 Prozent im Landkreis Darmstadt-Dieburg), dafür ist die ambulante Versorgung mit 19,4 Prozent überdurchschnittlich.' },
   { q: 'Gibt es in Darmstadt genug Heimplätze als Alternative?', a: 'Weniger, als viele annehmen. Zwar leben mit 14,4 Prozent etwas mehr Pflegebedürftige im Heim als in Hessen insgesamt (13,0 Prozent) — gemessen an der Zahl der über 65-Jährigen stehen aber nur 43 Plätze je 1.000 zur Verfügung, gegenüber 47 im Land. Der Landkreis Darmstadt-Dieburg liegt mit 34 noch deutlich darunter. Die Region ist insgesamt heimplatzarm, und die Stadt gleicht das nicht aus. Wer zu Hause bleiben möchte, hat dafür also nicht nur persönliche, sondern auch praktische Gründe.' },
   { q: 'Welches Einzugsgebiet wird in Darmstadt bedient?', a: 'Darmstadt und Landkreis Darmstadt-Dieburg: Griesheim, Weiterstadt, Dieburg, Reinheim, Groß-Umstadt und alle Gemeinden im Landkreis Darmstadt-Dieburg' },
   { q: 'Ist in einer Wohnung in Darmstadt Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Darmstadt hat im Schnitt 81,8 m², 33,5 % sind kleiner als 60 m². Das ist eng, deshalb klären wir vor der Zusage am Telefon, welches Zimmer frei wird — meist das ehemalige Kinder- oder Arbeitszimmer. 64,5 % der Gebäude in Darmstadt sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.230 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Hessen zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.430 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

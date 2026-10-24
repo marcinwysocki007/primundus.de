@@ -20,11 +20,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Burnout pflegende Angehörige — Warnsignale & Hilfe',
+  title: 'Burnout bei pflegenden Angehörigen: Warnsignale und Hilfe',
   description: 'Burnout durch Pflege erkennen: Erschöpfung, Isolation, Reizbarkeit. Was sofort hilft und wie eine 24h-Betreuungskraft pflegende Angehörige dauerhaft entlastet.',
   alternates: { canonical: 'https://primundus.de/burnout-pflegende-angehoerige' },
   openGraph: {
-    title: 'Burnout pflegende Angehörige | Primundus',
+    title: 'Burnout bei pflegenden Angehörigen: Warnsignale und Hilfe',
     description: 'Warnsignale für Burnout durch Pflege und wie man Angehörige dauerhaft entlastet.',
     url: 'https://primundus.de/burnout-pflegende-angehoerige',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Burnout pflegende Angehörige — Warnsignale, Ursachen & Hilfe',
+    headline: 'Burnout bei pflegenden Angehörigen: Warnsignale erkennen und Hilfe finden',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -82,7 +82,7 @@ export default function BurnoutPflegendeAngehoerige() {
             { label: "Burnout pflegende Angehörige" },
           ]}
           augenbraue="Ratgeber Angehörige"
-          titel="Burnout pflegende Angehörige — Warnsignale erkennen & Hilfe finden"
+          titel="Burnout bei pflegenden Angehörigen: Warnsignale erkennen und Hilfe finden"
           einleitung="Etwa jede vierte pflegende Person fühlt sich hoch belastet und hat das Gefühl, die Pflege nicht mehr bewältigen zu können (Wissenschaftliches Institut der AOK, 2023). Burnout entwickelt sich schleichend — und wer ihn nicht rechtzeitig erkennt, gefährdet am Ende die eigene Gesundheit und die Pflege des Angehörigen. Die wichtigste Botschaft: Entlastung zu suchen ist keine Schwäche, sondern Verantwortung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

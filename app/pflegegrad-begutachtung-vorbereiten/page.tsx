@@ -21,11 +21,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'MD-Begutachtung vorbereiten — Checkliste & 7 Tipps',
+  title: 'Begutachtung zum Pflegegrad vorbereiten: Checkliste, 7 Tipps',
   description: 'MD-Begutachtung vorbereiten: Pflegetagebuch führen, den schlechtesten Tag schildern, Vertrauensperson einladen.',
   alternates: { canonical: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten' },
   openGraph: {
-    title: 'MD-Begutachtung vorbereiten | Primundus',
+    title: 'Begutachtung zum Pflegegrad vorbereiten: Checkliste, 7 Tipps',
     description: 'Checkliste und 7 Tipps für die MD-Begutachtung — so erreichen Sie eine faire und korrekte Einstufung.',
     url: 'https://primundus.de/pflegegrad-begutachtung-vorbereiten',
     siteName: 'Primundus',
@@ -39,7 +39,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'MD-Begutachtung vorbereiten — Checkliste & 7 Tipps für höhere Einstufung',
+    headline: 'MD-Begutachtung zum Pflegegrad vorbereiten: Checkliste und 7 Tipps',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -95,7 +95,7 @@ export default function BegutachtungVorbereiten() {
             { label: "Begutachtung vorbereiten" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="MD-Begutachtung vorbereiten — Checkliste & 7 Tipps"
+          titel="MD-Begutachtung zum Pflegegrad vorbereiten: Checkliste und 7 Tipps"
           einleitung="Die MD-Begutachtung entscheidet über den Pflegegrad — und damit über hunderte Euro Kassenzuschuss pro Monat. Wer gut vorbereitet ist, bekommt eine faire Einstufung. Wer aus Scham minimiert, verschenkt Geld. Die wichtigste Vorbereitung: Das Pflegetagebuch. Es dauert 5 Minuten täglich und macht den größten Unterschied."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

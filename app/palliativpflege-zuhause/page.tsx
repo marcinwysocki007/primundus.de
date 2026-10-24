@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('palliativpflege-zuhause', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('palliativpflege-zuhause', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist Palliativpflege zuhause?' },
@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Palliativpflege zuhause — würdevoll bis zum Ende | Primundus',
+  title: 'Palliativpflege zu Hause: wer hilft und was Angehörige entlastet',
   description: 'Palliativpflege zuhause: Was möglich ist, welches Team gebraucht wird und wie Angehörige in der letzten Lebensphase unterstützt werden können.',
   alternates: { canonical: 'https://primundus.de/palliativpflege-zuhause' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Palliativpflege zuhause | Primundus',
+    title: 'Palliativpflege zu Hause: wer hilft und was Angehörige entlastet',
     description: 'Würdevolle Begleitung in der letzten Lebensphase zuhause — was möglich ist und was gebraucht wird.',
     url: 'https://primundus.de/palliativpflege-zuhause',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Palliativpflege zuhause — würdevoll bis zum Ende',
+    headline: 'Palliativpflege zu Hause: wer Schmerzen lindert und was Angehörige entlastet',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function PalliativpflegeZuhause() {
             { label: "Palliativpflege zuhause" },
           ]}
           augenbraue="Ratgeber Palliativpflege"
-          titel="Palliativpflege zuhause — würdevoll bis zum Ende"
+          titel="Palliativpflege zu Hause: wer Schmerzen lindert und was Angehörige entlastet"
           einleitung="Die meisten Menschen möchten in ihrem Zuhause sterben — umgeben von vertrauten Menschen und Gegenständen. Mit dem richtigen Team ist das in den meisten Fällen möglich: Hausarzt, SAPV-Team, palliative Pflegekraft und Hospizbegleiter ermöglichen eine würdevolle letzte Lebensphase zuhause."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."
@@ -119,7 +119,7 @@ export default function PalliativpflegeZuhause() {
               { title: 'Hausarzt', desc: 'Koordiniert die medizinische Versorgung, verordnet SAPV wenn nötig, Ansprechpartner für Fragen. Hausbesuche sind in der Palliativsituation problemlos zu vereinbaren.' },
               { title: 'SAPV-Team (Spezialisierte Ambulante Palliativversorgung)', desc: 'Auf Verordnung des Hausarztes: Palliativarzt und -pflegekraft kommen nach Hause. Rund um die Uhr erreichbar. Kostenfrei über Krankenversicherung. Zugang: Hausarzt SAPV verordnen lassen.' },
               { title: 'Ambulanter Pflegedienst', desc: 'Übernimmt Grundpflege, Medikamentengabe, Verbandswechsel. Arbeitet mit SAPV-Team zusammen.' },
-              { title: '24h-Betreuungskraft', desc: 'Rund um die Uhr vor Ort — Gesellschaft, praktische Unterstützung, Sicherheit. Entlastet Angehörige. Meldet Veränderungen sofort.' },
+              { title: '24h-Betreuungskraft', desc: 'Lebt mit im Haushalt und ist bei Bedarf auch nachts da. Sie leistet Gesellschaft, unterstützt praktisch, gibt Sicherheit, entlastet Angehörige und informiert bei Veränderungen.' },
               { title: 'Hospizbegleiter', desc: 'Ehrenamtliche die sterbende Menschen und ihre Familien begleiten. Kostenlos über lokale Hospizdienste. Seelische Unterstützung, Dasein, Gespräche.' },
             ]}
           />
@@ -144,7 +144,7 @@ export default function PalliativpflegeZuhause() {
             </Text>
             <Punkte
               punkte={[
-                { title: 'Entlastung durch Betreuungskraft', desc: 'Eine 24h-Betreuungskraft ist nachts da wenn Angehörige schlafen müssen. Sie übernimmt praktische Aufgaben damit Angehörige Energie für emotionale Begleitung haben.' },
+                { title: 'Entlastung durch Betreuungskraft', desc: 'Eine Betreuungskraft lebt mit im Haushalt und ist bei Bedarf auch nachts da; regelmäßige Einsätze in der Nacht müssen ausgeglichen werden. Sie übernimmt praktische Aufgaben, damit Angehörige Energie für die emotionale Begleitung haben.' },
                 { title: 'Hospizbegleiter als Gesprächspartner', desc: 'Kostenlos, erfahren, ohne eigene Betroffenheit. Jemand mit dem man sprechen kann der zuhört ohne selbst zu leiden.' },
                 { title: 'Psychologische Trauerbegleitung', desc: 'Viele Hospizdienste und Beratungsstellen bieten Trauerbegleitung auch schon während der Palliativphase an — nicht erst nach dem Tod.' },
                 { title: 'Pflegezeit / Pflegeunterstützungsgeld', desc: 'Angehörige können für die Begleitung in der Sterbephase bezahlte Freistellung (Pflegeunterstützungsgeld) in Anspruch nehmen.' },

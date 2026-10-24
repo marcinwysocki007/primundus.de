@@ -7,11 +7,11 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // unverändert übernommen, Einleitung ohne Gedankenstrich-Kette; Sonderblöcke und Korrekturen siehe SEITEN im Skript.
 
 export const metadata: Metadata = {
-  title: 'Rechtliches zur 24h-Pflege — alle rechtlichen Aspekte',
+  title: 'Rechtliches zur 24-Stunden-Pflege: Beschäftigung und Verträge',
   description: 'Rechtliches zur 24h-Pflege: Beschäftigungsmodelle, Scheinselbstständigkeit vermeiden, Pflegevertrag, Vorsorgevollmacht, Patientenverfügung und Steuerrecht.',
   alternates: { canonical: 'https://primundus.de/rechtliches' },
   openGraph: {
-    title: 'Rechtliches zur 24h-Pflege | Primundus',
+    title: 'Rechtliches zur 24-Stunden-Pflege: Beschäftigung und Verträge',
     description: 'Alle rechtlichen Aspekte der 24h-Pflege — Beschäftigung, Verträge, Steuern.',
     url: 'https://primundus.de/rechtliches',
     siteName: 'Primundus',
@@ -58,7 +58,7 @@ export default function Rechtliches() {
             { label: 'Rechtliches & Vorsorge' },
           ]}
           augenbraue="Ratgeber"
-          titel="Rechtliches & Vorsorge"
+          titel="Rechtliches zur 24-Stunden-Pflege: Beschäftigung, Verträge, Vollmachten und Steuern"
           einleitung="Rechtssichere Beschäftigung, Verträge, Vollmachten und Steuern: alle rechtlichen Themen rund um die 24-Stunden-Pflege."
         />
 
@@ -68,8 +68,8 @@ export default function Rechtliches() {
               <Text>
                 Wer eine „selbstständige“ Betreuungskraft im Haushalt beschäftigt, riskiert in der Regel Scheinselbstständigkeit:
                 Sozialversicherungsbeiträge können für bis zu vier Jahre nachgefordert werden, dazu Bußgelder, bei Vorsatz ein
-                Strafverfahren. Sicher ist das Entsendemodell: Die Betreuungskraft ist beim Anbieter angestellt, für jeden Einsatz
-                liegt eine A1-Bescheinigung vor.
+                Strafverfahren. Sicher ist das Entsendemodell: Die Betreuungskraft ist beim Anbieter angestellt; die A1-Bescheinigung
+                wird vor der Anreise beantragt und, wenn sie noch nicht vorliegt, nachgereicht.
               </Text>
               <MehrDazu label="Mehr dazu:" links={[{ href: '/rechtssicher', text: 'So stellt Primundus das sicher' }]} />
             </Kasten>
@@ -78,8 +78,8 @@ export default function Rechtliches() {
           <Abschnitt id="rechtssichere-beschaeftigung-von-pflegekraeften" titel="Rechtssichere Beschäftigung von Pflegekräften">
             <Punkte
               punkte={[
-                { title: l('/pflegekraft-legal-beschaeftigen', 'Pflegekraft legal beschäftigen'), desc: 'Die 3 legalen Modelle — Entsendemodell, Direktanstellung, Scheinselbstständigkeit — erklärt und verglichen.' },
-                { title: l('/scheinselbststaendigkeit-pflege-vermeiden', 'Scheinselbstständigkeit vermeiden'), desc: 'Was Scheinselbstständigkeit ist, woran die Behörden sie erkennen und wie man das Risiko vollständig vermeidet.' },
+                { title: l('/pflegekraft-legal-beschaeftigen', 'Pflegekraft legal beschäftigen'), desc: 'Entsendemodell und Direktanstellung werden erklärt und verglichen, dazu das Risiko einer Scheinselbstständigkeit.' },
+                { title: l('/scheinselbststaendigkeit-pflege-vermeiden', 'Scheinselbstständigkeit vermeiden'), desc: 'Was Scheinselbstständigkeit ist, woran Behörden sie erkennen und wie Sie das Risiko vermeiden.' },
                 { title: l('/pflegevertrag-aufsetzen', 'Pflegevertrag aufsetzen'), desc: 'Was in jeden Pflegevertrag gehört — Leistungsumfang, Vergütung, Kündigung, Kost und Logis.' },
                 { title: l('/eu-pflegekraft-rechte-pflichten', 'EU-Pflegekraft: Rechte & Pflichten'), desc: 'Was das A1-Entsendemodell bedeutet und welche Regeln für EU-Pflegekräfte gelten.' },
                 { title: l('/haftung-pflegehaushalt', 'Haftung im Pflegehaushalt'), desc: 'Wer haftet bei Schäden: Familie, Anbieter oder Betreuungskraft?' },

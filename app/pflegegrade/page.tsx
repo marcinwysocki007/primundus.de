@@ -8,11 +8,11 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // „24h-Pflege wird ab PG 3 für viele Familien zur tragenden Versorgungsform", „Intensive 24h-Betreuung notwendig".
 
 export const metadata: Metadata = {
-  title: 'Pflegegrade — alle 5 Grade, Beträge & Leistungen 2026',
+  title: 'Pflegegrade 2026: alle 5 Grade und Leistungen in der Tabelle',
   description: 'Alle 5 Pflegegrade: Punkte, Pflegegeld 347 bis 990 € im Monat, Sachleistungen, Antrag und Begutachtung. Stand 2026.',
   alternates: { canonical: 'https://primundus.de/pflegegrade' },
   openGraph: {
-    title: 'Pflegegrade — alle 5 Grade, Beträge & Leistungen 2026',
+    title: 'Pflegegrade 2026: alle 5 Grade und Leistungen in der Tabelle',
     description: 'Pflegegrade 1–5: Voraussetzungen, Pflegegeld, Sachleistungen und Beantragung. Alles erklärt.',
     url: 'https://primundus.de/pflegegrade',
     siteName: 'Primundus',
@@ -83,7 +83,7 @@ export default function Pflegegrade() {
             { label: 'Pflegegrade' },
           ]}
           augenbraue="Ratgeber"
-          titel="Pflegegrade 2026"
+          titel="Pflegegrade 2026: Punkte je Grad und Tabelle der Leistungen"
           einleitung="Alle 5 Pflegegrade: wie viele Punkte es braucht, welches Pflegegeld es gibt, wie Sie den Antrag stellen und die Begutachtung vorbereiten."
           knopf={{ href: 'https://kostenrechner.primundus.de/?start=1&src=apex-pflegegrade', text: 'Preis & Pflegekräfte ansehen' }}
         />

@@ -21,11 +21,11 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflege steuerlich absetzen 2026 — was geht & wie viel?',
+  title: 'Pflege steuerlich absetzen 2026: welche Pflegekosten zählen',
   description: 'Pflege steuerlich absetzen 2026: 20 % der Kosten als haushaltsnahe Dienstleistung, max. 4.000 € Ersparnis/Jahr. Außergewöhnliche Belastungen zusätzlich möglich.',
   alternates: { canonical: 'https://primundus.de/pflege-steuerlich-absetzen' },
   openGraph: {
-    title: 'Pflege steuerlich absetzen 2026 | Primundus',
+    title: 'Pflege steuerlich absetzen 2026: welche Pflegekosten zählen',
     description: '20 % der Pflegekosten absetzbar — max. 4.000 € Steuerersparnis/Jahr. Wie es geht und was zusätzlich möglich ist.',
     url: 'https://primundus.de/pflege-steuerlich-absetzen',
     siteName: 'Primundus',
@@ -39,7 +39,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflege steuerlich absetzen 2026 — was geht und wie viel?',
+    headline: 'Pflege steuerlich absetzen 2026: welche Pflegekosten zählen und wie viel Sie sparen',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -83,7 +83,7 @@ export default function PflegeSteuerlichAbsetzen() {
             { label: "Pflege steuerlich absetzen" },
           ]}
           augenbraue="Ratgeber Steuern"
-          titel="Pflege steuerlich absetzen 2026 — was geht & wie viel?"
+          titel="Pflege steuerlich absetzen 2026: welche Pflegekosten zählen und wie viel Sie sparen"
           einleitung="Pflegekosten sind steuerlich absetzbar — und das lohnt sich erheblich. Wer 24h-Pflege nutzt, kann 20 % der jährlichen Kosten direkt von der Steuerschuld abziehen — maximal 4.000 Euro pro Jahr. Bei typischen Primundus-Kosten von 2.700 €/Monat sind das die volle Maximalersparnis von 4.000 Euro jährlich."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

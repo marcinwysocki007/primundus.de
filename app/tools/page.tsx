@@ -86,7 +86,7 @@ export default function ToolsPage() {
             { label: 'Tools & Rechner' },
           ]}
           augenbraue="Tools & Rechner"
-          titel="Kostenlose Pflege-Tools und Rechner 2026"
+          titel="Kostenlose Pflege-Tools und Rechner 2026: Pflegegrad, Zuschüsse und Kosten berechnen"
           einleitung="Pflegegrad einschätzen, Zuschüsse sehen, Kosten vergleichen, Vertrag und Vollmacht erstellen: alle Werkzeuge kostenlos und ohne Anmeldung. Am häufigsten genutzt: der Kostenrechner mit Ihrem Monatspreis und passenden Pflegekräften."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
         />

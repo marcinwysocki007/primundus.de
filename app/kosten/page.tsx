@@ -27,7 +27,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // Personen, Mobilität, Wünsche, Pflegegrad 5), wird benannt und gewichtet, aber nicht beziffert — den Betrag zeigt der
 // Rechner. Zuschüsse (Pflegegeld, Entlastungsbudget, Steuer) bleiben exakt, das sind Gesetzeszahlen.
 
-const AKTUALISIERT = aktualisiertAm('kosten', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('kosten', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-kosten'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
@@ -104,7 +104,7 @@ const FRAGEN = [
   },
   {
     q: 'Was kostet eine polnische Pflegekraft im Monat?',
-    a: 'Bei Primundus ab 2.150 € im Monat für eine Person. Unsere Betreuungskräfte kommen aus Polen, sind bei uns angestellt und in Polen sozialversichert; für jeden Einsatz liegt eine A1-Bescheinigung vor. Bei Pflegegrad 3 bleiben nach den Zuschüssen ab ca. 923 € im Monat.',
+    a: 'Bei Primundus ab 2.150 € im Monat für eine Person. Unsere Betreuungskräfte kommen aus Polen, sind bei uns angestellt und in Polen sozialversichert. Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Bei Pflegegrad 3 bleiben nach den Zuschüssen ab ca. 923 € im Monat.',
   },
   {
     q: 'Was ist billiger, Pflegeheim oder 24-Stunden-Pflege?',
@@ -188,8 +188,9 @@ export default function Kosten() {
 
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Abschnitt id="kosten-uebersicht" titel="Was kostet 24-Stunden-Pflege bei Primundus?">
+            {/* 15.10.2026: das vorhandene Wort verlinkt auf die Themenseite (Text unverändert) */}
             <Text>
-              Die Kosten der 24-Stunden-Pflege bestehen aus dem Monatspreis, der An- und Abreise und Kost und Logis. Der
+              Die Kosten der <a href="/24-stunden-pflege" className={QUELLE}>24-Stunden-Pflege</a> bestehen aus dem Monatspreis, der An- und Abreise und Kost und Logis. Der
               Grundpreis liegt bei 2.150 € im Monat. Er gilt für eine Person, die noch mobil ist oder mit Rollator geht.
               Nachts braucht sie keine Hilfe, und es gibt keine besonderen Wünsche an die Betreuungskraft. Im Preis
               enthalten sind Lohn und Sozialabgaben der Betreuungskraft, die Organisation der Einsätze, der Ersatz bei
@@ -367,8 +368,8 @@ export default function Kosten() {
           <Abschnitt id="polnische-pflegekraft" titel="Was kostet eine polnische Pflegekraft?">
             <Text>
               Unsere Betreuungskräfte kommen aus Polen, und der Preis ab 2.150 € im Monat gilt für sie. Darin enthalten sind
-              Lohn und Sozialabgaben: Die Betreuungskraft ist bei uns angestellt und in Polen sozialversichert, für jeden
-              Einsatz liegt eine A1-Bescheinigung vor. Sie werden nicht Arbeitgeber und zahlen weder Lohnsteuer noch
+              Lohn und Sozialabgaben: Die Betreuungskraft ist bei uns angestellt und in Polen sozialversichert.
+              Die A1-Bescheinigung beantragen wir vor der Anreise; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie werden nicht Arbeitgeber und zahlen weder Lohnsteuer noch
               Sozialabgaben.
             </Text>
             <Text>

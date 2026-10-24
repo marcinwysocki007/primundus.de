@@ -44,8 +44,11 @@ export function zusammenhalten(titel: ReactNode, bis = 14): ReactNode {
  */
 export function titelTeilen(titel: ReactNode): { kopf: string; trenner: string; rest: string } | null {
   if (typeof titel !== 'string') return null
-  const m = titel.match(/^(.+?)(:\s+|\s+[—–]\s+)(.+)$/)
+  const m = titel.match(/^(.+?)(:\s+|\?\s+|\s+[—–]\s+)(.+)$/)
   if (!m || m[1].length > 70 || m[3].length < 6) return null
+  // 16.10.2026: Auch nach einer Frage teilen; das Fragezeichen bleibt in der fetten ersten Zeile
+  // („Was kostet 24-Stunden-Pflege?“ / „Kosten und Zuschüsse 2026“, vorher drei Zeilen fett).
+  if (m[2].startsWith('?')) return { kopf: m[1] + '?', trenner: ' ', rest: m[3] }
   return { kopf: m[1], trenner: m[2], rest: m[3] }
 }
 
@@ -116,12 +119,17 @@ function SiegelKopf({ ziel, karte = false }: { ziel: string; karte?: boolean }) 
  * Die Unterzeile aus dem Rechner-Kopf, Wort für Wort — mit Ort in der Anreise-Zusage
  * (Martin 22.09.: „Anreise in Worms in drei Tagen möglich … ist besser").
  */
-export function StandardUnterzeile({ ort }: { ort?: string }) {
+/** inOrt für Namen mit Artikel („im Saarland“, „im Landkreis Wittmund“), sonst „in <ort>“ */
+export function StandardUnterzeile({ ort, inOrt }: { ort?: string; inOrt?: string }) {
+  const wo = inOrt ?? (ort ? `in ${ort}` : '')
   return (
     <>
       Sehen Sie in 2 Minuten, <strong className="text-pm-ink">was es kostet</strong> und{' '}
       <strong className="text-pm-ink">welche Pflegekräfte verfügbar sind</strong>&nbsp;–{' '}
-      <span className="whitespace-nowrap">Anreise{ort ? ` in ${ort}` : ''} in 3 Tagen möglich.</span>
+      {/* 16.10.2026: Nur „in 3 Tagen möglich.“ bleibt zusammen. Vorher hing der ganze Satz samt Ortsname an einem Stück
+          und lief auf 53 Seiten mit langen Namen („Anreise in Mecklenburg-Vorpommern in 3 Tagen möglich.“) am iPhone
+          bis zu 129 px über den Rand, die Seite ließ sich seitlich verschieben. */}
+      Anreise{wo ? ` ${wo}` : ''} <span className="whitespace-nowrap">in 3 Tagen möglich.</span>
     </>
   )
 }
@@ -420,7 +428,8 @@ function rechnerQuelle(href: string): string {
 }
 
 // Text links, rechts Inhaltsverzeichnis und Kostenknopf (beide mitlaufend, erst ab 1024 px).
-export function RatgeberRumpf({ abschnitte, children, src = 'apex-components' }: { abschnitte: { id: string; title: string }[]; children: ReactNode; src?: string }) {
+// neutral: Kostenknopf ohne Zusage zu Pflegekräften (LeistenKarte neutral), siehe RechnerKasten.
+export function RatgeberRumpf({ abschnitte, children, src = 'apex-components', neutral = false }: { abschnitte: { id: string; title: string }[]; children: ReactNode; src?: string; neutral?: boolean }) {
   return (
     <div className="max-w-seite mx-auto px-5 pt-12 pb-20 md:pt-16 md:pb-24 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
       <article className="min-w-0 max-w-[46rem]">{children}</article>
@@ -436,7 +445,7 @@ export function RatgeberRumpf({ abschnitte, children, src = 'apex-components' }:
             <InhaltLeiste abschnitte={abschnitte} />
           </div>
           <div className="mt-6 flex-none pb-6">
-            <LeistenKarte src={mitPosition(src, 'leiste')} />
+            <LeistenKarte src={mitPosition(src, 'leiste')} neutral={neutral} />
           </div>
         </div>
       </aside>
@@ -635,7 +644,31 @@ export function Kasten({
 
 // „Preis berechnen" führt direkt in den Kostenrechner, nicht zu Pflegegrad- oder Schätzrechnern
 // (Martin 17.09.2026). src bleibt je Seite, damit Anfragen ihrer Seite zugeordnet werden.
-export function RechnerKasten({ src }: { src: string }) {
+//
+// neutral (13.10.2026, Ratgeber /pflegekraft-aus-rumaenien und /pflegekraft-aus-bulgarien): Martins Vorgabe für diese
+// Seiten — Primundus „macht“ Kräfte aus diesen Ländern weder, noch „macht“ es sie nicht. Der Kasten verspricht deshalb
+// keine Pflegekräfte, nennt den Kontaktschritt und keine Minuten (Wortlaut aus den Entwürfen vom 13.10., Fassung 6g:
+// „von Primundus“, damit erkennbar ist, wessen Rechner es ist; „Vergleichspreis“ wie Titel und Knopf, Martin 13.10.).
+// Ohne neutral bleibt jede andere Seite unverändert.
+export function RechnerKasten({ src, neutral = false }: { src: string; neutral?: boolean }) {
+  if (neutral) {
+    return (
+      <Kasten titel="Vergleichspreis für Ihre Situation">
+        <Text>
+          Der Kostenrechner von Primundus fragt nach Pflegegrad, Mobilität, nächtlichem Hilfebedarf und Deutschkenntnissen. Nach den Fragen und
+          Ihren Kontaktdaten erhalten Sie einen unverbindlichen monatlichen Vergleichspreis für eine Betreuungskraft,
+          die bei Ihnen wohnt.
+        </Text>
+        <a
+          href={`https://kostenrechner.primundus.de/?start=1&src=${src}`}
+          referrerPolicy="no-referrer-when-downgrade"
+          className={`${KNOPF} sm:self-start`}
+        >
+          Vergleichspreis ansehen
+        </a>
+      </Kasten>
+    )
+  }
   return (
     <Kasten titel="Berechnen Sie Ihren Preis und sehen Sie passende Pflegekräfte sofort">
       <Text>
@@ -773,7 +806,26 @@ export function MehrDazu({ label, links }: { label: string; links: { href: strin
   )
 }
 
-export function Fragen({ fragen }: { fragen: { q: string; a: string }[] }) {
+// Ein Wort der Antwort als Link (15.10.2026): Der sichtbare Text bleibt zeichengleich, das FAQ-Schema liest weiter
+// `a`. Fehlt das Wort nach einer Textänderung, bricht der Build ab, statt den Link lautlos zu verlieren.
+type FrageLink = { wort: string; href: string }
+
+function Antwort({ a, link }: { a: string; link?: FrageLink }) {
+  if (!link) return <>{a}</>
+  const i = a.indexOf(link.wort)
+  if (i < 0) throw new Error(`Fragen: „${link.wort}" steht nicht in der Antwort „${a.slice(0, 60)}…"`)
+  return (
+    <>
+      {a.slice(0, i)}
+      <a href={link.href} className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">
+        {link.wort}
+      </a>
+      {a.slice(i + link.wort.length)}
+    </>
+  )
+}
+
+export function Fragen({ fragen }: { fragen: { q: string; a: string; link?: FrageLink }[] }) {
   return (
     <div className="border-t border-pm-line">
       {fragen.map((f) => (
@@ -786,7 +838,7 @@ export function Fragen({ fragen }: { fragen: { q: string; a: string }[] }) {
               </svg>
             </span>
           </summary>
-          <p className="pb-6 pr-14 text-[17px] leading-[1.7] text-pm-body max-w-[64ch]">{f.a}</p>
+          <p className="pb-6 pr-14 text-[17px] leading-[1.7] text-pm-body max-w-[64ch]"><Antwort a={f.a} link={f.link} /></p>
         </details>
       ))}
     </div>

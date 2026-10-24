@@ -11,13 +11,13 @@ import { Text } from '@/components/vorlage/Ratgeber'
 // Erzeugt von scripts/codemods/13-ortsseiten.py — Texte unverändert bis auf die
 // Nachtaussage (Martin 14.09.) und die Bestpreisgarantie statt der Prozent-Pille (16.09.).
 export const metadata: Metadata = {
-  title: '24-Stunden-Pflege in Pfaffenhofen | 6× Testsieger | Primundus',
-  description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Pfaffenhofen an der Ilm in 3 Tagen möglich – mit Bestpreisgarantie.',
+  title: '24-Stunden-Pflege in Pfaffenhofen | 6× Testsieger',
+  description: '24-Stunden-Pflege zu Hause in Pfaffenhofen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
   alternates: { canonical: 'https://primundus.de/24h-pflege-pfaffenhofen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24-Stunden-Pflege in Pfaffenhofen | 6× Testsieger | Primundus',
-    description: 'Geprüfte, verfügbare Betreuungskräfte und Preis direkt online sehen. Anreise in Pfaffenhofen an der Ilm in 3 Tagen möglich – mit Bestpreisgarantie.',
+    title: '24-Stunden-Pflege in Pfaffenhofen | 6× Testsieger',
+    description: '24-Stunden-Pflege zu Hause in Pfaffenhofen: Preis und Pflegekräfte sofort sehen. Keine Vermittlungsgebühr, täglich kündbar, Bestpreisgarantie.',
     url: 'https://primundus.de/24h-pflege-pfaffenhofen',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 }
 
 const FRAGEN = [
-  { q: 'Was kostet eine 24h-Pflegekraft in Pfaffenhofen an der Ilm?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.200 € Eigenanteil (vdek 07/2026).' },
+  { q: 'Was kostet eine 24h-Pflegekraft in Pfaffenhofen an der Ilm?', a: 'Das hängt vom Pflegebedarf und den Deutschkenntnissen der Betreuungskraft ab — Ihren Preis zeigt der Kostenrechner in 2 Minuten. Pflegegeld und Entlastungsbudget zahlen bei Pflegegrad 3 zusammen bis zu ca. 894 €/Monat, dazu kommen bis zu 333 €/Monat Steuerermäßigung; ein Heimplatz in Bayern kostet im Schnitt rund 3.270 € Eigenanteil (vdek 07/2026).' },
   { q: 'Gibt es in Bayern besondere Pflegeförderungen?', a: 'Ja: Bayerisches Landespflegegeld — 500 €/Jahr ab Pflegegrad 2 mit Hauptwohnsitz in Bayern (bis 2025: 1.000 €). Antrag beim Landesamt für Pflege (LfP Bayern), kumulierbar mit allen Pflegekassen-Leistungen.' },
   { q: 'Wie schnell kann eine 24h-Pflegekraft in Pfaffenhofen an der Ilm starten?', a: 'Eine Anreise ist schon in 3 Tagen möglich. Preis und Betreuungskräfte sehen Sie sofort online — ein Beratungsgespräch ist möglich, aber keine Voraussetzung.' },
   { q: 'Kommt eine Betreuungskraft auch in die Gemeindeteile rund um Pfaffenhofen?', a: 'Ja, und dort ist der Unterschied besonders groß. Zum Stadtgebiet gehören 62 Gemeindeteile auf gut 92 Quadratkilometern — rechnerisch keine 300 Einwohner je Quadratkilometer. Wer in Förnbach, Tegernbach oder Uttenhofen wohnt, hängt bei jedem Termin daran, dass jemand fährt. Eine Betreuungskraft, die im Haus wohnt, übernimmt diese Wege und ist von keiner Tourenplanung abhängig. Anfahrtskosten berechnen wir nicht.' },
   { q: 'Was passiert, wenn der Führerschein wegfällt?', a: 'In einer so gestreuten Siedlungsstruktur ist das oft der Moment, in dem der Alltag kippt — nicht die Pflegebedürftigkeit selbst. Einkaufen, Arzttermine, Besuche: alles hängt plötzlich an anderen. Eine Betreuungskraft im Haushalt löst beides auf einmal, weil sie da ist und die Wege übernimmt. In Bayern kommt das Landespflegegeld von 500 Euro im Jahr ab Pflegegrad 2 hinzu, unabhängig davon, wer die Pflege leistet.' },
   { q: 'Welches Einzugsgebiet wird in Pfaffenhofen an der Ilm bedient?', a: 'Pfaffenhofen und Landkreis Pfaffenhofen: Wolnzach, Schrobenhausen-Grenze, Geisenfeld und alle Gemeinden im Landkreis Pfaffenhofen an der Ilm' },
   { q: 'Ist in einer Wohnung in Pfaffenhofen Platz für eine Betreuungskraft?', a: 'Sie braucht ein eigenes, abschließbares Zimmer — ein Bad teilen Sie sich in der Regel. Eine Wohnung in Pfaffenhofen hat im Schnitt 103,0 m², 18,8 % sind kleiner als 60 m². Meist lässt sich ein Zimmer frei machen, häufig das ehemalige Kinder- oder Arbeitszimmer. 82,0 % der Gebäude in Pfaffenhofen sind Ein- oder Zweifamilienhäuser; dort bietet sich oft eine ganze Etage an.' },
-  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.200 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
+  { q: 'Was kostet ein Heimplatz statt Betreuung zu Hause?', a: 'In Bayern zahlen Heimbewohner im ersten Jahr im Schnitt rund 3.270 € Eigenanteil im Monat (vdek, Juli 2026). Zu Hause zahlen Pflegegeld und anteiliges Entlastungsbudget bei Pflegegrad 3 zusammen bis zu ca. 894 € im Monat, dazu kommen bis zu 333 € Steuerermäßigung — was bei Ihnen bleibt, zeigt der Kostenrechner in 2 Minuten.' },
 ]
 
 const ORT: OrtDaten = {

@@ -21,13 +21,13 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Pflegegrad beantragen — Schritt für Schritt 2026 | Primundus',
+  title: 'Pflegegrad beantragen 2026: Schritt für Schritt zum Bescheid',
   description: 'Pflegegrad beantragen: Antrag bei der Pflegekasse, MD-Begutachtung, Einstufung in 5 Schritten. Mit Tipps für höhere Einstufung. Aktuell für 2026.',
   alternates: {
     canonical: 'https://primundus.de/pflegegrad-beantragen',
   },
   openGraph: {
-    title: 'Pflegegrad beantragen — Schritt für Schritt 2026 | Primundus',
+    title: 'Pflegegrad beantragen 2026: Schritt für Schritt zum Bescheid',
     description: 'Pflegegrad beantragen: Antrag bei der Pflegekasse, MD-Begutachtung, Einstufung in 5 Schritten. Mit Tipps für höhere Einstufung. Aktuell für 2026.',
     url: 'https://primundus.de/pflegegrad-beantragen',
     siteName: 'Primundus',
@@ -41,7 +41,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pflegegrad beantragen — Schritt für Schritt 2026',
+    headline: 'Pflegegrad beantragen: Schritt für Schritt vom Antrag bis zum Bescheid',
     description: 'Wie man einen Pflegegrad beantragt, was bei der MD-Begutachtung passiert und wie man eine höhere Einstufung erreicht.',
     author: { '@id': PERSON_MARTA_ID },
     publisher: {
@@ -143,7 +143,7 @@ export default function PflegegradBeantragen() {
             { label: "Pflegegrad beantragen" },
           ]}
           augenbraue="Ratgeber Pflegegrad"
-          titel="Pflegegrad beantragen — Schritt für Schritt"
+          titel="Pflegegrad beantragen: Schritt für Schritt vom Antrag bis zum Bescheid"
           einleitung="Pflegegrad beantragen geht in zwei Schritten: Antrag bei der Pflegekasse stellen, dann kommt der Medizinische Dienst zur Begutachtung nach Hause. Die Entscheidung fällt innerhalb von 25 Arbeitstagen. Wer gut vorbereitet ist, erreicht einen höheren Pflegegrad — mit deutlich mehr Leistungen."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="7 Min."

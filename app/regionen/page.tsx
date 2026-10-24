@@ -15,12 +15,12 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 // wird der Standard-Kontakt (Marta-Band).
 
 export const metadata: Metadata = {
-  title: '24h-Pflege in Ihrer Region — alle Städte & Bundesländer',
+  title: '24-Stunden-Pflege in Ihrer Region: Städte und Bundesländer',
   description: '24-Stunden-Pflege in Ihrer Region: Ort oder Postleitzahl eingeben und die Seite für Ihre Stadt öffnen. Alle Städte und Bundesländer.',
   alternates: { canonical: 'https://primundus.de/regionen' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: '24h-Pflege in Ihrer Region | Primundus',
+    title: '24-Stunden-Pflege in Ihrer Region: Städte und Bundesländer',
     description: 'PLZ oder Ort eingeben — 24h-Pflege in Ihrer Stadt finden.',
     url: 'https://primundus.de/regionen',
     siteName: 'Primundus',
@@ -90,7 +90,7 @@ export default function RegionenHub() {
             { label: '24h-Pflege in Ihrer Region' },
           ]}
           augenbraue="Regionen"
-          titel="24-Stunden-Pflege in Ihrer Region finden"
+          titel="24-Stunden-Pflege in Ihrer Region: Ihre Stadt oder Ihr Bundesland finden"
           einleitung="Unsere Betreuungskräfte sind in ganz Deutschland im Einsatz, in der Großstadt wie auf dem Land. Suchen Sie Ihren Ort oder Ihre Postleitzahl, oder wählen Sie Ihr Bundesland."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
         />

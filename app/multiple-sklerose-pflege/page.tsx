@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Multiple Sklerose Pflege zuhause — was möglich ist',
+  title: 'Pflege bei Multipler Sklerose: was zu Hause möglich ist',
   description: 'Multiple Sklerose Pflege zuhause: Was in welchem MS-Verlauf möglich ist, konkrete Alltagstipps und ab wann eine 24h-Betreuungskraft sinnvoll wird. 2026.',
   alternates: { canonical: 'https://primundus.de/multiple-sklerose-pflege' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Multiple Sklerose Pflege zuhause | Primundus',
+    title: 'Pflege bei Multipler Sklerose: was zu Hause möglich ist',
     description: 'Was bei MS zuhause möglich ist und ab wann 24h-Pflege sinnvoll wird.',
     url: 'https://primundus.de/multiple-sklerose-pflege',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Multiple Sklerose Pflege zuhause 2026',
+    headline: 'Pflege bei Multipler Sklerose: was zu Hause möglich ist',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -81,7 +81,7 @@ export default function MultipleSklerosePflege() {
             { label: "Multiple Sklerose Pflege" },
           ]}
           augenbraue="Ratgeber Multiple Sklerose"
-          titel="Multiple Sklerose Pflege zuhause — was möglich ist"
+          titel="Pflege bei Multipler Sklerose: was zu Hause möglich ist"
           einleitung="Multiple Sklerose (MS) ist eine chronisch-entzündliche Erkrankung des Nervensystems — mit sehr unterschiedlichem Verlauf. Während manche Menschen mit MS jahrzehntelang nahezu symptomfrei leben, brauchen andere bereits im mittleren Lebensalter intensive Pflege. Die häusliche Pflege ist in den meisten Stadien nicht nur möglich, sondern oft die bessere Wahl."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."

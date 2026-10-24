@@ -1,0 +1,405 @@
+﻿Kreisschluessel;Kreis;Art;Bundesland;Pflegebeduerftige_2023;davon_vollstationaer_2023;davon_nur_Pflegegeld_2023;davon_ambulant_2023;davon_Pflegegrad1_ohne_Leistungen_2023;zu_Hause_versorgt_Prozent;Dauerpflegeplaetze_2023;Einwohner_ab_80_2023;Dauerpflegeplaetze_je_100_ab_80;vollstationaer_2019;Veraenderung_vollstationaer_2019_2023_Prozent
+DG;Deutschland;;;5688473;799591;3103007;1100672;683500;85,9;874562;6041003;14,5;818317;-2,3
+01001;Flensburg;kreisfreie Stadt;Schleswig-Holstein;5298;987;2471;1125;714;81,4;1043;6348;16,4;978;0,9
+01002;Kiel;kreisfreie Stadt;Schleswig-Holstein;12827;1942;5566;3668;1647;84,9;2074;16303;12,7;1987;-2,3
+01003;Lübeck;kreisfreie Stadt;Schleswig-Holstein;12926;3055;5735;2307;1828;76,4;3223;17974;17,9;3154;-3,1
+01004;Neumünster;kreisfreie Stadt;Schleswig-Holstein;5502;995;2563;1177;763;81,9;1055;6175;17,1;1212;-17,9
+01051;Kreis Dithmarschen;Kreis;Schleswig-Holstein;9606;1723;4522;2023;1331;82,1;1891;10777;17,5;1637;5,3
+01053;Kreis Herzogtum Lauenburg;Kreis;Schleswig-Holstein;12355;2208;6093;2537;1504;82,1;2324;16328;14,2;2325;-5,0
+01054;Kreis Nordfriesland;Kreis;Schleswig-Holstein;10092;1699;4789;2373;1228;83,2;1825;13439;13,6;1786;-4,9
+01055;Kreis Ostholstein;Kreis;Schleswig-Holstein;13105;3050;6145;2119;1787;76,7;3488;18805;18,5;3148;-3,1
+01056;Kreis Pinneberg;Kreis;Schleswig-Holstein;17129;3270;8346;3278;2234;80,9;3608;25146;14,3;3258;0,4
+01057;Kreis Plön;Kreis;Schleswig-Holstein;6994;1294;3504;1151;1033;81,5;1489;12083;12,3;1207;7,2
+01058;Kreis Rendsburg-Eckernförde;Kreis;Schleswig-Holstein;15502;2983;7315;3215;1986;80,8;3354;21796;15,4;3014;-1,0
+01059;Kreis Schleswig-Flensburg;Kreis;Schleswig-Holstein;13845;2681;6115;3398;1634;80,6;2883;16142;17,9;2837;-5,5
+01060;Kreis Segeberg;Kreis;Schleswig-Holstein;15981;3225;7295;3299;2160;79,8;3856;20883;18,5;3466;-7,0
+01061;Kreis Steinburg;Kreis;Schleswig-Holstein;9312;1714;4716;1623;1250;81,6;1828;10278;17,8;1818;-5,7
+01062;Kreis Stormarn;Kreis;Schleswig-Holstein;14849;3131;5973;4035;1702;78,9;3453;20794;16,6;3290;-4,8
+02000;Hamburg;Stadtstaat;Hamburg;96606;14416;46083;25947;10130;85,1;16612;114525;14,5;16276;-11,4
+03101;Braunschweig;kreisfreie Stadt;Niedersachsen;17043;2934;8718;3469;1922;82,8;3215;19098;16,8;2871;2,2
+03102;Salzgitter;kreisfreie Stadt;Niedersachsen;9459;1344;5840;1088;1185;85,8;1454;7814;18,6;1478;-9,1
+03103;Wolfsburg;kreisfreie Stadt;Niedersachsen;9535;1147;6042;1225;1121;88,0;1291;10345;12,5;1201;-4,5
+03151;Landkreis Gifhorn;Landkreis;Niedersachsen;13322;1709;8280;1912;1419;87,2;1912;11480;16,7;1806;-5,4
+03153;Landkreis Goslar;Landkreis;Niedersachsen;13540;2651;6884;2611;1391;80,4;3061;12072;25,4;3005;-11,8
+03154;Landkreis Helmstedt;Landkreis;Niedersachsen;7137;1417;3567;1210;939;80,1;1546;6951;22,2;1600;-11,4
+03155;Landkreis Northeim;Landkreis;Niedersachsen;13178;2108;6609;3042;1414;84,0;2335;10878;21,5;2202;-4,3
+03157;Landkreis Peine;Landkreis;Niedersachsen;10783;1698;6399;1416;1268;84,3;1968;9787;20,1;1860;-8,7
+03158;Landkreis Wolfenbüttel;Landkreis;Niedersachsen;8825;1461;5012;1254;1098;83,4;1577;9668;16,3;1497;-2,4
+03159;Landkreis Göttingen;Landkreis;Niedersachsen;25377;4543;13693;4536;2590;82,1;5131;25730;19,9;4857;-6,5
+03241;Region Hannover;Region;Niedersachsen;85769;13583;47022;16228;8909;84,2;15272;85620;17,8;14004;-3,0
+03251;Landkreis Diepholz;Landkreis;Niedersachsen;16642;2239;9054;3388;1957;86,5;2638;16372;16,1;2233;0,3
+03252;Landkreis Hameln-Pyrmont;Landkreis;Niedersachsen;13234;2372;6873;2553;1431;82,1;2807;13389;21,0;2479;-4,3
+03254;Landkreis Hildesheim;Landkreis;Niedersachsen;23532;3612;12622;4652;2644;84,7;4286;21453;20,0;3693;-2,2
+03255;Landkreis Holzminden;Landkreis;Niedersachsen;6745;1132;3260;1603;750;83,2;1300;5855;22,2;1248;-9,3
+03256;Landkreis Nienburg (Weser);Landkreis;Niedersachsen;10673;1717;5707;2034;1213;83,9;1969;8819;22,3;1766;-2,8
+03257;Landkreis Schaumburg;Landkreis;Niedersachsen;15637;2749;8245;3160;1463;82,4;3430;13767;24,9;2950;-6,8
+03351;Landkreis Celle;Landkreis;Niedersachsen;15172;2590;8648;2314;1617;82,9;2898;13280;21,8;2539;2,0
+03352;Landkreis Cuxhaven;Landkreis;Niedersachsen;15817;2557;8568;2865;1822;83,8;2945;16018;18,4;2595;-1,5
+03353;Landkreis Harburg;Landkreis;Niedersachsen;14173;2061;7676;2913;1523;85,5;2297;20351;11,3;2382;-13,5
+03354;Landkreis Lüchow-Dannenberg;Landkreis;Niedersachsen;4864;898;2095;1342;529;81,5;999;4336;23,0;874;2,7
+03355;Landkreis Lüneburg;Landkreis;Niedersachsen;10656;1847;5278;2373;1155;82,7;2133;11845;18,0;2114;-12,6
+03356;Landkreis Osterholz;Landkreis;Niedersachsen;8044;1259;4530;1438;815;84,3;1418;8778;16,2;1386;-9,2
+03357;Landkreis Rotenburg (Wümme);Landkreis;Niedersachsen;11708;1794;6870;1838;1202;84,7;1979;11123;17,8;1939;-7,5
+03358;Heidekreis;Landkreis;Niedersachsen;11590;1815;6529;2004;1241;84,3;2003;10852;18,5;1717;5,7
+03359;Landkreis Stade;Landkreis;Niedersachsen;13678;2147;7941;2130;1458;84,3;2404;14478;16,6;2274;-5,6
+03360;Landkreis Uelzen;Landkreis;Niedersachsen;7626;1592;3517;1681;836;79,1;1866;7978;23,4;1696;-6,1
+03361;Landkreis Verden;Landkreis;Niedersachsen;9606;1882;5801;865;1056;80,4;2117;9991;21,2;1647;14,3
+03401;Delmenhorst;kreisfreie Stadt;Niedersachsen;6616;702;4205;912;797;89,4;809;5903;13,7;565;24,2
+03402;Emden;kreisfreie Stadt;Niedersachsen;4011;519;2293;635;564;87,1;536;3285;16,3;514;1,0
+03403;Oldenburg (Oldb);kreisfreie Stadt;Niedersachsen;10606;1464;5935;1922;1285;86,2;1748;11070;15,8;1622;-9,7
+03404;Osnabrück;kreisfreie Stadt;Niedersachsen;10941;1394;5250;3135;1159;87,3;1424;10719;13,3;1338;4,2
+03405;Wilhelmshaven;kreisfreie Stadt;Niedersachsen;6992;1178;3933;966;914;83,2;1360;6805;20,0;1217;-3,2
+03451;Landkreis Ammerland;Landkreis;Niedersachsen;9749;1153;5885;1663;1044;88,2;1343;9790;13,7;1212;-4,9
+03452;Landkreis Aurich;Landkreis;Niedersachsen;18015;1589;11141;3180;2103;91,2;1754;12897;13,6;1634;-2,8
+03453;Landkreis Cloppenburg;Landkreis;Niedersachsen;13042;1763;7944;2076;1253;86,5;1931;8804;21,9;1637;7,7
+03454;Landkreis Emsland;Landkreis;Niedersachsen;25748;2572;14813;5246;3108;90,0;2765;19365;14,3;2569;0,1
+03455;Landkreis Friesland;Landkreis;Niedersachsen;9504;1112;5164;2186;1041;88,3;1194;8800;13,6;1151;-3,4
+03456;Landkreis Grafschaft Bentheim;Landkreis;Niedersachsen;11741;1367;6032;3034;1303;88,4;1449;9451;15,3;1325;3,2
+03457;Landkreis Leer;Landkreis;Niedersachsen;15473;1625;9359;2636;1849;89,5;1800;10873;16,6;1565;3,8
+03458;Landkreis Oldenburg;Landkreis;Niedersachsen;9481;1606;5365;1536;974;83,1;1831;9393;19,5;1670;-3,8
+03459;Landkreis Osnabrück;Landkreis;Niedersachsen;25891;3676;14335;5170;2696;85,8;3979;25410;15,7;3696;-0,5
+03460;Landkreis Vechta;Landkreis;Niedersachsen;8669;1322;5088;1445;814;84,8;1414;7514;18,8;1210;9,3
+03461;Landkreis Wesermarsch;Landkreis;Niedersachsen;7055;1270;3663;1326;793;82,0;1357;6794;20,0;1280;-0,8
+03462;Landkreis Wittmund;Landkreis;Niedersachsen;6172;508;3229;1808;627;91,8;594;4168;14,3;623;-18,5
+04011;Bremen;kreisfreie Stadt;Bremen;37748;4941;21587;6969;4250;86,9;5519;39858;13,8;5250;-5,9
+04012;Bremerhaven;kreisfreie Stadt;Bremen;9880;845;5518;2351;1166;91,4;1028;7770;13,2;923;-8,5
+05111;Düsseldorf;kreisfreie Stadt;Nordrhein-Westfalen;40248;4559;22882;8470;4332;88,7;4666;39597;11,8;4642;-1,8
+05112;Duisburg;kreisfreie Stadt;Nordrhein-Westfalen;44910;5079;27900;6470;5459;88,7;5205;32953;15,8;5094;-0,3
+05113;Essen;kreisfreie Stadt;Nordrhein-Westfalen;41063;6606;21494;6631;6328;83,9;6781;41149;16,5;6772;-2,5
+05114;Krefeld;kreisfreie Stadt;Nordrhein-Westfalen;23169;2250;15937;3376;1605;90,3;2369;16984;13,9;2190;2,7
+05116;Mönchengladbach;kreisfreie Stadt;Nordrhein-Westfalen;27163;2546;18705;3838;2074;90,6;2580;17645;14,6;2431;4,7
+05117;Mülheim an der Ruhr;kreisfreie Stadt;Nordrhein-Westfalen;13296;1819;7172;2573;1728;86,3;1878;14077;13,3;1737;4,7
+05119;Oberhausen;kreisfreie Stadt;Nordrhein-Westfalen;17645;1997;9955;2999;2694;88,7;2106;14695;14,3;2007;-0,5
+05120;Remscheid;kreisfreie Stadt;Nordrhein-Westfalen;10012;1139;5965;1835;1073;88,6;1168;8508;13,7;1111;2,5
+05122;Solingen;kreisfreie Stadt;Nordrhein-Westfalen;13477;1864;8133;1991;1488;86,2;1878;12468;15,1;1886;-1,2
+05124;Wuppertal;kreisfreie Stadt;Nordrhein-Westfalen;25081;3611;14805;3936;2728;85,6;3765;25119;15,0;3595;0,4
+05154;Kreis Kleve;Kreis;Nordrhein-Westfalen;26821;3311;16261;4627;2619;87,7;3429;20271;16,9;3126;5,9
+05158;Kreis Mettmann;Kreis;Nordrhein-Westfalen;37107;4480;22299;6062;4265;87,9;4726;41946;11,3;4798;-6,6
+05162;Rhein-Kreis Neuss;Kreis;Nordrhein-Westfalen;33302;3814;21840;3727;3920;88,5;4079;33427;12,2;3784;0,8
+05166;Kreis Viersen;Kreis;Nordrhein-Westfalen;29823;2506;22116;3055;2146;91,6;2581;21717;11,9;2385;5,1
+05170;Kreis Wesel;Kreis;Nordrhein-Westfalen;44837;4964;26740;7602;5526;88,9;5026;34500;14,6;4652;6,7
+05314;Bonn;kreisfreie Stadt;Nordrhein-Westfalen;19909;2863;11659;3672;1712;85,6;3032;20368;14,9;2898;-1,2
+05315;Köln;kreisfreie Stadt;Nordrhein-Westfalen;73822;7510;49823;9406;7077;89,8;7694;59798;12,9;7566;-0,7
+05316;Leverkusen;kreisfreie Stadt;Nordrhein-Westfalen;15536;1231;10882;2222;1201;92,1;1333;12897;10,3;1275;-3,5
+05334;Städteregion Aachen;Kreis;Nordrhein-Westfalen;50506;5559;34836;6419;3692;89,0;5828;38494;15,1;5596;-0,7
+05358;Kreis Düren;Kreis;Nordrhein-Westfalen;26844;3089;18428;3419;1906;88,5;3172;18279;17,4;2794;10,6
+05362;Rhein-Erft-Kreis;Kreis;Nordrhein-Westfalen;37814;3584;24598;5662;3967;90,5;3718;32740;11,4;3334;7,5
+05366;Kreis Euskirchen;Kreis;Nordrhein-Westfalen;18779;2109;12241;2857;1572;88,8;2222;13429;16,5;2354;-10,4
+05370;Kreis Heinsberg;Kreis;Nordrhein-Westfalen;28173;2650;19418;4226;1877;90,6;2721;17247;15,8;2585;2,5
+05374;Oberbergischer Kreis;Kreis;Nordrhein-Westfalen;24457;3119;14709;4481;2147;87,2;3303;19270;17,1;3192;-2,3
+05378;Rheinisch-Bergischer Kreis;Kreis;Nordrhein-Westfalen;23730;2444;15499;3922;1864;89,7;2686;23340;11,5;2687;-9,0
+05382;Rhein-Sieg-Kreis;Kreis;Nordrhein-Westfalen;45249;5148;29939;6282;3878;88,6;5441;43691;12,5;5250;-1,9
+05512;Bottrop;kreisfreie Stadt;Nordrhein-Westfalen;9563;1345;5233;1429;1556;85,9;1365;8588;15,9;1375;-2,2
+05513;Gelsenkirchen;kreisfreie Stadt;Nordrhein-Westfalen;20215;2589;10873;3754;2998;87,2;2724;16523;16,5;2501;3,5
+05515;Münster;kreisfreie Stadt;Nordrhein-Westfalen;13694;2553;6440;2856;1829;81,4;2684;18999;14,1;2648;-3,6
+05554;Kreis Borken;Kreis;Nordrhein-Westfalen;25254;3080;12301;6598;3265;87,8;3230;22774;14,2;3003;2,6
+05558;Kreis Coesfeld;Kreis;Nordrhein-Westfalen;14284;2410;6930;3154;1781;83,1;2509;15372;16,3;2302;4,7
+05562;Kreis Recklinghausen;Kreis;Nordrhein-Westfalen;53048;6706;28223;10884;7226;87,4;7042;44760;15,7;6824;-1,7
+05566;Kreis Steinfurt;Kreis;Nordrhein-Westfalen;30541;3772;15660;7212;3883;87,6;4187;29054;14,4;3728;1,2
+05570;Kreis Warendorf;Kreis;Nordrhein-Westfalen;18345;2612;9466;3986;2271;85,8;2724;19637;13,9;2492;4,8
+05711;Bielefeld;kreisfreie Stadt;Nordrhein-Westfalen;22590;2656;11734;4989;3207;88,2;2846;23107;12,3;2767;-4,0
+05754;Kreis Gütersloh;Kreis;Nordrhein-Westfalen;21952;2354;12453;4323;2814;89,3;2669;24449;10,9;2492;-5,5
+05758;Kreis Herford;Kreis;Nordrhein-Westfalen;17032;2517;8583;3732;2199;85,2;2689;19402;13,9;2560;-1,7
+05762;Kreis Höxter;Kreis;Nordrhein-Westfalen;11772;1479;5782;3150;1355;87,4;1578;10621;14,9;1438;2,9
+05766;Kreis Lippe;Kreis;Nordrhein-Westfalen;22590;3557;11518;4279;3229;84,3;3924;27052;14,5;3734;-4,7
+05770;Kreis Minden-Lübbecke;Kreis;Nordrhein-Westfalen;21351;3267;11240;4086;2754;84,7;3808;24033;15,8;3424;-4,6
+05774;Kreis Paderborn;Kreis;Nordrhein-Westfalen;18939;2533;9708;4448;2241;86,6;2641;18891;14,0;2494;1,6
+05911;Bochum;kreisfreie Stadt;Nordrhein-Westfalen;25591;3508;14132;4051;3898;86,3;3637;25840;14,1;3317;5,8
+05913;Dortmund;kreisfreie Stadt;Nordrhein-Westfalen;42960;5528;22317;8942;6168;87,1;5846;39506;14,8;5512;0,3
+05914;Hagen;kreisfreie Stadt;Nordrhein-Westfalen;15260;2056;8791;2293;2117;86,5;2166;13540;16,0;2180;-5,7
+05915;Hamm;kreisfreie Stadt;Nordrhein-Westfalen;13152;1789;6625;2860;1876;86,4;1867;12088;15,4;1829;-2,2
+05916;Herne;kreisfreie Stadt;Nordrhein-Westfalen;13867;1964;7697;2295;1911;85,8;2083;11001;18,9;1725;13,9
+05954;Ennepe-Ruhr-Kreis;Kreis;Nordrhein-Westfalen;25016;3481;13632;4589;3305;86,1;3700;25112;14,7;3506;-0,7
+05958;Hochsauerlandkreis;Kreis;Nordrhein-Westfalen;19367;2584;9925;4207;2645;86,7;2744;19463;14,1;2541;1,7
+05962;Märkischer Kreis;Kreis;Nordrhein-Westfalen;32651;4273;18669;4883;4815;86,9;4463;30737;14,5;4391;-2,7
+05966;Kreis Olpe;Kreis;Nordrhein-Westfalen;10175;1219;5993;1584;1375;88,0;1220;8534;14,3;1177;3,6
+05970;Kreis Siegen-Wittgenstein;Kreis;Nordrhein-Westfalen;21405;2183;12012;4503;2702;89,8;2281;19181;11,9;2091;4,4
+05974;Kreis Soest;Kreis;Nordrhein-Westfalen;21357;3155;10472;5049;2674;85,2;3430;21418;16,0;3368;-6,3
+05978;Kreis Unna;Kreis;Nordrhein-Westfalen;32390;4192;17378;6182;4635;87,1;4321;29298;14,7;3968;5,6
+06411;Darmstadt;kreisfreie Stadt;Hessen;7587;1155;4137;1475;;84,8;1176;9280;12,7;1111;4,0
+06412;Frankfurt am Main;kreisfreie Stadt;Hessen;38910;4418;22112;8574;;88,6;4941;36419;13,6;4590;-3,7
+06413;Offenbach am Main;kreisfreie Stadt;Hessen;6998;936;3923;1220;919;86,6;965;6488;14,9;902;3,8
+06414;Wiesbaden;kreisfreie Stadt;Hessen;16251;2236;8834;3506;1675;86,2;2500;19047;13,1;2153;3,9
+06431;Kreis Bergstraße;Kreis;Hessen;19288;2806;11123;3564;;85,5;3028;19621;15,4;2763;1,6
+06432;Landkreis Darmstadt-Dieburg;Landkreis;Hessen;17336;1975;10773;2796;1787;88,6;2133;19776;10,8;2044;-3,4
+06433;Kreis Groß-Gerau;Kreis;Hessen;16707;1875;10679;2153;;88,8;1980;16550;12,0;1861;0,8
+06434;Hochtaunuskreis;Landkreis;Hessen;13995;2212;8628;2122;1033;84,2;2507;20058;12,5;2479;-10,8
+06435;Main-Kinzig-Kreis;Landkreis;Hessen;27437;3765;15585;4469;;86,3;4023;28639;14,0;3465;8,7
+06436;Main-Taunus-Kreis;Landkreis;Hessen;13683;1489;8179;2824;1191;89,1;1567;17586;8,9;1490;-0,1
+06437;Odenwaldkreis;Landkreis;Hessen;7942;1265;4586;1389;;84,1;1334;7266;18,4;1263;0,2
+06438;Kreis Offenbach;Kreis;Hessen;19610;2605;11668;3030;2302;86,7;2843;25066;11,3;2522;3,3
+06439;Rheingau-Taunus-Kreis;Landkreis;Hessen;11553;1752;6441;2071;;84,8;1822;14333;12,7;1637;7,0
+06440;Wetteraukreis;Landkreis;Hessen;22125;3697;13345;3107;;83,3;4036;21550;18,7;3415;8,3
+06531;Landkreis Gießen;Landkreis;Hessen;20662;2502;13683;2998;1472;87,9;2620;16619;15,8;2496;0,2
+06532;Lahn-Dill-Kreis;Landkreis;Hessen;23320;2836;15953;3149;;87,8;3087;18023;17,1;2727;4,0
+06533;Landkreis Limburg-Weilburg;Landkreis;Hessen;12640;1776;7449;2125;;85,9;1981;11804;16,8;1727;2,8
+06534;Landkreis Marburg-Biedenkopf;Landkreis;Hessen;21538;2170;14777;3383;;89,9;2401;15465;15,5;2170;0,0
+06535;Vogelsbergkreis;Landkreis;Hessen;9213;1334;4785;1934;1149;85,5;1445;7866;18,4;1326;0,6
+06611;Kassel;kreisfreie Stadt;Hessen;14217;1671;6889;3892;1765;88,2;1794;12843;14,0;1776;-5,9
+06631;Landkreis Fulda;Landkreis;Hessen;15546;2650;8363;2512;2014;83,0;2803;16329;17,2;2601;1,9
+06632;Landkreis Hersfeld-Rotenburg;Landkreis;Hessen;9475;1462;5299;1347;1357;84,6;1617;9511;17,0;1414;3,4
+06633;Landkreis Kassel;Landkreis;Hessen;19591;2855;10435;3829;2458;85,4;3104;19209;16,2;3118;-8,4
+06634;Schwalm-Eder-Kreis;Landkreis;Hessen;14017;2067;7433;2716;1797;85,3;2368;13432;17,6;2210;-6,5
+06635;Landkreis Waldeck-Frankenberg;Landkreis;Hessen;14128;2254;7997;2500;1373;84,0;2312;11586;20,0;2361;-4,5
+06636;Werra-Meißner-Kreis;Landkreis;Hessen;9609;1559;5161;1818;1071;83,8;1654;8141;20,3;1593;-2,1
+07111;Koblenz;kreisfreie Stadt;Rheinland-Pfalz;8124;1471;3532;2263;855;81,9;1719;8708;19,7;1527;-3,7
+07131;Landkreis Ahrweiler;Landkreis;Rheinland-Pfalz;9830;1116;5444;2115;1155;88,6;1285;10749;12,0;1370;-18,5
+07132;Landkreis Altenkirchen (Westerwald);Landkreis;Rheinland-Pfalz;10743;1296;5838;2418;1190;87,9;1457;9158;15,9;1299;-0,2
+07133;Landkreis Bad Kreuznach;Landkreis;Rheinland-Pfalz;10360;1294;5801;1724;1536;87,5;1561;12131;12,9;1394;-7,2
+07134;Landkreis Birkenfeld;Landkreis;Rheinland-Pfalz;5984;974;3333;896;781;83,7;1101;6307;17,5;995;-2,1
+07135;Landkreis Cochem-Zell;Landkreis;Rheinland-Pfalz;5362;771;2609;1330;649;85,6;882;4876;18,1;854;-9,7
+07137;Landkreis Mayen-Koblenz;Landkreis;Rheinland-Pfalz;15001;1949;8498;2524;2026;87,0;2212;14956;14,8;1877;3,8
+07138;Landkreis Neuwied;Landkreis;Rheinland-Pfalz;13881;1840;8049;2313;1676;86,7;2061;13671;15,1;1985;-7,3
+07140;Rhein-Hunsrück-Kreis;Landkreis;Rheinland-Pfalz;7123;1020;3933;1277;891;85,7;1161;7386;15,7;1045;-2,4
+07141;Rhein-Lahn-Kreis;Landkreis;Rheinland-Pfalz;8057;1073;4513;1366;1105;86,7;1307;9047;14,4;1023;4,9
+07143;Westerwaldkreis;Landkreis;Rheinland-Pfalz;14250;2006;7500;2985;1753;85,9;2422;13679;17,7;2021;-0,7
+07211;Trier;kreisfreie Stadt;Rheinland-Pfalz;4782;969;2228;832;750;79,7;1110;6485;17,1;908;6,7
+07231;Landkreis Bernkastel-Wittlich;Landkreis;Rheinland-Pfalz;7045;1140;3396;1452;1049;83,8;1230;8110;15,2;1227;-7,1
+07232;Eifelkreis Bitburg-Prüm;Landkreis;Rheinland-Pfalz;6003;839;2800;1488;871;86,0;958;6203;15,4;842;-0,4
+07233;Landkreis Vulkaneifel;Landkreis;Rheinland-Pfalz;4701;676;2336;977;711;85,6;731;4515;16,2;702;-3,7
+07235;Landkreis Trier-Saarburg;Landkreis;Rheinland-Pfalz;7508;1500;3728;1244;1031;80,0;1523;9768;15,6;1432;4,7
+07311;Frankenthal (Pfalz);kreisfreie Stadt;Rheinland-Pfalz;3355;508;1970;461;415;84,9;605;4020;15,0;492;3,3
+07312;Kaiserslautern;kreisfreie Stadt;Rheinland-Pfalz;6134;988;3393;956;797;83,9;1069;6834;15,6;1024;-3,5
+07313;Landau in der Pfalz;kreisfreie Stadt;Rheinland-Pfalz;3127;370;1583;809;361;88,2;465;3075;15,1;421;-12,1
+07314;Ludwigshafen am Rhein;kreisfreie Stadt;Rheinland-Pfalz;11776;1334;7371;1714;1356;88,7;1471;11083;13,3;1348;-1,0
+07315;Mainz;kreisfreie Stadt;Rheinland-Pfalz;9114;1429;4760;1504;1416;84,3;1740;13393;13,0;1519;-5,9
+07316;Neustadt an der Weinstraße;kreisfreie Stadt;Rheinland-Pfalz;3732;401;2288;613;430;89,3;515;4560;11,3;445;-9,9
+07317;Pirmasens;kreisfreie Stadt;Rheinland-Pfalz;4234;602;2158;957;517;85,8;683;3362;20,3;597;0,8
+07318;Speyer;kreisfreie Stadt;Rheinland-Pfalz;3653;761;1935;595;362;79,2;863;3771;22,9;796;-4,4
+07319;Worms;kreisfreie Stadt;Rheinland-Pfalz;5537;757;2710;1280;789;86,3;971;5321;18,2;836;-9,4
+07320;Zweibrücken;kreisfreie Stadt;Rheinland-Pfalz;2870;356;1653;573;288;87,6;368;2642;13,9;311;14,5
+07331;Landkreis Alzey-Worms;Landkreis;Rheinland-Pfalz;7353;958;4146;1227;1020;87,0;1098;7701;14,3;876;9,4
+07332;Landkreis Bad Dürkheim;Landkreis;Rheinland-Pfalz;8387;1359;5185;799;1044;83,8;1561;10394;15,0;1382;-1,7
+07333;Donnersbergkreis;Landkreis;Rheinland-Pfalz;5883;829;2948;1402;703;85,9;970;4975;19,5;832;-0,4
+07334;Landkreis Germersheim;Landkreis;Rheinland-Pfalz;8437;922;5867;641;1005;89,1;941;8140;11,6;911;1,2
+07335;Landkreis Kaiserslautern;Landkreis;Rheinland-Pfalz;6960;918;4101;1142;798;86,8;1094;7129;15,3;764;20,2
+07336;Landkreis Kusel;Landkreis;Rheinland-Pfalz;5571;637;3271;963;698;88,6;764;5127;14,9;582;9,5
+07337;Landkreis Südliche Weinstraße;Landkreis;Rheinland-Pfalz;7331;532;4769;1219;809;92,7;728;8210;8,9;667;-20,2
+07338;Rhein-Pfalz-Kreis;Landkreis;Rheinland-Pfalz;10351;1219;6149;1964;1015;88,2;1349;11996;11,2;1141;6,8
+07339;Landkreis Mainz-Bingen;Landkreis;Rheinland-Pfalz;10583;1592;5767;1660;1562;85,0;2084;13569;15,4;1532;3,9
+07340;Landkreis Südwestpfalz;Landkreis;Rheinland-Pfalz;8377;667;4840;1987;882;92,0;732;7560;9,7;756;-11,8
+08111;Stuttgart;Stadtkreis;Baden-Württemberg;26992;4564;13350;4938;4131;83,1;4706;39852;11,8;4886;-6,6
+08115;Landkreis Böblingen;Landkreis;Baden-Württemberg;21078;2775;11368;4019;2911;86,8;2874;27801;10,3;2800;-0,9
+08116;Landkreis Esslingen;Landkreis;Baden-Württemberg;27422;4045;14517;5232;3618;85,2;4171;38915;10,7;4041;0,1
+08117;Landkreis Göppingen;Landkreis;Baden-Württemberg;15560;2437;8223;2724;2168;84,3;2605;19142;13,6;2284;6,7
+08118;Landkreis Ludwigsburg;Landkreis;Baden-Württemberg;28077;4005;15545;4551;3968;85,7;4302;37194;11,6;3982;0,6
+08119;Rems-Murr-Kreis;Landkreis;Baden-Württemberg;23155;3548;12642;3672;3278;84,7;3691;32593;11,3;3761;-5,7
+08121;Heilbronn;Stadtkreis;Baden-Württemberg;8181;1417;4108;1609;1043;82,7;1512;8576;17,6;1439;-1,5
+08125;Landkreis Heilbronn;Landkreis;Baden-Württemberg;19291;2766;10696;3519;2295;85,7;2981;22020;13,5;2752;0,5
+08126;Hohenlohekreis;Landkreis;Baden-Württemberg;7054;985;3717;1543;807;86,0;1077;7127;15,1;1155;-14,7
+08127;Landkreis Schwäbisch Hall;Landkreis;Baden-Württemberg;11111;1789;5719;2158;1443;83,9;1883;11876;15,9;1748;2,3
+08128;Main-Tauber-Kreis;Landkreis;Baden-Württemberg;9448;1560;4672;2044;1167;83,5;1634;9905;16,5;1579;-1,2
+08135;Landkreis Heidenheim;Landkreis;Baden-Württemberg;7838;1215;4218;1204;1200;84,5;1315;10208;12,9;1236;-1,7
+08136;Ostalbkreis;Landkreis;Baden-Württemberg;16889;2802;9695;2213;2177;83,4;3020;21744;13,9;2887;-2,9
+08211;Baden-Baden;Stadtkreis;Baden-Württemberg;3593;594;1944;635;418;83,5;632;5423;11,7;619;-4,0
+08212;Karlsruhe;Stadtkreis;Baden-Württemberg;15199;2522;8390;2285;2000;83,4;2522;20450;12,3;2605;-3,2
+08215;Landkreis Karlsruhe;Landkreis;Baden-Württemberg;27562;3983;16091;4250;3230;85,5;4283;32137;13,3;3864;3,1
+08216;Landkreis Rastatt;Landkreis;Baden-Württemberg;14291;1765;8751;2024;1748;87,6;2001;16681;12,0;1839;-4,0
+08221;Heidelberg;Stadtkreis;Baden-Württemberg;6812;1225;4093;788;706;82,0;1262;8235;15,3;1141;7,4
+08222;Mannheim;Stadtkreis;Baden-Württemberg;20939;2780;12918;2803;2436;86,7;2956;19208;15,4;2785;-0,2
+08225;Neckar-Odenwald-Kreis;Landkreis;Baden-Württemberg;11147;1743;5655;2330;1407;84,4;1932;10195;19,0;1606;8,5
+08226;Rhein-Neckar-Kreis;Landkreis;Baden-Württemberg;37540;4326;23286;6071;3854;88,5;4728;40046;11,8;4566;-5,3
+08231;Pforzheim;Stadtkreis;Baden-Württemberg;8724;1376;5066;1101;1177;84,2;1499;9143;16,4;1540;-10,6
+08235;Landkreis Calw;Landkreis;Baden-Württemberg;10445;1843;5396;1886;1312;82,4;1973;11028;17,9;1651;11,6
+08236;Enzkreis;Landkreis;Baden-Württemberg;13317;1846;6903;3016;1543;86,1;1987;14473;13,7;1796;2,8
+08237;Landkreis Freudenstadt;Landkreis;Baden-Württemberg;7598;1322;4213;1016;1042;82,6;1377;8411;16,4;1292;2,3
+08311;Freiburg im Breisgau;Stadtkreis;Baden-Württemberg;9640;1900;5028;1423;1288;80,3;2005;13378;15,0;1944;-2,3
+08315;Landkreis Breisgau-Hochschwarzwald;Landkreis;Baden-Württemberg;13418;2109;7662;1989;1649;84,3;2260;20109;11,2;1980;6,5
+08316;Landkreis Emmendingen;Landkreis;Baden-Württemberg;9140;1399;4748;1749;1237;84,7;1412;11524;12,3;1415;-1,1
+08317;Ortenaukreis;Landkreis;Baden-Württemberg;24224;4357;12130;4442;3272;82,0;4584;30649;15,0;4270;2,0
+08325;Landkreis Rottweil;Landkreis;Baden-Württemberg;9001;1251;5244;1267;1231;86,1;1366;10003;13,7;1238;1,1
+08326;Schwarzwald-Baar-Kreis;Landkreis;Baden-Württemberg;13617;2195;7520;2282;1616;83,9;2278;16331;13,9;2135;2,8
+08327;Landkreis Tuttlingen;Landkreis;Baden-Württemberg;7997;1116;4860;948;1070;86,0;1269;9429;13,5;1157;-3,5
+08335;Landkreis Konstanz;Landkreis;Baden-Württemberg;16193;2736;9409;2123;1925;83,1;2873;21330;13,5;2623;4,3
+08336;Landkreis Lörrach;Landkreis;Baden-Württemberg;11974;1669;6027;2366;1907;86,1;1754;16239;10,8;1806;-7,6
+08337;Landkreis Waldshut;Landkreis;Baden-Württemberg;9282;1394;5855;1086;947;85,0;1493;11718;12,7;1521;-8,3
+08415;Landkreis Reutlingen;Landkreis;Baden-Württemberg;16341;2102;9895;2223;2115;87,1;2179;20945;10,4;2300;-8,6
+08416;Landkreis Tübingen;Landkreis;Baden-Württemberg;11117;1334;6774;1726;1277;88,0;1437;13435;10,7;1397;-4,5
+08417;Zollernalbkreis;Landkreis;Baden-Württemberg;12280;1385;7694;1591;1605;88,7;1541;14156;10,9;1528;-9,4
+08421;Ulm;Stadtkreis;Baden-Württemberg;6893;1135;3772;1152;829;83,5;1206;8423;14,3;1089;4,2
+08425;Alb-Donau-Kreis;Landkreis;Baden-Württemberg;10310;1509;5975;1647;1174;85,4;1603;12820;12,5;1564;-3,5
+08426;Landkreis Biberach;Landkreis;Baden-Württemberg;10232;1423;6118;1445;1240;86,1;1477;12550;11,8;1463;-2,7
+08435;Bodenseekreis;Landkreis;Baden-Württemberg;11093;1509;6403;1767;1413;86,4;1573;17882;8,8;1596;-5,5
+08436;Landkreis Ravensburg;Landkreis;Baden-Württemberg;14546;2211;8127;2353;1854;84,8;2299;19172;12,0;2221;-0,5
+08437;Landkreis Sigmaringen;Landkreis;Baden-Württemberg;8270;941;4837;1526;966;88,6;985;9006;10,9;946;-0,5
+09161;Ingolstadt;kreisfreie Stadt;Bayern;5581;932;2631;1119;895;83,3;1079;8289;13,0;923;1,0
+09162;München;kreisfreie Stadt;Bayern;48818;7235;21737;12573;7265;85,2;7682;87937;8,7;7252;-0,2
+09163;Rosenheim;kreisfreie Stadt;Bayern;2393;362;1224;461;345;84,9;417;4360;9,6;368;-1,6
+09171;Landkreis Altötting;Landkreis;Bayern;5796;1299;2539;1080;870;77,6;1414;8095;17,5;1236;5,1
+09172;Landkreis Berchtesgadener Land;Landkreis;Bayern;4786;1034;2059;1002;691;78,4;1175;8685;13,5;1083;-4,5
+09173;Landkreis Bad Tölz-Wolfratshausen;Landkreis;Bayern;5886;1011;2813;1315;744;82,8;1067;9825;10,9;962;5,1
+09174;Landkreis Dachau;Landkreis;Bayern;5689;1186;2685;1057;760;79,2;1417;9373;15,1;1414;-16,1
+09175;Landkreis Ebersberg;Landkreis;Bayern;4965;1123;2239;854;745;77,4;1200;9787;12,3;1050;7,0
+09176;Landkreis Eichstätt;Landkreis;Bayern;5030;703;2568;1087;668;86,0;897;7715;11,6;728;-3,4
+09177;Landkreis Erding;Landkreis;Bayern;4701;955;2439;575;731;79,7;1011;7496;13,5;984;-2,9
+09178;Landkreis Freising;Landkreis;Bayern;5691;1003;3024;817;843;82,4;1120;9297;12,0;978;2,6
+09179;Landkreis Fürstenfeldbruck;Landkreis;Bayern;8295;1617;3994;1341;1335;80,5;1818;17055;10,7;1626;-0,6
+09180;Landkreis Garmisch-Partenkirchen;Landkreis;Bayern;4249;486;1922;1198;643;88,6;719;8112;8,9;634;-23,3
+09181;Landkreis Landsberg am Lech;Landkreis;Bayern;4605;604;2623;806;569;86,9;629;8016;7,8;630;-4,1
+09182;Landkreis Miesbach;Landkreis;Bayern;3741;657;1854;724;505;82,4;776;7828;9,9;825;-20,4
+09183;Landkreis Mühldorf a.Inn;Landkreis;Bayern;5611;1366;2462;1010;767;75,7;1517;7615;19,9;1386;-1,4
+09184;Landkreis München;Landkreis;Bayern;13242;2952;5832;2682;1765;77,7;3219;27654;11,6;3008;-1,9
+09185;Landkreis Neuburg-Schrobenhausen;Landkreis;Bayern;3948;737;1962;627;621;81,3;830;6002;13,8;703;4,8
+09186;Landkreis Pfaffenhofen a.d.Ilm;Landkreis;Bayern;4807;937;2586;560;723;80,5;1018;7396;13,8;971;-3,5
+09187;Landkreis Rosenheim;Landkreis;Bayern;11817;3134;4958;2330;1389;73,5;3449;18439;18,7;3189;-1,7
+09188;Landkreis Starnberg;Landkreis;Bayern;5540;1059;2416;1334;725;80,9;1260;12136;10,4;1060;-0,1
+09189;Landkreis Traunstein;Landkreis;Bayern;7684;1612;3435;1458;1171;79,0;1777;13228;13,4;1698;-5,1
+09190;Landkreis Weilheim-Schongau;Landkreis;Bayern;5938;1087;2913;993;939;81,7;1144;10190;11,2;962;13,0
+09261;Landshut;kreisfreie Stadt;Bayern;3167;1008;1316;445;398;68,2;1160;4737;24,5;1035;-2,6
+09262;Passau;kreisfreie Stadt;Bayern;4599;727;1465;2014;392;84,2;857;3908;21,9;857;-15,2
+09263;Straubing;kreisfreie Stadt;Bayern;3263;584;1542;660;473;82,1;663;3221;20,6;697;-16,2
+09271;Landkreis Deggendorf;Landkreis;Bayern;7215;1114;3907;1171;1023;84,6;1296;7422;17,5;1280;-13,0
+09272;Landkreis Freyung-Grafenau;Landkreis;Bayern;6018;791;3335;1094;797;86,9;892;5030;17,7;789;0,3
+09273;Landkreis Kelheim;Landkreis;Bayern;6101;903;3026;1413;755;85,2;1129;7204;15,7;890;1,5
+09274;Landkreis Landshut;Landkreis;Bayern;6678;1062;3697;998;914;84,1;1218;9127;13,3;1107;-4,1
+09275;Landkreis Passau;Landkreis;Bayern;13482;1686;7536;2590;1661;87,5;1952;13379;14,6;1849;-8,8
+09276;Landkreis Regen;Landkreis;Bayern;4840;786;2644;813;596;83,8;898;5165;17,4;707;11,2
+09277;Landkreis Rottal-Inn;Landkreis;Bayern;7308;1161;3507;1769;865;84,1;1362;8182;16,6;1234;-5,9
+09278;Landkreis Straubing-Bogen;Landkreis;Bayern;4962;473;3196;706;586;90,5;530;6122;8,7;605;-21,8
+09279;Landkreis Dingolfing-Landau;Landkreis;Bayern;5022;689;2525;1214;584;86,3;863;5651;15,3;725;-5,0
+09361;Amberg;kreisfreie Stadt;Bayern;2662;656;1117;548;338;75,4;767;3345;22,9;631;4,0
+09362;Regensburg;kreisfreie Stadt;Bayern;6622;1433;2900;1354;934;78,4;1661;8554;19,4;1600;-10,4
+09363;Weiden i.d.OPf.;kreisfreie Stadt;Bayern;2913;644;1038;824;404;77,9;681;3175;21,4;644;0,0
+09371;Landkreis Amberg-Sulzbach;Landkreis;Bayern;5359;1147;2558;924;726;78,6;1326;7114;18,6;1144;0,3
+09372;Landkreis Cham;Landkreis;Bayern;8065;1271;4039;1865;887;84,2;1419;8329;17,0;1363;-6,7
+09373;Landkreis Neumarkt i.d.OPf.;Landkreis;Bayern;6489;1310;3321;1068;787;79,8;1394;8269;16,9;1297;1,0
+09374;Landkreis Neustadt a.d.Waldnaab;Landkreis;Bayern;5296;949;2496;1053;793;82,1;1130;6248;18,1;1041;-8,8
+09375;Landkreis Regensburg;Landkreis;Bayern;8979;1691;4770;1363;1147;81,2;1923;11537;16,7;1693;-0,1
+09376;Landkreis Schwandorf;Landkreis;Bayern;8474;1574;4084;1682;1134;81,4;1783;9430;18,9;1629;-3,4
+09377;Landkreis Tirschenreuth;Landkreis;Bayern;4379;935;1807;986;650;78,6;1084;5280;20,5;989;-5,5
+09461;Bamberg;kreisfreie Stadt;Bayern;3636;804;1560;738;532;77,9;871;5120;17,0;867;-7,3
+09462;Bayreuth;kreisfreie Stadt;Bayern;3945;1057;1647;618;619;73,2;1343;5409;24,8;1095;-3,5
+09463;Coburg;kreisfreie Stadt;Bayern;2775;567;1146;657;402;79,6;624;3144;19,8;570;-0,5
+09464;Hof;kreisfreie Stadt;Bayern;3631;762;1628;738;500;79,0;786;3571;22,0;794;-4,0
+09471;Landkreis Bamberg;Landkreis;Bayern;7095;1143;3714;1269;956;83,9;1264;8569;14,8;1270;-10,0
+09472;Landkreis Bayreuth;Landkreis;Bayern;5710;1112;2711;1075;802;80,5;1255;7325;17,1;1170;-5,0
+09473;Landkreis Coburg;Landkreis;Bayern;5239;954;2560;873;851;81,8;1037;6267;16,5;952;0,2
+09474;Landkreis Forchheim;Landkreis;Bayern;6179;831;2973;1533;824;86,6;908;7450;12,2;855;-2,8
+09475;Landkreis Hof;Landkreis;Bayern;6960;1400;3417;1104;1038;79,9;1512;7772;19,5;1466;-4,5
+09476;Landkreis Kronach;Landkreis;Bayern;5083;640;2546;1151;743;87,4;677;5098;13,3;676;-5,3
+09477;Landkreis Kulmbach;Landkreis;Bayern;4705;824;2010;1114;749;82,5;920;5504;16,7;904;-8,8
+09478;Landkreis Lichtenfels;Landkreis;Bayern;4795;813;2061;1286;631;83,0;945;4970;19,0;922;-11,8
+09479;Landkreis Wunsiedel i.Fichtelgebirge;Landkreis;Bayern;5523;954;2298;1556;714;82,7;1017;6169;16,5;1019;-6,4
+09561;Ansbach;kreisfreie Stadt;Bayern;2357;525;1013;435;382;77,7;645;2804;23,0;571;-8,1
+09562;Erlangen;kreisfreie Stadt;Bayern;5036;1051;2104;1232;646;79,1;1185;7504;15,8;1002;4,9
+09563;Fürth;kreisfreie Stadt;Bayern;6015;1209;3183;759;853;79,9;1387;7763;17,9;1258;-3,9
+09564;Nürnberg;kreisfreie Stadt;Bayern;26283;5091;12399;5138;3650;80,6;5738;35724;16,1;5350;-4,8
+09565;Schwabach;kreisfreie Stadt;Bayern;2124;425;952;478;269;80,0;456;3079;14,8;449;-5,3
+09571;Landkreis Ansbach;Landkreis;Bayern;10011;1655;4821;2143;1375;83,5;1785;11793;15,1;1606;3,1
+09572;Landkreis Erlangen-Höchstadt;Landkreis;Bayern;5815;985;3194;797;839;83,1;1046;8804;11,9;1040;-5,3
+09573;Landkreis Fürth;Landkreis;Bayern;6320;1179;3196;1137;796;81,3;1345;8944;15,0;1314;-10,3
+09574;Landkreis Nürnberger Land;Landkreis;Bayern;8597;1562;3895;1936;1198;81,8;1863;12554;14,8;1579;-1,1
+09575;Landkreis Neustadt a.d.Aisch-Bad Windsheim;Landkreis;Bayern;5440;986;2868;834;739;81,9;1056;6504;16,2;1010;-2,4
+09576;Landkreis Roth;Landkreis;Bayern;6642;1036;3195;1678;729;84,4;1120;8918;12,6;1037;-0,1
+09577;Landkreis Weißenburg-Gunzenhausen;Landkreis;Bayern;5485;843;2520;1412;707;84,6;960;6589;14,6;916;-8,0
+09661;Aschaffenburg;kreisfreie Stadt;Bayern;4372;650;1975;1072;673;85,1;681;4935;13,8;663;-2,0
+09662;Schweinfurt;kreisfreie Stadt;Bayern;3510;900;1621;372;617;74,4;1092;4451;24,5;880;2,3
+09663;Würzburg;kreisfreie Stadt;Bayern;6764;1689;2972;1273;828;75,0;1845;9802;18,8;1727;-2,2
+09671;Landkreis Aschaffenburg;Landkreis;Bayern;10087;1159;5567;1882;1455;88,5;1277;11973;10,7;1171;-1,0
+09672;Landkreis Bad Kissingen;Landkreis;Bayern;7288;1176;3266;1734;1107;83,9;1315;8643;15,2;1371;-14,2
+09673;Landkreis Rhön-Grabfeld;Landkreis;Bayern;5149;767;2494;1216;668;85,1;877;5624;15,6;874;-12,2
+09674;Landkreis Haßberge;Landkreis;Bayern;4740;560;2704;768;706;88,2;588;5383;10,9;587;-4,6
+09675;Landkreis Kitzingen;Landkreis;Bayern;4694;815;2534;767;570;82,6;954;5811;16,4;919;-11,3
+09676;Landkreis Miltenberg;Landkreis;Bayern;7650;1156;3976;1233;1277;84,9;1309;8795;14,9;1043;10,8
+09677;Landkreis Main-Spessart;Landkreis;Bayern;7608;1118;4083;1311;1089;85,3;1408;9343;15,1;1263;-11,5
+09678;Landkreis Schweinfurt;Landkreis;Bayern;5960;1205;2973;817;953;79,8;1299;8031;16,2;1079;11,7
+09679;Landkreis Würzburg;Landkreis;Bayern;7513;877;4349;1324;947;88,3;1064;10716;9,9;955;-8,2
+09761;Augsburg;kreisfreie Stadt;Bayern;14208;2591;6455;3145;2009;81,8;2879;19604;14,7;2687;-3,6
+09762;Kaufbeuren;kreisfreie Stadt;Bayern;2617;475;1157;591;392;81,8;523;3544;14,8;526;-9,7
+09763;Kempten (Allgäu);kreisfreie Stadt;Bayern;3346;479;1612;728;526;85,7;591;4976;11,9;563;-14,9
+09764;Memmingen;kreisfreie Stadt;Bayern;2366;329;1203;527;304;86,1;464;3275;14,2;420;-21,7
+09771;Landkreis Aichach-Friedberg;Landkreis;Bayern;5657;851;2997;1046;760;85,0;952;8951;10,6;902;-5,7
+09772;Landkreis Augsburg;Landkreis;Bayern;12040;1784;6479;2273;1498;85,2;1881;17534;10,7;1839;-3,0
+09773;Landkreis Dillingen a.d.Donau;Landkreis;Bayern;5028;901;2660;708;758;82,1;1102;6332;17,4;1014;-11,1
+09774;Landkreis Günzburg;Landkreis;Bayern;6489;976;3409;1178;918;85,0;1072;7955;13,5;996;-2,0
+09775;Landkreis Neu-Ulm;Landkreis;Bayern;8471;1372;4229;1549;1318;83,8;1600;12122;13,2;1423;-3,6
+09776;Landkreis Lindau (Bodensee);Landkreis;Bayern;4322;899;1816;1035;572;79,2;938;6693;14,0;943;-4,7
+09777;Landkreis Ostallgäu;Landkreis;Bayern;5887;908;3092;1128;756;84,6;973;9572;10,2;900;0,9
+09778;Landkreis Unterallgäu;Landkreis;Bayern;7114;1215;3704;1332;861;82,9;1383;9992;13,8;1270;-4,3
+09779;Landkreis Donau-Ries;Landkreis;Bayern;5884;921;2918;1152;885;84,3;997;8664;11,5;927;-0,6
+09780;Landkreis Oberallgäu;Landkreis;Bayern;6402;978;3448;1009;960;84,7;1131;11950;9,5;1090;-10,3
+10041;Regionalverband Saarbrücken;Regionalverband;Saarland;25938;3975;13869;4659;3427;84,7;4561;24240;18,8;4024;-1,2
+10042;Landkreis Merzig-Wadern;Landkreis;Saarland;7902;1560;4490;874;978;80,3;1697;7874;21,6;1537;1,5
+10043;Landkreis Neunkirchen;Landkreis;Saarland;11508;1575;6887;1571;1472;86,3;1771;10320;17,2;1780;-11,5
+10044;Landkreis Saarlouis;Landkreis;Saarland;16513;1938;9890;2543;2138;88,3;2038;15848;12,9;1923;0,8
+10045;Saarpfalz-Kreis;Landkreis;Saarland;11041;1535;7006;1116;1379;86,1;1965;11993;16,4;1539;-0,3
+10046;Landkreis St. Wendel;Landkreis;Saarland;7449;1085;4386;1158;819;85,4;1145;6930;16,5;1061;2,3
+11000;Berlin;Stadtstaat;Berlin;211999;27699;115277;43847;25157;86,9;30178;240636;12,5;29069;-4,7
+12051;Brandenburg an der Havel;kreisfreie Stadt;Brandenburg;5784;905;2762;1396;720;84,4;1044;7810;13,4;847;6,8
+12052;Cottbus;kreisfreie Stadt;Brandenburg;7080;1092;3116;1841;1027;84,6;1153;9203;12,5;1140;-4,2
+12053;Frankfurt (Oder);kreisfreie Stadt;Brandenburg;4947;782;2597;950;617;84,2;807;5517;14,6;830;-5,8
+12054;Potsdam;kreisfreie Stadt;Brandenburg;10087;1673;5091;2117;1199;83,4;1796;13473;13,3;1718;-2,6
+12060;Landkreis Barnim;Landkreis;Brandenburg;18557;2091;11077;3881;1508;88,7;2439;15591;15,6;2226;-6,1
+12061;Landkreis Dahme-Spreewald;Landkreis;Brandenburg;13229;1291;7269;3109;1556;90,2;1512;14959;10,1;1358;-4,9
+12062;Landkreis Elbe-Elster;Landkreis;Brandenburg;8947;878;4086;2706;1276;90,2;950;9684;9,8;900;-2,4
+12063;Landkreis Havelland;Landkreis;Brandenburg;11705;1235;6479;2656;1332;89,4;1299;12975;10,0;1262;-2,1
+12064;Landkreis Märkisch-Oderland;Landkreis;Brandenburg;17998;1633;10297;4113;1953;90,9;1756;16188;10,8;1848;-11,6
+12065;Landkreis Oberhavel;Landkreis;Brandenburg;18528;1918;11161;3767;1681;89,6;2057;17565;11,7;1973;-2,8
+12066;Landkreis Oberspreewald-Lausitz;Landkreis;Brandenburg;9632;1294;4849;2028;1459;86,6;1394;11366;12,3;1295;-0,1
+12067;Landkreis Oder-Spree;Landkreis;Brandenburg;17785;1840;9937;3934;2070;89,7;1971;16897;11,7;1807;1,8
+12068;Landkreis Ostprignitz-Ruppin;Landkreis;Brandenburg;10613;859;5998;2883;873;91,9;1003;8715;11,5;1026;-16,3
+12069;Landkreis Potsdam-Mittelmark;Landkreis;Brandenburg;13251;1592;7229;2818;1609;88,0;1990;17009;11,7;1748;-8,9
+12070;Landkreis Prignitz;Landkreis;Brandenburg;9778;922;5287;2674;894;90,6;1004;7508;13,4;1022;-9,8
+12071;Landkreis Spree-Neiße;Landkreis;Brandenburg;9242;1093;4637;2179;1327;88,2;1202;10810;11,1;1091;0,2
+12072;Landkreis Teltow-Fläming;Landkreis;Brandenburg;12714;1570;6765;2918;1458;87,7;1723;13485;12,8;1628;-3,6
+12073;Landkreis Uckermark;Landkreis;Brandenburg;14195;1025;8015;3859;1296;92,8;1060;11587;9,1;1074;-4,6
+13003;Rostock;kreisfreie Stadt;Mecklenburg-Vorpommern;14574;2418;7122;3126;1902;83,4;2615;19671;13,3;2560;-5,5
+13004;Schwerin;kreisfreie Stadt;Mecklenburg-Vorpommern;8148;1707;3660;1698;1080;79,1;1943;9477;20,5;1451;17,6
+13071;Landkreis Mecklenburgische Seenplatte;Landkreis;Mecklenburg-Vorpommern;24723;3231;11580;6648;3258;86,9;3434;22028;15,6;3064;5,5
+13072;Landkreis Rostock;Landkreis;Mecklenburg-Vorpommern;18408;2463;8595;5001;2340;86,6;2643;17405;15,2;2468;-0,2
+13073;Landkreis Vorpommern-Rügen;Landkreis;Mecklenburg-Vorpommern;21387;2484;10962;5151;2781;88,4;2616;19495;13,4;2608;-4,8
+13074;Landkreis Nordwestmecklenburg;Landkreis;Mecklenburg-Vorpommern;12492;1791;6405;2625;1671;85,7;1950;12348;15,8;1732;3,4
+13075;Landkreis Vorpommern-Greifswald;Landkreis;Mecklenburg-Vorpommern;22683;2694;10203;6927;2853;88,1;3124;19505;16,0;2989;-9,9
+13076;Landkreis Ludwigslust-Parchim;Landkreis;Mecklenburg-Vorpommern;17457;2226;8712;4104;2397;87,2;2399;16268;14,7;2401;-7,3
+14511;Chemnitz;kreisfreie Stadt;Sachsen;23939;3310;12230;5040;3356;86,2;3748;24264;15,4;3532;-6,3
+14521;Erzgebirgskreis;Landkreis;Sachsen;33077;4774;15214;8557;4518;85,6;5337;30783;17,3;4624;3,2
+14522;Landkreis Mittelsachsen;Landkreis;Sachsen;28308;4129;13622;6520;4026;85,4;4552;29277;15,5;4025;2,6
+14523;Vogtlandkreis;Landkreis;Sachsen;17087;3128;6466;4779;2706;81,7;3575;23200;15,4;3245;-3,6
+14524;Landkreis Zwickau;Landkreis;Sachsen;28456;4365;12367;7570;4142;84,7;5149;31157;16,5;4512;-3,3
+14612;Dresden;kreisfreie Stadt;Sachsen;44141;5766;22850;9934;;86,9;6231;48003;13,0;6057;-4,8
+14625;Landkreis Bautzen;Landkreis;Sachsen;31835;3427;16525;7960;3918;89,2;3805;29069;13,1;3715;-7,8
+14626;Landkreis Görlitz;Landkreis;Sachsen;30121;3437;14439;8434;3804;88,6;3657;26355;13,9;3533;-2,7
+14627;Landkreis Meißen;Landkreis;Sachsen;24436;2555;13090;5880;;89,5;2876;24690;11,6;2705;-5,5
+14628;Landkreis Sächsische Schweiz-Osterzgebirge;Landkreis;Sachsen;23655;3132;12645;5187;;86,8;3329;24525;13,6;3415;-8,3
+14713;Leipzig;kreisfreie Stadt;Sachsen;39324;6284;17725;9808;5495;84,0;6931;45270;15,3;6380;-1,5
+14729;Landkreis Leipzig;Landkreis;Sachsen;21802;3028;10205;5372;3191;86,1;3192;23779;13,4;3109;-2,6
+14730;Landkreis Nordsachsen;Landkreis;Sachsen;17062;2341;8738;3437;2541;86,3;2455;17698;13,9;2458;-4,8
+15001;Dessau-Roßlau;kreisfreie Stadt;Sachsen-Anhalt;9000;1359;4355;2348;936;84,9;1492;9099;16,4;1338;1,6
+15002;Halle (Saale);kreisfreie Stadt;Sachsen-Anhalt;19426;2712;9106;5076;2527;86,0;2888;20081;14,4;2809;-3,5
+15003;Magdeburg;kreisfreie Stadt;Sachsen-Anhalt;18240;3207;9574;3106;2345;82,4;3721;21220;17,5;3150;1,8
+15081;Altmarkkreis Salzwedel;Landkreis;Sachsen-Anhalt;6812;892;3782;1235;901;86,9;1026;6670;15,4;987;-9,6
+15082;Landkreis Anhalt-Bitterfeld;Landkreis;Sachsen-Anhalt;16101;1980;8294;4024;1796;87,7;2105;14651;14,4;1891;4,7
+15083;Landkreis Börde;Landkreis;Sachsen-Anhalt;14444;1931;7578;3195;1735;86,6;2137;12712;16,8;2194;-12,0
+15084;Burgenlandkreis;Landkreis;Sachsen-Anhalt;18688;2523;9889;4208;2064;86,5;2756;17119;16,1;2643;-4,5
+15085;Landkreis Harz;Landkreis;Sachsen-Anhalt;21012;3224;10170;5158;2451;84,7;3559;20097;17,7;3491;-7,6
+15086;Landkreis Jerichower Land;Landkreis;Sachsen-Anhalt;8144;1353;4737;1287;766;83,4;1446;7865;18,4;1345;0,6
+15087;Landkreis Mansfeld-Südharz;Landkreis;Sachsen-Anhalt;14416;1926;7565;3179;1744;86,6;2093;13193;15,9;1915;0,6
+15088;Saalekreis;Landkreis;Sachsen-Anhalt;15333;1646;8443;3404;1835;89,3;1711;14893;11,5;1597;3,1
+15089;Salzlandkreis;Landkreis;Sachsen-Anhalt;17834;2775;8674;4094;2282;84,4;2962;17478;16,9;2866;-3,2
+15090;Landkreis Stendal;Landkreis;Sachsen-Anhalt;10082;1453;5308;2069;1246;85,6;1572;9179;17,1;1444;0,6
+15091;Landkreis Wittenberg;Landkreis;Sachsen-Anhalt;14704;1277;7378;4629;1420;91,3;1432;12192;11,7;1402;-8,9
+16051;Erfurt;kreisfreie Stadt;Thüringen;16527;2195;9164;3310;1858;86,7;2431;16698;14,6;2456;-10,6
+16052;Gera;kreisfreie Stadt;Thüringen;8647;1220;4263;2016;1146;85,9;1280;9477;13,5;1241;-1,7
+16053;Jena;kreisfreie Stadt;Thüringen;7056;1119;3602;1525;810;84,1;1238;9323;13,3;1188;-5,8
+16054;Suhl;kreisfreie Stadt;Thüringen;3524;419;2037;669;399;88,1;436;3732;11,7;435;-3,7
+16055;Weimar;kreisfreie Stadt;Thüringen;5570;950;2498;1526;595;82,9;1036;5597;18,5;925;2,7
+16061;Landkreis Eichsfeld;Landkreis;Thüringen;10335;984;5855;2578;911;90,5;1064;8042;13,2;980;0,4
+16062;Landkreis Nordhausen;Landkreis;Thüringen;9836;1420;4918;2429;1066;85,6;1526;7631;20,0;1437;-1,2
+16063;Wartburgkreis;Landkreis;Thüringen;14160;1804;8087;2575;1687;87,3;2059;13614;15,1;1812;-0,4
+16064;Unstrut-Hainich-Kreis;Landkreis;Thüringen;12264;1418;6392;3121;1331;88,4;1537;8104;19,0;1433;-1,0
+16065;Kyffhäuserkreis;Landkreis;Thüringen;8756;1037;4778;1944;996;88,2;1096;6395;17,1;1035;0,2
+16066;Landkreis Schmalkalden-Meiningen;Landkreis;Thüringen;12653;1375;7220;2730;1326;89,1;1499;10746;13,9;1434;-4,1
+16067;Landkreis Gotha;Landkreis;Thüringen;11398;1433;6247;2394;1320;87,4;1718;11443;15,0;1421;0,8
+16068;Landkreis Sömmerda;Landkreis;Thüringen;6964;626;3962;1592;783;91,0;760;5058;15,0;663;-5,6
+16069;Landkreis Hildburghausen;Landkreis;Thüringen;5435;757;3213;817;648;86,1;858;4841;17,7;877;-13,7
+16070;Ilm-Kreis;Landkreis;Thüringen;9429;1206;5471;1719;1031;87,2;1245;9338;13,3;1217;-0,9
+16071;Landkreis Weimarer Land;Landkreis;Thüringen;7174;844;3914;1583;828;88,2;1005;5914;17,0;916;-7,9
+16072;Landkreis Sonneberg;Landkreis;Thüringen;4769;605;2987;591;584;87,3;661;5206;12,7;688;-12,1
+16073;Landkreis Saalfeld-Rudolstadt;Landkreis;Thüringen;9582;1199;4877;2411;1092;87,5;1245;10250;12,1;1259;-4,8
+16074;Saale-Holzland-Kreis;Landkreis;Thüringen;6114;760;3613;909;829;87,6;767;7139;10,7;788;-3,6
+16075;Saale-Orla-Kreis;Landkreis;Thüringen;6363;638;3443;1435;846;90,0;701;6816;10,3;676;-5,6
+16076;Landkreis Greiz;Landkreis;Thüringen;8278;1204;3992;2146;935;85,5;1344;9643;13,9;1277;-5,7
+16077;Landkreis Altenburger Land;Landkreis;Thüringen;9103;1172;4595;2263;1071;87,1;1311;9337;14,0;1149;2,0
+
+# Quelle: Statistische Ämter des Bundes und der Länder, Regionaldatenbank Deutschland, Tabellen 22411-02-05-4, 22411-01-02-4, 12411-09-01-4 (https://www.regionalstatistik.de). Datenlizenz Deutschland – Namensnennung – Version 2.0 (https://www.govdata.de/dl-de/by-2-0).
+# Bearbeitung: Primundus (https://primundus.de/pflege-im-kreis). Anteile, Plätze je 100 Einwohner ab 80 und Veränderungen berechnet. Stand der Daten: Dezember 2023, Vergleich Dezember 2019 (Eisenach 2019 dem Wartburgkreis zugerechnet). Leere Zellen: in der Quelle gesperrt.

@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('diabetes-pflege-senioren', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('diabetes-pflege-senioren', '16. Oktober 2026')
 
 const SECTIONS = [
   { id: 'besonderheiten', title: 'Besonderheiten bei Diabetes im Alter' },
@@ -20,12 +20,12 @@ const SECTIONS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Diabetes Pflege Senioren — Blutzucker, Hypoglykämie & 24h-Betreuung | Primundus',
+  title: 'Diabetes im Alter: Pflege zu Hause und Unterzuckerung',
   description: 'Diabetes Pflege bei älteren Menschen: Blutzuckermessen, Insulingabe, Hypoglykämie erkennen, richtige Ernährung und ab wann eine 24h-Betreuungskraft sinnvoll.',
   alternates: { canonical: 'https://primundus.de/diabetes-pflege-senioren' },
   openGraph: {
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
-    title: 'Diabetes Pflege Senioren | Primundus',
+    title: 'Diabetes im Alter: Pflege zu Hause und Unterzuckerung',
     description: 'Diabetesmanagement bei pflegebedürftigen Senioren — Blutzucker, Hypoglykämie, 24h-Betreuung.',
     url: 'https://primundus.de/diabetes-pflege-senioren',
     siteName: 'Primundus',
@@ -38,7 +38,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Diabetes Pflege Senioren — Blutzucker, Hypoglykämie und 24h-Betreuung',
+    headline: 'Diabetes im Alter: Pflege zu Hause und Anzeichen einer Unterzuckerung',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was macht eine 24h-Betreuungskraft bei Diabetes?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft kann: Blutzucker messen, an Medikamenteneinnahme erinnern, zuckerarme Mahlzeiten kochen, Hypoglykämie-Zeichen beobachten und sofort reagieren. Was eine Betreuungskraft nicht tut: Insulin spritzen (das ist Behandlungspflege und übernimmt der ambulante Pflegedienst).' } },
+      { '@type': 'Question', name: 'Was macht eine 24h-Betreuungskraft bei Diabetes?', acceptedAnswer: { '@type': 'Answer', text: 'An Blutzuckermessung und Medikamente erinnern, diabetesgerechte Mahlzeiten kochen, Flüssigkeit anbieten, Hypoglykämie-Zeichen beobachten. Blutzucker messen und Insulin spritzen sind Behandlungspflege. Das übernimmt der ambulante Pflegedienst, wenn die Person es nicht selbst kann.' } },
       { '@type': 'Question', name: 'Was sind Zeichen einer Unterzuckerung?', acceptedAnswer: { '@type': 'Answer', text: 'Frühe Zeichen: Zittern, Schwitzen, Blässe, Herzrasen, Hunger. Fortgeschrittene Zeichen: Verwirrtheit, undeutliche Sprache, Aggression, Koordinationsstörungen. Schwere Hypoglykämie: Bewusstlosigkeit — sofort Rettungsdienst rufen.' } },
     ],
   },
@@ -81,7 +81,7 @@ export default function DiabetesPflegeSenioren() {
             { label: "Diabetes Pflege Senioren" },
           ]}
           augenbraue="Ratgeber Diabetes"
-          titel="Diabetes Pflege Senioren — was bei der Betreuung zuhause wichtig ist"
+          titel="Diabetes im Alter: Pflege zu Hause und Anzeichen einer Unterzuckerung"
           einleitung="Diabetes Typ 2 ist bei Senioren über 70 eine der häufigsten Erkrankungen — und bei pflegebedürftigen Menschen oft eines von mehreren gleichzeitigen Problemen. Die häusliche Pflege von Menschen mit Diabetes erfordert strukturiertes Management: regelmäßige Mahlzeiten, Blutzuckerkontrolle, Medikamentensicherheit und das sichere Erkennen einer Unterzuckerung."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
@@ -108,12 +108,12 @@ export default function DiabetesPflegeSenioren() {
           <Abschnitt id="alltag" titel="Diabetesmanagement im Alltag — was die Betreuungskraft übernimmt">
             <Punkte
               punkte={[
-                { title: '✓ Blutzucker messen', desc: 'Betreuungskraft lernt das Blutzuckermessen und führt es zu festgelegten Zeiten durch. Werte werden dokumentiert und bei Auffälligkeiten Angehörige und Arzt informiert.' },
-                { title: '✓ Medikamentenerinnerung', desc: 'Orale Diabetesmedikamente werden zur richtigen Zeit und nach den Mahlzeiten erinnert. Keine Medikamentengabe gegen den Willen des Betroffenen.' },
+                { title: '✓ Ans Blutzuckermessen erinnern', desc: 'Misst die Person ihren Blutzucker selbst, erinnert die Betreuungskraft zu den festgelegten Zeiten und notiert die Werte. Bei Auffälligkeiten informiert sie Angehörige und Arzt.' },
+                { title: '✓ Medikamentenerinnerung', desc: 'Die Betreuungskraft erinnert zur richtigen Zeit und nach den Mahlzeiten an die Diabetestabletten.' },
                 { title: '✓ Diabetesgerechte Mahlzeiten kochen', desc: 'Kohlenhydratreduzierte, ausgewogene Mahlzeiten zu festen Zeiten. Keine süßen Getränke. Frisches Obst in Maßen. Vollkornprodukte. Betreuungskraft lernt die Grundlagen der Diabeteskost.' },
                 { title: '✓ Flüssigkeit aktiv anbieten', desc: 'Regelmäßig Wasser, ungesüßten Tee, Mineralwasser anbieten. Keine zuckerhaltigen Getränke. Trinkprotokoll bei Bedarf.' },
                 { title: '✓ Hypoglykämie-Zeichen beobachten', desc: 'Betreuungskraft ist geschult auf frühe und späte Zeichen einer Unterzuckerung — und weiß wie zu handeln.' },
-                { title: '✗ Insulin spritzen — Pflegedienst', desc: 'Insulininjektionen sind Behandlungspflege — übernimmt der ambulante Pflegedienst. Primundus koordiniert auf Wunsch die Zusammenarbeit.' },
+                { title: '✗ Blutzucker messen und Insulin spritzen: Pflegedienst', desc: 'Blutzuckermessung und Insulininjektionen sind Behandlungspflege. Kann die Person es nicht selbst, übernimmt das der ambulante Pflegedienst. Primundus koordiniert auf Wunsch die Zusammenarbeit.' },
               ]}
             />
           </Abschnitt>
@@ -128,7 +128,7 @@ export default function DiabetesPflegeSenioren() {
                   title: 'Frühe Zeichen',
                   punkte: [
                     <><strong>Zeichen:</strong> {'Zittern, Schwitzen, Blässe, Herzrasen, Hunger, Unruhe'}</>,
-                    <><strong>Handlung:</strong> {'Sofort Traubenzucker (15–20 g), Fruchtsaft oder Orangensaft geben. Blutzucker nach 15 Minuten nochmals messen.'}</>,
+                    <><strong>Handlung:</strong> {'Traubenzucker, Fruchtsaft oder Orangensaft anbieten und ärztliche Hilfe holen, wenn die Zeichen nicht rasch nachlassen.'}</>,
                   ],
                 },
                 {
@@ -172,7 +172,7 @@ export default function DiabetesPflegeSenioren() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Was macht eine 24h-Betreuungskraft bei Diabetes?', a: 'Blutzucker messen, Medikamentenerinnerung, diabetesgerechte Mahlzeiten kochen, Flüssigkeit anbieten, Hypoglykämie-Zeichen beobachten. Insulin spritzen ist Behandlungspflege — übernimmt ambulanter Pflegedienst.' },
+                { q: 'Was macht eine 24h-Betreuungskraft bei Diabetes?', a: 'An Blutzuckermessung und Medikamente erinnern, diabetesgerechte Mahlzeiten kochen, Flüssigkeit anbieten, Hypoglykämie-Zeichen beobachten. Blutzucker messen und Insulin spritzen sind Behandlungspflege. Das übernimmt der ambulante Pflegedienst, wenn die Person es nicht selbst kann.' },
                 { q: 'Was sind Zeichen einer Unterzuckerung?', a: 'Früh: Zittern, Schwitzen, Herzrasen. Fortgeschritten: Verwirrtheit, Aggression, undeutliche Sprache. Schwer: Bewusstlosigkeit. Bei Bewusstlosigkeit: sofort 112 rufen.' },
                 { q: 'Was darf eine Betreuungskraft bei Diabetes NICHT tun?', a: 'Insulin spritzen — das ist Behandlungspflege und darf nur von examinierten Pflegekräften oder Ärzten durchgeführt werden. Primundus koordiniert auf Wunsch die Zusammenarbeit mit einem Pflegedienst.' },
                 { q: 'Wie hoch ist der Pflegegrad bei Diabetes?', a: 'Diabetes allein führt oft zu PG 1–2. Mit Folgekomplikationen (Neuropathie, Sehverlust, Niereninsuffizienz, Mobilitätseinschränkungen) sind PG 2–4 möglich.' },

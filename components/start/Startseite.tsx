@@ -9,7 +9,7 @@ import { ABLAUF_SCHRITTE } from '@/components/vertrauen/Ablauf'
 import { VORAUSSETZUNGEN } from '@/components/vertrauen/Voraussetzungen'
 
 export const RECHNER_START = 'https://kostenrechner.primundus.de/?start=1&src=apex-startseite'
-const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie'
+const GARANTIE = 'https://kostenrechner.primundus.de/bestpreisgarantie?src=apex-garantie'
 
 const KNOPF =
   'inline-flex items-center justify-center gap-2 min-h-[58px] px-8 rounded-2xl bg-pm-coral hover:bg-pm-coral-deep text-white text-[18px] md:text-[19px] font-bold shadow-lift transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pm-taupe'
@@ -146,8 +146,9 @@ export function WasIst() {
       <div className="max-w-[900px] mx-auto">
         <p className={`${AUGENBRAUE} text-center`}>Das Betreuungskonzept</p>
         <h2 className={`${H2} text-center`}>Was ist 24-Stunden-Pflege?</h2>
+        {/* 15.10.2026: Fließtext-Link auf die Themenseite, nur das vorhandene Wort verlinkt (Text unverändert) */}
         <p className="mt-5 text-[18px] leading-[1.65] text-pm-body text-center max-w-[44rem] mx-auto">
-          Bei der 24-Stunden-Betreuung zieht eine Betreuungskraft bei Ihrem pflegebedürftigen Angehörigen ein und unterstützt ihn im Alltag – im vertrauten Zuhause und bei Bedarf auch nachts.
+          Bei der <a href="/24-stunden-pflege" className="font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">24-Stunden-Betreuung</a> zieht eine Betreuungskraft bei Ihrem pflegebedürftigen Angehörigen ein und unterstützt ihn im Alltag – im vertrauten Zuhause und bei Bedarf auch nachts.
         </p>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {KONZEPT.map((k) => (

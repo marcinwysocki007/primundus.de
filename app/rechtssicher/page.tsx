@@ -12,7 +12,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // „Kontrollen seit Jahren häufiger", „Vertrag mit Primundus als deutscher Agentur" (Vertragspartner ist die PRIMUNDUS
 // Sp. z o.o.; kein „Agentur"), „seit 20 Jahren ausschließlich". Die Kurzantwort (August 2026) steht jetzt als Einleitung.
 
-const AKTUALISIERT = aktualisiertAm('rechtssicher', '19. September 2026')
+const AKTUALISIERT = aktualisiertAm('rechtssicher', '15. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-rechtssicher'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 const LINK = 'text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Ist 24-Stunden-Pflege legal?',
-    a: 'Ja, im Entsendemodell: Die Betreuungskraft ist bei einem Unternehmen in einem anderen EU-Land angestellt und dort sozialversichert, für jeden Einsatz liegt eine A1-Bescheinigung vor, und sie hat geregelte Arbeits- und Ruhezeiten. Bei Primundus sind die Betreuungskräfte bei uns angestellt und in Polen sozialversichert; Sie als Familie werden nicht Arbeitgeber.',
+    a: 'Ja, im Entsendemodell: Die Betreuungskraft ist bei einem Unternehmen in einem anderen EU-Land angestellt und dort sozialversichert; die A1-Bescheinigung wird vor der Anreise beantragt und, wenn sie noch nicht vorliegt, nachgereicht. Die Kraft hat geregelte Arbeits- und Ruhezeiten. Bei Primundus sind die Betreuungskräfte bei uns angestellt und in Polen sozialversichert; Sie als Familie werden nicht Arbeitgeber.',
   },
   {
     q: 'Was passiert bei einer behördlichen Kontrolle?',
@@ -65,7 +65,7 @@ const schemaMarkup = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Rechtssichere 24-Stunden-Pflege: so stellt Primundus das sicher',
+    headline: 'Rechtssichere 24-Stunden-Pflege im Entsendemodell: wie es funktioniert und was Primundus dafür tut',
     author: { '@id': PERSON_MARTA_ID },
     publisher: { '@type': 'Organization', name: 'Primundus', logo: 'https://primundus.de/images/primundus_logo_header.webp' },
     datePublished: '2026-04-25',
@@ -103,8 +103,8 @@ export default function RechtssicherPage() {
             { label: 'Rechtssicher' },
           ]}
           augenbraue="Über Primundus"
-          titel={<>Rechtssichere <span className="min-[375px]:whitespace-nowrap">24-Stunden-Pflege</span>: so stellt Primundus das sicher</>}
-          einleitung={<>Legal ist die 24-Stunden-Betreuung im <strong className="text-pm-ink">Entsendemodell</strong>: Die Betreuungskraft ist bei uns angestellt und sozialversichert, für jeden Einsatz liegt eine <strong className="text-pm-ink">A1-Bescheinigung</strong> vor, und sie hat geregelte Arbeits- und Ruhezeiten. Sie als Familie werden nicht Arbeitgeber. Was das im Einzelnen heißt, warum „selbstständige“ Kräfte riskant sind und was bei einer Kontrolle zählt.</>}
+          titel="Rechtssichere 24-Stunden-Pflege im Entsendemodell: wie es funktioniert und was Primundus dafür tut"
+          einleitung={<>Legal ist die 24-Stunden-Betreuung im <strong className="text-pm-ink">Entsendemodell</strong>: Die Betreuungskraft ist bei uns angestellt und sozialversichert und hat geregelte Arbeits- und Ruhezeiten. Die <strong className="text-pm-ink">A1-Bescheinigung</strong> beantragen wir vor jedem Einsatz; liegt sie bei Anreise noch nicht vor, wird sie nachgereicht. Sie als Familie werden nicht Arbeitgeber. Was das im Einzelnen heißt, warum „selbstständige“ Kräfte riskant sind und was bei einer Kontrolle zählt.</>}
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="5 Min."
           knopf={{ href: RECHNER, text: 'Preis & Pflegekräfte ansehen' }}
