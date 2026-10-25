@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegedienst-oder-24h-kraft', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('pflegedienst-oder-24h-kraft', '25. Oktober 2026')
 
 const SECTIONS = [
   { id: 'unterschied', title: 'Der grundlegende Unterschied' },
@@ -125,7 +125,7 @@ export default function PflegedienstOder24hKraft() {
                   titel: '24h-Betreuungskraft (Primundus)',
                   ton: 'taupe',
                   text: 'Ab 2.150 €/Monat. Nach Pflegegeld (347–990 €/Mo), Entlastungsbudget und Steuerermäßigung bleiben bei PG 3 ab ca. 923 €/Monat. Inklusive: Haushalt, Kochen, Gesellschaft — alles in einem.',
-                  punkte: ['Kombination mit Pflegedienst für Behandlungspflege möglich — Kosten dann kumuliert aber Kassenzuschüsse laufen parallel.'],
+                  punkte: ['Kombination mit Pflegedienst für Behandlungspflege möglich — bei ärztlicher Verordnung zahlt die Krankenkasse, das Pflegegeld bleibt unverändert.'],
                 },
               ]}
             />
@@ -150,10 +150,10 @@ export default function PflegedienstOder24hKraft() {
 
           <Abschnitt id="kombination" titel="Kombination — oft die beste Lösung">
             <Text>
-              Die häufigste und meist beste Lösung ist die Kombination: Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushalt, Gesellschaft und Nacht. Der ambulante Pflegedienst kommt täglich für Behandlungspflege (Injektionen, Verbandswechsel). Beide Kassenzuschüsse laufen parallel.
+              Die häufigste und meist beste Lösung ist die Kombination: Eine 24h-Betreuungskraft übernimmt Grundpflege, Haushalt, Gesellschaft und Nacht. Der ambulante Pflegedienst kommt täglich für Behandlungspflege (Injektionen, Verbandswechsel); bei ärztlicher Verordnung zahlt sie die Krankenkasse, und das Pflegegeld bleibt unverändert. Übernimmt der Dienst auch Hilfe beim Waschen und Anziehen am Morgen, zahlt die Pflegekasse sie als Sachleistung, und das Pflegegeld sinkt anteilig.
             </Text>
             <Kasten augenbraue="Rechenbeispiel Kombination — PG 3" ton="gruen">
-              <Werte zeilen={[[<>24h-Kraft (Primundus)</>, <>ab 2.150 €/Mo</>], [<>Ambulanter Dienst (Behandlungspflege)</>, <>ca. 300 €/Mo</>], [<>Gesamtkosten</>, <>ab ca. 2.450 €/Mo</>], [<>− Sachleistungen (für den Pflegedienst)</>, <>− ca. 300 €/Mo</>], [<>− anteiliges Pflegegeld PG 3 (Kombinationsleistung)</>, <>− ca. 480 €/Mo</>], [<>− Entlastungsbudget (anteilig)</>, <>− ca. 295 €/Mo</>], [<>− Steuerermäßigung</>, <>− ca. 333 €/Mo</>], [<>Eigenanteil</>, <>ab ca. 1.040 €/Mo</>]]} />
+              <Werte zeilen={[[<>24h-Kraft (Primundus)</>, <>ab 2.150 €/Mo</>], [<>Ambulanter Dienst (Waschen und Anziehen am Morgen)</>, <>ca. 300 €/Mo</>], [<>Gesamtkosten</>, <>ab ca. 2.450 €/Mo</>], [<>− Sachleistungen (für den Pflegedienst)</>, <>− ca. 300 €/Mo</>], [<>− anteiliges Pflegegeld PG 3 (Kombinationsleistung)</>, <>− ca. 480 €/Mo</>], [<>− Entlastungsbudget (anteilig)</>, <>− ca. 295 €/Mo</>], [<>− Steuerermäßigung</>, <>− ca. 333 €/Mo</>], [<>Eigenanteil</>, <>ab ca. 1.040 €/Mo</>]]} />
             </Kasten>
             <MehrDazu
               label="Alle Kombinationsmöglichkeiten:"
@@ -166,7 +166,7 @@ export default function PflegedienstOder24hKraft() {
               fragen={[
                 { q: 'Was ist der Unterschied zwischen Pflegedienst und 24h-Kraft?', a: 'Pflegedienst: kommt zu festen Zeiten, geht dann wieder. Kernkompetenz Grund- und Behandlungspflege. 24h-Kraft: lebt im Haushalt, ist bei Bedarf auch nachts da — übernimmt zusätzlich Haushalt, Kochen, Gesellschaft.' },
                 { q: 'Ist ambulante Pflege günstiger als eine 24h-Kraft?', a: 'Bei moderatem Bedarf ja — Sachleistungen decken oft den Pflegedienst vollständig. Bei hohem Gesamtbedarf (Haushalt, Betreuung, Nacht) ist die 24h-Kraft oft günstiger als mehrere Dienste kombiniert.' },
-                { q: 'Kann man Pflegedienst und 24h-Kraft kombinieren?', a: 'Ja — das ist die häufigste Lösung bei komplexem Bedarf. 24h-Kraft für Grundpflege/Haushalt/Nacht, Pflegedienst für Behandlungspflege. Beide Kassenzuschüsse (Pflegegeld + Sachleistungen) laufen parallel.' },
+                { q: 'Kann man Pflegedienst und 24h-Kraft kombinieren?', a: 'Ja — das ist die häufigste Lösung bei komplexem Bedarf. 24h-Kraft für Grundpflege/Haushalt/Nacht, Pflegedienst für Behandlungspflege; bei ärztlicher Verordnung zahlt sie die Krankenkasse, das Pflegegeld bleibt unverändert. Übernimmt der Dienst auch Hilfe beim Waschen und Anziehen, laufen Sachleistungen und anteiliges Pflegegeld parallel (Kombinationsleistung).' },
                 { q: 'Wann reicht ein ambulanter Pflegedienst nicht mehr aus?', a: 'Wenn nächtliche Betreuung nötig ist, Demenz kontinuierliche Anwesenheit erfordert, Angehörige die verbleibende Zeit nicht abdecken können, oder wenn der Gesamtaufwand (Haushalt, Kochen, Begleitung) den Pflegedienst übersteigt.' },
               ]}
             />

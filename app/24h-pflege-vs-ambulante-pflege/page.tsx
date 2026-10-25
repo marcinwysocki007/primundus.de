@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-ambulante-pflege', '16. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('24h-pflege-vs-ambulante-pflege', '25. Oktober 2026')
 
 const SECTIONS = [
   { id: 'unterschied', title: 'Der grundlegende Unterschied' },
@@ -76,7 +76,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Kann man ambulante Pflege und 24h kombinieren?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Ja — Kombinationsleistung: Sachleistungen für ambulanten Pflegedienst + anteiliges Pflegegeld für private Betreuung. Sinnvoll wenn z.B. medizinische Behandlungspflege durch Dienst und Betreuung durch 24h-Kraft.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Ja — Kombinationsleistung: Sachleistungen für ambulanten Pflegedienst + anteiliges Pflegegeld für private Betreuung. Sinnvoll wenn z.B. Hilfe beim Waschen und Anziehen durch Dienst und Betreuung durch 24h-Kraft.' },
       },
     ],
   },
@@ -179,7 +179,7 @@ export default function VsAmbulantePflege() {
 
           <Abschnitt id="kombination" titel="Kombination aus ambulant und 24h möglich?">
             <Text>
-              Ja — die sogenannte Kombinationsleistung ermöglicht es, Sachleistungen (ambulanter Pflegedienst) und Pflegegeld (für private Betreuung) zu kombinieren. Das ist besonders dann sinnvoll wenn ein ambulanter Pflegedienst bestimmte Aufgaben übernimmt (z.B. medizinische Behandlungspflege) und eine Betreuungskraft oder Angehörige den Rest.
+              Ja — die sogenannte Kombinationsleistung ermöglicht es, Sachleistungen (ambulanter Pflegedienst) und Pflegegeld (für private Betreuung) zu kombinieren. Das ist besonders dann sinnvoll wenn ein ambulanter Pflegedienst bestimmte Aufgaben übernimmt (z.B. Hilfe beim Waschen und Anziehen) und eine Betreuungskraft oder Angehörige den Rest.
             </Text>
             <MehrDazu
               label="Kombinationsleistung erklärt:"
@@ -193,7 +193,7 @@ export default function VsAmbulantePflege() {
                 { q: 'Was ist der Unterschied zwischen ambulanter Pflege und 24h-Pflege?', a: 'Ambulanter Pflegedienst kommt zu vereinbarten Zeiten, geht dann wieder. 24h-Betreuungskraft lebt im Haushalt und ist bei Bedarf auch nachts da. Der entscheidende Unterschied: nächtliche Sicherheit, Demenzbetreuung, Gesellschaft im Alltag.' },
                 { q: 'Wann reicht ambulante Pflege nicht mehr aus?', a: 'Wenn Pflegebedarf über mehrere Tageszeiten verteilt ist und Angehörige nicht übernehmen können, bei nächtlichem Betreuungsbedarf, bei Demenz mit Weglaufen oder Selbstgefährdung, oder wenn ambulante Kosten die Sachleistungen deutlich übersteigen.' },
                 { q: 'Was kostet ambulante Pflege im Vergleich zu 24h?', a: 'Ambulant: je nach Zahl und Art der Einsätze, Sachleistungen können angerechnet werden. 24-Stunden-Pflege: ab 2.150 €/Monat, Eigenanteil nach Pflegegeld, Entlastungsbudget und Steuerermäßigung bei PG 3 ab ca. 923 €.' },
-                { q: 'Kann man ambulante Pflege und 24h kombinieren?', a: 'Ja — Kombinationsleistung: Sachleistungen für ambulanten Pflegedienst + anteiliges Pflegegeld für private Betreuung. Sinnvoll wenn z.B. medizinische Behandlungspflege durch Dienst und Betreuung durch 24h-Kraft.' },
+                { q: 'Kann man ambulante Pflege und 24h kombinieren?', a: 'Ja — Kombinationsleistung: Sachleistungen für ambulanten Pflegedienst + anteiliges Pflegegeld für private Betreuung. Sinnvoll wenn z.B. Hilfe beim Waschen und Anziehen durch Dienst und Betreuung durch 24h-Kraft.' },
               ]}
             />
           </Abschnitt>

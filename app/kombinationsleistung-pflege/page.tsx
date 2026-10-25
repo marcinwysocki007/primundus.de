@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('kombinationsleistung-pflege', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('kombinationsleistung-pflege', '25. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist die Kombinationsleistung?' },
@@ -139,8 +139,8 @@ export default function Kombinationsleistung() {
           <Abschnitt id="wann-sinnvoll" titel="Wann ist die Kombinationsleistung besonders sinnvoll?">
             <Punkte
               punkte={[
-                { title: 'Ambulanter Pflegedienst + Angehörigenpflege', desc: 'Pflegedienst übernimmt z.B. Medikamentengabe und Grundpflege morgens — Angehörige pflegen den Rest. Die Sachleistungen für den Dienst + anteiliges Pflegegeld für die Angehörigen optimiert die Gesamtentlastung.' },
-                { title: 'Ambulanter Pflegedienst + 24h-Betreuungskraft', desc: 'Spezialisierter Pflegedienst für Behandlungspflege (Verbände, Injektionen) — 24h-Kraft für Grundpflege und Betreuung. Sachleistungen für den Dienst + Pflegegeld für die 24h-Kraft.' },
+                { title: 'Ambulanter Pflegedienst + Angehörigenpflege', desc: 'Pflegedienst übernimmt z.B. die Grundpflege morgens — Angehörige pflegen den Rest. Die Sachleistungen für den Dienst + anteiliges Pflegegeld für die Angehörigen optimiert die Gesamtentlastung.' },
+                { title: 'Ambulanter Pflegedienst + 24h-Betreuungskraft', desc: 'Pflegedienst für Hilfe beim Waschen und Anziehen am Morgen — 24h-Kraft für Grundpflege und Betreuung über den Tag. Sachleistungen für den Dienst + anteiliges Pflegegeld. Behandlungspflege (Verbände, Injektionen) zahlt bei ärztlicher Verordnung die Krankenkasse; sie mindert das Pflegegeld nicht.' },
                 { title: 'Sachleistungsrahmen wird nicht voll ausgeschöpft', desc: 'Wenn der Pflegedienst günstiger als der Sachleistungsrahmen ist — Kombination holt das Maximum an Kassenzuschüssen heraus.' },
               ]}
             />

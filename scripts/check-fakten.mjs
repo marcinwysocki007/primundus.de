@@ -118,6 +118,21 @@ const STALE = [
   // stand „Alltagsleben (keine eigene Gewichtung)“.
   ['Alltagsleben „keine eigene Gewichtung“ (§ 15 Abs. 2: Modul 6 zählt 15 %)', /keine\s+eigene\s+Gewichtung/gi,
     { ohneKommentare: true }],
+  // Zweite Runde 25.10.2026 (Wortlaut von OpenAI geprüft, seo-reports/analysen/sachfehler-2026-10-25/antwort2.md).
+  // § 15 Abs. 2 SGB XI: Selbstversorgung 40 %, nicht 36 % (stand auf /pflegegrad-beantragen und /pflegegrad-bei-demenz).
+  ['Selbstversorgung mit 36 % gewichtet (§ 15 Abs. 2: 40 %)', /Selbstversorgung[^.]{0,60}\b36\s*(?:%|Prozent)|\b36\s*(?:%|Prozent)[^.]{0,30}Selbstversorgung/gi,
+    { ohneKommentare: true }],
+  // § 15 Abs. 2 und 3: Kognition und Verhalten zählen ZUSAMMEN 15 %, gewertet wird der höhere Modulwert. Gesperrt ist jeder
+  // der beiden Bereiche einzeln mit „(15 %)“ oder „(15 % Gewicht)“ und „je 15 %“. Erlaubt bleibt „Kognition und Verhalten (15 %)“.
+  ['Kognition/Verhalten einzeln mit 15 % (§ 15 Abs. 2/3: zusammen 15 %, der höhere Wert zählt)',
+    /(?<!und\s)(?:Kognition|kognitive\s+Fähigkeiten|Verhaltensweisen|Verhalten)(?:\s*&\s*[A-Za-zÄÖÜäöü]+)?\s*\(15\s*%\)|(?:Verhalten|Kognition|kognitiv)[^.]{0,140}\(15\s*%\s*Gewicht\)|\b(?:je|jeweils)\s+15\s*%/gi,
+    { ohneKommentare: true }],
+  // Behandlungspflege (§ 37 Abs. 2 SGB V) zahlt die Krankenkasse auf ärztliche Verordnung; sie ist keine Pflegesachleistung
+  // (§ 36 SGB XI) und mindert das Pflegegeld nicht. Am 25.10. stand das Gegenteil auf /pflegekraft-aus-polen,
+  // /24h-pflege-vs-ambulante-pflege, /pflegedienst-oder-24h-kraft und /kombinationsleistung-pflege.
+  ['Behandlungspflege über Sachleistungen/Kombinationsleistung (§ 37 Abs. 2 SGB V: Krankenkasse, Pflegegeld bleibt)',
+    /Behandlungspflege[^.]{0,60}(?:sinkt|mindert)\s+(?:das\s+)?Pflegegeld(?!\s+nicht)|Sinnvoll,?\s+wenn\s+z\.\s?B\.\s+(?:medizinische\s+)?Behandlungspflege|\(z\.\s?B\.\s+medizinische\s+Behandlungspflege\)|Behandlungspflege[\s\S]{0,80}?Kassenzuschüsse[^.]{0,40}parallel|Ambulanter\s+Dienst\s+\(Behandlungspflege\)|Pflegedienst\s+für\s+Behandlungspflege[\s\S]{0,120}?Sachleistungen\s+für\s+den\s+Dienst|Medikamentengabe\s+und\s+Grundpflege/gi,
+    { ohneKommentare: true }],
 ]
 
 // Zeilen, die nur Kommentar sind (// …, * … in Blockkommentaren, {/* … in JSX)

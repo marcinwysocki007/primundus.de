@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegegrad-beantragen', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('pflegegrad-beantragen', '25. Oktober 2026')
 
 const SECTIONS = [
   { id: 'voraussetzungen', title: 'Wer kann Pflegegrad beantragen?' },
@@ -215,7 +215,7 @@ export default function PflegegradBeantragen() {
               ]}
             />
             <Text>
-              Jeder Bereich wird gewichtet und in Punkte umgerechnet. Die Summe ergibt den Pflegegrad. Der Bereich <strong>Selbstversorgung</strong> hat das höchste Gewicht (36 %), danach folgen kognitive Fähigkeiten und krankheitsbedingte Anforderungen.
+              Jeder Bereich wird gewichtet und in Punkte umgerechnet. Die Summe ergibt den Pflegegrad. Der Bereich <strong>Selbstversorgung</strong> hat das höchste Gewicht (40&nbsp;%), danach folgen krankheitsbedingte Anforderungen (20&nbsp;%). Kognition und Verhalten zählen zusammen 15&nbsp;%, gewertet wird der höhere der beiden Bereiche; Alltagsleben und soziale Kontakte zählen ebenfalls 15&nbsp;%.
             </Text>
             <Zwischentitel>Die 5 wichtigsten Tipps für die Begutachtung:</Zwischentitel>
             <Punkte

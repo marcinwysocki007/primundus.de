@@ -26,7 +26,7 @@ import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN 
 // ohne Anrechnung), § 45 (kostenlose Pflegekurse), § 45b SGB XI, § 1831 BGB (Unterbringung nur mit Genehmigung des
 // Betreuungsgerichts). Preise und Eigenanteile wie auf /kosten (Rechner-Preiskonfiguration 20.09.2026).
 
-const AKTUALISIERT = aktualisiertAm('demenz-pflege-zuhause', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('demenz-pflege-zuhause', '25. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-demenz'
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 
@@ -282,7 +282,7 @@ export default function DemenzPflegeZuhause() {
                 ['Angehörige pflegen selbst', `Pflegegeld ${euro(PFLEGEGELD[2])} bis ${euro(PFLEGEGELD[5])} im Monat ab Pflegegrad 2`, 'Frühe Phase, wenn jemand aus der Familie Zeit hat'],
                 ['Stundenweise Betreuung (Alltagsbegleiter, Betreuungsgruppe)', `Entlastungsbetrag ${euro(ENTLASTUNGSBETRAG)} im Monat für anerkannte Angebote, ab Pflegegrad 1`, 'Frühe Phase, ein paar Stunden Entlastung pro Woche'],
                 ['Tagespflege', `Bis ${euro(PFLEGESACHLEISTUNGEN[2])} (PG 2) bis ${euro(PFLEGESACHLEISTUNGEN[5])} (PG 5) im Monat, zusätzlich zum Pflegegeld`, 'Frühe und mittlere Phase, wenn abends und nachts Familie da ist'],
-                ['Ambulanter Pflegedienst', `Pflegesachleistungen ${euro(PFLEGESACHLEISTUNGEN[2])} bis ${euro(PFLEGESACHLEISTUNGEN[5])} im Monat`, 'Körperpflege und Behandlungspflege zu festen Zeiten'],
+                ['Ambulanter Pflegedienst', `Pflegekasse: Pflegesachleistungen ${euro(PFLEGESACHLEISTUNGEN[2])} bis ${euro(PFLEGESACHLEISTUNGEN[5])} im Monat; Krankenkasse: Behandlungspflege bei ärztlicher Verordnung`, 'Körperpflege und Behandlungspflege zu festen Zeiten'],
                 ['Betreuungskraft im Haus (24-Stunden-Pflege)', `Pflegegeld, Entlastungsbudget ${euro(ENTLASTUNGSBUDGET)} im Jahr, Steuerermäßigung bis 4.000 € im Jahr`, 'Mittlere und späte Phase; Preis bei Primundus ab 2.150 € im Monat'],
                 ['Pflegeheim', 'Leistungsbetrag je Pflegegrad plus Zuschlag; Eigenanteil bundesweit Ø 3.364 € im Monat', 'Wenn Sicherheit oder Medizin zu Hause nicht mehr zu leisten sind'],
               ]}
