@@ -66,7 +66,7 @@ const PHASEN: Phase[] = [
       { id: 'eigene-pause', label: 'Eigene Auszeiten und Verhinderungspflege planen', desc: 'Bis 3.539 €/Jahr aus dem Entlastungsbudget für Vertretung — wichtig zur Burnout-Prävention' },
       { id: 'angehoerige', label: 'Pflegeverantwortung unter Geschwistern fair verteilen', desc: 'Wer macht was? Schriftliche Vereinbarung hilft' },
       { id: 'pflegekurs', label: 'Pflegekurs besuchen (kostenlos über Pflegekasse)', desc: 'Sicherer im Umgang mit der pflegebedürftigen Person' },
-      { id: 'beratung', label: 'Regelmäßige Beratungsbesuche (§ 37.3 SGB XI)', desc: 'Halbjährlich bei PG 2–3, vierteljährlich bei PG 4–5 — Pflicht!' },
+      { id: 'beratung', label: 'Regelmäßige Beratungsbesuche (§ 37 Abs. 3 SGB XI)', desc: 'Pflicht bei Pflegegeld ab PG 2: einmal im Halbjahr. Bei PG 4–5 zusätzlich bis zu einmal im Quartal möglich.' },
       { id: 'anpassung', label: 'Pflegegrad-Erhöhung prüfen', desc: 'Bei Verschlechterung Höherstufung beantragen' },
       { id: 'demenz', label: 'Bei Demenz: Tagesstruktur und Kommunikation anpassen', desc: 'Validation, Erinnerungspflege, Reizoptimierung' },
     ],

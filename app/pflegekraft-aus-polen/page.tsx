@@ -25,7 +25,7 @@ import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN 
 // Preise aus der Preiskonfiguration des Rechners (20.09.), Vertragsfakten aus dem Mustervertrag, Recht: VO (EG) 883/2004 Art. 12,
 // § 35a EStG, §§ 36, 37, 42a, 45b SGB XI, SGB XII. Herkunft: unsere Betreuungskräfte kommen aus Polen; keine anderen Länder bewerben.
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-polen', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-polen', '25. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-polen'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
@@ -209,9 +209,10 @@ export default function PflegekraftAusPolen() {
             />
             <Zwischentitel>Pflegedienst daneben, Landespflegegeld, Sozialamt</Zwischentitel>
             <Text>
-              Pflegesachleistungen ({euro(PFLEGESACHLEISTUNGEN[2])} bis {euro(PFLEGESACHLEISTUNGEN[5])} im Monat) zahlt die Kasse nur an zugelassene Pflegedienste. Sie
-              können sie neben der Betreuungskraft nutzen, zum Beispiel für die Behandlungspflege; dann sinkt das Pflegegeld anteilig
-              (Kombinationsleistung). In Bayern kommt das Landespflegegeld von 500 € im Jahr ab Pflegegrad 2 dazu. Reicht das Geld nicht,
+              Pflegesachleistungen ({euro(PFLEGESACHLEISTUNGEN[2])} bis {euro(PFLEGESACHLEISTUNGEN[5])} im Monat) zahlt die Pflegekasse nur an zugelassene Pflegedienste. Sie
+              können sie neben der Betreuungskraft nutzen, zum Beispiel für Hilfe beim Waschen und Anziehen am Morgen; dann sinkt das
+              Pflegegeld anteilig (Kombinationsleistung). Behandlungspflege wie Spritzen oder Verbände verordnet der Arzt, die
+              Krankenkasse zahlt sie, und das Pflegegeld bleibt dabei unverändert. In Bayern kommt das Landespflegegeld von 500 € im Jahr ab Pflegegrad 2 dazu. Reicht das Geld nicht,
               prüft das Sozialamt Hilfe zur Pflege.
             </Text>
             <MehrDazu

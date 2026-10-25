@@ -61,7 +61,7 @@ const schemaMarkup = JSON.stringify([
         name: 'Welche Pflicht-Beratungsbesuche gibt es?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Bei reiner Pflege durch Angehörige (Pflegegeld-Bezug) sind Beratungsbesuche nach § 37 Abs. 3 SGB XI verpflichtend: halbjährlich bei PG 2 und 3, vierteljährlich bei PG 4 und 5. Werden die Termine versäumt, kann das Pflegegeld gekürzt oder eingestellt werden. Die Beratung selbst ist kostenlos und wird durch zugelassene Pflegedienste durchgeführt.',
+          text: 'Bei reiner Pflege durch Angehörige (Pflegegeld-Bezug) sind Beratungsbesuche nach § 37 Abs. 3 SGB XI verpflichtend: einmal im Halbjahr ab PG 2. Bei PG 4 und 5 kann die Beratung darüber hinaus bis zu einmal im Quartal abgerufen werden. Werden die Pflichttermine versäumt, kann das Pflegegeld gekürzt oder eingestellt werden. Die Beratung selbst ist kostenlos und wird durch zugelassene Pflegedienste durchgeführt.',
         },
       },
       {
@@ -99,7 +99,7 @@ const faqs = [
   },
   {
     q: 'Welche Pflicht-Beratungsbesuche gibt es?',
-    a: 'Bei Pflegegeld-Bezug: halbjährlich bei PG 2–3, vierteljährlich bei PG 4–5. Bei Versäumnis kann das Pflegegeld gekürzt werden. Die Beratung ist kostenlos und wird durch zugelassene Pflegedienste durchgeführt.',
+    a: 'Bei Pflegegeld-Bezug: Pflicht ist ab PG 2 einmal im Halbjahr; bei PG 4–5 kann die Beratung bis zu einmal im Quartal genutzt werden. Bei Versäumnis des Pflichttermins kann das Pflegegeld gekürzt werden. Die Beratung ist kostenlos und wird durch zugelassene Pflegedienste durchgeführt.',
   },
   {
     q: 'Wie schütze ich mich vor Pflege-Burnout?',

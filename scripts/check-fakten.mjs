@@ -107,6 +107,17 @@ const STALE = [
   // Regel 12.09.2026: Mindestlohn-Beträge stehen nicht auf Kundenseiten (am 13.10. stand dort noch der Wert von 2025).
   ['Mindestlohn mit Betrag (Regel 12.09.: keine Beträge auf Kundenseiten)',
     /Mindestlohn[^.;"'<]{0,40}\d{1,2},\d{2}\s*(?:€|Euro)/g, { ohneKommentare: true }],
+  // Sachfehler vom 25.10.2026 (Wortlaut von OpenAI geprüft; § 37 Abs. 3 und § 15 Abs. 2 SGB XI, gesetze-im-internet.de,
+  // gelesen am 25.10.2026). Beratungsbesuch: Pflicht ist ab Pflegegrad 2 einmal im Halbjahr; Pflegegrad 4 und 5 DÜRFEN
+  // ihn zusätzlich bis zu einmal im Quartal abrufen. Auf /checkliste-pflegeuebernahme und /eigenanteil-24h-pflege-senken
+  // stand „vierteljährlich bei PG 4–5“ als Pflicht. Erlaubt bleibt „vierteljährlich möglich/abrufen/auf Wunsch“.
+  ['Beratungsbesuch vierteljährlich als Pflicht bei PG 4/5 (§ 37 Abs. 3: Pflicht halbjährlich, vierteljährlich möglich)',
+    /vierteljährlich\s+(?:bei|für|ab)\s+(?:PG|Pflegegrad(?:en?)?)\s*4|(?:PG|Pflegegrad(?:en?)?)\s*4\s*(?:–|-|bis|und)\s*5\s*:\s*vierteljährlich|vierteljährlich\s*(?:—|–|-)?\s*(?:Pflicht|verpflichtend|vorgeschrieben)|halbjährlich\s+bei\s+(?:PG|Pflegegrad(?:en?)?)\s*2\s*(?:–|-|bis|und)\s*3|(?:PG|Pflegegrad(?:en?)?)\s*2\s*(?:–|-|bis|und)\s*3\s*:\s*halbjährlich/gi,
+    { ohneKommentare: true }],
+  // § 15 Abs. 2 SGB XI: Modul 6 (Alltagsleben und soziale Kontakte) zählt mit 15 %. Auf /pflegegrad-begutachtung-vorbereiten
+  // stand „Alltagsleben (keine eigene Gewichtung)“.
+  ['Alltagsleben „keine eigene Gewichtung“ (§ 15 Abs. 2: Modul 6 zählt 15 %)', /keine\s+eigene\s+Gewichtung/gi,
+    { ohneKommentare: true }],
 ]
 
 // Zeilen, die nur Kommentar sind (// …, * … in Blockkommentaren, {/* … in JSX)

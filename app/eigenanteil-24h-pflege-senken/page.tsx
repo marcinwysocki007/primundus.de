@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('eigenanteil-24h-pflege-senken', '22. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('eigenanteil-24h-pflege-senken', '25. Oktober 2026')
 
 const SECTIONS = [
   { id: 'uebersicht', title: 'Alle Stellschrauben' },
@@ -144,7 +144,7 @@ export default function EigenanteilSenken() {
           <Abschnitt id="kassenzuschuesse" titel="2. Alle Kassenzuschüsse voll ausschöpfen">
             <Punkte
               punkte={[
-                { title: 'Pflegegeld — monatlich', desc: <>347–990 €/Monat je nach Pflegegrad. Wird automatisch ausgezahlt — aber nur wenn Beratungseinsätze wahrgenommen werden (PG 2–3: halbjährlich, PG 4–5: vierteljährlich).<br /><a href="/pflegegeld" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
+                { title: 'Pflegegeld — monatlich', desc: <>347–990 €/Monat je nach Pflegegrad. Wird automatisch ausgezahlt — aber nur wenn die Pflicht-Beratungseinsätze wahrgenommen werden (ab PG 2 einmal im Halbjahr).<br /><a href="/pflegegeld" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
                 { title: 'Entlastungsbetrag — 131 €/Monat', desc: <>Wird nicht automatisch ausgezahlt — Rechnungen anerkannter Anbieter einreichen; für die Betreuungskraft selbst zahlt die Kasse ihn in der Regel nicht. Kann bis 30. Juni des Folgejahres angespart werden (max. 1.572 €).<br /><a href="/entlastungsbetrag" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
                 { title: 'Entlastungsbudget — 3.539 €/Jahr', desc: <>Für Verhinderungs- und Kurzzeitpflege. Verfällt am 31. Dezember — rechtzeitig nutzen und einreichen. Vorpflegezeit entfällt seit Juli 2025.<br /><a href="/verhinderungspflege" className="text-pm-taupe-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors">Mehr Details</a></> },
                 { title: 'Pflegehilfsmittel — 42 €/Monat', desc: 'Handschuhe, Desinfektionsmittel, Bettschutzeinlagen. Bei der Pflegekasse beantragen — werden direkt nach Hause geliefert. Kaum jemand nutzt das.' },

@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('pflegegrad-begutachtung-vorbereiten', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('pflegegrad-begutachtung-vorbereiten', '25. Oktober 2026')
 
 const SECTIONS = [
   { id: 'vorbereitung', title: 'Die wichtigste Vorbereitung' },
@@ -170,11 +170,11 @@ export default function BegutachtungVorbereiten() {
             einleitung="Der MD-Gutachter bewertet sechs Lebensbereiche — je nach Selbstständigkeit in jedem Bereich werden Punkte vergeben. Die Punktsumme ergibt den Pflegegrad."
             punkte={[
               { title: 'Mobilität (10 %)', desc: 'Aufstehen, Gehen, Positionswechsel, Treppensteigen. Kann die Person das selbstständig, mit Aufsicht, mit Hilfe oder gar nicht?' },
-              { title: 'Kognition & Kommunikation (15 %)', desc: 'Örtliche/zeitliche Orientierung, Gedächtnis, Entscheidungen treffen, Gespräche führen, Gefahren verstehen.' },
-              { title: 'Verhaltensweisen & Psyche (15 %)', desc: 'Ängste, Aggressionen, Schlafstörungen, Selbst-/Fremdgefährdung — besonders relevant bei Demenz.' },
+              { title: 'Kognition & Kommunikation (15\u00a0% zusammen mit Verhalten)', desc: 'Örtliche/zeitliche Orientierung, Gedächtnis, Entscheidungen treffen, Gespräche führen, Gefahren verstehen. Von diesem und dem nächsten Bereich zählt nur der höhere Wert.' },
+              { title: 'Verhaltensweisen & Psyche (15\u00a0% zusammen mit Kognition)', desc: 'Ängste, Aggressionen, Schlafstörungen, Selbst-/Fremdgefährdung — besonders relevant bei Demenz. Es zählt nur der höhere Wert der beiden Bereiche.' },
               { title: 'Selbstversorgung (40 %)', desc: 'Körperpflege, Ankleiden, Essen und Trinken, Ausscheidungen, Medikamente. Höchste Gewichtung — hier zählt jedes Detail.' },
               { title: 'Krankheitsbedingte Anforderungen (20 %)', desc: 'Medikamente, Verbandswechsel, Arztbesuche, Therapien — was ist nötig und wie viel Hilfe wird dabei gebraucht?' },
-              { title: 'Alltagsleben (keine eigene Gewichtung)', desc: 'Tagesstruktur, soziale Kontakte, Freizeitgestaltung — fließt in die Gesamtbewertung ein.' },
+              { title: 'Alltagsleben & soziale Kontakte (15\u00a0%)', desc: 'Tagesstruktur, soziale Kontakte, Freizeitgestaltung.' },
             ]}
           />
 
