@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('sozialhilfe-bei-pflegebedarf', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('sozialhilfe-bei-pflegebedarf', '27. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist Sozialhilfe in der Pflege?' },
@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Müssen Kinder für Pflege der Eltern zahlen?', acceptedAnswer: { '@type': 'Answer', text: 'Grundsätzlich ja — Kinder sind gegenüber Eltern unterhaltspflichtig. Jedoch gilt seit 2020: Elternunterhalt für Pflegekosten wird erst verlangt wenn das eigene Jahreseinkommen des Kindes über 100.000 € brutto liegt. Unter dieser Grenze müssen Kinder nicht zahlen.' } },
+      { '@type': 'Question', name: 'Müssen Kinder für die Pflege der Eltern zahlen?', acceptedAnswer: { '@type': 'Answer', text: 'Nur wenn das jährliche Gesamteinkommen über 100.000 € liegt (seit Angehörigen-Entlastungsgesetz 2020). Darunter zahlen Kinder nichts — das Sozialamt trägt die Kosten.' } },
       { '@type': 'Question', name: 'Was ist Hilfe zur Pflege?', acceptedAnswer: { '@type': 'Answer', text: 'Hilfe zur Pflege ist die Sozialhilfeleistung die greift wenn Rente, Vermögen und Pflegekasse-Leistungen die Pflegekosten nicht decken. Das Sozialamt übernimmt dann den nicht gedeckten Teil — nach Prüfung von Einkommen und Vermögen.' } },
     ],
   },
@@ -82,7 +82,7 @@ export default function SozialhilfeBeiPflegebedarf() {
           ]}
           augenbraue="Ratgeber Finanzierung"
           titel="Sozialhilfe bei Pflegebedarf: Hilfe zur Pflege beantragen und ob Kinder zahlen müssen"
-          einleitung="Wenn Rente, Ersparnisse und Pflegekasse-Leistungen die Pflegekosten nicht decken, greift die Hilfe zur Pflege nach §61 SGB XII. Das Sozialamt übernimmt den nicht gedeckten Teil. Und seit 2020 gilt: Kinder müssen erst dann für elterliche Pflegekosten aufkommen wenn ihr eigenes Jahreseinkommen 100.000 Euro brutto übersteigt."
+          einleitung="Wenn Rente, Ersparnisse und Pflegekasse-Leistungen die Pflegekosten nicht decken, greift die Hilfe zur Pflege nach §61 SGB XII. Das Sozialamt übernimmt den nicht gedeckten Teil. Und seit 2020 gilt: Kinder müssen erst dann für elterliche Pflegekosten aufkommen wenn ihr jährliches Gesamteinkommen 100.000 Euro übersteigt."
           aktualisiert={AKTUALISIERT.sichtbar}
           lesezeit="6 Min."
         />
@@ -90,7 +90,7 @@ export default function SozialhilfeBeiPflegebedarf() {
         <RatgeberRumpf abschnitte={SECTIONS}>
           <Vorspann>
             <Kasten titel="Wichtige Änderung seit 2020: Angehörigen-Entlastungsgesetz" ton="gruen">
-              <Text>Seit dem Angehörigen-Entlastungsgesetz (Januar 2020) müssen Kinder erst dann Elternunterhalt für Pflegekosten zahlen wenn ihr eigenes Jahreseinkommen über 100.000 € brutto liegt. Darunter bleibt das Sozialamt beim Elternteil und fragt nicht bei den Kindern an.</Text>
+              <Text>Seit dem Angehörigen-Entlastungsgesetz (Januar 2020) müssen Kinder erst dann Elternunterhalt für Pflegekosten zahlen wenn ihr jährliches Gesamteinkommen über 100.000 € liegt. Darunter bleibt das Sozialamt beim Elternteil und fragt nicht bei den Kindern an.</Text>
             </Kasten>
           </Vorspann>
 
@@ -131,8 +131,8 @@ export default function SozialhilfeBeiPflegebedarf() {
               titel=""
               kopf={['Situation', 'Pflicht der Kinder']}
               zeilen={[
-                ['Eigenes Jahreseinkommen des Kindes unter 100.000 € brutto', 'Kein Elternunterhalt — Sozialamt fragt nicht an'],
-                ['Eigenes Jahreseinkommen des Kindes über 100.000 € brutto', 'Elternunterhalt möglich — aber nur der über 100.000 € liegende Teil'],
+                ['Jährliches Gesamteinkommen des Kindes bis 100.000 €', 'Kein Elternunterhalt — Sozialamt fragt nicht an'],
+                ['Jährliches Gesamteinkommen des Kindes über 100.000 €', 'Elternunterhalt möglich — nur aus dem Einkommen, das über einem Selbstbehalt liegt'],
                 ['Vermögen des Kindes', 'Wird grundsätzlich nicht angetastet (nur Einkommen wird geprüft)'],
                 ['Geschwister', 'Jedes Kind wird separat beurteilt — keine Solidarhaftung'],
               ]}
@@ -156,7 +156,7 @@ export default function SozialhilfeBeiPflegebedarf() {
             <Fragen
               fragen={[
                 { q: 'Was ist Hilfe zur Pflege?', a: 'Die Sozialhilfeleistung nach §61 SGB XII — greift wenn Rente, Vermögen und Pflegekasse nicht reichen. Das Sozialamt übernimmt den Differenzbetrag zwischen verfügbaren Mitteln und Pflegekosten.' },
-                { q: 'Müssen Kinder für die Pflege der Eltern zahlen?', a: 'Nur wenn das eigene Jahreseinkommen über 100.000 € brutto liegt (seit Angehörigen-Entlastungsgesetz 2020). Darunter zahlen Kinder nichts — das Sozialamt trägt die Kosten.' },
+                { q: 'Müssen Kinder für die Pflege der Eltern zahlen?', a: 'Nur wenn das jährliche Gesamteinkommen über 100.000 € liegt (seit Angehörigen-Entlastungsgesetz 2020). Darunter zahlen Kinder nichts — das Sozialamt trägt die Kosten.' },
                 { q: 'Muss man das Haus verkaufen für die Pflege?', a: 'Nicht solange es selbst bewohnt wird oder nahe Angehörige darin wohnen — es ist Schonvermögen. Erst nach Tod des Pflegebedürftigen kann das Sozialamt beim Pflegeheim-Finanzierung Regressforderungen stellen.' },
                 { q: 'Gilt Hilfe zur Pflege auch für 24h-Pflege zuhause?', a: 'In der Regel nicht — Hilfe zur Pflege wird meist für stationäre Pflegeheimkosten gewährt. Für häusliche 24h-Pflege empfiehlt sich zuerst alle Kassenzuschüsse und Steuervorteile auszuschöpfen.' },
               ]}

@@ -158,6 +158,12 @@ const STALE = [
     /Kein\s+Antrag\s+nötig\s*[—–-]\s*einfach/gi, { ohneKommentare: true }],
   ['Elternunterhalt: „fragt das Amt nicht einmal nach“ (§ 94 Abs. 1a Satz 4/5 SGB XII)',
     /fragt\s+das\s+Amt\s+nicht\s+einmal\s+nach/gi, { ohneKommentare: true }],
+  // § 94 Abs. 1a SGB XII: Maßstab ist das „jährliche Gesamteinkommen im Sinne des § 16 SGB IV“, nicht das Bruttoeinkommen.
+  // Am 27.10.2026 auf sechs Seiten korrigiert (/pflegeheim-kosten-deutschland, /24-stunden-pflege-kostenuebernahme, /kosten,
+  // /pflegekraft-aus-polen, /sozialhilfe-bei-pflegebedarf).
+  ['Elternunterhalt mit „brutto“ (§ 94 Abs. 1a SGB XII: jährliches Gesamteinkommen nach § 16 SGB IV)',
+    /(?:Brutto(?:jahres)?einkommen|Jahresbruttoeinkommen|brutto)[^.;]{0,60}100\.000|100\.000\s*(?:€|Euro)?\s*(?:brutto|Brutto(?:jahres)?einkommen)/g,
+    { ohneKommentare: true }],
   ['Kassenanteil als widersprüchliche Spanne (nachgerechnet: PG 3 = 599 + 295 = 894 €)',
     /oft\s+(?:700\s+bis\s+1\.200|600\s+bis\s+1\.100)\s+Euro/g, { ohneKommentare: true }],
   ['„rund um die Uhr“ versprochen (Martin 14.09.2026: „wohnt mit im Haus, bei Bedarf auch nachts vor Ort“)',

@@ -25,7 +25,7 @@ import { ENTLASTUNGSBETRAG, ENTLASTUNGSBUDGET, PFLEGEGELD, PFLEGESACHLEISTUNGEN 
 // Preise aus der Preiskonfiguration des Rechners (20.09.), Vertragsfakten aus dem Mustervertrag, Recht: VO (EG) 883/2004 Art. 12,
 // § 35a EStG, §§ 36, 37, 42a, 45b SGB XI, SGB XII. Herkunft: unsere Betreuungskräfte kommen aus Polen; keine anderen Länder bewerben.
 
-const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-polen', '25. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('pflegekraft-aus-polen', '27. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-polen'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
@@ -56,7 +56,7 @@ const FRAGEN = [
   { q: 'Welches Zimmer braucht eine polnische Pflegekraft?', a: 'Ein eigenes Zimmer mit Bett, Schrank, Tisch und Tür, die Mitbenutzung von Bad und Küche, Verpflegung, WLAN und einen Schlüssel. Das Zimmer muss nicht groß sein, aber abschließbar und beheizt. Pflegebett und Hilfsmittel für die betreute Person beantragen Sie bei der Pflegekasse.' },
   { q: 'Hilft eine polnische Pflegekraft auch nachts?', a: 'Ja, weil sie mit im Haus wohnt, ist sie bei Bedarf auch nachts da. Nachteinsätze kosten mehr, gestaffelt nach gelegentlich, einmal pro Nacht und mehrmals pro Nacht. Sie braucht wie jeder Mensch ihre Nachtruhe; wer jede Nacht mehrfach Hilfe braucht, sagt das im Kostenrechner an, dann passen Preis und Auswahl.' },
   { q: 'Kann ich die Kosten steuerlich absetzen?', a: 'Ja, als haushaltsnahe Dienstleistung nach § 35a EStG: 20 Prozent der Kosten, bis zu 4.000 € im Jahr, also bis zu 333 € im Monat. Voraussetzung: Rechnung und Überweisung, keine Barzahlung. Die Ermäßigung zieht das Finanzamt direkt von der Steuer ab.' },
-  { q: 'Zahlt das Sozialamt eine polnische Pflegekraft?', a: 'Reichen Rente, Einkommen und Vermögen nicht, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch zu Hause; ob es eine Betreuungskraft übernimmt, entscheidet es im Einzelfall. Kinder werden erst ab einem Bruttoeinkommen von 100.000 € im Jahr herangezogen. Stellen Sie den Antrag, bevor die Betreuung beginnt.' },
+  { q: 'Zahlt das Sozialamt eine polnische Pflegekraft?', a: 'Reichen Rente, Einkommen und Vermögen nicht, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch zu Hause; ob es eine Betreuungskraft übernimmt, entscheidet es im Einzelfall. Kinder werden erst herangezogen, wenn ihr jährliches Gesamteinkommen über 100.000 € liegt. Stellen Sie den Antrag, bevor die Betreuung beginnt.' },
 ]
 
 export const metadata: Metadata = {

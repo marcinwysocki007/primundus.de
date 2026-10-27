@@ -27,7 +27,7 @@ import { PERSON_MARTA_ID } from '@/lib/schema'
 // Personen, Mobilität, Wünsche, Pflegegrad 5), wird benannt und gewichtet, aber nicht beziffert — den Betrag zeigt der
 // Rechner. Zuschüsse (Pflegegeld, Entlastungsbudget, Steuer) bleiben exakt, das sind Gesetzeszahlen.
 
-const AKTUALISIERT = aktualisiertAm('kosten', '15. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('kosten', '27. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-kosten'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
@@ -96,7 +96,7 @@ const FRAGEN = [
   },
   {
     q: 'Zahlt das Sozialamt die 24-Stunden-Pflege?',
-    a: 'Wenn Rente, Einkommen und Vermögen nicht reichen, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch für die Pflege zu Hause. Es prüft dafür Einkommen und Vermögen des Pflegebedürftigen. Kinder werden nur herangezogen, wenn sie mehr als 100.000 € brutto im Jahr verdienen.',
+    a: 'Wenn Rente, Einkommen und Vermögen nicht reichen, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch für die Pflege zu Hause. Es prüft dafür Einkommen und Vermögen des Pflegebedürftigen. Kinder werden nur herangezogen, wenn ihr jährliches Gesamteinkommen über 100.000 € liegt.',
   },
   {
     q: 'Kann ich die 24-Stunden-Pflege von der Steuer absetzen?',
@@ -343,7 +343,7 @@ export default function Kosten() {
                 { title: 'Pflegekasse: Pflegehilfsmittel', desc: '42 € im Monat für Verbrauchsmittel wie Handschuhe und Desinfektionsmittel, ab Pflegegrad 1. Der Entlastungsbetrag von 131 € im Monat gilt für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
                 { title: 'Krankenkasse', desc: 'Zahlt für die Betreuung nichts. Sie zahlt medizinische Behandlungspflege durch einen ambulanten Pflegedienst, etwa Spritzen, Verbände oder das Stellen von Medikamenten. Beides lässt sich gut kombinieren.' },
                 { title: 'Finanzamt', desc: '20 % der Kosten als haushaltsnahe Dienstleistung, höchstens 4.000 € Ersparnis im Jahr. Schon beim Grundpreis erreichen Sie den Höchstbetrag. Eintragen in der Anlage Haushaltsnahe Aufwendungen der Steuererklärung.' },
-                { title: 'Sozialamt', desc: 'Reichen Rente, Einkommen und Vermögen nicht, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch zu Hause. Kinder werden erst ab einem Bruttoeinkommen von 100.000 € im Jahr herangezogen.' },
+                { title: 'Sozialamt', desc: 'Reichen Rente, Einkommen und Vermögen nicht, kann das Sozialamt Hilfe zur Pflege nach dem SGB XII leisten, auch zu Hause. Kinder werden erst herangezogen, wenn ihr jährliches Gesamteinkommen über 100.000 € liegt.' },
               ]}
             />
             <Kasten augenbraue="Entlastungsbudget" titel="3.539 € im Jahr, flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
