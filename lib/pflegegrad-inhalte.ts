@@ -69,7 +69,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
         { modul: 'Alltag und Kontakte: Planungen überwiegend selbständig', punkte: '1 von 18', gewichtet: '3,75' },
       ],
       gesamt: '21,25 Punkte = Pflegegrad 1',
-      fazit: 'Bis Pflegegrad 2 fehlen 5,75 Punkte. Kommt Hilfe beim Waschen des Oberkörpers oder beim Anziehen des Oberkörpers dazu, ist die Grenze erreicht.',
+      fazit: 'Bis Pflegegrad 2 fehlen 5,75 Punkte. Etwas Hilfe beim Waschen oder Anziehen des Oberkörpers reicht dafür noch nicht. Erst ab 8 Einzelpunkten zählt die Selbstversorgung 20 statt 10 gewichtete Punkte; dann sind es 31,25 Punkte und Pflegegrad 2.',
     },
     versorgung: [
       { title: 'Alltagshilfe über den Entlastungsbetrag', desc: `Die ${euro(ENTLASTUNGSBETRAG)} im Monat zahlt die Kasse gegen Rechnung anerkannter Anbieter: Haushaltshilfe, Betreuungsgruppe, Alltagsbegleiter, auch Tagespflege. Nicht genutzte Beträge sammeln sich bis zum Ende des folgenden Halbjahres an.` },
@@ -85,7 +85,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
       { q: 'Wie viele Punkte braucht man für Pflegegrad 1?', a: '12,5 bis unter 27 Punkte im Begutachtungsinstrument. Unter 12,5 Punkten gibt es keinen Pflegegrad, ab 27 Punkten Pflegegrad 2. Die Punkte kommen aus sechs Modulen; die Selbstversorgung zählt 40 Prozent.' },
       { q: 'Gibt es bei Pflegegrad 1 Pflegegeld?', a: `Nein. Pflegegeld gibt es ab Pflegegrad 2 (${euro(PFLEGEGELD[2])} im Monat). Bei Pflegegrad 1 ersetzt der Entlastungsbetrag von ${euro(ENTLASTUNGSBETRAG)} das Pflegegeld teilweise; er wird aber nicht ausgezahlt, sondern gegen Rechnung erstattet.` },
       { q: 'Kann man mit Pflegegrad 1 eine 24-Stunden-Betreuung bekommen?', a: 'Ja, der Pflegegrad ist keine Voraussetzung. Die Betreuungskraft kostet bei Primundus ab 2.150 € im Monat; ohne Pflegegeld und Entlastungsbudget bleiben nach der Steuerermäßigung ab ca. 1.817 € selbst zu tragen. Sinnvoll ist das, wenn die Person allein lebt und Sicherheit und Gesellschaft braucht.' },
-      { q: 'Wie komme ich von Pflegegrad 1 auf Pflegegrad 2?', a: 'Mit einem Antrag auf Höherstufung bei der Pflegekasse, sobald der Hilfebedarf gewachsen ist. Es fehlen im Beispiel oben 5,75 Punkte; Hilfe beim Waschen und Anziehen des Oberkörpers oder eine beginnende Vergesslichkeit reichen oft. Führen Sie zwei Wochen Pflegetagebuch vor dem Termin.' },
+      { q: 'Wie komme ich von Pflegegrad 1 auf Pflegegrad 2?', a: 'Mit einem Antrag auf Höherstufung bei der Pflegekasse, sobald der Hilfebedarf gewachsen ist. Es fehlen im Beispiel oben 5,75 Punkte. Dafür muss die Selbstversorgung auf 8 Einzelpunkte steigen oder die Kognition auf 6 Einzelpunkte; etwas Hilfe beim Oberkörper oder eine beginnende Vergesslichkeit reicht meist noch nicht. Führen Sie zwei Wochen Pflegetagebuch vor dem Termin.' },
       { q: 'Zahlt die Kasse bei Pflegegrad 1 die Tagespflege?', a: `Einen eigenen Tagespflege-Betrag gibt es erst ab Pflegegrad 2. Bei Pflegegrad 1 können Sie den Entlastungsbetrag von ${euro(ENTLASTUNGSBETRAG)} für die Tagespflege einsetzen.` },
     ],
   },
@@ -122,7 +122,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
         { modul: 'Alltag und Kontakte: Tagesablauf und Planung überwiegend selbständig', punkte: '2 von 18', gewichtet: '3,75' },
       ],
       gesamt: '35 Punkte = Pflegegrad 2',
-      fazit: 'Bis Pflegegrad 3 fehlen 12,5 Punkte. Braucht er beim Waschen des Oberkörpers, beim Essen und auf der Toilette den größeren Teil Hilfe, springt die Selbstversorgung auf 30 gewichtete Punkte, und Pflegegrad 3 ist erreicht.',
+      fazit: 'Bis Pflegegrad 3 fehlen 12,5 Punkte. Steigt die Selbstversorgung auf mindestens 19 Einzelpunkte (30 statt 20 gewichtete Punkte) und die Mobilität auf 4 Einzelpunkte (5 statt 2,5), kommen 47,5 Punkte zusammen: Pflegegrad 3.',
     },
     versorgung: [
       { title: 'Angehörige pflegen, Pflegegeld kommt aufs Konto', desc: `${euro(PFLEGEGELD[2])} im Monat, frei verwendbar, alle sechs Monate ein Beratungsbesuch. Wer daneben einen Pflegedienst nutzt, bekommt die Kombinationsleistung: 50 Prozent Sachleistung lassen 50 Prozent Pflegegeld, also ${euroHalb(PFLEGEGELD[2])}.` },
@@ -176,7 +176,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
         { modul: 'Alltag und Kontakte: Tagesablauf und Planung überwiegend unselbständig, Kontakte mit Hilfe', punkte: '8 von 18', gewichtet: '11,25' },
       ],
       gesamt: '66,25 Punkte = Pflegegrad 3',
-      fazit: 'Bis Pflegegrad 4 fehlen 3,75 Punkte. Kommt nächtliche Unruhe oder Abwehr bei der Pflege dazu (Modul 3) oder werden Essen und Toilette überwiegend unselbständig, ist Pflegegrad 4 erreicht.',
+      fazit: 'Bis Pflegegrad 4 fehlen 3,75 Punkte. Kommt täglich nächtliche Unruhe oder Abwehr bei der Pflege dazu (Modul 3), ist Pflegegrad 4 erreicht.',
     },
     versorgung: [
       { title: 'Betreuungskraft im Haus: bei Pflegegrad 3 die häufigste Wahl', desc: 'Ab 2.150 € im Monat für eine Person. Davon gehen 599 € Pflegegeld, 295 € anteiliges Entlastungsbudget (wenn die Kasse den Einsatz als Verhinderungspflege anerkennt) und bis zu 333 € Steuerermäßigung ab: ab ca. 923 € selbst zu tragen. Die Betreuungskraft übernimmt Körperpflege, Haushalt, Begleitung, ist bei Bedarf auch nachts da.' },
@@ -231,7 +231,7 @@ export const INHALTE: Record<Grad, PflegegradInhalt> = {
         { modul: 'Alltag und Kontakte: Beschäftigung, Planung, Kontakte nach außen unselbständig', punkte: '15 von 18', gewichtet: '15' },
       ],
       gesamt: '87,5 Punkte = Pflegegrad 4',
-      fazit: 'Bis Pflegegrad 5 fehlen 2,5 Punkte. Geht die Sprache weiter verloren oder wird das Trinken unselbständig, ist die Grenze überschritten.',
+      fazit: 'Bis Pflegegrad 5 fehlen 2,5 Punkte. Gehen Sprechen und Verstehen ganz verloren, steigen die kognitiven Fähigkeiten auf 11,25 Punkte, und die Grenze ist überschritten. Mehr Hilfe beim Trinken ändert nichts: Die Selbstversorgung zählt schon die vollen 40 Punkte.',
     },
     versorgung: [
       { title: 'Betreuungskraft im Haus plus Pflegedienst', desc: 'Die Betreuungskraft übernimmt Körperpflege, Umsetzen, Essen anreichen, Haushalt und ist bei Bedarf nachts da; der Pflegedienst kommt für Verbände, Spritzen und Katheter. Preis ab 2.150 €; bei Rollstuhl, Bettlägerigkeit und Nachteinsätzen kommen Aufschläge dazu, den Preis zeigt der Rechner. Beim Grundpreis bleiben nach 800 € Pflegegeld, 295 € Budget und 333 € Steuer ab ca. 722 € selbst zu tragen.' },

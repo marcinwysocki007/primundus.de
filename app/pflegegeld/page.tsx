@@ -23,12 +23,14 @@ import { eineStelle } from '@/lib/pflege-kreise-format'
 // pflege-betreuer.de 3.600 Wörter). Jede Regel steht mit Paragraf im Text; alle Beträge kommen aus lib/fakten. Neu: Kombinations-Rechner
 // nach § 38, Eigenanteil je Pflegegrad mit Betreuungskraft, Auszahlung, Krankenhaus (acht Wochen, § 34), Pflichten, Angehörige, 2028.
 
-const AKTUALISIERT = aktualisiertAm('pflegegeld', '20. September 2026')
+const AKTUALISIERT = aktualisiertAm('pflegegeld', '27. Oktober 2026')
 const euro = (n: number) => n.toLocaleString('de-DE') + ' €'
 const euroCent = (n: number) => n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'
 const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 // Preisregel 25.09. (Martin): nur der Grundpreis; Pflegegrad 5 hat einen Aufschlag, der nicht beziffert wird — deshalb nicht in der Tabelle
 const GRADE = [2, 3, 4] as const
+// Die Leistungstabelle zeigt alle Pflegegrade; die Preisregel gilt nur für die Preistabellen (Sachfehler 27.10.2026)
+const GRADE_LEISTUNG = [2, 3, 4, 5] as const
 const PREIS = 2150
 const eigen = (g: 2 | 3 | 4) => PREIS - PFLEGEGELD[g] - 295 - 333
 const halb = (g: 2 | 3 | 4 | 5) => anteiligesPflegegeld(g, PFLEGESACHLEISTUNGEN[g] / 2).pflegegeld
@@ -192,7 +194,7 @@ export default function Pflegegeld() {
               kopf={['Pflegegrad', 'Pflegegeld', 'im Jahr', 'Sachleistungen', 'Tagespflege dazu', 'Entlastungsbetrag dazu']}
               zeilen={[
                 ['Pflegegrad 1', 'keins', '–', '–', '–', euro(ENTLASTUNGSBETRAG)],
-                ...GRADE.map((g) => [
+                ...GRADE_LEISTUNG.map((g) => [
                   `Pflegegrad ${g}`,
                   euro(PFLEGEGELD[g]),
                   euro(PFLEGEGELD[g] * 12),
@@ -401,10 +403,10 @@ export default function Pflegegeld() {
             </Text>
             <Schritte
               schritte={[
-                { title: 'Antrag bei der Pflegekasse', desc: 'Formlos, schriftlich oder telefonisch, bei der Pflegekasse Ihrer Krankenkasse. Ab diesem Tag läuft der Anspruch. Auch ein Bevollmächtigter darf ihn stellen.' },
+                { title: 'Antrag bei der Pflegekasse', desc: 'Formlos, schriftlich oder telefonisch, bei der Pflegekasse Ihrer Krankenkasse. Ab Antragstellung läuft der Anspruch, frühestens ab Vorliegen der Voraussetzungen; bestand der Bedarf schon in einem früheren Monat, ab dem Ersten des Antragsmonats. Auch ein Bevollmächtigter darf ihn stellen.' },
                 { title: 'Begutachtung zu Hause', desc: 'Der Medizinische Dienst kommt und bewertet sechs Lebensbereiche mit 64 Fragen. Ein Pflegetagebuch der letzten zwei Wochen und ein Angehöriger beim Termin helfen; beschreiben Sie auch die schlechten Tage.' },
                 { title: 'Bescheid innerhalb von 25 Arbeitstagen', desc: 'Mit dem Bescheid kommt das Gutachten. Fällt der Pflegegrad zu niedrig aus, haben Sie einen Monat für den Widerspruch.' },
-                { title: 'Leistung wählen', desc: 'Pflegegeld, Sachleistungen oder beides anteilig. Die Kasse zahlt rückwirkend ab dem Antragstag und überweist danach monatlich.' },
+                { title: 'Leistung wählen', desc: 'Pflegegeld, Sachleistungen oder beides anteilig. Die Kasse zahlt entsprechend rückwirkend und überweist danach monatlich.' },
               ]}
             />
             <MehrDazu

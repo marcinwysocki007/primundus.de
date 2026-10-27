@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('entlastungsbetrag', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('entlastungsbetrag', '27. Oktober 2026')
 
 const SECTIONS = [
   { id: 'was-ist', title: 'Was ist der Entlastungsbetrag?' },
@@ -126,12 +126,12 @@ export default function Entlastungsbetrag() {
 
           <Abschnitt id="anspruch" titel="Wer hat Anspruch?">
             <Text>
-              Der Entlastungsbetrag steht allen pflegebedürftigen Personen mit Pflegegrad 1 bis 5 zu — unabhängig davon ob sie zu Hause oder in einer Pflegeeinrichtung leben. Er ist damit die einzige Kassenleistung, die auch bei Pflegegrad 1 ohne Pflegegeld-Anspruch gilt.
+              Der Entlastungsbetrag steht allen pflegebedürftigen Personen mit Pflegegrad 1 bis 5 zu, die zu Hause gepflegt werden (§ 45b Abs. 1 SGB XI). Er gilt auch bei Pflegegrad 1, wo es kein Pflegegeld gibt.
             </Text>
             <Tabelle
               titel="Entlastungsbetrag nach Pflegegrad"
               zeilen={[
-                ['Pflegegrad 1', '131 €/Monat', 'Kein Pflegegeld — Entlastungsbetrag ist einzige Kassenleistung'],
+                ['Pflegegrad 1', '131 €/Monat', 'Kein Pflegegeld'],
                 ['Pflegegrad 2', '131 €/Monat', 'Zusätzlich zu 347 € Pflegegeld'],
                 ['Pflegegrad 3', '131 €/Monat', 'Zusätzlich zu 599 € Pflegegeld'],
                 ['Pflegegrad 4', '131 €/Monat', 'Zusätzlich zu 800 € Pflegegeld'],
@@ -166,7 +166,7 @@ export default function Entlastungsbetrag() {
               punkte={[
                 { title: 'Entlastungsbetrag + Pflegegeld', desc: '131 €/Monat zusätzlich zum Pflegegeld — bei PG 3 macht das 730 €/Monat Gesamtentlastung durch die Kasse.' },
                 { title: 'Entlastungsbetrag + Entlastungsbudget', desc: 'Beide laufen parallel — Entlastungsbudget (3.539 €/Jahr) für Verhinderungs-/Kurzzeitpflege, Entlastungsbetrag (131 €/Monat) für Alltagsentlastung.' },
-                { title: 'Entlastungsbetrag + 24h-Pflege', desc: 'Wenn die 24h-Betreuungskraft über einen anerkannten Anbieter kommt, können Teile der Kosten über den Entlastungsbetrag abgerechnet werden. Primundus berät individuell.' },
+                { title: 'Entlastungsbetrag + 24h-Pflege', desc: 'Für eine Betreuungskraft im Haushalt lässt sich der Entlastungsbetrag in der Regel nicht einsetzen. Er bleibt daneben für Tagespflege, Kurzzeitpflege, einen Pflegedienst oder eine anerkannte Alltagshilfe.' },
               ]}
             />
             <MehrDazu

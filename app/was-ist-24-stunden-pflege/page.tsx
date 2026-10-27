@@ -12,7 +12,7 @@ import { KurzAntwort } from '@/components/KurzAntwort'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('was-ist-24-stunden-pflege', '21. August 2026')
+const AKTUALISIERT = aktualisiertAm('was-ist-24-stunden-pflege', '27. Oktober 2026')
 
 const SECTIONS = [
   { id: 'leistungen',  title: 'Was leistet eine Betreuungskraft?' },
@@ -50,13 +50,13 @@ const GrafikKostenvergleich = dynamic(
 // Der Betrag bleibt im Text der Seite und im Rechner — nur das Suchergebnis nennt ihn nicht.
 export const metadata: Metadata = {
   title: 'Was ist 24-Stunden-Pflege? Wer bei Ihnen wohnt und hilft',
-  description: 'Eine Betreuungskraft lebt im Haushalt und ist die meistgenutzte Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
+  description: 'Eine Betreuungskraft lebt im Haushalt und ist eine Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
   alternates: {
     canonical: 'https://primundus.de/was-ist-24-stunden-pflege',
   },
   openGraph: {
     title: 'Was ist 24-Stunden-Pflege? Wer bei Ihnen wohnt und hilft',
-    description: 'Eine Betreuungskraft lebt im Haushalt und ist die meistgenutzte Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
+    description: 'Eine Betreuungskraft lebt im Haushalt und ist eine Alternative zum Pflegeheim. Was sie leistet, was sie kostet und wie sie abläuft.',
     url: 'https://primundus.de/was-ist-24-stunden-pflege',
     siteName: 'Primundus',
     locale: 'de_DE',
@@ -97,7 +97,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was versteht man unter 24-Stunden-Pflege?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten beginnen bei 2.150 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim.' },
+        acceptedAnswer: { '@type': 'Answer', text: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und bei Bedarf auch nachts vor Ort ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und eine Alternative zum Pflegeheim.' },
       },
       {
         '@type': 'Question',
@@ -107,7 +107,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die frühere Verhinderungspflege und Kurzzeitpflege zusammen. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die bisher getrennten Beträge für Verhinderungs- und Kurzzeitpflege zusammen; beide Leistungen gibt es weiter. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
       },
       {
         '@type': 'Question',
@@ -117,7 +117,7 @@ const schemaMarkup = [
       {
         '@type': 'Question',
         name: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — ohne individuelle Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Eins-zu-eins-Betreuung und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Eins-zu-eins-Betreuung und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
       },
       {
         '@type': 'Question',
@@ -171,7 +171,7 @@ export default function WasIst24StundenPflege() {
               24-Stunden-Pflege wird auch „Live-in-Betreuung“ oder „Betreuung in häuslicher Gemeinschaft“ genannt: Eine Betreuungskraft wohnt im Haushalt und unterstützt rund um den Alltag. Gemeint ist Betreuung und Grundpflege — nicht medizinische Behandlungspflege und keine 24-stündige Arbeitszeit am Stück.
             </KurzAntwort>
             <Text>
-              24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten beginnen bei 2.150 Euro. Sie ist die meistgenutzte Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
+              24-Stunden-Pflege bedeutet: Eine Betreuungskraft zieht in den Haushalt des Pflegebedürftigen ein und ist bei Bedarf auch nachts vor Ort — für Grundpflege, Haushaltsführung und Gesellschaft. Die monatlichen Kosten beginnen bei 2.150 Euro. Sie ist eine Alternative zum Pflegeheim und ermöglicht es, in der vertrauten Umgebung zu bleiben.
             </Text>
             <Kasten augenbraue="Auf einen Blick">
               <HakenListe punkte={[
@@ -206,22 +206,22 @@ export default function WasIst24StundenPflege() {
 
           <Abschnitt id="verbreitung" titel="Wie viele Menschen nutzen 24h-Pflege in Deutschland?">
             <Text>
-              Schätzungsweise 300.000 bis 400.000 Haushalte nutzen aktuell eine 24-Stunden-Betreuung durch Kräfte aus EU-Ländern — bei einem Marktpotenzial von über 5 Millionen häuslich versorgten Pflegebedürftigen ist das erst der Anfang.
+              Schätzungsweise 300.000 bis 400.000 Haushalte nutzen aktuell eine 24-Stunden-Betreuung durch Kräfte aus EU-Ländern — bei einem Marktpotenzial von rund 4,9 Millionen häuslich versorgten Pflegebedürftigen ist das erst der Anfang.
             </Text>
             <Text>
-              Ende 2024 waren rund 6 Millionen Menschen in Deutschland pflegebedürftig. <strong>86 Prozent</strong> werden zu Hause versorgt — nur 14 Prozent in Pflegeheimen. Allein seit 2021 stieg die Zahl der Pflegebedürftigen um 15 Prozent.
+              Ende 2023 waren knapp 5,7 Millionen Menschen in Deutschland pflegebedürftig. <strong>86 Prozent</strong> werden zu Hause versorgt — nur 14 Prozent in Pflegeheimen. Allein seit 2021 stieg die Zahl der Pflegebedürftigen um 15 Prozent.
             </Text>
             <Tabelle
-              titel="Pflegestatistik Deutschland — Stand 2024"
+              titel="Pflegestatistik Deutschland — Stand Dezember 2023"
               zeilen={[
-                ['Pflegebedürftige gesamt', '~6,0 Millionen'],
-                ['Davon zu Hause versorgt', '86 % — ca. 5,1 Mio.'],
-                ['Davon im Pflegeheim', '14 % — ca. 0,9 Mio.'],
+                ['Pflegebedürftige gesamt', 'knapp 5,7 Millionen'],
+                ['Davon zu Hause versorgt', '86 % — ca. 4,9 Mio.'],
+                ['Davon im Pflegeheim', '14 % — ca. 0,8 Mio.'],
                 ['Haushalte mit 24h-Betreuungskraft', '300.000–400.000 (Schätzung)'],
                 ['Wachstum seit 2021', '+15 %'],
-                ['Prognose bis 2050', 'über 7 Millionen'],
+                ['Modellrechnung für 2055', 'rund 6,8 Millionen'],
               ]}
-              fuss="Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2024"
+              fuss="Quelle: Statistisches Bundesamt (Destatis), Pflegestatistik 2023 (veröffentlicht Dezember 2024) und Pflegevorausberechnung (März 2023)"
             />
             <Sicher name="Grafik Pflegestatistik">
               <GrafikPflegestatistik />
@@ -243,7 +243,7 @@ export default function WasIst24StundenPflege() {
             <Sicher name="Grafik Kostenvergleich">
               <GrafikKostenvergleich />
             </Sicher>
-            <Kasten augenbraue="Neu 2026 — Entlastungsbudget" titel="3.539 Euro pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
+            <Kasten augenbraue="Seit Juli 2025 — Entlastungsbudget" titel="3.539 Euro pro Jahr — flexibel für Verhinderungs- und Kurzzeitpflege" ton="gruen">
               <HakenListe punkte={[
                 'Ein Budget statt zwei — flexibel für Verhinderungs- und Kurzzeitpflege nutzbar',
                 'Vorpflegezeit entfällt — die frühere 6-Monats-Voraussetzung ist abgeschafft',
@@ -291,7 +291,7 @@ export default function WasIst24StundenPflege() {
                 { title: 'Demenz und Alzheimer', desc: <>Tagesstruktur, Orientierung und konstante Bezugsperson — eine feste Betreuungskraft zuhause bietet das besser als jede Einrichtung.<br /><a href="/demenz-pflege-zuhause" className={LINK}>Demenzpflege zuhause — was ist möglich?</a></> },
                 { title: 'Nach Schlaganfall oder Operation', desc: <>Kontinuierliche Unterstützung in der Reha-Phase ermöglicht Entlassung aus dem Krankenhaus ohne Umzug ins Heim.<br /><a href="/pflege-nach-op" className={LINK}>Pflege nach OP — Organisation und Kosten</a></> },
                 { title: 'Parkinson, MS, Herzinsuffizienz', desc: <>Chronische Erkrankungen mit schwankendem Tagesverlauf — eine feste Kraft kennt die Muster und reagiert richtig.<br /><a href="/parkinson-pflege-zuhause" className={LINK}>Parkinson Pflege zuhause</a></> },
-                { title: 'Sturzgefahr und eingeschränkte Mobilität', desc: <>Prävention, Mobilisierung, sichere Begleitung — rund um die Uhr.<br /><a href="/sturzpraevention-senioren" className={LINK}>Sturzprävention bei Senioren</a></> },
+                { title: 'Sturzgefahr und eingeschränkte Mobilität', desc: <>Prävention, Mobilisierung, sichere Begleitung — bei Bedarf auch nachts.<br /><a href="/sturzpraevention-senioren" className={LINK}>Sturzprävention bei Senioren</a></> },
               ]}
             />
             <MehrDazu
@@ -303,11 +303,11 @@ export default function WasIst24StundenPflege() {
           <Abschnitt id="faq" titel="Häufige Fragen zur 24-Stunden-Pflege">
             <Fragen
               fragen={[
-                { q: 'Was versteht man unter 24-Stunden-Pflege?', a: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und bei Bedarf auch nachts vor Ort ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und die beliebteste Alternative zum Pflegeheim in Deutschland.' },
+                { q: 'Was versteht man unter 24-Stunden-Pflege?', a: '24-Stunden-Pflege bedeutet, dass eine Betreuungskraft dauerhaft im Haushalt des Pflegebedürftigen lebt und bei Bedarf auch nachts vor Ort ist — für Grundpflege, Haushaltsführung und soziale Betreuung. Sie ist die intensivste Form der häuslichen Pflege und eine Alternative zum Pflegeheim.' },
                 { q: 'Was kostet 24-Stunden-Pflege 2026?', a: 'Die monatlichen Kosten beginnen bei 2.150 Euro. Das Pflegegeld (bis 990 €/Monat bei Pflegegrad 5) und das Entlastungsbudget (3.539 €/Jahr) der Pflegekasse senken die Eigenkosten erheblich, dazu sind 20 % der Kosten als haushaltsnahe Dienstleistung steuerlich absetzbar. Bei Pflegegrad 3 bleiben so ab ca. 923 € im Monat.' },
-                { q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?', a: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die frühere Verhinderungspflege und Kurzzeitpflege zusammen. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
+                { q: 'Was ist das Entlastungsbudget und was hat sich 2026 geändert?', a: 'Seit 1. Juli 2025 gibt es ein gemeinsames Entlastungsbudget von 3.539 Euro pro Jahr. Es fasst die bisher getrennten Beträge für Verhinderungs- und Kurzzeitpflege zusammen; beide Leistungen gibt es weiter. 2026 ist das erste vollständige Kalenderjahr, in dem dieser Betrag ohne Übergangsregelungen nutzbar ist. Die Vorpflegezeit von 6 Monaten entfällt. Wichtig: Ungenutztes Budget verfällt am 31. Dezember.' },
                 { q: 'Ist 24-Stunden-Pflege legal?', a: 'Ja — über eine seriöse Agentur im Entsendemodell ist 24h-Pflege absolut legal. Die A1-Bescheinigung belegt die Sozialversicherung im Heimatland. Scheinselbstständigkeit ist dagegen strafbar und kann zu hohen Nachzahlungen von Sozialabgaben führen.' },
-                { q: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?', a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Betreuung rund um die Uhr und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
+                { q: 'Was ist der Unterschied zwischen 24h-Pflege und Pflegeheim?', a: 'Im Pflegeheim beträgt der Eigenanteil im Bundesdurchschnitt 3.364 Euro pro Monat (Quelle: vdek-Auswertung, Stand 1. Juli 2026) — ohne individuelle Eins-zu-eins-Betreuung und ohne die vertraute Umgebung. Bei der 24h-Pflege bleibt der Mensch zuhause, erhält persönliche Eins-zu-eins-Betreuung und zahlt oft vergleichbare oder geringere Gesamtkosten.' },
                 { q: 'Wie schnell kann eine 24h-Betreuung beginnen?', a: 'Mit Primundus ist eine Anreise in 3 Tagen möglich: Preis und passende Betreuungskräfte sehen Sie sofort online, Bewerbungen kommen am selben Werktag — täglich kündbar, taggenaue Abrechnung.' },
                 { q: 'Für welche Pflegesituationen ist 24h-Pflege geeignet?', a: '24h-Pflege ist geeignet ab Pflegegrad 2 — für Demenz, Alzheimer, nach Schlaganfall oder Operation, bei Parkinson, MS, Herzinsuffizienz, eingeschränkter Mobilität und Sturzrisiko. Sie funktioniert überall dort, wo kontinuierliche Präsenz wichtiger ist als stationäre medizinische Versorgung.' },
                 { q: 'Was ist der Unterschied zwischen Verhinderungspflege und Entlastungsbudget?', a: 'Seit Juli 2025 gibt es kein getrenntes Budget mehr für Verhinderungspflege und Kurzzeitpflege — beide wurden im gemeinsamen Entlastungsbudget von 3.539 Euro pro Jahr zusammengeführt. Der monatliche Entlastungsbetrag von 131 Euro ist davon getrennt und kann zusätzlich für anerkannte Betreuungsleistungen eingesetzt werden.' },

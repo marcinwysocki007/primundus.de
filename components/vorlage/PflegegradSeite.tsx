@@ -37,7 +37,7 @@ export function pflegegradMetadata(grad: Grad) {
 
 export function PflegegradSeite({ grad }: { grad: Grad }) {
   const i = INHALTE[grad]
-  const AKTUALISIERT = aktualisiertAm(`pflegegrad-${grad}`, '20. September 2026')
+  const AKTUALISIERT = aktualisiertAm(`pflegegrad-${grad}`, '27. Oktober 2026')
   const RECHNER = `https://kostenrechner.primundus.de/?start=1&src=apex-pflegegrad-${grad}`
   const g = grad as 2 | 3 | 4 | 5
 
@@ -211,7 +211,7 @@ export function PflegegradSeite({ grad }: { grad: Grad }) {
 
           <Abschnitt id="beantragen" titel={`Pflegegrad ${grad} beantragen`}>
             <Text>
-              Der Antrag geht formlos an die Pflegekasse; die Leistungen laufen ab dem Antragstag. Die Kasse muss spätestens 25 Arbeitstage nach dem
+              Der Antrag geht formlos an die Pflegekasse; die Leistungen laufen ab Antragstellung, frühestens ab Vorliegen der Voraussetzungen; bestand der Hilfebedarf schon in einem früheren Monat, ab dem Ersten des Antragsmonats. Die Kasse muss spätestens 25 Arbeitstage nach dem
               Antrag entscheiden, im Krankenhaus wird spätestens am fünften Arbeitstag begutachtet.
             </Text>
             <Schritte

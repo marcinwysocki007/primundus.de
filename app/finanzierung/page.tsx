@@ -10,7 +10,7 @@ import { aktualisiertAm } from '@/lib/lastmod'
 // Tabelle nach Pflegegrad), dazu die Grafik „Wer zahlt was" der Hauptseite und ein Absatz, wie sich die Zuschüsse zum Eigenanteil
 // verrechnen. Beträge 2026 = 2025 (GKV-Spitzenverband), Entlastungsbetrag nur für anerkannte Alltagshilfen.
 
-const AKTUALISIERT = aktualisiertAm('finanzierung', '19. September 2026')
+const AKTUALISIERT = aktualisiertAm('finanzierung', '27. Oktober 2026')
 const RECHNER = 'https://kostenrechner.primundus.de/?start=1&src=apex-finanzierung'
 const LINK = 'font-semibold text-pm-ink underline decoration-pm-taupe/40 underline-offset-4 hover:decoration-pm-taupe-ink transition-colors'
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const FRAGEN = [
   {
     q: 'Wie kann ich 24-Stunden-Pflege finanzieren?',
-    a: 'Mit drei Bausteinen: Pflegegeld (347 bis 990 € im Monat je nach Pflegegrad), Entlastungsbudget (3.539 € im Jahr, wenn die Kasse den Einsatz als Verhinderungspflege anerkennt) und Steuerermäßigung (20 % der Kosten, höchstens 4.000 € im Jahr). Den Entlastungsbetrag von 131 € im Monat zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft. Bei Pflegegrad 3 bleiben so ab ca. 923 € im Monat selbst zu tragen.',
+    a: 'Mit drei Bausteinen: Pflegegeld (347 bis 990 € im Monat je nach Pflegegrad), Entlastungsbudget (3.539 € im Jahr, wenn die Kasse den Einsatz als Verhinderungspflege anerkennt) und Steuerermäßigung (20 % der Kosten, höchstens 4.000 € im Jahr). Den Entlastungsbetrag von 131 € im Monat zahlt die Kasse nur zweckgebunden für Tages- oder Nachtpflege, Kurzzeitpflege, Pflegedienst oder anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft. Bei Pflegegrad 3 bleiben so ab ca. 923 € im Monat selbst zu tragen.',
   },
   {
     q: 'Was ist das Entlastungsbudget 2026?',
@@ -104,7 +104,7 @@ export default function FinanzierungPage() {
             'Pflegegeld: 347 bis 990 € im Monat je nach Pflegegrad (ab Pflegegrad 2)',
             'Entlastungsbudget: 3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege (ab Pflegegrad 2)',
             'Steuerermäßigung: 20 % der Kosten, höchstens 4.000 € im Jahr',
-            'Entlastungsbetrag: 131 € im Monat, nur für anerkannte Alltagshilfen',
+            'Entlastungsbetrag: 131 € im Monat, zweckgebunden für Tages- oder Nachtpflege, Kurzzeitpflege, Pflegedienst oder anerkannte Alltagshilfen',
             'Pflegehilfsmittel: 42 € im Monat für Verbrauchsmittel',
             'Wohnraumanpassung: bis 4.180 € je Maßnahme',
           ]}

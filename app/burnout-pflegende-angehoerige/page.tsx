@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('burnout-pflegende-angehoerige', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('burnout-pflegende-angehoerige', '27. Oktober 2026')
 
 const SECTIONS = [
   { id: 'zeichen', title: 'Anzeichen erkennen' },
@@ -131,10 +131,10 @@ export default function BurnoutPflegendeAngehoerige() {
             </Text>
             <Punkte
               punkte={[
-                { title: 'Entlastungsbudget nutzen — 3.539 €/Jahr', desc: 'Seit Juli 2025 gibt es ein gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Es ermöglicht Auszeiten von mehreren Wochen — während die Pflege durch eine Vertretung sichergestellt wird. Kein Antrag nötig — einfach bei der Pflegekasse anmelden.' },
+                { title: 'Entlastungsbudget nutzen — 3.539 €/Jahr', desc: 'Seit Juli 2025 gibt es ein gemeinsames Budget für Verhinderungs- und Kurzzeitpflege. Es ermöglicht Auszeiten von mehreren Wochen — während die Pflege durch eine Vertretung sichergestellt wird. Für die Verhinderungspflege ist kein Antrag vorab nötig; die Kosten erstattet die Pflegekasse auf Antrag gegen Belege (§ 39 Abs. 1 SGB XI).' },
                 { title: '24h-Betreuungskraft — dauerhafte Entlastung', desc: 'Die wirkungsvollste Lösung: Eine Betreuungskraft übernimmt die tägliche Pflege. Angehörige sind wieder Angehörige — nicht rund um die Uhr Pflegepersonal. Bei Primundus ist eine Anreise schon in 3 Tagen möglich.' },
                 { title: 'Tagespflege — stundenweise Entlastung', desc: 'Der pflegebedürftige Mensch verbringt einige Tage pro Woche in einer Tagespflegeeinrichtung. Angehörige haben Freizeit — der Pflegebedürftige hat Struktur und Gesellschaft.' },
-                { title: 'Pflegestützpunkte — kostenlose Beratung', desc: 'In jedem Bundesland gibt es kostenlose Pflegestützpunkte. Beratung zu Leistungsansprüchen, Unterstützungsangeboten und Entlastungsmöglichkeiten — ohne Voranmeldung.' },
+                { title: 'Pflegestützpunkte — kostenlose Beratung', desc: 'In den meisten Bundesländern gibt es kostenlose Pflegestützpunkte. Beratung zu Leistungsansprüchen, Unterstützungsangeboten und Entlastungsmöglichkeiten.' },
               ]}
             />
             <MehrDazu

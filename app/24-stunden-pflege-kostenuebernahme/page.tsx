@@ -10,7 +10,7 @@ import { KurzAntwort } from '@/components/KurzAntwort'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-kostenuebernahme', '21. August 2026')
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege-kostenuebernahme', '27. Oktober 2026')
 
 // Nachfrage-Lücke (GSC 08/2026): "24 stunden pflege kostenübernahme"
 // 38 Impr. auf Pos. 66 — keine fokussierte Seite. Kaufnahe Query; die
@@ -61,7 +61,7 @@ const schemaMarkup = [
         name: 'Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 600 bis 1.100 Euro im Monat, den Rest tragen die Familien selbst. Den Entlastungsbetrag (131 Euro) zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.',
+          text: 'Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad) und Verhinderungspflege (bis 3.539 Euro im Jahr). Bei Pflegegrad 3 sind das zusammen rund 894 Euro im Monat, den Rest tragen die Familien selbst. Den Entlastungsbetrag (131 Euro) zahlt die Kasse nur zweckgebunden für Tages- oder Nachtpflege, Kurzzeitpflege, Pflegedienst oder anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.',
         },
       },
       {
@@ -77,7 +77,7 @@ const schemaMarkup = [
         name: 'Müssen Kinder für die Pflege ihrer Eltern zahlen?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Nur bei sehr hohem Einkommen: Seit dem Angehörigen-Entlastungsgesetz müssen Kinder erst ab 100.000 Euro Bruttojahreseinkommen zum Elternunterhalt beitragen. Wer darunter liegt, wird vom Sozialamt nicht herangezogen — das Vermögen der Kinder spielt keine Rolle.',
+          text: 'Nur bei sehr hohem Einkommen: Seit dem Angehörigen-Entlastungsgesetz müssen Kinder erst ab 100.000 Euro jährlichem Gesamteinkommen zum Elternunterhalt beitragen. Wer darunter liegt, wird vom Sozialamt nicht herangezogen — das Vermögen der Kinder spielt keine Rolle.',
         },
       },
       {
@@ -131,10 +131,10 @@ export default function KostenuebernahmePage() {
             </KurzAntwort>
             <Text>
               Die kurze, ehrliche Antwort: <strong>Komplett übernimmt die Kosten niemand</strong> — aber es
-            zahlen mehr Stellen mit, als die meisten Familien denken. Die Pflegekasse steuert je nach
-            Pflegegrad oft 700 bis 1.200 Euro im Monat bei, das Finanzamt bis zu 4.000 Euro im Jahr, und
+            zahlen mehr Stellen mit, als die meisten Familien denken. Die Pflegekasse steuert bei
+            Pflegegrad 3 rund 894 Euro im Monat bei (599 Euro Pflegegeld und anteilig 295 Euro für Verhinderungspflege), das Finanzamt bis zu 4.000 Euro im Jahr, und
             wenn das Geld trotzdem nicht reicht, springt das Sozialamt ein. Die wichtigste Beruhigung
-            vorweg: <strong>Kinder müssen erst ab 100.000 Euro Bruttojahreseinkommen für die Pflege ihrer
+            vorweg: <strong>Kinder müssen erst ab 100.000 Euro jährlichem Gesamteinkommen für die Pflege ihrer
             Eltern zahlen.</strong>
             </Text>
           </Vorspann>
@@ -146,7 +146,7 @@ export default function KostenuebernahmePage() {
               kopf={['Wer zahlt?', 'Was genau?', 'Wie viel?']}
               zeilen={[
                 ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Pflegegeld (bei Pflege zuhause)</span>, <span className="whitespace-normal max-sm:hyphens-auto">347 € (PG 2) · 599 € (PG 3) · 800 € (PG 4) · 990 € (PG 5) monatlich</span>],
-                ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Entlastungsbetrag</span>, <span className="whitespace-normal max-sm:hyphens-auto">131 € monatlich (ab PG 1), nur für anerkannte Alltagshilfen</span>],
+                ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Entlastungsbetrag</span>, <span className="whitespace-normal max-sm:hyphens-auto">131 € monatlich (ab PG 1), zweckgebunden für Tages- oder Nachtpflege, Kurzzeitpflege, Pflegedienst oder anerkannte Alltagshilfen</span>],
                 ['Pflegekasse', <span className="whitespace-normal max-sm:hyphens-auto">Verhinderungspflege (gemeinsamer Jahresbetrag mit Kurzzeitpflege)</span>, <span className="whitespace-normal max-sm:hyphens-auto">bis 3.539 € im Jahr (≈ 295 € monatlich)</span>],
                 ['Finanzamt', <span className="whitespace-normal max-sm:hyphens-auto">Steuerermäßigung für haushaltsnahe Dienstleistungen (§ 35a EStG)</span>, <span className="whitespace-normal max-sm:hyphens-auto">bis 4.000 € im Jahr (≈ 333 € monatlich)</span>],
                 ['Sozialamt', <span className="whitespace-normal max-sm:hyphens-auto">„Hilfe zur Pflege", wenn Einkommen und Vermögen nicht reichen</span>, <span className="whitespace-normal max-sm:hyphens-auto">einzelfallabhängig; 10.000 € Schonvermögen bleiben geschützt</span>],
@@ -158,9 +158,10 @@ export default function KostenuebernahmePage() {
           <Abschnitt id="was-bleibt-am-ende" titel="Was bleibt am Ende wirklich zu zahlen?">
             <Kasten>
               <Text>
-                Ein typisches Beispiel mit Pflegegrad 3: Die Betreuung kostet 2.800 Euro im Monat. Davon
-                gehen ab: 599 Euro Pflegegeld, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben rund 1.570 Euro
-                im Monat</strong> — für eine Kraft, die rund um die Uhr im Haus ist. Zum Vergleich: Ein
+                Ein Beispiel mit Pflegegrad 3: Die Betreuung kostet bei uns ab 2.150 Euro im Monat. Davon
+                gehen ab: 599 Euro Pflegegeld, rund 295 Euro anteilige Verhinderungspflege und etwa 333 Euro Steuerersparnis. <strong>Es bleiben ab ca. 923 Euro
+                im Monat</strong> — für eine Kraft, die mit im Haus wohnt und bei Bedarf auch nachts vor Ort ist. Dazu kommen An- und Abreise mit
+                125 Euro je Strecke; Kost und Logis stellen Sie. Zum Vergleich: Ein
                 Heimplatz kostet im Bundesdurchschnitt rund 3.364 Euro Eigenanteil, und das Haus
                 steht leer.
               </Text>
@@ -184,7 +185,7 @@ export default function KostenuebernahmePage() {
             <Kasten augenbraue="Die 100.000-Euro-Regel — die wichtigste Entlastung für Angehörige">
               <Text>
                 Seit dem Angehörigen-Entlastungsgesetz zieht das Sozialamt Kinder erst dann zum
-                Elternunterhalt heran, wenn ihr <strong>Bruttojahreseinkommen über 100.000 Euro</strong>{' '}
+                Elternunterhalt heran, wenn ihr <strong>jährliches Gesamteinkommen über 100.000 Euro</strong>{' '}
                 liegt — pro Kind gerechnet, Vermögen zählt nicht. Für die allermeisten Familien heißt das:
                 Die Kinder zahlen nichts, auch wenn das Sozialamt einspringt.
               </Text>
@@ -194,9 +195,9 @@ export default function KostenuebernahmePage() {
           <Abschnitt id="haeufige-fragen-zur-kostenuebernahme" titel="Häufige Fragen zur Kostenübernahme">
             <Punkte
               punkte={[
-                { title: "Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?", desc: "Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad) und Verhinderungspflege (bis 3.539 Euro im Jahr). Zusammen deckt das oft 600 bis 1.100 Euro im Monat, den Rest tragen die Familien selbst. Den Entlastungsbetrag (131 Euro) zahlt die Kasse nur für anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft." },
+                { title: "Übernimmt die Pflegekasse die 24-Stunden-Pflege komplett?", desc: "Nein. Die Pflegekasse zahlt feste Zuschüsse — Pflegegeld (347 bis 990 Euro je nach Pflegegrad) und Verhinderungspflege (bis 3.539 Euro im Jahr). Bei Pflegegrad 3 sind das zusammen rund 894 Euro im Monat, den Rest tragen die Familien selbst. Den Entlastungsbetrag (131 Euro) zahlt die Kasse nur zweckgebunden für Tages- oder Nachtpflege, Kurzzeitpflege, Pflegedienst oder anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft." },
                 { title: "Zahlt das Sozialamt die 24-Stunden-Pflege, wenn das Geld nicht reicht?", desc: "Reichen Rente, Pflegegeld und Erspartes nicht, kann beim Sozialamt „Hilfe zur Pflege\" beantragt werden. Ein Schonvermögen von 10.000 Euro pro Person bleibt dabei geschützt. Das Sozialamt prüft den Einzelfall und übernimmt anerkannte, angemessene Pflegekosten." },
-                { title: "Müssen Kinder für die Pflege ihrer Eltern zahlen?", desc: "Nur bei sehr hohem Einkommen: Seit dem Angehörigen-Entlastungsgesetz müssen Kinder erst ab 100.000 Euro Bruttojahreseinkommen zum Elternunterhalt beitragen. Wer darunter liegt, wird vom Sozialamt nicht herangezogen — das Vermögen der Kinder spielt keine Rolle." },
+                { title: "Müssen Kinder für die Pflege ihrer Eltern zahlen?", desc: "Nur bei sehr hohem Einkommen: Seit dem Angehörigen-Entlastungsgesetz müssen Kinder erst ab 100.000 Euro jährlichem Gesamteinkommen zum Elternunterhalt beitragen. Wer darunter liegt, wird vom Sozialamt nicht herangezogen — das Vermögen der Kinder spielt keine Rolle." },
                 { title: "Kann man die 24-Stunden-Pflege von der Steuer absetzen?", desc: <>Ja. Für haushaltsnahe Dienstleistungen erkennt das Finanzamt bis zu 4.000 Euro
                 Steuerermäßigung pro Jahr an — das entspricht gut 330 Euro im Monat zusätzlicher
                 Entlastung. Mehr dazu:{' '}

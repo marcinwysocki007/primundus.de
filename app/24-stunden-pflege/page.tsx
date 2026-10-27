@@ -18,7 +18,7 @@ import { ORG_ID } from '@/lib/schema'
 // Ersatzkraft nach Vertrag § 1 („schnellstmöglich, in der Regel innerhalb von 3 Tagen", Krankheitstage ohne
 // Honorar nach § 4), Ablauf in drei Schritten wie auf der Startseite und im Rechner.
 
-const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '15. Oktober 2026')
+const AKTUALISIERT = aktualisiertAm('24-stunden-pflege', '27. Oktober 2026')
 const RECHNER_SEITE = 'https://kostenrechner.primundus.de/?start=1&src=apex-24-stunden-pflege'
 const MUSTERVERTRAG = 'https://kundenportal.primundus.de/primundus-mustervertrag.pdf'
 
@@ -58,7 +58,7 @@ const FRAGEN = [
   { q: 'Ist 24-Stunden-Pflege bei Primundus legal?', a: 'Ja. Die Betreuungskräfte sind bei uns angestellt und arbeiten im Entsendemodell mit A1-Bescheinigung: Sie sind in Polen sozialversichert und legal in Deutschland tätig. Sie als Familie werden nicht Arbeitgeber.' },
   { q: 'Warum ist Primundus Testsieger?', a: 'Primundus ist sechsmal in Folge Testsieger bei DIE WELT. Primundus steht für die beste Kombination aus Preis, Qualität und Kundenservice, getragen von 20 Jahren Erfahrung und über 60.000 Betreuungen.' },
   { q: 'Was passiert, wenn die Betreuungskraft krank wird?', a: 'Wir stellen schnellstmöglich eine Ersatzkraft, laut Vertrag in der Regel innerhalb von 3 Tagen. Für die Tage, an denen die Betreuungskraft krank ist, berechnen wir nichts. Der Wechsel kostet nichts extra, es fallen nur die An- und Abreisekosten an.' },
-  { q: 'Was zahlt die Pflegekasse bei einer 24-Stunden-Pflege?', a: 'Das Pflegegeld, je nach Pflegegrad 347 bis 990 € im Monat, und das Entlastungsbudget von 3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege. Dazu kommt die Steuerermäßigung von 20 %, höchstens 4.000 € im Jahr. Die Krankenkasse zahlt nichts, und der Entlastungsbetrag von 131 € im Monat ist nur für anerkannte Alltagshilfen gedacht, in der Regel nicht für die Betreuungskraft.' },
+  { q: 'Was zahlt die Pflegekasse bei einer 24-Stunden-Pflege?', a: 'Das Pflegegeld, je nach Pflegegrad 347 bis 990 € im Monat, und das Entlastungsbudget von 3.539 € im Jahr für Verhinderungs- und Kurzzeitpflege. Dazu kommt die Steuerermäßigung von 20 %, höchstens 4.000 € im Jahr. Die Krankenkasse zahlt nichts, und der Entlastungsbetrag von 131 € im Monat ist zweckgebunden für Tages- oder Nachtpflege, Kurzzeitpflege, Pflegedienst oder anerkannte Alltagshilfen, in der Regel nicht für die Betreuungskraft.' },
   { q: 'Was sind die Nachteile der 24-Stunden-Pflege?', a: 'Die Betreuungskraft braucht ein eigenes Zimmer, Kost und Logis stellen Sie. Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, eine Überwachung rund um die Uhr gibt es nicht. Alle 6 bis 8 Wochen wechselt die Betreuungskraft, und medizinische Behandlungspflege übernimmt weiter ein Pflegedienst. Für Menschen, die dauerhaft Fachpflege brauchen, passt sie nicht.' },
   { q: 'Was ist billiger, Pflegeheim oder 24-Stunden-Pflege?', a: 'Meist die 24-Stunden-Pflege. Im Pflegeheim zahlen Sie bundesweit im Durchschnitt 3.364 € im Monat selbst (vdek, Stand 1. Juli 2026). Bei der 24-Stunden-Pflege bleiben bei Pflegegrad 3 nach Pflegegeld, Entlastungsbudget und Steuerermäßigung ab ca. 923 € im Monat, zzgl. An- und Abreise sowie Kost und Logis.' },
   { q: 'Wie lange arbeitet eine Betreuungskraft am Tag?', a: 'Sie hat geregelte Arbeitszeiten mit Pausen und Ruhezeiten, so wie jede Arbeitnehmerin. Den Tagesablauf legen Sie gemeinsam fest: Hilfe am Morgen, im Haushalt, am Nachmittag und am Abend, dazwischen ihre Ruhezeit. Nachts schläft sie im Haus und hilft, wenn etwas ist; wie oft nachts Hilfe nötig ist, fließt in den Preis ein.' },
@@ -182,8 +182,8 @@ export default function VierUndZwanzigStundenPflege() {
             <Kasten titel="Was „24 Stunden“ bedeutet">
               <Text>
                 Die Betreuungskraft wohnt mit im Haus und ist bei Bedarf auch nachts da. Sie hat geregelte Arbeitszeiten
-                mit Pausen und Ruhezeiten, so wie jede Arbeitnehmerin. „24 Stunden“ heißt also: Sie ist rund um die Uhr
-                erreichbar, nicht rund um die Uhr im Einsatz. Medizinische Behandlungspflege wie Spritzen oder Verbände
+                mit Pausen und Ruhezeiten, so wie jede Arbeitnehmerin. „24 Stunden“ heißt also: Sie wohnt mit im Haus,
+                ist aber nicht rund um die Uhr im Einsatz. Medizinische Behandlungspflege wie Spritzen oder Verbände
                 übernimmt ein ambulanter Pflegedienst.
               </Text>
             </Kasten>

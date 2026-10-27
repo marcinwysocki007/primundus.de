@@ -9,7 +9,7 @@ import { ArticleTOC } from '@/components/ArticleTOC'
 import { aktualisiertAm } from '@/lib/lastmod'
 import { PERSON_MARTA_ID } from '@/lib/schema'
 
-const AKTUALISIERT = aktualisiertAm('barrierefreies-zuhause-gestalten', '25. April 2026')
+const AKTUALISIERT = aktualisiertAm('barrierefreies-zuhause-gestalten', '27. Oktober 2026')
 
 const SECTIONS = [
   { id: 'massnahmen', title: 'Die wichtigsten Maßnahmen' },
@@ -58,7 +58,7 @@ const schemaMarkup = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Was fördert die Pflegekasse bei der Wohnraumanpassung?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse fördert Maßnahmen zur Wohnraumanpassung mit bis zu 4.180 € je Maßnahme (§ 40 SGB XI). Bei mehreren Personen im Haushalt bis zu 16.720 €. Typische Maßnahmen: Treppenlift, Badumbau, Türverbreiterung, Haltegriffe, Rampen. Antrag vor Beginn der Maßnahme stellen.' } },
+      { '@type': 'Question', name: 'Was fördert die Pflegekasse bei der Wohnraumanpassung?', acceptedAnswer: { '@type': 'Answer', text: 'Die Pflegekasse fördert Maßnahmen zur Wohnraumanpassung mit bis zu 4.180 € je Maßnahme (§ 40 SGB XI). Leben mehrere Pflegebedürftige in derselben Wohnung, sind bis zu 16.720 € möglich. Typische Maßnahmen: Treppenlift, Badumbau, Türverbreiterung, Haltegriffe, Rampen. Antrag vor Beginn der Maßnahme stellen.' } },
       { '@type': 'Question', name: 'Welche Maßnahmen sind die wichtigsten für ein barrierefreies Zuhause?', acceptedAnswer: { '@type': 'Answer', text: 'Die wichtigsten Maßnahmen: Badumbau (begehbare Dusche, Haltegriffe), Treppenlift oder Rampen, Türverbreiterung auf 90 cm, rutschfeste Böden, Haltegriffe an Toilette, höhenverstellbares Bett, ausreichend Beleuchtung.' } },
     ],
   },
@@ -101,9 +101,9 @@ export default function BarrierefreiesZuhause() {
               zeilen={[
                 ['Haltegriffe (Bad, WC)', '50–300 €', 'Bis 4.180 €', 'Sofort'],
                 ['Rutschfeste Matten/Böden', '20–200 €', 'Bis 4.180 €', 'Sofort'],
-                ['Badewannenlifter', '200–800 €', 'Bis 4.180 €', 'Hoch'],
+                ['Badewannenlifter', '200–800 €', 'Hilfsmittel (KV)', 'Hoch'],
                 ['Begehbare Dusche', '1.500–8.000 €', 'Bis 4.180 €', 'Hoch'],
-                ['Erhöhter WC-Sitz', '30–200 €', 'Bis 4.180 €', 'Hoch'],
+                ['Erhöhter WC-Sitz', '30–200 €', 'Hilfsmittel (KV)', 'Hoch'],
                 ['Treppenlift', '3.000–15.000 €', 'Bis 4.180 €', 'Je nach Wohnsituation'],
                 ['Türverbreiterung (auf 90 cm)', '500–3.000 €', 'Bis 4.180 €', 'Bei Rollstuhl'],
                 ['Rampe statt Stufen', '300–2.000 €', 'Bis 4.180 €', 'Bei Gehbehinderung'],
@@ -154,10 +154,10 @@ export default function BarrierefreiesZuhause() {
           <Abschnitt id="faq" titel="Häufige Fragen">
             <Fragen
               fragen={[
-                { q: 'Was fördert die Pflegekasse bei der Wohnraumanpassung?', a: 'Bis zu 4.180 € je Maßnahme (§40 SGB XI). Typische Maßnahmen: Treppenlift, Badumbau, Haltegriffe, Türverbreiterung, Rampen. Antrag muss vor Beginn der Maßnahme gestellt werden.' },
+                { q: 'Was fördert die Pflegekasse bei der Wohnraumanpassung?', a: 'Die Pflegekasse fördert Maßnahmen zur Wohnraumanpassung mit bis zu 4.180 € je Maßnahme (§ 40 SGB XI). Leben mehrere Pflegebedürftige in derselben Wohnung, sind bis zu 16.720 € möglich. Typische Maßnahmen: Treppenlift, Badumbau, Türverbreiterung, Haltegriffe, Rampen. Antrag vor Beginn der Maßnahme stellen.' },
                 { q: 'Muss man Pflegegrad haben um die Förderung zu bekommen?', a: 'Ja — Förderung nach §40 SGB XI setzt einen Pflegegrad (1–5) voraus. Der Antrag läuft über die Pflegekasse.' },
                 { q: 'Welche Maßnahme hat die höchste Priorität?', a: 'Haltegriffe im Bad und an der Toilette haben das beste Kosten-Nutzen-Verhältnis — günstiger Einbau, sofort wirksam für Sturzprävention. Danach begehbare Dusche und Türschwellen entfernen.' },
-                { q: 'Kann man mehrere Maßnahmen gleichzeitig fördern lassen?', a: 'Ja — jede Maßnahme kann separat bis 4.180 € gefördert werden. Bei mehreren Personen im Haushalt sogar bis 16.720 € insgesamt.' },
+                { q: 'Kann man mehrere Maßnahmen gleichzeitig fördern lassen?', a: 'Ja, aber zusammen: Alles, was in der aktuellen Pflegesituation nötig ist, zählt als eine Maßnahme mit bis zu 4.180 €. Ändert sich die Pflegesituation später, können Sie erneut einen Zuschuss beantragen. Leben mehrere Pflegebedürftige in derselben Wohnung, sind bis zu 16.720 € insgesamt möglich.' },
               ]}
             />
           </Abschnitt>
