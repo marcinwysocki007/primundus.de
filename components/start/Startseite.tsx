@@ -82,7 +82,11 @@ export function StartKopf() {
                 helle Koralle, 14 px halbfett, am Computer 18 px — dieselben Werte wie app/page.tsx im Rechner */}
             <span className="block text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.07em] lg:tracking-[0.06em] text-pm-coral">24-Stunden-Pflege vom Testsieger</span>
             <span className="sr-only">: </span>
-            <span className="mt-2.5 lg:mt-3 block text-[36px] md:text-[50px] lg:text-[56px] font-extrabold leading-[1.04] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">Ihre Eltern müssen nicht ins Heim.</span>
+            {/* Wortlaut wie im Kostenrechner (Martin 03.11.2026: „pack auch die neue Überschrift bei primundus.de rein“), Text darunter
+                und Knopf bleiben. Zweizeilig halten: „Passende Pflegekräfte“ ist 10,44 × Schriftgröße breit. Bei 36 px brach die Zeile
+                unter 430 px Breite in drei Zeilen und schob den Knopf 38 px tiefer, am Computer bei 56 px ebenso (+105 px). Am Handy
+                folgt die Schrift deshalb der Textspalte (Breite − 40 px), höchstens 36 px; am Computer 39/48 px wie im Rechner. */}
+            <span className="mt-2.5 lg:mt-3 block text-[length:min(36px,calc((100vw-40px)*0.0935))] md:text-[50px] lg:text-[39px] xl:text-[48px] font-extrabold leading-[1.04] tracking-[-0.035em] text-pm-ink [text-wrap:balance]">Passende Pflegekräfte sofort finden.</span>
           </h1>
           {/* Die Unterzeile bleibt ÜBER dem Knopf (Martin 24.09.: „der Knopf soll doch nicht über den Untertext“) */}
           <p className="mt-5 text-[18px] md:text-[20px] leading-[1.55] text-pm-body max-w-[36rem]">
